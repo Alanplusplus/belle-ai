@@ -1,0 +1,242 @@
+import { notFound } from "next/navigation";
+import { Link } from "@/i18n/navigation";
+import { SITE_URL } from "@/lib/constants";
+import { routing } from "@/i18n/routing";
+import type { Metadata } from "next";
+
+interface CompetitorData {
+  name: string;
+  slug: string;
+  description: string;
+  comparison: {
+    feature: string;
+    belle: string;
+    competitor: string;
+  }[];
+  belleAdvantages: string[];
+  competitorAdvantages: string[];
+  verdict: string;
+}
+
+const COMPETITORS: Record<string, CompetitorData> = {
+  dressika: {
+    name: "Dressika",
+    slug: "dressika",
+    description:
+      "Compare Belle AI and Dressika for personal color analysis. Both apps use AI to determine your seasonal color type, but they take different approaches.",
+    comparison: [
+      { feature: "Color System", belle: "12-season with detailed subtypes", competitor: "12-season" },
+      { feature: "Makeup Analysis", belle: "Full makeup report (eyes, lips, blush, looks)", competitor: "Color palette only" },
+      { feature: "Face Shape Analysis", belle: "Yes – with hairstyle recommendations", competitor: "No" },
+      { feature: "Report Style", belle: "Magazine-quality visual report (Dior/CT style)", competitor: "App-native UI cards" },
+      { feature: "Resolution", belle: "2K and 4K options", competitor: "Standard" },
+      { feature: "Free Trial", belle: "1 free analysis", competitor: "3-day free trial" },
+      { feature: "Platforms", belle: "iOS", competitor: "iOS & Android" },
+      { feature: "Languages", belle: "5 languages", competitor: "Multiple" },
+      { feature: "Price", belle: "From $2.99 (5 reports)", competitor: "From €12.99/month" },
+    ],
+    belleAdvantages: [
+      "Magazine-quality visual reports you can save and share",
+      "Comprehensive makeup analysis beyond just color",
+      "Face shape and hairstyle analysis included",
+      "More affordable pay-per-use pricing",
+      "2K/4K high-resolution output",
+    ],
+    competitorAdvantages: [
+      "Available on Android",
+      "AR try-on feature for hair colors",
+      "Longer free trial period",
+      "Capsule wardrobe features",
+    ],
+    verdict:
+      "Belle AI is the better choice if you want comprehensive beauty analysis (color + makeup + face shape) with stunning visual reports. Dressika is better if you need Android support or want AR hair color try-on. For pure color analysis accuracy and report quality, Belle AI delivers a premium experience at a lower price point.",
+  },
+  colorwise: {
+    name: "Colorwise",
+    slug: "colorwise",
+    description:
+      "Compare Belle AI and Colorwise for seasonal color analysis. Both use AI, but they differ in analysis depth, report quality, and pricing.",
+    comparison: [
+      { feature: "Analysis Types", belle: "Makeup + Color + Face Shape (3 modes)", competitor: "Color analysis only" },
+      { feature: "Color System", belle: "12-season detailed", competitor: "4-season basic" },
+      { feature: "Report Format", belle: "Magazine-quality visual image", competitor: "Text-based results" },
+      { feature: "Makeup Recommendations", belle: "Yes – detailed with looks", competitor: "Basic color suggestions" },
+      { feature: "Face Shape Analysis", belle: "Yes", competitor: "No" },
+      { feature: "Free Usage", belle: "1 free analysis", competitor: "3 free per month" },
+      { feature: "Price", belle: "From $2.99", competitor: "From $9.99/month" },
+    ],
+    belleAdvantages: [
+      "Three analysis modes in one app",
+      "12-season system vs 4-season for more precision",
+      "Magazine-quality visual reports",
+      "Complete makeup look recommendations",
+      "Better value pricing",
+    ],
+    competitorAdvantages: [
+      "More free monthly analyses",
+      "Web-based (no app install needed)",
+      "Simpler interface",
+    ],
+    verdict:
+      "Belle AI offers significantly more depth with three analysis modes, 12-season classification, and premium visual reports. Colorwise is simpler and offers more free uses, but provides less detailed analysis. Choose Belle AI for comprehensive beauty guidance, or Colorwise if you just want a quick color type answer.",
+  },
+  "professional-stylist": {
+    name: "Professional Color Stylist",
+    slug: "professional-stylist",
+    description:
+      "How does AI color analysis compare to a professional in-person consultation? We break down accuracy, cost, convenience, and results.",
+    comparison: [
+      { feature: "Cost", belle: "$2.99 – $5.99", competitor: "$150 – $400" },
+      { feature: "Time", belle: "60 seconds", competitor: "1.5 – 3 hours" },
+      { feature: "Availability", belle: "Anytime, anywhere", competitor: "Appointment required" },
+      { feature: "Accuracy", belle: "73-82% match rate", competitor: "Highest (when skilled)" },
+      { feature: "Report", belle: "Magazine-quality image report", competitor: "Verbal + color swatches" },
+      { feature: "Repeatability", belle: "Consistent every time", competitor: "Varies by analyst" },
+      { feature: "Makeup Advice", belle: "Detailed visual recommendations", competitor: "Varies" },
+      { feature: "Face Shape", belle: "Included", competitor: "Usually separate service" },
+    ],
+    belleAdvantages: [
+      "98% cheaper ($2.99 vs $200+)",
+      "Results in 60 seconds vs hours",
+      "Available 24/7 from anywhere",
+      "Consistent, objective analysis",
+      "Visual magazine-quality report included",
+      "Includes makeup + face shape analysis",
+    ],
+    competitorAdvantages: [
+      "Highest accuracy for edge cases",
+      "Human intuition for ambiguous types",
+      "Personalized conversation and Q&A",
+      "Physical fabric draping experience",
+    ],
+    verdict:
+      "For most people, AI color analysis provides excellent results at a fraction of the cost and time. Professional consultations remain the gold standard for accuracy, especially for people with unusual or ambiguous coloring. Our recommendation: start with Belle AI's free analysis, and if you want a second opinion on a tricky result, consider a professional consultation.",
+  },
+};
+
+export function generateStaticParams() {
+  const params: { locale: string; competitor: string }[] = [];
+  for (const locale of routing.locales) {
+    for (const slug of Object.keys(COMPETITORS)) {
+      params.push({ locale, competitor: slug });
+    }
+  }
+  return params;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; competitor: string }>;
+}): Promise<Metadata> {
+  const { locale, competitor } = await params;
+  const data = COMPETITORS[competitor];
+  if (!data) return {};
+
+  return {
+    title: `Belle AI vs ${data.name} – Comparison`,
+    description: data.description,
+    alternates: {
+      canonical: `${SITE_URL}/${locale}/vs/${competitor}`,
+    },
+  };
+}
+
+export default async function ComparisonPage({
+  params,
+}: {
+  params: Promise<{ locale: string; competitor: string }>;
+}) {
+  const { competitor } = await params;
+  const data = COMPETITORS[competitor];
+  if (!data) notFound();
+
+  return (
+    <section className="py-20">
+      <div className="mx-auto max-w-4xl px-4">
+        <h1 className="text-3xl font-bold sm:text-4xl">
+          Belle AI vs {data.name}
+        </h1>
+        <p className="mt-3 text-muted-foreground">{data.description}</p>
+
+        {/* Comparison Table */}
+        <div className="mt-10 overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border">
+                <th className="py-3 text-left font-semibold">Feature</th>
+                <th className="py-3 text-left font-semibold text-primary">
+                  Belle AI
+                </th>
+                <th className="py-3 text-left font-semibold">{data.name}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.comparison.map((row) => (
+                <tr key={row.feature} className="border-b border-border/50">
+                  <td className="py-3 font-medium">{row.feature}</td>
+                  <td className="py-3">{row.belle}</td>
+                  <td className="py-3 text-muted-foreground">
+                    {row.competitor}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Advantages */}
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          <div className="rounded-2xl border border-primary/30 bg-primary/5 p-6">
+            <h3 className="font-semibold text-primary">
+              Belle AI Advantages
+            </h3>
+            <ul className="mt-3 space-y-2">
+              {data.belleAdvantages.map((adv) => (
+                <li key={adv} className="flex items-start gap-2 text-sm">
+                  <span className="mt-0.5 text-primary">✓</span>
+                  {adv}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-6">
+            <h3 className="font-semibold">{data.name} Advantages</h3>
+            <ul className="mt-3 space-y-2">
+              {data.competitorAdvantages.map((adv) => (
+                <li
+                  key={adv}
+                  className="flex items-start gap-2 text-sm text-muted-foreground"
+                >
+                  <span className="mt-0.5">✓</span>
+                  {adv}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Verdict */}
+        <div className="mt-10 rounded-2xl border border-border bg-muted/50 p-6">
+          <h3 className="font-semibold">Our Verdict</h3>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            {data.verdict}
+          </p>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-10 text-center">
+          <Link
+            href="/download"
+            className="inline-block rounded-full bg-primary px-8 py-3 font-semibold text-white transition hover:bg-primary-dark"
+          >
+            Try Belle AI Free
+          </Link>
+          <p className="mt-2 text-sm text-muted-foreground">
+            1 free analysis · No account needed
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
