@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { SITE_URL, APP_STORE_URL } from "@/lib/constants";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -34,7 +35,7 @@ export default function DownloadPage() {
     <section className="py-20">
       <div className="mx-auto max-w-4xl px-4">
         <div className="text-center">
-          <h1 className="text-4xl font-bold sm:text-5xl">{t("title")}</h1>
+          <h1 className="font-serif text-4xl font-bold sm:text-5xl">{t("title")}</h1>
           <p className="mt-3 text-lg text-primary">{t("subtitle")}</p>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
             {t("description")}
@@ -56,6 +57,30 @@ export default function DownloadPage() {
               </div>
             </div>
           </a>
+        </div>
+
+        {/* App Screenshots */}
+        <div className="mt-16">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            {[
+              { src: "/images/showcase_skin.jpg", alt: "Skin Analysis" },
+              { src: "/images/showcase_eyes.jpg", alt: "Eye Makeup" },
+              { src: "/images/showcase_lips.jpg", alt: "Lip Color" },
+            ].map((img) => (
+              <div
+                key={img.src}
+                className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-lg"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 50vw, 33vw"
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-16">

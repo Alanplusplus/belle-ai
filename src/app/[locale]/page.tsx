@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import Image from "next/image";
 
 export default function HomePage({
   params,
@@ -18,15 +19,15 @@ function HomeContent() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-gold/5" />
         <div className="relative mx-auto max-w-6xl px-4 py-20 text-center sm:py-28 lg:py-36">
-          <p className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary">
+          <p className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-sm font-medium tracking-widest uppercase text-primary">
             {t("heroSubtitle")}
           </p>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             {t("heroTitle")}
             <br />
-            <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-gold bg-clip-text text-transparent">
               {t("heroTitleAccent")}
             </span>
           </h1>
@@ -36,16 +37,42 @@ function HomeContent() {
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
               href="/download"
-              className="rounded-full bg-primary px-8 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-primary-dark hover:shadow-xl"
+              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 text-base font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl hover:shadow-primary/40"
             >
               {t("heroCta")}
             </Link>
             <Link
               href="/tools/color-quiz"
-              className="rounded-full border border-border px-8 py-3 text-base font-medium transition hover:bg-muted"
+              className="rounded-full border border-primary/30 px-8 py-3 text-base font-medium text-primary transition hover:bg-primary/5"
             >
               {t("heroSecondaryCta")}
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Showcase */}
+      <section className="py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            {SHOWCASE_IMAGES.map((img) => (
+              <div
+                key={img.src}
+                className="group relative aspect-[3/4] overflow-hidden rounded-2xl"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover transition duration-300 group-hover:scale-105"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition group-hover:opacity-100" />
+                <p className="absolute bottom-3 left-3 text-sm font-medium text-white opacity-0 transition group-hover:opacity-100">
+                  {img.alt}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -54,13 +81,14 @@ function HomeContent() {
       <section className="bg-muted/30 py-20">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center">
-            <h2 className="text-3xl font-bold">{t("featuresTitle")}</h2>
+            <h2 className="font-serif text-3xl font-bold">{t("featuresTitle")}</h2>
             <p className="mt-2 text-muted-foreground">
               {t("featuresSubtitle")}
             </p>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             <FeatureCard
+              image="/images/showcase_skin.jpg"
               icon={<MakeupIcon />}
               title={t("makeupTitle")}
               description={t("makeupDesc")}
@@ -68,6 +96,7 @@ function HomeContent() {
               cta={ft("learnMore")}
             />
             <FeatureCard
+              image="/images/card_color_analysis.jpg"
               icon={<ColorIcon />}
               title={t("colorTitle")}
               description={t("colorDesc")}
@@ -75,6 +104,7 @@ function HomeContent() {
               cta={ft("learnMore")}
             />
             <FeatureCard
+              image="/images/card_face_shape.jpg"
               icon={<FaceIcon />}
               title={t("faceTitle")}
               description={t("faceDesc")}
@@ -89,7 +119,7 @@ function HomeContent() {
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center">
-            <h2 className="text-3xl font-bold">{t("howTitle")}</h2>
+            <h2 className="font-serif text-3xl font-bold">{t("howTitle")}</h2>
             <p className="mt-2 text-muted-foreground">{t("howSubtitle")}</p>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -103,7 +133,7 @@ function HomeContent() {
       {/* Why AI */}
       <section className="bg-muted/30 py-20">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-center text-3xl font-bold">{ft("whyAI")}</h2>
+          <h2 className="text-center font-serif text-3xl font-bold">{ft("whyAI")}</h2>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <WhyCard
               icon="🎯"
@@ -128,13 +158,13 @@ function HomeContent() {
       {/* CTA */}
       <section className="py-20">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="text-3xl font-bold">{t("ctaTitle")}</h2>
+          <h2 className="font-serif text-3xl font-bold">{t("ctaTitle")}</h2>
           <p className="mt-3 text-lg text-muted-foreground">
             {t("ctaSubtitle")}
           </p>
           <Link
             href="/download"
-            className="mt-8 inline-block rounded-full bg-primary px-10 py-3.5 text-base font-semibold text-white shadow-lg transition hover:bg-primary-dark"
+            className="mt-8 inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-10 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl hover:shadow-primary/40"
           >
             {t("ctaCta")}
           </Link>
@@ -145,12 +175,14 @@ function HomeContent() {
 }
 
 function FeatureCard({
+  image,
   icon,
   title,
   description,
   href,
   cta,
 }: {
+  image?: string;
   icon: React.ReactNode;
   title: string;
   description: string;
@@ -158,20 +190,33 @@ function FeatureCard({
   cta: string;
 }) {
   return (
-    <div className="group rounded-2xl border border-border bg-card p-6 transition hover:border-primary/40 hover:shadow-lg">
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-        {icon}
+    <div className="group overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
+      {image && (
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover transition duration-300 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
+        </div>
+      )}
+      <div className="p-6">
+        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+          {icon}
+        </div>
+        <h3 className="text-lg font-semibold">{title}</h3>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+          {description}
+        </p>
+        <Link
+          href={href}
+          className="mt-4 inline-flex items-center text-sm font-medium text-primary transition group-hover:underline"
+        >
+          {cta} &rarr;
+        </Link>
       </div>
-      <h3 className="text-lg font-semibold">{title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-        {description}
-      </p>
-      <Link
-        href={href}
-        className="mt-4 inline-flex items-center text-sm font-medium text-primary transition group-hover:underline"
-      >
-        {cta} &rarr;
-      </Link>
     </div>
   );
 }
@@ -187,10 +232,10 @@ function StepCard({
 }) {
   return (
     <div className="text-center">
-      <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-xl font-bold text-white">
+      <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary to-gold text-xl font-bold text-white shadow-md shadow-primary/20">
         {number}
       </div>
-      <h3 className="text-lg font-semibold">{title}</h3>
+      <h3 className="font-serif text-lg font-semibold">{title}</h3>
       <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
     </div>
   );
@@ -228,3 +273,11 @@ function FaceIcon() {
     </svg>
   );
 }
+
+const SHOWCASE_IMAGES = [
+  { src: "/images/showcase_skin.jpg", alt: "Skin Analysis" },
+  { src: "/images/showcase_eyes.jpg", alt: "Eye Makeup" },
+  { src: "/images/showcase_blush.jpg", alt: "Blush Analysis" },
+  { src: "/images/showcase_lips.jpg", alt: "Lip Color" },
+  { src: "/images/showcase_looks.jpg", alt: "Overall Looks" },
+];

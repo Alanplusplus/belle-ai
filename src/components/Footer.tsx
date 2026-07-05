@@ -15,8 +15,9 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <Link href="/" className="text-xl font-bold tracking-tight">
-              Belle<span className="text-primary">AI</span>
+            <Link href="/" className="flex items-center gap-1.5">
+              <span className="font-serif text-2xl font-semibold tracking-tight text-foreground">Belle</span>
+              <span className="rounded-md bg-gradient-to-r from-primary to-accent px-1.5 py-0.5 text-xs font-bold uppercase tracking-wider text-white">AI</span>
             </Link>
             <p className="mt-2 text-sm text-muted-foreground">
               {ft("tagline")}

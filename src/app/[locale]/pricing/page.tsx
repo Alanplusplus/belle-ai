@@ -26,7 +26,7 @@ export default function PricingPage() {
     <section className="py-20">
       <div className="mx-auto max-w-5xl px-4">
         <div className="text-center">
-          <h1 className="text-4xl font-bold">{t("title")}</h1>
+          <h1 className="font-serif text-4xl font-bold">{t("title")}</h1>
           <p className="mt-3 text-lg text-muted-foreground">{t("subtitle")}</p>
         </div>
 

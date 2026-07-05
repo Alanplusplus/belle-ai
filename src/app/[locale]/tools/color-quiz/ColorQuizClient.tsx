@@ -4,146 +4,91 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
-interface Question {
-  id: string;
-  question: string;
-  options: { label: string; scores: Record<string, number> }[];
-}
-
-const QUESTIONS: Question[] = [
-  {
-    id: "vein",
-    question: "Look at the veins on your inner wrist. What color are they?",
-    options: [
-      { label: "Blue or purple", scores: { cool: 2 } },
-      { label: "Green", scores: { warm: 2 } },
-      { label: "Mix of blue and green", scores: { neutral: 2 } },
-    ],
-  },
-  {
-    id: "jewelry",
-    question: "Which metal jewelry looks better on you?",
-    options: [
-      { label: "Silver or platinum", scores: { cool: 2 } },
-      { label: "Gold", scores: { warm: 2 } },
-      { label: "Both look equally good", scores: { neutral: 2 } },
-    ],
-  },
-  {
-    id: "sunReaction",
-    question: "When you spend time in the sun, your skin tends to:",
-    options: [
-      { label: "Burn easily, rarely tan", scores: { cool: 1, light: 1 } },
-      { label: "Burn first, then tan", scores: { cool: 1 } },
-      { label: "Tan easily, rarely burn", scores: { warm: 1, deep: 1 } },
-      { label: "Tan very quickly and deeply", scores: { warm: 1, deep: 2 } },
-    ],
-  },
-  {
-    id: "whiteVsCream",
-    question: "Hold a pure white and an ivory/cream fabric next to your face. Which is more flattering?",
-    options: [
-      { label: "Pure white – it brightens my face", scores: { cool: 2, bright: 1 } },
-      { label: "Ivory/cream – it warms my complexion", scores: { warm: 2, soft: 1 } },
-      { label: "Hard to tell, both seem fine", scores: { neutral: 1 } },
-    ],
-  },
-  {
-    id: "eyeColor",
-    question: "What best describes your natural eye color?",
-    options: [
-      { label: "Light blue, light gray, or light green", scores: { light: 2, cool: 1 } },
-      { label: "Dark brown or black", scores: { deep: 2 } },
-      { label: "Hazel, amber, or warm brown", scores: { warm: 1, soft: 1 } },
-      { label: "Blue-gray, cool brown, or dark gray", scores: { cool: 1 } },
-    ],
-  },
-  {
-    id: "hairColor",
-    question: "What is your natural (undyed) hair color?",
-    options: [
-      { label: "Blonde or light brown", scores: { light: 2 } },
-      { label: "Auburn, red, or golden brown", scores: { warm: 2 } },
-      { label: "Dark brown", scores: { deep: 1, soft: 1 } },
-      { label: "Black or blue-black", scores: { deep: 2, cool: 1 } },
-      { label: "Ash brown or mousy brown", scores: { cool: 1, soft: 1 } },
-    ],
-  },
-  {
-    id: "contrast",
-    question: "Look at the contrast between your skin, hair, and eyes. Is it:",
-    options: [
-      { label: "High contrast (e.g., dark hair + light skin)", scores: { bright: 2, deep: 1 } },
-      { label: "Medium contrast", scores: { neutral: 1 } },
-      { label: "Low contrast (everything is similar in depth)", scores: { soft: 2, light: 1 } },
-    ],
-  },
-  {
-    id: "blush",
-    question: "When you blush or exercise, your cheeks turn:",
-    options: [
-      { label: "Pink or rosy", scores: { cool: 1 } },
-      { label: "Peach or apricot", scores: { warm: 1 } },
-      { label: "I rarely visibly blush", scores: { deep: 1 } },
-    ],
-  },
-];
-
-type Season = "spring" | "summer" | "autumn" | "winter";
-
-interface SeasonResult {
-  season: Season;
-  title: string;
-  description: string;
-  colors: string[];
-  bestColors: string;
-  avoidColors: string;
-}
-
-const SEASON_RESULTS: Record<Season, SeasonResult> = {
-  spring: {
-    season: "spring",
-    title: "Spring",
-    description:
-      "You have warm undertones with a light, bright overall appearance. Your best colors are warm, clear, and lively – think golden yellows, coral, warm greens, and peach.",
-    colors: ["#F5C16C", "#FF6B6B", "#6BCB77", "#FBBF77", "#FF9A76", "#4ECDC4"],
-    bestColors: "Coral, peach, warm pink, golden yellow, turquoise, warm green",
-    avoidColors: "Black, dark navy, cool gray, burgundy, icy pastels",
-  },
-  summer: {
-    season: "summer",
-    title: "Summer",
-    description:
-      "You have cool undertones with a soft, muted overall appearance. Your best colors are cool, gentle, and elegant – think dusty rose, lavender, soft blue, and sage.",
-    colors: ["#B5C7D3", "#D4A5B9", "#C8B6D9", "#96ADC8", "#A8B5A0", "#C4ADA0"],
-    bestColors: "Lavender, dusty rose, powder blue, soft teal, mauve, sage green",
-    avoidColors: "Orange, bright yellow, warm red, black, warm brown",
-  },
-  autumn: {
-    season: "autumn",
-    title: "Autumn",
-    description:
-      "You have warm undertones with a rich, muted overall appearance. Your best colors are warm, earthy, and deep – think rust, olive, mustard, and terracotta.",
-    colors: ["#C87533", "#8B6914", "#6B4226", "#556B2F", "#CD853F", "#8B4513"],
-    bestColors: "Rust, olive, mustard, terracotta, warm brown, forest green",
-    avoidColors: "Pastel pink, icy blue, bright white, fuchsia, cool gray",
-  },
-  winter: {
-    season: "winter",
-    title: "Winter",
-    description:
-      "You have cool undertones with a high-contrast, vivid overall appearance. Your best colors are bold, clear, and dramatic – think true red, emerald, royal blue, and black.",
-    colors: ["#FF1493", "#00BFFF", "#7CFC00", "#1C1C3A", "#C71585", "#008B8B"],
-    bestColors: "True red, royal blue, emerald, black, pure white, fuchsia",
-    avoidColors: "Warm brown, orange, muted tones, camel, warm beige",
-  },
-};
-
 export function ColorQuizClient() {
   const t = useTranslations("quiz");
+  const cq = useTranslations("colorQuiz");
   const [currentQ, setCurrentQ] = useState(-1);
   const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [result, setResult] = useState<SeasonResult | null>(null);
+  const [result, setResult] = useState<{ season: string; scores: Record<string, number> } | null>(null);
+
+  const questions: { id: string; question: string; options: { label: string; scores: Record<string, number> }[] }[] = [
+    {
+      id: "vein",
+      question: cq("q1"),
+      options: [
+        { label: cq("q1a"), scores: { cool: 2 } },
+        { label: cq("q1b"), scores: { warm: 2 } },
+        { label: cq("q1c"), scores: { neutral: 2 } },
+      ],
+    },
+    {
+      id: "jewelry",
+      question: cq("q2"),
+      options: [
+        { label: cq("q2a"), scores: { cool: 2 } },
+        { label: cq("q2b"), scores: { warm: 2 } },
+        { label: cq("q2c"), scores: { neutral: 2 } },
+      ],
+    },
+    {
+      id: "sunReaction",
+      question: cq("q3"),
+      options: [
+        { label: cq("q3a"), scores: { cool: 1, light: 1 } },
+        { label: cq("q3b"), scores: { cool: 1 } },
+        { label: cq("q3c"), scores: { warm: 1, deep: 1 } },
+        { label: cq("q3d"), scores: { warm: 1, deep: 2 } },
+      ],
+    },
+    {
+      id: "whiteVsCream",
+      question: cq("q4"),
+      options: [
+        { label: cq("q4a"), scores: { cool: 2, bright: 1 } },
+        { label: cq("q4b"), scores: { warm: 2, soft: 1 } },
+        { label: cq("q4c"), scores: { neutral: 1 } },
+      ],
+    },
+    {
+      id: "eyeColor",
+      question: cq("q5"),
+      options: [
+        { label: cq("q5a"), scores: { light: 2, cool: 1 } },
+        { label: cq("q5b"), scores: { deep: 2 } },
+        { label: cq("q5c"), scores: { warm: 1, soft: 1 } },
+        { label: cq("q5d"), scores: { cool: 1 } },
+      ],
+    },
+    {
+      id: "hairColor",
+      question: cq("q6"),
+      options: [
+        { label: cq("q6a"), scores: { light: 2 } },
+        { label: cq("q6b"), scores: { warm: 2 } },
+        { label: cq("q6c"), scores: { deep: 1, soft: 1 } },
+        { label: cq("q6d"), scores: { deep: 2, cool: 1 } },
+        { label: cq("q6e"), scores: { cool: 1, soft: 1 } },
+      ],
+    },
+    {
+      id: "contrast",
+      question: cq("q7"),
+      options: [
+        { label: cq("q7a"), scores: { bright: 2, deep: 1 } },
+        { label: cq("q7b"), scores: { neutral: 1 } },
+        { label: cq("q7c"), scores: { soft: 2, light: 1 } },
+      ],
+    },
+    {
+      id: "blush",
+      question: cq("q8"),
+      options: [
+        { label: cq("q8a"), scores: { cool: 1 } },
+        { label: cq("q8b"), scores: { warm: 1 } },
+        { label: cq("q8c"), scores: { deep: 1 } },
+      ],
+    },
+  ];
 
   function handleAnswer(scores: Record<string, number>) {
     const newAnswers = { ...answers };
@@ -152,7 +97,7 @@ export function ColorQuizClient() {
     }
     setAnswers(newAnswers);
 
-    if (currentQ < QUESTIONS.length - 1) {
+    if (currentQ < questions.length - 1) {
       setCurrentQ(currentQ + 1);
     } else {
       calculateResult(newAnswers);
@@ -165,16 +110,13 @@ export function ColorQuizClient() {
     const light = scores.light || 0;
     const deep = scores.deep || 0;
 
-    const isWarm = warm > cool;
-    const isLight = light >= deep;
-
-    let season: Season;
-    if (isWarm && isLight) season = "spring";
-    else if (!isWarm && isLight) season = "summer";
-    else if (isWarm && !isLight) season = "autumn";
+    let season: string;
+    if (warm > cool && light >= deep) season = "spring";
+    else if (cool >= warm && light >= deep) season = "summer";
+    else if (warm > cool && deep > light) season = "autumn";
     else season = "winter";
 
-    setResult(SEASON_RESULTS[season]);
+    setResult({ season, scores });
   }
 
   function reset() {
@@ -184,16 +126,19 @@ export function ColorQuizClient() {
   }
 
   if (result) {
+    const season = result.season;
+    const colors = SEASON_COLORS[season as keyof typeof SEASON_COLORS];
+
     return (
       <section className="py-20">
         <div className="mx-auto max-w-2xl px-4">
           <div className="rounded-2xl border border-primary/30 bg-card p-8 text-center">
             <p className="text-sm font-medium text-primary">{t("resultTitle")}</p>
-            <h1 className="mt-2 text-4xl font-bold">{result.title}</h1>
-            <p className="mt-4 text-muted-foreground">{result.description}</p>
+            <h1 className="mt-2 text-4xl font-bold">{cq(`result_${season}_title`)}</h1>
+            <p className="mt-4 text-muted-foreground">{cq(`result_${season}_desc`)}</p>
 
             <div className="mt-6 flex justify-center gap-2">
-              {result.colors.map((color) => (
+              {colors.map((color) => (
                 <div
                   key={color}
                   className="h-10 w-10 rounded-full border border-border"
@@ -205,15 +150,15 @@ export function ColorQuizClient() {
             <div className="mt-6 grid gap-4 text-left sm:grid-cols-2">
               <div className="rounded-xl bg-green-50 p-4 dark:bg-green-950/20">
                 <p className="text-xs font-semibold text-green-700 dark:text-green-400">
-                  Best Colors
+                  {cq("bestColors")}
                 </p>
-                <p className="mt-1 text-sm">{result.bestColors}</p>
+                <p className="mt-1 text-sm">{cq(`result_${season}_best`)}</p>
               </div>
               <div className="rounded-xl bg-red-50 p-4 dark:bg-red-950/20">
                 <p className="text-xs font-semibold text-red-700 dark:text-red-400">
-                  Colors to Avoid
+                  {cq("avoidColors")}
                 </p>
-                <p className="mt-1 text-sm">{result.avoidColors}</p>
+                <p className="mt-1 text-sm">{cq(`result_${season}_avoid`)}</p>
               </div>
             </div>
 
@@ -246,12 +191,9 @@ export function ColorQuizClient() {
     return (
       <section className="py-20">
         <div className="mx-auto max-w-2xl px-4 text-center">
-          <h1 className="text-4xl font-bold">
-            Free Seasonal Color Analysis Quiz
-          </h1>
+          <h1 className="text-4xl font-bold">{cq("title")}</h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            Answer {QUESTIONS.length} quick questions to discover whether
-            you&apos;re a Spring, Summer, Autumn, or Winter color type.
+            {cq("description")}
           </p>
           <button
             onClick={() => setCurrentQ(0)}
@@ -260,27 +202,27 @@ export function ColorQuizClient() {
             {t("startQuiz")}
           </button>
           <p className="mt-4 text-sm text-muted-foreground">
-            No account required · Takes about 2 minutes
+            {cq("noAccount")}
           </p>
         </div>
       </section>
     );
   }
 
-  const q = QUESTIONS[currentQ];
+  const q = questions[currentQ];
 
   return (
     <section className="py-20">
       <div className="mx-auto max-w-2xl px-4">
         <div className="mb-6 flex items-center justify-between text-sm text-muted-foreground">
           <span>
-            {t("question")} {currentQ + 1} / {QUESTIONS.length}
+            {t("question")} {currentQ + 1} / {questions.length}
           </span>
           <div className="h-2 flex-1 mx-4 rounded-full bg-muted">
             <div
               className="h-2 rounded-full bg-primary transition-all"
               style={{
-                width: `${((currentQ + 1) / QUESTIONS.length) * 100}%`,
+                width: `${((currentQ + 1) / questions.length) * 100}%`,
               }}
             />
           </div>
@@ -312,3 +254,10 @@ export function ColorQuizClient() {
     </section>
   );
 }
+
+const SEASON_COLORS = {
+  spring: ["#F5C16C", "#FF6B6B", "#6BCB77", "#FBBF77", "#FF9A76", "#4ECDC4"],
+  summer: ["#B5C7D3", "#D4A5B9", "#C8B6D9", "#96ADC8", "#A8B5A0", "#C4ADA0"],
+  autumn: ["#C87533", "#8B6914", "#6B4226", "#556B2F", "#CD853F", "#8B4513"],
+  winter: ["#FF1493", "#00BFFF", "#7CFC00", "#1C1C3A", "#C71585", "#008B8B"],
+};

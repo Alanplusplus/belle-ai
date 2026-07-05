@@ -3,6 +3,7 @@ import { getPostBySlug, getAllSlugs } from "@/lib/blog";
 import { Link } from "@/i18n/navigation";
 import { SITE_URL } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
@@ -49,6 +50,13 @@ export default async function BlogPostPage({
   const post = getPostBySlug(locale, slug);
   if (!post) notFound();
 
+  return <BlogPostContent post={post} />;
+}
+
+function BlogPostContent({ post }: { post: { date: string; readingTime: string; title: string; tags: string[]; content: string } }) {
+  const t = useTranslations("blog");
+  const ft = useTranslations("features");
+
   return (
     <article className="py-16">
       <div className="mx-auto max-w-3xl px-4">
@@ -56,14 +64,14 @@ export default async function BlogPostPage({
           href="/blog"
           className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground"
         >
-          &larr; Back to Blog
+          &larr; {t("backToBlog")}
         </Link>
 
         <header className="mt-6">
           <div className="flex items-center gap-3 text-sm text-muted-foreground">
             <time>{post.date}</time>
             <span>·</span>
-            <span>{post.readingTime} min read</span>
+            <span>{post.readingTime} {t("minRead")}</span>
           </div>
           <h1 className="mt-3 text-3xl font-bold sm:text-4xl">{post.title}</h1>
           {post.tags.length > 0 && (
@@ -86,17 +94,16 @@ export default async function BlogPostPage({
 
         <div className="mt-16 rounded-2xl border border-primary/30 bg-primary/5 p-6 text-center">
           <h3 className="text-lg font-bold">
-            Want to try AI color analysis yourself?
+            {t("ctaTitle")}
           </h3>
           <p className="mt-2 text-sm text-muted-foreground">
-            Upload one photo and get a magazine-level beauty report in 60
-            seconds.
+            {t("ctaDescription")}
           </p>
           <Link
             href="/download"
             className="mt-4 inline-block rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark"
           >
-            Download Belle AI – Free
+            {ft("downloadApp")}
           </Link>
         </div>
       </div>

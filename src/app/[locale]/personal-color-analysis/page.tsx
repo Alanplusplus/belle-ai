@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { SITE_URL } from "@/lib/constants";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -29,7 +30,7 @@ export default function PersonalColorAnalysisPage() {
     <>
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
-          <h1 className="text-4xl font-bold sm:text-5xl">{t("title")}</h1>
+          <h1 className="font-serif text-4xl font-bold sm:text-5xl">{t("title")}</h1>
           <p className="mt-3 text-lg text-primary">{t("subtitle")}</p>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
             {t("description")}
@@ -37,7 +38,7 @@ export default function PersonalColorAnalysisPage() {
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
               href="/download"
-              className="rounded-full bg-primary px-8 py-3 font-semibold text-white transition hover:bg-primary-dark"
+              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
             >
               {ft("tryItFree")}
             </Link>
@@ -53,17 +54,25 @@ export default function PersonalColorAnalysisPage() {
 
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-2xl font-bold">{ft("reportIncludes")}</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {items.map((item, i) => (
+          <h2 className="text-2xl font-bold text-center">{ft("reportIncludes")}</h2>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            {COLOR_DIMENSIONS.map((dim, i) => (
               <div
-                key={i}
-                className="flex items-start gap-3 rounded-xl border border-border bg-card p-4"
+                key={dim.image}
+                className="group overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg"
               >
-                <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary">
-                  {i + 1}
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <Image
+                    src={dim.image}
+                    alt={items[i] || dim.image}
+                    fill
+                    className="object-cover transition duration-300 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
                 </div>
-                <p className="text-sm">{item}</p>
+                <div className="p-4">
+                  <p className="text-sm font-medium">{items[i]}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -98,7 +107,7 @@ export default function PersonalColorAnalysisPage() {
           <div className="mt-10 text-center">
             <Link
               href="/download"
-              className="inline-block rounded-full bg-primary px-8 py-3 font-semibold text-white transition hover:bg-primary-dark"
+              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
             >
               {ft("downloadApp")}
             </Link>
@@ -108,6 +117,13 @@ export default function PersonalColorAnalysisPage() {
     </>
   );
 }
+
+const COLOR_DIMENSIONS = [
+  { image: "/images/dim_color_season.png" },
+  { image: "/images/dim_color_palette.png" },
+  { image: "/images/dim_color_makeup.png" },
+  { image: "/images/dim_color_clothing.png" },
+];
 
 const SEASONS = [
   { name: "Light Spring", colors: ["#F9E4B7", "#FBBF77", "#E8A87C"] },

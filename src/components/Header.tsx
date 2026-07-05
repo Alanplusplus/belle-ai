@@ -28,8 +28,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="text-xl font-bold tracking-tight">
-          Belle<span className="text-primary">AI</span>
+        <Link href="/" className="flex items-center gap-1.5">
+          <span className="font-serif text-2xl font-semibold tracking-tight text-foreground">Belle</span>
+          <span className="rounded-md bg-gradient-to-r from-primary to-accent px-1.5 py-0.5 text-xs font-bold uppercase tracking-wider text-white">AI</span>
         </Link>
 
         {/* Desktop nav */}
@@ -69,7 +70,7 @@ export function Header() {
 
           <Link
             href="/download"
-            className="ml-3 rounded-full bg-primary px-4 py-2 text-sm font-medium text-white transition hover:bg-primary-dark"
+            className="ml-3 rounded-full bg-gradient-to-r from-primary to-primary-dark px-4 py-2 text-sm font-medium text-white shadow-md shadow-primary/20 transition hover:shadow-lg hover:shadow-primary/30"
           >
             {t("download")}
           </Link>
@@ -160,7 +161,7 @@ export function Header() {
           </div>
           <Link
             href="/download"
-            className="mt-3 block w-full rounded-full bg-primary py-2.5 text-center text-sm font-medium text-white"
+            className="mt-3 block w-full rounded-full bg-gradient-to-r from-primary to-primary-dark py-2.5 text-center text-sm font-medium text-white shadow-md shadow-primary/20"
             onClick={() => setMobileOpen(false)}
           >
             {t("download")}
