@@ -6,6 +6,7 @@ import { useLocale } from "next-intl";
 import { routing, type Locale } from "@/i18n/routing";
 import { LOCALE_NAMES } from "@/lib/constants";
 import { useState } from "react";
+import Image from "next/image";
 
 export function Header() {
   const t = useTranslations("nav");
@@ -28,9 +29,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-1.5">
-          <span className="font-serif text-2xl font-semibold tracking-tight text-foreground">Belle</span>
-          <span className="rounded-md bg-gradient-to-r from-primary to-accent px-1.5 py-0.5 text-xs font-bold uppercase tracking-wider text-white">AI</span>
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/icon-192.png"
+            alt="Belle AI"
+            width={32}
+            height={32}
+            className="rounded-lg"
+          />
+          <span className="font-serif text-xl font-semibold tracking-tight text-foreground">Belle</span>
+          <span className="rounded bg-gradient-to-r from-primary to-accent px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">AI</span>
         </Link>
 
         {/* Desktop nav */}
