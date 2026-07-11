@@ -82,6 +82,28 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
 
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Belle AI - Personal Color Analysis",
+    url: SITE_URL,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${SITE_URL}/en/blog?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Belle AI",
+    url: SITE_URL,
+    sameAs: [],
+    description:
+      "AI-powered personal color analysis, makeup analysis, and face shape analysis app.",
+  };
+
   return (
     <html
       lang={locale}
@@ -89,6 +111,16 @@ export default async function LocaleLayout({
       style={{ colorScheme: "light" }}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col font-sans">
         <NextIntlClientProvider messages={messages}>
           <Header />

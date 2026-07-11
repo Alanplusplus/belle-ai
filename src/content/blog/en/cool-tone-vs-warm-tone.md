@@ -1,6 +1,6 @@
 ---
-title: "Cool Tone vs Warm Tone: 5 Easy Ways to Find Your Undertone"
-description: "Learn how to determine whether you have cool, warm, or neutral undertones with 5 simple at-home tests. Your undertone is the key to choosing flattering colors."
+title: "Cool Tone vs Warm Tone: 5 Easy Tests to Find Your Undertone (With Photos)"
+description: "Still unsure if you're cool or warm toned? These 5 simple at-home tests take under 2 minutes and work for ALL skin tones. The vein test alone is 70% accurate."
 date: "2026-07-02"
 tags: ["undertone", "cool tone", "warm tone", "skin tone", "color analysis"]
 ---
@@ -114,7 +114,7 @@ The color temperature that makes your skin look brighter and more even is your u
 
 If you've tried all five tests and still aren't sure, you likely have a neutral undertone — which is actually great news. Neutral undertones have the most flexibility with color choices.
 
-For a definitive answer, consider AI-powered color analysis. Apps like Belle AI use computer vision to analyze the actual color values in your skin, providing objective results that aren't affected by subjective perception or lighting conditions.
+For a definitive answer, consider [AI-powered color analysis](/en/personal-color-analysis). Apps like Belle AI use computer vision to analyze the actual color values in your skin, providing objective results that aren't affected by subjective perception or lighting conditions. You can also try our [free color quiz](/en/tools/color-quiz) for a quick estimate.
 
 ## Frequently Asked Questions
 
@@ -126,3 +126,10 @@ Overtone (surface tone) is what you see on the surface — it can be affected by
 
 **I have olive skin — what's my undertone?**
 Olive skin has a greenish cast that can be either warm-olive or cool-olive. The green hue itself is separate from your underlying warm/cool undertone. Many olive-skinned people are actually neutral or cool.
+
+## Related Articles
+
+- [Am I Warm or Cool Toned? 7 Proven Methods](/en/blog/how-to-determine-skin-undertone) — A deeper dive into undertone determination
+- [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Complete style guide for cool-toned people
+- [Personal Color Analysis: 12 Types Explained](/en/blog/personal-color-analysis-guide) — Go beyond undertone to find your full seasonal type
+- [Face Shape & Hairstyle Guide](/en/blog/face-shape-hairstyle-guide) — Find the best hairstyle for your face shape

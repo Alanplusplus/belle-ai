@@ -1,8 +1,8 @@
 ---
-title: "Complete Guide to Personal Color Analysis: 12 Seasonal Types Explained"
-description: "Learn everything about personal color analysis, from the 4-season system to the detailed 12-season classification. Find your best colors for makeup, fashion, and more."
+title: "Personal Color Analysis Guide: All 12 Seasonal Types Explained (Free Quiz Inside)"
+description: "The complete guide to personal color analysis with the 12-season system. Learn your color type, best makeup shades, and wardrobe colors. Includes free AI color quiz."
 date: "2026-07-04"
-tags: ["personal color analysis", "seasonal color", "color theory", "beauty guide"]
+tags: ["personal color analysis", "seasonal color", "color theory", "beauty guide", "12 season color analysis"]
 ---
 
 ## What Is Personal Color Analysis?
@@ -148,3 +148,11 @@ No. Every season and subtype can be found across all ethnicities. A common misco
 
 **Is personal color analysis scientifically proven?**
 Color harmony theory has roots in color science and has been used in art and design for centuries. While the specific seasonal framework is a practical application rather than hard science, the underlying principles of undertone harmonics are well-established.
+
+## Related Articles
+
+- [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Start with the basics of undertone
+- [Am I Warm or Cool Toned? 7 Methods](/en/blog/how-to-determine-skin-undertone) — Detailed undertone determination guide
+- [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Style guide for cool types
+- [Face Shape & Hairstyle Guide](/en/blog/face-shape-hairstyle-guide) — Pair your color analysis with face shape advice
+- [Take the Free Color Quiz](/en/tools/color-quiz) — Get your seasonal type in 2 minutes

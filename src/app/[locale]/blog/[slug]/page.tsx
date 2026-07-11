@@ -50,7 +50,39 @@ export default async function BlogPostPage({
   const post = getPostBySlug(locale, slug);
   if (!post) notFound();
 
-  return <BlogPostContent post={post} />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Organization",
+      name: "Belle AI",
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Belle AI",
+      url: SITE_URL,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/${locale}/blog/${slug}`,
+    },
+    inLanguage: locale,
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BlogPostContent post={post} />
+    </>
+  );
 }
 
 function BlogPostContent({ post }: { post: { date: string; readingTime: string; title: string; tags: string[]; content: string } }) {
@@ -121,15 +153,27 @@ function simpleMarkdownToHtml(md: string): string {
   html = html.replace(/^### (.+)$/gm, "<h3>$1</h3>");
   html = html.replace(/^## (.+)$/gm, "<h2>$1</h2>");
   html = html.replace(/^# (.+)$/gm, "<h1>$1</h1>");
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
   html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
   html = html.replace(/\*(.+?)\*/g, "<em>$1</em>");
   html = html.replace(/^\- (.+)$/gm, "<li>$1</li>");
   html = html.replace(/(<li>.*<\/li>\n?)+/g, (match) => `<ul>${match}</ul>`);
+  // Tables
+  html = html.replace(/^(\|.+\|)\n\|[-| :]+\|\n((?:\|.+\|\n?)*)/gm, (_match, header: string, body: string) => {
+    const ths = header.split("|").filter((c: string) => c.trim()).map((c: string) => `<th>${c.trim()}</th>`).join("");
+    const rows = body.trim().split("\n").map((row: string) => {
+      const tds = row.split("|").filter((c: string) => c.trim()).map((c: string) => `<td>${c.trim()}</td>`).join("");
+      return `<tr>${tds}</tr>`;
+    }).join("");
+    return `<table><thead><tr>${ths}</tr></thead><tbody>${rows}</tbody></table>`;
+  });
   html = html.replace(/\n\n/g, "</p><p>");
   html = `<p>${html}</p>`;
   html = html.replace(/<p><h([1-3])>/g, "<h$1>");
   html = html.replace(/<\/h([1-3])><\/p>/g, "</h$1>");
   html = html.replace(/<p><ul>/g, "<ul>");
   html = html.replace(/<\/ul><\/p>/g, "</ul>");
+  html = html.replace(/<p><table>/g, "<table>");
+  html = html.replace(/<\/table><\/p>/g, "</table>");
   return html;
 }
