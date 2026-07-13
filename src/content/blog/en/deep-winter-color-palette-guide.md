@@ -3,10 +3,10 @@ title: "Deep Winter Color Palette: Your Complete Style Guide for 2026"
 description: "Everything you need to know about the Deep Winter season — from signature colors to makeup, wardrobe building, jewelry metals, and how to tell Deep Winter apart from similar seasons."
 date: "2026-07-13"
 tags: ["deep winter", "personal color analysis", "color palette", "style guide", "seasonal color"]
-image: "/images/blog/deep-winter-color-palette.png"
+image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
-![Deep Winter Color Palette](/images/blog/deep-winter-color-palette.png)
+![Deep Winter Color Palette](/images/blog/deep-winter-color-palette.webp)
 
 ## What Makes Someone a Deep Winter?
 
@@ -47,6 +47,8 @@ Versatile shades that are always flattering:
 - Dark chocolate brown (only if it's cool-leaning)
 - Deep olive (the cool version, not golden-olive)
 - Pine green
+
+![Deep Winter Color Palette Swatches](/images/blog/deep-winter-palette-swatches.webp)
 
 ### Accent Colors
 
