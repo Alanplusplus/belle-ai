@@ -3,7 +3,10 @@ title: "冷皮暖皮怎么判断？5个简单自测方法"
 description: "学会用5种简单方法在家判断自己是冷皮、暖皮还是中性皮。色调是选对颜色的关键。"
 date: "2026-07-02"
 tags: ["冷皮暖皮", "色调", "肤色", "色彩分析"]
+image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
+
+![冷皮暖皮对比](/images/blog/cool-tone-vs-warm-tone.webp)
 
 ## 什么是冷暖色调？
 

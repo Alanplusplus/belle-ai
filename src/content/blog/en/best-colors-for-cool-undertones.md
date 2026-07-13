@@ -3,7 +3,10 @@ title: "Best Colors for Cool Undertones: Your Complete Style Guide"
 description: "Discover the most flattering colors for cool undertones in makeup, clothing, hair, and accessories. Includes specific shade recommendations for cool-toned skin."
 date: "2026-07-09"
 tags: ["cool undertone", "cool skin", "color palette", "style guide", "fashion"]
+image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
+
+![Best Colors for Cool Undertones](/images/blog/best-colors-for-cool-undertones.webp)
 
 ## Your Cool Undertone Color Palette
 

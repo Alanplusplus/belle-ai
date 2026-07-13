@@ -3,7 +3,10 @@ title: "퍼스널 컬러 진단 완벽 가이드: 12가지 시즌 타입 해설"
 description: "퍼스널 컬러 진단의 4시즌·12타입 분류를 상세히 설명합니다. 봄 웜톤, 여름 쿨톤, 가을 웜톤, 겨울 쿨톤의 특징과 메이크업·패션 활용법을 안내합니다."
 date: "2026-07-04"
 tags: ["퍼스널컬러", "봄웜톤", "여름쿨톤", "12타입", "퍼스널컬러진단"]
+image: "/images/blog/personal-color-analysis-guide.webp"
 ---
+
+![퍼스널 컬러 분석 가이드](/images/blog/personal-color-analysis-guide.webp)
 
 ## 퍼스널 컬러 진단이란?
 

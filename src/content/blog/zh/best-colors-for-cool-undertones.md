@@ -3,7 +3,10 @@ title: "冷皮适合什么颜色？冷色调穿搭化妆完全指南"
 description: "冷皮人群的最佳穿搭配色、化妆色号和发色推荐。详细的冷色调色彩方案，让你的肤色更加透亮。"
 date: "2026-07-09"
 tags: ["冷皮", "冷色调", "穿搭配色", "化妆", "适合颜色"]
+image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
+
+![冷皮适合的颜色](/images/blog/best-colors-for-cool-undertones.webp)
 
 ## 冷皮色彩方案总览
 

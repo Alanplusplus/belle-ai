@@ -3,7 +3,10 @@ title: "7种脸型适合的发型完整对照表"
 description: "详解鹅蛋脸、圆脸、方脸、心形脸、长脸、菱形脸、三角脸各自最适合和最该避免的发型，含刘海指南。"
 date: "2026-07-03"
 tags: ["脸型", "发型", "美妆指南", "发型推荐"]
+image: "/images/blog/face-shape-hairstyle-guide.webp"
 ---
+
+![脸型与发型指南](/images/blog/face-shape-hairstyle-guide.webp)
 
 ## 为什么脸型决定了发型选择？
 

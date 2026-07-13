@@ -3,7 +3,10 @@ title: "Personal Color Analysis Guide: All 12 Seasonal Types Explained (Free Qui
 description: "The complete guide to personal color analysis with the 12-season system. Learn your color type, best makeup shades, and wardrobe colors. Includes free AI color quiz."
 date: "2026-07-04"
 tags: ["personal color analysis", "seasonal color", "color theory", "beauty guide", "12 season color analysis"]
+image: "/images/blog/personal-color-analysis-guide.webp"
 ---
+
+![Personal Color Analysis Guide](/images/blog/personal-color-analysis-guide.webp)
 
 ## What Is Personal Color Analysis?
 

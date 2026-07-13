@@ -3,7 +3,10 @@ title: "为什么网上的色彩测试总是测不准？（以及正确的做法
 description: "对测试结果前后矛盾感到困惑？了解色彩分析测试不可靠的5个科学原因，以及更准确的个人色彩诊断方法。"
 date: "2026-07-12"
 tags: ["色彩测试", "个人色彩分析", "四季色彩", "美妆", "AI测色"]
+image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
+
+![色彩测试为什么不准](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
 
 ## 色彩测试的问题
 

@@ -3,7 +3,10 @@ title: "パーソナルカラー診断完全ガイド：12タイプの特徴と�
 description: "パーソナルカラー診断の4シーズン・12タイプ分類を徹底解説。イエベ春、ブルベ夏、イエベ秋、ブルベ冬の特徴と、メイク・ファッションへの活用方法を紹介。"
 date: "2026-07-04"
 tags: ["パーソナルカラー診断", "イエベ春", "ブルベ夏", "12タイプ", "似合う色"]
+image: "/images/blog/personal-color-analysis-guide.webp"
 ---
+
+![パーソナルカラー診断ガイド](/images/blog/personal-color-analysis-guide.webp)
 
 ## パーソナルカラー診断とは？
 

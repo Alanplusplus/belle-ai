@@ -3,7 +3,10 @@ title: "顔型別似合う髪型ガイド：7つの顔型に最適なヘアス�
 description: "丸顔、面長、ベース型、逆三角形など7つの顔型別に、似合う髪型・前髪・分け目を徹底解説。AI顔型診断で自分に合うヘアスタイルを見つけよう。"
 date: "2026-07-03"
 tags: ["顔型", "似合う髪型", "ヘアスタイル", "顔型診断", "美容"]
+image: "/images/blog/face-shape-hairstyle-guide.webp"
 ---
+
+![顔型別ヘアスタイルガイド](/images/blog/face-shape-hairstyle-guide.webp)
 
 ## なぜ顔型が髪型選びに重要なのか
 

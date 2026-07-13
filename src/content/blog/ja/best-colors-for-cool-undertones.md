@@ -3,7 +3,10 @@ title: "ブルベに似合う色：完全スタイルガイド"
 description: "ブルーベース（ブルベ）肌に最も映えるメイク、服、ヘアカラー、アクセサリーの色を紹介。ブルベのための具体的なカラー提案付き。"
 date: "2026-07-09"
 tags: ["ブルベ", "パーソナルカラー", "カラーパレット", "スタイルガイド", "ファッション"]
+image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
+
+![ブルベに似合う色](/images/blog/best-colors-for-cool-undertones.webp)
 
 ## ブルベのカラーパレット
 

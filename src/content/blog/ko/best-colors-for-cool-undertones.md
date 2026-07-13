@@ -3,7 +3,10 @@ title: "쿨톤에게 어울리는 색상: 완벽 스타일 가이드"
 description: "쿨톤 피부에 가장 잘 어울리는 메이크업, 의류, 헤어, 액세서리 색상을 알아보세요. 쿨톤을 위한 구체적인 색상 추천이 포함되어 있습니다."
 date: "2026-07-09"
 tags: ["쿨톤", "퍼스널 컬러", "색상 팔레트", "스타일 가이드", "패션"]
+image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
+
+![쿨톤에게 어울리는 색상](/images/blog/best-colors-for-cool-undertones.webp)
 
 ## 쿨톤 색상 팔레트
 

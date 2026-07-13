@@ -3,7 +3,10 @@ title: "온라인 퍼스널 컬러 테스트가 정확하지 않은 이유 (그�
 description: "테스트 결과가 매번 달라서 혼란스러우신가요? 퍼스널 컬러 테스트가 신뢰할 수 없는 5가지 과학적 이유와 더 정확한 대안을 알아보세요."
 date: "2026-07-12"
 tags: ["컬러 테스트", "퍼스널 컬러", "시즌 컬러", "뷰티", "AI 퍼스널 컬러"]
+image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
+
+![퍼스널 컬러 테스트가 틀린 이유](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
 
 ## 퍼스널 컬러 테스트의 문제
 

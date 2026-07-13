@@ -3,7 +3,10 @@ title: "Am I Warm or Cool Toned? The Definitive Undertone Guide (2026)"
 description: "Not sure if you're warm or cool toned? Use our complete guide with 7 proven methods to determine your skin undertone accurately at home. Includes photo examples and expert tips."
 date: "2026-07-08"
 tags: ["undertone", "warm or cool", "skin tone", "color analysis", "beauty tips"]
+image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
+
+![How to Determine Skin Undertone](/images/blog/how-to-determine-skin-undertone.webp)
 
 ## The Quick Answer
 

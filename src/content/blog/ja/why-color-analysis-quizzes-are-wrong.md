@@ -3,7 +3,10 @@ title: "オンラインのパーソナルカラー診断が当たらない理由
 description: "診断結果が毎回違って困っていませんか？パーソナルカラー診断テストが信頼できない5つの科学的理由と、より正確な代替方法を解説します。"
 date: "2026-07-12"
 tags: ["カラー診断", "パーソナルカラー", "シーズンカラー", "ビューティー", "AIカラー診断"]
+image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
+
+![パーソナルカラー診断が当たらない理由](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
 
 ## パーソナルカラー診断テストの問題
 

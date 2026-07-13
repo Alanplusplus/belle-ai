@@ -3,7 +3,10 @@ title: "쿨톤 vs 웜톤: 내 피부 톤을 알 수 있는 5가지 간단한 방
 description: "집에서 간단하게 쿨톤, 웜톤, 뉴트럴톤을 구분하는 5가지 자가진단 방법을 소개합니다. 언더톤은 퍼스널 컬러의 핵심입니다."
 date: "2026-07-02"
 tags: ["쿨톤", "웜톤", "언더톤", "피부톤", "퍼스널컬러"]
+image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
+
+![쿨톤 vs 웜톤](/images/blog/cool-tone-vs-warm-tone.webp)
 
 ## 언더톤이란?
 

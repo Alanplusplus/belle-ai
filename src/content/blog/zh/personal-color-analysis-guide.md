@@ -3,7 +3,10 @@ title: "个人色彩分析完全指南：12季型人详解"
 description: "全面了解个人色彩分析，从四季型分类到12季型精准诊断。找到最适合你的妆容、穿搭和发色方案。"
 date: "2026-07-04"
 tags: ["个人色彩分析", "四季型人", "色彩理论", "美妆指南"]
+image: "/images/blog/personal-color-analysis-guide.webp"
 ---
+
+![个人色彩分析指南](/images/blog/personal-color-analysis-guide.webp)
 
 ## 什么是个人色彩分析？
 

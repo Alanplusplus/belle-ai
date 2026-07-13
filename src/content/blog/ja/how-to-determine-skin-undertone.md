@@ -3,7 +3,10 @@ title: "イエベ？ブルベ？アンダートーン判別完全ガイド（202
 description: "自分がイエベかブルベか分からない？7つの実証済み方法で正確にアンダートーンを判別する完全ガイド。専門家のコツと写真例付き。"
 date: "2026-07-08"
 tags: ["アンダートーン", "イエベ ブルベ", "肌色", "パーソナルカラー", "美容"]
+image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
+
+![アンダートーンの見分け方](/images/blog/how-to-determine-skin-undertone.webp)
 
 ## クイックアンサー
 

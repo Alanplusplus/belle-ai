@@ -3,7 +3,10 @@ title: "얼굴형별 어울리는 헤어스타일 완벽 가이드"
 description: "둥근형, 긴형, 각진형, 하트형 등 7가지 얼굴형별 어울리는 헤어스타일, 앞머리, 가르마를 총정리합니다. AI 얼굴형 진단으로 나에게 맞는 스타일을 찾아보세요."
 date: "2026-07-03"
 tags: ["얼굴형", "헤어스타일", "뷰티가이드", "헤어", "얼굴형 진단"]
+image: "/images/blog/face-shape-hairstyle-guide.webp"
 ---
+
+![얼굴형별 헤어스타일 가이드](/images/blog/face-shape-hairstyle-guide.webp)
 
 ## 왜 얼굴형이 헤어스타일 선택에 중요한가
 

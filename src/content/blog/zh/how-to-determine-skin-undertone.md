@@ -3,7 +3,10 @@ title: "怎么判断自己是冷皮还是暖皮？7种最准确的方法（2026�
 description: "不确定自己是冷皮还是暖皮？用7种经过验证的方法在家准确判断肤色色调。附照片示例和专家建议。"
 date: "2026-07-08"
 tags: ["冷皮暖皮", "色调判断", "肤色", "美妆", "穿搭"]
+image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
+
+![判断肤色色调](/images/blog/how-to-determine-skin-undertone.webp)
 
 ## 快速判断法
 

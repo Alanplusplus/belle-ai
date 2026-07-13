@@ -3,7 +3,10 @@ title: "나는 웜톤일까 쿨톤일까? 언더톤 판별 완벽 가이드 (202
 description: "웜톤인지 쿨톤인지 모르겠다면? 7가지 검증된 방법으로 정확하게 피부 언더톤을 판별하는 완벽 가이드. 전문가 팁과 사진 예시 포함."
 date: "2026-07-08"
 tags: ["언더톤", "웜톤 쿨톤", "피부톤", "퍼스널 컬러", "뷰티 팁"]
+image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
+
+![피부 언더톤 판별법](/images/blog/how-to-determine-skin-undertone.webp)
 
 ## 빠른 답변
 

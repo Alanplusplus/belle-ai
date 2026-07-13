@@ -3,7 +3,10 @@ title: "Cool Tone vs Warm Tone: 5 Easy Tests to Find Your Undertone (With Photos
 description: "Still unsure if you're cool or warm toned? These 5 simple at-home tests take under 2 minutes and work for ALL skin tones. The vein test alone is 70% accurate."
 date: "2026-07-02"
 tags: ["undertone", "cool tone", "warm tone", "skin tone", "color analysis"]
+image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
+
+![Cool Tone vs Warm Tone](/images/blog/cool-tone-vs-warm-tone.webp)
 
 ## What Is an Undertone?
 
