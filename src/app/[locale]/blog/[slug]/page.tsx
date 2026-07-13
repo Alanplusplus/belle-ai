@@ -5,6 +5,8 @@ import { SITE_URL } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -144,36 +146,22 @@ function BlogPostContent({ post }: { post: { date: string; readingTime: string; 
 }
 
 function MarkdownContent({ content }: { content: string }) {
-  const html = simpleMarkdownToHtml(content);
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
-}
-
-function simpleMarkdownToHtml(md: string): string {
-  let html = md;
-  html = html.replace(/^### (.+)$/gm, "<h3>$1</h3>");
-  html = html.replace(/^## (.+)$/gm, "<h2>$1</h2>");
-  html = html.replace(/^# (.+)$/gm, "<h1>$1</h1>");
-  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
-  html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
-  html = html.replace(/\*(.+?)\*/g, "<em>$1</em>");
-  html = html.replace(/^\- (.+)$/gm, "<li>$1</li>");
-  html = html.replace(/(<li>.*<\/li>\n?)+/g, (match) => `<ul>${match}</ul>`);
-  // Tables
-  html = html.replace(/^(\|.+\|)\n\|[-| :]+\|\n((?:\|.+\|\n?)*)/gm, (_match, header: string, body: string) => {
-    const ths = header.split("|").filter((c: string) => c.trim()).map((c: string) => `<th>${c.trim()}</th>`).join("");
-    const rows = body.trim().split("\n").map((row: string) => {
-      const tds = row.split("|").filter((c: string) => c.trim()).map((c: string) => `<td>${c.trim()}</td>`).join("");
-      return `<tr>${tds}</tr>`;
-    }).join("");
-    return `<table><thead><tr>${ths}</tr></thead><tbody>${rows}</tbody></table>`;
-  });
-  html = html.replace(/\n\n/g, "</p><p>");
-  html = `<p>${html}</p>`;
-  html = html.replace(/<p><h([1-3])>/g, "<h$1>");
-  html = html.replace(/<\/h([1-3])><\/p>/g, "</h$1>");
-  html = html.replace(/<p><ul>/g, "<ul>");
-  html = html.replace(/<\/ul><\/p>/g, "</ul>");
-  html = html.replace(/<p><table>/g, "<table>");
-  html = html.replace(/<\/table><\/p>/g, "</table>");
-  return html;
+  return (
+    <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
+      components={{
+        img: ({ src, alt }) => (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={src} alt={alt || ""} className="rounded-lg" loading="lazy" />
+        ),
+        a: ({ href, children }) => (
+          <a href={href} className="text-primary hover:underline">
+            {children}
+          </a>
+        ),
+      }}
+    >
+      {content}
+    </ReactMarkdown>
+  );
 }
