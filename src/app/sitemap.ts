@@ -3,6 +3,8 @@ import { routing } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/constants";
 import { getAllSlugs } from "@/lib/blog";
 
+const COMPETITOR_SLUGS = ["dressika", "colorwise", "professional-stylist"];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = routing.locales;
 
@@ -21,6 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   for (const page of staticPages) {
+    const isBlogIndex = page === "/blog";
+    const isHome = page === "";
     for (const locale of locales) {
       const alternates: Record<string, string> = {};
       for (const l of locales) {
@@ -31,15 +35,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: `${SITE_URL}/${locale}${page}`,
         lastModified: new Date(),
-        changeFrequency: page === "" ? "weekly" : "monthly",
-        priority: page === "" ? 1 : 0.8,
+        changeFrequency: isHome || isBlogIndex ? "daily" : "weekly",
+        priority: isHome ? 1 : 0.8,
+        alternates: { languages: alternates },
+      });
+    }
+  }
+
+  for (const slug of COMPETITOR_SLUGS) {
+    for (const locale of locales) {
+      const alternates: Record<string, string> = {};
+      for (const l of locales) {
+        alternates[l] = `${SITE_URL}/${l}/vs/${slug}`;
+      }
+      alternates["x-default"] = `${SITE_URL}/en/vs/${slug}`;
+
+      entries.push({
+        url: `${SITE_URL}/${locale}/vs/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.7,
         alternates: { languages: alternates },
       });
     }
   }
 
   for (const locale of locales) {
-    const slugs = getAllSlugs(locale);
+    let slugs: string[] = [];
+    try {
+      slugs = getAllSlugs(locale);
+    } catch {
+      slugs = [];
+    }
     for (const slug of slugs) {
       const alternates: Record<string, string> = {};
       for (const l of locales) {
@@ -50,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: `${SITE_URL}/${locale}/blog/${slug}`,
         lastModified: new Date(),
-        changeFrequency: "monthly",
+        changeFrequency: "weekly",
         priority: 0.6,
         alternates: { languages: alternates },
       });
