@@ -122,7 +122,7 @@ function BlogPostContent({ post }: { post: { date: string; readingTime: string; 
           )}
         </header>
 
-        <div className="prose prose-neutral mt-10 max-w-none dark:prose-invert prose-headings:font-bold prose-a:text-primary">
+        <div className="prose prose-neutral mt-10 max-w-none prose-headings:font-bold prose-a:text-primary">
           <MarkdownContent content={post.content} />
         </div>
 
