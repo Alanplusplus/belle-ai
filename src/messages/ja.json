@@ -18,7 +18,9 @@
     "colorQuizTitle": "無料パーソナルカラー診断クイズ",
     "colorQuizDescription": "無料クイズであなたのシーズンカラータイプを発見。スプリング、サマー、オータム、ウィンターのどれ？",
     "faceQuizTitle": "無料顔型診断クイズ",
-    "faceQuizDescription": "6つの簡単な質問に答えて、あなたの顔型を判定しヘアスタイルの提案を受けましょう。"
+    "faceQuizDescription": "6つの簡単な質問に答えて、あなたの顔型を判定しヘアスタイルの提案を受けましょう。",
+    "tryTitle": "AIビューティー分析を無料でオンライン体験",
+    "tryDescription": "写真をアップロードして、60秒で雑誌レベルのAIビューティーレポートを取得。初回分析は無料。"
   },
   "nav": {
     "home": "ホーム",
@@ -31,7 +33,8 @@
     "faceQuiz": "顔型診断クイズ",
     "blog": "ブログ",
     "pricing": "料金",
-    "download": "ダウンロード"
+    "download": "ダウンロード",
+    "tryNow": "今すぐ試す"
   },
   "home": {
     "heroTitle": "あなただけの",
@@ -305,6 +308,33 @@
     "backToBlog": "ブログに戻る",
     "ctaTitle": "AIカラー診断を試してみませんか？",
     "ctaDescription": "写真1枚をアップロードして、60秒で雑誌レベルのビューティーレポートを取得。"
+  },
+  "tryPage": {
+    "title": "AIビューティー分析を試す",
+    "subtitle": "素顔の写真をアップロードして、60秒でパーソナライズドレポートを取得",
+    "type_makeup": "メイク",
+    "type_color_analysis": "カラー",
+    "type_face_shape": "顔型・髪型",
+    "uploadTitle": "写真をアップロード",
+    "uploadHint": "JPG、PNG、WebP · 最大10MB · 素顔の写真を推奨",
+    "changePhoto": "写真を変更",
+    "generate": "レポートを生成",
+    "signInToGenerate": "Googleでログインして生成",
+    "signInNote": "Googleでログインして無料分析を取得",
+    "signingIn": "ログイン中…",
+    "uploading": "アップロード中…",
+    "generating": "AIが写真を分析中… 約60秒かかります",
+    "resultTitle": "あなたの分析レポート",
+    "fileTooLarge": "ファイルが大きすぎます。10MB以下の画像を選択してください。",
+    "quotaInfo": "無料分析 残り{remaining}/{total}回",
+    "noQuotaTitle": "無料分析を使用済み",
+    "noQuotaDesc": "ウェブ版の無料分析を使い切りました。アプリをダウンロードして、さらに多くの機能と分析をお楽しみください！",
+    "downloadApp": "Belle AIアプリをダウンロード",
+    "noQuotaHint": "アプリで1回無料分析 · 週間・年間プランあり",
+    "tipsTitle": "最良の結果を得るためのヒント",
+    "tip1": "自然光の素顔セルフィーを使用 — メイクなし、フィルターなし",
+    "tip2": "カメラを正面から見て、髪を顔から後ろに寄せる",
+    "tip3": "影を避け、顔に均一な照明を当てる"
   },
   "footer": {
     "tagline": "AI搭載パーソナルビューティー分析",

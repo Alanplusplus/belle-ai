@@ -18,7 +18,9 @@
     "colorQuizTitle": "Bài Kiểm Tra Màu Theo Mùa Miễn Phí – Tìm Màu Của Bạn",
     "colorQuizDescription": "Làm bài kiểm tra miễn phí để khám phá màu theo mùa của bạn. Xem bạn thuộc Xuân, Hạ, Thu hay Đông.",
     "faceQuizTitle": "Bài Kiểm Tra Dáng Mặt Miễn Phí – Dáng Mặt Của Bạn Là Gì?",
-    "faceQuizDescription": "Trả lời 6 câu hỏi đơn giản để xác định dáng mặt và nhận gợi ý kiểu tóc."
+    "faceQuizDescription": "Trả lời 6 câu hỏi đơn giản để xác định dáng mặt và nhận gợi ý kiểu tóc.",
+    "tryTitle": "Dùng thử Phân tích Làm đẹp AI – Miễn phí Trực tuyến",
+    "tryDescription": "Tải lên ảnh và nhận báo cáo làm đẹp AI đẳng cấp tạp chí trong 60 giây. Lần phân tích đầu tiên miễn phí."
   },
   "nav": {
     "home": "Trang chủ",
@@ -31,7 +33,8 @@
     "faceQuiz": "Bài kiểm tra dáng mặt",
     "blog": "Blog",
     "pricing": "Bảng giá",
-    "download": "Tải xuống"
+    "download": "Tải xuống",
+    "tryNow": "Dùng thử ngay"
   },
   "home": {
     "heroTitle": "Khám Phá",
@@ -305,6 +308,33 @@
     "backToBlog": "Quay Lại Blog",
     "ctaTitle": "Muốn thử phân tích màu AI?",
     "ctaDescription": "Tải lên một bức ảnh và nhận báo cáo làm đẹp đẳng cấp tạp chí trong 60 giây."
+  },
+  "tryPage": {
+    "title": "Dùng thử Phân tích Làm đẹp AI",
+    "subtitle": "Tải lên ảnh mặt mộc và nhận báo cáo cá nhân hóa trong 60 giây",
+    "type_makeup": "Trang điểm",
+    "type_color_analysis": "Màu sắc",
+    "type_face_shape": "Mặt & Tóc",
+    "uploadTitle": "Tải lên ảnh của bạn",
+    "uploadHint": "JPG, PNG hoặc WebP · Tối đa 10MB · Nên dùng ảnh mặt mộc",
+    "changePhoto": "Đổi ảnh",
+    "generate": "Tạo báo cáo của tôi",
+    "signInToGenerate": "Đăng nhập Google để tạo",
+    "signInNote": "Đăng nhập Google để nhận phân tích miễn phí",
+    "signingIn": "Đang đăng nhập…",
+    "uploading": "Đang tải lên…",
+    "generating": "AI đang phân tích ảnh của bạn… Mất khoảng 60 giây",
+    "resultTitle": "Báo cáo phân tích của bạn",
+    "fileTooLarge": "Tệp quá lớn. Vui lòng chọn ảnh dưới 10MB.",
+    "quotaInfo": "Còn {remaining}/{total} lần phân tích miễn phí",
+    "noQuotaTitle": "Đã dùng hết lượt phân tích miễn phí",
+    "noQuotaDesc": "Bạn đã dùng hết lượt phân tích web miễn phí. Tải app để có thêm tính năng và lượt phân tích!",
+    "downloadApp": "Tải App Belle AI",
+    "noQuotaHint": "1 lần phân tích miễn phí trong app · Có gói tuần và năm",
+    "tipsTitle": "Mẹo để có kết quả tốt nhất",
+    "tip1": "Dùng ảnh selfie mặt mộc dưới ánh sáng tự nhiên — không trang điểm, không filter",
+    "tip2": "Nhìn thẳng vào camera và buộc tóc ra khỏi mặt",
+    "tip3": "Tránh bóng đổ và đảm bảo ánh sáng đều trên khuôn mặt"
   },
   "footer": {
     "tagline": "Phân tích làm đẹp cá nhân bằng AI",

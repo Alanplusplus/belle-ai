@@ -18,7 +18,9 @@
     "colorQuizTitle": "Ücretsiz Mevsimsel Renk Analizi Testi – Renk Tipinizi Bulun",
     "colorQuizDescription": "Mevsimsel renk tipinizi keşfetmek için ücretsiz testimizi yapın. İlkbahar, Yaz, Sonbahar veya Kış tipinden hangisi olduğunuzu öğrenin.",
     "faceQuizTitle": "Ücretsiz Yüz Şekli Testi – Yüz Şekliniz Nedir?",
-    "faceQuizDescription": "Yüz şeklinizi belirlemek ve saç stili önerileri almak için 6 basit soruyu yanıtlayın."
+    "faceQuizDescription": "Yüz şeklinizi belirlemek ve saç stili önerileri almak için 6 basit soruyu yanıtlayın.",
+    "tryTitle": "Yapay Zeka Güzellik Analizini Deneyin – Ücretsiz Çevrimiçi",
+    "tryDescription": "Bir fotoğraf yükleyin ve 60 saniyede dergi kalitesinde yapay zeka güzellik raporu alın. İlk analiz ücretsiz."
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -31,7 +33,8 @@
     "faceQuiz": "Yüz Şekli Testi",
     "blog": "Blog",
     "pricing": "Fiyatlandırma",
-    "download": "İndir"
+    "download": "İndir",
+    "tryNow": "Hemen Dene"
   },
   "home": {
     "heroTitle": "Mükemmel",
@@ -305,6 +308,33 @@
     "backToBlog": "Bloga Dön",
     "ctaTitle": "Yapay zeka renk analizini kendiniz denemek ister misiniz?",
     "ctaDescription": "Bir fotoğraf yükleyin ve 60 saniyede dergi kalitesinde güzellik raporu alın."
+  },
+  "tryPage": {
+    "title": "Yapay Zeka Güzellik Analizini Deneyin",
+    "subtitle": "Makyajsız bir fotoğraf yükleyin ve 60 saniyede kişiselleştirilmiş raporunuzu alın",
+    "type_makeup": "Makyaj",
+    "type_color_analysis": "Renk",
+    "type_face_shape": "Yüz ve Saç",
+    "uploadTitle": "Fotoğrafınızı Yükleyin",
+    "uploadHint": "JPG, PNG veya WebP · Maks. 10MB · Makyajsız fotoğraf önerilir",
+    "changePhoto": "Fotoğrafı değiştir",
+    "generate": "Raporumu Oluştur",
+    "signInToGenerate": "Oluşturmak için Google ile Giriş Yap",
+    "signInNote": "Ücretsiz analiziniz için Google ile giriş yapın",
+    "signingIn": "Giriş yapılıyor…",
+    "uploading": "Yükleniyor…",
+    "generating": "Yapay zeka fotoğrafınızı analiz ediyor… Bu işlem yaklaşık 60 saniye sürer",
+    "resultTitle": "Analiz Raporunuz",
+    "fileTooLarge": "Dosya çok büyük. Lütfen 10MB'den küçük bir görsel seçin.",
+    "quotaInfo": "{total} ücretsiz analizden {remaining} kaldı",
+    "noQuotaTitle": "Ücretsiz Analiz Kullanıldı",
+    "noQuotaDesc": "Ücretsiz web analizinizi kullandınız. Daha fazla özellik ve analiz için uygulamayı indirin!",
+    "downloadApp": "Belle AI Uygulamasını İndir",
+    "noQuotaHint": "Uygulamada 1 ücretsiz analiz · Haftalık ve yıllık planlar mevcut",
+    "tipsTitle": "En İyi Sonuçlar İçin İpuçları",
+    "tip1": "Doğal ışıkta makyajsız bir selfie kullanın — makyaj yok, filtre yok",
+    "tip2": "Saçınızı yüzünüzden çekerek doğrudan kameraya bakın",
+    "tip3": "Gölgelerden kaçının ve yüzünüzde eşit aydınlatma sağlayın"
   },
   "footer": {
     "tagline": "Yapay zeka destekli kişisel güzellik analizi",

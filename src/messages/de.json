@@ -18,7 +18,9 @@
     "colorQuizTitle": "Kostenloser saisonaler Farbtyp-Quiz – Finde deinen Farbtyp",
     "colorQuizDescription": "Mache unseren kostenlosen Quiz und entdecke deinen saisonalen Farbtyp. Bist du Frühling, Sommer, Herbst oder Winter?",
     "faceQuizTitle": "Kostenloser Gesichtsform-Quiz – Welche Gesichtsform hast du?",
-    "faceQuizDescription": "Beantworte 6 einfache Fragen, um deine Gesichtsform zu bestimmen und Frisurenempfehlungen zu erhalten."
+    "faceQuizDescription": "Beantworte 6 einfache Fragen, um deine Gesichtsform zu bestimmen und Frisurenempfehlungen zu erhalten.",
+    "tryTitle": "KI-Schönheitsanalyse testen – Kostenlos online",
+    "tryDescription": "Lade ein Foto hoch und erhalte in 60 Sekunden einen KI-Schönheitsbericht auf Magazin-Niveau. Die erste Analyse ist kostenlos."
   },
   "nav": {
     "home": "Startseite",
@@ -31,7 +33,8 @@
     "faceQuiz": "Gesichtsform-Quiz",
     "blog": "Blog",
     "pricing": "Preise",
-    "download": "Download"
+    "download": "Download",
+    "tryNow": "Jetzt testen"
   },
   "home": {
     "heroTitle": "Entdecke deine",
@@ -305,6 +308,33 @@
     "backToBlog": "Zurück zum Blog",
     "ctaTitle": "Möchtest du die KI-Farbanalyse selbst ausprobieren?",
     "ctaDescription": "Lade ein Foto hoch und erhalte in 60 Sekunden einen Schönheitsbericht auf Magazin-Niveau."
+  },
+  "tryPage": {
+    "title": "KI-Schönheitsanalyse testen",
+    "subtitle": "Lade ein Foto ohne Make-up hoch und erhalte deinen personalisierten Bericht in 60 Sekunden",
+    "type_makeup": "Make-up",
+    "type_color_analysis": "Farbe",
+    "type_face_shape": "Gesicht & Haare",
+    "uploadTitle": "Foto hochladen",
+    "uploadHint": "JPG, PNG oder WebP · Max. 10 MB · Foto ohne Make-up empfohlen",
+    "changePhoto": "Foto ändern",
+    "generate": "Meinen Bericht erstellen",
+    "signInToGenerate": "Mit Google anmelden zum Erstellen",
+    "signInNote": "Melde dich mit Google an, um deine kostenlose Analyse zu erhalten",
+    "signingIn": "Anmeldung läuft…",
+    "uploading": "Wird hochgeladen…",
+    "generating": "KI analysiert dein Foto… Das dauert etwa 60 Sekunden",
+    "resultTitle": "Dein Analysebericht",
+    "fileTooLarge": "Datei zu groß. Bitte wähle ein Bild unter 10 MB.",
+    "quotaInfo": "{remaining} von {total} kostenlosen Analysen verbleibend",
+    "noQuotaTitle": "Kostenlose Analyse aufgebraucht",
+    "noQuotaDesc": "Du hast deine kostenlose Web-Analyse genutzt. Lade die App herunter für mehr Funktionen und Analysen!",
+    "downloadApp": "Belle AI App herunterladen",
+    "noQuotaHint": "1 kostenlose Analyse in der App · Wöchentliche und jährliche Tarife verfügbar",
+    "tipsTitle": "Tipps für beste Ergebnisse",
+    "tip1": "Nutze ein Selfie ohne Make-up bei natürlichem Licht — ohne Make-up und Filter",
+    "tip2": "Schaue direkt in die Kamera mit zurückgezogenem Haar vom Gesicht",
+    "tip3": "Vermeide Schatten und sorge für gleichmäßige Beleuchtung im Gesicht"
   },
   "footer": {
     "tagline": "KI-gestützte persönliche Schönheitsanalyse",

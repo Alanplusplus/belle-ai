@@ -5,6 +5,7 @@ import { routing, type Locale } from "@/i18n/routing";
 import { Inter, Playfair_Display } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { AuthProvider } from "@/components/AuthProvider";
 import { SITE_URL, APP_STORE_ID } from "@/lib/constants";
 import Script from "next/script";
 import type { Metadata } from "next";
@@ -135,11 +136,13 @@ export default async function LocaleLayout({
         `}
       </Script>
       <body className="min-h-full flex flex-col font-sans">
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </NextIntlClientProvider>
+        <AuthProvider>
+          <NextIntlClientProvider messages={messages}>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </NextIntlClientProvider>
+        </AuthProvider>
       </body>
     </html>
   );

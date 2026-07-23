@@ -18,7 +18,9 @@
     "colorQuizTitle": "Quiz Gratuito di Analisi del Colore Stagionale – Scopri la Tua Tipologia",
     "colorQuizDescription": "Fai il nostro quiz gratuito per scoprire la tua tipologia cromatica stagionale. Scopri se sei Primavera, Estate, Autunno o Inverno.",
     "faceQuizTitle": "Quiz Gratuito sulla Forma del Viso – Qual è la Tua Forma del Viso?",
-    "faceQuizDescription": "Rispondi a 6 semplici domande per determinare la forma del tuo viso e ottenere consigli sulle acconciature."
+    "faceQuizDescription": "Rispondi a 6 semplici domande per determinare la forma del tuo viso e ottenere consigli sulle acconciature.",
+    "tryTitle": "Prova l'Analisi di Bellezza con IA – Gratis Online",
+    "tryDescription": "Carica una foto e ottieni un report di bellezza con IA da rivista in 60 secondi. La prima analisi è gratuita."
   },
   "nav": {
     "home": "Home",
@@ -31,7 +33,8 @@
     "faceQuiz": "Quiz Forma del Viso",
     "blog": "Blog",
     "pricing": "Prezzi",
-    "download": "Scarica"
+    "download": "Scarica",
+    "tryNow": "Prova ora"
   },
   "home": {
     "heroTitle": "Scopri la Tua",
@@ -305,6 +308,33 @@
     "backToBlog": "Torna al Blog",
     "ctaTitle": "Vuoi provare l'analisi del colore con IA?",
     "ctaDescription": "Carica una foto e ottieni un report di bellezza da rivista in 60 secondi."
+  },
+  "tryPage": {
+    "title": "Prova l'Analisi di Bellezza con IA",
+    "subtitle": "Carica una foto senza trucco e ottieni il tuo report personalizzato in 60 secondi",
+    "type_makeup": "Trucco",
+    "type_color_analysis": "Colore",
+    "type_face_shape": "Viso e Capelli",
+    "uploadTitle": "Carica la tua foto",
+    "uploadHint": "JPG, PNG o WebP · Max 10 MB · Foto senza trucco consigliata",
+    "changePhoto": "Cambia foto",
+    "generate": "Genera il mio report",
+    "signInToGenerate": "Accedi con Google per generare",
+    "signInNote": "Accedi con Google per ottenere la tua analisi gratuita",
+    "signingIn": "Accesso in corso…",
+    "uploading": "Caricamento in corso…",
+    "generating": "L'IA sta analizzando la tua foto… Ci vogliono circa 60 secondi",
+    "resultTitle": "Il tuo report di analisi",
+    "fileTooLarge": "File troppo grande. Scegli un'immagine inferiore a 10 MB.",
+    "quotaInfo": "{remaining} di {total} analisi gratuite rimanenti",
+    "noQuotaTitle": "Analisi gratuita utilizzata",
+    "noQuotaDesc": "Hai utilizzato la tua analisi web gratuita. Scarica l'app per più funzionalità e analisi!",
+    "downloadApp": "Scarica l'App Belle AI",
+    "noQuotaHint": "1 analisi gratuita nell'app · Piani settimanali e annuali disponibili",
+    "tipsTitle": "Consigli per i migliori risultati",
+    "tip1": "Usa un selfie senza trucco con luce naturale — senza trucco né filtri",
+    "tip2": "Guarda direttamente la fotocamera con i capelli tirati indietro dal viso",
+    "tip3": "Evita le ombre e assicura un'illuminazione uniforme sul viso"
   },
   "footer": {
     "tagline": "Analisi di bellezza personale con IA",

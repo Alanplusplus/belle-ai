@@ -18,7 +18,9 @@
     "colorQuizTitle": "免费四季色彩测试 – 找到你的色彩类型",
     "colorQuizDescription": "做个免费小测试，发现你是春季、夏季、秋季还是冬季型人。",
     "faceQuizTitle": "免费脸型测试 – 你是什么脸型？",
-    "faceQuizDescription": "回答6个简单问题，判断你的脸型并获得发型推荐。"
+    "faceQuizDescription": "回答6个简单问题，判断你的脸型并获得发型推荐。",
+    "tryTitle": "免费在线 AI 美妆分析",
+    "tryDescription": "上传一张照片，60秒获得杂志级AI美妆报告。首次分析免费。"
   },
   "nav": {
     "home": "首页",
@@ -31,7 +33,8 @@
     "faceQuiz": "脸型测试",
     "blog": "博客",
     "pricing": "价格",
-    "download": "下载"
+    "download": "下载",
+    "tryNow": "立即体验"
   },
   "home": {
     "heroTitle": "发现你的",
@@ -305,6 +308,33 @@
     "backToBlog": "返回博客",
     "ctaTitle": "想亲自体验AI色彩分析吗？",
     "ctaDescription": "上传一张照片，60秒获得杂志级AI美妆报告。"
+  },
+  "tryPage": {
+    "title": "AI 美妆分析",
+    "subtitle": "上传一张素颜照，60秒获得你的专属美妆报告",
+    "type_makeup": "妆容分析",
+    "type_color_analysis": "色彩分析",
+    "type_face_shape": "脸型发型",
+    "uploadTitle": "上传你的照片",
+    "uploadHint": "JPG、PNG 或 WebP · 最大 10MB · 建议使用素颜照",
+    "changePhoto": "更换照片",
+    "generate": "生成我的报告",
+    "signInToGenerate": "登录 Google 账号生成报告",
+    "signInNote": "登录 Google 账号即可免费获取一次分析",
+    "signingIn": "登录中…",
+    "uploading": "上传中…",
+    "generating": "AI 正在分析你的照片… 大约需要 60 秒",
+    "resultTitle": "你的分析报告",
+    "fileTooLarge": "文件过大，请选择 10MB 以内的图片。",
+    "quotaInfo": "剩余 {remaining}/{total} 次免费分析",
+    "noQuotaTitle": "免费次数已用完",
+    "noQuotaDesc": "你已使用完网页版免费分析次数。下载 App 可获得更多功能和分析次数！",
+    "downloadApp": "下载 Belle AI App",
+    "noQuotaHint": "App 内含 1 次免费分析 · 提供周订阅和年订阅方案",
+    "tipsTitle": "获取最佳效果的小技巧",
+    "tip1": "使用自然光下的素颜自拍——不化妆、不加滤镜",
+    "tip2": "正面朝向镜头，将头发拨到耳后",
+    "tip3": "避免阴影，确保面部光线均匀"
   },
   "footer": {
     "tagline": "AI驱动的个人美学分析",

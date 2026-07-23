@@ -77,10 +77,10 @@ export function Header() {
           </div>
 
           <Link
-            href="/download"
+            href="/try"
             className="ml-3 rounded-full bg-gradient-to-r from-primary to-primary-dark px-4 py-2 text-sm font-medium text-white shadow-md shadow-primary/20 transition hover:shadow-lg hover:shadow-primary/30"
           >
-            {t("download")}
+            {t("tryNow")}
           </Link>
         </nav>
 
@@ -168,11 +168,11 @@ export function Header() {
             ))}
           </div>
           <Link
-            href="/download"
+            href="/try"
             className="mt-3 block w-full rounded-full bg-gradient-to-r from-primary to-primary-dark py-2.5 text-center text-sm font-medium text-white shadow-md shadow-primary/20"
             onClick={() => setMobileOpen(false)}
           >
-            {t("download")}
+            {t("tryNow")}
           </Link>
         </div>
       )}

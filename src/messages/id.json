@@ -18,7 +18,9 @@
     "colorQuizTitle": "Kuis Analisis Warna Musiman Gratis – Temukan Tipe Warna Anda",
     "colorQuizDescription": "Ikuti kuis gratis kami untuk menemukan tipe warna musiman Anda. Cari tahu apakah Anda Musim Semi, Panas, Gugur, atau Dingin.",
     "faceQuizTitle": "Kuis Bentuk Wajah Gratis – Apa Bentuk Wajah Anda?",
-    "faceQuizDescription": "Jawab 6 pertanyaan sederhana untuk menentukan bentuk wajah dan mendapatkan rekomendasi gaya rambut."
+    "faceQuizDescription": "Jawab 6 pertanyaan sederhana untuk menentukan bentuk wajah dan mendapatkan rekomendasi gaya rambut.",
+    "tryTitle": "Coba Analisis Kecantikan AI – Gratis Online",
+    "tryDescription": "Unggah foto dan dapatkan laporan kecantikan AI setara majalah dalam 60 detik. Analisis pertama gratis."
   },
   "nav": {
     "home": "Beranda",
@@ -31,7 +33,8 @@
     "faceQuiz": "Kuis Bentuk Wajah",
     "blog": "Blog",
     "pricing": "Harga",
-    "download": "Unduh"
+    "download": "Unduh",
+    "tryNow": "Coba Sekarang"
   },
   "home": {
     "heroTitle": "Temukan",
@@ -305,6 +308,33 @@
     "backToBlog": "Kembali ke Blog",
     "ctaTitle": "Ingin mencoba analisis warna AI sendiri?",
     "ctaDescription": "Unggah satu foto dan dapatkan laporan kecantikan setara majalah dalam 60 detik."
+  },
+  "tryPage": {
+    "title": "Coba Analisis Kecantikan AI",
+    "subtitle": "Unggah foto wajah tanpa makeup dan dapatkan laporan personal Anda dalam 60 detik",
+    "type_makeup": "Makeup",
+    "type_color_analysis": "Warna",
+    "type_face_shape": "Wajah & Rambut",
+    "uploadTitle": "Unggah Foto Anda",
+    "uploadHint": "JPG, PNG, atau WebP · Maks. 10MB · Disarankan foto tanpa makeup",
+    "changePhoto": "Ganti foto",
+    "generate": "Buat Laporan Saya",
+    "signInToGenerate": "Masuk dengan Google untuk Membuat",
+    "signInNote": "Masuk dengan Google untuk mendapatkan analisis gratis Anda",
+    "signingIn": "Sedang masuk…",
+    "uploading": "Sedang mengunggah…",
+    "generating": "AI sedang menganalisis foto Anda… Proses ini membutuhkan sekitar 60 detik",
+    "resultTitle": "Laporan Analisis Anda",
+    "fileTooLarge": "File terlalu besar. Pilih gambar di bawah 10MB.",
+    "quotaInfo": "{remaining} dari {total} analisis gratis tersisa",
+    "noQuotaTitle": "Analisis Gratis Telah Digunakan",
+    "noQuotaDesc": "Anda telah menggunakan analisis web gratis. Unduh aplikasi untuk fitur dan analisis lebih banyak!",
+    "downloadApp": "Unduh Aplikasi Belle AI",
+    "noQuotaHint": "1 analisis gratis di aplikasi · Paket mingguan dan tahunan tersedia",
+    "tipsTitle": "Tips untuk Hasil Terbaik",
+    "tip1": "Gunakan selfie tanpa makeup dengan cahaya alami — tanpa makeup dan filter",
+    "tip2": "Hadapkan wajah langsung ke kamera dengan rambut disisir ke belakang",
+    "tip3": "Hindari bayangan dan pastikan pencahayaan merata di wajah"
   },
   "footer": {
     "tagline": "Analisis kecantikan personal berbasis AI",

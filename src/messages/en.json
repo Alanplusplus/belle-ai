@@ -18,7 +18,9 @@
     "colorQuizTitle": "Free Seasonal Color Analysis Quiz – Find Your Color Type",
     "colorQuizDescription": "Take our free quiz to discover your seasonal color type. Find out if you're a Spring, Summer, Autumn, or Winter.",
     "faceQuizTitle": "Free Face Shape Quiz – What's Your Face Shape?",
-    "faceQuizDescription": "Answer 6 simple questions to determine your face shape and get hairstyle recommendations."
+    "faceQuizDescription": "Answer 6 simple questions to determine your face shape and get hairstyle recommendations.",
+    "tryTitle": "Try AI Beauty Analysis – Free Online",
+    "tryDescription": "Upload a photo and get a magazine-level AI beauty report in 60 seconds. Free for the first analysis."
   },
   "nav": {
     "home": "Home",
@@ -31,7 +33,8 @@
     "faceQuiz": "Face Shape Quiz",
     "blog": "Blog",
     "pricing": "Pricing",
-    "download": "Download"
+    "download": "Download",
+    "tryNow": "Try Now"
   },
   "home": {
     "heroTitle": "Discover Your",
@@ -305,6 +308,33 @@
     "backToBlog": "Back to Blog",
     "ctaTitle": "Want to try AI color analysis yourself?",
     "ctaDescription": "Upload one photo and get a magazine-level beauty report in 60 seconds."
+  },
+  "tryPage": {
+    "title": "Try AI Beauty Analysis",
+    "subtitle": "Upload a bare-face photo and get your personalized report in 60 seconds",
+    "type_makeup": "Makeup",
+    "type_color_analysis": "Color",
+    "type_face_shape": "Face & Hair",
+    "uploadTitle": "Upload Your Photo",
+    "uploadHint": "JPG, PNG or WebP · Max 10MB · Bare-face photo recommended",
+    "changePhoto": "Change photo",
+    "generate": "Generate My Report",
+    "signInToGenerate": "Sign in with Google to Generate",
+    "signInNote": "Sign in with Google to get your free analysis",
+    "signingIn": "Signing in…",
+    "uploading": "Uploading…",
+    "generating": "AI is analyzing your photo… This takes about 60 seconds",
+    "resultTitle": "Your Analysis Report",
+    "fileTooLarge": "File too large. Please choose an image under 10MB.",
+    "quotaInfo": "{remaining} of {total} free analysis remaining",
+    "noQuotaTitle": "Free Analysis Used",
+    "noQuotaDesc": "You've used your free web analysis. Download the app for more features and analyses!",
+    "downloadApp": "Download Belle AI App",
+    "noQuotaHint": "1 free analysis in app · Weekly & yearly plans available",
+    "tipsTitle": "Tips for Best Results",
+    "tip1": "Use a bare-face selfie in natural light — no makeup, no filters",
+    "tip2": "Face the camera directly with hair pulled back from your face",
+    "tip3": "Avoid shadows and ensure even lighting on your face"
   },
   "footer": {
     "tagline": "AI-powered personal beauty analysis",

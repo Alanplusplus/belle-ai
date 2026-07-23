@@ -18,7 +18,9 @@
     "colorQuizTitle": "무료 퍼스널컬러 진단 퀴즈",
     "colorQuizDescription": "무료 퀴즈로 나의 시즌 컬러 타입을 알아보세요. 봄, 여름, 가을, 겨울 중 어디에 해당할까요?",
     "faceQuizTitle": "무료 얼굴형 테스트",
-    "faceQuizDescription": "간단한 6가지 질문으로 얼굴형을 판별하고 헤어스타일 추천을 받아보세요."
+    "faceQuizDescription": "간단한 6가지 질문으로 얼굴형을 판별하고 헤어스타일 추천을 받아보세요.",
+    "tryTitle": "AI 뷰티 분석 무료 체험 – 온라인",
+    "tryDescription": "사진을 업로드하면 60초 만에 매거진급 AI 뷰티 리포트를 받아보세요. 첫 분석은 무료입니다."
   },
   "nav": {
     "home": "홈",
@@ -31,7 +33,8 @@
     "faceQuiz": "얼굴형 퀴즈",
     "blog": "블로그",
     "pricing": "요금",
-    "download": "다운로드"
+    "download": "다운로드",
+    "tryNow": "지금 체험하기"
   },
   "home": {
     "heroTitle": "나만의",
@@ -305,6 +308,33 @@
     "backToBlog": "블로그로 돌아가기",
     "ctaTitle": "AI 컬러 분석을 직접 체험해보시겠어요?",
     "ctaDescription": "사진 한 장을 업로드하면 60초 만에 매거진급 뷰티 리포트를 받아보세요."
+  },
+  "tryPage": {
+    "title": "AI 뷰티 분석 체험하기",
+    "subtitle": "생얼 사진을 업로드하면 60초 만에 맞춤형 리포트를 받아보세요",
+    "type_makeup": "메이크업",
+    "type_color_analysis": "컬러",
+    "type_face_shape": "얼굴형 & 헤어",
+    "uploadTitle": "사진 업로드",
+    "uploadHint": "JPG, PNG 또는 WebP · 최대 10MB · 생얼 사진 권장",
+    "changePhoto": "사진 변경",
+    "generate": "내 리포트 생성하기",
+    "signInToGenerate": "Google로 로그인하여 생성",
+    "signInNote": "Google로 로그인하면 무료 분석을 받을 수 있습니다",
+    "signingIn": "로그인 중…",
+    "uploading": "업로드 중…",
+    "generating": "AI가 사진을 분석하고 있습니다… 약 60초 소요",
+    "resultTitle": "분석 리포트",
+    "fileTooLarge": "파일이 너무 큽니다. 10MB 이하의 이미지를 선택해 주세요.",
+    "quotaInfo": "무료 분석 {remaining}/{total}회 남음",
+    "noQuotaTitle": "무료 분석 사용 완료",
+    "noQuotaDesc": "웹 무료 분석을 모두 사용하셨습니다. 앱을 다운로드하면 더 많은 기능과 분석을 이용할 수 있습니다!",
+    "downloadApp": "Belle AI 앱 다운로드",
+    "noQuotaHint": "앱에서 1회 무료 분석 · 주간 및 연간 요금제 제공",
+    "tipsTitle": "최상의 결과를 위한 팁",
+    "tip1": "자연광 아래 생얼 셀카를 사용하세요 — 메이크업 없이, 필터 없이",
+    "tip2": "카메라를 정면으로 바라보고 머리카락을 얼굴에서 뒤로 넘기세요",
+    "tip3": "그림자를 피하고 얼굴에 고른 조명이 비치도록 하세요"
   },
   "footer": {
     "tagline": "AI 기반 퍼스널 뷰티 분석",
