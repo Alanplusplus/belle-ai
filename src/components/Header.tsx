@@ -6,14 +6,17 @@ import { useLocale } from "next-intl";
 import { routing, type Locale } from "@/i18n/routing";
 import { LOCALE_NAMES } from "@/lib/constants";
 import { useState } from "react";
+import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 
 export function Header() {
   const t = useTranslations("nav");
   const locale = useLocale() as Locale;
   const pathname = usePathname();
+  const { data: session, status } = useSession();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
 
   const features = [
     { href: "/makeup-analysis", label: t("makeupAnalysis") },
@@ -76,12 +79,57 @@ export function Header() {
             )}
           </div>
 
-          <Link
-            href="/try"
-            className="ml-3 rounded-full bg-gradient-to-r from-primary to-primary-dark px-4 py-2 text-sm font-medium text-white shadow-md shadow-primary/20 transition hover:shadow-lg hover:shadow-primary/30"
-          >
-            {t("tryNow")}
-          </Link>
+          {status === "authenticated" && session.user ? (
+            <div className="relative ml-3">
+              <button
+                onClick={() => setUserMenuOpen(!userMenuOpen)}
+                className="flex items-center gap-2 rounded-full border border-border px-2 py-1 transition hover:bg-muted"
+              >
+                {session.user.image ? (
+                  <img
+                    src={session.user.image}
+                    alt=""
+                    className="h-7 w-7 rounded-full"
+                    referrerPolicy="no-referrer"
+                  />
+                ) : (
+                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
+                    {(session.user.name?.[0] || "U").toUpperCase()}
+                  </div>
+                )}
+                <svg className="h-3 w-3 text-muted-foreground" viewBox="0 0 12 12" fill="currentColor">
+                  <path d="M2 4l4 4 4-4" />
+                </svg>
+              </button>
+              {userMenuOpen && (
+                <div className="absolute right-0 top-full mt-1 min-w-[160px] rounded-lg border border-border bg-card p-1 shadow-lg">
+                  <div className="px-3 py-2 text-xs text-muted-foreground truncate">
+                    {session.user.email}
+                  </div>
+                  <Link
+                    href="/try"
+                    className="block rounded-md px-3 py-2 text-sm hover:bg-muted"
+                    onClick={() => setUserMenuOpen(false)}
+                  >
+                    {t("tryNow")}
+                  </Link>
+                  <button
+                    onClick={() => { setUserMenuOpen(false); signOut(); }}
+                    className="w-full rounded-md px-3 py-2 text-left text-sm text-red-600 hover:bg-muted"
+                  >
+                    {t("signOut")}
+                  </button>
+                </div>
+              )}
+            </div>
+          ) : (
+            <Link
+              href="/try"
+              className="ml-3 rounded-full bg-gradient-to-r from-primary to-primary-dark px-4 py-2 text-sm font-medium text-white shadow-md shadow-primary/20 transition hover:shadow-lg hover:shadow-primary/30"
+            >
+              {t("tryNow")}
+            </Link>
+          )}
         </nav>
 
         {/* Mobile hamburger */}
@@ -167,13 +215,35 @@ export function Header() {
               </a>
             ))}
           </div>
-          <Link
-            href="/try"
-            className="mt-3 block w-full rounded-full bg-gradient-to-r from-primary to-primary-dark py-2.5 text-center text-sm font-medium text-white shadow-md shadow-primary/20"
-            onClick={() => setMobileOpen(false)}
-          >
-            {t("tryNow")}
-          </Link>
+          {status === "authenticated" && session?.user ? (
+            <div className="mt-3 flex items-center gap-3 rounded-xl border border-border bg-muted/50 p-3">
+              {session.user.image ? (
+                <img src={session.user.image} alt="" className="h-8 w-8 rounded-full" referrerPolicy="no-referrer" />
+              ) : (
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+                  {(session.user.name?.[0] || "U").toUpperCase()}
+                </div>
+              )}
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-medium truncate">{session.user.name}</p>
+                <p className="text-xs text-muted-foreground truncate">{session.user.email}</p>
+              </div>
+              <button
+                onClick={() => { setMobileOpen(false); signOut(); }}
+                className="rounded-md px-2 py-1 text-xs text-red-600 hover:bg-red-50"
+              >
+                {t("signOut")}
+              </button>
+            </div>
+          ) : (
+            <Link
+              href="/try"
+              className="mt-3 block w-full rounded-full bg-gradient-to-r from-primary to-primary-dark py-2.5 text-center text-sm font-medium text-white shadow-md shadow-primary/20"
+              onClick={() => setMobileOpen(false)}
+            >
+              {t("tryNow")}
+            </Link>
+          )}
         </div>
       )}
     </header>

@@ -34,7 +34,8 @@
     "blog": "블로그",
     "pricing": "요금",
     "download": "다운로드",
-    "tryNow": "지금 체험하기"
+    "tryNow": "지금 체험하기",
+    "signOut": "로그아웃"
   },
   "home": {
     "heroTitle": "나만의",
@@ -315,6 +316,7 @@
     "type_makeup": "메이크업",
     "type_color_analysis": "컬러",
     "type_face_shape": "얼굴형 & 헤어",
+    "loginRequired": "Google 로그인 후 사진을 업로드하세요",
     "uploadTitle": "사진 업로드",
     "uploadHint": "JPG, PNG 또는 WebP · 최대 10MB · 생얼 사진 권장",
     "changePhoto": "사진 변경",

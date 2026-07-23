@@ -34,7 +34,8 @@
     "blog": "บล็อก",
     "pricing": "ราคา",
     "download": "ดาวน์โหลด",
-    "tryNow": "ลองเลย"
+    "tryNow": "ลองเลย",
+    "signOut": "ออกจากระบบ"
   },
   "home": {
     "heroTitle": "ค้นพบ",
@@ -315,6 +316,7 @@
     "type_makeup": "เมคอัพ",
     "type_color_analysis": "สี",
     "type_face_shape": "หน้าและผม",
+    "loginRequired": "เข้าสู่ระบบด้วย Google เพื่ออัปโหลด",
     "uploadTitle": "อัปโหลดรูปของคุณ",
     "uploadHint": "JPG, PNG หรือ WebP · สูงสุด 10MB · แนะนำรูปหน้าสด",
     "changePhoto": "เปลี่ยนรูป",

@@ -34,7 +34,8 @@
     "blog": "Blog",
     "pricing": "Pricing",
     "download": "Download",
-    "tryNow": "Try Now"
+    "tryNow": "Try Now",
+    "signOut": "Sign Out"
   },
   "home": {
     "heroTitle": "Discover Your",
@@ -315,6 +316,7 @@
     "type_makeup": "Makeup",
     "type_color_analysis": "Color",
     "type_face_shape": "Face & Hair",
+    "loginRequired": "Sign in with Google to Upload",
     "uploadTitle": "Upload Your Photo",
     "uploadHint": "JPG, PNG or WebP · Max 10MB · Bare-face photo recommended",
     "changePhoto": "Change photo",

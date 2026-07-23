@@ -34,7 +34,8 @@
     "blog": "Blog",
     "pricing": "Preços",
     "download": "Descarregar",
-    "tryNow": "Experimentar agora"
+    "tryNow": "Experimentar agora",
+    "signOut": "Sair"
   },
   "home": {
     "heroTitle": "Descubra a Sua",
@@ -315,6 +316,7 @@
     "type_makeup": "Maquilhagem",
     "type_color_analysis": "Cor",
     "type_face_shape": "Rosto e Cabelo",
+    "loginRequired": "Faça login com Google para carregar",
     "uploadTitle": "Carregue a sua foto",
     "uploadHint": "JPG, PNG ou WebP · Máx. 10 MB · Foto sem maquilhagem recomendada",
     "changePhoto": "Alterar foto",

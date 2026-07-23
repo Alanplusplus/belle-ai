@@ -39,6 +39,16 @@ export function TryClient({ locale }: { locale: string }) {
   const [quota, setQuota] = useState<{ total: number; used: number; remaining: number } | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
 
+  const isLoggedIn = status === "authenticated";
+
+  const handleUploadClick = useCallback(() => {
+    if (!isLoggedIn) {
+      signIn("google");
+      return;
+    }
+    fileRef.current?.click();
+  }, [isLoggedIn]);
+
   const handleFileSelect = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const file = e.target.files?.[0];
@@ -58,22 +68,16 @@ export function TryClient({ locale }: { locale: string }) {
   );
 
   const handleGenerate = useCallback(async () => {
-    if (!previewUrl) return;
-
-    if (status !== "authenticated") {
-      signIn("google");
-      return;
-    }
+    if (!previewUrl || !isLoggedIn) return;
 
     setPhase("signing_in");
     setErrorMsg("");
 
     try {
-      // 1. 后端登录 / 获取次数
       const signInRes = await webSignIn(
-        session.user?.email ?? undefined,
-        session.user?.name ?? undefined,
-        session.user?.image ?? undefined
+        session?.user?.email ?? undefined,
+        session?.user?.name ?? undefined,
+        session?.user?.image ?? undefined
       );
       if (signInRes.code !== 200 || !signInRes.data) {
         throw new Error(signInRes.message);
@@ -86,7 +90,6 @@ export function TryClient({ locale }: { locale: string }) {
         return;
       }
 
-      // 2. 上传图片
       setPhase("uploading");
       const file = fileRef.current?.files?.[0];
       if (!file) throw new Error("No file selected");
@@ -97,7 +100,6 @@ export function TryClient({ locale }: { locale: string }) {
         throw new Error(uploadRes.message);
       }
 
-      // 3. 创建生成任务
       setPhase("generating");
       const taskRes = await createTask(uploadRes.data.url, analysisType, locale);
       if (taskRes.code === 429) {
@@ -113,7 +115,6 @@ export function TryClient({ locale }: { locale: string }) {
         setQuota(taskRes.data.quota);
       }
 
-      // 4. 轮询结果
       const images = await pollUntilDone(taskRes.data.task_id);
       setResultUrls(images);
       setPhase("done");
@@ -121,7 +122,7 @@ export function TryClient({ locale }: { locale: string }) {
       setErrorMsg(err instanceof Error ? err.message : "Unknown error");
       setPhase("error");
     }
-  }, [previewUrl, status, session, analysisType, locale]);
+  }, [previewUrl, isLoggedIn, session, analysisType, locale]);
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12">
@@ -152,8 +153,8 @@ export function TryClient({ locale }: { locale: string }) {
 
       {/* Upload Area */}
       <div className="mt-8">
-        <label
-          htmlFor="photo-upload"
+        <div
+          onClick={handleUploadClick}
           className={`group relative flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed transition ${
             previewUrl
               ? "border-primary/40 bg-primary/5"
@@ -182,22 +183,21 @@ export function TryClient({ locale }: { locale: string }) {
                 />
               </svg>
               <p className="text-sm font-medium text-foreground">
-                {t("uploadTitle")}
+                {isLoggedIn ? t("uploadTitle") : t("loginRequired")}
               </p>
               <p className="mt-1 text-xs text-muted-foreground">
-                {t("uploadHint")}
+                {isLoggedIn ? t("uploadHint") : t("signInNote")}
               </p>
             </>
           )}
           <input
             ref={fileRef}
-            id="photo-upload"
             type="file"
             accept="image/jpeg,image/png,image/webp"
             className="hidden"
             onChange={handleFileSelect}
           />
-        </label>
+        </div>
 
         {previewUrl && (
           <button
@@ -221,12 +221,14 @@ export function TryClient({ locale }: { locale: string }) {
         ) : (
           <>
             <button
-              onClick={handleGenerate}
+              onClick={isLoggedIn ? handleGenerate : () => signIn("google")}
               disabled={
-                !previewUrl ||
-                phase === "uploading" ||
-                phase === "generating" ||
-                phase === "signing_in"
+                isLoggedIn && (
+                  !previewUrl ||
+                  phase === "uploading" ||
+                  phase === "generating" ||
+                  phase === "signing_in"
+                )
               }
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
             >
@@ -239,12 +241,12 @@ export function TryClient({ locale }: { locale: string }) {
                   ? t("uploading")
                   : phase === "generating"
                     ? t("generating")
-                    : status !== "authenticated"
+                    : !isLoggedIn
                       ? t("signInToGenerate")
                       : t("generate")}
             </button>
 
-            {status !== "authenticated" && previewUrl && (
+            {!isLoggedIn && (
               <p className="mt-2 text-xs text-muted-foreground">
                 {t("signInNote")}
               </p>

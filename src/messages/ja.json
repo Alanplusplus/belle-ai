@@ -34,7 +34,8 @@
     "blog": "ブログ",
     "pricing": "料金",
     "download": "ダウンロード",
-    "tryNow": "今すぐ試す"
+    "tryNow": "今すぐ試す",
+    "signOut": "ログアウト"
   },
   "home": {
     "heroTitle": "あなただけの",
@@ -315,6 +316,7 @@
     "type_makeup": "メイク",
     "type_color_analysis": "カラー",
     "type_face_shape": "顔型・髪型",
+    "loginRequired": "Googleでログインして写真をアップロード",
     "uploadTitle": "写真をアップロード",
     "uploadHint": "JPG、PNG、WebP · 最大10MB · 素顔の写真を推奨",
     "changePhoto": "写真を変更",

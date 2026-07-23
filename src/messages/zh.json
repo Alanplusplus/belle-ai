@@ -34,7 +34,8 @@
     "blog": "博客",
     "pricing": "价格",
     "download": "下载",
-    "tryNow": "立即体验"
+    "tryNow": "立即体验",
+    "signOut": "退出登录"
   },
   "home": {
     "heroTitle": "发现你的",
@@ -315,6 +316,7 @@
     "type_makeup": "妆容分析",
     "type_color_analysis": "色彩分析",
     "type_face_shape": "脸型发型",
+    "loginRequired": "登录 Google 以上传照片",
     "uploadTitle": "上传你的照片",
     "uploadHint": "JPG、PNG 或 WebP · 最大 10MB · 建议使用素颜照",
     "changePhoto": "更换照片",

@@ -34,7 +34,8 @@
     "blog": "ब्लॉग",
     "pricing": "प्राइसिंग",
     "download": "डाउनलोड",
-    "tryNow": "अभी आज़माएं"
+    "tryNow": "अभी आज़माएं",
+    "signOut": "लॉग आउट"
   },
   "home": {
     "heroTitle": "अपनी",
@@ -315,6 +316,7 @@
     "type_makeup": "मेकअप",
     "type_color_analysis": "कलर",
     "type_face_shape": "चेहरा और बाल",
+    "loginRequired": "अपलोड करने के लिए Google से लॉग इन करें",
     "uploadTitle": "अपनी फोटो अपलोड करें",
     "uploadHint": "JPG, PNG या WebP · अधिकतम 10MB · बिना मेकअप वाली फोटो अनुशंसित",
     "changePhoto": "फोटो बदलें",

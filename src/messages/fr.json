@@ -34,7 +34,8 @@
     "blog": "Blog",
     "pricing": "Tarifs",
     "download": "Télécharger",
-    "tryNow": "Essayer maintenant"
+    "tryNow": "Essayer maintenant",
+    "signOut": "Se déconnecter"
   },
   "home": {
     "heroTitle": "Découvrez votre",
@@ -315,6 +316,7 @@
     "type_makeup": "Maquillage",
     "type_color_analysis": "Couleur",
     "type_face_shape": "Visage et cheveux",
+    "loginRequired": "Connectez-vous avec Google pour télécharger",
     "uploadTitle": "Téléchargez votre photo",
     "uploadHint": "JPG, PNG ou WebP · Max 10 Mo · Photo sans maquillage recommandée",
     "changePhoto": "Changer la photo",

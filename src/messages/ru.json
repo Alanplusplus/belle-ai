@@ -34,7 +34,8 @@
     "blog": "Блог",
     "pricing": "Цены",
     "download": "Скачать",
-    "tryNow": "Попробовать"
+    "tryNow": "Попробовать",
+    "signOut": "Выйти"
   },
   "home": {
     "heroTitle": "Откройте свою",
@@ -315,6 +316,7 @@
     "type_makeup": "Макияж",
     "type_color_analysis": "Цветотип",
     "type_face_shape": "Лицо и волосы",
+    "loginRequired": "Войдите через Google, чтобы загрузить",
     "uploadTitle": "Загрузите фото",
     "uploadHint": "JPG, PNG или WebP · Макс. 10 МБ · Рекомендуется фото без макияжа",
     "changePhoto": "Изменить фото",

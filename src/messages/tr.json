@@ -34,7 +34,8 @@
     "blog": "Blog",
     "pricing": "Fiyatlandırma",
     "download": "İndir",
-    "tryNow": "Hemen Dene"
+    "tryNow": "Hemen Dene",
+    "signOut": "Çıkış Yap"
   },
   "home": {
     "heroTitle": "Mükemmel",
@@ -315,6 +316,7 @@
     "type_makeup": "Makyaj",
     "type_color_analysis": "Renk",
     "type_face_shape": "Yüz ve Saç",
+    "loginRequired": "Yüklemek için Google ile giriş yapın",
     "uploadTitle": "Fotoğrafınızı Yükleyin",
     "uploadHint": "JPG, PNG veya WebP · Maks. 10MB · Makyajsız fotoğraf önerilir",
     "changePhoto": "Fotoğrafı değiştir",

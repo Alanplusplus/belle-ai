@@ -34,7 +34,8 @@
     "blog": "Blog",
     "pricing": "Prezzi",
     "download": "Scarica",
-    "tryNow": "Prova ora"
+    "tryNow": "Prova ora",
+    "signOut": "Esci"
   },
   "home": {
     "heroTitle": "Scopri la Tua",
@@ -315,6 +316,7 @@
     "type_makeup": "Trucco",
     "type_color_analysis": "Colore",
     "type_face_shape": "Viso e Capelli",
+    "loginRequired": "Accedi con Google per caricare",
     "uploadTitle": "Carica la tua foto",
     "uploadHint": "JPG, PNG o WebP · Max 10 MB · Foto senza trucco consigliata",
     "changePhoto": "Cambia foto",

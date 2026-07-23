@@ -34,7 +34,8 @@
     "blog": "المدونة",
     "pricing": "الأسعار",
     "download": "تحميل",
-    "tryNow": "جرّبي الآن"
+    "tryNow": "جرّبي الآن",
+    "signOut": "تسجيل الخروج"
   },
   "home": {
     "heroTitle": "اكتشفي",
@@ -315,6 +316,7 @@
     "type_makeup": "المكياج",
     "type_color_analysis": "الألوان",
     "type_face_shape": "الوجه والشعر",
+    "loginRequired": "سجّلي الدخول بحساب Google لرفع الصورة",
     "uploadTitle": "ارفعي صورتك",
     "uploadHint": "JPG أو PNG أو WebP · الحد الأقصى 10 ميجابايت · يُفضّل صورة بدون مكياج",
     "changePhoto": "تغيير الصورة",

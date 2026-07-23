@@ -34,7 +34,8 @@
     "blog": "Blog",
     "pricing": "Harga",
     "download": "Unduh",
-    "tryNow": "Coba Sekarang"
+    "tryNow": "Coba Sekarang",
+    "signOut": "Keluar"
   },
   "home": {
     "heroTitle": "Temukan",
@@ -315,6 +316,7 @@
     "type_makeup": "Makeup",
     "type_color_analysis": "Warna",
     "type_face_shape": "Wajah & Rambut",
+    "loginRequired": "Masuk dengan Google untuk mengunggah",
     "uploadTitle": "Unggah Foto Anda",
     "uploadHint": "JPG, PNG, atau WebP · Maks. 10MB · Disarankan foto tanpa makeup",
     "changePhoto": "Ganti foto",

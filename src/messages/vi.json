@@ -34,7 +34,8 @@
     "blog": "Blog",
     "pricing": "Bảng giá",
     "download": "Tải xuống",
-    "tryNow": "Dùng thử ngay"
+    "tryNow": "Dùng thử ngay",
+    "signOut": "Đăng xuất"
   },
   "home": {
     "heroTitle": "Khám Phá",
@@ -315,6 +316,7 @@
     "type_makeup": "Trang điểm",
     "type_color_analysis": "Màu sắc",
     "type_face_shape": "Mặt & Tóc",
+    "loginRequired": "Đăng nhập Google để tải ảnh lên",
     "uploadTitle": "Tải lên ảnh của bạn",
     "uploadHint": "JPG, PNG hoặc WebP · Tối đa 10MB · Nên dùng ảnh mặt mộc",
     "changePhoto": "Đổi ảnh",
