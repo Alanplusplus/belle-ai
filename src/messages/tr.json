@@ -337,7 +337,11 @@
     "tipsTitle": "En İyi Sonuçlar İçin İpuçları",
     "tip1": "Doğal ışıkta makyajsız bir selfie kullanın — makyaj yok, filtre yok",
     "tip2": "Saçınızı yüzünüzden çekerek doğrudan kameraya bakın",
-    "tip3": "Gölgelerden kaçının ve yüzünüzde eşit aydınlatma sağlayın"
+    "tip3": "Gölgelerden kaçının ve yüzünüzde eşit aydınlatma sağlayın",
+    "historyTitle": "Your Analysis History",
+    "historyEmpty": "No analysis history yet. Generate your first report above!",
+    "historyClearAll": "Clear All",
+    "historyViewReport": "View Report"
   },
   "footer": {
     "tagline": "Yapay zeka destekli kişisel güzellik analizi",

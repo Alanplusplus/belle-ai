@@ -337,7 +337,11 @@
     "tipsTitle": "เคล็ดลับเพื่อผลลัพธ์ที่ดีที่สุด",
     "tip1": "ใช้เซลฟี่หน้าสดในแสงธรรมชาติ — ไม่แต่งหน้า ไม่ใส่ฟิลเตอร์",
     "tip2": "หันหน้าตรงกล้องและเก็บผมให้พ้นหน้า",
-    "tip3": "หลีกเลี่ยงเงาและให้แสงส่องใบหน้าอย่างสม่ำเสมอ"
+    "tip3": "หลีกเลี่ยงเงาและให้แสงส่องใบหน้าอย่างสม่ำเสมอ",
+    "historyTitle": "Your Analysis History",
+    "historyEmpty": "No analysis history yet. Generate your first report above!",
+    "historyClearAll": "Clear All",
+    "historyViewReport": "View Report"
   },
   "footer": {
     "tagline": "วิเคราะห์ความงามส่วนบุคคลด้วย AI",

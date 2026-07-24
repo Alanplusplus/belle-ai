@@ -5,7 +5,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import { routing, type Locale } from "@/i18n/routing";
 import { LOCALE_NAMES, APP_STORE_URL } from "@/lib/constants";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 
@@ -17,6 +17,22 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
+
+  const langRef = useRef<HTMLDivElement>(null);
+  const userMenuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+      if (userMenuRef.current && !userMenuRef.current.contains(e.target as Node)) {
+        setUserMenuOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const features = [
     { href: "/makeup-analysis", label: t("makeupAnalysis") },
@@ -51,7 +67,7 @@ export function Header() {
           <NavLink href="/pricing">{t("pricing")}</NavLink>
 
           {/* Language switcher */}
-          <div className="relative ml-2">
+          <div className="relative ml-2" ref={langRef}>
             <button
               onClick={() => setLangOpen(!langOpen)}
               className="rounded-md px-2 py-1 text-sm text-muted-foreground hover:bg-muted"
@@ -92,7 +108,7 @@ export function Header() {
           </a>
 
           {status === "authenticated" && session.user ? (
-            <div className="relative ml-2">
+            <div className="relative ml-2" ref={userMenuRef}>
               <button
                 onClick={() => setUserMenuOpen(!userMenuOpen)}
                 className="flex items-center gap-2 rounded-full border border-border px-2 py-1 transition hover:bg-muted"

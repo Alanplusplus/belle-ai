@@ -337,7 +337,11 @@
     "tipsTitle": "Tipps für beste Ergebnisse",
     "tip1": "Nutze ein Selfie ohne Make-up bei natürlichem Licht — ohne Make-up und Filter",
     "tip2": "Schaue direkt in die Kamera mit zurückgezogenem Haar vom Gesicht",
-    "tip3": "Vermeide Schatten und sorge für gleichmäßige Beleuchtung im Gesicht"
+    "tip3": "Vermeide Schatten und sorge für gleichmäßige Beleuchtung im Gesicht",
+    "historyTitle": "Your Analysis History",
+    "historyEmpty": "No analysis history yet. Generate your first report above!",
+    "historyClearAll": "Clear All",
+    "historyViewReport": "View Report"
   },
   "footer": {
     "tagline": "KI-gestützte persönliche Schönheitsanalyse",

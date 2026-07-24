@@ -337,7 +337,11 @@
     "tipsTitle": "نصائح للحصول على أفضل النتائج",
     "tip1": "استخدمي سيلفي بدون مكياج في ضوء طبيعي — بدون مكياج أو فلاتر",
     "tip2": "واجهي الكاميرا مباشرة مع إبعاد الشعر عن الوجه",
-    "tip3": "تجنّبي الظلال وتأكّدي من إضاءة متساوية على وجهك"
+    "tip3": "تجنّبي الظلال وتأكّدي من إضاءة متساوية على وجهك",
+    "historyTitle": "Your Analysis History",
+    "historyEmpty": "No analysis history yet. Generate your first report above!",
+    "historyClearAll": "Clear All",
+    "historyViewReport": "View Report"
   },
   "footer": {
     "tagline": "تحليل جمالي شخصي بالذكاء الاصطناعي",

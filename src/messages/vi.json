@@ -337,7 +337,11 @@
     "tipsTitle": "Mẹo để có kết quả tốt nhất",
     "tip1": "Dùng ảnh selfie mặt mộc dưới ánh sáng tự nhiên — không trang điểm, không filter",
     "tip2": "Nhìn thẳng vào camera và buộc tóc ra khỏi mặt",
-    "tip3": "Tránh bóng đổ và đảm bảo ánh sáng đều trên khuôn mặt"
+    "tip3": "Tránh bóng đổ và đảm bảo ánh sáng đều trên khuôn mặt",
+    "historyTitle": "Your Analysis History",
+    "historyEmpty": "No analysis history yet. Generate your first report above!",
+    "historyClearAll": "Clear All",
+    "historyViewReport": "View Report"
   },
   "footer": {
     "tagline": "Phân tích làm đẹp cá nhân bằng AI",

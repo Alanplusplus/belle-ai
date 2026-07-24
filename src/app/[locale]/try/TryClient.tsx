@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { useSession, signIn } from "next-auth/react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -20,6 +20,28 @@ type Phase =
   | "done"
   | "error"
   | "no_quota";
+
+interface HistoryEntry {
+  id: string;
+  type: AnalysisType;
+  imageUrls: string[];
+  createdAt: number;
+}
+
+const HISTORY_KEY = "belle_analysis_history";
+
+function loadHistory(): HistoryEntry[] {
+  if (typeof window === "undefined") return [];
+  try {
+    return JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
+  } catch {
+    return [];
+  }
+}
+
+function saveHistory(entries: HistoryEntry[]) {
+  localStorage.setItem(HISTORY_KEY, JSON.stringify(entries.slice(0, 20)));
+}
 
 function MakeupTypeIcon() {
   return (
@@ -51,6 +73,12 @@ const ANALYSIS_TYPES: { value: AnalysisType; icon: React.ReactNode }[] = [
   { value: "face_shape", icon: <FaceTypeIcon /> },
 ];
 
+const TYPE_LABELS: Record<AnalysisType, string> = {
+  makeup: "Makeup",
+  color_analysis: "Color",
+  face_shape: "Face & Hair",
+};
+
 export function TryClient({ locale }: { locale: string }) {
   const t = useTranslations("tryPage");
   const { data: session, status } = useSession();
@@ -61,9 +89,31 @@ export function TryClient({ locale }: { locale: string }) {
   const [resultUrls, setResultUrls] = useState<string[]>([]);
   const [errorMsg, setErrorMsg] = useState("");
   const [quota, setQuota] = useState<{ total: number; used: number; remaining: number } | null>(null);
+  const [history, setHistory] = useState<HistoryEntry[]>([]);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const isLoggedIn = status === "authenticated";
+
+  useEffect(() => {
+    setHistory(loadHistory());
+  }, []);
+
+  const addToHistory = useCallback((type: AnalysisType, imageUrls: string[]) => {
+    const entry: HistoryEntry = {
+      id: Date.now().toString(),
+      type,
+      imageUrls,
+      createdAt: Date.now(),
+    };
+    const updated = [entry, ...loadHistory()].slice(0, 20);
+    saveHistory(updated);
+    setHistory(updated);
+  }, []);
+
+  const clearHistory = useCallback(() => {
+    saveHistory([]);
+    setHistory([]);
+  }, []);
 
   const handleUploadClick = useCallback(() => {
     if (!isLoggedIn) {
@@ -142,11 +192,12 @@ export function TryClient({ locale }: { locale: string }) {
       const images = await pollUntilDone(taskRes.data.task_id);
       setResultUrls(images);
       setPhase("done");
+      addToHistory(analysisType, images);
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : "Unknown error");
       setPhase("error");
     }
-  }, [previewUrl, isLoggedIn, session, analysisType, locale]);
+  }, [previewUrl, isLoggedIn, session, analysisType, locale, addToHistory]);
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12">
@@ -183,14 +234,16 @@ export function TryClient({ locale }: { locale: string }) {
             previewUrl
               ? "border-primary/40 bg-primary/5"
               : "border-border hover:border-primary/40 hover:bg-muted/30"
-          } ${previewUrl ? "aspect-[3/4] max-h-[480px]" : "py-16"}`}
+          } ${previewUrl ? "max-h-[480px]" : "py-16"}`}
         >
           {previewUrl ? (
-            <img
-              src={previewUrl}
-              alt="Preview"
-              className="h-full w-full rounded-2xl object-contain"
-            />
+            <div className="flex w-full items-center justify-center overflow-hidden rounded-2xl" style={{ maxHeight: 480 }}>
+              <img
+                src={previewUrl}
+                alt="Preview"
+                className="max-h-[480px] max-w-full rounded-2xl object-contain"
+              />
+            </div>
           ) : (
             <>
               <svg
@@ -224,17 +277,19 @@ export function TryClient({ locale }: { locale: string }) {
         </div>
 
         {previewUrl && (
-          <button
-            onClick={() => {
-              setPreviewUrl(null);
-              setResultUrls([]);
-              setPhase("idle");
-              if (fileRef.current) fileRef.current.value = "";
-            }}
-            className="mt-2 text-sm text-muted-foreground hover:text-foreground"
-          >
-            {t("changePhoto")}
-          </button>
+          <div className="mt-2 text-center">
+            <button
+              onClick={() => {
+                setPreviewUrl(null);
+                setResultUrls([]);
+                setPhase("idle");
+                if (fileRef.current) fileRef.current.value = "";
+              }}
+              className="text-sm text-muted-foreground hover:text-foreground"
+            >
+              {t("changePhoto")}
+            </button>
+          </div>
         )}
       </div>
 
@@ -340,6 +395,69 @@ export function TryClient({ locale }: { locale: string }) {
           </li>
         </ul>
       </div>
+
+      {/* History */}
+      {history.length > 0 && (
+        <div className="mt-12">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-bold">{t("historyTitle")}</h2>
+            <button
+              onClick={clearHistory}
+              className="text-sm text-muted-foreground hover:text-foreground"
+            >
+              {t("historyClearAll")}
+            </button>
+          </div>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {history.map((entry) => (
+              <div
+                key={entry.id}
+                className="overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg"
+              >
+                {entry.imageUrls[0] && (
+                  <a
+                    href={entry.imageUrls[0]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <img
+                      src={entry.imageUrls[0]}
+                      alt="Analysis"
+                      className="aspect-[3/4] w-full object-cover"
+                    />
+                  </a>
+                )}
+                <div className="flex items-center justify-between p-3">
+                  <div>
+                    <span className="inline-block rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
+                      {TYPE_LABELS[entry.type]}
+                    </span>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      {new Date(entry.createdAt).toLocaleDateString()}
+                    </p>
+                  </div>
+                  {entry.imageUrls.length > 1 && (
+                    <div className="flex gap-1">
+                      {entry.imageUrls.slice(1).map((url, i) => (
+                        <a
+                          key={i}
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block h-10 w-10 overflow-hidden rounded-lg border border-border"
+                        >
+                          <img src={url} alt="" className="h-full w-full object-cover" />
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

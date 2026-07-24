@@ -337,7 +337,11 @@
     "tipsTitle": "获取最佳效果的小技巧",
     "tip1": "使用自然光下的素颜自拍——不化妆、不加滤镜",
     "tip2": "正面朝向镜头，将头发拨到耳后",
-    "tip3": "避免阴影，确保面部光线均匀"
+    "tip3": "避免阴影，确保面部光线均匀",
+    "historyTitle": "分析历史",
+    "historyEmpty": "暂无分析记录。在上方生成您的第一份报告吧！",
+    "historyClearAll": "清除全部",
+    "historyViewReport": "查看报告"
   },
   "footer": {
     "tagline": "AI驱动的个人美学分析",

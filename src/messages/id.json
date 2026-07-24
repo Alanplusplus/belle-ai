@@ -337,7 +337,11 @@
     "tipsTitle": "Tips untuk Hasil Terbaik",
     "tip1": "Gunakan selfie tanpa makeup dengan cahaya alami — tanpa makeup dan filter",
     "tip2": "Hadapkan wajah langsung ke kamera dengan rambut disisir ke belakang",
-    "tip3": "Hindari bayangan dan pastikan pencahayaan merata di wajah"
+    "tip3": "Hindari bayangan dan pastikan pencahayaan merata di wajah",
+    "historyTitle": "Your Analysis History",
+    "historyEmpty": "No analysis history yet. Generate your first report above!",
+    "historyClearAll": "Clear All",
+    "historyViewReport": "View Report"
   },
   "footer": {
     "tagline": "Analisis kecantikan personal berbasis AI",

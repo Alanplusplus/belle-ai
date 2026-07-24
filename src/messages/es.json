@@ -337,7 +337,11 @@
     "tipsTitle": "Consejos para mejores resultados",
     "tip1": "Usa un selfie sin maquillaje con luz natural — sin maquillaje ni filtros",
     "tip2": "Mira directamente a la cámara con el cabello recogido del rostro",
-    "tip3": "Evita sombras y asegura una iluminación uniforme en tu rostro"
+    "tip3": "Evita sombras y asegura una iluminación uniforme en tu rostro",
+    "historyTitle": "Your Analysis History",
+    "historyEmpty": "No analysis history yet. Generate your first report above!",
+    "historyClearAll": "Clear All",
+    "historyViewReport": "View Report"
   },
   "footer": {
     "tagline": "Análisis de belleza personal con IA",

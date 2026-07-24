@@ -337,7 +337,11 @@
     "tipsTitle": "Tips for Best Results",
     "tip1": "Use a bare-face selfie in natural light — no makeup, no filters",
     "tip2": "Face the camera directly with hair pulled back from your face",
-    "tip3": "Avoid shadows and ensure even lighting on your face"
+    "tip3": "Avoid shadows and ensure even lighting on your face",
+    "historyTitle": "Your Analysis History",
+    "historyEmpty": "No analysis history yet. Generate your first report above!",
+    "historyClearAll": "Clear All",
+    "historyViewReport": "View Report"
   },
   "footer": {
     "tagline": "AI-powered personal beauty analysis",

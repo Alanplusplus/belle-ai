@@ -337,7 +337,11 @@
     "tipsTitle": "Советы для лучших результатов",
     "tip1": "Используйте селфи без макияжа при естественном освещении — без макияжа и фильтров",
     "tip2": "Смотрите прямо в камеру, убрав волосы с лица",
-    "tip3": "Избегайте теней и обеспечьте равномерное освещение лица"
+    "tip3": "Избегайте теней и обеспечьте равномерное освещение лица",
+    "historyTitle": "Your Analysis History",
+    "historyEmpty": "No analysis history yet. Generate your first report above!",
+    "historyClearAll": "Clear All",
+    "historyViewReport": "View Report"
   },
   "footer": {
     "tagline": "Персональный анализ красоты с ИИ",

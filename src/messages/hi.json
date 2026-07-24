@@ -337,7 +337,11 @@
     "tipsTitle": "सर्वोत्तम परिणामों के लिए सुझाव",
     "tip1": "प्राकृतिक रोशनी में बिना मेकअप वाला सेल्फी लें — न मेकअप, न फ़िल्टर",
     "tip2": "कैमरे की ओर सीधे देखें और बाल चेहरे से पीछे करें",
-    "tip3": "छाया से बचें और चेहरे पर समान रोशनी सुनिश्चित करें"
+    "tip3": "छाया से बचें और चेहरे पर समान रोशनी सुनिश्चित करें",
+    "historyTitle": "Your Analysis History",
+    "historyEmpty": "No analysis history yet. Generate your first report above!",
+    "historyClearAll": "Clear All",
+    "historyViewReport": "View Report"
   },
   "footer": {
     "tagline": "AI-संचालित व्यक्तिगत ब्यूटी एनालिसिस",
