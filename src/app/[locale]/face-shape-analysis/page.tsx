@@ -37,7 +37,7 @@ export default function FaceShapeAnalysisPage() {
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
-              href="/download"
+              href="/try"
               className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
             >
               {ft("tryItFree")}
@@ -91,17 +91,19 @@ export default function FaceShapeAnalysisPage() {
                 key={shape.name}
                 className="flex flex-col items-center rounded-xl border border-border bg-card p-5"
               >
-                <div className="mb-3 text-4xl">{shape.icon}</div>
+                <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  {shape.icon}
+                </div>
                 <p className="text-sm font-medium">{shape.name}</p>
               </div>
             ))}
           </div>
           <div className="mt-10 text-center">
             <Link
-              href="/download"
+              href="/try"
               className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
             >
-              {ft("downloadApp")}
+              {ft("tryItFree")}
             </Link>
           </div>
         </div>
@@ -117,12 +119,68 @@ const FACE_DIMENSIONS = [
   { image: "/images/dim_face_tips.png" },
 ];
 
+function OvalIcon() {
+  return (
+    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+      <ellipse cx="12" cy="12" rx="7" ry="9" />
+    </svg>
+  );
+}
+
+function RoundIcon() {
+  return (
+    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+      <circle cx="12" cy="12" r="8" />
+    </svg>
+  );
+}
+
+function SquareIcon() {
+  return (
+    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+      <rect x="4" y="4" width="16" height="16" rx="2" />
+    </svg>
+  );
+}
+
+function HeartIcon() {
+  return (
+    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+      <path d="M12 21C12 21 4 14.5 4 9.5C4 7 6 4.5 8.5 4.5C10 4.5 11.5 5.5 12 7C12.5 5.5 14 4.5 15.5 4.5C18 4.5 20 7 20 9.5C20 14.5 12 21 12 21Z" />
+    </svg>
+  );
+}
+
+function OblongIcon() {
+  return (
+    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+      <rect x="6" y="2" width="12" height="20" rx="6" />
+    </svg>
+  );
+}
+
+function DiamondIcon() {
+  return (
+    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+      <path d="M12 2L22 12L12 22L2 12L12 2Z" />
+    </svg>
+  );
+}
+
+function TriangleIcon() {
+  return (
+    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+      <path d="M12 4L22 20H2L12 4Z" />
+    </svg>
+  );
+}
+
 const FACE_SHAPES = [
-  { name: "Oval", icon: "🥚" },
-  { name: "Round", icon: "🔵" },
-  { name: "Square", icon: "🟧" },
-  { name: "Heart", icon: "💛" },
-  { name: "Oblong", icon: "📱" },
-  { name: "Diamond", icon: "💎" },
-  { name: "Triangle", icon: "🔺" },
+  { name: "Oval", icon: <OvalIcon /> },
+  { name: "Round", icon: <RoundIcon /> },
+  { name: "Square", icon: <SquareIcon /> },
+  { name: "Heart", icon: <HeartIcon /> },
+  { name: "Oblong", icon: <OblongIcon /> },
+  { name: "Diamond", icon: <DiamondIcon /> },
+  { name: "Triangle", icon: <TriangleIcon /> },
 ];

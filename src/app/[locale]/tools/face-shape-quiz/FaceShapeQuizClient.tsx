@@ -129,7 +129,7 @@ export function FaceShapeQuizClient() {
             <h3 className="text-lg font-bold">{t("wantMoreAccurate")}</h3>
             <p className="mt-2 text-sm text-muted-foreground">{t("wantMoreAccurateDesc")}</p>
             <Link
-              href="/download"
+              href="/try"
               className="mt-4 inline-block rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark"
             >
               {t("downloadForAccurate")}

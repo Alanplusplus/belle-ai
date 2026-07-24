@@ -46,7 +46,7 @@ export default function PricingPage() {
               <PricingFeature text={t("freeFeature3")} />
             </ul>
             <Link
-              href="/download"
+              href="/try"
               className="mt-6 block w-full rounded-full border border-primary py-2.5 text-center text-sm font-semibold text-primary transition hover:bg-primary/5"
             >
               {t("freeCta")}

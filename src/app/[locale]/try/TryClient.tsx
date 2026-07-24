@@ -14,17 +14,41 @@ import {
 type AnalysisType = "makeup" | "color_analysis" | "face_shape";
 type Phase =
   | "idle"
-  | "signing_in"
+  | "preparing"
   | "uploading"
   | "generating"
   | "done"
   | "error"
   | "no_quota";
 
-const ANALYSIS_TYPES: { value: AnalysisType; icon: string }[] = [
-  { value: "makeup", icon: "💄" },
-  { value: "color_analysis", icon: "🎨" },
-  { value: "face_shape", icon: "💇" },
+function MakeupTypeIcon() {
+  return (
+    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+    </svg>
+  );
+}
+
+function ColorTypeIcon() {
+  return (
+    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
+    </svg>
+  );
+}
+
+function FaceTypeIcon() {
+  return (
+    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+    </svg>
+  );
+}
+
+const ANALYSIS_TYPES: { value: AnalysisType; icon: React.ReactNode }[] = [
+  { value: "makeup", icon: <MakeupTypeIcon /> },
+  { value: "color_analysis", icon: <ColorTypeIcon /> },
+  { value: "face_shape", icon: <FaceTypeIcon /> },
 ];
 
 export function TryClient({ locale }: { locale: string }) {
@@ -70,7 +94,7 @@ export function TryClient({ locale }: { locale: string }) {
   const handleGenerate = useCallback(async () => {
     if (!previewUrl || !isLoggedIn) return;
 
-    setPhase("signing_in");
+    setPhase("preparing");
     setErrorMsg("");
 
     try {
@@ -227,16 +251,16 @@ export function TryClient({ locale }: { locale: string }) {
                   !previewUrl ||
                   phase === "uploading" ||
                   phase === "generating" ||
-                  phase === "signing_in"
+                  phase === "preparing"
                 )
               }
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
             >
               {(phase === "uploading" ||
                 phase === "generating" ||
-                phase === "signing_in") && <Spinner />}
-              {phase === "signing_in"
-                ? t("signingIn")
+                phase === "preparing") && <Spinner />}
+              {phase === "preparing"
+                ? t("preparing")
                 : phase === "uploading"
                   ? t("uploading")
                   : phase === "generating"
@@ -303,15 +327,15 @@ export function TryClient({ locale }: { locale: string }) {
         <h3 className="font-semibold">{t("tipsTitle")}</h3>
         <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-primary">✓</span>
+            <svg className="mt-0.5 h-4 w-4 shrink-0 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
             {t("tip1")}
           </li>
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-primary">✓</span>
+            <svg className="mt-0.5 h-4 w-4 shrink-0 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
             {t("tip2")}
           </li>
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-primary">✓</span>
+            <svg className="mt-0.5 h-4 w-4 shrink-0 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
             {t("tip3")}
           </li>
         </ul>

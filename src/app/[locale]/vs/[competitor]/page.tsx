@@ -194,7 +194,7 @@ export default async function ComparisonPage({
             <ul className="mt-3 space-y-2">
               {data.belleAdvantages.map((adv) => (
                 <li key={adv} className="flex items-start gap-2 text-sm">
-                  <span className="mt-0.5 text-primary">✓</span>
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
                   {adv}
                 </li>
               ))}
@@ -208,7 +208,7 @@ export default async function ComparisonPage({
                   key={adv}
                   className="flex items-start gap-2 text-sm text-muted-foreground"
                 >
-                  <span className="mt-0.5">✓</span>
+                  <svg className="mt-0.5 h-4 w-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
                   {adv}
                 </li>
               ))}
@@ -227,8 +227,8 @@ export default async function ComparisonPage({
         {/* CTA */}
         <div className="mt-10 text-center">
           <Link
-            href="/download"
-            className="inline-block rounded-full bg-primary px-8 py-3 font-semibold text-white transition hover:bg-primary-dark"
+            href="/try"
+            className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
           >
             Try Belle AI Free
           </Link>

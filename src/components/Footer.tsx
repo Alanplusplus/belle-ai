@@ -16,16 +16,14 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center">
               <Image
-                src="/icon-192.png"
+                src="/logo-384.webp"
                 alt="Belle AI"
-                width={36}
-                height={36}
-                className="rounded-lg"
+                width={60}
+                height={40}
+                className="object-contain"
               />
-              <span className="font-serif text-xl font-semibold tracking-tight text-foreground">Belle</span>
-              <span className="rounded bg-gradient-to-r from-primary to-accent px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">AI</span>
             </Link>
             <p className="mt-2 text-sm text-muted-foreground">
               {ft("tagline")}
@@ -115,24 +113,20 @@ export function Footer() {
             <h3 className="mb-3 text-sm font-semibold">{ft("legal")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
-                  href="https://pic.chibistyle.app/agreement/makeup-privacy.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/privacy"
                   className="text-muted-foreground hover:text-foreground"
                 >
                   {ft("privacy")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/terms"
                   className="text-muted-foreground hover:text-foreground"
                 >
                   {ft("terms")}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

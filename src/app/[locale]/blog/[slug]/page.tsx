@@ -134,10 +134,10 @@ function BlogPostContent({ post }: { post: { date: string; readingTime: string; 
             {t("ctaDescription")}
           </p>
           <Link
-            href="/download"
+            href="/try"
             className="mt-4 inline-block rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark"
           >
-            {ft("downloadApp")}
+            {ft("tryItFree")}
           </Link>
         </div>
       </div>

@@ -37,7 +37,7 @@ export default function PersonalColorAnalysisPage() {
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
-              href="/download"
+              href="/try"
               className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
             >
               {ft("tryItFree")}
@@ -106,10 +106,10 @@ export default function PersonalColorAnalysisPage() {
           </div>
           <div className="mt-10 text-center">
             <Link
-              href="/download"
+              href="/try"
               className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
             >
-              {ft("downloadApp")}
+              {ft("tryItFree")}
             </Link>
           </div>
         </div>
