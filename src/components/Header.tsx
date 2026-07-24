@@ -48,15 +48,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/logo-384.webp"
+            src="/icon-192.png"
             alt="Belle AI"
-            width={54}
-            height={36}
-            className="object-contain"
+            width={32}
+            height={32}
+            className="rounded-lg"
             priority
           />
+          <span className="font-serif text-lg font-bold tracking-tight text-foreground">Belle AI</span>
         </Link>
 
         {/* Desktop nav */}

@@ -16,14 +16,15 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/logo-384.webp"
+                src="/icon-192.png"
                 alt="Belle AI"
-                width={60}
-                height={40}
-                className="object-contain"
+                width={36}
+                height={36}
+                className="rounded-lg"
               />
+              <span className="font-serif text-lg font-bold tracking-tight text-foreground">Belle AI</span>
             </Link>
             <p className="mt-2 text-sm text-muted-foreground">
               {ft("tagline")}
