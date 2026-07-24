@@ -2,7 +2,6 @@
 
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import Image from "next/image";
 
 export function Footer() {
   const t = useTranslations();
@@ -16,15 +15,13 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="/icon-192.png"
-                alt="Belle AI"
-                width={36}
-                height={36}
-                className="rounded-lg"
-              />
-              <span className="font-serif text-lg font-bold tracking-tight text-foreground">Belle AI</span>
+            <Link href="/" className="flex items-baseline gap-1">
+              <span className="font-serif text-2xl font-bold tracking-tight bg-gradient-to-r from-primary via-accent to-gold bg-clip-text text-transparent">
+                Belle
+              </span>
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                AI
+              </span>
             </Link>
             <p className="mt-2 text-sm text-muted-foreground">
               {ft("tagline")}

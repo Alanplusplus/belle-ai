@@ -3,7 +3,19 @@ import { routing } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/constants";
 import { getAllSlugs } from "@/lib/blog";
 
-const COMPETITOR_SLUGS = ["dressika", "colorwise", "professional-stylist"];
+const COMPETITOR_SLUGS = [
+  "dressika",
+  "colorwise",
+  "professional-stylist",
+  "mycoloranalysis",
+  "color-analysis-app",
+  "palettehunt",
+];
+
+function localePath(locale: string, path: string): string {
+  const isDefault = locale === routing.defaultLocale;
+  return isDefault ? `${SITE_URL}${path || "/"}` : `${SITE_URL}/${locale}${path}`;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = routing.locales;
@@ -30,12 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const locale of locales) {
       const alternates: Record<string, string> = {};
       for (const l of locales) {
-        alternates[l] = `${SITE_URL}/${l}${page}`;
+        alternates[l] = localePath(l, page);
       }
-      alternates["x-default"] = `${SITE_URL}/en${page}`;
+      alternates["x-default"] = localePath("en", page);
 
       entries.push({
-        url: `${SITE_URL}/${locale}${page}`,
+        url: localePath(locale, page),
         lastModified: new Date(),
         changeFrequency: isHome || isBlogIndex ? "daily" : "weekly",
         priority: isHome ? 1 : 0.8,
@@ -48,12 +60,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const locale of locales) {
       const alternates: Record<string, string> = {};
       for (const l of locales) {
-        alternates[l] = `${SITE_URL}/${l}/vs/${slug}`;
+        alternates[l] = localePath(l, `/vs/${slug}`);
       }
-      alternates["x-default"] = `${SITE_URL}/en/vs/${slug}`;
+      alternates["x-default"] = localePath("en", `/vs/${slug}`);
 
       entries.push({
-        url: `${SITE_URL}/${locale}/vs/${slug}`,
+        url: localePath(locale, `/vs/${slug}`),
         lastModified: new Date(),
         changeFrequency: "monthly",
         priority: 0.7,
@@ -72,12 +84,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const slug of slugs) {
       const alternates: Record<string, string> = {};
       for (const l of locales) {
-        alternates[l] = `${SITE_URL}/${l}/blog/${slug}`;
+        alternates[l] = localePath(l, `/blog/${slug}`);
       }
-      alternates["x-default"] = `${SITE_URL}/en/blog/${slug}`;
+      alternates["x-default"] = localePath("en", `/blog/${slug}`);
 
       entries.push({
-        url: `${SITE_URL}/${locale}/blog/${slug}`,
+        url: localePath(locale, `/blog/${slug}`),
         lastModified: new Date(),
         changeFrequency: "weekly",
         priority: 0.6,

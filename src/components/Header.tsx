@@ -7,7 +7,6 @@ import { routing, type Locale } from "@/i18n/routing";
 import { LOCALE_NAMES, APP_STORE_URL } from "@/lib/constants";
 import { useState, useEffect, useRef } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
-import Image from "next/image";
 
 export function Header() {
   const t = useTranslations("nav");
@@ -48,16 +47,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="/icon-192.png"
-            alt="Belle AI"
-            width={32}
-            height={32}
-            className="rounded-lg"
-            priority
-          />
-          <span className="font-serif text-lg font-bold tracking-tight text-foreground">Belle AI</span>
+        <Link href="/" className="flex items-baseline gap-1">
+          <span className="font-serif text-xl font-bold tracking-tight bg-gradient-to-r from-primary via-accent to-gold bg-clip-text text-transparent">
+            Belle
+          </span>
+          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">
+            AI
+          </span>
         </Link>
 
         {/* Desktop nav */}

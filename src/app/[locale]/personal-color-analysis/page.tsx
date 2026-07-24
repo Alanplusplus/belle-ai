@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { SITE_URL } from "@/lib/constants";
+import { routing } from "@/i18n/routing";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -11,11 +12,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const isDefault = locale === routing.defaultLocale;
+  const path = "/personal-color-analysis";
+  const canonicalUrl = isDefault ? `${SITE_URL}${path}` : `${SITE_URL}/${locale}${path}`;
   return {
     title: messages.meta.colorTitle,
     description: messages.meta.colorDescription,
     alternates: {
-      canonical: `${SITE_URL}/${locale}/personal-color-analysis`,
+      canonical: canonicalUrl,
     },
   };
 }

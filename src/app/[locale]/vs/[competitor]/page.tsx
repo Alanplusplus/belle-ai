@@ -112,6 +112,99 @@ const COMPETITORS: Record<string, CompetitorData> = {
     verdict:
       "For most people, AI color analysis provides excellent results at a fraction of the cost and time. Professional consultations remain the gold standard for accuracy, especially for people with unusual or ambiguous coloring. Our recommendation: start with Belle AI's free analysis, and if you want a second opinion on a tricky result, consider a professional consultation.",
   },
+  mycoloranalysis: {
+    name: "MyColorAnalysis AI",
+    slug: "mycoloranalysis",
+    description:
+      "Compare Belle AI and MyColorAnalysis AI for personal color analysis. Both offer AI-powered seasonal color typing, but differ in analysis depth, additional features, and pricing model.",
+    comparison: [
+      { feature: "Analysis Types", belle: "Color + Makeup + Face Shape (3 modes)", competitor: "Color analysis only" },
+      { feature: "Color System", belle: "12-season", competitor: "12-season" },
+      { feature: "Report Format", belle: "Magazine-quality visual report", competitor: "App-native palette cards" },
+      { feature: "Makeup Recommendations", belle: "Complete looks with eye, lip, blush detail", competitor: "Basic shade suggestions" },
+      { feature: "Face Shape Analysis", belle: "Yes – with hairstyle recommendations", competitor: "No" },
+      { feature: "Free Usage", belle: "1 free analysis", competitor: "Limited free tier" },
+      { feature: "Expert Review Option", belle: "No", competitor: "Yes ($39)" },
+      { feature: "Platforms", belle: "iOS + Web", competitor: "iOS + Web" },
+      { feature: "Price", belle: "From $2.99", competitor: "Free AI / $39 expert" },
+    ],
+    belleAdvantages: [
+      "Three analysis modes (color + makeup + face shape) in one app",
+      "Magazine-quality visual reports designed for sharing",
+      "Comprehensive makeup looks with detailed product guidance",
+      "2K/4K high-resolution output",
+      "More affordable for detailed analysis",
+    ],
+    competitorAdvantages: [
+      "Optional professional expert review",
+      "Quiz-based alternative (no photo needed)",
+      "Longer market presence",
+    ],
+    verdict:
+      "Belle AI provides more comprehensive analysis with three modes and premium visual reports. MyColorAnalysis AI offers a professional review option for those who want human expert validation. Choose Belle AI for all-in-one beauty analysis with stunning reports, or MyColorAnalysis if you specifically want an expert human review.",
+  },
+  "color-analysis-app": {
+    name: "Color Analysis App",
+    slug: "color-analysis-app",
+    description:
+      "Compare Belle AI and Color-Analysis.app for finding your seasonal color type. Both use AI technology, but they differ in analysis scope, report quality, and additional features.",
+    comparison: [
+      { feature: "Analysis Types", belle: "Color + Makeup + Face Shape", competitor: "Color analysis only" },
+      { feature: "Color System", belle: "12-season", competitor: "12-season" },
+      { feature: "Input Method", belle: "Photo upload", competitor: "Quiz + optional photo" },
+      { feature: "Report Format", belle: "Magazine-quality image report", competitor: "Web-based text results" },
+      { feature: "Makeup Analysis", belle: "Yes – complete looks", competitor: "Basic suggestions" },
+      { feature: "Face Shape", belle: "Yes", competitor: "No" },
+      { feature: "Mobile App", belle: "iOS (native)", competitor: "Web only (PWA)" },
+      { feature: "Price", belle: "From $2.99", competitor: "Free" },
+    ],
+    belleAdvantages: [
+      "Three comprehensive analysis modes",
+      "Visual magazine-quality reports",
+      "Complete makeup look recommendations",
+      "Face shape and hairstyle analysis",
+      "Native iOS app experience",
+      "Higher resolution output (2K/4K)",
+    ],
+    competitorAdvantages: [
+      "Fully free with no limits",
+      "Quiz-based option (no photo required)",
+      "Works on any device via browser",
+      "Blog with extensive color education content",
+    ],
+    verdict:
+      "Belle AI excels in analysis depth and report quality — offering three analysis modes with magazine-grade visual output. Color-Analysis.app is the better choice if you want completely free unlimited access or prefer a quiz-based approach. For the most comprehensive beauty guidance and shareable reports, Belle AI delivers more value.",
+  },
+  palettehunt: {
+    name: "Palette Hunt",
+    slug: "palettehunt",
+    description:
+      "Compare Belle AI and Palette Hunt for AI color analysis. Both determine your seasonal color type from a photo, but differ in report depth and additional features.",
+    comparison: [
+      { feature: "Analysis Types", belle: "Color + Makeup + Face Shape", competitor: "Color analysis" },
+      { feature: "Color Recommendations", belle: "24+ personalized colors", competitor: "30+ colors" },
+      { feature: "Report Format", belle: "Visual magazine report", competitor: "Web-based results page" },
+      { feature: "Makeup Analysis", belle: "Yes – detailed looks", competitor: "Basic" },
+      { feature: "Face Shape", belle: "Yes", competitor: "No" },
+      { feature: "Free Quiz", belle: "Yes", competitor: "Yes" },
+      { feature: "Platforms", belle: "iOS + Web", competitor: "Web only" },
+      { feature: "Price", belle: "From $2.99", competitor: "Free basic / paid detailed" },
+    ],
+    belleAdvantages: [
+      "Three analysis modes in one tool",
+      "Magazine-quality visual reports",
+      "Complete makeup look recommendations",
+      "Face shape and hairstyle analysis",
+      "Native mobile app",
+    ],
+    competitorAdvantages: [
+      "More free colors in basic tier",
+      "No app install required",
+      "Simple and focused on color only",
+    ],
+    verdict:
+      "Both tools provide solid color analysis. Belle AI offers a more comprehensive package with makeup and face shape analysis plus premium visual reports. Palette Hunt is focused purely on color recommendations with more generous free access. Choose Belle AI for all-round beauty guidance, or Palette Hunt for a quick free color check.",
+  },
 };
 
 export function generateStaticParams() {
@@ -133,11 +226,15 @@ export async function generateMetadata({
   const data = COMPETITORS[competitor];
   if (!data) return {};
 
+  const isDefault = locale === routing.defaultLocale;
+  const path = `/vs/${competitor}`;
+  const canonicalUrl = isDefault ? `${SITE_URL}${path}` : `${SITE_URL}/${locale}${path}`;
+
   return {
-    title: `Belle AI vs ${data.name} – Comparison`,
+    title: `Belle AI vs ${data.name} – Color Analysis Comparison`,
     description: data.description,
     alternates: {
-      canonical: `${SITE_URL}/${locale}/vs/${competitor}`,
+      canonical: canonicalUrl,
     },
   };
 }

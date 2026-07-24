@@ -34,11 +34,14 @@ export async function generateMetadata({
   const messages = (await import(`@/messages/${locale}.json`)).default;
   const meta = messages.meta;
 
+  const isDefault = locale === routing.defaultLocale;
+  const canonicalPath = isDefault ? SITE_URL : `${SITE_URL}/${locale}`;
+
   const languages: Record<string, string> = {};
   for (const l of routing.locales) {
-    languages[l] = `${SITE_URL}/${l}`;
+    languages[l] = l === routing.defaultLocale ? SITE_URL : `${SITE_URL}/${l}`;
   }
-  languages["x-default"] = `${SITE_URL}/en`;
+  languages["x-default"] = SITE_URL;
 
   return {
     title: {
@@ -55,7 +58,7 @@ export async function generateMetadata({
       apple: "/apple-touch-icon.png",
     },
     alternates: {
-      canonical: `${SITE_URL}/${locale}`,
+      canonical: canonicalPath,
       languages,
     },
     openGraph: {
@@ -64,6 +67,12 @@ export async function generateMetadata({
       siteName: meta.siteName,
       locale,
       type: "website",
+      url: canonicalPath,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.homeTitle,
+      description: meta.homeDescription,
     },
     other: APP_STORE_ID
       ? { "apple-itunes-app": `app-id=${APP_STORE_ID}` }
@@ -87,11 +96,13 @@ export default async function LocaleLayout({
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Belle AI - Personal Color Analysis",
+    name: "Belle AI - Free AI Color Analysis",
     url: SITE_URL,
+    description:
+      "Free AI-powered personal color analysis. Upload a photo and discover your seasonal color type, best color palette, and styling recommendations in 60 seconds.",
     potentialAction: {
       "@type": "SearchAction",
-      target: `${SITE_URL}/en/blog?q={search_term_string}`,
+      target: `${SITE_URL}/blog?q={search_term_string}`,
       "query-input": "required name=search_term_string",
     },
   };
@@ -101,9 +112,10 @@ export default async function LocaleLayout({
     "@type": "Organization",
     name: "Belle AI",
     url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
     sameAs: [],
     description:
-      "AI-powered personal color analysis, makeup analysis, and face shape analysis app.",
+      "AI-powered personal color analysis app. Find your seasonal color type, best colors for makeup, fashion, and hair with advanced computer vision.",
   };
 
   return (

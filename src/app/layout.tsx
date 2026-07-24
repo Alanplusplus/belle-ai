@@ -9,7 +9,7 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: "Belle AI",
-  description: "AI Magazine-Level Makeup & Personal Color Analysis",
+  description: "Free AI Color Analysis – Find Your Best Colors in 60 Seconds",
 };
 
 export default function RootLayout({
