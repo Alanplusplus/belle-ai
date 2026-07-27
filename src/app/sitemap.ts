@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/makeup-analysis",
     "/personal-color-analysis",
     "/face-shape-analysis",
+    "/try",
     "/download",
     "/pricing",
     "/blog",

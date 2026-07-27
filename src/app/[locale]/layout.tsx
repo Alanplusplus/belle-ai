@@ -113,7 +113,12 @@ export default async function LocaleLayout({
     name: "Belle AI",
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
-    sameAs: [],
+    sameAs: [
+      "https://www.instagram.com/belleai.app",
+      "https://www.pinterest.com/belleaiapp",
+      "https://www.youtube.com/@BelleAI",
+      "https://x.com/BelleAI_jp",
+    ],
     description:
       "AI-powered personal color analysis app. Find your seasonal color type, best colors for makeup, fashion, and hair with advanced computer vision.",
   };
