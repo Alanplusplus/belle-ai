@@ -122,9 +122,13 @@ function HomeContent() {
             <div className="flex items-center gap-2">
               <div className="flex -space-x-1">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <div
+                  <Image
                     key={i}
-                    className="h-7 w-7 rounded-full border-2 border-white bg-gradient-to-br from-primary/60 to-gold/60"
+                    src={`/images/avatar-${i}.webp`}
+                    alt=""
+                    width={28}
+                    height={28}
+                    className="h-7 w-7 rounded-full border-2 border-white object-cover"
                   />
                 ))}
               </div>
