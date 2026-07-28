@@ -117,7 +117,7 @@ function HomeContent() {
             </Link>
           </div>
 
-          {/* Social Proof */}
+          {/* Social Proof - temporarily hidden, pending verified evidence
           <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <div className="flex -space-x-1">
@@ -144,6 +144,7 @@ function HomeContent() {
             </div>
             <span>Free &bull; No signup &bull; Results in 60s</span>
           </div>
+          */}
         </div>
       </section>
 
