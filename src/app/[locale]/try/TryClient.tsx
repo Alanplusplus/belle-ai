@@ -9,6 +9,10 @@ import {
   uploadImage,
   createTask,
   pollUntilDone,
+  fetchHistory,
+  fetchProcessingTask,
+  type WebSignInData,
+  type HistoryEntry,
 } from "@/lib/api";
 
 type AnalysisType = "makeup" | "color_analysis" | "face_shape";
@@ -20,28 +24,6 @@ type Phase =
   | "done"
   | "error"
   | "no_quota";
-
-interface HistoryEntry {
-  id: string;
-  type: AnalysisType;
-  imageUrls: string[];
-  createdAt: number;
-}
-
-const HISTORY_KEY = "belle_analysis_history";
-
-function loadHistory(): HistoryEntry[] {
-  if (typeof window === "undefined") return [];
-  try {
-    return JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
-  } catch {
-    return [];
-  }
-}
-
-function saveHistory(entries: HistoryEntry[]) {
-  localStorage.setItem(HISTORY_KEY, JSON.stringify(entries.slice(0, 20)));
-}
 
 function MakeupTypeIcon() {
   return (
@@ -89,30 +71,52 @@ export function TryClient({ locale }: { locale: string }) {
   const [resultUrls, setResultUrls] = useState<string[]>([]);
   const [errorMsg, setErrorMsg] = useState("");
   const [quota, setQuota] = useState<{ total: number; used: number; remaining: number } | null>(null);
+  const [userCredits, setUserCredits] = useState<{ paid: number; subRemaining: number; subPlan: string | null; totalRemaining: number } | null>(null);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
+  const [historyLoading, setHistoryLoading] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const isLoggedIn = status === "authenticated";
+  const resumedRef = useRef(false);
 
+  // 从服务端加载历史 + 恢复 processing 任务
   useEffect(() => {
-    setHistory(loadHistory());
-  }, []);
+    if (!isLoggedIn || resumedRef.current) return;
+    resumedRef.current = true;
 
-  const addToHistory = useCallback((type: AnalysisType, imageUrls: string[]) => {
-    const entry: HistoryEntry = {
-      id: Date.now().toString(),
-      type,
-      imageUrls,
-      createdAt: Date.now(),
-    };
-    const updated = [entry, ...loadHistory()].slice(0, 20);
-    saveHistory(updated);
-    setHistory(updated);
-  }, []);
+    setHistoryLoading(true);
+    // 并行加载历史和进行中的任务
+    Promise.all([fetchHistory(), fetchProcessingTask()])
+      .then(([historyRes, procRes]) => {
+        if (historyRes.code === 200 && historyRes.data?.list) {
+          setHistory(historyRes.data.list);
+        }
 
-  const clearHistory = useCallback(() => {
-    saveHistory([]);
-    setHistory([]);
+        const pendingTask = procRes.data?.task;
+        if (pendingTask) {
+          setAnalysisType(pendingTask.type as AnalysisType);
+          setPhase("generating");
+          pollUntilDone(pendingTask.task_id)
+            .then((images) => {
+              setResultUrls(images);
+              setPhase("done");
+              reloadHistory();
+            })
+            .catch((err) => {
+              setErrorMsg(err instanceof Error ? err.message : "Resume failed");
+              setPhase("error");
+            });
+        }
+      })
+      .finally(() => setHistoryLoading(false));
+  }, [isLoggedIn]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const reloadHistory = useCallback(() => {
+    fetchHistory().then((res) => {
+      if (res.code === 200 && res.data?.list) {
+        setHistory(res.data.list);
+      }
+    });
   }, []);
 
   const handleUploadClick = useCallback(() => {
@@ -156,10 +160,17 @@ export function TryClient({ locale }: { locale: string }) {
       if (signInRes.code !== 200 || !signInRes.data) {
         throw new Error(signInRes.message);
       }
-      const webQuota = signInRes.data.web_quota;
+      const data = signInRes.data;
+      const webQuota = data.web_quota;
       setQuota(webQuota);
+      setUserCredits({
+        paid: data.paid_credits ?? 0,
+        subRemaining: data.subscription?.remaining ?? 0,
+        subPlan: data.subscription?.plan ?? null,
+        totalRemaining: data.total_remaining ?? webQuota.remaining,
+      });
 
-      if (webQuota.remaining <= 0) {
+      if ((data.total_remaining ?? webQuota.remaining) <= 0) {
         setPhase("no_quota");
         return;
       }
@@ -192,12 +203,12 @@ export function TryClient({ locale }: { locale: string }) {
       const images = await pollUntilDone(taskRes.data.task_id);
       setResultUrls(images);
       setPhase("done");
-      addToHistory(analysisType, images);
+      reloadHistory();
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : "Unknown error");
       setPhase("error");
     }
-  }, [previewUrl, isLoggedIn, session, analysisType, locale, addToHistory]);
+  }, [previewUrl, isLoggedIn, session, analysisType, locale, reloadHistory]);
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12">
@@ -331,7 +342,19 @@ export function TryClient({ locale }: { locale: string }) {
               </p>
             )}
 
-            {quota && phase !== "done" && (
+            {userCredits && phase !== "done" && (
+              <p className="mt-2 text-xs text-muted-foreground">
+                {userCredits.subPlan ? (
+                  <span className="inline-flex items-center gap-1">
+                    <span className="rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-semibold text-primary uppercase">Pro</span>
+                    {t("quotaInfo", { remaining: userCredits.totalRemaining, total: userCredits.subRemaining + userCredits.paid + (quota?.remaining ?? 0) })}
+                  </span>
+                ) : (
+                  t("quotaInfo", { remaining: userCredits.totalRemaining, total: quota?.total ?? 1 })
+                )}
+              </p>
+            )}
+            {!userCredits && quota && phase !== "done" && (
               <p className="mt-2 text-xs text-muted-foreground">
                 {t("quotaInfo", { remaining: quota.remaining, total: quota.total })}
               </p>
@@ -397,32 +420,29 @@ export function TryClient({ locale }: { locale: string }) {
       </div>
 
       {/* History */}
-      {history.length > 0 && (
+      {historyLoading && (
+        <div className="mt-12 text-center text-sm text-muted-foreground">
+          <Spinner /> {t("historyTitle")}
+        </div>
+      )}
+      {!historyLoading && history.length > 0 && (
         <div className="mt-12">
-          <div className="flex items-center justify-between">
-            <h2 className="text-xl font-bold">{t("historyTitle")}</h2>
-            <button
-              onClick={clearHistory}
-              className="text-sm text-muted-foreground hover:text-foreground"
-            >
-              {t("historyClearAll")}
-            </button>
-          </div>
+          <h2 className="text-xl font-bold">{t("historyTitle")}</h2>
           <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {history.map((entry) => (
               <div
                 key={entry.id}
                 className="overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg"
               >
-                {entry.imageUrls[0] && (
+                {entry.image_urls[0] && (
                   <a
-                    href={entry.imageUrls[0]}
+                    href={entry.image_urls[0]}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block"
                   >
                     <img
-                      src={entry.imageUrls[0]}
+                      src={entry.image_urls[0]}
                       alt="Analysis"
                       className="aspect-[3/4] w-full object-cover"
                     />
@@ -431,15 +451,15 @@ export function TryClient({ locale }: { locale: string }) {
                 <div className="flex items-center justify-between p-3">
                   <div>
                     <span className="inline-block rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
-                      {TYPE_LABELS[entry.type]}
+                      {TYPE_LABELS[entry.type as AnalysisType] || entry.type}
                     </span>
                     <p className="mt-1 text-xs text-muted-foreground">
-                      {new Date(entry.createdAt).toLocaleDateString()}
+                      {new Date(entry.created_at * 1000).toLocaleDateString()}
                     </p>
                   </div>
-                  {entry.imageUrls.length > 1 && (
+                  {entry.image_urls.length > 1 && (
                     <div className="flex gap-1">
-                      {entry.imageUrls.slice(1).map((url, i) => (
+                      {entry.image_urls.slice(1).map((url, i) => (
                         <a
                           key={i}
                           href={url}
@@ -463,15 +483,50 @@ export function TryClient({ locale }: { locale: string }) {
 }
 
 function NoQuotaCard({ t }: { t: (key: string) => string }) {
+  const [loading, setLoading] = useState<string | null>(null);
+
+  const handleBuy = async (product: string) => {
+    setLoading(product);
+    try {
+      const res = await fetch("/api/creem/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ product }),
+      });
+      const data = await res.json();
+      if (data.checkoutUrl) {
+        window.location.href = data.checkoutUrl;
+      }
+    } catch { /* ignore */ } finally {
+      setLoading(null);
+    }
+  };
+
   return (
     <div className="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50 to-orange-50 p-6 text-center">
       <p className="text-lg font-semibold text-amber-900">{t("noQuotaTitle")}</p>
       <p className="mt-1 text-sm text-amber-700">{t("noQuotaDesc")}</p>
+      <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+        <button
+          onClick={() => handleBuy("credits5")}
+          disabled={loading !== null}
+          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:opacity-50"
+        >
+          {loading === "credits5" ? t("processing") : t("buy5Credits")}
+        </button>
+        <button
+          onClick={() => handleBuy("credits12")}
+          disabled={loading !== null}
+          className="inline-flex items-center gap-2 rounded-full border-2 border-primary px-6 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 disabled:opacity-50"
+        >
+          {loading === "credits12" ? t("processing") : t("buy12Credits")}
+        </button>
+      </div>
       <Link
-        href="/download"
-        className="mt-4 inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+        href="/pricing"
+        className="mt-3 inline-block text-sm font-medium text-primary hover:underline"
       >
-        {t("downloadApp")}
+        {t("viewAllPlans")}
       </Link>
       <p className="mt-2 text-xs text-amber-600">{t("noQuotaHint")}</p>
     </div>

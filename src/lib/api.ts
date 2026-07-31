@@ -13,15 +13,20 @@ async function belleApi<T>(body: Record<string, unknown>): Promise<ApiResponse<T
   return res.json();
 }
 
+export interface WebSignInData {
+  user_id: string;
+  device_id: string;
+  email: string;
+  nickname: string;
+  avatar_url: string;
+  web_quota: { total: number; used: number; remaining: number };
+  paid_credits: number;
+  subscription: { plan: string | null; status: string; remaining: number };
+  total_remaining: number;
+}
+
 export async function webSignIn(email?: string, name?: string, avatarUrl?: string) {
-  return belleApi<{
-    user_id: string;
-    device_id: string;
-    email: string;
-    nickname: string;
-    avatar_url: string;
-    web_quota: { total: number; used: number; remaining: number };
-  }>({
+  return belleApi<WebSignInData>({
     action: "signin",
     email,
     name,
@@ -89,4 +94,28 @@ export async function pollUntilDone(
     onProgress?.();
   }
   throw new Error("Timed out");
+}
+
+export interface HistoryEntry {
+  id: string;
+  status: string;
+  type: string;
+  image_urls: string[];
+  created_at: number;
+}
+
+export async function fetchHistory(page = 1, pageSize = 20) {
+  return belleApi<{ list: HistoryEntry[] }>({
+    action: "history",
+    page,
+    page_size: pageSize,
+  });
+}
+
+export async function fetchProcessingTask() {
+  return belleApi<{
+    task: { task_id: string; type: string; created_at: number } | null;
+  }>({
+    action: "processing",
+  });
 }

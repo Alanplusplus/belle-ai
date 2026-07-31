@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { SITE_URL, APP_STORE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
+import { PricingButtons } from "./PricingButtons";
 
 export async function generateMetadata({
   params,
@@ -71,39 +72,25 @@ export default function PricingPage() {
               <PricingFeature text={t("yearlyFeature2")} />
               <PricingFeature text={t("yearlyFeature3")} />
             </ul>
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 block w-full rounded-full bg-primary py-2.5 text-center text-sm font-semibold text-white transition hover:bg-primary-dark"
-            >
-              {t("yearlyCta")}
-            </a>
+            <PricingButtons product="yearly" variant="primary" label={t("yearlyCta")} />
           </div>
 
-          {/* Weekly */}
+          {/* Monthly */}
           <div className="rounded-2xl border border-border bg-card p-6">
-            <h3 className="text-xl font-bold">{t("weekly")}</h3>
+            <h3 className="text-xl font-bold">{t("monthly")}</h3>
             <p className="mt-1 text-sm text-muted-foreground">
-              {t("weeklyDesc")}
+              {t("monthlyDesc")}
             </p>
             <div className="mt-4">
-              <span className="text-4xl font-bold">{t("weeklyPrice")}</span>
-              <span className="text-muted-foreground">{t("weeklyPer")}</span>
+              <span className="text-4xl font-bold">{t("monthlyPrice")}</span>
+              <span className="text-muted-foreground">{t("monthlyPer")}</span>
             </div>
             <ul className="mt-6 space-y-3">
-              <PricingFeature text={t("weeklyFeature1")} />
-              <PricingFeature text={t("weeklyFeature2")} />
-              <PricingFeature text={t("weeklyFeature3")} />
+              <PricingFeature text={t("monthlyFeature1")} />
+              <PricingFeature text={t("monthlyFeature2")} />
+              <PricingFeature text={t("monthlyFeature3")} />
             </ul>
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 block w-full rounded-full border border-primary py-2.5 text-center text-sm font-semibold text-primary transition hover:bg-primary/5"
-            >
-              {t("weeklyCta")}
-            </a>
+            <PricingButtons product="monthly" variant="outline" label={t("monthlyCta")} />
           </div>
         </div>
 
@@ -121,14 +108,7 @@ export default function PricingPage() {
                   {t("smallPrice")}
                 </p>
               </div>
-              <a
-                href={APP_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full bg-primary px-5 py-2 text-sm font-medium text-white transition hover:bg-primary-dark"
-              >
-                {t("creditsCta")}
-              </a>
+              <PricingButtons product="credits5" variant="small" label={t("creditsCta")} />
             </div>
             <div className="flex items-center justify-between rounded-xl border border-border p-4">
               <div>
@@ -137,16 +117,24 @@ export default function PricingPage() {
                   {t("largePrice")}
                 </p>
               </div>
-              <a
-                href={APP_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full bg-primary px-5 py-2 text-sm font-medium text-white transition hover:bg-primary-dark"
-              >
-                {t("creditsCta")}
-              </a>
+              <PricingButtons product="credits12" variant="small" label={t("creditsCta")} />
             </div>
           </div>
+        </div>
+
+        {/* App Store fallback */}
+        <div className="mt-8 text-center">
+          <p className="text-sm text-muted-foreground">
+            {t("appStoreNote")}
+            <a
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-1 font-medium text-primary hover:underline"
+            >
+              {t("appStoreLink")}
+            </a>
+          </p>
         </div>
       </div>
     </section>

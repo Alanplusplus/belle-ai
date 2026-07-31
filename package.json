@@ -11,6 +11,7 @@
   "dependencies": {
     "@auth/core": "^0.41.2",
     "@tailwindcss/typography": "^0.5.20",
+    "creem": "^1.6.0",
     "gray-matter": "^4.0.3",
     "next": "16.2.10",
     "next-auth": "^5.0.0-beta.31",

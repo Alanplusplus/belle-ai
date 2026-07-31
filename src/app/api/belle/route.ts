@@ -82,6 +82,22 @@ export async function POST(req: NextRequest) {
         return NextResponse.json(data);
       }
 
+      case "history": {
+        const page = params.page || 1;
+        const pageSize = params.page_size || 20;
+        const data = await proxyGet(
+          `/common/v1/web/history?google_user_id=${googleId}&page=${page}&page_size=${pageSize}`
+        );
+        return NextResponse.json(data);
+      }
+
+      case "processing": {
+        const data = await proxyGet(
+          `/common/v1/web/processing?google_user_id=${googleId}`
+        );
+        return NextResponse.json(data);
+      }
+
       default:
         return NextResponse.json({ code: 400, message: "Unknown action" }, { status: 400 });
     }
