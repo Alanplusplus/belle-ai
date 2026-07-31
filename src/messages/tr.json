@@ -36,7 +36,13 @@
     "download": "İndir",
     "tryNow": "Hemen Dene",
     "getApp": "Uygulamayı İndir",
-    "signOut": "Çıkış Yap"
+    "signOut": "Çıkış Yap",
+    "myHistory": "Geçmişim",
+    "subscription": "Abonelik",
+    "credits": "Kredi",
+    "activeUntil": "Aktif",
+    "noPlan": "Plan yok",
+    "manage": "Yönet"
   },
   "home": {
     "heroTitle": "Yapay Zeka Renk Analizi:",
@@ -171,7 +177,7 @@
     "yearlyFeature1": "Ayda 200 analiz",
     "yearlyFeature2": "4K çözünürlük mevcut",
     "yearlyFeature3": "Düzeltme ve yeniden oluşturma",
-    "yearlyCta": "Ücretsiz Denemeyi Başlat",
+    "yearlyCta": "Yıllık Abone Ol",
     "credits": "Kredi Paketleri",
     "creditsDesc": "Kullandıkça öde",
     "smallPack": "5 rapor",
@@ -371,7 +377,17 @@
     "historyTitle": "Your Analysis History",
     "historyEmpty": "No analysis history yet. Generate your first report above!",
     "historyClearAll": "Clear All",
-    "historyViewReport": "View Report"
+    "historyViewReport": "View Report",
+    "correction": "Yeniden Oluştur",
+    "correctionDesc": "Aynı fotoğrafla tekrar analiz et",
+    "download": "İndir",
+    "share": "Paylaş",
+    "shareCopied": "Bağlantı kopyalandı!",
+    "shareTitle": "Belle AI Analizim",
+    "shareText": "AI güzellik analizimi inceleyin!",
+    "close": "Kapat",
+    "prev": "Önceki",
+    "next": "Sonraki"
   },
   "footer": {
     "tagline": "Yapay zeka destekli kişisel güzellik analizi",

@@ -36,7 +36,13 @@
     "download": "下载",
     "tryNow": "立即体验",
     "getApp": "获取App",
-    "signOut": "退出登录"
+    "signOut": "退出登录",
+    "myHistory": "我的历史",
+    "subscription": "订阅",
+    "credits": "积分",
+    "activeUntil": "生效中",
+    "noPlan": "暂无订阅",
+    "manage": "管理"
   },
   "home": {
     "heroTitle": "AI色彩分析：",
@@ -171,7 +177,7 @@
     "yearlyFeature1": "每月 200 次分析",
     "yearlyFeature2": "4K分辨率可用",
     "yearlyFeature3": "修正与重新生成",
-    "yearlyCta": "开始免费试用",
+    "yearlyCta": "订阅年度方案",
     "credits": "次数包",
     "creditsDesc": "按需购买",
     "smallPack": "5次报告",
@@ -371,7 +377,17 @@
     "historyTitle": "分析历史",
     "historyEmpty": "暂无分析记录。在上方生成您的第一份报告吧！",
     "historyClearAll": "清除全部",
-    "historyViewReport": "查看报告"
+    "historyViewReport": "查看报告",
+    "correction": "重新生成",
+    "correctionDesc": "使用同一张照片重新分析",
+    "download": "下载",
+    "share": "分享",
+    "shareCopied": "链接已复制!",
+    "shareTitle": "我的 Belle AI 分析报告",
+    "shareText": "看看我的 AI 美妆分析报告！",
+    "close": "关闭",
+    "prev": "上一张",
+    "next": "下一张"
   },
   "footer": {
     "tagline": "AI驱动的个人美学分析",

@@ -36,7 +36,13 @@
     "download": "Tải xuống",
     "tryNow": "Dùng thử ngay",
     "getApp": "Tải App",
-    "signOut": "Đăng xuất"
+    "signOut": "Đăng xuất",
+    "myHistory": "Lịch sử",
+    "subscription": "Đăng ký",
+    "credits": "Tín dụng",
+    "activeUntil": "Đang hoạt động",
+    "noPlan": "Chưa có gói",
+    "manage": "Quản lý"
   },
   "home": {
     "heroTitle": "Phân Tích Màu AI:",
@@ -171,7 +177,7 @@
     "yearlyFeature1": "200 lượt phân tích mỗi tháng",
     "yearlyFeature2": "Có độ phân giải 4K",
     "yearlyFeature3": "Chỉnh sửa & tạo lại",
-    "yearlyCta": "Dùng Thử Miễn Phí",
+    "yearlyCta": "Đăng ký năm",
     "credits": "Gói Tín Dụng",
     "creditsDesc": "Trả theo lượt dùng",
     "smallPack": "5 báo cáo",
@@ -371,7 +377,17 @@
     "historyTitle": "Your Analysis History",
     "historyEmpty": "No analysis history yet. Generate your first report above!",
     "historyClearAll": "Clear All",
-    "historyViewReport": "View Report"
+    "historyViewReport": "View Report",
+    "correction": "Tạo lại",
+    "correctionDesc": "Phân tích lại với cùng ảnh",
+    "download": "Tải xuống",
+    "share": "Chia sẻ",
+    "shareCopied": "Đã sao chép liên kết!",
+    "shareTitle": "Phân tích Belle AI của tôi",
+    "shareText": "Xem phân tích sắc đẹp AI của tôi!",
+    "close": "Đóng",
+    "prev": "Trước",
+    "next": "Tiếp"
   },
   "footer": {
     "tagline": "Phân tích làm đẹp cá nhân bằng AI",

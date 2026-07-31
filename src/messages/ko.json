@@ -36,7 +36,13 @@
     "download": "다운로드",
     "tryNow": "지금 체험하기",
     "getApp": "앱 다운로드",
-    "signOut": "로그아웃"
+    "signOut": "로그아웃",
+    "myHistory": "내 기록",
+    "subscription": "구독",
+    "credits": "크레딧",
+    "activeUntil": "활성",
+    "noPlan": "구독 없음",
+    "manage": "관리"
   },
   "home": {
     "heroTitle": "AI 컬러 분석:",
@@ -171,7 +177,7 @@
     "yearlyFeature1": "월 200회 분석",
     "yearlyFeature2": "4K 해상도 이용 가능",
     "yearlyFeature3": "수정 & 재생성",
-    "yearlyCta": "무료 체험 시작",
+    "yearlyCta": "연간 구독",
     "credits": "크레딧 팩",
     "creditsDesc": "필요한 만큼만",
     "smallPack": "5회 리포트",
@@ -371,7 +377,17 @@
     "historyTitle": "분석 기록",
     "historyEmpty": "아직 분석 기록이 없습니다. 위에서 첫 번째 리포트를 생성해보세요!",
     "historyClearAll": "전체 삭제",
-    "historyViewReport": "리포트 보기"
+    "historyViewReport": "리포트 보기",
+    "correction": "재생성",
+    "correctionDesc": "같은 사진으로 다시 분석합니다",
+    "download": "다운로드",
+    "share": "공유",
+    "shareCopied": "링크가 복사되었습니다!",
+    "shareTitle": "Belle AI 분석 결과",
+    "shareText": "Belle AI 뷰티 분석을 확인하세요!",
+    "close": "닫기",
+    "prev": "이전",
+    "next": "다음"
   },
   "footer": {
     "tagline": "AI 기반 퍼스널 뷰티 분석",

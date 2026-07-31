@@ -36,7 +36,13 @@
     "download": "डाउनलोड",
     "tryNow": "अभी आज़माएं",
     "getApp": "ऐप डाउनलोड",
-    "signOut": "लॉग आउट"
+    "signOut": "लॉग आउट",
+    "myHistory": "मेरा इतिहास",
+    "subscription": "सदस्यता",
+    "credits": "क्रेडिट",
+    "activeUntil": "सक्रिय",
+    "noPlan": "कोई योजना नहीं",
+    "manage": "प्रबंधित करें"
   },
   "home": {
     "heroTitle": "AI कलर एनालिसिस:",
@@ -171,7 +177,7 @@
     "yearlyFeature1": "200 एनालिसिस प्रति माह",
     "yearlyFeature2": "4K रेज़ोल्यूशन उपलब्ध",
     "yearlyFeature3": "सुधार और पुनर्जनन",
-    "yearlyCta": "मुफ्त ट्रायल शुरू करें",
+    "yearlyCta": "वार्षिक सदस्यता",
     "credits": "क्रेडिट पैक",
     "creditsDesc": "जितना उपयोग, उतना भुगतान",
     "smallPack": "5 रिपोर्ट",
@@ -371,7 +377,17 @@
     "historyTitle": "Your Analysis History",
     "historyEmpty": "No analysis history yet. Generate your first report above!",
     "historyClearAll": "Clear All",
-    "historyViewReport": "View Report"
+    "historyViewReport": "View Report",
+    "correction": "पुनः जनरेट",
+    "correctionDesc": "उसी फोटो से दोबारा विश्लेषण करें",
+    "download": "डाउनलोड",
+    "share": "शेयर",
+    "shareCopied": "लिंक कॉपी हो गया!",
+    "shareTitle": "मेरा Belle AI विश्लेषण",
+    "shareText": "Belle AI द्वारा मेरा सौंदर्य विश्लेषण देखें!",
+    "close": "बंद",
+    "prev": "पिछला",
+    "next": "अगला"
   },
   "footer": {
     "tagline": "AI-संचालित व्यक्तिगत ब्यूटी एनालिसिस",

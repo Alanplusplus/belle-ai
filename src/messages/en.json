@@ -35,8 +35,14 @@
     "pricing": "Pricing",
     "download": "Download",
     "tryNow": "Try Now",
+    "myHistory": "My History",
     "getApp": "Get App",
-    "signOut": "Sign Out"
+    "signOut": "Sign Out",
+    "subscription": "Subscription",
+    "credits": "Credits",
+    "activeUntil": "Active",
+    "noPlan": "No active plan",
+    "manage": "Manage"
   },
   "home": {
     "heroTitle": "AI Color Analysis:",
@@ -171,7 +177,7 @@
     "yearlyFeature1": "200 analyses per month",
     "yearlyFeature2": "4K resolution available",
     "yearlyFeature3": "Correction & regeneration",
-    "yearlyCta": "Start Free Trial",
+    "yearlyCta": "Subscribe Yearly",
     "credits": "Credit Packs",
     "creditsDesc": "Pay as you go",
     "smallPack": "5 reports",
@@ -371,7 +377,17 @@
     "historyTitle": "Your Analysis History",
     "historyEmpty": "No analysis history yet. Generate your first report above!",
     "historyClearAll": "Clear All",
-    "historyViewReport": "View Report"
+    "historyViewReport": "View Report",
+    "correction": "Correction",
+    "correctionDesc": "Re-analyze with the same photo for a different result",
+    "download": "Download",
+    "share": "Share",
+    "shareCopied": "Link copied to clipboard!",
+    "shareTitle": "My Belle AI Analysis",
+    "shareText": "Check out my AI beauty analysis by Belle AI!",
+    "close": "Close",
+    "prev": "Previous",
+    "next": "Next"
   },
   "footer": {
     "tagline": "AI-powered personal beauty analysis",

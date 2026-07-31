@@ -7,6 +7,7 @@ import { routing, type Locale } from "@/i18n/routing";
 import { LOCALE_NAMES, APP_STORE_URL } from "@/lib/constants";
 import { useState, useEffect, useRef } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
+import { webSignIn, type WebSignInData } from "@/lib/api";
 
 export function Header() {
   const t = useTranslations("nav");
@@ -16,9 +17,11 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
+  const [userInfo, setUserInfo] = useState<{ credits: number; subPlan: string | null; subRemaining: number } | null>(null);
 
   const langRef = useRef<HTMLDivElement>(null);
   const userMenuRef = useRef<HTMLDivElement>(null);
+  const fetchedRef = useRef(false);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -32,6 +35,24 @@ export function Header() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  useEffect(() => {
+    if (status !== "authenticated" || fetchedRef.current) return;
+    fetchedRef.current = true;
+    webSignIn(
+      session?.user?.email ?? undefined,
+      session?.user?.name ?? undefined,
+      session?.user?.image ?? undefined
+    ).then((res) => {
+      if (res.code === 200 && res.data) {
+        setUserInfo({
+          credits: res.data.paid_credits ?? 0,
+          subPlan: res.data.subscription?.plan ?? null,
+          subRemaining: res.data.subscription?.remaining ?? 0,
+        });
+      }
+    });
+  }, [status, session]);
 
   const features = [
     { href: "/makeup-analysis", label: t("makeupAnalysis") },
@@ -127,9 +148,25 @@ export function Header() {
                 </svg>
               </button>
               {userMenuOpen && (
-                <div className="absolute right-0 top-full mt-1 min-w-[160px] rounded-lg border border-border bg-card p-1 shadow-lg">
+                <div className="absolute right-0 top-full mt-1 min-w-[220px] rounded-lg border border-border bg-card p-1 shadow-lg">
                   <div className="px-3 py-2 text-xs text-muted-foreground truncate">
                     {session.user.email}
+                  </div>
+                  <div className="mx-2 my-1 rounded-md bg-muted/50 px-3 py-2">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-muted-foreground">{t("subscription")}</span>
+                      {userInfo?.subPlan ? (
+                        <span className="rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-semibold text-primary uppercase">
+                          {userInfo.subPlan} · {userInfo.subRemaining} left
+                        </span>
+                      ) : (
+                        <span className="text-muted-foreground">{t("noPlan")}</span>
+                      )}
+                    </div>
+                    <div className="mt-1.5 flex items-center justify-between text-xs">
+                      <span className="text-muted-foreground">{t("credits")}</span>
+                      <span className="font-medium">{userInfo?.credits ?? 0}</span>
+                    </div>
                   </div>
                   <Link
                     href="/try"
@@ -138,6 +175,21 @@ export function Header() {
                   >
                     {t("tryNow")}
                   </Link>
+                  <Link
+                    href="/try#history"
+                    className="block rounded-md px-3 py-2 text-sm hover:bg-muted"
+                    onClick={() => setUserMenuOpen(false)}
+                  >
+                    {t("myHistory")}
+                  </Link>
+                  <Link
+                    href="/pricing"
+                    className="block rounded-md px-3 py-2 text-sm text-primary hover:bg-muted"
+                    onClick={() => setUserMenuOpen(false)}
+                  >
+                    {t("manage")}
+                  </Link>
+                  <div className="mx-1 my-1 border-t border-border" />
                   <button
                     onClick={() => { setUserMenuOpen(false); signOut(); }}
                     className="w-full rounded-md px-3 py-2 text-left text-sm text-red-600 hover:bg-muted"

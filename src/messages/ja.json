@@ -36,7 +36,13 @@
     "download": "ダウンロード",
     "tryNow": "今すぐ試す",
     "getApp": "アプリを入手",
-    "signOut": "ログアウト"
+    "signOut": "ログアウト",
+    "myHistory": "履歴",
+    "subscription": "サブスクリプション",
+    "credits": "クレジット",
+    "activeUntil": "有効",
+    "noPlan": "プランなし",
+    "manage": "管理"
   },
   "home": {
     "heroTitle": "AIカラー分析：",
@@ -171,7 +177,7 @@
     "yearlyFeature1": "月200回の分析",
     "yearlyFeature2": "4K解像度利用可",
     "yearlyFeature3": "修正・再生成",
-    "yearlyCta": "無料トライアル開始",
+    "yearlyCta": "年間プランを購入",
     "credits": "クレジットパック",
     "creditsDesc": "必要な分だけ",
     "smallPack": "5回レポート",
@@ -371,7 +377,17 @@
     "historyTitle": "分析履歴",
     "historyEmpty": "まだ分析履歴がありません。上のフォームで最初のレポートを作成しましょう！",
     "historyClearAll": "すべて削除",
-    "historyViewReport": "レポートを見る"
+    "historyViewReport": "レポートを見る",
+    "correction": "再生成",
+    "correctionDesc": "同じ写真で再分析します",
+    "download": "ダウンロード",
+    "share": "シェア",
+    "shareCopied": "リンクがコピーされました!",
+    "shareTitle": "Belle AIの分析結果",
+    "shareText": "Belle AIの美容分析をチェックしてください！",
+    "close": "閉じる",
+    "prev": "前へ",
+    "next": "次へ"
   },
   "footer": {
     "tagline": "AI搭載パーソナルビューティー分析",

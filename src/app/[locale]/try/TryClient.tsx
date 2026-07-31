@@ -15,6 +15,11 @@ import {
   type HistoryEntry,
 } from "@/lib/api";
 
+interface LightboxState {
+  entry: HistoryEntry;
+  imageIndex: number;
+}
+
 type AnalysisType = "makeup" | "color_analysis" | "face_shape";
 type Phase =
   | "idle"
@@ -68,12 +73,15 @@ export function TryClient({ locale }: { locale: string }) {
   const [phase, setPhase] = useState<Phase>("idle");
   const [analysisType, setAnalysisType] = useState<AnalysisType>("color_analysis");
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [sourceImageUrl, setSourceImageUrl] = useState<string | null>(null);
   const [resultUrls, setResultUrls] = useState<string[]>([]);
   const [errorMsg, setErrorMsg] = useState("");
   const [quota, setQuota] = useState<{ total: number; used: number; remaining: number } | null>(null);
   const [userCredits, setUserCredits] = useState<{ paid: number; subRemaining: number; subPlan: string | null; totalRemaining: number } | null>(null);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [historyLoading, setHistoryLoading] = useState(false);
+  const [lightbox, setLightbox] = useState<LightboxState | null>(null);
+  const [shareToast, setShareToast] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const isLoggedIn = status === "authenticated";
@@ -118,6 +126,71 @@ export function TryClient({ locale }: { locale: string }) {
       }
     });
   }, []);
+
+  const handleCorrection = useCallback(async (entry: HistoryEntry) => {
+    if (!entry.source_image_url) return;
+    setLightbox(null);
+    setPhase("generating");
+    setErrorMsg("");
+    setResultUrls([]);
+    const type = (entry.type || "color_analysis") as AnalysisType;
+    setAnalysisType(type);
+
+    try {
+      const signInRes = await webSignIn(
+        session?.user?.email ?? undefined,
+        session?.user?.name ?? undefined,
+        session?.user?.image ?? undefined
+      );
+      if (signInRes.code !== 200 || !signInRes.data) throw new Error(signInRes.message);
+      const data = signInRes.data;
+      if ((data.total_remaining ?? data.web_quota.remaining) <= 0) {
+        setPhase("no_quota");
+        return;
+      }
+
+      const taskRes = await createTask(entry.source_image_url, type, locale);
+      if (taskRes.code === 429) { setPhase("no_quota"); return; }
+      if (taskRes.code !== 200 || !taskRes.data?.task_id) throw new Error(taskRes.message);
+
+      const images = await pollUntilDone(taskRes.data.task_id);
+      setResultUrls(images);
+      setPhase("done");
+      reloadHistory();
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : "Correction failed");
+      setPhase("error");
+    }
+  }, [session, locale, reloadHistory]);
+
+  const handleDownload = useCallback(async (url: string) => {
+    try {
+      const res = await fetch(url);
+      const blob = await res.blob();
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `belle-ai-report-${Date.now()}.jpg`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(a.href);
+    } catch { /* fallback: open in new tab */ window.open(url, "_blank"); }
+  }, []);
+
+  const handleShare = useCallback(async (url: string) => {
+    const shareData = {
+      title: t("shareTitle"),
+      text: t("shareText"),
+      url,
+    };
+    if (navigator.share && navigator.canShare?.(shareData)) {
+      try { await navigator.share(shareData); } catch { /* user cancelled */ }
+    } else {
+      await navigator.clipboard.writeText(url);
+      setShareToast(true);
+      setTimeout(() => setShareToast(false), 2000);
+    }
+  }, [t]);
 
   const handleUploadClick = useCallback(() => {
     if (!isLoggedIn) {
@@ -184,6 +257,7 @@ export function TryClient({ locale }: { locale: string }) {
       if (uploadRes.code !== 200 || !uploadRes.data?.url) {
         throw new Error(uploadRes.message);
       }
+      setSourceImageUrl(uploadRes.data.url);
 
       setPhase("generating");
       const taskRes = await createTask(uploadRes.data.url, analysisType, locale);
@@ -376,20 +450,34 @@ export function TryClient({ locale }: { locale: string }) {
           <h2 className="text-center text-xl font-bold">{t("resultTitle")}</h2>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {resultUrls.map((url, i) => (
-              <a
-                key={i}
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group overflow-hidden rounded-2xl border border-border transition hover:border-primary/40 hover:shadow-lg"
-              >
+              <div key={i} className="group relative overflow-hidden rounded-2xl border border-border transition hover:border-primary/40 hover:shadow-lg">
                 <img
                   src={url}
                   alt={`Result ${i + 1}`}
-                  className="w-full transition duration-300 group-hover:scale-[1.02]"
+                  className="w-full cursor-pointer transition duration-300 group-hover:scale-[1.02]"
+                  onClick={() => setLightbox({ entry: { id: "current", status: "success", type: analysisType, image_urls: resultUrls, source_image_url: sourceImageUrl ?? undefined, created_at: Date.now() / 1000 }, imageIndex: i })}
                 />
-              </a>
+                <div className="absolute bottom-2 right-2 flex gap-1.5 opacity-0 transition group-hover:opacity-100">
+                  <button onClick={() => handleDownload(url)} className="rounded-full bg-black/60 p-2 text-white backdrop-blur-sm hover:bg-black/80" title={t("download")}>
+                    <DownloadIcon />
+                  </button>
+                  <button onClick={() => handleShare(url)} className="rounded-full bg-black/60 p-2 text-white backdrop-blur-sm hover:bg-black/80" title={t("share")}>
+                    <ShareIcon />
+                  </button>
+                </div>
+              </div>
             ))}
+          </div>
+
+          <div className="mt-4 flex justify-center">
+            <button
+              onClick={() => handleCorrection({ id: "current", status: "success", type: analysisType, image_urls: resultUrls, source_image_url: sourceImageUrl ?? undefined, created_at: Date.now() / 1000 })}
+              disabled={!sourceImageUrl}
+              className="inline-flex items-center gap-2 rounded-full border border-primary px-5 py-2 text-sm font-medium text-primary transition hover:bg-primary/5 disabled:opacity-50"
+            >
+              <CorrectionIcon />
+              {t("correction")}
+            </button>
           </div>
 
           {quota && quota.remaining <= 0 && (
@@ -420,62 +508,68 @@ export function TryClient({ locale }: { locale: string }) {
       </div>
 
       {/* History */}
-      {historyLoading && (
-        <div className="mt-12 text-center text-sm text-muted-foreground">
-          <Spinner /> {t("historyTitle")}
-        </div>
-      )}
-      {!historyLoading && history.length > 0 && (
-        <div className="mt-12">
-          <h2 className="text-xl font-bold">{t("historyTitle")}</h2>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {history.map((entry) => (
-              <div
-                key={entry.id}
-                className="overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg"
-              >
-                {entry.image_urls[0] && (
-                  <a
-                    href={entry.image_urls[0]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block"
-                  >
+      <div id="history">
+        {historyLoading && (
+          <div className="mt-12 text-center text-sm text-muted-foreground">
+            <Spinner /> {t("historyTitle")}
+          </div>
+        )}
+        {!historyLoading && history.length > 0 && (
+          <div className="mt-12">
+            <h2 className="text-xl font-bold">{t("historyTitle")}</h2>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {history.map((entry) => (
+                <div
+                  key={entry.id}
+                  className="cursor-pointer overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg"
+                  onClick={() => setLightbox({ entry, imageIndex: 0 })}
+                >
+                  {entry.image_urls[0] && (
                     <img
                       src={entry.image_urls[0]}
                       alt="Analysis"
                       className="aspect-[3/4] w-full object-cover"
                     />
-                  </a>
-                )}
-                <div className="flex items-center justify-between p-3">
-                  <div>
-                    <span className="inline-block rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
-                      {TYPE_LABELS[entry.type as AnalysisType] || entry.type}
-                    </span>
-                    <p className="mt-1 text-xs text-muted-foreground">
-                      {new Date(entry.created_at * 1000).toLocaleDateString()}
-                    </p>
-                  </div>
-                  {entry.image_urls.length > 1 && (
-                    <div className="flex gap-1">
-                      {entry.image_urls.slice(1).map((url, i) => (
-                        <a
-                          key={i}
-                          href={url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block h-10 w-10 overflow-hidden rounded-lg border border-border"
-                        >
-                          <img src={url} alt="" className="h-full w-full object-cover" />
-                        </a>
-                      ))}
-                    </div>
                   )}
+                  <div className="flex items-center justify-between p-3">
+                    <div>
+                      <span className="inline-block rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
+                        {TYPE_LABELS[entry.type as AnalysisType] || entry.type}
+                      </span>
+                      <p className="mt-1 text-xs text-muted-foreground">
+                        {new Date(entry.created_at * 1000).toLocaleDateString()}
+                      </p>
+                    </div>
+                    {entry.image_urls.length > 1 && (
+                      <span className="text-xs text-muted-foreground">
+                        +{entry.image_urls.length - 1}
+                      </span>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+        )}
+      </div>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <ImageLightbox
+          entry={lightbox.entry}
+          initialIndex={lightbox.imageIndex}
+          onClose={() => setLightbox(null)}
+          onCorrection={handleCorrection}
+          onDownload={handleDownload}
+          onShare={handleShare}
+          t={t}
+        />
+      )}
+
+      {/* Share Toast */}
+      {shareToast && (
+        <div className="fixed bottom-6 left-1/2 z-[200] -translate-x-1/2 rounded-full bg-foreground px-4 py-2 text-sm text-background shadow-lg">
+          {t("shareCopied")}
         </div>
       )}
     </div>
@@ -560,4 +654,135 @@ function fileToBase64(file: File): Promise<string> {
     reader.onerror = reject;
     reader.readAsDataURL(file);
   });
+}
+
+function ImageLightbox({
+  entry,
+  initialIndex,
+  onClose,
+  onCorrection,
+  onDownload,
+  onShare,
+  t,
+}: {
+  entry: HistoryEntry;
+  initialIndex: number;
+  onClose: () => void;
+  onCorrection: (entry: HistoryEntry) => void;
+  onDownload: (url: string) => void;
+  onShare: (url: string) => void;
+  t: (key: string) => string;
+}) {
+  const [index, setIndex] = useState(initialIndex);
+  const urls = entry.image_urls;
+  const currentUrl = urls[index];
+
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft" && index > 0) setIndex(index - 1);
+      if (e.key === "ArrowRight" && index < urls.length - 1) setIndex(index + 1);
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [index, urls.length, onClose]);
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = ""; };
+  }, []);
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm" onClick={onClose}>
+      <div className="relative flex max-h-[90vh] max-w-[90vw] flex-col items-center" onClick={(e) => e.stopPropagation()}>
+        {/* Close */}
+        <button onClick={onClose} className="absolute -top-10 right-0 rounded-full bg-white/10 p-2 text-white hover:bg-white/20">
+          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+
+        {/* Image */}
+        <div className="relative flex items-center justify-center">
+          {index > 0 && (
+            <button onClick={() => setIndex(index - 1)} className="absolute left-2 z-10 rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+          )}
+          <img
+            src={currentUrl}
+            alt={`Report ${index + 1}`}
+            className="max-h-[75vh] max-w-[85vw] rounded-xl object-contain shadow-2xl"
+          />
+          {index < urls.length - 1 && (
+            <button onClick={() => setIndex(index + 1)} className="absolute right-2 z-10 rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </button>
+          )}
+        </div>
+
+        {/* Page indicator */}
+        {urls.length > 1 && (
+          <div className="mt-3 flex gap-1.5">
+            {urls.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setIndex(i)}
+                className={`h-2 w-2 rounded-full transition ${i === index ? "bg-white" : "bg-white/40"}`}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Action bar */}
+        <div className="mt-4 flex items-center gap-3">
+          <button
+            onClick={() => onDownload(currentUrl)}
+            className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm hover:bg-white/20"
+          >
+            <DownloadIcon />
+            {t("download")}
+          </button>
+          <button
+            onClick={() => onShare(currentUrl)}
+            className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm hover:bg-white/20"
+          >
+            <ShareIcon />
+            {t("share")}
+          </button>
+          {entry.source_image_url && (
+            <button
+              onClick={() => onCorrection(entry)}
+              className="inline-flex items-center gap-1.5 rounded-full bg-primary/80 px-4 py-2 text-sm text-white hover:bg-primary"
+            >
+              <CorrectionIcon />
+              {t("correction")}
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DownloadIcon() {
+  return (
+    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+    </svg>
+  );
+}
+
+function ShareIcon() {
+  return (
+    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+    </svg>
+  );
+}
+
+function CorrectionIcon() {
+  return (
+    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+    </svg>
+  );
 }

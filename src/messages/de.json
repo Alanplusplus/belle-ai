@@ -36,7 +36,13 @@
     "download": "Download",
     "tryNow": "Jetzt testen",
     "getApp": "App laden",
-    "signOut": "Abmelden"
+    "signOut": "Abmelden",
+    "myHistory": "Mein Verlauf",
+    "subscription": "Abonnement",
+    "credits": "Guthaben",
+    "activeUntil": "Aktiv",
+    "noPlan": "Kein Abo",
+    "manage": "Verwalten"
   },
   "home": {
     "heroTitle": "KI-Farbanalyse:",
@@ -171,7 +177,7 @@
     "yearlyFeature1": "200 Analysen pro Monat",
     "yearlyFeature2": "4K-Auflösung verfügbar",
     "yearlyFeature3": "Korrektur und Neugenerierung",
-    "yearlyCta": "Kostenlose Testversion starten",
+    "yearlyCta": "Jahresabo abschließen",
     "credits": "Credit-Pakete",
     "creditsDesc": "Bezahle nach Bedarf",
     "smallPack": "5 Berichte",
@@ -371,7 +377,17 @@
     "historyTitle": "Your Analysis History",
     "historyEmpty": "No analysis history yet. Generate your first report above!",
     "historyClearAll": "Clear All",
-    "historyViewReport": "View Report"
+    "historyViewReport": "View Report",
+    "correction": "Neu generieren",
+    "correctionDesc": "Mit demselben Foto erneut analysieren",
+    "download": "Herunterladen",
+    "share": "Teilen",
+    "shareCopied": "Link kopiert!",
+    "shareTitle": "Meine Belle AI Analyse",
+    "shareText": "Schau dir meine KI-Beauty-Analyse an!",
+    "close": "Schließen",
+    "prev": "Zurück",
+    "next": "Weiter"
   },
   "footer": {
     "tagline": "KI-gestützte persönliche Schönheitsanalyse",

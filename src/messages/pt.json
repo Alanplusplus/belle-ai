@@ -36,7 +36,13 @@
     "download": "Descarregar",
     "tryNow": "Experimentar agora",
     "getApp": "Baixar App",
-    "signOut": "Sair"
+    "signOut": "Sair",
+    "myHistory": "Meu histórico",
+    "subscription": "Assinatura",
+    "credits": "Créditos",
+    "activeUntil": "Ativo",
+    "noPlan": "Sem plano",
+    "manage": "Gerenciar"
   },
   "home": {
     "heroTitle": "Análise de Cor com IA:",
@@ -171,7 +177,7 @@
     "yearlyFeature1": "200 análises por mês",
     "yearlyFeature2": "Resolução 4K disponível",
     "yearlyFeature3": "Correção e regeneração",
-    "yearlyCta": "Iniciar Teste Gratuito",
+    "yearlyCta": "Assinar anualmente",
     "credits": "Pacotes de Créditos",
     "creditsDesc": "Pague conforme usa",
     "smallPack": "5 relatórios",
@@ -371,7 +377,17 @@
     "historyTitle": "Your Analysis History",
     "historyEmpty": "No analysis history yet. Generate your first report above!",
     "historyClearAll": "Clear All",
-    "historyViewReport": "View Report"
+    "historyViewReport": "View Report",
+    "correction": "Regerar",
+    "correctionDesc": "Reanalisar com a mesma foto",
+    "download": "Baixar",
+    "share": "Compartilhar",
+    "shareCopied": "Link copiado!",
+    "shareTitle": "Minha análise Belle AI",
+    "shareText": "Confira minha análise de beleza com IA!",
+    "close": "Fechar",
+    "prev": "Anterior",
+    "next": "Próximo"
   },
   "footer": {
     "tagline": "Análise de beleza pessoal com IA",

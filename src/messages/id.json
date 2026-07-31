@@ -36,7 +36,13 @@
     "download": "Unduh",
     "tryNow": "Coba Sekarang",
     "getApp": "Unduh Aplikasi",
-    "signOut": "Keluar"
+    "signOut": "Keluar",
+    "myHistory": "Riwayat Saya",
+    "subscription": "Langganan",
+    "credits": "Kredit",
+    "activeUntil": "Aktif",
+    "noPlan": "Tidak ada paket",
+    "manage": "Kelola"
   },
   "home": {
     "heroTitle": "Analisis Warna AI:",
@@ -171,7 +177,7 @@
     "yearlyFeature1": "200 analisis per bulan",
     "yearlyFeature2": "Resolusi 4K tersedia",
     "yearlyFeature3": "Koreksi & regenerasi",
-    "yearlyCta": "Mulai Uji Coba Gratis",
+    "yearlyCta": "Langganan Tahunan",
     "credits": "Paket Kredit",
     "creditsDesc": "Bayar sesuai pemakaian",
     "smallPack": "5 laporan",
@@ -371,7 +377,17 @@
     "historyTitle": "Your Analysis History",
     "historyEmpty": "No analysis history yet. Generate your first report above!",
     "historyClearAll": "Clear All",
-    "historyViewReport": "View Report"
+    "historyViewReport": "View Report",
+    "correction": "Regenerasi",
+    "correctionDesc": "Analisis ulang dengan foto yang sama",
+    "download": "Unduh",
+    "share": "Bagikan",
+    "shareCopied": "Tautan disalin!",
+    "shareTitle": "Analisis Belle AI Saya",
+    "shareText": "Lihat analisis kecantikan AI saya!",
+    "close": "Tutup",
+    "prev": "Sebelumnya",
+    "next": "Selanjutnya"
   },
   "footer": {
     "tagline": "Analisis kecantikan personal berbasis AI",

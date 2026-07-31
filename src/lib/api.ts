@@ -101,6 +101,7 @@ export interface HistoryEntry {
   status: string;
   type: string;
   image_urls: string[];
+  source_image_url?: string;
   created_at: number;
 }
 

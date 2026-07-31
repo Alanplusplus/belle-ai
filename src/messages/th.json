@@ -36,7 +36,13 @@
     "download": "ดาวน์โหลด",
     "tryNow": "ลองเลย",
     "getApp": "ดาวน์โหลดแอป",
-    "signOut": "ออกจากระบบ"
+    "signOut": "ออกจากระบบ",
+    "myHistory": "ประวัติของฉัน",
+    "subscription": "การสมัคร",
+    "credits": "เครดิต",
+    "activeUntil": "ใช้งานอยู่",
+    "noPlan": "ไม่มีแพลน",
+    "manage": "จัดการ"
   },
   "home": {
     "heroTitle": "วิเคราะห์สีด้วย AI:",
@@ -171,7 +177,7 @@
     "yearlyFeature1": "200 การวิเคราะห์ต่อเดือน",
     "yearlyFeature2": "ความละเอียด 4K พร้อมใช้งาน",
     "yearlyFeature3": "แก้ไขและสร้างใหม่",
-    "yearlyCta": "เริ่มทดลองใช้ฟรี",
+    "yearlyCta": "สมัครรายปี",
     "credits": "แพ็กเครดิต",
     "creditsDesc": "จ่ายตามการใช้งาน",
     "smallPack": "5 รายงาน",
@@ -371,7 +377,17 @@
     "historyTitle": "Your Analysis History",
     "historyEmpty": "No analysis history yet. Generate your first report above!",
     "historyClearAll": "Clear All",
-    "historyViewReport": "View Report"
+    "historyViewReport": "View Report",
+    "correction": "สร้างใหม่",
+    "correctionDesc": "วิเคราะห์ซ้ำด้วยรูปเดิม",
+    "download": "ดาวน์โหลด",
+    "share": "แชร์",
+    "shareCopied": "คัดลอกลิงก์แล้ว!",
+    "shareTitle": "การวิเคราะห์ Belle AI ของฉัน",
+    "shareText": "ดูการวิเคราะห์ความงาม AI ของฉัน!",
+    "close": "ปิด",
+    "prev": "ก่อนหน้า",
+    "next": "ถัดไป"
   },
   "footer": {
     "tagline": "วิเคราะห์ความงามส่วนบุคคลด้วย AI",

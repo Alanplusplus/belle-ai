@@ -36,7 +36,13 @@
     "download": "Скачать",
     "tryNow": "Попробовать",
     "getApp": "Скачать",
-    "signOut": "Выйти"
+    "signOut": "Выйти",
+    "myHistory": "Моя история",
+    "subscription": "Подписка",
+    "credits": "Кредиты",
+    "activeUntil": "Активна",
+    "noPlan": "Нет подписки",
+    "manage": "Управление"
   },
   "home": {
     "heroTitle": "ИИ-анализ цветотипа:",
@@ -171,7 +177,7 @@
     "yearlyFeature1": "200 анализов в месяц",
     "yearlyFeature2": "Доступно разрешение 4K",
     "yearlyFeature3": "Коррекция и перегенерация",
-    "yearlyCta": "Начать бесплатный пробный период",
+    "yearlyCta": "Годовая подписка",
     "credits": "Пакеты кредитов",
     "creditsDesc": "Оплата по мере использования",
     "smallPack": "5 отчётов",
@@ -371,7 +377,17 @@
     "historyTitle": "Your Analysis History",
     "historyEmpty": "No analysis history yet. Generate your first report above!",
     "historyClearAll": "Clear All",
-    "historyViewReport": "View Report"
+    "historyViewReport": "View Report",
+    "correction": "Перегенерировать",
+    "correctionDesc": "Повторный анализ с той же фотографией",
+    "download": "Скачать",
+    "share": "Поделиться",
+    "shareCopied": "Ссылка скопирована!",
+    "shareTitle": "Мой анализ Belle AI",
+    "shareText": "Посмотрите мой анализ красоты от Belle AI!",
+    "close": "Закрыть",
+    "prev": "Назад",
+    "next": "Вперёд"
   },
   "footer": {
     "tagline": "Персональный анализ красоты с ИИ",

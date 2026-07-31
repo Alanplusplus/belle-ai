@@ -36,7 +36,13 @@
     "download": "تحميل",
     "tryNow": "جرّبي الآن",
     "getApp": "تحميل التطبيق",
-    "signOut": "تسجيل الخروج"
+    "signOut": "تسجيل الخروج",
+    "myHistory": "سجلي",
+    "subscription": "الاشتراك",
+    "credits": "الرصيد",
+    "activeUntil": "نشط",
+    "noPlan": "لا يوجد خطة",
+    "manage": "إدارة"
   },
   "home": {
     "heroTitle": "تحليل الألوان بالذكاء الاصطناعي:",
@@ -171,7 +177,7 @@
     "yearlyFeature1": "200 تحليل شهرياً",
     "yearlyFeature2": "دقة 4K متاحة",
     "yearlyFeature3": "تصحيح وإعادة إنشاء",
-    "yearlyCta": "ابدئي التجربة المجانية",
+    "yearlyCta": "اشتراك سنوي",
     "credits": "باقات الرصيد",
     "creditsDesc": "ادفعي حسب الاستخدام",
     "smallPack": "5 تقارير",
@@ -371,7 +377,17 @@
     "historyTitle": "Your Analysis History",
     "historyEmpty": "No analysis history yet. Generate your first report above!",
     "historyClearAll": "Clear All",
-    "historyViewReport": "View Report"
+    "historyViewReport": "View Report",
+    "correction": "إعادة التحليل",
+    "correctionDesc": "إعادة التحليل بنفس الصورة",
+    "download": "تحميل",
+    "share": "مشاركة",
+    "shareCopied": "تم نسخ الرابط!",
+    "shareTitle": "تحليلي من Belle AI",
+    "shareText": "شاهد تحليل الجمال الخاص بي من Belle AI!",
+    "close": "إغلاق",
+    "prev": "السابق",
+    "next": "التالي"
   },
   "footer": {
     "tagline": "تحليل جمالي شخصي بالذكاء الاصطناعي",
