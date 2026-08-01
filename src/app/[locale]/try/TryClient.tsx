@@ -297,8 +297,10 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   }, [analysisType]);
 
   const handleShare = useCallback(async (url: string) => {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+      (navigator.maxTouchPoints > 0 && window.innerWidth < 768);
     const shareData = { title: t("shareTitle"), text: t("shareText"), url };
-    if (navigator.share && navigator.canShare?.(shareData)) {
+    if (isMobile && navigator.share && navigator.canShare?.(shareData)) {
       trackEvent("result_share", { method: "native", type: analysisType });
       try { await navigator.share(shareData); } catch { /* user cancelled */ }
     } else {
