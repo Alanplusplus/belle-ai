@@ -6,8 +6,6 @@ tags: ["kişisel renk analizi", "renk bilimi", "renk teorisi", "güzellik", "cil
 image: "/images/blog/science-of-color-analysis.webp"
 ---
 
-![Kişisel Renk Analizinin Arkasındaki Bilim](/images/blog/science-of-color-analysis.webp)
-
 ## Neden Bazı Renkler Harika Görünmenizi Sağlarken Diğerleri Sağlamaz?
 
 Muhtemelen bunu yaşamışsınızdır. Mercan renkli bir bluz denersiniz, cildiniz ışıl ışıl parlar, gözleriniz belirginleşir, biri tatile mi gittiniz diye sorar. Sonra zeytin yeşili bir kazak giyersiniz ve aniden yorgun görünürsünüz — sekiz saat uyumuş olsanız bile.
@@ -153,4 +151,3 @@ Bir dahaki sefere biri bir rengin "sizin tonunuz değil" dediğinde hatırlayın
 - [Kişisel Renk Analizi Rehberi: 12 Mevsimsel Tip Açıklanıyor (Ücretsiz Test Dahil)](/tr/blog/personal-color-analysis-guide) — 12 mevsim sistemini tam olarak anlayın
 - [Sıcak mı Soğuk mu Tonluyum? Kesin Alt Ton Rehberi (2026)](/tr/blog/how-to-determine-skin-undertone) — Bilimi pratik alt ton testleriyle uygulayın
 - [Çevrimiçi Renk Analizi Testleri Neden Yanlış Sonuç Verir (Ve Bunun Yerine Ne Yapmalısınız)](/tr/blog/why-color-analysis-quizzes-are-wrong) — Öz değerlendirmenin sınırlarını anlayın
-- [Yapay Zeka vs Profesyonel Renk Analizi: İkisini de Denedim — İşte Dürüst Karşılaştırmam](/tr/blog/ai-vs-professional-color-analysis) — Teknoloji geleneksel draping ile nasıl karşılaştırılır

@@ -6,8 +6,6 @@ tags: ["undertone", "nada dingin", "nada hangat", "warna kulit", "analisis warna
 image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
 
-![Nada Dingin vs Nada Hangat](/images/blog/cool-tone-vs-warm-tone.webp)
-
 ## Apa Itu Undertone?
 
 Undertone adalah warna halus di bawah permukaan kulit Anda. Berbeda dengan warna kulit permukaan (yang dapat berubah karena paparan sinar matahari, kemerahan, dll.), undertone Anda tetap konstan sepanjang hidup.
@@ -135,4 +133,3 @@ Kulit olive memiliki nuansa kehijauan yang bisa warm-olive atau cool-olive. Rona
 - [Apakah Saya Nada Hangat atau Dingin? 7 Metode Terbukti](/id/blog/how-to-determine-skin-undertone) — Penjelasan mendalam tentang penentuan undertone
 - [Warna Terbaik untuk Undertone Dingin](/id/blog/best-colors-for-cool-undertones) — Panduan gaya lengkap untuk orang bernada dingin
 - [Analisis Warna Personal: 12 Tipe Dijelaskan](/id/blog/personal-color-analysis-guide) — Melampaui undertone untuk menemukan tipe musiman lengkap Anda
-- [Panduan Bentuk Wajah & Gaya Rambut](/id/blog/face-shape-hairstyle-guide) — Temukan gaya rambut terbaik untuk bentuk wajah Anda

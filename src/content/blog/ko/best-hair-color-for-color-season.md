@@ -6,8 +6,6 @@ tags: ["퍼스널 컬러", "헤어 컬러", "컬러 시즌", "뷰티", "스타�
 image: "/images/blog/best-hair-color-for-color-season.webp"
 ---
 
-![퍼스널 컬러 시즌에 따른 최적의 헤어 컬러 찾기](/images/blog/best-hair-color-for-color-season.webp)
-
 ## 퍼스널 컬러 시즌이 헤어 컬러 선택에 중요한 이유
 
 염색을 하고 나서야 깨닫는 경우가 많습니다. "왜 이렇게 안 어울리지?"라는 의문은 대부분 트렌드나 유명인 사진을 따라 했기 때문이 아니라, **타고난 색소와 맞지 않는 톤**을 선택했기 때문입니다.
@@ -303,4 +301,3 @@ image: "/images/blog/best-hair-color-for-color-season.webp"
 - [쿨톤 vs 웜톤: 5가지 쉬운 테스트](/ko/blog/cool-tone-vs-warm-tone)
 - [쿨톤에 가장 어울리는 컬러](/ko/blog/best-colors-for-cool-undertones)
 - [딥 윈터 컬러 팔레트: 2026 완벽 스타일 가이드](/ko/blog/deep-winter-color-palette-guide)
-- [얼굴형 & 헤어스타일 가이드](/ko/blog/face-shape-hairstyle-guide)

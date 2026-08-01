@@ -6,8 +6,6 @@ tags: ["analisi del colore personale", "palette primavera", "stagione cromatica"
 image: "/images/blog/spring-color-palettes-decoded.webp"
 ---
 
-![Palette Primavera decodificate: Primavera Brillante vs Primavera Calda vs Primavera Chiara](/images/blog/spring-color-palettes-decoded.webp)
-
 ## Sai di essere una Primavera — ma quale Primavera?
 
 Hai fatto un'analisi del colore e il verdetto è chiaro: sei una Primavera. Il tuo sottotono è caldo, il tuo look complessivo è fresco e vivace, e i colori che evocano un giardino illuminato dal sole ti donano in modo straordinario.
@@ -203,4 +201,3 @@ Indipendentemente dal sottotipo Primavera che sei, questi principi valgono per t
 - Tutti e tre i tipi Primavera condividono il calore come fondamento — il fattore distintivo è quanto contrasto e saturazione la tua colorazione riesce a reggere.
 - In caso di dubbio, prova i colori sul viso alla luce naturale del giorno. La reazione della pelle (risplendere vs. sbiadirsi) ti dice tutto.
 
-Trovare il tuo sottotipo Primavera esatto fa la differenza tra sembrare «a posto» e sembrare che tu irradia dall'interno. Una volta individuato, ogni shopping, ogni mattina davanti all'armadio e ogni foto outfit acquistano un senso improvviso. I tuoi colori smettono di essere qualcosa a cui pensi e diventano qualcosa che semplicemente *sai*.

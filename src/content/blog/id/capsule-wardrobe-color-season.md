@@ -6,8 +6,6 @@ tags: ["capsule wardrobe", "analisis warna pribadi", "color season", "tips fashi
 image: "/images/blog/capsule-wardrobe-color-season.webp"
 ---
 
-![Cara Membangun Capsule Wardrobe Berdasarkan Color Season](/images/blog/capsule-wardrobe-color-season.webp)
-
 ## Sudah Tahu Color Season — Lalu Apa?
 
 Jadi kamu sudah tahu kalau kamu Soft Autumn atau Bright Spring. Mungkin pakai alat analisis warna AI, atau mungkin dua jam di depan cermin dengan kain warna-warni. Bagaimanapun, kamu punya jawaban.
@@ -139,4 +137,3 @@ Alat gratis seperti [aicoloranalysis.io](https://aicoloranalysis.io/id) menawark
 - Bangun bertahap selama 6+ bulan
 - Gunakan analisis warna AI untuk identifikasi season dengan cepat
 
-Color season adalah filter belanja paling powerful yang akan kamu miliki. Begitu paletmu terinternalisasi, berpakaian jadi bagian termudah dari pagi hari.

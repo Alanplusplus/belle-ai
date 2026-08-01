@@ -6,8 +6,6 @@ tags: ["soğuk alt ton", "soğuk cilt", "renk paleti", "stil rehberi", "moda"]
 image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
 
-![Soğuk Alt Tonlar İçin En İyi Renkler](/images/blog/best-colors-for-cool-undertones.webp)
-
 ## Soğuk Alt Ton Renk Paletiniz
 
 Soğuk alt tonlara sahipseniz (yüzeyin altında pembe, kırmızı veya mavi tonlar), belirli renkler sizi gerçekten ışıldatır. Bu rehber günlük nötrlerden cesur vurgu renklerine kadar her şeyi kapsar.
@@ -196,4 +194,3 @@ Tam alt tonunuz veya mevsimsel tipiniz konusunda emin değilseniz, [yapay zekâ 
 - [Soğuk Ton mu Sıcak Ton mu: 5 Kolay Test](/tr/blog/cool-tone-vs-warm-tone) — Gerçekten soğuk tonlu olup olmadığınızı doğrulayın
 - [Sıcak mı Soğuk mu Tonluyum? 7 Yöntem](/tr/blog/how-to-determine-skin-undertone) — Kesin alt ton rehberi
 - [Kişisel Renk Analizi: 12 Tip Açıklanıyor](/tr/blog/personal-color-analysis-guide) — 12 mevsimsel tipin tamamını anlayın
-- [Ücretsiz Renk Testine Katılın](/tr/tools/color-quiz) — Renk mevsiminizi hızlıca tahmin edin

@@ -6,8 +6,6 @@ tags: ["个人色彩分析", "发色", "色彩季型", "美容", "造型指南"]
 image: "/images/blog/best-hair-color-for-color-season.webp"
 ---
 
-![如何根据你的个人色彩季节选择最适合的发色](/images/blog/best-hair-color-for-color-season.webp)
-
 ## 为什么色彩季型对发色选择如此重要
 
 很多人直到染完头发、照镜子的那一刻才意识到：发色选错，比选错口红更致命。你的天然肤色——底调、瞳色，以及五官之间的对比度——决定了哪些发色会让你看起来容光焕发，哪些则会让你显得暗沉、疲惫。
@@ -295,4 +293,3 @@ image: "/images/blog/best-hair-color-for-color-season.webp"
 - [个人色彩分析完全指南：12季型人详解](/zh/blog/personal-color-analysis-guide)
 - [肤色底调判断完全指南](/zh/blog/how-to-determine-skin-undertone)
 - [冷色调 vs 暖色调：5个简单测试](/zh/blog/cool-tone-vs-warm-tone)
-- [冷色调最适合的颜色](/zh/blog/best-colors-for-cool-undertones)

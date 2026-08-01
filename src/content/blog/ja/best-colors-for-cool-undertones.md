@@ -6,8 +6,6 @@ tags: ["ブルベ", "パーソナルカラー", "カラーパレット", "スタ
 image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
 
-![ブルベに似合う色](/images/blog/best-colors-for-cool-undertones.webp)
-
 ## ブルベのカラーパレット
 
 ブルベ（肌の下にピンク、レッド、ブルーの色味がある場合）であれば、特定の色があなたを輝かせます。このガイドでは、日常のベーシックカラーから大胆なアクセントカラーまで全てをカバーします。
@@ -196,4 +194,3 @@ image: "/images/blog/best-colors-for-cool-undertones.webp"
 - [クールトーン vs ウォームトーン：5つの簡単テスト](/ja/blog/cool-tone-vs-warm-tone) — 本当にブルベか確認する
 - [肌のアンダートーンの見分け方](/ja/blog/how-to-determine-skin-undertone) — 完全アンダートーンガイド
 - [パーソナルカラー分析：12タイプ解説](/ja/blog/personal-color-analysis-guide) — 12シーズンタイプを全て理解する
-- [無料カラー診断クイズ](/ja/tools/color-quiz) — カラーシーズンを素早く推定

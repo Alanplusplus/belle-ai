@@ -6,8 +6,6 @@ tags: ["undertone", "hangat atau dingin", "warna kulit", "analisis warna", "tips
 image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
 
-![Cara Menentukan Undertone Kulit](/images/blog/how-to-determine-skin-undertone.webp)
-
 ## Jawaban Cepat
 
 Jika Anda ingin hasil cepat: perhatikan urat pergelangan tangan di bawah cahaya alami siang hari. Biru/ungu = dingin. Hijau = hangat. Campuran keduanya = netral. Namun untuk akurasi, Anda harus menggunakan beberapa metode — dan itulah yang dibahas panduan ini.
@@ -147,4 +145,3 @@ Untuk analisis lengkap, coba fitur [analisis warna personal Belle AI](/id/person
 - [Nada Dingin vs Nada Hangat: 5 Tes Mudah](/id/blog/cool-tone-vs-warm-tone) — Tes cepat untuk mengonfirmasi undertone Anda
 - [Warna Terbaik untuk Undertone Dingin](/id/blog/best-colors-for-cool-undertones) — Panduan gaya lengkap jika Anda bernada dingin
 - [Analisis Warna Personal: 12 Tipe Dijelaskan](/id/blog/personal-color-analysis-guide) — Memahami sistem warna musiman lengkap
-- [Panduan Bentuk Wajah & Gaya Rambut](/id/blog/face-shape-hairstyle-guide) — Temukan gaya rambut sempurna untuk wajah Anda

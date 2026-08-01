@@ -6,8 +6,6 @@ tags: ["colorimétrie personnelle", "palette printemps", "couleurs saisonnières
 image: "/images/blog/spring-color-palettes-decoded.webp"
 ---
 
-![Palettes Printemps décryptées : Printemps Vif vs Printemps Chaud vs Printemps Clair](/images/blog/spring-color-palettes-decoded.webp)
-
 ## Vous savez que vous êtes Printemps — mais quel Printemps ?
 
 Vous avez passé une analyse colorimétrique et le verdict est tombé : vous êtes Printemps. Votre sous-ton est chaud, votre allure générale est fraîche et vivante, et vous êtes sublime dans des couleurs qui évoquent un jardin ensoleillé.
@@ -203,4 +201,3 @@ Quelle que soit votre sous-saison Printemps, ces principes s'appliquent :
 - Les trois types Printemps partagent la chaleur comme fondation — le critère différenciateur est la quantité de contraste et de saturation que votre coloration peut supporter.
 - En cas de doute, testez les couleurs contre votre visage à la lumière du jour. La réaction de votre peau (éclat vs. ternissement) vous dit tout.
 
-Trouver votre sous-saison Printemps exacte, c'est la différence entre avoir l'air « correcte » et rayonner de l'intérieur. Une fois que vous l'avez identifiée, chaque shopping, chaque matin devant le miroir et chaque photo de tenue prend soudain sens. Vos couleurs ne sont plus quelque chose à réfléchir — elles deviennent quelque chose que vous *savez*.

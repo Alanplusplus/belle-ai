@@ -6,8 +6,6 @@ tags: ["color analysis quiz", "personal color analysis", "seasonal color", "beau
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
 
-![Why Color Analysis Quizzes Are Wrong](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
-
 ## The Problem with Color Analysis Quizzes
 
 You take one quiz and get "Warm Autumn." You take another and get "Cool Summer." A third one says you're a "Clear Winter." Sound familiar?
@@ -164,4 +162,3 @@ The beauty of modern technology is that getting an objective color analysis no l
 
 ---
 
-*Still confused about your color season? [Try our free AI color analysis tool](/en/tools/color-quiz) — it takes 30 seconds and doesn't ask you to guess your own undertone.*

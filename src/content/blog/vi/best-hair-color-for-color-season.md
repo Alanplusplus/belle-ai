@@ -6,8 +6,6 @@ tags: ["phân tích màu sắc cá nhân", "màu tóc", "mùa màu sắc", "làm
 image: "/images/blog/best-hair-color-for-color-season.webp"
 ---
 
-![Cách Tìm Màu Tóc Phù Hợp Nhất Dựa Trên Mùa Màu Sắc Của Bạn](/images/blog/best-hair-color-for-color-season.webp)
-
 ## Tại Sao Mùa Màu Sắc Quan Trọng Khi Chọn Màu Tóc
 
 Có một điều mà hầu hết mọi người chỉ nhận ra sau khi nhuộm tóc thất bại: màu sắc tự nhiên của bạn — tông da nền, màu mắt và độ tương phản giữa các đặc điểm khuôn mặt — quyết định màu tóc nào sẽ khiến bạn trông rạng rỡ và màu nào khiến bạn trông xanh xao, mệt mỏi.
@@ -298,4 +296,3 @@ Tóc là khối màu lớn nhất trên khuôn mặt bạn. Chọn đúng, mọi
 - [Hướng dẫn phân tích màu sắc cá nhân: 12 mùa giải thích chi tiết](/vi/blog/personal-color-analysis-guide)
 - [Cách xác định tông da nền của bạn](/vi/blog/how-to-determine-skin-undertone)
 - [Tông lạnh vs tông ấm: 5 cách kiểm tra đơn giản](/vi/blog/cool-tone-vs-warm-tone)
-- [Màu sắc tốt nhất cho tông da lạnh](/vi/blog/best-colors-for-cool-undertones)

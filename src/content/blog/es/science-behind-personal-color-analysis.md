@@ -6,8 +6,6 @@ tags: ["análisis de color personal", "ciencia del color", "teoría del color", 
 image: "/images/blog/science-of-color-analysis.webp"
 ---
 
-![La ciencia detrás del análisis de color personal](/images/blog/science-of-color-analysis.webp)
-
 ## ¿Por Qué Algunos Colores Te Hacen Ver Increíble — y Otros No?
 
 Seguro que lo has vivido. Te pruebas una blusa coral y tu piel se ve radiante, tus ojos resaltan y alguien te pregunta si has estado de vacaciones. Luego te pones un jersey verde oliva y de repente pareces agotada — aunque hayas dormido ocho horas.
@@ -153,4 +151,3 @@ La próxima vez que alguien te diga que un color «no es tu tono», recuerda —
 - [Guía de análisis de color personal: los 12 tipos estacionales explicados](/es/blog/personal-color-analysis-guide) — Comprende el sistema completo de 12 estaciones
 - [¿Tengo tono cálido o frío? La guía definitiva del subtono](/es/blog/how-to-determine-skin-undertone) — Aplica la ciencia con pruebas prácticas de subtono
 - [Por qué los tests de análisis de color en línea se equivocan](/es/blog/why-color-analysis-quizzes-are-wrong) — Entiende las limitaciones de la autoevaluación
-- [IA vs Análisis de Color Profesional: Probé Ambos](/es/blog/ai-vs-professional-color-analysis) — Cómo se compara la tecnología con el draping tradicional

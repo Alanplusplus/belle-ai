@@ -6,6 +6,8 @@ import { Inter, Playfair_Display } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AuthProvider } from "@/components/AuthProvider";
+import { GoogleOneTap } from "@/components/GoogleOneTap";
+import { PageViewTracker } from "@/components/PageViewTracker";
 import { SITE_URL, APP_STORE_ID } from "@/lib/constants";
 import Script from "next/script";
 import type { Metadata } from "next";
@@ -68,11 +70,13 @@ export async function generateMetadata({
       locale,
       type: "website",
       url: canonicalPath,
+      images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title: meta.homeTitle,
       description: meta.homeDescription,
+      images: [`${SITE_URL}/opengraph-image`],
     },
     other: APP_STORE_ID
       ? { "apple-itunes-app": `app-id=${APP_STORE_ID}` }
@@ -100,11 +104,6 @@ export default async function LocaleLayout({
     url: SITE_URL,
     description:
       "Free AI-powered personal color analysis. Upload a photo and discover your seasonal color type, best color palette, and styling recommendations in 60 seconds.",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${SITE_URL}/blog?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 
   const orgJsonLd = {
@@ -112,7 +111,7 @@ export default async function LocaleLayout({
     "@type": "Organization",
     name: "Belle AI",
     url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
+    logo: `${SITE_URL}/logo-full.webp`,
     sameAs: [
       "https://www.instagram.com/belleai.app",
       "https://www.pinterest.com/belleaiapp",
@@ -126,6 +125,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
+      dir={locale === "ar" ? "rtl" : "ltr"}
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
       style={{ colorScheme: "light" }}
       suppressHydrationWarning
@@ -154,6 +154,8 @@ export default async function LocaleLayout({
       </Script>
       <body className="min-h-full flex flex-col font-sans">
         <AuthProvider>
+          <GoogleOneTap />
+          <PageViewTracker />
           <NextIntlClientProvider messages={messages}>
             <Header />
             <main className="flex-1">{children}</main>

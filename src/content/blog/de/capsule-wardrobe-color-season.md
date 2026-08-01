@@ -6,8 +6,6 @@ tags: ["Capsule Wardrobe", "Farbanalyse", "Farbtyp", "Mode-Tipps", "Stil-Guide"]
 image: "/images/blog/capsule-wardrobe-color-season.webp"
 ---
 
-![Capsule Wardrobe nach Farbtyp erstellen](/images/blog/capsule-wardrobe-color-season.webp)
-
 ## Du kennst deinen Farbtyp — und nun?
 
 Du hast herausgefunden, dass du ein Soft Autumn oder Bright Spring bist. Vielleicht hast du ein AI-Farbanalyse-Tool benutzt, vielleicht hast du zwei Stunden vor dem Spiegel mit farbigen Tüchern hantiert. Wie auch immer — du hast eine Antwort.
@@ -153,4 +151,3 @@ Kostenlose Tools wie [aicoloranalysis.io](https://aicoloranalysis.io/de) bieten 
 - Baue schrittweise über 6+ Monate auf
 - Nutze AI-Farbanalyse, um deinen Typ schnell zu identifizieren
 
-Dein Farbtyp ist der stärkste Shopping-Filter, den du jemals haben wirst. Einmal verinnerlicht, wird das Anziehen zum einfachsten Teil deines Morgens.

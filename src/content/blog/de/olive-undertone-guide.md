@@ -6,8 +6,6 @@ tags: ["Oliv-Unterton", "Hautunterton", "persönliche Farbanalyse", "Beauty", "M
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 
-![Oliv-Unterton Ratgeber](/images/blog/olive-undertone-guide.webp)
-
 ## Warum niemand über Oliv-Untertöne spricht
 
 Jeder Beauty-Artikel im Internet teilt Hautuntertöne in drei saubere Kategorien ein: warm, kühl oder neutral. Sie machen den Venentest, prüfen, ob Gold- oder Silberschmuck besser aussieht, und fertig.
@@ -211,4 +209,3 @@ Ihren Oliv-Unterton zu verstehen, ist wirklich befreiend. Sobald Sie aufhören, 
 - [So bestimmen Sie Ihren Hautunterton](/de/blog/how-to-determine-skin-undertone) — Der vollständige Unterton-Ratgeber mit 7 Testmethoden
 - [Kühl vs. Warm: 5 einfache Tests](/de/blog/cool-tone-vs-warm-tone) — Kühle und warme Grundlagen vergleichen
 - [Die besten Farben für kühle Untertöne](/de/blog/best-colors-for-cool-undertones) — Speziell für kühl getönte Haut
-- [Tiefer Winter Farbpalette Ratgeber](/de/blog/deep-winter-color-palette-guide) — Ein verwandter Ratgeber für tiefe saisonale Typen

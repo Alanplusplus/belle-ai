@@ -6,8 +6,6 @@ tags: ["퍼스널 컬러", "색채 과학", "색채 이론", "뷰티", "언더�
 image: "/images/blog/science-of-color-analysis.webp"
 ---
 
-![퍼스널 컬러 분석의 과학](/images/blog/science-of-color-analysis.webp)
-
 ## 왜 어떤 색은 최고로 어울리고 — 어떤 색은 그렇지 않을까?
 
 아마 이런 경험을 해보셨을 겁니다. 코랄색 상의를 입으면 피부가 빛나고, 눈이 또렷해지며, 누군가 "요즘 어디 다녀왔어?"라고 묻습니다. 그런데 올리브 그린 스웨터를 걸치면 8시간 잤는데도 갑자기 지쳐 보입니다.
@@ -153,4 +151,3 @@ image: "/images/blog/science-of-color-analysis.webp"
 - [퍼스널 컬러 진단 완벽 가이드: 12가지 시즌 타입 해설](/ko/blog/personal-color-analysis-guide) — 12시즌 시스템 완전 이해
 - [나는 웜톤일까 쿨톤일까? 언더톤 판별 완벽 가이드 (2026)](/ko/blog/how-to-determine-skin-undertone) — 실용적 언더톤 테스트로 과학 적용하기
 - [온라인 퍼스널 컬러 테스트가 정확하지 않은 이유 (그리고 대신 할 수 있는 것)](/ko/blog/why-color-analysis-quizzes-are-wrong) — 자가 진단의 한계 이해하기
-- [AI vs 전문 퍼스널 컬러 진단: 둘 다 해봤습니다 — 솔직한 비교](/ko/blog/ai-vs-professional-color-analysis) — 기술과 전통 드레이핑 비교

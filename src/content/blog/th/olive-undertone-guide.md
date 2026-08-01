@@ -6,8 +6,6 @@ tags: ["โทนผิวโอลีฟ", "โทนผิวใต้", "pers
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 
-![คู่มือโทนผิวโอลีฟ](/images/blog/olive-undertone-guide.webp)
-
 ## ทำไมไม่ค่อยมีใครพูดถึงโทนผิวโอลีฟ
 
 บทความความงามบนอินเทอร์เน็ตแบ่งโทนผิวใต้เป็นสามหมวดเรียบร้อย: อุ่น เย็น หรือกลาง ทำแบบทดสอบเส้นเลือด ดูว่าทองหรือเงินดูดีกว่า แล้วก็จบ
@@ -211,4 +209,3 @@ image: "/images/blog/olive-undertone-guide.webp"
 - [วิธีหาโทนผิวใต้](/th/blog/how-to-determine-skin-undertone) — คู่มือโทนผิวใต้ครบ 7 วิธีทดสอบ
 - [โทนเย็น vs โทนอุ่น: 5 วิธีทดสอบง่ายๆ](/th/blog/cool-tone-vs-warm-tone) — เปรียบเทียบพื้นฐานอุ่นและเย็น
 - [สีที่เหมาะกับโทนผิวเย็น](/th/blog/best-colors-for-cool-undertones) — สำหรับผิวโทนเย็นโดยเฉพาะ
-- [คู่มือพาเลตสี Deep Winter](/th/blog/deep-winter-color-palette-guide) — คู่มือฤดูกาลโทนเข้มที่เกี่ยวข้อง

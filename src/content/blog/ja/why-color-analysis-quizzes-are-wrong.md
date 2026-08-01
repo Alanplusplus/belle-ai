@@ -6,8 +6,6 @@ tags: ["カラー診断", "パーソナルカラー", "シーズンカラー", "
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
 
-![パーソナルカラー診断が当たらない理由](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
-
 ## パーソナルカラー診断テストの問題
 
 あるテストでは「オータム」。別のテストでは「サマー」。3つ目は「ウィンター」と言う。心当たりありませんか？
@@ -164,4 +162,3 @@ image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 
 ---
 
-*まだパーソナルカラーシーズンで迷っていますか？[無料AIパーソナルカラー分析ツールを試してみてください](/ja/tools/color-quiz) — 30秒で完了し、自分のアンダートーンを推測する必要はありません。*

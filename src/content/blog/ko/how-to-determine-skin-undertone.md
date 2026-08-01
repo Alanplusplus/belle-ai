@@ -6,8 +6,6 @@ tags: ["언더톤", "웜톤 쿨톤", "피부톤", "퍼스널 컬러", "뷰티 �
 image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
 
-![피부 언더톤 판별법](/images/blog/how-to-determine-skin-undertone.webp)
-
 ## 빠른 답변
 
 빠른 결과를 원한다면: 자연광에서 손목 혈관을 보세요. 파란색/보라색 = 쿨톤. 초록색 = 웜톤. 둘 다 보인다면 = 뉴트럴. 하지만 정확도를 위해 여러 가지 방법을 사용해야 합니다 — 이 가이드에서 정확히 그 방법을 다룹니다.
@@ -147,4 +145,3 @@ image: "/images/blog/how-to-determine-skin-undertone.webp"
 - [쿨톤 vs 웜톤: 5가지 간단한 테스트](/ko/blog/cool-tone-vs-warm-tone) — 언더톤 확인을 위한 빠른 테스트
 - [쿨톤에게 어울리는 색상](/ko/blog/best-colors-for-cool-undertones) — 쿨톤을 위한 완벽 스타일 가이드
 - [퍼스널 컬러 분석: 12가지 타입 설명](/ko/blog/personal-color-analysis-guide) — 시즌 컬러 시스템 전체 이해
-- [얼굴형 & 헤어스타일 가이드](/ko/blog/face-shape-hairstyle-guide) — 얼굴형에 맞는 완벽한 헤어스타일 찾기

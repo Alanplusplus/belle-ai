@@ -6,8 +6,6 @@ tags: ["딥 윈터", "퍼스널 컬러 분석", "컬러 팔레트", "스타일 �
 image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
-![딥 윈터 컬러 팔레트](/images/blog/deep-winter-color-palette.webp)
-
 ## 딥 윈터는 어떤 사람인가요?
 
 딥 윈터(Deep Winter)는 트루 윈터와 다크 오텀 사이에 위치하며, 세 가지 윈터 서브 시즌 중 가장 어두운 시즌입니다. 핵심 특징은 **깊이(depth)** — 어두운 머리카락, 어두운 눈, 그리고 쿨톤 또는 뉴트럴 쿨톤 언더톤을 가진 중간~어두운 피부입니다.
@@ -118,4 +116,3 @@ image: "/images/blog/deep-winter-color-palette.webp"
 ## 관련 글
 
 - [퍼스널 컬러 분석 가이드: 12가지 시즌 타입 설명](/ko/blog/personal-color-analysis-guide)
-- [쿨톤 vs 웜톤: 5가지 쉬운 테스트](/ko/blog/cool-tone-vs-warm-tone)

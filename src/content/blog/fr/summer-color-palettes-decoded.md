@@ -6,8 +6,6 @@ tags: ["analyse de couleurs", "palette été", "saison couleur", "beauté", "gui
 image: "/images/blog/summer-color-palettes-decoded.webp"
 ---
 
-![Palettes d'Été Décryptées : Cool Summer vs True Summer vs Soft Summer](/images/blog/summer-color-palettes-decoded.webp)
-
 ## Vous Êtes un Été — Mais Lequel ?
 
 Votre analyse colorimétrique confirme que vous êtes un type Été. Votre peau a un sous-ton froid, vos traits ont une douceur naturelle, et vous êtes sublime dans des couleurs qui évoquent une matinée brumeuse en bord de mer.
@@ -98,4 +96,3 @@ Des outils comme [l'analyse de couleurs IA](https://aicoloranalysis.io/fr) utili
 - **Cool Summer :** Le plus intense des Étés. Peut porter des couleurs plus profondes et froides. Frontalier avec l'Hiver.
 - **True Summer :** Le centre équilibré. Profondeur moyenne, clairement froid, doucement atténué.
 - **Soft Summer :** Le plus atténué des 12 saisons. Ultra-doux, neutre-froid, couleurs en murmure.
-- Tous les Étés partagent des sous-tons froids et des qualités atténuées — la différence est de degré.

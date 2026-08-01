@@ -6,8 +6,6 @@ tags: ["undertone dingin", "kulit dingin", "palet warna", "panduan gaya", "fashi
 image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
 
-![Warna Terbaik untuk Undertone Dingin](/images/blog/best-colors-for-cool-undertones.webp)
-
 ## Palet Warna Undertone Dingin Anda
 
 Jika Anda memiliki undertone dingin (kulit dengan rona pink, merah, atau biru di bawah permukaan), warna tertentu akan membuat Anda benar-benar bersinar. Panduan ini mencakup segalanya dari netral sehari-hari hingga warna statement yang berani.
@@ -196,4 +194,3 @@ Jika Anda tidak yakin tentang undertone atau tipe musiman tepat, [analisis warna
 - [Nada Dingin vs Nada Hangat: 5 Tes Mudah](/id/blog/cool-tone-vs-warm-tone) — Konfirmasi apakah Anda benar-benar bernada dingin
 - [Apakah Saya Nada Hangat atau Dingin? 7 Metode](/id/blog/how-to-determine-skin-undertone) — Panduan undertone definitif
 - [Analisis Warna Personal: 12 Tipe Dijelaskan](/id/blog/personal-color-analysis-guide) — Memahami semua 12 tipe musiman
-- [Ikuti Kuis Warna Gratis](/id/tools/color-quiz) — Kuis cepat untuk memperkirakan musim warna Anda

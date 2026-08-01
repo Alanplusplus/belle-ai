@@ -42,20 +42,47 @@ export async function uploadImage(base64Data: string) {
   });
 }
 
+export type AnalysisType =
+  | "makeup"
+  | "color_analysis"
+  | "face_shape"
+  | "hair_preview"
+  | "outfit_color"
+  | "glasses_match"
+  | "occasion_makeup"
+  | "jewelry_guide"
+  | "glow_up_report"
+  | "style_personality"
+  | "palette_scan"
+  | "celebrity_match";
+
 export async function createTask(
   imageUrl: string,
-  analysisType: "makeup" | "color_analysis" | "face_shape",
-  language: string
+  analysisType: AnalysisType,
+  language: string,
+  options?: {
+    corrections?: string;
+    resolution?: string;
+    occasion?: string;
+    personality_type?: string;
+    color_season?: string;
+  }
 ) {
   return belleApi<{
     task_id: string;
     api_task_id: string;
     quota: { used: number; total: number; remaining: number };
+    credit_cost?: number;
   }>({
     action: "generate",
     image_url_list: [imageUrl],
     analysis_type: analysisType,
     language,
+    ...(options?.corrections ? { corrections: options.corrections } : {}),
+    ...(options?.resolution ? { resolution: options.resolution } : {}),
+    ...(options?.occasion ? { occasion: options.occasion } : {}),
+    ...(options?.personality_type ? { personality_type: options.personality_type } : {}),
+    ...(options?.color_season ? { color_season: options.color_season } : {}),
   });
 }
 

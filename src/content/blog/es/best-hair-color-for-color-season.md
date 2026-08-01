@@ -6,8 +6,6 @@ tags: ["análisis de color personal", "color de cabello", "estación de color", 
 image: "/images/blog/best-hair-color-for-color-season.webp"
 ---
 
-![Cómo Encontrar el Mejor Color de Cabello Según tu Estación de Color](/images/blog/best-hair-color-for-color-season.webp)
-
 ## Por Qué tu Estación de Color Importa al Elegir el Color de Cabello
 
 Hay algo que la mayoría de las personas no descubre hasta después de un tinte desastroso: tu coloración natural — el subtono de la piel, el color de los ojos y el contraste entre tus rasgos — determina qué tonos de cabello te harán lucir radiante y cuáles te dejarán apagada o cansada.
@@ -298,4 +296,3 @@ Tu cabello es el bloque de color más grande de tu rostro. Si aciertas, todo lo 
 - [Guía de análisis de color personal: las 12 estaciones explicadas](/es/blog/personal-color-analysis-guide)
 - [Cómo determinar el subtono de tu piel](/es/blog/how-to-determine-skin-undertone)
 - [Tono frío vs. tono cálido: 5 pruebas sencillas](/es/blog/cool-tone-vs-warm-tone)
-- [Los mejores colores para subtonos fríos](/es/blog/best-colors-for-cool-undertones)

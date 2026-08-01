@@ -6,8 +6,6 @@ tags: ["tông nền ấm", "da ấm", "bảng màu", "hướng dẫn phong cách
 image: "/images/blog/best-colors-for-warm-undertones.webp"
 ---
 
-![Màu Sắc Tốt Nhất Cho Tông Nền Ấm](/images/blog/best-colors-for-warm-undertones.webp)
-
 ## Tông Nền Ấm Của Bạn Là Siêu Năng Lực — Nếu Biết Cách Dùng
 
 Tôi đã mặc pastel lạnh và xám tông lạnh suốt nhiều năm vì bài quiz ở cửa hàng bảo tôi "hợp mọi màu trung tính." Chỉ khi hiểu tông nền ấm của mình, tôi mới biết vì sao một số outfit khiến tôi trông rạng rỡ như được nắng hôn, còn outfit khác khiến tôi trông mệt mỏi trước trưa.
@@ -338,4 +336,3 @@ Phần hay nhất khi hiểu tông nền ấm? Mua sắm nhanh hơn, outfit gắ
 - [Tông Lạnh vs Tông Ấm: 5 Bài Test Dễ Dàng](/vi/blog/cool-tone-vs-warm-tone) — Xác nhận bạn thực sự tông ấm
 - [Tôi Thuộc Tông Ấm Hay Lạnh? 7 Phương Pháp](/vi/blog/how-to-determine-skin-undertone) — Hướng dẫn tông nền đầy đủ
 - [Phân Tích Màu Cá Nhân: Giải Thích 12 Loại](/vi/blog/personal-color-analysis-guide) — Hiểu cả 12 seasonal types
-- [Cách Phân Tích Màu Tại Nhà](/vi/blog/how-to-do-color-analysis-at-home) — Hướng dẫn DIY từng bước

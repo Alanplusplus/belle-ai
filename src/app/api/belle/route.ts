@@ -73,6 +73,11 @@ export async function POST(req: NextRequest) {
           image_url_list: params.image_url_list,
           analysis_type: params.analysis_type,
           language: params.language,
+          ...(params.corrections ? { corrections: params.corrections } : {}),
+          ...(params.resolution ? { resolution: params.resolution } : {}),
+          ...(params.occasion ? { occasion: params.occasion } : {}),
+          ...(params.personality_type ? { personality_type: params.personality_type } : {}),
+          ...(params.color_season ? { color_season: params.color_season } : {}),
         });
         return NextResponse.json(data);
       }

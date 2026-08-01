@@ -6,8 +6,6 @@ tags: ["subtom", "quente ou frio", "tom de pele", "análise de coloração", "di
 image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
 
-![Como Determinar o Subtom da Pele](/images/blog/how-to-determine-skin-undertone.webp)
-
 ## A Resposta Rápida
 
 Se você quer um resultado rápido: olhe as veias do pulso à luz natural do dia. Azul/roxo = frio. Verde = quente. Mistura dos dois = neutro. Mas, para precisão, use vários métodos — e é exatamente isso que este guia cobre.
@@ -147,4 +145,3 @@ Para uma análise completa, experimente o recurso de [análise de coloração pe
 - [Tom Frio vs. Tom Quente: 5 Testes Fáceis](/pt/blog/cool-tone-vs-warm-tone) — Testes rápidos para confirmar seu subtom
 - [Melhores Cores para Subtons Frios](/pt/blog/best-colors-for-cool-undertones) — Guia completo de estilo se você é de tom frio
 - [Análise de Coloração Pessoal: 12 Tipos Explicados](/pt/blog/personal-color-analysis-guide) — Entenda o sistema completo de coloração sazonal
-- [Guia de Formato do Rosto e Penteados](/pt/blog/face-shape-hairstyle-guide) — Encontre o penteado perfeito para o seu rosto

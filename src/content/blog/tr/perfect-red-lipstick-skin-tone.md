@@ -6,8 +6,6 @@ tags: ["kırmızı ruj", "cilt alt tonu", "makyaj ipuçları", "renk analizi", "
 image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
 ---
 
-![Cilt Tonunuza Uygun Mükemmel Kırmızı Ruju Nasıl Bulursunuz](/images/blog/perfect-red-lipstick-skin-tone.webp)
-
 ## Herkesin Yanlış Yaptığı Makyaj Kuralı
 
 Kaç kırmızı ruj aldığımı, bir kez sürdüğümü ve çekmeceye ittiğimi sayamam. Klasik kırmızı mı? Çok sert. Mercan mı? Yüzümü soluk gösterdi. Bordo mu? Dişlerimi sarı gösterdi. Yıllarca kırmızı ruju taşıyamadığımı düşündüm.
@@ -170,4 +168,3 @@ Kendi selfie'mi bir yapay zeka renk analizi aracından geçirdim ve Yumuşak Yaz
 - **Zeytin alt tonlar mat, daha koyu kırmızılara ihtiyaç duyar** — parlak veya pastel tonlara değil.
 - **Elinizin üstüne değil, iç bileğinize veya dudaklarınıza test edin.** Ve her zaman doğal ışıkta kontrol edin.
 
-Mükemmel kırmızı rujunuzu bulmak şans meselesi veya "kırmızıya uygun bir yüze sahip olmak" değil. Tek bir basit şeyi anlamakla ilgili — cildinizin sıcaklığını — ve bunu rujunuzun sıcaklığıyla eşleştirmekle. Bunlar uyum sağladığında neden bu kadar uğraştığınızı merak edeceksiniz.

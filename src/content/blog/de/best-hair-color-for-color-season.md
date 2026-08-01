@@ -6,8 +6,6 @@ tags: ["Farbanalyse", "Haarfarbe", "Farbtyp", "Beauty", "Stilberatung"]
 image: "/images/blog/best-hair-color-for-color-season.webp"
 ---
 
-![Die Beste Haarfarbe für Deinen Farbtyp Finden](/images/blog/best-hair-color-for-color-season.webp)
-
 ## Warum Dein Farbtyp für die Haarfarbenwahl Entscheidend Ist
 
 Etwas, das die meisten Menschen erst nach einer missglückten Färbung begreifen: Deine natürliche Farbgebung — Hautunterton, Augenfarbe und der Kontrast zwischen deinen Gesichtszügen — bestimmt, welche Haarfarben dich strahlend wirken lassen und welche dich blass oder müde aussehen lassen.
@@ -298,4 +296,3 @@ Dein Haar ist der größte Farbblock in deinem Gesicht. Triffst du die richtige 
 - [Persönliche Farbanalyse: Die 12 Typen erklärt](/de/blog/personal-color-analysis-guide)
 - [Wie du deinen Hautunterton bestimmst](/de/blog/how-to-determine-skin-undertone)
 - [Kühl vs. warm: 5 einfache Tests](/de/blog/cool-tone-vs-warm-tone)
-- [Die besten Farben für kühle Untertöne](/de/blog/best-colors-for-cool-undertones)

@@ -6,8 +6,6 @@ tags: ["análisis de color personal", "color estacional", "teoría del color", "
 image: "/images/blog/personal-color-analysis-guide.webp"
 ---
 
-![Guía de análisis de color personal](/images/blog/personal-color-analysis-guide.webp)
-
 ## ¿Qué es el análisis de color personal?
 
 El análisis de color personal (también conocido como análisis de color estacional o tipología cromática) es un método para determinar qué colores resultan más armoniosos y favorecedores según tu coloración natural: tono de piel, subtono, color de pelo y color de ojos.
@@ -158,4 +156,3 @@ La teoría de la armonía cromática tiene raíces en la ciencia del color y se 
 - [¿Tengo tono cálido o frío? 7 métodos](/es/blog/how-to-determine-skin-undertone) — Guía detallada para determinar el subtono
 - [Los mejores colores para subtonos fríos](/es/blog/best-colors-for-cool-undertones) — Guía de estilo para tipos fríos
 - [Guía de forma del rostro y peinados](/es/blog/face-shape-hairstyle-guide) — Combina tu análisis de color con consejos sobre la forma del rostro
-- [Haz el test de color gratuito](/es/tools/color-quiz) — Descubre tu tipo estacional en 2 minutos

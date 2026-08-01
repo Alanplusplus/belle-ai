@@ -6,8 +6,6 @@ tags: ["batom vermelho", "subtom de pele", "dicas de maquiagem", "análise de co
 image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
 ---
 
-![Como encontrar o batom vermelho perfeito para o seu tom de pele](/images/blog/perfect-red-lipstick-skin-tone.webp)
-
 ## A Regra de Maquiagem que Todo Mundo Erra
 
 Perdi a conta de quantos batons vermelhos comprei, usei uma vez e guardei no fundo da gaveta. Vermelho clássico? Muito agressivo. Coral? Me apagou. Amora? Deixou meus dentes amarelados. Durante anos, achei que simplesmente "não conseguia usar batom vermelho."
@@ -170,4 +168,3 @@ Passei minha própria selfie por uma ferramenta de análise de coloração com I
 - **Subtons oliva precisam de vermelhos suaves e mais profundos** — não tons vibrantes ou pastéis.
 - **Teste no pulso interno ou nos lábios, não na mão.** E sempre verifique à luz natural.
 
-Encontrar o batom vermelho perfeito não é questão de sorte ou de ter "o rosto certo para isso". É entender uma coisa simples — a temperatura da sua pele — e combiná-la com a temperatura do batom. Quando esses dois se alinham, você vai se perguntar por que algum dia teve dificuldade.

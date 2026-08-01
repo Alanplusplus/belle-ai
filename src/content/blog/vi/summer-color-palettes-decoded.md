@@ -6,8 +6,6 @@ tags: ["phân tích màu sắc cá nhân", "bảng màu hè", "mùa màu", "làm
 image: "/images/blog/summer-color-palettes-decoded.webp"
 ---
 
-![Bảng Màu Mùa Hè Giải Mã: Cool Summer vs True Summer vs Soft Summer](/images/blog/summer-color-palettes-decoded.webp)
-
 ## Bạn Là Summer — Nhưng Là Summer Nào?
 
 Kết quả phân tích màu xác nhận bạn là tuýp Summer. Da bạn có undertone lạnh, đường nét mềm mại, và những màu gợi nhớ buổi sáng sương mù bên bờ biển trông tuyệt vời trên bạn.
@@ -97,4 +95,3 @@ Công cụ như [phân tích màu AI](https://aicoloranalysis.io/vi) dùng compu
 
 - **Cool Summer:** Đậm nhất trong Summer. Mặc được màu sâu hơn, lạnh hơn. Giáp Đông.
 - **True Summer:** Trung tâm cân bằng. Sâu trung bình, lạnh rõ ràng, muted nhẹ.
-- **Soft Summer:** Muted nhất trong 12 mùa. Siêu nhẹ nhàng, lạnh-trung tính, màu thì thầm.

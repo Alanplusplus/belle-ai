@@ -6,8 +6,6 @@ tags: ["色彩测试", "个人色彩分析", "四季色彩", "美妆", "AI测色
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
 
-![色彩测试为什么不准](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
-
 ## 色彩测试的问题
 
 你做了一个测试，结果是"暖秋"。做了另一个，结果变成"冷夏"。第三个又说你是"冬季型"。是不是很熟悉？
@@ -164,4 +162,3 @@ image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 
 ---
 
-*还在为你的色彩季节困惑？[试试我们的免费AI色彩分析工具](/zh/tools/color-quiz)——只需30秒，不需要你猜测自己的底色。*

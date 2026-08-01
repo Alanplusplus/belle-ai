@@ -6,8 +6,6 @@ tags: ["analisis warna personal", "warna musiman", "teori warna", "panduan kecan
 image: "/images/blog/personal-color-analysis-guide.webp"
 ---
 
-![Panduan Analisis Warna Personal](/images/blog/personal-color-analysis-guide.webp)
-
 ## Apa Itu Analisis Warna Personal?
 
 Analisis warna personal (juga dikenal sebagai analisis warna musiman atau color typing) adalah metode untuk menentukan warna mana yang paling harmonis dan mempesona pada Anda berdasarkan warna alami Anda — warna kulit, undertone, warna rambut, dan warna mata.
@@ -158,4 +156,3 @@ Teori harmoni warna berakar pada ilmu warna dan telah digunakan dalam seni dan d
 - [Apakah Saya Nada Hangat atau Dingin? 7 Metode](/id/blog/how-to-determine-skin-undertone) — Panduan penentuan undertone mendalam
 - [Warna Terbaik untuk Undertone Dingin](/id/blog/best-colors-for-cool-undertones) — Panduan gaya untuk tipe dingin
 - [Panduan Bentuk Wajah & Gaya Rambut](/id/blog/face-shape-hairstyle-guide) — Padukan analisis warna dengan saran bentuk wajah
-- [Ikuti Kuis Warna Gratis](/id/tools/color-quiz) — Dapatkan tipe musiman Anda dalam 2 menit

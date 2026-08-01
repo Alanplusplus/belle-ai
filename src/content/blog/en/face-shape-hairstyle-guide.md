@@ -6,8 +6,6 @@ tags: ["face shape", "hairstyle", "beauty guide", "hair", "face shape hairstyle"
 image: "/images/blog/face-shape-hairstyle-guide.webp"
 ---
 
-![Face Shape & Hairstyle Guide](/images/blog/face-shape-hairstyle-guide.webp)
-
 ## Why Face Shape Matters for Hairstyle Selection
 
 Your face shape is the foundation for choosing a flattering hairstyle. The right cut can balance your proportions, highlight your best features, and frame your face beautifully. The wrong cut can emphasize features you'd rather minimize.
@@ -172,4 +170,3 @@ Absolutely. The recommendations above are starting points. Your hair texture (fi
 - [Personal Color Analysis: 12 Types Explained](/en/blog/personal-color-analysis-guide) — Find your best colors after finding your face shape
 - [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Determine your undertone for hair color choices
 - [Am I Warm or Cool Toned?](/en/blog/how-to-determine-skin-undertone) — Guide to choosing the right hair color temperature
-- [Take the Face Shape Quiz](/en/tools/face-shape-quiz) — AI-powered face shape analysis

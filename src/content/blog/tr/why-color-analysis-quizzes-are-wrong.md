@@ -6,8 +6,6 @@ tags: ["renk analizi testi", "kişisel renk analizi", "mevsimsel renk", "güzell
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
 
-![Renk Analizi Testleri Neden Yanlış](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
-
 ## Renk Analizi Testlerinin Sorunu
 
 Bir teste giriyorsunuz ve "Sıcak Sonbahar" çıkıyor. Başka birine giriyorsunuz ve "Soğuk Yaz" diyor. Üçüncüsü sizi "Parlak Kış" olarak etiketliyor. Tanıdık geldi mi?
@@ -164,4 +162,3 @@ Modern teknolojinin güzelliği, nesnel renk analizinin artık 300 $'lık bir ra
 
 ---
 
-*Renk mevsiminiz hâlâ kafanızı karıştırıyor mu? [Ücretsiz yapay zekâ renk analizi aracımızı](/tr/tools/color-quiz) deneyin — 30 saniye sürer ve kendi alt tonunuzu tahmin etmenizi istemez.*

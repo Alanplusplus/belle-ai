@@ -6,8 +6,6 @@ tags: ["tông nền olive", "tông nền da", "phân tích màu cá nhân", "là
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 
-![Hướng Dẫn Tông Nền Olive](/images/blog/olive-undertone-guide.webp)
-
 ## Tại Sao Không Ai Nói Về Tông Nền Olive
 
 Mọi bài viết làm đẹp trên internet chia tông nền da thành ba nhóm gọn gàng: ấm, lạnh hoặc trung tính. Bạn làm bài test tĩnh mạch, kiểm tra trang sức vàng hay bạc đẹp hơn, và xong.
@@ -211,4 +209,3 @@ Hiểu tông olive thực sự giải phóng. Khi ngừng cố nhét mình vào 
 - [Cách Xác Định Tông Nền Da](/vi/blog/how-to-determine-skin-undertone) — Hướng dẫn tông nền đầy đủ với 7 phương pháp test
 - [Tông Lạnh vs Tông Ấm: 5 Bài Test Dễ Dàng](/vi/blog/cool-tone-vs-warm-tone) — So sánh kiến thức cơ bản ấm và lạnh
 - [Màu Sắc Tốt Nhất Cho Tông Nền Lạnh](/vi/blog/best-colors-for-cool-undertones) — Dành riêng cho da tông lạnh
-- [Hướng Dẫn Bảng Màu Đông Sâu](/vi/blog/deep-winter-color-palette-guide) — Hướng dẫn mùa tông sâu liên quan

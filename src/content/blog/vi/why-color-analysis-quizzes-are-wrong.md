@@ -6,8 +6,6 @@ tags: ["bài quiz phân tích màu", "phân tích màu cá nhân", "màu theo m�
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
 
-![Tại Sao Bài Quiz Phân Tích Màu Thường Sai](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
-
 ## Vấn Đề Với Bài Quiz Phân Tích Màu
 
 Bạn làm một bài quiz và được "Thu Ấm". Bài khác cho "Hè Mát". Bài thứ ba bảo bạn là "Đông Tươi Sáng". Quen chứ?
@@ -164,4 +162,3 @@ Vẻ đẹp của công nghệ hiện đại là phân tích màu khách quan kh
 
 ---
 
-*Vẫn bối rối về mùa màu? [Thử công cụ phân tích màu AI miễn phí](/vi/tools/color-quiz) — chỉ mất 30 giây và không yêu cầu bạn đoán tông nền của mình.*

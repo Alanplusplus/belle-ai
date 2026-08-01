@@ -6,8 +6,6 @@ tags: ["ऑलिव अंडरटोन", "त्वचा अंडरटो
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 
-![ऑलिव अंडरटोन गाइड](/images/blog/olive-undertone-guide.webp)
-
 ## ऑलिव अंडरटोन के बारे में कोई क्यों नहीं बताता?
 
 इंटरनेट पर हर ब्यूटी लेख त्वचा अंडरटोन को तीन साफ़ श्रेणियों में बाँटता है: वार्म, कूल या न्यूट्रल। नसों का टेस्ट लें, देखें सोना या चाँदी बेहतर लगता है, और बस।
@@ -211,4 +209,3 @@ image: "/images/blog/olive-undertone-guide.webp"
 - [अपना त्वचा अंडरटोन कैसे जानें](/hi/blog/how-to-determine-skin-undertone) — 7 टेस्टिंग विधियों के साथ पूरी अंडरटोन गाइड
 - [कूल टोन बनाम वार्म टोन: 5 आसान टेस्ट](/hi/blog/cool-tone-vs-warm-tone) — कूल और वार्म की बुनियादी तुलना
 - [कूल अंडरटोन के लिए सर्वोत्तम रंग](/hi/blog/best-colors-for-cool-undertones) — विशेष रूप से कूल-टोन त्वचा के लिए
-- [Deep Winter रंग पैलेट गाइड](/hi/blog/deep-winter-color-palette-guide) — एक संबंधित गहरे टोन वाली सीज़नल गाइड

@@ -6,8 +6,6 @@ tags: ["personal color analysis", "spring color palette", "color season", "beaut
 image: "/images/blog/spring-color-palettes-decoded.webp"
 ---
 
-![Spring Color Palettes Decoded: Bright Spring vs True Spring vs Light Spring](/images/blog/spring-color-palettes-decoded.webp)
-
 ## You Know You're a Spring — But Which Spring?
 
 So you've taken a color analysis and the verdict is in: you're a Spring. Your undertone runs warm, your overall vibe is fresh and lively, and you look incredible in colors that feel like a sunny garden.
@@ -203,4 +201,3 @@ Regardless of which Spring sub-season you are, these principles apply:
 - All three Spring types share warmth as their foundation — the key differentiator is how much contrast and saturation your coloring can handle.
 - When in doubt, test colors against your face in natural daylight. Your skin's reaction (glowing vs. washed out) tells you everything.
 
-Finding your exact Spring sub-season is the difference between looking "fine" and looking like you're radiating from within. Once you nail it, every shopping trip, every morning getting dressed, and every outfit photo suddenly makes sense. Your colors stop being something you think about and start being something you just *know*.

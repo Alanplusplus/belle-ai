@@ -6,8 +6,6 @@ tags: ["analisi del colore", "palette estate", "stagione colore", "bellezza", "g
 image: "/images/blog/summer-color-palettes-decoded.webp"
 ---
 
-![Palette Colori Estate: Cool Summer vs True Summer vs Soft Summer](/images/blog/summer-color-palettes-decoded.webp)
-
 ## Sei un'Estate — Ma Quale?
 
 La tua analisi del colore ha confermato: sei un tipo Estate. Il tuo sottotono è freddo, i tuoi lineamenti hanno una morbidezza naturale, e stai benissimo con colori che evocano una mattina nebbiosa al mare.
@@ -98,4 +96,3 @@ Strumenti come [analisi del colore IA](https://aicoloranalysis.io/it) usano la v
 - **Cool Summer:** Il più intenso delle Estati. Può portare colori più profondi e freddi. Confina con l'Inverno.
 - **True Summer:** Il centro equilibrato. Profondità media, chiaramente freddo, delicatamente attenuato.
 - **Soft Summer:** Il più attenuato delle 12 stagioni. Ultra-morbido, neutro-freddo, colori sussurrati.
-- Tutte le Estati condividono sottotoni freddi e qualità attenuate — la differenza è di grado.

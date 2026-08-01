@@ -6,8 +6,6 @@ tags: ["deep winter", "personal color analysis", "color palette", "style guide",
 image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
-![Deep Winter Color Palette](/images/blog/deep-winter-color-palette.webp)
-
 ## What Makes Someone a Deep Winter?
 
 Deep Winter sits between True Winter and Dark Autumn on the color wheel. It's the darkest of the three Winter sub-seasons, with the defining characteristic being **depth** — deep hair, deep eyes, and medium-to-deep skin with cool or neutral-cool undertones.
@@ -171,4 +169,3 @@ For precise results without the guesswork, [AI color analysis](/en/personal-colo
 - [Personal Color Analysis: All 12 Types Explained](/en/blog/personal-color-analysis-guide) — Understand where Deep Winter fits in the full system
 - [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Broader cool-toned color guide
 - [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Confirm your undertone first
-- [How to Determine Your Skin Undertone](/en/blog/how-to-determine-skin-undertone) — Step-by-step undertone guide

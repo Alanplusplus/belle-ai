@@ -6,8 +6,6 @@ tags: ["subtono olivastro", "subtono della pelle", "analisi del colore personale
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 
-![Guida al subtono olivastro](/images/blog/olive-undertone-guide.webp)
-
 ## Perché nessuno parla dei subtoni olivastri
 
 Ogni articolo beauty su internet divide i subtoni della pelle in tre categorie ordinate: caldo, freddo o neutro. Fai il test delle vene, controlli se l'oro o l'argento ti sta meglio, e hai finito.
@@ -211,4 +209,3 @@ Comprendere il subtono olivastro è davvero liberatorio. Una volta che smetti di
 - [Come determinare il subtono della pelle](/it/blog/how-to-determine-skin-undertone) — La guida completa al subtono con 7 metodi di test
 - [Tono freddo vs tono caldo: 5 test semplici](/it/blog/cool-tone-vs-warm-tone) — Confronta le basi calde e fredde
 - [I migliori colori per subtoni freddi](/it/blog/best-colors-for-cool-undertones) — Specificamente per pelle a tono freddo
-- [Guida alla palette Inverno Profondo](/it/blog/deep-winter-color-palette-guide) — Una guida stagionale correlata per tonalità profonde

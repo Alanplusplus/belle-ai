@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { SITE_URL } from "@/lib/constants";
+import { canonicalUrl } from "@/lib/seo";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -16,7 +16,7 @@ export async function generateMetadata({
     title: messages.meta.makeupTitle,
     description: messages.meta.makeupDescription,
     alternates: {
-      canonical: `${SITE_URL}/${locale}/makeup-analysis`,
+      canonical: canonicalUrl(locale, "/makeup-analysis"),
     },
   };
 }
@@ -37,7 +37,7 @@ export default function MakeupAnalysisPage() {
             {t("description")}
           </p>
           <Link
-            href="/try"
+            href="/try?type=makeup"
             className="mt-8 inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
           >
             {ft("tryItFree")}
@@ -83,7 +83,7 @@ export default function MakeupAnalysisPage() {
           </div>
           <div className="mt-10 text-center">
             <Link
-              href="/try"
+              href="/try?type=makeup"
               className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
             >
               {ft("tryItFree")}
@@ -115,10 +115,10 @@ function WhyItem({ text }: { text: string }) {
 }
 
 const MAKEUP_DIMENSIONS = [
-  { image: "/images/dim_skin.png" },
-  { image: "/images/dim_eyes.png" },
-  { image: "/images/dim_blush.png" },
-  { image: "/images/dim_lips.png" },
-  { image: "/images/dim_looks.png" },
-  { image: "/images/dim_tools.png" },
+  { image: "/images/dim_skin.webp" },
+  { image: "/images/dim_eyes.webp" },
+  { image: "/images/dim_blush.webp" },
+  { image: "/images/dim_lips.webp" },
+  { image: "/images/dim_looks.webp" },
+  { image: "/images/dim_tools.webp" },
 ];

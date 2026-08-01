@@ -1,4 +1,4 @@
-import { SITE_URL } from "@/lib/constants";
+import { canonicalUrl } from "@/lib/seo";
 import type { Metadata } from "next";
 import { ColorQuizClient } from "./ColorQuizClient";
 
@@ -13,7 +13,7 @@ export async function generateMetadata({
     title: messages.meta.colorQuizTitle,
     description: messages.meta.colorQuizDescription,
     alternates: {
-      canonical: `${SITE_URL}/${locale}/tools/color-quiz`,
+      canonical: canonicalUrl(locale, "/tools/color-quiz"),
     },
   };
 }

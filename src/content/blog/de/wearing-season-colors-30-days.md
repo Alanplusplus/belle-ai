@@ -6,8 +6,6 @@ tags: ["Farbanalyse", "Farbtyp", "persönlicher Stil", "Mode-Tipps", "Selbstverb
 image: "/images/blog/wearing-season-colors-30-days.webp"
 ---
 
-![30 Tage nur meine Farbtyp-Farben getragen](/images/blog/wearing-season-colors-30-days.webp)
-
 ## Die Herausforderung, Die Mein Anziehen Verändert Hat
 
 Es begann mit einer Kleiderschrank-Krise. Montag, 7:45 Uhr, ich stand schon wieder zu spät vor meinem Schrank und starrte auf ein chaotisches Farb-Mix, das irgendwie nie zusammenpasste. Schwarze Hose mit Senf-Oberteil? Zu hart. Grauer Pullover mit olivgrüner Hose? Ich wirkte müde, bevor der Tag überhaupt begonnen hatte.
@@ -150,4 +148,3 @@ Und ich bekomme immer noch die Komplimente. Die „du siehst toll aus"-Art, die 
 - Accessoires und Make-up sollten zum Unterton deiner Palette passen, für volle Harmonie
 - Die Angst, mit einer Palette „langweilig" zu wirken, ist unbegründet — Konsistenz wirkt wie persönlicher Stil, nicht wie Einschränkung
 
-Dein Kleiderschrank braucht nicht mehr Optionen. Er braucht die *richtigen* Optionen. Und dein Farbtyp ist der zuverlässigste Wegweiser, sie zu finden.

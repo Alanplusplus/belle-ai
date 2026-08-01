@@ -6,8 +6,6 @@ tags: ["冷皮暖皮", "色调判断", "肤色", "美妆", "穿搭"]
 image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
 
-![判断肤色色调](/images/blog/how-to-determine-skin-undertone.webp)
-
 ## 快速判断法
 
 想要快速结果：在自然光下看手腕内侧的血管。蓝紫色 = 冷皮。绿色 = 暖皮。两者都有 = 中性皮。但为了准确性，建议使用多种方法交叉验证。
@@ -120,4 +118,3 @@ image: "/images/blog/how-to-determine-skin-undertone.webp"
 - **深浅度：** 适合的颜色是浅还是深
 - **饱和度：** 适合的颜色是鲜艳还是柔和
 
-想要完整分析，可以试试Belle AI的个人色彩诊断 — 只需一张照片60秒内确定你的12类型季节分类。

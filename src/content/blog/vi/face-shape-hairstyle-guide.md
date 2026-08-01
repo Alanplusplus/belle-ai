@@ -6,8 +6,6 @@ tags: ["dạng khuôn mặt", "kiểu tóc", "hướng dẫn làm đẹp", "tóc
 image: "/images/blog/face-shape-hairstyle-guide.webp"
 ---
 
-![Hướng Dẫn Dạng Khuôn Mặt & Kiểu Tóc](/images/blog/face-shape-hairstyle-guide.webp)
-
 ## Tại Sao Dạng Khuôn Mặt Quan Trọng Khi Chọn Kiểu Tóc
 
 Dạng khuôn mặt là nền tảng để chọn kiểu tóc tôn da. Kiểu cắt phù hợp có thể cân bằng tỷ lệ, làm nổi bật điểm mạnh và khung khuôn mặt đẹp. Kiểu cắt sai có thể nhấn mạnh những điểm bạn muốn giảm bớt.
@@ -172,4 +170,3 @@ Chắc chắn. Gợi ý trên là điểm khởi đầu. Kết cấu tóc (mỏn
 - [Phân Tích Màu Cá Nhân: Giải Thích 12 Kiểu](/vi/blog/personal-color-analysis-guide) — Tìm màu tốt nhất sau khi biết dạng khuôn mặt
 - [Tông Lạnh vs Tông Ấm: 5 Bài Test Dễ Dàng](/vi/blog/cool-tone-vs-warm-tone) — Xác định tông nền để chọn màu tóc
 - [Tôi Thuộc Tông Ấm Hay Lạnh?](/vi/blog/how-to-determine-skin-undertone) — Hướng dẫn chọn nhiệt độ màu tóc phù hợp
-- [Làm Bài Quiz Dạng Khuôn Mặt](/vi/tools/face-shape-quiz) — Phân tích dạng khuôn mặt bằng AI

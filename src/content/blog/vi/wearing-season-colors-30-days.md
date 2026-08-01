@@ -6,8 +6,6 @@ tags: ["phân tích màu sắc cá nhân", "mùa màu sắc", "phong cách cá n
 image: "/images/blog/wearing-season-colors-30-days.webp"
 ---
 
-![Tôi chỉ mặc màu mùa trong 30 ngày](/images/blog/wearing-season-colors-30-days.webp)
-
 ## Thử Thách Thay Đổi Cách Tôi Mặc Đồ
 
 Mọi chuyện bắt đầu từ một cuộc khủng hoảng tủ đồ. Thứ Hai, 7 giờ 45 sáng, tôi đã trễ giờ, đứng trước tủ quần áo nhìn chằm chằm vào đống màu sắc lộn xộn — sao cũng không hợp với nhau. Quần đen với áo vàng mù tạt? Quá gắt. Áo len xám với quần olive? Chưa kịp bước ra cửa đã trông mệt mỏi rồi.
@@ -150,4 +148,3 @@ Và tôi vẫn nhận lời khen. Những câu "bạn trông tuyệt" không li�
 - Phụ kiện và makeup nên khớp undertone palette để hài hòa trọn vẹn
 - Nỗi sợ trông "nhàm chán" với một palette là không có cơ sở — sự nhất quán đọc là phong cách cá nhân, không phải giới hạn
 
-Tủ đồ của bạn không cần thêm lựa chọn. Nó cần *đúng* lựa chọn. Và mùa màu sắc là kim chỉ nam đáng tin cậy nhất để tìm chúng.

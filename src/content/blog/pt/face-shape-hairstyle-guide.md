@@ -6,8 +6,6 @@ tags: ["formato do rosto", "penteado", "guia de beleza", "cabelo", "penteado por
 image: "/images/blog/face-shape-hairstyle-guide.webp"
 ---
 
-![Guia de Formato do Rosto e Penteados](/images/blog/face-shape-hairstyle-guide.webp)
-
 ## Por Que o Formato do Rosto Importa na Escolha do Penteado
 
 O formato do rosto é a base para escolher um corte favorecedor. O corte certo pode equilibrar suas proporções, destacar seus melhores traços e emoldurar o rosto com beleza. O corte errado pode enfatizar características que você prefere minimizar.
@@ -172,4 +170,3 @@ Com certeza. As recomendações acima são pontos de partida. Sua textura de cab
 - [Análise de Coloração Pessoal: 12 Tipos Explicados](/pt/blog/personal-color-analysis-guide) — Encontre suas melhores cores depois de descobrir o formato do rosto
 - [Tom Frio vs. Tom Quente: 5 Testes Fáceis](/pt/blog/cool-tone-vs-warm-tone) — Determine seu subtom para escolher a cor do cabelo
 - [Sou de Tom Quente ou Frio?](/pt/blog/how-to-determine-skin-undertone) — Guia para escolher a temperatura certa do cabelo
-- [Faça o Quiz de Formato do Rosto](/pt/tools/face-shape-quiz) — Análise de formato do rosto com IA

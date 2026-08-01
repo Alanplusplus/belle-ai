@@ -6,8 +6,6 @@ tags: ["guarda-roupa cápsula", "análise de cores pessoal", "estação de cores
 image: "/images/blog/capsule-wardrobe-color-season.webp"
 ---
 
-![Como Montar um Guarda-Roupa Cápsula Baseado na Sua Estação de Cores](/images/blog/capsule-wardrobe-color-season.webp)
-
 ## Você Já Sabe Sua Estação de Cores — E Agora?
 
 Então você descobriu que é Outono Suave ou Primavera Brilhante. Talvez tenha usado uma ferramenta de análise de cores com IA, ou talvez tenha passado duas horas na frente do espelho com tecidos coloridos. De qualquer forma, tem uma resposta.
@@ -151,4 +149,3 @@ Ferramentas gratuitas como [aicoloranalysis.io](https://aicoloranalysis.io/pt) o
 - Construa gradualmente em 6+ meses
 - Use análise de cores com IA para identificar sua estação rapidamente
 
-Sua estação de cores é o filtro de compras mais poderoso que você terá. Uma vez que internalize sua paleta, se vestir vira a parte mais fácil da manhã.

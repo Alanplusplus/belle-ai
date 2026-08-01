@@ -6,8 +6,6 @@ tags: ["deep winter", "व्यक्तिगत रंग विश्ले�
 image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
-![Deep Winter रंग पैलेट](/images/blog/deep-winter-color-palette.webp)
-
 ## किसे Deep Winter कहा जाता है?
 
 Deep Winter रंग चक्र पर True Winter और Dark Autumn के बीच स्थित है। यह तीन Winter उप-सीज़न में सबसे गहरा है, जिसकी परिभाषित विशेषता **गहराई** है — गहरे बाल, गहरी आँखें, और कूल या न्यूट्रल-कूल अंडरटोन वाली मध्यम से गहरी त्वचा।
@@ -171,4 +169,3 @@ Deep Winter रंग चक्र पर True Winter और Dark Autumn के 
 - [व्यक्तिगत रंग विश्लेषण: सभी 12 प्रकारों की व्याख्या](/hi/blog/personal-color-analysis-guide) — पूरे सिस्टम में Deep Winter कहाँ फ़िट होता है समझें
 - [कूल अंडरटोन के लिए सर्वोत्तम रंग](/hi/blog/best-colors-for-cool-undertones) — व्यापक कूल-टोन रंग गाइड
 - [कूल टोन बनाम वार्म टोन: 5 आसान टेस्ट](/hi/blog/cool-tone-vs-warm-tone) — पहले अपना अंडरटोन पुष्टि करें
-- [अपना त्वचा अंडरटोन कैसे जानें](/hi/blog/how-to-determine-skin-undertone) — चरण-दर-चरण अंडरटोन गाइड

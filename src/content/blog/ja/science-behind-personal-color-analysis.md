@@ -6,8 +6,6 @@ tags: ["パーソナルカラー", "色彩科学", "色彩理論", "美容", "�
 image: "/images/blog/science-of-color-analysis.webp"
 ---
 
-![パーソナルカラー分析の科学](/images/blog/science-of-color-analysis.webp)
-
 ## なぜある色は最高に似合うのに——ある色は似合わないのか？
 
 誰もが経験したことがあるはずです。コーラル色のトップスを試着すると、肌が輝き、目がパッと明るくなり、「最近どこか行ってきた？」と聞かれる。それなのにオリーブグリーンのセーターを着ると、8時間睡眠したのに急に疲れて見える。
@@ -153,4 +151,3 @@ image: "/images/blog/science-of-color-analysis.webp"
 - [パーソナルカラー診断完全ガイド：12タイプの特徴と似合う色](/ja/blog/personal-color-analysis-guide) — 12タイプシステムを完全理解
 - [イエベ？ブルベ？アンダートーン判別完全ガイド（2026年版）](/ja/blog/how-to-determine-skin-undertone) — 実践的なアンダートーンテストで科学を応用
 - [オンラインのパーソナルカラー診断が当たらない理由（そして代わりにすべきこと）](/ja/blog/why-color-analysis-quizzes-are-wrong) — 自己診断の限界を理解する
-- [AIとプロのパーソナルカラー診断：両方試してみた正直な比較](/ja/blog/ai-vs-professional-color-analysis) — テクノロジーと従来のドレーピングの比較

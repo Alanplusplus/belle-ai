@@ -6,8 +6,6 @@ tags: ["Unterton", "warm oder kühl", "Hautton", "Farbanalyse", "Beauty-Tipps"]
 image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
 
-![So bestimmen Sie Ihren Hautunterton](/images/blog/how-to-determine-skin-undertone.webp)
-
 ## Die Kurzantwort
 
 Wenn Sie schnell ein Ergebnis wollen: Schauen Sie bei Tageslicht auf Ihre Handgelenksvenen. Blau/Violett = kühl. Grün = warm. Mischung aus beidem = neutral. Für Genauigkeit sollten Sie jedoch mehrere Methoden nutzen – genau das behandelt dieser Leitfaden.
@@ -147,4 +145,3 @@ Für eine vollständige Analyse probieren Sie die [persönliche Farbanalyse von 
 - [Kühl vs. Warm: 5 einfache Tests](/de/blog/cool-tone-vs-warm-tone) — Schnelle Tests zur Bestätigung Ihres Untertons
 - [Die besten Farben für kühle Untertöne](/de/blog/best-colors-for-cool-undertones) — Kompletter Styling-Ratgeber für Kühlttypen
 - [Persönliche Farbanalyse: 12 Typen erklärt](/de/blog/personal-color-analysis-guide) — Das gesamte Saisonfarben-System verstehen
-- [Gesichtsform & Frisuren-Ratgeber](/de/blog/face-shape-hairstyle-guide) — Finden Sie die perfekte Frisur für Ihr Gesicht

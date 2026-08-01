@@ -6,8 +6,6 @@ tags: ["yüz şekli", "saç modeli", "güzellik rehberi", "saç", "yüz şekline
 image: "/images/blog/face-shape-hairstyle-guide.webp"
 ---
 
-![Yüz Şekli ve Saç Modeli Rehberi](/images/blog/face-shape-hairstyle-guide.webp)
-
 ## Saç Modeli Seçiminde Yüz Şekli Neden Önemlidir?
 
 Yüz şekliniz, yüz güzelleştirici bir saç modeli seçmenin temelidir. Doğru kesim oranlarınızı dengeleyebilir, en iyi özelliklerinizi öne çıkarabilir ve yüzünüzü güzelce çerçeveleyebilir. Yanlış kesim ise küçültmek istediğiniz özellikleri vurgulayabilir.
@@ -172,4 +170,3 @@ Kesinlikle. Yukarıdaki öneriler başlangıç noktalarıdır. Saç dokunuz (inc
 - [Kişisel Renk Analizi: 12 Tip Açıklanıyor](/tr/blog/personal-color-analysis-guide) — Yüz şeklinizi bulduktan sonra en iyi renklerinizi keşfedin
 - [Soğuk Ton mu Sıcak Ton mu: 5 Kolay Test](/tr/blog/cool-tone-vs-warm-tone) — Saç rengi seçimleri için alt tonunuzu belirleyin
 - [Sıcak mı Soğuk mu Tonluyum?](/tr/blog/how-to-determine-skin-undertone) — Doğru saç rengi sıcaklığını seçme rehberi
-- [Yüz Şekli Testine Katılın](/tr/tools/face-shape-quiz) — Yapay zekâ destekli yüz şekli analizi

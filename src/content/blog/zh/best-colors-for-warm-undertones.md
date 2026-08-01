@@ -6,8 +6,6 @@ tags: ["暖底色", "暖色调肤色", "色彩搭配", "穿搭指南", "时尚"]
 image: "/images/blog/best-colors-for-warm-undertones.webp"
 ---
 
-![暖底色最适合的颜色](/images/blog/best-colors-for-warm-undertones.webp)
-
 ## 你的暖底色是一种超能力——前提是你会用
 
 我曾经好几年都在穿冰蓝色、冷灰色这些柜台导购推荐的"百搭色"。直到真正了解了自己的暖底色，我才明白为什么有些衣服能让我看起来气色很好，另一些却让我出门前就像没睡够。
@@ -317,4 +315,3 @@ image: "/images/blog/best-colors-for-warm-undertones.webp"
 - [冷色调 vs 暖色调：5个简单测试](/zh/blog/cool-tone-vs-warm-tone) — 确认你是否真的是暖底色
 - [如何判断自己的底色：7种方法](/zh/blog/how-to-determine-skin-undertone) — 终极底色指南
 - [个人色彩分析：12种季型详解](/zh/blog/personal-color-analysis-guide) — 了解全部12种季型
-- [在家做色彩分析](/zh/blog/how-to-do-color-analysis-at-home) — 零基础DIY指南

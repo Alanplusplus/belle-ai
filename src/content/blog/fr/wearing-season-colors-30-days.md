@@ -6,8 +6,6 @@ tags: ["analyse colorimétrique", "saison de couleurs", "style personnel", "cons
 image: "/images/blog/wearing-season-colors-30-days.webp"
 ---
 
-![J'ai porté uniquement mes couleurs de saison pendant 30 jours](/images/blog/wearing-season-colors-30-days.webp)
-
 ## Le Défi Qui a Changé Ma Façon de M'Habiller
 
 Tout a commencé par une crise de dressing. Un lundi, 7 h 45, déjà en retard, je me tenais devant mon armoire en fixant un mélange chaotique de couleurs qui, d'une manière ou d'une autre, ne s'accordaient jamais. Pantalon noir et haut moutarde ? Trop dur. Pull gris et pantalon olive ? J'avais l'air fatiguée avant même que la journée ne commence.
@@ -150,4 +148,3 @@ Et je reçois toujours des compliments. Ceux du type « tu es super » qui ne co
 - Accessoires et maquillage doivent correspondre au sous-ton de votre palette pour une harmonie complète
 - La peur de paraître « ennuyeuse » avec une seule palette est infondée — la cohérence se lit comme un style personnel, pas comme une limitation
 
-Votre dressing n'a pas besoin de plus d'options. Il a besoin des *bonnes* options. Et votre saison de couleurs est le guide le plus fiable pour les trouver.

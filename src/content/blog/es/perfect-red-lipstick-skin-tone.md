@@ -6,8 +6,6 @@ tags: ["lápiz labial rojo", "subtono de piel", "consejos de maquillaje", "anál
 image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
 ---
 
-![Cómo encontrar el lápiz labial rojo perfecto para tu tono de piel](/images/blog/perfect-red-lipstick-skin-tone.webp)
-
 ## La regla de maquillaje que casi todo el mundo aplica mal
 
 He perdido la cuenta de cuántos labiales rojos he comprado, usado una sola vez y empujado al fondo de un cajón. ¿Rojo clásico? Demasiado intenso. ¿Coral? Me apagaba la piel. ¿Berries? Me hacía los dientes amarillos. Durante años pensé que simplemente «no me favorecía el rojo».
@@ -170,4 +168,3 @@ Pasé mi propio selfie por una herramienta de análisis de color con IA y confir
 - **Los subtonos oliva necesitan rojos apagados y profundos** — no tonos brillantes ni pasteles.
 - **Haz la muestra en la muñeca interna o en los labios, no en la mano.** Y siempre comprueba a la luz natural.
 
-Encontrar tu labial rojo perfecto no es cuestión de suerte ni de tener «la cara adecuada». Se trata de entender una cosa sencilla — la temperatura de tu piel — y combinarla con la temperatura de tu labial. Cuando coinciden, te preguntarás por qué alguna vez te costó tanto.

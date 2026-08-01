@@ -6,8 +6,6 @@ tags: ["análise de coloração pessoal", "coloração sazonal", "teoria das cor
 image: "/images/blog/personal-color-analysis-guide.webp"
 ---
 
-![Guia de Análise de Coloração Pessoal](/images/blog/personal-color-analysis-guide.webp)
-
 ## O Que É Análise de Coloração Pessoal?
 
 A análise de coloração pessoal (também conhecida como análise de coloração sazonal ou tipologia cromática) é um método para determinar quais cores ficam mais harmoniosas e favorecedoras em você com base na sua coloração natural — tom de pele, subtom, cor do cabelo e cor dos olhos.
@@ -158,4 +156,3 @@ A teoria da harmonia das cores tem raízes na ciência das cores e é usada em a
 - [Sou de Tom Quente ou Frio? 7 Métodos](/pt/blog/how-to-determine-skin-undertone) — Guia detalhado para determinar o subtom
 - [Melhores Cores para Subtons Frios](/pt/blog/best-colors-for-cool-undertones) — Guia de estilo para tipos frios
 - [Guia de Formato do Rosto e Penteados](/pt/blog/face-shape-hairstyle-guide) — Combine sua análise de cores com dicas de formato do rosto
-- [Faça o Quiz de Cores Gratuito](/pt/tools/color-quiz) — Descubra seu tipo sazonal em 2 minutos

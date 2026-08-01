@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
-import { SITE_URL, APP_STORE_URL } from "@/lib/constants";
+import { APP_STORE_URL } from "@/lib/constants";
+import { canonicalUrl } from "@/lib/seo";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -14,7 +15,7 @@ export async function generateMetadata({
     title: messages.meta.downloadTitle,
     description: messages.meta.downloadDescription,
     alternates: {
-      canonical: `${SITE_URL}/${locale}/download`,
+      canonical: canonicalUrl(locale, "/download"),
     },
   };
 }
@@ -63,9 +64,9 @@ export default function DownloadPage() {
         <div className="mt-16">
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
             {[
-              { src: "/images/showcase_skin.jpg", alt: "Skin Analysis" },
-              { src: "/images/showcase_eyes.jpg", alt: "Eye Makeup" },
-              { src: "/images/showcase_lips.jpg", alt: "Lip Color" },
+              { src: "/images/showcase_skin.webp", alt: "Skin Analysis" },
+              { src: "/images/showcase_eyes.webp", alt: "Eye Makeup" },
+              { src: "/images/showcase_lips.webp", alt: "Lip Color" },
             ].map((img) => (
               <div
                 key={img.src}

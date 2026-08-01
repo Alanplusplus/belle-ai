@@ -6,8 +6,6 @@ tags: ["पर्सनल कलर एनालिसिस", "कलर स�
 image: "/images/blog/wearing-season-colors-30-days.webp"
 ---
 
-![30 दिन सिर्फ अपने कलर सीज़न के रंग पहने](/images/blog/wearing-season-colors-30-days.webp)
-
 ## वो चैलेंज जिसने मेरा कपड़े पहनने का तरीका बदल दिया
 
 यह एक वॉर्डरोब क्राइसिस से शुरू हुआ। सोमवार, सुबह 7:45, मैं पहले से लेट थी और अलमारी के सामने खड़ी थी — रंगों का एक अस्त-व्यस्त मिक्स जो कभी साथ नहीं बैठता। काली पैंट, सरसों रंग की टॉप? बहुत हार्श। ग्रे स्वेटर, ऑलिव ट्राउज़र? दिन शुरू होने से पहले ही थकी हुई लग रही थी।
@@ -150,4 +148,3 @@ Compliments अभी भी आती हैं। "You look great" वाल�
 - Accessories और makeup palette undertone match करें full harmony के लिए
 - One palette में "boring" look का डर unfounded — consistency personal style पढ़ती है, limitation नहीं
 
-Closet को more options नहीं, *right* options चाहिए। Color season उन्हें find करने का most reliable guide है।।

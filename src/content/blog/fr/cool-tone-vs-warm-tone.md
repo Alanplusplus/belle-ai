@@ -6,8 +6,6 @@ tags: ["sous-ton", "ton froid", "ton chaud", "teint", "colorimétrie"]
 image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
 
-![Ton froid vs ton chaud](/images/blog/cool-tone-vs-warm-tone.webp)
-
 ## Qu'est-ce qu'un sous-ton ?
 
 Votre sous-ton est la couleur subtile située sous la surface de votre peau. Contrairement à votre teint de surface (qui peut changer avec l'exposition au soleil, les rougeurs, etc.), votre sous-ton reste constant tout au long de votre vie.
@@ -135,4 +133,3 @@ La peau olive a une nuance verdâtre qui peut être olive chaude ou olive froide
 - [Suis-je à sous-ton chaud ou froid ? 7 méthodes éprouvées](/fr/blog/how-to-determine-skin-undertone) — Une exploration approfondie de la détermination du sous-ton
 - [Les meilleures couleurs pour les sous-tons froids](/fr/blog/best-colors-for-cool-undertones) — Guide de style complet pour les personnes à sous-ton froid
 - [Colorimétrie personnelle : les 12 types expliqués](/fr/blog/personal-color-analysis-guide) — Allez au-delà du sous-ton pour trouver votre type saisonnier complet
-- [Guide forme du visage et coiffures](/fr/blog/face-shape-hairstyle-guide) — Trouvez la meilleure coiffure pour votre visage

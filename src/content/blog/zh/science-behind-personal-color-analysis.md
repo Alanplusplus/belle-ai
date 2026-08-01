@@ -6,8 +6,6 @@ tags: ["个人色彩分析", "色彩科学", "色彩理论", "美妆", "肤色�
 image: "/images/blog/science-of-color-analysis.webp"
 ---
 
-![个人色彩分析背后的科学](/images/blog/science-of-color-analysis.webp)
-
 ## 为什么有些颜色让你光彩照人——有些却不行？
 
 你可能有过这样的经历：试一件珊瑚色上衣，皮肤立刻透亮起来，眼睛更有神，还有人问你最近是不是去度假了。再套上一件橄榄绿毛衣，整个人突然显得疲惫——明明睡了八小时。
@@ -153,4 +151,3 @@ image: "/images/blog/science-of-color-analysis.webp"
 - [个人色彩分析完全指南：12季型人详解](/zh/blog/personal-color-analysis-guide) — 全面了解12季型系统
 - [怎么判断自己是冷皮还是暖皮？7种最准确的方法（2026）](/zh/blog/how-to-determine-skin-undertone) — 用实用底调测试应用这些科学原理
 - [为什么网上的色彩测试总是测不准？（以及正确的做法）](/zh/blog/why-color-analysis-quizzes-are-wrong) — 了解自我评估的局限性
-- [AI vs 专业色彩分析师：我都试了——这是我的真实对比](/zh/blog/ai-vs-professional-color-analysis) — 技术如何与传统拼色比色相比

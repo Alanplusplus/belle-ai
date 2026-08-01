@@ -6,8 +6,6 @@ tags: ["컬러 테스트", "퍼스널 컬러", "시즌 컬러", "뷰티", "AI �
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
 
-![퍼스널 컬러 테스트가 틀린 이유](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
-
 ## 퍼스널 컬러 테스트의 문제
 
 한 테스트에서 "웜 가을"이 나왔습니다. 다른 테스트에서는 "쿨 여름". 세 번째는 "클리어 겨울"이라고 합니다. 익숙하지 않나요?
@@ -164,4 +162,3 @@ image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 
 ---
 
-*아직 퍼스널 컬러 시즌이 혼란스러우신가요? [무료 AI 퍼스널 컬러 분석 도구를 사용해보세요](/ko/tools/color-quiz) — 30초면 되고, 자신의 언더톤을 추측할 필요가 없습니다.*

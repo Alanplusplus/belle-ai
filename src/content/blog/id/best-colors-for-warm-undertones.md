@@ -6,8 +6,6 @@ tags: ["undertone hangat", "kulit hangat", "palet warna", "panduan gaya", "fashi
 image: "/images/blog/best-colors-for-warm-undertones.webp"
 ---
 
-![Warna Terbaik untuk Undertone Hangat](/images/blog/best-colors-for-warm-undertones.webp)
-
 ## Undertone Hangat Anda Adalah Kekuatan Super — Jika Anda Tahu Cara Menggunakannya
 
 Saya menghabiskan bertahun-tahun mengenakan pastel es dan abu-abu dingin karena kuis di department store memberi tahu saya bahwa saya terlihat "hebat dalam semua warna netral." Baru setelah saya benar-benar memahami undertone hangat saya, saya menyadari mengapa beberapa outfit membuat saya terlihat seolah-olah baru saja berjemur dan penuh energi, sementara yang lain membuat saya terlihat lelah sebelum tengah hari.
@@ -338,4 +336,3 @@ Bagian terbaik dari memahami undertone hangat Anda? Belanja jadi lebih cepat, ou
 - [Nada Dingin vs Nada Hangat: 5 Tes Mudah](/id/blog/cool-tone-vs-warm-tone) — Konfirmasi apakah Anda benar-benar bernada hangat
 - [Apakah Saya Nada Hangat atau Dingin? 7 Metode](/id/blog/how-to-determine-skin-undertone) — Panduan undertone definitif
 - [Analisis Warna Personal: 12 Tipe Dijelaskan](/id/blog/personal-color-analysis-guide) — Memahami semua 12 tipe musiman
-- [Cara Analisis Warna di Rumah](/id/blog/how-to-do-color-analysis-at-home) — Panduan DIY langkah demi langkah

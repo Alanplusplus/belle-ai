@@ -6,8 +6,6 @@ tags: ["subtom frio", "pele fria", "paleta de cores", "guia de estilo", "moda"]
 image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
 
-![Melhores Cores para Subtons Frios](/images/blog/best-colors-for-cool-undertones.webp)
-
 ## Sua Paleta de Cores para Subtom Frio
 
 Se você tem subtom frio (pele com matizes rosados, avermelhados ou azulados abaixo da superfície), certas cores farão você brilhar de verdade. Este guia cobre tudo, dos neutros do dia a dia às cores ousadas de destaque.
@@ -196,4 +194,3 @@ Se você não tem certeza do subtom exato ou do tipo sazonal, a [análise de cor
 - [Tom Frio vs. Tom Quente: 5 Testes Fáceis](/pt/blog/cool-tone-vs-warm-tone) — Confirme se você é realmente de tom frio
 - [Sou de Tom Quente ou Frio? 7 Métodos](/pt/blog/how-to-determine-skin-undertone) — O guia definitivo de subtom
 - [Análise de Coloração Pessoal: 12 Tipos Explicados](/pt/blog/personal-color-analysis-guide) — Entenda todos os 12 tipos sazonais
-- [Faça o Quiz de Cores Gratuito](/pt/tools/color-quiz) — Quiz rápido para estimar sua estação de cor

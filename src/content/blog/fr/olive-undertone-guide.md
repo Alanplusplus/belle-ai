@@ -6,8 +6,6 @@ tags: ["sous-ton olive", "sous-ton de peau", "colorimétrie personnelle", "beaut
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 
-![Guide du sous-ton olive](/images/blog/olive-undertone-guide.webp)
-
 ## Pourquoi personne ne parle des sous-tons olive
 
 Chaque article beauté sur internet divise les sous-tons de peau en trois catégories nettes : chaud, froid ou neutre. Vous faites le test des veines, vérifiez si l'or ou l'argent vous va mieux, et c'est terminé.
@@ -211,4 +209,3 @@ Comprendre votre sous-ton olive est véritablement libérateur. Une fois que vou
 - [Comment déterminer le sous-ton de votre peau](/fr/blog/how-to-determine-skin-undertone) — Le guide complet du sous-ton avec 7 méthodes de test
 - [Ton froid vs ton chaud : 5 tests faciles](/fr/blog/cool-tone-vs-warm-tone) — Comparer les bases chaudes et froides
 - [Les meilleures couleurs pour les sous-tons froids](/fr/blog/best-colors-for-cool-undertones) — Spécifiquement pour la peau à sous-ton froid
-- [Guide palette Hiver Profond](/fr/blog/deep-winter-color-palette-guide) — Un guide saisonnier connexe pour les teints profonds

@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { SITE_URL } from "@/lib/constants";
+import { canonicalUrl } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -13,7 +13,7 @@ export async function generateMetadata({
     title: messages.terms.title,
     description: messages.terms.intro,
     alternates: {
-      canonical: `${SITE_URL}/${locale}/terms`,
+      canonical: canonicalUrl(locale, "/terms"),
     },
   };
 }

@@ -6,8 +6,6 @@ tags: ["sous-ton chaud", "peau chaude", "palette de couleurs", "guide de style",
 image: "/images/blog/best-colors-for-warm-undertones.webp"
 ---
 
-![Les meilleures couleurs pour les sous-tons chauds](/images/blog/best-colors-for-warm-undertones.webp)
-
 ## Votre sous-ton chaud est un superpouvoir — si vous savez l'utiliser
 
 Pendant des années, j'ai porté des pastels glacés et des gris froids parce qu'un quiz en magasin m'avait dit que j'étais « superbe dans tout ce qui est neutre ». Ce n'est qu'en comprenant enfin mon sous-ton chaud que j'ai réalisé pourquoi certaines tenues me donnaient l'air bronzée et pleine de vie, tandis que d'autres me faisaient paraître fatiguée avant midi.
@@ -338,4 +336,3 @@ Le meilleur aspect de comprendre votre sous-ton chaud ? Faire les courses devien
 - [Ton froid vs ton chaud : 5 tests faciles pour trouver votre sous-ton (avec photos)](/fr/blog/cool-tone-vs-warm-tone) — Confirmez si vous êtes vraiment à sous-ton chaud
 - [Suis-je à sous-ton chaud ou froid ? Le guide définitif du sous-ton (2026)](/fr/blog/how-to-determine-skin-undertone) — Le guide définitif du sous-ton
 - [Guide de colorimétrie personnelle : les 12 types saisonniers expliqués (avec test gratuit)](/fr/blog/personal-color-analysis-guide) — Comprenez les 12 types saisonniers
-- [Comment faire son analyse de couleur à la maison : Guide DIY](/fr/blog/how-to-do-color-analysis-at-home) — Guide DIY étape par étape

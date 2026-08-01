@@ -11,6 +11,7 @@ export interface BlogPost {
   description: string;
   date: string;
   tags: string[];
+  image: string;
   readingTime: string;
   content: string;
   locale: string;
@@ -34,6 +35,7 @@ export function getAllPosts(locale: string): BlogPost[] {
         description: data.description || "",
         date: data.date || "",
         tags: data.tags || [],
+        image: data.image || "",
         readingTime: Math.ceil(stats.minutes).toString(),
         content,
         locale,
@@ -59,6 +61,7 @@ export function getPostBySlug(
     description: data.description || "",
     date: data.date || "",
     tags: data.tags || [],
+    image: data.image || "",
     readingTime: Math.ceil(stats.minutes).toString(),
     content,
     locale,

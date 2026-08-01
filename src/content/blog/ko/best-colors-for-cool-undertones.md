@@ -6,8 +6,6 @@ tags: ["쿨톤", "퍼스널 컬러", "색상 팔레트", "스타일 가이드", 
 image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
 
-![쿨톤에게 어울리는 색상](/images/blog/best-colors-for-cool-undertones.webp)
-
 ## 쿨톤 색상 팔레트
 
 쿨톤(피부 아래에 핑크, 레드 또는 블루 톤이 있는 경우)이라면 특정 색상이 당신을 빛나게 만듭니다. 이 가이드는 일상적인 뉴트럴부터 대담한 스테이트먼트 컬러까지 모든 것을 다룹니다.
@@ -196,4 +194,3 @@ image: "/images/blog/best-colors-for-cool-undertones.webp"
 - [쿨톤 vs 웜톤: 5가지 간단한 테스트](/ko/blog/cool-tone-vs-warm-tone) — 정말 쿨톤인지 확인하기
 - [피부 언더톤 판별법](/ko/blog/how-to-determine-skin-undertone) — 완벽한 언더톤 가이드
 - [퍼스널 컬러 분석: 12가지 타입 설명](/ko/blog/personal-color-analysis-guide) — 12시즌 타입 전체 이해하기
-- [무료 컬러 퀴즈 해보기](/ko/tools/color-quiz) — 빠르게 컬러 시즌 추정하기

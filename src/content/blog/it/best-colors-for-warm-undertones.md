@@ -6,8 +6,6 @@ tags: ["sottotono caldo", "tono di pelle caldo", "palette colori", "guida allo s
 image: "/images/blog/best-colors-for-warm-undertones.webp"
 ---
 
-![I migliori colori per i sottotoni caldi](/images/blog/best-colors-for-warm-undertones.webp)
-
 ## Il Tuo Sottotono Caldo È un Superpotere — Se Sai Come Usarlo
 
 Ho passato anni a indossare pastelli ghiacciati e grigi freddi perché un quiz in un grande magazzino mi aveva detto che stavo "benissimo con tutti i neutri". Solo quando ho finalmente capito il mio sottotono caldo ho realizzato perché certi outfit mi facevano sembrare baciata dal sole e piena di vita, mentre altri mi facevano sembrare stanca prima di mezzogiorno.
@@ -338,4 +336,3 @@ La parte migliore di capire il tuo sottotono caldo? Fare shopping diventa più v
 - [Tono freddo vs tono caldo: 5 test semplici](/it/blog/cool-tone-vs-warm-tone) — Conferma se sei davvero a tono caldo
 - [Ho un tono caldo o freddo? La guida definitiva al subtono](/it/blog/how-to-determine-skin-undertone) — La guida definitiva al subtono
 - [Guida all'analisi del colore personale: tutti i 12 tipi stagionali spiegati](/it/blog/personal-color-analysis-guide) — Comprendi tutti i 12 tipi stagionali
-- [Come fare l'analisi del colore a casa](/it/blog/how-to-do-color-analysis-at-home) — Guida DIY con istruzioni passo passo

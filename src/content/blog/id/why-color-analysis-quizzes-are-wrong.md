@@ -6,8 +6,6 @@ tags: ["kuis analisis warna", "analisis warna personal", "warna musiman", "kecan
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
 
-![Mengapa Kuis Analisis Warna Salah](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
-
 ## Masalah dengan Kuis Analisis Warna
 
 Anda ikut satu kuis dan dapat "Warm Autumn." Ikut yang lain dapat "Cool Summer." Yang ketiga bilang Anda "Clear Winter." Familiar?
@@ -164,4 +162,3 @@ Keindahan teknologi modern adalah mendapatkan analisis warna objektif tidak lagi
 
 ---
 
-*Masih bingung tentang musim warna Anda? [Coba alat analisis warna AI gratis kami](/id/tools/color-quiz) — hanya butuh 30 detik dan tidak meminta Anda menebak undertone sendiri.*

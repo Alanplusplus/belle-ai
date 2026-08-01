@@ -6,8 +6,6 @@ tags: ["تحليل الألوان الشخصية", "لوحة ألوان صيفي
 image: "/images/blog/summer-color-palettes-decoded.webp"
 ---
 
-![لوحات ألوان الصيف: Cool Summer vs True Summer vs Soft Summer](/images/blog/summer-color-palettes-decoded.webp)
-
 ## أنتِ صيفية — لكن أي صيف؟
 
 تحليل الألوان أكّد أنكِ من النوع الصيفي. بشرتك ذات أندرتون بارد، ملامحكِ ناعمة، وتبدين رائعة بألوان تشبه صباحاً ضبابياً على شاطئ البحر.
@@ -97,4 +95,3 @@ image: "/images/blog/summer-color-palettes-decoded.webp"
 
 - **Cool Summer:** الأكثر كثافة بين الصيفيات. يمكنها ارتداء ألوان أعمق وأبرد. تحدّ الشتاء.
 - **True Summer:** المركز المتوازن. عمق متوسط، بارد بوضوح، مُخفَّف بنعومة.
-- **Soft Summer:** الأكثر إخفاءً بين الـ12 موسماً. فائق النعومة، بارد-محايد، ألوان همسية.

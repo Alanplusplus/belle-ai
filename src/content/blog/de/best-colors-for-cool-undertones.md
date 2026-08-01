@@ -6,8 +6,6 @@ tags: ["kühler Unterton", "kühle Haut", "Farbpalette", "Styling-Ratgeber", "Mo
 image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
 
-![Die besten Farben für kühle Untertöne](/images/blog/best-colors-for-cool-undertones.webp)
-
 ## Ihre Farbpalette für kühle Untertöne
 
 Wenn Sie kühle Untertöne haben (Haut mit rosa-, rot- oder bläulichen Farbtönen unter der Oberfläche), lassen bestimmte Farben Sie absolut strahlen. Dieser Ratgeber deckt alles ab – von Alltags-Neutraltönen bis zu kräftigen Statement-Farben.
@@ -196,4 +194,3 @@ Wenn Sie sich bei Ihrem exakten Unterton oder saisonalen Typ unsicher sind, bese
 - [Kühl vs. Warm: 5 einfache Tests](/de/blog/cool-tone-vs-warm-tone) — Bestätigen Sie, ob Sie wirklich kühl getönt sind
 - [Bin ich warm oder kühl getönt? 7 Methoden](/de/blog/how-to-determine-skin-undertone) — Der definitive Unterton-Ratgeber
 - [Persönliche Farbanalyse: 12 Typen erklärt](/de/blog/personal-color-analysis-guide) — Alle 12 saisonalen Typen verstehen
-- [Kostenloses Farbquiz starten](/de/tools/color-quiz) — Schnelles Quiz zur Einschätzung Ihrer Farbsaison

@@ -6,8 +6,6 @@ tags: ["โทนผิวอุ่น", "ผิวโทนอุ่น", "พ�
 image: "/images/blog/best-colors-for-warm-undertones.webp"
 ---
 
-![สีที่เหมาะกับโทนผิวอุ่น](/images/blog/best-colors-for-warm-undertones.webp)
-
 ## โทนผิวอุ่นของคุณคือพลังพิเศษ — ถ้ารู้วิธีใช้
 
 ฉันใส่สีพาสเทลเย็นและเทาโทนเย็นมาหลายปี เพราะแบบทดสอบในห้างบอกว่าฉัน "ใส่สีกลางอะไรก็ดูดี" จนกระทั่งเข้าใจโทนผิวอุ่นของตัวเอง ถึงรู้ว่าทำไมบางชุดทำให้ดูสดใสเหมือนโดนแดดจับ แต่บางชุดทำให้ดูเหนื่อยก่อนเที่ยง
@@ -338,4 +336,3 @@ image: "/images/blog/best-colors-for-warm-undertones.webp"
 - [โทนเย็น vs โทนอุ่น: 5 วิธีทดสอบง่ายๆ](/th/blog/cool-tone-vs-warm-tone) — ยืนยันว่าคุณโทนอุ่นจริง
 - [ฉันโทนอุ่นหรือเย็น? 7 วิธี](/th/blog/how-to-determine-skin-undertone) — คู่มือโทนผิวใต้ฉบับสมบูรณ์
 - [Personal Color Analysis: อธิบาย 12 ประเภท](/th/blog/personal-color-analysis-guide) — เข้าใจ 12 seasonal types ทั้งหมด
-- [วิธีวิเคราะห์สีที่บ้าน](/th/blog/how-to-do-color-analysis-at-home) — คู่มือ DIY ทีละขั้นตอน

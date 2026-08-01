@@ -6,8 +6,6 @@ tags: ["rossetto rosso", "subtono", "consigli trucco", "analisi cromatica", "bea
 image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
 ---
 
-![Come trovare il rossetto rosso perfetto per il tuo tono di pelle](/images/blog/perfect-red-lipstick-skin-tone.webp)
-
 ## La regola del trucco che tutti sbagliano
 
 Ho perso il conto di quanti rossetti rossi ho comprato, indossato una volta e spinto in fondo a un cassetto. Rosso classico? Troppo duro. Corallo? Mi sbiancava. Lampone? Mi faceva sembrare i denti gialli. Per anni ho pensato di non riuscire semplicemente a «portare il rosso».
@@ -170,4 +168,3 @@ Ho fatto analizzare il mio selfie con uno strumento IA di analisi cromatica e ho
 - **I subtoni olivastri necessitano di rossi smorzati e più profondi** — non tonalità brillanti o pastello.
 - **Prova il colore sull'interno del polso o sulle labbra, non sulla mano.** E controlla sempre alla luce naturale.
 
-Trovare il rossetto rosso perfetto non è questione di fortuna o di avere «il viso giusto». Riguarda capire una cosa semplice — la temperatura della tua pelle — e abbinarla alla temperatura del rossetto. Quando si allineano, ti chiederai perché ti sia mai costata fatica.

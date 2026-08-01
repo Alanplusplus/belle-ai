@@ -6,8 +6,6 @@ tags: ["イエベ", "ウォームスキントーン", "カラーパレット", "
 image: "/images/blog/best-colors-for-warm-undertones.webp"
 ---
 
-![イエベに似合う色](/images/blog/best-colors-for-warm-undertones.webp)
-
 ## イエベは武器になる — 活かし方を知っていれば
 
 何年もの間、百貨店のクイズで「ニュートラルなら何でも似合う」と言われたせいで、冷たいパステルやクールグレーを身につけ続けていました。ようやく自分がイエベだと理解して初めて、あるコーデは日焼けしたように生き生きと見えるのに、別のコーデは午前中から疲れて見える理由が分かったのです。
@@ -338,4 +336,3 @@ image: "/images/blog/best-colors-for-warm-undertones.webp"
 - [クールトーン vs ウォームトーン：5つの簡単テスト](/ja/blog/cool-tone-vs-warm-tone) — 本当にイエベか確認する
 - [イエベ？ブルベ？アンダートーン判別完全ガイド（2026年版）](/ja/blog/how-to-determine-skin-undertone) — 決定版アンダートーンガイド
 - [パーソナルカラー診断完全ガイド：12タイプの特徴と似合う色](/ja/blog/personal-color-analysis-guide) — 12シーズンタイプを全て理解する
-- [自宅でカラー分析する方法：DIYガイド（スタイリスト不要）](/ja/blog/how-to-do-color-analysis-at-home) — ステップバイステップのDIYガイド

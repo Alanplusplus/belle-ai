@@ -6,8 +6,6 @@ tags: ["tông nền lạnh", "da lạnh", "bảng màu", "hướng dẫn phong c
 image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
 
-![Màu Sắc Tốt Nhất Cho Tông Nền Lạnh](/images/blog/best-colors-for-cool-undertones.webp)
-
 ## Bảng Màu Cho Tông Nền Lạnh
 
 Nếu bạn có tông nền lạnh (da có sắc hồng, đỏ hoặc xanh bên dưới bề mặt), một số màu sẽ khiến bạn rạng rỡ tuyệt đối. Hướng dẫn này bao gồm từ màu trung tính hàng ngày đến màu nổi bật táo bạo.
@@ -196,4 +194,3 @@ Nếu không chắc tông nền hoặc kiểu theo mùa chính xác, [phân tíc
 - [Tông Lạnh vs Tông Ấm: 5 Bài Test Dễ Dàng](/vi/blog/cool-tone-vs-warm-tone) — Xác nhận bạn thực sự thuộc tông lạnh
 - [Tôi Thuộc Tông Ấm Hay Lạnh? 7 Phương Pháp](/vi/blog/how-to-determine-skin-undertone) — Hướng dẫn tông nền toàn diện
 - [Phân Tích Màu Cá Nhân: Giải Thích 12 Kiểu](/vi/blog/personal-color-analysis-guide) — Hiểu tất cả 12 kiểu theo mùa
-- [Làm Bài Quiz Màu Miễn Phí](/vi/tools/color-quiz) — Bài quiz nhanh ước tính mùa màu của bạn

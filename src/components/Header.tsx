@@ -6,8 +6,9 @@ import { useLocale } from "next-intl";
 import { routing, type Locale } from "@/i18n/routing";
 import { LOCALE_NAMES, APP_STORE_URL } from "@/lib/constants";
 import { useState, useEffect, useRef } from "react";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 import { webSignIn, type WebSignInData } from "@/lib/api";
+import { trackEvent } from "@/lib/analytics";
 
 export function Header() {
   const t = useTranslations("nav");
@@ -22,6 +23,25 @@ export function Header() {
   const langRef = useRef<HTMLDivElement>(null);
   const userMenuRef = useRef<HTMLDivElement>(null);
   const fetchedRef = useRef(false);
+  const [portalLoading, setPortalLoading] = useState(false);
+
+  const openCustomerPortal = async () => {
+    setUserMenuOpen(false);
+    setPortalLoading(true);
+    try {
+      const res = await fetch("/api/creem/portal");
+      const data = await res.json();
+      if (res.ok && data.portalUrl) {
+        window.open(data.portalUrl, "_blank", "noopener,noreferrer");
+      } else {
+        window.open("https://app.creem.io/portal", "_blank", "noopener,noreferrer");
+      }
+    } catch {
+      window.open("https://app.creem.io/portal", "_blank", "noopener,noreferrer");
+    } finally {
+      setPortalLoading(false);
+    }
+  };
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -55,9 +75,17 @@ export function Header() {
   }, [status, session]);
 
   const features = [
-    { href: "/makeup-analysis", label: t("makeupAnalysis") },
     { href: "/personal-color-analysis", label: t("colorAnalysis") },
+    { href: "/makeup-analysis", label: t("makeupAnalysis") },
     { href: "/face-shape-analysis", label: t("faceAnalysis") },
+    { href: "/hair-color-analysis", label: t("hairPreview") },
+    { href: "/outfit-color-analysis", label: t("outfitColor") },
+    { href: "/glasses-analysis", label: t("glassesMatch") },
+    { href: "/occasion-makeup", label: t("occasionMakeup") },
+    { href: "/jewelry-analysis", label: t("jewelryGuide") },
+    { href: "/glow-up-report", label: t("glowUpReport") },
+    { href: "/style-personality", label: t("stylePersonality") },
+    { href: "/celebrity-match", label: t("celebrityMatch") },
   ];
 
   const tools = [
@@ -148,52 +176,89 @@ export function Header() {
                 </svg>
               </button>
               {userMenuOpen && (
-                <div className="absolute right-0 top-full mt-1 min-w-[220px] rounded-lg border border-border bg-card p-1 shadow-lg">
-                  <div className="px-3 py-2 text-xs text-muted-foreground truncate">
+                <div className="absolute right-0 top-full mt-1 min-w-[240px] rounded-xl border border-border bg-card p-2 shadow-xl">
+                  <div className="px-3 py-1.5 text-xs text-muted-foreground truncate">
                     {session.user.email}
                   </div>
-                  <div className="mx-2 my-1 rounded-md bg-muted/50 px-3 py-2">
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="text-muted-foreground">{t("subscription")}</span>
-                      {userInfo?.subPlan ? (
-                        <span className="rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-semibold text-primary uppercase">
-                          {userInfo.subPlan} · {userInfo.subRemaining} left
-                        </span>
-                      ) : (
-                        <span className="text-muted-foreground">{t("noPlan")}</span>
-                      )}
-                    </div>
-                    <div className="mt-1.5 flex items-center justify-between text-xs">
-                      <span className="text-muted-foreground">{t("credits")}</span>
-                      <span className="font-medium">{userInfo?.credits ?? 0}</span>
-                    </div>
+
+                  {/* Quota display */}
+                  <div className="mx-1 my-1.5 overflow-hidden rounded-lg border border-border">
+                    {userInfo?.subPlan ? (
+                      <div className="flex items-center gap-2.5 bg-gradient-to-r from-primary/5 to-transparent px-3 py-2">
+                        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/10">
+                          <svg className="h-3.5 w-3.5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-baseline gap-1">
+                            <span className="text-xs font-semibold text-primary uppercase">{userInfo.subPlan}</span>
+                            <span className="text-[10px] text-muted-foreground">· {t("activeUntil")}</span>
+                          </div>
+                          <p className="text-[11px] text-muted-foreground">{userInfo.subRemaining} analyses left this month</p>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="flex items-center gap-2.5 px-3 py-2">
+                        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-muted">
+                          <svg className="h-3.5 w-3.5 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <div className="flex-1">
+                          <span className="text-xs text-muted-foreground">{t("noPlan")}</span>
+                        </div>
+                      </div>
+                    )}
+                    {(userInfo?.credits ?? 0) > 0 && (
+                      <div className="flex items-center gap-2.5 border-t border-border px-3 py-1.5">
+                        <div className="flex h-5 w-5 items-center justify-center">
+                          <svg className="h-3.5 w-3.5 text-amber-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H11.5v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.65c.1 1.7 1.36 2.66 2.85 2.97V19h1.73v-1.67c1.52-.29 2.72-1.16 2.72-2.74 0-2.08-1.87-2.93-3.64-3.45z" /></svg>
+                        </div>
+                        <span className="text-xs font-medium">{userInfo!.credits} {t("credits")}</span>
+                      </div>
+                    )}
                   </div>
+
+                  {/* Menu items */}
                   <Link
                     href="/try"
-                    className="block rounded-md px-3 py-2 text-sm hover:bg-muted"
+                    className="flex items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-muted"
                     onClick={() => setUserMenuOpen(false)}
                   >
+                    <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
                     {t("tryNow")}
                   </Link>
                   <Link
                     href="/try#history"
-                    className="block rounded-md px-3 py-2 text-sm hover:bg-muted"
+                    className="flex items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-muted"
                     onClick={() => setUserMenuOpen(false)}
                   >
+                    <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     {t("myHistory")}
                   </Link>
-                  <Link
-                    href="/pricing"
-                    className="block rounded-md px-3 py-2 text-sm text-primary hover:bg-muted"
-                    onClick={() => setUserMenuOpen(false)}
-                  >
-                    {t("manage")}
-                  </Link>
+                  {userInfo?.subPlan ? (
+                    <button
+                      type="button"
+                      disabled={portalLoading}
+                      className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm text-primary hover:bg-muted disabled:opacity-50"
+                      onClick={openCustomerPortal}
+                    >
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
+                      {portalLoading ? "..." : t("manage")}
+                    </button>
+                  ) : (
+                    <Link
+                      href="/pricing"
+                      className="flex items-center gap-2 rounded-md px-3 py-2 text-sm text-primary hover:bg-muted"
+                      onClick={() => setUserMenuOpen(false)}
+                    >
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
+                      {t("manage")}
+                    </Link>
+                  )}
                   <div className="mx-1 my-1 border-t border-border" />
                   <button
-                    onClick={() => { setUserMenuOpen(false); signOut(); }}
-                    className="w-full rounded-md px-3 py-2 text-left text-sm text-red-600 hover:bg-muted"
+                    onClick={() => { setUserMenuOpen(false); trackEvent("sign_out"); signOut(); }}
+                    className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm text-red-600 hover:bg-muted"
                   >
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" /></svg>
                     {t("signOut")}
                   </button>
                 </div>
@@ -321,7 +386,7 @@ export function Header() {
                 <p className="text-xs text-muted-foreground truncate">{session.user.email}</p>
               </div>
               <button
-                onClick={() => { setMobileOpen(false); signOut(); }}
+                onClick={() => { setMobileOpen(false); trackEvent("sign_out"); signOut(); }}
                 className="rounded-md px-2 py-1 text-xs text-red-600 hover:bg-red-50"
               >
                 {t("signOut")}
@@ -370,6 +435,7 @@ function NavDropdown({
   items: { href: string; label: string }[];
 }) {
   const [open, setOpen] = useState(false);
+  const isWide = items.length > 5;
 
   return (
     <div
@@ -384,7 +450,7 @@ function NavDropdown({
         </svg>
       </button>
       {open && (
-        <div className="absolute left-0 top-full mt-0 min-w-[180px] rounded-lg border border-border bg-card p-1 shadow-lg">
+        <div className={`absolute left-0 top-full mt-0 rounded-lg border border-border bg-card p-1 shadow-lg ${isWide ? "grid min-w-[340px] grid-cols-2 gap-x-1" : "min-w-[180px]"}`}>
           {items.map((item) => (
             <Link
               key={item.href}

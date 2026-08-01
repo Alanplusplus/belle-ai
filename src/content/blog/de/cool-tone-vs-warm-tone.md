@@ -6,8 +6,6 @@ tags: ["Unterton", "kühler Unterton", "warmer Unterton", "Hautton", "Farbanalys
 image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
 
-![Kühl vs. Warm: Unterton bestimmen](/images/blog/cool-tone-vs-warm-tone.webp)
-
 ## Was ist ein Unterton?
 
 Ihr Unterton ist die subtile Farbe unter der Oberfläche Ihrer Haut. Im Gegensatz zu Ihrem oberflächlichen Hautton (der sich durch Sonne, Rötungen usw. verändern kann) bleibt Ihr Unterton ein Leben lang konstant.
@@ -135,4 +133,3 @@ Olivfarbene Haut hat einen grünlichen Schimmer, der warm-oliv oder kühl-oliv s
 - [Bin ich warm oder kühl getönt? 7 bewährte Methoden](/de/blog/how-to-determine-skin-undertone) — Ein tieferer Einblick in die Untertonbestimmung
 - [Die besten Farben für kühle Untertöne](/de/blog/best-colors-for-cool-undertones) — Kompletter Styling-Ratgeber für kühl getönte Menschen
 - [Persönliche Farbanalyse: 12 Typen erklärt](/de/blog/personal-color-analysis-guide) — Gehen Sie über den Unterton hinaus zu Ihrem vollständigen saisonalen Typ
-- [Gesichtsform & Frisuren-Ratgeber](/de/blog/face-shape-hairstyle-guide) — Finden Sie die beste Frisur für Ihre Gesichtsform

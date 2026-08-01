@@ -6,8 +6,6 @@ tags: ["แบบทดสอบวิเคราะห์สี", "personal co
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
 
-![ทำไมแบบทดสอบวิเคราะห์สีถึงผิด](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
-
 ## ปัญหาของแบบทดสอบวิเคราะห์สี
 
 ทำแบบทดสอบหนึ่งได้ "Warm Autumn" อีกอันได้ "Cool Summer" อันที่สามบอกว่าเป็น "Clear Winter" คุ้นเคยไหม?
@@ -164,4 +162,3 @@ image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 
 ---
 
-*ยังสับสนเรื่องฤดูกาลสี? [ลองเครื่องมือวิเคราะห์สีด้วย AI ฟรีของเรา](/th/tools/color-quiz) — ใช้เวลา 30 วินาทีและไม่ถามให้เดาโทนผิวใต้เอง*

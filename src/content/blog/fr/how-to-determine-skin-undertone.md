@@ -6,8 +6,6 @@ tags: ["sous-ton", "chaud ou froid", "teint", "colorimétrie", "conseils beauté
 image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
 
-![Comment déterminer le sous-ton de la peau](/images/blog/how-to-determine-skin-undertone.webp)
-
 ## La réponse rapide
 
 Pour un résultat rapide : observez les veines de votre poignet en lumière naturelle. Bleu/violet = froid. Vert = chaud. Mélange des deux = neutre. Mais pour plus de précision, vous devriez utiliser plusieurs méthodes — c'est exactement ce que couvre ce guide.
@@ -147,4 +145,3 @@ Pour une analyse complète, essayez la fonction [colorimétrie personnelle de Be
 - [Ton froid vs ton chaud : 5 tests faciles](/fr/blog/cool-tone-vs-warm-tone) — Tests rapides pour confirmer votre sous-ton
 - [Les meilleures couleurs pour les sous-tons froids](/fr/blog/best-colors-for-cool-undertones) — Guide de style complet si vous êtes à sous-ton froid
 - [Colorimétrie personnelle : les 12 types expliqués](/fr/blog/personal-color-analysis-guide) — Comprendre le système colorimétrique saisonnier complet
-- [Guide forme du visage et coiffures](/fr/blog/face-shape-hairstyle-guide) — Trouvez la coiffure parfaite pour votre visage

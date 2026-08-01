@@ -6,8 +6,6 @@ tags: ["analisi del colore personale", "scienza del colore", "teoria del colore"
 image: "/images/blog/science-of-color-analysis.webp"
 ---
 
-![La scienza dietro l'analisi del colore personale](/images/blog/science-of-color-analysis.webp)
-
 ## Perché alcuni colori ti fanno sembrare splendida — e altri no?
 
 Probabilmente ti è capitato. Provi una maglia corallo e la pelle ti sembra radiosa, gli occhi brillano e qualcuno ti chiede se sei stata in vacanza. Poi indossi un maglione verde oliva e all'improvviso sembri stanca — anche se hai dormito otto ore.
@@ -153,4 +151,3 @@ La prossima volta che qualcuno ti dice che un colore «non è il tuo», ricorda 
 - [Analisi del colore personale: 12 tipi spiegati](/it/blog/personal-color-analysis-guide) — Comprendi il sistema completo delle 12 stagioni
 - [Come determinare il subtono della pelle](/it/blog/how-to-determine-skin-undertone) — Applica la scienza con test pratici del subtono
 - [Perché i quiz di analisi cromatica online sbagliano](/it/blog/why-color-analysis-quizzes-are-wrong) — Comprendi i limiti dell'autovalutazione
-- [IA vs Analisi del Colore Professionale: Ho Provato Entrambi](/it/blog/ai-vs-professional-color-analysis) — Come la tecnologia si confronta con il draping tradizionale

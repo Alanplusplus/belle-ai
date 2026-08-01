@@ -6,8 +6,6 @@ tags: ["zeytin alt tonu", "cilt alt tonu", "kişisel renk analizi", "güzellik",
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 
-![Zeytin Alt Tonu Rehberi](/images/blog/olive-undertone-guide.webp)
-
 ## Neden Kimse Zeytin Alt Tonlarından Bahsetmiyor?
 
 İnternetteki her güzellik makalesi cilt alt tonlarını üç düzenli kategoriye ayırır: sıcak, soğuk veya nötr. Damar testini yaparsınız, altın mı gümüş mü takının daha iyi göründüğüne bakarsınız ve işiniz biter.
@@ -211,4 +209,3 @@ Zeytin alt tonunuzu anlamak gerçekten özgürleştiricidir. Kendinizi "sıcak v
 - [Cilt Alt Tonunuzu Nasıl Belirlersiniz](/tr/blog/how-to-determine-skin-undertone) — 7 test yöntemiyle tam alt ton rehberi
 - [Soğuk Ton mu Sıcak Ton mu: 5 Kolay Test](/tr/blog/cool-tone-vs-warm-tone) — Soğuk ve sıcak temelleri karşılaştırın
 - [Soğuk Alt Tonlar İçin En İyi Renkler](/tr/blog/best-colors-for-cool-undertones) — Özellikle soğuk tonlu cilt için
-- [Derin Kış Renk Paleti Rehberi](/tr/blog/deep-winter-color-palette-guide) — İlgili derin tonlu mevsimsel rehber

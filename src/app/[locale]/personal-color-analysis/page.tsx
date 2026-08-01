@@ -41,7 +41,7 @@ export default function PersonalColorAnalysisPage() {
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
-              href="/try"
+              href="/try?type=color_analysis"
               className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
             >
               {ft("tryItFree")}
@@ -110,7 +110,7 @@ export default function PersonalColorAnalysisPage() {
           </div>
           <div className="mt-10 text-center">
             <Link
-              href="/try"
+              href="/try?type=color_analysis"
               className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
             >
               {ft("tryItFree")}
@@ -123,10 +123,10 @@ export default function PersonalColorAnalysisPage() {
 }
 
 const COLOR_DIMENSIONS = [
-  { image: "/images/dim_color_season.png" },
-  { image: "/images/dim_color_palette.png" },
-  { image: "/images/dim_color_makeup.png" },
-  { image: "/images/dim_color_clothing.png" },
+  { image: "/images/dim_color_season.webp" },
+  { image: "/images/dim_color_palette.webp" },
+  { image: "/images/dim_color_makeup.webp" },
+  { image: "/images/dim_color_clothing.webp" },
 ];
 
 const SEASONS = [

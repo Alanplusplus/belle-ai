@@ -6,8 +6,6 @@ tags: ["quiz de análise de coloração", "análise de coloração pessoal", "co
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
 
-![Por Que os Quizzes de Análise de Coloração Erram](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
-
 ## O Problema com os Quizzes de Análise de Coloração
 
 Você faz um quiz e recebe "Outono Quente". Faz outro e recebe "Verão Frio". Um terceiro diz que você é "Inverno Vibrante". Parece familiar?
@@ -164,4 +162,3 @@ A beleza da tecnologia moderna é que obter uma análise de coloração objetiva
 
 ---
 
-*Ainda confuso sobre sua estação de cor? [Experimente nossa ferramenta gratuita de análise de cores com IA](/pt/tools/color-quiz) — leva 30 segundos e não pede que você adivinhe seu próprio subtom.*

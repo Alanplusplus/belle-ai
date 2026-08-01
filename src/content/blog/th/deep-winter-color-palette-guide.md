@@ -6,8 +6,6 @@ tags: ["deep winter", "personal color analysis", "พาเลตสี", "ค�
 image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
-![พาเลตสี Deep Winter](/images/blog/deep-winter-color-palette.webp)
-
 ## อะไรทำให้คนเป็น Deep Winter?
 
 Deep Winter อยู่ระหว่าง True Winter และ Dark Autumn บนวงล้อสี เป็นฤดูกาลย่อย Winter ที่เข้มที่สุด โดยลักษณะเด่นคือ **ความลึก** — ผมเข้ม ตาเข้ม และผิวกลางถึงเข้มพร้อมโทนผิวใต้เย็นหรือกลางเย็น
@@ -171,4 +169,3 @@ Deep Winter อยู่ระหว่าง True Winter และ Dark Autumn 
 - [Personal Color Analysis: อธิบายครบ 12 ประเภท](/th/blog/personal-color-analysis-guide) — เข้าใจว่า Deep Winter อยู่ตรงไหนในระบบ
 - [สีที่เหมาะกับโทนผิวเย็น](/th/blog/best-colors-for-cool-undertones) — คู่มือสีโทนเย็นกว้างขึ้น
 - [โทนเย็น vs โทนอุ่น: 5 วิธีทดสอบง่ายๆ](/th/blog/cool-tone-vs-warm-tone) — ยืนยันโทนผิวใต้ก่อน
-- [วิธีหาโทนผิวใต้](/th/blog/how-to-determine-skin-undertone) — คู่มือโทนผิวใต้ทีละขั้น

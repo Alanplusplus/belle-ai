@@ -6,8 +6,6 @@ tags: ["personal color analysis", "summer color palette", "color season", "beaut
 image: "/images/blog/summer-color-palettes-decoded.webp"
 ---
 
-![Summer Color Palettes Decoded: Cool Summer vs True Summer vs Soft Summer](/images/blog/summer-color-palettes-decoded.webp)
-
 ## You're a Summer — But Which One?
 
 You've gotten your color analysis result and it confirms what you suspected: you're a Summer. Your coloring leans cool, your features have a softness to them, and you look gorgeous in colors that feel like a misty morning by the sea.
@@ -234,4 +232,3 @@ Tools like [AI color analysis](https://aicoloranalysis.io) use computer vision t
 - All Summers share cool undertones and muted qualities — the difference is degree.
 - When in doubt, try the saturation test: your sub-season is revealed by how much color intensity your skin can handle.
 
-The beauty of knowing your exact Summer sub-season isn't just about wearing the "right" colors — it's about understanding why certain shades make you look rested, healthy, and radiant while others make you look tired. Once you know whether you're Cool, True, or Soft, getting dressed becomes an act of self-enhancement rather than guesswork.

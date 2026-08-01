@@ -6,8 +6,6 @@ tags: ["forme du visage", "coiffure", "guide beauté", "cheveux", "coiffure selo
 image: "/images/blog/face-shape-hairstyle-guide.webp"
 ---
 
-![Guide forme du visage et coiffures](/images/blog/face-shape-hairstyle-guide.webp)
-
 ## Pourquoi la forme du visage compte pour choisir sa coiffure
 
 La forme de votre visage est la base pour choisir une coiffure flatteuse. La bonne coupe peut équilibrer vos proportions, mettre en valeur vos atouts et encadrer magnifiquement votre visage. La mauvaise coupe peut accentuer les traits que vous préféreriez minimiser.
@@ -172,4 +170,3 @@ Absolument. Les recommandations ci-dessus sont des points de départ. La texture
 - [Colorimétrie personnelle : les 12 types expliqués](/fr/blog/personal-color-analysis-guide) — Trouvez vos meilleures couleurs après avoir identifié votre forme de visage
 - [Ton froid vs ton chaud : 5 tests faciles](/fr/blog/cool-tone-vs-warm-tone) — Déterminez votre sous-ton pour le choix de la couleur de cheveux
 - [Suis-je à sous-ton chaud ou froid ?](/fr/blog/how-to-determine-skin-undertone) — Guide pour choisir la bonne température de couleur de cheveux
-- [Faire le test de forme du visage](/fr/tools/face-shape-quiz) — Analyse de la forme du visage par IA

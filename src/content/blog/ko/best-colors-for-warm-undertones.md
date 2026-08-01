@@ -6,8 +6,6 @@ tags: ["웜 언더톤", "웜톤", "컬러 팔레트", "스타일 가이드", "�
 image: "/images/blog/best-colors-for-warm-undertones.webp"
 ---
 
-![웜톤에 어울리는 색](/images/blog/best-colors-for-warm-undertones.webp)
-
 ## 웜 언더톤은 무기입니다 — 활용법만 알면
 
 수년간 백화점 퀴즈에서 "뉴트럴은 뭐든 잘 어울린다"는 말을 듣고 차가운 파스텔과 쿨 그레이만 입었습니다. 마침내 웜 언더톤이라는 걸 이해하고 나서야, 어떤 옷은 햇볕에 그을린 듯 생기 있어 보이는데 다른 옷은 오전부터 피곤해 보이는 이유를 알게 됐습니다.
@@ -338,4 +336,3 @@ image: "/images/blog/best-colors-for-warm-undertones.webp"
 - [쿨톤 vs 웜톤: 5가지 간단한 테스트](/ko/blog/cool-tone-vs-warm-tone) — 정말 웜톤인지 확인하기
 - [나는 웜톤일까 쿨톤일까? 언더톤 판별 완벽 가이드 (2026)](/ko/blog/how-to-determine-skin-undertone) — 결정판 언더톤 가이드
 - [퍼스널 컬러 진단 완벽 가이드: 12가지 시즌 타입 해설](/ko/blog/personal-color-analysis-guide) — 12시즌 타입 전체 이해하기
-- [집에서 퍼스널 컬러 분석하는 법: DIY 가이드](/ko/blog/how-to-do-color-analysis-at-home) — 단계별 DIY 가이드

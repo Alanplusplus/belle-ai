@@ -6,8 +6,6 @@ tags: ["subtono", "tono freddo", "tono caldo", "tono della pelle", "analisi crom
 image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
 
-![Tono freddo vs tono caldo](/images/blog/cool-tone-vs-warm-tone.webp)
-
 ## Cos'è il subtono?
 
 Il subtono è il colore sottile che si trova sotto la superficie della pelle. A differenza del tono superficiale (che può cambiare con l'esposizione al sole, arrossamenti, ecc.), il subtono resta costante per tutta la vita.
@@ -135,4 +133,3 @@ La pelle olivastra ha una sfumatura verdognola che può essere oliva-calda o oli
 - [Ho un tono caldo o freddo? 7 metodi comprovati](/it/blog/how-to-determine-skin-undertone) — Un approfondimento sulla determinazione del subtono
 - [I migliori colori per subtoni freddi](/it/blog/best-colors-for-cool-undertones) — Guida di stile completa per chi ha un tono freddo
 - [Analisi del colore personale: 12 tipi spiegati](/it/blog/personal-color-analysis-guide) — Vai oltre il subtono per scoprire il tuo tipo stagionale completo
-- [Guida alla forma del viso e acconciature](/it/blog/face-shape-hairstyle-guide) — Trova l'acconciatura ideale per la tua forma del viso

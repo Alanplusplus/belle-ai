@@ -6,8 +6,6 @@ tags: ["cool undertone", "cool skin", "color palette", "style guide", "fashion"]
 image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
 
-![Best Colors for Cool Undertones](/images/blog/best-colors-for-cool-undertones.webp)
-
 ## Your Cool Undertone Color Palette
 
 If you have cool undertones (skin with pink, red, or blue hues beneath the surface), certain colors will make you absolutely glow. This guide covers everything from everyday neutrals to bold statement colors.
@@ -196,4 +194,3 @@ If you're unsure about your exact undertone or seasonal type, [AI color analysis
 - [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Confirm whether you're actually cool-toned
 - [Am I Warm or Cool Toned? 7 Methods](/en/blog/how-to-determine-skin-undertone) — The definitive undertone guide
 - [Personal Color Analysis: 12 Types Explained](/en/blog/personal-color-analysis-guide) — Understand all 12 seasonal types
-- [Take the Free Color Quiz](/en/tools/color-quiz) — Quick quiz to estimate your color season

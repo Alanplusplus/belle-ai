@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { SITE_URL } from "@/lib/constants";
+import { canonicalUrl } from "@/lib/seo";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -15,7 +15,7 @@ export async function generateMetadata({
     title: messages.meta.faceTitle,
     description: messages.meta.faceDescription,
     alternates: {
-      canonical: `${SITE_URL}/${locale}/face-shape-analysis`,
+      canonical: canonicalUrl(locale, "/face-shape-analysis"),
     },
   };
 }
@@ -37,7 +37,7 @@ export default function FaceShapeAnalysisPage() {
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
-              href="/try"
+              href="/try?type=face_shape"
               className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
             >
               {ft("tryItFree")}
@@ -100,7 +100,7 @@ export default function FaceShapeAnalysisPage() {
           </div>
           <div className="mt-10 text-center">
             <Link
-              href="/try"
+              href="/try?type=face_shape"
               className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
             >
               {ft("tryItFree")}
@@ -113,10 +113,10 @@ export default function FaceShapeAnalysisPage() {
 }
 
 const FACE_DIMENSIONS = [
-  { image: "/images/dim_face_shape.png" },
-  { image: "/images/dim_face_hairstyle.png" },
-  { image: "/images/dim_face_bangs.png" },
-  { image: "/images/dim_face_tips.png" },
+  { image: "/images/dim_face_shape.webp" },
+  { image: "/images/dim_face_hairstyle.webp" },
+  { image: "/images/dim_face_bangs.webp" },
+  { image: "/images/dim_face_tips.webp" },
 ];
 
 function OvalIcon() {

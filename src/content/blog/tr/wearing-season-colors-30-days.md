@@ -6,8 +6,6 @@ tags: ["kişisel renk analizi", "renk mevsimi", "kişisel stil", "moda ipuçlar�
 image: "/images/blog/wearing-season-colors-30-days.webp"
 ---
 
-![30 gün boyunca sadece renk mevsimimdeki renkleri giydim](/images/blog/wearing-season-colors-30-days.webp)
-
 ## Giyinme Alışkanlığımı Değiştiren Meydan Okuma
 
 Her şey bir gardırop kriziyle başladı. Pazartesi sabahı saat 7.45'te zaten geç kalmıştım; dolabın önünde durup bir türlü birbirine uymayan renklerin karmaşasına bakıyordum. Siyah pantolon, hardal rengi üst? Fazla sert. Gri kazak, zeytin yeşili pantolon? Gün daha başlamadan yorgun görünüyordum.
@@ -150,4 +148,3 @@ Ve hâlâ iltifat alıyorum. Belirli bir kıyafetle ilgili olmayan "harika gör�
 - Tam uyum için aksesuar ve makyaj paletinizin alt tonuyla eşleşmelidir
 - Tek paletle "sıkıcı" görünme korkusu yersiz — tutarlılık sınırlama değil, kişisel stil olarak okunur
 
-Dolabınızın daha fazla seçeneğe değil, *doğru* seçeneklere ihtiyacı var. Ve renk mevsiminiz onları bulmanın en güvenilir rehberi.

@@ -6,8 +6,6 @@ tags: ["alt ton", "sıcak veya soğuk", "cilt tonu", "renk analizi", "güzellik 
 image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
 
-![Cilt Alt Tonu Nasıl Belirlenir](/images/blog/how-to-determine-skin-undertone.webp)
-
 ## Hızlı Cevap
 
 Hızlı bir sonuç istiyorsanız: doğal gün ışığında bilek damarlarınıza bakın. Mavi/mor = soğuk. Yeşil = sıcak. İkisinin karışımı = nötr. Ancak doğruluk için birden fazla yöntem kullanmalısınız — bu rehber tam olarak bunu kapsıyor.
@@ -147,4 +145,3 @@ Kapsamlı bir analiz için [Belle AI kişisel renk analizi](/tr/personal-color-a
 - [Soğuk Ton mu Sıcak Ton mu: 5 Kolay Test](/tr/blog/cool-tone-vs-warm-tone) — Alt tonunuzu doğrulamak için hızlı testler
 - [Soğuk Alt Tonlar İçin En İyi Renkler](/tr/blog/best-colors-for-cool-undertones) — Soğuk tonluysanız kapsamlı stil rehberi
 - [Kişisel Renk Analizi: 12 Tip Açıklanıyor](/tr/blog/personal-color-analysis-guide) — Tam mevsimsel renk sistemini anlayın
-- [Yüz Şekli ve Saç Modeli Rehberi](/tr/blog/face-shape-hairstyle-guide) — Yüzünüze mükemmel saç modelini bulun

@@ -6,8 +6,6 @@ tags: ["colorimétrie personnelle", "couleurs saisonnières", "théorie des coul
 image: "/images/blog/personal-color-analysis-guide.webp"
 ---
 
-![Guide de colorimétrie personnelle](/images/blog/personal-color-analysis-guide.webp)
-
 ## Qu'est-ce que la colorimétrie personnelle ?
 
 La colorimétrie personnelle (également appelée analyse colorimétrique saisonnière ou typologie chromatique) est une méthode qui permet de déterminer quelles couleurs vous mettent le plus en valeur et s'harmonisent le mieux avec votre coloration naturelle — votre teint, votre sous-ton, la couleur de vos cheveux et celle de vos yeux.
@@ -158,4 +156,3 @@ La théorie de l'harmonie chromatique a des racines dans la science des couleurs
 - [Suis-je à sous-ton chaud ou froid ? 7 méthodes](/fr/blog/how-to-determine-skin-undertone) — Guide détaillé pour déterminer le sous-ton
 - [Les meilleures couleurs pour les sous-tons froids](/fr/blog/best-colors-for-cool-undertones) — Guide de style pour les types froids
 - [Guide forme du visage et coiffures](/fr/blog/face-shape-hairstyle-guide) — Associez votre colorimétrie à des conseils sur la forme du visage
-- [Faire le test colorimétrique gratuit](/fr/tools/color-quiz) — Découvrez votre type saisonnier en 2 minutes

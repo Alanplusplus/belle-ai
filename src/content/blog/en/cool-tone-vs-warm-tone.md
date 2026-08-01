@@ -6,8 +6,6 @@ tags: ["undertone", "cool tone", "warm tone", "skin tone", "color analysis"]
 image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
 
-![Cool Tone vs Warm Tone](/images/blog/cool-tone-vs-warm-tone.webp)
-
 ## What Is an Undertone?
 
 Your undertone is the subtle color beneath the surface of your skin. Unlike your surface skin tone (which can change with sun exposure, redness, etc.), your undertone stays constant throughout your life.
@@ -135,4 +133,3 @@ Olive skin has a greenish cast that can be either warm-olive or cool-olive. The 
 - [Am I Warm or Cool Toned? 7 Proven Methods](/en/blog/how-to-determine-skin-undertone) — A deeper dive into undertone determination
 - [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Complete style guide for cool-toned people
 - [Personal Color Analysis: 12 Types Explained](/en/blog/personal-color-analysis-guide) — Go beyond undertone to find your full seasonal type
-- [Face Shape & Hairstyle Guide](/en/blog/face-shape-hairstyle-guide) — Find the best hairstyle for your face shape

@@ -6,8 +6,6 @@ tags: ["subtono oliva", "subtono de piel", "análisis de color personal", "belle
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 
-![Guía del subtono oliva](/images/blog/olive-undertone-guide.webp)
-
 ## Por qué nadie habla de los subtonos oliva
 
 Todos los artículos de belleza en internet dividen los subtonos de piel en tres categorías ordenadas: cálido, frío o neutro. Haces la prueba de las venas, compruebas si el oro o la plata te queda mejor, y listo.
@@ -211,4 +209,3 @@ Comprender tu subtono oliva es genuinamente liberador. Una vez que dejas de inte
 - [Cómo determinar el subtono de tu piel](/es/blog/how-to-determine-skin-undertone) — La guía completa del subtono con 7 métodos de prueba
 - [Tono frío vs. tono cálido: 5 pruebas sencillas](/es/blog/cool-tone-vs-warm-tone) — Compara lo básico de frío y cálido
 - [Los mejores colores para subtonos fríos](/es/blog/best-colors-for-cool-undertones) — Específicamente para piel de tono frío
-- [Guía de la paleta Invierno Profundo](/es/blog/deep-winter-color-palette-guide) — Una guía estacional relacionada para tonos profundos

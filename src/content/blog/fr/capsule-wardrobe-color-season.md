@@ -6,8 +6,6 @@ tags: ["garde-robe capsule", "analyse colorimétrique", "saison de couleurs", "c
 image: "/images/blog/capsule-wardrobe-color-season.webp"
 ---
 
-![Comment Créer une Garde-Robe Capsule Selon Votre Saison de Couleurs](/images/blog/capsule-wardrobe-color-season.webp)
-
 ## Vous Connaissez Votre Saison de Couleurs — Et Maintenant ?
 
 Vous avez découvert que vous êtes Automne Doux ou Printemps Éclatant. Peut-être avez-vous utilisé un outil d'analyse colorimétrique par IA, ou peut-être avez-vous passé deux heures devant votre miroir avec des tissus colorés. Quoi qu'il en soit, vous avez votre réponse.
@@ -160,4 +158,3 @@ Des outils gratuits comme [aicoloranalysis.io](https://aicoloranalysis.io/fr) of
 - Construisez graduellement sur 6+ mois
 - Utilisez l'analyse colorimétrique IA pour démarrer avec confiance
 
-Votre saison de couleurs est le filtre shopping le plus puissant que vous aurez jamais. Une fois votre palette intégrée, s'habiller devient la partie la plus facile de votre matinée.

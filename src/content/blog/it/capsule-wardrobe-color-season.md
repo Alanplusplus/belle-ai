@@ -6,8 +6,6 @@ tags: ["guardaroba capsula", "analisi del colore", "stagione di colori", "consig
 image: "/images/blog/capsule-wardrobe-color-season.webp"
 ---
 
-![Come Creare un Guardaroba Capsula in Base alla Tua Stagione di Colori](/images/blog/capsule-wardrobe-color-season.webp)
-
 ## Conosci la Tua Stagione di Colori — E Adesso?
 
 Hai scoperto di essere un Autunno Morbido o una Primavera Brillante. Forse hai usato uno strumento di analisi del colore con IA, o forse hai passato due ore davanti allo specchio con tessuti colorati. In ogni caso, hai la risposta.
@@ -146,4 +144,3 @@ Strumenti gratuiti come [aicoloranalysis.io](https://aicoloranalysis.io/it) offr
 - Costruisci gradualmente in 6+ mesi
 - Usa l'analisi del colore IA per iniziare con sicurezza
 
-La tua stagione di colori è il filtro shopping più potente che avrai mai. Una volta interiorizzata la tua palette, vestirsi diventa la parte più facile della mattina.

@@ -1,8 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { useSession, signIn } from "next-auth/react";
+import { useSession } from "next-auth/react";
+import { triggerGoogleSignIn } from "@/lib/google-signin";
+import { openCheckout } from "@creem_io/embed";
 import type { CreemProductKey } from "@/lib/constants";
+import { trackEvent } from "@/lib/analytics";
 
 interface Props {
   product: CreemProductKey;
@@ -15,11 +18,14 @@ export function PricingButtons({ product, variant, label }: Props) {
   const [loading, setLoading] = useState(false);
 
   const handleClick = async () => {
+    trackEvent("pricing_cta_clicked", { product, variant });
     if (status !== "authenticated") {
-      signIn("google");
+      trackEvent("sign_in_prompted", { trigger: "pricing_click" });
+      triggerGoogleSignIn();
       return;
     }
 
+    trackEvent("checkout_started", { product, source: "pricing_page" });
     setLoading(true);
     try {
       const res = await fetch("/api/creem/checkout", {
@@ -30,11 +36,20 @@ export function PricingButtons({ product, variant, label }: Props) {
       const data = await res.json();
 
       if (data.checkoutUrl) {
-        window.location.href = data.checkoutUrl;
+        openCheckout({
+          checkoutUrl: data.checkoutUrl,
+          theme: "light",
+          onComplete: () => {
+            trackEvent("checkout_completed", { product, source: "pricing_page" });
+            window.location.href = "/en/payment/success";
+          },
+        });
       } else {
+        trackEvent("checkout_failed", { product, error: data.error || "unknown" });
         alert(data.error || "Failed to create checkout");
       }
     } catch {
+      trackEvent("checkout_failed", { product, error: "network_error" });
       alert("Network error. Please try again.");
     } finally {
       setLoading(false);

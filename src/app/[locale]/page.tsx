@@ -66,12 +66,6 @@ function HomeContent() {
       price: "0",
       priceCurrency: "USD",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      ratingCount: "500",
-      bestRating: "5",
-    },
   };
 
   return (
@@ -189,7 +183,7 @@ function HomeContent() {
         </div>
       </section>
 
-      {/* Three Features */}
+      {/* Core Features */}
       <section className="bg-muted/30 py-20">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center">
@@ -200,7 +194,7 @@ function HomeContent() {
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             <FeatureCard
-              image="/images/card_color_analysis.jpg"
+              image="/images/card_color_analysis.webp"
               icon={<ColorIcon />}
               title={t("colorTitle")}
               description={t("colorDesc")}
@@ -208,7 +202,7 @@ function HomeContent() {
               cta={ft("learnMore")}
             />
             <FeatureCard
-              image="/images/showcase_skin.jpg"
+              image="/images/showcase_skin.webp"
               icon={<MakeupIcon />}
               title={t("makeupTitle")}
               description={t("makeupDesc")}
@@ -216,13 +210,49 @@ function HomeContent() {
               cta={ft("learnMore")}
             />
             <FeatureCard
-              image="/images/card_face_shape.jpg"
+              image="/images/card_face_shape.webp"
               icon={<FaceIcon />}
               title={t("faceTitle")}
               description={t("faceDesc")}
               href="/face-shape-analysis"
               cta={ft("learnMore")}
             />
+          </div>
+        </div>
+      </section>
+
+      {/* More Analysis Types */}
+      <section className="py-20">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="text-center">
+            <h2 className="font-serif text-3xl font-bold">{t("moreTitle")}</h2>
+            <p className="mt-2 text-muted-foreground">{t("moreSubtitle")}</p>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {MORE_FEATURES.map((f) => (
+              <Link key={f.href} href={f.href} className="group">
+                <div className="overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
+                  <div className="relative aspect-[4/3]">
+                    <Image
+                      src={f.image}
+                      alt={t(f.titleKey)}
+                      fill
+                      className="object-cover transition duration-300 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-sm font-semibold">{t(f.titleKey)}</h3>
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground line-clamp-2">{t(f.descKey)}</p>
+                    {f.premium && (
+                      <span className="mt-2 inline-block rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-semibold text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+                        Premium
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -487,10 +517,21 @@ function FaceIcon() {
   );
 }
 
+const MORE_FEATURES = [
+  { titleKey: "hairTitle", descKey: "hairDesc", href: "/hair-color-analysis" as const, image: "/images/card_hair.webp" },
+  { titleKey: "outfitTitle", descKey: "outfitDesc", href: "/outfit-color-analysis" as const, image: "/images/card_outfit.webp" },
+  { titleKey: "glassesTitle", descKey: "glassesDesc", href: "/glasses-analysis" as const, image: "/images/card_glasses.webp" },
+  { titleKey: "occasionTitle", descKey: "occasionDesc", href: "/occasion-makeup" as const, image: "/images/card_occasion.webp" },
+  { titleKey: "jewelryTitle", descKey: "jewelryDesc", href: "/jewelry-analysis" as const, image: "/images/card_jewelry.webp" },
+  { titleKey: "glowUpTitle", descKey: "glowUpDesc", href: "/glow-up-report" as const, image: "/images/card_glow_up.webp", premium: true },
+  { titleKey: "styleTitle", descKey: "styleDesc", href: "/style-personality" as const, image: "/images/card_style.webp" },
+  { titleKey: "celebTitle", descKey: "celebDesc", href: "/celebrity-match" as const, image: "/images/card_celebrity.webp" },
+];
+
 const SHOWCASE_IMAGES = [
-  { src: "/images/showcase_skin.jpg", alt: "Color Analysis Result" },
-  { src: "/images/showcase_eyes.jpg", alt: "Seasonal Color Palette" },
-  { src: "/images/showcase_blush.jpg", alt: "Best Colors for You" },
-  { src: "/images/showcase_lips.jpg", alt: "Personalized Makeup" },
-  { src: "/images/showcase_looks.jpg", alt: "Complete Style Guide" },
+  { src: "/images/showcase_skin.webp", alt: "Color Analysis Result" },
+  { src: "/images/showcase_eyes.webp", alt: "Seasonal Color Palette" },
+  { src: "/images/showcase_blush.webp", alt: "Best Colors for You" },
+  { src: "/images/showcase_lips.webp", alt: "Personalized Makeup" },
+  { src: "/images/showcase_looks.webp", alt: "Complete Style Guide" },
 ];

@@ -6,8 +6,6 @@ tags: ["forma del rostro", "peinado", "guía de belleza", "cabello", "peinado se
 image: "/images/blog/face-shape-hairstyle-guide.webp"
 ---
 
-![Guía de forma del rostro y peinados](/images/blog/face-shape-hairstyle-guide.webp)
-
 ## Por qué importa la forma del rostro al elegir peinado
 
 La forma de tu rostro es la base para elegir un peinado favorecedor. El corte adecuado puede equilibrar tus proporciones, resaltar tus mejores rasgos y enmarcar tu rostro con belleza. El corte equivocado puede enfatizar rasgos que preferirías minimizar.
@@ -172,4 +170,3 @@ Por supuesto. Las recomendaciones anteriores son puntos de partida. La textura d
 - [Análisis de color personal: los 12 tipos explicados](/es/blog/personal-color-analysis-guide) — Encuentra tus mejores colores después de conocer la forma de tu rostro
 - [Tono frío vs. tono cálido: 5 pruebas sencillas](/es/blog/cool-tone-vs-warm-tone) — Determina tu subtono para elegir el color de pelo
 - [¿Tengo tono cálido o frío?](/es/blog/how-to-determine-skin-undertone) — Guía para elegir la temperatura correcta del color de pelo
-- [Haz el test de forma del rostro](/es/tools/face-shape-quiz) — Análisis de forma del rostro con IA

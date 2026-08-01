@@ -6,8 +6,6 @@ tags: ["올리브 언더톤", "피부 언더톤", "퍼스널 컬러 분석", "�
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 
-![올리브 언더톤 가이드](/images/blog/olive-undertone-guide.webp)
-
 ## 왜 아무도 올리브 언더톤을 이야기하지 않을까?
 
 인터넷의 거의 모든 뷰티 기사가 피부 언더톤을 세 가지로 깔끔하게 나눕니다: 웜톤, 쿨톤, 뉴트럴. 손목 혈관 테스트를 하고, 골드와 실버 주얼리 중 어느 쪽이 더 잘 어울리는지 확인하면 끝.
@@ -210,4 +208,3 @@ image: "/images/blog/olive-undertone-guide.webp"
 - [피부 언더톤 판별 완벽 가이드](/ko/blog/how-to-determine-skin-undertone) — 7가지 테스트 방법 전체 언더톤 가이드
 - [쿨톤 vs 웜톤: 5가지 쉬운 테스트](/ko/blog/cool-tone-vs-warm-tone) — 쿨·웜 기초 비교
 - [쿨톤에 가장 어울리는 컬러](/ko/blog/best-colors-for-cool-undertones) — 쿨톤 피부 전용 가이드
-- [딥 윈터 컬러 팔레트 가이드](/ko/blog/deep-winter-color-palette-guide) — 관련 딥톤 시즌 가이드

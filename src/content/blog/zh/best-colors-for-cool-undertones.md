@@ -6,8 +6,6 @@ tags: ["冷皮", "冷色调", "穿搭配色", "化妆", "适合颜色"]
 image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
 
-![冷皮适合的颜色](/images/blog/best-colors-for-cool-undertones.webp)
-
 ## 冷皮色彩方案总览
 
 如果你是冷色调（皮肤底色偏粉、偏红或偏蓝），某些颜色会让你的肤色格外透亮。本文覆盖从日常基础色到大胆色彩的全部推荐。
@@ -90,4 +88,3 @@ image: "/images/blog/best-colors-for-cool-undertones.webp"
 
 ## 不确定自己是冷皮？试试AI分析
 
-如果不确定自己的确切色调或季节类型，AI色彩分析可以消除猜测。Belle AI用计算机视觉分析你的照片，确定精确的12季节色彩类型，给你量身定制的个人色彩方案。

@@ -6,8 +6,6 @@ tags: ["analisis warna pribadi", "color season", "gaya pribadi", "tips fashion",
 image: "/images/blog/wearing-season-colors-30-days.webp"
 ---
 
-![Aku hanya pakai color season selama 30 hari](/images/blog/wearing-season-colors-30-days.webp)
-
 ## Tantangan yang Mengubah Cara Aku Berpakaian
 
 Semuanya dimulai dari krisis lemari. Senin pagi, jam 7.45, aku sudah telat, berdiri di depan lemari menatap campuran warna yang entah kenapa nggak pernah cocok. Celana hitam dengan atasan mustard? Terlalu keras. Sweater abu-abu dengan celana olive? Belum mulai hari sudah keliatan lelah.
@@ -150,4 +148,3 @@ Dan aku masih dapat pujian. Yang "kamu keliatan bagus" tanpa tentang garment spe
 - Aksesori dan makeup harus match undertone palet untuk harmoni penuh
 - Takut keliatan "membosankan" dengan satu palet nggak beralasan — konsistensi dibaca sebagai gaya pribadi, bukan limitasi
 
-Lemarimu nggak butuh lebih banyak opsi. Butuh opsi yang *tepat*. Dan color season-mu adalah panduan paling reliable untuk menemukannya.

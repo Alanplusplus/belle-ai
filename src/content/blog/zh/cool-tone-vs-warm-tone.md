@@ -6,8 +6,6 @@ tags: ["冷皮暖皮", "色调", "肤色", "色彩分析"]
 image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
 
-![冷皮暖皮对比](/images/blog/cool-tone-vs-warm-tone.webp)
-
 ## 什么是冷暖色调？
 
 你的色调（undertone）是皮肤表面之下的微妙颜色。与你的表面肤色（可以因日晒、泛红等变化）不同，色调是终身不变的。
@@ -89,4 +87,3 @@ image: "/images/blog/cool-tone-vs-warm-tone.webp"
 
 如果5种方法都试过仍然不确定，你很可能是中性色调——这其实是好消息，因为你可以驾驭更多颜色。
 
-要获得确定答案，可以试试AI色彩分析。Belle AI使用计算机视觉分析你照片中的实际色彩数值，提供不受主观感知和光线条件影响的客观结果。

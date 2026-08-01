@@ -6,8 +6,6 @@ tags: ["warmer Unterton", "warme Haut", "Farbpalette", "Styling-Ratgeber", "Mode
 image: "/images/blog/best-colors-for-warm-undertones.webp"
 ---
 
-![Die besten Farben für warme Untertöne](/images/blog/best-colors-for-warm-undertones.webp)
-
 ## Ihr warmer Unterton ist ein Superpower — wenn Sie wissen, wie Sie ihn nutzen
 
 Jahrelang habe ich eisige Pastelltöne und kühle Grautöne getragen, weil ein Kaufhaus-Quiz mir versicherte, ich sehe „in allen Neutraltönen großartig aus“. Erst als ich meinen warmen Unterton wirklich verstand, wurde mir klar, warum manche Outfits mich sonnenverwöhnt und lebendig wirken ließen, während andere mich schon vor dem Mittag müde aussehen ließen.
@@ -338,4 +336,3 @@ Das Beste am Verständnis Ihres warmen Untertons? Einkaufen geht schneller, Ihre
 - [Kühl vs. Warm: 5 einfache Tests](/de/blog/cool-tone-vs-warm-tone) — Bestätigen Sie, ob Sie wirklich warm getönt sind
 - [Bin ich warm oder kühl getönt? Der definitive Unterton-Ratgeber](/de/blog/how-to-determine-skin-undertone) — Der definitive Unterton-Ratgeber
 - [Persönliche Farbanalyse: Alle 12 Saison-Typen erklärt](/de/blog/personal-color-analysis-guide) — Alle 12 saisonalen Typen verstehen
-- [Farbanalyse zu Hause machen: DIY-Anleitung](/de/blog/how-to-do-color-analysis-at-home) — DIY-Anleitung mit Schritt-für-Schritt-Anweisungen

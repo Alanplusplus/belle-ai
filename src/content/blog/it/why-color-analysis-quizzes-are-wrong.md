@@ -6,8 +6,6 @@ tags: ["quiz analisi cromatica", "analisi del colore personale", "colore stagion
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
 
-![Perché i quiz di analisi cromatica sbagliano](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
-
 ## Il problema dei quiz di analisi cromatica
 
 Fai un quiz e ottieni "Autunno Caldo". Ne fai un altro e risulta "Estate Fredda". Un terzo ti dice che sei "Inverno Brillante". Ti suona familiare?
@@ -164,4 +162,3 @@ Il bello della tecnologia moderna è che ottenere un'analisi cromatica oggettiva
 
 ---
 
-*Ancora confusa sulla tua stagione cromatica? [Prova il nostro strumento gratuito di analisi cromatica con IA](/it/tools/color-quiz) — richiede 30 secondi e non ti chiede di indovinare il tuo subtono.*

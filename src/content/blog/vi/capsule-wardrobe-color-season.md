@@ -6,8 +6,6 @@ tags: ["tủ đồ capsule", "phân tích màu sắc cá nhân", "mùa màu sắ
 image: "/images/blog/capsule-wardrobe-color-season.webp"
 ---
 
-![Cách Xây Dựng Tủ Đồ Capsule Theo Mùa Màu Sắc](/images/blog/capsule-wardrobe-color-season.webp)
-
 ## Bạn Đã Biết Mùa Màu Sắc — Rồi Sao Nữa?
 
 Bạn đã phát hiện mình là Soft Autumn hay Bright Spring. Có thể đã dùng công cụ phân tích màu AI, hoặc đứng trước gương hai tiếng với các tấm vải màu. Dù sao, bạn đã có câu trả lời.
@@ -139,4 +137,3 @@ Công cụ miễn phí như [aicoloranalysis.io](https://aicoloranalysis.io/vi) 
 - Xây dựng dần trong 6+ tháng
 - Dùng AI phân tích màu để xác định mùa nhanh
 
-Mùa màu sắc là bộ lọc mua sắm mạnh nhất bạn sẽ có. Khi nội hóa palette, mặc đồ trở thành phần dễ nhất mỗi sáng.

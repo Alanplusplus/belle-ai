@@ -6,8 +6,6 @@ tags: ["analisis warna personal", "ilmu warna", "teori warna", "kecantikan", "un
 image: "/images/blog/science-of-color-analysis.webp"
 ---
 
-![Ilmu di Balik Analisis Warna Personal](/images/blog/science-of-color-analysis.webp)
-
 ## Mengapa Beberapa Warna Membuat Anda Terlihat Menakjubkan — dan Yang Lain Tidak?
 
 Anda mungkin pernah mengalaminya. Anda mencoba atasan coral dan kulit Anda terlihat bersinar, mata Anda lebih cerah, seseorang bertanya apakah Anda baru liburan. Lalu Anda memakai sweter hijau zaitun dan tiba-tiba terlihat lelah — padahal tidur delapan jam.
@@ -153,4 +151,3 @@ Lain kali seseorang bilang warna "bukan nuansa Anda," ingat — ada satu abad il
 - [Panduan Analisis Warna Personal: Semua 12 Tipe Musiman Dijelaskan (Kuis Gratis Tersedia)](/id/blog/personal-color-analysis-guide) — Pahami sistem 12 musim secara lengkap
 - [Apakah Saya Nada Hangat atau Dingin? Panduan Undertone Definitif (2026)](/id/blog/how-to-determine-skin-undertone) — Terapkan ilmu dengan tes undertone praktis
 - [Mengapa Kuis Analisis Warna Online Salah (Dan Apa yang Harus Dilakukan)](/id/blog/why-color-analysis-quizzes-are-wrong) — Memahami keterbatasan penilaian diri
-- [AI vs Analisis Warna Profesional: Saya Coba Keduanya — Ini Perbandingan Jujur Saya](/id/blog/ai-vs-professional-color-analysis) — Bagaimana teknologi dibandingkan dengan draping tradisional

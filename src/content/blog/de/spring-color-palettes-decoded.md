@@ -6,8 +6,6 @@ tags: ["Farbanalyse", "Frühlings-Farbpalette", "Farbtyp", "Beauty", "Styling-Gu
 image: "/images/blog/spring-color-palettes-decoded.webp"
 ---
 
-![Frühlings-Farbpaletten entschlüsselt: Bright Spring vs. True Spring vs. Light Spring](/images/blog/spring-color-palettes-decoded.webp)
-
 ## Du weißt, dass du ein Frühling bist — aber welcher?
 
 Du hast eine Farbanalyse gemacht und das Ergebnis steht fest: Du bist ein **Frühling**. Dein Unterton ist warm, dein Gesamteindruck frisch und lebendig, und du siehst unglaublich aus in Farben, die sich wie ein sonniger Garten anfühlen.
@@ -203,4 +201,3 @@ Unabhängig davon, welcher Frühlings-Untertyp du bist, gelten diese Grundsätze
 - Alle drei Frühlings-Typen teilen Wärme als Fundament — der entscheidende Unterschied ist, wie viel Kontrast und Sättigung deine Färbung verträgt.
 - Im Zweifel teste Farben an deinem Gesicht bei natürlichem Tageslicht. Die Reaktion deiner Haut (strahlend vs. ausgewaschen) verrät dir alles.
 
-Deine exakte Frühlings-Unterkategorie zu finden, ist der Unterschied zwischen „gut genug" und dem Gefühl, von innen heraus zu leuchten. Sobald du es getroffen hast, ergibt jeder Shopping-Trip, jedes morgendliche Anziehen und jedes Outfit-Foto plötzlich Sinn. Deine Farben hören auf, etwas zu sein, worüber du nachdenkst — und werden zu etwas, das du einfach *weißt*.

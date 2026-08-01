@@ -6,8 +6,6 @@ tags: ["tông nền", "ấm hay lạnh", "tông da", "phân tích màu sắc", "
 image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
 
-![Cách Xác Định Tông Nền Da](/images/blog/how-to-determine-skin-undertone.webp)
-
 ## Câu Trả Lời Nhanh
 
 Nếu muốn kết quả nhanh: nhìn tĩnh mạch cổ tay dưới ánh sáng tự nhiên ban ngày. Xanh/tím = lạnh. Xanh lá = ấm. Hỗn hợp cả hai = trung tính. Nhưng để chính xác, bạn nên dùng nhiều phương pháp — đó chính là nội dung hướng dẫn này.
@@ -147,4 +145,3 @@ Tông nền cho biết nhiệt độ (ấm vs. lạnh), nhưng mùa còn tính �
 - [Tông Lạnh vs Tông Ấm: 5 Bài Test Dễ Dàng](/vi/blog/cool-tone-vs-warm-tone) — Bài test nhanh để xác nhận tông nền
 - [Màu Sắc Tốt Nhất Cho Tông Nền Lạnh](/vi/blog/best-colors-for-cool-undertones) — Hướng dẫn phong cách đầy đủ nếu bạn tông lạnh
 - [Phân Tích Màu Cá Nhân: Giải Thích 12 Kiểu](/vi/blog/personal-color-analysis-guide) — Hiểu hệ thống màu theo mùa đầy đủ
-- [Hướng Dẫn Dạng Khuôn Mặt & Kiểu Tóc](/vi/blog/face-shape-hairstyle-guide) — Tìm kiểu tóc hoàn hảo cho khuôn mặt

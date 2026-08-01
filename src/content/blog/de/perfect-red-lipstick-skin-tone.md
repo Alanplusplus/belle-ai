@@ -6,8 +6,6 @@ tags: ["roter Lippenstift", "Hautunterton", "Make-up-Tipps", "Farbanalyse", "Sch
 image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
 ---
 
-![So finden Sie den perfekten roten Lippenstift für Ihren Hautton](/images/blog/perfect-red-lipstick-skin-tone.webp)
-
 ## Die Make-up-Regel, die jeder falsch versteht
 
 Ich habe verloren, wie viele rote Lippenstifte ich gekauft, einmal getragen und ganz hinten in der Schublade verstaut habe. Klassisches Rot? Zu hart. Koralle? Hat mich blass wirken lassen. Beere? Hat meine Zähne gelb aussehen lassen. Jahrelang dachte ich, ich könne einfach „kein Rot tragen“.
@@ -170,4 +168,3 @@ Ich habe mein eigenes Selfie durch ein KI-Farbanalyse-Tool laufen lassen und bes
 - **Olivfarbene Untertöne brauchen gedämpfte, tiefere Rottöne** — keine leuchtenden oder Pastelltöne.
 - **Swatchen Sie am inneren Handgelenk oder auf den Lippen, nicht an der Hand.** Und prüfen Sie immer im natürlichen Licht.
 
-Den perfekten roten Lippenstift zu finden, ist keine Frage des Glücks oder des „richtigen Gesichts dafür“. Es geht darum, eine einfache Sache zu verstehen — die Temperatur Ihrer Haut — und sie mit der Temperatur Ihres Lippenstifts abzustimmen. Sobald beides zusammenpasst, werden Sie sich fragen, warum Sie jemals Schwierigkeiten hatten.

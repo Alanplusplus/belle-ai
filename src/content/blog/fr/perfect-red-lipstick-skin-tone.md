@@ -6,8 +6,6 @@ tags: ["rouge à lèvres", "sous-ton de peau", "conseils maquillage", "analyse d
 image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
 ---
 
-![Comment trouver le rouge à lèvres parfait pour votre teint](/images/blog/perfect-red-lipstick-skin-tone.webp)
-
 ## La règle de maquillage que tout le monde se trompe
 
 J'ai perdu le compte du nombre de rouges à lèvres que j'ai achetés, portés une fois, puis relégués au fond d'un tiroir. Rouge classique ? Trop agressif. Corail ? Me faisait paraître terne. Framboise ? Donnait un aspect jaune à mes dents. Pendant des années, j'ai cru que je n'étais tout simplement « pas faite pour le rouge à lèvres ».
@@ -170,4 +168,3 @@ J'ai fait analyser mon propre selfie avec un outil d'analyse des couleurs par IA
 - **Les sous-tons olivâtres ont besoin de rouges atténués et profonds** — pas de teintes vives ou pastel.
 - **Testez sur l'intérieur du poignet ou les lèvres, pas sur la main.** Et vérifiez toujours à la lumière naturelle.
 
-Trouver votre rouge à lèvres parfait n'est pas une question de chance ou d'avoir « le bon visage pour ça ». Il s'agit de comprendre une chose simple — la température de votre peau — et de l'assortir à celle de votre rouge à lèvres. Une fois ces deux éléments alignés, vous vous demanderez pourquoi vous avez jamais eu du mal.

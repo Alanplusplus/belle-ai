@@ -6,8 +6,6 @@ tags: ["Tiefer Winter", "persönliche Farbanalyse", "Farbpalette", "Styling-Ratg
 image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
-![Tiefer Winter Farbpalette](/images/blog/deep-winter-color-palette.webp)
-
 ## Was macht jemanden zu einem Tiefer Winter?
 
 Tiefer Winter liegt auf dem Farbkreis zwischen Echtem Winter und Tiefem Herbst. Es ist die dunkelste der drei Winter-Untersaisons, wobei **Tiefe** das definierende Merkmal ist — dunkles Haar, dunkle Augen und mittel- bis tiefer Hautton mit kühlen oder neutral-kühlen Untertönen.
@@ -171,4 +169,3 @@ Für präzise Ergebnisse ohne Rätselraten nutzt die [KI-Farbanalyse](/de/person
 - [Persönliche Farbanalyse: Alle 12 Typen erklärt](/de/blog/personal-color-analysis-guide) — Verstehen Sie, wo Tiefer Winter im Gesamtsystem steht
 - [Die besten Farben für kühle Untertöne](/de/blog/best-colors-for-cool-undertones) — Breiterer Ratgeber für kühl getönte Farben
 - [Kühl vs. Warm: 5 einfache Tests](/de/blog/cool-tone-vs-warm-tone) — Bestätigen Sie zuerst Ihren Unterton
-- [So bestimmen Sie Ihren Hautunterton](/de/blog/how-to-determine-skin-undertone) — Schritt-für-Schritt-Unterton-Ratgeber

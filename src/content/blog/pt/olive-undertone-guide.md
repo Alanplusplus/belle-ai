@@ -6,8 +6,6 @@ tags: ["subtom oliva", "subtom de pele", "análise de coloração pessoal", "bel
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 
-![Guia de Subtom Oliva](/images/blog/olive-undertone-guide.webp)
-
 ## Por Que Ninguém Fala Sobre Subtom Oliva
 
 Todo artigo de beleza na internet divide os subtons da pele em três categorias organizadas: quente, frio ou neutro. Você faz o teste das veias, verifica se joias de ouro ou prata ficam melhor e pronto.
@@ -211,4 +209,3 @@ Entender seu subtom oliva é genuinamente libertador. Depois que você para de t
 - [Como Determinar o Subtom da Pele](/pt/blog/how-to-determine-skin-undertone) — O guia completo de subtom com 7 métodos de teste
 - [Tom Frio vs. Tom Quente: 5 Testes Fáceis](/pt/blog/cool-tone-vs-warm-tone) — Compare o básico de frio e quente
 - [Melhores Cores para Subtons Frios](/pt/blog/best-colors-for-cool-undertones) — Especificamente para pele de tom frio
-- [Guia da Paleta Inverno Profundo](/pt/blog/deep-winter-color-palette-guide) — Um guia sazonal relacionado para tons profundos

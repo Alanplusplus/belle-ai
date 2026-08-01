@@ -6,8 +6,6 @@ tags: ["subtono freddo", "pelle fredda", "palette cromatica", "guida di stile", 
 image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
 
-![I migliori colori per subtoni freddi](/images/blog/best-colors-for-cool-undertones.webp)
-
 ## La tua palette per subtoni freddi
 
 Se hai un subtono freddo (pelle con sfumature rosa, rosse o blu sotto la superficie), certi colori ti faranno letteralmente brillare. Questa guida copre tutto, dai neutri quotidiani ai colori audaci.
@@ -196,4 +194,3 @@ Se non sei certa del tuo subtono esatto o del tipo stagionale, l'[analisi cromat
 - [Tono freddo vs tono caldo: 5 test semplici](/it/blog/cool-tone-vs-warm-tone) — Conferma se hai davvero un tono freddo
 - [Ho un tono caldo o freddo? 7 metodi](/it/blog/how-to-determine-skin-undertone) — La guida definitiva al subtono
 - [Analisi del colore personale: 12 tipi spiegati](/it/blog/personal-color-analysis-guide) — Comprendi tutti i 12 tipi stagionali
-- [Fai il quiz cromatico gratuito](/it/tools/color-quiz) — Quiz rapido per stimare la tua stagione cromatica

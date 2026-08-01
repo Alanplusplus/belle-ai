@@ -1,6 +1,5 @@
-import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import { SITE_URL } from "@/lib/constants";
+import { canonicalUrl } from "@/lib/seo";
 import type { Metadata } from "next";
 import { TryClient } from "./TryClient";
 
@@ -14,17 +13,20 @@ export async function generateMetadata({
   return {
     title: messages.meta.tryTitle || "Try AI Analysis – Free",
     description: messages.meta.tryDescription || messages.meta.homeDescription,
-    alternates: { canonical: `${SITE_URL}/${locale}/try` },
+    alternates: { canonical: canonicalUrl(locale, "/try") },
   };
 }
 
 export default async function TryPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ type?: string }>;
 }) {
   const { locale } = await params;
+  const { type } = await searchParams;
   setRequestLocale(locale);
 
-  return <TryClient locale={locale} />;
+  return <TryClient locale={locale} initialType={type} />;
 }

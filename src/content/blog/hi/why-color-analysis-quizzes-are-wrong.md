@@ -6,8 +6,6 @@ tags: ["रंग विश्लेषण क्विज़", "व्यक्
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
 
-![रंग विश्लेषण क्विज़ गलत क्यों होती हैं](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
-
 ## रंग विश्लेषण क्विज़ की समस्या
 
 एक क्विज़ लेती हैं और "Warm Autumn" मिलता है। दूसरी में "Cool Summer"। तीसरी कहती है आप "Clear Winter" हैं। जाना-पहचाना लगता है?
@@ -164,4 +162,3 @@ image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 
 ---
 
-*अभी भी अपने रंग सीज़न में उलझन में हैं? [हमारा मुफ़्त AI रंग विश्लेषण टूल आज़माएँ](/hi/tools/color-quiz) — 30 सेकंड लगते हैं और आपसे अपना अंडरटोन अनुमान लगाने को नहीं कहता।*

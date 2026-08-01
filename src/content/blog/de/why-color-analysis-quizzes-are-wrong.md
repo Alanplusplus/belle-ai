@@ -6,8 +6,6 @@ tags: ["Farbanalyse-Quiz", "persönliche Farbanalyse", "Saisonfarben", "Beauty",
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
 
-![Warum Farbanalyse-Quizs falsch liegen](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
-
 ## Das Problem mit Farbanalyse-Quizs
 
 Sie machen ein Quiz und erhalten „Warmer Herbst". Sie machen ein anderes und erhalten „Kühler Sommer". Ein drittes sagt, Sie seien ein „Leuchtender Winter". Kommt Ihnen das bekannt vor?
@@ -164,4 +162,3 @@ Das Schöne an moderner Technologie ist, dass eine objektive Farbanalyse keinen 
 
 ---
 
-*Immer noch verwirrt über Ihre Farbsaison? [Probieren Sie unser kostenloses KI-Farbanalyse-Tool](/de/tools/color-quiz) — es dauert 30 Sekunden und bittet Sie nicht, Ihren eigenen Unterton zu erraten.*

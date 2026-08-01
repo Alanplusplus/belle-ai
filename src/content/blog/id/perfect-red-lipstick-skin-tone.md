@@ -6,8 +6,6 @@ tags: ["lipstik merah", "undertone kulit", "tips makeup", "analisis warna", "kec
 image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
 ---
 
-![Cara Menemukan Lipstik Merah Sempurna untuk Warna Kulit Anda](/images/blog/perfect-red-lipstick-skin-tone.webp)
-
 ## Aturan Makeup yang Sering Salah Dipahami Semua Orang
 
 Saya sudah kehilangan hitungan berapa banyak lipstik merah yang saya beli, pakai sekali, lalu selipkan ke bagian belakang laci. Merah klasik? Terlalu keras. Coral? Membuat wajah saya kusam. Berry? Membuat gigi saya terlihat kuning. Selama bertahun-tahun saya pikir saya memang "tidak cocok memakai lipstik merah."
@@ -170,4 +168,3 @@ Saya menjalankan selfie saya sendiri melalui alat analisis warna AI dan mengonfi
 - **Undertone olive membutuhkan merah muted dan lebih dalam** — bukan shade cerah atau pastel.
 - **Swatch di pergelangan bagian dalam atau bibir, bukan tangan.** Dan selalu periksa di cahaya alami.
 
-Menemukan lipstik merah sempurna bukan soal keberuntungan atau memiliki "wajah yang tepat." Ini tentang memahami satu hal sederhana — suhu kulit Anda — dan mencocokkannya dengan suhu lipstik Anda. Setelah keduanya selaras, Anda akan heran mengapa pernah kesulitan.

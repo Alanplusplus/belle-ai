@@ -6,8 +6,6 @@ tags: ["análise de cores", "paleta de verão", "estação de cor", "beleza", "g
 image: "/images/blog/summer-color-palettes-decoded.webp"
 ---
 
-![Paletas de Cores de Verão: Cool Summer vs True Summer vs Soft Summer](/images/blog/summer-color-palettes-decoded.webp)
-
 ## Você É Verão — Mas Qual?
 
 Sua análise de cores confirmou: você é um tipo Verão. Seu tom de pele é frio, seus traços têm uma suavidade natural, e cores que lembram uma manhã enevoada à beira-mar ficam incríveis em você.
@@ -98,4 +96,3 @@ Ferramentas como [análise de cores IA](https://aicoloranalysis.io/pt) usam vis�
 - **Cool Summer:** O mais intenso dos Verões. Pode usar cores mais profundas e frias. Fronteira com Inverno.
 - **True Summer:** O centro equilibrado. Profundidade média, claramente frio, suavemente atenuado.
 - **Soft Summer:** O mais atenuado das 12 estações. Ultra-suave, neutro-frio, cores em sussurro.
-- Todos os Verões compartilham subtons frios e qualidades atenuadas — a diferença é de grau.

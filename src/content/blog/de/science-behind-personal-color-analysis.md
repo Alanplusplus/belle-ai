@@ -6,8 +6,6 @@ tags: ["Farbanalyse", "Farbwissenschaft", "Farbtheorie", "Schönheit", "Hautunte
 image: "/images/blog/science-of-color-analysis.webp"
 ---
 
-![Die Wissenschaft hinter der persönlichen Farbanalyse](/images/blog/science-of-color-analysis.webp)
-
 ## Warum Manche Farben Sie Fantastisch Aussehen Lassen — und Andere Nicht?
 
 Das kennen Sie sicher. Sie probieren ein Korallen-Oberteil an und Ihre Haut wirkt strahlend, Ihre Augen leuchten, und jemand fragt, ob Sie im Urlaub waren. Dann ziehen Sie einen olivgrünen Pullover an und plötzlich sehen Sie müde aus — obwohl Sie acht Stunden geschlafen haben.
@@ -153,4 +151,3 @@ Wenn Ihnen das nächste Mal jemand sagt, eine Farbe „steht Ihnen nicht", denke
 - [Persönliche Farbanalyse: Alle 12 Saison-Typen erklärt](/de/blog/personal-color-analysis-guide) — Das vollständige 12-Saisonen-System verstehen
 - [Bin ich warm oder kühl getönt? Der definitive Unterton-Ratgeber](/de/blog/how-to-determine-skin-undertone) — Die Wissenschaft mit praktischen Unterton-Tests anwenden
 - [Warum Online-Farbanalyse-Quizs falsch liegen](/de/blog/why-color-analysis-quizzes-are-wrong) — Die Grenzen der Selbsteinschätzung verstehen
-- [KI vs Professionelle Farbberatung: Ich Habe Beides Getestet](/de/blog/ai-vs-professional-color-analysis) — Wie Technologie sich mit traditioneller Drapierung vergleicht

@@ -6,8 +6,6 @@ tags: ["アンダートーン", "イエベ ブルベ", "肌色", "パーソナ�
 image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
 
-![アンダートーンの見分け方](/images/blog/how-to-determine-skin-undertone.webp)
-
 ## クイックアンサー
 
 すぐに結果が欲しいなら：自然光で手首の血管を見てください。青/紫 = ブルベ。緑 = イエベ。両方が見える = ニュートラル。ただし正確性のためには複数の方法を使うべきです — このガイドで詳しく解説します。
@@ -147,4 +145,3 @@ image: "/images/blog/how-to-determine-skin-undertone.webp"
 - [クールトーン vs ウォームトーン：5つの簡単テスト](/ja/blog/cool-tone-vs-warm-tone) — アンダートーン確認のためのクイックテスト
 - [ブルベに似合う色](/ja/blog/best-colors-for-cool-undertones) — ブルベのための完全スタイルガイド
 - [パーソナルカラー分析：12タイプ解説](/ja/blog/personal-color-analysis-guide) — シーズンカラーシステムの全体像
-- [顔型＆ヘアスタイルガイド](/ja/blog/face-shape-hairstyle-guide) — 顔型に合った完璧なヘアスタイル探し

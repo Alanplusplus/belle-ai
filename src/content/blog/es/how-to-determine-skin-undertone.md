@@ -6,8 +6,6 @@ tags: ["subtono", "cálido o frío", "tono de piel", "análisis de color", "cons
 image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
 
-![Cómo determinar el subtono de la piel](/images/blog/how-to-determine-skin-undertone.webp)
-
 ## La respuesta rápida
 
 Si quieres un resultado rápido: mira las venas de tu muñeca a la luz natural del día. Azul/morado = frío. Verde = cálido. Mezcla de ambos = neutro. Pero para mayor precisión, deberías usar varios métodos, que es exactamente lo que cubre esta guía.
@@ -147,4 +145,3 @@ Para un análisis completo, prueba la función de [análisis de color personal d
 - [Tono frío vs. tono cálido: 5 pruebas sencillas](/es/blog/cool-tone-vs-warm-tone) — Pruebas rápidas para confirmar tu subtono
 - [Los mejores colores para subtonos fríos](/es/blog/best-colors-for-cool-undertones) — Guía de estilo completa si eres de tono frío
 - [Análisis de color personal: los 12 tipos explicados](/es/blog/personal-color-analysis-guide) — Comprende el sistema completo de color estacional
-- [Guía de forma del rostro y peinados](/es/blog/face-shape-hairstyle-guide) — Encuentra el peinado perfecto para tu rostro

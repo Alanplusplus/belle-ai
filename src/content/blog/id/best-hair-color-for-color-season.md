@@ -6,8 +6,6 @@ tags: ["analisis warna personal", "warna rambut", "color season", "kecantikan", 
 image: "/images/blog/best-hair-color-for-color-season.webp"
 ---
 
-![Cara Menemukan Warna Rambut Terbaik Berdasarkan Color Season Anda](/images/blog/best-hair-color-for-color-season.webp)
-
 ## Mengapa Color Season Penting untuk Memilih Warna Rambut
 
 Ada satu hal yang kebanyakan orang baru sadari setelah hasil cat rambutnya gagal: warna alami Anda — undertone kulit, warna mata, dan kontras antar fitur wajah — menentukan warna rambut mana yang membuat Anda terlihat segar dan mana yang membuat Anda terlihat pucat atau lelah.
@@ -298,4 +296,3 @@ Rambut adalah blok warna terbesar di wajah Anda. Pilih tepat, dan segalanya — 
 - [Panduan analisis warna personal: 12 season dijelaskan](/id/blog/personal-color-analysis-guide)
 - [Cara menentukan undertone kulit Anda](/id/blog/how-to-determine-skin-undertone)
 - [Tone dingin vs tone hangat: 5 tes sederhana](/id/blog/cool-tone-vs-warm-tone)
-- [Warna terbaik untuk undertone dingin](/id/blog/best-colors-for-cool-undertones)

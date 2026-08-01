@@ -6,8 +6,6 @@ tags: ["son môi đỏ", "tông nền", "mẹo trang điểm", "phân tích màu
 image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
 ---
 
-![Cách tìm son môi đỏ hoàn hảo cho tông da của bạn](/images/blog/perfect-red-lipstick-skin-tone.webp)
-
 ## Quy Tắc Trang Điểm Mà Ai Cũng Làm Sai
 
 Tôi đã mất đếm bao thỏi son môi đỏ mình mua, dùng một lần rồi nhét vào tận đáy ngăn kéo. Đỏ cổ điển? Quá gắt. Cam san hô? Làm da xỉn đi. Mận chín? Khiến răng trông vàng. Trong nhiều năm, tôi nghĩ mình chỉ đơn giản là "không hợp son đỏ."
@@ -170,4 +168,3 @@ Tôi đã đưa selfie qua công cụ phân tích màu AI và xác nhận mình 
 - **Tông nền ô liu cần sắc đỏ trầm, sâu hơn** — không phải sắc sáng hay pastel.
 - **Thử trên mặt trong cổ tay hoặc môi, không phải mu bàn tay.** Và luôn kiểm tra dưới ánh sáng tự nhiên.
 
-Tìm son môi đỏ hoàn hảo không phải chuyện may mắn hay có "khuôn mặt phù hợp." Mà là hiểu một điều đơn giản — nhiệt độ của da — và ghép với nhiệt độ của son môi. Khi chúng khớp nhau, bạn sẽ tự hỏi vì sao mình từng vật lộn.

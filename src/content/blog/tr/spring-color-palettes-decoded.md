@@ -6,8 +6,6 @@ tags: ["kişisel renk analizi", "ilkbahar renk paleti", "renk mevsimi", "güzell
 image: "/images/blog/spring-color-palettes-decoded.webp"
 ---
 
-![İlkbahar Renk Paletleri Çözümlendi: Parlak İlkbahar vs Gerçek İlkbahar vs Açık İlkbahar](/images/blog/spring-color-palettes-decoded.webp)
-
 ## İlkbahar Olduğunuzu Biliyorsunuz — Peki Hangi İlkbahar?
 
 Renk analizi yaptınız ve sonuç net: bir İlkbaharsınız. Alt tonunuz sıcak, genel havanız taze ve canlı; güneşli bir bahçeyi andıran renklerde inanılmaz görünüyorsunuz.
@@ -203,4 +201,3 @@ Hangi İlkbahar alt mevsiminde olursanız olun, şu ilkeler geçerlidir:
 - Üç İlkbahar tipi de temel olarak sıcaklığı paylaşır — asıl ayırt edici, renklendirmenizin ne kadar kontrast ve doygunluk kaldırabildiğidir.
 - Emin değilseniz, renkleri doğal gün ışığında yüzünüze karşı test edin. Cildinizin tepkisi (parlamak vs. solmak) size her şeyi söyler.
 
-Tam İlkbahar alt mevsiminizi bulmak, "idare eder" görünmek ile içten parlıyormuş gibi görünmek arasındaki farktır. Doğru mevsimi bulduğunuzda her alışveriş, her sabah giyinme ve her kıyafet fotoğrafı aniden anlam kazanır. Renkleriniz düşünmeniz gereken bir şey olmaktan çıkar, sadece *bildiğiniz* bir şey haline gelir.

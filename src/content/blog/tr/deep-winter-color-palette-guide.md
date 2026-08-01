@@ -6,8 +6,6 @@ tags: ["derin kış", "kişisel renk analizi", "renk paleti", "stil rehberi", "m
 image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
-![Derin Kış Renk Paleti](/images/blog/deep-winter-color-palette.webp)
-
 ## Birini Derin Kış Yapan Nedir?
 
 Derin Kış, renk çarkında Gerçek Kış ile Koyu Sonbahar arasında yer alır. Üç Kış alt mevsiminin en koyusudur; belirleyici özellik **derinliktir** — koyu saç, koyu gözler ve soğuk veya nötr-soğuk alt tonlu orta ila koyu cilt.
@@ -171,4 +169,3 @@ Tahmin oyunu olmadan kesin sonuçlar için [yapay zekâ renk analizi](/tr/person
 - [Kişisel Renk Analizi: 12 Tip Açıklanıyor](/tr/blog/personal-color-analysis-guide) — Derin Kış'ın tam sistemdeki yerini anlayın
 - [Soğuk Alt Tonlar İçin En İyi Renkler](/tr/blog/best-colors-for-cool-undertones) — Daha geniş soğuk tonlu renk rehberi
 - [Soğuk Ton mu Sıcak Ton mu: 5 Kolay Test](/tr/blog/cool-tone-vs-warm-tone) — Önce alt tonunuzu doğrulayın
-- [Cilt Alt Tonunuzu Nasıl Belirlersiniz](/tr/blog/how-to-determine-skin-undertone) — Adım adım alt ton rehberi

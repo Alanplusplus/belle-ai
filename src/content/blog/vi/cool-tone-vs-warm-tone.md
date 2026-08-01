@@ -6,8 +6,6 @@ tags: ["tông nền", "tông lạnh", "tông ấm", "tông da", "phân tích mà
 image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
 
-![Tông Lạnh vs Tông Ấm](/images/blog/cool-tone-vs-warm-tone.webp)
-
 ## Tông Nền Là Gì?
 
 Tông nền là màu tinh tế nằm bên dưới bề mặt da. Khác với tông da bề mặt (có thể thay đổi do nắng, đỏ da, v.v.), tông nền của bạn giữ nguyên suốt đời.
@@ -135,4 +133,3 @@ Da olive có tông xanh lá có thể là olive ấm hoặc olive lạnh. Sắc 
 - [Tôi Thuộc Tông Ấm Hay Lạnh? 7 Phương Pháp Đã Chứng Minh](/vi/blog/how-to-determine-skin-undertone) — Tìm hiểu sâu hơn về xác định tông nền
 - [Màu Sắc Tốt Nhất Cho Tông Nền Lạnh](/vi/blog/best-colors-for-cool-undertones) — Hướng dẫn phong cách đầy đủ cho người tông lạnh
 - [Phân Tích Màu Cá Nhân: Giải Thích 12 Kiểu](/vi/blog/personal-color-analysis-guide) — Vượt xa tông nền để tìm kiểu theo mùa đầy đủ
-- [Hướng Dẫn Dạng Khuôn Mặt & Kiểu Tóc](/vi/blog/face-shape-hairstyle-guide) — Tìm kiểu tóc phù hợp nhất cho dạng khuôn mặt

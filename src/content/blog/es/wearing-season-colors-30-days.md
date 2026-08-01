@@ -6,8 +6,6 @@ tags: ["análisis de color personal", "estación de color", "estilo personal", "
 image: "/images/blog/wearing-season-colors-30-days.webp"
 ---
 
-![Solo usé los colores de mi estación durante 30 días](/images/blog/wearing-season-colors-30-days.webp)
-
 ## El Reto Que Cambió Mi Forma de Vestirme
 
 Todo empezó con una crisis de armario. Eran las 7:45 de un lunes por la mañana, ya iba tarde, y estaba frente al armario mirando un caos de colores que nunca parecían combinar. ¿Pantalones negros con un top mostaza? Demasiado duro. ¿Jersey gris con pantalones oliva? Parecía agotada antes de que empezara el día.
@@ -150,4 +148,3 @@ Y sigo recibiendo cumplidos. Los de "te ves genial" que no van sobre una prenda 
 - Accesorios y maquillaje deben coincidir con el subtono de tu paleta para una armonía completa
 - El miedo a parecer "aburrida" con una sola paleta es infundado — la consistencia se lee como estilo personal, no como limitación
 
-Tu armario no necesita más opciones. Necesita las opciones *correctas*. Y tu estación de color es la guía más fiable para encontrarlas.

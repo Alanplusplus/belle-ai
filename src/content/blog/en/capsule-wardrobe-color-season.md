@@ -6,8 +6,6 @@ tags: ["capsule wardrobe", "personal color analysis", "color season", "fashion t
 image: "/images/blog/capsule-wardrobe-color-season.webp"
 ---
 
-![How to Build a Capsule Wardrobe for Your Color Season](/images/blog/capsule-wardrobe-color-season.webp)
-
 ## You Know Your Color Season — Now What?
 
 So you've figured out you're a Soft Autumn or a Bright Spring. Maybe you used an AI color analysis tool, or maybe you draped yourself with colored fabrics in front of a mirror for two hours. Either way, you have an answer.
@@ -197,4 +195,3 @@ Free tools like [aicoloranalysis.io](https://aicoloranalysis.io) offer an instan
 - Build gradually over 6+ months rather than overhauling everything at once
 - Use AI color analysis to quickly identify your season and start with confidence
 
-Your color season isn't just trivia — it's the most powerful shopping filter you'll ever have. Once you internalize your palette, getting dressed becomes the easiest part of your morning. And that's the real goal of a capsule wardrobe: less decision fatigue, more confidence, and a closet where everything works together.

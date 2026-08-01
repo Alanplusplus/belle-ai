@@ -6,8 +6,6 @@ tags: ["kişisel renk analizi", "saç rengi", "renk sezonu", "güzellik", "stil 
 image: "/images/blog/best-hair-color-for-color-season.webp"
 ---
 
-![Renk Sezonunuza Göre En İyi Saç Rengini Nasıl Bulursunuz](/images/blog/best-hair-color-for-color-season.webp)
-
 ## Saç Rengi Seçiminde Renk Sezonu Neden Önemli?
 
 Çoğu insanın ancak kötü bir boya deneyiminden sonra fark ettiği bir şey var: doğal renkleriniz — cilt alt tonu, göz rengi ve yüz hatlarınız arasındaki kontrast — hangi saç renklerinin sizi canlı göstereceğini, hangilerinin soluk ve yorgun göstereceğini belirler.
@@ -298,4 +296,3 @@ Saç, yüzünüzdeki en büyük renk bloğudur. Doğru seçim yaptığınızda m
 - [Kişisel renk analizi rehberi: 12 sezon açıklaması](/tr/blog/personal-color-analysis-guide)
 - [Cilt alt tonunuzu nasıl belirlersiniz](/tr/blog/how-to-determine-skin-undertone)
 - [Soğuk ton vs sıcak ton: 5 basit test](/tr/blog/cool-tone-vs-warm-tone)
-- [Soğuk alt tonlar için en iyi renkler](/tr/blog/best-colors-for-cool-undertones)

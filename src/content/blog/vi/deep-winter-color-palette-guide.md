@@ -6,8 +6,6 @@ tags: ["đông sâu", "phân tích màu cá nhân", "bảng màu", "hướng d�
 image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
-![Bảng Màu Đông Sâu](/images/blog/deep-winter-color-palette.webp)
-
 ## Điều Gì Khiến Ai Đó Thuộc Đông Sâu?
 
 Đông Sâu nằm giữa Đông Mát và Thu Sâu trên vòng màu. Đây là kiểu tối nhất trong ba kiểu phụ Mùa Đông, với đặc điểm xác định là **độ sâu** — tóc sâu, mắt sâu và da trung bình đến sâu với tông nền lạnh hoặc trung tính-lạnh.
@@ -171,4 +169,3 @@ Nếu nghi ngờ thuộc Đông Sâu, hãy thử nguyên tắc cốt lõi: **mà
 - [Phân Tích Màu Cá Nhân: Giải Thích Đầy Đủ 12 Kiểu](/vi/blog/personal-color-analysis-guide) — Hiểu Đông Sâu trong hệ thống đầy đủ
 - [Màu Sắc Tốt Nhất Cho Tông Nền Lạnh](/vi/blog/best-colors-for-cool-undertones) — Hướng dẫn màu lạnh rộng hơn
 - [Tông Lạnh vs Tông Ấm: 5 Bài Test Dễ Dàng](/vi/blog/cool-tone-vs-warm-tone) — Xác nhận tông nền trước
-- [Cách Xác Định Tông Nền Da](/vi/blog/how-to-determine-skin-undertone) — Hướng dẫn tông nền từng bước

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getPostBySlug, getAllSlugs } from "@/lib/blog";
 import { Link } from "@/i18n/navigation";
 import { SITE_URL } from "@/lib/constants";
+import { canonicalUrl } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
@@ -32,13 +33,14 @@ export async function generateMetadata({
     title: post.title,
     description: post.description,
     alternates: {
-      canonical: `${SITE_URL}/${locale}/blog/${slug}`,
+      canonical: canonicalUrl(locale, `/blog/${slug}`),
     },
     openGraph: {
       title: post.title,
       description: post.description,
       type: "article",
       publishedTime: post.date,
+      ...(post.image ? { images: [{ url: post.image }] } : {}),
     },
   };
 }
@@ -87,7 +89,7 @@ export default async function BlogPostPage({
   );
 }
 
-function BlogPostContent({ post }: { post: { date: string; readingTime: string; title: string; tags: string[]; content: string } }) {
+function BlogPostContent({ post }: { post: { date: string; readingTime: string; title: string; tags: string[]; image: string; content: string } }) {
   const t = useTranslations("blog");
   const ft = useTranslations("features");
 
@@ -121,6 +123,13 @@ function BlogPostContent({ post }: { post: { date: string; readingTime: string; 
             </div>
           )}
         </header>
+
+        {post.image && (
+          <div className="mt-8 overflow-hidden rounded-2xl">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={post.image} alt={post.title} className="w-full" loading="eager" />
+          </div>
+        )}
 
         <div className="prose prose-neutral mt-10 max-w-none prose-headings:font-bold prose-a:text-primary">
           <MarkdownContent content={post.content} />

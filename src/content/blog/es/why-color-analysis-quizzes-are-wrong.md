@@ -6,8 +6,6 @@ tags: ["test de análisis de color", "análisis de color personal", "color estac
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
 
-![Por qué los tests de análisis de color se equivocan](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
-
 ## El problema con los tests de análisis de color
 
 Haces un test y te sale "Otoño Cálido". Haces otro y te sale "Verano Frío". Un tercero dice que eres "Invierno Brillante". ¿Te suena?
@@ -164,4 +162,3 @@ La ventaja de la tecnología moderna es que obtener un análisis de color objeti
 
 ---
 
-*¿Sigues confundida sobre tu estación de color? [Prueba nuestra herramienta gratuita de análisis de color con IA](/es/tools/color-quiz) — tarda 30 segundos y no te pide que adivines tu propio subtono.*

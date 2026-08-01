@@ -6,8 +6,6 @@ tags: ["การวิเคราะห์สีส่วนบุคคล", 
 image: "/images/blog/best-hair-color-for-color-season.webp"
 ---
 
-![วิธีเลือกสีผมที่เหมาะกับ Color Season ของคุณ](/images/blog/best-hair-color-for-color-season.webp)
-
 ## ทำไม Color Season ถึงสำคัญต่อการเลือกสีผม
 
 มีเรื่องหนึ่งที่หลายคนมักรู้ตัวก็ต่อเมื่อย้อมผมพลาดไปแล้ว: โทนสีธรรมชาติของคุณ — โทนผิวใต้ สีตา และความต่างระหว่างลักษณะใบหน้า — เป็นตัวกำหนดว่าสีผมแบบไหนจะทำให้คุณดูสดใส หรือทำให้ดูซีดและเหนื่อย
@@ -300,4 +298,3 @@ Bright Winter มีความชัดแบบ True Winter แต่สด�
 - [คู่มือการวิเคราะห์สีส่วนบุคคล: อธิบายครบ 12 ฤดูกาล](/th/blog/personal-color-analysis-guide)
 - [วิธีหาโทนผิวใต้ของคุณ](/th/blog/how-to-determine-skin-undertone)
 - [โทนเย็น vs โทนอุ่น: 5 วิธีทดสอบง่ายๆ](/th/blog/cool-tone-vs-warm-tone)
-- [สีที่ดีที่สุดสำหรับโทนผิวใต้เย็น](/th/blog/best-colors-for-cool-undertones)

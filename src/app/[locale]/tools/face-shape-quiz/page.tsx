@@ -1,4 +1,4 @@
-import { SITE_URL } from "@/lib/constants";
+import { canonicalUrl } from "@/lib/seo";
 import type { Metadata } from "next";
 import { FaceShapeQuizClient } from "./FaceShapeQuizClient";
 
@@ -13,7 +13,7 @@ export async function generateMetadata({
     title: messages.meta.faceQuizTitle,
     description: messages.meta.faceQuizDescription,
     alternates: {
-      canonical: `${SITE_URL}/${locale}/tools/face-shape-quiz`,
+      canonical: canonicalUrl(locale, "/tools/face-shape-quiz"),
     },
   };
 }

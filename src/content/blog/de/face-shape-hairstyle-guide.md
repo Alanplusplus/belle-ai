@@ -6,8 +6,6 @@ tags: ["Gesichtsform", "Frisur", "Beauty-Ratgeber", "Haare", "Gesichtsform Frisu
 image: "/images/blog/face-shape-hairstyle-guide.webp"
 ---
 
-![Gesichtsform & Frisuren-Ratgeber](/images/blog/face-shape-hairstyle-guide.webp)
-
 ## Warum die Gesichtsform bei der Frisurenwahl wichtig ist
 
 Ihre Gesichtsform ist die Grundlage für die Wahl einer schmeichelhaften Frisur. Der richtige Schnitt kann Ihre Proportionen ausgleichen, Ihre besten Merkmale betonen und Ihr Gesicht wunderschön einrahmen. Der falsche Schnitt kann Merkmale hervorheben, die Sie lieber minimieren würden.
@@ -172,4 +170,3 @@ Absolut. Die obigen Empfehlungen sind Ausgangspunkte. Ihre Haarstruktur (fein, d
 - [Persönliche Farbanalyse: 12 Typen erklärt](/de/blog/personal-color-analysis-guide) — Finden Sie Ihre besten Farben nach der Gesichtsformbestimmung
 - [Kühl vs. Warm: 5 einfache Tests](/de/blog/cool-tone-vs-warm-tone) — Bestimmen Sie Ihren Unterton für die Haarfarbenwahl
 - [Bin ich warm oder kühl getönt?](/de/blog/how-to-determine-skin-undertone) — Ratgeber zur Wahl der richtigen Haarfarbtemperatur
-- [Gesichtsform-Quiz starten](/de/tools/face-shape-quiz) — KI-gestützte Gesichtsformanalyse

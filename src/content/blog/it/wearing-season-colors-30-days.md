@@ -6,8 +6,6 @@ tags: ["analisi del colore", "stagione di colori", "stile personale", "consigli 
 image: "/images/blog/wearing-season-colors-30-days.webp"
 ---
 
-![Ho indossato solo i colori della mia stagione per 30 giorni](/images/blog/wearing-season-colors-30-days.webp)
-
 ## La Sfida Che Ha Cambiato il Modo in Cui Mi Vesto
 
 Tutto è iniziato con una crisi del guardaroba. Era un lunedì, le 7:45, ero già in ritardo, ferma davanti all'armadio a fissare un mix caotico di colori che, in qualche modo, non si abbinavano mai. Pantaloni neri e maglia mostarda? Troppo duro. Maglione grigio e pantaloni oliva? Sembravo stanca prima ancora che iniziasse la giornata.
@@ -150,4 +148,3 @@ E ricevo ancora complimenti. Quelli del tipo «stai benissimo» che non riguarda
 - Accessori e trucco dovrebbero corrispondere al sottotono della tua palette per un'armonia completa
 - La paura di sembrare «noiosa» con una sola palette è infondata — la coerenza si legge come stile personale, non come limitazione
 
-Il tuo armadio non ha bisogno di più opzioni. Ha bisogno delle *opzioni giuste*. E la tua stagione di colori è la guida più affidabile per trovarle.

@@ -6,8 +6,6 @@ tags: ["subtono frío", "piel fría", "paleta de colores", "guía de estilo", "m
 image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
 
-![Los mejores colores para subtonos fríos](/images/blog/best-colors-for-cool-undertones.webp)
-
 ## Tu paleta de colores para subtono frío
 
 Si tienes subtono frío (piel con matices rosados, rojizos o azulados bajo la superficie), ciertos colores te harán brillar de verdad. Esta guía cubre todo, desde neutros cotidianos hasta colores llamativos.
@@ -196,4 +194,3 @@ Si no tienes claro tu subtono exacto o tu tipo estacional, el [análisis de colo
 - [Tono frío vs. tono cálido: 5 pruebas sencillas](/es/blog/cool-tone-vs-warm-tone) — Confirma si realmente eres de tono frío
 - [¿Tengo tono cálido o frío? 7 métodos](/es/blog/how-to-determine-skin-undertone) — La guía definitiva del subtono
 - [Análisis de color personal: los 12 tipos explicados](/es/blog/personal-color-analysis-guide) — Comprende los 12 tipos estacionales
-- [Haz el test de color gratuito](/es/tools/color-quiz) — Test rápido para estimar tu estación de color

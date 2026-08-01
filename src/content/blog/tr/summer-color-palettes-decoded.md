@@ -6,8 +6,6 @@ tags: ["kişisel renk analizi", "yaz renk paleti", "renk mevsimi", "güzellik", 
 image: "/images/blog/summer-color-palettes-decoded.webp"
 ---
 
-![Yaz Renk Paletleri: Cool Summer vs True Summer vs Soft Summer](/images/blog/summer-color-palettes-decoded.webp)
-
 ## Siz Bir Yazsınız — Ama Hangisi?
 
 Renk analiziniz doğruladı: Yaz tipsiniz. Cildinizin alt tonu soğuk, yüz hatlarınız yumuşak ve deniz kenarında sisli bir sabahı andıran renkler size muhteşem yakışıyor.
@@ -97,4 +95,3 @@ Eskiden alt tip belirlemek 2 saatlik profesyonel seans gerektirirdi. Bugün AI r
 
 - **Cool Summer:** Yazların en yoğunu. Daha derin, daha soğuk renkler giyebilir. Kış'a sınır.
 - **True Summer:** Dengeli merkez. Orta derinlik, açıkça soğuk, yumuşak bastırılmış.
-- **Soft Summer:** 12 mevsimin en bastırılmışı. Ultra-nazik, soğuk-nötr, fısıldayan renkler.

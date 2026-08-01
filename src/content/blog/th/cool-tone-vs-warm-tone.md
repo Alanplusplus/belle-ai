@@ -6,8 +6,6 @@ tags: ["โทนผิวใต้", "โทนเย็น", "โทนอุ�
 image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
 
-![โทนเย็น vs โทนอุ่น](/images/blog/cool-tone-vs-warm-tone.webp)
-
 ## โทนผิวใต้คืออะไร?
 
 โทนผิวใต้ (Undertone) คือสีอ่อนๆ ที่อยู่ใต้ผิวหนัง ต่างจากโทนผิวด้านนอก (ที่เปลี่ยนได้จากแดด ความแดง ฯลฯ) โทนผิวใต้จะคงที่ตลอดชีวิต
@@ -135,4 +133,3 @@ image: "/images/blog/cool-tone-vs-warm-tone.webp"
 - [ฉันโทนอุ่นหรือเย็น? 7 วิธีที่พิสูจน์แล้ว](/th/blog/how-to-determine-skin-undertone) — เจาะลึกการหาโทนผิวใต้
 - [สีที่เหมาะกับโทนผิวเย็น](/th/blog/best-colors-for-cool-undertones) — คู่มือสไตล์ครบสำหรับโทนเย็น
 - [Personal Color Analysis: อธิบาย 12 ประเภท](/th/blog/personal-color-analysis-guide) — ไปต่อจากโทนผิวใต้สู่ฤดูกาลเต็มรูปแบบ
-- [คู่มือรูปหน้าและทรงผม](/th/blog/face-shape-hairstyle-guide) — หาทรงผมที่เหมาะกับรูปหน้า

@@ -6,8 +6,6 @@ tags: ["forma del viso", "acconciatura", "guida beauty", "capelli", "acconciatur
 image: "/images/blog/face-shape-hairstyle-guide.webp"
 ---
 
-![Guida alla forma del viso e acconciature](/images/blog/face-shape-hairstyle-guide.webp)
-
 ## Perché la forma del viso è importante nella scelta dell'acconciatura
 
 La forma del viso è la base per scegliere un'acconciatura valorizzante. Il taglio giusto può bilanciare le proporzioni, mettere in risalto i tuoi punti di forza e incorniciare il viso in modo armonioso. Il taglio sbagliato può invece enfatizzare ciò che preferiresti minimizzare.
@@ -172,4 +170,3 @@ Assolutamente sì. Le raccomandazioni sopra sono punti di partenza. La texture d
 - [Analisi del colore personale: 12 tipi spiegati](/it/blog/personal-color-analysis-guide) — Trova i tuoi colori migliori dopo aver identificato la forma del viso
 - [Tono freddo vs tono caldo: 5 test semplici](/it/blog/cool-tone-vs-warm-tone) — Determina il subtono per la scelta del colore dei capelli
 - [Ho un tono caldo o freddo?](/it/blog/how-to-determine-skin-undertone) — Guida per scegliere la temperatura giusta del colore dei capelli
-- [Fai il quiz sulla forma del viso](/it/tools/face-shape-quiz) — Analisi della forma del viso con IA

@@ -6,8 +6,6 @@ tags: ["test colorimétrique", "colorimétrie personnelle", "couleurs saisonniè
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"
 ---
 
-![Pourquoi les tests de colorimétrie se trompent](/images/blog/why-color-analysis-quizzes-are-wrong.webp)
-
 ## Le problème des tests de colorimétrie
 
 Vous faites un test et obtenez « Automne Chaud ». Vous en faites un autre et obtenez « Été Froid ». Un troisième vous dit que vous êtes « Hiver Vif ». Ça vous dit quelque chose ?
@@ -164,4 +162,3 @@ La beauté de la technologie moderne, c'est qu'obtenir une colorimétrie objecti
 
 ---
 
-*Toujours perplexe sur votre saison colorimétrique ? [Essayez notre outil d'analyse colorimétrique IA gratuit](/fr/tools/color-quiz) — il prend 30 secondes et ne vous demande pas de deviner votre propre sous-ton.*

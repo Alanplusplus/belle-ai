@@ -6,8 +6,6 @@ tags: ["脸型", "发型", "美妆指南", "发型推荐"]
 image: "/images/blog/face-shape-hairstyle-guide.webp"
 ---
 
-![脸型与发型指南](/images/blog/face-shape-hairstyle-guide.webp)
-
 ## 为什么脸型决定了发型选择？
 
 脸型是选择发型的基础。正确的发型能平衡面部比例、突出优势特征、完美修饰脸部轮廓。错误的发型则会放大你不想强调的特征。
@@ -117,4 +115,3 @@ image: "/images/blog/face-shape-hairstyle-guide.webp"
 3. 生成根据你独特特征量身定制的视觉化发型推荐
 4. 展示真实的发型预览效果
 
-结果是一份杂志级品质的报告，包含考虑了你具体脸型、比例和特征的个性化推荐。

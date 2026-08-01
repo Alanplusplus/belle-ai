@@ -6,8 +6,6 @@ tags: ["analyse colorimétrique", "science des couleurs", "théorie des couleurs
 image: "/images/blog/science-of-color-analysis.webp"
 ---
 
-![La science derrière l'analyse des couleurs personnelles](/images/blog/science-of-color-analysis.webp)
-
 ## Pourquoi Certaines Couleurs Vous Mettent en Valeur — et D'autres Non ?
 
 Vous l'avez probablement déjà vécu. Vous enfilez un haut corail et votre peau semble radieuse, vos yeux ressortent, et quelqu'un vous demande si vous venez de revenir de vacances. Puis vous enfilez un pull vert olive et soudain vous avez l'air épuisée — alors que vous avez dormi huit heures.
@@ -153,4 +151,3 @@ La prochaine fois que quelqu'un vous dira qu'une couleur « n'est pas votre tein
 - [Guide de colorimétrie personnelle : les 12 types saisonniers expliqués](/fr/blog/personal-color-analysis-guide) — Comprendre le système complet des 12 saisons
 - [Suis-je à sous-ton chaud ou froid ? Le guide définitif du sous-ton](/fr/blog/how-to-determine-skin-undertone) — Appliquer la science avec des tests pratiques de sous-ton
 - [Pourquoi les tests de colorimétrie en ligne se trompent](/fr/blog/why-color-analysis-quizzes-are-wrong) — Comprendre les limites de l'auto-évaluation
-- [IA vs Analyse de Colorimétrie Professionnelle : J'ai Testé les Deux](/fr/blog/ai-vs-professional-color-analysis) — Comment la technologie se compare au drapage traditionnel

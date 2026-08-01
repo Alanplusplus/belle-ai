@@ -6,8 +6,6 @@ tags: ["deep winter", "analisis warna personal", "palet warna", "panduan gaya", 
 image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
-![Palet Warna Deep Winter](/images/blog/deep-winter-color-palette.webp)
-
 ## Apa yang Membuat Seseorang Menjadi Deep Winter?
 
 Deep Winter berada di antara True Winter dan Dark Autumn pada roda warna. Ini adalah yang paling gelap dari tiga sub-musim Winter, dengan karakteristik penentu adalah **kedalaman** — rambut gelap, mata gelap, dan kulit sedang hingga gelap dengan undertone dingin atau netral-dingin.
@@ -171,4 +169,3 @@ Untuk hasil presisi tanpa tebakan, [analisis warna AI](/id/personal-color-analys
 - [Analisis Warna Personal: Semua 12 Tipe Dijelaskan](/id/blog/personal-color-analysis-guide) — Memahami posisi Deep Winter dalam sistem lengkap
 - [Warna Terbaik untuk Undertone Dingin](/id/blog/best-colors-for-cool-undertones) — Panduan warna dingin yang lebih luas
 - [Nada Dingin vs Nada Hangat: 5 Tes Mudah](/id/blog/cool-tone-vs-warm-tone) — Konfirmasi undertone Anda terlebih dahulu
-- [Cara Menentukan Undertone Kulit](/id/blog/how-to-determine-skin-undertone) — Panduan undertone langkah demi langkah

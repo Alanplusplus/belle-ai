@@ -6,8 +6,6 @@ tags: ["sous-ton froid", "peau froide", "palette de couleurs", "guide de style",
 image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
 
-![Les meilleures couleurs pour les sous-tons froids](/images/blog/best-colors-for-cool-undertones.webp)
-
 ## Votre palette de couleurs à sous-ton froid
 
 Si vous avez un sous-ton froid (peau avec des nuances rosées, rouges ou bleutées sous la surface), certaines couleurs vous feront absolument rayonner. Ce guide couvre tout, des neutres du quotidien aux couleurs audacieuses.
@@ -196,4 +194,3 @@ Si vous hésitez sur votre sous-ton exact ou votre type saisonnier, l'[analyse c
 - [Ton froid vs ton chaud : 5 tests faciles](/fr/blog/cool-tone-vs-warm-tone) — Confirmez si vous êtes vraiment à sous-ton froid
 - [Suis-je à sous-ton chaud ou froid ? 7 méthodes](/fr/blog/how-to-determine-skin-undertone) — Le guide définitif du sous-ton
 - [Colorimétrie personnelle : les 12 types expliqués](/fr/blog/personal-color-analysis-guide) — Comprendre tous les types saisonniers
-- [Faire le test colorimétrique gratuit](/fr/tools/color-quiz) — Test rapide pour estimer votre saison colorimétrique

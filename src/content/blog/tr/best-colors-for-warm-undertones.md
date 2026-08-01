@@ -6,8 +6,6 @@ tags: ["sıcak alt ton", "sıcak cilt", "renk paleti", "stil rehberi", "moda"]
 image: "/images/blog/best-colors-for-warm-undertones.webp"
 ---
 
-![Sıcak Alt Tonlar İçin En İyi Renkler](/images/blog/best-colors-for-warm-undertones.webp)
-
 ## Sıcak Alt Tonunuz Bir Süper Güç — Nasıl Kullanacağınızı Bilirseniz
 
 Yıllarca buz gibi pastel tonlar ve soğuk griler giydim çünkü bir mağaza testi bana "nötr renklerde harika görünüyorsun" demişti. Sıcak alt tonumu gerçekten anladığımda, bazı kombinlerin beni güneşten yeni çıkmış ve canlı gösterirken diğerlerinin öğleden önce yorgun göstermesinin nedenini anladım.
@@ -338,4 +336,3 @@ Sıcak alt tonunuzu anlamanın en güzel yanı? Alışveriş daha hızlı olur, 
 - [Soğuk Ton mu Sıcak Ton mu: 5 Kolay Test](/tr/blog/cool-tone-vs-warm-tone) — Gerçekten sıcak tonlu olup olmadığınızı doğrulayın
 - [Sıcak mı Soğuk mu Tonluyum? 7 Yöntem](/tr/blog/how-to-determine-skin-undertone) — Kesin alt ton rehberi
 - [Kişisel Renk Analizi: 12 Tip Açıklanıyor](/tr/blog/personal-color-analysis-guide) — 12 mevsimsel tipin tamamını anlayın
-- [Evde Renk Analizi Nasıl Yapılır](/tr/blog/how-to-do-color-analysis-at-home) — Adım adım DIY rehberi

@@ -6,8 +6,6 @@ tags: ["subtom quente", "tom de pele quente", "paleta de cores", "guia de estilo
 image: "/images/blog/best-colors-for-warm-undertones.webp"
 ---
 
-![Melhores Cores para Subtons Quentes](/images/blog/best-colors-for-warm-undertones.webp)
-
 ## Seu Subtom Quente É um Superpoder — Se Você Souber Usá-lo
 
 Passei anos usando pastéis gelados e cinzas frios porque um quiz de loja de departamento me disse que eu ficava "ótima em tudo neutro". Só quando finalmente entendi meu subtom quente percebi por que alguns looks me deixavam com aparência bronzeada e viva, enquanto outros me faziam parecer cansada antes do meio-dia.
@@ -338,4 +336,3 @@ A melhor parte de entender seu subtom quente? Compras ficam mais rápidas, seus 
 - [Tom Frio vs. Tom Quente: 5 Testes Fáceis](/pt/blog/cool-tone-vs-warm-tone) — Confirme se você é realmente de tom quente
 - [Sou de Tom Quente ou Frio? O Guia Definitivo de Subtom](/pt/blog/how-to-determine-skin-undertone) — O guia definitivo de subtom
 - [Guia de Análise de Coloração Pessoal: Os 12 Tipos Sazonais Explicados](/pt/blog/personal-color-analysis-guide) — Entenda todos os 12 tipos sazonais
-- [Como fazer análise de cores em casa](/pt/blog/how-to-do-color-analysis-at-home) — Guia DIY com instruções passo a passo

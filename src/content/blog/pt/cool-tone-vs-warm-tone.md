@@ -6,8 +6,6 @@ tags: ["subtom", "tom frio", "tom quente", "tom de pele", "análise de coloraç�
 image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
 
-![Tom Frio vs. Tom Quente](/images/blog/cool-tone-vs-warm-tone.webp)
-
 ## O Que É um Subtom?
 
 O subtom é a cor sutil que fica abaixo da superfície da pele. Diferente do tom superficial da pele (que pode mudar com exposição ao sol, vermelhidão etc.), o subtom permanece constante ao longo da vida.
@@ -135,4 +133,3 @@ A pele oliva tem um tom esverdeado que pode ser oliva quente ou oliva fria. O to
 - [Sou de Tom Quente ou Frio? 7 Métodos Comprovados](/pt/blog/how-to-determine-skin-undertone) — Um mergulho mais profundo na determinação do subtom
 - [Melhores Cores para Subtons Frios](/pt/blog/best-colors-for-cool-undertones) — Guia completo de estilo para pessoas de tom frio
 - [Análise de Coloração Pessoal: 12 Tipos Explicados](/pt/blog/personal-color-analysis-guide) — Vá além do subtom e descubra seu tipo sazonal completo
-- [Guia de Formato do Rosto e Penteados](/pt/blog/face-shape-hairstyle-guide) — Encontre o melhor penteado para o seu rosto

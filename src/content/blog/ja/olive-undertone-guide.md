@@ -6,8 +6,6 @@ tags: ["オリーブアンダートーン", "肌のアンダートーン", "パ�
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 
-![オリーブアンダートーン ガイド](/images/blog/olive-undertone-guide.webp)
-
 ## なぜ誰もオリーブアンダートーンを話題にしないのか
 
 ネット上のほぼすべてのビューティー記事が、肌のアンダートーンを3つにきれいに分類しています：ウォーム、クール、ニュートラル。手首の血管テストをして、ゴールドとシルバーのジュエリーどちらが似合うか確認すれば、それで終わり。
@@ -210,4 +208,3 @@ image: "/images/blog/olive-undertone-guide.webp"
 - [肌のアンダートーン判定 完全ガイド](/ja/blog/how-to-determine-skin-undertone) — 7つの方法による完全アンダートーンガイド
 - [クールトーン vs ウォームトーン：5つの簡単テスト](/ja/blog/cool-tone-vs-warm-tone) — クール・ウォームの基本比較
 - [クールトーンに最も似合うカラー](/ja/blog/best-colors-for-cool-undertones) — クールトーン肌専用ガイド
-- [ディープウィンター カラーパレットガイド](/ja/blog/deep-winter-color-palette-guide) — 関連するディープトーンシーズンガイド

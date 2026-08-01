@@ -6,8 +6,6 @@ tags: ["深冬型", "个人色彩分析", "色彩搭配", "穿搭指南", "四�
 image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
-![深冬型色彩搭配](/images/blog/deep-winter-color-palette.webp)
-
 ## 什么样的人是深冬型？
 
 深冬型（Deep Winter）位于纯冬型和暗秋型之间，是三个冬季亚型中最深的一个。其核心特征是**深度**——深色头发、深色眼睛，加上带有冷色或中性偏冷色底调的中等至深色皮肤。
@@ -126,4 +124,3 @@ image: "/images/blog/deep-winter-color-palette.webp"
 - [个人色彩分析指南：12种季型详解](/zh/blog/personal-color-analysis-guide)
 - [冷色调最佳颜色搭配](/zh/blog/best-colors-for-cool-undertones)
 - [冷暖色调对比：5个简单测试](/zh/blog/cool-tone-vs-warm-tone)
-- [如何判断你的皮肤底调](/zh/blog/how-to-determine-skin-undertone)

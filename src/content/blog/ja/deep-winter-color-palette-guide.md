@@ -6,8 +6,6 @@ tags: ["ディープウィンター", "パーソナルカラー分析", "カラ�
 image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
-![ディープウィンター カラーパレット](/images/blog/deep-winter-color-palette.webp)
-
 ## ディープウィンターとは？
 
 ディープウィンター（Deep Winter）は、トゥルーウィンターとダークオータムの間に位置し、3つのウィンターサブシーズンの中で最も深いシーズンです。核心的な特徴は**深さ（depth）**— 深い髪色、深い瞳の色、クールまたはニュートラルクールのアンダートーンを持つミディアム〜ダークな肌色です。
@@ -118,4 +116,3 @@ image: "/images/blog/deep-winter-color-palette.webp"
 ## 関連記事
 
 - [パーソナルカラー分析ガイド：12シーズンタイプ解説](/ja/blog/personal-color-analysis-guide)
-- [クールトーン vs ウォームトーン：5つの簡単テスト](/ja/blog/cool-tone-vs-warm-tone)

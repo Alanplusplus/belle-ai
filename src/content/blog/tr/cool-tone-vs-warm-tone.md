@@ -6,8 +6,6 @@ tags: ["alt ton", "soğuk ton", "sıcak ton", "cilt tonu", "renk analizi"]
 image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
 
-![Soğuk Ton mu Sıcak Ton mu](/images/blog/cool-tone-vs-warm-tone.webp)
-
 ## Alt Ton Nedir?
 
 Alt ton, cildinizin yüzeyinin altındaki ince renktir. Yüzey cilt tonunuzun (güneşe maruz kalma, kızarıklık vb. ile değişebilir) aksine alt tonunuz hayatınız boyunca sabit kalır.
@@ -135,4 +133,3 @@ Zeytin teni, sıcak-zeytin veya soğuk-zeytin olabilen yeşilimsi bir ton taşı
 - [Sıcak mı Soğuk mu Tonluyum? 7 Kanıtlanmış Yöntem](/tr/blog/how-to-determine-skin-undertone) — Alt ton belirlemenin derinlemesine incelemesi
 - [Soğuk Alt Tonlar İçin En İyi Renkler](/tr/blog/best-colors-for-cool-undertones) — Soğuk tonlu kişiler için kapsamlı stil rehberi
 - [Kişisel Renk Analizi: 12 Tip Açıklanıyor](/tr/blog/personal-color-analysis-guide) — Alt tonun ötesine geçerek tam mevsimsel tipinizi bulun
-- [Yüz Şekli ve Saç Modeli Rehberi](/tr/blog/face-shape-hairstyle-guide) — Yüz şeklinize en uygun saç modelini bulun

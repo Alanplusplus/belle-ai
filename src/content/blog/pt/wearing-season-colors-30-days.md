@@ -6,8 +6,6 @@ tags: ["análise de cores pessoal", "estação de cores", "estilo pessoal", "dic
 image: "/images/blog/wearing-season-colors-30-days.webp"
 ---
 
-![Usei apenas as cores da minha estação por 30 dias](/images/blog/wearing-season-colors-30-days.webp)
-
 ## O Desafio Que Mudou a Forma Como Eu Me Visto
 
 Tudo começou com uma crise no guarda-roupa. Era uma segunda-feira, 7h45, eu já estava atrasada, parada na frente do armário olhando para uma mistura caótica de cores que, de algum jeito, nunca combinavam. Calça preta com blusa mostarda? Duro demais. Suéter cinza com calça oliva? Parecia cansada antes mesmo do dia começar.
@@ -150,4 +148,3 @@ E ainda recebo elogios. Aqueles «você está ótima» que não são sobre uma p
 - Acessórios e maquiagem devem combinar com o subtom da sua paleta para harmonia completa
 - O medo de parecer «sem graça» com uma paleta só é infundado — consistência transmite estilo pessoal, não limitação
 
-Seu guarda-roupa não precisa de mais opções. Precisa das *opções certas*. E sua estação de cores é o guia mais confiável para encontrá-las.

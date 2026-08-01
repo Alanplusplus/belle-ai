@@ -6,8 +6,6 @@ tags: ["análise de cores", "cor de cabelo", "estação de cores", "beleza", "gu
 image: "/images/blog/best-hair-color-for-color-season.webp"
 ---
 
-![Como Encontrar a Melhor Cor de Cabelo Baseada na Sua Estação de Cores](/images/blog/best-hair-color-for-color-season.webp)
-
 ## Por Que a Sua Estação de Cores Importa na Escolha da Cor do Cabelo
 
 Há algo que a maioria das pessoas só percebe depois de uma coloração desastrosa: a sua coloração natural — subtom de pele, cor dos olhos e o contraste entre os seus traços — determina quais tons de cabelo vão deixá-la radiante e quais vão deixá-la opaca ou cansada.
@@ -298,4 +296,3 @@ O cabelo é o maior bloco de cor do rosto. Se acertar, tudo o resto — maquilha
 - [Guia de análise de cores pessoal: as 12 estações explicadas](/pt/blog/personal-color-analysis-guide)
 - [Como determinar o subtom da pele](/pt/blog/how-to-determine-skin-undertone)
 - [Tom frio vs. tom quente: 5 testes simples](/pt/blog/cool-tone-vs-warm-tone)
-- [As melhores cores para subtons frios](/pt/blog/best-colors-for-cool-undertones)

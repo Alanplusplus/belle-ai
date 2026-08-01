@@ -6,8 +6,6 @@ tags: ["phân tích màu cá nhân", "bảng màu mùa xuân", "mùa màu", "là
 image: "/images/blog/spring-color-palettes-decoded.webp"
 ---
 
-![Giải Mã Bảng Màu Mùa Xuân: Xuân Sáng Rõ vs Xuân Ấm vs Xuân Sáng](/images/blog/spring-color-palettes-decoded.webp)
-
 ## Bạn Biết Mình Thuộc Mùa Xuân — Nhưng Là Xuân Nào?
 
 Bạn đã làm phân tích màu và kết quả đã rõ: bạn thuộc Mùa Xuân. Tông nền da ấm, tổng thể tươi mới và sôi động, và bạn trông tuyệt vời trong những màu giống như một khu vườn đầy nắng.
@@ -203,4 +201,3 @@ Bất kể bạn thuộc kiểu phụ Xuân nào, những nguyên tắc sau đ�
 - Cả ba kiểu Xuân đều có sự ấm làm nền tảng — điểm phân biệt then chốt là mức tương phản và bão hòa màu sắc của bạn chịu được.
 - Khi không chắc, thử màu trên mặt dưới ánh sáng tự nhiên ban ngày. Phản ứng của da (rạng rỡ hay xỉn màu) sẽ nói lên tất cả.
 
-Tìm đúng kiểu phụ Xuân của bạn là ranh giới giữa trông "ổn" và trông như đang tỏa sáng từ bên trong. Một khi nắm được, mỗi chuyến mua sắm, mỗi buổi sáng chọn đồ và mỗi bức ảnh outfit đột nhiên đều có lý. Màu sắc không còn là thứ bạn phải suy nghĩ — mà là thứ bạn *biết* ngay.

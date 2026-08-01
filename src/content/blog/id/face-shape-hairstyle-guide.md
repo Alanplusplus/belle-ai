@@ -6,8 +6,6 @@ tags: ["bentuk wajah", "gaya rambut", "panduan kecantikan", "rambut", "gaya ramb
 image: "/images/blog/face-shape-hairstyle-guide.webp"
 ---
 
-![Panduan Bentuk Wajah & Gaya Rambut](/images/blog/face-shape-hairstyle-guide.webp)
-
 ## Mengapa Bentuk Wajah Penting dalam Memilih Gaya Rambut
 
 Bentuk wajah adalah fondasi untuk memilih gaya rambut yang mempesona. Potongan yang tepat dapat menyeimbangkan proporsi, menonjolkan fitur terbaik, dan membingkai wajah dengan indah. Potongan yang salah dapat menekankan fitur yang ingin Anda minimalkan.
@@ -172,4 +170,3 @@ Tentu saja. Rekomendasi di atas adalah titik awal. Tekstur rambut (halus, tebal,
 - [Analisis Warna Personal: 12 Tipe Dijelaskan](/id/blog/personal-color-analysis-guide) — Temukan warna terbaik setelah menemukan bentuk wajah
 - [Nada Dingin vs Nada Hangat: 5 Tes Mudah](/id/blog/cool-tone-vs-warm-tone) — Tentukan undertone untuk pilihan warna rambut
 - [Apakah Saya Nada Hangat atau Dingin?](/id/blog/how-to-determine-skin-undertone) — Panduan memilih suhu warna rambut yang tepat
-- [Ikuti Kuis Bentuk Wajah](/id/tools/face-shape-quiz) — Analisis bentuk wajah berbasis AI

@@ -6,8 +6,6 @@ tags: ["โทนผิวใต้", "อุ่นหรือเย็น", "�
 image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
 
-![วิธีหาโทนผิวใต้](/images/blog/how-to-determine-skin-undertone.webp)
-
 ## คำตอบด่วน
 
 ถ้าต้องการผลเร็ว: มองเส้นเลือดที่ข้อมือภายใต้แสงธรรมชาติ น้ำเงิน/ม่วง = เย็น เขียว = อุ่น ผสมทั้งสอง = กลาง แต่เพื่อความแม่นยำ ควรใช้หลายวิธี — ซึ่งคู่มือนี้ครอบคลุมครบ
@@ -147,4 +145,3 @@ image: "/images/blog/how-to-determine-skin-undertone.webp"
 - [โทนเย็น vs โทนอุ่น: 5 วิธีทดสอบง่ายๆ](/th/blog/cool-tone-vs-warm-tone) — ทดสอบเร็วเพื่อยืนยันโทนผิวใต้
 - [สีที่เหมาะกับโทนผิวเย็น](/th/blog/best-colors-for-cool-undertones) — คู่มือสไตล์ครบถ้าคุณเป็นโทนเย็น
 - [Personal Color Analysis: อธิบาย 12 ประเภท](/th/blog/personal-color-analysis-guide) — เข้าใจระบบสีตามฤดูกาลครบวงจร
-- [คู่มือรูปหน้าและทรงผม](/th/blog/face-shape-hairstyle-guide) — หาทรงผมที่สมบูรณ์แบบสำหรับรูปหน้าคุณ

@@ -6,8 +6,6 @@ tags: ["analyse de couleurs", "couleur de cheveux", "saison de couleurs", "beaut
 image: "/images/blog/best-hair-color-for-color-season.webp"
 ---
 
-![Comment Trouver la Meilleure Couleur de Cheveux Selon Votre Saison de Couleurs](/images/blog/best-hair-color-for-color-season.webp)
-
 ## Pourquoi Votre Saison de Couleurs Compte pour le Choix de la Coloration
 
 Voici quelque chose que beaucoup de personnes ne réalisent qu'après une coloration ratée : votre coloration naturelle — le sous-ton de votre peau, la couleur de vos yeux et le contraste entre vos traits — détermine quelles teintes de cheveux vous feront paraître éclatante et lesquelles vous donneront l'air fatiguée ou terne.
@@ -298,4 +296,3 @@ Vos cheveux sont le plus grand bloc de couleur de votre visage. Faites le bon ch
 - [Colorimétrie personnelle : les 12 types expliqués](/fr/blog/personal-color-analysis-guide)
 - [Comment déterminer le sous-ton de votre peau](/fr/blog/how-to-determine-skin-undertone)
 - [Ton froid vs ton chaud : 5 tests faciles](/fr/blog/cool-tone-vs-warm-tone)
-- [Les meilleures couleurs pour les sous-tons froids](/fr/blog/best-colors-for-cool-undertones)

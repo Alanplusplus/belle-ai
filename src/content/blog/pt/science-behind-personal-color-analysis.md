@@ -6,8 +6,6 @@ tags: ["análise de coloração pessoal", "ciência das cores", "teoria das core
 image: "/images/blog/science-of-color-analysis.webp"
 ---
 
-![A ciência por trás da análise de coloração pessoal](/images/blog/science-of-color-analysis.webp)
-
 ## Por Que Algumas Cores Fazem Você Parecer Incrível — e Outras Não?
 
 Você provavelmente já passou por isso. Experimenta uma blusa coral e sua pele fica radiante, seus olhos se destacam e alguém pergunta se você estava de férias. Depois veste um suéter verde-oliva e de repente você parece exausta — mesmo tendo dormido oito horas.
@@ -153,4 +151,3 @@ Da próxima vez que alguém disser que uma cor «não é sua tonalidade», lembr
 - [Guia de Análise de Coloração Pessoal: Os 12 Tipos Sazonais Explicados](/pt/blog/personal-color-analysis-guide) — Entenda o sistema completo das 12 estações
 - [Sou de Tom Quente ou Frio? O Guia Definitivo de Subtom](/pt/blog/how-to-determine-skin-undertone) — Aplique a ciência com testes práticos de subtom
 - [Por Que os Quizzes de Análise de Coloração Erram](/pt/blog/why-color-analysis-quizzes-are-wrong) — Entenda as limitações da autoavaliação
-- [IA vs Coloração Pessoal Profissional: Testei Ambos](/pt/blog/ai-vs-professional-color-analysis) — Como a tecnologia se compara ao draping tradicional

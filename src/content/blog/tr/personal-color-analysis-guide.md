@@ -6,8 +6,6 @@ tags: ["kişisel renk analizi", "mevsimsel renk", "renk teorisi", "güzellik reh
 image: "/images/blog/personal-color-analysis-guide.webp"
 ---
 
-![Kişisel Renk Analizi Rehberi](/images/blog/personal-color-analysis-guide.webp)
-
 ## Kişisel Renk Analizi Nedir?
 
 Kişisel renk analizi (mevsimsel renk analizi veya renk tipi belirleme olarak da bilinir), doğal görünümünüze — cilt tonunuz, alt tonunuz, saç renginiz ve göz renginiz — göre hangi renklerin size en uyumlu ve en çok yakıştığını belirleme yöntemidir.
@@ -158,4 +156,3 @@ Renk uyumu teorisi renk bilimine dayanır ve yüzyıllardır sanat ve tasarımda
 - [Sıcak mı Soğuk mu Tonluyum? 7 Yöntem](/tr/blog/how-to-determine-skin-undertone) — Ayrıntılı alt ton belirleme rehberi
 - [Soğuk Alt Tonlar İçin En İyi Renkler](/tr/blog/best-colors-for-cool-undertones) — Soğuk tipler için stil rehberi
 - [Yüz Şekli ve Saç Modeli Rehberi](/tr/blog/face-shape-hairstyle-guide) — Renk analizinizi yüz şekli önerileriyle tamamlayın
-- [Ücretsiz Renk Testine Katılın](/tr/tools/color-quiz) — 2 dakikada mevsimsel tipinizi öğrenin

@@ -6,8 +6,6 @@ tags: ["analisis warna personal", "palet musim panas", "musim warna", "kecantika
 image: "/images/blog/summer-color-palettes-decoded.webp"
 ---
 
-![Palet Warna Musim Panas: Cool Summer vs True Summer vs Soft Summer](/images/blog/summer-color-palettes-decoded.webp)
-
 ## Anda Summer — Tapi Yang Mana?
 
 Hasil analisis warna mengkonfirmasi: Anda tipe Summer. Kulit Anda memiliki undertone dingin, fitur wajah lembut, dan warna-warna yang mengingatkan pagi berkabut di tepi laut terlihat luar biasa pada Anda.
@@ -97,4 +95,3 @@ Alat seperti [analisis warna AI](https://aicoloranalysis.io/id) menggunakan comp
 
 - **Cool Summer:** Paling intens di antara Summer. Bisa memakai warna lebih dalam dan dingin. Berbatasan dengan Winter.
 - **True Summer:** Pusat yang seimbang. Kedalaman sedang, jelas dingin, lembut muted.
-- **Soft Summer:** Paling muted dari 12 musim. Ultra-lembut, dingin-netral, warna berbisik.

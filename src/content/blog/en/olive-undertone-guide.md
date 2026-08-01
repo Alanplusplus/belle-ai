@@ -6,8 +6,6 @@ tags: ["olive undertone", "skin undertone", "personal color analysis", "beauty",
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 
-![Olive Undertone Guide](/images/blog/olive-undertone-guide.webp)
-
 ## Why Nobody Talks About Olive Undertones
 
 Every beauty article on the internet breaks skin undertones into three neat categories: warm, cool, or neutral. You take the vein test, check if gold or silver jewelry looks better, and you're done.
@@ -211,4 +209,3 @@ Understanding your olive undertone is genuinely liberating. Once you stop trying
 - [How to Determine Your Skin Undertone](/en/blog/how-to-determine-skin-undertone) — The full undertone guide with 7 testing methods
 - [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Compare cool and warm basics
 - [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Specifically for cool-toned skin
-- [Deep Winter Color Palette Guide](/en/blog/deep-winter-color-palette-guide) — A related deep-toned seasonal guide

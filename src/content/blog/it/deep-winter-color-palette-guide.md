@@ -6,8 +6,6 @@ tags: ["inverno profondo", "analisi del colore personale", "palette cromatica", 
 image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
-![Palette Inverno Profondo](/images/blog/deep-winter-color-palette.webp)
-
 ## Cosa caratterizza l'Inverno Profondo?
 
 L'Inverno Profondo si colloca tra l'Inverno Vero e l'Autunno Scuro sulla ruota dei colori. È il più scuro dei tre sottotipi Inverno, con la caratteristica definente che è la **profondità** — capelli scuri, occhi intensi e pelle media-scura con subtoni freddi o neutro-freddi.
@@ -171,4 +169,3 @@ Per risultati precisi senza incertezze, l'[analisi cromatica con IA](/it/persona
 - [Analisi del colore personale: tutti i 12 tipi spiegati](/it/blog/personal-color-analysis-guide) — Comprendi dove si colloca l'Inverno Profondo nel sistema completo
 - [I migliori colori per subtoni freddi](/it/blog/best-colors-for-cool-undertones) — Guida cromatica più ampia per toni freddi
 - [Tono freddo vs tono caldo: 5 test semplici](/it/blog/cool-tone-vs-warm-tone) — Conferma prima il subtono
-- [Come determinare il subtono della pelle](/it/blog/how-to-determine-skin-undertone) — Guida passo passo al subtono

@@ -6,8 +6,6 @@ tags: ["subtono", "caldo o freddo", "tono della pelle", "analisi cromatica", "co
 image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
 
-![Come determinare il subtono della pelle](/images/blog/how-to-determine-skin-undertone.webp)
-
 ## La risposta rapida
 
 Se vuoi un risultato veloce: osserva le vene del polso alla luce naturale del giorno. Blu/viola = freddo. Verde = caldo. Mix di entrambi = neutro. Ma per maggiore precisione dovresti usare più metodi — ed è esattamente ciò che copre questa guida.
@@ -147,4 +145,3 @@ Per un'analisi completa, prova la funzione di [analisi del colore personale di B
 - [Tono freddo vs tono caldo: 5 test semplici](/it/blog/cool-tone-vs-warm-tone) — Test rapidi per confermare il subtono
 - [I migliori colori per subtoni freddi](/it/blog/best-colors-for-cool-undertones) — Guida di stile completa se hai un tono freddo
 - [Analisi del colore personale: 12 tipi spiegati](/it/blog/personal-color-analysis-guide) — Comprendi il sistema cromatico stagionale completo
-- [Guida alla forma del viso e acconciature](/it/blog/face-shape-hairstyle-guide) — Trova l'acconciatura perfetta per il tuo viso

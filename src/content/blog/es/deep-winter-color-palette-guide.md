@@ -6,8 +6,6 @@ tags: ["invierno profundo", "análisis de color personal", "paleta de colores", 
 image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
-![Paleta de colores Invierno Profundo](/images/blog/deep-winter-color-palette.webp)
-
 ## ¿Qué hace que alguien sea Invierno Profundo?
 
 Invierno Profundo se sitúa entre Invierno Verdadero y Otoño Oscuro en la rueda cromática. Es el más oscuro de los tres subtipos de Invierno, y su característica definitoria es la **profundidad**: pelo oscuro, ojos oscuros y piel de tono medio a profundo con subtonos fríos o neutro-fríos.
@@ -171,4 +169,3 @@ Para resultados precisos sin adivinar, el [análisis de color con IA](/es/person
 - [Análisis de color personal: los 12 tipos explicados](/es/blog/personal-color-analysis-guide) — Comprende dónde encaja Invierno Profundo en el sistema completo
 - [Los mejores colores para subtonos fríos](/es/blog/best-colors-for-cool-undertones) — Guía de colores más amplia para tono frío
 - [Tono frío vs. tono cálido: 5 pruebas sencillas](/es/blog/cool-tone-vs-warm-tone) — Confirma primero tu subtono
-- [Cómo determinar el subtono de tu piel](/es/blog/how-to-determine-skin-undertone) — Guía paso a paso del subtono

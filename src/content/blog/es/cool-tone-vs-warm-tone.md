@@ -6,8 +6,6 @@ tags: ["subtono", "tono frío", "tono cálido", "tono de piel", "análisis de co
 image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
 
-![Tono frío vs. tono cálido](/images/blog/cool-tone-vs-warm-tone.webp)
-
 ## ¿Qué es un subtono?
 
 El subtono es el color sutil que se encuentra bajo la superficie de tu piel. A diferencia del tono superficial de la piel (que puede cambiar con la exposición al sol, el enrojecimiento, etc.), el subtono permanece constante a lo largo de toda la vida.
@@ -135,4 +133,3 @@ La piel oliva tiene un matiz verdoso que puede ser oliva cálida u oliva fría. 
 - [¿Tengo tono cálido o frío? 7 métodos probados](/es/blog/how-to-determine-skin-undertone) — Una inmersión más profunda en la determinación del subtono
 - [Los mejores colores para subtonos fríos](/es/blog/best-colors-for-cool-undertones) — Guía de estilo completa para personas de tono frío
 - [Análisis de color personal: los 12 tipos explicados](/es/blog/personal-color-analysis-guide) — Ve más allá del subtono para encontrar tu tipo estacional completo
-- [Guía de forma del rostro y peinados](/es/blog/face-shape-hairstyle-guide) — Encuentra el mejor peinado para tu forma de rostro

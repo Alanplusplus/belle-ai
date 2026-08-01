@@ -6,8 +6,6 @@ tags: ["red lipstick", "skin undertone", "makeup tips", "color analysis", "beaut
 image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
 ---
 
-![How to Find the Perfect Red Lipstick for Your Skin Tone](/images/blog/perfect-red-lipstick-skin-tone.webp)
-
 ## The One Makeup Rule Everyone Gets Wrong
 
 I've lost count of how many red lipsticks I've bought, worn once, and shoved to the back of a drawer. Classic red? Too harsh. Coral? Washed me out. Berry? Made my teeth look yellow. For years I thought I just "couldn't pull off red lipstick."
@@ -170,4 +168,3 @@ I ran my own selfie through an AI color analysis tool and confirmed I was a Soft
 - **Olive undertones need muted, deeper reds** — not bright or pastel shades.
 - **Swatch on your inner wrist or lips, not your hand.** And always check in natural light.
 
-Finding your perfect red lipstick isn't about luck or having "the right face for it." It's about understanding one simple thing — the temperature of your skin — and matching it to the temperature of your lipstick. Once those align, you'll wonder why you ever struggled.

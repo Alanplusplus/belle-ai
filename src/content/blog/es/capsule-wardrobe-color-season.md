@@ -6,8 +6,6 @@ tags: ["armario cápsula", "análisis de color personal", "estación de color", 
 image: "/images/blog/capsule-wardrobe-color-season.webp"
 ---
 
-![Cómo Crear un Armario Cápsula Según tu Estación de Color](/images/blog/capsule-wardrobe-color-season.webp)
-
 ## Ya Conoces tu Estación de Color — ¿Y Ahora Qué?
 
 Así que descubriste que eres Otoño Suave o Primavera Brillante. Quizás usaste una herramienta de análisis de color con IA, o quizás te pusiste telas de colores frente al espejo durante dos horas. De cualquier manera, tienes una respuesta.
@@ -195,4 +193,3 @@ Herramientas gratuitas como [aicoloranalysis.io](https://aicoloranalysis.io/es) 
 - Construye gradualmente en 6+ meses en lugar de renovar todo de una vez
 - Usa análisis de color con IA para identificar rápidamente tu estación y comenzar con confianza
 
-Tu estación de color no es solo trivia — es el filtro de compras más poderoso que jamás tendrás. Una vez que internalices tu paleta, vestirte se convierte en la parte más fácil de tu mañana.

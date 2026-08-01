@@ -6,8 +6,6 @@ tags: ["analisis warna pribadi", "palet warna spring", "color season", "kecantik
 image: "/images/blog/spring-color-palettes-decoded.webp"
 ---
 
-![Palet Warna Spring Dijelaskan: Bright Spring vs True Spring vs Light Spring](/images/blog/spring-color-palettes-decoded.webp)
-
 ## Kamu Tahu Kamu Spring — Tapi Spring yang Mana?
 
 Jadi kamu sudah analisis warna dan hasilnya jelas: kamu **Spring**. Undertone-mu hangat, vibe keseluruhanmu segar dan ceria, dan kamu terlihat luar biasa dengan warna yang terasa seperti taman yang cerah di musim semi.
@@ -203,4 +201,3 @@ Apapun sub-season Spring-mu, prinsip ini berlaku:
 - Ketiga tipe Spring berbagi kehangatan sebagai fondasi — pembeda kuncinya adalah seberapa banyak kontras dan saturasi yang coloring-mu bisa handle.
 - Kalau ragu, tes warna di wajah di cahaya siang alami. Reaksi kulit (glowing vs. washed out) memberitahu semuanya.
 
-Menemukan sub-season Spring tepat adalah perbedaan antara terlihat "cukup" dan terlihat seperti bersinar dari dalam. Setelah kamu dapat, setiap belanja, setiap pagi berpakaian, dan setiap foto outfit tiba-tiba masuk akal. Warna-mu berhenti jadi sesuatu yang kamu pikirkan dan mulai jadi sesuatu yang kamu *tahu*.

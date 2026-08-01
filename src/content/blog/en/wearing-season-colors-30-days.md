@@ -6,8 +6,6 @@ tags: ["personal color analysis", "color season", "personal style", "fashion tip
 image: "/images/blog/wearing-season-colors-30-days.webp"
 ---
 
-![I Wore Only My Season Colors for 30 Days](/images/blog/wearing-season-colors-30-days.webp)
-
 ## The Challenge That Changed How I Get Dressed
 
 It started with a closet crisis. I was standing in front of my wardrobe at 7:45 AM on a Monday, already running late, staring at a chaotic mix of colors that somehow never seemed to work together. Black pants with a mustard top? Too harsh. A gray sweater with olive trousers? I looked tired before the day even started.
@@ -150,4 +148,3 @@ And I still get the compliments. The "you look great" ones that aren't about a s
 - Accessories and makeup should match your palette's undertone for full harmony
 - The fear of looking "boring" in one palette is unfounded — consistency reads as personal style, not limitation
 
-Your closet doesn't need more options. It needs the *right* options. And your color season is the most reliable guide to finding them.

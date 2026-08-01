@@ -6,8 +6,6 @@ tags: ["phân tích màu cá nhân", "khoa học màu sắc", "lý thuyết màu
 image: "/images/blog/science-of-color-analysis.webp"
 ---
 
-![Khoa Học Đằng Sau Phân Tích Màu Sắc Cá Nhân](/images/blog/science-of-color-analysis.webp)
-
 ## Tại Sao Một Số Màu Khiến Bạn Trông Tuyệt Vời — Còn Màu Khác Thì Không?
 
 Bạn chắc hẳn đã từng trải qua điều này. Thử một chiếc áo màu san hô và da bạn trông rạng rỡ, đôi mắt sáng hơn, ai đó hỏi bạn vừa đi nghỉ mát về. Rồi bạn mặc chiếc áo len xanh olive và đột nhiên trông mệt mỏi — dù đã ngủ đủ tám tiếng.
@@ -153,4 +151,3 @@ Lần tới ai đó nói một màu "không phải sắc thái của bạn," hã
 - [Hướng Dẫn Phân Tích Màu Cá Nhân: Giải Thích Đầy Đủ 12 Kiểu Theo Mùa (Kèm Bài Quiz Miễn Phí)](/vi/blog/personal-color-analysis-guide) — Hiểu đầy đủ hệ thống 12 mùa
 - [Tôi Thuộc Tông Ấm Hay Lạnh? Hướng Dẫn Tông Nền Toàn Diện (2026)](/vi/blog/how-to-determine-skin-undertone) — Áp dụng khoa học với bài test tông nền thực tế
 - [Tại Sao Bài Quiz Phân Tích Màu Trực Tuyến Thường Sai (Và Nên Làm Gì Thay Thế)](/vi/blog/why-color-analysis-quizzes-are-wrong) — Hiểu hạn chế của tự đánh giá
-- [AI vs Phân Tích Màu Sắc Chuyên Nghiệp: Tôi Đã Thử Cả Hai — Đây Là So Sánh Thật Lòng](/vi/blog/ai-vs-professional-color-analysis) — Công nghệ so với draping truyền thống

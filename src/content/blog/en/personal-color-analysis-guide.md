@@ -6,8 +6,6 @@ tags: ["personal color analysis", "seasonal color", "color theory", "beauty guid
 image: "/images/blog/personal-color-analysis-guide.webp"
 ---
 
-![Personal Color Analysis Guide](/images/blog/personal-color-analysis-guide.webp)
-
 ## What Is Personal Color Analysis?
 
 Personal color analysis (also known as seasonal color analysis or color typing) is a method of determining which colors look most harmonious and flattering on you based on your natural coloring — your skin tone, undertone, hair color, and eye color.
@@ -158,4 +156,3 @@ Color harmony theory has roots in color science and has been used in art and des
 - [Am I Warm or Cool Toned? 7 Methods](/en/blog/how-to-determine-skin-undertone) — Detailed undertone determination guide
 - [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Style guide for cool types
 - [Face Shape & Hairstyle Guide](/en/blog/face-shape-hairstyle-guide) — Pair your color analysis with face shape advice
-- [Take the Free Color Quiz](/en/tools/color-quiz) — Get your seasonal type in 2 minutes

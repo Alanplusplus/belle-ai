@@ -6,8 +6,6 @@ tags: ["subtono cálido", "piel cálida", "paleta de colores", "guía de estilo"
 image: "/images/blog/best-colors-for-warm-undertones.webp"
 ---
 
-![Los mejores colores para subtonos cálidos](/images/blog/best-colors-for-warm-undertones.webp)
-
 ## Tu subtono cálido es un superpoder — si sabes cómo usarlo
 
 Pasé años vistiendo pasteles helados y grises fríos porque un test de una tienda me dijo que me quedaba "genial con todo lo neutro". No fue hasta que entendí mi subtono cálido que me di cuenta de por qué algunos conjuntos me hacían ver bronceada y llena de vida, mientras que otros me hacían parecer cansada antes del mediodía.
@@ -338,4 +336,3 @@ El [análisis de color con IA](/es/personal-color-analysis) elimina la subjetivi
 - [Tono frío vs. tono cálido: 5 pruebas sencillas para descubrir tu subtono (con fotos)](/es/blog/cool-tone-vs-warm-tone) — Confirma si realmente tienes subtono cálido
 - [¿Tengo tono cálido o frío? La guía definitiva del subtono (2026)](/es/blog/how-to-determine-skin-undertone) — La guía definitiva del subtono
 - [Guía de análisis de color personal: los 12 tipos estacionales explicados (con test gratuito)](/es/blog/personal-color-analysis-guide) — Entiende los 12 tipos estacionales
-- [Cómo hacer análisis de color en casa: Guía DIY (sin estilista)](/es/blog/how-to-do-color-analysis-at-home) — Guía DIY paso a paso

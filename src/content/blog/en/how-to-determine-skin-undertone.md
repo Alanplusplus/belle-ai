@@ -6,8 +6,6 @@ tags: ["undertone", "warm or cool", "skin tone", "color analysis", "beauty tips"
 image: "/images/blog/how-to-determine-skin-undertone.webp"
 ---
 
-![How to Determine Skin Undertone](/images/blog/how-to-determine-skin-undertone.webp)
-
 ## The Quick Answer
 
 If you want a fast result: look at your wrist veins in natural daylight. Blue/purple = cool. Green = warm. Mix of both = neutral. But for accuracy, you should use multiple methods — which is exactly what this guide covers.
@@ -147,4 +145,3 @@ For a complete analysis, try [Belle AI's personal color analysis](/en/personal-c
 - [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Quick tests to confirm your undertone
 - [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Complete style guide if you're cool-toned
 - [Personal Color Analysis: 12 Types Explained](/en/blog/personal-color-analysis-guide) — Understand the full seasonal color system
-- [Face Shape & Hairstyle Guide](/en/blog/face-shape-hairstyle-guide) — Find the perfect hairstyle for your face

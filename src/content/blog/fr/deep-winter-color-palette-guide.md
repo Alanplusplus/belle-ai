@@ -6,8 +6,6 @@ tags: ["hiver profond", "colorimétrie personnelle", "palette de couleurs", "gui
 image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
-![Palette Hiver Profond](/images/blog/deep-winter-color-palette.webp)
-
 ## Qu'est-ce qui fait de quelqu'un un Hiver Profond ?
 
 Hiver Profond se situe entre Hiver Vrai et Automne Profond sur la roue chromatique. C'est le plus foncé des trois sous-saisons Hiver, la caractéristique définissante étant la **profondeur** — cheveux foncés, yeux foncés, et peau moyenne à foncée avec des sous-tons froids ou neutre-froids.
@@ -171,4 +169,3 @@ Pour des résultats précis sans approximations, l'[analyse colorimétrique par 
 - [Colorimétrie personnelle : les 12 types expliqués](/fr/blog/personal-color-analysis-guide) — Comprendre où Hiver Profond s'inscrit dans le système complet
 - [Les meilleures couleurs pour les sous-tons froids](/fr/blog/best-colors-for-cool-undertones) — Guide colorimétrique plus large pour les sous-tons froids
 - [Ton froid vs ton chaud : 5 tests faciles](/fr/blog/cool-tone-vs-warm-tone) — Confirmez d'abord votre sous-ton
-- [Comment déterminer le sous-ton de votre peau](/fr/blog/how-to-determine-skin-undertone) — Guide du sous-ton étape par étape

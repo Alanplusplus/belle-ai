@@ -6,8 +6,6 @@ tags: ["วิเคราะห์สีส่วนบุคคล", "พา�
 image: "/images/blog/summer-color-palettes-decoded.webp"
 ---
 
-![พาเลทสีซัมเมอร์: Cool Summer vs True Summer vs Soft Summer](/images/blog/summer-color-palettes-decoded.webp)
-
 ## คุณเป็นซัมเมอร์ — แต่ซัมเมอร์ไหน?
 
 ผลวิเคราะห์สียืนยันว่าคุณเป็นโทนซัมเมอร์ ผิวมีอันเดอร์โทนเย็น หน้าตามีความนุ่มนวล และสีที่ให้ความรู้สึกเหมือนเช้าวันมีหมอกริมทะเลนั้นเข้ากับคุณมาก
@@ -97,4 +95,3 @@ image: "/images/blog/summer-color-palettes-decoded.webp"
 
 - **Cool Summer:** เข้มที่สุดในซัมเมอร์ ใส่สีลึกเย็นได้ ติดวินเทอร์
 - **True Summer:** ศูนย์กลางสมดุล ลึกปานกลาง เย็นชัดเจน อ่อน muted
-- **Soft Summer:** muted ที่สุดใน 12 ซีซั่น อัลตร้าเจนเทิล คูลนิวทรัล สีกระซิบ

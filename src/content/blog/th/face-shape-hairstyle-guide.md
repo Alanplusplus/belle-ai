@@ -6,8 +6,6 @@ tags: ["รูปหน้า", "ทรงผม", "คู่มือควา�
 image: "/images/blog/face-shape-hairstyle-guide.webp"
 ---
 
-![คู่มือรูปหน้าและทรงผม](/images/blog/face-shape-hairstyle-guide.webp)
-
 ## ทำไมรูปหน้าถึงสำคัญต่อการเลือกทรงผม
 
 รูปหน้าเป็นรากฐานในการเลือกทรงผมที่ทำให้ดูดี ทรงที่เหมาะจะสมดุลสัดส่วน เน้นจุดเด่น และกรอบใบหน้าได้สวยงาม ทรงที่ไม่เหมาะอาจเน้นส่วนที่คุณอยากลดลง
@@ -172,4 +170,3 @@ image: "/images/blog/face-shape-hairstyle-guide.webp"
 - [Personal Color Analysis: อธิบาย 12 ประเภท](/th/blog/personal-color-analysis-guide) — หาสีที่ดีที่สุดหลังรู้รูปหน้า
 - [โทนเย็น vs โทนอุ่น: 5 วิธีทดสอบง่ายๆ](/th/blog/cool-tone-vs-warm-tone) — หาโทนผิวใต้สำหรับเลือกสีผม
 - [ฉันโทนอุ่นหรือเย็น?](/th/blog/how-to-determine-skin-undertone) — คู่มือเลือกอุณหภูมิสีผมที่ถูกต้อง
-- [ทำแบบทดสอบรูปหน้า](/th/tools/face-shape-quiz) — วิเคราะห์รูปหน้าด้วย AI

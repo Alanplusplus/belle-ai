@@ -6,8 +6,6 @@ tags: ["undertone olive", "undertone kulit", "analisis warna personal", "kecanti
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 
-![Panduan Undertone Olive](/images/blog/olive-undertone-guide.webp)
-
 ## Mengapa Tidak Ada yang Membahas Undertone Olive
 
 Setiap artikel kecantikan di internet membagi undertone kulit menjadi tiga kategori rapi: hangat, dingin, atau netral. Anda ikut tes urat, periksa apakah perhiasan emas atau perak terlihat lebih baik, dan selesai.
@@ -211,4 +209,3 @@ Memahami undertone olive benar-benar membebaskan. Setelah berhenti memaksa diri 
 - [Cara Menentukan Undertone Kulit](/id/blog/how-to-determine-skin-undertone) — Panduan undertone lengkap dengan 7 metode pengujian
 - [Nada Dingin vs Nada Hangat: 5 Tes Mudah](/id/blog/cool-tone-vs-warm-tone) — Bandingkan dasar dingin dan hangat
 - [Warna Terbaik untuk Undertone Dingin](/id/blog/best-colors-for-cool-undertones) — Khusus untuk kulit bernada dingin
-- [Panduan Palet Warna Deep Winter](/id/blog/deep-winter-color-palette-guide) — Panduan musiman bernada dalam terkait

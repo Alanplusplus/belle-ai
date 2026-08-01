@@ -4,6 +4,8 @@ import crypto from "crypto";
 const WEBHOOK_SECRET = process.env.CREEM_WEBHOOK_SECRET!;
 const API_BASE = process.env.BELLE_API_BASE || "https://api.chibistyle.app";
 const API_TOKEN = process.env.BELLE_API_TOKEN!;
+const FEISHU_WEBHOOK_URL =
+  "https://open.feishu.cn/open-apis/bot/v2/hook/f979ba3d-4f75-418b-aef6-6b00c8de64e7";
 
 function verifySignature(payload: string, signature: string): boolean {
   const expected = crypto
@@ -70,6 +72,52 @@ async function callBackend(path: string, body: unknown) {
     body: JSON.stringify(body),
   });
   return res.json();
+}
+
+const EVENT_LABELS: Record<string, string> = {
+  "checkout.completed": "💰 购买完成",
+  "subscription.active": "✅ 订阅激活",
+  "subscription.trialing": "🆓 试用开始",
+  "subscription.paid": "💳 续费成功",
+  "subscription.canceled": "❌ 订阅取消",
+  "subscription.expired": "⏰ 订阅过期",
+  "subscription.past_due": "⚠️ 付款逾期",
+  "subscription.scheduled_cancel": "📅 计划取消",
+};
+
+async function notifyFeishu(event: WebhookEvent) {
+  const label = EVENT_LABELS[event.eventType] || event.eventType;
+  const user = event.object.customer;
+  const product = event.object.product;
+  const userId =
+    event.object.request_id ||
+    event.object.metadata?.referenceId ||
+    event.object.metadata?.google_user_id ||
+    "unknown";
+
+  const lines = [
+    `${label}`,
+    `用户: ${user?.name || "N/A"} (${user?.email || "N/A"})`,
+    `ID: ${userId}`,
+  ];
+  if (product) {
+    lines.push(`产品: ${product.name} (${product.billing_type}/${product.billing_period})`);
+  }
+  lines.push(`订单: ${event.object.order?.id || event.object.id}`);
+  lines.push(`时间: ${new Date(event.created_at * 1000).toISOString()}`);
+
+  try {
+    await fetch(FEISHU_WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        msg_type: "text",
+        content: { text: lines.join("\n") },
+      }),
+    });
+  } catch (e) {
+    console.error("Feishu notify failed:", e);
+  }
 }
 
 function extractGoogleUserId(event: WebhookEvent): string | null {
@@ -183,6 +231,8 @@ export async function POST(req: NextRequest) {
         break;
       }
     }
+
+    await notifyFeishu(event);
 
     return NextResponse.json({ received: true });
   } catch (err) {

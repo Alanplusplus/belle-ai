@@ -6,8 +6,6 @@ tags: ["โทนผิวเย็น", "ผิวโทนเย็น", "พ�
 image: "/images/blog/best-colors-for-cool-undertones.webp"
 ---
 
-![สีที่เหมาะกับโทนผิวเย็น](/images/blog/best-colors-for-cool-undertones.webp)
-
 ## พาเลตสีสำหรับโทนผิวเย็น
 
 ถ้าคุณมีโทนผิวเย็น (ผิวที่มีโทนชมพู แดง หรือน้ำเงินอ่อนใต้ผิว) สีบางเฉดจะทำให้คุณเปล่งประกายอย่างเห็นได้ชัด คู่มือนี้ครอบคลุมตั้งแต่โทนกลางประจำวันจนถึงสีจัดจ้าน
@@ -196,4 +194,3 @@ image: "/images/blog/best-colors-for-cool-undertones.webp"
 - [โทนเย็น vs โทนอุ่น: 5 วิธีทดสอบง่ายๆ](/th/blog/cool-tone-vs-warm-tone) — ยืนยันว่าคุณเป็นโทนเย็นจริงหรือไม่
 - [ฉันโทนอุ่นหรือเย็น? 7 วิธี](/th/blog/how-to-determine-skin-undertone) — คู่มือโทนผิวใต้ฉบับสมบูรณ์
 - [Personal Color Analysis: อธิบาย 12 ประเภท](/th/blog/personal-color-analysis-guide) — เข้าใจทั้ง 12 ฤดูกาล
-- [ทำแบบทดสอบสีฟรี](/th/tools/color-quiz) — แบบทดสอบเร็วเพื่อประมาณฤดูกาลสีของคุณ

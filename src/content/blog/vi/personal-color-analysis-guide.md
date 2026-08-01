@@ -6,8 +6,6 @@ tags: ["phân tích màu cá nhân", "màu theo mùa", "lý thuyết màu sắc"
 image: "/images/blog/personal-color-analysis-guide.webp"
 ---
 
-![Hướng Dẫn Phân Tích Màu Cá Nhân](/images/blog/personal-color-analysis-guide.webp)
-
 ## Phân Tích Màu Cá Nhân Là Gì?
 
 Phân tích màu cá nhân (còn gọi là phân tích màu theo mùa hoặc phân loại màu sắc) là phương pháp xác định những màu nào trông hài hòa và tôn da nhất dựa trên màu sắc tự nhiên của bạn — tông da, tông nền, màu tóc và màu mắt.
@@ -158,4 +156,3 @@ Lý thuyết hài hòa màu sắc có nguồn gốc từ khoa học màu sắc v
 - [Tôi Thuộc Tông Ấm Hay Lạnh? 7 Phương Pháp](/vi/blog/how-to-determine-skin-undertone) — Hướng dẫn chi tiết xác định tông nền
 - [Màu Sắc Tốt Nhất Cho Tông Nền Lạnh](/vi/blog/best-colors-for-cool-undertones) — Hướng dẫn phong cách cho kiểu lạnh
 - [Hướng Dẫn Dạng Khuôn Mặt & Kiểu Tóc](/vi/blog/face-shape-hairstyle-guide) — Kết hợp phân tích màu với lời khuyên về dạng khuôn mặt
-- [Làm Bài Quiz Màu Miễn Phí](/vi/tools/color-quiz) — Xác định kiểu theo mùa trong 2 phút

@@ -32,38 +32,18 @@ export function Footer() {
           <div>
             <h3 className="mb-3 text-sm font-semibold">{ft("product")}</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/makeup-analysis"
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  {nav("makeupAnalysis")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/personal-color-analysis"
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  {nav("colorAnalysis")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/face-shape-analysis"
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  {nav("faceAnalysis")}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/pricing"
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  {nav("pricing")}
-                </Link>
-              </li>
+              <li><Link href="/personal-color-analysis" className="text-muted-foreground hover:text-foreground">{nav("colorAnalysis")}</Link></li>
+              <li><Link href="/makeup-analysis" className="text-muted-foreground hover:text-foreground">{nav("makeupAnalysis")}</Link></li>
+              <li><Link href="/face-shape-analysis" className="text-muted-foreground hover:text-foreground">{nav("faceAnalysis")}</Link></li>
+              <li><Link href="/hair-color-analysis" className="text-muted-foreground hover:text-foreground">{ft("hairPreview")}</Link></li>
+              <li><Link href="/outfit-color-analysis" className="text-muted-foreground hover:text-foreground">{ft("outfitColor")}</Link></li>
+              <li><Link href="/glasses-analysis" className="text-muted-foreground hover:text-foreground">{ft("glassesMatch")}</Link></li>
+              <li><Link href="/occasion-makeup" className="text-muted-foreground hover:text-foreground">{ft("occasionMakeup")}</Link></li>
+              <li><Link href="/glow-up-report" className="text-muted-foreground hover:text-foreground">{ft("glowUpReport")}</Link></li>
+              <li><Link href="/style-personality" className="text-muted-foreground hover:text-foreground">{ft("stylePersonality")}</Link></li>
+              <li><Link href="/celebrity-match" className="text-muted-foreground hover:text-foreground">{ft("celebrityMatch")}</Link></li>
+              <li><Link href="/try" className="text-muted-foreground hover:text-foreground">{nav("tryNow")}</Link></li>
+              <li><Link href="/pricing" className="text-muted-foreground hover:text-foreground">{nav("pricing")}</Link></li>
             </ul>
           </div>
 

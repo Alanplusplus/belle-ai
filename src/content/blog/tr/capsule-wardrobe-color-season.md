@@ -6,8 +6,6 @@ tags: ["kapsül gardırop", "kişisel renk analizi", "renk mevsimi", "moda ipuç
 image: "/images/blog/capsule-wardrobe-color-season.webp"
 ---
 
-![Renk Mevsimize Göre Kapsül Gardırop Nasıl Oluşturulur](/images/blog/capsule-wardrobe-color-season.webp)
-
 ## Renk Mevsimini Biliyorsun — Peki Şimdi Ne Olacak?
 
 Soft Autumn ya da Bright Spring olduğunu öğrendin. Belki AI renk analizi aracı kullandın, belki aynanın önünde iki saat renkli kumaşlarla durdum. Her iki durumda da bir cevabın var.
@@ -139,4 +137,3 @@ AI renk analizi araçları bir selfie'den saniyeler içinde mevsimini belirleyeb
 - 6+ ay boyunca kademeli olarak inşa et
 - Mevsimini hızla belirlemek için AI renk analizini kullan
 
-Renk mevsimin sahip olacağın en güçlü alışveriş filtresi. Paletini içselleştirdiğinde, giyinmek sabahının en kolay kısmı olur.

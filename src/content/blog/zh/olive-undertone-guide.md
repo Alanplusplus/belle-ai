@@ -6,8 +6,6 @@ tags: ["橄榄色底调", "肤色底调", "个人色彩分析", "美妆", "穿�
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 
-![橄榄色底调指南](/images/blog/olive-undertone-guide.webp)
-
 ## 为什么没人讨论橄榄色底调？
 
 网上几乎所有关于底调的文章都把肤色底调分为三类：暖色调、冷色调和中性色调。看看手腕血管颜色，试试金银首饰哪个更好看，就算判断完了。
@@ -210,4 +208,3 @@ image: "/images/blog/olive-undertone-guide.webp"
 - [肤色底调判断完全指南](/zh/blog/how-to-determine-skin-undertone) — 7种测试方法的完整底调指南
 - [冷色调 vs 暖色调：5个简单测试](/zh/blog/cool-tone-vs-warm-tone) — 冷暖色调基础对比
 - [冷色调最适合的颜色](/zh/blog/best-colors-for-cool-undertones) — 专为冷色调肤色的指南
-- [深冬型色彩搭配指南](/zh/blog/deep-winter-color-palette-guide) — 相关的深色调季型指南

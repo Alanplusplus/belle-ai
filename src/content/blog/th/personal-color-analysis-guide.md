@@ -6,8 +6,6 @@ tags: ["personal color analysis", "สีตามฤดูกาล", "ทฤ�
 image: "/images/blog/personal-color-analysis-guide.webp"
 ---
 
-![คู่มือ Personal Color Analysis](/images/blog/personal-color-analysis-guide.webp)
-
 ## Personal Color Analysis คืออะไร?
 
 Personal Color Analysis (หรือที่เรียกว่า Seasonal Color Analysis หรือ Color Typing) คือวิธีการหาว่าสีใดเข้ากับคุณมากที่สุด โดยอิงจากโทนสีธรรมชาติของคุณ — สีผิว โทนผิวใต้ สีผม และสีตา
@@ -158,4 +156,3 @@ Personal Color Analysis (หรือที่เรียกว่า Seasonal 
 - [ฉันโทนอุ่นหรือเย็น? 7 วิธี](/th/blog/how-to-determine-skin-undertone) — คู่มือหาโทนผิวใต้แบบละเอียด
 - [สีที่เหมาะกับโทนผิวเย็น](/th/blog/best-colors-for-cool-undertones) — คู่มือสไตล์สำหรับโทนเย็น
 - [คู่มือรูปหน้าและทรงผม](/th/blog/face-shape-hairstyle-guide) — จับคู่การวิเคราะห์สีกับคำแนะนำรูปหน้า
-- [ทำแบบทดสอบสีฟรี](/th/tools/color-quiz) — รู้ฤดูกาลของคุณใน 2 นาที

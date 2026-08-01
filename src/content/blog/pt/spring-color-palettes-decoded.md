@@ -6,8 +6,6 @@ tags: ["análise de coloração pessoal", "paleta de cores primavera", "coloraç
 image: "/images/blog/spring-color-palettes-decoded.webp"
 ---
 
-![Paletas de Cores Primavera Decodificadas: Primavera Brilhante vs Primavera Verdadeira vs Primavera Clara](/images/blog/spring-color-palettes-decoded.webp)
-
 ## Você Sabe que é Primavera — Mas Qual Primavera?
 
 Você fez uma análise de coloração e o veredicto chegou: você é Primavera. Seu subtom é quente, sua vibe geral é fresca e vibrante, e você fica incrível em cores que parecem um jardim ensolarado.
@@ -203,4 +201,3 @@ Independentemente de qual subestação de Primavera você seja, estes princípio
 - Os três tipos de Primavera compartilham o calor como base — o diferenciador principal é quanto contraste e saturação sua coloração consegue suportar.
 - Na dúvida, teste cores contra o rosto em luz natural do dia. A reação da sua pele (brilhando vs. apagada) diz tudo.
 
-Encontrar sua subestação exata de Primavera é a diferença entre parecer "ok" e parecer que você irradia de dentro para fora. Quando acertar, cada ida às compras, cada manhã se vestindo e cada foto de look de repente faz sentido. Suas cores deixam de ser algo em que você pensa e passam a ser algo que você simplesmente *sabe*.

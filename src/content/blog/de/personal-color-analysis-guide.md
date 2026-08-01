@@ -6,8 +6,6 @@ tags: ["persönliche Farbanalyse", "Saisonfarben", "Farbtheorie", "Beauty-Ratgeb
 image: "/images/blog/personal-color-analysis-guide.webp"
 ---
 
-![Leitfaden zur persönlichen Farbanalyse](/images/blog/personal-color-analysis-guide.webp)
-
 ## Was ist eine persönliche Farbanalyse?
 
 Die persönliche Farbanalyse (auch Saisonfarbenanalyse oder Farbtypberatung genannt) ist eine Methode, um herauszufinden, welche Farben auf Grundlage Ihrer natürlichen Färbung – Hautton, Unterton, Haarfarbe und Augenfarbe – am harmonischsten und schmeichelhaftesten wirken.
@@ -158,4 +156,3 @@ Die Farbharmonielehre hat Wurzeln in der Farbwissenschaft und wird seit Jahrhund
 - [Bin ich warm oder kühl getönt? 7 Methoden](/de/blog/how-to-determine-skin-undertone) — Ausführlicher Leitfaden zur Untertonbestimmung
 - [Die besten Farben für kühle Untertöne](/de/blog/best-colors-for-cool-undertones) — Styling-Ratgeber für Kühlttypen
 - [Gesichtsform & Frisuren-Ratgeber](/de/blog/face-shape-hairstyle-guide) — Kombinieren Sie Ihre Farbanalyse mit Frisurentipps
-- [Kostenloses Farbquiz starten](/de/tools/color-quiz) — Finden Sie Ihren saisonalen Typ in 2 Minuten

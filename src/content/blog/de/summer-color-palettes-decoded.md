@@ -6,8 +6,6 @@ tags: ["Farbberatung", "Sommer-Farbpalette", "Farbtyp", "Beauty", "Style Guide"]
 image: "/images/blog/summer-color-palettes-decoded.webp"
 ---
 
-![Sommer-Farbpaletten entschlüsselt: Cool Summer vs True Summer vs Soft Summer](/images/blog/summer-color-palettes-decoded.webp)
-
 ## Du bist ein Sommer — aber welcher?
 
 Deine Farbberatung hat bestätigt: Du bist ein Sommertyp. Dein Hautunterton ist kühl, deine Züge haben eine natürliche Weichheit, und Farben, die an einen nebligen Morgen am Meer erinnern, stehen dir fantastisch.
@@ -98,4 +96,3 @@ Tools wie [KI-Farbanalyse](https://aicoloranalysis.io/de) nutzen Computer Vision
 - **Cool Summer:** Der intensivste Sommer. Kann tiefere, kühlere Farben tragen. Grenzt an Winter.
 - **True Summer:** Die ausgewogene Mitte. Mittlere Tiefe, klar kühl, sanft gedämpft.
 - **Soft Summer:** Der gedämpfteste der 12 Typen. Ultra-sanft, kühl-neutral, flüsternde Farben.
-- Alle Sommer teilen kühle Untertöne und gedämpfte Qualitäten — der Unterschied liegt im Grad.
