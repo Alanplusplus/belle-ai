@@ -5,7 +5,7 @@ const WEBHOOK_SECRET = process.env.CREEM_WEBHOOK_SECRET!;
 const API_BASE = process.env.BELLE_API_BASE || "https://api.chibistyle.app";
 const API_TOKEN = process.env.BELLE_API_TOKEN!;
 const FEISHU_WEBHOOK_URL =
-  "https://open.feishu.cn/open-apis/bot/v2/hook/f979ba3d-4f75-418b-aef6-6b00c8de64e7";
+  "https://open.feishu.cn/open-apis/bot/v2/hook/8bfecb84-d551-422e-b0c4-93a93651ed3a";
 
 function verifySignature(payload: string, signature: string): boolean {
   const expected = crypto
