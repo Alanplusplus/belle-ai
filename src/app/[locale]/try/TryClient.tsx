@@ -149,6 +149,7 @@ const LOCALE_TO_REPORT_LANG: Record<string, string> = {
 };
 
 const PREFS_KEY = "belle_try_prefs";
+const LAST_PHOTO_KEY = "belle_last_photo_url";
 
 function loadPrefs(): { resolution: Resolution; reportLang: string | null } {
   if (typeof window === "undefined") return { resolution: "2K", reportLang: null };
@@ -161,6 +162,53 @@ function loadPrefs(): { resolution: Resolution; reportLang: string | null } {
 
 function savePrefs(resolution: Resolution, reportLang: string) {
   try { localStorage.setItem(PREFS_KEY, JSON.stringify({ resolution, reportLang })); } catch {}
+}
+
+function saveLastPhotoUrl(url: string) {
+  try { localStorage.setItem(LAST_PHOTO_KEY, url); } catch {}
+}
+
+function loadLastPhotoUrl(): string | null {
+  if (typeof window === "undefined") return null;
+  try { return localStorage.getItem(LAST_PHOTO_KEY); } catch { return null; }
+}
+
+const RECOMMENDED_TYPES: Record<AnalysisType, AnalysisType[]> = {
+  makeup: ["color_analysis", "face_shape", "occasion_makeup"],
+  color_analysis: ["outfit_color", "hair_preview", "makeup"],
+  face_shape: ["glasses_match", "hair_preview", "makeup"],
+  hair_preview: ["color_analysis", "outfit_color", "celebrity_match"],
+  outfit_color: ["color_analysis", "jewelry_guide", "style_personality"],
+  glasses_match: ["face_shape", "style_personality", "celebrity_match"],
+  occasion_makeup: ["color_analysis", "jewelry_guide", "outfit_color"],
+  jewelry_guide: ["outfit_color", "color_analysis", "glow_up_report"],
+  glow_up_report: ["celebrity_match", "style_personality", "occasion_makeup"],
+  style_personality: ["outfit_color", "celebrity_match", "glow_up_report"],
+  palette_scan: ["color_analysis", "outfit_color", "makeup"],
+  celebrity_match: ["style_personality", "makeup", "hair_preview"],
+};
+
+const CARD_IMAGES: Record<AnalysisType, string> = {
+  makeup: "/images/card_makeup.webp",
+  color_analysis: "/images/card_color_analysis.webp",
+  face_shape: "/images/card_face_shape.webp",
+  hair_preview: "/images/card_hair.webp",
+  outfit_color: "/images/card_outfit.webp",
+  glasses_match: "/images/card_glasses.webp",
+  occasion_makeup: "/images/card_occasion.webp",
+  jewelry_guide: "/images/card_jewelry.webp",
+  glow_up_report: "/images/card_glow_up.webp",
+  style_personality: "/images/card_style.webp",
+  palette_scan: "/images/card_color_analysis.webp",
+  celebrity_match: "/images/card_celebrity.webp",
+};
+
+interface BackgroundTask {
+  id: string;
+  type: AnalysisType;
+  phase: "uploading" | "generating" | "done" | "error";
+  resultUrls: string[];
+  errorMsg?: string;
 }
 
 export function TryClient({ locale, initialType }: { locale: string; initialType?: string }) {
@@ -185,6 +233,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [correctionModal, setCorrectionModal] = useState<HistoryEntry | null>(null);
   const [shareModal, setShareModal] = useState<string | null>(null);
   const [showPricingModal, setShowPricingModal] = useState(false);
+  const [backgroundTasks, setBackgroundTasks] = useState<BackgroundTask[]>([]);
+  const [lastUploadedPhotoUrl, setLastUploadedPhotoUrl] = useState<string | null>(null);
+  const [showTaskPanel, setShowTaskPanel] = useState(false);
 
   const prefs = loadPrefs();
   const defaultLang = prefs.reportLang || LOCALE_TO_REPORT_LANG[locale] || "en";
@@ -197,7 +248,10 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const isLoggedIn = status === "authenticated";
   const resumedRef = useRef(false);
 
-  // 从服务端加载历史 + 恢复 processing 任务
+  useEffect(() => {
+    setLastUploadedPhotoUrl(loadLastPhotoUrl());
+  }, []);
+
   useEffect(() => {
     if (!isLoggedIn || resumedRef.current) return;
     resumedRef.current = true;
@@ -382,6 +436,8 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         throw new Error(uploadRes.message);
       }
       setSourceImageUrl(uploadRes.data.url);
+      setLastUploadedPhotoUrl(uploadRes.data.url);
+      saveLastPhotoUrl(uploadRes.data.url);
 
       setPhase("generating");
       savePrefs(resolution, reportLang);
@@ -420,6 +476,61 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       trackEvent("generate_failed", { type: analysisType, error: message });
     }
   }, [previewUrl, isLoggedIn, session, analysisType, reportLang, resolution, occasion, reloadHistory]);
+
+  const startRecommendedAnalysis = useCallback(async (type: AnalysisType) => {
+    const photoUrl = sourceImageUrl || lastUploadedPhotoUrl;
+    if (!photoUrl || !isLoggedIn) return;
+
+    const taskId = `bg_${Date.now()}_${type}`;
+    trackEvent("recommended_analysis_started", { type, source: "recommendation" });
+
+    setBackgroundTasks((prev) => [...prev, { id: taskId, type, phase: "generating", resultUrls: [] }]);
+
+    try {
+      const signInRes = await webSignIn(
+        session?.user?.email ?? undefined,
+        session?.user?.name ?? undefined,
+        session?.user?.image ?? undefined
+      );
+      if (signInRes.code !== 200 || !signInRes.data) throw new Error(signInRes.message);
+      if ((signInRes.data.total_remaining ?? signInRes.data.web_quota.remaining) <= 0) {
+        setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: "No credits" } : t));
+        setShowPricingModal(true);
+        return;
+      }
+
+      const taskRes = await createTask(photoUrl, type, reportLang, { resolution });
+      if (taskRes.code === 429) {
+        setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: "No credits" } : t));
+        setShowPricingModal(true);
+        return;
+      }
+      if (taskRes.code !== 200 || !taskRes.data?.task_id) throw new Error(taskRes.message);
+
+      const images = await pollUntilDone(taskRes.data.task_id);
+      setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "done", resultUrls: images } : t));
+      trackEvent("recommended_analysis_completed", { type, image_count: images.length });
+      reloadHistory();
+    } catch (err) {
+      setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: err instanceof Error ? err.message : "Failed" } : t));
+    }
+  }, [sourceImageUrl, lastUploadedPhotoUrl, isLoggedIn, session, reportLang, resolution, reloadHistory]);
+
+  const handleUseLastPhoto = useCallback(async () => {
+    if (!lastUploadedPhotoUrl || !isLoggedIn) return;
+    trackEvent("last_photo_reused");
+    setSourceImageUrl(lastUploadedPhotoUrl);
+    setPreviewUrl(lastUploadedPhotoUrl);
+    setPhase("idle");
+    setResultUrls([]);
+    setErrorMsg("");
+  }, [lastUploadedPhotoUrl, isLoggedIn]);
+
+  const recommendedTypes = (RECOMMENDED_TYPES[analysisType] || []).filter(
+    (t) => !backgroundTasks.some((bt) => bt.type === t)
+  );
+
+  const activeTaskCount = backgroundTasks.filter((t) => t.phase === "generating" || t.phase === "uploading").length;
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-12">
@@ -621,6 +732,15 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               <p className="mt-1 text-xs text-muted-foreground">
                 {isLoggedIn ? t("uploadHint") : t("signInNote")}
               </p>
+              {isLoggedIn && lastUploadedPhotoUrl && !previewUrl && (
+                <button
+                  onClick={(e) => { e.stopPropagation(); handleUseLastPhoto(); }}
+                  className="mt-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary/10"
+                >
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
+                  {t("useLastPhoto")}
+                </button>
+              )}
             </>
           )}
           <input
@@ -708,6 +828,88 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         )}
       </div>
 
+      {/* Recommendations during generation */}
+      {(phase === "generating" || phase === "uploading") && recommendedTypes.length > 0 && (sourceImageUrl || lastUploadedPhotoUrl) && (
+        <div className="mt-8">
+          <div className="flex items-center gap-2 mb-3">
+            <svg className="h-4 w-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" /></svg>
+            <h3 className="font-serif text-base font-bold">{t("tryMore")}</h3>
+          </div>
+          <p className="mb-4 text-xs text-muted-foreground">{t("tryMoreDesc")}</p>
+          <div className="flex gap-3 overflow-x-auto pb-2 -mx-1 px-1">
+            {recommendedTypes.map((type) => (
+              <button
+                key={type}
+                onClick={() => startRecommendedAnalysis(type)}
+                className="group flex-shrink-0 w-[160px] overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary/40 hover:shadow-md"
+              >
+                <div className="relative h-[100px] overflow-hidden">
+                  <img
+                    src={CARD_IMAGES[type]}
+                    alt={TYPE_LABELS[type]}
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-2.5">
+                  <p className="text-xs font-semibold truncate">{t(`type_${type}`)}</p>
+                  <div className="mt-1.5 flex items-center gap-1 text-primary">
+                    <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+                    <span className="text-[11px] font-medium">{t("startNow")}</span>
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Background Tasks */}
+      {backgroundTasks.length > 0 && (
+        <div className="mt-6" data-task-panel>
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2">
+              <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" /></svg>
+              <h3 className="text-sm font-semibold">{t("multiTaskTitle")}</h3>
+            </div>
+            {activeTaskCount > 0 && (
+              <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-medium text-primary">
+                {t("tasksRunning", { count: activeTaskCount })}
+              </span>
+            )}
+          </div>
+          <div className="space-y-2">
+            {backgroundTasks.map((task) => (
+              <div
+                key={task.id}
+                className="flex items-center gap-3 rounded-xl border border-border bg-card p-3 transition hover:border-primary/20"
+              >
+                <div className="h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg">
+                  <img src={CARD_IMAGES[task.type]} alt="" className="h-full w-full object-cover" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-medium truncate">{t(`type_${task.type}`)}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {task.phase === "done" ? t("taskDone") : task.phase === "error" ? t("taskError") : task.phase === "uploading" ? t("taskUploading") : t("taskAnalyzing")}
+                  </p>
+                </div>
+                {task.phase === "done" && task.resultUrls[0] && (
+                  <button
+                    onClick={() => setLightbox({ entry: { id: task.id, status: "success", type: task.type, image_urls: task.resultUrls, source_image_url: sourceImageUrl ?? lastUploadedPhotoUrl ?? undefined, created_at: Date.now() / 1000 }, imageIndex: 0 })}
+                    className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary hover:bg-primary/20"
+                  >
+                    {t("viewResults")}
+                  </button>
+                )}
+                {task.phase === "generating" && <Spinner />}
+                {task.phase === "error" && (
+                  <svg className="h-4 w-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Error */}
       {phase === "error" && (
         <div className="mt-4 rounded-xl border border-red-200 bg-red-50 p-4 text-center text-sm text-red-700">
@@ -750,6 +952,41 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               {t("correction")}
             </button>
           </div>
+
+          {/* Post-result recommendations */}
+          {recommendedTypes.length > 0 && (sourceImageUrl || lastUploadedPhotoUrl) && (
+            <div className="mt-8 rounded-2xl border border-border bg-gradient-to-br from-muted/30 to-muted/10 p-5">
+              <div className="flex items-center gap-2 mb-1">
+                <svg className="h-4 w-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" /></svg>
+                <h3 className="font-serif text-base font-bold">{t("tryAnother")}</h3>
+              </div>
+              <p className="mb-4 text-xs text-muted-foreground">{t("tryAnotherDesc")}</p>
+              <div className="grid grid-cols-3 gap-3">
+                {recommendedTypes.map((type) => (
+                  <button
+                    key={type}
+                    onClick={() => startRecommendedAnalysis(type)}
+                    className="group overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary/40 hover:shadow-md"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <img
+                        src={CARD_IMAGES[type]}
+                        alt={TYPE_LABELS[type]}
+                        className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-2.5 text-center">
+                      <p className="text-xs font-semibold truncate">{t(`type_${type}`)}</p>
+                      <div className="mt-1 flex items-center justify-center gap-1 text-primary">
+                        <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+                        <span className="text-[11px] font-medium">{t("startNow")}</span>
+                      </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
 
           {quota && quota.remaining <= 0 && (
             <div className="mt-6">
@@ -861,6 +1098,22 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       {shareToast && (
         <div className="fixed bottom-6 left-1/2 z-[200] -translate-x-1/2 rounded-full bg-foreground px-4 py-2 text-sm text-background shadow-lg">
           {t("shareCopied")}
+        </div>
+      )}
+
+      {/* Floating task indicator */}
+      {activeTaskCount > 0 && (
+        <div className="fixed bottom-6 right-6 z-50">
+          <button
+            onClick={() => {
+              const el = document.querySelector('[data-task-panel]');
+              el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }}
+            className="flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-medium text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+          >
+            <Spinner />
+            {t("tasksRunning", { count: activeTaskCount })}
+          </button>
         </div>
       )}
 

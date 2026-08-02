@@ -21,8 +21,6 @@ export async function generateMetadata({
 export default function JewelryAnalysisPage() {
   const t = useTranslations("jewelryPage");
   const ft = useTranslations("features");
-  const items = [t("feat1Title"), t("feat2Title"), t("feat3Title"), t("feat4Title"), t("feat5Title"), t("feat6Title")];
-
   return (
     <>
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
@@ -43,20 +41,20 @@ export default function JewelryAnalysisPage() {
         <div className="mx-auto max-w-5xl px-4">
           <h2 className="text-center text-2xl font-bold">{t("whatYouGet")}</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {DIMENSIONS.map((dim, i) => (
+            {DIMENSIONS.map((dim) => (
               <div key={dim.image} className="group overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
                 <div className="relative aspect-square w-full overflow-hidden">
                   <Image
                     src={dim.image}
-                    alt={items[i] || ""}
+                    alt={t(`feat${dim.feat}Title`)}
                     fill
                     className="object-cover transition duration-300 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-4">
-                  <p className="text-sm font-medium">{items[i]}</p>
-                  <p className="mt-1 text-xs text-muted-foreground">{t(`feat${i + 1}Desc`)}</p>
+                  <p className="text-sm font-medium">{t(`feat${dim.feat}Title`)}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">{t(`feat${dim.feat}Desc`)}</p>
                 </div>
               </div>
             ))}
@@ -76,10 +74,8 @@ export default function JewelryAnalysisPage() {
 }
 
 const DIMENSIONS = [
-  { image: "/images/dim_jewelry_metals.webp" },
-  { image: "/images/dim_jewelry_earrings.webp" },
-  { image: "/images/dim_jewelry_necklace.webp" },
-  { image: "/images/dim_jewelry_gems.webp" },
-  { image: "/images/dim_jewelry_seasonal.webp" },
-  { image: "/images/dim_jewelry_shopping.webp" },
+  { image: "/images/dim_jewelry_metals.webp", feat: 1 },
+  { image: "/images/dim_jewelry_earrings.webp", feat: 2 },
+  { image: "/images/dim_jewelry_necklace.webp", feat: 3 },
+  { image: "/images/dim_jewelry_gems.webp", feat: 4 },
 ];

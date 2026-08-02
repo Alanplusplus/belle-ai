@@ -21,8 +21,6 @@ export async function generateMetadata({
 export default function GlassesAnalysisPage() {
   const t = useTranslations("glassesPage");
   const ft = useTranslations("features");
-  const items = [t("feat1Title"), t("feat2Title"), t("feat3Title"), t("feat4Title"), t("feat5Title"), t("feat6Title")];
-
   return (
     <>
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
@@ -43,20 +41,20 @@ export default function GlassesAnalysisPage() {
         <div className="mx-auto max-w-5xl px-4">
           <h2 className="text-center text-2xl font-bold">{t("whatYouGet")}</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {DIMENSIONS.map((dim, i) => (
+            {DIMENSIONS.map((dim) => (
               <div key={dim.image} className="group overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
                 <div className="relative aspect-square w-full overflow-hidden">
                   <Image
                     src={dim.image}
-                    alt={items[i] || ""}
+                    alt={t(`feat${dim.feat}Title`)}
                     fill
                     className="object-cover transition duration-300 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-4">
-                  <p className="text-sm font-medium">{items[i]}</p>
-                  <p className="mt-1 text-xs text-muted-foreground">{t(`feat${i + 1}Desc`)}</p>
+                  <p className="text-sm font-medium">{t(`feat${dim.feat}Title`)}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">{t(`feat${dim.feat}Desc`)}</p>
                 </div>
               </div>
             ))}
@@ -94,10 +92,8 @@ function Step({ num, text }: { num: string; text: string }) {
 }
 
 const DIMENSIONS = [
-  { image: "/images/dim_glasses_frames.webp" },
-  { image: "/images/dim_glasses_face.webp" },
-  { image: "/images/dim_glasses_sun.webp" },
-  { image: "/images/dim_glasses_colors.webp" },
-  { image: "/images/dim_glasses_works.webp" },
-  { image: "/images/dim_glasses_avoid.webp" },
+  { image: "/images/dim_glasses_frames.webp", feat: 1 },
+  { image: "/images/dim_glasses_face.webp", feat: 2 },
+  { image: "/images/dim_glasses_sun.webp", feat: 3 },
+  { image: "/images/dim_glasses_avoid.webp", feat: 6 },
 ];

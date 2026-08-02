@@ -96,30 +96,13 @@ export default function PricingPage() {
           </div>
         </div>
 
-        {/* Analysis Types & Credit Cost */}
-        <div className="mt-12 rounded-2xl border border-border bg-card p-6">
-          <h3 className="text-xl font-bold">{t("analysisTypes")}</h3>
-          <p className="mt-1 text-sm text-muted-foreground">{t("analysisTypesDesc")}</p>
-          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {ANALYSIS_OPTIONS.map((a) => (
-              <div key={a.type} className="flex items-center gap-3 rounded-xl border border-border p-3">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10">{a.icon}</span>
-                <div className="flex-1">
-                  <p className="text-sm font-medium">{t(`at_${a.type}`)}</p>
-                </div>
-                <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${a.credits > 1 ? "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300" : "bg-muted text-muted-foreground"}`}>
-                  {a.credits}x
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Credit Packs */}
         <div className="mt-12 rounded-2xl border border-border bg-card p-6">
           <h3 className="text-xl font-bold">{t("credits")}</h3>
           <p className="mt-1 text-sm text-muted-foreground">
             {t("creditsDesc")}
+            <span className="mx-1.5 text-border">·</span>
+            <span className="font-medium text-primary">{t("creditsNeverExpire")}</span>
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <div className="flex items-center justify-between rounded-xl border border-border p-4">
@@ -140,6 +123,25 @@ export default function PricingPage() {
               </div>
               <PricingButtons product="credits12" variant="small" label={t("creditsCta")} />
             </div>
+          </div>
+        </div>
+
+        {/* Analysis Types & Credit Cost */}
+        <div className="mt-12 rounded-2xl border border-border bg-card p-6">
+          <h3 className="text-xl font-bold">{t("analysisTypes")}</h3>
+          <p className="mt-1 text-sm text-muted-foreground">{t("analysisTypesDesc")}</p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {ANALYSIS_OPTIONS.map((a) => (
+              <div key={a.type} className="flex items-center gap-3 rounded-xl border border-border p-3">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10">{a.icon}</span>
+                <div className="flex-1">
+                  <p className="text-sm font-medium">{t(`at_${a.type}`)}</p>
+                </div>
+                <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${a.credits > 1 ? "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300" : "bg-muted text-muted-foreground"}`}>
+                  {a.credits}x
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 
