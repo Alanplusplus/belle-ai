@@ -6,8 +6,6 @@ tags: ["análisis de color personal", "paleta de colores otoño", "temporada de 
 image: "/images/blog/autumn-color-palettes-decoded.webp"
 ---
 
-![Moodboard de paletas de colores otoñales con tonos cálidos terrosos](/images/blog/autumn-color-palettes-decoded.webp)
-
 ## Eres Otoño — ¿Pero Cuál?
 
 Tu análisis de color dio como resultado Otoño. Tienes calidez en tu coloración, riqueza en tus rasgos y te ves increíble con tonos que recuerdan a bosques, mercados de cosecha y la hora dorada.
@@ -188,3 +186,10 @@ Tradicionalmente, identificar tu sub-estación de Otoño requería una sesión d
 - **Otoño Suave:** El más apagado de los Otoños. Tonos neutros cálidos polvorientos, gentiles y sofisticados. Bordea el Verano.
 - Todos los Otoños comparten subtonos cálidos y coloración rica — la diferencia está en la profundidad y saturación.
 - En caso de duda, prueba el test de profundidad: tu sub-estación se revela por cuánto peso de color pueden llevar tus rasgos sin verse sobrepasados.
+
+## Artículos Relacionados
+
+- [Paletas de Primavera Decodificadas: Bright Spring vs True Spring vs Light Spring](/es/blog/spring-color-palettes-decoded) — La guía hermana de temporadas cálidas
+- [Paletas de Verano Decodificadas: Cool Summer vs True Summer vs Soft Summer](/es/blog/summer-color-palettes-decoded) — Comparación de temporadas frías
+- [Paleta Deep Winter: Guía Completa de Estilo](/es/blog/deep-winter-color-palette-guide) — El vecino frío del Otoño Profundo
+- [Mejores Colores para Subtonos Cálidos](/es/blog/best-colors-for-warm-undertones) — Guía amplia para todos los tipos de Otoño

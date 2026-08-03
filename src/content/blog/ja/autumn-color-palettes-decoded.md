@@ -6,8 +6,6 @@ tags: ["パーソナルカラー分析", "秋カラーパレット", "カラー�
 image: "/images/blog/autumn-color-palettes-decoded.webp"
 ---
 
-![秋のカラーパレットムードボード、温かみのあるアースカラー](/images/blog/autumn-color-palettes-decoded.webp)
-
 ## あなたはオータムタイプ——でも、どのオータム？
 
 パーソナルカラー診断の結果はオータム。温かみのある肌色、豊かな色彩感、森の小道やゴールデンアワーを思わせるカラーがよく似合う——それがあなた。
@@ -190,3 +188,10 @@ image: "/images/blog/autumn-color-palettes-decoded.webp"
 - **ソフトオータム：** 最もミュートなオータム。ダスティで穏やか、洗練された暖色ニュートラル。
 - すべてのオータムはウォームアンダートーンとリッチな色彩を共有——違いは深さと彩度。
 - 迷ったら深度テストを：あなたのサブタイプは、顔立ちが圧倒されずにどれだけの色の重みを受け止められるかで決まります。
+
+## 関連記事
+
+- [春カラーパレット解説：ブライトスプリング vs トゥルースプリング vs ライトスプリング](/ja/blog/spring-color-palettes-decoded) — ウォームシーズンの姉妹ガイド
+- [夏カラーパレット解説：クールサマー vs トゥルーサマー vs ソフトサマー](/ja/blog/summer-color-palettes-decoded) — クールミュートシーズンの比較
+- [ディープウィンターカラーパレット完全ガイド](/ja/blog/deep-winter-color-palette-guide) — ディープオータムのクールトーンの隣人
+- [ウォームアンダートーンのベストカラーガイド](/ja/blog/best-colors-for-warm-undertones) — すべてのオータムタイプ向けガイド

@@ -6,8 +6,6 @@ tags: ["personal color analysis", "autumn color palette", "color season", "beaut
 image: "/images/blog/autumn-color-palettes-decoded.webp"
 ---
 
-![Autumn color palettes mood board with warm earthy tones](/images/blog/autumn-color-palettes-decoded.webp)
-
 ## You're an Autumn — But Which Kind?
 
 So your color analysis came back Autumn. You've got warmth in your veins, richness in your coloring, and you look incredible in shades that remind people of forest floors, harvest markets, and golden hour.
@@ -243,3 +241,10 @@ Today, AI-powered color analysis tools can examine your skin undertone, eye colo
 - When in doubt, try the depth test: your sub-season is revealed by how much color weight your features can carry without being overpowered.
 
 Understanding your specific Autumn sub-season transforms how you shop, how you get dressed in the morning, and how confident you feel walking out the door. You're not just "an Autumn" — you're a specific shade of warm, and knowing exactly which one unlocks a wardrobe that genuinely works for you.
+
+## Related Articles
+
+- [Spring Color Palettes Decoded: Bright Spring vs True Spring vs Light Spring](/en/blog/spring-color-palettes-decoded) — The warm-season counterpart to this guide
+- [Summer Color Palettes Decoded: Cool Summer vs True Summer vs Soft Summer](/en/blog/summer-color-palettes-decoded) — How the cool muted seasons compare
+- [Deep Winter Color Palette: Your Complete Style Guide](/en/blog/deep-winter-color-palette-guide) — Deep Autumn's cool-toned neighbor
+- [Best Colors for Warm Undertones](/en/blog/best-colors-for-warm-undertones) — Broader warm-toned color guide for all Autumn types

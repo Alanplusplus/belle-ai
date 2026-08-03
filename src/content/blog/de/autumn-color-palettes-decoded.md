@@ -6,8 +6,6 @@ tags: ["Farbanalyse", "Herbst-Farbpalette", "Farbsaison", "Beauty", "Stilratgebe
 image: "/images/blog/autumn-color-palettes-decoded.webp"
 ---
 
-![Herbst-Farbpaletten Moodboard mit warmen Erdtönen](/images/blog/autumn-color-palettes-decoded.webp)
-
 ## Du Bist ein Herbsttyp — Aber Welcher?
 
 Deine Farbanalyse hat ergeben: Herbsttyp. Du hast Wärme in deinem Teint, Tiefe in deiner Farbgebung und siehst umwerfend aus in Tönen, die an Wälder, Erntemärkte und die goldene Stunde erinnern.
@@ -146,3 +144,10 @@ Heute können KI-gestützte Farbanalyse-Tools deinen Hautunterton, Augenfarbe un
 - **Deep Autumn:** Der intensivste Herbsttyp. Reiche, tiefe, gesättigte warme Farben. Grenzt an Winter.
 - **True Autumn:** Die ausgewogene Mitte. Mittlere Tiefe, klar warm, erdig. Der klassische Herbst.
 - **Soft Autumn:** Der gedämpfteste Herbsttyp. Staubige, sanfte, raffinierte Warmneutrale. Grenzt an Sommer.
+
+## Verwandte Artikel
+
+- [Frühlings-Farbpaletten Entschlüsselt: Bright Spring vs True Spring vs Light Spring](/de/blog/spring-color-palettes-decoded) — Der Schwesternguide für warme Jahreszeiten
+- [Sommer-Farbpaletten Entschlüsselt: Cool Summer vs True Summer vs Soft Summer](/de/blog/summer-color-palettes-decoded) — Vergleich der kühlen Jahreszeiten
+- [Deep Winter Farbpalette: Kompletter Stilratgeber](/de/blog/deep-winter-color-palette-guide) — Deep Autumns kühler Nachbar
+- [Beste Farben für warme Untertöne](/de/blog/best-colors-for-warm-undertones) — Umfassender Guide für alle Herbsttypen

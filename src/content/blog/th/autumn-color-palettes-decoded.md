@@ -6,8 +6,6 @@ tags: ["วิเคราะห์สีส่วนบุคคล", "พา�
 image: "/images/blog/autumn-color-palettes-decoded.webp"
 ---
 
-![มูดบอร์ดพาเลตต์สีฤดูใบไม้ร่วงโทนสีดินอบอุ่น](/images/blog/autumn-color-palettes-decoded.webp)
-
 ## คุณเป็นออทัม — แต่ออทัมแบบไหน?
 
 ผลวิเคราะห์สีของคุณออกมาว่า: ออทัม คุณมีความอบอุ่นในผิว ความเข้มในสีสัน และดูสวยมากในเฉดที่ทำให้นึกถึงป่า ตลาดเก็บเกี่ยว และโกลเด้นอาวร์
@@ -106,3 +104,10 @@ image: "/images/blog/autumn-color-palettes-decoded.webp"
 - **Deep Autumn:** เข้มข้นที่สุด สีวอร์มเข้ม ลึก อิ่มตัว ใกล้ Winter
 - **True Autumn:** ศูนย์กลางสมดุล ความลึกปานกลาง อุ่นชัด เอิร์ธตัน
 - **Soft Autumn:** อ่อนนุ่มที่สุด ดัสตี้ อ่อนโยน นิวทรัลวอร์มซอฟิสติเคท ใกล้ Summer
+
+## บทความที่เกี่ยวข้อง
+
+- [ถอดรหัสพาเลตต์สีฤดูใบไม้ผลิ: Bright Spring vs True Spring vs Light Spring](/th/blog/spring-color-palettes-decoded) — ไกด์พี่น้องของซีซั่นวอร์ม
+- [ถอดรหัสพาเลตต์สีฤดูร้อน: Cool Summer vs True Summer vs Soft Summer](/th/blog/summer-color-palettes-decoded) — เปรียบเทียบซีซั่นคูลมิวท์
+- [พาเลตต์สี Deep Winter: ไกด์สไตล์ฉบับสมบูรณ์](/th/blog/deep-winter-color-palette-guide) — เพื่อนบ้านคูลโทนของ Deep Autumn
+- [สีที่ดีที่สุดสำหรับอันเดอร์โทนวอร์ม](/th/blog/best-colors-for-warm-undertones) — ไกด์สำหรับออทัมทุกประเภท

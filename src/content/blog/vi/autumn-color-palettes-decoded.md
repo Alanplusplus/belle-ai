@@ -6,8 +6,6 @@ tags: ["phân tích màu sắc cá nhân", "bảng màu mùa thu", "mùa màu", 
 image: "/images/blog/autumn-color-palettes-decoded.webp"
 ---
 
-![Bảng tâm trạng màu sắc mùa thu với tông đất ấm](/images/blog/autumn-color-palettes-decoded.webp)
-
 ## Bạn Là Kiểu Thu — Nhưng Kiểu Thu Nào?
 
 Kết quả phân tích màu sắc của bạn cho thấy: Mùa Thu. Bạn có sự ấm áp trong làn da, sự phong phú trong sắc tố, và trông tuyệt vời trong những tông màu gợi nhớ đến rừng cây, chợ thu hoạch và giờ vàng.
@@ -106,3 +104,10 @@ Công cụ phân tích màu sắc AI có thể kiểm tra undertone, màu mắt 
 - **Deep Autumn:** Đậm đặc nhất. Màu ấm sâu, phong phú, bão hòa. Gần Winter.
 - **True Autumn:** Trung tâm cân bằng. Độ sâu trung bình, rõ ràng ấm, đất. Thu điển hình.
 - **Soft Autumn:** Nhạt nhất. Trung tính ấm bụi, dịu dàng, tinh tế. Gần Summer.
+
+## Bài Viết Liên Quan
+
+- [Giải Mã Bảng Màu Mùa Xuân: Bright Spring vs True Spring vs Light Spring](/vi/blog/spring-color-palettes-decoded) — Hướng dẫn chị em cho mùa ấm
+- [Giải Mã Bảng Màu Mùa Hè: Cool Summer vs True Summer vs Soft Summer](/vi/blog/summer-color-palettes-decoded) — So sánh các mùa mát
+- [Bảng Màu Deep Winter: Hướng Dẫn Phong Cách Đầy Đủ](/vi/blog/deep-winter-color-palette-guide) — Người hàng xóm tông lạnh của Deep Autumn
+- [Màu Tốt Nhất Cho Undertone Ấm](/vi/blog/best-colors-for-warm-undertones) — Hướng dẫn cho tất cả kiểu Thu

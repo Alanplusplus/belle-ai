@@ -6,8 +6,6 @@ tags: ["analisis warna personal", "palet musim gugur", "musim warna", "kecantika
 image: "/images/blog/autumn-color-palettes-decoded.webp"
 ---
 
-![Moodboard palet warna musim gugur dengan nuansa tanah hangat](/images/blog/autumn-color-palettes-decoded.webp)
-
 ## Kamu Tipe Autumn — Tapi Autumn yang Mana?
 
 Hasil analisis warnamu menunjukkan: Autumn. Kamu punya kehangatan di kulitmu, kekayaan di pewarnaan alami, dan terlihat luar biasa dengan nuansa yang mengingatkan pada hutan, pasar panen, dan golden hour.
@@ -106,3 +104,10 @@ Alat analisis warna AI dapat memeriksa undertone, warna mata, dan nuansa rambut 
 - **Deep Autumn:** Paling intens. Warna hangat kaya, dalam, dan jenuh. Berbatasan dengan Winter.
 - **True Autumn:** Pusat seimbang. Kedalaman sedang, jelas hangat, earthy. Autumn paling khas.
 - **Soft Autumn:** Paling muted. Netral hangat dusty, lembut, dan sofistikasi. Berbatasan dengan Summer.
+
+## Artikel Terkait
+
+- [Palet Warna Musim Semi Terdekode: Bright Spring vs True Spring vs Light Spring](/id/blog/spring-color-palettes-decoded) — Panduan saudara untuk musim hangat
+- [Palet Warna Musim Panas Terdekode: Cool Summer vs True Summer vs Soft Summer](/id/blog/summer-color-palettes-decoded) — Perbandingan musim sejuk
+- [Palet Warna Deep Winter: Panduan Gaya Lengkap](/id/blog/deep-winter-color-palette-guide) — Tetangga cool-tone dari Deep Autumn
+- [Warna Terbaik untuk Undertone Hangat](/id/blog/best-colors-for-warm-undertones) — Panduan untuk semua tipe Autumn

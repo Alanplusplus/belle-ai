@@ -6,8 +6,6 @@ tags: ["kişisel renk analizi", "sonbahar paleti", "renk mevsimi", "güzellik", 
 image: "/images/blog/autumn-color-palettes-decoded.webp"
 ---
 
-![Sıcak toprak tonlarıyla sonbahar renk paleti moodboard](/images/blog/autumn-color-palettes-decoded.webp)
-
 ## Sonbahar Tipindesiniz — Ama Hangisi?
 
 Renk analiziniz sonuç verdi: Sonbahar. Cildinizde sıcaklık, renklendirmenizde zenginlik var ve ormanları, hasat pazarlarını ve altın saati hatırlatan tonlarda harika görünüyorsunuz.
@@ -106,3 +104,10 @@ Yapay zeka renk analizi araçları alt tonunuzu, göz renginizi ve saç tonunuzu
 - **Derin Sonbahar:** En yoğun. Zengin, derin, doygun sıcak renkler. Kışa sınır.
 - **Gerçek Sonbahar:** Dengeli merkez. Orta derinlik, açıkça sıcak, topraksal. Klasik sonbahar.
 - **Yumuşak Sonbahar:** En soluk. Tozlu, nazik, sofistike sıcak nötrler. Yaza sınır.
+
+## İlgili Makaleler
+
+- [Bahar Renk Paletleri Çözümlendi: Bright Spring vs True Spring vs Light Spring](/tr/blog/spring-color-palettes-decoded) — Sıcak mevsimler için kardeş rehber
+- [Yaz Renk Paletleri Çözümlendi: Cool Summer vs True Summer vs Soft Summer](/tr/blog/summer-color-palettes-decoded) — Serin mevsimlerin karşılaştırması
+- [Deep Winter Renk Paleti: Tam Stil Rehberi](/tr/blog/deep-winter-color-palette-guide) — Derin Sonbahar'ın soğuk tonlu komşusu
+- [Sıcak Alt Tonlar İçin En İyi Renkler](/tr/blog/best-colors-for-warm-undertones) — Tüm Sonbahar tipleri için kapsamlı rehber

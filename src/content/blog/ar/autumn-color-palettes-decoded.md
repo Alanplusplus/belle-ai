@@ -6,8 +6,6 @@ tags: ["تحليل الألوان الشخصي", "لوحة ألوان الخري
 image: "/images/blog/autumn-color-palettes-decoded.webp"
 ---
 
-![لوحة مزاجية لألوان الخريف بدرجات ترابية دافئة](/images/blog/autumn-color-palettes-decoded.webp)
-
 ## أنتِ من نوع الخريف — لكن أي خريف؟
 
 كشف تحليل الألوان الخاص بك أنك من نوع الخريف. لديك دفء في بشرتك، غنى في ملامحك، وتبدين رائعة بالدرجات التي تذكّر بالغابات والأسواق الخريفية والساعة الذهبية.
@@ -106,3 +104,10 @@ image: "/images/blog/autumn-color-palettes-decoded.webp"
 - **الخريف العميق:** الأكثر كثافة. ألوان دافئة غنية وعميقة ومشبعة. يحاذي الشتاء.
 - **الخريف الحقيقي:** المركز المتوازن. عمق متوسط، دافئ بوضوح، ترابي.
 - **الخريف الناعم:** الأكثر خفوتاً. محايدات دافئة مغبّرة ولطيفة وراقية. يحاذي الصيف.
+
+## مقالات ذات صلة
+
+- [لوحات ألوان الربيع: Bright Spring vs True Spring vs Light Spring](/ar/blog/spring-color-palettes-decoded) — الدليل الشقيق للمواسم الدافئة
+- [لوحات ألوان الصيف: Cool Summer vs True Summer vs Soft Summer](/ar/blog/summer-color-palettes-decoded) — مقارنة المواسم الباردة
+- [لوحة ألوان الشتاء العميق: دليل الأسلوب الكامل](/ar/blog/deep-winter-color-palette-guide) — الجار البارد للخريف العميق
+- [أفضل الألوان للدرجات التحتية الدافئة](/ar/blog/best-colors-for-warm-undertones) — دليل شامل لجميع أنواع الخريف

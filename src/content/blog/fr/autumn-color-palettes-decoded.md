@@ -6,8 +6,6 @@ tags: ["analyse de couleurs personnelle", "palette automne", "saison de couleurs
 image: "/images/blog/autumn-color-palettes-decoded.webp"
 ---
 
-![Moodboard de palettes automnales aux tons chauds et terreux](/images/blog/autumn-color-palettes-decoded.webp)
-
 ## Vous Êtes Automne — Mais Lequel ?
 
 Votre analyse de couleurs a révélé que vous êtes Automne. Vous avez de la chaleur dans votre teint, une richesse dans votre coloration, et vous êtes superbe dans les nuances qui évoquent les forêts, les marchés d'automne et l'heure dorée.
@@ -171,3 +169,10 @@ Aujourd'hui, les outils d'analyse de couleurs par IA peuvent examiner votre sous
 - **Automne Vrai :** Le centre équilibré. Profondeur moyenne, clairement chaud, terreux.
 - **Automne Doux :** Le plus atténué des Automnes. Neutres chauds poudrés, doux et sophistiqués. Proche de l'Été.
 - Tous les Automnes partagent des sous-tons chauds — la différence réside dans la profondeur et la saturation.
+
+## Articles Connexes
+
+- [Palettes Printemps Décodées : Bright Spring vs True Spring vs Light Spring](/fr/blog/spring-color-palettes-decoded) — Le guide sœur des saisons chaudes
+- [Palettes Été Décodées : Cool Summer vs True Summer vs Soft Summer](/fr/blog/summer-color-palettes-decoded) — Comparaison des saisons fraîches
+- [Palette Deep Winter : Guide Complet](/fr/blog/deep-winter-color-palette-guide) — Le voisin froid de l'Automne Profond
+- [Meilleures Couleurs pour Sous-tons Chauds](/fr/blog/best-colors-for-warm-undertones) — Guide élargi pour tous les types d'Automne

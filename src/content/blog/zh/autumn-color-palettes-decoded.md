@@ -6,8 +6,6 @@ tags: ["个人色彩分析", "秋季色彩", "色彩季型", "美妆", "穿搭�
 image: "/images/blog/autumn-color-palettes-decoded.webp"
 ---
 
-![秋季色彩情绪板，温暖大地色系](/images/blog/autumn-color-palettes-decoded.webp)
-
 ## 你是秋季型——但到底是哪一种？
 
 你的色彩分析结果出来了：秋季型。你身上有着温暖的底蕴，丰富的色彩感，穿上让人联想到森林、丰收和金色黄昏的色调时格外美丽。
@@ -220,3 +218,10 @@ image: "/images/blog/autumn-color-palettes-decoded.webp"
 - 拿不准时试试深度测试：你的子季型取决于你的五官能承载多少色彩重量而不被压制。
 
 了解你具体的秋季子季型，会改变你购物、日常搭配以及出门时的自信程度。你不只是"一个秋季型"——你是某种特定色调的温暖，精确知道是哪一种，能为你解锁一个真正适合你的衣橱。
+
+## 相关文章
+
+- [春季色彩解码：明亮春 vs 真春 vs 浅春](/zh/blog/spring-color-palettes-decoded) — 暖色季型的姊妹指南
+- [夏季色彩解码：冷夏 vs 真夏 vs 柔夏](/zh/blog/summer-color-palettes-decoded) — 冷调柔和季型的对比
+- [深冬色彩完整风格指南](/zh/blog/deep-winter-color-palette-guide) — 深秋的冷调邻居
+- [暖色调最佳颜色指南](/zh/blog/best-colors-for-warm-undertones) — 适用于所有秋季型的暖色调指南

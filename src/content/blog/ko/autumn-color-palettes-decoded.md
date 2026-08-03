@@ -6,8 +6,6 @@ tags: ["퍼스널 컬러 분석", "가을 컬러 팔레트", "컬러 시즌", "�
 image: "/images/blog/autumn-color-palettes-decoded.webp"
 ---
 
-![가을 컬러 팔레트 무드보드, 따뜻한 어스톤](/images/blog/autumn-color-palettes-decoded.webp)
-
 ## 당신은 가을 타입 — 하지만 어떤 가을?
 
 퍼스널 컬러 진단 결과 가을 타입이 나왔습니다. 따뜻한 톤의 피부, 풍부한 색감, 숲속 길과 골든아워를 떠올리게 하는 컬러가 잘 어울리는 당신.
@@ -189,3 +187,10 @@ image: "/images/blog/autumn-color-palettes-decoded.webp"
 - **소프트 오텀:** 가장 뮤트한 가을. 더스티하고 부드럽고 세련된 웜 뉴트럴. 여름에 가까움.
 - 모든 가을은 웜 언더톤과 풍부한 색감을 공유 — 차이는 깊이와 채도.
 - 헷갈리면 깊이 테스트를: 이목구비가 압도당하지 않으면서 어느 정도의 색 무게를 감당할 수 있는지가 서브시즌을 결정합니다.
+
+## 관련 기사
+
+- [봄 컬러 팔레트 해석: 브라이트 스프링 vs 트루 스프링 vs 라이트 스프링](/ko/blog/spring-color-palettes-decoded) — 웜 시즌 자매 가이드
+- [여름 컬러 팔레트 해석: 쿨 서머 vs 트루 서머 vs 소프트 서머](/ko/blog/summer-color-palettes-decoded) — 쿨 뮤트 시즌 비교
+- [딥 윈터 컬러 팔레트 완전 가이드](/ko/blog/deep-winter-color-palette-guide) — 딥 오텀의 쿨톤 이웃
+- [웜 언더톤 베스트 컬러 가이드](/ko/blog/best-colors-for-warm-undertones) — 모든 가을 타입을 위한 가이드

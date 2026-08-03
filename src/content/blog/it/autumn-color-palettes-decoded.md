@@ -6,8 +6,6 @@ tags: ["analisi del colore personale", "palette autunnale", "stagione di colori"
 image: "/images/blog/autumn-color-palettes-decoded.webp"
 ---
 
-![Moodboard palette autunnali con toni caldi e terrosi](/images/blog/autumn-color-palettes-decoded.webp)
-
 ## Sei un Autunno — Ma Quale?
 
 La tua analisi del colore ha rivelato: Autunno. Hai calore nella tua colorazione, ricchezza nei tratti e stai benissimo con le tonalità che ricordano boschi, mercati del raccolto e l'ora dorata.
@@ -139,3 +137,10 @@ Gli strumenti di analisi del colore basati sull'IA possono esaminare il tuo sott
 - **Autunno Profondo:** Il più intenso. Colori caldi ricchi, profondi e saturi. Confina con l'Inverno.
 - **Autunno Vero:** Il centro equilibrato. Profondità media, chiaramente caldo, terroso.
 - **Autunno Morbido:** Il più attenuato. Neutri caldi polverosi, delicati e sofisticati. Confina con l'Estate.
+
+## Articoli Correlati
+
+- [Palette Primavera Decodificate: Bright Spring vs True Spring vs Light Spring](/it/blog/spring-color-palettes-decoded) — La guida sorella delle stagioni calde
+- [Palette Estate Decodificate: Cool Summer vs True Summer vs Soft Summer](/it/blog/summer-color-palettes-decoded) — Confronto delle stagioni fredde
+- [Palette Deep Winter: Guida Completa allo Stile](/it/blog/deep-winter-color-palette-guide) — Il vicino freddo dell'Autunno Profondo
+- [Migliori Colori per Sottotoni Caldi](/it/blog/best-colors-for-warm-undertones) — Guida ampia per tutti i tipi di Autunno

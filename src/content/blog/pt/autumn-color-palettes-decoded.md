@@ -6,8 +6,6 @@ tags: ["análise de cores pessoal", "paleta de outono", "estação de cores", "b
 image: "/images/blog/autumn-color-palettes-decoded.webp"
 ---
 
-![Moodboard de paletas de cores de outono com tons quentes terrosos](/images/blog/autumn-color-palettes-decoded.webp)
-
 ## Você é Outono — Mas Qual?
 
 Sua análise de cores revelou: Outono. Você tem calor na sua coloração, riqueza nos seus traços, e fica incrível em tons que lembram florestas, feiras de colheita e a hora dourada.
@@ -117,3 +115,10 @@ Ferramentas de análise de cores com IA podem examinar seu subtom, cor dos olhos
 - **Outono Profundo:** O mais intenso dos Outonos. Cores quentes ricas, profundas e saturadas. Borda o Inverno.
 - **Outono Verdadeiro:** O centro equilibrado. Profundidade média, claramente quente, terroso.
 - **Outono Suave:** O mais suavizado dos Outonos. Neutros quentes poeirentos, gentis e sofisticados. Borda o Verão.
+
+## Artigos Relacionados
+
+- [Paletas de Primavera Decodificadas: Bright Spring vs True Spring vs Light Spring](/pt/blog/spring-color-palettes-decoded) — O guia irmão das estações quentes
+- [Paletas de Verão Decodificadas: Cool Summer vs True Summer vs Soft Summer](/pt/blog/summer-color-palettes-decoded) — Comparação das estações frias
+- [Paleta Deep Winter: Guia Completo de Estilo](/pt/blog/deep-winter-color-palette-guide) — O vizinho frio do Outono Profundo
+- [Melhores Cores para Subtons Quentes](/pt/blog/best-colors-for-warm-undertones) — Guia amplo para todos os tipos de Outono
