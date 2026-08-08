@@ -14,6 +14,9 @@ export type CreemProductKey = keyof typeof CREEM_PRODUCTS;
 export const FIRST_MONTH_DISCOUNT_CODE = process.env.CREEM_FIRST_MONTH_DISCOUNT || "FIRST50";
 export const FIRST_MONTH_DISCOUNT_PERCENT = 50;
 
+export const CREDITS5_FIRST_BUY_DISCOUNT_CODE = process.env.CREEM_CREDITS5_FIRST_BUY_DISCOUNT || "CREDITS5FIRST";
+export const CREDITS5_FIRST_BUY_PRICE = "$0.99";
+
 export const LOCALES = [
   "en", "zh", "ja", "ko",
   "es", "fr", "de", "pt", "it", "ru",

@@ -19,6 +19,7 @@ import {
 } from "@/lib/api";
 import { trackEvent } from "@/lib/analytics";
 import { PricingModal } from "@/components/PricingModal";
+import { WelcomeOfferSheet } from "@/components/WelcomeOfferSheet";
 
 interface LightboxState {
   entry: HistoryEntry;
@@ -236,11 +237,10 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [backgroundTasks, setBackgroundTasks] = useState<BackgroundTask[]>([]);
   const [lastUploadedPhotoUrl, setLastUploadedPhotoUrl] = useState<string | null>(null);
   const [showTaskPanel, setShowTaskPanel] = useState(false);
+  const [showWelcomeOffer, setShowWelcomeOffer] = useState(false);
 
-  const prefs = loadPrefs();
-  const defaultLang = prefs.reportLang || LOCALE_TO_REPORT_LANG[locale] || "en";
-  const [resolution, setResolution] = useState<Resolution>(prefs.resolution);
-  const [reportLang, setReportLang] = useState(defaultLang);
+  const [resolution, setResolution] = useState<Resolution>("2K");
+  const [reportLang, setReportLang] = useState(LOCALE_TO_REPORT_LANG[locale] || "en");
   const [showLangPicker, setShowLangPicker] = useState(false);
 
   const fileRef = useRef<HTMLInputElement>(null);
@@ -250,6 +250,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
   useEffect(() => {
     setLastUploadedPhotoUrl(loadLastPhotoUrl());
+    const prefs = loadPrefs();
+    if (prefs.reportLang) setReportLang(prefs.reportLang);
+    if (prefs.resolution) setResolution(prefs.resolution);
   }, []);
 
   useEffect(() => {
@@ -282,6 +285,15 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       })
       .finally(() => setHistoryLoading(false));
   }, [isLoggedIn]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    if (!isLoggedIn) return;
+    try {
+      if (localStorage.getItem("belle_welcome_offer_seen")) return;
+    } catch { return; }
+    const timer = setTimeout(() => setShowWelcomeOffer(true), 1500);
+    return () => clearTimeout(timer);
+  }, [isLoggedIn]);
 
   const reloadHistory = useCallback(() => {
     fetchHistory().then((res) => {
@@ -1119,6 +1131,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
       {/* Pricing Modal */}
       <PricingModal open={showPricingModal} onClose={() => setShowPricingModal(false)} />
+
+      {/* Welcome Offer */}
+      <WelcomeOfferSheet open={showWelcomeOffer} onClose={() => setShowWelcomeOffer(false)} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Creem } from "creem";
 import { auth } from "@/lib/auth";
-import { CREEM_PRODUCTS, FIRST_MONTH_DISCOUNT_CODE, SITE_URL, type CreemProductKey } from "@/lib/constants";
+import { CREEM_PRODUCTS, FIRST_MONTH_DISCOUNT_CODE, CREDITS5_FIRST_BUY_DISCOUNT_CODE, SITE_URL, type CreemProductKey } from "@/lib/constants";
 
 const creem = new Creem({ apiKey: process.env.CREEM_API_KEY! });
 
@@ -37,6 +37,8 @@ export async function POST(req: NextRequest) {
       checkoutParams.discountCode = discountCode;
     } else if (product === "monthly") {
       checkoutParams.discountCode = FIRST_MONTH_DISCOUNT_CODE;
+    } else if (product === "credits5") {
+      checkoutParams.discountCode = CREDITS5_FIRST_BUY_DISCOUNT_CODE;
     }
 
     const checkout = await creem.checkouts.create(checkoutParams);
