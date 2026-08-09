@@ -114,9 +114,10 @@ export default async function LocaleLayout({
     logo: `${SITE_URL}/logo-full.webp`,
     sameAs: [
       "https://www.instagram.com/belleai.app",
-      "https://www.pinterest.com/belleaiapp",
+      "https://x.com/BelleAI",
       "https://www.youtube.com/@BelleAI",
-      "https://x.com/BelleAI_jp",
+      "https://www.pinterest.com/belleaiapp",
+      "https://medium.com/@belleai",
     ],
     description:
       "AI-powered personal color analysis app. Find your seasonal color type, best colors for makeup, fashion, and hair with advanced computer vision.",
