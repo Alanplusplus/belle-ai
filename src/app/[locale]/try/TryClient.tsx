@@ -204,6 +204,20 @@ const CARD_IMAGES: Record<AnalysisType, string> = {
   celebrity_match: "/images/card_celebrity.webp",
 };
 
+const EXAMPLE_IMAGES: Partial<Record<AnalysisType, string>> = {
+  color_analysis: "/images/examples/report_color_analysis.webp",
+  makeup: "/images/examples/report_makeup.webp",
+  face_shape: "/images/examples/report_face_shape.webp",
+  hair_preview: "/images/examples/report_hair_preview.webp",
+  outfit_color: "/images/examples/report_outfit_color.webp",
+  glasses_match: "/images/examples/report_glasses_match.webp",
+  occasion_makeup: "/images/examples/report_occasion_makeup.webp",
+  jewelry_guide: "/images/examples/report_jewelry_guide.webp",
+  glow_up_report: "/images/examples/report_glow_up_report.webp",
+  style_personality: "/images/examples/report_style_personality.webp",
+  celebrity_match: "/images/examples/report_celebrity_match.webp",
+};
+
 interface BackgroundTask {
   id: string;
   type: AnalysisType;
@@ -238,6 +252,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [lastUploadedPhotoUrl, setLastUploadedPhotoUrl] = useState<string | null>(null);
   const [showTaskPanel, setShowTaskPanel] = useState(false);
   const [showWelcomeOffer, setShowWelcomeOffer] = useState(false);
+  const [examplePreview, setExamplePreview] = useState<string | null>(null);
 
   const [resolution, setResolution] = useState<Resolution>("2K");
   const [reportLang, setReportLang] = useState(LOCALE_TO_REPORT_LANG[locale] || "en");
@@ -258,6 +273,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   useEffect(() => {
     if (!isLoggedIn || resumedRef.current) return;
     resumedRef.current = true;
+    trackEvent("sign_in_success", { method: "google" });
 
     setHistoryLoading(true);
     // 并行加载历史和进行中的任务
@@ -294,6 +310,14 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     const timer = setTimeout(() => setShowWelcomeOffer(true), 1500);
     return () => clearTimeout(timer);
   }, [isLoggedIn]);
+
+  useEffect(() => {
+    const isGenerating = phase === "uploading" || phase === "generating" || phase === "preparing";
+    if (!isGenerating) return;
+    const handler = () => trackEvent("page_leave_during_generation", { type: analysisType, phase });
+    window.addEventListener("beforeunload", handler);
+    return () => window.removeEventListener("beforeunload", handler);
+  }, [phase, analysisType]);
 
   const reloadHistory = useCallback(() => {
     fetchHistory().then((res) => {
@@ -376,14 +400,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   }, [t, analysisType]);
 
   const handleUploadClick = useCallback(() => {
-    if (!isLoggedIn) {
-      trackEvent("sign_in_prompted", { trigger: "upload_click" });
-      triggerGoogleSignIn();
-      return;
-    }
     trackEvent("upload_area_clicked");
     fileRef.current?.click();
-  }, [isLoggedIn]);
+  }, []);
 
   const handleFileSelect = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -662,7 +681,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           {(["2K", "4K"] as Resolution[]).map((r) => (
             <button
               key={r}
-              onClick={() => { setResolution(r); savePrefs(r, reportLang); }}
+              onClick={() => { setResolution(r); savePrefs(r, reportLang); trackEvent("resolution_changed", { resolution: r }); }}
               className={`rounded-full px-3.5 py-1 text-xs font-medium transition ${
                 resolution === r
                   ? "bg-primary text-white shadow-sm"
@@ -691,7 +710,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                 {REPORT_LANGUAGES.map((lang) => (
                   <button
                     key={lang.code}
-                    onClick={() => { setReportLang(lang.code); savePrefs(resolution, lang.code); setShowLangPicker(false); }}
+                    onClick={() => { setReportLang(lang.code); savePrefs(resolution, lang.code); setShowLangPicker(false); trackEvent("report_language_changed", { language: lang.code }); }}
                     className={`w-full rounded-lg px-3 py-1.5 text-left text-xs transition hover:bg-muted ${
                       reportLang === lang.code ? "bg-primary/10 font-medium text-primary" : ""
                     }`}
@@ -704,6 +723,64 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           )}
         </div>
       </div>
+
+      {/* Example Showcase */}
+      {EXAMPLE_IMAGES[analysisType] && (
+        <div className="mt-8">
+          <p className="mb-3 text-center text-sm font-medium text-muted-foreground">{t("exampleTitle")}</p>
+          <div className="grid grid-cols-2 gap-3 rounded-2xl border border-border/60 bg-muted/20 p-3 sm:p-4">
+            <div className="space-y-1.5">
+              <span className="block text-center text-xs font-medium text-muted-foreground">{t("exampleBefore")}</span>
+              <div className="overflow-hidden rounded-xl border border-border/40 bg-background">
+                <img
+                  src="/images/examples/before.webp"
+                  alt="Example photo"
+                  className="h-auto w-full object-cover"
+                  style={{ aspectRatio: "3/4" }}
+                />
+              </div>
+            </div>
+            <div className="space-y-1.5">
+              <span className="block text-center text-xs font-medium text-muted-foreground">{t("exampleAfter")}</span>
+              <div
+                className="cursor-pointer overflow-hidden rounded-xl border border-border/40 bg-background transition hover:shadow-md"
+                onClick={() => {
+                  trackEvent("example_viewed", { type: analysisType });
+                  setExamplePreview(EXAMPLE_IMAGES[analysisType]!);
+                }}
+              >
+                <img
+                  src={EXAMPLE_IMAGES[analysisType]!}
+                  alt="Example AI report"
+                  className="h-auto w-full object-cover"
+                  style={{ aspectRatio: "3/4" }}
+                />
+              </div>
+            </div>
+          </div>
+          <p className="mt-2 text-center text-xs text-muted-foreground">{t("exampleCta")}</p>
+        </div>
+      )}
+
+      {/* Example Preview Modal */}
+      {examplePreview && (
+        <div
+          className="fixed inset-0 z-[70] flex items-center justify-center bg-black/60 backdrop-blur-sm"
+          onClick={() => setExamplePreview(null)}
+        >
+          <div className="relative max-h-[90vh] max-w-lg overflow-auto rounded-2xl" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setExamplePreview(null)}
+              className="absolute right-3 top-3 z-10 rounded-full bg-black/50 p-1.5 text-white transition hover:bg-black/70"
+            >
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img src={examplePreview} alt="Example report full view" className="h-auto w-full rounded-2xl" />
+          </div>
+        </div>
+      )}
 
       {/* Upload Area */}
       <div className="mt-8">
@@ -738,11 +815,11 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                   d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
                 />
               </svg>
-              <p className="text-sm font-medium text-foreground">
-                {isLoggedIn ? t("uploadTitle") : t("loginRequired")}
+              <p className="text-center text-sm font-medium text-foreground">
+                {t("uploadTitle")}
               </p>
-              <p className="mt-1 text-xs text-muted-foreground">
-                {isLoggedIn ? t("uploadHint") : t("signInNote")}
+              <p className="mt-1 text-center text-xs text-muted-foreground">
+                {t("uploadHint")}
               </p>
               {isLoggedIn && lastUploadedPhotoUrl && !previewUrl && (
                 <button
@@ -784,18 +861,23 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       {/* Generate Button */}
       <div className="mt-6 text-center">
         {phase === "no_quota" ? (
-          <NoQuotaCard t={t} onViewPlans={() => setShowPricingModal(true)} />
+          <NoQuotaCard t={t} onViewPlans={() => { trackEvent("pricing_modal_opened", { source: "no_quota_generate" }); setShowPricingModal(true); }} />
         ) : (
           <>
             <button
-              onClick={isLoggedIn ? handleGenerate : () => { trackEvent("sign_in_prompted", { trigger: "generate_click" }); triggerGoogleSignIn(); }}
+              onClick={() => {
+                if (!isLoggedIn) {
+                  trackEvent("sign_in_prompted", { trigger: "generate_click" });
+                  triggerGoogleSignIn();
+                  return;
+                }
+                handleGenerate();
+              }}
               disabled={
-                isLoggedIn && (
-                  !previewUrl ||
-                  phase === "uploading" ||
-                  phase === "generating" ||
-                  phase === "preparing"
-                )
+                !previewUrl ||
+                phase === "uploading" ||
+                phase === "generating" ||
+                phase === "preparing"
               }
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
             >
@@ -808,12 +890,12 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                   ? t("uploading")
                   : phase === "generating"
                     ? t("generating")
-                    : !isLoggedIn
+                    : !isLoggedIn && previewUrl
                       ? t("signInToGenerate")
                       : t("generate")}
             </button>
 
-            {!isLoggedIn && (
+            {!isLoggedIn && previewUrl && (
               <p className="mt-2 text-xs text-muted-foreground">
                 {t("signInNote")}
               </p>
@@ -1002,7 +1084,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
           {quota && quota.remaining <= 0 && (
             <div className="mt-6">
-              <NoQuotaCard t={t} onViewPlans={() => setShowPricingModal(true)} />
+              <NoQuotaCard t={t} onViewPlans={() => { trackEvent("pricing_modal_opened", { source: "no_quota_result" }); setShowPricingModal(true); }} />
             </div>
           )}
         </div>

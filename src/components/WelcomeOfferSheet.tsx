@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { useSession } from "next-auth/react";
 import { triggerGoogleSignIn } from "@/lib/google-signin";
@@ -18,10 +18,19 @@ export function WelcomeOfferSheet({ open, onClose }: Props) {
   const t = useTranslations("welcomeOffer");
   const { status } = useSession();
   const [loading, setLoading] = useState(false);
+  const trackedRef = useRef(false);
+
+  useEffect(() => {
+    if (open && !trackedRef.current) {
+      trackedRef.current = true;
+      trackEvent("welcome_offer_shown");
+    }
+  }, [open]);
 
   if (!open) return null;
 
   const handleDismiss = () => {
+    trackEvent("welcome_offer_dismissed");
     try { localStorage.setItem(STORAGE_KEY, "1"); } catch {}
     onClose();
   };
