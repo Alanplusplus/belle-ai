@@ -396,7 +396,13 @@
     "relatedPosts": "Verwandte Beiträge",
     "backToBlog": "Zurück zum Blog",
     "ctaTitle": "Möchtest du die KI-Farbanalyse selbst ausprobieren?",
-    "ctaDescription": "Lade ein Foto hoch und erhalte in 60 Sekunden einen Schönheitsbericht auf Magazin-Niveau."
+    "ctaDescription": "Lade ein Foto hoch und erhalte in 60 Sekunden einen Schönheitsbericht auf Magazin-Niveau.",
+    "inlineCtaTitle": "Entdecke jetzt deine persönliche Farbpalette",
+    "inlineCtaDesc": "Lade ein Foto hoch — erhalte deinen KI-Beauty-Report in 60 Sekunden.",
+    "stickyCtaText": "✨ Kostenlose KI-Farbanalyse starten",
+    "sidebarCtaTitle": "Selbst ausprobieren",
+    "sidebarCtaDesc": "Lade ein Foto hoch und finde in 60 Sekunden deine besten Farben.",
+    "sidebarCtaFree": "Kostenlos · Keine Registrierung"
   },
   "tryPage": {
     "title": "KI-Schönheitsanalyse testen",

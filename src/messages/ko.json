@@ -396,7 +396,13 @@
     "relatedPosts": "관련 글",
     "backToBlog": "블로그로 돌아가기",
     "ctaTitle": "AI 컬러 분석을 직접 체험해보시겠어요?",
-    "ctaDescription": "사진 한 장을 업로드하면 60초 만에 매거진급 뷰티 리포트를 받아보세요."
+    "ctaDescription": "사진 한 장을 업로드하면 60초 만에 매거진급 뷰티 리포트를 받아보세요.",
+    "inlineCtaTitle": "나만의 퍼스널 컬러를 지금 확인하세요",
+    "inlineCtaDesc": "사진 업로드 — 60초 만에 AI 뷰티 리포트를 받아보세요.",
+    "stickyCtaText": "✨ 무료 AI 컬러 분석 받기",
+    "sidebarCtaTitle": "직접 체험해보세요",
+    "sidebarCtaDesc": "사진을 업로드하고 60초 만에 어울리는 색상을 발견하세요.",
+    "sidebarCtaFree": "무료 · 가입 불필요"
   },
   "tryPage": {
     "title": "AI 뷰티 분석 체험하기",

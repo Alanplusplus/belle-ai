@@ -396,7 +396,13 @@
     "relatedPosts": "関連記事",
     "backToBlog": "ブログに戻る",
     "ctaTitle": "AIカラー診断を試してみませんか？",
-    "ctaDescription": "写真1枚をアップロードして、60秒で雑誌レベルのビューティーレポートを取得。"
+    "ctaDescription": "写真1枚をアップロードして、60秒で雑誌レベルのビューティーレポートを取得。",
+    "inlineCtaTitle": "あなたのパーソナルカラーを今すぐチェック",
+    "inlineCtaDesc": "写真をアップロード — 60秒でAIビューティーレポートを取得。",
+    "stickyCtaText": "✨ 無料AIカラー診断を受ける",
+    "sidebarCtaTitle": "自分で試してみる",
+    "sidebarCtaDesc": "写真をアップロードして、60秒で似合う色を発見。",
+    "sidebarCtaFree": "無料 · 登録不要"
   },
   "tryPage": {
     "title": "AIビューティー分析を試す",

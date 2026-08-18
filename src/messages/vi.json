@@ -396,7 +396,13 @@
     "relatedPosts": "Bài Viết Liên Quan",
     "backToBlog": "Quay Lại Blog",
     "ctaTitle": "Muốn thử phân tích màu AI?",
-    "ctaDescription": "Tải lên một bức ảnh và nhận báo cáo làm đẹp đẳng cấp tạp chí trong 60 giây."
+    "ctaDescription": "Tải lên một bức ảnh và nhận báo cáo làm đẹp đẳng cấp tạp chí trong 60 giây.",
+    "inlineCtaTitle": "Xem bảng màu cá nhân của bạn ngay",
+    "inlineCtaDesc": "Tải ảnh lên — nhận báo cáo làm đẹp AI trong 60 giây.",
+    "stickyCtaText": "✨ Phân tích màu AI miễn phí",
+    "sidebarCtaTitle": "Tự mình trải nghiệm",
+    "sidebarCtaDesc": "Tải ảnh lên và khám phá màu sắc phù hợp nhất trong 60 giây.",
+    "sidebarCtaFree": "Miễn phí · Không cần đăng ký"
   },
   "tryPage": {
     "title": "Dùng thử Phân tích Làm đẹp AI",

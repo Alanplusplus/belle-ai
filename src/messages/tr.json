@@ -396,7 +396,13 @@
     "relatedPosts": "İlgili Yazılar",
     "backToBlog": "Bloga Dön",
     "ctaTitle": "Yapay zeka renk analizini kendiniz denemek ister misiniz?",
-    "ctaDescription": "Bir fotoğraf yükleyin ve 60 saniyede dergi kalitesinde güzellik raporu alın."
+    "ctaDescription": "Bir fotoğraf yükleyin ve 60 saniyede dergi kalitesinde güzellik raporu alın.",
+    "inlineCtaTitle": "Kişisel renk paletini şimdi keşfet",
+    "inlineCtaDesc": "Bir fotoğraf yükle — 60 saniyede AI güzellik raporunu al.",
+    "stickyCtaText": "✨ Ücretsiz AI renk analizi",
+    "sidebarCtaTitle": "Kendin dene",
+    "sidebarCtaDesc": "Bir fotoğraf yükle ve 60 saniyede en iyi renklerini keşfet.",
+    "sidebarCtaFree": "Ücretsiz · Kayıt gerekmez"
   },
   "tryPage": {
     "title": "Yapay Zeka Güzellik Analizini Deneyin",

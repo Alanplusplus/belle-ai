@@ -414,7 +414,13 @@
     "relatedPosts": "相关文章",
     "backToBlog": "返回博客",
     "ctaTitle": "想亲自体验AI色彩分析吗？",
-    "ctaDescription": "上传一张照片，60秒获得杂志级AI美妆报告。"
+    "ctaDescription": "上传一张照片，60秒获得杂志级AI美妆报告。",
+    "inlineCtaTitle": "立即查看你的专属色彩方案",
+    "inlineCtaDesc": "上传照片，60秒获取你的AI美妆报告。",
+    "stickyCtaText": "✨ 免费获取你的AI色彩分析",
+    "sidebarCtaTitle": "亲自试试",
+    "sidebarCtaDesc": "上传照片，60秒发现最适合你的颜色。",
+    "sidebarCtaFree": "免费 · 无需注册"
   },
   "tryPage": {
     "title": "AI 美妆分析",

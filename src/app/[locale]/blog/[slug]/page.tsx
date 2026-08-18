@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { StickyBottomCta, InlineCta } from "@/components/BlogCtaBanner";
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -93,6 +94,8 @@ function BlogPostContent({ post }: { post: { date: string; readingTime: string; 
   const t = useTranslations("blog");
   const ft = useTranslations("features");
 
+  const { before, after } = splitContentAtSecondH2(post.content);
+
   return (
     <article className="py-16">
       <div className="mx-auto max-w-3xl px-4">
@@ -132,9 +135,19 @@ function BlogPostContent({ post }: { post: { date: string; readingTime: string; 
         )}
 
         <div className="prose prose-neutral mt-10 max-w-none prose-headings:font-bold prose-a:text-primary">
-          <MarkdownContent content={post.content} />
+          <MarkdownContent content={before} />
         </div>
 
+        {/* Inline CTA — inserted after the 2nd h2 section */}
+        <InlineCta after={after} inlineCtaTitle={t("inlineCtaTitle")} inlineCtaDesc={t("inlineCtaDesc")} tryItFree={ft("tryItFree")} />
+
+        {after && (
+          <div className="prose prose-neutral max-w-none prose-headings:font-bold prose-a:text-primary">
+            <MarkdownContent content={after} />
+          </div>
+        )}
+
+        {/* Bottom CTA card */}
         <div className="mt-16 rounded-2xl border border-primary/30 bg-primary/5 p-6 text-center">
           <h3 className="text-lg font-bold">
             {t("ctaTitle")}
@@ -150,8 +163,36 @@ function BlogPostContent({ post }: { post: { date: string; readingTime: string; 
           </Link>
         </div>
       </div>
+
+      {/* Sticky bottom bar */}
+      <StickyBottomCta />
     </article>
   );
+}
+
+function splitContentAtSecondH2(content: string): { before: string; after: string | null } {
+  const lines = content.split("\n");
+  let h2Count = 0;
+  for (let i = 0; i < lines.length; i++) {
+    if (/^##\s/.test(lines[i])) {
+      h2Count++;
+      if (h2Count === 3) {
+        return {
+          before: lines.slice(0, i).join("\n"),
+          after: lines.slice(i).join("\n"),
+        };
+      }
+    }
+  }
+  // If fewer than 3 h2s, split at ~40% of the content
+  const splitPoint = Math.floor(lines.length * 0.4);
+  if (lines.length > 20) {
+    return {
+      before: lines.slice(0, splitPoint).join("\n"),
+      after: lines.slice(splitPoint).join("\n"),
+    };
+  }
+  return { before: content, after: null };
 }
 
 function MarkdownContent({ content }: { content: string }) {

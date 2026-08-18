@@ -396,7 +396,13 @@
     "relatedPosts": "Artículos relacionados",
     "backToBlog": "Volver al blog",
     "ctaTitle": "¿Quieres probar el análisis de color con IA tú misma?",
-    "ctaDescription": "Sube una foto y obtén un informe de belleza de nivel revista en 60 segundos."
+    "ctaDescription": "Sube una foto y obtén un informe de belleza de nivel revista en 60 segundos.",
+    "inlineCtaTitle": "Descubre tu paleta de colores personal",
+    "inlineCtaDesc": "Sube una foto — obtén tu informe de belleza con IA en 60 segundos.",
+    "stickyCtaText": "✨ Análisis de color con IA gratis",
+    "sidebarCtaTitle": "Pruébalo tú misma",
+    "sidebarCtaDesc": "Sube una foto y descubre tus mejores colores en 60 segundos.",
+    "sidebarCtaFree": "Gratis · Sin registro"
   },
   "tryPage": {
     "title": "Prueba el análisis de belleza con IA",

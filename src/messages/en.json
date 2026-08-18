@@ -414,7 +414,13 @@
     "relatedPosts": "Related Posts",
     "backToBlog": "Back to Blog",
     "ctaTitle": "Want to try AI color analysis yourself?",
-    "ctaDescription": "Upload one photo and get a magazine-level beauty report in 60 seconds."
+    "ctaDescription": "Upload one photo and get a magazine-level beauty report in 60 seconds.",
+    "inlineCtaTitle": "See your personal color palette now",
+    "inlineCtaDesc": "Upload a photo — get your AI beauty report in 60 seconds.",
+    "stickyCtaText": "✨ Get your free AI color analysis",
+    "sidebarCtaTitle": "Try It Yourself",
+    "sidebarCtaDesc": "Upload a photo and discover your best colors in 60 seconds.",
+    "sidebarCtaFree": "Free · No signup needed"
   },
   "tryPage": {
     "title": "Try AI Beauty Analysis",

@@ -396,7 +396,13 @@
     "relatedPosts": "Artikel Terkait",
     "backToBlog": "Kembali ke Blog",
     "ctaTitle": "Ingin mencoba analisis warna AI sendiri?",
-    "ctaDescription": "Unggah satu foto dan dapatkan laporan kecantikan setara majalah dalam 60 detik."
+    "ctaDescription": "Unggah satu foto dan dapatkan laporan kecantikan setara majalah dalam 60 detik.",
+    "inlineCtaTitle": "Lihat palet warna personalmu sekarang",
+    "inlineCtaDesc": "Unggah foto — dapatkan laporan kecantikan AI dalam 60 detik.",
+    "stickyCtaText": "✨ Analisis warna AI gratis",
+    "sidebarCtaTitle": "Coba sendiri",
+    "sidebarCtaDesc": "Unggah foto dan temukan warna terbaikmu dalam 60 detik.",
+    "sidebarCtaFree": "Gratis · Tanpa daftar"
   },
   "tryPage": {
     "title": "Coba Analisis Kecantikan AI",
