@@ -146,3 +146,7 @@ This doesn't make human analysts obsolete. It makes color analysis accessible to
 - **The best strategy is complementary:** use AI as your starting point, and invest in a professional session if you want the full experience
 - **AI accuracy is improving rapidly** — what was a novelty two years ago is now a genuinely useful tool for personal styling
 
+## Related Articles
+
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+

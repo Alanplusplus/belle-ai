@@ -166,6 +166,7 @@ For precise results without the guesswork, [AI color analysis](/en/personal-colo
 
 ## Related Articles
 
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
 - [Personal Color Analysis: All 12 Types Explained](/en/blog/personal-color-analysis-guide) — Understand where Deep Winter fits in the full system
 - [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Broader cool-toned color guide
 - [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Confirm your undertone first

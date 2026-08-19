@@ -157,3 +157,7 @@ Ready to discover your seasonal color type? Our AI-powered tool analyzes your ph
 [Start Free AI Color Analysis →](/try)
 
 Or prefer no photo? [Take the Free Color Quiz →](/tools/color-quiz)
+
+## Related Articles
+
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors

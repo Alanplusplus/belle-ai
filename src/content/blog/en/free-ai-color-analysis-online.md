@@ -132,3 +132,7 @@ Ready to find your best colors? Upload a selfie and get your complete color anal
 No signup required. No credit card. Your results appear instantly.
 
 Prefer not to upload a photo? [Take our free color analysis quiz instead →](/tools/color-quiz)
+
+## Related Articles
+
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors

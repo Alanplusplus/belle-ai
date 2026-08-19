@@ -201,6 +201,7 @@ The trick isn't figuring out which side you're on. It's recognizing that you wer
 
 ## Related Articles
 
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
 - [How to Determine Your Skin Undertone](/en/blog/how-to-determine-skin-undertone) — The complete guide with 7 testing methods
 - [Olive Undertone Explained](/en/blog/olive-undertone-guide) — Another commonly misidentified undertone
 - [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — If you lean slightly cool-neutral

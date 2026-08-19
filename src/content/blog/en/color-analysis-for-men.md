@@ -140,3 +140,8 @@ Stop guessing and find your exact seasonal type. Our AI works equally well for m
 60 seconds, free, no signup. You'll know your season and have a practical color palette for shopping.
 
 Or answer quick questions: [Take the Free Quiz →](/tools/color-quiz)
+
+## Related Articles
+
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Color Analysis for Men – Full Guide](/en/color-analysis-for/men) — Detailed guide for men's color analysis

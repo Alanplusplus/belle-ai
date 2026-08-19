@@ -148,6 +148,7 @@ The next time someone tells you a color "isn't your shade," remember — there's
 
 ## Related Articles
 
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
 - [Personal Color Analysis: All 12 Types Explained](/en/blog/personal-color-analysis-guide) — Understand the full 12-season system
 - [How to Determine Your Skin Undertone](/en/blog/how-to-determine-skin-undertone) — Apply the science with practical undertone tests
 - [Why Online Color Analysis Quizzes Get It Wrong](/en/blog/why-color-analysis-quizzes-are-wrong) — Understanding the limitations of self-assessment

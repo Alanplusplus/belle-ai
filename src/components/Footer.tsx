@@ -115,6 +115,14 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
+                  href="/color-analysis"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {nav("colorAnalysisGuide")}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/blog"
                   className="text-muted-foreground hover:text-foreground"
                 >

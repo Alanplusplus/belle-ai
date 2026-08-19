@@ -32,6 +32,7 @@ export default function HomePage() {
 function HomeContent() {
   const t = useTranslations("home");
   const ft = useTranslations("features");
+  const cg = useTranslations("colorGuide");
 
   const faqs = [
     { q: t("faq1Q"), a: t("faq1A") },
@@ -218,6 +219,28 @@ function HomeContent() {
               cta={ft("learnMore")}
             />
           </div>
+        </div>
+      </section>
+
+      {/* Color Analysis Guide Banner */}
+      <section className="py-10">
+        <div className="mx-auto max-w-6xl px-4">
+          <Link
+            href="/color-analysis"
+            className="group flex items-center justify-between rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/5 to-gold/5 px-6 py-5 transition hover:border-primary/40 hover:shadow-md sm:px-8"
+          >
+            <div>
+              <h3 className="font-serif text-lg font-bold group-hover:text-primary sm:text-xl">
+                {cg("homeBannerTitle")}
+              </h3>
+              <p className="mt-1 text-sm text-muted-foreground">
+                {cg("homeBannerDesc")}
+              </p>
+            </div>
+            <span className="ml-4 shrink-0 text-primary transition group-hover:translate-x-1">
+              &rarr;
+            </span>
+          </Link>
         </div>
       </section>
 

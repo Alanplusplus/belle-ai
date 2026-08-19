@@ -147,3 +147,7 @@ Our AI has been trained on diverse skin tones including East Asian coloring, pro
 60 seconds, free, no signup. Available in Korean (한국어) and 15 other languages.
 
 [한국어로 색상 분석 받기 →](/ko/try)
+
+## Related Articles
+
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors

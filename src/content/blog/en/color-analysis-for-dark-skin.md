@@ -152,3 +152,8 @@ Ready to discover your exact seasonal color type? Our AI has been trained on div
 [Start Free Color Analysis →](/try)
 
 60 seconds, free, no signup. Get your personalized palette and styling guide.
+
+## Related Articles
+
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Color Analysis for Dark Skin – Full Guide](/en/color-analysis-for/dark-skin) — Detailed guide for dark skin tones

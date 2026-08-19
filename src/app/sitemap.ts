@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/constants";
 import { getAllSlugs } from "@/lib/blog";
+import { SEASON_SLUGS } from "@/lib/color-palette-data";
+import { ATTRIBUTE_SLUGS } from "@/lib/color-analysis-for-data";
 
 const COMPETITOR_SLUGS = [
   "dressika",
@@ -22,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages = [
     "",
+    "/color-analysis",
     "/makeup-analysis",
     "/personal-color-analysis",
     "/face-shape-analysis",
@@ -75,6 +78,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       entries.push({
         url: localePath(locale, `/vs/${slug}`),
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.7,
+        alternates: { languages: alternates },
+      });
+    }
+  }
+
+  for (const slug of SEASON_SLUGS) {
+    for (const locale of locales) {
+      const alternates: Record<string, string> = {};
+      for (const l of locales) {
+        alternates[l] = localePath(l, `/color-palette/${slug}`);
+      }
+      alternates["x-default"] = localePath("en", `/color-palette/${slug}`);
+
+      entries.push({
+        url: localePath(locale, `/color-palette/${slug}`),
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.7,
+        alternates: { languages: alternates },
+      });
+    }
+  }
+
+  for (const slug of ATTRIBUTE_SLUGS) {
+    for (const locale of locales) {
+      const alternates: Record<string, string> = {};
+      for (const l of locales) {
+        alternates[l] = localePath(l, `/color-analysis-for/${slug}`);
+      }
+      alternates["x-default"] = localePath("en", `/color-analysis-for/${slug}`);
+
+      entries.push({
+        url: localePath(locale, `/color-analysis-for/${slug}`),
         lastModified: new Date(),
         changeFrequency: "monthly",
         priority: 0.7,

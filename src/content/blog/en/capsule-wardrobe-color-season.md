@@ -195,3 +195,7 @@ Free tools like [aicoloranalysis.io](https://aicoloranalysis.io) offer an instan
 - Build gradually over 6+ months rather than overhauling everything at once
 - Use AI color analysis to quickly identify your season and start with confidence
 
+## Related Articles
+
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+

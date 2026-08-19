@@ -232,3 +232,10 @@ Tools like [AI color analysis](https://aicoloranalysis.io) use computer vision t
 - All Summers share cool undertones and muted qualities — the difference is degree.
 - When in doubt, try the saturation test: your sub-season is revealed by how much color intensity your skin can handle.
 
+## Related Articles
+
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Light Summer Color Palette](/en/color-palette/light-summer) — Full palette, makeup & wardrobe guide
+- [Cool Summer Color Palette](/en/color-palette/cool-summer) — Full palette, makeup & wardrobe guide
+- [Soft Summer Color Palette](/en/color-palette/soft-summer) — Full palette, makeup & wardrobe guide
+

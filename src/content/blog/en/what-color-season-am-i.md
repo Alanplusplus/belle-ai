@@ -148,3 +148,7 @@ For the most accurate result, upload a clear selfie and let AI determine your ex
 [Free AI Color Analysis →](/try)
 
 No signup, no cost. Results in 60 seconds with your full personalized palette.
+
+## Related Articles
+
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors

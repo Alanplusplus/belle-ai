@@ -89,6 +89,7 @@ export function Header() {
   ];
 
   const tools = [
+    { href: "/color-analysis", label: t("colorAnalysisGuide") },
     { href: "/tools/color-quiz", label: t("colorQuiz") },
     { href: "/tools/face-shape-quiz", label: t("faceQuiz") },
   ];

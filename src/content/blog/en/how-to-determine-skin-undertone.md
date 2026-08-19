@@ -142,6 +142,7 @@ For a complete analysis, try [Belle AI's personal color analysis](/en/personal-c
 
 ## Related Articles
 
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
 - [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Quick tests to confirm your undertone
 - [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Complete style guide if you're cool-toned
 - [Personal Color Analysis: 12 Types Explained](/en/blog/personal-color-analysis-guide) — Understand the full seasonal color system

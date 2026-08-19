@@ -176,3 +176,7 @@ Our AI analyzes the exact same color signals a professional looks at — underto
 [Start Free AI Color Analysis →](/try)
 
 Free, instant, no account needed. Your full palette and styling guide appears immediately.
+
+## Related Articles
+
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors

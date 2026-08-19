@@ -206,6 +206,7 @@ Understanding your olive undertone is genuinely liberating. Once you stop trying
 
 ## Related Articles
 
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
 - [How to Determine Your Skin Undertone](/en/blog/how-to-determine-skin-undertone) — The full undertone guide with 7 testing methods
 - [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Compare cool and warm basics
 - [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Specifically for cool-toned skin

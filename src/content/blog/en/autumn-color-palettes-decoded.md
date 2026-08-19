@@ -244,6 +244,10 @@ Understanding your specific Autumn sub-season transforms how you shop, how you g
 
 ## Related Articles
 
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Soft Autumn Color Palette](/en/color-palette/soft-autumn) — Full palette, makeup & wardrobe guide
+- [Warm Autumn Color Palette](/en/color-palette/warm-autumn) — Full palette, makeup & wardrobe guide
+- [Deep Autumn Color Palette](/en/color-palette/deep-autumn) — Full palette, makeup & wardrobe guide
 - [Spring Color Palettes Decoded: Bright Spring vs True Spring vs Light Spring](/en/blog/spring-color-palettes-decoded) — The warm-season counterpart to this guide
 - [Summer Color Palettes Decoded: Cool Summer vs True Summer vs Soft Summer](/en/blog/summer-color-palettes-decoded) — How the cool muted seasons compare
 - [Deep Winter Color Palette: Your Complete Style Guide](/en/blog/deep-winter-color-palette-guide) — Deep Autumn's cool-toned neighbor

@@ -201,3 +201,10 @@ Regardless of which Spring sub-season you are, these principles apply:
 - All three Spring types share warmth as their foundation — the key differentiator is how much contrast and saturation your coloring can handle.
 - When in doubt, test colors against your face in natural daylight. Your skin's reaction (glowing vs. washed out) tells you everything.
 
+## Related Articles
+
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Light Spring Color Palette](/en/color-palette/light-spring) — Full palette, makeup & wardrobe guide
+- [Warm Spring Color Palette](/en/color-palette/warm-spring) — Full palette, makeup & wardrobe guide
+- [Bright Spring Color Palette](/en/color-palette/bright-spring) — Full palette, makeup & wardrobe guide
+

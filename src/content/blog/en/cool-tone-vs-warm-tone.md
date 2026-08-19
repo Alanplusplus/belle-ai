@@ -130,6 +130,7 @@ Olive skin has a greenish cast that can be either warm-olive or cool-olive. The 
 
 ## Related Articles
 
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
 - [Am I Warm or Cool Toned? 7 Proven Methods](/en/blog/how-to-determine-skin-undertone) — A deeper dive into undertone determination
 - [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Complete style guide for cool-toned people
 - [Personal Color Analysis: 12 Types Explained](/en/blog/personal-color-analysis-guide) — Go beyond undertone to find your full seasonal type
