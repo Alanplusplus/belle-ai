@@ -544,7 +544,10 @@
     "occasionMakeup": "Maquiagem por ocasião",
     "glowUpReport": "Relatório Glow-Up",
     "stylePersonality": "Personalidade de estilo",
-    "celebrityMatch": "Match de celebridade"
+    "celebrityMatch": "Match de celebridade",
+    "company": "Empresa",
+    "about": "Sobre",
+    "contact": "Contato"
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -1869,5 +1872,22 @@
     "ai-vs-professional-color-analysis": "IA vs análise de cores profissional",
     "science-behind-personal-color-analysis": "A ciência por trás da análise de cores pessoal",
     "why-color-analysis-quizzes-are-wrong": "Por que os testes de análise de cores erram"
+  },
+  "about": {
+    "title": "Sobre a Belle AI",
+    "intro": "Belle AI é uma plataforma de análise de cores e beleza pessoal com IA. Ajudamos milhões de pessoas a descobrir as cores, estilos e maquiagem que realmente complementam suas características naturais.",
+    "missionTitle": "Nossa Missão",
+    "missionContent": "Acreditamos que todos merecem saber quais cores os favorecem mais. A análise de cores tradicional custa $200–$500 e requer agendamento presencial. Belle AI torna a mesma ciência das cores acessível a todos — gratuita, instantânea e disponível em 16 idiomas.",
+    "whatWeDoTitle": "O Que Fazemos",
+    "whatWeDoContent": "Belle AI utiliza visão computacional avançada para analisar seu tom de pele, cor dos olhos e cor do cabelo natural, determinar seu tipo de cor sazonal e gerar recomendações personalizadas.",
+    "feature1": "Análise de cor pessoal em 12 estações",
+    "feature2": "Análise de maquiagem com IA e relatórios de qualidade editorial",
+    "feature3": "Recomendações de formato de rosto e penteado",
+    "feature4": "Cor de cabelo, cores de looks e seleção de óculos",
+    "feature5": "Disponível como app iOS e plataforma web",
+    "technologyTitle": "Nossa Tecnologia",
+    "technologyContent": "Nossa IA analisa os mesmos sinais de cor que analistas profissionais usam — subtom, profundidade, croma e contraste — mas faz isso a partir de uma única foto em 60 segundos. O sistema foi treinado com milhares de análises profissionais e calibrado para todos os tons de pele.",
+    "contactTitle": "Contato",
+    "contactContent": "Tem perguntas, feedback ou consultas de parceria? Adoraríamos ouvir de você."
   }
 }

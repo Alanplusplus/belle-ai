@@ -544,7 +544,10 @@
     "occasionMakeup": "시장 메이크업",
     "glowUpReport": "글로우업 리포트",
     "stylePersonality": "스타일 성격",
-    "celebrityMatch": "셀럽 매칭"
+    "celebrityMatch": "셀럽 매칭",
+    "company": "회사",
+    "about": "소개",
+    "contact": "문의하기"
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -1869,5 +1872,22 @@
     "ai-vs-professional-color-analysis": "AI vs 전문 컬러 분석",
     "science-behind-personal-color-analysis": "퍼스널 컬러 분석의 과학",
     "why-color-analysis-quizzes-are-wrong": "컬러 분석 퀴즈가 부정확한 이유"
+  },
+  "about": {
+    "title": "Belle AI 소개",
+    "intro": "Belle AI는 AI 기반 퍼스널 컬러 & 뷰티 분석 플랫폼입니다. 전 세계 수백만 사용자가 자연스러운 특징에 어울리는 색상, 스타일, 메이크업을 찾도록 도와드립니다.",
+    "missionTitle": "미션",
+    "missionContent": "모든 사람이 자신을 가장 돋보이게 하는 색상을 알 자격이 있다고 믿습니다. 기존 퍼스널 컬러 진단은 $200-$500이며 대면 예약이 필요합니다. Belle AI는 동일한 컬러 사이언스를 무료로, 즉시, 16개 언어로 제공합니다.",
+    "whatWeDoTitle": "서비스 소개",
+    "whatWeDoContent": "Belle AI는 고급 컴퓨터 비전을 활용하여 피부색, 눈 색, 머리카락 색을 분석하고, 시즌 컬러 타입을 결정하며, 맞춤형 추천을 생성합니다.",
+    "feature1": "12시즌 퍼스널 컬러 분석",
+    "feature2": "AI 메이크업 분석 (매거진 품질 리포트)",
+    "feature3": "얼굴형 & 헤어스타일 추천",
+    "feature4": "헤어 컬러, 코디 컬러, 안경 매칭",
+    "feature5": "iOS 앱 & 웹 플랫폼 제공",
+    "technologyTitle": "기술",
+    "technologyContent": "전문 컬러리스트가 사용하는 동일한 컬러 시그널 — 언더톤, 깊이, 채도, 대비 — 을 사진 한 장으로 60초 만에 분석합니다. 수천 건의 전문 컬러 분석으로 훈련되었으며 모든 피부색에 보정되어 있습니다.",
+    "contactTitle": "문의하기",
+    "contactContent": "질문, 피드백 또는 파트너십 문의가 있으시면 편하게 연락해 주세요."
   }
 }

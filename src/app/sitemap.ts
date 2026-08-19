@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog",
     "/tools/color-quiz",
     "/tools/face-shape-quiz",
+    "/about",
     "/privacy",
     "/terms",
   ];

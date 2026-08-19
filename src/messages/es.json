@@ -544,7 +544,10 @@
     "occasionMakeup": "Maquillaje por ocasión",
     "glowUpReport": "Informe Glow-Up",
     "stylePersonality": "Personalidad de estilo",
-    "celebrityMatch": "Match de celebridad"
+    "celebrityMatch": "Match de celebridad",
+    "company": "Empresa",
+    "about": "Acerca de",
+    "contact": "Contacto"
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -1869,5 +1872,22 @@
     "ai-vs-professional-color-analysis": "IA vs análisis de color profesional",
     "science-behind-personal-color-analysis": "La ciencia detrás del análisis de color personal",
     "why-color-analysis-quizzes-are-wrong": "Por qué los tests de análisis de color fallan"
+  },
+  "about": {
+    "title": "Acerca de Belle AI",
+    "intro": "Belle AI es una plataforma de análisis de color y belleza personal impulsada por IA. Ayudamos a millones de personas a descubrir los colores, estilos y maquillaje que realmente complementan sus características naturales.",
+    "missionTitle": "Nuestra Misión",
+    "missionContent": "Creemos que todos merecen saber qué colores les favorecen más. El análisis de color tradicional cuesta $200–$500 y requiere una cita presencial. Belle AI hace accesible la misma ciencia del color para todos — gratis, instantáneo y disponible en 16 idiomas.",
+    "whatWeDoTitle": "Qué Hacemos",
+    "whatWeDoContent": "Belle AI utiliza visión por computadora avanzada para analizar tu tono de piel, color de ojos y color de cabello natural, determinar tu tipo de color estacional y generar recomendaciones personalizadas.",
+    "feature1": "Análisis de color personal de 12 estaciones",
+    "feature2": "Análisis de maquillaje con IA y reportes de calidad editorial",
+    "feature3": "Recomendaciones de forma de rostro y peinado",
+    "feature4": "Color de cabello, color de outfit y selección de gafas",
+    "feature5": "Disponible como app iOS y plataforma web",
+    "technologyTitle": "Nuestra Tecnología",
+    "technologyContent": "Nuestra IA analiza las mismas señales de color que usan los analistas profesionales — subtono, profundidad, croma y contraste — pero lo hace a partir de una sola foto en 60 segundos. El sistema ha sido entrenado con miles de análisis profesionales y está calibrado para todos los tonos de piel.",
+    "contactTitle": "Contacto",
+    "contactContent": "¿Tienes preguntas, comentarios o consultas de asociación? Nos encantaría saber de ti."
   }
 }

@@ -59,7 +59,7 @@ function HomeContent() {
   const softwareJsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Belle AI - Color Analysis",
+    name: "Belle AI",
     operatingSystem: "iOS",
     applicationCategory: "LifestyleApplication",
     offers: {

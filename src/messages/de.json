@@ -544,7 +544,10 @@
     "occasionMakeup": "Anlass-Makeup",
     "glowUpReport": "Glow-Up-Bericht",
     "stylePersonality": "Stil-Persönlichkeit",
-    "celebrityMatch": "Promi-Match"
+    "celebrityMatch": "Promi-Match",
+    "company": "Unternehmen",
+    "about": "Über uns",
+    "contact": "Kontakt"
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -1869,5 +1872,22 @@
     "ai-vs-professional-color-analysis": "KI vs professionelle Farbanalyse",
     "science-behind-personal-color-analysis": "Die Wissenschaft hinter der Farbanalyse",
     "why-color-analysis-quizzes-are-wrong": "Warum Farbanalyse-Quizze falsch liegen"
+  },
+  "about": {
+    "title": "Über Belle AI",
+    "intro": "Belle AI ist eine KI-gestützte Plattform für persönliche Farb- und Schönheitsanalyse. Wir helfen Millionen von Menschen, die Farben, Stile und Make-up zu entdecken, die ihre natürlichen Merkmale wirklich ergänzen.",
+    "missionTitle": "Unsere Mission",
+    "missionContent": "Wir glauben, dass jeder verdient zu wissen, welche Farben am besten zu ihm passen. Traditionelle Farbberatung kostet 200–500$ und erfordert einen persönlichen Termin. Belle AI macht dieselbe Farbwissenschaft für alle zugänglich — kostenlos, sofort und in 16 Sprachen verfügbar.",
+    "whatWeDoTitle": "Was Wir Tun",
+    "whatWeDoContent": "Belle AI nutzt fortschrittliche Computer Vision, um Ihren natürlichen Hautton, Augenfarbe und Haarfarbe zu analysieren, Ihren saisonalen Farbtyp zu bestimmen und personalisierte Empfehlungen zu generieren.",
+    "feature1": "12-Jahreszeiten Persönliche Farbanalyse",
+    "feature2": "KI-Makeup-Analyse mit Magazin-Qualitätsberichten",
+    "feature3": "Gesichtsform- und Frisurempfehlungen",
+    "feature4": "Haarfarbe, Outfit-Farben und Brillenanpassung",
+    "feature5": "Verfügbar als iOS-App und Web-Plattform",
+    "technologyTitle": "Unsere Technologie",
+    "technologyContent": "Unsere KI analysiert dieselben Farbsignale wie professionelle Farbberater — Unterton, Tiefe, Chroma und Kontrast — aber in nur 60 Sekunden anhand eines einzigen Fotos. Das System wurde mit Tausenden professioneller Farbanalysen trainiert und für alle Hauttöne kalibriert.",
+    "contactTitle": "Kontakt",
+    "contactContent": "Haben Sie Fragen, Feedback oder Partnerschaftsanfragen? Wir freuen uns von Ihnen zu hören."
   }
 }

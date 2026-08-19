@@ -156,10 +156,18 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Company */}
           <div>
-            <h3 className="mb-3 text-sm font-semibold">{ft("legal")}</h3>
+            <h3 className="mb-3 text-sm font-semibold">{ft("company")}</h3>
             <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  href="/about"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {ft("about")}
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/privacy"
@@ -175,6 +183,14 @@ export function Footer() {
                 >
                   {ft("terms")}
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="mailto:support@aicoloranalysis.io"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {ft("contact")}
+                </a>
               </li>
             </ul>
           </div>

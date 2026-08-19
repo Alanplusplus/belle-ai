@@ -544,7 +544,10 @@
     "occasionMakeup": "Maquillage par occasion",
     "glowUpReport": "Rapport Glow-Up",
     "stylePersonality": "Personnalité de style",
-    "celebrityMatch": "Match célébrité"
+    "celebrityMatch": "Match célébrité",
+    "company": "Entreprise",
+    "about": "À propos",
+    "contact": "Contact"
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -1869,5 +1872,22 @@
     "ai-vs-professional-color-analysis": "IA vs analyse des couleurs professionnelle",
     "science-behind-personal-color-analysis": "La science derrière l'analyse des couleurs personnelles",
     "why-color-analysis-quizzes-are-wrong": "Pourquoi les quiz d'analyse des couleurs se trompent"
+  },
+  "about": {
+    "title": "À propos de Belle AI",
+    "intro": "Belle AI est une plateforme d'analyse de couleurs et de beauté personnelle alimentée par l'IA. Nous aidons des millions de personnes à découvrir les couleurs, styles et maquillages qui mettent véritablement en valeur leurs caractéristiques naturelles.",
+    "missionTitle": "Notre Mission",
+    "missionContent": "Nous croyons que chacun mérite de connaître les couleurs qui le mettent en valeur. L'analyse de couleurs traditionnelle coûte 200–500$ et nécessite un rendez-vous en personne. Belle AI rend la même science des couleurs accessible à tous — gratuit, instantané et disponible en 16 langues.",
+    "whatWeDoTitle": "Ce Que Nous Faisons",
+    "whatWeDoContent": "Belle AI utilise la vision par ordinateur avancée pour analyser votre teint naturel, la couleur de vos yeux et de vos cheveux, déterminer votre type de couleur saisonnière et générer des recommandations personnalisées.",
+    "feature1": "Analyse de couleur personnelle en 12 saisons",
+    "feature2": "Analyse maquillage IA avec rapports qualité magazine",
+    "feature3": "Recommandations morphologie du visage et coiffure",
+    "feature4": "Couleur de cheveux, couleurs de tenues et sélection de lunettes",
+    "feature5": "Disponible en app iOS et plateforme web",
+    "technologyTitle": "Notre Technologie",
+    "technologyContent": "Notre IA analyse les mêmes signaux de couleur que les coloristes professionnels — sous-ton, profondeur, saturation et contraste — à partir d'une seule photo en 60 secondes. Le système a été entraîné sur des milliers d'analyses professionnelles et calibré pour tous les tons de peau.",
+    "contactTitle": "Contact",
+    "contactContent": "Des questions, commentaires ou demandes de partenariat ? N'hésitez pas à nous contacter."
   }
 }

@@ -544,7 +544,10 @@
     "occasionMakeup": "Trang điểm theo dịp",
     "glowUpReport": "Báo cáo Glow-Up",
     "stylePersonality": "Tính cách phong cách",
-    "celebrityMatch": "Kết hợp người nổi tiếng"
+    "celebrityMatch": "Kết hợp người nổi tiếng",
+    "company": "Công ty",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ"
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -1869,5 +1872,22 @@
     "ai-vs-professional-color-analysis": "AI vs phân tích màu chuyên nghiệp",
     "science-behind-personal-color-analysis": "Khoa học đằng sau Personal Color Analysis",
     "why-color-analysis-quizzes-are-wrong": "Vì sao quiz Color Analysis sai"
+  },
+  "about": {
+    "title": "Về Belle AI",
+    "intro": "Belle AI là nền tảng phân tích màu sắc và sắc đẹp cá nhân bằng AI. Chúng tôi giúp hàng triệu người khám phá màu sắc, phong cách và trang điểm thực sự tôn lên đặc điểm tự nhiên của họ.",
+    "missionTitle": "Sứ mệnh",
+    "missionContent": "Chúng tôi tin rằng mọi người đều xứng đáng biết màu sắc nào phù hợp nhất với mình. Phân tích màu truyền thống tốn $200-$500 và cần đặt lịch hẹn trực tiếp. Belle AI giúp khoa học màu sắc trở nên dễ tiếp cận — miễn phí, tức thì và có sẵn bằng 16 ngôn ngữ.",
+    "whatWeDoTitle": "Chúng tôi làm gì",
+    "whatWeDoContent": "Belle AI sử dụng thị giác máy tính tiên tiến để phân tích tông da, màu mắt và màu tóc tự nhiên, xác định loại màu theo mùa và tạo ra các đề xuất cá nhân hóa.",
+    "feature1": "Phân tích màu cá nhân 12 mùa",
+    "feature2": "Phân tích trang điểm AI với báo cáo chất lượng tạp chí",
+    "feature3": "Đề xuất hình dạng khuôn mặt và kiểu tóc",
+    "feature4": "Màu tóc, màu trang phục và kết hợp kính",
+    "feature5": "Có sẵn trên app iOS và nền tảng web",
+    "technologyTitle": "Công nghệ",
+    "technologyContent": "AI của chúng tôi phân tích các tín hiệu màu sắc giống như các chuyên gia phân tích màu — undertone, độ sâu, chroma và tương phản — nhưng chỉ từ một bức ảnh trong 60 giây. Hệ thống được huấn luyện trên hàng ngàn phân tích chuyên nghiệp và hiệu chỉnh cho mọi tông da.",
+    "contactTitle": "Liên hệ",
+    "contactContent": "Có câu hỏi, phản hồi hoặc yêu cầu hợp tác? Chúng tôi rất mong được nghe từ bạn."
   }
 }

@@ -544,7 +544,10 @@
     "occasionMakeup": "Etkinlik makyajı",
     "glowUpReport": "Glow-Up Raporu",
     "stylePersonality": "Stil kişiliği",
-    "celebrityMatch": "Ünlü eşleştirme"
+    "celebrityMatch": "Ünlü eşleştirme",
+    "company": "Şirket",
+    "about": "Hakkımızda",
+    "contact": "İletişim"
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -1869,5 +1872,22 @@
     "ai-vs-professional-color-analysis": "Yapay Zeka vs Profesyonel Renk Analizi",
     "science-behind-personal-color-analysis": "Kişisel Renk Analizinin Bilimi",
     "why-color-analysis-quizzes-are-wrong": "Renk Analizi Testleri Neden Yanlış"
+  },
+  "about": {
+    "title": "Belle AI Hakkında",
+    "intro": "Belle AI, yapay zeka destekli kişisel renk ve güzellik analizi platformudur. Milyonlarca insanın doğal özelliklerini gerçekten tamamlayan renkleri, stilleri ve makyajı keşfetmesine yardımcı oluyoruz.",
+    "missionTitle": "Misyonumuz",
+    "missionContent": "Herkesin kendisine en çok yakışan renkleri bilmeyi hak ettiğine inanıyoruz. Geleneksel renk analizi 200-500$ tutar ve yüz yüze randevu gerektirir. Belle AI aynı renk bilimini herkes için erişilebilir kılar — ücretsiz, anında ve 16 dilde.",
+    "whatWeDoTitle": "Ne Yapıyoruz",
+    "whatWeDoContent": "Belle AI, gelişmiş bilgisayar görüşü kullanarak doğal cilt tonunuzu, göz renginizi ve saç renginizi analiz eder, mevsimsel renk tipinizi belirler ve kişiselleştirilmiş öneriler oluşturur.",
+    "feature1": "12 mevsim kişisel renk analizi",
+    "feature2": "AI makyaj analizi dergi kalitesinde raporlarla",
+    "feature3": "Yüz şekli ve saç modeli önerileri",
+    "feature4": "Saç rengi, kıyafet renkleri ve gözlük eşleştirme",
+    "feature5": "iOS uygulaması ve web platformu olarak mevcut",
+    "technologyTitle": "Teknolojimiz",
+    "technologyContent": "Yapay zekamız profesyonel renk analistlerinin kullandığı aynı renk sinyallerini analiz eder — alt ton, derinlik, kroma ve kontrast — ama tek bir fotoğraftan 60 saniyede. Sistem binlerce profesyonel renk analiziyle eğitilmiş ve tüm cilt tonları için kalibre edilmiştir.",
+    "contactTitle": "İletişim",
+    "contactContent": "Sorularınız, geri bildirimleriniz veya iş birliği talepleriniz mi var? Sizden duymaktan memnuniyet duyarız."
   }
 }

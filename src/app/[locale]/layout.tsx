@@ -100,7 +100,7 @@ export default async function LocaleLayout({
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Belle AI - Free AI Color Analysis",
+    name: "Belle AI",
     url: SITE_URL,
     description:
       "Free AI-powered personal color analysis. Upload a photo and discover your seasonal color type, best color palette, and styling recommendations in 60 seconds.",

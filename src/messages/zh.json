@@ -562,7 +562,10 @@
     "occasionMakeup": "场景妆容",
     "glowUpReport": "全面提升报告",
     "stylePersonality": "风格人格",
-    "celebrityMatch": "明星匹配"
+    "celebrityMatch": "明星匹配",
+    "company": "公司",
+    "about": "关于我们",
+    "contact": "联系我们"
   },
   "privacy": {
     "title": "隐私政策",
@@ -1887,5 +1890,22 @@
     "ai-vs-professional-color-analysis": "AI vs 专业色彩分析",
     "science-behind-personal-color-analysis": "个人色彩分析背后的科学",
     "why-color-analysis-quizzes-are-wrong": "为什么色彩分析测试不准确"
+  },
+  "about": {
+    "title": "关于 Belle AI",
+    "intro": "Belle AI 是一个 AI 驱动的个人色彩与美学分析平台。我们帮助全球数百万用户发现真正衬托自然特征的颜色、风格和妆容。",
+    "missionTitle": "我们的使命",
+    "missionContent": "我们相信每个人都值得知道哪些颜色最适合自己。传统的个人色彩分析花费 $200–$500，且需要线下预约。Belle AI 让相同的色彩科学人人可及——免费、即时，支持 16 种语言。",
+    "whatWeDoTitle": "我们做什么",
+    "whatWeDoContent": "Belle AI 利用先进的计算机视觉技术分析你的自然肤色、瞳色和发色，确定你的季节色彩类型，并生成个性化推荐。",
+    "feature1": "12 季型个人色彩分析",
+    "feature2": "AI 妆容分析，杂志级报告",
+    "feature3": "脸型与发型推荐",
+    "feature4": "发色、穿搭配色与眼镜适配",
+    "feature5": "提供 iOS App 和网页版",
+    "technologyTitle": "我们的技术",
+    "technologyContent": "我们的 AI 分析与专业色彩分析师相同的色彩信号——色调、明度、彩度和对比度——但只需一张照片，60秒内完成。系统经过数千次专业色彩分析训练，已针对所有肤色和种族进行校准。",
+    "contactTitle": "联系我们",
+    "contactContent": "有问题、反馈或合作咨询？我们很乐意听到您的声音。"
   }
 }

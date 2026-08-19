@@ -562,7 +562,10 @@
     "occasionMakeup": "Occasion Makeup",
     "glowUpReport": "Glow-Up Report",
     "stylePersonality": "Style Personality",
-    "celebrityMatch": "Celebrity Match"
+    "celebrityMatch": "Celebrity Match",
+    "company": "Company",
+    "about": "About",
+    "contact": "Contact Us"
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -1887,5 +1890,22 @@
     "ai-vs-professional-color-analysis": "AI vs Professional Color Analysis",
     "science-behind-personal-color-analysis": "The Science Behind Personal Color Analysis",
     "why-color-analysis-quizzes-are-wrong": "Why Color Analysis Quizzes Are Wrong"
+  },
+  "about": {
+    "title": "About Belle AI",
+    "intro": "Belle AI is an AI-powered personal color and beauty analysis platform. We help millions of people discover the colors, styles, and makeup that truly complement their natural features.",
+    "missionTitle": "Our Mission",
+    "missionContent": "We believe everyone deserves to know which colors make them look their best. Traditional personal color analysis costs $200–$500 and requires an in-person appointment. Belle AI makes the same color science accessible to everyone — free, instant, and available in 16 languages.",
+    "whatWeDoTitle": "What We Do",
+    "whatWeDoContent": "Belle AI uses advanced computer vision to analyze your natural skin tone, eye color, and hair color, then determines your seasonal color type and generates personalized recommendations.",
+    "feature1": "12-season personal color analysis",
+    "feature2": "AI makeup analysis with magazine-quality reports",
+    "feature3": "Face shape and hairstyle recommendations",
+    "feature4": "Hair color, outfit color, and glasses matching",
+    "feature5": "Available as an iOS app and web platform",
+    "technologyTitle": "Our Technology",
+    "technologyContent": "Our AI analyzes the same color signals that professional color analysts use — undertone, depth, chroma, and contrast — but does so from a single photo in 60 seconds. The system has been trained on thousands of professional color analyses and is calibrated for all skin tones and ethnicities.",
+    "contactTitle": "Contact Us",
+    "contactContent": "Have questions, feedback, or partnership inquiries? We would love to hear from you."
   }
 }

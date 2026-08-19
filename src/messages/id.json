@@ -544,7 +544,10 @@
     "occasionMakeup": "Makeup sesuai acara",
     "glowUpReport": "Laporan Glow-Up",
     "stylePersonality": "Kepribadian gaya",
-    "celebrityMatch": "Cocokkan selebriti"
+    "celebrityMatch": "Cocokkan selebriti",
+    "company": "Perusahaan",
+    "about": "Tentang",
+    "contact": "Hubungi Kami"
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -1869,5 +1872,22 @@
     "ai-vs-professional-color-analysis": "AI vs Analisis Warna Profesional",
     "science-behind-personal-color-analysis": "Ilmu di Balik Personal Color Analysis",
     "why-color-analysis-quizzes-are-wrong": "Mengapa Kuis Color Analysis Salah"
+  },
+  "about": {
+    "title": "Tentang Belle AI",
+    "intro": "Belle AI adalah platform analisis warna dan kecantikan personal berbasis AI. Kami membantu jutaan orang menemukan warna, gaya, dan makeup yang benar-benar melengkapi fitur alami mereka.",
+    "missionTitle": "Misi Kami",
+    "missionContent": "Kami percaya semua orang berhak tahu warna apa yang paling cocok untuk mereka. Analisis warna tradisional biayanya $200-$500 dan memerlukan janji tatap muka. Belle AI membuat ilmu warna yang sama dapat diakses semua orang — gratis, instan, dan tersedia dalam 16 bahasa.",
+    "whatWeDoTitle": "Apa yang Kami Lakukan",
+    "whatWeDoContent": "Belle AI menggunakan computer vision canggih untuk menganalisis warna kulit, mata, dan rambut alami Anda, menentukan tipe warna musiman, dan menghasilkan rekomendasi personal.",
+    "feature1": "Analisis warna personal 12 musim",
+    "feature2": "Analisis makeup AI dengan laporan kualitas majalah",
+    "feature3": "Rekomendasi bentuk wajah dan gaya rambut",
+    "feature4": "Warna rambut, warna outfit, dan pencocokan kacamata",
+    "feature5": "Tersedia sebagai app iOS dan platform web",
+    "technologyTitle": "Teknologi Kami",
+    "technologyContent": "AI kami menganalisis sinyal warna yang sama dengan analis warna profesional — undertone, kedalaman, chroma, dan kontras — tetapi dari satu foto dalam 60 detik. Sistem telah dilatih dengan ribuan analisis profesional dan dikalibrasi untuk semua warna kulit.",
+    "contactTitle": "Hubungi Kami",
+    "contactContent": "Punya pertanyaan, masukan, atau pertanyaan kemitraan? Kami senang mendengar dari Anda."
   }
 }
