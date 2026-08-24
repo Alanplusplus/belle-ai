@@ -2,10 +2,9 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { useSession } from "next-auth/react";
-import { triggerGoogleSignIn } from "@/lib/google-signin";
 import { openCheckout } from "@creem_io/embed";
 import { trackEvent } from "@/lib/analytics";
+import { getCachedUserId } from "@/lib/api";
 
 const STORAGE_KEY = "belle_welcome_offer_seen";
 
@@ -16,7 +15,6 @@ interface Props {
 
 export function WelcomeOfferSheet({ open, onClose }: Props) {
   const t = useTranslations("welcomeOffer");
-  const { status } = useSession();
   const [loading, setLoading] = useState(false);
   const trackedRef = useRef(false);
 
@@ -37,17 +35,14 @@ export function WelcomeOfferSheet({ open, onClose }: Props) {
 
   const handleClaim = async () => {
     trackEvent("welcome_offer_cta_clicked");
-    if (status !== "authenticated") {
-      triggerGoogleSignIn();
-      return;
-    }
 
     setLoading(true);
     try {
+      const userId = getCachedUserId();
       const res = await fetch("/api/creem/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ product: "credits5" }),
+        body: JSON.stringify({ product: "credits5", userId }),
       });
       const data = await res.json();
       if (data.checkoutUrl) {

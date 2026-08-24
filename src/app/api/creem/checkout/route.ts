@@ -1,23 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Creem } from "creem";
-import { auth } from "@/lib/auth";
 import { CREEM_PRODUCTS, FIRST_MONTH_DISCOUNT_CODE, CREDITS5_FIRST_BUY_DISCOUNT_CODE, SITE_URL, type CreemProductKey } from "@/lib/constants";
 
 const creem = new Creem({ apiKey: process.env.CREEM_API_KEY! });
 
 export async function POST(req: NextRequest) {
   try {
-    const session = await auth();
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const googleId = (session?.user as any)?.googleId;
-    if (!googleId || !session?.user?.email) {
+    const { product, discountCode, userId } = (await req.json()) as {
+      product: CreemProductKey;
+      discountCode?: string;
+      userId?: string;
+    };
+
+    if (!userId) {
       return NextResponse.json(
-        { error: "Not authenticated" },
-        { status: 401 }
+        { error: "User ID required" },
+        { status: 400 }
       );
     }
-
-    const { product, discountCode } = (await req.json()) as { product: CreemProductKey; discountCode?: string };
 
     const productId = CREEM_PRODUCTS[product];
     if (!productId) {
@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     const checkoutParams: Parameters<typeof creem.checkouts.create>[0] = {
       productId,
       successUrl: `${SITE_URL}/en/payment/success`,
-      requestId: googleId,
+      requestId: userId,
     };
 
     if (discountCode) {

@@ -1,11 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { useSession } from "next-auth/react";
-import { triggerGoogleSignIn } from "@/lib/google-signin";
 import { openCheckout } from "@creem_io/embed";
 import type { CreemProductKey } from "@/lib/constants";
 import { trackEvent } from "@/lib/analytics";
+import { getCachedUserId } from "@/lib/api";
 
 interface Props {
   product: CreemProductKey;
@@ -14,24 +13,19 @@ interface Props {
 }
 
 export function PricingButtons({ product, variant, label }: Props) {
-  const { status } = useSession();
   const [loading, setLoading] = useState(false);
 
   const handleClick = async () => {
     trackEvent("pricing_cta_clicked", { product, variant });
-    if (status !== "authenticated") {
-      trackEvent("sign_in_prompted", { trigger: "pricing_click" });
-      triggerGoogleSignIn();
-      return;
-    }
 
     trackEvent("checkout_started", { product, source: "pricing_page" });
     setLoading(true);
     try {
+      const userId = getCachedUserId();
       const res = await fetch("/api/creem/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ product }),
+        body: JSON.stringify({ product, userId }),
       });
       const data = await res.json();
 

@@ -1,19 +1,28 @@
+import { getFingerprint } from "./fingerprint";
+
 interface ApiResponse<T> {
   code: number;
   message: string;
   data?: T;
 }
 
+let cachedUserId: string | null = null;
+
+export function getCachedUserId(): string | null {
+  return cachedUserId;
+}
+
 async function belleApi<T>(body: Record<string, unknown>): Promise<ApiResponse<T>> {
+  const fingerprint = await getFingerprint();
   const res = await fetch("/api/belle", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
+    body: JSON.stringify({ ...body, fingerprint }),
   });
   return res.json();
 }
 
-export interface WebSignInData {
+export interface WebInitData {
   user_id: string;
   device_id: string;
   email: string;
@@ -25,13 +34,40 @@ export interface WebSignInData {
   total_remaining: number;
 }
 
+export type WebSignInData = WebInitData;
+
+export async function webInit() {
+  const res = await belleApi<WebInitData>({ action: "init" });
+  if (res.code === 200 && res.data) {
+    cachedUserId = res.data.user_id;
+  }
+  return res;
+}
+
 export async function webSignIn(email?: string, name?: string, avatarUrl?: string) {
-  return belleApi<WebSignInData>({
+  const res = await belleApi<WebInitData>({
     action: "signin",
     email,
     name,
     avatar_url: avatarUrl,
   });
+  if (res.code === 200 && res.data) {
+    cachedUserId = res.data.user_id;
+  }
+  return res;
+}
+
+export async function webMergeAccount(email?: string, name?: string, avatarUrl?: string) {
+  const res = await belleApi<WebInitData>({
+    action: "merge",
+    email,
+    name,
+    avatar_url: avatarUrl,
+  });
+  if (res.code === 200 && res.data) {
+    cachedUserId = res.data.user_id;
+  }
+  return res;
 }
 
 export async function uploadImage(base64Data: string) {
@@ -104,21 +140,43 @@ export async function pollUntilDone(
   taskId: string,
   onProgress?: () => void,
   maxAttempts = 60,
-  intervalMs = 5000
+  intervalMs = 10000
 ): Promise<string[]> {
+  let consecutiveErrors = 0;
+  const maxConsecutiveErrors = 5;
+
   for (let i = 0; i < maxAttempts; i++) {
     await new Promise((r) => setTimeout(r, intervalMs));
-    const res = await pollTask(taskId);
-    if (res.code === 500) throw new Error(res.message);
-    if (!res.data) continue;
+    try {
+      const res = await pollTask(taskId);
+      if (res.code === 500) {
+        consecutiveErrors++;
+        if (consecutiveErrors >= maxConsecutiveErrors) {
+          throw new Error(res.message || "Server error");
+        }
+        continue;
+      }
+      consecutiveErrors = 0;
 
-    if (res.data.status === "done") {
-      return res.data.result?.image_urls ?? [];
+      if (!res.data) continue;
+
+      if (res.data.status === "done") {
+        return res.data.result?.image_urls ?? [];
+      }
+      if (res.data.status === "failed") {
+        throw new Error(res.message || "Generation failed");
+      }
+      onProgress?.();
+    } catch (err) {
+      if (err instanceof TypeError || (err instanceof Error && err.message === "Failed to fetch")) {
+        consecutiveErrors++;
+        if (consecutiveErrors >= maxConsecutiveErrors) {
+          throw new Error("Network error");
+        }
+        continue;
+      }
+      throw err;
     }
-    if (res.data.status === "failed") {
-      throw new Error(res.message || "Generation failed");
-    }
-    onProgress?.();
   }
   throw new Error("Timed out");
 }

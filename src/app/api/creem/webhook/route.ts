@@ -120,7 +120,7 @@ async function notifyFeishu(event: WebhookEvent) {
   }
 }
 
-function extractGoogleUserId(event: WebhookEvent): string | null {
+function extractUserId(event: WebhookEvent): string | null {
   return (
     event.object.request_id ||
     event.object.metadata?.referenceId ||
@@ -150,9 +150,9 @@ export async function POST(req: NextRequest) {
 
     const event: WebhookEvent = JSON.parse(rawBody);
     const { eventType } = event;
-    const googleUserId = extractGoogleUserId(event);
+    const userId = extractUserId(event);
 
-    if (!googleUserId) {
+    if (!userId) {
       console.error("Webhook missing user identifier:", eventType, event.id);
       return NextResponse.json({ received: true, warning: "no user id" });
     }
@@ -165,13 +165,13 @@ export async function POST(req: NextRequest) {
       case "checkout.completed": {
         if (productId && PRODUCT_CREDITS[productId]) {
           await callBackend("/common/v1/web/add-credits", {
-            google_user_id: googleUserId,
+            user_id: userId,
             credits: PRODUCT_CREDITS[productId],
             order_id: orderId,
           });
         } else if (productId && SUBSCRIPTION_PRODUCTS.has(productId)) {
           await callBackend("/common/v1/web/set-subscription", {
-            google_user_id: googleUserId,
+            user_id: userId,
             plan: determinePlan(productId),
             status: "active",
             order_id: orderId,
@@ -185,7 +185,7 @@ export async function POST(req: NextRequest) {
       case "subscription.trialing": {
         if (productId && SUBSCRIPTION_PRODUCTS.has(productId)) {
           await callBackend("/common/v1/web/set-subscription", {
-            google_user_id: googleUserId,
+            user_id: userId,
             plan: determinePlan(productId),
             status: "active",
             order_id: orderId,
@@ -198,7 +198,7 @@ export async function POST(req: NextRequest) {
       case "subscription.paid": {
         if (productId && SUBSCRIPTION_PRODUCTS.has(productId)) {
           await callBackend("/common/v1/web/set-subscription", {
-            google_user_id: googleUserId,
+            user_id: userId,
             plan: determinePlan(productId),
             status: "active",
             order_id: orderId,
@@ -211,7 +211,7 @@ export async function POST(req: NextRequest) {
       case "subscription.canceled":
       case "subscription.expired": {
         await callBackend("/common/v1/web/set-subscription", {
-          google_user_id: googleUserId,
+          user_id: userId,
           plan: "none",
           status: "inactive",
           order_id: orderId,
@@ -221,13 +221,13 @@ export async function POST(req: NextRequest) {
 
       // 付款失败（重试中）— 暂时不动，Creem 会自动重试
       case "subscription.past_due": {
-        console.warn("Subscription past due:", googleUserId, orderId);
+        console.warn("Subscription past due:", userId, orderId);
         break;
       }
 
       // 用户请求取消但本期仍有效
       case "subscription.scheduled_cancel": {
-        console.info("Subscription scheduled cancel:", googleUserId);
+        console.info("Subscription scheduled cancel:", userId);
         break;
       }
     }

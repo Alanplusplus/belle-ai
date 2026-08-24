@@ -36,22 +36,54 @@ async function proxyGet(path: string) {
 
 /**
  * Unified proxy endpoint.
- * Client POSTs { action, ...params } → server adds auth → forwards to backend.
+ * Client POSTs { action, fingerprint, ...params } → server adds auth → forwards to backend.
+ * Supports both authenticated (Google) and anonymous (fingerprint) users.
  */
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { action, ...params } = body;
+    const { action, fingerprint, ...params } = body;
 
     const googleId = await getGoogleId();
-    if (!googleId) {
-      return NextResponse.json({ code: 401, message: "Not authenticated" }, { status: 401 });
+
+    if (!googleId && !fingerprint) {
+      return NextResponse.json({ code: 401, message: "No identity provided" }, { status: 401 });
     }
 
     switch (action) {
+      case "init": {
+        if (googleId) {
+          const data = await proxyPost("/common/v1/web/google-signin", {
+            google_user_id: googleId,
+            email: params.email,
+            name: params.name,
+            avatar_url: params.avatar_url,
+          });
+          return NextResponse.json(data);
+        }
+        const data = await proxyPost("/common/v1/web/anonymous-init", {
+          fingerprint,
+        });
+        return NextResponse.json(data);
+      }
+
       case "signin": {
         const data = await proxyPost("/common/v1/web/google-signin", {
           google_user_id: googleId,
+          email: params.email,
+          name: params.name,
+          avatar_url: params.avatar_url,
+        });
+        return NextResponse.json(data);
+      }
+
+      case "merge": {
+        if (!googleId) {
+          return NextResponse.json({ code: 401, message: "Google login required for merge" }, { status: 401 });
+        }
+        const data = await proxyPost("/common/v1/web/merge-account", {
+          google_user_id: googleId,
+          fingerprint,
           email: params.email,
           name: params.name,
           avatar_url: params.avatar_url,
@@ -69,7 +101,7 @@ export async function POST(req: NextRequest) {
 
       case "generate": {
         const data = await proxyPost("/common/v1/web/generate", {
-          google_user_id: googleId,
+          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
           image_url_list: params.image_url_list,
           analysis_type: params.analysis_type,
           language: params.language,
@@ -90,15 +122,27 @@ export async function POST(req: NextRequest) {
       case "history": {
         const page = params.page || 1;
         const pageSize = params.page_size || 20;
+        if (googleId) {
+          const data = await proxyGet(
+            `/common/v1/web/history?google_user_id=${googleId}&page=${page}&page_size=${pageSize}`
+          );
+          return NextResponse.json(data);
+        }
         const data = await proxyGet(
-          `/common/v1/web/history?google_user_id=${googleId}&page=${page}&page_size=${pageSize}`
+          `/common/v1/web/history?fingerprint=${fingerprint}&page=${page}&page_size=${pageSize}`
         );
         return NextResponse.json(data);
       }
 
       case "processing": {
+        if (googleId) {
+          const data = await proxyGet(
+            `/common/v1/web/processing?google_user_id=${googleId}`
+          );
+          return NextResponse.json(data);
+        }
         const data = await proxyGet(
-          `/common/v1/web/processing?google_user_id=${googleId}`
+          `/common/v1/web/processing?fingerprint=${fingerprint}`
         );
         return NextResponse.json(data);
       }

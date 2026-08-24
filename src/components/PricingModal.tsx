@@ -2,10 +2,9 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { useSession } from "next-auth/react";
-import { triggerGoogleSignIn } from "@/lib/google-signin";
 import { openCheckout } from "@creem_io/embed";
 import { trackEvent } from "@/lib/analytics";
+import { getCachedUserId } from "@/lib/api";
 import type { CreemProductKey } from "@/lib/constants";
 
 interface Props {
@@ -15,7 +14,6 @@ interface Props {
 
 export function PricingModal({ open, onClose }: Props) {
   const t = useTranslations("pricing");
-  const { status } = useSession();
   const [loading, setLoading] = useState<string | null>(null);
   const [tab, setTab] = useState(0);
 
@@ -23,19 +21,15 @@ export function PricingModal({ open, onClose }: Props) {
 
   const handleCheckout = async (product: CreemProductKey) => {
     trackEvent("pricing_modal_cta_clicked", { product });
-    if (status !== "authenticated") {
-      trackEvent("sign_in_prompted", { trigger: "pricing_modal" });
-      triggerGoogleSignIn();
-      return;
-    }
 
     setLoading(product);
     trackEvent("checkout_started", { product, source: "pricing_modal" });
     try {
+      const userId = getCachedUserId();
       const res = await fetch("/api/creem/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ product }),
+        body: JSON.stringify({ product, userId }),
       });
       const data = await res.json();
       if (data.checkoutUrl) {

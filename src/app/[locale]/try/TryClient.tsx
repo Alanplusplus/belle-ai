@@ -1,19 +1,17 @@
 "use client";
 
 import { useState, useRef, useCallback, useEffect } from "react";
-import { useSession } from "next-auth/react";
-import { triggerGoogleSignIn } from "@/lib/google-signin";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { openCheckout } from "@creem_io/embed";
 import {
-  webSignIn,
+  webInit,
   uploadImage,
   createTask,
   pollUntilDone,
   fetchHistory,
   fetchProcessingTask,
-  type WebSignInData,
+  getCachedUserId,
   type HistoryEntry,
   type AnalysisType as ApiAnalysisType,
 } from "@/lib/api";
@@ -228,7 +226,6 @@ interface BackgroundTask {
 
 export function TryClient({ locale, initialType }: { locale: string; initialType?: string }) {
   const t = useTranslations("tryPage");
-  const { data: session, status } = useSession();
 
   const validInitialType = (ALL_VALID_TYPES.includes(initialType as AnalysisType) ? initialType : "color_analysis") as AnalysisType;
 
@@ -257,10 +254,11 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [resolution, setResolution] = useState<Resolution>("2K");
   const [reportLang, setReportLang] = useState(LOCALE_TO_REPORT_LANG[locale] || "en");
   const [showLangPicker, setShowLangPicker] = useState(false);
+  const [generateElapsed, setGenerateElapsed] = useState(0);
 
   const fileRef = useRef<HTMLInputElement>(null);
 
-  const isLoggedIn = status === "authenticated";
+  const [isReady, setIsReady] = useState(false);
   const resumedRef = useRef(false);
 
   useEffect(() => {
@@ -271,45 +269,56 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   }, []);
 
   useEffect(() => {
-    if (!isLoggedIn || resumedRef.current) return;
+    if (resumedRef.current) return;
     resumedRef.current = true;
-    trackEvent("sign_in_success", { method: "google" });
 
-    setHistoryLoading(true);
-    // 并行加载历史和进行中的任务
-    Promise.all([fetchHistory(), fetchProcessingTask()])
-      .then(([historyRes, procRes]) => {
-        if (historyRes.code === 200 && historyRes.data?.list) {
-          setHistory(historyRes.data.list);
-        }
+    webInit().then((initRes) => {
+      if (initRes.code === 200 && initRes.data) {
+        const data = initRes.data;
+        setQuota(data.web_quota);
+        setUserCredits({
+          paid: data.paid_credits ?? 0,
+          subRemaining: data.subscription?.remaining ?? 0,
+          subPlan: data.subscription?.plan ?? null,
+          totalRemaining: data.total_remaining ?? data.web_quota.remaining,
+        });
+        setIsReady(true);
 
-        const pendingTask = procRes.data?.task;
-        if (pendingTask) {
-          setAnalysisType(pendingTask.type as AnalysisType);
-          setPhase("generating");
-          pollUntilDone(pendingTask.task_id)
-            .then((images) => {
-              setResultUrls(images);
-              setPhase("done");
-              reloadHistory();
-            })
-            .catch((err) => {
-              setErrorMsg(err instanceof Error ? err.message : "Resume failed");
-              setPhase("error");
-            });
-        }
-      })
-      .finally(() => setHistoryLoading(false));
-  }, [isLoggedIn]); // eslint-disable-line react-hooks/exhaustive-deps
+        setHistoryLoading(true);
+        Promise.all([fetchHistory(), fetchProcessingTask()])
+          .then(([historyRes, procRes]) => {
+            if (historyRes.code === 200 && historyRes.data?.list) {
+              setHistory(historyRes.data.list);
+            }
+            const pendingTask = procRes.data?.task;
+            if (pendingTask) {
+              setAnalysisType(pendingTask.type as AnalysisType);
+              setPhase("generating");
+              pollUntilDone(pendingTask.task_id)
+                .then((images) => {
+                  setResultUrls(images);
+                  setPhase("done");
+                  reloadHistory();
+                })
+                .catch((err) => {
+                  setErrorMsg(err instanceof Error ? err.message : "Resume failed");
+                  setPhase("error");
+                });
+            }
+          })
+          .finally(() => setHistoryLoading(false));
+      }
+    });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    if (!isLoggedIn) return;
+    if (!isReady) return;
     try {
       if (localStorage.getItem("belle_welcome_offer_seen")) return;
     } catch { return; }
     const timer = setTimeout(() => setShowWelcomeOffer(true), 1500);
     return () => clearTimeout(timer);
-  }, [isLoggedIn]);
+  }, [isReady]);
 
   useEffect(() => {
     const isGenerating = phase === "uploading" || phase === "generating" || phase === "preparing";
@@ -318,6 +327,18 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     window.addEventListener("beforeunload", handler);
     return () => window.removeEventListener("beforeunload", handler);
   }, [phase, analysisType]);
+
+  useEffect(() => {
+    const isGenerating = phase === "uploading" || phase === "generating" || phase === "preparing";
+    if (!isGenerating) {
+      setGenerateElapsed(0);
+      return;
+    }
+    const timer = setInterval(() => {
+      setGenerateElapsed((prev) => prev + 1);
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [phase]);
 
   const reloadHistory = useCallback(() => {
     fetchHistory().then((res) => {
@@ -345,11 +366,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     setAnalysisType(type);
 
     try {
-      const signInRes = await webSignIn(
-        session?.user?.email ?? undefined,
-        session?.user?.name ?? undefined,
-        session?.user?.image ?? undefined
-      );
+      const signInRes = await webInit();
       if (signInRes.code !== 200 || !signInRes.data) throw new Error(signInRes.message);
       const data = signInRes.data;
       if ((data.total_remaining ?? data.web_quota.remaining) <= 0) {
@@ -369,7 +386,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       setErrorMsg(err instanceof Error ? err.message : "Correction failed");
       setPhase("error");
     }
-  }, [session, reportLang, resolution, reloadHistory]);
+  }, [reportLang, resolution, reloadHistory]);
 
   const handleDownload = useCallback(async (url: string) => {
     trackEvent("result_download", { type: analysisType });
@@ -425,19 +442,16 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   );
 
   const handleGenerate = useCallback(async () => {
-    if (!previewUrl || !isLoggedIn) return;
+    if (!previewUrl) return;
 
     const generateStart = Date.now();
     setPhase("preparing");
     setErrorMsg("");
+    setGenerateElapsed(0);
     trackEvent("generate_started", { type: analysisType, resolution, language: reportLang });
 
     try {
-      const signInRes = await webSignIn(
-        session?.user?.email ?? undefined,
-        session?.user?.name ?? undefined,
-        session?.user?.image ?? undefined
-      );
+      const signInRes = await webInit();
       if (signInRes.code !== 200 || !signInRes.data) {
         throw new Error(signInRes.message);
       }
@@ -457,22 +471,27 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         return;
       }
 
-      setPhase("uploading");
-      const file = fileRef.current?.files?.[0];
-      if (!file) throw new Error("No file selected");
+      let imageUrl = sourceImageUrl;
 
-      const base64 = await fileToBase64(file);
-      const uploadRes = await uploadImage(base64);
-      if (uploadRes.code !== 200 || !uploadRes.data?.url) {
-        throw new Error(uploadRes.message);
+      if (!imageUrl) {
+        setPhase("uploading");
+        const file = fileRef.current?.files?.[0];
+        if (!file) throw new Error("No file selected");
+
+        const base64 = await fileToBase64(file);
+        const uploadRes = await uploadImage(base64);
+        if (uploadRes.code !== 200 || !uploadRes.data?.url) {
+          throw new Error(uploadRes.message);
+        }
+        imageUrl = uploadRes.data.url;
+        setSourceImageUrl(imageUrl);
+        setLastUploadedPhotoUrl(imageUrl);
+        saveLastPhotoUrl(imageUrl);
       }
-      setSourceImageUrl(uploadRes.data.url);
-      setLastUploadedPhotoUrl(uploadRes.data.url);
-      saveLastPhotoUrl(uploadRes.data.url);
 
       setPhase("generating");
       savePrefs(resolution, reportLang);
-      const taskRes = await createTask(uploadRes.data.url, analysisType, reportLang, {
+      const taskRes = await createTask(imageUrl, analysisType, reportLang, {
         resolution,
         ...(analysisType === "occasion_makeup" ? { occasion } : {}),
       });
@@ -506,11 +525,11 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       setPhase("error");
       trackEvent("generate_failed", { type: analysisType, error: message });
     }
-  }, [previewUrl, isLoggedIn, session, analysisType, reportLang, resolution, occasion, reloadHistory]);
+  }, [previewUrl, sourceImageUrl, analysisType, reportLang, resolution, occasion, reloadHistory]);
 
   const startRecommendedAnalysis = useCallback(async (type: AnalysisType) => {
     const photoUrl = sourceImageUrl || lastUploadedPhotoUrl;
-    if (!photoUrl || !isLoggedIn) return;
+    if (!photoUrl) return;
 
     const taskId = `bg_${Date.now()}_${type}`;
     trackEvent("recommended_analysis_started", { type, source: "recommendation" });
@@ -518,11 +537,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     setBackgroundTasks((prev) => [...prev, { id: taskId, type, phase: "generating", resultUrls: [] }]);
 
     try {
-      const signInRes = await webSignIn(
-        session?.user?.email ?? undefined,
-        session?.user?.name ?? undefined,
-        session?.user?.image ?? undefined
-      );
+      const signInRes = await webInit();
       if (signInRes.code !== 200 || !signInRes.data) throw new Error(signInRes.message);
       if ((signInRes.data.total_remaining ?? signInRes.data.web_quota.remaining) <= 0) {
         setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: "No credits" } : t));
@@ -545,17 +560,17 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     } catch (err) {
       setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: err instanceof Error ? err.message : "Failed" } : t));
     }
-  }, [sourceImageUrl, lastUploadedPhotoUrl, isLoggedIn, session, reportLang, resolution, reloadHistory]);
+  }, [sourceImageUrl, lastUploadedPhotoUrl, reportLang, resolution, reloadHistory]);
 
   const handleUseLastPhoto = useCallback(async () => {
-    if (!lastUploadedPhotoUrl || !isLoggedIn) return;
+    if (!lastUploadedPhotoUrl) return;
     trackEvent("last_photo_reused");
     setSourceImageUrl(lastUploadedPhotoUrl);
     setPreviewUrl(lastUploadedPhotoUrl);
     setPhase("idle");
     setResultUrls([]);
     setErrorMsg("");
-  }, [lastUploadedPhotoUrl, isLoggedIn]);
+  }, [lastUploadedPhotoUrl]);
 
   const recommendedTypes = (RECOMMENDED_TYPES[analysisType] || []).filter(
     (t) => !backgroundTasks.some((bt) => bt.type === t)
@@ -793,12 +808,34 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           } ${previewUrl ? "max-h-[480px]" : "py-16"}`}
         >
           {previewUrl ? (
-            <div className="flex w-full items-center justify-center overflow-hidden rounded-2xl" style={{ maxHeight: 480 }}>
+            <div className="relative flex w-full items-center justify-center overflow-hidden rounded-2xl" style={{ maxHeight: 480 }}>
               <img
                 src={previewUrl}
                 alt="Preview"
                 className="max-h-[480px] max-w-full rounded-2xl object-contain"
               />
+              {(phase === "preparing" || phase === "uploading" || phase === "generating") && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-black/50 backdrop-blur-[2px]">
+                  <Spinner className="h-8 w-8 text-white" />
+                  <p className="mt-3 text-sm font-medium text-white">
+                    {phase === "preparing"
+                      ? t("preparing")
+                      : phase === "uploading"
+                        ? t("uploading")
+                        : t("generating")}
+                  </p>
+                  {phase === "generating" && generateElapsed > 60 && (
+                    <p className="mt-1.5 text-xs text-white/80">
+                      {t("almostDone")}
+                    </p>
+                  )}
+                  {phase === "generating" && generateElapsed > 0 && (
+                    <p className="mt-1 text-[11px] text-white/60">
+                      {Math.floor(generateElapsed / 60)}:{String(generateElapsed % 60).padStart(2, "0")}
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
           ) : (
             <>
@@ -821,7 +858,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               <p className="mt-1 text-center text-xs text-muted-foreground">
                 {t("uploadHint")}
               </p>
-              {isLoggedIn && lastUploadedPhotoUrl && !previewUrl && (
+              {lastUploadedPhotoUrl && !previewUrl && (
                 <button
                   onClick={(e) => { e.stopPropagation(); handleUseLastPhoto(); }}
                   className="mt-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary/10"
@@ -866,11 +903,6 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           <>
             <button
               onClick={() => {
-                if (!isLoggedIn) {
-                  trackEvent("sign_in_prompted", { trigger: "generate_click" });
-                  triggerGoogleSignIn();
-                  return;
-                }
                 handleGenerate();
               }}
               disabled={
@@ -884,22 +916,10 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               {(phase === "uploading" ||
                 phase === "generating" ||
                 phase === "preparing") && <Spinner />}
-              {phase === "preparing"
-                ? t("preparing")
-                : phase === "uploading"
-                  ? t("uploading")
-                  : phase === "generating"
-                    ? t("generating")
-                    : !isLoggedIn && previewUrl
-                      ? t("signInToGenerate")
-                      : t("generate")}
+              {(phase === "preparing" || phase === "uploading" || phase === "generating")
+                ? t("generating")
+                : t("generate")}
             </button>
-
-            {!isLoggedIn && previewUrl && (
-              <p className="mt-2 text-xs text-muted-foreground">
-                {t("signInNote")}
-              </p>
-            )}
 
             {userCredits && phase !== "done" && (
               <p className="mt-2 text-xs text-muted-foreground">
@@ -1227,10 +1247,11 @@ function NoQuotaCard({ t, onViewPlans }: { t: (key: string) => string; onViewPla
     trackEvent("checkout_started", { product, source: "no_quota_card" });
     setLoading(product);
     try {
+      const userId = getCachedUserId();
       const res = await fetch("/api/creem/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ product }),
+        body: JSON.stringify({ product, userId }),
       });
       const data = await res.json();
       if (data.checkoutUrl) {
@@ -1279,9 +1300,9 @@ function NoQuotaCard({ t, onViewPlans }: { t: (key: string) => string; onViewPla
   );
 }
 
-function Spinner() {
+function Spinner({ className }: { className?: string }) {
   return (
-    <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+    <svg className={`animate-spin ${className || "h-4 w-4"}`} viewBox="0 0 24 24" fill="none">
       <circle
         cx="12"
         cy="12"

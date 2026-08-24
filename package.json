@@ -11,6 +11,7 @@
   "dependencies": {
     "@auth/core": "^0.41.2",
     "@creem_io/embed": "^0.3.3",
+    "@fingerprintjs/fingerprintjs": "^5.2.0",
     "@tailwindcss/typography": "^0.5.20",
     "creem": "^1.6.0",
     "google-auth-library": "^11.0.0",

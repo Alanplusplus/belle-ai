@@ -4,6 +4,7 @@ import { useEffect, useCallback } from "react";
 import { useSession, signIn } from "next-auth/react";
 import Script from "next/script";
 import { trackEvent } from "@/lib/analytics";
+import { webMergeAccount } from "@/lib/api";
 
 declare global {
   interface Window {
@@ -25,7 +26,22 @@ declare global {
 const CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!;
 
 export function GoogleOneTap() {
-  const { status } = useSession();
+  const { data: session, status } = useSession();
+
+  useEffect(() => {
+    if (status !== "authenticated" || !session?.user) return;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const googleId = (session.user as any).googleId;
+    if (!googleId) return;
+
+    webMergeAccount(
+      session.user.email ?? undefined,
+      session.user.name ?? undefined,
+      session.user.image ?? undefined
+    ).then(() => {
+      trackEvent("account_merged", { method: "google" });
+    });
+  }, [status, session]);
 
   const initOneTap = useCallback(() => {
     if (!window.google || status === "authenticated" || status === "loading") return;
@@ -40,17 +56,9 @@ export function GoogleOneTap() {
         });
         window.location.reload();
       },
-      auto_select: true,
-      cancel_on_tap_outside: false,
+      auto_select: false,
+      cancel_on_tap_outside: true,
       use_fedcm_for_prompt: true,
-    });
-
-    window.google.accounts.id.prompt((notification) => {
-      if (notification.isNotDisplayed()) {
-        trackEvent("one_tap_not_displayed");
-      } else if (notification.isSkippedMoment()) {
-        trackEvent("one_tap_skipped");
-      }
     });
   }, [status]);
 
@@ -60,8 +68,6 @@ export function GoogleOneTap() {
       initOneTap();
     }
   }, [status, initOneTap]);
-
-  if (status === "authenticated") return null;
 
   return (
     <Script
