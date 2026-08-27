@@ -1247,7 +1247,18 @@ function NoQuotaCard({ t, onViewPlans }: { t: (key: string) => string; onViewPla
     trackEvent("checkout_started", { product, source: "no_quota_card" });
     setLoading(product);
     try {
-      const userId = getCachedUserId();
+      let userId = getCachedUserId();
+      if (!userId) {
+        const initRes = await webInit();
+        if (initRes.code === 200 && initRes.data) {
+          userId = initRes.data.user_id;
+        }
+      }
+      if (!userId) {
+        alert("Please try again.");
+        setLoading(null);
+        return;
+      }
       const res = await fetch("/api/creem/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

@@ -68,9 +68,32 @@ export default function PricingPage() {
         <PricingTabs labels={[t("tabSubscription"), t("tabCredits")]}>
           {/* Tab 1: Subscriptions */}
           <div className="grid gap-6 md:grid-cols-2">
-            {/* Yearly - highlighted */}
+            {/* Monthly - highlighted */}
             <div className="relative rounded-2xl border-2 border-primary bg-card p-6 shadow-lg">
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-0.5 text-xs font-semibold text-white">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-green-500 px-3 py-0.5 text-xs font-semibold text-white">
+                {t("monthlyOfferBadge")}
+              </span>
+              <h3 className="text-xl font-bold">{t("monthly")}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">
+                {t("monthlyDesc")}
+              </p>
+              <div className="mt-4">
+                <span className="text-base text-muted-foreground line-through mr-2">{t("monthlyPrice")}</span>
+                <span className="text-4xl font-bold text-primary">{t("monthlyOfferPrice")}</span>
+                <span className="text-muted-foreground">{t("monthlyPer")}</span>
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground">{t("monthlyFirstMonth")}</p>
+              <ul className="mt-4 space-y-3">
+                <PricingFeature text={t("monthlyFeature1")} />
+                <PricingFeature text={t("monthlyFeature2")} />
+                <PricingFeature text={t("monthlyFeature3")} />
+              </ul>
+              <PricingButtons product="monthly" variant="primary" label={t("monthlyCta")} />
+            </div>
+
+            {/* Yearly */}
+            <div className="rounded-2xl border border-border bg-card p-6">
+              <span className="inline-block rounded-full bg-muted px-2.5 py-0.5 text-xs font-semibold text-muted-foreground mb-2">
                 {t("yearlyBadge")}
               </span>
               <h3 className="text-xl font-bold">{t("yearly")}</h3>
@@ -86,26 +109,7 @@ export default function PricingPage() {
                 <PricingFeature text={t("yearlyFeature2")} />
                 <PricingFeature text={t("yearlyFeature3")} />
               </ul>
-              <PricingButtons product="yearly" variant="primary" label={t("yearlyCta")} />
-            </div>
-
-            {/* Monthly */}
-            <div className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="text-xl font-bold">{t("monthly")}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">
-                {t("monthlyDesc")}
-              </p>
-              <div className="mt-4">
-                <span className="text-4xl font-bold">{t("monthlyPrice")}</span>
-                <span className="text-muted-foreground">{t("monthlyPer")}</span>
-              </div>
-              <p className="mt-1 text-sm font-medium text-green-600">{t("monthlyFirstMonth")}</p>
-              <ul className="mt-6 space-y-3">
-                <PricingFeature text={t("monthlyFeature1")} />
-                <PricingFeature text={t("monthlyFeature2")} />
-                <PricingFeature text={t("monthlyFeature3")} />
-              </ul>
-              <PricingButtons product="monthly" variant="outline" label={t("monthlyCta")} />
+              <PricingButtons product="yearly" variant="outline" label={t("yearlyCta")} />
             </div>
           </div>
 

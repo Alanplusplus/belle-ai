@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { openCheckout } from "@creem_io/embed";
 import { trackEvent } from "@/lib/analytics";
-import { getCachedUserId } from "@/lib/api";
+import { getCachedUserId, webInit } from "@/lib/api";
 import type { CreemProductKey } from "@/lib/constants";
 
 interface Props {
@@ -25,7 +25,17 @@ export function PricingModal({ open, onClose }: Props) {
     setLoading(product);
     trackEvent("checkout_started", { product, source: "pricing_modal" });
     try {
-      const userId = getCachedUserId();
+      let userId = getCachedUserId();
+      if (!userId) {
+        const initRes = await webInit();
+        if (initRes.code === 200 && initRes.data) {
+          userId = initRes.data.user_id;
+        }
+      }
+      if (!userId) {
+        alert("Please try again.");
+        return;
+      }
       const res = await fetch("/api/creem/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -93,9 +103,35 @@ export function PricingModal({ open, onClose }: Props) {
         <div className="mt-5">
           {tab === 0 ? (
             <div className="grid gap-4 sm:grid-cols-2">
-              {/* Yearly */}
+              {/* Monthly - highlighted */}
               <div className="relative rounded-xl border-2 border-primary bg-card p-5">
-                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 rounded-full bg-primary px-2.5 py-0.5 text-[11px] font-semibold text-white">
+                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 rounded-full bg-green-500 px-2.5 py-0.5 text-[11px] font-semibold text-white">
+                  {t("monthlyOfferBadge")}
+                </span>
+                <h3 className="text-lg font-bold">{t("monthly")}</h3>
+                <div className="mt-2">
+                  <span className="text-sm text-muted-foreground line-through mr-1.5">{t("monthlyPrice")}</span>
+                  <span className="text-3xl font-bold text-primary">{t("monthlyOfferPrice")}</span>
+                  <span className="text-sm text-muted-foreground">{t("monthlyPer")}</span>
+                </div>
+                <p className="mt-1 text-xs text-muted-foreground">{t("monthlyFirstMonth")}</p>
+                <ul className="mt-3 space-y-1.5">
+                  <ModalFeature text={t("monthlyFeature1")} />
+                  <ModalFeature text={t("monthlyFeature2")} />
+                  <ModalFeature text={t("monthlyFeature3")} />
+                </ul>
+                <button
+                  onClick={() => handleCheckout("monthly")}
+                  disabled={loading !== null}
+                  className="mt-4 w-full rounded-full bg-primary py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-50"
+                >
+                  {loading === "monthly" ? <LoadingDots /> : t("monthlyCta")}
+                </button>
+              </div>
+
+              {/* Yearly */}
+              <div className="rounded-xl border border-border bg-card p-5">
+                <span className="inline-block rounded-full bg-muted px-2 py-0.5 text-[11px] font-semibold text-muted-foreground mb-1">
                   {t("yearlyBadge")}
                 </span>
                 <h3 className="text-lg font-bold">{t("yearly")}</h3>
@@ -111,31 +147,9 @@ export function PricingModal({ open, onClose }: Props) {
                 <button
                   onClick={() => handleCheckout("yearly")}
                   disabled={loading !== null}
-                  className="mt-4 w-full rounded-full bg-primary py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-50"
-                >
-                  {loading === "yearly" ? <LoadingDots /> : t("yearlyCta")}
-                </button>
-              </div>
-
-              {/* Monthly */}
-              <div className="rounded-xl border border-border bg-card p-5">
-                <h3 className="text-lg font-bold">{t("monthly")}</h3>
-                <div className="mt-2">
-                  <span className="text-3xl font-bold">{t("monthlyPrice")}</span>
-                  <span className="text-sm text-muted-foreground">{t("monthlyPer")}</span>
-                </div>
-                <p className="mt-1 text-xs font-medium text-green-600">{t("monthlyFirstMonth")}</p>
-                <ul className="mt-3 space-y-1.5">
-                  <ModalFeature text={t("monthlyFeature1")} />
-                  <ModalFeature text={t("monthlyFeature2")} />
-                  <ModalFeature text={t("monthlyFeature3")} />
-                </ul>
-                <button
-                  onClick={() => handleCheckout("monthly")}
-                  disabled={loading !== null}
                   className="mt-4 w-full rounded-full border border-primary py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 disabled:opacity-50"
                 >
-                  {loading === "monthly" ? <LoadingDots /> : t("monthlyCta")}
+                  {loading === "yearly" ? <LoadingDots /> : t("yearlyCta")}
                 </button>
               </div>
             </div>

@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { openCheckout } from "@creem_io/embed";
 import { trackEvent } from "@/lib/analytics";
-import { getCachedUserId } from "@/lib/api";
+import { getCachedUserId, webInit } from "@/lib/api";
 
 const STORAGE_KEY = "belle_welcome_offer_seen";
 
@@ -38,7 +38,17 @@ export function WelcomeOfferSheet({ open, onClose }: Props) {
 
     setLoading(true);
     try {
-      const userId = getCachedUserId();
+      let userId = getCachedUserId();
+      if (!userId) {
+        const initRes = await webInit();
+        if (initRes.code === 200 && initRes.data) {
+          userId = initRes.data.user_id;
+        }
+      }
+      if (!userId) {
+        alert("Please try again.");
+        return;
+      }
       const res = await fetch("/api/creem/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
