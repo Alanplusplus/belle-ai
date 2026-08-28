@@ -64,11 +64,8 @@ export function WelcomeOfferSheet({ open, onClose }: Props) {
             handleDismiss();
             window.location.reload();
           },
-          onCancel: () => {
-            trackCheckoutEvent("checkout_cancelled", { product: "credits5", source: "welcome_offer" });
-          },
           onClose: () => {
-            trackCheckoutEvent("checkout_closed", { product: "credits5", source: "welcome_offer" });
+            trackCheckoutEvent("checkout_cancelled", { product: "credits5", source: "welcome_offer" });
           },
         });
       }

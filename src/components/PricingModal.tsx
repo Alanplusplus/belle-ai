@@ -50,11 +50,8 @@ export function PricingModal({ open, onClose }: Props) {
             trackCheckoutEvent("checkout_completed", { product, source: "pricing_modal" });
             window.location.reload();
           },
-          onCancel: () => {
-            trackCheckoutEvent("checkout_cancelled", { product, source: "pricing_modal" });
-          },
           onClose: () => {
-            trackCheckoutEvent("checkout_closed", { product, source: "pricing_modal" });
+            trackCheckoutEvent("checkout_cancelled", { product, source: "pricing_modal" });
           },
         });
       }

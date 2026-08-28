@@ -1273,11 +1273,8 @@ function NoQuotaCard({ t, onViewPlans }: { t: (key: string) => string; onViewPla
             trackCheckoutEvent("checkout_completed", { product, source: "no_quota_card" });
             window.location.reload();
           },
-          onCancel: () => {
-            trackCheckoutEvent("checkout_cancelled", { product, source: "no_quota_card" });
-          },
           onClose: () => {
-            trackCheckoutEvent("checkout_closed", { product, source: "no_quota_card" });
+            trackCheckoutEvent("checkout_cancelled", { product, source: "no_quota_card" });
           },
         });
       }

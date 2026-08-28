@@ -54,7 +54,6 @@ export function trackCheckoutEvent(event: string, params?: GtagParams) {
     checkout_completed: "✅ Checkout Completed",
     checkout_failed: "❌ Checkout Failed",
     checkout_cancelled: "🚫 Checkout Cancelled",
-    checkout_closed: "👋 Checkout Closed",
   };
 
   notifyFeishu(titleMap[event] ?? `💰 ${event}`, event, params);

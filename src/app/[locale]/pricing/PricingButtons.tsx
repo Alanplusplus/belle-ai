@@ -47,11 +47,8 @@ export function PricingButtons({ product, variant, label }: Props) {
             trackCheckoutEvent("checkout_completed", { product, source: "pricing_page" });
             window.location.href = "/en/payment/success";
           },
-          onCancel: () => {
-            trackCheckoutEvent("checkout_cancelled", { product, source: "pricing_page" });
-          },
           onClose: () => {
-            trackCheckoutEvent("checkout_closed", { product, source: "pricing_page" });
+            trackCheckoutEvent("checkout_cancelled", { product, source: "pricing_page" });
           },
         });
       } else {
