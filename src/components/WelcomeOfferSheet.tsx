@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { openCheckout } from "@creem_io/embed";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
 import { getCachedUserId, webInit } from "@/lib/api";
 
 const STORAGE_KEY = "belle_welcome_offer_seen";
@@ -60,9 +60,15 @@ export function WelcomeOfferSheet({ open, onClose }: Props) {
           checkoutUrl: data.checkoutUrl,
           theme: "light",
           onComplete: () => {
-            trackEvent("welcome_offer_completed");
+            trackCheckoutEvent("checkout_completed", { product: "credits5", source: "welcome_offer" });
             handleDismiss();
             window.location.reload();
+          },
+          onCancel: () => {
+            trackCheckoutEvent("checkout_cancelled", { product: "credits5", source: "welcome_offer" });
+          },
+          onClose: () => {
+            trackCheckoutEvent("checkout_closed", { product: "credits5", source: "welcome_offer" });
           },
         });
       }

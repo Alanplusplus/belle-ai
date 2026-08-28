@@ -15,7 +15,7 @@ import {
   type HistoryEntry,
   type AnalysisType as ApiAnalysisType,
 } from "@/lib/api";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
 import { PricingModal } from "@/components/PricingModal";
 import { WelcomeOfferSheet } from "@/components/WelcomeOfferSheet";
 
@@ -1244,7 +1244,7 @@ function NoQuotaCard({ t, onViewPlans }: { t: (key: string) => string; onViewPla
   const [loading, setLoading] = useState<string | null>(null);
 
   const handleBuy = async (product: string) => {
-    trackEvent("checkout_started", { product, source: "no_quota_card" });
+    trackCheckoutEvent("checkout_started", { product, source: "no_quota_card" });
     setLoading(product);
     try {
       let userId = getCachedUserId();
@@ -1270,8 +1270,14 @@ function NoQuotaCard({ t, onViewPlans }: { t: (key: string) => string; onViewPla
           checkoutUrl: data.checkoutUrl,
           theme: "light",
           onComplete: () => {
-            trackEvent("checkout_completed", { product, source: "no_quota_card" });
+            trackCheckoutEvent("checkout_completed", { product, source: "no_quota_card" });
             window.location.reload();
+          },
+          onCancel: () => {
+            trackCheckoutEvent("checkout_cancelled", { product, source: "no_quota_card" });
+          },
+          onClose: () => {
+            trackCheckoutEvent("checkout_closed", { product, source: "no_quota_card" });
           },
         });
       }

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { openCheckout } from "@creem_io/embed";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
 import { getCachedUserId, webInit } from "@/lib/api";
 import type { CreemProductKey } from "@/lib/constants";
 
@@ -23,7 +23,7 @@ export function PricingModal({ open, onClose }: Props) {
     trackEvent("pricing_modal_cta_clicked", { product });
 
     setLoading(product);
-    trackEvent("checkout_started", { product, source: "pricing_modal" });
+    trackCheckoutEvent("checkout_started", { product, source: "pricing_modal" });
     try {
       let userId = getCachedUserId();
       if (!userId) {
@@ -47,8 +47,14 @@ export function PricingModal({ open, onClose }: Props) {
           checkoutUrl: data.checkoutUrl,
           theme: "light",
           onComplete: () => {
-            trackEvent("checkout_completed", { product, source: "pricing_modal" });
+            trackCheckoutEvent("checkout_completed", { product, source: "pricing_modal" });
             window.location.reload();
+          },
+          onCancel: () => {
+            trackCheckoutEvent("checkout_cancelled", { product, source: "pricing_modal" });
+          },
+          onClose: () => {
+            trackCheckoutEvent("checkout_closed", { product, source: "pricing_modal" });
           },
         });
       }

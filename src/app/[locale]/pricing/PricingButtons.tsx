@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { openCheckout } from "@creem_io/embed";
 import type { CreemProductKey } from "@/lib/constants";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
 import { getCachedUserId, webInit } from "@/lib/api";
 
 interface Props {
@@ -18,7 +18,7 @@ export function PricingButtons({ product, variant, label }: Props) {
   const handleClick = async () => {
     trackEvent("pricing_cta_clicked", { product, variant });
 
-    trackEvent("checkout_started", { product, source: "pricing_page" });
+    trackCheckoutEvent("checkout_started", { product, source: "pricing_page" });
     setLoading(true);
     try {
       let userId = getCachedUserId();
@@ -44,16 +44,22 @@ export function PricingButtons({ product, variant, label }: Props) {
           checkoutUrl: data.checkoutUrl,
           theme: "light",
           onComplete: () => {
-            trackEvent("checkout_completed", { product, source: "pricing_page" });
+            trackCheckoutEvent("checkout_completed", { product, source: "pricing_page" });
             window.location.href = "/en/payment/success";
+          },
+          onCancel: () => {
+            trackCheckoutEvent("checkout_cancelled", { product, source: "pricing_page" });
+          },
+          onClose: () => {
+            trackCheckoutEvent("checkout_closed", { product, source: "pricing_page" });
           },
         });
       } else {
-        trackEvent("checkout_failed", { product, error: data.error || "unknown" });
+        trackCheckoutEvent("checkout_failed", { product, error: data.error || "unknown" });
         alert(data.error || "Failed to create checkout");
       }
     } catch {
-      trackEvent("checkout_failed", { product, error: "network_error" });
+      trackCheckoutEvent("checkout_failed", { product, error: "network_error" });
       alert("Network error. Please try again.");
     } finally {
       setLoading(false);
