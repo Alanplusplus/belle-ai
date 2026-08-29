@@ -173,8 +173,22 @@ export default function PricingPage() {
           </div>
         </div>
 
+        {/* Payment badge */}
+        <div className="mt-10 flex justify-center">
+          <a
+            href="https://www.creem.io/"
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-1.5 rounded-[10px] border-2 border-[#151617] bg-[#F5F2F0] px-3.5 py-2 shadow-[0_2px_0_0_#151617] transition hover:shadow-[0_1px_0_0_#151617] hover:translate-y-[1px] no-underline"
+          >
+            <span className="text-[13px] font-semibold leading-none text-[#5b5c5e]">Payments secured by</span>
+            <CreemLogo />
+            <span className="text-[13px] font-bold leading-none text-[#151617]">Creem</span>
+          </a>
+        </div>
+
         {/* App Store fallback */}
-        <div className="mt-8 text-center">
+        <div className="mt-4 text-center">
           <p className="text-sm text-muted-foreground">
             {t("appStoreNote")}
             <a
@@ -234,5 +248,13 @@ function PricingFeature({ text }: { text: string }) {
       </svg>
       {text}
     </li>
+  );
+}
+
+function CreemLogo() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 121 121" fill="none" aria-hidden="true" className="block flex-shrink-0">
+      <path d="M22.1102 11C24.1187 11 25.9669 12.0982 26.9281 13.8619L51.2059 58.4106C52.5699 60.9134 55.7048 61.8368 58.2077 60.473C60.7108 59.109 61.6342 55.9742 60.2701 53.4712L41.5466 19.113C39.554 15.4566 42.2004 11 46.3645 11H103.806C107.885 11 110.539 15.2933 108.715 18.9416L65.0579 106.254C63.0356 110.298 57.2654 110.298 55.2431 106.254L11.5863 18.9416C9.76212 15.2933 12.4156 11 16.4946 11H22.1102Z" fill="#B09CFB" />
+    </svg>
   );
 }
