@@ -1,6 +1,6 @@
 ---
 title: "Analisis Warna untuk Kulit Gelap: Panduan Lengkap"
-description: "Temukan bagaimana analisis warna personal bekerja untuk kulit gelap dan deep. Temukan tipe musim, palet terbaik, dan tips styling untuk kulit kaya melanin."
+description: "Analisis warna juga cocok untuk kulit kaya melanin. Temukan musim warnamu, palet terbaik & tips gaya — termasuk alat AI gratis."
 date: "2026-07-22"
 tags: ["analisis warna", "kulit gelap", "tone kulit deep", "melanin", "warna musiman"]
 image: "/images/blog/color-analysis-dark-skin.webp"

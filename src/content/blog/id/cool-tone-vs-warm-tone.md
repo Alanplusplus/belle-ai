@@ -1,6 +1,6 @@
 ---
 title: "Nada Dingin vs Nada Hangat: 5 Tes Mudah untuk Menemukan Undertone Anda (Dengan Foto)"
-description: "Masih bingung apakah Anda bernada dingin atau hangat? 5 tes sederhana di rumah ini membutuhkan waktu kurang dari 2 menit dan berlaku untuk SEMUA warna kulit. Tes urat saja sudah 70% akurat."
+description: "5 tes mudah di rumah untuk menemukan undertone Anda dalam 2 menit — dengan contoh foto. Berlaku untuk SEMUA warna kulit. Tes vena akurat 70%."
 date: "2026-07-02"
 tags: ["undertone", "nada dingin", "nada hangat", "warna kulit", "analisis warna"]
 image: "/images/blog/cool-tone-vs-warm-tone.webp"

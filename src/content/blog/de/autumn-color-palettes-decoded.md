@@ -1,6 +1,6 @@
 ---
 title: "Herbst-Farbpaletten Entschlüsselt: Deep Autumn vs True Autumn vs Soft Autumn"
-description: "Nicht sicher, welcher Herbst-Subtyp du bist? Lerne die wichtigsten Unterschiede zwischen Deep Autumn, True Autumn und Soft Autumn — inklusive bester Farben, Make-up-Tipps und wie du sie unterscheidest."
+description: "Deep, True oder Soft Autumn? Alle 3 Herbst-Subtypen im Vergleich — beste Farben, Make-up und wie du sie sofort unterscheidest."
 date: "2026-08-03"
 tags: ["Farbanalyse", "Herbst-Farbpalette", "Farbsaison", "Beauty", "Stilratgeber"]
 image: "/images/blog/autumn-color-palettes-decoded.webp"

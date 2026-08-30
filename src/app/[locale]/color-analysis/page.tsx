@@ -1,7 +1,7 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { SITE_URL } from "@/lib/constants";
-import { routing } from "@/i18n/routing";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import {
   SEASON_PALETTES,
   PARENT_SEASON_ORDER,
@@ -17,22 +17,22 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
-  const isDefault = locale === routing.defaultLocale;
-  const path = "/color-analysis";
-  const canonicalUrl = isDefault
-    ? `${SITE_URL}${path}`
-    : `${SITE_URL}/${locale}${path}`;
   return {
     title: messages.meta.colorGuideTitle,
     description: messages.meta.colorGuideDescription,
-    alternates: { canonical: canonicalUrl },
+    alternates: buildAlternates(locale, "/color-analysis"),
   };
 }
 
-export default function ColorAnalysisPillarPage() {
-  const t = useTranslations("colorGuide");
-  const sd = useTranslations("sd");
-  const adT = useTranslations("ad");
+export default async function ColorAnalysisPillarPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "colorGuide" });
+  const sd = await getTranslations({ locale, namespace: "sd" });
+  const adT = await getTranslations({ locale, namespace: "ad" });
 
   const faqs = Array.from({ length: 10 }, (_, i) => ({
     q: t(`faq${i + 1}Q`),
@@ -127,8 +127,13 @@ export default function ColorAnalysisPillarPage() {
     "#find-your-season", "#use-results", "#by-skin-tone", "#faq",
   ];
 
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Color Analysis", path: "/color-analysis" },
+  ]);
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
 

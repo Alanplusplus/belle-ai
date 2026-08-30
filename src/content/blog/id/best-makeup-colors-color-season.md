@@ -1,6 +1,6 @@
 ---
 title: "Warna Makeup Terbaik untuk Setiap Color Season: Grafik Lengkap"
-description: "Berhenti membeli makeup yang bentrok dengan warna alami Anda. Panduan lengkap ini memecah shade foundation, lip, eye, dan blush terbaik untuk semua 12 color season — dengan grafik yang bisa dicetak."
+description: "Tabel makeup lengkap untuk 12 musim warna. Temukan foundation, lipstik, eyeshadow & blush terbaik — diurutkan per musim dengan tabel perbandingan."
 date: "2026-08-07"
 tags: ["makeup", "analisis warna personal", "color season", "kecantikan", "panduan gaya"]
 image: "/images/blog/best-makeup-colors-color-season.webp"

@@ -1,6 +1,6 @@
 ---
 title: "Sonbahar Renk Paletleri Çözümlendi: Derin Sonbahar vs Gerçek Sonbahar vs Yumuşak Sonbahar"
-description: "Hangi sonbahar alt tipine ait olduğunuzdan emin değil misiniz? Derin Sonbahar, Gerçek Sonbahar ve Yumuşak Sonbahar arasındaki temel farkları öğrenin — en iyi renkler, makyaj ipuçları ve ayırt etme yöntemleri."
+description: "Deep, True yoksa Soft Autumn? 3 alt mevsimi yan yana karşılaştırın — en iyi renkler, makyaj ve anında ayırt etmenin yolu."
 date: "2026-08-03"
 tags: ["kişisel renk analizi", "sonbahar paleti", "renk mevsimi", "güzellik", "stil rehberi"]
 image: "/images/blog/autumn-color-palettes-decoded.webp"

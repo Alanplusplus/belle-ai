@@ -1,6 +1,6 @@
 ---
 title: "Come l'illuminazione influenza i tuoi colori: Perché appari diversa nelle foto rispetto alla realtà"
-description: "Ti sei mai chiesta perché con certe luci stai benissimo ma con altre sembri spenta? Scopri la scienza di come diverse fonti luminose cambiano i tuoi colori — e cosa fare al riguardo."
+description: "Spenta sotto le luci dell'ufficio ma luminosa all'ora dorata — ecco perché. Consigli scientifici per valorizzare i tuoi colori con qualsiasi luce."
 date: "2026-08-08"
 tags: ["analisi colore", "illuminazione", "colore personale", "bellezza", "guida stile"]
 image: "/images/blog/lighting-affects-colors.webp"

@@ -1,6 +1,6 @@
 ---
 title: "Bảng Màu Mùa Hè Giải Mã: Cool Summer vs True Summer vs Soft Summer"
-description: "Chưa biết mình là Summer loại nào? Tìm hiểu sự khác biệt giữa Cool Summer, True Summer và Soft Summer — màu đẹp nhất và mẹo phối đồ."
+description: "Cool, True hay Soft Summer? So sánh 3 mùa phụ — màu đẹp nhất, mẹo phối đồ và cách nhanh nhất tìm ra type của bạn."
 date: "2026-07-30"
 tags: ["phân tích màu sắc cá nhân", "bảng màu hè", "mùa màu", "làm đẹp", "hướng dẫn phong cách"]
 image: "/images/blog/summer-color-palettes-decoded.webp"

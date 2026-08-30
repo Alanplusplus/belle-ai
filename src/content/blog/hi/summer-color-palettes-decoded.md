@@ -1,6 +1,6 @@
 ---
 title: "समर कलर पैलेट डिकोडेड: Cool Summer vs True Summer vs Soft Summer"
-description: "नहीं पता कि आप कौन सा समर सबटाइप हैं? Cool Summer, True Summer और Soft Summer के बीच मुख्य अंतर, बेस्ट कलर और स्टाइलिंग टिप्स जानें।"
+description: "Cool, True या Soft Summer? 3 समर सब-सीज़न की तुलना — बेस्ट कलर, स्टाइलिंग टिप्स और जल्दी पता लगाने का तरीका।"
 date: "2026-07-30"
 tags: ["पर्सनल कलर एनालिसिस", "समर कलर पैलेट", "कलर सीजन", "ब्यूटी", "स्टाइल गाइड"]
 image: "/images/blog/summer-color-palettes-decoded.webp"

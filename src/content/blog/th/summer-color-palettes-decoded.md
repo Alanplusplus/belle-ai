@@ -1,6 +1,6 @@
 ---
 title: "พาเลทสีซัมเมอร์: Cool Summer vs True Summer vs Soft Summer"
-description: "ไม่แน่ใจว่าคุณเป็น Summer ประเภทไหน? เรียนรู้ความแตกต่างระหว่าง Cool Summer, True Summer และ Soft Summer — สีที่เหมาะและเคล็ดลับการแต่งตัว"
+description: "Cool, True หรือ Soft Summer? เปรียบเทียบ 3 ซับซีซัน — สีที่เหมาะ เคล็ดลับสไตล์ และวิธีค้นหาประเภทของคุณอย่างรวดเร็ว"
 date: "2026-07-30"
 tags: ["วิเคราะห์สีส่วนบุคคล", "พาเลทซัมเมอร์", "ซีซั่นสี", "ความงาม", "ไกด์แต่งตัว"]
 image: "/images/blog/summer-color-palettes-decoded.webp"

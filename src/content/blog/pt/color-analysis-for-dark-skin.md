@@ -1,6 +1,6 @@
 ---
 title: "Análise de cores para pele escura"
-description: "Descubra como a análise de coloração pessoal funciona para tons de pele escuros e profundos. Encontre seu tipo sazonal, melhor paleta e dicas de estilo para pele rica em melanina."
+description: "A análise de cores funciona lindamente para peles ricas em melanina. Encontre sua estação, melhor paleta e dicas de estilo — ferramenta IA gratuita incluída."
 date: "2026-07-22"
 tags: ["análise de cores", "pele escura", "tom de pele profundo", "melanina", "coloração sazonal"]
 image: "/images/blog/color-analysis-dark-skin.webp"

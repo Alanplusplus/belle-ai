@@ -1,6 +1,6 @@
 ---
 title: "Melhores Cores para Subtons Quentes: Seu Guia Completo de Estilo (2026)"
-description: "Descubra as cores mais favorecedoras para subtons quentes em roupas, maquiagem, cabelo e acessórios. Recomendações específicas para tons de pele dourados, pêssego e oliva quente."
+description: "As 15 melhores cores para subtons quentes — roupas, maquiagem e cabelo. Seleção para peles douradas, pêssego e oliva. Ferramenta de IA gratuita incluída."
 date: "2026-07-28"
 tags: ["subtom quente", "tom de pele quente", "paleta de cores", "guia de estilo", "moda"]
 image: "/images/blog/best-colors-for-warm-undertones.webp"

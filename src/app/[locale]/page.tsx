@@ -1,9 +1,8 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
-import { routing } from "@/i18n/routing";
+import { buildAlternates } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -13,15 +12,11 @@ export async function generateMetadata({
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
   const meta = messages.meta;
-  const isDefault = locale === routing.defaultLocale;
-  const canonicalPath = isDefault ? SITE_URL : `${SITE_URL}/${locale}`;
 
   return {
     title: meta.homeTitle,
     description: meta.homeDescription,
-    alternates: {
-      canonical: canonicalPath,
-    },
+    alternates: buildAlternates(locale, ""),
   };
 }
 

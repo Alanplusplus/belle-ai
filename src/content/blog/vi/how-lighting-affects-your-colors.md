@@ -1,6 +1,6 @@
 ---
 title: "Ánh sáng ảnh hưởng đến màu sắc của bạn như thế nào: Tại sao bạn trông khác trong ảnh so với ngoài đời"
-description: "Bạn có bao giờ thắc mắc tại sao mình trông tuyệt với ánh sáng này nhưng nhợt nhạt với ánh sáng khác? Tìm hiểu khoa học về cách các nguồn sáng khác nhau thay đổi màu sắc của bạn — và cách xử lý."
+description: "Nhợt nhạt dưới đèn văn phòng nhưng rạng rỡ lúc hoàng hôn — lý do ở đây. Mẹo khoa học để chọn đúng màu trong mọi ánh sáng."
 date: "2026-08-08"
 tags: ["phân tích màu", "ánh sáng", "màu cá nhân", "làm đẹp", "hướng dẫn phong cách"]
 image: "/images/blog/lighting-affects-colors.webp"

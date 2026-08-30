@@ -1,6 +1,6 @@
 ---
 title: "Bagaimana Pencahayaan Mempengaruhi Warna Anda: Mengapa Anda Terlihat Berbeda di Foto vs Kehidupan Nyata"
-description: "Pernah bertanya-tanya mengapa Anda terlihat luar biasa dengan cahaya tertentu tapi pucat dengan cahaya lain? Pelajari sains tentang bagaimana sumber cahaya berbeda mengubah warna Anda — dan apa yang harus dilakukan."
+description: "Terlihat kusam di lampu kantor tapi bercahaya di golden hour — ini alasannya. Tips berbasis sains untuk tampil memukau di semua pencahayaan."
 date: "2026-08-08"
 tags: ["analisis warna", "pencahayaan", "warna personal", "kecantikan", "panduan gaya"]
 image: "/images/blog/lighting-affects-colors.webp"

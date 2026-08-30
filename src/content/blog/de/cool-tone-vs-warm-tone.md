@@ -1,6 +1,6 @@
 ---
 title: "Kühl vs. Warm: 5 einfache Tests zur Bestimmung Ihres Untertons (mit Fotos)"
-description: "Noch unsicher, ob Sie kühl oder warm getönt sind? Diese 5 einfachen Tests zu Hause dauern unter 2 Minuten und funktionieren bei ALLEN Hauttönen. Allein der Venentest ist zu 70 % genau."
+description: "5 einfache Hauttests für deinen Unterton in unter 2 Minuten — mit Fotobeispielen. Funktioniert bei ALLEN Hauttönen. Der Venentest ist zu 70% genau."
 date: "2026-07-02"
 tags: ["Unterton", "kühler Unterton", "warmer Unterton", "Hautton", "Farbanalyse"]
 image: "/images/blog/cool-tone-vs-warm-tone.webp"

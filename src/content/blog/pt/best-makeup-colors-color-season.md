@@ -1,6 +1,6 @@
 ---
 title: "Melhores Cores de Maquiagem para Cada Estação de Cor: Tabela Completa"
-description: "Pare de comprar maquiagem que conflita com sua coloração natural. Este guia completo detalha as melhores bases, batons, sombras e blushes para as 12 estações de cor — com uma tabela para imprimir ou salvar."
+description: "Tabela completa de maquiagem para as 12 estações de cor. Encontre os melhores tons de base, batom, sombra e blush — organizado por estação com tabelas comparativas."
 date: "2026-08-07"
 tags: ["maquiagem", "análise de coloração pessoal", "estação de cor", "beleza", "guia de estilo"]
 image: "/images/blog/best-makeup-colors-color-season.webp"

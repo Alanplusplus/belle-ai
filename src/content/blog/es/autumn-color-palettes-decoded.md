@@ -1,6 +1,6 @@
 ---
 title: "Paletas de Colores de Otoño Decodificadas: Otoño Profundo vs Otoño Verdadero vs Otoño Suave"
-description: "¿No sabes qué subtipo de otoño eres? Aprende las diferencias clave entre Otoño Profundo, Otoño Verdadero y Otoño Suave — incluyendo mejores colores, consejos de maquillaje y cómo distinguirlos."
+description: "¿Deep, True o Soft Autumn? Compara las 3 subestaciones lado a lado — mejores colores, maquillaje y cómo distinguirlas al instante."
 date: "2026-08-03"
 tags: ["análisis de color personal", "paleta de colores otoño", "temporada de color", "belleza", "guía de estilo"]
 image: "/images/blog/autumn-color-palettes-decoded.webp"

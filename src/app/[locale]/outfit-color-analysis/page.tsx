@@ -1,7 +1,7 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { canonicalUrl } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -14,15 +14,29 @@ export async function generateMetadata({
   return {
     title: messages.meta.outfitTitle,
     description: messages.meta.outfitDescription,
-    alternates: { canonical: canonicalUrl(locale, "/outfit-color-analysis") },
+    alternates: buildAlternates(locale, "/outfit-color-analysis"),
   };
 }
 
-export default function OutfitColorAnalysisPage() {
-  const t = useTranslations("outfitPage");
-  const ft = useTranslations("features");
+export default async function OutfitColorAnalysisPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "outfitPage" });
+  const ft = await getTranslations({ locale, namespace: "features" });
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Outfit Color Analysis", path: "/outfit-color-analysis" },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h1 className="font-serif text-4xl font-bold sm:text-5xl">{t("title")}</h1>

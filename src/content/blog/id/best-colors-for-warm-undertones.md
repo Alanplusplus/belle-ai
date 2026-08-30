@@ -1,6 +1,6 @@
 ---
 title: "Warna Terbaik untuk Undertone Hangat: Panduan Gaya Lengkap Anda (2026)"
-description: "Temukan warna paling mempesona untuk undertone hangat dalam pakaian, makeup, rambut, dan aksesori. Rekomendasi shade spesifik untuk kulit bernada keemasan, peachy, dan olive-hangat."
+description: "15 warna terbaik untuk undertone hangat — pakaian, makeup & warna rambut. Pilihan untuk kulit golden, peach, dan olive. Coba alat warna AI gratis."
 date: "2026-07-28"
 tags: ["undertone hangat", "kulit hangat", "palet warna", "panduan gaya", "fashion"]
 image: "/images/blog/best-colors-for-warm-undertones.webp"

@@ -1,6 +1,6 @@
 ---
 title: "I migliori colori di trucco per ogni stagione cromatica: tabella completa"
-description: "Smetti di comprare trucchi che scontrano con la tua colorazione naturale. Questa guida completa analizza i migliori fondotinta, rossetti, ombretti e blush per tutte e 12 le stagioni cromatiche — con una tabella da salvare o stampare."
+description: "Tabella trucco completa per tutte le 12 stagioni di colore. Trova i migliori toni di fondotinta, rossetto, ombretto e blush — organizzati per stagione con tabelle comparative."
 date: "2026-08-07"
 tags: ["trucco", "analisi del colore personale", "stagione cromatica", "bellezza", "guida di stile"]
 image: "/images/blog/best-makeup-colors-color-season.webp"

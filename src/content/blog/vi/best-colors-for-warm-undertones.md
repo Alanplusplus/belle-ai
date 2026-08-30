@@ -1,6 +1,6 @@
 ---
 title: "Màu Sắc Tốt Nhất Cho Tông Nền Ấm: Hướng Dẫn Phong Cách Toàn Diện (2026)"
-description: "Tìm những màu tôn da nhất cho tông nền ấm trong quần áo, trang điểm, tóc và phụ kiện. Gợi ý sắc thái cụ thể cho da vàng, đào và ô liu ấm."
+description: "15 sắc màu tốt nhất cho undertone ấm — trang phục, trang điểm & màu tóc. Gợi ý cho da tone vàng, đào và olive. Công cụ AI phối màu miễn phí."
 date: "2026-07-28"
 tags: ["tông nền ấm", "da ấm", "bảng màu", "hướng dẫn phong cách", "thời trang"]
 image: "/images/blog/best-colors-for-warm-undertones.webp"

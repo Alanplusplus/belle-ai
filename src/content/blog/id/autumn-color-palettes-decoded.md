@@ -1,6 +1,6 @@
 ---
 title: "Palet Warna Musim Gugur Terdekode: Deep Autumn vs True Autumn vs Soft Autumn"
-description: "Tidak yakin tipe musim gugur mana yang cocok? Pelajari perbedaan utama antara Deep Autumn, True Autumn, dan Soft Autumn — termasuk warna terbaik, tips makeup, dan cara membedakannya."
+description: "Deep, True, atau Soft Autumn? Bandingkan 3 sub-musim — warna terbaik, makeup, dan cara membedakannya secara instan."
 date: "2026-08-03"
 tags: ["analisis warna personal", "palet musim gugur", "musim warna", "kecantikan", "panduan gaya"]
 image: "/images/blog/autumn-color-palettes-decoded.webp"

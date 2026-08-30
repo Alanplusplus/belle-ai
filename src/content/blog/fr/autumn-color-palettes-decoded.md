@@ -1,6 +1,6 @@
 ---
 title: "Palettes de Couleurs d'Automne Décodées : Automne Profond vs Automne Vrai vs Automne Doux"
-description: "Vous ne savez pas quel sous-type d'automne vous êtes ? Découvrez les différences clés entre Automne Profond, Automne Vrai et Automne Doux — meilleures couleurs, conseils maquillage et comment les distinguer."
+description: "Deep, True ou Soft Autumn ? Comparez les 3 sous-saisons côte à côte — meilleures couleurs, maquillage et comment les différencier instantanément."
 date: "2026-08-03"
 tags: ["analyse de couleurs personnelle", "palette automne", "saison de couleurs", "beauté", "guide de style"]
 image: "/images/blog/autumn-color-palettes-decoded.webp"

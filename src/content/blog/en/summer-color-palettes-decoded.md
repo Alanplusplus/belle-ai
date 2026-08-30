@@ -1,6 +1,6 @@
 ---
 title: "Summer Color Palettes Decoded: Cool Summer vs True Summer vs Soft Summer"
-description: "Not sure which Summer sub-season you are? Learn the key differences between Cool Summer, True Summer, and Soft Summer — including best colors, styling tips, and how to tell them apart for good."
+description: "Cool, True, or Soft Summer? See all 3 sub-seasons compared — best colors, styling tips, and a fast way to find which one you are."
 date: "2026-07-30"
 tags: ["personal color analysis", "summer color palette", "color season", "beauty", "style guide"]
 image: "/images/blog/summer-color-palettes-decoded.webp"

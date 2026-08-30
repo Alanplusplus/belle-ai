@@ -148,3 +148,9 @@ And I still get the compliments. The "you look great" ones that aren't about a s
 - Accessories and makeup should match your palette's undertone for full harmony
 - The fear of looking "boring" in one palette is unfounded — consistency reads as personal style, not limitation
 
+## Related Articles
+
+- [How to Build a Capsule Wardrobe for Your Color Season (Step-by-Step)](/en/blog/capsule-wardrobe-color-season) — Turn your seasonal palette into a cohesive everyday wardrobe
+- [Soft Autumn vs Soft Summer: The Most Commonly Confused Color Seasons](/en/blog/soft-autumn-vs-soft-summer) — Why getting your sub-season right matters
+- [The Psychology of Color: Why Wearing Your Best Colors Boosts Confidence](/en/blog/psychology-of-color-confidence) — The science behind why the right colors change how you feel
+

@@ -1,6 +1,6 @@
 ---
 title: "Tom Frio vs. Tom Quente: 5 Testes Fáceis para Descobrir Seu Subtom (com Fotos)"
-description: "Ainda não sabe se seu tom é frio ou quente? Estes 5 testes simples em casa levam menos de 2 minutos e funcionam para TODOS os tons de pele. Só o teste das veias tem 70% de precisão."
+description: "5 testes simples em casa para descobrir seu subtom em menos de 2 minutos — com fotos. Funciona para TODOS os tons de pele. O teste das veias tem 70% de precisão."
 date: "2026-07-02"
 tags: ["subtom", "tom frio", "tom quente", "tom de pele", "análise de coloração"]
 image: "/images/blog/cool-tone-vs-warm-tone.webp"

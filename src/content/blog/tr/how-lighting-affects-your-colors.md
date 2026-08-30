@@ -1,6 +1,6 @@
 ---
 title: "Aydınlatma Renklerinizi Nasıl Etkiler: Fotoğraflarda ve Gerçek Hayatta Neden Farklı Görünüyorsunuz"
-description: "Bazı ışıklarda neden harika görünüp diğerlerinde solgun göründüğünüzü hiç merak ettiniz mi? Farklı ışık kaynaklarının renklerinizi nasıl değiştirdiğinin bilimini ve ne yapmanız gerektiğini öğrenin."
+description: "Ofis ışığında solgun ama altın saatte ışıl ışıl — işte nedeni. Her ışıkta en iyi görünmek için bilime dayalı ipuçları."
 date: "2026-08-08"
 tags: ["renk analizi", "aydınlatma", "kişisel renk", "güzellik", "stil rehberi"]
 image: "/images/blog/lighting-affects-colors.webp"

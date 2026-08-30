@@ -1,6 +1,6 @@
 ---
 title: "Les meilleures couleurs pour les sous-tons chauds : votre guide de style complet (2026)"
-description: "Découvrez les couleurs les plus flatteuses pour les sous-tons chauds en vêtements, maquillage, cheveux et accessoires. Recommandations précises de teintes pour peau dorée, pêche et olivâtre-chaude."
+description: "Les 15 meilleures teintes pour les sous-tons chauds — vêtements, maquillage et cheveux. Sélection pour peaux dorées, pêche et olive. Outil IA gratuit inclus."
 date: "2026-07-28"
 tags: ["sous-ton chaud", "peau chaude", "palette de couleurs", "guide de style", "mode"]
 image: "/images/blog/best-colors-for-warm-undertones.webp"

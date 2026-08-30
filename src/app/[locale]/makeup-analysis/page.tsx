@@ -1,7 +1,6 @@
-import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { canonicalUrl } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -15,20 +14,31 @@ export async function generateMetadata({
   return {
     title: messages.meta.makeupTitle,
     description: messages.meta.makeupDescription,
-    alternates: {
-      canonical: canonicalUrl(locale, "/makeup-analysis"),
-    },
+    alternates: buildAlternates(locale, "/makeup-analysis"),
   };
 }
 
-export default function MakeupAnalysisPage() {
-  const t = useTranslations("makeup");
-  const ft = useTranslations("features");
+export default async function MakeupAnalysisPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "makeup" });
+  const ft = await getTranslations({ locale, namespace: "features" });
 
   const items = [t("item1"), t("item2"), t("item3"), t("item4"), t("item5"), t("item6")];
 
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Makeup Analysis", path: "/makeup-analysis" },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h1 className="font-serif text-4xl font-bold sm:text-5xl">{t("title")}</h1>

@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { AuthProvider } from "@/components/AuthProvider";
 import { GoogleOneTap } from "@/components/GoogleOneTap";
 import { PageViewTracker } from "@/components/PageViewTracker";
+import { buildAlternates } from "@/lib/seo";
 import { SITE_URL, APP_STORE_ID } from "@/lib/constants";
 import Script from "next/script";
 import type { Metadata } from "next";
@@ -36,15 +37,6 @@ export async function generateMetadata({
   const messages = (await import(`@/messages/${locale}.json`)).default;
   const meta = messages.meta;
 
-  const isDefault = locale === routing.defaultLocale;
-  const canonicalPath = isDefault ? SITE_URL : `${SITE_URL}/${locale}`;
-
-  const languages: Record<string, string> = {};
-  for (const l of routing.locales) {
-    languages[l] = l === routing.defaultLocale ? SITE_URL : `${SITE_URL}/${l}`;
-  }
-  languages["x-default"] = SITE_URL;
-
   return {
     title: {
       default: meta.homeTitle,
@@ -59,17 +51,14 @@ export async function generateMetadata({
       ],
       apple: "/apple-touch-icon.png",
     },
-    alternates: {
-      canonical: canonicalPath,
-      languages,
-    },
+    alternates: buildAlternates(locale, ""),
     openGraph: {
       title: meta.homeTitle,
       description: meta.homeDescription,
       siteName: meta.siteName,
       locale,
       type: "website",
-      url: canonicalPath,
+      url: buildAlternates(locale, "").canonical,
       images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630 }],
     },
     twitter: {
@@ -96,14 +85,14 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   const messages = await getMessages();
+  const meta = (messages as Record<string, Record<string, string>>).meta;
 
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Belle AI",
     url: SITE_URL,
-    description:
-      "Free AI-powered personal color analysis. Upload a photo and discover your seasonal color type, best color palette, and styling recommendations in 60 seconds.",
+    description: meta?.homeDescription ?? "Free AI-powered personal color analysis.",
   };
 
   const orgJsonLd = {
@@ -119,8 +108,7 @@ export default async function LocaleLayout({
       "https://www.pinterest.com/belleaiapp",
       "https://medium.com/@belleai",
     ],
-    description:
-      "AI-powered personal color analysis app. Find your seasonal color type, best colors for makeup, fashion, and hair with advanced computer vision.",
+    description: meta?.homeDescription ?? "AI-powered personal color analysis app.",
   };
 
   return (

@@ -1,6 +1,6 @@
 ---
 title: "Летние цветовые палитры: Cool Summer vs True Summer vs Soft Summer"
-description: "Не знаете, какой вы подтип Лета? Узнайте ключевые различия между Cool Summer, True Summer и Soft Summer — лучшие цвета и советы по стилю."
+description: "Cool, True или Soft Summer? Сравнение 3 летних подтипов — лучшие цвета, советы по стилю и быстрый способ определить свой тип."
 date: "2026-07-30"
 tags: ["цветотип", "летняя палитра", "цветовой сезон", "красота", "гид по стилю"]
 image: "/images/blog/summer-color-palettes-decoded.webp"

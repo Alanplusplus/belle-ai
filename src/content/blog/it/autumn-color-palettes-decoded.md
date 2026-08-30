@@ -1,6 +1,6 @@
 ---
 title: "Palette Colori Autunnali Decodificate: Autunno Profondo vs Autunno Vero vs Autunno Morbido"
-description: "Non sai quale sottotipo autunnale sei? Scopri le differenze chiave tra Autunno Profondo, Autunno Vero e Autunno Morbido — migliori colori, consigli trucco e come distinguerli."
+description: "Deep, True o Soft Autumn? Confronta le 3 sotto-stagioni fianco a fianco — colori migliori, trucco e come distinguerle subito."
 date: "2026-08-03"
 tags: ["analisi del colore personale", "palette autunnale", "stagione di colori", "bellezza", "guida allo stile"]
 image: "/images/blog/autumn-color-palettes-decoded.webp"

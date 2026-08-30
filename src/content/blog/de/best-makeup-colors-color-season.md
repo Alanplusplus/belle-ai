@@ -1,6 +1,6 @@
 ---
 title: "Die Besten Make-up-Farben für Jeden Farbtyp: Komplette Übersicht mit Tabelle"
-description: "Schluss mit Make-up, das mit Ihrer natürlichen Farbgebung kollidiert. Dieser umfassende Guide zeigt die besten Foundation-, Lippen-, Augen- und Rouge-Töne für alle 12 Farbtypen — mit einer Tabelle zum Speichern."
+description: "Komplette Make-up-Tabelle für alle 12 Farbtypen. Finde die besten Foundation-, Lippen-, Lidschatten- & Rouge-Töne — nach Saison mit Vergleichstabellen."
 date: "2026-08-07"
 tags: ["Make-up", "persönliche Farbanalyse", "Farbtyp", "Schönheit", "Styling-Ratgeber"]
 image: "/images/blog/best-makeup-colors-color-season.webp"

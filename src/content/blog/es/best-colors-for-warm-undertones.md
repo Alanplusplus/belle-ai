@@ -1,6 +1,6 @@
 ---
 title: "Los mejores colores para subtonos cálidos: tu guía de estilo completa (2026)"
-description: "Descubre los colores más favorecedores para subtonos cálidos en ropa, maquillaje, pelo y accesorios. Recomendaciones específicas de tonalidades para piel dorada, melocotón y oliva-cálida."
+description: "Los 15 mejores tonos para subtonos cálidos: ropa, maquillaje y cabello. Selección para pieles doradas, melocotón y oliva. Prueba nuestra herramienta de color con IA gratis."
 date: "2026-07-28"
 tags: ["subtono cálido", "piel cálida", "paleta de colores", "guía de estilo", "moda"]
 image: "/images/blog/best-colors-for-warm-undertones.webp"

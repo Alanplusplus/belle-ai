@@ -1,6 +1,6 @@
 ---
 title: "Farbanalyse für dunkle Hauttöne: Ein vollständiger Leitfaden"
-description: "Entdecke, wie persönliche Farbanalyse für dunkle und tiefe Hauttöne funktioniert. Finde deinen saisonalen Farbtyp, deine beste Palette und Styling-Tipps für melaninreiche Haut."
+description: "Farbanalyse funktioniert auch bei melaninreicher Haut hervorragend. Finde deinen Farbtyp, beste Palette & Styling-Tipps — kostenloses KI-Tool inklusive."
 date: "2026-07-22"
 tags: ["Farbanalyse", "dunkle Haut", "tiefer Hautton", "Melanin", "saisonale Farben"]
 image: "/images/blog/color-analysis-dark-skin.webp"

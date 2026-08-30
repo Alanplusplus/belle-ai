@@ -1,6 +1,6 @@
 ---
 title: "Die besten Farben für warme Untertöne: Ihr kompletter Styling-Ratgeber (2026)"
-description: "Finden Sie die schmeichelhaftesten Farben für warme Untertöne in Kleidung, Make-up, Haaren und Accessoires. Spezifische Farbtonempfehlungen für goldene, pfirsichfarbene und warm-oliv getönte Haut."
+description: "Die 15 besten Farben für warme Untertöne — Kleidung, Make-up & Haarfarbe. Empfehlungen für goldene, pfirsich- und olivfarbene Hauttöne. Kostenloses KI-Tool."
 date: "2026-07-28"
 tags: ["warmer Unterton", "warme Haut", "Farbpalette", "Styling-Ratgeber", "Mode"]
 image: "/images/blog/best-colors-for-warm-undertones.webp"

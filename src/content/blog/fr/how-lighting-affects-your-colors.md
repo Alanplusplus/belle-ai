@@ -1,6 +1,6 @@
 ---
 title: "Comment l'éclairage affecte vos couleurs : Pourquoi vous paraissez différente en photo et dans la réalité"
-description: "Vous êtes-vous déjà demandé pourquoi vous êtes magnifique sous certaines lumières mais terne sous d'autres ? Découvrez la science de l'impact des sources lumineuses sur vos couleurs — et comment y remédier."
+description: "Terne sous les néons, éclatante à l'heure dorée — voici pourquoi. Conseils scientifiques pour sublimer vos couleurs sous toute lumière."
 date: "2026-08-08"
 tags: ["analyse couleur", "éclairage", "couleur personnelle", "beauté", "guide style"]
 image: "/images/blog/lighting-affects-colors.webp"

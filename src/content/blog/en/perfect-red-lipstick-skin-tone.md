@@ -168,3 +168,9 @@ I ran my own selfie through an AI color analysis tool and confirmed I was a Soft
 - **Olive undertones need muted, deeper reds** — not bright or pastel shades.
 - **Swatch on your inner wrist or lips, not your hand.** And always check in natural light.
 
+## Related Articles
+
+- [The Best Makeup Colors for Every Color Season: A Complete Chart](/en/blog/best-makeup-colors-color-season) — Lip, eye, and blush shades matched to your seasonal type
+- [Am I Warm or Cool Toned? The Definitive Undertone Guide (2026)](/en/blog/how-to-determine-skin-undertone) — Confirm your undertone before choosing a red
+- [Best Colors for Warm Undertones: Your Complete Style Guide (2026)](/en/blog/best-colors-for-warm-undertones) — Full wardrobe palette for warm-toned skin
+

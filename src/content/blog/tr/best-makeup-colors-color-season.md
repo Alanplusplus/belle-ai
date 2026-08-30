@@ -1,6 +1,6 @@
 ---
 title: "Her Renk Sezonu İçin En İyi Makyaj Renkleri: Eksiksiz Tablo"
-description: "Doğal renginizle uyumsuz makyaj satın almayı bırakın. Bu kapsamlı rehber, 12 renk sezonunun tamamı için en iyi fondöten, ruj, göz ve allık tonlarını — yazdırılabilir bir tabloyla birlikte — açıklıyor."
+description: "Tüm 12 renk mevsimi için eksiksiz makyaj tablosu. En iyi fondöten, ruj, far ve allık tonlarını bulun — mevsime göre karşılaştırma tablolarıyla."
 date: "2026-08-07"
 tags: ["makyaj", "kişisel renk analizi", "renk sezonu", "güzellik", "stil rehberi"]
 image: "/images/blog/best-makeup-colors-color-season.webp"

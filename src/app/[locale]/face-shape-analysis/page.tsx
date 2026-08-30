@@ -1,6 +1,6 @@
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { canonicalUrl } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -14,20 +14,65 @@ export async function generateMetadata({
   return {
     title: messages.meta.faceTitle,
     description: messages.meta.faceDescription,
-    alternates: {
-      canonical: canonicalUrl(locale, "/face-shape-analysis"),
-    },
+    alternates: buildAlternates(locale, "/face-shape-analysis"),
   };
 }
 
-export default function FaceShapeAnalysisPage() {
-  const t = useTranslations("face");
-  const ft = useTranslations("features");
+export default async function FaceShapeAnalysisPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "face" });
+  const ft = await getTranslations({ locale, namespace: "features" });
 
   const items = [t("item1"), t("item2"), t("item3"), t("item4"), t("item5"), t("item6")];
 
+  const faqs = [
+    {
+      q: "How do I determine my face shape?",
+      a: "Compare 4 measurements: forehead width, cheekbone width, jawline width, and face length. The ratio between these determines your shape. Our AI analysis measures these from your photo, or you can take our free face shape quiz.",
+    },
+    {
+      q: "What is the most common face shape?",
+      a: "Oval and round are the most common face shapes worldwide. Oval faces have balanced proportions and suit most hairstyles, while round faces have similar width and length with soft angles.",
+    },
+    {
+      q: "Can face shape affect which hairstyles look best?",
+      a: "Absolutely. Hairstyles can create visual balance — adding width to long faces, length to round faces, or softening angular features. Our analysis gives you specific hairstyle recommendations based on your unique face shape.",
+    },
+    {
+      q: "How accurate is AI face shape detection?",
+      a: "Our AI measures precise facial proportions from your photo using computer vision landmarks. It identifies your face shape, proportions, and symmetry — providing more objective results than self-assessment.",
+    },
+  ];
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Face Shape Analysis", path: "/face-shape-analysis" },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h1 className="font-serif text-4xl font-bold sm:text-5xl">{t("title")}</h1>
@@ -89,12 +134,13 @@ export default function FaceShapeAnalysisPage() {
             {FACE_SHAPES.map((shape) => (
               <div
                 key={shape.name}
-                className="flex flex-col items-center rounded-xl border border-border bg-card p-5"
+                className="flex flex-col items-center rounded-xl border border-border bg-card p-5 text-center"
               >
                 <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
                   {shape.icon}
                 </div>
                 <p className="text-sm font-medium">{shape.name}</p>
+                <p className="mt-1 text-xs text-muted-foreground">{shape.desc}</p>
               </div>
             ))}
           </div>
@@ -106,6 +152,53 @@ export default function FaceShapeAnalysisPage() {
               {ft("tryItFree")}
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="mb-6 text-2xl font-semibold">FAQ</h2>
+        <div className="space-y-6">
+          {faqs.map((faq, i) => (
+            <details key={i} className="group border-b border-gray-200 pb-4">
+              <summary className="cursor-pointer font-medium text-gray-900 transition-colors group-open:text-rose-600">
+                {faq.q}
+              </summary>
+              <p className="mt-3 leading-relaxed text-gray-600">{faq.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 pb-16">
+        <h2 className="mb-6 text-2xl font-bold">Related Tools</h2>
+        <div className="grid gap-4 sm:grid-cols-3">
+          <Link
+            href="/glasses-analysis"
+            className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
+          >
+            <span className="font-medium text-gray-900">Glasses Analysis</span>
+            <span className="mt-1 block text-sm text-gray-500">
+              Find frames for your face shape
+            </span>
+          </Link>
+          <Link
+            href="/tools/face-shape-quiz"
+            className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
+          >
+            <span className="font-medium text-gray-900">Face Shape Quiz</span>
+            <span className="mt-1 block text-sm text-gray-500">
+              Determine your shape in 1 minute
+            </span>
+          </Link>
+          <Link
+            href="/hair-color-analysis"
+            className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
+          >
+            <span className="font-medium text-gray-900">Hair Color Analysis</span>
+            <span className="mt-1 block text-sm text-gray-500">
+              Best hair colors for your features
+            </span>
+          </Link>
         </div>
       </section>
     </>
@@ -176,11 +269,11 @@ function TriangleIcon() {
 }
 
 const FACE_SHAPES = [
-  { name: "Oval", icon: <OvalIcon /> },
-  { name: "Round", icon: <RoundIcon /> },
-  { name: "Square", icon: <SquareIcon /> },
-  { name: "Heart", icon: <HeartIcon /> },
-  { name: "Oblong", icon: <OblongIcon /> },
-  { name: "Diamond", icon: <DiamondIcon /> },
-  { name: "Triangle", icon: <TriangleIcon /> },
+  { name: "Oval", icon: <OvalIcon />, desc: "Balanced proportions, gently rounded — the most versatile shape" },
+  { name: "Round", icon: <RoundIcon />, desc: "Equal width and length with soft angles and full cheeks" },
+  { name: "Square", icon: <SquareIcon />, desc: "Strong jawline with angular, well-defined features" },
+  { name: "Heart", icon: <HeartIcon />, desc: "Wider forehead tapering to a narrower, pointed chin" },
+  { name: "Oblong", icon: <OblongIcon />, desc: "Noticeably longer than wide with even proportions" },
+  { name: "Diamond", icon: <DiamondIcon />, desc: "Wide cheekbones with narrow forehead and jawline" },
+  { name: "Triangle", icon: <TriangleIcon />, desc: "Wider jawline that tapers to a narrower forehead" },
 ];

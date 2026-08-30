@@ -1,6 +1,6 @@
 ---
 title: "Palet Warna Musim Panas: Cool Summer vs True Summer vs Soft Summer"
-description: "Tidak yakin Anda Summer tipe apa? Pelajari perbedaan utama antara Cool Summer, True Summer, dan Soft Summer — warna terbaik dan tips styling."
+description: "Cool, True, atau Soft Summer? Lihat perbandingan 3 sub-musim — warna terbaik, tips gaya, dan cara cepat menemukan tipe Anda."
 date: "2026-07-30"
 tags: ["analisis warna personal", "palet musim panas", "musim warna", "kecantikan", "panduan gaya"]
 image: "/images/blog/summer-color-palettes-decoded.webp"

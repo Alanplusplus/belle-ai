@@ -1,6 +1,6 @@
 ---
 title: "Analisi del colore per pelle scura"
-description: "Scopri come l'analisi del colore personale funziona per pelli scure e profonde. Trova il tuo tipo stagionale, la palette migliore e consigli di stile per pelle ricca di melanina."
+description: "L'analisi del colore funziona perfettamente per le pelli ricche di melanina. Trova la tua stagione, palette e consigli di stile — strumento AI gratuito incluso."
 date: "2026-07-22"
 tags: ["analisi del colore", "pelle scura", "tono di pelle profondo", "melanina", "armocromia stagionale"]
 image: "/images/blog/color-analysis-dark-skin.webp"

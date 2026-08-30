@@ -1,6 +1,6 @@
 ---
 title: "Los Mejores Colores de Maquillaje para Cada Estación de Color: Guía Completa con Tabla"
-description: "Deja de comprar maquillaje que choca con tu coloración natural. Esta guía completa desglosa los mejores tonos de base, labios, ojos y rubor para las 12 estaciones de color, con una tabla que puedes guardar."
+description: "Tabla completa de maquillaje para las 12 estaciones de color. Encuentra la mejor base, labial, sombra y rubor — organizado por estación con tablas comparativas."
 date: "2026-08-07"
 tags: ["maquillaje", "análisis de color personal", "estación de color", "belleza", "guía de estilo"]
 image: "/images/blog/best-makeup-colors-color-season.webp"

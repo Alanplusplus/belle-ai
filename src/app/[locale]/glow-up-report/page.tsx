@@ -1,7 +1,7 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { canonicalUrl } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -14,16 +14,29 @@ export async function generateMetadata({
   return {
     title: messages.meta.glowUpTitle,
     description: messages.meta.glowUpDescription,
-    alternates: { canonical: canonicalUrl(locale, "/glow-up-report") },
+    alternates: buildAlternates(locale, "/glow-up-report"),
   };
 }
 
-export default function GlowUpReportPage() {
-  const t = useTranslations("glowUpPage");
-  const ft = useTranslations("features");
+export default async function GlowUpReportPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "glowUpPage" });
+  const ft = await getTranslations({ locale, namespace: "features" });
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Glow Up Report", path: "/glow-up-report" },
+  ]);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section className="bg-gradient-to-b from-amber-50/50 to-transparent py-20 dark:from-amber-950/10">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <span className="mb-4 inline-block rounded-full bg-amber-100 px-4 py-1 text-sm font-semibold text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">

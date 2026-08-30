@@ -1,6 +1,6 @@
 ---
 title: "Sıcak Alt Tonlar İçin En İyi Renkler: Kapsamlı Stil Rehberiniz (2026)"
-description: "Kıyafet, makyaj, saç ve aksesuarlarda sıcak alt tonlara en çok yakışan renkleri keşfedin. Altın, şeftali ve zeytin-sıcak cilt tonları için özel ton önerileri."
+description: "Sıcak alt ton için en iyi 15 renk — giyim, makyaj ve saç rengi. Altın, şeftali ve zeytin tonlu ciltler için özel seçim. Ücretsiz AI renk aracı."
 date: "2026-07-28"
 tags: ["sıcak alt ton", "sıcak cilt", "renk paleti", "stil rehberi", "moda"]
 image: "/images/blog/best-colors-for-warm-undertones.webp"

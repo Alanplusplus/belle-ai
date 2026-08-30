@@ -1,6 +1,6 @@
 ---
 title: "لوحات ألوان الصيف: Cool Summer vs True Summer vs Soft Summer"
-description: "لا تعرفين أي نوع صيفي أنتِ؟ اكتشفي الفروق الرئيسية بين Cool Summer وTrue Summer وSoft Summer — أفضل الألوان ونصائح التنسيق."
+description: "Cool أم True أم Soft Summer؟ قارني بين 3 فصول فرعية صيفية — أفضل الألوان ونصائح الستايل وطريقة سريعة لمعرفة نوعك."
 date: "2026-07-30"
 tags: ["تحليل الألوان الشخصية", "لوحة ألوان صيفية", "موسم الألوان", "جمال", "دليل الأناقة"]
 image: "/images/blog/summer-color-palettes-decoded.webp"

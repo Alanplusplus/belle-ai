@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { SITE_URL } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import { ATTRIBUTES, ATTRIBUTE_SLUGS } from "@/lib/color-analysis-for-data";
 import type { Metadata } from "next";
 
@@ -26,18 +26,13 @@ export async function generateMetadata({
   if (!data) return {};
 
   const messages = (await import(`@/messages/${locale}.json`)).default;
-  const isDefault = locale === routing.defaultLocale;
-  const path = `/color-analysis-for/${attribute}`;
-  const canonicalUrl = isDefault
-    ? `${SITE_URL}${path}`
-    : `${SITE_URL}/${locale}${path}`;
 
   const localName = messages.ad?.[attribute]?.name ?? data.name;
 
   return {
     title: messages.meta.colorForTitle.replace(/\{audience\}/g, localName),
     description: messages.meta.colorForDescription.replace(/\{audience\}/g, localName),
-    alternates: { canonical: canonicalUrl },
+    alternates: buildAlternates(locale, `/color-analysis-for/${attribute}`),
   };
 }
 
@@ -46,11 +41,28 @@ export default async function ColorAnalysisForPage({
 }: {
   params: Promise<{ locale: string; attribute: string }>;
 }) {
-  const { attribute } = await params;
+  const { locale, attribute } = await params;
   const data = ATTRIBUTES[attribute];
   if (!data) notFound();
 
-  return <ColorAnalysisForContent slug={attribute} />;
+  const attributeName = attribute
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Color Analysis", path: "/color-analysis" },
+    { name: attributeName, path: `/color-analysis-for/${attribute}` },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <ColorAnalysisForContent slug={attribute} />
+    </>
+  );
 }
 
 function ColorAnalysisForContent({ slug }: { slug: string }) {

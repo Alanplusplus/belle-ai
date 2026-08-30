@@ -1,5 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
-import { canonicalUrl } from "@/lib/seo";
+import { buildAlternates } from "@/lib/seo";
 import type { Metadata } from "next";
 import { TryClient } from "./TryClient";
 
@@ -13,7 +13,7 @@ export async function generateMetadata({
   return {
     title: messages.meta.tryTitle || "Try AI Analysis – Free",
     description: messages.meta.tryDescription || messages.meta.homeDescription,
-    alternates: { canonical: canonicalUrl(locale, "/try") },
+    alternates: buildAlternates(locale, "/try"),
   };
 }
 

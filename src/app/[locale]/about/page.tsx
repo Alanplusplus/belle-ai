@@ -1,5 +1,5 @@
-import { useTranslations } from "next-intl";
-import { canonicalUrl } from "@/lib/seo";
+import { getTranslations } from "next-intl/server";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 
@@ -13,16 +13,28 @@ export async function generateMetadata({
   return {
     title: messages.about.title,
     description: messages.about.intro,
-    alternates: {
-      canonical: canonicalUrl(locale, "/about"),
-    },
+    alternates: buildAlternates(locale, "/about"),
   };
 }
 
-export default function AboutPage() {
-  const t = useTranslations("about");
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "about" });
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "About", path: "/about" },
+  ]);
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
     <section className="py-16">
       <div className="mx-auto max-w-3xl px-4">
         <h1 className="font-serif text-3xl font-bold sm:text-4xl">
@@ -101,5 +113,6 @@ export default function AboutPage() {
         />
       </div>
     </section>
+    </>
   );
 }

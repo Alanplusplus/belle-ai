@@ -1,7 +1,7 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { APP_STORE_URL } from "@/lib/constants";
-import { canonicalUrl } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 import { PricingButtons } from "./PricingButtons";
 import { PricingTabs } from "./PricingTabs";
@@ -16,16 +16,28 @@ export async function generateMetadata({
   return {
     title: messages.meta.pricingTitle,
     description: messages.meta.pricingDescription,
-    alternates: {
-      canonical: canonicalUrl(locale, "/pricing"),
-    },
+    alternates: buildAlternates(locale, "/pricing"),
   };
 }
 
-export default function PricingPage() {
-  const t = useTranslations("pricing");
+export default async function PricingPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pricing" });
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Pricing", path: "/pricing" },
+  ]);
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
     <section className="py-20">
       <div className="mx-auto max-w-5xl px-4">
         <div className="text-center">
@@ -203,6 +215,7 @@ export default function PricingPage() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

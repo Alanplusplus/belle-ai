@@ -1,6 +1,6 @@
 ---
 title: "Koyu ten için renk analizi"
-description: "Koyu ve derin ten tonları için kişisel renk analizinin nasıl çalıştığını keşfedin. Mevsimsel renk tipinizi, en iyi paletinizi ve melanin açısından zengin ciltler için stil ipuçlarını bulun."
+description: "Renk analizi melanin açısından zengin ciltlerde de mükemmel çalışır. Mevsim tipinizi, en iyi paletinizi ve stil ipuçlarını bulun — ücretsiz AI aracı dahil."
 date: "2026-07-22"
 tags: ["renk analizi", "koyu ten", "derin ten tonu", "melanin", "mevsimsel renk"]
 image: "/images/blog/color-analysis-dark-skin.webp"

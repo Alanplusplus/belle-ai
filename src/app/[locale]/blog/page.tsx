@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { getAllPosts } from "@/lib/blog";
-import { canonicalUrl } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -15,9 +15,7 @@ export async function generateMetadata({
   return {
     title: messages.meta.blogTitle,
     description: messages.meta.blogDescription,
-    alternates: {
-      canonical: canonicalUrl(locale, "/blog"),
-    },
+    alternates: buildAlternates(locale, "/blog"),
   };
 }
 
@@ -28,8 +26,19 @@ export default async function BlogPage({
 }) {
   const { locale } = await params;
   const posts = getAllPosts(locale);
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Blog", path: "/blog" },
+  ]);
 
-  return <BlogList posts={posts} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <BlogList posts={posts} />
+    </>
+  );
 }
 
 function BlogList({

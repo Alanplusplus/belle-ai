@@ -1,6 +1,6 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { APP_STORE_URL } from "@/lib/constants";
-import { canonicalUrl } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -14,14 +14,17 @@ export async function generateMetadata({
   return {
     title: messages.meta.downloadTitle,
     description: messages.meta.downloadDescription,
-    alternates: {
-      canonical: canonicalUrl(locale, "/download"),
-    },
+    alternates: buildAlternates(locale, "/download"),
   };
 }
 
-export default function DownloadPage() {
-  const t = useTranslations("download");
+export default async function DownloadPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "download" });
 
   const features = [
     t("feature1"),
@@ -32,7 +35,16 @@ export default function DownloadPage() {
     t("feature6"),
   ];
 
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Download", path: "/download" },
+  ]);
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
     <section className="py-20">
       <div className="mx-auto max-w-4xl px-4">
         <div className="text-center">
@@ -110,5 +122,6 @@ export default function DownloadPage() {
         </div>
       </div>
     </section>
+    </>
   );
 }

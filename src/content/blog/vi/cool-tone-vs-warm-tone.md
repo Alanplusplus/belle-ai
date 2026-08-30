@@ -1,6 +1,6 @@
 ---
 title: "Tông Lạnh vs Tông Ấm: 5 Bài Test Dễ Dàng Để Tìm Tông Nền Của Bạn (Kèm Ảnh)"
-description: "Vẫn chưa chắc bạn thuộc tông lạnh hay ấm? 5 bài test đơn giản tại nhà này chỉ mất dưới 2 phút và áp dụng được cho MỌI tông da. Riêng bài test tĩnh mạch đã có độ chính xác 70%."
+description: "5 bài test đơn giản tại nhà để tìm undertone trong 2 phút — kèm ảnh minh họa. Áp dụng cho MỌI tông da. Bài test tĩnh mạch chính xác 70%."
 date: "2026-07-02"
 tags: ["tông nền", "tông lạnh", "tông ấm", "tông da", "phân tích màu sắc"]
 image: "/images/blog/cool-tone-vs-warm-tone.webp"

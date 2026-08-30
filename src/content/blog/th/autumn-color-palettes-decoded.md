@@ -1,6 +1,6 @@
 ---
 title: "ถอดรหัสพาเลตต์สีฤดูใบไม้ร่วง: Deep Autumn vs True Autumn vs Soft Autumn"
-description: "ไม่แน่ใจว่าคุณเป็นฤดูใบไม้ร่วงประเภทไหน? เรียนรู้ความแตกต่างระหว่าง Deep Autumn, True Autumn และ Soft Autumn — สีที่ดีที่สุด เทคนิคแต่งหน้า และวิธีแยกแยะ"
+description: "Deep, True หรือ Soft Autumn? เปรียบเทียบ 3 ซับซีซัน — สีที่เหมาะ เมคอัพ และวิธีแยกแยะทันที"
 date: "2026-08-03"
 tags: ["วิเคราะห์สีส่วนบุคคล", "พาเลตต์สีฤดูใบไม้ร่วง", "ฤดูกาลสี", "ความงาม", "ไกด์สไตล์"]
 image: "/images/blog/autumn-color-palettes-decoded.webp"

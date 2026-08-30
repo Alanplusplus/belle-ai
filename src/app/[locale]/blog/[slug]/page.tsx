@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { getPostBySlug, getAllSlugs } from "@/lib/blog";
 import { Link } from "@/i18n/navigation";
 import { SITE_URL } from "@/lib/constants";
-import { canonicalUrl } from "@/lib/seo";
+import { canonicalUrl, buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
@@ -33,9 +33,7 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.description,
-    alternates: {
-      canonical: canonicalUrl(locale, `/blog/${slug}`),
-    },
+    alternates: buildAlternates(locale, `/blog/${slug}`),
     openGraph: {
       title: post.title,
       description: post.description,
@@ -74,16 +72,25 @@ export default async function BlogPostPage({
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${SITE_URL}/${locale}/blog/${slug}`,
+      "@id": canonicalUrl(locale, `/blog/${slug}`),
     },
     inLanguage: locale,
   };
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Blog", path: "/blog" },
+    { name: post.title, path: `/blog/${slug}` },
+  ]);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <BlogPostContent post={post} />
     </>

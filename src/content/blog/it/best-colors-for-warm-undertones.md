@@ -1,6 +1,6 @@
 ---
 title: "I migliori colori per i sottotoni caldi: la guida completa allo stile (2026)"
-description: "Scopri i colori più favorevoli per i sottotoni caldi in abbigliamento, trucco, capelli e accessori. Raccomandazioni specifiche per tonalità di pelle dorate, pesche e oliva calda."
+description: "I 15 colori migliori per i sottotoni caldi — abbigliamento, trucco e capelli. Selezione per pelli dorate, pesca e oliva. Strumento AI gratuito incluso."
 date: "2026-07-28"
 tags: ["sottotono caldo", "tono di pelle caldo", "palette colori", "guida allo stile", "moda"]
 image: "/images/blog/best-colors-for-warm-undertones.webp"

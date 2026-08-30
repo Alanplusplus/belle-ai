@@ -1,6 +1,6 @@
 ---
 title: "Yaz Renk Paletleri: Cool Summer vs True Summer vs Soft Summer"
-description: "Hangi Yaz alt tipine sahipsiniz bilmiyor musunuz? Cool Summer, True Summer ve Soft Summer arasındaki temel farkları, en iyi renkleri ve stil ipuçlarını öğrenin."
+description: "Cool, True yoksa Soft Summer? 3 yaz alt mevsimini karşılaştırın — en iyi renkler, stil önerileri ve türünüzü hızlıca bulmanın yolu."
 date: "2026-07-30"
 tags: ["kişisel renk analizi", "yaz renk paleti", "renk mevsimi", "güzellik", "stil rehberi"]
 image: "/images/blog/summer-color-palettes-decoded.webp"

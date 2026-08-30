@@ -1,7 +1,7 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { canonicalUrl } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -14,16 +14,29 @@ export async function generateMetadata({
   return {
     title: messages.meta.styleTitle,
     description: messages.meta.styleDescription,
-    alternates: { canonical: canonicalUrl(locale, "/style-personality") },
+    alternates: buildAlternates(locale, "/style-personality"),
   };
 }
 
-export default function StylePersonalityPage() {
-  const t = useTranslations("stylePage");
-  const ft = useTranslations("features");
+export default async function StylePersonalityPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "stylePage" });
+  const ft = await getTranslations({ locale, namespace: "features" });
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Style Personality", path: "/style-personality" },
+  ]);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h1 className="font-serif text-4xl font-bold sm:text-5xl">{t("title")}</h1>

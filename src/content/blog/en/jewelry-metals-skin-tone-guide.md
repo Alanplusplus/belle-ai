@@ -94,3 +94,9 @@ Your ideal jewelry combines:
 ## Try AI Jewelry Analysis
 
 Our AI analyzes your skin undertone, face shape, and overall coloring to generate a complete jewelry recommendation board — including metal tones, earring styles, necklace lengths, and gemstone compatibility. See realistic previews of different jewelry on your actual photo.
+
+## Related Articles
+
+- [How to Accessorize Based on Your Color Season: Jewelry, Scarves & More](/en/blog/accessorize-by-color-season) — Match metals and gemstones to your seasonal palette
+- [Best Earring Styles for Every Face Shape — A Visual Guide](/en/blog/best-earring-styles-face-shape) — Choose earring shapes that flatter your face
+- [Cool Tone vs Warm Tone: 5 Easy Tests to Find Your Undertone (With Photos)](/en/blog/cool-tone-vs-warm-tone) — Confirm whether gold or silver suits you best

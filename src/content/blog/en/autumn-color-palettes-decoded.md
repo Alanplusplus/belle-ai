@@ -1,6 +1,6 @@
 ---
 title: "Autumn Color Palettes Decoded: Deep Autumn vs True Autumn vs Soft Autumn"
-description: "Not sure which Autumn sub-season you are? Learn the key differences between Deep Autumn, True Autumn, and Soft Autumn — including best colors, makeup tips, and how to finally tell them apart."
+description: "Deep, True, or Soft Autumn? Compare all 3 sub-seasons side by side — best colors, makeup picks, and how to tell them apart instantly."
 date: "2026-08-03"
 tags: ["personal color analysis", "autumn color palette", "color season", "beauty", "style guide"]
 image: "/images/blog/autumn-color-palettes-decoded.webp"

@@ -1,6 +1,6 @@
 ---
 title: "Giải Mã Bảng Màu Mùa Thu: Deep Autumn vs True Autumn vs Soft Autumn"
-description: "Chưa chắc mình thuộc loại Thu nào? Tìm hiểu sự khác biệt giữa Deep Autumn, True Autumn và Soft Autumn — bao gồm màu sắc tốt nhất, mẹo trang điểm và cách phân biệt."
+description: "Deep, True hay Soft Autumn? So sánh 3 mùa phụ — màu đẹp nhất, gợi ý makeup và cách phân biệt ngay lập tức."
 date: "2026-08-03"
 tags: ["phân tích màu sắc cá nhân", "bảng màu mùa thu", "mùa màu", "làm đẹp", "hướng dẫn phong cách"]
 image: "/images/blog/autumn-color-palettes-decoded.webp"

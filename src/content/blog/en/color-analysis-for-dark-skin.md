@@ -1,6 +1,6 @@
 ---
 title: "Color Analysis for Dark Skin Tones: A Complete Guide"
-description: "Discover how personal color analysis works for dark and deep skin tones. Find your seasonal color type, best palette, and styling tips designed for melanin-rich skin."
+description: "Color analysis works beautifully for melanin-rich skin. Find your season, best palette & styling tips for dark and deep skin tones — free AI tool included."
 date: "2026-07-22"
 tags: ["color analysis", "dark skin", "deep skin tone", "melanin", "seasonal color"]
 image: "/images/blog/color-analysis-dark-skin.webp"

@@ -1,6 +1,6 @@
 ---
 title: "Analyse de couleur pour peau foncée : Guide complet"
-description: "Découvrez comment l'analyse de couleur personnelle fonctionne pour les peaux foncées et profondes. Trouvez votre type de couleur saisonnier, votre meilleure palette et des conseils de style adaptés aux peaux riches en mélanine."
+description: "L'analyse de couleurs fonctionne à merveille sur les peaux riches en mélanine. Trouvez votre saison, palette et conseils de style — outil IA gratuit inclus."
 date: "2026-07-22"
 tags: ["analyse de couleur", "peau foncée", "teint profond", "mélanine", "couleur saisonnière"]
 image: "/images/blog/color-analysis-dark-skin.webp"

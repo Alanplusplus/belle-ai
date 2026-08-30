@@ -123,17 +123,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  const allLocaleSlugs = new Map<string, Set<string>>();
   for (const locale of locales) {
-    let slugs: string[] = [];
     try {
-      slugs = getAllSlugs(locale);
+      allLocaleSlugs.set(locale, new Set(getAllSlugs(locale)));
     } catch {
-      slugs = [];
+      allLocaleSlugs.set(locale, new Set());
     }
+  }
+
+  for (const locale of locales) {
+    const slugs = allLocaleSlugs.get(locale) ?? new Set<string>();
     for (const slug of slugs) {
       const alternates: Record<string, string> = {};
       for (const l of locales) {
-        alternates[l] = localePath(l, `/blog/${slug}`);
+        if (allLocaleSlugs.get(l)?.has(slug)) {
+          alternates[l] = localePath(l, `/blog/${slug}`);
+        }
       }
       alternates["x-default"] = localePath("en", `/blog/${slug}`);
 

@@ -90,3 +90,9 @@ Knowing your style personality stops you from buying things that look great on t
 Our AI analyzes your facial features, coloring, and proportions to determine your style personality archetype. You'll get a visual moodboard, signature look preview, and actionable style keywords — designed to be shared on social media.
 
 Discover your Style DNA in 60 seconds.
+
+## Related Articles
+
+- [The Complete AI Glow-Up: How to Transform Your Style with Technology](/en/blog/complete-ai-glow-up-guide) — Combine style personality with color season, face shape, and more
+- [How to Build a Capsule Wardrobe for Your Color Season (Step-by-Step)](/en/blog/capsule-wardrobe-color-season) — Dress for your aesthetic with a curated palette
+- [Which Celebrity Has Your Color Season? Find Your Style Twin](/en/blog/celebrity-color-season-style-twin) — See how celebrities express similar style personalities

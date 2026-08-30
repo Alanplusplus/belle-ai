@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { SITE_URL } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import {
   SEASON_PALETTES,
   SEASON_SLUGS,
@@ -30,18 +30,13 @@ export async function generateMetadata({
   if (!data) return {};
 
   const messages = (await import(`@/messages/${locale}.json`)).default;
-  const isDefault = locale === routing.defaultLocale;
-  const path = `/color-palette/${season}`;
-  const canonicalUrl = isDefault
-    ? `${SITE_URL}${path}`
-    : `${SITE_URL}/${locale}${path}`;
 
   const localName = messages.sd?.[season]?.name ?? data.name.split(" (")[0];
 
   return {
     title: messages.meta.seasonPaletteTitle.replace(/\{season\}/g, localName),
     description: messages.meta.seasonPaletteDescription.replace(/\{season\}/g, localName),
-    alternates: { canonical: canonicalUrl },
+    alternates: buildAlternates(locale, `/color-palette/${season}`),
   };
 }
 
@@ -50,11 +45,28 @@ export default async function SeasonPalettePage({
 }: {
   params: Promise<{ locale: string; season: string }>;
 }) {
-  const { season } = await params;
+  const { locale, season } = await params;
   const data = SEASON_PALETTES[season];
   if (!data) notFound();
 
-  return <SeasonPaletteContent slug={season} />;
+  const seasonName = season
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Color Palette", path: "/color-palette" },
+    { name: seasonName, path: `/color-palette/${season}` },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <SeasonPaletteContent slug={season} />
+    </>
+  );
 }
 
 function SeasonPaletteContent({ slug }: { slug: string }) {
@@ -91,21 +103,21 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
   ];
 
   const faqItems = [
-    { q: `What is ${displayName}?`, a: sd("desc") },
+    { q: t("faqWhatIs", { season: displayName }), a: sd("desc") },
     {
-      q: `What colors look best on ${displayName}?`,
+      q: t("faqBestColors", { season: displayName }),
       a: `${bestColors.slice(0, 5).map((c) => c.name).join(", ")}`,
     },
     {
-      q: `What colors should ${displayName} avoid?`,
+      q: t("faqAvoidColors", { season: displayName }),
       a: `${avoidColors.map((c) => c.name).join(", ")}`,
     },
     {
-      q: `What makeup suits ${displayName}?`,
+      q: t("faqMakeup", { season: displayName }),
       a: `${sd("lips")}. ${sd("eyes")}. ${sd("blush")}. ${sd("found")}.`,
     },
     {
-      q: `What celebrities are ${displayName}?`,
+      q: t("faqCelebrities", { season: displayName }),
       a: data.celebrities.join(", "),
     },
   ];

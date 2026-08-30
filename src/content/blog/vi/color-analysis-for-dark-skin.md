@@ -1,6 +1,6 @@
 ---
 title: "Phân tích màu cho da sẫm: Hướng dẫn đầy đủ"
-description: "Khám phá phân tích màu cá nhân cho da sẫm và đậm. Tìm loại mùa, bảng màu đẹp nhất và mẹo phong cách cho da giàu melanin."
+description: "Phân tích màu sắc hoạt động tuyệt vời cho da giàu melanin. Tìm mùa sắc, bảng màu tối ưu & mẹo phối đồ — kèm công cụ AI miễn phí."
 date: "2026-07-22"
 tags: ["phân tích màu", "da sẫm", "tone da đậm", "melanin", "màu theo mùa"]
 image: "/images/blog/color-analysis-dark-skin.webp"

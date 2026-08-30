@@ -1,6 +1,6 @@
 ---
 title: "Palette Colori Estate: Cool Summer vs True Summer vs Soft Summer"
-description: "Non sai quale sottotipo Estate sei? Scopri le differenze chiave tra Cool Summer, True Summer e Soft Summer — i colori migliori e consigli di stile."
+description: "Cool, True o Soft Summer? Confronta le 3 sotto-stagioni — colori migliori, consigli di stile e un modo rapido per scoprire quale sei."
 date: "2026-07-30"
 tags: ["analisi del colore", "palette estate", "stagione colore", "bellezza", "guida stile"]
 image: "/images/blog/summer-color-palettes-decoded.webp"

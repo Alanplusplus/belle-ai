@@ -1,6 +1,6 @@
 ---
 title: "Tono freddo vs tono caldo: 5 test semplici per scoprire il tuo subtono (con foto)"
-description: "Non sei sicura se hai un tono freddo o caldo? Questi 5 test casalinghi richiedono meno di 2 minuti e funzionano per TUTTI i toni di pelle. Il test delle vene da solo ha un'accuratezza del 70%."
+description: "5 semplici test casalinghi per trovare il tuo sottotono in meno di 2 minuti — con foto. Funziona per TUTTI i toni di pelle. Il test delle vene è accurato al 70%."
 date: "2026-07-02"
 tags: ["subtono", "tono freddo", "tono caldo", "tono della pelle", "analisi cromatica"]
 image: "/images/blog/cool-tone-vs-warm-tone.webp"

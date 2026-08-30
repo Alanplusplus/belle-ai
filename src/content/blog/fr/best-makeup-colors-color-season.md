@@ -1,6 +1,6 @@
 ---
 title: "Les Meilleures Couleurs de Maquillage pour Chaque Saison : Guide Complet avec Tableau"
-description: "Arrêtez d'acheter du maquillage qui entre en conflit avec votre coloration naturelle. Ce guide complet détaille les meilleures teintes de fond de teint, lèvres, yeux et blush pour les 12 saisons — avec un tableau à conserver."
+description: "Tableau de maquillage complet pour les 12 saisons de couleurs. Trouvez les meilleurs fonds de teint, rouges à lèvres, fards et blushs — par saison avec tableaux comparatifs."
 date: "2026-08-07"
 tags: ["maquillage", "colorimétrie personnelle", "saison de couleurs", "beauté", "guide de style"]
 image: "/images/blog/best-makeup-colors-color-season.webp"

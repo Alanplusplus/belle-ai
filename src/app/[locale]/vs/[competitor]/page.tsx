@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
-import { SITE_URL } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 
 interface CompetitorData {
@@ -226,16 +226,10 @@ export async function generateMetadata({
   const data = COMPETITORS[competitor];
   if (!data) return {};
 
-  const isDefault = locale === routing.defaultLocale;
-  const path = `/vs/${competitor}`;
-  const canonicalUrl = isDefault ? `${SITE_URL}${path}` : `${SITE_URL}/${locale}${path}`;
-
   return {
     title: `Belle AI vs ${data.name} – Color Analysis Comparison`,
     description: data.description,
-    alternates: {
-      canonical: canonicalUrl,
-    },
+    alternates: buildAlternates(locale, `/vs/${competitor}`),
   };
 }
 
@@ -244,11 +238,20 @@ export default async function ComparisonPage({
 }: {
   params: Promise<{ locale: string; competitor: string }>;
 }) {
-  const { competitor } = await params;
+  const { locale, competitor } = await params;
   const data = COMPETITORS[competitor];
   if (!data) notFound();
 
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: data.name, path: `/vs/${competitor}` },
+  ]);
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
     <section className="py-20">
       <div className="mx-auto max-w-4xl px-4">
         <h1 className="text-3xl font-bold sm:text-4xl">
@@ -335,5 +338,6 @@ export default async function ComparisonPage({
         </div>
       </div>
     </section>
+    </>
   );
 }

@@ -1,6 +1,6 @@
 ---
 title: "Wie Beleuchtung deine Farben beeinflusst: Warum du auf Fotos anders aussiehst als im echten Leben"
-description: "Hast du dich je gefragt, warum du bei mancher Beleuchtung toll aussiehst, bei anderer aber blass? Lerne die Wissenschaft dahinter, wie verschiedene Lichtquellen deine Farben verändern — und was du dagegen tun kannst."
+description: "Im Bürolicht blass, im Goldenen Stunde strahlend — hier ist der Grund. Wissenschaftlich fundierte Tipps für perfekte Farben bei jedem Licht."
 date: "2026-08-08"
 tags: ["Farbanalyse", "Beleuchtung", "persönliche Farben", "Beauty", "Style Guide"]
 image: "/images/blog/lighting-affects-colors.webp"

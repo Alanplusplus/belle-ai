@@ -1,6 +1,8 @@
-import { canonicalUrl } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 import { ColorQuizClient } from "./ColorQuizClient";
+import { Link } from "@/i18n/navigation";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({
   params,
@@ -12,59 +14,113 @@ export async function generateMetadata({
   return {
     title: messages.meta.colorQuizTitle,
     description: messages.meta.colorQuizDescription,
-    alternates: {
-      canonical: canonicalUrl(locale, "/tools/color-quiz"),
-    },
+    alternates: buildAlternates(locale, "/tools/color-quiz"),
   };
 }
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is a personal color quiz?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A personal color quiz helps determine whether you have warm, cool, or neutral undertones by asking questions about your skin, eyes, hair, and color preferences. The result tells you which seasonal color type (Spring, Summer, Autumn, or Winter) suits you best.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How accurate is an online color analysis quiz?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Online quizzes provide a moderate estimate (around 60-70% accuracy) since they rely on self-observation. AI-powered photo analysis is more accurate (73-82% match rate with professional draping) because it measures actual color values objectively.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I do personal color analysis for free?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes! You can take our free online color quiz to get an initial assessment of your seasonal color type. For a more detailed AI-powered analysis with a full color palette and makeup recommendations, Belle AI offers one free analysis.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What are the 4 color seasons?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The 4 color seasons are Spring (warm, light, bright), Summer (cool, light, muted), Autumn (warm, deep, muted), and Winter (cool, deep, vivid). Each season has 3 subtypes in the 12-season system for more precise color recommendations.",
-      },
-    },
-  ],
-};
+export default async function ColorQuizPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "colorQuiz" });
 
-export default function ColorQuizPage() {
+  const faqs = [
+    { q: t("faq1Q"), a: t("faq1A") },
+    { q: t("faq2Q"), a: t("faq2A") },
+    { q: t("faq3Q"), a: t("faq3A") },
+    { q: t("faq4Q"), a: t("faq4A") },
+  ];
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Color Quiz", path: "/tools/color-quiz" },
+  ]);
+
   return (
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
+
       <ColorQuizClient />
+
+      <section className="max-w-3xl mx-auto px-4 py-12">
+        <p className="text-gray-700 leading-relaxed text-base">
+          {t("seoIntro")}
+        </p>
+      </section>
+
+      <section className="max-w-3xl mx-auto px-4 pb-12">
+        <h2 className="text-2xl font-semibold mb-6">FAQ</h2>
+        <div className="space-y-6">
+          {faqs.map((faq, i) => (
+            <details key={i} className="group border-b border-gray-200 pb-4">
+              <summary className="cursor-pointer font-medium text-gray-900 group-open:text-rose-600 transition-colors">
+                {faq.q}
+              </summary>
+              <p className="mt-3 text-gray-600 leading-relaxed">{faq.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section className="max-w-3xl mx-auto px-4 pb-16">
+        <h2 className="text-2xl font-semibold mb-4">{t("relatedTitle")}</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
+          <Link
+            href="/color-analysis"
+            className="block p-4 rounded-xl border border-gray-200 hover:border-rose-300 hover:shadow-sm transition-all"
+          >
+            <span className="font-medium text-gray-900">AI Color Analysis</span>
+            <span className="block text-sm text-gray-500 mt-1">
+              Upload a photo for AI-powered 12-season analysis
+            </span>
+          </Link>
+          <Link
+            href="/personal-color-analysis"
+            className="block p-4 rounded-xl border border-gray-200 hover:border-rose-300 hover:shadow-sm transition-all"
+          >
+            <span className="font-medium text-gray-900">Personal Color Analysis</span>
+            <span className="block text-sm text-gray-500 mt-1">
+              Learn about the 12 seasonal color types
+            </span>
+          </Link>
+          <Link
+            href="/color-palette/light-spring"
+            className="block p-4 rounded-xl border border-gray-200 hover:border-rose-300 hover:shadow-sm transition-all"
+          >
+            <span className="font-medium text-gray-900">Spring Palettes</span>
+            <span className="block text-sm text-gray-500 mt-1">
+              Explore Light, True & Bright Spring colors
+            </span>
+          </Link>
+          <Link
+            href="/color-palette/cool-summer"
+            className="block p-4 rounded-xl border border-gray-200 hover:border-rose-300 hover:shadow-sm transition-all"
+          >
+            <span className="font-medium text-gray-900">Summer Palettes</span>
+            <span className="block text-sm text-gray-500 mt-1">
+              Explore Cool, True & Soft Summer colors
+            </span>
+          </Link>
+        </div>
+      </section>
     </>
   );
 }

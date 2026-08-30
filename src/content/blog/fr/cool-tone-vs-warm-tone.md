@@ -1,6 +1,6 @@
 ---
 title: "Ton froid vs ton chaud : 5 tests faciles pour trouver votre sous-ton (avec photos)"
-description: "Vous hésitez encore entre un sous-ton chaud ou froid ? Ces 5 tests simples à domicile prennent moins de 2 minutes et fonctionnent pour TOUS les teints. Le test des veines seul est précis à 70 %."
+description: "5 tests simples à faire chez soi pour trouver votre sous-ton en moins de 2 minutes — avec photos. Fonctionne pour TOUS les tons de peau. Le test des veines est fiable à 70%."
 date: "2026-07-02"
 tags: ["sous-ton", "ton froid", "ton chaud", "teint", "colorimétrie"]
 image: "/images/blog/cool-tone-vs-warm-tone.webp"

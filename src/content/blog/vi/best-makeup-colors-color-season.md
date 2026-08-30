@@ -1,6 +1,6 @@
 ---
 title: "Màu Trang Điểm Tốt Nhất Cho Mỗi Mùa Màu Sắc: Bảng Tra Cứu Đầy Đủ"
-description: "Ngừng mua mỹ phẩm lệch tông với màu sắc tự nhiên của bạn. Hướng dẫn đầy đủ này phân tích sắc thái kem nền, son môi, mắt và má hồng tốt nhất cho cả 12 mùa màu sắc — kèm bảng tra cứu có thể in ra."
+description: "Bảng trang điểm đầy đủ cho 12 mùa sắc. Tìm tông kem nền, son, mắt & má hồng phù hợp nhất — sắp xếp theo mùa với bảng so sánh."
 date: "2026-08-07"
 tags: ["trang điểm", "phân tích màu cá nhân", "mùa màu sắc", "làm đẹp", "hướng dẫn phong cách"]
 image: "/images/blog/best-makeup-colors-color-season.webp"

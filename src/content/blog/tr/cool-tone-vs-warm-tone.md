@@ -1,6 +1,6 @@
 ---
 title: "Soğuk Ton mu Sıcak Ton mu: Alt Tonunuzu Bulmak İçin 5 Kolay Test (Fotoğraflarla)"
-description: "Hâlâ soğuk mu sıcak mı tonlu olduğunuzdan emin değil misiniz? Bu 5 basit ev testi 2 dakikadan kısa sürer ve TÜM cilt tonları için geçerlidir. Sadece damar testi bile %70 doğruluk sağlar."
+description: "Alt tonunuzu 2 dakikada bulmanın 5 kolay ev testi — fotoğraflı örneklerle. TÜM cilt tonları için geçerli. Damar testi %70 doğrulukta."
 date: "2026-07-02"
 tags: ["alt ton", "soğuk ton", "sıcak ton", "cilt tonu", "renk analizi"]
 image: "/images/blog/cool-tone-vs-warm-tone.webp"

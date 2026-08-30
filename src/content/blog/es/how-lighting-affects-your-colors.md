@@ -1,6 +1,6 @@
 ---
 title: "Cómo la iluminación afecta tus colores: Por qué te ves diferente en fotos vs en la vida real"
-description: "¿Te has preguntado por qué te ves genial con cierta luz pero pálida con otra? Aprende la ciencia de cómo diferentes fuentes de luz cambian tus colores — y qué hacer al respecto."
+description: "Te ves apagada bajo la luz de oficina pero brillante al atardecer — descubre por qué. Consejos con base científica para verte bien con cualquier iluminación."
 date: "2026-08-08"
 tags: ["análisis de color", "iluminación", "color personal", "belleza", "guía de estilo"]
 image: "/images/blog/lighting-affects-colors.webp"

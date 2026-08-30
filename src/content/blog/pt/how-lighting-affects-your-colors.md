@@ -1,6 +1,6 @@
 ---
 title: "Como a iluminação afeta suas cores: Por que você parece diferente em fotos vs na vida real"
-description: "Já se perguntou por que você fica ótima com certa luz mas pálida com outra? Aprenda a ciência de como diferentes fontes de luz mudam suas cores — e o que fazer sobre isso."
+description: "Apagada na luz do escritório mas radiante na hora dourada — descubra por quê. Dicas baseadas em ciência para acertar suas cores em qualquer luz."
 date: "2026-08-08"
 tags: ["análise de cor", "iluminação", "cor pessoal", "beleza", "guia de estilo"]
 image: "/images/blog/lighting-affects-colors.webp"

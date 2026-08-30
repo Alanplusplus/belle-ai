@@ -1,7 +1,7 @@
-import { useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { canonicalUrl } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -14,15 +14,63 @@ export async function generateMetadata({
   return {
     title: messages.meta.glassesTitle,
     description: messages.meta.glassesDescription,
-    alternates: { canonical: canonicalUrl(locale, "/glasses-analysis") },
+    alternates: buildAlternates(locale, "/glasses-analysis"),
   };
 }
 
-export default function GlassesAnalysisPage() {
-  const t = useTranslations("glassesPage");
-  const ft = useTranslations("features");
+export default async function GlassesAnalysisPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "glassesPage" });
+  const ft = await getTranslations({ locale, namespace: "features" });
+
+  const faqs = [
+    {
+      q: "How does AI glasses recommendation work?",
+      a: "Our AI analyzes your face shape, proportions, and skin tone from a selfie. It then matches these features against frame-shape compatibility rules used by opticians — recommending frames that balance and complement your facial features.",
+    },
+    {
+      q: "What face shapes suit which glasses?",
+      a: "Round faces look great with angular frames. Square faces suit rounded or oval frames. Oval faces can wear almost any style. Heart-shaped faces benefit from bottom-heavy frames. Our analysis gives personalized recommendations beyond these general rules.",
+    },
+    {
+      q: "Can I get sunglasses recommendations too?",
+      a: "Yes! Our analysis covers both prescription glasses and sunglasses, recommending frame shapes, colors, and styles that work for each.",
+    },
+    {
+      q: "Is the glasses analysis free?",
+      a: "Your first glasses analysis is completely free — no signup required. Upload a selfie and get frame recommendations in 60 seconds.",
+    },
+  ];
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Glasses Analysis", path: "/glasses-analysis" },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h1 className="font-serif text-4xl font-bold sm:text-5xl">{t("title")}</h1>
@@ -75,6 +123,53 @@ export default function GlassesAnalysisPage() {
             className="mt-10 inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
           >
             {ft("tryItFree")}
+          </Link>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-12">
+        <h2 className="mb-6 text-2xl font-semibold">FAQ</h2>
+        <div className="space-y-6">
+          {faqs.map((faq, i) => (
+            <details key={i} className="group border-b border-gray-200 pb-4">
+              <summary className="cursor-pointer font-medium text-gray-900 transition-colors group-open:text-rose-600">
+                {faq.q}
+              </summary>
+              <p className="mt-3 leading-relaxed text-gray-600">{faq.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 pb-16">
+        <h2 className="mb-6 text-2xl font-bold">Related Tools</h2>
+        <div className="grid gap-4 sm:grid-cols-3">
+          <Link
+            href="/face-shape-analysis"
+            className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
+          >
+            <span className="font-medium text-gray-900">Face Shape Analysis</span>
+            <span className="mt-1 block text-sm text-gray-500">
+              Know your face shape first
+            </span>
+          </Link>
+          <Link
+            href="/tools/face-shape-quiz"
+            className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
+          >
+            <span className="font-medium text-gray-900">Face Shape Quiz</span>
+            <span className="mt-1 block text-sm text-gray-500">
+              Quick face shape test
+            </span>
+          </Link>
+          <Link
+            href="/personal-color-analysis"
+            className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
+          >
+            <span className="font-medium text-gray-900">Color Analysis</span>
+            <span className="mt-1 block text-sm text-gray-500">
+              Find your best colors for frame color
+            </span>
           </Link>
         </div>
       </section>
