@@ -450,10 +450,21 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     setGenerateElapsed(0);
     trackEvent("generate_started", { type: analysisType, resolution, language: reportLang });
 
+    if ("Notification" in window && Notification.permission === "default") {
+      Notification.requestPermission();
+    }
+
+    const fail = (event: string, message: string) => {
+      setErrorMsg(message);
+      setPhase("error");
+      trackEvent(event, { type: analysisType, error: message });
+    };
+
     try {
       const signInRes = await webInit();
       if (signInRes.code !== 200 || !signInRes.data) {
-        throw new Error(signInRes.message);
+        fail("init_failed", signInRes.message || "Init failed");
+        return;
       }
       const data = signInRes.data;
       const webQuota = data.web_quota;
@@ -476,25 +487,44 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       if (!imageUrl) {
         setPhase("uploading");
         const file = fileRef.current?.files?.[0];
-        if (!file) throw new Error("No file selected");
-
-        const base64 = await fileToBase64(file);
-        const uploadRes = await uploadImage(base64);
-        if (uploadRes.code !== 200 || !uploadRes.data?.url) {
-          throw new Error(uploadRes.message);
+        if (!file) {
+          fail("upload_failed", "No file selected");
+          return;
         }
-        imageUrl = uploadRes.data.url;
-        setSourceImageUrl(imageUrl);
-        setLastUploadedPhotoUrl(imageUrl);
-        saveLastPhotoUrl(imageUrl);
+
+        try {
+          const base64 = await fileToBase64(file);
+          const uploadRes = await uploadImage(base64);
+          if (uploadRes.code !== 200 || !uploadRes.data?.url) {
+            fail("upload_failed", uploadRes.message || "Upload failed");
+            return;
+          }
+          imageUrl = uploadRes.data.url;
+          setSourceImageUrl(imageUrl);
+          setLastUploadedPhotoUrl(imageUrl);
+          saveLastPhotoUrl(imageUrl);
+        } catch (err) {
+          const message = err instanceof Error ? err.message : "Upload error";
+          fail("upload_failed", message);
+          return;
+        }
       }
 
       setPhase("generating");
       savePrefs(resolution, reportLang);
-      const taskRes = await createTask(imageUrl, analysisType, reportLang, {
-        resolution,
-        ...(analysisType === "occasion_makeup" ? { occasion } : {}),
-      });
+
+      let taskRes;
+      try {
+        taskRes = await createTask(imageUrl, analysisType, reportLang, {
+          resolution,
+          ...(analysisType === "occasion_makeup" ? { occasion } : {}),
+        });
+      } catch (err) {
+        const message = err instanceof Error ? err.message : "Task creation error";
+        fail("task_create_failed", message);
+        return;
+      }
+
       if (taskRes.code === 429) {
         trackEvent("quota_exhausted", { type: analysisType });
         setQuota(taskRes.data?.quota ?? { total: 1, used: 1, remaining: 0 });
@@ -502,7 +532,8 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         return;
       }
       if (taskRes.code !== 200 || !taskRes.data?.task_id) {
-        throw new Error(taskRes.message);
+        fail("task_create_failed", taskRes.message || "Task creation failed");
+        return;
       }
 
       if (taskRes.data.quota) {
@@ -518,12 +549,14 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         image_count: images.length,
         duration_sec: Math.round((Date.now() - generateStart) / 1000),
       });
+      if (document.hidden && "Notification" in window && Notification.permission === "granted") {
+        const n = new Notification(t("notifyTitle"), { body: t("notifyBody"), icon: "/favicon-32.png" });
+        n.onclick = () => { window.focus(); n.close(); };
+      }
       reloadHistory();
     } catch (err) {
       const message = err instanceof Error ? err.message : "Unknown error";
-      setErrorMsg(message);
-      setPhase("error");
-      trackEvent("generate_failed", { type: analysisType, error: message });
+      fail("generate_failed", message);
     }
   }, [previewUrl, sourceImageUrl, analysisType, reportLang, resolution, occasion, reloadHistory]);
 

@@ -569,7 +569,9 @@
     "viewResults": "Göster",
     "multiTaskTitle": "Analizleriniz",
     "tryAnother": "Başka bir analiz dene",
-    "tryAnotherDesc": "Aynı fotoğrafla daha fazlasını keşfet"
+    "tryAnotherDesc": "Aynı fotoğrafla daha fazlasını keşfet",
+    "notifyTitle": "Raporunuz hazır ✨",
+    "notifyBody": "Analiz raporunuz oluşturuldu. Sonuçları görmek için tıklayın."
   },
   "footer": {
     "tagline": "Yapay zeka destekli kişisel güzellik analizi",

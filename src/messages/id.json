@@ -569,7 +569,9 @@
     "viewResults": "Lihat",
     "multiTaskTitle": "Analisis Anda",
     "tryAnother": "Coba analisis lain",
-    "tryAnotherDesc": "Gunakan foto yang sama untuk wawasan lebih"
+    "tryAnotherDesc": "Gunakan foto yang sama untuk wawasan lebih",
+    "notifyTitle": "Laporan Anda sudah siap ✨",
+    "notifyBody": "Laporan analisis Anda telah dibuat. Klik untuk melihat hasilnya."
   },
   "footer": {
     "tagline": "Analisis kecantikan personal berbasis AI",

@@ -569,7 +569,9 @@
     "viewResults": "Xem",
     "multiTaskTitle": "Phân tích của bạn",
     "tryAnother": "Thử phân tích khác",
-    "tryAnotherDesc": "Dùng cùng ảnh để khám phá thêm"
+    "tryAnotherDesc": "Dùng cùng ảnh để khám phá thêm",
+    "notifyTitle": "Báo cáo đã sẵn sàng ✨",
+    "notifyBody": "Báo cáo phân tích của bạn đã được tạo. Nhấp để xem kết quả."
   },
   "footer": {
     "tagline": "Phân tích làm đẹp cá nhân bằng AI",

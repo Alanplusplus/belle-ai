@@ -569,7 +569,9 @@
     "viewResults": "Ver",
     "multiTaskTitle": "Suas análises",
     "tryAnother": "Tente outra análise",
-    "tryAnotherDesc": "Use a mesma foto para explorar mais"
+    "tryAnotherDesc": "Use a mesma foto para explorar mais",
+    "notifyTitle": "Seu relatório está pronto ✨",
+    "notifyBody": "Seu relatório de análise foi gerado. Clique para ver os resultados."
   },
   "footer": {
     "tagline": "Análise de beleza pessoal com IA",

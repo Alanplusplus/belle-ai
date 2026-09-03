@@ -569,7 +569,9 @@
     "viewResults": "查看",
     "multiTaskTitle": "你的分析",
     "tryAnother": "试试其他分析",
-    "tryAnotherDesc": "用同一张照片探索更多分析报告"
+    "tryAnotherDesc": "用同一张照片探索更多分析报告",
+    "notifyTitle": "报告已生成 ✨",
+    "notifyBody": "你的分析报告已经生成完毕，点击查看结果。"
   },
   "footer": {
     "tagline": "AI驱动的个人美学分析",

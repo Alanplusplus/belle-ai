@@ -569,7 +569,9 @@
     "viewResults": "View",
     "multiTaskTitle": "Your Analyses",
     "tryAnother": "Try Another Analysis",
-    "tryAnotherDesc": "Use the same photo to explore more insights"
+    "tryAnotherDesc": "Use the same photo to explore more insights",
+    "notifyTitle": "Your report is ready ✨",
+    "notifyBody": "Your analysis report has been generated. Click to view the results."
   },
   "footer": {
     "tagline": "AI-powered personal beauty analysis",

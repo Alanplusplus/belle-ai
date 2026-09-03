@@ -569,7 +569,9 @@
     "viewResults": "Ansehen",
     "multiTaskTitle": "Deine Analysen",
     "tryAnother": "Probiere eine andere Analyse",
-    "tryAnotherDesc": "Nutze dasselbe Foto für weitere Einblicke"
+    "tryAnotherDesc": "Nutze dasselbe Foto für weitere Einblicke",
+    "notifyTitle": "Dein Bericht ist fertig ✨",
+    "notifyBody": "Dein Analysebericht wurde erstellt. Klicke hier, um die Ergebnisse anzuzeigen."
   },
   "footer": {
     "tagline": "KI-gestützte persönliche Schönheitsanalyse",

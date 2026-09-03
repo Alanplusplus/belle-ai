@@ -569,7 +569,9 @@
     "viewResults": "表示",
     "multiTaskTitle": "あなたの分析",
     "tryAnother": "他の分析も試す",
-    "tryAnotherDesc": "同じ写真で新しい分析レポートを作成"
+    "tryAnotherDesc": "同じ写真で新しい分析レポートを作成",
+    "notifyTitle": "レポートが完成しました ✨",
+    "notifyBody": "分析レポートが生成されました。クリックして結果をご覧ください。"
   },
   "footer": {
     "tagline": "AI搭載パーソナルビューティー分析",

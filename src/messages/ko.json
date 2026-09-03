@@ -569,7 +569,9 @@
     "viewResults": "보기",
     "multiTaskTitle": "내 분석",
     "tryAnother": "다른 분석도 해보세요",
-    "tryAnotherDesc": "같은 사진으로 더 많은 분석 리포트 만들기"
+    "tryAnotherDesc": "같은 사진으로 더 많은 분석 리포트 만들기",
+    "notifyTitle": "리포트가 완성되었습니다 ✨",
+    "notifyBody": "분석 리포트가 생성되었습니다. 클릭하여 결과를 확인하세요."
   },
   "footer": {
     "tagline": "AI 기반 퍼스널 뷰티 분석",
