@@ -1,6 +1,5 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { APP_STORE_URL } from "@/lib/constants";
 import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 import { PricingButtons } from "./PricingButtons";
@@ -199,20 +198,6 @@ export default async function PricingPage({
           </a>
         </div>
 
-        {/* App Store fallback */}
-        <div className="mt-4 text-center">
-          <p className="text-sm text-muted-foreground">
-            {t("appStoreNote")}
-            <a
-              href={APP_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-1 font-medium text-primary hover:underline"
-            >
-              {t("appStoreLink")}
-            </a>
-          </p>
-        </div>
       </div>
     </section>
     </>

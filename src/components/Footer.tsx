@@ -145,14 +145,6 @@ export function Footer() {
                   {nav("faceQuiz")}
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/download"
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  {nav("download")}
-                </Link>
-              </li>
             </ul>
           </div>
 

@@ -37,7 +37,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/style-personality",
     "/celebrity-match",
     "/try",
-    "/download",
     "/pricing",
     "/blog",
     "/tools/color-quiz",

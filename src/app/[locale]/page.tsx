@@ -51,28 +51,11 @@ function HomeContent() {
     })),
   };
 
-  const softwareJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Belle AI",
-    operatingSystem: "iOS",
-    applicationCategory: "LifestyleApplication",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
       />
 
       {/* Hero */}
@@ -383,12 +366,6 @@ function HomeContent() {
               className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-10 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl hover:shadow-primary/40"
             >
               {t("ctaCta")}
-            </Link>
-            <Link
-              href="/download"
-              className="rounded-full border border-primary/30 px-10 py-3.5 text-base font-medium text-primary transition hover:bg-primary/5"
-            >
-              Download iOS App
             </Link>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">

@@ -9,7 +9,7 @@ import { AuthProvider } from "@/components/AuthProvider";
 import { GoogleOneTap } from "@/components/GoogleOneTap";
 import { PageViewTracker } from "@/components/PageViewTracker";
 import { buildAlternates } from "@/lib/seo";
-import { SITE_URL, APP_STORE_ID } from "@/lib/constants";
+import { SITE_URL } from "@/lib/constants";
 import Script from "next/script";
 import type { Metadata } from "next";
 
@@ -67,9 +67,6 @@ export async function generateMetadata({
       description: meta.homeDescription,
       images: [`${SITE_URL}/opengraph-image`],
     },
-    other: APP_STORE_ID
-      ? { "apple-itunes-app": `app-id=${APP_STORE_ID}` }
-      : undefined,
   };
 }
 
