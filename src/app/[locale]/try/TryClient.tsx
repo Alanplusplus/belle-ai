@@ -227,40 +227,6 @@ interface BackgroundTask {
   errorMsg?: string;
 }
 
-async function addWatermark(imageUrl: string, code: string | null): Promise<Blob> {
-  const res = await fetch(imageUrl);
-  const blob = await res.blob();
-  const img = await createImageBitmap(blob);
-
-  const canvas = document.createElement("canvas");
-  canvas.width = img.width;
-  canvas.height = img.height;
-  const ctx = canvas.getContext("2d")!;
-  ctx.drawImage(img, 0, 0);
-
-  const barHeight = Math.round(img.height * 0.045);
-  ctx.fillStyle = "rgba(0, 0, 0, 0.45)";
-  ctx.fillRect(0, img.height - barHeight, img.width, barHeight);
-
-  const fontSize = Math.max(12, Math.round(barHeight * 0.5));
-  ctx.font = `${fontSize}px Inter, system-ui, sans-serif`;
-  ctx.fillStyle = "rgba(255, 255, 255, 0.9)";
-  ctx.textBaseline = "middle";
-  const y = img.height - barHeight / 2;
-
-  ctx.textAlign = "left";
-  ctx.fillText("aicoloranalysis.io", fontSize, y);
-
-  if (code) {
-    ctx.textAlign = "right";
-    ctx.fillText(`Code: ${code}`, img.width - fontSize, y);
-  }
-
-  return new Promise((resolve) => {
-    canvas.toBlob((b) => resolve(b!), "image/jpeg", 0.92);
-  });
-}
-
 export function TryClient({ locale, initialType }: { locale: string; initialType?: string }) {
   const t = useTranslations("tryPage");
 
@@ -445,7 +411,8 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const handleDownload = useCallback(async (url: string) => {
     trackEvent("result_download", { type: analysisType });
     try {
-      const blob = await addWatermark(url, referralCode);
+      const res = await fetch(url);
+      const blob = await res.blob();
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
       a.download = `belle-ai-report-${Date.now()}.jpg`;
@@ -454,26 +421,18 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       document.body.removeChild(a);
       URL.revokeObjectURL(a.href);
     } catch { window.open(url, "_blank"); }
-  }, [analysisType, referralCode]);
+  }, [analysisType]);
 
   const handleShare = useCallback(async (url: string) => {
     const isMobile = /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
       (navigator.maxTouchPoints > 0 && window.innerWidth < 768);
 
     const refUrl = referralCode ? `${SITE_URL}?ref=${referralCode}` : SITE_URL;
-    const shareText = `${t("shareText")} ${refUrl}`;
+    const shareData = { title: t("shareTitle"), text: `${t("shareText")} ${refUrl}`, url: refUrl };
 
-    if (isMobile && navigator.share) {
+    if (isMobile && navigator.share && navigator.canShare?.(shareData)) {
       trackEvent("result_share", { method: "native", type: analysisType });
-      try {
-        const blob = await addWatermark(url, referralCode);
-        const file = new File([blob], "belle-ai-report.jpg", { type: "image/jpeg" });
-        if (navigator.canShare?.({ files: [file] })) {
-          await navigator.share({ title: t("shareTitle"), text: shareText, files: [file] });
-        } else {
-          await navigator.share({ title: t("shareTitle"), text: shareText, url: refUrl });
-        }
-      } catch { /* user cancelled */ }
+      try { await navigator.share(shareData); } catch { /* user cancelled */ }
     } else {
       trackEvent("result_share", { method: "panel", type: analysisType });
       setShareModal(url);
