@@ -42,7 +42,9 @@
     "styleTitle": "风格人格测试 – 发现你的Style DNA",
     "styleDescription": "AI分析你的面部特征确定你独特的风格人格原型。获得可分享的风格档案和个性化建议。",
     "celebrityTitle": "明星风格匹配 – 找到你的明星双胞胎",
-    "celebrityDescription": "AI匹配与你特征和肤色相似的明星。获得风格借鉴和'偷师指南'推荐。"
+    "celebrityDescription": "AI匹配与你特征和肤色相似的明星。获得风格借鉴和'偷师指南'推荐。",
+    "referralTitle": "邀请好友 · 赚取免费积分",
+    "referralDescription": "分享 Belle AI 给好友，当他们体验色彩分析时，双方都能获得免费积分。"
   },
   "nav": {
     "home": "首页",
@@ -73,7 +75,8 @@
     "credits": "积分",
     "activeUntil": "生效中",
     "noPlan": "暂无订阅",
-    "manage": "管理"
+    "manage": "管理",
+    "inviteFriends": "邀请好友"
   },
   "home": {
     "heroTitle": "AI色彩分析：",
@@ -526,6 +529,9 @@
     "buy5Credits": "5 次 – $0.99（首次优惠）",
     "buy12Credits": "12 次 – $5.99",
     "viewAllPlans": "查看所有方案 →",
+    "inviteEarn": "邀请好友，免费获取积分 →",
+    "inviteEarnFree": "邀请好友获取免费积分 →",
+    "noQuotaOr": "或者",
     "processing": "处理中…",
     "exampleTitle": "查看效果示例",
     "exampleBefore": "你的照片",
@@ -1920,6 +1926,25 @@
     "ai-vs-professional-color-analysis": "AI vs 专业色彩分析",
     "science-behind-personal-color-analysis": "个人色彩分析背后的科学",
     "why-color-analysis-quizzes-are-wrong": "为什么色彩分析测试不准确"
+  },
+  "referral": {
+    "title": "邀请好友，赚取积分",
+    "subtitle": "分享 Belle AI 给好友，双方都能获得免费分析积分",
+    "yourLink": "你的邀请链接",
+    "copy": "复制",
+    "copied": "已复制！",
+    "codeLabel": "你的邀请码",
+    "shareText": "免费试用 Belle AI 个人色彩分析！获取 AI 驱动的专属妆容、发色和穿搭建议。",
+    "howItWorks": "如何参与",
+    "step1": "分享链接给好友",
+    "reward1": "好友注册后你获得 +1 积分",
+    "step2": "好友完成首次分析",
+    "reward2": "你和好友各获得 +2 积分",
+    "step3": "好友首次付费",
+    "reward3": "你获得 +3 积分",
+    "friendsInvited": "已邀请好友",
+    "creditsEarned": "获得积分",
+    "bannerText": "好友邀请了你！完成首次分析，双方各得 2 个免费积分"
   },
   "about": {
     "title": "关于 Belle AI",

@@ -42,7 +42,9 @@
     "styleTitle": "スタイル診断 – あなたのスタイルDNAを発見",
     "styleDescription": "AIがあなたの特徴を分析し、ユニークなスタイルパーソナリティアーキタイプを判定。シェア可能なスタイルプロフィールとパーソナライズ提案を取得。",
     "celebrityTitle": "セレブスタイルマッチ – あなたのセレブツインを見つけよう",
-    "celebrityDescription": "AIがあなたの特徴とカラーリングを、同じスタイルポテンシャルを持つセレブとマッチング。スタイルレッスンと「このルックを盗む」提案を取得。"
+    "celebrityDescription": "AIがあなたの特徴とカラーリングを、同じスタイルポテンシャルを持つセレブとマッチング。スタイルレッスンと「このルックを盗む」提案を取得。",
+    "referralTitle": "友達を招待して無料クレジットを獲得",
+    "referralDescription": "Belle AIを友達にシェア。カラー分析を試すと、双方に無料クレジットが付与されます。"
   },
   "nav": {
     "home": "ホーム",
@@ -73,7 +75,8 @@
     "credits": "クレジット",
     "activeUntil": "有効",
     "noPlan": "プランなし",
-    "manage": "管理"
+    "manage": "管理",
+    "inviteFriends": "友達を招待"
   },
   "home": {
     "heroTitle": "AIカラー分析：",
@@ -526,6 +529,9 @@
     "buy5Credits": "5回分 – $0.99（初回限定）",
     "buy12Credits": "12回分 – $5.99",
     "viewAllPlans": "全プランを見る →",
+    "inviteEarn": "友達を招待して無料クレジットを獲得 →",
+    "inviteEarnFree": "友達を招待して無料クレジットを獲得 →",
+    "noQuotaOr": "または",
     "processing": "処理中…",
     "exampleTitle": "仕上がりサンプル",
     "exampleBefore": "あなたの写真",
@@ -1920,6 +1926,25 @@
     "ai-vs-professional-color-analysis": "AI vs プロのカラー分析",
     "science-behind-personal-color-analysis": "パーソナルカラー分析の科学",
     "why-color-analysis-quizzes-are-wrong": "カラー分析クイズが不正確な理由"
+  },
+  "referral": {
+    "title": "友達を招待してクレジットを獲得",
+    "subtitle": "Belle AIを友達にシェアして、双方が無料分析クレジットを獲得",
+    "yourLink": "招待リンク",
+    "copy": "コピー",
+    "copied": "コピーしました！",
+    "codeLabel": "招待コード",
+    "shareText": "Belle AIで無料パーソナルカラー分析を試そう！AIが提案するメイク、ヘアカラー、スタイルを体験。",
+    "howItWorks": "仕組み",
+    "step1": "リンクを友達にシェア",
+    "reward1": "登録時に+1クレジット",
+    "step2": "友達が初回分析を完了",
+    "reward2": "あなたと友達にそれぞれ+2クレジット",
+    "step3": "友達が初回購入",
+    "reward3": "あなたに+3クレジット",
+    "friendsInvited": "招待した友達",
+    "creditsEarned": "獲得クレジット",
+    "bannerText": "友達からの招待です！初回分析を完了すると、双方に無料クレジット2つが付与されます"
   },
   "about": {
     "title": "Belle AI について",

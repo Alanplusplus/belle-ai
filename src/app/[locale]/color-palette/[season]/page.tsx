@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import {
   SEASON_PALETTES,
   SEASON_SLUGS,
@@ -33,10 +33,26 @@ export async function generateMetadata({
 
   const localName = messages.sd?.[season]?.name ?? data.name.split(" (")[0];
 
+  const title = messages.meta.seasonPaletteTitle.replace(/\{season\}/g, localName);
+  const description = messages.meta.seasonPaletteDescription.replace(/\{season\}/g, localName);
+  const alternates = buildAlternates(locale, `/color-palette/${season}`);
+
   return {
-    title: messages.meta.seasonPaletteTitle.replace(/\{season\}/g, localName),
-    description: messages.meta.seasonPaletteDescription.replace(/\{season\}/g, localName),
-    alternates: buildAlternates(locale, `/color-palette/${season}`),
+    title,
+    description,
+    alternates,
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 

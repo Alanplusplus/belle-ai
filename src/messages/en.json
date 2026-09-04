@@ -42,7 +42,9 @@
     "styleTitle": "Style Personality Test – Discover Your Style DNA",
     "styleDescription": "AI analyzes your features to determine your unique style personality archetype. Get a shareable style profile with personalized recommendations.",
     "celebrityTitle": "Celebrity Style Match – Find Your Celebrity Twin",
-    "celebrityDescription": "AI matches your features and coloring with celebrities who share your style potential. Get style lessons and 'steal this look' recommendations."
+    "celebrityDescription": "AI matches your features and coloring with celebrities who share your style potential. Get style lessons and 'steal this look' recommendations.",
+    "referralTitle": "Invite Friends & Earn Free Credits",
+    "referralDescription": "Share Belle AI with friends. When they try color analysis, both of you earn free credits."
   },
   "nav": {
     "home": "Home",
@@ -73,7 +75,8 @@
     "credits": "Credits",
     "activeUntil": "Active",
     "noPlan": "No active plan",
-    "manage": "Manage"
+    "manage": "Manage",
+    "inviteFriends": "Invite Friends"
   },
   "home": {
     "heroTitle": "AI Color Analysis:",
@@ -526,6 +529,9 @@
     "buy5Credits": "5 Credits – $0.99 (First buy)",
     "buy12Credits": "12 Credits – $5.99",
     "viewAllPlans": "View all plans →",
+    "inviteEarn": "Invite friends, earn free credits →",
+    "inviteEarnFree": "Invite friends for free credits →",
+    "noQuotaOr": "or",
     "processing": "Processing…",
     "exampleTitle": "See What You'll Get",
     "exampleBefore": "Your Photo",
@@ -1920,6 +1926,25 @@
     "ai-vs-professional-color-analysis": "AI vs Professional Color Analysis",
     "science-behind-personal-color-analysis": "The Science Behind Personal Color Analysis",
     "why-color-analysis-quizzes-are-wrong": "Why Color Analysis Quizzes Are Wrong"
+  },
+  "referral": {
+    "title": "Invite Friends, Earn Credits",
+    "subtitle": "Share Belle AI with friends and both of you get free analysis credits",
+    "yourLink": "Your Invite Link",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "codeLabel": "Your code",
+    "shareText": "Try Belle AI for free color analysis! Get personalized makeup, hair, and style recommendations powered by AI.",
+    "howItWorks": "How It Works",
+    "step1": "Share your link with friends",
+    "reward1": "+1 credit when they sign up",
+    "step2": "Friend completes their first analysis",
+    "reward2": "+2 credits for you, +2 credits for your friend",
+    "step3": "Friend makes their first purchase",
+    "reward3": "+3 credits for you",
+    "friendsInvited": "Friends Invited",
+    "creditsEarned": "Credits Earned",
+    "bannerText": "Your friend invited you! Complete your first analysis and both of you get 2 free credits"
   },
   "about": {
     "title": "About Belle AI",

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/constants";
-import { getAllSlugs } from "@/lib/blog";
+import { getAllSlugs, getPostBySlug } from "@/lib/blog";
 import { SEASON_SLUGS } from "@/lib/color-palette-data";
 import { ATTRIBUTE_SLUGS } from "@/lib/color-analysis-for-data";
 
@@ -13,6 +13,8 @@ const COMPETITOR_SLUGS = [
   "color-analysis-app",
   "palettehunt",
 ];
+
+const STATIC_LAST_MODIFIED = new Date("2025-06-01");
 
 function localePath(locale: string, path: string): string {
   const isDefault = locale === routing.defaultLocale;
@@ -37,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/style-personality",
     "/celebrity-match",
     "/try",
+    "/referral",
     "/pricing",
     "/blog",
     "/tools/color-quiz",
@@ -60,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       entries.push({
         url: localePath(locale, page),
-        lastModified: new Date(),
+        lastModified: STATIC_LAST_MODIFIED,
         changeFrequency: isHome || isBlogIndex ? "daily" : "weekly",
         priority: isHome ? 1 : 0.8,
         alternates: { languages: alternates },
@@ -78,7 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       entries.push({
         url: localePath(locale, `/vs/${slug}`),
-        lastModified: new Date(),
+        lastModified: STATIC_LAST_MODIFIED,
         changeFrequency: "monthly",
         priority: 0.7,
         alternates: { languages: alternates },
@@ -96,7 +99,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       entries.push({
         url: localePath(locale, `/color-palette/${slug}`),
-        lastModified: new Date(),
+        lastModified: STATIC_LAST_MODIFIED,
         changeFrequency: "monthly",
         priority: 0.7,
         alternates: { languages: alternates },
@@ -114,7 +117,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
       entries.push({
         url: localePath(locale, `/color-analysis-for/${slug}`),
-        lastModified: new Date(),
+        lastModified: STATIC_LAST_MODIFIED,
         changeFrequency: "monthly",
         priority: 0.7,
         alternates: { languages: alternates },
@@ -142,9 +145,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }
       alternates["x-default"] = localePath("en", `/blog/${slug}`);
 
+      const post = getPostBySlug(locale, slug);
       entries.push({
         url: localePath(locale, `/blog/${slug}`),
-        lastModified: new Date(),
+        lastModified: post?.date ? new Date(post.date) : STATIC_LAST_MODIFIED,
         changeFrequency: "weekly",
         priority: 0.6,
         alternates: { languages: alternates },

@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -11,10 +11,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const alternates = buildAlternates(locale, "/glasses-analysis");
   return {
     title: messages.meta.glassesTitle,
     description: messages.meta.glassesDescription,
-    alternates: buildAlternates(locale, "/glasses-analysis"),
+    alternates,
+    openGraph: {
+      title: messages.meta.glassesTitle,
+      description: messages.meta.glassesDescription,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: messages.meta.glassesTitle,
+      description: messages.meta.glassesDescription,
+    },
   };
 }
 

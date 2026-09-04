@@ -21,6 +21,48 @@ export function buildAlternates(locale: string, path: string) {
   };
 }
 
+const BREADCRUMB_HOME: Record<string, string> = {
+  en: "Home",
+  zh: "首页",
+  ja: "ホーム",
+  ko: "홈",
+  es: "Inicio",
+  fr: "Accueil",
+  de: "Startseite",
+  pt: "Início",
+  it: "Home",
+  ru: "Главная",
+  ar: "الرئيسية",
+  hi: "होम",
+  th: "หน้าแรก",
+  vi: "Trang chủ",
+  id: "Beranda",
+  tr: "Ana Sayfa",
+};
+
+const OG_LOCALE_MAP: Record<string, string> = {
+  en: "en_US",
+  zh: "zh_CN",
+  ja: "ja_JP",
+  ko: "ko_KR",
+  es: "es_ES",
+  fr: "fr_FR",
+  de: "de_DE",
+  pt: "pt_BR",
+  it: "it_IT",
+  ru: "ru_RU",
+  ar: "ar_SA",
+  hi: "hi_IN",
+  th: "th_TH",
+  vi: "vi_VN",
+  id: "id_ID",
+  tr: "tr_TR",
+};
+
+export function ogLocale(locale: string): string {
+  return OG_LOCALE_MAP[locale] || locale;
+}
+
 export function buildBreadcrumbJsonLd(
   locale: string,
   items: { name: string; path: string }[],
@@ -32,7 +74,7 @@ export function buildBreadcrumbJsonLd(
       {
         "@type": "ListItem",
         position: 1,
-        name: "Home",
+        name: BREADCRUMB_HOME[locale] || "Home",
         item: canonicalUrl(locale, ""),
       },
       ...items.map((it, i) => ({

@@ -1,4 +1,4 @@
-import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import type { Metadata } from "next";
 import { FaceShapeQuizClient } from "./FaceShapeQuizClient";
 import { Link } from "@/i18n/navigation";
@@ -11,10 +11,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const alternates = buildAlternates(locale, "/tools/face-shape-quiz");
   return {
     title: messages.meta.faceQuizTitle,
     description: messages.meta.faceQuizDescription,
-    alternates: buildAlternates(locale, "/tools/face-shape-quiz"),
+    alternates,
+    openGraph: {
+      title: messages.meta.faceQuizTitle,
+      description: messages.meta.faceQuizDescription,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: messages.meta.faceQuizTitle,
+      description: messages.meta.faceQuizDescription,
+    },
   };
 }
 

@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import type { Metadata } from "next";
 import { PricingButtons } from "./PricingButtons";
 import { PricingTabs } from "./PricingTabs";
@@ -12,10 +12,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const alternates = buildAlternates(locale, "/pricing");
   return {
     title: messages.meta.pricingTitle,
     description: messages.meta.pricingDescription,
-    alternates: buildAlternates(locale, "/pricing"),
+    alternates,
+    openGraph: {
+      title: messages.meta.pricingTitle,
+      description: messages.meta.pricingDescription,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: messages.meta.pricingTitle,
+      description: messages.meta.pricingDescription,
+    },
   };
 }
 
@@ -31,11 +44,67 @@ export default async function PricingPage({
     { name: "Pricing", path: "/pricing" },
   ]);
 
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Belle AI - Color Analysis",
+    description: "AI-powered personal color analysis with makeup, hair, outfit, and accessory recommendations.",
+    brand: { "@type": "Brand", name: "Belle AI" },
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Free",
+        price: "0",
+        priceCurrency: "USD",
+        description: "2 free AI analyses",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "Monthly",
+        price: "9.99",
+        priceCurrency: "USD",
+        description: "200 analyses per month, 4K resolution",
+        availability: "https://schema.org/InStock",
+        priceValidUntil: new Date(new Date().getFullYear() + 1, 0, 1).toISOString().split("T")[0],
+      },
+      {
+        "@type": "Offer",
+        name: "Yearly",
+        price: "39.99",
+        priceCurrency: "USD",
+        description: "200 analyses per month, 4K resolution, billed yearly",
+        availability: "https://schema.org/InStock",
+        priceValidUntil: new Date(new Date().getFullYear() + 1, 0, 1).toISOString().split("T")[0],
+      },
+      {
+        "@type": "Offer",
+        name: "5 Credits",
+        price: "2.99",
+        priceCurrency: "USD",
+        description: "5 one-time credits, never expire",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "12 Credits",
+        price: "5.99",
+        priceCurrency: "USD",
+        description: "12 one-time credits, never expire",
+        availability: "https://schema.org/InStock",
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
       />
     <section className="py-20">
       <div className="mx-auto max-w-5xl px-4">

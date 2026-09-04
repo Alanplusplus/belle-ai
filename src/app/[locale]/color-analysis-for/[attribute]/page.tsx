@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import { ATTRIBUTES, ATTRIBUTE_SLUGS } from "@/lib/color-analysis-for-data";
 import type { Metadata } from "next";
 
@@ -29,10 +29,26 @@ export async function generateMetadata({
 
   const localName = messages.ad?.[attribute]?.name ?? data.name;
 
+  const title = messages.meta.colorForTitle.replace(/\{audience\}/g, localName);
+  const description = messages.meta.colorForDescription.replace(/\{audience\}/g, localName);
+  const alternates = buildAlternates(locale, `/color-analysis-for/${attribute}`);
+
   return {
-    title: messages.meta.colorForTitle.replace(/\{audience\}/g, localName),
-    description: messages.meta.colorForDescription.replace(/\{audience\}/g, localName),
-    alternates: buildAlternates(locale, `/color-analysis-for/${attribute}`),
+    title,
+    description,
+    alternates,
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 

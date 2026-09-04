@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -11,10 +11,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const alternates = buildAlternates(locale, "/glow-up-report");
   return {
     title: messages.meta.glowUpTitle,
     description: messages.meta.glowUpDescription,
-    alternates: buildAlternates(locale, "/glow-up-report"),
+    alternates,
+    openGraph: {
+      title: messages.meta.glowUpTitle,
+      description: messages.meta.glowUpDescription,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: messages.meta.glowUpTitle,
+      description: messages.meta.glowUpDescription,
+    },
   };
 }
 
@@ -27,6 +40,39 @@ export default async function GlowUpReportPage({
   const t = await getTranslations({ locale, namespace: "glowUpPage" });
   const ft = await getTranslations({ locale, namespace: "features" });
 
+  const faqs = [
+    {
+      q: "What is the Glow Up Report?",
+      a: "The Glow Up Report is Belle's most comprehensive beauty analysis — an all-in-one transformation guide covering your personal color season, face shape, hair color recommendations, makeup palette, glasses styles, jewelry metals, and wardrobe colors. It's designed to give you a complete beauty roadmap in a single report.",
+    },
+    {
+      q: "What does the Glow Up Report include?",
+      a: "Your report combines eight analysis sections: seasonal color analysis, face shape assessment, hair color suggestions, personalized makeup recommendations, glasses frame styles, jewelry and metal matching, outfit color palette, and premium styling tips. It's equivalent to getting multiple individual analyses in one package.",
+    },
+    {
+      q: "How much does the Glow Up Report cost?",
+      a: "The Glow Up Report costs 3 credits — our premium tier analysis. While individual analyses are free for first-time use, the Glow Up Report bundles eight comprehensive sections into one detailed transformation guide for a complete beauty overhaul.",
+    },
+    {
+      q: "How is the Glow Up Report different from free analyses?",
+      a: "Free analyses cover one category at a time (e.g., color analysis or makeup only). The Glow Up Report delivers eight analysis sections in a single report, with deeper insights, cross-category styling coordination, and a unified transformation plan that connects your colors, makeup, hair, accessories, and wardrobe.",
+    },
+    {
+      q: "Who should get a Glow Up Report?",
+      a: "The Glow Up Report is ideal if you want a complete beauty refresh — whether you're updating your wardrobe, changing your hair color, refining your makeup routine, or building a cohesive personal style from scratch. One selfie unlocks your full beauty profile.",
+    },
+  ];
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
     { name: "Glow Up Report", path: "/glow-up-report" },
   ]);
@@ -36,6 +82,10 @@ export default async function GlowUpReportPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <section className="bg-gradient-to-b from-amber-50/50 to-transparent py-20 dark:from-amber-950/10">
         <div className="mx-auto max-w-4xl px-4 text-center">

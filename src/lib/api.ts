@@ -36,10 +36,27 @@ export interface WebInitData {
 
 export type WebSignInData = WebInitData;
 
+async function _tryApplyReferral() {
+  try {
+    const { getStoredReferralCode, clearStoredReferralCode } = await import("./referral");
+    const code = getStoredReferralCode();
+    if (code) {
+      const res = await belleApi<{ success: boolean }>({
+        action: "referral-apply",
+        referral_code: code,
+      });
+      if (res.code === 200) {
+        clearStoredReferralCode();
+      }
+    }
+  } catch {}
+}
+
 export async function webInit() {
   const res = await belleApi<WebInitData>({ action: "init" });
   if (res.code === 200 && res.data) {
     cachedUserId = res.data.user_id;
+    _tryApplyReferral();
   }
   return res;
 }
@@ -53,6 +70,7 @@ export async function webSignIn(email?: string, name?: string, avatarUrl?: strin
   });
   if (res.code === 200 && res.data) {
     cachedUserId = res.data.user_id;
+    _tryApplyReferral();
   }
   return res;
 }
@@ -204,4 +222,38 @@ export async function fetchProcessingTask() {
   }>({
     action: "processing",
   });
+}
+
+export interface ReferralCodeData {
+  referral_code: string;
+  referral_count: number;
+  referral_credits_earned: number;
+}
+
+export interface ReferralEvent {
+  event_type: string;
+  credits_awarded: number;
+  created_at: string;
+}
+
+export interface ReferralStatsData {
+  referral_code: string;
+  referral_count: number;
+  referral_credits_earned: number;
+  recent_events: ReferralEvent[];
+}
+
+export async function getReferralCode() {
+  return belleApi<ReferralCodeData>({ action: "referral-code" });
+}
+
+export async function applyReferralCode(referralCode: string) {
+  return belleApi<{ success: boolean }>({
+    action: "referral-apply",
+    referral_code: referralCode,
+  });
+}
+
+export async function getReferralStats() {
+  return belleApi<ReferralStatsData>({ action: "referral-stats" });
 }

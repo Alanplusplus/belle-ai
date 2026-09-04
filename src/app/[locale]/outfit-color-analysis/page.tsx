@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -11,10 +11,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const alternates = buildAlternates(locale, "/outfit-color-analysis");
   return {
     title: messages.meta.outfitTitle,
     description: messages.meta.outfitDescription,
-    alternates: buildAlternates(locale, "/outfit-color-analysis"),
+    alternates,
+    openGraph: {
+      title: messages.meta.outfitTitle,
+      description: messages.meta.outfitDescription,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: messages.meta.outfitTitle,
+      description: messages.meta.outfitDescription,
+    },
   };
 }
 
@@ -27,6 +40,39 @@ export default async function OutfitColorAnalysisPage({
   const t = await getTranslations({ locale, namespace: "outfitPage" });
   const ft = await getTranslations({ locale, namespace: "features" });
 
+  const faqs = [
+    {
+      q: "What is outfit color analysis?",
+      a: "Outfit color analysis identifies which clothing colors flatter your personal coloring based on your skin undertone and seasonal color type. It helps you build a wardrobe palette of neutrals, accent colors, and combinations that make you look vibrant and polished.",
+    },
+    {
+      q: "How does AI outfit color matching work?",
+      a: "Upload a selfie and our AI determines your personal color season and undertone. You then receive a curated outfit color palette with recommended neutrals, statement colors, color combinations to try, and shades to avoid when shopping for clothes.",
+    },
+    {
+      q: "Why do certain clothing colors look better on me?",
+      a: "Colors that share undertones with your skin, hair, and eyes create visual harmony and make your complexion appear brighter. Colors with clashing undertones can make skin look dull or sallow. Outfit color analysis identifies your ideal palette so every outfit enhances your natural coloring.",
+    },
+    {
+      q: "Can outfit color analysis help me shop smarter?",
+      a: "Absolutely — your report serves as a personal shopping guide. Keep your recommended neutrals and accent colors handy when buying tops, dresses, jackets, and accessories. You'll waste less money on colors that don't suit you and build a cohesive, flattering wardrobe.",
+    },
+    {
+      q: "Is outfit color analysis free?",
+      a: "Yes, your first AI outfit color analysis is completely free. Upload a selfie to discover your best clothing colors, seasonal palette, and styling combinations tailored to your personal coloring.",
+    },
+  ];
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
     { name: "Outfit Color Analysis", path: "/outfit-color-analysis" },
   ]);
@@ -36,6 +82,10 @@ export default async function OutfitColorAnalysisPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">

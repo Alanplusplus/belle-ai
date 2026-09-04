@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { SITE_URL } from "@/lib/constants";
-import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import {
   SEASON_PALETTES,
   PARENT_SEASON_ORDER,
@@ -17,10 +17,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const alternates = buildAlternates(locale, "/color-analysis");
   return {
     title: messages.meta.colorGuideTitle,
     description: messages.meta.colorGuideDescription,
-    alternates: buildAlternates(locale, "/color-analysis"),
+    alternates,
+    openGraph: {
+      title: messages.meta.colorGuideTitle,
+      description: messages.meta.colorGuideDescription,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: messages.meta.colorGuideTitle,
+      description: messages.meta.colorGuideDescription,
+    },
   };
 }
 

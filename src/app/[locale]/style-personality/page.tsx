@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -11,10 +11,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const alternates = buildAlternates(locale, "/style-personality");
   return {
     title: messages.meta.styleTitle,
     description: messages.meta.styleDescription,
-    alternates: buildAlternates(locale, "/style-personality"),
+    alternates,
+    openGraph: {
+      title: messages.meta.styleTitle,
+      description: messages.meta.styleDescription,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: messages.meta.styleTitle,
+      description: messages.meta.styleDescription,
+    },
   };
 }
 
@@ -27,6 +40,39 @@ export default async function StylePersonalityPage({
   const t = await getTranslations({ locale, namespace: "stylePage" });
   const ft = await getTranslations({ locale, namespace: "features" });
 
+  const faqs = [
+    {
+      q: "What is style personality analysis?",
+      a: "Style personality analysis identifies your personal style archetype — such as Romantic, Dramatic, Classic, Natural, Gamine, Ethereal, Creative, or Sensual — based on your facial features, body lines, and overall aesthetic. It helps you understand which fashion styles naturally suit your appearance and energy.",
+    },
+    {
+      q: "How does AI determine my style personality?",
+      a: "Our AI analyzes your facial structure, feature proportions, and overall visual impression from a selfie. These characteristics are mapped to established style archetypes to reveal which fashion aesthetics — from soft and feminine to bold and angular — align with your natural look.",
+    },
+    {
+      q: "What style archetypes does Belle recognize?",
+      a: "Belle identifies eight style personalities: Romantic (soft, feminine), Dramatic (bold, striking), Classic (timeless, refined), Natural (relaxed, effortless), Gamine (playful, youthful), Ethereal (delicate, luminous), Creative (eclectic, artistic), and Sensual (confident, magnetic). You may have a primary type with secondary influences.",
+    },
+    {
+      q: "How can style personality help me dress better?",
+      a: "Knowing your style personality guides clothing silhouettes, fabric choices, patterns, and accessories that feel authentic to you. Instead of following trends blindly, you build a wardrobe aligned with your natural aesthetic — making shopping decisions easier and your outfits more cohesive.",
+    },
+    {
+      q: "Is style personality analysis free?",
+      a: "Yes, your first AI style personality analysis is free with no signup required. Upload a selfie to discover your style archetype and receive personalized fashion recommendations.",
+    },
+  ];
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
     { name: "Style Personality", path: "/style-personality" },
   ]);
@@ -36,6 +82,10 @@ export default async function StylePersonalityPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">

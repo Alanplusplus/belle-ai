@@ -42,7 +42,9 @@
     "styleTitle": "Test de personalidad de estilo – Descubre tu ADN de estilo",
     "styleDescription": "La IA analiza tus rasgos para determinar tu arquetipo único de personalidad de estilo. Obtén un perfil de estilo compartible con recomendaciones personalizadas.",
     "celebrityTitle": "Match de estilo con celebridades – Encuentra tu gemelo famoso",
-    "celebrityDescription": "La IA compara tus rasgos y coloración con celebridades que comparten tu potencial de estilo. Obtén lecciones de estilo y recomendaciones de 'copia este look'."
+    "celebrityDescription": "La IA compara tus rasgos y coloración con celebridades que comparten tu potencial de estilo. Obtén lecciones de estilo y recomendaciones de 'copia este look'.",
+    "referralTitle": "Invita amigos y gana créditos gratis",
+    "referralDescription": "Comparte Belle AI con amigos. Cuando prueben el análisis de color, ambos ganan créditos gratis."
   },
   "nav": {
     "home": "Inicio",
@@ -73,7 +75,8 @@
     "credits": "Créditos",
     "activeUntil": "Activo",
     "noPlan": "Sin plan",
-    "manage": "Gestionar"
+    "manage": "Gestionar",
+    "inviteFriends": "Invitar amigos"
   },
   "home": {
     "heroTitle": "Análisis de color con IA:",
@@ -526,6 +529,9 @@
     "buy5Credits": "5 créditos – $0.99 (Primera compra)",
     "buy12Credits": "12 créditos – $5.99",
     "viewAllPlans": "Ver todos los planes →",
+    "inviteEarn": "Invita amigos y gana créditos gratis →",
+    "inviteEarnFree": "Invita amigos por créditos gratis →",
+    "noQuotaOr": "o",
     "processing": "Procesando…",
     "exampleTitle": "Mira lo que obtendrás",
     "exampleBefore": "Tu foto",
@@ -1920,6 +1926,25 @@
     "ai-vs-professional-color-analysis": "IA vs análisis de color profesional",
     "science-behind-personal-color-analysis": "La ciencia detrás del análisis de color personal",
     "why-color-analysis-quizzes-are-wrong": "Por qué los tests de análisis de color fallan"
+  },
+  "referral": {
+    "title": "Invita amigos, gana créditos",
+    "subtitle": "Comparte Belle AI con amigos y ambos obtienen créditos de análisis gratis",
+    "yourLink": "Tu enlace de invitación",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "codeLabel": "Tu código",
+    "shareText": "¡Prueba Belle AI gratis para análisis de color! Obtén recomendaciones personalizadas de maquillaje, cabello y estilo con IA.",
+    "howItWorks": "Cómo funciona",
+    "step1": "Comparte tu enlace con amigos",
+    "reward1": "+1 crédito cuando se registren",
+    "step2": "Tu amigo completa su primer análisis",
+    "reward2": "+2 créditos para ti, +2 créditos para tu amigo",
+    "step3": "Tu amigo hace su primera compra",
+    "reward3": "+3 créditos para ti",
+    "friendsInvited": "Amigos invitados",
+    "creditsEarned": "Créditos ganados",
+    "bannerText": "¡Un amigo te invitó! Completa tu primer análisis y ambos recibirán 2 créditos gratis"
   },
   "about": {
     "title": "Acerca de Belle AI",

@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -11,10 +11,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const alternates = buildAlternates(locale, "/hair-color-analysis");
   return {
     title: messages.meta.hairTitle,
     description: messages.meta.hairDescription,
-    alternates: buildAlternates(locale, "/hair-color-analysis"),
+    alternates,
+    openGraph: {
+      title: messages.meta.hairTitle,
+      description: messages.meta.hairDescription,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: messages.meta.hairTitle,
+      description: messages.meta.hairDescription,
+    },
   };
 }
 
@@ -27,6 +40,39 @@ export default async function HairColorAnalysisPage({
   const t = await getTranslations({ locale, namespace: "hairPage" });
   const ft = await getTranslations({ locale, namespace: "features" });
 
+  const faqs = [
+    {
+      q: "What is AI hair color analysis?",
+      a: "AI hair color analysis evaluates your skin undertone, depth, and contrast from a selfie to recommend hair colors that complement your natural coloring. It suggests flattering shades, highlights your best tones, and flags colors that may wash you out.",
+    },
+    {
+      q: "How does Belle determine the best hair color for me?",
+      a: "Our AI analyzes your skin undertone (warm, cool, or neutral), eye color, and natural hair color from your photo. These factors are matched against color theory principles to identify hair shades — from natural browns and blondes to bold fashion colors — that harmonize with your complexion.",
+    },
+    {
+      q: "Can AI hair color analysis help me before visiting a salon?",
+      a: "Yes — use the report as a reference when discussing options with your colorist. You'll receive specific shade recommendations, colors to avoid, and styling tips so you can confidently choose a hair color that suits your skin tone.",
+    },
+    {
+      q: "What hair colors should I avoid for my skin tone?",
+      a: "Your report includes a dedicated section on colors to avoid — shades that clash with your undertone or create unflattering contrast. This helps you steer clear of common mistakes like choosing an ashy blonde on warm skin or a brassy tone on cool undertones.",
+    },
+    {
+      q: "Is hair color analysis free?",
+      a: "Your first AI hair color analysis is free with no signup required. Upload a selfie to receive personalized hair color suggestions, undertone analysis, and styling recommendations.",
+    },
+  ];
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
     { name: "Hair Color Analysis", path: "/hair-color-analysis" },
   ]);
@@ -36,6 +82,10 @@ export default async function HairColorAnalysisPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">

@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -11,10 +11,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const alternates = buildAlternates(locale, "/occasion-makeup");
   return {
     title: messages.meta.occasionTitle,
     description: messages.meta.occasionDescription,
-    alternates: buildAlternates(locale, "/occasion-makeup"),
+    alternates,
+    openGraph: {
+      title: messages.meta.occasionTitle,
+      description: messages.meta.occasionDescription,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: messages.meta.occasionTitle,
+      description: messages.meta.occasionDescription,
+    },
   };
 }
 
@@ -27,6 +40,39 @@ export default async function OccasionMakeupPage({
   const t = await getTranslations({ locale, namespace: "occasionPage" });
   const ft = await getTranslations({ locale, namespace: "features" });
 
+  const faqs = [
+    {
+      q: "What is occasion makeup analysis?",
+      a: "Occasion makeup analysis creates event-specific makeup looks tailored to your skin tone, face shape, and the formality of the occasion. Whether it's a date night, job interview, wedding, or gala, you get a complete look designed for the setting.",
+    },
+    {
+      q: "What occasions does Belle support?",
+      a: "Belle generates makeup looks for a wide range of events including date night, job interviews, weddings, festivals, office settings, evening galas, brunch, and vacation. Each look is adjusted for the occasion's vibe — from polished and professional to bold and glamorous.",
+    },
+    {
+      q: "How is occasion makeup different from regular makeup analysis?",
+      a: "While standard makeup analysis recommends colors that suit your coloring, occasion makeup goes further by crafting complete looks for specific events. You receive step-by-step guidance on intensity, focus areas, and product choices appropriate for the occasion's dress code and atmosphere.",
+    },
+    {
+      q: "Will the makeup look suit my skin tone and face shape?",
+      a: "Yes — every occasion look is personalized to your unique features. The AI analyzes your skin undertone, depth, and face shape to ensure the recommended colors and techniques flatter you, not just the event type.",
+    },
+    {
+      q: "Is occasion makeup analysis free?",
+      a: "Your first AI occasion makeup analysis is free. Upload a selfie, select your event type, and receive a personalized makeup look with color recommendations and styling tips.",
+    },
+  ];
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
     { name: "Occasion Makeup", path: "/occasion-makeup" },
   ]);
@@ -36,6 +82,10 @@ export default async function OccasionMakeupPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">

@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 
@@ -10,10 +10,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const alternates = buildAlternates(locale, "/about");
   return {
     title: messages.about.title,
     description: messages.about.intro,
-    alternates: buildAlternates(locale, "/about"),
+    alternates,
+    openGraph: {
+      title: messages.about.title,
+      description: messages.about.intro,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: messages.about.title,
+      description: messages.about.intro,
+    },
   };
 }
 

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import type { Metadata } from "next";
 
 interface CompetitorData {
@@ -226,10 +226,26 @@ export async function generateMetadata({
   const data = COMPETITORS[competitor];
   if (!data) return {};
 
+  const title = `Belle AI vs ${data.name} – Color Analysis Comparison`;
+  const description = data.description;
+  const alternates = buildAlternates(locale, `/vs/${competitor}`);
+
   return {
-    title: `Belle AI vs ${data.name} – Color Analysis Comparison`,
-    description: data.description,
-    alternates: buildAlternates(locale, `/vs/${competitor}`),
+    title,
+    description,
+    alternates,
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 

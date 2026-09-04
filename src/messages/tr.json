@@ -42,7 +42,9 @@
     "styleTitle": "Stil Kişilik Testi – Style DNA'nızı Keşfedin",
     "styleDescription": "Yapay zeka benzersiz stil kişiliği arketipinizi belirlemek için özelliklerinizi analiz eder. Kişiselleştirilmiş önerilerle paylaşılabilir bir stil profili alın.",
     "celebrityTitle": "Ünlü Stil Eşleşmesi – Ünlü İkizinizi Bulun",
-    "celebrityDescription": "Yapay zeka özelliklerinizi ve renklendirmenizi stil potansiyelinizi paylaşan ünlülerle eşleştirir. Stil dersleri ve 'bu görünümü çal' önerileri alın."
+    "celebrityDescription": "Yapay zeka özelliklerinizi ve renklendirmenizi stil potansiyelinizi paylaşan ünlülerle eşleştirir. Stil dersleri ve 'bu görünümü çal' önerileri alın.",
+    "referralTitle": "Arkadaş davet et, ücretsiz kredi kazan",
+    "referralDescription": "Belle AI'yi arkadaşlarınla paylaş. Renk analizini denediklerinde ikiniz de ücretsiz kredi kazanırsınız."
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -73,7 +75,8 @@
     "credits": "Kredi",
     "activeUntil": "Aktif",
     "noPlan": "Plan yok",
-    "manage": "Yönet"
+    "manage": "Yönet",
+    "inviteFriends": "Arkadaş davet et"
   },
   "home": {
     "heroTitle": "Yapay Zeka Renk Analizi:",
@@ -526,6 +529,9 @@
     "buy5Credits": "5 kredi – $0.99 (İlk satın alma)",
     "buy12Credits": "12 kredi – $5.99",
     "viewAllPlans": "Tüm planları gör →",
+    "inviteEarn": "Arkadaşlarını davet et, ücretsiz kredi kazan →",
+    "inviteEarnFree": "Arkadaşlarını davet et, ücretsiz kredi al →",
+    "noQuotaOr": "veya",
     "processing": "İşleniyor…",
     "exampleTitle": "Sonuç Önizleme",
     "exampleBefore": "Fotoğrafınız",
@@ -1920,6 +1926,25 @@
     "ai-vs-professional-color-analysis": "Yapay Zeka vs Profesyonel Renk Analizi",
     "science-behind-personal-color-analysis": "Kişisel Renk Analizinin Bilimi",
     "why-color-analysis-quizzes-are-wrong": "Renk Analizi Testleri Neden Yanlış"
+  },
+  "referral": {
+    "title": "Arkadaş davet et, kredi kazan",
+    "subtitle": "Belle AI'yi arkadaşlarınla paylaş, ikiniz de ücretsiz analiz kredisi kazanın",
+    "yourLink": "Davet bağlantın",
+    "copy": "Kopyala",
+    "copied": "Kopyalandı!",
+    "codeLabel": "Kodun",
+    "shareText": "Renk analizi için Belle AI'yi ücretsiz dene! Yapay zeka destekli kişiselleştirilmiş makyaj, saç ve stil önerileri al.",
+    "howItWorks": "Nasıl çalışır",
+    "step1": "Bağlantını arkadaşlarınla paylaş",
+    "reward1": "Kayıt olduğunda +1 kredi",
+    "step2": "Arkadaş ilk analizini tamamlar",
+    "reward2": "Sana +2 kredi, arkadaşına +2 kredi",
+    "step3": "Arkadaş ilk satın alımını yapar",
+    "reward3": "Sana +3 kredi",
+    "friendsInvited": "Davet edilen arkadaşlar",
+    "creditsEarned": "Kazanılan krediler",
+    "bannerText": "Arkadaşın seni davet etti! İlk analizini tamamla, ikiniz de 2 ücretsiz kredi kazanın"
   },
   "about": {
     "title": "Belle AI Hakkında",

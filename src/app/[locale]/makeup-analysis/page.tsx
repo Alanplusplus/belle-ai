@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -11,10 +11,23 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const alternates = buildAlternates(locale, "/makeup-analysis");
   return {
     title: messages.meta.makeupTitle,
     description: messages.meta.makeupDescription,
-    alternates: buildAlternates(locale, "/makeup-analysis"),
+    alternates,
+    openGraph: {
+      title: messages.meta.makeupTitle,
+      description: messages.meta.makeupDescription,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: messages.meta.makeupTitle,
+      description: messages.meta.makeupDescription,
+    },
   };
 }
 
@@ -29,6 +42,39 @@ export default async function MakeupAnalysisPage({
 
   const items = [t("item1"), t("item2"), t("item3"), t("item4"), t("item5"), t("item6")];
 
+  const faqs = [
+    {
+      q: "What is AI makeup analysis?",
+      a: "AI makeup analysis uses computer vision to study your skin tone, undertone, face shape, and facial features from a selfie. It then generates personalized makeup recommendations — including foundation shades, blush, eyeshadow, lip colors, and complete looks tailored to your unique coloring.",
+    },
+    {
+      q: "How does Belle's makeup analysis work?",
+      a: "Upload a clear selfie and our AI analyzes your skin depth, undertone, eye color, and face shape. Based on these measurements, you receive a detailed report with specific product color recommendations, application tips, and curated makeup looks that complement your natural features.",
+    },
+    {
+      q: "What makeup recommendations will I receive?",
+      a: "Your report includes foundation and concealer shade matches, blush and bronzer colors, eyeshadow palettes, lip color suggestions, and full makeup look ideas. Recommendations are customized to your skin tone and face shape for a flattering, harmonious result.",
+    },
+    {
+      q: "Do I need to know my skin tone before using makeup analysis?",
+      a: "No — the AI detects your skin undertone and depth automatically from your photo. Whether you have warm, cool, or neutral undertones, the analysis identifies your coloring and suggests makeup shades that enhance your natural beauty.",
+    },
+    {
+      q: "Is the makeup analysis free?",
+      a: "Yes, your first AI makeup analysis is completely free with no signup required. You get a full personalized report with color recommendations and styling tips based on your selfie.",
+    },
+  ];
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
     { name: "Makeup Analysis", path: "/makeup-analysis" },
   ]);
@@ -38,6 +84,10 @@ export default async function MakeupAnalysisPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">

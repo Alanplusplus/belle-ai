@@ -42,7 +42,9 @@
     "styleTitle": "스타일 성격 테스트 – 나만의 스타일 DNA 발견",
     "styleDescription": "AI가 당신의 이목구비를 분석해 고유한 스타일 성격 유형을 판별합니다. 공유 가능한 스타일 프로필과 맞춤 추천을 받아보세요.",
     "celebrityTitle": "셀럽 스타일 매칭 – 나의 셀럽 트윈 찾기",
-    "celebrityDescription": "AI가 당신의 이목구비와 컬러링을 같은 스타일 잠재력을 가진 셀럽과 매칭합니다. 스타일 레슨과 '이 룩 따라하기' 추천을 받아보세요."
+    "celebrityDescription": "AI가 당신의 이목구비와 컬러링을 같은 스타일 잠재력을 가진 셀럽과 매칭합니다. 스타일 레슨과 '이 룩 따라하기' 추천을 받아보세요.",
+    "referralTitle": "친구 초대하고 무료 크레딧 받기",
+    "referralDescription": "Belle AI를 친구에게 공유하세요. 컬러 분석을 체험하면 양쪽 모두 무료 크레딧을 받습니다."
   },
   "nav": {
     "home": "홈",
@@ -73,7 +75,8 @@
     "credits": "크레딧",
     "activeUntil": "활성",
     "noPlan": "구독 없음",
-    "manage": "관리"
+    "manage": "관리",
+    "inviteFriends": "친구 초대"
   },
   "home": {
     "heroTitle": "AI 컬러 분석:",
@@ -526,6 +529,9 @@
     "buy5Credits": "5회 – $0.99 (첫 구매)",
     "buy12Credits": "12회 – $5.99",
     "viewAllPlans": "모든 요금제 보기 →",
+    "inviteEarn": "친구를 초대하고 무료 크레딧 받기 →",
+    "inviteEarnFree": "친구 초대로 무료 크레딧 받기 →",
+    "noQuotaOr": "또는",
     "processing": "처리 중…",
     "exampleTitle": "결과 미리보기",
     "exampleBefore": "내 사진",
@@ -1920,6 +1926,25 @@
     "ai-vs-professional-color-analysis": "AI vs 전문 컬러 분석",
     "science-behind-personal-color-analysis": "퍼스널 컬러 분석의 과학",
     "why-color-analysis-quizzes-are-wrong": "컬러 분석 퀴즈가 부정확한 이유"
+  },
+  "referral": {
+    "title": "친구 초대하고 크레딧 받기",
+    "subtitle": "Belle AI를 친구와 공유하고 양쪽 모두 무료 분석 크레딧을 받으세요",
+    "yourLink": "초대 링크",
+    "copy": "복사",
+    "copied": "복사됨!",
+    "codeLabel": "초대 코드",
+    "shareText": "Belle AI로 무료 퍼스널 컬러 분석을 체험해 보세요! AI가 제안하는 맞춤 메이크업, 헤어 컬러, 스타일을 확인하세요.",
+    "howItWorks": "참여 방법",
+    "step1": "링크를 친구에게 공유",
+    "reward1": "가입 시 +1 크레딧",
+    "step2": "친구가 첫 분석 완료",
+    "reward2": "나와 친구 각각 +2 크레딧",
+    "step3": "친구가 첫 구매",
+    "reward3": "나에게 +3 크레딧",
+    "friendsInvited": "초대한 친구",
+    "creditsEarned": "획득 크레딧",
+    "bannerText": "친구가 초대했습니다! 첫 분석을 완료하면 양쪽 모두 무료 크레딧 2개를 받습니다"
   },
   "about": {
     "title": "Belle AI 소개",

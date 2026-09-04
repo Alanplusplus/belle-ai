@@ -12,9 +12,12 @@ import {
   fetchHistory,
   fetchProcessingTask,
   getCachedUserId,
+  getReferralCode,
   type HistoryEntry,
   type AnalysisType as ApiAnalysisType,
 } from "@/lib/api";
+import { getStoredReferralCode, storeReferralCode } from "@/lib/referral";
+import { SITE_URL } from "@/lib/constants";
 import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
 import { PricingModal } from "@/components/PricingModal";
 import { WelcomeOfferSheet } from "@/components/WelcomeOfferSheet";
@@ -224,6 +227,40 @@ interface BackgroundTask {
   errorMsg?: string;
 }
 
+async function addWatermark(imageUrl: string, code: string | null): Promise<Blob> {
+  const res = await fetch(imageUrl);
+  const blob = await res.blob();
+  const img = await createImageBitmap(blob);
+
+  const canvas = document.createElement("canvas");
+  canvas.width = img.width;
+  canvas.height = img.height;
+  const ctx = canvas.getContext("2d")!;
+  ctx.drawImage(img, 0, 0);
+
+  const barHeight = Math.round(img.height * 0.045);
+  ctx.fillStyle = "rgba(0, 0, 0, 0.45)";
+  ctx.fillRect(0, img.height - barHeight, img.width, barHeight);
+
+  const fontSize = Math.max(12, Math.round(barHeight * 0.5));
+  ctx.font = `${fontSize}px Inter, system-ui, sans-serif`;
+  ctx.fillStyle = "rgba(255, 255, 255, 0.9)";
+  ctx.textBaseline = "middle";
+  const y = img.height - barHeight / 2;
+
+  ctx.textAlign = "left";
+  ctx.fillText("aicoloranalysis.io", fontSize, y);
+
+  if (code) {
+    ctx.textAlign = "right";
+    ctx.fillText(`Code: ${code}`, img.width - fontSize, y);
+  }
+
+  return new Promise((resolve) => {
+    canvas.toBlob((b) => resolve(b!), "image/jpeg", 0.92);
+  });
+}
+
 export function TryClient({ locale, initialType }: { locale: string; initialType?: string }) {
   const t = useTranslations("tryPage");
 
@@ -255,6 +292,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [reportLang, setReportLang] = useState(LOCALE_TO_REPORT_LANG[locale] || "en");
   const [showLangPicker, setShowLangPicker] = useState(false);
   const [generateElapsed, setGenerateElapsed] = useState(0);
+  const [referralCode, setReferralCode] = useState<string | null>(null);
 
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -266,6 +304,22 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     const prefs = loadPrefs();
     if (prefs.reportLang) setReportLang(prefs.reportLang);
     if (prefs.resolution) setResolution(prefs.resolution);
+  }, []);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get("ref");
+    if (ref) {
+      storeReferralCode(ref);
+    }
+  }, []);
+
+  useEffect(() => {
+    getReferralCode().then((res) => {
+      if (res.code === 200 && res.data) {
+        setReferralCode(res.data.referral_code);
+      }
+    });
   }, []);
 
   useEffect(() => {
@@ -391,8 +445,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const handleDownload = useCallback(async (url: string) => {
     trackEvent("result_download", { type: analysisType });
     try {
-      const res = await fetch(url);
-      const blob = await res.blob();
+      const blob = await addWatermark(url, referralCode);
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
       a.download = `belle-ai-report-${Date.now()}.jpg`;
@@ -400,21 +453,32 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(a.href);
-    } catch { /* fallback: open in new tab */ window.open(url, "_blank"); }
-  }, [analysisType]);
+    } catch { window.open(url, "_blank"); }
+  }, [analysisType, referralCode]);
 
   const handleShare = useCallback(async (url: string) => {
     const isMobile = /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
       (navigator.maxTouchPoints > 0 && window.innerWidth < 768);
-    const shareData = { title: t("shareTitle"), text: t("shareText"), url };
-    if (isMobile && navigator.share && navigator.canShare?.(shareData)) {
+
+    const refUrl = referralCode ? `${SITE_URL}?ref=${referralCode}` : SITE_URL;
+    const shareText = `${t("shareText")} ${refUrl}`;
+
+    if (isMobile && navigator.share) {
       trackEvent("result_share", { method: "native", type: analysisType });
-      try { await navigator.share(shareData); } catch { /* user cancelled */ }
+      try {
+        const blob = await addWatermark(url, referralCode);
+        const file = new File([blob], "belle-ai-report.jpg", { type: "image/jpeg" });
+        if (navigator.canShare?.({ files: [file] })) {
+          await navigator.share({ title: t("shareTitle"), text: shareText, files: [file] });
+        } else {
+          await navigator.share({ title: t("shareTitle"), text: shareText, url: refUrl });
+        }
+      } catch { /* user cancelled */ }
     } else {
       trackEvent("result_share", { method: "panel", type: analysisType });
       setShareModal(url);
     }
-  }, [t, analysisType]);
+  }, [t, analysisType, referralCode]);
 
   const handleUploadClick = useCallback(() => {
     trackEvent("upload_area_clicked");
@@ -930,49 +994,52 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
       {/* Generate Button */}
       <div className="mt-6 text-center">
-        {phase === "no_quota" ? (
-          <NoQuotaCard t={t} onViewPlans={() => { trackEvent("pricing_modal_opened", { source: "no_quota_generate" }); setShowPricingModal(true); }} />
-        ) : (
-          <>
-            <button
-              onClick={() => {
-                handleGenerate();
-              }}
-              disabled={
-                !previewUrl ||
-                phase === "uploading" ||
-                phase === "generating" ||
-                phase === "preparing"
-              }
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              {(phase === "uploading" ||
-                phase === "generating" ||
-                phase === "preparing") && <Spinner />}
-              {(phase === "preparing" || phase === "uploading" || phase === "generating")
-                ? t("generating")
-                : t("generate")}
-            </button>
+        <button
+          onClick={() => {
+            handleGenerate();
+          }}
+          disabled={
+            !previewUrl ||
+            phase === "uploading" ||
+            phase === "generating" ||
+            phase === "preparing"
+          }
+          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          {(phase === "uploading" ||
+            phase === "generating" ||
+            phase === "preparing") && <Spinner />}
+          {(phase === "preparing" || phase === "uploading" || phase === "generating")
+            ? t("generating")
+            : t("generate")}
+        </button>
 
-            {userCredits && phase !== "done" && (
-              <p className="mt-2 text-xs text-muted-foreground">
-                {userCredits.subPlan ? (
-                  <span className="inline-flex items-center gap-1">
-                    <span className="rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-semibold text-primary uppercase">Pro</span>
-                    {t("quotaInfo", { remaining: userCredits.totalRemaining, total: userCredits.subRemaining + userCredits.paid + (quota?.remaining ?? 0) })}
-                  </span>
-                ) : (
-                  t("quotaInfo", { remaining: userCredits.totalRemaining, total: quota?.total ?? 1 })
-                )}
-              </p>
+        {userCredits && phase !== "done" && (
+          <p className="mt-2 text-xs text-muted-foreground">
+            {userCredits.subPlan ? (
+              <span className="inline-flex items-center gap-1">
+                <span className="rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-semibold text-primary uppercase">Pro</span>
+                {t("quotaInfo", { remaining: userCredits.totalRemaining, total: userCredits.subRemaining + userCredits.paid + (quota?.remaining ?? 0) })}
+              </span>
+            ) : (
+              t("quotaInfo", { remaining: userCredits.totalRemaining, total: quota?.total ?? 1 })
             )}
-            {!userCredits && quota && phase !== "done" && (
-              <p className="mt-2 text-xs text-muted-foreground">
-                {t("quotaInfo", { remaining: quota.remaining, total: quota.total })}
-              </p>
-            )}
-          </>
+          </p>
         )}
+        {!userCredits && quota && phase !== "done" && (
+          <p className="mt-2 text-xs text-muted-foreground">
+            {t("quotaInfo", { remaining: quota.remaining, total: quota.total })}
+          </p>
+        )}
+
+        {/* Show NoQuotaCard when credits are exhausted (regardless of phase) */}
+        {(phase === "no_quota" || (userCredits && userCredits.totalRemaining <= 0) || (!userCredits && quota && quota.remaining <= 0)) && (
+          <div className="mt-4">
+            <NoQuotaCard t={t} onViewPlans={() => { trackEvent("pricing_modal_opened", { source: "no_quota_generate" }); setShowPricingModal(true); }} />
+          </div>
+        )}
+
+        <InviteEarnBanner />
       </div>
 
       {/* Recommendations during generation */}
@@ -1140,6 +1207,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               <NoQuotaCard t={t} onViewPlans={() => { trackEvent("pricing_modal_opened", { source: "no_quota_result" }); setShowPricingModal(true); }} />
             </div>
           )}
+          <div className="mt-4 text-center">
+            <InviteEarnBanner />
+          </div>
         </div>
       )}
 
@@ -1238,6 +1308,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           onClose={() => setShareModal(null)}
           onCopied={() => { setShareToast(true); setTimeout(() => setShareToast(false), 2000); }}
           t={t}
+          referralCode={referralCode}
         />
       )}
 
@@ -1270,6 +1341,20 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       {/* Welcome Offer */}
       <WelcomeOfferSheet open={showWelcomeOffer} onClose={() => setShowWelcomeOffer(false)} />
     </div>
+  );
+}
+
+function InviteEarnBanner() {
+  const t = useTranslations("tryPage");
+  return (
+    <Link
+      href="/referral"
+      className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary transition hover:bg-primary/10"
+      onClick={() => trackEvent("invite_earn_click", { source: "quota_area" })}
+    >
+      <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z" /></svg>
+      {t("inviteEarn")}
+    </Link>
   );
 }
 
@@ -1342,7 +1427,17 @@ function NoQuotaCard({ t, onViewPlans }: { t: (key: string) => string; onViewPla
       >
         {t("viewAllPlans")}
       </button>
-      <p className="mt-2 text-xs text-amber-600">{t("noQuotaHint")}</p>
+      <div className="mt-3 flex items-center justify-center gap-2 text-xs text-amber-700">
+        <span>{t("noQuotaOr")}</span>
+        <Link
+          href="/referral"
+          className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
+          onClick={() => trackEvent("invite_earn_click", { source: "no_quota_card" })}
+        >
+          <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z" /></svg>
+          {t("inviteEarnFree")}
+        </Link>
+      </div>
     </div>
   );
 }
@@ -1611,14 +1706,18 @@ function SharePanel({
   onClose,
   onCopied,
   t,
+  referralCode,
 }: {
   url: string;
   onClose: () => void;
   onCopied: () => void;
   t: (key: string) => string;
+  referralCode: string | null;
 }) {
+  const tReferral = useTranslations("referral");
   const [caption, setCaption] = useState(t("shareText"));
   const [tags, setTags] = useState("BelleAI,ColorAnalysis,Beauty");
+  const refUrl = referralCode ? `${SITE_URL}?ref=${referralCode}` : SITE_URL;
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -1627,13 +1726,13 @@ function SharePanel({
 
   const handlePlatformClick = (platform: typeof SHARE_PLATFORMS[number]) => {
     trackEvent("share_platform_click", { platform: platform.id });
-    const shareUrl = platform.buildUrl(url, caption, tags);
+    const shareUrl = platform.buildUrl(refUrl, caption, tags);
     window.open(shareUrl, "_blank", "noopener,noreferrer,width=600,height=500");
   };
 
   const handleCopyLink = async () => {
     trackEvent("share_link_copied");
-    await navigator.clipboard.writeText(url);
+    await navigator.clipboard.writeText(refUrl);
     onCopied();
     onClose();
   };
@@ -1686,6 +1785,25 @@ function SharePanel({
             </button>
           ))}
         </div>
+
+        {referralCode && (
+          <div className="mt-4 rounded-xl border border-primary/20 bg-primary/5 p-3 text-center">
+            <p className="text-xs text-muted-foreground">{tReferral("subtitle")}</p>
+            <p className="mt-1 text-xs text-muted-foreground">
+              {tReferral("codeLabel")}: <span className="font-mono font-semibold text-primary">{referralCode}</span>
+            </p>
+            <Link
+              href="/referral"
+              onClick={() => trackEvent("share_invite_friends_click")}
+              className="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
+              </svg>
+              {tReferral("title")}
+            </Link>
+          </div>
+        )}
 
         {/* Copy link */}
         <button

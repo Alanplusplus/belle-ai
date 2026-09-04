@@ -42,7 +42,9 @@
     "styleTitle": "Tes Kepribadian Gaya – Temukan Style DNA Anda",
     "styleDescription": "AI menganalisis fitur Anda untuk menentukan arketipe kepribadian gaya unik Anda. Dapatkan profil gaya yang bisa dibagikan dengan rekomendasi personal.",
     "celebrityTitle": "Cocokkan Gaya Selebriti – Temukan Kembar Selebriti Anda",
-    "celebrityDescription": "AI mencocokkan fitur dan warna Anda dengan selebriti yang memiliki potensi gaya serupa. Dapatkan pelajaran gaya dan rekomendasi 'curi look ini'."
+    "celebrityDescription": "AI mencocokkan fitur dan warna Anda dengan selebriti yang memiliki potensi gaya serupa. Dapatkan pelajaran gaya dan rekomendasi 'curi look ini'.",
+    "referralTitle": "Undang teman dan dapatkan kredit gratis",
+    "referralDescription": "Bagikan Belle AI dengan teman. Saat mereka mencoba analisis warna, kalian berdua mendapat kredit gratis."
   },
   "nav": {
     "home": "Beranda",
@@ -73,7 +75,8 @@
     "credits": "Kredit",
     "activeUntil": "Aktif",
     "noPlan": "Tidak ada paket",
-    "manage": "Kelola"
+    "manage": "Kelola",
+    "inviteFriends": "Undang teman"
   },
   "home": {
     "heroTitle": "Analisis Warna AI:",
@@ -526,6 +529,9 @@
     "buy5Credits": "5 kredit – $0.99 (Pembelian pertama)",
     "buy12Credits": "12 kredit – $5.99",
     "viewAllPlans": "Lihat semua paket →",
+    "inviteEarn": "Undang teman, dapatkan kredit gratis →",
+    "inviteEarnFree": "Undang teman untuk kredit gratis →",
+    "noQuotaOr": "atau",
     "processing": "Memproses…",
     "exampleTitle": "Lihat Hasilnya",
     "exampleBefore": "Foto Anda",
@@ -1920,6 +1926,25 @@
     "ai-vs-professional-color-analysis": "AI vs Analisis Warna Profesional",
     "science-behind-personal-color-analysis": "Ilmu di Balik Personal Color Analysis",
     "why-color-analysis-quizzes-are-wrong": "Mengapa Kuis Color Analysis Salah"
+  },
+  "referral": {
+    "title": "Undang teman, dapatkan kredit",
+    "subtitle": "Bagikan Belle AI dengan teman dan kalian berdua mendapat kredit analisis gratis",
+    "yourLink": "Tautan undangan Anda",
+    "copy": "Salin",
+    "copied": "Tersalin!",
+    "codeLabel": "Kode Anda",
+    "shareText": "Coba Belle AI gratis untuk analisis warna! Dapatkan rekomendasi makeup, rambut, dan gaya personal dengan AI.",
+    "howItWorks": "Cara kerjanya",
+    "step1": "Bagikan tautan Anda ke teman",
+    "reward1": "+1 kredit saat mereka mendaftar",
+    "step2": "Teman menyelesaikan analisis pertama",
+    "reward2": "+2 kredit untuk Anda, +2 kredit untuk teman",
+    "step3": "Teman melakukan pembelian pertama",
+    "reward3": "+3 kredit untuk Anda",
+    "friendsInvited": "Teman diundang",
+    "creditsEarned": "Kredit diperoleh",
+    "bannerText": "Teman Anda mengundang! Selesaikan analisis pertama dan kalian berdua mendapat 2 kredit gratis"
   },
   "about": {
     "title": "Tentang Belle AI",

@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 import ReactMarkdown from "react-markdown";
+import Image from "next/image";
 import remarkGfm from "remark-gfm";
 import { StickyBottomCta, InlineCta } from "@/components/BlogCtaBanner";
 
@@ -75,6 +76,7 @@ export default async function BlogPostPage({
       "@id": canonicalUrl(locale, `/blog/${slug}`),
     },
     inLanguage: locale,
+    ...(post.image ? { image: post.image.startsWith("http") ? post.image : `${SITE_URL}${post.image}` } : {}),
   };
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
@@ -136,8 +138,15 @@ function BlogPostContent({ post }: { post: { date: string; readingTime: string; 
 
         {post.image && (
           <div className="mt-8 overflow-hidden rounded-2xl">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={post.image} alt={post.title} className="w-full" loading="eager" />
+            <Image
+              src={post.image}
+              alt={post.title}
+              width={768}
+              height={432}
+              className="w-full"
+              priority
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
           </div>
         )}
 

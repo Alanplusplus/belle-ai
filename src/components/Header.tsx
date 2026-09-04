@@ -141,35 +141,42 @@ export function Header() {
             )}
           </div>
 
-          {status === "authenticated" && session.user ? (
-            <div className="relative ml-2" ref={userMenuRef}>
-              <button
-                onClick={() => setUserMenuOpen(!userMenuOpen)}
-                className="flex items-center gap-2 rounded-full border border-border px-2 py-1 transition hover:bg-muted"
-              >
-                {session.user.image ? (
-                  <img
-                    src={session.user.image}
-                    alt=""
-                    className="h-7 w-7 rounded-full"
-                    referrerPolicy="no-referrer"
-                  />
-                ) : (
-                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
-                    {(session.user.name?.[0] || "U").toUpperCase()}
-                  </div>
-                )}
-                <svg className="h-3 w-3 text-muted-foreground" viewBox="0 0 12 12" fill="currentColor">
-                  <path d="M2 4l4 4 4-4" />
-                </svg>
-              </button>
-              {userMenuOpen && (
-                <div className="absolute right-0 top-full mt-1 min-w-[240px] rounded-xl border border-border bg-card p-2 shadow-xl">
+          {/* User menu — shown for both authenticated and anonymous users */}
+          <div className="relative ml-2" ref={userMenuRef}>
+            <button
+              onClick={() => setUserMenuOpen(!userMenuOpen)}
+              className="flex items-center gap-2 rounded-full border border-border px-2 py-1 transition hover:bg-muted"
+            >
+              {status === "authenticated" && session?.user?.image ? (
+                <img
+                  src={session.user.image}
+                  alt=""
+                  className="h-7 w-7 rounded-full"
+                  referrerPolicy="no-referrer"
+                />
+              ) : status === "authenticated" && session?.user ? (
+                <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
+                  {(session.user.name?.[0] || "U").toUpperCase()}
+                </div>
+              ) : (
+                <div className="flex h-7 w-7 items-center justify-center rounded-full bg-muted">
+                  <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+                </div>
+              )}
+              <svg className="h-3 w-3 text-muted-foreground" viewBox="0 0 12 12" fill="currentColor">
+                <path d="M2 4l4 4 4-4" />
+              </svg>
+            </button>
+            {userMenuOpen && (
+              <div className="absolute right-0 top-full mt-1 min-w-[240px] rounded-xl border border-border bg-card p-2 shadow-xl">
+                {status === "authenticated" && session?.user && (
                   <div className="px-3 py-1.5 text-xs text-muted-foreground truncate">
                     {session.user.email}
                   </div>
+                )}
 
-                  {/* Quota display */}
+                {/* Quota display — only for authenticated users with loaded info */}
+                {status === "authenticated" && (
                   <div className="mx-1 my-1.5 overflow-hidden rounded-lg border border-border">
                     {userInfo?.subPlan ? (
                       <div className="flex items-center gap-2.5 bg-gradient-to-r from-primary/5 to-transparent px-3 py-2">
@@ -203,63 +210,68 @@ export function Header() {
                       </div>
                     )}
                   </div>
+                )}
 
-                  {/* Menu items */}
-                  <Link
-                    href="/try"
-                    className="flex items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-muted"
-                    onClick={() => setUserMenuOpen(false)}
-                  >
-                    <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
-                    {t("tryNow")}
-                  </Link>
-                  <Link
-                    href="/try#history"
-                    className="flex items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-muted"
-                    onClick={() => setUserMenuOpen(false)}
-                  >
-                    <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    {t("myHistory")}
-                  </Link>
-                  {userInfo?.subPlan ? (
-                    <button
-                      type="button"
-                      disabled={portalLoading}
-                      className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm text-primary hover:bg-muted disabled:opacity-50"
-                      onClick={openCustomerPortal}
-                    >
-                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
-                      {portalLoading ? "..." : t("manage")}
-                    </button>
-                  ) : (
-                    <Link
-                      href="/pricing"
-                      className="flex items-center gap-2 rounded-md px-3 py-2 text-sm text-primary hover:bg-muted"
-                      onClick={() => setUserMenuOpen(false)}
-                    >
-                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
-                      {t("manage")}
-                    </Link>
-                  )}
-                  <div className="mx-1 my-1 border-t border-border" />
+                {/* Menu items — shown for all users */}
+                <Link
+                  href="/try"
+                  className="flex items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-muted"
+                  onClick={() => setUserMenuOpen(false)}
+                >
+                  <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
+                  {t("tryNow")}
+                </Link>
+                <Link
+                  href="/try#history"
+                  className="flex items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-muted"
+                  onClick={() => setUserMenuOpen(false)}
+                >
+                  <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  {t("myHistory")}
+                </Link>
+                <Link
+                  href="/referral"
+                  className="flex items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-muted"
+                  onClick={() => setUserMenuOpen(false)}
+                >
+                  <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z" /></svg>
+                  {t("inviteFriends")}
+                </Link>
+                {status === "authenticated" && userInfo?.subPlan ? (
                   <button
-                    onClick={() => { setUserMenuOpen(false); trackEvent("sign_out"); signOut(); }}
-                    className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm text-red-600 hover:bg-muted"
+                    type="button"
+                    disabled={portalLoading}
+                    className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm text-primary hover:bg-muted disabled:opacity-50"
+                    onClick={openCustomerPortal}
                   >
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" /></svg>
-                    {t("signOut")}
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
+                    {portalLoading ? "..." : t("manage")}
                   </button>
-                </div>
-              )}
-            </div>
-          ) : (
-            <Link
-              href="/try"
-              className="ml-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-4 py-2 text-sm font-medium text-white shadow-md shadow-primary/20 transition hover:shadow-lg hover:shadow-primary/30"
-            >
-              {t("tryNow")}
-            </Link>
-          )}
+                ) : (
+                  <Link
+                    href="/pricing"
+                    className="flex items-center gap-2 rounded-md px-3 py-2 text-sm text-primary hover:bg-muted"
+                    onClick={() => setUserMenuOpen(false)}
+                  >
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
+                    {t("pricing")}
+                  </Link>
+                )}
+                {status === "authenticated" && (
+                  <>
+                    <div className="mx-1 my-1 border-t border-border" />
+                    <button
+                      onClick={() => { setUserMenuOpen(false); trackEvent("sign_out"); signOut(); }}
+                      className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm text-red-600 hover:bg-muted"
+                    >
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" /></svg>
+                      {t("signOut")}
+                    </button>
+                  </>
+                )}
+              </div>
+            )}
+          </div>
         </nav>
 
         {/* Mobile hamburger */}
@@ -346,6 +358,34 @@ export function Header() {
             ))}
           </div>
 
+          {/* Mobile quick actions — shown for all users */}
+          <div className="mt-3 space-y-1 border-t border-border pt-3">
+            <Link
+              href="/try"
+              className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-primary hover:bg-muted"
+              onClick={() => setMobileOpen(false)}
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
+              {t("tryNow")}
+            </Link>
+            <Link
+              href="/try#history"
+              className="flex items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-muted"
+              onClick={() => setMobileOpen(false)}
+            >
+              <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              {t("myHistory")}
+            </Link>
+            <Link
+              href="/referral"
+              className="flex items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-muted"
+              onClick={() => setMobileOpen(false)}
+            >
+              <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z" /></svg>
+              {t("inviteFriends")}
+            </Link>
+          </div>
+
           {status === "authenticated" && session?.user ? (
             <div className="mt-3 flex items-center gap-3 rounded-xl border border-border bg-muted/50 p-3">
               {session.user.image ? (
@@ -366,15 +406,7 @@ export function Header() {
                 {t("signOut")}
               </button>
             </div>
-          ) : (
-            <Link
-              href="/try"
-              className="mt-3 block w-full rounded-full bg-gradient-to-r from-primary to-primary-dark py-2.5 text-center text-sm font-medium text-white shadow-md shadow-primary/20"
-              onClick={() => setMobileOpen(false)}
-            >
-              {t("tryNow")}
-            </Link>
-          )}
+          ) : null}
         </div>
       )}
     </header>

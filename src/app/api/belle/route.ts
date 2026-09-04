@@ -147,6 +147,32 @@ export async function POST(req: NextRequest) {
         return NextResponse.json(data);
       }
 
+      case "referral-code": {
+        if (googleId) {
+          const data = await proxyGet(`/common/v1/web/referral-code?google_user_id=${googleId}`);
+          return NextResponse.json(data);
+        }
+        const data = await proxyGet(`/common/v1/web/referral-code?fingerprint=${fingerprint}`);
+        return NextResponse.json(data);
+      }
+
+      case "referral-apply": {
+        const data = await proxyPost("/common/v1/web/referral-apply", {
+          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
+          referral_code: params.referral_code,
+        });
+        return NextResponse.json(data);
+      }
+
+      case "referral-stats": {
+        if (googleId) {
+          const data = await proxyGet(`/common/v1/web/referral-stats?google_user_id=${googleId}`);
+          return NextResponse.json(data);
+        }
+        const data = await proxyGet(`/common/v1/web/referral-stats?fingerprint=${fingerprint}`);
+        return NextResponse.json(data);
+      }
+
       default:
         return NextResponse.json({ code: 400, message: "Unknown action" }, { status: 400 });
     }

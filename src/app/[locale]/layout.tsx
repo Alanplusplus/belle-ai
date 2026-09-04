@@ -4,11 +4,12 @@ import { notFound } from "next/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { Inter, Playfair_Display } from "next/font/google";
 import { Header } from "@/components/Header";
+import { ReferralBanner } from "@/components/ReferralBanner";
 import { Footer } from "@/components/Footer";
 import { AuthProvider } from "@/components/AuthProvider";
 import { GoogleOneTap } from "@/components/GoogleOneTap";
 import { PageViewTracker } from "@/components/PageViewTracker";
-import { buildAlternates } from "@/lib/seo";
+import { buildAlternates, ogLocale } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
 import Script from "next/script";
 import type { Metadata } from "next";
@@ -52,11 +53,15 @@ export async function generateMetadata({
       apple: "/apple-touch-icon.png",
     },
     alternates: buildAlternates(locale, ""),
+    other: {
+      "application/rss+xml": `${SITE_URL}/feed.xml`,
+    },
+    manifest: "/manifest.json",
     openGraph: {
       title: meta.homeTitle,
       description: meta.homeDescription,
       siteName: meta.siteName,
-      locale,
+      locale: ogLocale(locale),
       type: "website",
       url: buildAlternates(locale, "").canonical,
       images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630 }],
@@ -99,10 +104,10 @@ export default async function LocaleLayout({
     url: SITE_URL,
     logo: `${SITE_URL}/logo-full.webp`,
     sameAs: [
-      "https://www.instagram.com/belleai.app",
-      "https://x.com/BelleAI",
-      "https://www.youtube.com/@BelleAI",
-      "https://www.pinterest.com/belleaiapp",
+      "https://www.instagram.com/belleaicoloranalysis",
+      "https://x.com/BelleAIcolor",
+      "https://www.youtube.com/@coloranalysisbelleai",
+      "https://www.pinterest.com/coloranalysisbelleai",
       "https://medium.com/@belleai",
     ],
     description: meta?.homeDescription ?? "AI-powered personal color analysis app.",
@@ -143,6 +148,7 @@ export default async function LocaleLayout({
           <GoogleOneTap />
           <PageViewTracker />
           <NextIntlClientProvider messages={messages}>
+            <ReferralBanner />
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />

@@ -42,7 +42,9 @@
     "styleTitle": "Bài test tính cách phong cách – Khám phá Style DNA của bạn",
     "styleDescription": "AI phân tích đặc điểm để xác định archetype tính cách phong cách độc đáo của bạn. Nhận hồ sơ phong cách có thể chia sẻ với gợi ý cá nhân hóa.",
     "celebrityTitle": "Ghép phong cách người nổi tiếng – Tìm bản song sinh nổi tiếng của bạn",
-    "celebrityDescription": "AI ghép đặc điểm và màu sắc của bạn với người nổi tiếng có tiềm năng phong cách tương tự. Nhận bài học phong cách và gợi ý 'copy look này'."
+    "celebrityDescription": "AI ghép đặc điểm và màu sắc của bạn với người nổi tiếng có tiềm năng phong cách tương tự. Nhận bài học phong cách và gợi ý 'copy look này'.",
+    "referralTitle": "Mời bạn bè và nhận tín dụng miễn phí",
+    "referralDescription": "Chia sẻ Belle AI với bạn bè. Khi họ thử phân tích màu sắc, cả hai đều nhận tín dụng miễn phí."
   },
   "nav": {
     "home": "Trang chủ",
@@ -73,7 +75,8 @@
     "credits": "Tín dụng",
     "activeUntil": "Đang hoạt động",
     "noPlan": "Chưa có gói",
-    "manage": "Quản lý"
+    "manage": "Quản lý",
+    "inviteFriends": "Mời bạn bè"
   },
   "home": {
     "heroTitle": "Phân Tích Màu AI:",
@@ -526,6 +529,9 @@
     "buy5Credits": "5 lượt – $0.99 (Lần mua đầu)",
     "buy12Credits": "12 lượt – $5.99",
     "viewAllPlans": "Xem tất cả gói →",
+    "inviteEarn": "Mời bạn bè, nhận tín dụng miễn phí →",
+    "inviteEarnFree": "Mời bạn bè để nhận tín dụng miễn phí →",
+    "noQuotaOr": "hoặc",
     "processing": "Đang xử lý…",
     "exampleTitle": "Xem trước kết quả",
     "exampleBefore": "Ảnh của bạn",
@@ -1920,6 +1926,25 @@
     "ai-vs-professional-color-analysis": "AI vs phân tích màu chuyên nghiệp",
     "science-behind-personal-color-analysis": "Khoa học đằng sau Personal Color Analysis",
     "why-color-analysis-quizzes-are-wrong": "Vì sao quiz Color Analysis sai"
+  },
+  "referral": {
+    "title": "Mời bạn bè, nhận tín dụng",
+    "subtitle": "Chia sẻ Belle AI với bạn bè và cả hai đều nhận tín dụng phân tích miễn phí",
+    "yourLink": "Liên kết mời của bạn",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép!",
+    "codeLabel": "Mã của bạn",
+    "shareText": "Dùng thử Belle AI miễn phí để phân tích màu sắc! Nhận gợi ý trang điểm, tóc và phong cách cá nhân bằng AI.",
+    "howItWorks": "Cách hoạt động",
+    "step1": "Chia sẻ liên kết với bạn bè",
+    "reward1": "+1 tín dụng khi họ đăng ký",
+    "step2": "Bạn bè hoàn thành phân tích đầu tiên",
+    "reward2": "+2 tín dụng cho bạn, +2 tín dụng cho bạn bè",
+    "step3": "Bạn bè thực hiện mua hàng đầu tiên",
+    "reward3": "+3 tín dụng cho bạn",
+    "friendsInvited": "Bạn bè đã mời",
+    "creditsEarned": "Tín dụng đã nhận",
+    "bannerText": "Bạn bè đã mời bạn! Hoàn thành phân tích đầu tiên và cả hai đều nhận 2 tín dụng miễn phí"
   },
   "about": {
     "title": "Về Belle AI",
