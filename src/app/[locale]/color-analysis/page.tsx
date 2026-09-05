@@ -73,8 +73,8 @@ export default async function ColorAnalysisPillarPage({
       name: "Belle AI",
       logo: { "@type": "ImageObject", url: `${SITE_URL}/logo-full.webp` },
     },
-    datePublished: "2026-06-01",
-    dateModified: new Date().toISOString().split("T")[0],
+    datePublished: "2026-06-01T00:00:00+00:00",
+    dateModified: new Date().toISOString(),
     mainEntityOfPage: `${SITE_URL}/color-analysis`,
   };
 

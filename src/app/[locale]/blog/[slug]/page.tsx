@@ -39,7 +39,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.description,
       type: "article",
-      publishedTime: post.date,
+      publishedTime: `${post.date}T00:00:00+00:00`,
       ...(post.image ? { images: [{ url: post.image }] } : {}),
     },
   };
@@ -59,8 +59,8 @@ export default async function BlogPostPage({
     "@type": "Article",
     headline: post.title,
     description: post.description,
-    datePublished: post.date,
-    dateModified: post.date,
+    datePublished: `${post.date}T00:00:00+00:00`,
+    dateModified: `${post.date}T00:00:00+00:00`,
     author: {
       "@type": "Organization",
       name: "Belle AI",
