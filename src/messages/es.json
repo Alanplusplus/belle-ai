@@ -145,7 +145,32 @@
     "faq5Q": "¿Qué aprenderé de mi análisis de color?",
     "faq5A": "Descubrirás tu tipo de color estacional (p. ej., Otoño Suave, Invierno Brillante), obtendrás una paleta personalizada de tus colores más favorecedores, sabrás qué colores evitar y recibirás recomendaciones específicas para tonos de maquillaje, colores de ropa, color de cabello y metales de joyería.",
     "faq6Q": "¿En qué se diferencia de una consulta presencial?",
-    "faq6A": "Una consulta presencial con un colorista profesional suele costar entre 200 y 500 $ y dura 1-2 horas. Nuestro análisis con IA ofrece resultados instantáneos basados en los mismos principios de la ciencia del color. Aunque el draping profesional sigue siendo el estándar de oro para casos complejos, el análisis con IA ofrece resultados precisos para la mayoría de las personas y es un excelente punto de partida."
+    "faq6A": "Una consulta presencial con un colorista profesional suele costar entre 200 y 500 $ y dura 1-2 horas. Nuestro análisis con IA ofrece resultados instantáneos basados en los mismos principios de la ciencia del color. Aunque el draping profesional sigue siendo el estándar de oro para casos complejos, el análisis con IA ofrece resultados precisos para la mayoría de las personas y es un excelente punto de partida.",
+    "statsAnalysisTypes": "11 tipos de análisis",
+    "statsSeasonSystem": "Sistema de 12 estaciones",
+    "statsLanguages": "16 idiomas",
+    "statsSpeed": "Resultados en 60s",
+    "resultsTitle": "Mira los resultados",
+    "resultsSubtitle": "Sube una selfie y obtén un informe de análisis de calidad revista en segundos",
+    "resultsBefore": "Antes",
+    "resultsAfter": "Informe IA",
+    "resultsColorLabel": "Análisis de color personal",
+    "resultsMakeupLabel": "Análisis de maquillaje",
+    "resultsFaceLabel": "Forma del rostro y peinado",
+    "testimonialsTitle": "Amado por entusiastas de la belleza en todo el mundo",
+    "testimonialsSubtitle": "Descubre lo que dicen nuestros usuarios sobre su experiencia de análisis de color",
+    "testimonial1": "Gasté $300 en una consulta de color presencial. Belle AI me dio el mismo resultado de Otoño Suave con un desglose de paleta aún más detallado.",
+    "testimonial2": "Como maquilladora, lo recomiendo a todas mis clientas antes de su primera sesión. El análisis de 12 estaciones es muy preciso.",
+    "testimonial3": "¡Por fin descubrí que soy Verano Suave! Con razón la ropa de tonos cálidos nunca me quedaba bien.",
+    "testimonial4": "Era escéptica sobre el análisis de color con IA para pieles oscuras, pero acertó perfectamente con mi subtono.",
+    "testimonial5": "El análisis de forma facial ayudó a tres de mis clientas a encontrar peinados que les encantan.",
+    "testimonial6": "La calidad del informe parece sacada de una revista de moda. Uso las capturas de la paleta como referencia.",
+    "testimonialRole1": "Bloguera de belleza",
+    "testimonialRole2": "Maquilladora",
+    "testimonialRole3": "Estudiante de moda",
+    "testimonialRole4": "Creadora de contenido",
+    "testimonialRole5": "Estilista",
+    "testimonialRole6": "Fotógrafa"
   },
   "features": {
     "learnMore": "Saber más",
@@ -259,7 +284,16 @@
     "at_celebrity_match": "Coincidencia de celebridad",
     "at_glow_up_report": "Informe Glow-Up (Premium)",
     "appStoreNote": "También disponible en la",
-    "appStoreLink": "App Store"
+    "appStoreLink": "App Store",
+    "guaranteeTitle": "Prueba con confianza",
+    "guaranteeFreeTitle": "Comienza gratis",
+    "guaranteeFreeDesc": "2 análisis gratuitos, sin pago requerido",
+    "guaranteeNoAccountTitle": "Sin cuenta necesaria",
+    "guaranteeNoAccountDesc": "Empieza al instante, regístrate después",
+    "guaranteePrivacyTitle": "Privacidad primero",
+    "guaranteePrivacyDesc": "Fotos procesadas de forma segura, nunca almacenadas",
+    "guaranteeCancelTitle": "Cancela cuando quieras",
+    "guaranteeCancelDesc": "Sin contratos, cancela suscripciones en cualquier momento"
   },
   "welcomeOffer": {
     "title": "Bienvenida a Belle AI",
@@ -577,7 +611,8 @@
     "tryAnother": "Prueba otro análisis",
     "tryAnotherDesc": "Usa la misma foto para explorar más",
     "notifyTitle": "Tu informe está listo ✨",
-    "notifyBody": "Tu informe de análisis ha sido generado. Haz clic para ver los resultados."
+    "notifyBody": "Tu informe de análisis ha sido generado. Haz clic para ver los resultados.",
+    "uploadTrust": "Tu foto se procesa de forma segura y nunca se almacena en nuestros servidores"
   },
   "footer": {
     "tagline": "Análisis de belleza personal con IA",

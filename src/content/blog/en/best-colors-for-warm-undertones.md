@@ -1,6 +1,6 @@
 ---
-title: "Best Colors for Warm Undertones: Your Complete Style Guide (2026)"
-description: "15 best shades for warm undertones — in clothing, makeup & hair. Curated picks for golden, peachy, and olive skin. Try our free AI color tool."
+title: "15 Best Colors for Warm Undertones (2026)"
+description: "The best shades for warm undertones in clothing, makeup & hair. Curated picks for golden, peachy and olive skin. Free AI color tool included."
 date: "2026-07-28"
 tags: ["warm undertone", "warm skin tone", "color palette", "style guide", "fashion"]
 image: "/images/blog/best-colors-for-warm-undertones.webp"

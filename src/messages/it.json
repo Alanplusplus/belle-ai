@@ -145,7 +145,32 @@
     "faq5Q": "Cosa scoprirò dalla mia analisi del colore?",
     "faq5A": "Scoprirai la tua tipologia cromatica stagionale (es. Autunno Soft, Inverno Bright), otterrai una palette personalizzata dei tuoi colori più valorizzanti, imparerai quali colori evitare e riceverai raccomandazioni specifiche per tonalità di trucco, colori dell'abbigliamento, colore dei capelli e metalli dei gioielli.",
     "faq6Q": "In cosa differisce da una consulenza in presenza?",
-    "faq6A": "Una consulenza in presenza con un colorista professionista costa in genere $200–$500 e richiede 1–2 ore. La nostra analisi con IA fornisce risultati istantanei basati sugli stessi principi della scienza del colore. Sebbene il draping professionale resti lo standard d'oro per i casi complessi, l'analisi con IA offre risultati accurati per la maggior parte delle persone ed è un eccellente punto di partenza."
+    "faq6A": "Una consulenza in presenza con un colorista professionista costa in genere $200–$500 e richiede 1–2 ore. La nostra analisi con IA fornisce risultati istantanei basati sugli stessi principi della scienza del colore. Sebbene il draping professionale resti lo standard d'oro per i casi complessi, l'analisi con IA offre risultati accurati per la maggior parte delle persone ed è un eccellente punto di partenza.",
+    "statsAnalysisTypes": "11 tipi di analisi",
+    "statsSeasonSystem": "Sistema 12 stagioni",
+    "statsLanguages": "16 lingue",
+    "statsSpeed": "Risultati in 60s",
+    "resultsTitle": "Guarda i risultati",
+    "resultsSubtitle": "Carica un selfie e ottieni un rapporto di qualità magazine in pochi secondi",
+    "resultsBefore": "Prima",
+    "resultsAfter": "Report IA",
+    "resultsColorLabel": "Analisi del colore personale",
+    "resultsMakeupLabel": "Analisi trucco",
+    "resultsFaceLabel": "Forma del viso e acconciatura",
+    "testimonialsTitle": "Amato dalle appassionate di bellezza in tutto il mondo",
+    "testimonialsSubtitle": "Scopri cosa dicono le nostre utenti",
+    "testimonial1": "Ho speso 300€ per una consulenza colore dal vivo. Belle AI mi ha dato lo stesso risultato Autunno Morbido con un'analisi ancora più dettagliata.",
+    "testimonial2": "Come truccatrice, lo raccomando a tutte le mie clienti. L'analisi 12 stagioni è precisa.",
+    "testimonial3": "Finalmente ho scoperto che sono Estate Morbida! Ecco perché i vestiti dai toni caldi non mi stavano mai bene.",
+    "testimonial4": "Ero scettica sull'analisi del colore IA per le pelli scure, ma ha identificato perfettamente il mio sottotono.",
+    "testimonial5": "L'analisi della forma del viso ha aiutato tre clienti a trovare acconciature che adorano.",
+    "testimonial6": "La qualità del report sembra uscita da una rivista di moda. Uso gli screenshot della palette come riferimento.",
+    "testimonialRole1": "Beauty Blogger",
+    "testimonialRole2": "Truccatrice",
+    "testimonialRole3": "Studentessa di moda",
+    "testimonialRole4": "Content Creator",
+    "testimonialRole5": "Stilista",
+    "testimonialRole6": "Fotografa"
   },
   "features": {
     "learnMore": "Scopri di Più",
@@ -259,7 +284,16 @@
     "at_celebrity_match": "Celebrity match",
     "at_glow_up_report": "Report Glow-Up (Premium)",
     "appStoreNote": "Disponibile anche su",
-    "appStoreLink": "App Store"
+    "appStoreLink": "App Store",
+    "guaranteeTitle": "Prova con fiducia",
+    "guaranteeFreeTitle": "Inizia gratis",
+    "guaranteeFreeDesc": "2 analisi gratuite, nessun pagamento richiesto",
+    "guaranteeNoAccountTitle": "Nessun account necessario",
+    "guaranteeNoAccountDesc": "Inizia subito, registrati dopo",
+    "guaranteePrivacyTitle": "Privacy prima di tutto",
+    "guaranteePrivacyDesc": "Foto elaborate in sicurezza, mai archiviate",
+    "guaranteeCancelTitle": "Cancella quando vuoi",
+    "guaranteeCancelDesc": "Nessun contratto, cancella in qualsiasi momento"
   },
   "welcomeOffer": {
     "title": "Benvenuta su Belle AI",
@@ -577,7 +611,8 @@
     "tryAnother": "Prova un'altra analisi",
     "tryAnotherDesc": "Usa la stessa foto per scoprire di più",
     "notifyTitle": "Il tuo report è pronto ✨",
-    "notifyBody": "Il tuo report di analisi è stato generato. Clicca per vedere i risultati."
+    "notifyBody": "Il tuo report di analisi è stato generato. Clicca per vedere i risultati.",
+    "uploadTrust": "La tua foto viene elaborata in modo sicuro e non viene mai archiviata sui nostri server"
   },
   "footer": {
     "tagline": "Analisi di bellezza personale con IA",

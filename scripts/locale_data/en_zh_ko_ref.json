@@ -1,0 +1,4124 @@
+[
+  {
+    "en": "AI tools may have bias if not trained on diverse skin tones (Belle AI is trained for all skin tones)",
+    "zh": "若未针对多元肤色训练，AI 工具可能存在偏差（Belle AI 已针对所有肤色训练）",
+    "ko": "AI 도구는 다양한 피부톤으로 학습되지 않으면 편향이 있을 수 있습니다 (Belle AI는 모든 피부톤용으로 학습됨)",
+    "path": "ad.dark-skin.ch4"
+  },
+  {
+    "en": "Absolutely. Color analysis works for all skin tones. The 12-season system categorizes people based on undertone (warm vs. cool), depth (light vs. dark), and chroma (clear vs. muted) — these dimensions apply equally to every skin tone. The key is finding a method (like AI analysis) that has been calibrated for diverse complexions.",
+    "zh": "当然有效。色彩分析适用于所有肤色。十二季型体系根据底调（暖/冷）、深度（浅/深）和色度（清晰/柔和）分类 — 这些维度同样适用于每种肤色。关键是找到已针对多元肤色校准的方法（如 AI 分析）。",
+    "ko": "물론입니다. 컬러 분석은 모든 피부톤에 적용됩니다. 12시즌 시스템은 언더톤(웜/쿨), 깊이(밝음/어두움), 채도(뮤트/클리어)로 분류하며 — 이 차원들은 모든 피부톤에 동일하게 적용됩니다. 핵심은 다양한 피부톤에 보정된 방법(AI 분석 등)을 찾는 것입니다.",
+    "path": "ad.dark-skin.faq0A"
+  },
+  {
+    "en": "Accessories: Watch metal should match your undertone — silver/steel for cool, gold/bronze for warm",
+    "zh": "配饰：表带金属应匹配底调 — 冷调用银/钢，暖调用金/青铜",
+    "ko": "액세서리: 시계 금속은 언더톤에 맞추세요 — 쿨톤=실버/스틸, 웜톤=골드/브론즈",
+    "path": "ad.men.wt4"
+  },
+  {
+    "en": "Add 2-3 accent colors from your season palette for tops, accessories, and outerwear",
+    "zh": "从季型色盘加 2-3 点缀色用于上装、配饰和外衣",
+    "ko": "시즌 팔레트에서 2~3개 포인트 컬러를 상의·액세서리·아우터에 추가하세요",
+    "path": "ad.beginners.wt2"
+  },
+  {
+    "en": "Add pops of peach, coral, or aqua for accent pieces",
+    "zh": "用蜜桃色、珊瑚色或水蓝色点缀单品增添亮点",
+    "ko": "피치, 코랄, 아쿠아를 포인트 아이템으로 더하세요",
+    "path": "sd.light-spring.ft2"
+  },
+  {
+    "en": "All 12 seasons are possible for medium skin — undertone and chroma are the differentiators",
+    "zh": "十二季型皆可能 — 底调和色度是区分因素",
+    "ko": "12시즌 모두 가능 — 언더톤과 채도가 구분 요소입니다",
+    "path": "ad.medium-skin.cs0"
+  },
+  {
+    "en": "Animal prints and warm geometric patterns suit your bold warmth",
+    "zh": "动物纹与暖色几何图案适合你的大胆暖感",
+    "ko": "애니멀 프린트와 웜톤 기하학 패턴이 대담한 웜스에 어울립니다",
+    "path": "sd.warm-autumn.ft4"
+  },
+  {
+    "en": "Any 'True' season (True Spring, True Summer, True Autumn, True Winter)",
+    "zh": "任何「真」季型（真春、真夏、真秋、真冬）",
+    "ko": "모든 '트루' 시즌 (트루 스프링, 트루 서머, 트루 오텀, 트루 윈터)",
+    "path": "ad.medium-skin.cs4"
+  },
+  {
+    "en": "Aquamarine",
+    "zh": "海蓝色",
+    "ko": "아쿠아마린",
+    "path": "sd.light-spring.bc4"
+  },
+  {
+    "en": "Are Asian people always warm-toned?",
+    "zh": "亚洲人一定偏暖调吗？",
+    "ko": "아시아인은 항상 웜톤인가요?",
+    "path": "ad.asian-skin.faq0Q"
+  },
+  {
+    "en": "Ash blonde",
+    "zh": "灰金色",
+    "ko": "애쉬 블론드",
+    "path": "sd.light-spring.ha1"
+  },
+  {
+    "en": "Ash brunette",
+    "zh": "灰棕色",
+    "ko": "애쉬 브루넷",
+    "path": "sd.cool-summer.hr1"
+  },
+  {
+    "en": "Ash tones",
+    "zh": "灰调发色",
+    "ko": "애쉬 톤",
+    "path": "sd.warm-spring.ha0"
+  },
+  {
+    "en": "Ashy tones",
+    "zh": "灰调发色",
+    "ko": "애쉬 톤",
+    "path": "sd.bright-spring.ha0"
+  },
+  {
+    "en": "Asian Skin Tones",
+    "zh": "亚洲肤色",
+    "ko": "아시아인 피부톤",
+    "path": "ad.asian-skin.name"
+  },
+  {
+    "en": "Asian skin tones span a very wide range — grouping all 'Asian skin' together oversimplifies",
+    "zh": "亚洲肤色范围极广 — 将所有「亚洲肤色」归为一类过于简化",
+    "ko": "아시아인 피부톤 범위가 매우 넓어 '아시아인 피부'로 일괄 분류하면 지나치게 단순화됩니다",
+    "path": "ad.asian-skin.ch0"
+  },
+  {
+    "en": "Asian skin tones span a wide range — from fair with cool pink undertones to deep with warm golden undertones. Personal color analysis is extremely popular in East Asia (especially Korea and Japan, where it's called パーソナルカラー and 퍼스널컬러), and for good reason: the right colors can dramatically transform how healthy and vibrant your skin looks.",
+    "zh": "亚洲肤色范围极广 — 从冷粉调的白皙到暖金调的深色。个人色彩分析在东亚极为流行（尤其韩国和日本，当地称为 パーソナルカラー 和 퍼스널컬러），原因很充分：选对颜色能显著改变皮肤看起来有多健康、有活力。",
+    "ko": "아시아인 피부톤은 매우 넓은 범위를 아우릅니다 — 쿨톤 핑크 언더톤의 밝은 피부부터 웜톤 골드 언더톤의 깊은 피부까지. 퍼스널 컬러 분석은 동아시아(특히 한국과 일본, 퍼스널컬러/パーソナルカラー)에서 매우 인기 있으며, 올바른 색은 피부가 얼마나 건강하고 생기 있어 보이는지를 극적으로 바꿉니다.",
+    "path": "ad.asian-skin.heroDesc"
+  },
+  {
+    "en": "Auburn",
+    "zh": "赤褐色",
+    "ko": "오번",
+    "path": "sd.warm-spring.hr2"
+  },
+  {
+    "en": "Avoid anything dusty, muted, or earthy — it dulls your natural brightness",
+    "zh": "避免任何灰蒙、柔和或大地色 — 会削弱你的天然亮度",
+    "ko": "더스티, 어스톤은 피하세요 — 자연 밝기를 탁하게 만듭니다",
+    "path": "sd.bright-winter.ft3"
+  },
+  {
+    "en": "Avoid anything neon, vivid, or high-contrast",
+    "zh": "避免任何荧光、鲜艳或高对比色彩",
+    "ko": "네온, 선명한 색, 고대비는 피하세요",
+    "path": "sd.soft-summer.ft3"
+  },
+  {
+    "en": "Avoid anything vivid or high-contrast — your beauty is in subtlety",
+    "zh": "避免任何鲜艳或高对比色彩 — 你的美在于细腻",
+    "ko": "선명하거나 고대비 색은 피하세요 — 아름다움은 섬세함에 있습니다",
+    "path": "sd.soft-autumn.ft3"
+  },
+  {
+    "en": "Avoid harsh contrasts — keep your outfit palette light and harmonious",
+    "zh": "避免强烈对比 — 保持整体色调浅淡和谐",
+    "ko": "강한 대비는 피하고 — 팔레트를 밝고 조화롭게 유지하세요",
+    "path": "sd.light-summer.ft2"
+  },
+  {
+    "en": "Avoid heavy dark colors that create too much contrast with your light coloring",
+    "zh": "避免过深的颜色，以免与浅淡肤色形成过大对比",
+    "ko": "밝은 톤과 대비가 너무 강한 어두운 색은 피하세요",
+    "path": "sd.light-spring.ft3"
+  },
+  {
+    "en": "Avoid high-saturation colors that overpower your naturally muted coloring",
+    "zh": "避免高饱和色压过天然柔和色调",
+    "ko": "채도가 높은 색은 자연스럽게 뮤트한 컬러링을 압도하므로 피하세요",
+    "path": "ad.olive-skin.wt3"
+  },
+  {
+    "en": "Avoid very dark or heavy makeup that creates too much contrast with your light skin",
+    "zh": "避免极深或厚重彩妆与浅肤形成过大对比",
+    "ko": "밝은 피부와 대비가 너무 강한 매우 어두운/두꺼운 메이크업은 피하세요",
+    "path": "ad.fair-skin.mt4"
+  },
+  {
+    "en": "Avoid very muted or washed-out colors that may appear chalky against your skin",
+    "zh": "避免过于柔和或褪色的颜色，可能在皮肤上显得粉感",
+    "ko": "피부에 하얗게 뜨는 매우 뮤트하거나 빛바랜 색은 피하세요",
+    "path": "ad.dark-skin.wt4"
+  },
+  {
+    "en": "Avoid: Very cool-pink or very warm-orange products that fight against your neutral-green undertone",
+    "zh": "避免：极冷粉或极暖橙产品，会与中性绿底调冲突",
+    "ko": "피하기: 매우 쿨톤 핑크나 매우 웜톤 오렌지 제품 — 중성~녹기 언더톤과 맞지 않습니다",
+    "path": "ad.olive-skin.mt4"
+  },
+  {
+    "en": "Avoid: Very orange-toned foundations that can make skin appear sallow",
+    "zh": "避免：过橙调粉底可能使皮肤显黄",
+    "ko": "피하기: 피부를 누렇게 보이게 하는 오렌지톤 파운데이션",
+    "path": "ad.asian-skin.mt4"
+  },
+  {
+    "en": "Baby Blue",
+    "zh": "婴儿蓝",
+    "ko": "베이비 블루",
+    "path": "sd.deep-autumn.ac2"
+  },
+  {
+    "en": "Because the green/gray cast of olive skin doesn't fit the standard warm (golden) vs. cool (pink) framework that most color analysis systems use. Both warm and cool colors can look slightly off, and vein/jewelry tests give mixed signals. AI color analysis with photo input tends to be more accurate than quiz-based methods for olive skin.",
+    "zh": "因为橄榄肤色的绿/灰调不符合多数色彩体系使用的标准暖（金）与冷（粉）框架。暖冷色都可能略微不对，血管/首饰测试信号混杂。带照片的 AI 色彩分析往往比测试法对橄榄肤色更准确。",
+    "ko": "올리브 피부의 녹/회색 기가 대부분의 컬러 분석 시스템이 사용하는 표준 웜(골드)과 쿨(핑크) 프레임워크에 맞지 않기 때문입니다. 웜/쿨 색 모두 약간 어색해 보일 수 있고, 혈관/액세서리 테스트는 엇갈린 신호를 줍니다. 사진 기반 AI 컬러 분석이 퀴즈보다 올리브 피부에서 더 정확한 경우가 많습니다.",
+    "path": "ad.olive-skin.faq1A"
+  },
+  {
+    "en": "Beginners",
+    "zh": "初学者",
+    "ko": "초보자",
+    "path": "ad.beginners.name"
+  },
+  {
+    "en": "Beige",
+    "zh": "米色",
+    "ko": "베이지",
+    "path": "sd.bright-spring.ac2"
+  },
+  {
+    "en": "Beige (if cool-toned)",
+    "zh": "米色（若偏冷调）",
+    "ko": "베이지 (쿨톤 타입)",
+    "path": "ad.men.ac2"
+  },
+  {
+    "en": "Berry",
+    "zh": "浆果",
+    "ko": "베리",
+    "path": "ad.beginners.bc7"
+  },
+  {
+    "en": "Black",
+    "zh": "黑色",
+    "ko": "블랙",
+    "path": "sd.light-spring.ac0"
+  },
+  {
+    "en": "Black and bright white provide the perfect high-contrast base",
+    "zh": "黑色与亮白色提供完美的高对比基础",
+    "ko": "블랙과 브라이트 화이트가 완벽한 고대비 베이스입니다",
+    "path": "sd.bright-winter.ft1"
+  },
+  {
+    "en": "Black and white are your ultimate power neutrals",
+    "zh": "黑色与白色是你的终极王牌中性色",
+    "ko": "블랙과 화이트가 궁극의 파워 뉴트럴입니다",
+    "path": "sd.cool-winter.ft1"
+  },
+  {
+    "en": "Blue-Gray",
+    "zh": "蓝灰色",
+    "ko": "블루 그레이",
+    "path": "sd.cool-summer.nc3"
+  },
+  {
+    "en": "Blue-black",
+    "zh": "蓝黑色",
+    "ko": "블루 블랙",
+    "path": "sd.light-spring.ha3"
+  },
+  {
+    "en": "Blush in deep berry, warm plum, or rich coral adds dimension without looking ashy",
+    "zh": "深浆果、暖梅或浓郁珊瑚色腮红能增添层次，不会显灰",
+    "ko": "딥 베리, 웜 플럼, 리치 코랄 블러셔가 입체감을 더하며 회색빛이 도지 않습니다",
+    "path": "ad.dark-skin.mt4"
+  },
+  {
+    "en": "Blush in your undertone family (pink for cool, peach for warm) is a safe first purchase",
+    "zh": "同底调系列的腮红（冷用粉、暖用蜜桃）是稳妥首购",
+    "ko": "언더톤 계열 블러셔(쿨=핑크, 웜=피치)가 안전한 첫 구매입니다",
+    "path": "ad.beginners.mt3"
+  },
+  {
+    "en": "Blush is essential — it adds life and dimension; choose pink (cool) or peach (warm) based on undertone",
+    "zh": "腮红必不可少 — 增添生气与层次；按底调选粉（冷）或蜜桃（暖）",
+    "ko": "블러셔는 필수 — 생기와 입체감을 더합니다; 언더톤에 따라 핑크(쿨) 또는 피치(웜)",
+    "path": "ad.fair-skin.mt1"
+  },
+  {
+    "en": "Blush: Coral and soft pink universally flatter; avoid orange if cool-toned",
+    "zh": "腮红：珊瑚和柔和粉普遍适合；冷调者避免橙色",
+    "ko": "블러셔: 코랄과 소프트 핑크는 보편적으로 잘 어울립니다; 쿨톤이면 오렌지는 피하세요",
+    "path": "ad.asian-skin.mt1"
+  },
+  {
+    "en": "Blush: Muted peach or dusty rose; avoid bright pink or orange which can clash with green undertones",
+    "zh": "腮红：柔和蜜桃或灰粉；避免亮粉或橙色，可能与绿色底调冲突",
+    "ko": "블러셔: 뮤트 피치나 더스티 로즈; 밝은 핑크나 오렌지는 녹기 언더톤과 충돌할 수 있습니다",
+    "path": "ad.olive-skin.mt3"
+  },
+  {
+    "en": "Blush: warm peach or apricot; avoid cool pink which can clash with warm skin",
+    "zh": "腮红：暖蜜桃或杏；避免冷粉与暖肤冲突",
+    "ko": "블러셔: 웜 피치 또는 살구; 쿨 핑크는 웜톤 피부와 충돌할 수 있습니다",
+    "path": "ad.redheads.mt3"
+  },
+  {
+    "en": "Bold accessories in gold and warm metals complement your intensity",
+    "zh": "金色与暖金属的大胆配饰能衬托你的强烈感",
+    "ko": "골드와 웜톤 메탈의 대담한 액세서리가 강렬함을 보완합니다",
+    "path": "sd.deep-autumn.ft4"
+  },
+  {
+    "en": "Bold lip colors (berry, deep red, fuchsia, warm brown) are stunning on dark skin",
+    "zh": "大胆唇色（浆果、深红、洋红、暖棕）在深肤色上格外惊艳",
+    "ko": "대담한 립 컬러(베리, 딥 레드, 푸시아, 웜 브라운)는 다크 스킨에 매우 잘 어울립니다",
+    "path": "ad.dark-skin.mt1"
+  },
+  {
+    "en": "Bold statement pieces and architectural accessories complete your look",
+    "zh": "大胆点睛单品与建筑感配饰完善整体造型",
+    "ko": "대담한 스테이트먼트 피스와 건축적 액세서리가 룩을 완성합니다",
+    "path": "sd.deep-winter.ft4"
+  },
+  {
+    "en": "Bold, saturated colors are your friend — they don't overpower your complexion",
+    "zh": "大胆、饱和的颜色是你的朋友 — 不会压过你的肤色",
+    "ko": "대담하고 채도 높은 색이 잘 어울립니다 — 피부를 압도하지 않습니다",
+    "path": "ad.dark-skin.wt1"
+  },
+  {
+    "en": "Both rich jewel tones and medium-depth colors complement medium skin well",
+    "zh": "浓郁宝石色和中等深度色都衬托中等肤色",
+    "ko": "풍부한 주얼 톤과 중간 깊이 색 모두 중간 피부를 잘 돋보이게 합니다",
+    "path": "ad.medium-skin.wt2"
+  },
+  {
+    "en": "Both very light and very dark colors can work, depending on contrast level",
+    "zh": "极浅和极深色都可能适合，取决于对比度",
+    "ko": "대비 레벨에 따라 매우 밝은 색과 어두운 색 모두 가능합니다",
+    "path": "ad.medium-skin.ch2"
+  },
+  {
+    "en": "Both warm and cool colors can look 'off' on olive skin if they're the wrong shade",
+    "zh": "暖色和冷色若色度不对，在橄榄肤色上都可能「不对」",
+    "ko": "웜톤과 쿨톤 색 모두 색조가 맞지 않으면 '어색하게' 보일 수 있습니다",
+    "path": "ad.olive-skin.ch2"
+  },
+  {
+    "en": "Bright Aqua",
+    "zh": "亮水蓝色",
+    "ko": "브라이트 아쿠아",
+    "path": "sd.bright-spring.bc8"
+  },
+  {
+    "en": "Bright Coral",
+    "zh": "亮珊瑚色",
+    "ko": "브라이트 코랄",
+    "path": "sd.bright-winter.bc7"
+  },
+  {
+    "en": "Bright Navy",
+    "zh": "亮海军蓝",
+    "ko": "브라이트 네이비",
+    "path": "sd.bright-spring.nc0"
+  },
+  {
+    "en": "Bright Orange",
+    "zh": "亮橙色",
+    "ko": "브라이트 오렌지",
+    "path": "sd.soft-summer.ac3"
+  },
+  {
+    "en": "Bright Red",
+    "zh": "亮红色",
+    "ko": "브라이트 레드",
+    "path": "sd.soft-summer.ac0"
+  },
+  {
+    "en": "Bright Spring",
+    "zh": "亮春型",
+    "ko": "브라이트 스프링",
+    "path": "sd.bright-spring.name"
+  },
+  {
+    "en": "Bright Spring — fair with warm undertones and high contrast (e.g., light skin + dark eyes)",
+    "zh": "亮春型 — 白皙、暖底调、高对比（如浅肤加深眼）",
+    "ko": "브라이트 스프링 — 밝고 웜톤, 고대비 (예: 밝은 피부 + 어두운 눈)",
+    "path": "ad.fair-skin.cs2"
+  },
+  {
+    "en": "Bright Spring — those with clear, warm coloring and bright eyes",
+    "zh": "亮春型 — 清晰暖调、明亮眼睛者",
+    "ko": "브라이트 스프링 — 선명한 웜톤 컬러링과 밝은 눈",
+    "path": "ad.asian-skin.cs2"
+  },
+  {
+    "en": "Bright Spring, also known as Clear Spring, sits at the intersection of Spring warmth and Winter clarity. These individuals have warm undertones combined with high contrast and clear, vivid coloring. Their most striking feature is the brightness and clarity of their eyes, which often appear jewel-toned. Bright Springs shine in saturated, clear, and warm-leaning colors with no muddiness.",
+    "zh": "亮春型，又称净春型，处于春季暖调与冬季清透的交汇处。这类人肤色偏暖，对比度高，整体色彩清晰鲜明。最引人注目的是眼睛的明亮与清透，常呈宝石色调。亮春型最适合饱和、清晰、略偏暖的颜色，避免任何浑浊感。",
+    "ko": "브라이트 스프링(클리어 스프링)은 스프링의 웜스와 윈터의 선명함이 만나는 지점입니다. 웜톤 언더톤에 높은 대비와 선명한 컬러링을 가지며, 가장 인상적인 것은 보석처럼 빛나는 눈입니다. 브라이트 스프링에게는 탁하지 않은 채도 높은 웜톤 계열 색이 가장 잘 어울립니다.",
+    "path": "sd.bright-spring.desc"
+  },
+  {
+    "en": "Bright Teal",
+    "zh": "亮蓝绿色",
+    "ko": "브라이트 틸",
+    "path": "sd.bright-winter.bc5"
+  },
+  {
+    "en": "Bright Turquoise",
+    "zh": "亮绿松石色",
+    "ko": "브라이트 터쿼이즈",
+    "path": "sd.bright-spring.bc5"
+  },
+  {
+    "en": "Bright White",
+    "zh": "亮白色",
+    "ko": "브라이트 화이트",
+    "path": "sd.bright-spring.nc2"
+  },
+  {
+    "en": "Bright Winter",
+    "zh": "亮冬型",
+    "ko": "브라이트 윈터",
+    "path": "sd.bright-winter.name"
+  },
+  {
+    "en": "Bright Winter, also known as Clear Winter, sits at the intersection of Winter clarity and Spring brightness. These individuals have cool-neutral undertones combined with very high contrast and strikingly clear, vivid coloring. Their eyes are often their most striking feature — bright, clear, and jewel-like. Bright Winters look best in bold, saturated, clear colors that match their dramatic intensity. This is the rarest of the 12-season types, representing only about 5% of people.",
+    "zh": "亮冬型，又称净冬型，处于冬季清透与春季明亮之间的交汇处。这类人肤色偏冷中性，对比度极高，整体色彩清晰鲜明、引人注目。眼睛通常是最引人注目的特征 — 明亮、清澈、如宝石般。亮冬型最适合大胆、饱和、清晰的颜色，与其戏剧感强度相匹配。这是十二季型中最罕见的类型，仅占约 5%。",
+    "ko": "브라이트 윈터(클리어 윈터)는 윈터의 선명함과 스프링의 밝기가 만나는 지점입니다. 쿨~중성 언더톤에 매우 높은 대비와 선명하고 뚜렷한 컬러링을 가집니다. 눈이 가장 인상적 — 밝고, 선명하며 보석 같습니다. 브라이트 윈터에게는 극적인 강도에 맞는 대담하고 채도 높은 클리어 색이 가장 잘 어울립니다. 12시즌 중 가장 희귀하며, 약 5%에 해당합니다.",
+    "path": "sd.bright-winter.desc"
+  },
+  {
+    "en": "Bright Yellow",
+    "zh": "亮黄色",
+    "ko": "브라이트 옐로",
+    "path": "sd.bright-spring.bc2"
+  },
+  {
+    "en": "Bright burgundy",
+    "zh": "亮酒红色",
+    "ko": "브라이트 버건디",
+    "path": "sd.bright-winter.hr2"
+  },
+  {
+    "en": "Bright copper",
+    "zh": "亮铜色",
+    "ko": "브라이트 코퍼",
+    "path": "sd.soft-summer.ha0"
+  },
+  {
+    "en": "Bright coral, warm fuchsia, vivid peach",
+    "zh": "亮珊瑚色、暖洋红、鲜蜜桃色",
+    "ko": "브라이트 코랄, 웜 푸시아, 선명한 피치",
+    "path": "sd.bright-spring.blush"
+  },
+  {
+    "en": "Bright coral, warm red, vivid pink, tangerine gloss",
+    "zh": "亮珊瑚色、暖红色、鲜粉色、橘色唇蜜",
+    "ko": "브라이트 코랄, 웜 레드, 선명한 핑크, 귤 글로스",
+    "path": "sd.bright-spring.lips"
+  },
+  {
+    "en": "Bright pink, vivid coral, clear fuchsia",
+    "zh": "亮粉色、鲜珊瑚色、清晰洋红色",
+    "ko": "브라이트 핑크, 선명한 코랄, 클리어 푸시아",
+    "path": "sd.bright-winter.blush"
+  },
+  {
+    "en": "Bright prints and graphic patterns showcase your high contrast",
+    "zh": "明亮印花与图形图案能突出高对比优势",
+    "ko": "밝은 프린트와 그래픽 패턴이 고대비를 돋보이게 합니다",
+    "path": "sd.bright-spring.ft2"
+  },
+  {
+    "en": "Bright red, hot pink, vivid berry, clear coral",
+    "zh": "亮红色、热粉色、鲜浆果色、清晰珊瑚色",
+    "ko": "브라이트 레드, 핫 핑크, 선명한 베리, 클리어 코랄",
+    "path": "sd.bright-winter.lips"
+  },
+  {
+    "en": "Bright silver, platinum, white gold, diamond, bright sapphire, vivid emerald",
+    "zh": "亮银色、铂金、白金、钻石、亮蓝宝石、鲜祖母绿",
+    "ko": "브라이트 실버, 플래티넘, 화이트 골드, 다이아몬드, 브라이트 사파이어, 선명한 에메랄드",
+    "path": "sd.bright-winter.jewelry"
+  },
+  {
+    "en": "Bright silver, vivid teal, electric blue, bright plum",
+    "zh": "亮银色、鲜蓝绿色、电光蓝、亮梅色",
+    "ko": "브라이트 실버, 선명한 틸, 일렉트릭 블루, 브라이트 플럼",
+    "path": "sd.bright-winter.eyes"
+  },
+  {
+    "en": "Bright teal, vivid gold, electric blue, warm plum",
+    "zh": "亮蓝绿色、鲜金色、电光蓝、暖梅色",
+    "ko": "브라이트 틸, 선명한 골드, 일렉트릭 블루, 웜 플럼",
+    "path": "sd.bright-spring.eyes"
+  },
+  {
+    "en": "Bright yellow gold, mixed metals, vivid gemstones (emerald, sapphire), turquoise",
+    "zh": "亮黄金、混搭金属、鲜艳宝石（祖母绿、蓝宝石）、绿松石",
+    "ko": "밝은 옐로 골드, 믹스 메탈, 선명한 보석(에메랄드, 사파이어), 터쿼이즈",
+    "path": "sd.bright-spring.jewelry"
+  },
+  {
+    "en": "Bronde (cool-toned)",
+    "zh": "冷调棕金色",
+    "ko": "브론드 (쿨톤)",
+    "path": "sd.soft-summer.hr4"
+  },
+  {
+    "en": "Bronze",
+    "zh": "青铜色",
+    "ko": "브론즈",
+    "path": "sd.warm-autumn.bc9"
+  },
+  {
+    "en": "Bronze, warm copper, golden brown, olive green",
+    "zh": "青铜色、暖铜色、金棕色、橄榄绿",
+    "ko": "브론즈, 웜 코퍼, 골든 브라운, 올리브 그린",
+    "path": "sd.warm-spring.eyes"
+  },
+  {
+    "en": "Brown (if cool-toned)",
+    "zh": "棕色（若偏冷调）",
+    "ko": "브라운 (쿨톤 타입)",
+    "path": "ad.men.ac3"
+  },
+  {
+    "en": "Brows: use warm brown or auburn brow products, never cool gray or taupe",
+    "zh": "眉：用暖棕或赤褐眉产品，勿用冷灰或灰褐",
+    "ko": "눈썹: 웜 브라운 또는 오번 브로우 제품, 쿨 그레이·토프는 피하세요",
+    "path": "ad.redheads.mt4"
+  },
+  {
+    "en": "Brushed silver, matte gold, rose gold, morganite, soft amethyst, pearls",
+    "zh": "磨砂银、哑光金、玫瑰金、摩根石、柔和紫水晶、珍珠",
+    "ko": "브러시 실버, 매트 골드, 로즈 골드, 모르가나이트, 소프트 자수정, 진주",
+    "path": "sd.soft-summer.jewelry"
+  },
+  {
+    "en": "Build gradually — replace items as they wear out with season-appropriate colors",
+    "zh": "逐步构建 — 物品穿旧时用季型合适颜色替换",
+    "ko": "점진적으로 구축 — 닳은 아이템을 시즌에 맞는 색으로 교체하세요",
+    "path": "ad.beginners.wt4"
+  },
+  {
+    "en": "Build your wardrobe around cool pastels and soft, light tones",
+    "zh": "以冷调浅淡色系和柔和浅色调构建衣橱",
+    "ko": "쿨톤 파스텔과 부드러운 밝은 톤을 옷장 중심으로 구성하세요",
+    "path": "sd.light-summer.ft0"
+  },
+  {
+    "en": "Burgundy",
+    "zh": "酒红色",
+    "ko": "버건디",
+    "path": "sd.light-spring.ac2"
+  },
+  {
+    "en": "Burnt Orange",
+    "zh": "焦橙色",
+    "ko": "번트 오렌지",
+    "path": "sd.warm-autumn.bc0"
+  },
+  {
+    "en": "Burnt Sienna",
+    "zh": "焦赭色",
+    "ko": "번트 시에나",
+    "path": "sd.deep-autumn.bc7"
+  },
+  {
+    "en": "Buttercup Yellow",
+    "zh": "毛茛黄",
+    "ko": "버터컵 옐로",
+    "path": "sd.light-spring.bc3"
+  },
+  {
+    "en": "Camel",
+    "zh": "驼色",
+    "ko": "카멜",
+    "path": "sd.light-spring.bc8"
+  },
+  {
+    "en": "Can fair-skinned people wear black?",
+    "zh": "白皙皮肤能穿黑色吗？",
+    "ko": "밝은 피부도 블랙을 입을 수 있나요?",
+    "path": "ad.fair-skin.faq0Q"
+  },
+  {
+    "en": "Can my color season change?",
+    "zh": "季型会变吗？",
+    "ko": "컬러 시즌이 바뀔 수 있나요?",
+    "path": "ad.beginners.faq3Q"
+  },
+  {
+    "en": "Can redheads wear red clothing?",
+    "zh": "红发能穿红衣服吗？",
+    "ko": "레드헤드도 빨간 옷을 입을 수 있나요?",
+    "path": "ad.redheads.faq0Q"
+  },
+  {
+    "en": "Caramel",
+    "zh": "焦糖色",
+    "ko": "카라멜",
+    "path": "sd.warm-spring.nc1"
+  },
+  {
+    "en": "Caramel highlights",
+    "zh": "焦糖色挑染",
+    "ko": "카라멜 하이라이트",
+    "path": "sd.cool-winter.ha3"
+  },
+  {
+    "en": "Casual: Your best neutrals (navy, charcoal, olive, brown) form a capsule wardrobe base",
+    "zh": "休闲：最佳中性色（海军蓝、炭灰、橄榄、棕）构成胶囊衣橱基础",
+    "ko": "캐주얼: 최적 뉴트럴(네이비, 차콜, 올리브, 브라운)이 캡슐 옷장의 기반이 됩니다",
+    "path": "ad.men.wt3"
+  },
+  {
+    "en": "Champagne, soft peach, warm taupe, light gold shimmer",
+    "zh": "香槟色、柔和蜜桃色、暖灰褐色、浅金色闪粉",
+    "ko": "샴페인, 소프트 피치, 웜 토프, 라이트 골드 시머",
+    "path": "sd.light-spring.eyes"
+  },
+  {
+    "en": "Charcoal",
+    "zh": "炭灰色",
+    "ko": "차콜",
+    "path": "sd.light-spring.ac3"
+  },
+  {
+    "en": "Chocolate Brown",
+    "zh": "巧克力棕",
+    "ko": "초콜릿 브라운",
+    "path": "sd.warm-autumn.nc0"
+  },
+  {
+    "en": "Choose cool metallics (silver, pewter) for accessories and hardware",
+    "zh": "配饰与五金件选择冷调金属（银、锡色）",
+    "ko": "실버, 퓨터 등 쿨톤 메탈을 액세서리에 활용하세요",
+    "path": "sd.cool-summer.ft4"
+  },
+  {
+    "en": "Choose gold hardware and accessories over silver",
+    "zh": "配饰与五金件优先选择金色而非银色",
+    "ko": "실버보다 골드 액세서리를 선택하세요",
+    "path": "sd.warm-spring.ft2"
+  },
+  {
+    "en": "Chroma — how muted (soft, dusty) or clear (bright, vivid) your coloring is",
+    "zh": "色度 — 色调的柔和（灰蒙）或清晰（明亮、鲜明）",
+    "ko": "채도 — 컬러링이 뮤트(부드럽고 더스티)한지 클리어(밝고 선명)한지",
+    "path": "ad.beginners.cs3"
+  },
+  {
+    "en": "Cinnamon highlights",
+    "zh": "肉桂色挑染",
+    "ko": "시나몬 하이라이트",
+    "path": "sd.warm-autumn.hr4"
+  },
+  {
+    "en": "Clean lines, sharp tailoring, and sleek silhouettes enhance your cool elegance",
+    "zh": "利落线条、精准剪裁与流畅轮廓能强化冷调优雅",
+    "ko": "클린한 라인, 날카로운 테일러링, 슬릭한 실루엣이 쿨톤 우아함을 돋보이게 합니다",
+    "path": "sd.cool-winter.ft4"
+  },
+  {
+    "en": "Clear Spring",
+    "zh": "净春型",
+    "ko": "클리어 스프링",
+    "path": "sd.bright-spring.altName"
+  },
+  {
+    "en": "Clear Winter",
+    "zh": "净冬型",
+    "ko": "클리어 윈터",
+    "path": "sd.bright-winter.altName"
+  },
+  {
+    "en": "Clear or tinted lip balm is sufficient for most professional settings",
+    "zh": "透明或有色润唇膏足以应对大多数职场场合",
+    "ko": "대부분의 비즈니스 상황에는 클리어/틴티드 립밤으로 충분합니다",
+    "path": "ad.men.mt2"
+  },
+  {
+    "en": "Cobalt",
+    "zh": "钴蓝色",
+    "ko": "코발트",
+    "path": "sd.bright-winter.bc6"
+  },
+  {
+    "en": "Cobalt Blue",
+    "zh": "钴蓝色",
+    "ko": "코발트 블루",
+    "path": "ad.dark-skin.bc4"
+  },
+  {
+    "en": "Cocoa",
+    "zh": "可可色",
+    "ko": "코코아",
+    "path": "sd.soft-autumn.nc3"
+  },
+  {
+    "en": "Color analysis (also called seasonal color analysis or personal color analysis) is a method of finding the specific colors that look best on you based on your natural coloring — skin tone, eye color, and hair color. It categorizes people into 'seasons' (Spring, Summer, Autumn, Winter) with sub-types for more precision, each with its own recommended color palette.",
+    "zh": "色彩分析（亦称季节性色彩分析或个人色彩分析）是根据天然肤色 — 肤色、眼色、发色 — 找出最适合颜色的方法。将人归入「季型」（春、夏、秋、冬）及子类型以更精确，各有推荐色盘。",
+    "ko": "컬러 분석(퍼스널 컬러 분석, 시즌 컬러 분석)은 피부톤, 눈 색, 머리 색 등 자연스러운 컬러링을 바탕으로 가장 잘 어울리는 색을 찾는 방법입니다. 봄·여름·가을·겨울 '시즌'과 서브타입으로 분류해 더 정밀하게 하며, 각각 추천 컬러 팔레트가 있습니다.",
+    "path": "ad.beginners.faq0A"
+  },
+  {
+    "en": "Color analysis is based on color theory principles — specifically how different colors interact with your skin's undertone, creating either harmonious or clashing visual effects. While it's not 'hard science,' the underlying principles of color harmony and contrast are well-established in art, design, and optics.",
+    "zh": "色彩分析基于色彩理论原理 — 尤其不同颜色如何与皮肤底调相互作用，产生和谐或冲突的视觉效果。虽非「硬科学」，色彩和谐与对比的原理在艺术、设计和光学中已有充分依据。",
+    "ko": "컬러 분석은 색채 이론 원리 — 특히 다른 색이 피부 언더톤과 어떻게 상호작용해 조화롭거나 충돌하는 시각 효과를 만드는지 — 에 기반합니다. '엄밀한 과학'은 아니지만, 색의 조화와 대비 원리는 예술·디자인·광학에서 잘 확립되어 있습니다.",
+    "path": "ad.beginners.faq2A"
+  },
+  {
+    "en": "Color analysis isn't just for women. Knowing your best colors can transform your professional image, simplify shopping, and ensure every suit, shirt, and casual outfit works with your natural coloring. Men who understand their color season make better wardrobe investments and always look polished.",
+    "zh": "色彩分析并非女性专属。了解最适合的颜色能提升职业形象、简化购物，确保每套西装、衬衫和休闲装都与你的天然肤色协调。了解季型的男性能做出更明智的衣橱投资，始终显得精致得体。",
+    "ko": "컬러 분석은 여성만을 위한 것이 아닙니다. 잘 어울리는 색을 알면 프로페셔널한 이미지가 달라지고, 쇼핑이 간소화되며, 모든 정장·셔츠·캐주얼룩이 자연스러운 컬러링과 조화를 이룹니다. 컬러 시즌을 이해하는 남성은 더 현명한 옷장 투자를 하고, 항상 단정해 보입니다.",
+    "path": "ad.men.heroDesc"
+  },
+  {
+    "en": "Color blocking with vivid hues creates a head-turning effect",
+    "zh": "撞色搭配鲜艳色彩，打造回头率极高的造型",
+    "ko": "선명한 색의 컬러 블로킹이 시선을 집중시킵니다",
+    "path": "sd.bright-winter.ft2"
+  },
+  {
+    "en": "Color blocking with vivid hues creates a striking look",
+    "zh": "撞色搭配鲜艳色彩，打造醒目造型",
+    "ko": "선명한 색의 컬러 블로킹으로 눈에 띄는 룩을 연출하세요",
+    "path": "sd.bright-spring.ft1"
+  },
+  {
+    "en": "Color season descriptions often default to examples of lighter complexions",
+    "zh": "季型描述常以浅肤色为例，缺乏深肤色参考",
+    "ko": "시즌 설명이 밝은 피부 예시에 치우치는 경우가 많습니다",
+    "path": "ad.dark-skin.ch2"
+  },
+  {
+    "en": "Colors that clash with your specific undertone",
+    "zh": "与特定底调冲突的颜色",
+    "ko": "특정 언더톤과 충돌하는 색",
+    "path": "ad.medium-skin.ac0"
+  },
+  {
+    "en": "Colors that clash with your undertone bring out unflattering yellow or gray tones in your skin. If warm colors make you look yellowish, you're likely cool-toned. If cool colors make you look washed out, you're likely warm-toned.",
+    "zh": "与底调冲突的颜色会带出皮肤中不衬肤的黄或灰调。若暖色使你显黄，可能偏冷。若冷色使你显苍白，可能偏暖。",
+    "ko": "언더톤과 맞지 않는 색이 피부의 어울리지 않는 노란/회색 톤을 끌어냅니다. 웜톤 색이 노랗게 보이면 쿨톤일 가능성, 쿨톤 색이 창백해 보이면 웜톤일 가능성이 있습니다.",
+    "path": "ad.medium-skin.faq1A"
+  },
+  {
+    "en": "Colors that clash with your undertone emphasize the 'wrong' pigments in your skin. If you're cool-toned, warm colors like orange or mustard can make your skin look yellowish. If you're warm-toned, cool colors like icy pink or silver can bring out redness.",
+    "zh": "与底调冲突的颜色会突出皮肤中「错误」的色素。若偏冷，橙色或芥末黄等暖色可能使皮肤显黄。若偏暖，冰粉或银色等冷色可能凸显泛红。",
+    "ko": "언더톤과 맞지 않는 색이 피부의 '틀린' 색소를 강조합니다. 쿨톤이면 오렌지나 머스타드 같은 웜톤 색이 피부를 노랗게 보이게 하고, 웜톤이면 아이시 핑크나 실버 같은 쿨톤 색이 붉음을 부각시킬 수 있습니다.",
+    "path": "ad.fair-skin.faq1A"
+  },
+  {
+    "en": "Colors that make your skin look sallow or tired",
+    "zh": "使皮肤显黄或疲惫的颜色",
+    "ko": "피부를 누렇거나 피곤해 보이게 하는 색",
+    "path": "ad.beginners.ac1"
+  },
+  {
+    "en": "Concealer for under-eye circles — match to your undertone (cool = pink-based, warm = yellow-based)",
+    "zh": "遮瑕遮盖黑眼圈 — 匹配底调（冷调偏粉，暖调偏黄）",
+    "ko": "다크서클 컨실러 — 언더톤에 맞추세요 (쿨톤=핑크 베이스, 웜톤=옐로 베이스)",
+    "path": "ad.men.mt1"
+  },
+  {
+    "en": "Contradictory advice online makes it hard to know who to trust",
+    "zh": "网上矛盾建议让人难知信谁",
+    "ko": "온라인의 상반된 조언으로 누구를 믿어야 할지 어렵습니다",
+    "path": "ad.beginners.ch1"
+  },
+  {
+    "en": "Cool (pink, rosy)",
+    "zh": "冷调（粉色、玫瑰色）",
+    "ko": "쿨톤 (핑크, 로즈)",
+    "path": "sd.light-summer.charUndertone"
+  },
+  {
+    "en": "Cool Berry",
+    "zh": "冷浆果色",
+    "ko": "쿨 베리",
+    "path": "sd.cool-summer.bc3"
+  },
+  {
+    "en": "Cool Charcoal",
+    "zh": "冷炭灰色",
+    "ko": "쿨 차콜",
+    "path": "sd.bright-winter.nc3"
+  },
+  {
+    "en": "Cool Cocoa",
+    "zh": "冷可可色",
+    "ko": "쿨 코코아",
+    "path": "sd.cool-summer.nc2"
+  },
+  {
+    "en": "Cool Gray",
+    "zh": "冷灰色",
+    "ko": "쿨 그레이",
+    "path": "sd.light-spring.ac4"
+  },
+  {
+    "en": "Cool Mint",
+    "zh": "冷薄荷色",
+    "ko": "쿨 민트",
+    "path": "sd.light-summer.bc7"
+  },
+  {
+    "en": "Cool Pink",
+    "zh": "冷粉色",
+    "ko": "쿨 핑크",
+    "path": "sd.warm-spring.ac0"
+  },
+  {
+    "en": "Cool Plum",
+    "zh": "冷梅色",
+    "ko": "쿨 플럼",
+    "path": "sd.cool-summer.bc7"
+  },
+  {
+    "en": "Cool Purple",
+    "zh": "冷紫色",
+    "ko": "쿨 퍼플",
+    "path": "sd.cool-winter.bc6"
+  },
+  {
+    "en": "Cool Rose",
+    "zh": "冷玫瑰色",
+    "ko": "쿨 로즈",
+    "path": "sd.cool-summer.bc5"
+  },
+  {
+    "en": "Cool Summer",
+    "zh": "冷夏型",
+    "ko": "쿨 서머",
+    "path": "sd.cool-summer.name"
+  },
+  {
+    "en": "Cool Summer — fair with distinctly cool undertones and medium muting",
+    "zh": "冷夏型 — 白皙、明显冷底调、中等柔和",
+    "ko": "쿨 서머 — 밝고 뚜렷한 쿨톤, 중간 정도 뮤트",
+    "path": "ad.fair-skin.cs3"
+  },
+  {
+    "en": "Cool Summer — medium coloring with cool undertones",
+    "zh": "冷夏型 — 中等色调、冷调底调",
+    "ko": "쿨 서머 — 중간 컬러링, 쿨톤 언더톤",
+    "path": "ad.men.cs3"
+  },
+  {
+    "en": "Cool Summer — medium depth with soft cool coloring",
+    "zh": "冷夏型 — 中等深度、柔和冷调",
+    "ko": "쿨 서머 — 중간 깊이, 부드러운 쿨톤 컬러링",
+    "path": "ad.medium-skin.cs2"
+  },
+  {
+    "en": "Cool Summer — very common in East Asian women with soft, cool-toned coloring",
+    "zh": "冷夏型 — 东亚女性中柔和冷调肤色非常常见",
+    "ko": "쿨 서머 — 부드러운 쿨톤 컬러링의 동아시아 여성에서 매우 흔함",
+    "path": "ad.asian-skin.cs0"
+  },
+  {
+    "en": "Cool Summer, also called True Summer, is the purest expression of the Summer season. These individuals have distinctly cool undertones with medium depth and moderate contrast. Their coloring has a noticeable coolness — skin with blue or pink undertones, ashy hair, and cool-toned eyes. Cool Summers are most flattered by medium-depth cool colors that are neither too light nor too dark.",
+    "zh": "冷夏型，又称真夏型，是夏季型最纯粹的表达。这类人肤色明显偏冷，整体深度中等，对比度适中。整体带有清晰的冷感 — 皮肤偏蓝或粉调，头发偏灰，眼睛偏冷调。冷夏型最适合中等深度的冷色调，既不太浅也不太深。",
+    "ko": "쿨 서머(트루 서머)는 서머 시즌의 가장 순수한 표현입니다. 뚜렷한 쿨톤 언더톤과 중간 깊이, 적당한 대비를 가집니다. 피부(블루/핑크 언더톤), 애쉬 머리, 쿨톤 눈 등 전체에 쿨함이 느껴집니다. 쿨 서머에게는 너무 밝거나 어둡지 않은 중간 깊이의 쿨톤 컬러가 가장 잘 어울립니다.",
+    "path": "sd.cool-summer.desc"
+  },
+  {
+    "en": "Cool Winter",
+    "zh": "冷冬型",
+    "ko": "쿨 윈터",
+    "path": "sd.cool-winter.name"
+  },
+  {
+    "en": "Cool Winter — distinctly cool undertones with dark coloring",
+    "zh": "冷冬型 — 明显冷调底调、深色调",
+    "ko": "쿨 윈터 — 뚜렷한 쿨톤 언더톤, 어두운 컬러링",
+    "path": "ad.dark-skin.cs3"
+  },
+  {
+    "en": "Cool Winter, also called True Winter, is the purest expression of the Winter season. These individuals have distinctly cool undertones with medium-to-high contrast and clear, bold coloring. There is no warmth in their coloring — everything reads cool, from their skin (often with blue or pink undertones) to their hair and eyes. Cool Winters look best in pure, cool, and saturated colors with no warmth.",
+    "zh": "冷冬型，又称真冬型，是冬季型最纯粹的表达。这类人肤色明显偏冷，对比度中偏高，整体色彩清晰大胆。整体没有任何暖感 — 从皮肤（常带蓝或粉调）到头发和眼睛都偏冷。冷冬型最适合纯粹、冷调、饱和的颜色，不含任何暖感。",
+    "ko": "쿨 윈터(트루 윈터)는 윈터 시즌의 가장 순수한 표현입니다. 뚜렷한 쿨톤 언더톤과 중~고 대비, 선명하고 대담한 컬러링을 가집니다. 웜스는 전혀 없 — 피부(블루/핑크 언더톤), 머리, 눈 모두 쿨하게 읽힙니다. 쿨 윈터에게는 웜스 없는 순수하고 쿨하며 채도 높은 색이 가장 잘 어울립니다.",
+    "path": "sd.cool-winter.desc"
+  },
+  {
+    "en": "Cool ash tones",
+    "zh": "冷灰调发色",
+    "ko": "쿨 애쉬 톤",
+    "path": "sd.soft-autumn.ha1"
+  },
+  {
+    "en": "Cool black",
+    "zh": "冷黑色",
+    "ko": "쿨 블랙",
+    "path": "sd.warm-autumn.ha1"
+  },
+  {
+    "en": "Cool brown",
+    "zh": "冷棕色",
+    "ko": "쿨 브라운",
+    "path": "sd.warm-spring.ha1"
+  },
+  {
+    "en": "Cool burgundy",
+    "zh": "冷酒红色",
+    "ko": "쿨 버건디",
+    "path": "sd.warm-autumn.ha3"
+  },
+  {
+    "en": "Cool burgundy highlights",
+    "zh": "冷酒红挑染",
+    "ko": "쿨 버건디 하이라이트",
+    "path": "sd.cool-summer.hr4"
+  },
+  {
+    "en": "Cool dark blonde",
+    "zh": "冷深金色",
+    "ko": "쿨 다크 블론드",
+    "path": "sd.cool-summer.hr2"
+  },
+  {
+    "en": "Cool dark brown",
+    "zh": "冷深棕色",
+    "ko": "쿨 다크 브라운",
+    "path": "sd.cool-winter.hr0"
+  },
+  {
+    "en": "Cool espresso",
+    "zh": "冷浓缩咖啡棕",
+    "ko": "쿨 에스프레소",
+    "path": "sd.cool-winter.hr2"
+  },
+  {
+    "en": "Cool gray, silver, icy lavender, navy, deep plum",
+    "zh": "冷灰色、银色、冰薰衣草色、海军蓝、深梅色",
+    "ko": "쿨 그레이, 실버, 아이시 라벤더, 네이비, 딥 플럼",
+    "path": "sd.cool-winter.eyes"
+  },
+  {
+    "en": "Cool gray, silver, taupe, soft plum, navy",
+    "zh": "冷灰色、银色、灰褐色、柔和梅色、海军蓝",
+    "ko": "쿨 그레이, 실버, 토프, 소프트 플럼, 네이비",
+    "path": "sd.cool-summer.eyes"
+  },
+  {
+    "en": "Cool grays and soft whites make excellent neutrals",
+    "zh": "冷灰色和柔和白色是理想的中性色",
+    "ko": "쿨 그레이와 소프트 화이트가 훌륭한 뉴트럴입니다",
+    "path": "sd.light-summer.ft1"
+  },
+  {
+    "en": "Cool jewel tones like teal, berry, and plum are excellent accent colors",
+    "zh": "蓝绿色、浆果色和梅色等冷调宝石色是绝佳点缀",
+    "ko": "틸, 베리, 플럼 등 쿨톤 주얼 컬러가 훌륭한 포인트입니다",
+    "path": "sd.cool-summer.ft2"
+  },
+  {
+    "en": "Cool light brown",
+    "zh": "冷浅棕色",
+    "ko": "쿨 라이트 브라운",
+    "path": "sd.light-summer.hr1"
+  },
+  {
+    "en": "Cool medium brown",
+    "zh": "冷中棕色",
+    "ko": "쿨 미디엄 브라운",
+    "path": "sd.soft-summer.hr1"
+  },
+  {
+    "en": "Cool pink, berry, fuchsia",
+    "zh": "冷粉色、浆果色、洋红色",
+    "ko": "쿨 핑크, 베리, 푸시아",
+    "path": "sd.cool-winter.blush"
+  },
+  {
+    "en": "Cool pink, berry, plum, mauve, raspberry",
+    "zh": "冷粉色、浆果色、梅色、灰紫色、覆盆子色",
+    "ko": "쿨 핑크, 베리, 플럼, 모브, 라즈베리",
+    "path": "sd.cool-summer.lips"
+  },
+  {
+    "en": "Cool pink, rose, soft berry, pink nude",
+    "zh": "冷粉色、玫瑰色、柔和浆果色、粉色裸色",
+    "ko": "쿨 핑크, 로즈, 소프트 베리, 핑크 누드",
+    "path": "sd.light-summer.lips"
+  },
+  {
+    "en": "Cool pink, soft berry, mauve",
+    "zh": "冷粉色、柔和浆果色、灰紫色",
+    "ko": "쿨 핑크, 소프트 베리, 모브",
+    "path": "sd.cool-summer.blush"
+  },
+  {
+    "en": "Cool pink, soft rose, light berry",
+    "zh": "冷粉色、柔和玫瑰色、浅浆果色",
+    "ko": "쿨 핑크, 소프트 로즈, 라이트 베리",
+    "path": "sd.light-summer.blush"
+  },
+  {
+    "en": "Cool platinum",
+    "zh": "冷铂金色",
+    "ko": "쿨 플래티넘",
+    "path": "sd.light-spring.ha2"
+  },
+  {
+    "en": "Cool red, berry, plum, fuchsia, cool nude",
+    "zh": "冷红色、浆果色、梅色、洋红色、冷裸色",
+    "ko": "쿨 레드, 베리, 플럼, 푸시아, 쿨 누드",
+    "path": "sd.cool-winter.lips"
+  },
+  {
+    "en": "Cool strawberry blonde",
+    "zh": "冷草莓金",
+    "ko": "쿨 스트로베리 블론드",
+    "path": "sd.light-summer.hr3"
+  },
+  {
+    "en": "Cool types: charcoal, navy, cool gray, bright white. Warm types: camel, brown, olive, cream",
+    "zh": "冷调型：炭灰、海军蓝、冷灰、亮白。暖调型：驼、棕、橄榄、奶油",
+    "ko": "쿨톤: 차콜, 네이비, 쿨 그레이, 브라이트 화이트. 웜톤: 카멜, 브라운, 올리브, 크림",
+    "path": "ad.beginners.wt1"
+  },
+  {
+    "en": "Cool with pink or blue undertone",
+    "zh": "冷调，带粉色或蓝色底调",
+    "ko": "핑크 또는 블루 언더톤",
+    "path": "sd.cool-summer.found"
+  },
+  {
+    "en": "Cool with pink or neutral undertone",
+    "zh": "冷调，带粉色或中性底调",
+    "ko": "핑크 또는 중성 언더톤",
+    "path": "sd.cool-winter.found"
+  },
+  {
+    "en": "Cool with pink or neutral undertone, light coverage",
+    "zh": "冷调，带粉色或中性底调，轻薄遮瑕",
+    "ko": "핑크 또는 중성 언더톤, 가벼운 커버",
+    "path": "sd.light-summer.found"
+  },
+  {
+    "en": "Cool, light, and softly luminous",
+    "zh": "冷调、明亮、柔和清透",
+    "ko": "쿨하고, 밝고, 부드럽게 빛나는",
+    "path": "sd.light-summer.tagline"
+  },
+  {
+    "en": "Cool-neutral (cool but can handle slightly warm muted tones)",
+    "zh": "冷中性（偏冷，但也能驾驭略偏暖的柔和色调）",
+    "ko": "쿨~중성 (쿨톤이지만 약간 웜톤 뮤트 톤도 가능)",
+    "path": "sd.soft-summer.charUndertone"
+  },
+  {
+    "en": "Cool-neutral (cool but can handle some bright warm-leaning colors)",
+    "zh": "冷中性（偏冷，但也能驾驭部分明亮偏暖色）",
+    "ko": "쿨~중성 (쿨톤이지만 일부 밝은 웜톤 계열도 가능)",
+    "path": "sd.bright-winter.charUndertone"
+  },
+  {
+    "en": "Cool-neutral (cool but can handle some dark warm colors)",
+    "zh": "冷中性（偏冷，但也能驾驭部分深暖色）",
+    "ko": "쿨~중성 (쿨톤이지만 일부 어두운 웜톤 색도 가능)",
+    "path": "sd.deep-winter.charUndertone"
+  },
+  {
+    "en": "Copper",
+    "zh": "铜色",
+    "ko": "코퍼",
+    "path": "sd.light-summer.ha1"
+  },
+  {
+    "en": "Coral, warm peach, apricot",
+    "zh": "珊瑚色、暖蜜桃色、杏色",
+    "ko": "코랄, 웜 피치, 살구",
+    "path": "sd.warm-spring.blush"
+  },
+  {
+    "en": "Cream",
+    "zh": "奶油",
+    "ko": "크림",
+    "path": "ad.redheads.bc5"
+  },
+  {
+    "en": "Cream and warm white are more flattering than bright white",
+    "zh": "奶油和暖白比亮白更衬肤色",
+    "ko": "크림과 웜 화이트가 브라이트 화이트보다 더 잘 어울립니다",
+    "path": "ad.redheads.wt4"
+  },
+  {
+    "en": "Cultural stigma may make some men hesitant to explore color analysis",
+    "zh": "文化观念可能让部分男性对色彩分析有所顾虑",
+    "ko": "문화적 편견으로 일부 남성이 컬러 분석에 소극적일 수 있습니다",
+    "path": "ad.men.ch4"
+  },
+  {
+    "en": "Dark Autumn",
+    "zh": "暗秋型",
+    "ko": "다크 오텀",
+    "path": "sd.deep-autumn.altName"
+  },
+  {
+    "en": "Dark Brown (if cool)",
+    "zh": "深棕（若偏冷）",
+    "ko": "다크 브라운 (쿨톤)",
+    "path": "ad.fair-skin.ac3"
+  },
+  {
+    "en": "Dark Burgundy",
+    "zh": "深酒红色",
+    "ko": "다크 버건디",
+    "path": "sd.deep-winter.bc6"
+  },
+  {
+    "en": "Dark Camel",
+    "zh": "深驼色",
+    "ko": "다크 카멜",
+    "path": "sd.deep-autumn.nc3"
+  },
+  {
+    "en": "Dark Chocolate",
+    "zh": "深巧克力色",
+    "ko": "다크 초콜릿",
+    "path": "sd.deep-autumn.bc0"
+  },
+  {
+    "en": "Dark Espresso",
+    "zh": "深浓缩咖啡棕",
+    "ko": "다크 에스프레소",
+    "path": "sd.deep-winter.nc3"
+  },
+  {
+    "en": "Dark Navy",
+    "zh": "深海军蓝",
+    "ko": "다크 네이비",
+    "path": "sd.light-spring.ac1"
+  },
+  {
+    "en": "Dark Olive",
+    "zh": "深橄榄色",
+    "ko": "다크 올리브",
+    "path": "sd.warm-autumn.nc3"
+  },
+  {
+    "en": "Dark Purple",
+    "zh": "深紫色",
+    "ko": "다크 퍼플",
+    "path": "sd.deep-winter.bc3"
+  },
+  {
+    "en": "Dark Skin Tones",
+    "zh": "深肤色",
+    "ko": "다크 스킨 톤",
+    "path": "ad.dark-skin.name"
+  },
+  {
+    "en": "Dark Teal",
+    "zh": "深蓝绿色",
+    "ko": "다크 틸",
+    "path": "sd.deep-autumn.bc5"
+  },
+  {
+    "en": "Dark Winter",
+    "zh": "暗冬型",
+    "ko": "다크 윈터",
+    "path": "sd.deep-winter.altName"
+  },
+  {
+    "en": "Dark auburn",
+    "zh": "深赤褐色",
+    "ko": "다크 오번",
+    "path": "sd.deep-autumn.hr1"
+  },
+  {
+    "en": "Dark bronze, warm smoky brown, deep olive, dark gold",
+    "zh": "深青铜色、暖烟熏棕、深橄榄色、深金色",
+    "ko": "다크 브론즈, 웜 스모키 브라운, 딥 올리브, 다크 골드",
+    "path": "sd.deep-autumn.eyes"
+  },
+  {
+    "en": "Dark cherry highlights",
+    "zh": "深樱桃色挑染",
+    "ko": "다크 체리 하이라이트",
+    "path": "sd.deep-winter.hr3"
+  },
+  {
+    "en": "Dark golden brown",
+    "zh": "深金棕色",
+    "ko": "다크 골든 브라운",
+    "path": "sd.warm-autumn.hr2"
+  },
+  {
+    "en": "Dark skin tones carry incredible depth and richness that pair beautifully with both bold jewel tones and warm earthy shades. However, traditional color analysis systems were not originally designed with diverse skin tones in mind. This guide specifically addresses how color analysis works for deeper complexions and how to find your most flattering palette.",
+    "zh": "深肤色具有令人惊叹的深度和丰富感，与大胆的宝石色和温暖的大地色都能完美搭配。然而，传统色彩分析体系最初并非为多元肤色而设计。本指南专门讲解深肤色如何进行色彩分析，以及如何找到最衬肤色的色盘。",
+    "ko": "다크 스킨은 놀라운 깊이와 풍부함을 지니며, 대담한 주얼 톤과 따뜻한 어스 색 모두 아름답게 어울립니다. 그러나 전통적인 컬러 분석 시스템은 다양한 피부톤을 처음부터 고려하지 않았습니다. 이 가이드는 깊은 피부톤에서 컬러 분석이 어떻게 작동하고 가장 잘 어울리는 팔레트를 찾는 방법을 설명합니다.",
+    "path": "ad.dark-skin.heroDesc"
+  },
+  {
+    "en": "Dark skin tones most commonly fall into Deep Winter (cool-neutral undertones) or Deep Autumn (warm undertones). However, all 12 seasons are possible — it depends on your specific combination of undertone, contrast, and chroma, not just depth.",
+    "zh": "深肤色最常见深冬型（冷中性底调）或深秋型（暖调底调）。但十二季型皆有可能 — 取决于底调、对比度和色度的具体组合，而非仅看深度。",
+    "ko": "다크 스킨은 주로 딥 윈터(쿨~중성 언더톤) 또는 딥 오텀(웜톤 언더톤)에 해당합니다. 하지만 12시즌 모두 가능 — 깊이뿐 아니라 언더톤, 대비, 채도의 조합에 따라 달라집니다.",
+    "path": "ad.dark-skin.faq1A"
+  },
+  {
+    "en": "Dark, cool, and dramatically intense",
+    "zh": "深暗、冷调、戏剧强烈",
+    "ko": "어둡고, 쿨하며, 극적으로 강렬한",
+    "path": "sd.deep-winter.tagline"
+  },
+  {
+    "en": "Dark, warm, and intensely rich",
+    "zh": "深暗、暖调、浓郁强烈",
+    "ko": "어둡고, 따뜻하며, 강렬하게 풍부한",
+    "path": "sd.deep-autumn.tagline"
+  },
+  {
+    "en": "Deep Autumn",
+    "zh": "深秋型",
+    "ko": "딥 오텀",
+    "path": "sd.deep-autumn.name"
+  },
+  {
+    "en": "Deep Autumn — dark hair, warm skin, rich coloring",
+    "zh": "深秋型 — 深色头发、暖调皮肤、浓郁色调",
+    "ko": "딥 오텀 — 어두운 머리, 웜톤 피부, 풍부한 컬러링",
+    "path": "ad.men.cs1"
+  },
+  {
+    "en": "Deep Autumn — warm undertones with rich depth (common in dark skin with warm/golden undertones)",
+    "zh": "深秋型 — 暖调底调、浓郁深度（深肤色暖/金色底调较常见）",
+    "ko": "딥 오텀 — 웜톤 언더톤, 풍부한 깊이 (웜/골드 다크 스킨에서 흔함)",
+    "path": "ad.dark-skin.cs1"
+  },
+  {
+    "en": "Deep Autumn — warm-olive with deep, rich coloring",
+    "zh": "深秋型 — 暖橄榄、深浓郁色调",
+    "ko": "딥 오텀 — 웜톤 올리브, 깊고 풍부한 컬러링",
+    "path": "ad.olive-skin.cs2"
+  },
+  {
+    "en": "Deep Autumn, also called Dark Autumn, sits at the intersection of Autumn warmth and Winter depth. These individuals have warm undertones combined with deep, dark overall coloring and high contrast. Their appearance is dramatic — often with dark hair, warm-toned skin, and intense eyes. Deep Autumns look best in dark, rich, warm colors that match their natural intensity.",
+    "zh": "深秋型，又称暗秋型，处于秋季暖调与冬季深度之间的交汇处。这类人肤色偏暖，整体色调深暗，对比度高。外观戏剧感强 — 常是深色头发、暖调皮肤和深邃眼睛。深秋型最适合深暗、浓郁、暖调的颜色，与其天生的强烈感相匹配。",
+    "ko": "딥 오텀(다크 오텀)은 오텀의 웜스와 윈터의 깊이가 만나는 지점입니다. 웜톤 언더톤에 깊고 어두운 전체 컬러링과 높은 대비를 가집니다. 드라마틱한 인상 — 어두운 머리, 웜톤 피부, 강렬한 눈. 딥 오텀에게는 자연스러운 강도에 맞는 어둡고 풍부한 웜톤 컬러가 가장 잘 어울립니다.",
+    "path": "sd.deep-autumn.desc"
+  },
+  {
+    "en": "Deep Burgundy",
+    "zh": "深酒红色",
+    "ko": "딥 버건디",
+    "path": "sd.deep-autumn.bc4"
+  },
+  {
+    "en": "Deep Forest",
+    "zh": "深森林绿",
+    "ko": "딥 포레스트",
+    "path": "sd.deep-autumn.bc8"
+  },
+  {
+    "en": "Deep Plum",
+    "zh": "深梅色",
+    "ko": "딥 플럼",
+    "path": "ad.olive-skin.bc5"
+  },
+  {
+    "en": "Deep Red",
+    "zh": "深红色",
+    "ko": "딥 레드",
+    "path": "sd.deep-winter.bc1"
+  },
+  {
+    "en": "Deep Rust",
+    "zh": "深铁锈色",
+    "ko": "딥 러스트",
+    "path": "sd.deep-autumn.bc1"
+  },
+  {
+    "en": "Deep Teal",
+    "zh": "深蓝绿色",
+    "ko": "딥 틸",
+    "path": "sd.deep-winter.bc5"
+  },
+  {
+    "en": "Deep Winter",
+    "zh": "深冬型",
+    "ko": "딥 윈터",
+    "path": "sd.deep-winter.name"
+  },
+  {
+    "en": "Deep Winter — common in those with cool-neutral undertones and very dark hair",
+    "zh": "深冬型 — 冷中性底调、极深发色者常见",
+    "ko": "딥 윈터 — 쿨~중성 언더톤과 매우 어두운 머리",
+    "path": "ad.asian-skin.cs3"
+  },
+  {
+    "en": "Deep Winter — cool-neutral undertones with high contrast (common in dark skin with cool/neutral undertones)",
+    "zh": "深冬型 — 冷中性底调、高对比（深肤色冷/中性底调较常见）",
+    "ko": "딥 윈터 — 쿨~중성 언더톤, 고대비 (쿨/중성 다크 스킨에서 흔함)",
+    "path": "ad.dark-skin.cs0"
+  },
+  {
+    "en": "Deep Winter — cool-olive with dark, high-contrast features",
+    "zh": "深冬型 — 冷橄榄、深暗高对比特征",
+    "ko": "딥 윈터 — 쿨톤 올리브, 어둡고 고대비 이목구비",
+    "path": "ad.olive-skin.cs3"
+  },
+  {
+    "en": "Deep Winter — dark hair, cool-neutral skin, high contrast (very common in men)",
+    "zh": "深冬型 — 深色头发、冷中性皮肤、高对比（男性中非常常见）",
+    "ko": "딥 윈터 — 어두운 머리, 쿨~중성 피부, 고대비 (남성에서 매우 흔함)",
+    "path": "ad.men.cs0"
+  },
+  {
+    "en": "Deep Winter, also called Dark Winter, sits at the intersection of Winter coolness and Autumn depth. These individuals have cool-neutral undertones combined with very deep overall coloring and high contrast. Their appearance is striking and dramatic — think dark hair, clear eyes, and medium-to-deep skin with cool undertones. Deep Winters look best in dark, rich, cool-leaning colors that match their natural drama.",
+    "zh": "深冬型，又称暗冬型，处于冬季冷调与秋季深度之间的交汇处。这类人肤色偏冷中性，整体色调非常深，对比度高。外观醒目而戏剧感强 — 深色头发、清澈眼睛、中至深肤色带冷调。深冬型最适合深暗、浓郁、略偏冷的颜色，与其天生的戏剧感相匹配。",
+    "ko": "딥 윈터(다크 윈터)는 윈터의 쿨함과 오텀의 깊이가 만나는 지점입니다. 쿨~중성 언더톤에 매우 깊은 전체 컬러링과 높은 대비를 가집니다. 인상적이고 드라마틱 — 어두운 머리, 선명한 눈, 쿨톤 언더톤의 중~깊은 피부. 딥 윈터에게는 자연스러운 드라마에 맞는 어둡고 풍부한 쿨톤 계열 색이 가장 잘 어울립니다.",
+    "path": "sd.deep-winter.desc"
+  },
+  {
+    "en": "Deep berry, dark rose, cool bronzer",
+    "zh": "深浆果色、深玫瑰色、冷修容色",
+    "ko": "딥 베리, 다크 로즈, 쿨톤 컨투어링",
+    "path": "sd.deep-winter.blush"
+  },
+  {
+    "en": "Deep berry, warm plum, dark red, rich brick",
+    "zh": "深浆果色、暖梅色、深红色、浓郁砖红色",
+    "ko": "딥 베리, 웜 플럼, 다크 레드, 리치 벽돌색",
+    "path": "sd.deep-autumn.lips"
+  },
+  {
+    "en": "Deep copper highlights",
+    "zh": "深铜色挑染",
+    "ko": "딥 코퍼 하이라이트",
+    "path": "sd.deep-autumn.hr4"
+  },
+  {
+    "en": "Deep peach, warm bronze, dark coral",
+    "zh": "深蜜桃色、暖青铜色、深珊瑚色",
+    "ko": "딥 피치, 웜 브론즈, 다크 코랄",
+    "path": "sd.deep-autumn.blush"
+  },
+  {
+    "en": "Deep red, dark berry, plum, rich wine, dark nude",
+    "zh": "深红色、深浆果色、梅色、浓郁酒红色、深裸色",
+    "ko": "딥 레드, 다크 베리, 플럼, 리치 와인, 다크 누드",
+    "path": "sd.deep-winter.lips"
+  },
+  {
+    "en": "Deep — dark, rich overall coloring",
+    "zh": "深 — 整体色调深暗、浓郁",
+    "ko": "깊음 — 어둡고 풍부한 전체",
+    "path": "sd.deep-autumn.charDepth"
+  },
+  {
+    "en": "Depth — how light or dark your overall coloring is",
+    "zh": "深度 — 整体色调的浅或深",
+    "ko": "깊이 — 전체 컬러링이 얼마나 밝거나 어두운지",
+    "path": "ad.beginners.cs2"
+  },
+  {
+    "en": "Distinctly cool, elegant, and composed",
+    "zh": "冷调鲜明、优雅、沉稳",
+    "ko": "뚜렷히 쿨하고, 우아하며, 차분한",
+    "path": "sd.cool-summer.tagline"
+  },
+  {
+    "en": "Does color analysis work for dark skin?",
+    "zh": "色彩分析对深肤色有效吗？",
+    "ko": "다크 스킨에도 컬러 분석이 효과적인가요?",
+    "path": "ad.dark-skin.faq0Q"
+  },
+  {
+    "en": "Does facial hair affect my color season?",
+    "zh": "胡须会影响季型吗？",
+    "ko": "수염이 컬러 시즌에 영향을 주나요?",
+    "path": "ad.men.faq2Q"
+  },
+  {
+    "en": "Don't overthink it — even knowing warm vs. cool makes a noticeable difference",
+    "zh": "不必过度纠结 — 即使知道暖与冷也有明显差异",
+    "ko": "너무 고민하지 마세요 — 웜과 쿨만 알아도 눈에 띄는 차이가 있습니다",
+    "path": "ad.beginners.mt4"
+  },
+  {
+    "en": "Dove Gray",
+    "zh": "鸽灰色",
+    "ko": "도브 그레이",
+    "path": "sd.light-summer.nc3"
+  },
+  {
+    "en": "Dusty Blue",
+    "zh": "灰蓝色",
+    "ko": "더스티 블루",
+    "path": "sd.cool-summer.bc2"
+  },
+  {
+    "en": "Dusty Charcoal",
+    "zh": "灰蒙炭灰色",
+    "ko": "더스티 차콜",
+    "path": "sd.soft-summer.nc2"
+  },
+  {
+    "en": "Dusty Coral",
+    "zh": "灰蒙珊瑚色",
+    "ko": "더스티 코랄",
+    "path": "sd.soft-autumn.bc3"
+  },
+  {
+    "en": "Dusty Gold",
+    "zh": "灰蒙金色",
+    "ko": "더스티 골드",
+    "path": "sd.soft-autumn.bc7"
+  },
+  {
+    "en": "Dusty Rose",
+    "zh": "灰粉色",
+    "ko": "더스티 로즈",
+    "path": "sd.bright-spring.ac0"
+  },
+  {
+    "en": "Dusty rose, muted mauve, soft berry, nude pink",
+    "zh": "灰粉色、柔和灰紫色、柔和浆果色、裸粉色",
+    "ko": "더스티 로즈, 뮤트 모브, 소프트 베리, 누드 핑크",
+    "path": "sd.soft-summer.lips"
+  },
+  {
+    "en": "Dusty rose, soft pink, muted peach",
+    "zh": "灰粉色、柔和粉色、柔和蜜桃色",
+    "ko": "더스티 로즈, 소프트 핑크, 뮤트 피치",
+    "path": "sd.soft-summer.blush"
+  },
+  {
+    "en": "Earth tones (rust, olive, brown, cream) are natural allies",
+    "zh": "大地色（铁锈、橄榄、棕、奶油）是天然搭档",
+    "ko": "어스 톤(러스트, 올리브, 브라운, 크림)이 자연스러운 파트너입니다",
+    "path": "ad.redheads.wt1"
+  },
+  {
+    "en": "Earth tones are your signature — warm taupe, camel, olive, and sage",
+    "zh": "大地色是你的标志 — 暖灰褐色、驼色、橄榄色和鼠尾草绿",
+    "ko": "어스톤이 시그니처 — 웜 토프, 카멜, 올리브, 세이지",
+    "path": "sd.soft-autumn.ft0"
+  },
+  {
+    "en": "Earthy, muted tones are your best friends — olive, sage, taupe, and dusty rose",
+    "zh": "大地、柔和色调是最佳朋友 — 橄榄、鼠尾草、灰褐和灰粉",
+    "ko": "어스톤, 뮤트 톤이 최고의 선택 — 올리브, 세이지, 토프, 더스티 로즈",
+    "path": "ad.olive-skin.wt0"
+  },
+  {
+    "en": "Electric Blue",
+    "zh": "电光蓝",
+    "ko": "일렉트릭 블루",
+    "path": "sd.bright-spring.bc1"
+  },
+  {
+    "en": "Embrace muted, dusty tones — your power is in soft elegance, not bold contrast",
+    "zh": "拥抱柔和、灰蒙的色调 — 你的优势在于优雅柔和，而非强烈对比",
+    "ko": "뮤트하고 더스티한 톤을 활용하세요 — 힘은 강한 대비가 아닌 부드러운 우아함에 있습니다",
+    "path": "sd.soft-summer.ft0"
+  },
+  {
+    "en": "Embrace warm, saturated colors — think sunset and autumn harvest tones",
+    "zh": "大胆运用温暖、饱和的颜色 — 如日落与秋收色调",
+    "ko": "따뜻하고 채도 높은 색을 활용하세요 — 석양과 가을 수확 톤을 떠올리면 됩니다",
+    "path": "sd.warm-spring.ft0"
+  },
+  {
+    "en": "Emerald",
+    "zh": "祖母绿",
+    "ko": "에메랄드",
+    "path": "sd.cool-winter.bc5"
+  },
+  {
+    "en": "Espresso",
+    "zh": "浓缩咖啡棕",
+    "ko": "에스프레소",
+    "path": "sd.deep-autumn.nc0"
+  },
+  {
+    "en": "Even casual outfits benefit from at least one vivid accent piece",
+    "zh": "即使休闲穿搭，也建议至少加入一件鲜明点缀单品",
+    "ko": "캐주얼 룩에도 최소 하나의 선명한 포인트 컬러를 더하세요",
+    "path": "sd.bright-spring.ft4"
+  },
+  {
+    "en": "Everyone falls into one of 12 sub-seasons based on three dimensions:",
+    "zh": "所有人按三个维度归入十二子季型之一：",
+    "ko": "모든 사람은 세 가지 차원에 따라 12 서브시즌 중 하나에 해당합니다:",
+    "path": "ad.beginners.cs0"
+  },
+  {
+    "en": "Eyes: Earth tones — warm taupe, olive, bronze, and muted plum complement olive skin naturally",
+    "zh": "眼妆：大地色 — 暖灰褐、橄榄、青铜和柔和梅色自然衬托橄榄肤色",
+    "ko": "아이: 어스 톤 — 웜 토프, 올리브, 브론즈, 뮤트 플럼이 올리브 피부에 자연스럽습니다",
+    "path": "ad.olive-skin.mt2"
+  },
+  {
+    "en": "Eyes: Soft brown, rose gold, and mauve are universally flattering neutrals",
+    "zh": "眼妆：柔和棕、玫瑰金和灰紫色是普遍适合的中性色",
+    "ko": "아이: 소프트 브라운, 로즈 골드, 모브는 보편적으로 잘 어울리는 뉴트럴입니다",
+    "path": "ad.asian-skin.mt3"
+  },
+  {
+    "en": "Eyes: light, soft shades — champagne, soft taupe, rose gold work universally",
+    "zh": "眼妆：浅柔和色 — 香槟、柔和灰褐、玫瑰金普遍适合",
+    "ko": "아이: 밝고 부드러운 색 — 샴페인, 소프트 토프, 로즈 골드는 보편적으로 잘 어울립니다",
+    "path": "ad.fair-skin.mt3"
+  },
+  {
+    "en": "Eyes: warm bronze, copper, olive green, warm taupe — these complement red hair beautifully",
+    "zh": "眼：暖青铜、铜、橄榄绿、暖灰褐 — 优美衬托红发",
+    "ko": "아이: 웜 브론즈, 코퍼, 올리브 그린, 웜 토프 — 레드 헤어를 아름답게 보완합니다",
+    "path": "ad.redheads.mt2"
+  },
+  {
+    "en": "Facial hair color affects contrast level, which can change your season presentation",
+    "zh": "胡须颜色影响对比度，可能改变季型呈现",
+    "ko": "수염 색이 대비 레벨에 영향을 주어 시즌 표현이 달라질 수 있습니다",
+    "path": "ad.men.ch1"
+  },
+  {
+    "en": "Facial hair doesn't change your underlying season, but it can affect your apparent contrast level. A full dark beard on light skin increases contrast, potentially making your styling recommendations lean toward higher-contrast palettes within your season.",
+    "zh": "胡须不会改变底层季型，但会影响表面对比度。浅色皮肤上的深色全须会增加对比，可能使造型建议偏向季型内更高对比的色盘。",
+    "ko": "수염 자체는 기본 시즌을 바꾸지 않지만, 겉으로 보이는 대비 레벨에 영향을 줄 수 있습니다. 밝은 피부에 진한 수염이 있으면 대비가 높아져, 시즌 내에서 더 고대비 팔레트 추천이 가능합니다.",
+    "path": "ad.men.faq2A"
+  },
+  {
+    "en": "Fair Skin Tones",
+    "zh": "白皙肤色",
+    "ko": "밝은 피부톤",
+    "path": "ad.fair-skin.name"
+  },
+  {
+    "en": "Fair skin actually makes undertone identification easier in some ways: vein color is more visible (blue = cool, green = warm, mix = neutral). Look at your face in natural light — if you see pinkness, you're likely cool. If you see golden warmth, you're likely warm. If you sunburn easily and rarely tan, you're more likely cool-toned.",
+    "zh": "白皙皮肤在某些方面反而更易判断底调：血管颜色更明显（蓝为冷，绿为暖，混合为中性）。在自然光下观察面部 — 若见粉色可能偏冷；若见金色暖感可能偏暖。若易晒伤、难晒黑，更可能偏冷调。",
+    "ko": "밝은 피부는 어떤 면에서 언더톤 판별이 더 쉽습니다: 혈관 색이 더 잘 보입니다(파랑=쿨톤, 초록=웜톤, 혼합=중성). 자연광에서 얼굴을 보세요 — 핑크기가 있으면 쿨톤, 골든 웜스가 있으면 웜톤. 쉽게 햇볕에 타고 잘 태닝되지 않으면 쿨톤일 가능성이 높습니다.",
+    "path": "ad.fair-skin.undertone"
+  },
+  {
+    "en": "Fair skin can appear to change color easily — redness, blushing, and sun exposure affect appearance",
+    "zh": "白皙皮肤外观易变 — 泛红、腮红和日晒影响观感",
+    "ko": "밝은 피부는 색이 쉽게 변해 보입니다 — 홍조, 블러셔, 햇빛이 외모에 영향을 줍니다",
+    "path": "ad.fair-skin.ch1"
+  },
+  {
+    "en": "Fair skin tones have unique color analysis considerations. Because there's less melanin in the skin, undertone signals can be more visible (you might see redness, blue veins, or golden warmth more clearly), but low contrast between skin and features can make season typing tricky. The right colors make fair skin look luminous; the wrong ones make it look washed out or ruddy.",
+    "zh": "白皙肤色有独特的色彩分析考量。因皮肤黑色素较少，底调信号可能更明显（泛红、蓝血管或金色暖感更清楚），但皮肤与特征之间低对比可能使季型判断棘手。选对颜色让白皙皮肤透亮；选错则显苍白或泛红。",
+    "ko": "밝은 피부톤에는 컬러 분석에서 특별히 고려할 점이 있습니다. 피부 멜라닌이 적어 언더톤 신호(홍조, 푸른 혈관, 골든 웜스)가 더 잘 보이지만, 피부와 이목구비 간 낮은 대비는 시즌 판별을 어렵게 합니다. 맞는 색은 밝은 피부를 빛나게 하고, 틀린 색은 창백하거나 붉어 보이게 합니다.",
+    "path": "ad.fair-skin.heroDesc"
+  },
+  {
+    "en": "Fair skin with cool undertones can look washed out in warm colors, and vice versa",
+    "zh": "冷调白皙在暖色中可能显苍白，反之亦然",
+    "ko": "쿨톤 밝은 피부는 웜톤 색에서 창백해 보이고, 그 반대도 마찬가지입니다",
+    "path": "ad.fair-skin.ch4"
+  },
+  {
+    "en": "Floral prints in warm tones complement your natural femininity",
+    "zh": "暖色调花卉印花能衬托天生的柔美气质",
+    "ko": "웜톤 플로럴 프린트가 자연스러운 여성스러움을 돋보이게 합니다",
+    "path": "sd.light-spring.ft4"
+  },
+  {
+    "en": "Focus on undertone matching rather than depth matching",
+    "zh": "重点底调匹配而非深度匹配",
+    "ko": "깊이보다 언더톤 매칭에 집중하세요",
+    "path": "ad.medium-skin.wt1"
+  },
+  {
+    "en": "For Asian skin, the most reliable tests are: (1) Gold vs silver jewelry comparison — hold each against your jaw; (2) Look at the skin on your inner arm in natural light — pinkish = cool, yellowish-golden = warm, olive-gray = neutral; (3) The white paper test — hold a plain white paper next to your face — if your skin looks yellowish by comparison, you're likely warm, if pinkish, you're likely cool.",
+    "zh": "亚洲肤色最可靠的测试：（1）金银首饰对比 — 分别贴近下颌；（2）在自然光下观察上臂内侧皮肤 — 偏粉为冷调，偏黄金为暖调，偏橄榄灰为中性；（3）白纸测试 — 将白纸贴近面部 — 若皮肤相比之下偏黄，可能偏暖；若偏粉，可能偏冷。",
+    "ko": "아시아인 피부에서 가장 신뢰할 수 있는 테스트: (1) 골드와 실버 액세서리 비교 — 턱에 대어 보기; (2) 자연광에서 안쪽 팔 피부 확인 — 핑크=쿨톤, 황금=웜톤, 올리브 그레이=중성; (3) 백지 테스트 — 흰 종이를 얼굴 옆에 — 피부가 노랗게 보이면 웜톤, 핑크면 쿨톤일 가능성이 높습니다.",
+    "path": "ad.asian-skin.undertone"
+  },
+  {
+    "en": "For dark skin tones, check undertone by comparing pure gold jewelry vs. silver jewelry against your skin. Look at the inside of your lower lip — cooler undertones appear more pink-purple, while warmer undertones appear more orange-coral. You can also check behind your ear, where sun damage is minimal.",
+    "zh": "对于深肤色，可通过将纯金首饰与银首饰分别贴近皮肤来判断底调。观察下唇内侧 — 冷调底调偏粉紫色，暖调底调偏橙珊瑚色。也可查看耳后区域，那里日晒损伤最少。",
+    "ko": "다크 스킨의 경우 순금 액세서리와 실버를 피부에 비교해 언더톤을 확인하세요. 아랫입술 안쪽을 보면 — 쿨톤 언더톤은 핑크~퍼플, 웜톤은 오렌지~코랄로 보입니다. 귀 뒤도 자외선 영향이 적어 확인에 적합합니다.",
+    "path": "ad.dark-skin.undertone"
+  },
+  {
+    "en": "For medium skin tones, the jewelry test is most reliable: try on gold and silver separately and see which looks more harmonious against your skin. Also look at your inner wrist veins — blue/purple = cool, green = warm, mixed = neutral. Because medium skin can have any undertone, take your time with this step.",
+    "zh": "中等肤色最可靠是首饰测试：分别试金、银，看哪个与皮肤更和谐。也看手腕内侧血管 — 蓝/紫为冷，绿为暖，混合为中性。中等肤色可有任何底调，这一步要花时间。",
+    "ko": "중간 피부톤에서는 액세서리 테스트가 가장 신뢰됩니다: 골드와 실버를 각각 대어 피부와 더 조화로운 쪽을 확인하세요. 안쪽 손목 혈관도 — 파랑/퍼플=쿨, 초록=웜, 혼합=중성. 중간 피부는 어떤 언더톤이든 가능하므로 이 단계에 시간을 투자하세요.",
+    "path": "ad.medium-skin.undertone"
+  },
+  {
+    "en": "For men, the easiest undertone test is comparing a white shirt to an off-white/cream shirt against your face. If bright white brightens your face, you're likely cool-toned. If cream looks better, you're likely warm-toned. Also notice whether silver or gold watch cases look more natural on your wrist.",
+    "zh": "对男性而言，最简单的底调测试是将白衬衫与米白/奶油色衬衫分别贴近面部。若亮白衬肤色，你可能偏冷调；若奶油色更好看，你可能偏暖调。也可观察银色或金色表壳在手腕上哪个更自然。",
+    "ko": "남성에게 가장 쉬운 언더톤 테스트는 흰 셔츠와 오프화이트/크림 셔츠를 얼굴에 비교하는 것입니다. 순백이 얼굴을 밝히면 쿨톤, 크림이 더 좋으면 웜톤일 가능성이 높습니다. 실버·골드 시계 케이스 중 어느 것이 더 자연스러운지도 확인하세요.",
+    "path": "ad.men.undertone"
+  },
+  {
+    "en": "Forest Green",
+    "zh": "森林绿",
+    "ko": "포레스트 그린",
+    "path": "sd.warm-autumn.bc7"
+  },
+  {
+    "en": "Foundation should be sheer — heavy coverage looks mask-like on fair skin",
+    "zh": "粉底应轻薄 — 厚重遮瑕在白皙皮肤上像面具感",
+    "ko": "파운데이션은 얇게 — 두꺼운 커버는 밝은 피부에서 마스크처럼 보입니다",
+    "path": "ad.fair-skin.mt0"
+  },
+  {
+    "en": "Foundation undertone is more important than shade depth — match warm/cool first",
+    "zh": "粉底底调比色度深度更重要 — 先匹配暖/冷",
+    "ko": "파운데이션 언더톤이 색 농도보다 중요 — 먼저 웜/쿨을 맞추세요",
+    "path": "ad.beginners.mt1"
+  },
+  {
+    "en": "Foundation: Look for olive-specific undertone shades (increasingly available from NARS, MAC, and Fenty)",
+    "zh": "粉底：寻找橄榄专用底调色号（NARS、MAC、Fenty 等品牌越来越多提供）",
+    "ko": "파운데이션: 올리브 전용 언더톤 색상을 찾으세요 (NARS, MAC, Fenty 등에서 점점 늘고 있음)",
+    "path": "ad.olive-skin.mt0"
+  },
+  {
+    "en": "Foundation: Match undertone precisely — warm = yellow-based, cool = pink-based, neutral = balanced",
+    "zh": "粉底：精确匹配底调 — 暖调偏黄，冷调偏粉，中性平衡",
+    "ko": "파운데이션: 언더톤을 정확히 맞추세요 — 웜톤=옐로 베이스, 쿨톤=핑크, 중성=밸런스",
+    "path": "ad.asian-skin.mt0"
+  },
+  {
+    "en": "Foundation: medium skin has the widest shade range — test 2-3 shades on your jawline in natural light",
+    "zh": "粉底：中等肤色色号范围最广 — 在自然光下于下颌试 2-3 个色号",
+    "ko": "파운데이션: 중간 피부는 색상 범위가 가장 넓습니다 — 자연광에서 턱선에 2~3개 테스트하세요",
+    "path": "ad.medium-skin.mt0"
+  },
+  {
+    "en": "Foundation: warm with golden or peachy undertone; avoid pink-based formulas",
+    "zh": "粉底：暖调、金或蜜桃底调；避免偏粉配方",
+    "ko": "파운데이션: 골드 또는 피치 언더톤의 웜톤; 핑크 베이스는 피하세요",
+    "path": "ad.redheads.mt0"
+  },
+  {
+    "en": "Freckles and skin redness can affect how colors appear against the skin",
+    "zh": "雀斑和皮肤泛红影响颜色在皮肤上的外观",
+    "ko": "주근깨와 피부 붉음이 색과의 조화에 영향을 줍니다",
+    "path": "ad.redheads.ch2"
+  },
+  {
+    "en": "Fuchsia",
+    "zh": "洋红色",
+    "ko": "푸시아",
+    "path": "sd.warm-spring.ac4"
+  },
+  {
+    "en": "Generally avoid very bright, saturated colors (especially neon orange, bright coral, and vivid yellow) that can make olive skin look sallow. Also be cautious with very cool pastels (icy pink, baby blue) that may clash with the green undertone. Stick to muted, earthy, and medium-depth colors.",
+    "zh": "一般避免极亮、高饱和色（尤其荧光橙、亮珊瑚、鲜黄），可能使皮肤显黄。也要谨慎极冷浅淡色（冰粉、婴儿蓝），可能与绿色底调冲突。坚持柔和、大地、中等深度颜色。",
+    "ko": "일반적으로 피부를 누렇게 보이게 하는 매우 밝고 채도 높은 색(특히 네온 오렌지, 브라이트 코랄, 선명한 옐로)을 피하세요. 녹기 언더톤과 충돌할 수 있는 매우 쿨톤 파스텔(아이시 핑크, 베이비 블루)에도 주의하세요. 뮤트하고, 어스톤이며, 중간 깊이 색을 고수하세요.",
+    "path": "ad.olive-skin.faq2A"
+  },
+  {
+    "en": "Go bold or go home — vivid, clear colors are your superpower",
+    "zh": "要么大胆，要么回家 — 鲜明、清晰的颜色是你的超能力",
+    "ko": "대담하게 — 선명하고 클리어한 색이 슈퍼파워입니다",
+    "path": "sd.bright-winter.ft0"
+  },
+  {
+    "en": "Go bold with saturated, clear colors — avoid anything dusty or muted",
+    "zh": "大胆选用饱和、清晰的颜色 — 避免任何灰蒙或柔和色调",
+    "ko": "채도 높은 선명한 색으로 대담하게 — 탁한 색은 피하세요",
+    "path": "sd.bright-spring.ft0"
+  },
+  {
+    "en": "Gold hardware and warm metal accents elevate every outfit",
+    "zh": "金色五金与暖金属点缀能提升整体造型",
+    "ko": "골드 하드웨어와 웜톤 메탈 액센트가 모든 코디를 업그레이드합니다",
+    "path": "sd.warm-autumn.ft2"
+  },
+  {
+    "en": "Golden Brown",
+    "zh": "金棕色",
+    "ko": "골든 브라운",
+    "path": "sd.warm-autumn.bc1"
+  },
+  {
+    "en": "Golden Yellow",
+    "zh": "金黄色",
+    "ko": "골든 옐로",
+    "path": "sd.warm-spring.bc1"
+  },
+  {
+    "en": "Golden blonde",
+    "zh": "金金色",
+    "ko": "골든 블론드",
+    "path": "sd.light-spring.hr0"
+  },
+  {
+    "en": "Golden brown",
+    "zh": "金棕色",
+    "ko": "골든 브라운",
+    "path": "sd.bright-spring.hr2"
+  },
+  {
+    "en": "Golden highlights",
+    "zh": "金色挑染",
+    "ko": "골든 하이라이트",
+    "path": "sd.warm-spring.hr3"
+  },
+  {
+    "en": "Grass Green",
+    "zh": "草绿色",
+    "ko": "풀잎 그린",
+    "path": "sd.warm-spring.bc5"
+  },
+  {
+    "en": "Green is your power color — from sage to emerald, it creates a stunning complement to red hair",
+    "zh": "绿色是王牌色 — 从鼠尾草到祖母绿，与红发惊艳互补",
+    "ko": "그린은 파워 컬러 — 세이지부터 에메랄드까지, 레드 헤어와 놀라운 보색 관계를 이룹니다",
+    "path": "ad.redheads.wt0"
+  },
+  {
+    "en": "Grooming products (beard oil, hair styling) in matte finishes look most natural",
+    "zh": "护理产品（胡须油、造型产品）选哑光质感最自然",
+    "ko": "그루밍 제품(수염 오일, 헤어 스타일링)은 매트 마감이 가장 자연스럽습니다",
+    "path": "ad.men.mt3"
+  },
+  {
+    "en": "Hair color changes with age (darkening or turning more auburn), which may shift seasonal expression",
+    "zh": "发色随年龄变化（变深或更赤褐），可能改变季型呈现",
+    "ko": "나이에 따라 머리색이 변해(어두워지거나 더 오번) 시즌 표현이 달라질 수 있습니다",
+    "path": "ad.redheads.ch4"
+  },
+  {
+    "en": "Harsh Black",
+    "zh": "刺目黑",
+    "ko": "강한 블랙",
+    "path": "ad.fair-skin.ac0"
+  },
+  {
+    "en": "Heather",
+    "zh": "石楠色",
+    "ko": "헤더",
+    "path": "sd.soft-summer.bc8"
+  },
+  {
+    "en": "Heather Gray",
+    "zh": "石楠灰",
+    "ko": "헤더 그레이",
+    "path": "sd.bright-spring.ac4"
+  },
+  {
+    "en": "High contrast combinations (black/white, navy/icy pink) look striking on you",
+    "zh": "高对比组合（黑/白、海军蓝/冰粉色）在你身上格外醒目",
+    "ko": "고대비 조합(블랙/화이트, 네이비/아이시 핑크)이 눈에 띕니다",
+    "path": "sd.cool-winter.ft2"
+  },
+  {
+    "en": "High contrast is your friend: pair dark bases with jewel-toned accents",
+    "zh": "高对比是你的优势：深暗底色搭配宝石色点缀",
+    "ko": "고대비가 강점입니다 — 어두운 베이스에 주얼 톤 포인트를 더하세요",
+    "path": "sd.deep-winter.ft1"
+  },
+  {
+    "en": "High — bold, clear, and saturated",
+    "zh": "高 — 大胆、清晰、饱和",
+    "ko": "높음 — 대담하고, 선명하며, 채도 높음",
+    "path": "sd.cool-winter.charChroma"
+  },
+  {
+    "en": "High — clear distinction between features",
+    "zh": "高 — 五官之间区分清晰",
+    "ko": "높음 — 특징 간 명확한 구분",
+    "path": "sd.cool-winter.charContrast"
+  },
+  {
+    "en": "High — dramatic difference between features",
+    "zh": "高 — 五官之间差异显著",
+    "ko": "높음 — 특징 간 극적인 차이",
+    "path": "sd.deep-winter.charContrast"
+  },
+  {
+    "en": "High — noticeable difference between skin, hair, and eyes",
+    "zh": "高 — 皮肤、头发与眼睛差异明显",
+    "ko": "높음 — 피부, 머리, 눈의 차이가 뚜렷",
+    "path": "sd.bright-spring.charContrast"
+  },
+  {
+    "en": "High — rich and saturated",
+    "zh": "高 — 浓郁而饱和",
+    "ko": "높음 — 풍부하고 채도 높음",
+    "path": "sd.deep-winter.charChroma"
+  },
+  {
+    "en": "High — rich, saturated colors",
+    "zh": "高 — 浓郁、饱和的颜色",
+    "ko": "높음 — 풍부하고 채도 높은 색",
+    "path": "sd.warm-spring.charChroma"
+  },
+  {
+    "en": "High — significant difference between features",
+    "zh": "高 — 五官之间差异显著",
+    "ko": "높음 — 특징 간 큰 차이",
+    "path": "sd.deep-autumn.charContrast"
+  },
+  {
+    "en": "High-contrast, vivid, and electric",
+    "zh": "高对比、鲜明、充满张力",
+    "ko": "고대비, 선명하고, 생기 넘치는",
+    "path": "sd.bright-spring.tagline"
+  },
+  {
+    "en": "Highlighters in gold, bronze, or warm champagne create a gorgeous glow",
+    "zh": "金色、青铜或暖香槟色高光能打造迷人光泽",
+    "ko": "골드, 브론즈, 웜 샴페인 하이라이터가 아름다운 광채를 만듭니다",
+    "path": "ad.dark-skin.mt3"
+  },
+  {
+    "en": "Hot Coral",
+    "zh": "热珊瑚色",
+    "ko": "핫 코랄",
+    "path": "sd.bright-spring.bc0"
+  },
+  {
+    "en": "Hot Pink",
+    "zh": "热粉色",
+    "ko": "핫 핑크",
+    "path": "sd.cool-winter.bc1"
+  },
+  {
+    "en": "How do I find my undertone with dark skin?",
+    "zh": "深肤色如何判断底调？",
+    "ko": "다크 스킨에서 언더톤을 찾는 방법은?",
+    "path": "ad.dark-skin.faq2Q"
+  },
+  {
+    "en": "How do I get started with color analysis?",
+    "zh": "如何开始色彩分析？",
+    "ko": "컬러 분석은 어떻게 시작하나요?",
+    "path": "ad.beginners.faq1Q"
+  },
+  {
+    "en": "Icy Blue",
+    "zh": "冰蓝色",
+    "ko": "아이시 블루",
+    "path": "sd.warm-spring.ac1"
+  },
+  {
+    "en": "Icy Lavender",
+    "zh": "冰薰衣草色",
+    "ko": "아이시 라벤더",
+    "path": "sd.cool-winter.bc4"
+  },
+  {
+    "en": "Icy Mint",
+    "zh": "冰薄荷色",
+    "ko": "아이시 민트",
+    "path": "sd.deep-autumn.ac3"
+  },
+  {
+    "en": "Icy Pink",
+    "zh": "冰粉色",
+    "ko": "아이시 핑크",
+    "path": "sd.light-summer.bc9"
+  },
+  {
+    "en": "Icy White",
+    "zh": "冰白色",
+    "ko": "아이시 화이트",
+    "path": "sd.bright-winter.bc9"
+  },
+  {
+    "en": "Icy pastels and deep cool jewel tones both work beautifully",
+    "zh": "冰浅色系与深冷宝石色都很适合",
+    "ko": "아이시 파스텔과 깊은 쿨톤 주얼 컬러 모두 아름답습니다",
+    "path": "sd.cool-winter.ft3"
+  },
+  {
+    "en": "Icy platinum (if natural contrast allows)",
+    "zh": "冰铂金色（若自然对比度允许）",
+    "ko": "아이시 플래티넘 (자연 대비가 허용하면)",
+    "path": "sd.cool-winter.hr3"
+  },
+  {
+    "en": "Icy platinum highlights",
+    "zh": "冰铂金挑染",
+    "ko": "아이시 플래티넘 하이라이트",
+    "path": "sd.bright-winter.hr3"
+  },
+  {
+    "en": "If you're cool: replace black with charcoal or navy for a softer, more flattering contrast",
+    "zh": "若偏冷：用炭灰或海军蓝替代黑色，对比更柔和、更衬肤色",
+    "ko": "쿨톤이면: 블랙 대신 차콜이나 네이비로 더 부드럽고 잘 어울리는 대비를",
+    "path": "ad.fair-skin.wt1"
+  },
+  {
+    "en": "If you're warm: cream and camel make better neutrals than white and gray",
+    "zh": "若偏暖：奶油和驼色比白和灰更适合做中性色",
+    "ko": "웜톤이면: 화이트/그레이 대신 크림과 카멜이 더 좋은 뉴트럴",
+    "path": "ad.fair-skin.wt2"
+  },
+  {
+    "en": "If you've heard about color analysis on TikTok, Instagram, or from a friend and want to understand what it's all about — you're in the right place. This beginner-friendly guide breaks down everything you need to know, step by step, without jargon or assumptions about what you already know.",
+    "zh": "若你在 TikTok、Instagram 或朋友处听说色彩分析，想了解它是什么 — 你来对地方了。本入门指南逐步拆解所需知识，无术语门槛，也不假设你已有基础。",
+    "ko": "TikTok, Instagram, 또는 지인을 통해 컬러 분석을 들었고 전체 그림을 알고 싶다면 — 여기가 맞는 곳입니다. 이 초보자 가이드는 전문 용어나 사전 지식 없이, 단계별로 필요한 내용을 설명합니다.",
+    "path": "ad.beginners.heroDesc"
+  },
+  {
+    "en": "In Korea (퍼스널컬러) and Japan (パーソナルカラー), personal color analysis became a mainstream beauty practice because the subtle differences between warm and cool makeup shades have a very visible impact on Asian skin tones. Professional draping salons are common, and K-beauty brands increasingly label products by season type.",
+    "zh": "在韩国（퍼스널컬러）和日本（パーソナルカラー），个人色彩分析成为主流美妆实践，因为暖冷彩妆色度的细微差异在亚洲肤色上影响非常明显。专业试色沙龙很常见，韩系品牌越来越多按季型标注产品。",
+    "ko": "한국(퍼스널컬러)과 일본(パーソナルカラー)에서 퍼스널 컬러 분석이 주류 뷰티 문화가 된 이유는, 웜/쿨 메이크업 색의 미묘한 차이가 아시아 피부에 매우 눈에 띄게 영향을 주기 때문입니다. 프로 드레이핑 살롱이 흔하고, K-뷰티 브랜드도 점점 시즌 타입별로 제품을 라벨링합니다.",
+    "path": "ad.asian-skin.faq1A"
+  },
+  {
+    "en": "Is color analysis real science?",
+    "zh": "色彩分析是真正的科学吗？",
+    "ko": "컬러 분석은 진짜 과학인가요?",
+    "path": "ad.beginners.faq2Q"
+  },
+  {
+    "en": "Is color analysis useful for men?",
+    "zh": "色彩分析对男性有用吗？",
+    "ko": "남성에게 컬러 분석이 유용한가요?",
+    "path": "ad.men.faq0Q"
+  },
+  {
+    "en": "Is olive a warm or cool undertone?",
+    "zh": "橄榄是暖调还是冷调？",
+    "ko": "올리브는 웜톤인가요, 쿨톤인가요?",
+    "path": "ad.olive-skin.faq0Q"
+  },
+  {
+    "en": "It depends on your contrast level. If you have dark hair and fair skin (high contrast), black can look striking. If your hair, eyes, and skin are all light (low contrast), black creates too much visual weight and navy or charcoal is usually more flattering.",
+    "zh": "取决于对比度。若深发浅肤（高对比），黑色可醒目。若头发、眼睛、皮肤都浅（低对比），黑色视觉重量过大，海军蓝或炭灰通常更衬肤色。",
+    "ko": "대비 레벨에 따라 다릅니다. 어두운 머리 + 밝은 피부(고대비)면 블랙도 인상적입니다. 머리·눈·피부가 모두 밝으면(저대비) 블랙은 시각적 무게가 너무 커서, 네이비나 차콜이 보통 더 잘 어울립니다.",
+    "path": "ad.fair-skin.faq0A"
+  },
+  {
+    "en": "It's not always clear how to actually use color analysis results in daily life",
+    "zh": "如何将色彩分析结果用于日常生活并不总是清晰",
+    "ko": "결과를 일상에서 어떻게 쓰는지 항상 명확하지 않습니다",
+    "path": "ad.beginners.ch3"
+  },
+  {
+    "en": "Jet black",
+    "zh": "乌黑色",
+    "ko": "제트 블랙",
+    "path": "sd.light-spring.ha0"
+  },
+  {
+    "en": "Jewel tones (emerald, sapphire, ruby, amethyst) make dark skin glow",
+    "zh": "宝石色（祖母绿、蓝宝石、红宝石、紫水晶）让深肤色焕发光彩",
+    "ko": "주얼 톤(에메랄드, 사파이어, 루비, 자수정)이 다크 스킨을 빛나게 합니다",
+    "path": "ad.dark-skin.wt0"
+  },
+  {
+    "en": "Jewel tones work if you have higher contrast (dark hair + light skin)",
+    "zh": "若有较高对比（深发加浅肤），宝石色适合",
+    "ko": "고대비(어두운 머리 + 밝은 피부)면 주얼 톤도 잘 어울립니다",
+    "path": "ad.fair-skin.wt4"
+  },
+  {
+    "en": "Kelly Green",
+    "zh": "凯利绿",
+    "ko": "켈리 그린",
+    "path": "sd.bright-spring.bc3"
+  },
+  {
+    "en": "Khaki",
+    "zh": "卡其色",
+    "ko": "카키",
+    "path": "ad.dark-skin.ac3"
+  },
+  {
+    "en": "Know your undertone first — this matters more than any general 'Asian skin' advice",
+    "zh": "先了解底调 — 这比任何泛泛的「亚洲肤色」建议都重要",
+    "ko": "먼저 언더톤을 파악하세요 — 일반적인 '아시아 피부' 조언보다 중요합니다",
+    "path": "ad.asian-skin.wt0"
+  },
+  {
+    "en": "Korean/Japanese seasonal color analysis (春/夏/秋/冬) follows the same 4/12-season framework",
+    "zh": "韩日季节性色彩分析（春/夏/秋/冬）遵循相同的四/十二季框架",
+    "ko": "한/일 계절 컬러 분석(春/夏/秋/冬)은 동일한 4/12시즌 프레임워크를 따릅니다",
+    "path": "ad.asian-skin.wt3"
+  },
+  {
+    "en": "Layer dark and medium warm tones for dramatic sophistication",
+    "zh": "叠穿深暗与中暖色调，打造戏剧感精致造型",
+    "ko": "어두운 색과 중간 웜톤을 레이어링해 드라마틱한 세련됨을 연출하세요",
+    "path": "sd.deep-autumn.ft3"
+  },
+  {
+    "en": "Layer different shades of the same cool tone for a polished look",
+    "zh": "叠穿同一冷色调的不同深浅，打造精致层次感",
+    "ko": "같은 쿨톤의 다른 색조를 레이어링해 세련된 룩을 연출하세요",
+    "path": "sd.light-summer.ft4"
+  },
+  {
+    "en": "Layer muted warm tones for effortless elegance",
+    "zh": "叠穿柔和暖色调，轻松打造优雅造型",
+    "ko": "뮤트한 웜톤을 레이어링해 자연스러운 우아함을 연출하세요",
+    "path": "sd.soft-autumn.ft1"
+  },
+  {
+    "en": "Layer similar muted tones for a sophisticated, tonal look",
+    "zh": "叠穿相近的柔和色调，打造精致同色系造型",
+    "ko": "비슷한 뮤트 톤을 레이어링해 세련된 톤온 룩을 연출하세요",
+    "path": "sd.soft-summer.ft1"
+  },
+  {
+    "en": "Layer warm tones for a rich, cohesive look",
+    "zh": "叠穿暖色调，打造层次丰富、协调统一的整体造型",
+    "ko": "웜톤을 레이어링해 풍부하고 통일감 있는 룩을 연출하세요",
+    "path": "sd.warm-spring.ft4"
+  },
+  {
+    "en": "Layering different warm tones creates a rich, luxurious look",
+    "zh": "叠穿不同暖色调，打造层次丰富、奢华感造型",
+    "ko": "다른 웜톤을 레이어링해 풍부하고 럭셔리한 룩을 연출하세요",
+    "path": "sd.warm-autumn.ft3"
+  },
+  {
+    "en": "Less content and guidance exists specifically for men's color analysis",
+    "zh": "专门针对男性的色彩分析内容较少",
+    "ko": "남성을 위한 컬러 분석 콘텐츠와 가이드가 부족합니다",
+    "path": "ad.men.ch3"
+  },
+  {
+    "en": "Light Camel",
+    "zh": "浅驼色",
+    "ko": "라이트 카멜",
+    "path": "sd.light-spring.nc1"
+  },
+  {
+    "en": "Light Coral",
+    "zh": "浅珊瑚色",
+    "ko": "라이트 코랄",
+    "path": "sd.light-spring.bc2"
+  },
+  {
+    "en": "Light Lavender",
+    "zh": "浅薰衣草色",
+    "ko": "라이트 라벤더",
+    "path": "sd.deep-autumn.ac1"
+  },
+  {
+    "en": "Light Peach",
+    "zh": "浅蜜桃色",
+    "ko": "라이트 피치",
+    "path": "sd.deep-winter.ac1"
+  },
+  {
+    "en": "Light Periwinkle",
+    "zh": "浅长春花色",
+    "ko": "라이트 페리윙클",
+    "path": "sd.light-spring.bc9"
+  },
+  {
+    "en": "Light Raspberry",
+    "zh": "浅覆盆子色",
+    "ko": "라이트 라즈베리",
+    "path": "sd.light-summer.bc6"
+  },
+  {
+    "en": "Light Spring",
+    "zh": "浅春型",
+    "ko": "라이트 스프링",
+    "path": "sd.light-spring.name"
+  },
+  {
+    "en": "Light Spring is the softest and most delicate of the Spring sub-seasons. People with this coloring have warm undertones with low-to-medium contrast between their skin, hair, and eyes. Their overall appearance is light and luminous, with a warm golden glow. Light Springs look best in warm, light, and clear colors that echo their natural brightness without overwhelming their delicate features.",
+    "zh": "浅春型是春季型中最柔和、最精致的一种。这类人的肤色带有暖调，皮肤、头发与眼睛之间的对比度为低至中等，整体外观轻盈明亮，带有温暖的金色光泽。浅春型最适合温暖、明亮、清透的颜色，能呼应其天生的亮度，又不会掩盖精致五官。",
+    "ko": "라이트 스프링은 스프링 서브시즌 중 가장 부드럽고 섬세한 타입입니다. 웜톤 언더톤을 가지며 피부, 머리, 눈 사이의 대비가 낮음~중간입니다. 전체적으로 밝고 빛나며 따뜻한 골든 글로우를 띱니다. 라이트 스프링에게는 자연스러운 밝기를 살리면서 섬세한 이목구비를 압도하지 않는 따뜻하고 밝으며 선명한 색이 가장 잘 어울립니다.",
+    "path": "sd.light-spring.desc"
+  },
+  {
+    "en": "Light Spring — fair with warm, golden undertones and light, clear coloring",
+    "zh": "浅春型 — 白皙、暖金底调、浅清透色调",
+    "ko": "라이트 스프링 — 밝고 웜톤 골드 언더톤, 밝고 선명한 컬러링",
+    "path": "ad.fair-skin.cs0"
+  },
+  {
+    "en": "Light Spring — strawberry blondes with light, warm features",
+    "zh": "浅春型 — 草莓金、浅暖特征",
+    "ko": "라이트 스프링 — 밝고 웜톤 이목구비의 스트로베리 블론드",
+    "path": "ad.redheads.cs2"
+  },
+  {
+    "en": "Light Summer",
+    "zh": "浅夏型",
+    "ko": "라이트 서머",
+    "path": "sd.light-summer.name"
+  },
+  {
+    "en": "Light Summer is the lightest and most delicate of the Summer sub-seasons. These individuals have cool undertones with very light overall coloring and low contrast. Their appearance is ethereal and soft, with a pink or rosy quality to their skin. Light Summers look best in cool, light, and slightly muted colors that complement their gentle coloring without washing them out.",
+    "zh": "浅夏型是夏季型中最浅、最精致的一种。这类人肤色偏冷，整体色调非常浅，对比度低。外观空灵柔和，皮肤常带粉色或玫瑰色调。浅夏型最适合冷调、浅淡、略带柔和感的颜色，能衬托温柔肤色，又不会显得苍白。",
+    "ko": "라이트 서머는 서머 서브시즌 중 가장 밝고 섬세한 타입입니다. 쿨톤 언더톤과 매우 밝은 전체 톤, 낮은 대비를 가집니다. 몽환적이고 부드러운 인상이며 피부에 핑크나 로즈 톤이 있습니다. 라이트 서머에게는 부드러운 컬러링을 살리면서 탁해지지 않는 쿨하고 밝으며 약간 뮤트한 색이 가장 잘 어울립니다.",
+    "path": "sd.light-summer.desc"
+  },
+  {
+    "en": "Light Summer — fair with cool, pink undertones and soft, muted coloring",
+    "zh": "浅夏型 — 白皙、冷粉底调、柔和色调",
+    "ko": "라이트 서머 — 밝고 쿨톤 핑크 언더톤, 부드럽고 뮤트한 컬러링",
+    "path": "ad.fair-skin.cs1"
+  },
+  {
+    "en": "Light Taupe",
+    "zh": "浅灰褐色",
+    "ko": "라이트 토프",
+    "path": "sd.light-summer.nc2"
+  },
+  {
+    "en": "Light Teal",
+    "zh": "浅蓝绿色",
+    "ko": "라이트 틸",
+    "path": "sd.light-spring.bc5"
+  },
+  {
+    "en": "Light Yellow",
+    "zh": "浅黄色",
+    "ko": "라이트 옐로",
+    "path": "sd.deep-autumn.ac4"
+  },
+  {
+    "en": "Light ash blonde",
+    "zh": "浅灰金色",
+    "ko": "라이트 애쉬 블론드",
+    "path": "sd.deep-autumn.ha0"
+  },
+  {
+    "en": "Light blonde",
+    "zh": "浅金色",
+    "ko": "라이트 블론드",
+    "path": "sd.deep-winter.ha0"
+  },
+  {
+    "en": "Light brown",
+    "zh": "浅棕色",
+    "ko": "라이트 브라운",
+    "path": "sd.deep-winter.ha2"
+  },
+  {
+    "en": "Light colors overall",
+    "zh": "浅色调整体",
+    "ko": "전체적으로 밝은 색",
+    "path": "sd.deep-autumn.ha2"
+  },
+  {
+    "en": "Light gold, rose gold, warm-toned pearls, amber, peridot, aquamarine",
+    "zh": "浅金色、玫瑰金、暖调珍珠、琥珀、橄榄石、海蓝宝",
+    "ko": "라이트 골드, 로즈 골드, 웜톤 진주, 호박, 페리도트, 아쿠아마린",
+    "path": "sd.light-spring.jewelry"
+  },
+  {
+    "en": "Light honey brown",
+    "zh": "浅蜜棕色",
+    "ko": "라이트 허니 브라운",
+    "path": "sd.light-spring.hr1"
+  },
+  {
+    "en": "Light mushroom brown",
+    "zh": "浅蘑菇棕",
+    "ko": "라이트 머쉬룸 브라운",
+    "path": "sd.light-summer.hr4"
+  },
+  {
+    "en": "Light — overall coloring is fair and airy",
+    "zh": "浅 — 整体色调偏浅、轻盈",
+    "ko": "밝음 — 전체 톤이 밝고 가벼움",
+    "path": "sd.light-spring.charDepth"
+  },
+  {
+    "en": "Lime Green",
+    "zh": "青柠绿",
+    "ko": "라임 그린",
+    "path": "sd.bright-winter.bc2"
+  },
+  {
+    "en": "Lip colors: Muted berry, dusty rose, warm mauve, and terracotta work beautifully",
+    "zh": "唇色：柔和浆果、灰粉、暖灰紫和赤陶色都很优美",
+    "ko": "립: 뮤트 베리, 더스티 로즈, 웜 모브, 테라코타가 아름답습니다",
+    "path": "ad.olive-skin.mt1"
+  },
+  {
+    "en": "Lip colors: nude pink, soft rose, light berry, or coral depending on your season",
+    "zh": "唇色：裸粉、柔和玫瑰、浅浆果或珊瑚，视季型而定",
+    "ko": "립: 누드 핑크, 소프트 로즈, 라이트 베리, 또는 시즌에 맞는 코랄",
+    "path": "ad.fair-skin.mt2"
+  },
+  {
+    "en": "Lip: MLBB (My Lips But Better) shades in your undertone family are most natural",
+    "zh": "唇妆：同底调系列的自然唇色最自然",
+    "ko": "립: 내 입술색과 비슷한(MLBB) 톤을 언더톤 계열로 선택하면 가장 자연스럽습니다",
+    "path": "ad.asian-skin.mt2"
+  },
+  {
+    "en": "Lips: warm nude, warm coral, terracotta, warm berry (avoid cool pinks and blue-reds)",
+    "zh": "唇：暖裸、暖珊瑚、赤陶、暖浆果（避免冷粉和蓝红）",
+    "ko": "립: 웜 누드, 웜 코랄, 테라코타, 웜 베리 (쿨 핑크·블루 레드는 피하세요)",
+    "path": "ad.redheads.mt1"
+  },
+  {
+    "en": "Look for foundations with undertone-specific shades — warm (golden/red), cool (blue/red), or neutral",
+    "zh": "寻找带特定底调的粉底 — 暖调（金/红）、冷调（蓝/红）或中性",
+    "ko": "언더톤별 파운데이션을 찾으세요 — 웜톤(골드/레드), 쿨톤(블루/레드), 중성",
+    "path": "ad.dark-skin.mt0"
+  },
+  {
+    "en": "Low contrast between skin, hair, and eyes makes season distinction harder",
+    "zh": "皮肤、头发、眼睛之间低对比使季型区分更难",
+    "ko": "피부, 머리, 눈 사이 낮은 대비로 시즌 구분이 어렵습니다",
+    "path": "ad.fair-skin.ch0"
+  },
+  {
+    "en": "Low — distinctly muted, soft, and dusty",
+    "zh": "低 — 明显柔和、带有灰蒙感",
+    "ko": "낮음 — 뚜렷히 뮤트, 부드럽고 더스티",
+    "path": "sd.soft-summer.charChroma"
+  },
+  {
+    "en": "Low — distinctly soft and muted",
+    "zh": "低 — 明显柔和、带有灰蒙感",
+    "ko": "낮음 — 뚜렷히 부드럽고 뮤트",
+    "path": "sd.soft-autumn.charChroma"
+  },
+  {
+    "en": "Low — features are close in depth and intensity",
+    "zh": "低 — 五官深度与强度相近",
+    "ko": "낮음 — 특징의 깊이와 강도가 비슷",
+    "path": "sd.soft-autumn.charContrast"
+  },
+  {
+    "en": "Low — features blend together softly",
+    "zh": "低 — 五官柔和融合",
+    "ko": "낮음 — 특징이 부드럽게 어우러짐",
+    "path": "sd.soft-summer.charContrast"
+  },
+  {
+    "en": "Low — skin, hair, and eyes are close in lightness",
+    "zh": "低 — 皮肤、头发与眼睛明度相近",
+    "ko": "낮음 — 피부, 머리, 눈의 밝기가 비슷",
+    "path": "sd.light-spring.charContrast"
+  },
+  {
+    "en": "Low — skin, hair, and eyes are similar in lightness",
+    "zh": "低 — 皮肤、头发与眼睛明度相近",
+    "ko": "낮음 — 피부, 머리, 눈 밝기가 비슷",
+    "path": "sd.light-summer.charContrast"
+  },
+  {
+    "en": "Luxurious fabrics like velvet, leather, and rich wool enhance your depth",
+    "zh": "天鹅绒、皮革和厚重羊毛等奢华面料能强化你的深度",
+    "ko": "벨벳, 레더, 리치 울 등 럭셔리 소재가 깊이를 돋보이게 합니다",
+    "path": "sd.deep-autumn.ft2"
+  },
+  {
+    "en": "Many fair-skinned people default to black and gray, which may not be their best neutrals",
+    "zh": "许多白皙者默认黑灰，可能不是最佳中性色",
+    "ko": "많은 밝은 피부가 블랙/그레이를 기본으로 하지만, 최적 뉴트럴이 아닐 수 있습니다",
+    "path": "ad.fair-skin.ch3"
+  },
+  {
+    "en": "Many foundations skip olive undertones, making color matching difficult",
+    "zh": "许多粉底跳过橄榄底调，配色困难",
+    "ko": "많은 파운데이션이 올리브 언더톤을 생략해 색 매칭이 어렵습니다",
+    "path": "ad.olive-skin.ch3"
+  },
+  {
+    "en": "Many online quizzes rely on vein color tests that are less visible on darker skin",
+    "zh": "许多在线测试依赖看血管颜色，在深色皮肤上不易观察",
+    "ko": "많은 온라인 퀴즈가 어두운 피부에서 잘 보이지 않는 혈관 색 테스트에 의존합니다",
+    "path": "ad.dark-skin.ch1"
+  },
+  {
+    "en": "Many people assume Asian skin is automatically warm (yellow-toned), but cool and neutral undertones are very common",
+    "zh": "许多人假设亚洲肤色自动偏暖（偏黄），但冷调和中性底调非常常见",
+    "ko": "많은 사람이 아시아인=자동 웜톤(옐로)이라 가정하지만, 쿨톤과 중성도 매우 흔합니다",
+    "path": "ad.asian-skin.ch1"
+  },
+  {
+    "en": "Many redheads avoid certain colors (like red clothing) unnecessarily",
+    "zh": "许多红发者不必要地回避某些色（如红衣服）",
+    "ko": "많은 레드헤드가 불필요하게 특정 색(빨간 옷 등)을 피합니다",
+    "path": "ad.redheads.ch3"
+  },
+  {
+    "en": "Matte gold, brushed copper, warm pearls, amber, smoky quartz, peridot",
+    "zh": "哑光金、磨砂铜、暖调珍珠、琥珀、烟晶、橄榄石",
+    "ko": "매트 골드, 브러시 코퍼, 웜톤 진주, 호박, 스모키 쿼츠, 페리도트",
+    "path": "sd.soft-autumn.jewelry"
+  },
+  {
+    "en": "Medium Blue",
+    "zh": "中蓝",
+    "ko": "미디엄 블루",
+    "path": "ad.fair-skin.bc6"
+  },
+  {
+    "en": "Medium Skin Tones",
+    "zh": "中等肤色",
+    "ko": "중간 피부톤",
+    "path": "ad.medium-skin.name"
+  },
+  {
+    "en": "Medium depth means undertone becomes the primary differentiator — and it can be subtle",
+    "zh": "中等深度意味着底调成为主要区分因素 — 且可能微妙",
+    "ko": "중간 깊이는 언더톤이 주요 구분 요소가 되며 — 미묘할 수 있습니다",
+    "path": "ad.medium-skin.ch0"
+  },
+  {
+    "en": "Medium skin alone doesn't determine your season — undertone, contrast, and chroma are what matter. You could be any of the 12 seasons. The best approach is AI color analysis with a photo, which evaluates all dimensions simultaneously.",
+    "zh": "中等肤色本身不决定季型 — 底调、对比度、色度才重要。可能是十二季型任一。最佳是带照片的 AI 色彩分析，同时评估所有维度。",
+    "ko": "중간 피부만으로는 시즌이 정해지지 않습니다 — 언더톤, 대비, 채도가 중요합니다. 12시즌 모두 가능합니다. 최선은 사진으로 AI 컬러 분석 — 모든 차원을 동시에 평가합니다.",
+    "path": "ad.medium-skin.faq0A"
+  },
+  {
+    "en": "Medium skin can fall into almost any of the 12 seasons, making narrowing down harder",
+    "zh": "中等肤色可落入几乎任何十二季型，缩小范围更难",
+    "ko": "중간 피부는 12시즌 거의 모두에 해당 가능해 범위를 좁히기 어렵습니다",
+    "path": "ad.medium-skin.ch1"
+  },
+  {
+    "en": "Medium skin is the broadest category — generic 'medium skin' advice is rarely specific enough",
+    "zh": "中等肤色是最广类别 — 泛泛「中等肤色」建议很少足够具体",
+    "ko": "중간 피부는 가장 넓은 카테고리 — 일반적인 '중간 피부' 조언은 드물게 구체적입니다",
+    "path": "ad.medium-skin.ch4"
+  },
+  {
+    "en": "Medium skin is versatile — you can wear a wide range of colors if they match your undertone",
+    "zh": "中等肤色百搭 — 匹配底调可穿广泛色域",
+    "ko": "중간 피부는 다재다능 — 언더톤만 맞으면 넓은 색 범위를 소화할 수 있습니다",
+    "path": "ad.medium-skin.wt0"
+  },
+  {
+    "en": "Medium skin shows eyeshadow color beautifully — experiment with your season's accent colors",
+    "zh": "中等肤色展现眼影色极佳 — 用季型点缀色尝试",
+    "ko": "중간 피부는 아이섀도 색이 아름답게 표현됩니다 — 시즌 포인트 컬러를 실험해 보세요",
+    "path": "ad.medium-skin.mt3"
+  },
+  {
+    "en": "Medium skin tones are the most common globally and span the widest range of undertones — from warm golden to cool pink to neutral olive. Because medium skin has moderate depth, the undertone and chroma dimensions become especially important for color typing. The right colors make medium skin look vibrant and healthy; the wrong ones can make it look sallow or washed out.",
+    "zh": "中等肤色是全球最常见、底调范围最广 — 从暖金到冷粉到中性橄榄。因中等深度，底调和色度维度对分型尤其重要。选对颜色让中等肤色鲜活、健康；选错则显黄或苍白。",
+    "ko": "중간 피부톤은 전 세계에서 가장 흔하며 언더톤 범위도 가장 넓습니다 — 웜톤 골드부터 쿨톤 핑크, 중성 올리브까지. 중간 깊이 때문에 언더톤과 채도 차원이 컬러 타입에서 특히 중요합니다. 맞는 색은 중간 피부를 생기 있고 건강해 보이게 하고, 틀린 색은 누렇거나 창백해 보이게 합니다.",
+    "path": "ad.medium-skin.heroDesc"
+  },
+  {
+    "en": "Medium — balanced but high-impact",
+    "zh": "中等 — 均衡但冲击感强",
+    "ko": "중간 — 균형 잡히지만 임팩트가 큼",
+    "path": "sd.bright-winter.charDepth"
+  },
+  {
+    "en": "Medium — balanced depth, not extreme",
+    "zh": "中等 — 深度均衡，不极端",
+    "ko": "중간 — 균형 잡힌 깊이",
+    "path": "sd.cool-summer.charDepth"
+  },
+  {
+    "en": "Medium — balanced, not extreme",
+    "zh": "中等 — 均衡，不极端",
+    "ko": "중간 — 극단적이지 않음",
+    "path": "sd.soft-autumn.charDepth"
+  },
+  {
+    "en": "Medium — balanced, not extremely light or dark",
+    "zh": "中等 — 均衡，不过浅也不过深",
+    "ko": "중간 — 균형 잡힌, 극단적이지 않음",
+    "path": "sd.bright-spring.charDepth"
+  },
+  {
+    "en": "Medium — neither very light nor very dark",
+    "zh": "中等 — 既不太浅也不太深",
+    "ko": "중간 — 매우 밝거나 어둡지 않음",
+    "path": "sd.warm-spring.charDepth"
+  },
+  {
+    "en": "Medium — neither very muted nor very bright",
+    "zh": "中等 — 既不太柔和也不太鲜艳",
+    "ko": "중간 — 극단적으로 뮤트하거나 밝지 않음",
+    "path": "sd.light-summer.charChroma"
+  },
+  {
+    "en": "Medium — saturated but not vivid",
+    "zh": "中等 — 饱和但不鲜艳",
+    "ko": "중간 — 채도 있지만 과하게 선명하지 않음",
+    "path": "sd.warm-autumn.charChroma"
+  },
+  {
+    "en": "Medium — slightly muted but not dusty",
+    "zh": "中等 — 略带柔和但不显灰蒙",
+    "ko": "중간 — 약간 뮤트하지만 탁하지 않음",
+    "path": "sd.cool-summer.charChroma"
+  },
+  {
+    "en": "Medium — some difference between features",
+    "zh": "中等 — 五官之间有一定差异",
+    "ko": "중간 — 특징 간 약간의 차이",
+    "path": "sd.warm-spring.charContrast"
+  },
+  {
+    "en": "Medium — some distinction between features",
+    "zh": "中等 — 五官之间有一定区分",
+    "ko": "중간 — 특징 간 약간의 구분",
+    "path": "sd.cool-summer.charContrast"
+  },
+  {
+    "en": "Medium — warm harmony with some depth variation",
+    "zh": "中等 — 暖调和谐，深度略有变化",
+    "ko": "중간 — 웜톤 조화와 깊이 변화",
+    "path": "sd.warm-autumn.charContrast"
+  },
+  {
+    "en": "Medium-deep — balanced but leaning dark",
+    "zh": "中深 — 均衡但偏深",
+    "ko": "중~깊음 — 균형 잡히지만 어두운 편",
+    "path": "sd.cool-winter.charDepth"
+  },
+  {
+    "en": "Medium-deep — rich overall coloring",
+    "zh": "中深 — 整体色调浓郁",
+    "ko": "중~깊음 — 풍부한 전체 컬러링",
+    "path": "sd.warm-autumn.charDepth"
+  },
+  {
+    "en": "Medium-depth colors work better than extremes (very light or very dark)",
+    "zh": "中等深度颜色比极端（极浅或极深）更适合",
+    "ko": "중간 깊이 색이 극단(매우 밝거나 어두운)보다 더 잘 어울립니다",
+    "path": "ad.olive-skin.wt1"
+  },
+  {
+    "en": "Medium-high — colors lean clear rather than muted",
+    "zh": "中偏高 — 颜色偏向清透而非柔和",
+    "ko": "중~고 — 색이 뮤트보다 선명한 편",
+    "path": "sd.light-spring.charChroma"
+  },
+  {
+    "en": "Medium-high — saturated and rich",
+    "zh": "中偏高 — 饱和而丰富",
+    "ko": "중~고 — 채도 높고 풍부",
+    "path": "sd.deep-autumn.charChroma"
+  },
+  {
+    "en": "Men",
+    "zh": "男性",
+    "ko": "남성",
+    "path": "ad.men.name"
+  },
+  {
+    "en": "Men's fashion has a narrower color range — knowing which neutrals work best matters more",
+    "zh": "男装色彩范围较窄 — 了解哪种中性色最适合尤为重要",
+    "ko": "남성 패션은 색 범위가 좁습니다 — 어떤 뉴트럴이 최적인지가 더 중요합니다",
+    "path": "ad.men.ch0"
+  },
+  {
+    "en": "Metallics (gold, bronze, copper) complement warm undertones beautifully",
+    "zh": "金属色（金、青铜、铜）与暖调底调完美搭配",
+    "ko": "메탈릭(골드, 브론즈, 코퍼)이 웜톤 언더톤을 아름답게 보완합니다",
+    "path": "ad.dark-skin.wt3"
+  },
+  {
+    "en": "Midnight Blue",
+    "zh": "午夜蓝",
+    "ko": "미드나잇 블루",
+    "path": "sd.deep-winter.bc9"
+  },
+  {
+    "en": "Misty Mauve",
+    "zh": "雾感灰紫色",
+    "ko": "미스티 모브",
+    "path": "sd.light-summer.bc5"
+  },
+  {
+    "en": "Mix warm neutrals (camel, warm white, taupe) as your base",
+    "zh": "以暖调中性色（驼色、暖白、灰褐色）作为基础色",
+    "ko": "웜톤 뉴트럴(카멜, 웜 화이트, 토프)을 베이스로 활용하세요",
+    "path": "sd.light-spring.ft1"
+  },
+  {
+    "en": "Mix warm neutrals freely — they all work together on you",
+    "zh": "暖中性色可自由混搭 — 在你身上都很协调",
+    "ko": "웜톤 뉴트럴을 자유롭게 믹스하세요 — 모두 잘 어울립니다",
+    "path": "sd.soft-autumn.ft4"
+  },
+  {
+    "en": "Mocha",
+    "zh": "摩卡色",
+    "ko": "모카",
+    "path": "sd.cool-summer.hr3"
+  },
+  {
+    "en": "Monochromatic cool-toned outfits look very polished on you",
+    "zh": "同色系冷调穿搭看起来格外精致",
+    "ko": "모노톤 쿨톤 코디가 매우 세련됩니다",
+    "path": "sd.cool-summer.ft3"
+  },
+  {
+    "en": "Monochromatic dark outfits look incredibly sophisticated on you",
+    "zh": "同色系深暗穿搭看起来格外精致",
+    "ko": "모노톤 다크 코디가 매우 세련됩니다",
+    "path": "sd.deep-winter.ft3"
+  },
+  {
+    "en": "Most redheads have warm undertones, but cool-toned redheads do exist (especially those with ashy strawberry hair). Check if your skin has peachy-golden warmth (warm) or pink-rosy coolness (cool). If your freckles are golden-brown, you're almost certainly warm-toned. If they're grayish, you may lean cool.",
+    "zh": "多数红发者偏暖调，但冷调红发也存在（尤其灰调草莓金）。看皮肤是蜜桃金色暖还是粉红玫瑰冷。若雀斑金棕，几乎肯定偏暖。若偏灰，可能倾向冷。",
+    "ko": "대부분의 레드헤드는 웜톤이지만, 쿨톤 레드헤드도 있습니다(특히 애쉬 스트로베리). 피부에 피치~골든 웜스(웜)인지 핑크~로즈 쿨함(쿨)인지 확인하세요. 주근깨가 골든 브라운이면 거의 확실히 웜톤, 회색 기면 쿨톤일 수 있습니다.",
+    "path": "ad.redheads.undertone"
+  },
+  {
+    "en": "Mousy brown",
+    "zh": "灰棕色",
+    "ko": "마우스 브라운",
+    "path": "sd.bright-spring.ha1"
+  },
+  {
+    "en": "Mushroom",
+    "zh": "蘑菇色",
+    "ko": "머쉬룸",
+    "path": "sd.soft-summer.nc3"
+  },
+  {
+    "en": "Mushroom brown",
+    "zh": "蘑菇棕",
+    "ko": "머쉬룸 브라운",
+    "path": "sd.soft-summer.hr0"
+  },
+  {
+    "en": "Mustard",
+    "zh": "芥末黄",
+    "ko": "머스타드",
+    "path": "sd.light-summer.ac1"
+  },
+  {
+    "en": "Mustard (if cool-toned)",
+    "zh": "芥末黄（若偏冷调）",
+    "ko": "머스타드 (쿨톤 타입)",
+    "path": "ad.asian-skin.ac2"
+  },
+  {
+    "en": "Muted Burgundy",
+    "zh": "柔和酒红色",
+    "ko": "뮤트 버건디",
+    "path": "ad.olive-skin.bc7"
+  },
+  {
+    "en": "Muted Cocoa",
+    "zh": "柔和可可色",
+    "ko": "뮤트 코코아",
+    "path": "sd.soft-summer.bc6"
+  },
+  {
+    "en": "Muted Gray",
+    "zh": "柔和灰色",
+    "ko": "뮤트 그레이",
+    "path": "sd.soft-summer.nc0"
+  },
+  {
+    "en": "Muted Mauve",
+    "zh": "柔和灰紫色",
+    "ko": "뮤트 모브",
+    "path": "sd.bright-spring.ac1"
+  },
+  {
+    "en": "Muted Raspberry",
+    "zh": "柔和覆盆子色",
+    "ko": "뮤트 라즈베리",
+    "path": "sd.soft-summer.bc9"
+  },
+  {
+    "en": "Muted Salmon",
+    "zh": "柔和鲑鱼粉",
+    "ko": "뮤트 연어색",
+    "path": "sd.soft-autumn.bc9"
+  },
+  {
+    "en": "Muted Teal",
+    "zh": "柔和蓝绿色",
+    "ko": "뮤트 틸",
+    "path": "sd.soft-summer.bc3"
+  },
+  {
+    "en": "Muted ash tones",
+    "zh": "柔和灰调发色",
+    "ko": "뮤트 애쉬 톤",
+    "path": "sd.bright-winter.ha3"
+  },
+  {
+    "en": "Muted colors",
+    "zh": "柔和色调",
+    "ko": "뮤트한 색",
+    "path": "sd.bright-spring.ha3"
+  },
+  {
+    "en": "Muted jewel tones (dusty teal, muted burgundy, soft plum) add richness without clashing",
+    "zh": "柔和宝石色（灰蒙蓝绿、柔和酒红、柔和梅）增添丰富感而不冲突",
+    "ko": "뮤트 주얼 톤(더스티 틸, 뮤트 버건디, 소프트 플럼)이 풍부함을 더하며 충돌하지 않습니다",
+    "path": "ad.olive-skin.wt2"
+  },
+  {
+    "en": "Muted rose brown",
+    "zh": "柔和玫瑰棕",
+    "ko": "뮤트 로즈 브라운",
+    "path": "sd.soft-summer.hr3"
+  },
+  {
+    "en": "Muted, cool, and effortlessly harmonious",
+    "zh": "柔和、冷调、自然和谐",
+    "ko": "뮤트하고, 쿨하며, 자연스럽게 조화로운",
+    "path": "sd.soft-summer.tagline"
+  },
+  {
+    "en": "Natural dark brown",
+    "zh": "自然深棕色",
+    "ko": "내추럴 다크 브라운",
+    "path": "sd.deep-winter.hr0"
+  },
+  {
+    "en": "Natural fabrics and textures (linen, suede, cashmere) complement your coloring",
+    "zh": "天然面料与质感（亚麻、麂皮、羊绒）最能衬托你的肤色",
+    "ko": "린넨, 스웨이드, 캐시미어 등 자연 소재가 컬러링을 돋보이게 합니다",
+    "path": "sd.soft-autumn.ft2"
+  },
+  {
+    "en": "Natural hair color (very dark brown to black) can create undertone confusion",
+    "zh": "天然发色（深棕至黑）可能造成底调判断混淆",
+    "ko": "자연 머리색(매우 어두운 브라운~블랙)이 언더톤 판별을 혼란스럽게 할 수 있습니다",
+    "path": "ad.asian-skin.ch3"
+  },
+  {
+    "en": "Natural red hair is rare (about 2% of the global population) and creates a unique color analysis profile. Redheads have distinctive coloring that interacts with clothing and makeup colors in specific ways. Whether your hair is strawberry blonde, copper, auburn, or deep red, understanding your color season helps you work with your natural warmth rather than against it.",
+    "zh": "天然红发罕见（全球约 2%），形成独特的色彩分析特征。红发与服装、彩妆色相互作用有特定方式。无论草莓金、铜、赤褐或深红，了解季型帮你顺应而非违背天然暖感。",
+    "ko": "천연 레드 헤어는 드물며(전 세계 인구 약 2%), 독특한 컬러 분석 프로필을 만듭니다. 레드 헤어는 의류·메이크업 색과 특정 방식으로 상호작용합니다. 스트로베리 블론드, 코퍼, 오번, 딥 레드 모두 — 컬러 시즌을 이해하면 자연스러운 웜스와 조화를 이룰 수 있습니다.",
+    "path": "ad.redheads.heroDesc"
+  },
+  {
+    "en": "Navy",
+    "zh": "海军蓝",
+    "ko": "네이비",
+    "path": "sd.cool-summer.nc1"
+  },
+  {
+    "en": "Navy and teal are your best blue tones (avoid icy or periwinkle blues)",
+    "zh": "海军蓝和蓝绿是最佳蓝色调（避免冰或长春花蓝）",
+    "ko": "네이비와 틸이 최적의 블루 톤입니다 (아이시·페리윙클 블루는 피하세요)",
+    "path": "ad.redheads.wt3"
+  },
+  {
+    "en": "Navy, cool gray, and blue-gray are your power neutrals",
+    "zh": "海军蓝、冷灰色和蓝灰色是你的王牌中性色",
+    "ko": "네이비, 쿨 그레이, 블루 그레이가 파워 뉴트럴입니다",
+    "path": "sd.cool-summer.ft1"
+  },
+  {
+    "en": "Neon Colors",
+    "zh": "荧光色",
+    "ko": "네온 컬러",
+    "path": "ad.men.ac0"
+  },
+  {
+    "en": "Neon Green",
+    "zh": "荧光绿",
+    "ko": "네온 그린",
+    "path": "sd.soft-autumn.ac4"
+  },
+  {
+    "en": "Neon Yellow",
+    "zh": "荧光黄",
+    "ko": "네온 옐로",
+    "path": "sd.soft-summer.ac2"
+  },
+  {
+    "en": "Neutral to cool with medium-deep to deep coverage",
+    "zh": "中性偏冷，中深至深遮瑕",
+    "ko": "중성~쿨, 중~깊은 커버",
+    "path": "sd.deep-winter.found"
+  },
+  {
+    "en": "Neutral to cool, light-medium coverage with a natural finish",
+    "zh": "中性偏冷，轻至中等遮瑕，自然妆效",
+    "ko": "중성~쿨, 가벼운~중간 커버, 자연스러운 마감",
+    "path": "sd.soft-summer.found"
+  },
+  {
+    "en": "Neutral to cool, medium coverage with a luminous finish",
+    "zh": "中性偏冷，中等遮瑕，光泽妆效",
+    "ko": "중성~쿨, 중간 커버, 빛나는 마감",
+    "path": "sd.bright-winter.found"
+  },
+  {
+    "en": "No — this is a common misconception. While many Asian skin tones have yellow melanin, undertone is about whether that yellow leans warm (golden) or cool (olive/grayish). Many East Asians are actually Cool Summer or Cool Winter. The only way to know is to test against warm and cool colors.",
+    "zh": "不一定 — 这是常见误解。虽然许多亚洲肤色含黄色素，底调关乎黄色偏暖（金色）还是偏冷（橄榄/灰）。许多东亚人实际是冷夏或冷冬。唯一方法是与暖冷色对比测试。",
+    "ko": "아닙니다 — 흔한 오해입니다. 많은 아시아 피부에 옐로 멜라닌이 있어도, 언더톤은 그 옐로가 웜톤(골드)인지 쿨톤(올리브/그레이)인지의 문제입니다. 많은 동아시아인이 실제로 쿨 서머나 쿨 윈터입니다. 웜/쿨 색으로 테스트하는 것만이 답입니다.",
+    "path": "ad.asian-skin.faq0A"
+  },
+  {
+    "en": "Nude Pink",
+    "zh": "裸粉色",
+    "ko": "누드 핑크",
+    "path": "ad.dark-skin.ac1"
+  },
+  {
+    "en": "Olive",
+    "zh": "橄榄色",
+    "ko": "올리브",
+    "path": "sd.warm-spring.nc3"
+  },
+  {
+    "en": "Olive (if cool-toned)",
+    "zh": "橄榄色（若偏冷调）",
+    "ko": "올리브 (쿨톤 타입)",
+    "path": "ad.asian-skin.ac3"
+  },
+  {
+    "en": "Olive Drab",
+    "zh": "军绿色",
+    "ko": "올리브 드랩",
+    "path": "sd.bright-spring.ac3"
+  },
+  {
+    "en": "Olive Green",
+    "zh": "橄榄绿",
+    "ko": "올리브 그린",
+    "path": "ad.olive-skin.bc0"
+  },
+  {
+    "en": "Olive Skin Tones",
+    "zh": "橄榄肤色",
+    "ko": "올리브 피부톤",
+    "path": "ad.olive-skin.name"
+  },
+  {
+    "en": "Olive is actually a neutral undertone with a green/gray cast. It can lean warm (warm olive) or cool (cool olive), but it's distinct from standard warm or cool. This is why olive-toned people often get contradictory results from simple warm/cool tests.",
+    "zh": "橄榄实际是带绿/灰调的中性底调。可偏暖（暖橄榄）或偏冷（冷橄榄），但与标准暖或冷不同。因此橄榄肤色的人常从简单暖/冷测试得到矛盾结果。",
+    "ko": "올리브는 실제로 녹/회색 기가 있는 중성 언더톤입니다. 웜톤(웜 올리브)이나 쿨톤(쿨 올리브)으로 기울 수 있지만, 표준 웜/쿨과는 다릅니다. 그래서 올리브톤 피부는 단순한 웜/쿨 테스트에서 모순된 결과를 받기 쉽습니다.",
+    "path": "ad.olive-skin.faq0A"
+  },
+  {
+    "en": "Olive undertone doesn't fit the simple warm/cool binary — it's a third category",
+    "zh": "橄榄底调不符合简单暖/冷二分 — 它是第三类",
+    "ko": "올리브 언더톤은 단순한 웜/쿨 이분법에 맞지 않습니다 — 세 번째 카테고리입니다",
+    "path": "ad.olive-skin.ch0"
+  },
+  {
+    "en": "Olive undertone has a distinct greenish or grayish cast visible when compared to standard warm (golden) or cool (pink) tones. To identify it: (1) Both gold and silver jewelry look decent but neither looks perfect; (2) Your skin looks slightly greenish-gray next to white paper; (3) Many foundation shades look too pink or too yellow on you; (4) You may notice a greenish tint on your neck or jawline.",
+    "zh": "橄榄底调在与标准暖（金色）或冷（粉色）对比时，可见独特的绿色或灰调。识别方法：（1）金银首饰都还行但都不完美；（2）与白纸对比皮肤略偏绿灰；（3）许多粉底色号偏粉或偏黄；（4）颈或下颌可能见偏绿色调。",
+    "ko": "올리브 언더톤은 표준 웜톤(골드)이나 쿨톤(핑크)과 비교할 때 독특한 녹색 또는 회색 기가 보입니다. 확인 방법: (1) 골드와 실버 액세서리 모두 괜찮지만 완벽하지 않음; (2) 흰 종이 옆에서 피부가 약간 녹회색으로 보임; (3) 많은 파운데이션이 핑크거나 옐로로만 느껴짐; (4) 목이나 턱선에 녹기가 보일 수 있음.",
+    "path": "ad.olive-skin.undertone"
+  },
+  {
+    "en": "Olive undertone is arguably the most misunderstood and misdiagnosed skin tone in color analysis. Olive skin has a green or grayish cast that makes it appear neither purely warm nor purely cool. This unique undertone doesn't fit neatly into traditional warm/cool categories, which is why many olive-toned people get incorrect season results from basic quizzes.",
+    "zh": "橄榄底调可以说是色彩分析中最被误解、最易误诊的肤色。橄榄肤色带有绿色或灰调，看起来既非纯暖也非纯冷。这种独特底调无法简单归入传统暖/冷分类，因此许多橄榄肤色的人从基础测试中得到错误季型。",
+    "ko": "올리브 언더톤은 컬러 분석에서 가장 오해받고 잘못 진단되는 피부톤 중 하나입니다. 올리브 피부에는 녹색이나 회색 기가 있어 순수한 웜톤이나 쿨톤으로 보이지 않습니다. 이 독특한 언더톤은 전통적인 웜/쿨 분류에 깔끔하게 맞지 않아, 많은 올리브톤 피부가 기본 퀴즈에서 잘못된 시즌 결과를 받습니다.",
+    "path": "ad.olive-skin.heroDesc"
+  },
+  {
+    "en": "Online quizzes almost never account for olive undertone as a distinct category",
+    "zh": "在线测试几乎从不将橄榄底调作为独立类别",
+    "ko": "온라인 퀴즈는 거의 올리브 언더톤을 독립 카테고리로 다루지 않습니다",
+    "path": "ad.olive-skin.ch4"
+  },
+  {
+    "en": "Opt for lightweight fabrics like cotton, linen, and silk in warm pastels",
+    "zh": "选择棉、亚麻、真丝等轻盈面料，搭配暖调浅淡色系",
+    "ko": "면, 린넨, 실크 등 가벼운 소재를 웜톤 파스텔로 선택하세요",
+    "path": "sd.light-spring.ft0"
+  },
+  {
+    "en": "Orange",
+    "zh": "橙色",
+    "ko": "오렌지",
+    "path": "sd.light-summer.ac0"
+  },
+  {
+    "en": "Orchid",
+    "zh": "兰花紫",
+    "ko": "난초색",
+    "path": "sd.cool-summer.bc1"
+  },
+  {
+    "en": "Pair warm brights with a clean neutral base",
+    "zh": "以干净的中性色为底，搭配暖调亮色",
+    "ko": "웜톤 브라이트 컬러를 깔끔한 뉴트럴 베이스와 매치하세요",
+    "path": "sd.bright-spring.ft3"
+  },
+  {
+    "en": "Pastel Pink",
+    "zh": "浅淡粉",
+    "ko": "파스텔 핑크",
+    "path": "sd.deep-autumn.ac0"
+  },
+  {
+    "en": "Pastel Yellow",
+    "zh": "浅淡黄",
+    "ko": "파스텔 옐로",
+    "path": "sd.deep-winter.ac0"
+  },
+  {
+    "en": "Pastels can be beautiful on fair skin — just make sure they match your undertone",
+    "zh": "浅淡色在白皙皮肤上可很美 — 确保匹配底调",
+    "ko": "파스텔은 밝은 피부에 아름답습니다 — 언더톤에 맞추는 것이 중요합니다",
+    "path": "ad.fair-skin.wt3"
+  },
+  {
+    "en": "Peach",
+    "zh": "蜜桃色",
+    "ko": "피치",
+    "path": "sd.light-spring.bc0"
+  },
+  {
+    "en": "Peach gloss, warm pink, light coral, nude with warm undertone",
+    "zh": "蜜桃色唇蜜、暖粉色、浅珊瑚色、暖调裸色",
+    "ko": "피치 글로스, 웜 핑크, 라이트 코랄, 웜톤 누드",
+    "path": "sd.light-spring.lips"
+  },
+  {
+    "en": "Peach, light apricot, warm pink",
+    "zh": "蜜桃色、浅杏色、暖粉色",
+    "ko": "피치, 라이트 살구, 웜 핑크",
+    "path": "sd.light-spring.blush"
+  },
+  {
+    "en": "Platinum",
+    "zh": "铂金色",
+    "ko": "플래티넘",
+    "path": "sd.warm-autumn.ha2"
+  },
+  {
+    "en": "Platinum blonde",
+    "zh": "铂金色",
+    "ko": "플래티넘 블론드",
+    "path": "sd.warm-spring.ha3"
+  },
+  {
+    "en": "Platinum with soft tone",
+    "zh": "柔和调铂金色",
+    "ko": "소프트 톤의 플래티넘",
+    "path": "sd.light-summer.hr2"
+  },
+  {
+    "en": "Poppy",
+    "zh": "虞美人红",
+    "ko": "양귀비색",
+    "path": "sd.bright-spring.bc9"
+  },
+  {
+    "en": "Popular K-beauty and J-beauty trends may push colors that aren't universally flattering",
+    "zh": "流行的韩系和日系美妆趋势可能推广并非人人适合的颜色",
+    "ko": "인기 K/J-뷰티 트렌드가 보편적으로 잘 어울리지 않는 색을 밀 수 있습니다",
+    "path": "ad.asian-skin.ch4"
+  },
+  {
+    "en": "Powder Blue",
+    "zh": "粉蓝色",
+    "ko": "파우더 블루",
+    "path": "sd.light-summer.bc0"
+  },
+  {
+    "en": "Professional consultations are expensive ($200+) just to find out your 'type'",
+    "zh": "专业咨询昂贵（200 美元以上）只为知道你的「类型」",
+    "ko": "전문 상담은 비싸며(20만 원 이상) '타입'을 알기 위한 비용입니다",
+    "path": "ad.beginners.ch4"
+  },
+  {
+    "en": "Professional dress codes limit color choices, making subtle optimization crucial",
+    "zh": "职场着装规范限制色彩选择，细微优化至关重要",
+    "ko": "프로페셔널 드레스 코드가 색 선택을 제한하므로, 섬세한 최적화가 중요합니다",
+    "path": "ad.men.ch2"
+  },
+  {
+    "en": "Pumpkin",
+    "zh": "南瓜色",
+    "ko": "호박색",
+    "path": "sd.warm-spring.bc7"
+  },
+  {
+    "en": "Pure Black",
+    "zh": "纯黑色",
+    "ko": "퓨어 블랙",
+    "path": "sd.soft-summer.ac4"
+  },
+  {
+    "en": "Pure White",
+    "zh": "纯白色",
+    "ko": "퓨어 화이트",
+    "path": "sd.warm-spring.ac3"
+  },
+  {
+    "en": "Pure White (can be harsh)",
+    "zh": "纯白（可能刺目）",
+    "ko": "퓨어 화이트 (자극적일 수 있음)",
+    "path": "ad.redheads.ac2"
+  },
+  {
+    "en": "Pure cool colors are your playground — no warmth needed",
+    "zh": "纯粹冷色调是你的主场 — 无需任何暖感",
+    "ko": "순수 쿨톤 컬러가 최적입니다 — 웜톤은 필요 없습니다",
+    "path": "sd.cool-winter.ft0"
+  },
+  {
+    "en": "Pure cool, bold, and strikingly clear",
+    "zh": "纯冷、大胆、清晰鲜明",
+    "ko": "순수 쿨, 대담하고, 선명하게 클리어",
+    "path": "sd.cool-winter.tagline"
+  },
+  {
+    "en": "Quiz results often disagree with each other, leading to more confusion",
+    "zh": "测试结果常不一致，导致更困惑",
+    "ko": "퀴즈 결과가 서로 달라 더 혼란스러울 수 있습니다",
+    "path": "ad.beginners.ch2"
+  },
+  {
+    "en": "Raspberry",
+    "zh": "覆盆子色",
+    "ko": "라즈베리",
+    "path": "sd.cool-summer.bc9"
+  },
+  {
+    "en": "Red hair is almost always warm-toned, which immediately narrows season options",
+    "zh": "红发几乎总是暖调，立刻缩小季型选项",
+    "ko": "레드 헤어는 거의 항상 웜톤이라 시즌 선택지가 바로 좁아집니다",
+    "path": "ad.redheads.ch0"
+  },
+  {
+    "en": "Redheads & Auburn Hair",
+    "zh": "红发与赤褐色头发",
+    "ko": "레드헤드 & 오번 헤어",
+    "path": "ad.redheads.name"
+  },
+  {
+    "en": "Research consistently shows navy, deep blue, and black as most attractive on men. However, your best specific shades depend on your color season. A Warm Autumn man looks better in warm navy and chocolate brown, while a Cool Winter man looks sharper in blue-black and cool gray.",
+    "zh": "研究一致显示海军蓝、深蓝和黑色在男性身上最具吸引力。但最佳具体色度取决于季型。暖秋型男性更适合暖海军蓝和巧克力棕，冷冬型男性穿蓝黑和冷灰更利落。",
+    "ko": "연구에 따르면 네이비, 딥 블루, 블랙이 남성에게 가장 매력적으로 보입니다. 하지만 최적의 색조는 컬러 시즌에 따라 다릅니다. 웜 오텀 남성은 웜톤 네이비와 초콜릿 브라운이 더 잘 어울리고, 쿨 윈터 남성은 블루 블랙과 쿨 그레이가 더 날카로워 보입니다.",
+    "path": "ad.men.faq1A"
+  },
+  {
+    "en": "Rich Gold",
+    "zh": "浓郁金色",
+    "ko": "리치 골드",
+    "path": "sd.deep-autumn.bc3"
+  },
+  {
+    "en": "Rich Plum",
+    "zh": "浓郁梅色",
+    "ko": "리치 플럼",
+    "path": "sd.deep-winter.bc7"
+  },
+  {
+    "en": "Rich Purple",
+    "zh": "浓郁紫",
+    "ko": "리치 퍼플",
+    "path": "ad.medium-skin.bc2"
+  },
+  {
+    "en": "Rich auburn",
+    "zh": "浓郁赤褐色",
+    "ko": "리치 오번",
+    "path": "sd.bright-spring.hr3"
+  },
+  {
+    "en": "Rich brunette with warm highlights",
+    "zh": "深棕色配暖色挑染",
+    "ko": "웜 하이라이트의 리치 브루넷",
+    "path": "sd.bright-spring.hr0"
+  },
+  {
+    "en": "Rich dark auburn",
+    "zh": "浓郁深赤褐色",
+    "ko": "리치 다크 오번",
+    "path": "sd.deep-winter.hr4"
+  },
+  {
+    "en": "Rich dark brown",
+    "zh": "浓郁深棕色",
+    "ko": "리치 다크 브라운",
+    "path": "sd.deep-autumn.hr0"
+  },
+  {
+    "en": "Rich espresso",
+    "zh": "浓郁浓缩咖啡棕",
+    "ko": "리치 에스프레소",
+    "path": "sd.bright-winter.hr4"
+  },
+  {
+    "en": "Rich golden brown",
+    "zh": "浓郁金棕色",
+    "ko": "리치 골든 브라운",
+    "path": "sd.warm-spring.hr0"
+  },
+  {
+    "en": "Rich textures like suede, corduroy, and tweed enhance your warm depth",
+    "zh": "麂皮、灯芯绒和粗花呢等丰富质感能强化暖调深度",
+    "ko": "스웨이드, 코듀로이, 트위드 등 풍부한 텍스처가 웜톤 깊이를 돋보이게 합니다",
+    "path": "sd.warm-autumn.ft1"
+  },
+  {
+    "en": "Rich yellow gold, antiqued bronze, garnet, smoky quartz, tiger's eye, deep amber",
+    "zh": "浓郁黄金、做旧青铜、石榴石、烟晶、虎眼石、深琥珀",
+    "ko": "리치 옐로 골드, 앤틱 브론즈, 가넷, 스모키 쿼츠, 호랑이 눈, 딥 호박",
+    "path": "sd.deep-autumn.jewelry"
+  },
+  {
+    "en": "Rich, dark warm colors are your power palette — espresso, deep rust, dark olive",
+    "zh": "深暗暖色是你的王牌色盘 — 浓缩咖啡棕、深铁锈色、深橄榄色",
+    "ko": "풍부하고 어두운 웜톤 컬러가 파워 팔레트 — 에스프레소, 딥 러스트, 다크 올리브",
+    "path": "sd.deep-autumn.ft0"
+  },
+  {
+    "en": "Rich, golden, and deeply warm",
+    "zh": "浓郁、金色、深暖",
+    "ko": "풍부하고, 골든, 깊이 따뜻한",
+    "path": "sd.warm-autumn.tagline"
+  },
+  {
+    "en": "Richly pigmented eyeshadows show up beautifully — don't shy away from color",
+    "zh": "高显色眼影表现极佳 — 不必回避彩色",
+    "ko": "발색력이 풍부한 아이섀도가 아름답게 표현됩니다 — 색을 두려워하지 마세요",
+    "path": "ad.dark-skin.mt2"
+  },
+  {
+    "en": "Rose Pink",
+    "zh": "玫瑰粉",
+    "ko": "로즈 핑크",
+    "path": "sd.light-summer.bc2"
+  },
+  {
+    "en": "Royal Blue",
+    "zh": "宝蓝色",
+    "ko": "로얄 블루",
+    "path": "sd.cool-winter.bc0"
+  },
+  {
+    "en": "Royal Purple",
+    "zh": "皇家紫",
+    "ko": "로얄 퍼플",
+    "path": "ad.dark-skin.bc2"
+  },
+  {
+    "en": "Rust",
+    "zh": "铁锈色",
+    "ko": "러스트",
+    "path": "sd.light-summer.ac2"
+  },
+  {
+    "en": "Sage",
+    "zh": "鼠尾草绿",
+    "ko": "세이지",
+    "path": "sd.soft-autumn.bc2"
+  },
+  {
+    "en": "Sage Blue",
+    "zh": "蓝绿色鼠尾草",
+    "ko": "세이지 블루",
+    "path": "sd.cool-summer.bc8"
+  },
+  {
+    "en": "Sage Green",
+    "zh": "鼠尾草绿",
+    "ko": "세이지 그린",
+    "path": "sd.soft-summer.bc0"
+  },
+  {
+    "en": "Salmon",
+    "zh": "鲑鱼粉",
+    "ko": "연어색",
+    "path": "sd.warm-spring.bc9"
+  },
+  {
+    "en": "Sand",
+    "zh": "沙色",
+    "ko": "샌드",
+    "path": "sd.soft-autumn.nc1"
+  },
+  {
+    "en": "Seasonal tanning can shift apparent depth and confuse typing",
+    "zh": "季节性晒黑可能改变表面深度并干扰分型",
+    "ko": "계절적 태닝이 겉보기 깊이를 바꿔 타입 판별을 혼란스럽게 할 수 있습니다",
+    "path": "ad.medium-skin.ch3"
+  },
+  {
+    "en": "Shirts: Cool types — white, light blue, lavender; Warm types — cream, light salmon, sage",
+    "zh": "衬衫：冷调型 — 白、浅蓝、薰衣草；暖调型 — 奶油、浅鲑鱼、鼠尾草绿",
+    "ko": "셔츠: 쿨톤 — 화이트, 라이트 블루, 라벤더; 웜톤 — 크림, 라이트 연어색, 세이지",
+    "path": "ad.men.wt1"
+  },
+  {
+    "en": "Silver Gray",
+    "zh": "银灰色",
+    "ko": "실버 그레이",
+    "path": "sd.warm-spring.ac2"
+  },
+  {
+    "en": "Silver, platinum, white gold, sapphire, diamond, amethyst, tanzanite",
+    "zh": "银色、铂金、白金、蓝宝石、钻石、紫水晶、坦桑石",
+    "ko": "실버, 플래티넘, 화이트 골드, 사파이어, 다이아몬드, 자수정, 탄자나이트",
+    "path": "sd.cool-winter.jewelry"
+  },
+  {
+    "en": "Silver, white gold, platinum, rose quartz, moonstone, light amethyst",
+    "zh": "银色、白金、铂金、玫瑰石英、月光石、浅紫水晶",
+    "ko": "실버, 화이트 골드, 플래티넘, 로즈 쿼츠, 문스톤, 라이트 자수정",
+    "path": "sd.light-summer.jewelry"
+  },
+  {
+    "en": "Silver, white gold, platinum, sapphire, amethyst, aquamarine",
+    "zh": "银色、白金、铂金、蓝宝石、紫水晶、海蓝宝",
+    "ko": "실버, 화이트 골드, 플래티넘, 사파이어, 자수정, 아쿠아마린",
+    "path": "sd.cool-summer.jewelry"
+  },
+  {
+    "en": "Smoky charcoal, dark plum, deep navy, dark emerald, black",
+    "zh": "烟熏炭灰色、深梅色、深海军蓝、深祖母绿、黑色",
+    "ko": "스모키 차콜, 다크 플럼, 딥 네이비, 다크 에메랄드, 블랙",
+    "path": "sd.deep-winter.eyes"
+  },
+  {
+    "en": "Soft Aqua",
+    "zh": "柔和水蓝色",
+    "ko": "소프트 아쿠아",
+    "path": "sd.light-summer.bc4"
+  },
+  {
+    "en": "Soft Autumn",
+    "zh": "柔秋型",
+    "ko": "소프트 오텀",
+    "path": "sd.soft-autumn.name"
+  },
+  {
+    "en": "Soft Autumn / Soft Summer — medium depth with muted coloring",
+    "zh": "柔秋/柔夏 — 中等深度、柔和色调",
+    "ko": "소프트 오텀 / 소프트 서머 — 중간 깊이, 뮤트 컬러링",
+    "path": "ad.medium-skin.cs3"
+  },
+  {
+    "en": "Soft Autumn sits at the border between Autumn warmth and Summer softness. These individuals have warm-neutral undertones with low contrast and distinctly muted coloring. Their overall appearance is warm but gentle — think sun-faded earth tones. Everything about their coloring blends together harmoniously. Soft Autumns look best in warm, muted, and earthy colors that echo their natural softness.",
+    "zh": "柔秋型处于秋季暖调与夏季柔和之间的边界。这类人肤色偏暖中性，对比度低，整体色调明显柔和。外观温暖而温和 — 如同日晒褪色的大地色。一切色彩和谐融合。柔秋型最适合温暖、柔和、大地色系的颜色，呼应其天生的柔和感。",
+    "ko": "소프트 오텀은 오텀의 웜스와 서머의 부드러움 경계에 위치합니다. 웜~중성 언더톤과 낮은 대비, 뚜렷히 뮤트한 컬러링을 가집니다. 전체는 따뜻하지만 부드러운 — 햇볕에 바랜 어스톤을 연상시킵니다. 모든 것이 조화롭게 어우러집니다. 소프트 오텀에게는 자연스러운 부드러움을 반영하는 따뜻하고 뮤트한 어스 컬러가 가장 잘 어울립니다.",
+    "path": "sd.soft-autumn.desc"
+  },
+  {
+    "en": "Soft Autumn — auburn hair with muted, earthy overall coloring",
+    "zh": "柔秋型 — 赤褐发、柔和大地整体色调",
+    "ko": "소프트 오텀 — 오번 헤어, 뮤트하고 어스톤 전체 컬러링",
+    "path": "ad.redheads.cs3"
+  },
+  {
+    "en": "Soft Autumn — the most common season for warm-olive skin tones",
+    "zh": "柔秋型 — 暖橄榄底调最常见季型",
+    "ko": "소프트 오텀 — 웜톤 올리브 피부에서 가장 흔한 시즌",
+    "path": "ad.olive-skin.cs0"
+  },
+  {
+    "en": "Soft Coral",
+    "zh": "柔和珊瑚色",
+    "ko": "소프트 코랄",
+    "path": "ad.asian-skin.bc1"
+  },
+  {
+    "en": "Soft Cornflower",
+    "zh": "柔和矢车菊蓝",
+    "ko": "소프트 수레국화 블루",
+    "path": "sd.light-summer.bc8"
+  },
+  {
+    "en": "Soft Jade",
+    "zh": "柔和翡翠绿",
+    "ko": "소프트 제이드",
+    "path": "sd.soft-summer.bc7"
+  },
+  {
+    "en": "Soft Khaki",
+    "zh": "柔和卡其色",
+    "ko": "소프트 카키",
+    "path": "sd.light-spring.nc3"
+  },
+  {
+    "en": "Soft Lavender",
+    "zh": "柔和薰衣草色",
+    "ko": "소프트 라벤더",
+    "path": "sd.light-summer.bc1"
+  },
+  {
+    "en": "Soft Mauve",
+    "zh": "柔和灰紫色",
+    "ko": "소프트 모브",
+    "path": "sd.soft-summer.bc2"
+  },
+  {
+    "en": "Soft Navy",
+    "zh": "柔和海军蓝",
+    "ko": "소프트 네이비",
+    "path": "sd.cool-summer.bc6"
+  },
+  {
+    "en": "Soft Pink",
+    "zh": "柔和粉",
+    "ko": "소프트 핑크",
+    "path": "ad.fair-skin.bc0"
+  },
+  {
+    "en": "Soft Plum",
+    "zh": "柔和梅色",
+    "ko": "소프트 플럼",
+    "path": "sd.soft-summer.bc5"
+  },
+  {
+    "en": "Soft Summer",
+    "zh": "柔夏型",
+    "ko": "소프트 서머",
+    "path": "sd.soft-summer.name"
+  },
+  {
+    "en": "Soft Summer is the most muted of the Summer sub-seasons, sitting between Summer coolness and Autumn softness. These individuals have cool-neutral undertones with low contrast and very muted coloring. Nothing about their appearance is vivid or stark — everything blends together in a soft, harmonious way. Soft Summers look best in gently muted, cool-leaning colors with a dusty quality. This is the most common 12-season type, representing about 13% of people.",
+    "zh": "柔夏型是夏季型中最柔和的一种，介于夏季冷调与秋季柔和之间。这类人肤色偏冷中性，对比度低，整体色调非常柔和。外观没有任何鲜艳或强烈之处 — 一切自然融合、和谐统一。柔夏型最适合略带柔和感的冷调颜色，带有灰蒙质感。这是十二季型中最常见的类型，约占人群的 13%。",
+    "ko": "소프트 서머는 서머 서브시즌 중 가장 뮤트한 타입으로, 서머의 쿨함과 오텀의 부드러움 사이에 위치합니다. 쿨~중성 언더톤과 낮은 대비, 매우 뮤트한 컬러링을 가집니다. 선명하거나 강렬한 것은 없으며 — 모든 것이 부드럽게 조화합니다. 소프트 서머에게는 더스티한 질감의 약간 쿨한 뮤트 색이 가장 잘 어울립니다. 12시즌 중 가장 흔한 타입으로 약 13%가 해당합니다.",
+    "path": "sd.soft-summer.desc"
+  },
+  {
+    "en": "Soft Summer — common for cool-olive skin tones",
+    "zh": "柔夏型 — 冷橄榄底调常见",
+    "ko": "소프트 서머 — 쿨톤 올리브 피부에서 흔함",
+    "path": "ad.olive-skin.cs1"
+  },
+  {
+    "en": "Soft Taupe",
+    "zh": "柔和灰褐色",
+    "ko": "소프트 토프",
+    "path": "sd.soft-summer.nc1"
+  },
+  {
+    "en": "Soft Teal",
+    "zh": "柔和蓝绿",
+    "ko": "소프트 틸",
+    "path": "ad.fair-skin.bc7"
+  },
+  {
+    "en": "Soft Terracotta",
+    "zh": "柔和赤陶色",
+    "ko": "소프트 테라코타",
+    "path": "sd.soft-autumn.bc8"
+  },
+  {
+    "en": "Soft Turquoise",
+    "zh": "柔和绿松石色",
+    "ko": "소프트 터쿼이즈",
+    "path": "sd.light-spring.bc7"
+  },
+  {
+    "en": "Soft White",
+    "zh": "柔和白色",
+    "ko": "소프트 화이트",
+    "path": "sd.light-summer.nc1"
+  },
+  {
+    "en": "Soft ash brown",
+    "zh": "柔和灰棕色",
+    "ko": "소프트 애쉬 브라운",
+    "path": "sd.soft-summer.hr2"
+  },
+  {
+    "en": "Soft auburn highlights",
+    "zh": "柔和赤褐色挑染",
+    "ko": "소프트 오번 하이라이트",
+    "path": "sd.soft-autumn.hr4"
+  },
+  {
+    "en": "Soft caramel",
+    "zh": "柔和焦糖色",
+    "ko": "소프트 카라멜",
+    "path": "sd.soft-autumn.hr1"
+  },
+  {
+    "en": "Soft florals and watercolor prints are perfect for your coloring",
+    "zh": "柔和花卉与水彩印花非常适合你的肤色",
+    "ko": "소프트 플로럴과 수채화 프린트가 완벽합니다",
+    "path": "sd.light-summer.ft3"
+  },
+  {
+    "en": "Soft gray, cool taupe, light lavender, silver shimmer",
+    "zh": "柔和灰色、冷灰褐色、浅薰衣草色、银色闪粉",
+    "ko": "소프트 그레이, 쿨 토프, 라이트 라벤더, 실버 시머",
+    "path": "sd.light-summer.eyes"
+  },
+  {
+    "en": "Soft knits, cashmere, and matte textures complement your coloring",
+    "zh": "柔软针织、羊绒和哑光质感最能衬托你的肤色",
+    "ko": "소프트 니트, 캐시미어, 매트 텍스처가 컬러링을 돋보이게 합니다",
+    "path": "sd.soft-summer.ft4"
+  },
+  {
+    "en": "Soft taupe, dusty plum, muted gray-green, champagne",
+    "zh": "柔和灰褐色、灰蒙梅色、柔和灰绿色、香槟色",
+    "ko": "소프트 토프, 더스티 플럼, 뮤트 그레이 그린, 샴페인",
+    "path": "sd.soft-summer.eyes"
+  },
+  {
+    "en": "Soft taupe, mushroom, and muted gray are your everyday neutrals",
+    "zh": "柔和灰褐色、蘑菇色和柔和灰色是日常中性色",
+    "ko": "소프트 토프, 머쉬룸, 뮤트 그레이가 일상 뉴트럴입니다",
+    "path": "sd.soft-summer.ft2"
+  },
+  {
+    "en": "Soft, light-to-medium colors complement your coloring better than extremes",
+    "zh": "柔和、浅至中等深度颜色比极端更衬托你的色调",
+    "ko": "부드럽고 밝음~중간 깊이 색이 극단보다 더 잘 어울립니다",
+    "path": "ad.fair-skin.wt0"
+  },
+  {
+    "en": "Soft, medium-depth colors often work better than extreme lights or darks",
+    "zh": "柔和、中等深度颜色往往比极浅或极深更适合",
+    "ko": "부드럽고 중간 깊이의 색이 극단적인 밝기나 어두움보다 더 잘 어울리는 경우가 많습니다",
+    "path": "ad.asian-skin.wt1"
+  },
+  {
+    "en": "Standard vein tests and jewelry tests can give contradictory results for olive skin",
+    "zh": "标准血管测试和首饰测试对橄榄肤色可能给出矛盾结果",
+    "ko": "표준 혈관 테스트와 액세서리 테스트가 올리브 피부에서 모순된 결과를 줄 수 있습니다",
+    "path": "ad.olive-skin.ch1"
+  },
+  {
+    "en": "Start by identifying your undertone — this determines whether warm or cool makeup shades suit you",
+    "zh": "先识别底调 — 这决定暖或冷彩妆色是否适合",
+    "ko": "먼저 언더톤을 파악하세요 — 웜/쿨 메이크업 색 선택의 기준이 됩니다",
+    "path": "ad.beginners.mt0"
+  },
+  {
+    "en": "Start with the most basic test: hold a piece of pure white paper next to your bare face in natural light. If your skin looks slightly yellowish/golden by comparison, you likely have warm undertones. If it looks pinkish/rosy, you likely have cool undertones. If it's hard to tell, you may be neutral. This one test narrows your season possibilities from 12 to about 6.",
+    "zh": "从最基本测试开始：在自然光下将纯白纸贴近素颜面部。若皮肤相比之下略偏黄/金，可能偏暖调。若偏粉/玫瑰，可能偏冷调。若难判断，可能中性。这一测试可将季型可能从 12 缩至约 6。",
+    "ko": "가장 기본적인 테스트부터: 자연광에서 민낯 옆에 순백 종이를 대세요. 피부가 비교해 약간 노랗/골든하면 웜톤, 핑크/로즈하면 쿨톤일 가능성이 높습니다. 판단이 어려우면 중성입니다. 이 한 가지 테스트로 12시즌을 약 6개로 좁힐 수 있습니다.",
+    "path": "ad.beginners.undertone"
+  },
+  {
+    "en": "Start with your best neutrals — these form 60-70% of most wardrobes",
+    "zh": "从最佳中性色开始 — 它们构成多数衣橱的 60-70%",
+    "ko": "최적 뉴트럴부터 시작하세요 — 대부분 옷장의 60~70%를 차지합니다",
+    "path": "ad.beginners.wt0"
+  },
+  {
+    "en": "Statement pieces in bold colors are more impactful than subtle accessories",
+    "zh": "大胆色彩的点睛单品比低调配饰更有冲击力",
+    "ko": "은은한 액세서리보다 대담한 색의 스테이트먼트 피스가 더 임팩트 있습니다",
+    "path": "sd.bright-winter.ft4"
+  },
+  {
+    "en": "Steel Blue",
+    "zh": "钢蓝色",
+    "ko": "스틸 블루",
+    "path": "sd.cool-summer.bc0"
+  },
+  {
+    "en": "Stick to cool-toned colors in medium depth — avoid anything warm or earthy",
+    "zh": "坚持中等深度的冷色调 — 避免任何暖色或大地色",
+    "ko": "중간 깊이의 쿨톤 컬러를 고수하세요 — 웜톤이나 어스 톤은 피하세요",
+    "path": "sd.cool-summer.ft0"
+  },
+  {
+    "en": "Strawberry blonde",
+    "zh": "草莓金",
+    "ko": "스트로베리 블론드",
+    "path": "sd.light-spring.hr2"
+  },
+  {
+    "en": "Strongly cool (blue, pink, neutral-cool)",
+    "zh": "强冷调（蓝色、粉色、中性偏冷）",
+    "ko": "강한 쿨톤 (블루, 핑크, 중성~쿨)",
+    "path": "sd.cool-winter.charUndertone"
+  },
+  {
+    "en": "Strongly cool (blue, pink, rosy)",
+    "zh": "强冷调（蓝色、粉色、玫瑰色）",
+    "ko": "강한 쿨톤 (블루, 핑크, 로즈)",
+    "path": "sd.cool-summer.charUndertone"
+  },
+  {
+    "en": "Strongly warm (golden, bronze)",
+    "zh": "强暖调（金色、青铜色）",
+    "ko": "강한 웜톤 (골드, 브론즈)",
+    "path": "sd.warm-autumn.charUndertone"
+  },
+  {
+    "en": "Strongly warm (golden, yellow-based)",
+    "zh": "强暖调（金色、偏黄底调）",
+    "ko": "강한 웜톤 (골드, 옐로 베이스)",
+    "path": "sd.warm-spring.charUndertone"
+  },
+  {
+    "en": "Structured silhouettes and rich fabrics (velvet, silk, leather) enhance your drama",
+    "zh": "结构化轮廓与丰富面料（天鹅绒、真丝、皮革）能强化戏剧感",
+    "ko": "구조적 실루엣과 리치 소재(벨벳, 실크, 레더)가 드라마를 돋보이게 합니다",
+    "path": "sd.deep-winter.ft2"
+  },
+  {
+    "en": "Suits: Navy (universal), charcoal (cool types), dark brown (warm types) — these should be your first investments",
+    "zh": "西装：海军蓝（通用）、炭灰（冷调型）、深棕（暖调型）— 应优先投资",
+    "ko": "수트: 네이비(만능), 차콜(쿨톤), 다크 브라운(웜톤) — 첫 투자로 추천합니다",
+    "path": "ad.men.wt0"
+  },
+  {
+    "en": "Sun-kissed highlights",
+    "zh": "阳光挑染",
+    "ko": "햇볕 하이라이트",
+    "path": "sd.light-spring.hr3"
+  },
+  {
+    "en": "Tangerine",
+    "zh": "橘色",
+    "ko": "귤색",
+    "path": "sd.warm-spring.bc0"
+  },
+  {
+    "en": "Teal",
+    "zh": "蓝绿色",
+    "ko": "틸",
+    "path": "sd.cool-summer.bc4"
+  },
+  {
+    "en": "Terracotta",
+    "zh": "赤陶色",
+    "ko": "테라코타",
+    "path": "sd.warm-autumn.bc4"
+  },
+  {
+    "en": "The 'closet test' — notice which existing clothes you get the most compliments in",
+    "zh": "「衣橱测试」— 注意现有衣服中哪些获赞最多",
+    "ko": "'옷장 테스트' — 칭찬을 가장 많이 받는 기존 옷에 주목하세요",
+    "path": "ad.beginners.wt3"
+  },
+  {
+    "en": "The fastest way is to try a free AI color analysis — upload a bare-face selfie in natural light and get your season type in 60 seconds. You can also take a free online quiz for a quick estimate, or book a professional draping session ($200+) for the most thorough experience.",
+    "zh": "最快方式是免费 AI 色彩分析 — 上传自然光素颜自拍，60 秒得季型。也可做免费在线测试快速估算，或预约专业试色（200 美元以上）获最全面体验。",
+    "ko": "가장 빠른 방법은 무료 AI 컬러 분석 — 자연광 민낯 셀카를 업로드하면 60초 안에 시즌 타입을 받을 수 있습니다. 무료 온라인 퀴즈로 빠른 추정도 가능하고, 전문 드레이핑(20만 원 이상)으로 가장 철저한 경험을 할 수 있습니다.",
+    "path": "ad.beginners.faq1A"
+  },
+  {
+    "en": "The terminology can be confusing — undertone, season, sub-season, draping, chroma, contrast",
+    "zh": "术语可能令人困惑 — 底调、季型、子季型、试色、面料试色、色度、对比度",
+    "ko": "용어가 혼란스러울 수 있습니다 — 언더톤, 시즌, 서브시즌, 드레이핑, 채도, 대비",
+    "path": "ad.beginners.ch0"
+  },
+  {
+    "en": "There's no single dominant season — it varies widely by individual. That said, Cool Summer and Warm Autumn are statistically common among East Asians, while South Asians frequently test as Deep Autumn or Deep Winter. AI color analysis gives the most accurate individual result.",
+    "zh": "没有单一主导季型 — 因人而异。但统计显示东亚人中冷夏和暖秋较常见，南亚人常测为深秋或深冬。AI 色彩分析给出最准确的个人结果。",
+    "ko": "지배적인 단일 시즌은 없습니다 — 개인차가 큽니다. 다만 통계적으로 쿨 서머와 웜 오텀이 동아시아인에게 흔하고, 남아시아인은 딥 오텀이나 딥 윈터인 경우가 많습니다. AI 컬러 분석이 가장 정확한 개인 결과를 제공합니다.",
+    "path": "ad.asian-skin.faq2A"
+  },
+  {
+    "en": "Think harvest and spice — rust, mustard, olive, and warm brown are your core palette",
+    "zh": "想象秋收与香料 — 铁锈色、芥末黄、橄榄色和暖棕色是核心色盘",
+    "ko": "수확과 스파이스를 떠올리세요 — 러스트, 머스타드, 올리브, 웜 브라운이 코어 팔레트입니다",
+    "path": "sd.warm-autumn.ft0"
+  },
+  {
+    "en": "Ties: Use your accent colors for ties — this is where your season colors shine",
+    "zh": "领带：用点缀色做领带 — 季型色彩在此最出彩",
+    "ko": "넥타이: 포인트 컬러를 활용하세요 — 시즌 색이 빛나는 자리입니다",
+    "path": "ad.men.wt2"
+  },
+  {
+    "en": "Tinted moisturizer or BB cream matched to your undertone for a polished look",
+    "zh": "有色保湿霜或 BB 霜，匹配底调，打造精致外观",
+    "ko": "언더톤에 맞춘 틴티드 모이스처라이저나 비비 크림으로 단정한 인상을 연출하세요",
+    "path": "ad.men.mt0"
+  },
+  {
+    "en": "Tomato Red",
+    "zh": "番茄红",
+    "ko": "토마토 레드",
+    "path": "sd.warm-spring.bc3"
+  },
+  {
+    "en": "Traditional Western color systems may not account for the specific undertone nuances in Asian skin",
+    "zh": "传统西方色彩体系可能未考虑亚洲肤色的特定底调细微差别",
+    "ko": "전통적인 서구 컬러 시스템이 아시아 피부의 언더톤 뉘앙스를 반영하지 못할 수 있습니다",
+    "path": "ad.asian-skin.ch2"
+  },
+  {
+    "en": "Traditional draping methods using white and silver fabric can be harder to read on deep skin",
+    "zh": "传统的白色和银色面料试色法在深肤色上更难判断",
+    "ko": "흰색·실버 천을 사용하는 전통 드레이핑은 깊은 피부에서 판별하기 어렵습니다",
+    "path": "ad.dark-skin.ch0"
+  },
+  {
+    "en": "Tropical and warm-weather prints in rich colors are ideal",
+    "zh": "热带风情与暖色调的丰富印花最为理想",
+    "ko": "풍부한 색의 트로피컬·웜톤 프린트가 이상적입니다",
+    "path": "sd.warm-spring.ft3"
+  },
+  {
+    "en": "True Autumn",
+    "zh": "真秋型",
+    "ko": "트루 오텀",
+    "path": "sd.warm-autumn.altName"
+  },
+  {
+    "en": "True Red",
+    "zh": "正红色",
+    "ko": "트루 레드",
+    "path": "sd.cool-winter.bc3"
+  },
+  {
+    "en": "True Spring",
+    "zh": "真春型",
+    "ko": "트루 스프링",
+    "path": "sd.warm-spring.altName"
+  },
+  {
+    "en": "True Summer",
+    "zh": "真夏型",
+    "ko": "트루 서머",
+    "path": "sd.cool-summer.altName"
+  },
+  {
+    "en": "True Winter",
+    "zh": "真冬型",
+    "ko": "트루 윈터",
+    "path": "sd.cool-winter.altName"
+  },
+  {
+    "en": "Try MLBB (My Lips But Better) shades in your undertone for a natural starting point",
+    "zh": "尝试同底调系列的自然唇色作为起点",
+    "ko": "언더톤 계열의 MLBB(내 입술색과 비슷한) 톤으로 자연스럽게 시작하세요",
+    "path": "ad.beginners.mt2"
+  },
+  {
+    "en": "Try the gold vs. silver test — if gold jewelry looks more natural, you're likely warm-toned. Check the inside of your lower lip: pink-purple = cool, orange-coral = warm. Look at the area behind your ear for the most reliable skin color reading.",
+    "zh": "试试金银对比 — 若金色首饰更自然，你可能偏暖调。观察下唇内侧：粉紫为冷调，橙珊瑚为暖调。查看耳后区域可获得最可靠的皮肤色读数。",
+    "ko": "골드와 실버 테스트를 해보세요 — 골드 액세서리가 더 자연스러우면 웜톤일 가능성이 높습니다. 아랫입술 안쪽을 확인하세요: 핑크~퍼플=쿨톤, 오렌지~코랄=웜톤. 가장 신뢰할 수 있는 것은 귀 뒤 피부색입니다.",
+    "path": "ad.dark-skin.faq2A"
+  },
+  {
+    "en": "Undertone can be harder to identify visually in deeper skin tones",
+    "zh": "在深肤色中，底调更难通过肉眼识别",
+    "ko": "깊은 피부에서 언더톤을 눈으로 판별하기 어렵습니다",
+    "path": "ad.dark-skin.ch3"
+  },
+  {
+    "en": "Undertone — warm (golden/peachy) or cool (pink/rosy) or neutral",
+    "zh": "底调 — 暖（金/蜜桃）或冷（粉/玫瑰）或中性",
+    "ko": "언더톤 — 웜톤(골드/피치) 또는 쿨톤(핑크/로즈) 또는 중성",
+    "path": "ad.beginners.cs1"
+  },
+  {
+    "en": "Use warm brown, caramel, and olive as your neutral base",
+    "zh": "以暖棕色、焦糖色和橄榄色作为中性基础色",
+    "ko": "웜 브라운, 카라멜, 올리브를 뉴트럴 베이스로 사용하세요",
+    "path": "sd.warm-spring.ft1"
+  },
+  {
+    "en": "Very dark colors can overwhelm fair complexions with too much contrast",
+    "zh": "极深色可能以过大对比压倒白皙肤色",
+    "ko": "매우 어두운 색이 밝은 피부를 과도한 대비로 압도할 수 있습니다",
+    "path": "ad.fair-skin.ch2"
+  },
+  {
+    "en": "Very deep — dark and intense overall",
+    "zh": "极深 — 整体深暗、强烈",
+    "ko": "매우 깊음 — 어둡고 강렬한 전체",
+    "path": "sd.deep-winter.charDepth"
+  },
+  {
+    "en": "Very fair skin common with red hair can be overwhelmed by dark or bright colors",
+    "zh": "红发常见的极白皙皮肤可能被深色或鲜艳色压倒",
+    "ko": "레드헤드에 흔한 매우 밝은 피부는 어둡거나 밝은 색에 압도될 수 있습니다",
+    "path": "ad.redheads.ch1"
+  },
+  {
+    "en": "Very high — colors must be clear and vivid",
+    "zh": "极高 — 颜色必须清晰鲜明",
+    "ko": "매우 높음 — 색은 선명하고 클리어해야 함",
+    "path": "sd.bright-spring.charChroma"
+  },
+  {
+    "en": "Very high — dramatic contrast between features",
+    "zh": "极高 — 五官之间差异显著",
+    "ko": "매우 높음 — 특징 간 극적인 대비",
+    "path": "sd.bright-winter.charContrast"
+  },
+  {
+    "en": "Very high — the clearest and most vivid of all types",
+    "zh": "极高 — 所有类型中最清晰、最鲜明",
+    "ko": "매우 높음 — 모든 타입 중 가장 선명하고 클리어",
+    "path": "sd.bright-winter.charChroma"
+  },
+  {
+    "en": "Very light — fair and delicate overall",
+    "zh": "极浅 — 整体偏浅、精致",
+    "ko": "매우 밝음 — 전체가 밝고 섬세함",
+    "path": "sd.light-summer.charDepth"
+  },
+  {
+    "en": "Very much so. Men's wardrobes rely heavily on neutrals, and knowing which neutrals (cool gray vs. warm brown, white vs. cream) flatter you most can save money and elevate your professional image. Even small color adjustments — like choosing the right blue for a suit — make a noticeable difference.",
+    "zh": "非常有用。男装大量依赖中性色，了解哪种中性色（冷灰与暖棕、白与奶油）最衬你，能省钱并提升职业形象。即使细微的色彩调整 — 如选对西装蓝色 — 也有明显差异。",
+    "ko": "매우 유용합니다. 남성 옷장은 뉴트럴에 크게 의존하므로, 어떤 뉴트럴(쿨 그레이와 웜 브라운, 화이트와 크림)이 가장 잘 어울리는지 알면 돈을 절약하고 프로페셔널한 이미지를 높일 수 있습니다. 수트 블루 선택 등 작은 색 조정도 눈에 띄는 차이를 만듭니다.",
+    "path": "ad.men.faq0A"
+  },
+  {
+    "en": "Very pale pastels may wash out medium skin",
+    "zh": "极浅淡色可能使中等肤色显苍白",
+    "ko": "매우 옅은 파스텔은 중간 피부를 창백하게 보이게 할 수 있습니다",
+    "path": "ad.medium-skin.ac1"
+  },
+  {
+    "en": "Vibrant, golden, and full of warmth",
+    "zh": "鲜活、金色、充满温暖",
+    "ko": "생동감 있고, 골든, 따뜻함이 가득",
+    "path": "sd.warm-spring.tagline"
+  },
+  {
+    "en": "Vivid Purple",
+    "zh": "鲜紫色",
+    "ko": "선명한 퍼플",
+    "path": "sd.bright-spring.bc7"
+  },
+  {
+    "en": "Vivid red",
+    "zh": "鲜红色",
+    "ko": "선명한 레드",
+    "path": "sd.soft-summer.ha1"
+  },
+  {
+    "en": "Vivid, high-contrast, and electrifying",
+    "zh": "鲜明、高对比、充满电感",
+    "ko": "선명하고, 고대비, 생기 넘치는",
+    "path": "sd.bright-winter.tagline"
+  },
+  {
+    "en": "Warm (golden, peachy)",
+    "zh": "暖调（金色、蜜桃色）",
+    "ko": "웜톤 (골드, 피치)",
+    "path": "sd.light-spring.charUndertone"
+  },
+  {
+    "en": "Warm Autumn",
+    "zh": "暖秋型",
+    "ko": "웜 오텀",
+    "path": "sd.warm-autumn.name"
+  },
+  {
+    "en": "Warm Autumn is the most common season for natural redheads, followed by Warm Spring (for lighter redheads) and Soft Autumn (for auburn hair). The warm undertones of red hair align naturally with the Autumn and Spring season families.",
+    "zh": "暖秋是天然红发最常见，其次是暖春（较浅红发）和柔秋（赤褐发）。红发暖底调自然契合秋和春季型家族。",
+    "ko": "웜 오텀이 천연 레드헤드에서 가장 흔하고, 다음은 웜 스프링(더 밝은 레드헤드), 소프트 오텀(오번)입니다. 레드 헤어의 웜톤 언더톤은 자연스럽게 오텀·스프링 시즌 패밀리와 맞습니다.",
+    "path": "ad.redheads.faq1A"
+  },
+  {
+    "en": "Warm Autumn — common in those with warm, golden undertones and dark features",
+    "zh": "暖秋型 — 暖金底调、深特征者常见",
+    "ko": "웜 오텀 — 웜톤 골드 언더톤과 어두운 이목구비",
+    "path": "ad.asian-skin.cs1"
+  },
+  {
+    "en": "Warm Autumn — distinctly warm coloring with medium-deep depth",
+    "zh": "暖秋型 — 明显暖调、中深深度",
+    "ko": "웜 오텀 — 뚜렷한 웜톤, 중~깊은 깊이",
+    "path": "ad.men.cs2"
+  },
+  {
+    "en": "Warm Autumn — strongly warm undertones with medium-deep depth",
+    "zh": "暖秋型 — 强暖调底调、中深深度",
+    "ko": "웜 오텀 — 강한 웜톤 언더톤, 중~깊은 깊이",
+    "path": "ad.dark-skin.cs2"
+  },
+  {
+    "en": "Warm Autumn — the most common season for natural redheads with rich, warm coloring",
+    "zh": "暖秋型 — 天然红发、浓郁暖调最常见",
+    "ko": "웜 오텀 — 풍부한 웜톤 컬러링의 천연 레드헤드에서 가장 흔함",
+    "path": "ad.redheads.cs0"
+  },
+  {
+    "en": "Warm Autumn, also called True Autumn, is the purest expression of the Autumn season. These individuals have strongly warm undertones with medium-to-high depth and rich, warm coloring throughout. Their skin often has a golden or bronze quality, and their hair and eyes are distinctly warm-toned. Warm Autumns are most flattered by deep, warm, and earthy colors that match their natural richness.",
+    "zh": "暖秋型，又称真秋型，是秋季型最纯粹的表达。这类人肤色强烈偏暖，整体深度中偏深，全身带有浓郁暖调。皮肤常呈金色或青铜色，头发和眼睛也明显偏暖。暖秋型最适合深暖、大地色系的颜色，与其天生的丰富感相得益彰。",
+    "ko": "웜 오텀(트루 오텀)은 오텀 시즌의 가장 순수한 표현입니다. 강한 웜톤 언더톤과 중~깊은 깊이, 풍부한 웜 컬러링을 가집니다. 피부는 골드나 브론즈 톤, 머리와 눈은 뚜렷히 웜톤입니다. 웜 오텀에게는 자연스러운 풍부함에 맞는 깊고 따뜻한 어스 컬러가 가장 잘 어울립니다.",
+    "path": "sd.warm-autumn.desc"
+  },
+  {
+    "en": "Warm Beige",
+    "zh": "暖米色",
+    "ko": "웜 베이지",
+    "path": "sd.warm-spring.nc2"
+  },
+  {
+    "en": "Warm Black",
+    "zh": "暖黑色",
+    "ko": "웜 블랙",
+    "path": "sd.deep-autumn.bc9"
+  },
+  {
+    "en": "Warm Brown",
+    "zh": "暖棕色",
+    "ko": "웜 브라운",
+    "path": "sd.warm-spring.nc0"
+  },
+  {
+    "en": "Warm Burgundy",
+    "zh": "暖酒红色",
+    "ko": "웜 버건디",
+    "path": "sd.warm-autumn.bc8"
+  },
+  {
+    "en": "Warm Charcoal",
+    "zh": "暖炭灰色",
+    "ko": "웜 차콜",
+    "path": "sd.bright-spring.nc1"
+  },
+  {
+    "en": "Warm Cocoa",
+    "zh": "暖可可色",
+    "ko": "웜 코코아",
+    "path": "sd.bright-spring.nc3"
+  },
+  {
+    "en": "Warm Coral",
+    "zh": "暖珊瑚色",
+    "ko": "웜 코랄",
+    "path": "sd.warm-spring.bc2"
+  },
+  {
+    "en": "Warm Gray",
+    "zh": "暖灰色",
+    "ko": "웜 그레이",
+    "path": "sd.soft-autumn.nc0"
+  },
+  {
+    "en": "Warm Ivory",
+    "zh": "暖象牙白",
+    "ko": "웜 아이보리",
+    "path": "sd.light-spring.bc6"
+  },
+  {
+    "en": "Warm Khaki",
+    "zh": "暖卡其色",
+    "ko": "웜 카키",
+    "path": "sd.warm-autumn.nc1"
+  },
+  {
+    "en": "Warm Mauve",
+    "zh": "暖灰紫色",
+    "ko": "웜 모브",
+    "path": "sd.soft-autumn.bc4"
+  },
+  {
+    "en": "Warm Mushroom",
+    "zh": "暖蘑菇色",
+    "ko": "웜 머쉬룸",
+    "path": "sd.soft-autumn.nc2"
+  },
+  {
+    "en": "Warm Olive",
+    "zh": "暖橄榄色",
+    "ko": "웜 올리브",
+    "path": "sd.soft-autumn.bc6"
+  },
+  {
+    "en": "Warm Pink",
+    "zh": "暖粉色",
+    "ko": "웜 핑크",
+    "path": "sd.light-spring.bc1"
+  },
+  {
+    "en": "Warm Plum",
+    "zh": "暖梅色",
+    "ko": "웜 플럼",
+    "path": "sd.deep-autumn.bc6"
+  },
+  {
+    "en": "Warm Purple",
+    "zh": "暖紫色",
+    "ko": "웜 퍼플",
+    "path": "sd.warm-spring.bc8"
+  },
+  {
+    "en": "Warm Red",
+    "zh": "暖红色",
+    "ko": "웜 레드",
+    "path": "sd.bright-spring.bc4"
+  },
+  {
+    "en": "Warm Spring",
+    "zh": "暖春型",
+    "ko": "웜 스프링",
+    "path": "sd.warm-spring.name"
+  },
+  {
+    "en": "Warm Spring — medium depth with clear warm coloring",
+    "zh": "暖春型 — 中等深度、清晰暖调",
+    "ko": "웜 스프링 — 중간 깊이, 선명한 웜톤 컬러링",
+    "path": "ad.medium-skin.cs1"
+  },
+  {
+    "en": "Warm Spring — redheads with lighter, clearer warm coloring",
+    "zh": "暖春型 — 较浅、更清晰暖调的红发",
+    "ko": "웜 스프링 — 더 밝고 선명한 웜톤 레드헤드",
+    "path": "ad.redheads.cs1"
+  },
+  {
+    "en": "Warm Spring, also called True Spring, is the purest expression of the Spring season. These individuals have distinctly warm undertones with medium contrast and a noticeable golden warmth throughout their coloring. Their skin often has a warm, peachy or golden hue, and they tan easily. Warm Springs are most flattered by saturated, warm colors that match their natural vibrancy.",
+    "zh": "暖春型，又称真春型，是春季型最纯粹的表达。这类人肤色明显偏暖，整体对比度中等，全身带有清晰的金色暖感。皮肤常呈暖调蜜桃色或金色，且容易晒黑。暖春型最适合饱和度高、色调温暖的颜色，与其天生的活力相得益彰。",
+    "ko": "웜 스프링(트루 스프링)은 스프링 시즌의 가장 순수한 표현입니다. 뚜렷한 웜톤 언더톤과 중간 대비, 눈에 띄는 골든 웜스를 가집니다. 피부는 따뜻한 피치나 골드 톤이며 태닝이 잘 됩니다. 웜 스프링에게는 자연스러운 활력에 맞는 채도 높은 웜톤 컬러가 가장 잘 어울립니다.",
+    "path": "sd.warm-spring.desc"
+  },
+  {
+    "en": "Warm Taupe",
+    "zh": "暖灰褐色",
+    "ko": "웜 토프",
+    "path": "sd.light-spring.nc2"
+  },
+  {
+    "en": "Warm Teal",
+    "zh": "暖蓝绿色",
+    "ko": "웜 틸",
+    "path": "sd.warm-spring.bc4"
+  },
+  {
+    "en": "Warm Turquoise",
+    "zh": "暖绿松石色",
+    "ko": "웜 터쿼이즈",
+    "path": "sd.warm-spring.bc6"
+  },
+  {
+    "en": "Warm White",
+    "zh": "暖白色",
+    "ko": "웜 화이트",
+    "path": "sd.light-spring.nc0"
+  },
+  {
+    "en": "Warm Yellow",
+    "zh": "暖黄色",
+    "ko": "웜 옐로",
+    "path": "sd.cool-summer.ac1"
+  },
+  {
+    "en": "Warm auburn",
+    "zh": "暖赤褐色",
+    "ko": "웜 오번",
+    "path": "sd.cool-winter.ha2"
+  },
+  {
+    "en": "Warm black-brown",
+    "zh": "暖黑棕色",
+    "ko": "웜 블랙 브라운",
+    "path": "sd.deep-autumn.hr3"
+  },
+  {
+    "en": "Warm brick red, terracotta, warm berry, copper gloss",
+    "zh": "暖砖红色、赤陶色、暖浆果色、铜色唇蜜",
+    "ko": "웜 벽돌색, 테라코타, 웜 베리, 코퍼 글로스",
+    "path": "sd.warm-autumn.lips"
+  },
+  {
+    "en": "Warm bronde",
+    "zh": "暖棕金色",
+    "ko": "웜 브론드",
+    "path": "sd.soft-autumn.hr3"
+  },
+  {
+    "en": "Warm bronze, copper, burnt sienna, warm olive, gold",
+    "zh": "暖青铜色、铜色、焦赭色、暖橄榄色、金色",
+    "ko": "웜 브론즈, 코퍼, 번트 시에나, 웜 올리브, 골드",
+    "path": "sd.warm-autumn.eyes"
+  },
+  {
+    "en": "Warm brown",
+    "zh": "暖棕色",
+    "ko": "웜 브라운",
+    "path": "sd.soft-autumn.hr0"
+  },
+  {
+    "en": "Warm caramel",
+    "zh": "暖焦糖色",
+    "ko": "웜 카라멜",
+    "path": "sd.light-spring.hr4"
+  },
+  {
+    "en": "Warm chestnut",
+    "zh": "暖栗色",
+    "ko": "웜 체스트넛",
+    "path": "sd.warm-spring.hr4"
+  },
+  {
+    "en": "Warm chocolate",
+    "zh": "暖巧克力色",
+    "ko": "웜 초콜릿",
+    "path": "sd.bright-spring.hr4"
+  },
+  {
+    "en": "Warm copper",
+    "zh": "暖铜色",
+    "ko": "웜 코퍼",
+    "path": "sd.warm-spring.hr1"
+  },
+  {
+    "en": "Warm coral, terracotta, peach-orange, warm berry",
+    "zh": "暖珊瑚色、赤陶色、桃橙色、暖浆果色",
+    "ko": "웜 코랄, 테라코타, 피치 오렌지, 웜 베리",
+    "path": "sd.warm-spring.lips"
+  },
+  {
+    "en": "Warm golden blonde",
+    "zh": "暖金金色",
+    "ko": "웜 골든 블론드",
+    "path": "sd.light-summer.ha0"
+  },
+  {
+    "en": "Warm golden tones",
+    "zh": "暖金色调",
+    "ko": "웜 골든 톤",
+    "path": "sd.deep-winter.ha1"
+  },
+  {
+    "en": "Warm neutrals (camel, sand, warm gray) make excellent wardrobe staples",
+    "zh": "暖中性色（驼色、沙色、暖灰）是极佳衣橱基础单品",
+    "ko": "웜톤 뉴트럴(카멜, 샌드, 웜 그레이)이 옷장 기본 아이템으로 좋습니다",
+    "path": "ad.olive-skin.wt4"
+  },
+  {
+    "en": "Warm nude, dusty rose, soft terracotta, muted peach",
+    "zh": "暖裸色、灰粉色、柔和赤陶色、柔和蜜桃色",
+    "ko": "웜 누드, 더스티 로즈, 소프트 테라코타, 뮤트 피치",
+    "path": "sd.soft-autumn.lips"
+  },
+  {
+    "en": "Warm peach, soft apricot, muted coral",
+    "zh": "暖蜜桃色、柔和杏色、柔和珊瑚色",
+    "ko": "웜 피치, 소프트 살구, 뮤트 코랄",
+    "path": "sd.soft-autumn.blush"
+  },
+  {
+    "en": "Warm peach, terracotta, warm apricot",
+    "zh": "暖蜜桃色、赤陶色、暖杏色",
+    "ko": "웜 피치, 테라코타, 웜 살구",
+    "path": "sd.warm-autumn.blush"
+  },
+  {
+    "en": "Warm taupe, soft bronze, muted olive, champagne",
+    "zh": "暖灰褐色、柔和青铜色、柔和橄榄色、香槟色",
+    "ko": "웜 토프, 소프트 브론즈, 뮤트 올리브, 샴페인",
+    "path": "sd.soft-autumn.eyes"
+  },
+  {
+    "en": "Warm types: camel, olive, warm brown, coral. Cool types: navy, gray, dusty rose, lavender",
+    "zh": "暖调型：驼色、橄榄色、暖棕、珊瑚。冷调型：海军蓝、灰色、灰粉、薰衣草",
+    "ko": "웜톤: 카멜, 올리브, 웜 브라운, 코랄. 쿨톤: 네이비, 그레이, 더스티 로즈, 라벤더",
+    "path": "ad.asian-skin.wt2"
+  },
+  {
+    "en": "Warm types: golden bronzer, peach blush, warm berry lips. Cool types: pink bronzer, rose blush, cool berry lips",
+    "zh": "暖调型：金色修容、蜜桃腮红、暖浆果唇。冷调型：粉色修容、玫瑰腮红、冷浆果唇",
+    "ko": "웜톤: 골든 컨투어링, 피치 블러셔, 웜 베리 립. 쿨톤: 핑크 컨투어링, 로즈 블러셔, 쿨 베리 립",
+    "path": "ad.medium-skin.mt2"
+  },
+  {
+    "en": "Warm with deep golden or olive undertone",
+    "zh": "暖调，带深金色或橄榄色底调",
+    "ko": "깊은 골드 또는 올리브 언더톤",
+    "path": "sd.deep-autumn.found"
+  },
+  {
+    "en": "Warm with golden or peachy undertone, light coverage",
+    "zh": "暖调，带金色或蜜桃色底调，轻薄遮瑕",
+    "ko": "골드 또는 피치 언더톤, 가벼운 커버",
+    "path": "sd.light-spring.found"
+  },
+  {
+    "en": "Warm with golden undertone, medium coverage",
+    "zh": "暖调，带金色底调，中等遮瑕",
+    "ko": "골드 언더톤, 중간 커버",
+    "path": "sd.bright-spring.found"
+  },
+  {
+    "en": "Warm with golden undertone, natural finish",
+    "zh": "暖调，带金色底调，自然妆效",
+    "ko": "골드 언더톤, 자연스러운 마감",
+    "path": "sd.soft-autumn.found"
+  },
+  {
+    "en": "Warm with strong golden or yellow undertone",
+    "zh": "暖调，带明显金色或黄色底调",
+    "ko": "강한 골드 또는 옐로 언더톤",
+    "path": "sd.warm-spring.found"
+  },
+  {
+    "en": "Warm with strong golden-bronze undertone",
+    "zh": "暖调，带明显金色或青铜色底调",
+    "ko": "강한 골드~브론즈 언더톤",
+    "path": "sd.warm-autumn.found"
+  },
+  {
+    "en": "Warm, light, and delicately radiant",
+    "zh": "温暖、明亮、精致通透",
+    "ko": "따뜻하고, 밝고, 섬세하게 빛나는",
+    "path": "sd.light-spring.tagline"
+  },
+  {
+    "en": "Warm-neutral (warm but can handle some cool bright colors)",
+    "zh": "暖中性（偏暖，但也能驾驭部分冷调亮色）",
+    "ko": "웜~중성 (웜톤이지만 일부 쿨톤 밝은 색도 가능)",
+    "path": "sd.bright-spring.charUndertone"
+  },
+  {
+    "en": "Warm-neutral (warm but can handle some cool muted tones)",
+    "zh": "暖中性（偏暖，但也能驾驭部分冷调柔和色）",
+    "ko": "웜~중성 (웜톤이지만 일부 쿨톤 뮤트 톤도 가능)",
+    "path": "sd.soft-autumn.charUndertone"
+  },
+  {
+    "en": "Warm-neutral (warm but can handle some dark cool colors)",
+    "zh": "暖中性（偏暖，但也能驾驭部分深冷色）",
+    "ko": "웜~중성 (웜톤이지만 일부 어두운 쿨톤 색도 가능)",
+    "path": "sd.deep-autumn.charUndertone"
+  },
+  {
+    "en": "Warm-neutral, muted, and earthy-soft",
+    "zh": "暖中性、柔和、大地色",
+    "ko": "웜~중성, 뮤트하고, 어스톤으로 부드러운",
+    "path": "sd.soft-autumn.tagline"
+  },
+  {
+    "en": "Washed-out Pastels",
+    "zh": "褪色浅淡色",
+    "ko": "빛바랜 파스텔",
+    "path": "ad.dark-skin.ac2"
+  },
+  {
+    "en": "What color season are most dark-skinned people?",
+    "zh": "深肤色最常见哪种季型？",
+    "ko": "다크 스킨 사람에게 가장 흔한 시즌은?",
+    "path": "ad.dark-skin.faq1Q"
+  },
+  {
+    "en": "What colors should men wear to look more attractive?",
+    "zh": "男性穿什么颜色更有吸引力？",
+    "ko": "남성이 더 매력적으로 보이는 색은?",
+    "path": "ad.men.faq1Q"
+  },
+  {
+    "en": "What colors should olive skin avoid?",
+    "zh": "橄榄肤色应避免什么颜色？",
+    "ko": "올리브 피부가 피해야 할 색은?",
+    "path": "ad.olive-skin.faq2Q"
+  },
+  {
+    "en": "What is color analysis?",
+    "zh": "什么是色彩分析？",
+    "ko": "컬러 분석이란?",
+    "path": "ad.beginners.faq0Q"
+  },
+  {
+    "en": "What is the most common color season for redheads?",
+    "zh": "红发最常见季型？",
+    "ko": "레드헤드에게 가장 흔한 컬러 시즌은?",
+    "path": "ad.redheads.faq1Q"
+  },
+  {
+    "en": "What season am I if I have medium skin?",
+    "zh": "中等肤色是什么季型？",
+    "ko": "중간 피부면 어떤 시즌인가요?",
+    "path": "ad.medium-skin.faq0Q"
+  },
+  {
+    "en": "What's the most common color season for Asian people?",
+    "zh": "亚洲人最常见的季型是什么？",
+    "ko": "아시아인에게 가장 흔한 컬러 시즌은?",
+    "path": "ad.asian-skin.faq2Q"
+  },
+  {
+    "en": "White and off-white create stunning high-contrast looks",
+    "zh": "白色与米白色能打造惊艳的高对比造型",
+    "ko": "화이트와 오프화이트가 인상적인 고대비 룩을 만듭니다",
+    "path": "ad.dark-skin.wt2"
+  },
+  {
+    "en": "White gold, platinum, silver, garnet, onyx, deep sapphire, dark ruby",
+    "zh": "白金、铂金、银色、石榴石、缟玛瑙、深蓝宝石、深红宝石",
+    "ko": "화이트 골드, 플래티넘, 실버, 가넷, 오닉스, 딥 사파이어, 다크 루비",
+    "path": "sd.deep-winter.jewelry"
+  },
+  {
+    "en": "White is universally worn but brightness matters: warm types prefer ivory, cool types prefer blue-white",
+    "zh": "白色普遍穿着但亮度有讲究：暖调型偏好象牙白，冷调型偏好蓝白",
+    "ko": "화이트는 보편적으로 입지만 밝기가 중요합니다: 웜톤=아이보리, 쿨톤=블루 화이트",
+    "path": "ad.asian-skin.wt4"
+  },
+  {
+    "en": "Why do some colors make my fair skin look ruddy or sallow?",
+    "zh": "为什么有些颜色让白皙皮肤显红或显黄？",
+    "ko": "왜 어떤 색은 밝은 피부를 붉거나 누렇게 보이게 하나요?",
+    "path": "ad.fair-skin.faq1Q"
+  },
+  {
+    "en": "Why do some colors make my medium skin look sallow?",
+    "zh": "为什么有些颜色让中等肤色显黄？",
+    "ko": "왜 어떤 색은 중간 피부를 누렇게 보이게 하나요?",
+    "path": "ad.medium-skin.faq1Q"
+  },
+  {
+    "en": "Why is olive skin so hard to color-type?",
+    "zh": "为什么橄榄肤色难分型？",
+    "ko": "올리브 피부는 왜 컬러 타입 판별이 어려운가요?",
+    "path": "ad.olive-skin.faq1Q"
+  },
+  {
+    "en": "Why is personal color analysis so popular in Korea and Japan?",
+    "zh": "为什么个人色彩分析在韩国和日本如此流行？",
+    "ko": "한국과 일본에서 퍼스널 컬러 분석이 인기인 이유는?",
+    "path": "ad.asian-skin.faq1Q"
+  },
+  {
+    "en": "Yellow gold, copper, bronze, amber, citrine, turquoise",
+    "zh": "黄金、铜、青铜、琥珀、黄水晶、绿松石",
+    "ko": "옐로 골드, 코퍼, 브론즈, 호박, 시트린, 터쿼이즈",
+    "path": "sd.warm-spring.jewelry"
+  },
+  {
+    "en": "Yellow gold, copper, bronze, tiger's eye, amber, carnelian, garnet",
+    "zh": "黄金、铜、青铜、虎眼石、琥珀、红玉髓、石榴石",
+    "ko": "옐로 골드, 코퍼, 브론즈, 호랑이 눈, 호박, 카넬리안, 가넷",
+    "path": "sd.warm-autumn.jewelry"
+  },
+  {
+    "en": "Yes, but choose the right red. Match the warmth and depth of your clothing red to your hair — if your hair is warm copper, wear warm reds (tomato, rust). If your hair is cool strawberry, you can handle slightly cooler reds. The 'redheads can't wear red' rule is a myth.",
+    "zh": "能，但要选对红。服装红色的暖度和深度匹配头发 — 若头发暖铜，穿暖红（番茄、铁锈）。若头发冷草莓，可驾驭略冷红。「红发不能穿红」是误解。",
+    "ko": "네, 다만 올바른 레드를 선택하세요. 옷의 레드 웜스와 깊이를 머리에 맞추세요 — 머리가 웜 코퍼면 웜 레드(토마토, 러스트). 스트로베리면 약간 쿨한 레드도 가능합니다. '레드헤드는 빨강 못 입는다'는 미신입니다.",
+    "path": "ad.redheads.faq0A"
+  },
+  {
+    "en": "You CAN wear red clothing — choose shades that match your hair's warmth level",
+    "zh": "可以穿红衣服 — 选与发色暖度匹配的红色色度",
+    "ko": "빨간 옷도 입을 수 있습니다 — 머리의 웜스 레벨에 맞는 레드 톤을 선택하세요",
+    "path": "ad.redheads.wt2"
+  },
+  {
+    "en": "You can handle both subtle and bold makeup — versatility is your advantage",
+    "zh": "你可驾驭含蓄与大胆彩妆 — 多样性是优势",
+    "ko": "은은한 메이크업부터 대담한 메이크업까지 소화 가능 — 다양성이 강점입니다",
+    "path": "ad.medium-skin.mt1"
+  },
+  {
+    "en": "You own dark, dramatic colors — black, deep navy, dark red, and forest green",
+    "zh": "深暗、戏剧感色彩是你的专属 — 黑色、深海军蓝、深红色和森林绿",
+    "ko": "어둡고 드라마틱한 색이 잘 어울립니다 — 블랙, 딥 네이비, 다크 레드, 포레스트 그린",
+    "path": "sd.deep-winter.ft0"
+  },
+  {
+    "en": "You're one of the few warm types who can pull off near-black (warm black)",
+    "zh": "你是少数能驾驭近黑色（暖黑色）的暖调类型",
+    "ko": "웜톤 블랙에 가까운 색을 소화할 수 있는 소수의 웜톤 타입입니다",
+    "path": "sd.deep-autumn.ft1"
+  },
+  {
+    "en": "Your best neutrals depend entirely on warm vs. cool: brown/camel or navy/gray",
+    "zh": "最佳中性色完全取决于暖与冷：棕/驼或海军蓝/灰",
+    "ko": "최적 뉴트럴은 웜과 쿨에 전적으로 달려 있습니다: 브라운/카멜 또는 네이비/그레이",
+    "path": "ad.medium-skin.wt3"
+  },
+  {
+    "en": "Your fundamental undertone doesn't change, but your apparent season can shift slightly with major changes like going gray, significant tanning, or aging. Your underlying season remains the same — what changes is how you present it. Periodic re-analysis is useful after major appearance changes.",
+    "zh": "根本底调不变，但表面季型可能因白发、显著晒黑或衰老等重大变化而略有改变。底层季型不变 — 变的是呈现方式。重大外观变化后定期重新分析有用。",
+    "ko": "기본 언더톤은 변하지 않지만, 백발, 심한 태닝, 노화 등 큰 변화로 겉으로 보이는 시즌이 약간 달라질 수 있습니다. 근본 시즌은 같고 — 변하는 것은 표현 방식입니다. 큰 외모 변화 후에는 재분석이 유용합니다.",
+    "path": "ad.beginners.faq3A"
+  },
+  {
+    "en": "Your opposite undertone's extreme colors",
+    "zh": "相反底调的极端颜色",
+    "ko": "반대 언더톤의 극단적 색",
+    "path": "ad.beginners.ac0"
+  }
+]

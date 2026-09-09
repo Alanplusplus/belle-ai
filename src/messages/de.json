@@ -145,7 +145,32 @@
     "faq5Q": "Was werde ich aus meiner Farbanalyse lernen?",
     "faq5A": "Du entdeckst deinen saisonalen Farbtyp (z. B. Soft Autumn, Bright Winter), erhältst eine personalisierte Palette deiner schmeichelhaftesten Farben, erfährst, welche Farben du vermeiden solltest, und bekommst spezifische Empfehlungen für Make-up-Töne, Kleiderfarben, Haarfarbe und Schmuckmetalle.",
     "faq6Q": "Worin unterscheidet sich das von einer persönlichen Beratung?",
-    "faq6A": "Eine persönliche Beratung mit einem professionellen Coloristen kostet typischerweise 200–500 $ und dauert 1–2 Stunden. Unsere KI-Analyse liefert sofortige Ergebnisse basierend auf denselben Farbwissenschafts-Prinzipien. Während professionelles Draping für komplexe Fälle der Goldstandard bleibt, liefert die KI-Analyse für die Mehrheit der Menschen genaue Ergebnisse und ist ein hervorragender Ausgangspunkt."
+    "faq6A": "Eine persönliche Beratung mit einem professionellen Coloristen kostet typischerweise 200–500 $ und dauert 1–2 Stunden. Unsere KI-Analyse liefert sofortige Ergebnisse basierend auf denselben Farbwissenschafts-Prinzipien. Während professionelles Draping für komplexe Fälle der Goldstandard bleibt, liefert die KI-Analyse für die Mehrheit der Menschen genaue Ergebnisse und ist ein hervorragender Ausgangspunkt.",
+    "statsAnalysisTypes": "11 Analysetypen",
+    "statsSeasonSystem": "12-Jahreszeiten-System",
+    "statsLanguages": "16 Sprachen",
+    "statsSpeed": "Ergebnisse in 60s",
+    "resultsTitle": "Sehen Sie die Ergebnisse",
+    "resultsSubtitle": "Laden Sie ein Selfie hoch und erhalten Sie in Sekunden einen Analysebericht in Magazinqualität",
+    "resultsBefore": "Vorher",
+    "resultsAfter": "KI-Bericht",
+    "resultsColorLabel": "Persönliche Farbanalyse",
+    "resultsMakeupLabel": "Make-up-Analyse",
+    "resultsFaceLabel": "Gesichtsform & Frisur",
+    "testimonialsTitle": "Von Beauty-Enthusiasten weltweit geliebt",
+    "testimonialsSubtitle": "Erfahren Sie, was unsere Nutzerinnen sagen",
+    "testimonial1": "Ich habe 300€ für eine persönliche Farbberatung ausgegeben. Belle AI lieferte dasselbe Soft-Autumn-Ergebnis mit einer noch detaillierteren Palettenanalyse.",
+    "testimonial2": "Als Visagistin empfehle ich es allen Kundinnen vor der ersten Sitzung. Die 12-Jahreszeiten-Analyse ist punktgenau.",
+    "testimonial3": "Endlich weiß ich, dass ich Soft Summer bin! Kein Wunder, dass warme Farben nie an mir aussahen.",
+    "testimonial4": "Ich war skeptisch bezüglich KI-Farbanalyse für dunklere Hauttöne, aber es hat meinen Unterton perfekt erkannt.",
+    "testimonial5": "Die Gesichtsformanalyse hat drei meiner Kundinnen geholfen, Frisuren zu finden, die sie lieben.",
+    "testimonial6": "Die Berichtqualität sieht aus wie aus einem Modemagazin. Ich nutze die Farbpaletten-Screenshots als Referenz.",
+    "testimonialRole1": "Beauty-Bloggerin",
+    "testimonialRole2": "Visagistin",
+    "testimonialRole3": "Modestudentin",
+    "testimonialRole4": "Content-Creatorin",
+    "testimonialRole5": "Stylistin",
+    "testimonialRole6": "Fotografin"
   },
   "features": {
     "learnMore": "Mehr erfahren",
@@ -259,7 +284,16 @@
     "at_celebrity_match": "Promi-Match",
     "at_glow_up_report": "Glow-Up Report (Premium)",
     "appStoreNote": "Auch erhältlich im",
-    "appStoreLink": "App Store"
+    "appStoreLink": "App Store",
+    "guaranteeTitle": "Testen Sie ohne Risiko",
+    "guaranteeFreeTitle": "Kostenlos starten",
+    "guaranteeFreeDesc": "2 kostenlose Analysen, keine Zahlung erforderlich",
+    "guaranteeNoAccountTitle": "Kein Konto nötig",
+    "guaranteeNoAccountDesc": "Sofort starten, später registrieren",
+    "guaranteePrivacyTitle": "Datenschutz zuerst",
+    "guaranteePrivacyDesc": "Fotos sicher verarbeitet, nie gespeichert",
+    "guaranteeCancelTitle": "Jederzeit kündbar",
+    "guaranteeCancelDesc": "Keine Verträge, jederzeit kündbar"
   },
   "welcomeOffer": {
     "title": "Willkommen bei Belle AI",
@@ -577,7 +611,8 @@
     "tryAnother": "Probiere eine andere Analyse",
     "tryAnotherDesc": "Nutze dasselbe Foto für weitere Einblicke",
     "notifyTitle": "Dein Bericht ist fertig ✨",
-    "notifyBody": "Dein Analysebericht wurde erstellt. Klicke hier, um die Ergebnisse anzuzeigen."
+    "notifyBody": "Dein Analysebericht wurde erstellt. Klicke hier, um die Ergebnisse anzuzeigen.",
+    "uploadTrust": "Ihr Foto wird sicher verarbeitet und niemals auf unseren Servern gespeichert"
   },
   "footer": {
     "tagline": "KI-gestützte persönliche Schönheitsanalyse",

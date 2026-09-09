@@ -145,7 +145,32 @@
     "faq5Q": "Tôi sẽ học được gì từ phân tích màu?",
     "faq5A": "Bạn sẽ khám phá màu theo mùa, nhận bảng màu cá nhân tôn vẻ đẹp nhất, biết màu nên tránh và nhận gợi ý cụ thể cho trang điểm, quần áo, màu tóc và trang sức.",
     "faq6Q": "Khác gì so với tư vấn trực tiếp?",
-    "faq6A": "Tư vấn trực tiếp thường có giá $200-$500 và mất 1-2 giờ. AI của chúng tôi cung cấp kết quả tức thì dựa trên cùng nguyên lý khoa học màu sắc. Phân tích AI cho kết quả chính xác với đa số người và là điểm khởi đầu tuyệt vời."
+    "faq6A": "Tư vấn trực tiếp thường có giá $200-$500 và mất 1-2 giờ. AI của chúng tôi cung cấp kết quả tức thì dựa trên cùng nguyên lý khoa học màu sắc. Phân tích AI cho kết quả chính xác với đa số người và là điểm khởi đầu tuyệt vời.",
+    "statsAnalysisTypes": "11 loại phân tích",
+    "statsSeasonSystem": "Hệ thống 12 mùa",
+    "statsLanguages": "16 ngôn ngữ",
+    "statsSpeed": "Kết quả trong 60 giây",
+    "resultsTitle": "Xem kết quả",
+    "resultsSubtitle": "Tải ảnh selfie lên và nhận báo cáo chất lượng tạp chí trong vài giây",
+    "resultsBefore": "Trước",
+    "resultsAfter": "Báo cáo AI",
+    "resultsColorLabel": "Phân tích màu sắc cá nhân",
+    "resultsMakeupLabel": "Phân tích trang điểm",
+    "resultsFaceLabel": "Hình dáng khuôn mặt & kiểu tóc",
+    "testimonialsTitle": "Được yêu thích bởi người đam mê làm đẹp trên toàn thế giới",
+    "testimonialsSubtitle": "Xem người dùng nói gì",
+    "testimonial1": "Năm ngoái chi $300 cho tư vấn màu sắc trực tiếp. Belle AI cho kết quả Soft Autumn giống hệt với phân tích chi tiết hơn.",
+    "testimonial2": "Là chuyên viên trang điểm, tôi giới thiệu cho tất cả khách hàng. Phân tích 12 mùa rất chính xác.",
+    "testimonial3": "Cuối cùng cũng biết mình là Soft Summer! Hèn gì quần áo tông ấm chẳng bao giờ hợp.",
+    "testimonial4": "Hoài nghi về phân tích màu AI cho da ngăm, nhưng xác định đúng undertone hoàn hảo.",
+    "testimonial5": "Phân tích khuôn mặt giúp 3 khách hàng tìm được kiểu tóc yêu thích. Báo cáo rất chuyên nghiệp.",
+    "testimonial6": "Chất lượng báo cáo trông như từ tạp chí thời trang. Dùng ảnh bảng màu làm tham khảo mỗi lần mua sắm.",
+    "testimonialRole1": "Beauty Blogger",
+    "testimonialRole2": "Chuyên viên trang điểm",
+    "testimonialRole3": "Sinh viên thời trang",
+    "testimonialRole4": "Nhà sáng tạo nội dung",
+    "testimonialRole5": "Stylist",
+    "testimonialRole6": "Nhiếp ảnh gia"
   },
   "features": {
     "learnMore": "Tìm Hiểu Thêm",
@@ -259,7 +284,16 @@
     "at_celebrity_match": "Ghép sao",
     "at_glow_up_report": "Báo cáo Glow-Up (Premium)",
     "appStoreNote": "Cũng có trên",
-    "appStoreLink": "App Store"
+    "appStoreLink": "App Store",
+    "guaranteeTitle": "Dùng thử tự tin",
+    "guaranteeFreeTitle": "Bắt đầu miễn phí",
+    "guaranteeFreeDesc": "2 lần phân tích miễn phí",
+    "guaranteeNoAccountTitle": "Không cần tài khoản",
+    "guaranteeNoAccountDesc": "Bắt đầu ngay, đăng ký sau",
+    "guaranteePrivacyTitle": "Quyền riêng tư trước tiên",
+    "guaranteePrivacyDesc": "Ảnh xử lý an toàn, không lưu trữ",
+    "guaranteeCancelTitle": "Hủy bất cứ lúc nào",
+    "guaranteeCancelDesc": "Không hợp đồng, hủy đăng ký bất cứ lúc nào"
   },
   "welcomeOffer": {
     "title": "Chào mừng đến Belle AI",
@@ -577,7 +611,8 @@
     "tryAnother": "Thử phân tích khác",
     "tryAnotherDesc": "Dùng cùng ảnh để khám phá thêm",
     "notifyTitle": "Báo cáo đã sẵn sàng ✨",
-    "notifyBody": "Báo cáo phân tích của bạn đã được tạo. Nhấp để xem kết quả."
+    "notifyBody": "Báo cáo phân tích của bạn đã được tạo. Nhấp để xem kết quả.",
+    "uploadTrust": "Ảnh của bạn được xử lý an toàn và không bao giờ lưu trữ trên máy chủ"
   },
   "footer": {
     "tagline": "Phân tích làm đẹp cá nhân bằng AI",

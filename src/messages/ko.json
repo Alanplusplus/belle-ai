@@ -145,7 +145,32 @@
     "faq5Q": "컬러 분석에서 무엇을 알 수 있나요?",
     "faq5A": "시즌 컬러 타입(예: 소프트 오텀, 브라이트 윈터)을 발견하고, 가장 잘 어울리는 색의 맞춤형 팔레트를 받으며, 피해야 할 색을 알고, 메이크업 색상, 의류 색상, 헤어 컬러, 주얼리 메탈에 대한 구체적인 추천을 받을 수 있습니다.",
     "faq6Q": "대면 상담과 어떻게 다른가요?",
-    "faq6A": "전문 컬러리스트의 대면 상담은 일반적으로 $200–$500이며 1–2시간이 소요됩니다. AI 분석은 동일한 컬러 사이언스 원리에 기반하여 즉각적인 결과를 제공합니다. 전문 드레이핑은 복잡한 경우의 골드 스탠다드이지만, AI 분석은 대다수의 사람들에게 정확한 결과를 제공하며 훌륭한 시작점입니다."
+    "faq6A": "전문 컬러리스트의 대면 상담은 일반적으로 $200–$500이며 1–2시간이 소요됩니다. AI 분석은 동일한 컬러 사이언스 원리에 기반하여 즉각적인 결과를 제공합니다. 전문 드레이핑은 복잡한 경우의 골드 스탠다드이지만, AI 분석은 대다수의 사람들에게 정확한 결과를 제공하며 훌륭한 시작점입니다.",
+    "statsAnalysisTypes": "11가지 분석 유형",
+    "statsSeasonSystem": "12시즌 시스템",
+    "statsLanguages": "16개 언어",
+    "statsSpeed": "60초 결과",
+    "resultsTitle": "분석 결과 확인하기",
+    "resultsSubtitle": "셀카를 업로드하고 몇 초 만에 매거진급 분석 리포트를 받으세요",
+    "resultsBefore": "비포",
+    "resultsAfter": "AI 리포트",
+    "resultsColorLabel": "퍼스널 컬러 분석",
+    "resultsMakeupLabel": "메이크업 분석",
+    "resultsFaceLabel": "얼굴형 & 헤어스타일",
+    "testimonialsTitle": "전 세계 뷰티 애호가들의 사랑",
+    "testimonialsSubtitle": "사용자들의 컬러 분석 경험을 확인하세요",
+    "testimonial1": "작년에 대면 컬러 진단에 30만원을 썼는데, Belle AI가 더 상세한 팔레트 분석과 함께 같은 소프트 오텀 결과를 줬어요.",
+    "testimonial2": "메이크업 아티스트로서 첫 세션 전 모든 고객에게 추천합니다. 12시즌 분석이 정확해서 컬러 매칭 시간을 크게 절약해줍니다.",
+    "testimonial3": "드디어 제가 소프트 서머라는 걸 알았어요! 따뜻한 톤의 옷이 안 어울렸던 이유를 알겠어요.",
+    "testimonial4": "짙은 피부톤에 대한 AI 컬러 분석에 회의적이었는데, 제 언더톤을 완벽하게 파악했어요.",
+    "testimonial5": "얼굴형 분석 덕분에 세 명의 고객이 정말 좋아하는 헤어스타일을 찾았어요.",
+    "testimonial6": "리포트 퀄리티가 패션 매거진 같아요. 쇼핑할 때마다 컬러 팔레트 스크린샷을 참고해요.",
+    "testimonialRole1": "뷰티 블로거",
+    "testimonialRole2": "메이크업 아티스트",
+    "testimonialRole3": "패션 전공 학생",
+    "testimonialRole4": "콘텐츠 크리에이터",
+    "testimonialRole5": "스타일리스트",
+    "testimonialRole6": "포토그래퍼"
   },
   "features": {
     "learnMore": "자세히 보기",
@@ -259,7 +284,16 @@
     "at_celebrity_match": "셀럽 매치",
     "at_glow_up_report": "Glow-Up 리포트 (프리미엄)",
     "appStoreNote": "App Store에서도",
-    "appStoreLink": "이용 가능"
+    "appStoreLink": "이용 가능",
+    "guaranteeTitle": "안심하고 이용하세요",
+    "guaranteeFreeTitle": "무료로 시작",
+    "guaranteeFreeDesc": "2회 무료 분석, 결제 불필요",
+    "guaranteeNoAccountTitle": "계정 불필요",
+    "guaranteeNoAccountDesc": "바로 시작, 나중에 가입",
+    "guaranteePrivacyTitle": "개인정보 보호",
+    "guaranteePrivacyDesc": "사진은 안전하게 처리, 저장되지 않음",
+    "guaranteeCancelTitle": "언제든 해지",
+    "guaranteeCancelDesc": "계약 없음, 구독 언제든 해지 가능"
   },
   "welcomeOffer": {
     "title": "Belle AI에 오신 것을 환영합니다",
@@ -577,7 +611,8 @@
     "tryAnother": "다른 분석도 해보세요",
     "tryAnotherDesc": "같은 사진으로 더 많은 분석 리포트 만들기",
     "notifyTitle": "리포트가 완성되었습니다 ✨",
-    "notifyBody": "분석 리포트가 생성되었습니다. 클릭하여 결과를 확인하세요."
+    "notifyBody": "분석 리포트가 생성되었습니다. 클릭하여 결과를 확인하세요.",
+    "uploadTrust": "사진은 안전하게 처리되며 서버에 저장되지 않습니다"
   },
   "footer": {
     "tagline": "AI 기반 퍼스널 뷰티 분석",

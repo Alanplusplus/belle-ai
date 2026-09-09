@@ -253,6 +253,49 @@ export default async function PricingPage({
           </div>
         </div>
 
+        {/* Trust Guarantees */}
+        <div className="mt-12 rounded-2xl border border-border bg-muted/30 p-6">
+          <h3 className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-wider">{t("guaranteeTitle")}</h3>
+          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="flex items-start gap-3">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" /></svg>
+              </div>
+              <div>
+                <p className="text-sm font-semibold">{t("guaranteeFreeTitle")}</p>
+                <p className="mt-0.5 text-xs text-muted-foreground">{t("guaranteeFreeDesc")}</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
+              </div>
+              <div>
+                <p className="text-sm font-semibold">{t("guaranteeNoAccountTitle")}</p>
+                <p className="mt-0.5 text-xs text-muted-foreground">{t("guaranteeNoAccountDesc")}</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+              </div>
+              <div>
+                <p className="text-sm font-semibold">{t("guaranteePrivacyTitle")}</p>
+                <p className="mt-0.5 text-xs text-muted-foreground">{t("guaranteePrivacyDesc")}</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+              </div>
+              <div>
+                <p className="text-sm font-semibold">{t("guaranteeCancelTitle")}</p>
+                <p className="mt-0.5 text-xs text-muted-foreground">{t("guaranteeCancelDesc")}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Payment badge */}
         <div className="mt-10 flex justify-center">
           <a

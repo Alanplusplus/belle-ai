@@ -1,8 +1,8 @@
 ---
-title: "Oliv-Unterton: Der am meisten missverstandene Hautton erklärt"
-description: "Vermuten Sie einen Oliv-Unterton? Dieser komplette Ratgeber erklärt, was ein Oliv-Unterton wirklich ist, warum er falsch identifiziert wird und wie Sie Ihre besten Farben in Make-up, Kleidung und Haaren finden."
+title: "Olive Hautton: Oliv-Unterton erkennen & Farben"
+description: "Haben Sie einen Oliv-Unterton? So erkennen Sie ihn, warum er oft falsch bestimmt wird und welche Farben in Make-up, Kleidung und Haar am besten passen."
 date: "2026-07-14"
-tags: ["Oliv-Unterton", "Hautunterton", "persönliche Farbanalyse", "Beauty", "Make-up"]
+tags: ["olive Hautton", "Oliv-Unterton", "oliv Hautton", "Farbanalyse", "Beauty"]
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 

@@ -145,7 +145,32 @@
     "faq5Q": "カラー分析から何がわかりますか？",
     "faq5A": "シーズンカラータイプ（例：ソフトオータム、ブライトウィンター）を発見し、最も映える色のパーソナルパレットを取得。避けるべき色を学び、メイクの色、ファッションカラー、ヘアカラー、ジュエリーメタルの具体的な提案を受け取れます。",
     "faq6Q": "対面診断との違いは？",
-    "faq6A": "プロのカラーリストによる対面診断は通常$200–$500かかり、1–2時間必要です。当社のAI分析は同じカラーサイエンスの原理に基づき、即座に結果を提供します。プロのドレーピングは複雑なケースのゴールドスタンダードですが、AI分析は大多数の方に正確な結果を提供し、優れた出発点となります。"
+    "faq6A": "プロのカラーリストによる対面診断は通常$200–$500かかり、1–2時間必要です。当社のAI分析は同じカラーサイエンスの原理に基づき、即座に結果を提供します。プロのドレーピングは複雑なケースのゴールドスタンダードですが、AI分析は大多数の方に正確な結果を提供し、優れた出発点となります。",
+    "statsAnalysisTypes": "11種類の分析",
+    "statsSeasonSystem": "12シーズンシステム",
+    "statsLanguages": "16言語対応",
+    "statsSpeed": "60秒で結果",
+    "resultsTitle": "分析結果をご覧ください",
+    "resultsSubtitle": "自撮りをアップロードして、数秒で雑誌品質の分析レポートを取得",
+    "resultsBefore": "ビフォー",
+    "resultsAfter": "AIレポート",
+    "resultsColorLabel": "パーソナルカラー分析",
+    "resultsMakeupLabel": "メイクアップ分析",
+    "resultsFaceLabel": "顔型＆ヘアスタイル",
+    "testimonialsTitle": "世界中のビューティー愛好家に愛されています",
+    "testimonialsSubtitle": "ユーザーのカラー分析体験をご覧ください",
+    "testimonial1": "昨年、対面のカラー診断に3万円かけました。Belle AIは同じソフトオータムの結果を、より詳細なパレット分析付きで出してくれました。レポートの品質が驚きです。",
+    "testimonial2": "メイクアップアーティストとして、初回セッション前にすべてのクライアントにおすすめしています。12シーズン分析は的確で、カラーマッチングの時間を大幅に節約できます。",
+    "testimonial3": "やっと自分がソフトサマーだとわかりました！暖色系の服がしっくりこなかった理由がやっとわかりました。",
+    "testimonial4": "濃い肌色のAIカラー分析に懐疑的でしたが、アンダートーンを完璧に捉えてくれました。メイクの提案も実用的です。",
+    "testimonial5": "顔型分析で3人のクライアントが大好きなヘアスタイルを見つけました。ビジュアルレポートはプロフェッショナルです。",
+    "testimonial6": "レポートの品質はファッション雑誌のようです。買い物のたびにカラーパレットのスクリーンショットを参考にしています。",
+    "testimonialRole1": "ビューティーブロガー",
+    "testimonialRole2": "メイクアップアーティスト",
+    "testimonialRole3": "ファッション学生",
+    "testimonialRole4": "コンテンツクリエイター",
+    "testimonialRole5": "スタイリスト",
+    "testimonialRole6": "フォトグラファー"
   },
   "features": {
     "learnMore": "詳しく見る",
@@ -259,7 +284,16 @@
     "at_celebrity_match": "セレブマッチ",
     "at_glow_up_report": "Glow-Upレポート（プレミアム）",
     "appStoreNote": "App Storeでも",
-    "appStoreLink": "ダウンロード可能"
+    "appStoreLink": "ダウンロード可能",
+    "guaranteeTitle": "安心してお試しください",
+    "guaranteeFreeTitle": "無料で開始",
+    "guaranteeFreeDesc": "2回の無料分析、お支払い不要",
+    "guaranteeNoAccountTitle": "アカウント不要",
+    "guaranteeNoAccountDesc": "すぐに開始、後でサインアップ",
+    "guaranteePrivacyTitle": "プライバシー最優先",
+    "guaranteePrivacyDesc": "写真は安全に処理、保存されません",
+    "guaranteeCancelTitle": "いつでも解約可能",
+    "guaranteeCancelDesc": "契約なし、いつでも解約可能"
   },
   "welcomeOffer": {
     "title": "Belle AI へようこそ",
@@ -577,7 +611,8 @@
     "tryAnother": "他の分析も試す",
     "tryAnotherDesc": "同じ写真で新しい分析レポートを作成",
     "notifyTitle": "レポートが完成しました ✨",
-    "notifyBody": "分析レポートが生成されました。クリックして結果をご覧ください。"
+    "notifyBody": "分析レポートが生成されました。クリックして結果をご覧ください。",
+    "uploadTrust": "写真は安全に処理され、サーバーに保存されることはありません"
   },
   "footer": {
     "tagline": "AI搭載パーソナルビューティー分析",

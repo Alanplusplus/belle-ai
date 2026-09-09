@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteName": "Belle AI",
-    "homeTitle": "Analyse couleur IA gratuite – Trouvez vos plus belles couleurs en 60 secondes",
+    "homeTitle": "Analyse Couleur IA Gratuite – Vos Meilleures Couleurs en 60s",
     "homeDescription": "Téléchargez une photo et découvrez votre saison colorimétrique grâce à l'IA. Obtenez votre palette personnalisée pour le maquillage, les vêtements et les cheveux. Gratuit, instantané, sans inscription.",
     "makeupTitle": "Analyse maquillage IA – Rapport beauté personnalisé",
     "makeupDescription": "Obtenez un rapport beauté de niveau magazine avec l'IA : analyse du teint, maquillage des yeux, couleur des lèvres, blush, contouring et recommandations de looks complets.",
@@ -145,7 +145,32 @@
     "faq5Q": "Que vais-je apprendre de mon analyse couleur ?",
     "faq5A": "Vous découvrirez votre saison colorimétrique (ex. : Automne Doux, Hiver Éclatant), obtiendrez une palette personnalisée de vos couleurs les plus flatteuses, saurez quelles couleurs éviter et recevrez des recommandations spécifiques pour les teintes de maquillage, les couleurs de vêtements, la couleur des cheveux et les métaux des bijoux.",
     "faq6Q": "En quoi est-ce différent d'une consultation en personne ?",
-    "faq6A": "Une consultation en personne avec un coloriste professionnel coûte généralement entre 200 et 500 $ et dure 1 à 2 heures. Notre analyse IA fournit des résultats instantanés basés sur les mêmes principes de la science des couleurs. Bien que le draping professionnel reste la référence pour les cas complexes, l'analyse IA donne des résultats précis pour la majorité des personnes et constitue un excellent point de départ."
+    "faq6A": "Une consultation en personne avec un coloriste professionnel coûte généralement entre 200 et 500 $ et dure 1 à 2 heures. Notre analyse IA fournit des résultats instantanés basés sur les mêmes principes de la science des couleurs. Bien que le draping professionnel reste la référence pour les cas complexes, l'analyse IA donne des résultats précis pour la majorité des personnes et constitue un excellent point de départ.",
+    "statsAnalysisTypes": "11 types d'analyse",
+    "statsSeasonSystem": "Système 12 saisons",
+    "statsLanguages": "16 langues",
+    "statsSpeed": "Résultats en 60s",
+    "resultsTitle": "Découvrez les résultats",
+    "resultsSubtitle": "Téléchargez un selfie et obtenez un rapport en quelques secondes",
+    "resultsBefore": "Avant",
+    "resultsAfter": "Rapport IA",
+    "resultsColorLabel": "Analyse de couleur personnelle",
+    "resultsMakeupLabel": "Analyse maquillage",
+    "resultsFaceLabel": "Forme du visage et coiffure",
+    "testimonialsTitle": "Adoré par les passionnées de beauté du monde entier",
+    "testimonialsSubtitle": "Découvrez ce que nos utilisatrices disent de leur expérience",
+    "testimonial1": "J'ai dépensé 300€ pour une consultation couleur en personne. Belle AI m'a donné le même résultat Automne Doux avec une analyse encore plus détaillée.",
+    "testimonial2": "En tant que maquilleuse, je le recommande à toutes mes clientes. L'analyse 12 saisons est très précise.",
+    "testimonial3": "J'ai enfin découvert que je suis Été Doux ! Pas étonnant que les vêtements aux tons chauds ne m'allaient jamais.",
+    "testimonial4": "J'étais sceptique sur l'analyse IA pour les peaux foncées, mais il a parfaitement identifié mon sous-ton.",
+    "testimonial5": "L'analyse de forme du visage a aidé trois de mes clientes à trouver des coiffures qu'elles adorent.",
+    "testimonial6": "La qualité du rapport ressemble à celle d'un magazine de mode. J'utilise les captures de palette comme référence.",
+    "testimonialRole1": "Blogueuse beauté",
+    "testimonialRole2": "Maquilleuse",
+    "testimonialRole3": "Étudiante en mode",
+    "testimonialRole4": "Créatrice de contenu",
+    "testimonialRole5": "Styliste",
+    "testimonialRole6": "Photographe"
   },
   "features": {
     "learnMore": "En savoir plus",
@@ -259,7 +284,16 @@
     "at_celebrity_match": "Correspondance célébrité",
     "at_glow_up_report": "Rapport Glow-Up (Premium)",
     "appStoreNote": "Également disponible sur l'",
-    "appStoreLink": "App Store"
+    "appStoreLink": "App Store",
+    "guaranteeTitle": "Essayez en toute confiance",
+    "guaranteeFreeTitle": "Démarrage gratuit",
+    "guaranteeFreeDesc": "2 analyses gratuites, aucun paiement requis",
+    "guaranteeNoAccountTitle": "Pas de compte nécessaire",
+    "guaranteeNoAccountDesc": "Commencez instantanément, inscrivez-vous plus tard",
+    "guaranteePrivacyTitle": "Confidentialité d'abord",
+    "guaranteePrivacyDesc": "Photos traitées en toute sécurité, jamais stockées",
+    "guaranteeCancelTitle": "Annulation à tout moment",
+    "guaranteeCancelDesc": "Sans engagement, annulez à tout moment"
   },
   "welcomeOffer": {
     "title": "Bienvenue sur Belle AI",
@@ -577,7 +611,8 @@
     "tryAnother": "Essayez une autre analyse",
     "tryAnotherDesc": "Utilisez la même photo pour découvrir plus",
     "notifyTitle": "Votre rapport est prêt ✨",
-    "notifyBody": "Votre rapport d'analyse a été généré. Cliquez pour voir les résultats."
+    "notifyBody": "Votre rapport d'analyse a été généré. Cliquez pour voir les résultats.",
+    "uploadTrust": "Votre photo est traitée en toute sécurité et n'est jamais stockée sur nos serveurs"
   },
   "footer": {
     "tagline": "Analyse beauté personnelle par IA",

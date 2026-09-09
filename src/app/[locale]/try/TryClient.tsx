@@ -914,6 +914,10 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               <p className="mt-1 text-center text-xs text-muted-foreground">
                 {t("uploadHint")}
               </p>
+              <p className="mt-2 flex items-center justify-center gap-1 text-center text-[11px] text-muted-foreground/70">
+                <svg className="h-3 w-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+                {t("uploadTrust")}
+              </p>
               {lastUploadedPhotoUrl && !previewUrl && (
                 <button
                   onClick={(e) => { e.stopPropagation(); handleUseLastPhoto(); }}

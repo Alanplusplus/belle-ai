@@ -1,8 +1,8 @@
 ---
-title: "Subtono oliva: el tono de piel más incomprendido, explicado"
-description: "¿Crees que podrías tener subtono oliva? Esta guía completa explica qué es realmente el subtono oliva, por qué se identifica mal y cómo encontrar tus mejores colores en maquillaje, ropa y pelo."
+title: "Subtono Oliva Piel: Guía para Identificarlo"
+description: "¿Tienes subtono oliva? Aprende a identificarlo, por qué se confunde, y los mejores colores en maquillaje, ropa y pelo. Análisis AI gratis."
 date: "2026-07-14"
-tags: ["subtono oliva", "subtono de piel", "análisis de color personal", "belleza", "maquillaje"]
+tags: ["subtono oliva", "subtono oliva piel", "tono oliva", "análisis de color personal", "belleza"]
 image: "/images/blog/olive-undertone-guide.webp"
 ---
 

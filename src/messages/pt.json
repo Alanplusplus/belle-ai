@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteName": "Belle AI",
-    "homeTitle": "Análise de cor com IA gratuita – Encontre as suas melhores cores em 60 segundos",
+    "homeTitle": "Análise de Cor com IA Grátis – Suas Melhores Cores em 60s",
     "homeDescription": "Carregue uma foto e descubra o seu tipo de cor sazonal com IA. Obtenha a sua paleta personalizada para maquilhagem, roupa e cabelo. Grátis, instantâneo, sem registo.",
     "makeupTitle": "Análise de Maquilhagem com IA – Relatório de Beleza Personalizado",
     "makeupDescription": "Obtenha um relatório de beleza ao nível de revista Dior com IA: análise de tom de pele, maquilhagem dos olhos, cor dos lábios, blush, contorno e recomendações de looks completos.",
@@ -145,7 +145,32 @@
     "faq5Q": "O que vou aprender com a minha análise de cor?",
     "faq5A": "Descobrirá o seu tipo de cor sazonal (ex.: Outono Suave, Inverno Brilhante), obterá uma paleta personalizada das suas cores mais favorecedoras, saberá quais cores evitar e receberá recomendações específicas para tons de maquilhagem, cores de roupa, cor de cabelo e metais de joias.",
     "faq6Q": "Como é diferente de uma consulta presencial?",
-    "faq6A": "Uma consulta presencial com um colorista profissional custa normalmente entre 200 e 500 $ e demora 1-2 horas. A nossa análise com IA fornece resultados instantâneos baseados nos mesmos princípios da ciência da cor. Embora o draping profissional continue a ser o padrão ouro para casos complexos, a análise com IA oferece resultados precisos para a maioria das pessoas e é um excelente ponto de partida."
+    "faq6A": "Uma consulta presencial com um colorista profissional custa normalmente entre 200 e 500 $ e demora 1-2 horas. A nossa análise com IA fornece resultados instantâneos baseados nos mesmos princípios da ciência da cor. Embora o draping profissional continue a ser o padrão ouro para casos complexos, a análise com IA oferece resultados precisos para a maioria das pessoas e é um excelente ponto de partida.",
+    "statsAnalysisTypes": "11 tipos de análise",
+    "statsSeasonSystem": "Sistema 12 estações",
+    "statsLanguages": "16 idiomas",
+    "statsSpeed": "Resultados em 60s",
+    "resultsTitle": "Veja os resultados",
+    "resultsSubtitle": "Envie uma selfie e receba um relatório de análise com qualidade de revista em segundos",
+    "resultsBefore": "Antes",
+    "resultsAfter": "Relatório IA",
+    "resultsColorLabel": "Análise de cor pessoal",
+    "resultsMakeupLabel": "Análise de maquiagem",
+    "resultsFaceLabel": "Formato do rosto e penteado",
+    "testimonialsTitle": "Amado por entusiastas de beleza no mundo todo",
+    "testimonialsSubtitle": "Veja o que nossos usuários dizem",
+    "testimonial1": "Gastei R$1.500 em consultoria de cor presencial. O Belle AI me deu o mesmo resultado de Outono Suave com análise ainda mais detalhada.",
+    "testimonial2": "Como maquiadora, recomendo a todas as minhas clientes. A análise de 12 estações é precisa.",
+    "testimonial3": "Finalmente descobri que sou Verão Suave! Com razão roupas de tons quentes nunca ficavam bem em mim.",
+    "testimonial4": "Era cética sobre análise de cor por IA para peles mais escuras, mas acertou perfeitamente meu subtom.",
+    "testimonial5": "A análise facial ajudou três clientes a encontrar penteados que amam.",
+    "testimonial6": "A qualidade do relatório parece de uma revista de moda. Uso as capturas como referência.",
+    "testimonialRole1": "Blogueira de beleza",
+    "testimonialRole2": "Maquiadora",
+    "testimonialRole3": "Estudante de moda",
+    "testimonialRole4": "Criadora de conteúdo",
+    "testimonialRole5": "Estilista",
+    "testimonialRole6": "Fotógrafa"
   },
   "features": {
     "learnMore": "Saber Mais",
@@ -259,7 +284,16 @@
     "at_celebrity_match": "Match de celebridade",
     "at_glow_up_report": "Relatório Glow-Up (Premium)",
     "appStoreNote": "Também disponível na",
-    "appStoreLink": "App Store"
+    "appStoreLink": "App Store",
+    "guaranteeTitle": "Experimente com confiança",
+    "guaranteeFreeTitle": "Comece grátis",
+    "guaranteeFreeDesc": "2 análises gratuitas, sem pagamento necessário",
+    "guaranteeNoAccountTitle": "Sem conta necessária",
+    "guaranteeNoAccountDesc": "Comece instantaneamente, cadastre-se depois",
+    "guaranteePrivacyTitle": "Privacidade em primeiro",
+    "guaranteePrivacyDesc": "Fotos processadas com segurança, nunca armazenadas",
+    "guaranteeCancelTitle": "Cancele quando quiser",
+    "guaranteeCancelDesc": "Sem contratos, cancele a qualquer momento"
   },
   "welcomeOffer": {
     "title": "Bem-vinda ao Belle AI",
@@ -577,7 +611,8 @@
     "tryAnother": "Tente outra análise",
     "tryAnotherDesc": "Use a mesma foto para explorar mais",
     "notifyTitle": "Seu relatório está pronto ✨",
-    "notifyBody": "Seu relatório de análise foi gerado. Clique para ver os resultados."
+    "notifyBody": "Seu relatório de análise foi gerado. Clique para ver os resultados.",
+    "uploadTrust": "Sua foto é processada com segurança e nunca é armazenada em nossos servidores"
   },
   "footer": {
     "tagline": "Análise de beleza pessoal com IA",

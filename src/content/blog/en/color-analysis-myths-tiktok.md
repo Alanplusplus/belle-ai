@@ -1,6 +1,6 @@
 ---
-title: "Color Analysis Myths Debunked: 7 Things TikTok Gets Wrong"
-description: "TikTok has made color analysis viral — but also spread major misconceptions. A trained eye separates fact from fiction on the 7 most common color analysis myths circulating on social media right now."
+title: "7 Color Analysis Myths TikTok Gets Wrong"
+description: "TikTok made color analysis viral — and spread major myths. We debunk the 7 biggest misconceptions with facts. See what your season really means."
 date: "2026-08-21"
 tags: ["color analysis", "color theory", "beauty", "personal style", "self improvement"]
 image: "/images/blog/color-analysis-myths-tiktok.webp"

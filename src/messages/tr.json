@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteName": "Belle AI",
-    "homeTitle": "Ücretsiz Yapay Zeka Renk Analizi – 60 Saniyede En İyi Renklerinizi Bulun",
+    "homeTitle": "Ücretsiz AI Renk Analizi – En İyi Renklerinizi 60s'de Bulun",
     "homeDescription": "Bir fotoğraf yükleyin ve yapay zeka ile mevsimsel renk tipinizi keşfedin. Makyaj, kıyafet ve saç için kişiselleştirilmiş renk paletinizi alın. Ücretsiz, anında, kayıt gerekmez.",
     "makeupTitle": "Yapay Zeka Makyaj Analizi – Kişiselleştirilmiş Güzellik Raporu",
     "makeupDescription": "Yapay zeka ile dergi kalitesinde güzellik raporu: cilt tonu analizi, göz makyajı, ruj rengi, allık, kontür ve tam görünüm önerileri.",
@@ -11,8 +11,8 @@
     "colorGuideDescription": "Renk analizi hakkında bilmeniz gereken her şey — nedir, nasıl çalışır, 12 mevsim sistemi, mevsiminizi nasıl bulursunuz ve sonuçları makyaj, gardırop ve saç için nasıl kullanırsınız. Ücretsiz AI analizi dahil.",
     "seasonPaletteTitle": "{season} Renk Paleti – En İyi Renkler, Makyaj ve Gardırop Rehberi",
     "seasonPaletteDescription": "Tam {season} renk paleti rehberi. En iyi renklerinizi, makyaj tonlarınızı, saç renklerinizi, gardırop temellerinizi ve {season} mevsimsel renk tipi için takılarınızı keşfedin.",
-    "colorForTitle": "{audience} için Renk Analizi – En İyi Renklerinizi Bulun",
-    "colorForDescription": "{audience} için renk analizi rehberi. Mevsimsel renk tipinizi keşfedin ve makyaj, gardırop ve aksesuarlar için en flattering renkleri bulun.",
+    "colorForTitle": "{audience} Renk Analizi – En İyi Renkler",
+    "colorForDescription": "{audience} için renk analizi rehberi. Mevsimsel renk tipinizi keşfedin, makyaj, gardırop ve aksesuar için en iyi renkleri bulun.",
     "faceTitle": "Yüz Şekli ve Saç Stili Analizi – Mükemmel Tarzınızı Bulun",
     "faceDescription": "Yapay zeka yüz şeklinizi analiz eder ve size en çok yakışan saç stilleri, kahküller ve ayrımları önerir.",
     "downloadTitle": "Belle AI İndir – Ücretsiz Renk Analizi Uygulaması",
@@ -145,7 +145,32 @@
     "faq5Q": "Renk analizimden neler öğreneceğim?",
     "faq5A": "Mevsimsel renk tipinizi (ör. Yumuşak Sonbahar, Parlak Kış) keşfedecek, size en çok yakışan renklerden oluşan kişisel bir palet alacak, hangi renklerden kaçınmanız gerektiğini öğrenecek ve makyaj tonları, kıyafet renkleri, saç rengi ve takı metalleri için özel öneriler alacaksınız.",
     "faq6Q": "Bu, yüz yüze danışmanlıktan nasıl farklı?",
-    "faq6A": "Profesyonel bir renk uzmanıyla yüz yüze danışmanlık genellikle $200–$500 tutar ve 1–2 saat sürer. Yapay zeka analizimiz aynı renk bilimi ilkelerine dayanarak anında sonuç sağlar. Profesyonel draping karmaşık vakalar için altın standart olsa da, yapay zeka analizi çoğu kişi için doğru sonuçlar verir ve mükemmel bir başlangıç noktasıdır."
+    "faq6A": "Profesyonel bir renk uzmanıyla yüz yüze danışmanlık genellikle $200–$500 tutar ve 1–2 saat sürer. Yapay zeka analizimiz aynı renk bilimi ilkelerine dayanarak anında sonuç sağlar. Profesyonel draping karmaşık vakalar için altın standart olsa da, yapay zeka analizi çoğu kişi için doğru sonuçlar verir ve mükemmel bir başlangıç noktasıdır.",
+    "statsAnalysisTypes": "11 analiz türü",
+    "statsSeasonSystem": "12 mevsim sistemi",
+    "statsLanguages": "16 dil",
+    "statsSpeed": "60 saniyede sonuç",
+    "resultsTitle": "Sonuçlara bakın",
+    "resultsSubtitle": "Bir selfie yükleyin ve saniyeler içinde dergi kalitesinde rapor alın",
+    "resultsBefore": "Önce",
+    "resultsAfter": "AI Raporu",
+    "resultsColorLabel": "Kişisel renk analizi",
+    "resultsMakeupLabel": "Makyaj analizi",
+    "resultsFaceLabel": "Yüz şekli ve saç modeli",
+    "testimonialsTitle": "Dünya genelinde güzellik tutkunları tarafından seviliyor",
+    "testimonialsSubtitle": "Kullanıcılarımızın deneyimlerini görün",
+    "testimonial1": "Geçen yıl yüz yüze renk danışmanlığına 300$ harcadım. Belle AI aynı Soft Autumn sonucunu daha detaylı analizle verdi.",
+    "testimonial2": "Makyaj sanatçısı olarak tüm müşterilerime öneriyorum. 12 mevsim analizi çok doğru.",
+    "testimonial3": "Sonunda Soft Summer olduğumu öğrendim! Sıcak tonlu kıyafetlerin neden yakışmadığını anladım.",
+    "testimonial4": "Koyu ciltler için AI renk analizine şüpheliydim ama alt tonum kusursuzca belirlendi.",
+    "testimonial5": "Yüz şekli analizi üç müşterimin bayıldığı saç modellerini bulmalarına yardımcı oldu.",
+    "testimonial6": "Rapor kalitesi bir moda dergisinden çıkmış gibi. Her alışverişte renk paleti referans olarak kullanıyorum.",
+    "testimonialRole1": "Güzellik Bloggerı",
+    "testimonialRole2": "Makyaj Sanatçısı",
+    "testimonialRole3": "Moda Öğrencisi",
+    "testimonialRole4": "İçerik Üreticisi",
+    "testimonialRole5": "Stilist",
+    "testimonialRole6": "Fotoğrafçı"
   },
   "features": {
     "learnMore": "Daha Fazla Bilgi",
@@ -259,7 +284,16 @@
     "at_celebrity_match": "Ünlü Eşleşme",
     "at_glow_up_report": "Glow-Up Raporu (Premium)",
     "appStoreNote": "Ayrıca şurada mevcut:",
-    "appStoreLink": "App Store"
+    "appStoreLink": "App Store",
+    "guaranteeTitle": "Güvenle deneyin",
+    "guaranteeFreeTitle": "Ücretsiz başlayın",
+    "guaranteeFreeDesc": "2 ücretsiz analiz, ödeme gerekmez",
+    "guaranteeNoAccountTitle": "Hesap gerekmez",
+    "guaranteeNoAccountDesc": "Hemen başlayın, sonra kaydolun",
+    "guaranteePrivacyTitle": "Gizlilik öncelikli",
+    "guaranteePrivacyDesc": "Fotoğraflar güvenle işlenir, asla saklanmaz",
+    "guaranteeCancelTitle": "İstediğiniz zaman iptal",
+    "guaranteeCancelDesc": "Sözleşme yok, istediğiniz zaman iptal edin"
   },
   "welcomeOffer": {
     "title": "Belle AI'ye Hoş Geldiniz",
@@ -577,7 +611,8 @@
     "tryAnother": "Başka bir analiz dene",
     "tryAnotherDesc": "Aynı fotoğrafla daha fazlasını keşfet",
     "notifyTitle": "Raporunuz hazır ✨",
-    "notifyBody": "Analiz raporunuz oluşturuldu. Sonuçları görmek için tıklayın."
+    "notifyBody": "Analiz raporunuz oluşturuldu. Sonuçları görmek için tıklayın.",
+    "uploadTrust": "Fotoğrafınız güvenli şekilde işlenir ve asla sunucularımızda saklanmaz"
   },
   "footer": {
     "tagline": "Yapay zeka destekli kişisel güzellik analizi",

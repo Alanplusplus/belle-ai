@@ -61,7 +61,7 @@ function HomeContent() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-gold/5" />
-        <div className="relative mx-auto max-w-6xl px-4 py-20 text-center sm:py-28 lg:py-36">
+        <div className="relative mx-auto max-w-6xl px-4 py-12 text-center sm:py-12 lg:py-18">
           <p className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-sm font-medium tracking-widest uppercase text-primary">
             {t("heroSubtitle")}
           </p>
@@ -90,57 +90,65 @@ function HomeContent() {
             </Link>
           </div>
 
-          {/* Social Proof - temporarily hidden, pending verified evidence
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+          {/* Product Stats Bar */}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
-              <div className="flex -space-x-1">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Image
-                    key={i}
-                    src={`/images/avatar-${i}.webp`}
-                    alt=""
-                    width={28}
-                    height={28}
-                    className="h-7 w-7 rounded-full border-2 border-white object-cover"
-                  />
-                ))}
-              </div>
-              <span className="font-medium">{t("socialProof")}</span>
+              <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>
+              <span><span className="font-semibold text-foreground">{t("statsAnalysisTypes")}</span></span>
             </div>
-            <div className="flex items-center gap-1">
-              <div className="flex text-amber-400">
-                {"★★★★★".split("").map((s, i) => (
-                  <span key={i}>{s}</span>
-                ))}
-              </div>
-              <span className="font-medium">{t("socialRating")}</span>
+            <span className="text-border">·</span>
+            <div className="flex items-center gap-2">
+              <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" /></svg>
+              <span><span className="font-semibold text-foreground">{t("statsSeasonSystem")}</span></span>
             </div>
-            <span>Free &bull; No signup &bull; Results in 60s</span>
+            <span className="text-border">·</span>
+            <div className="flex items-center gap-2">
+              <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
+              <span><span className="font-semibold text-foreground">{t("statsLanguages")}</span></span>
+            </div>
+            <span className="text-border">·</span>
+            <div className="flex items-center gap-2">
+              <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+              <span><span className="font-semibold text-foreground">{t("statsSpeed")}</span></span>
+            </div>
           </div>
-          */}
         </div>
       </section>
 
-      {/* Showcase */}
-      <section className="py-16">
+      {/* Before / After Results */}
+      <section className="py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-            {SHOWCASE_IMAGES.map((img) => (
-              <div
-                key={img.src}
-                className="group relative aspect-[3/4] overflow-hidden rounded-2xl"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover transition duration-300 group-hover:scale-105"
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition group-hover:opacity-100" />
-                <p className="absolute bottom-3 left-3 text-sm font-medium text-white opacity-0 transition group-hover:opacity-100">
-                  {img.alt}
-                </p>
+          <div className="text-center">
+            <h2 className="font-serif text-3xl font-bold">{t("resultsTitle")}</h2>
+            <p className="mt-2 text-muted-foreground">{t("resultsSubtitle")}</p>
+          </div>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {BEFORE_AFTER.map((pair) => (
+              <div key={pair.type} className="group">
+                <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:shadow-lg">
+                  <div className="relative aspect-[3/4]">
+                    <Image
+                      src={pair.after}
+                      alt={`${t(pair.labelKey)} result`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <div className="absolute bottom-4 left-4 overflow-hidden rounded-xl border-2 border-white shadow-lg" style={{ width: "30%", aspectRatio: "3/4" }}>
+                    <Image
+                      src={pair.before}
+                      alt={t(pair.labelKey)}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 30vw, 10vw"
+                    />
+                  </div>
+                  <div className="absolute right-3 top-3 rounded-full bg-primary/90 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur-sm">
+                    {t("resultsAfter")}
+                  </div>
+                </div>
+                <p className="mt-3 text-center text-sm font-medium">{t(pair.labelKey)}</p>
               </div>
             ))}
           </div>
@@ -148,13 +156,13 @@ function HomeContent() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center">
             <h2 className="font-serif text-3xl font-bold">{t("howTitle")}</h2>
             <p className="mt-2 text-muted-foreground">{t("howSubtitle")}</p>
           </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <div className="mt-8 grid gap-8 md:grid-cols-3">
             <StepCard number="1" title={t("step1Title")} desc={t("step1Desc")} />
             <StepCard number="2" title={t("step2Title")} desc={t("step2Desc")} />
             <StepCard number="3" title={t("step3Title")} desc={t("step3Desc")} />
@@ -163,7 +171,7 @@ function HomeContent() {
       </section>
 
       {/* Core Features */}
-      <section className="bg-muted/30 py-20">
+      <section className="bg-muted/30 py-12">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center">
             <h2 className="font-serif text-3xl font-bold">{t("featuresTitle")}</h2>
@@ -171,7 +179,7 @@ function HomeContent() {
               {t("featuresSubtitle")}
             </p>
           </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
             <FeatureCard
               image="/images/card_color_analysis.webp"
               icon={<ColorIcon />}
@@ -201,7 +209,7 @@ function HomeContent() {
       </section>
 
       {/* Color Analysis Guide Banner */}
-      <section className="py-10">
+      <section className="py-6">
         <div className="mx-auto max-w-6xl px-4">
           <Link
             href="/color-analysis"
@@ -223,13 +231,13 @@ function HomeContent() {
       </section>
 
       {/* More Analysis Types */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center">
             <h2 className="font-serif text-3xl font-bold">{t("moreTitle")}</h2>
             <p className="mt-2 text-muted-foreground">{t("moreSubtitle")}</p>
           </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {MORE_FEATURES.map((f) => (
               <Link key={f.href} href={f.href} className="group">
                 <div className="overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
@@ -259,10 +267,10 @@ function HomeContent() {
       </section>
 
       {/* Why AI Color Analysis */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-center font-serif text-3xl font-bold">{t("whyTitle")}</h2>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <WhyCard icon={<WhyFreeIcon />} title={t("whyFree")} text={t("whyFreeDesc")} />
             <WhyCard icon={<WhyAccuracyIcon />} title={t("whyAccurate")} text={t("whyAccurateDesc")} />
             <WhyCard icon={<WhyCostIcon />} title={t("whyCost")} text={t("whyCostDesc")} />
@@ -271,16 +279,50 @@ function HomeContent() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="bg-muted/30 py-12">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="text-center font-serif text-3xl font-bold">{t("testimonialsTitle")}</h2>
+          <p className="mt-2 text-center text-muted-foreground">{t("testimonialsSubtitle")}</p>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {TESTIMONIALS.map((item, idx) => (
+              <div key={idx} className="rounded-2xl border border-border bg-card p-5">
+                <div className="flex text-amber-400 text-sm">
+                  {"★".repeat(Math.floor(item.stars))}
+                  {item.stars % 1 > 0 && <span className="text-amber-300">★</span>}
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  &ldquo;{t(`testimonial${idx + 1}`)}&rdquo;
+                </p>
+                <div className="mt-4 flex items-center gap-3">
+                  <Image
+                    src={item.avatar}
+                    alt={item.name}
+                    width={36}
+                    height={36}
+                    className="h-9 w-9 rounded-full object-cover"
+                  />
+                  <div>
+                    <p className="text-sm font-medium">{item.name} {item.flag}</p>
+                    <p className="text-xs text-muted-foreground">{t(`testimonialRole${idx + 1}`)}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Comparison Table */}
-      <section className="bg-muted/30 py-20">
+      <section className="py-12">
         <div className="mx-auto max-w-4xl px-4">
           <h2 className="text-center font-serif text-3xl font-bold">
             AI Color Analysis vs. In-Person Consultation
           </h2>
-          <p className="mt-3 text-center text-muted-foreground">
+          <p className="mt-2 text-center text-muted-foreground">
             See how our AI-powered analysis compares to traditional methods
           </p>
-          <div className="mt-10 overflow-x-auto">
+          <div className="mt-8 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr className="border-b border-border">
@@ -334,10 +376,10 @@ function HomeContent() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="mx-auto max-w-3xl px-4">
           <h2 className="text-center font-serif text-3xl font-bold">{t("faqTitle")}</h2>
-          <div className="mt-10 divide-y divide-border">
+          <div className="mt-6 divide-y divide-border">
             {faqs.map((faq, i) => (
               <details key={i} className="group py-5">
                 <summary className="flex cursor-pointer items-center justify-between font-medium">
@@ -354,13 +396,13 @@ function HomeContent() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-br from-primary/5 to-gold/5 py-20">
+      <section className="bg-gradient-to-br from-primary/5 to-gold/5 py-14">
         <div className="mx-auto max-w-3xl px-4 text-center">
           <h2 className="font-serif text-3xl font-bold">{t("ctaTitle")}</h2>
-          <p className="mt-3 text-lg text-muted-foreground">
+          <p className="mt-2 text-lg text-muted-foreground">
             {t("ctaSubtitle")}
           </p>
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
               href="/try"
               className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-10 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl hover:shadow-primary/40"
@@ -523,10 +565,18 @@ const MORE_FEATURES = [
   { titleKey: "celebTitle", descKey: "celebDesc", href: "/celebrity-match" as const, image: "/images/card_celebrity.webp" },
 ];
 
-const SHOWCASE_IMAGES = [
-  { src: "/images/showcase_skin.webp", alt: "Color Analysis Result" },
-  { src: "/images/showcase_eyes.webp", alt: "Seasonal Color Palette" },
-  { src: "/images/showcase_blush.webp", alt: "Best Colors for You" },
-  { src: "/images/showcase_lips.webp", alt: "Personalized Makeup" },
-  { src: "/images/showcase_looks.webp", alt: "Complete Style Guide" },
+const BEFORE_AFTER = [
+  { before: "/images/showcase/before-color.webp", after: "/images/showcase/after-color.webp", type: "color", labelKey: "resultsColorLabel" },
+  { before: "/images/showcase/before-makeup.webp", after: "/images/showcase/after-makeup.webp", type: "makeup", labelKey: "resultsMakeupLabel" },
+  { before: "/images/showcase/before-face.webp", after: "/images/showcase/after-face.webp", type: "face", labelKey: "resultsFaceLabel" },
 ];
+
+const TESTIMONIALS = [
+  { name: "Sarah M.", flag: "🇺🇸", avatar: "/images/avatars/sarah.webp", stars: 5 },
+  { name: "Yuki T.", flag: "🇯🇵", avatar: "/images/avatars/yuki.webp", stars: 5 },
+  { name: "Emma L.", flag: "🇬🇧", avatar: "/images/avatars/emma.webp", stars: 5 },
+  { name: "Priya K.", flag: "🇮🇳", avatar: "/images/avatars/priya.webp", stars: 5 },
+  { name: "Maria G.", flag: "🇧🇷", avatar: "/images/avatars/maria.webp", stars: 4.5 },
+  { name: "Lisa W.", flag: "🇩🇪", avatar: "/images/avatars/lisa.webp", stars: 5 },
+];
+
