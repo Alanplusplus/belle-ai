@@ -41,24 +41,11 @@ export default async function GlassesAnalysisPage({
   const t = await getTranslations({ locale, namespace: "glassesPage" });
   const ft = await getTranslations({ locale, namespace: "features" });
 
-  const faqs = [
-    {
-      q: "How does AI glasses recommendation work?",
-      a: "Our AI analyzes your face shape, proportions, and skin tone from a selfie. It then matches these features against frame-shape compatibility rules used by opticians — recommending frames that balance and complement your facial features.",
-    },
-    {
-      q: "What face shapes suit which glasses?",
-      a: "Round faces look great with angular frames. Square faces suit rounded or oval frames. Oval faces can wear almost any style. Heart-shaped faces benefit from bottom-heavy frames. Our analysis gives personalized recommendations beyond these general rules.",
-    },
-    {
-      q: "Can I get sunglasses recommendations too?",
-      a: "Yes! Our analysis covers both prescription glasses and sunglasses, recommending frame shapes, colors, and styles that work for each.",
-    },
-    {
-      q: "Is the glasses analysis free?",
-      a: "Your first glasses analysis is completely free — no signup required. Upload a selfie and get frame recommendations in 60 seconds.",
-    },
-  ];
+  const faqCount = 4;
+  const faqs = Array.from({ length: faqCount }, (_, i) => ({
+    q: t(`faq${i + 1}Q`),
+    a: t(`faq${i + 1}A`),
+  }));
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -141,7 +128,7 @@ export default async function GlassesAnalysisPage({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-12">
-        <h2 className="mb-6 text-2xl font-semibold">FAQ</h2>
+        <h2 className="mb-6 text-2xl font-semibold">{t("faqTitle")}</h2>
         <div className="space-y-6">
           {faqs.map((faq, i) => (
             <details key={i} className="group border-b border-gray-200 pb-4">

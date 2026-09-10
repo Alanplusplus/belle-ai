@@ -40,28 +40,11 @@ export default async function OutfitColorAnalysisPage({
   const t = await getTranslations({ locale, namespace: "outfitPage" });
   const ft = await getTranslations({ locale, namespace: "features" });
 
-  const faqs = [
-    {
-      q: "What is outfit color analysis?",
-      a: "Outfit color analysis identifies which clothing colors flatter your personal coloring based on your skin undertone and seasonal color type. It helps you build a wardrobe palette of neutrals, accent colors, and combinations that make you look vibrant and polished.",
-    },
-    {
-      q: "How does AI outfit color matching work?",
-      a: "Upload a selfie and our AI determines your personal color season and undertone. You then receive a curated outfit color palette with recommended neutrals, statement colors, color combinations to try, and shades to avoid when shopping for clothes.",
-    },
-    {
-      q: "Why do certain clothing colors look better on me?",
-      a: "Colors that share undertones with your skin, hair, and eyes create visual harmony and make your complexion appear brighter. Colors with clashing undertones can make skin look dull or sallow. Outfit color analysis identifies your ideal palette so every outfit enhances your natural coloring.",
-    },
-    {
-      q: "Can outfit color analysis help me shop smarter?",
-      a: "Absolutely — your report serves as a personal shopping guide. Keep your recommended neutrals and accent colors handy when buying tops, dresses, jackets, and accessories. You'll waste less money on colors that don't suit you and build a cohesive, flattering wardrobe.",
-    },
-    {
-      q: "Is outfit color analysis free?",
-      a: "Yes, your first AI outfit color analysis is completely free. Upload a selfie to discover your best clothing colors, seasonal palette, and styling combinations tailored to your personal coloring.",
-    },
-  ];
+  const faqCount = 5;
+  const faqs = Array.from({ length: faqCount }, (_, i) => ({
+    q: t(`faq${i + 1}Q`),
+    a: t(`faq${i + 1}A`),
+  }));
 
   const faqJsonLd = {
     "@context": "https://schema.org",

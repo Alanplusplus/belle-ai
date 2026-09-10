@@ -593,6 +593,358 @@ export const ATTRIBUTES: Record<string, AttributeData> = {
       "best-makeup-colors-color-season",
     ],
   },
+  "neutral-undertone": {
+    slug: "neutral-undertone",
+    name: "Neutral Undertones",
+    title: "Color Analysis for Neutral Undertones – Your Versatile Palette",
+    metaDescription:
+      "Find the best colors for neutral undertones. AI color analysis for people who can wear both warm and cool colors — discover your season and optimal palette.",
+    heroDescription:
+      "Neutral undertones are a blend of warm and cool, giving you the unique advantage of looking good in a wider range of colors than purely warm or cool types. However, this versatility can make it harder to pinpoint your exact seasonal color type. This guide helps neutral undertones find their sweet spot.",
+    challenges: [
+      "Difficulty determining whether you lean warm or cool",
+      "Conflicting results from online undertone quizzes",
+      "Both gold and silver jewelry look decent, making the vein test inconclusive",
+      "Finding the 'best' colors feels harder when many colors look OK",
+    ],
+    undertoneGuidance:
+      "Neutral undertones often have a mix of both warm and cool indicators. Your veins may appear blue-green (neither purely blue nor green). You likely tan easily without burning but don't turn very golden. The key is identifying whether you lean slightly warm-neutral or cool-neutral.",
+    commonSeasons: [
+      "Soft Summer — if you lean cool with muted coloring",
+      "Soft Autumn — if you lean warm with muted coloring",
+      "Light Spring — if you lean warm with light, clear coloring",
+      "Light Summer — if you lean cool with light, delicate coloring",
+    ],
+    bestColors: [
+      { name: "Dusty Rose", hex: "#DCAE96" },
+      { name: "Soft Teal", hex: "#5F9EA0" },
+      { name: "Muted Sage", hex: "#9CAF88" },
+      { name: "Warm Taupe", hex: "#B5A392" },
+      { name: "Periwinkle", hex: "#8E82FE" },
+      { name: "Soft Coral", hex: "#F08080" },
+      { name: "Medium Blue", hex: "#6495ED" },
+      { name: "Rose Beige", hex: "#D4A59A" },
+    ],
+    avoidColors: [
+      { name: "Neon Yellow", hex: "#FFFF00" },
+      { name: "Electric Orange", hex: "#FF6600" },
+      { name: "Icy Silver", hex: "#C0C0C0" },
+    ],
+    makeupTips: [
+      "Choose foundation with a neutral or olive-neutral base — avoid strongly warm or cool undertones",
+      "Soft rosy and peachy blush shades work universally well",
+      "Eyeshadow in muted tones — taupe, mauve, soft bronze — complements neutrals beautifully",
+      "Lipstick in the mauve-to-rose spectrum is your sweet spot",
+      "Both warm and cool metallic eyeshadows can work — experiment with both",
+    ],
+    wardrobeTips: [
+      "Build your wardrobe core in soft, muted neutrals: warm taupe, greige, soft navy",
+      "Medium-saturation colors work best — avoid extremes of bright or muted",
+      "Mix warm and cool pieces freely since both suit you",
+      "Dusty pastels and mid-tone jewel shades are particularly flattering",
+      "When in doubt, choose colors with a slight warmth for a healthy glow",
+    ],
+    faq: [
+      {
+        q: "How do I know if I have neutral undertones?",
+        a: "If you look equally good in gold and silver jewelry, your veins appear blue-green, and you can wear both warm and cool colors without looking washed out, you likely have neutral undertones.",
+      },
+      {
+        q: "Which color season is best for neutral undertones?",
+        a: "Neutral undertones most commonly fall into Soft Summer (cool-leaning) or Soft Autumn (warm-leaning). AI analysis can detect the subtle lean in your undertone to identify your exact season.",
+      },
+      {
+        q: "Can neutral undertones wear both warm and cool colors?",
+        a: "Yes — that's the biggest advantage of neutral undertones. You can pull from both warm and cool palettes, though muted and medium-saturation shades tend to be most flattering.",
+      },
+    ],
+    relatedSlugs: [
+      "neutral-undertone-guide",
+      "how-to-determine-skin-undertone",
+      "cool-tone-vs-warm-tone",
+    ],
+  },
+  "mature-skin": {
+    slug: "mature-skin",
+    name: "Mature Skin (40+)",
+    title: "Color Analysis for Mature Skin – Colors That Refresh & Brighten",
+    metaDescription:
+      "Find the most flattering colors for mature skin over 40. AI color analysis for age-graceful styling — discover colors that brighten your complexion.",
+    heroDescription:
+      "As skin matures, coloring naturally shifts — skin may lose some warmth or depth, and contrast between hair, skin, and eyes can change. These shifts can move your optimal color palette. Understanding how aging affects your seasonal type ensures you keep wearing colors that make you glow rather than look tired.",
+    challenges: [
+      "Coloring may shift over time — colors that suited you at 25 may no longer be optimal",
+      "Gray or silver hair changes your contrast level significantly",
+      "Skin may become more neutral or lose depth as melanin production decreases",
+      "Many color analysis resources focus on younger demographics",
+      "Foundation matching becomes trickier as skin tone changes",
+    ],
+    undertoneGuidance:
+      "Your undertone typically stays consistent as you age, but the depth and contrast of your coloring often shifts. As hair grays, warm types may appear cooler. Increased redness or sallowness can alter how colors interact with your skin. Reassess your color season every few years.",
+    commonSeasons: [
+      "Soft Summer — graying hair often shifts coloring toward cool, muted palettes",
+      "Soft Autumn — warm undertones with softer, less contrasted features",
+      "Light Summer — lighter complexions with silver or white hair",
+      "Cool Summer — naturally cool coloring that deepens with silver hair",
+    ],
+    bestColors: [
+      { name: "Soft Raspberry", hex: "#B5485D" },
+      { name: "Teal", hex: "#008080" },
+      { name: "Warm Blush", hex: "#DE6FA1" },
+      { name: "Rich Plum", hex: "#8E4585" },
+      { name: "Soft Navy", hex: "#415A77" },
+      { name: "Warm Coral", hex: "#E8735A" },
+      { name: "Forest Green", hex: "#228B22" },
+      { name: "Sapphire Blue", hex: "#0F52BA" },
+    ],
+    avoidColors: [
+      { name: "Beige / Camel", hex: "#C19A6B" },
+      { name: "Washed-out Pastels", hex: "#E8D5D5" },
+      { name: "Pure Black (near face)", hex: "#000000" },
+    ],
+    makeupTips: [
+      "Choose cream-based over powder formulas for a more youthful, dewy finish",
+      "Use warm-toned blush to add healthy color — avoid ashy or overly cool tones",
+      "Opt for satin or semi-matte lipstick in rose, berry, or soft red",
+      "Lighter, more blended eye makeup with soft definition rather than heavy liner",
+      "Match foundation carefully as skin tone shifts — re-test seasonally",
+    ],
+    wardrobeTips: [
+      "Wear your most flattering colors near your face — especially in scarves, tops, and jewelry",
+      "Saturated, rich colors energize mature skin better than pale or muted tones",
+      "Replace harsh black with charcoal, navy, or espresso for a softer frame",
+      "Colorful accessories can refresh neutral outfits without committing to bold clothing",
+      "Monochromatic outfits in your best colors create an elegant, lengthening effect",
+    ],
+    faq: [
+      {
+        q: "Does my color season change as I age?",
+        a: "Your undertone stays the same, but your optimal sub-season may shift as hair grays and skin loses depth. Many people move from a deeper or warmer sub-season to a softer or lighter one. Re-analysis every few years is recommended.",
+      },
+      {
+        q: "What colors make mature skin look younger?",
+        a: "Rich, saturated colors like teal, raspberry, plum, and sapphire add vibrancy near the face. Avoid washed-out pastels and heavy black, which can emphasize lines and shadows.",
+      },
+      {
+        q: "Should I still wear black after 40?",
+        a: "Black can create harsh contrast against aging skin. Consider softer dark neutrals like charcoal, deep navy, or espresso. If you love black, wear it in bottoms and add a flattering color near your face.",
+      },
+    ],
+    relatedSlugs: [
+      "personal-color-analysis-guide",
+      "how-to-determine-skin-undertone",
+      "capsule-wardrobe-color-season",
+    ],
+  },
+  brides: {
+    slug: "brides",
+    name: "Brides & Wedding",
+    title: "Color Analysis for Brides – Your Perfect Wedding Color Palette",
+    metaDescription:
+      "Find your ideal wedding colors with AI color analysis. Discover the most flattering bridal makeup, dress shade, bridesmaids colors, and wedding palette for your skin tone.",
+    heroDescription:
+      "Your wedding is the most photographed day of your life — choosing colors that complement your natural coloring ensures you look radiant in every shot. Color analysis helps brides select the perfect dress shade (warm ivory vs cool white), bridesmaid colors, makeup palette, and overall wedding color scheme.",
+    challenges: [
+      "Choosing between white, ivory, champagne, and blush dress shades",
+      "Selecting bridesmaid colors that flatter the whole party",
+      "Wedding makeup that photographs beautifully under various lighting",
+      "Coordinating flowers, décor, and stationery with your personal palette",
+    ],
+    undertoneGuidance:
+      "Your undertone determines which shade of white looks best — warm undertones glow in ivory, champagne, or warm white, while cool undertones shine in pure white, blue-white, or soft blush. Neutral undertones can wear almost any shade of white.",
+    commonSeasons: [
+      "All seasons apply — the key is matching your dress and palette to your specific type",
+      "Spring brides radiate in warm ivory, peach, and golden details",
+      "Summer brides glow in cool white, lavender, and dusty rose",
+      "Autumn brides shine in champagne, sage, and warm earth tones",
+      "Winter brides are stunning in pure white, jewel tones, and metallic accents",
+    ],
+    bestColors: [
+      { name: "Warm Ivory", hex: "#FFFFF0" },
+      { name: "Blush Pink", hex: "#FFB6C1" },
+      { name: "Dusty Rose", hex: "#DCAE96" },
+      { name: "Sage Green", hex: "#9CAF88" },
+      { name: "Dusty Blue", hex: "#6A89A7" },
+      { name: "Champagne Gold", hex: "#F7E7CE" },
+      { name: "Soft Lavender", hex: "#B39DDB" },
+      { name: "Terracotta", hex: "#CC6244" },
+    ],
+    avoidColors: [
+      { name: "Neon / Electric shades", hex: "#FF1493" },
+      { name: "Clashing undertone whites", hex: "#F5F5DC" },
+    ],
+    makeupTips: [
+      "Test your wedding makeup in both natural light and flash photography",
+      "Choose foundation with the right undertone — bridal makeup must be flawless in photos",
+      "Blush and lip color should complement your dress shade and personal palette",
+      "Avoid overly trendy makeup — timeless looks photograph better decades later",
+      "Set makeup with a fine mist spray rather than heavy powder to maintain glow",
+    ],
+    wardrobeTips: [
+      "Choose your dress shade (pure white, ivory, champagne) based on your undertone",
+      "Bridesmaid dresses in your complementary colors create harmonious photos",
+      "Consider your color season for jewelry metal — gold, silver, or rose gold",
+      "Flowers should echo your seasonal palette for a cohesive aesthetic",
+      "Groom and groomsmen can coordinate with your palette through ties and pocket squares",
+    ],
+    faq: [
+      {
+        q: "How does color analysis help with wedding planning?",
+        a: "Color analysis identifies the shades of white, accent colors, and makeup tones that flatter your specific complexion. This ensures your dress, bridesmaids, flowers, and makeup all harmonize beautifully in photos.",
+      },
+      {
+        q: "Should I wear white or ivory on my wedding day?",
+        a: "It depends on your undertone. Warm undertones look best in ivory or champagne. Cool undertones glow in pure white or blue-white. Neutral undertones can wear either. AI analysis can determine your ideal shade.",
+      },
+      {
+        q: "How do I choose bridesmaid dress colors?",
+        a: "Bridesmaid colors should complement your wedding palette AND flatter the bridesmaids. Popular universally flattering options include dusty rose, sage green, and dusty blue. Color analysis for each bridesmaid can help find a shade that works for everyone.",
+      },
+    ],
+    relatedSlugs: [
+      "wedding-guest-outfit-colors",
+      "personal-color-analysis-guide",
+      "best-makeup-colors-color-season",
+    ],
+  },
+  teenagers: {
+    slug: "teenagers",
+    name: "Teenagers & Young Adults",
+    title: "Color Analysis for Teens – Discover Your Personal Color Palette",
+    metaDescription:
+      "Free color analysis guide for teenagers. Discover your seasonal color type, best makeup shades, and wardrobe colors to build your personal style.",
+    heroDescription:
+      "Discovering your personal color palette as a teenager sets you up for a lifetime of confident style choices. Whether you're building your first wardrobe, experimenting with makeup, or developing your personal style, knowing your seasonal color type helps you make choices that truly flatter your natural features.",
+    challenges: [
+      "Still developing personal style and not sure where to start",
+      "Budget constraints make it important to buy pieces that truly work",
+      "Social media trends may not suit your actual coloring",
+      "Coloring may still be evolving through adolescence",
+    ],
+    undertoneGuidance:
+      "Your undertone is determined by genetics and generally stays consistent through your life. Look at your inner wrist — blue veins suggest cool, green veins suggest warm, and a mix suggests neutral. Also notice whether gold or silver jewelry is more flattering.",
+    commonSeasons: [
+      "All 12 seasons are possible — your age doesn't determine your season",
+      "Many teens initially gravitate toward trendy colors rather than their best colors",
+      "Your season will remain stable even as you age — learn it once and benefit for life",
+    ],
+    bestColors: [
+      { name: "Soft Pink", hex: "#FFB6C1" },
+      { name: "Sky Blue", hex: "#87CEEB" },
+      { name: "Mint Green", hex: "#98FB98" },
+      { name: "Warm Peach", hex: "#FFDAB9" },
+      { name: "Lavender", hex: "#E6E6FA" },
+      { name: "Coral", hex: "#FF7F50" },
+      { name: "Teal", hex: "#008080" },
+      { name: "Dusty Rose", hex: "#DCAE96" },
+    ],
+    avoidColors: [
+      { name: "Colors that wash you out", hex: "#F5F5DC" },
+      { name: "Harsh neons against cool skin", hex: "#CCFF00" },
+    ],
+    makeupTips: [
+      "Start with tinted moisturizer or light coverage rather than heavy foundation",
+      "A touch of blush in your seasonal color instantly brightens your face",
+      "Tinted lip balm in your palette is an easy, natural starting point",
+      "Mascara is universally flattering — brown for warm types, black for cool",
+      "Experiment with one bold element (lip or eye) at a time to find your comfort zone",
+    ],
+    wardrobeTips: [
+      "Build a capsule wardrobe of basics in your neutral palette colors",
+      "Add 2-3 statement pieces in your best accent colors each season",
+      "Thrift shopping is a great way to experiment with colors on a budget",
+      "Focus on tops and scarves in flattering colors — bottoms can be neutral",
+      "Know your colors before shopping to avoid impulse buys that sit unworn",
+    ],
+    faq: [
+      {
+        q: "What age can you do color analysis?",
+        a: "Color analysis works at any age, but results are most stable after puberty (around 14-15) when skin, hair, and eye coloring has largely settled. Younger teens can still benefit — results may just need a recheck in a couple of years.",
+      },
+      {
+        q: "Can teens do color analysis for free?",
+        a: "Yes! Belle offers free AI color analysis — just upload a clear selfie in natural light. You'll receive your seasonal color type and a full palette of your most flattering colors.",
+      },
+      {
+        q: "How does knowing my colors help with shopping on a budget?",
+        a: "When you know your best colors, you buy fewer wrong pieces. Every item in your palette works together, creating more outfit combinations with fewer clothes. It's the ultimate money-saving style hack.",
+      },
+    ],
+    relatedSlugs: [
+      "what-color-season-am-i",
+      "personal-color-analysis-guide",
+      "capsule-wardrobe-color-season",
+    ],
+  },
+  "curly-hair": {
+    slug: "curly-hair",
+    name: "Curly & Coily Hair",
+    title: "Color Analysis for Curly Hair – Best Colors & Hair Tones",
+    metaDescription:
+      "Find your best colors with curly, coily, or wavy hair. AI color analysis for curly-haired people — discover flattering hair dyes, wardrobe colors, and makeup.",
+    heroDescription:
+      "Curly and coily hair textures interact with color differently than straight hair — curls create light-and-shadow patterns that affect how hair color is perceived. This unique texture means color analysis considerations extend beyond just skin tone to how your curls reflect and absorb light.",
+    challenges: [
+      "Curly hair appears darker than straight hair at the same dye level due to light absorption",
+      "Highlights and lowlights show differently on curly vs straight textures",
+      "Hair color recommendations often assume straight hair behavior",
+      "Maintaining color-treated curly hair requires specific care to preserve curl pattern",
+    ],
+    undertoneGuidance:
+      "Determine your undertone independently from your hair color. Curly-haired people span all undertones and seasons. Your natural curl color is a good indicator — warm-toned curls (golden, copper, warm brown) suggest warm undertones, while ashy or cool-brown curls suggest cool undertones.",
+    commonSeasons: [
+      "Deep Autumn — rich, warm curls with deep skin tones",
+      "Warm Autumn — golden or copper curls with warm coloring",
+      "Deep Winter — dark curls with high contrast",
+      "Soft Autumn — muted, warm-toned curls with medium coloring",
+    ],
+    bestColors: [
+      { name: "Rich Burgundy", hex: "#800020" },
+      { name: "Golden Bronze", hex: "#CD7F32" },
+      { name: "Deep Teal", hex: "#006D6F" },
+      { name: "Warm Copper", hex: "#B87333" },
+      { name: "Forest Green", hex: "#228B22" },
+      { name: "Plum", hex: "#8E4585" },
+      { name: "Warm Red", hex: "#CC3333" },
+      { name: "Soft Gold", hex: "#DAA520" },
+    ],
+    avoidColors: [
+      { name: "Ashy gray (on warm types)", hex: "#808080" },
+      { name: "Overly cool platinum", hex: "#E5E4E2" },
+    ],
+    makeupTips: [
+      "Your hair texture frames your face differently — choose blush placement that works with your curl volume",
+      "Bold lip colors stand up well against voluminous curly hair",
+      "Warm bronzer enhances the golden tones that curly hair often catches in sunlight",
+      "Define brows to balance the visual weight of curly hair",
+    ],
+    wardrobeTips: [
+      "Rich, saturated colors complement the visual texture of curly hair beautifully",
+      "Solid colors in your palette let your curls be the star texture",
+      "Avoid busy prints near the face that compete with your curl pattern",
+      "Earthy, warm tones often harmonize with the natural warmth of most curl types",
+      "Statement earrings in your metal tone add polish without competing with your hair",
+    ],
+    faq: [
+      {
+        q: "Does curly hair affect my color season?",
+        a: "Your hair texture doesn't change your color season, but it affects how hair color appears. Curly hair looks darker than straight hair at the same level due to how curls absorb light. Factor this in when choosing hair dye shades.",
+      },
+      {
+        q: "What hair colors work best on curly hair?",
+        a: "Colors with dimension — like balayage, highlights, or rich single-process shades — look stunning on curls because the curl pattern naturally creates light play. Choose warm or cool tones based on your season.",
+      },
+      {
+        q: "How do I maintain colored curly hair?",
+        a: "Use sulfate-free, color-safe products. Deep condition regularly as color processing can affect curl pattern. Avoid excessive heat styling. Refresh color every 8-10 weeks for optimal vibrancy without over-processing.",
+      },
+    ],
+    relatedSlugs: [
+      "best-hair-color-for-color-season",
+      "hair-coloring-technique-color-season",
+      "how-to-determine-skin-undertone",
+    ],
+  },
 };
 
 export const ATTRIBUTE_SLUGS = Object.keys(ATTRIBUTES);

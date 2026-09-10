@@ -40,28 +40,11 @@ export default async function HairColorAnalysisPage({
   const t = await getTranslations({ locale, namespace: "hairPage" });
   const ft = await getTranslations({ locale, namespace: "features" });
 
-  const faqs = [
-    {
-      q: "What is AI hair color analysis?",
-      a: "AI hair color analysis evaluates your skin undertone, depth, and contrast from a selfie to recommend hair colors that complement your natural coloring. It suggests flattering shades, highlights your best tones, and flags colors that may wash you out.",
-    },
-    {
-      q: "How does Belle determine the best hair color for me?",
-      a: "Our AI analyzes your skin undertone (warm, cool, or neutral), eye color, and natural hair color from your photo. These factors are matched against color theory principles to identify hair shades — from natural browns and blondes to bold fashion colors — that harmonize with your complexion.",
-    },
-    {
-      q: "Can AI hair color analysis help me before visiting a salon?",
-      a: "Yes — use the report as a reference when discussing options with your colorist. You'll receive specific shade recommendations, colors to avoid, and styling tips so you can confidently choose a hair color that suits your skin tone.",
-    },
-    {
-      q: "What hair colors should I avoid for my skin tone?",
-      a: "Your report includes a dedicated section on colors to avoid — shades that clash with your undertone or create unflattering contrast. This helps you steer clear of common mistakes like choosing an ashy blonde on warm skin or a brassy tone on cool undertones.",
-    },
-    {
-      q: "Is hair color analysis free?",
-      a: "Your first AI hair color analysis is free with no signup required. Upload a selfie to receive personalized hair color suggestions, undertone analysis, and styling recommendations.",
-    },
-  ];
+  const faqCount = 5;
+  const faqs = Array.from({ length: faqCount }, (_, i) => ({
+    q: t(`faq${i + 1}Q`),
+    a: t(`faq${i + 1}A`),
+  }));
 
   const faqJsonLd = {
     "@context": "https://schema.org",

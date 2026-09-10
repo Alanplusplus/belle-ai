@@ -8,6 +8,9 @@ import {
   getSeasonsByParent,
 } from "@/lib/color-palette-data";
 import { ATTRIBUTES } from "@/lib/color-analysis-for-data";
+import { FACE_SHAPE_SLUGS, FACE_SHAPES } from "@/lib/face-shape-data";
+import { CELEBRITY_SLUGS, CELEBRITY_DATA } from "@/lib/celebrity-data";
+import { COMPARISON_SLUGS } from "@/lib/season-compare-data";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -353,6 +356,73 @@ export default async function ColorAnalysisPillarPage({
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.a}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* More Guides */}
+        <section className="border-t border-border py-16">
+          <h2 className="text-3xl font-bold">{t("moreGuidesTitle")}</h2>
+          <p className="mt-4 text-muted-foreground">{t("moreGuidesDesc")}</p>
+
+          <div className="mt-10 space-y-10">
+            <div>
+              <h3 className="text-xl font-semibold">{t("faceShapesTitle")}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{t("faceShapesDesc")}</p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {FACE_SHAPE_SLUGS.map((slug) => (
+                  <Link
+                    key={slug}
+                    href={`/face-shape/${slug}`}
+                    className="rounded-lg border border-border px-4 py-3 text-sm transition hover:border-primary/40 hover:bg-muted"
+                  >
+                    {FACE_SHAPES[slug].name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">{t("celebrityMatchesTitle")}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{t("celebrityMatchesDesc")}</p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {CELEBRITY_SLUGS.slice(0, 9).map((slug) => (
+                  <Link
+                    key={slug}
+                    href={`/celebrity/${slug}`}
+                    className="rounded-lg border border-border px-4 py-3 text-sm transition hover:border-primary/40 hover:bg-muted"
+                  >
+                    {CELEBRITY_DATA[slug].name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">{t("seasonComparisonsTitle")}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{t("seasonComparisonsDesc")}</p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {COMPARISON_SLUGS.slice(0, 8).map((slug) => {
+                  const label = slug
+                    .split("-vs-")
+                    .map((s) =>
+                      s
+                        .split("-")
+                        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+                        .join(" ")
+                    )
+                    .join(" vs ");
+                  return (
+                    <Link
+                      key={slug}
+                      href={`/compare/${slug}`}
+                      className="rounded-lg border border-border px-4 py-3 text-sm transition hover:border-primary/40 hover:bg-muted"
+                    >
+                      {label}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </section>
 

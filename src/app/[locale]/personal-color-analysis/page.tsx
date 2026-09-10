@@ -43,28 +43,11 @@ export default async function PersonalColorAnalysisPage({
 
   const items = [t("item1"), t("item2"), t("item3"), t("item4"), t("item5"), t("item6")];
 
-  const faqs = [
-    {
-      q: "What is personal color analysis?",
-      a: "Personal color analysis (seasonal color analysis) determines which colors complement your natural coloring — skin tone, eye color, and hair color. The system categorizes people into 12 seasonal sub-types across 4 main seasons: Spring, Summer, Autumn, and Winter.",
-    },
-    {
-      q: "How does AI color analysis work?",
-      a: "Our AI uses computer vision to analyze your skin undertone, depth, contrast, and chroma from a selfie. These measurements are compared against the 12-season system to find your best match — achieving results comparable to in-person consultations.",
-    },
-    {
-      q: "Is AI color analysis accurate?",
-      a: "Yes — our AI achieves a 73-82% match rate with professional color draping. For best results, use a clear selfie in natural daylight with no makeup or filters.",
-    },
-    {
-      q: "What's the difference between the quiz and AI analysis?",
-      a: "The quiz relies on your self-observation (60-70% accuracy), while AI analysis measures actual color values from your photo objectively (73-82% accuracy). AI also provides a detailed report with specific color palette, makeup recommendations, and styling tips.",
-    },
-    {
-      q: "Do I need to pay for color analysis?",
-      a: "Your first AI color analysis is completely free — no signup required. You get a full report with your seasonal color type, personalized palette, and styling recommendations.",
-    },
-  ];
+  const faqCount = 5;
+  const faqs = Array.from({ length: faqCount }, (_, i) => ({
+    q: t(`faq${i + 1}Q`),
+    a: t(`faq${i + 1}A`),
+  }));
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -179,7 +162,7 @@ export default async function PersonalColorAnalysisPage({
       </section>
 
       <section className="max-w-3xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-semibold mb-6">FAQ</h2>
+        <h2 className="text-2xl font-semibold mb-6">{t("faqTitle")}</h2>
         <div className="space-y-6">
           {faqs.map((faq, i) => (
             <details key={i} className="group border-b border-gray-200 pb-4">

@@ -40,28 +40,11 @@ export default async function CelebrityMatchPage({
   const t = await getTranslations({ locale, namespace: "celebrityPage" });
   const ft = await getTranslations({ locale, namespace: "features" });
 
-  const faqs = [
-    {
-      q: "What is celebrity color matching?",
-      a: "Celebrity color matching uses AI to find celebrities who share your skin tone, undertone, and coloring profile. By comparing your facial features and color characteristics to a database of celebrities, Belle identifies your 'color twin' — stars whose makeup, hair, and fashion choices can inspire your own style.",
-    },
-    {
-      q: "How does the celebrity match feature work?",
-      a: "Upload a selfie and our AI analyzes your skin undertone, depth, contrast, and facial coloring. These traits are matched against celebrities with similar color profiles to find your closest matches, along with styling lessons you can learn from their red carpet and everyday looks.",
-    },
-    {
-      q: "What can I learn from my celebrity match?",
-      a: "Your report shows your top celebrity matches, explains why you share similar coloring, and highlights specific beauty and fashion choices those celebrities make — from lipstick shades and hair colors to outfit palettes. It's a fun, practical way to discover colors and styles that work for your exact coloring.",
-    },
-    {
-      q: "Why match with celebrities instead of just getting color analysis?",
-      a: "Celebrity matching makes color theory tangible and inspiring. Seeing a famous face with your same undertone wearing certain shades helps you visualize what works on you. Plus, you get steal-the-look tips and beauty DNA insights that translate celebrity styling into actionable advice for your everyday wardrobe.",
-    },
-    {
-      q: "Is celebrity match analysis free?",
-      a: "Yes, your first AI celebrity match is completely free. Upload a selfie to discover your celebrity color twins and get personalized styling inspiration based on stars who share your coloring.",
-    },
-  ];
+  const faqCount = 5;
+  const faqs = Array.from({ length: faqCount }, (_, i) => ({
+    q: t(`faq${i + 1}Q`),
+    a: t(`faq${i + 1}A`),
+  }));
 
   const faqJsonLd = {
     "@context": "https://schema.org",

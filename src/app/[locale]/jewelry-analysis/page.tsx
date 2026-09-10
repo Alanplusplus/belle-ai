@@ -40,28 +40,11 @@ export default async function JewelryAnalysisPage({
   const t = await getTranslations({ locale, namespace: "jewelryPage" });
   const ft = await getTranslations({ locale, namespace: "features" });
 
-  const faqs = [
-    {
-      q: "What is AI jewelry analysis?",
-      a: "AI jewelry analysis determines which metals, gemstones, and jewelry styles complement your skin undertone and coloring. It helps you choose between gold, silver, rose gold, and mixed metals, plus recommends earring shapes, necklace lengths, and gemstone colors that enhance your natural glow.",
-    },
-    {
-      q: "Should I wear gold or silver jewelry?",
-      a: "The best metal depends on your skin undertone. Warm undertones typically look best in yellow gold and rose gold, while cool undertones shine in silver and white gold. Our AI analyzes your skin from a selfie and tells you which metals flatter you most — many people can wear both.",
-    },
-    {
-      q: "What jewelry recommendations will I receive?",
-      a: "Your report covers optimal metal tones (gold, silver, rose gold), earring styles and shapes, necklace lengths, gemstone color suggestions, and specific pieces to seek out or avoid. Recommendations are tailored to your undertone and contrast level.",
-    },
-    {
-      q: "How accurate is AI jewelry matching?",
-      a: "Our AI uses the same undertone and contrast analysis used in professional color consultations. By measuring your skin's warm/cool balance from a clear selfie, it provides metal and gemstone recommendations comparable to an in-person styling session.",
-    },
-    {
-      q: "Is jewelry analysis free?",
-      a: "Yes, your first AI jewelry analysis is completely free. Upload a selfie to discover your best metals, gemstone colors, and jewelry styles with no signup required.",
-    },
-  ];
+  const faqCount = 5;
+  const faqs = Array.from({ length: faqCount }, (_, i) => ({
+    q: t(`faq${i + 1}Q`),
+    a: t(`faq${i + 1}A`),
+  }));
 
   const faqJsonLd = {
     "@context": "https://schema.org",

@@ -40,28 +40,11 @@ export default async function OccasionMakeupPage({
   const t = await getTranslations({ locale, namespace: "occasionPage" });
   const ft = await getTranslations({ locale, namespace: "features" });
 
-  const faqs = [
-    {
-      q: "What is occasion makeup analysis?",
-      a: "Occasion makeup analysis creates event-specific makeup looks tailored to your skin tone, face shape, and the formality of the occasion. Whether it's a date night, job interview, wedding, or gala, you get a complete look designed for the setting.",
-    },
-    {
-      q: "What occasions does Belle support?",
-      a: "Belle generates makeup looks for a wide range of events including date night, job interviews, weddings, festivals, office settings, evening galas, brunch, and vacation. Each look is adjusted for the occasion's vibe — from polished and professional to bold and glamorous.",
-    },
-    {
-      q: "How is occasion makeup different from regular makeup analysis?",
-      a: "While standard makeup analysis recommends colors that suit your coloring, occasion makeup goes further by crafting complete looks for specific events. You receive step-by-step guidance on intensity, focus areas, and product choices appropriate for the occasion's dress code and atmosphere.",
-    },
-    {
-      q: "Will the makeup look suit my skin tone and face shape?",
-      a: "Yes — every occasion look is personalized to your unique features. The AI analyzes your skin undertone, depth, and face shape to ensure the recommended colors and techniques flatter you, not just the event type.",
-    },
-    {
-      q: "Is occasion makeup analysis free?",
-      a: "Your first AI occasion makeup analysis is free. Upload a selfie, select your event type, and receive a personalized makeup look with color recommendations and styling tips.",
-    },
-  ];
+  const faqCount = 5;
+  const faqs = Array.from({ length: faqCount }, (_, i) => ({
+    q: t(`faq${i + 1}Q`),
+    a: t(`faq${i + 1}A`),
+  }));
 
   const faqJsonLd = {
     "@context": "https://schema.org",

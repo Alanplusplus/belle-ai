@@ -92,6 +92,7 @@ export function Header() {
     { href: "/color-analysis", label: t("colorAnalysisGuide") },
     { href: "/tools/color-quiz", label: t("colorQuiz") },
     { href: "/tools/face-shape-quiz", label: t("faceQuiz") },
+    { href: "/vs/dressika", label: t("vsCompare") },
   ];
 
   return (
@@ -124,9 +125,10 @@ export function Header() {
             {langOpen && (
               <div className="absolute right-0 top-full mt-1 min-w-[120px] rounded-lg border border-border bg-card p-1 shadow-lg">
                 {routing.locales.map((l) => (
-                  <a
+                  <Link
                     key={l}
-                    href={`/${l}${pathname}`}
+                    href={pathname || "/"}
+                    locale={l}
                     className={`block rounded-md px-3 py-1.5 text-sm hover:bg-muted ${
                       l === locale
                         ? "font-medium text-primary"
@@ -135,7 +137,7 @@ export function Header() {
                     onClick={() => setLangOpen(false)}
                   >
                     {LOCALE_NAMES[l]}
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
@@ -344,9 +346,10 @@ export function Header() {
           </div>
           <div className="flex items-center gap-2 border-t border-border pt-3">
             {routing.locales.map((l) => (
-              <a
+              <Link
                 key={l}
-                href={`/${l}${pathname}`}
+                href={pathname || "/"}
+                locale={l}
                 className={`rounded-md px-2 py-1 text-xs ${
                   l === locale
                     ? "bg-primary/10 font-medium text-primary"
@@ -354,7 +357,7 @@ export function Header() {
                 }`}
               >
                 {LOCALE_NAMES[l]}
-              </a>
+              </Link>
             ))}
           </div>
 

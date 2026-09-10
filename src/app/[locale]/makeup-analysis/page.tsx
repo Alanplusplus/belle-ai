@@ -42,28 +42,11 @@ export default async function MakeupAnalysisPage({
 
   const items = [t("item1"), t("item2"), t("item3"), t("item4"), t("item5"), t("item6")];
 
-  const faqs = [
-    {
-      q: "What is AI makeup analysis?",
-      a: "AI makeup analysis uses computer vision to study your skin tone, undertone, face shape, and facial features from a selfie. It then generates personalized makeup recommendations — including foundation shades, blush, eyeshadow, lip colors, and complete looks tailored to your unique coloring.",
-    },
-    {
-      q: "How does Belle's makeup analysis work?",
-      a: "Upload a clear selfie and our AI analyzes your skin depth, undertone, eye color, and face shape. Based on these measurements, you receive a detailed report with specific product color recommendations, application tips, and curated makeup looks that complement your natural features.",
-    },
-    {
-      q: "What makeup recommendations will I receive?",
-      a: "Your report includes foundation and concealer shade matches, blush and bronzer colors, eyeshadow palettes, lip color suggestions, and full makeup look ideas. Recommendations are customized to your skin tone and face shape for a flattering, harmonious result.",
-    },
-    {
-      q: "Do I need to know my skin tone before using makeup analysis?",
-      a: "No — the AI detects your skin undertone and depth automatically from your photo. Whether you have warm, cool, or neutral undertones, the analysis identifies your coloring and suggests makeup shades that enhance your natural beauty.",
-    },
-    {
-      q: "Is the makeup analysis free?",
-      a: "Yes, your first AI makeup analysis is completely free with no signup required. You get a full personalized report with color recommendations and styling tips based on your selfie.",
-    },
-  ];
+  const faqCount = 5;
+  const faqs = Array.from({ length: faqCount }, (_, i) => ({
+    q: t(`faq${i + 1}Q`),
+    a: t(`faq${i + 1}A`),
+  }));
 
   const faqJsonLd = {
     "@context": "https://schema.org",

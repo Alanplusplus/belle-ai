@@ -43,24 +43,11 @@ export default async function FaceShapeAnalysisPage({
 
   const items = [t("item1"), t("item2"), t("item3"), t("item4"), t("item5"), t("item6")];
 
-  const faqs = [
-    {
-      q: "How do I determine my face shape?",
-      a: "Compare 4 measurements: forehead width, cheekbone width, jawline width, and face length. The ratio between these determines your shape. Our AI analysis measures these from your photo, or you can take our free face shape quiz.",
-    },
-    {
-      q: "What is the most common face shape?",
-      a: "Oval and round are the most common face shapes worldwide. Oval faces have balanced proportions and suit most hairstyles, while round faces have similar width and length with soft angles.",
-    },
-    {
-      q: "Can face shape affect which hairstyles look best?",
-      a: "Absolutely. Hairstyles can create visual balance — adding width to long faces, length to round faces, or softening angular features. Our analysis gives you specific hairstyle recommendations based on your unique face shape.",
-    },
-    {
-      q: "How accurate is AI face shape detection?",
-      a: "Our AI measures precise facial proportions from your photo using computer vision landmarks. It identifies your face shape, proportions, and symmetry — providing more objective results than self-assessment.",
-    },
-  ];
+  const faqCount = 4;
+  const faqs = Array.from({ length: faqCount }, (_, i) => ({
+    q: t(`faq${i + 1}Q`),
+    a: t(`faq${i + 1}A`),
+  }));
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -169,7 +156,7 @@ export default async function FaceShapeAnalysisPage({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-12">
-        <h2 className="mb-6 text-2xl font-semibold">FAQ</h2>
+        <h2 className="mb-6 text-2xl font-semibold">{t("faqTitle")}</h2>
         <div className="space-y-6">
           {faqs.map((faq, i) => (
             <details key={i} className="group border-b border-gray-200 pb-4">
