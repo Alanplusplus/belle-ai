@@ -213,7 +213,8 @@
     "faq4Q": "Do I need to know my skin tone before using makeup analysis?",
     "faq4A": "No — the AI detects your skin undertone and depth automatically from your photo. Whether you have warm, cool, or neutral undertones, the analysis identifies your coloring and suggests makeup shades that enhance your natural beauty.",
     "faq5Q": "Is the makeup analysis free?",
-    "faq5A": "Yes, your first AI makeup analysis is completely free with no signup required. You get a full personalized report with color recommendations and styling tips based on your selfie."
+    "faq5A": "Yes, your first AI makeup analysis is completely free with no signup required. You get a full personalized report with color recommendations and styling tips based on your selfie.",
+    "seoIntro": "A personalized AI makeup analysis goes beyond generic beauty advice by examining your unique skin undertone, face shape, eye color, and contrast level from a single selfie. Unlike one-size-fits-all color charts, our AI evaluates the specific interplay between your features — whether warm-toned bronzers or cool-toned highlighters suit you better, which lip shades complement rather than compete with your natural coloring, and how your eye shape and color influence the best eyeshadow placement. Professional makeup consultations typically cost $100-300 and require in-person visits. AI makeup analysis delivers comparable personalized recommendations in 60 seconds, covering foundation undertone matching, blush placement, lip color families, eye makeup palettes, and complete look ideas tailored to your face."
   },
   "color": {
     "title": "Analisi del Colore Personale",
@@ -775,7 +776,8 @@
     "faq4Q": "What hair colors should I avoid for my skin tone?",
     "faq4A": "Your report includes a dedicated section on colors to avoid — shades that clash with your undertone or create unflattering contrast. This helps you steer clear of common mistakes like choosing an ashy blonde on warm skin or a brassy tone on cool undertones.",
     "faq5Q": "Is hair color analysis free?",
-    "faq5A": "Your first AI hair color analysis is free with no signup required. Upload a selfie to receive personalized hair color suggestions, undertone analysis, and styling recommendations."
+    "faq5A": "Your first AI hair color analysis is free with no signup required. Upload a selfie to receive personalized hair color suggestions, undertone analysis, and styling recommendations.",
+    "seoIntro": "Finding the right hair color is one of the highest-impact beauty decisions you can make — and one of the most expensive to get wrong. A salon color correction can cost $200-500+. AI hair color analysis removes the guesswork by evaluating your skin undertone, natural contrast level, and eye color to predict which hair shades will harmonize with your coloring and which will clash. The difference between a flattering warm caramel and an unflattering ashy blonde often comes down to undertone alignment that is invisible to the untrained eye but obvious in photos. Our AI previews multiple hair colors on your actual face, so you can see the result before committing at the salon."
   },
   "outfitPage": {
     "title": "Anteprima colori outfit IA",
@@ -808,7 +810,8 @@
     "faq4Q": "Can outfit color analysis help me shop smarter?",
     "faq4A": "Absolutely — your report serves as a personal shopping guide. Keep your recommended neutrals and accent colors handy when buying tops, dresses, jackets, and accessories. You'll waste less money on colors that don't suit you and build a cohesive, flattering wardrobe.",
     "faq5Q": "Is outfit color analysis free?",
-    "faq5A": "Yes, your first AI outfit color analysis is completely free. Upload a selfie to discover your best clothing colors, seasonal palette, and styling combinations tailored to your personal coloring."
+    "faq5A": "Yes, your first AI outfit color analysis is completely free. Upload a selfie to discover your best clothing colors, seasonal palette, and styling combinations tailored to your personal coloring.",
+    "seoIntro": "Ever noticed that some clothing colors make your skin look radiant while others make you look tired — even when you slept perfectly? That is the effect of color harmony between your skin undertone and your clothing. AI outfit color analysis maps your personal coloring against the full spectrum of clothing colors, identifying the specific shades that brighten your complexion versus those that create a washed-out, sallow, or ruddy effect. Your report includes your best neutrals (the 60-70% of your wardrobe that should be effortless), your power colors (the shades that make people compliment your appearance), and your avoid list (colors that work against your natural coloring). Most people discover 3-5 colors they have been wearing that subtly undermine their appearance."
   },
   "glassesPage": {
     "title": "Consiglio occhiali IA",
@@ -868,7 +871,8 @@
     "faq4Q": "Will the makeup look suit my skin tone and face shape?",
     "faq4A": "Yes — every occasion look is personalized to your unique features. The AI analyzes your skin undertone, depth, and face shape to ensure the recommended colors and techniques flatter you, not just the event type.",
     "faq5Q": "Is occasion makeup analysis free?",
-    "faq5A": "Your first AI occasion makeup analysis is free. Upload a selfie, select your event type, and receive a personalized makeup look with color recommendations and styling tips."
+    "faq5A": "Your first AI occasion makeup analysis is free. Upload a selfie, select your event type, and receive a personalized makeup look with color recommendations and styling tips.",
+    "seoIntro": "The right makeup look varies dramatically by occasion — what works for a casual brunch will look out of place at a black-tie gala, and what dazzles at a festival will overwhelm a job interview. AI occasion makeup analysis solves this by generating looks calibrated to both your features and the specific event context. Our AI considers venue lighting (natural daylight, fluorescent offices, dim evening settings), dress code expectations, and photography conditions to recommend makeup that photographs well and feels appropriate. Select from 8 occasion types — date night, job interview, wedding guest, festival, office, evening gala, brunch, and vacation — and receive a complete face chart with product shade recommendations personalized to your skin tone and undertone."
   },
   "jewelryPage": {
     "title": "Guida gioielli e accessori IA",
@@ -897,7 +901,12 @@
     "faq4Q": "How accurate is AI jewelry matching?",
     "faq4A": "Our AI uses the same undertone and contrast analysis used in professional color consultations. By measuring your skin's warm/cool balance from a clear selfie, it provides metal and gemstone recommendations comparable to an in-person styling session.",
     "faq5Q": "Is jewelry analysis free?",
-    "faq5A": "Yes, your first AI jewelry analysis is completely free. Upload a selfie to discover your best metals, gemstone colors, and jewelry styles with no signup required."
+    "faq5A": "Yes, your first AI jewelry analysis is completely free. Upload a selfie to discover your best metals, gemstone colors, and jewelry styles with no signup required.",
+    "howItWorks": "How It Works",
+    "step1": "Upload a clear selfie in natural light — no makeup or filters",
+    "step2": "AI analyzes your skin undertone, contrast level, and face shape",
+    "step3": "Get your personalized metal, gemstone, and jewelry style guide",
+    "seoIntro": "The wrong metal tone against your skin can make even expensive jewelry look cheap, while the right metal-skin combination creates an effortless glow. AI jewelry analysis evaluates your skin undertone (warm, cool, or neutral) to determine whether yellow gold, white gold, silver, rose gold, or mixed metals create the most harmonious effect on you. Beyond metals, it analyzes your face shape to recommend earring styles that balance your proportions — elongating round faces, softening square jaws, or adding width to oblong faces. Your report covers metal tone matching, earring shape recommendations, necklace lengths that flatter your neck and face proportions, and gemstone colors that enhance your natural coloring. It is the difference between jewelry that decorates and jewelry that transforms."
   },
   "glowUpPage": {
     "premiumBadge": "PREMIUM · 3 crediti",
@@ -930,7 +939,8 @@
     "faq4Q": "How is the Glow Up Report different from free analyses?",
     "faq4A": "Free analyses cover one category at a time (e.g., color analysis or makeup only). The Glow Up Report delivers eight analysis sections in a single report, with deeper insights, cross-category styling coordination, and a unified transformation plan that connects your colors, makeup, hair, accessories, and wardrobe.",
     "faq5Q": "Who should get a Glow Up Report?",
-    "faq5A": "The Glow Up Report is ideal if you want a complete beauty refresh — whether you're updating your wardrobe, changing your hair color, refining your makeup routine, or building a cohesive personal style from scratch. One selfie unlocks your full beauty profile."
+    "faq5A": "The Glow Up Report is ideal if you want a complete beauty refresh — whether you're updating your wardrobe, changing your hair color, refining your makeup routine, or building a cohesive personal style from scratch. One selfie unlocks your full beauty profile.",
+    "seoIntro": "A complete glow-up is more than changing one thing — it is aligning every element of your appearance into a cohesive personal style system. The Glow-Up Report analyzes your photo across 8 beauty dimensions simultaneously: color season, face shape, best hair colors, ideal makeup palette, glasses frame shapes, jewelry metals, wardrobe color palette, and your overall style personality archetype. Each dimension informs the others — your color season determines your best hair color which influences your ideal makeup palette which connects to your wardrobe colors. Professional image consultants charge $500-2000 for this level of comprehensive styling analysis. The Glow-Up Report delivers all 8 analyses from a single selfie, with each recommendation cross-referenced against the others for total coherence."
   },
   "stylePage": {
     "title": "Analisi personalità di stile",
@@ -954,7 +964,8 @@
     "faq4Q": "How can style personality help me dress better?",
     "faq4A": "Knowing your style personality guides clothing silhouettes, fabric choices, patterns, and accessories that feel authentic to you. Instead of following trends blindly, you build a wardrobe aligned with your natural aesthetic — making shopping decisions easier and your outfits more cohesive.",
     "faq5Q": "Is style personality analysis free?",
-    "faq5A": "Yes, your first AI style personality analysis is free with no signup required. Upload a selfie to discover your style archetype and receive personalized fashion recommendations."
+    "faq5A": "Yes, your first AI style personality analysis is free with no signup required. Upload a selfie to discover your style archetype and receive personalized fashion recommendations.",
+    "seoIntro": "Your style personality is the intersection of your physical features, your energy, and the aesthetic that feels most authentically you. Unlike color analysis (which is purely physical) or trend-following (which ignores your individuality), style personality typing identifies your natural style archetype — the fashion language that makes you feel like yourself at your best. Our AI evaluates your facial bone structure, feature contrast, body proportions, and overall presence to match you with one of 8 style personality archetypes: Romantic, Dramatic, Classic, Natural, Gamine, Ethereal, Creative, or Sensual. Each archetype comes with specific guidance on silhouettes, fabrics, patterns, and styling details that reinforce your natural aesthetic rather than fighting against it."
   },
   "celebrityPage": {
     "title": "Match stile celebrità",
@@ -983,7 +994,12 @@
     "faq4Q": "Why match with celebrities instead of just getting color analysis?",
     "faq4A": "Celebrity matching makes color theory tangible and inspiring. Seeing a famous face with your same undertone wearing certain shades helps you visualize what works on you. Plus, you get steal-the-look tips and beauty DNA insights that translate celebrity styling into actionable advice for your everyday wardrobe.",
     "faq5Q": "Is celebrity match analysis free?",
-    "faq5A": "Yes, your first AI celebrity match is completely free. Upload a selfie to discover your celebrity color twins and get personalized styling inspiration based on stars who share your coloring."
+    "faq5A": "Yes, your first AI celebrity match is completely free. Upload a selfie to discover your celebrity color twins and get personalized styling inspiration based on stars who share your coloring.",
+    "howItWorks": "How It Works",
+    "step1": "Upload a clear selfie in natural light — no makeup or filters",
+    "step2": "AI analyzes your face shape, skin tone, and coloring characteristics",
+    "step3": "Discover your celebrity twins with style lessons and steal-the-look tips",
+    "seoIntro": "Celebrity style matching turns abstract color theory into something visual and actionable. Instead of being told you are a 'Warm Autumn with medium contrast,' you see specific celebrities who share your exact coloring — and whose makeup, hair, and fashion choices you can directly reference. Our AI compares your skin undertone, depth, contrast level, and facial coloring against a curated database of celebrities to find your closest matches. Your report includes your top 3 celebrity color twins, an analysis of why you share similar coloring, specific 'steal this look' tips extracted from their red carpet and everyday outfits, and a summary of your unique style DNA. It is the bridge between knowing your color season and knowing what to actually wear."
   },
   "colorGuide": {
     "heroTitle": "Analisi del colore: La guida completa per trovare i tuoi colori migliori",
@@ -2074,6 +2090,7 @@
     },
     "neutral-undertone": {
       "name": "Neutral Undertones",
+      "heroDesc": "I sottotoni neutri sono i camaleonti dell'analisi del colore — né distintamente caldi né freddi, uniscono caratteristiche di entrambi. Se i quiz online ti danno risultati contraddittori, se sia i gioielli dorati che quelli argentati ti stanno bene, e se puoi indossare una sorprendente varietà di colori senza sembrare malconcia, potresti avere sottotoni neutri. Questa guida spiega come identificare i sottotoni neutri e trovare la tua palette più favorevole.",
       "ch0": "Difficulty determining whether you lean warm or cool",
       "ch1": "Conflicting results from online undertone quizzes",
       "ch2": "Both gold and silver jewelry look decent, making the vein test inconclusive",
@@ -2113,6 +2130,7 @@
     },
     "mature-skin": {
       "name": "Mature Skin (40+)",
+      "heroDesc": "Con l'età, la nostra colorazione evolve naturalmente — i capelli possono ingrigire o schiarirsi, la pelle può perdere profondità e i livelli di contrasto cambiano. Questo può significare che i colori che sembravano fantastici a 25 anni non hanno più lo stesso effetto. L'analisi del colore per pelle matura ti aiuta ad adattare la tua palette alla colorazione attuale, assicurandoti di apparire sempre vibrante, sana e curata invece che spenta o sopraffatta.",
       "ch0": "Colors that suited you at 25 may no longer be optimal",
       "ch1": "Gray or silver hair changes your contrast level significantly",
       "ch2": "Skin may become more neutral or lose depth as melanin decreases",
@@ -2153,6 +2171,7 @@
     },
     "brides": {
       "name": "Brides & Wedding",
+      "heroDesc": "Il giorno del tuo matrimonio è uno dei più fotografati della tua vita — e l'analisi del colore garantisce che ogni dettaglio ti valorizzi perfettamente. Dalla scelta tra bianco puro, avorio e champagne per l'abito alla selezione di abiti da damigella, fiori e trucco che armonizzino con la tua colorazione naturale, capire la tua stagione cromatica trasforma la pianificazione del matrimonio da opprimente a intuitiva.",
       "ch0": "Choosing between white, ivory, champagne, and blush dress shades",
       "ch1": "Selecting bridesmaid colors that flatter the whole party",
       "ch2": "Wedding makeup that photographs beautifully under various lighting",
@@ -2191,6 +2210,7 @@
     },
     "teenagers": {
       "name": "Teenagers & Young Adults",
+      "heroDesc": "Scoprire la tua stagione cromatica da adolescente è come ottenere un codice segreto per lo stile. Invece di sprecare soldi in capi di tendenza che non ti valorizzano, saprai esattamente quali colori ti fanno risplendere. Che tu stia costruendo il tuo primo guardaroba, sperimentando con il trucco o cercando semplicemente di definire il tuo stile personale, l'analisi del colore ti dà una base solida che dura tutta la vita.",
       "ch0": "Still developing personal style and not sure where to start",
       "ch1": "Budget constraints make buying right pieces important",
       "ch2": "Social media trends may not suit your actual coloring",
@@ -2228,6 +2248,7 @@
     },
     "curly-hair": {
       "name": "Curly & Coily Hair",
+      "heroDesc": "I capelli ricci e afro creano un profilo unico di analisi del colore perché la texture influisce drasticamente sull'aspetto del colore dei capelli. I ricci creano naturalmente profondità e dimensione, facendo apparire i capelli più scuri di quanto sarebbero se lisciati. Questo influisce sul tuo livello di contrasto complessivo e può determinare quale sotto-stagione esprimi. Capire come il tuo pattern di ricci interagisce con l'analisi del colore ti aiuta a scegliere i colori di capelli, trucco e guardaroba più favorevoli.",
       "ch0": "Curly hair appears darker than straight hair at the same dye level",
       "ch1": "Highlights and lowlights show differently on curly textures",
       "ch2": "Hair color recommendations often assume straight hair behavior",
@@ -2358,7 +2379,13 @@
     "getMyAnalysis": "Analyze My Face Shape",
     "otherShapes": "Explore Other Face Shapes",
     "relatedArticles": "Related Articles",
-    "backToGuide": "All Face Shape Guides"
+    "backToGuide": "All Face Shape Guides",
+    "earringTitle": "Best Earrings for {shape} Face Shape",
+    "earringDesc": "Earring shapes that balance and complement your facial structure for the most flattering look.",
+    "bestEarrings": "Recommended Earring Styles",
+    "avoidEarrings": "Earring Styles to Avoid",
+    "facialHairTitle": "Facial Hair Guide for {shape} Face (Men)",
+    "facialHairDesc": "Beard and facial hair styles that work with your face shape proportions."
   },
   "fs": {
     "oval": {
@@ -2563,7 +2590,18 @@
     "getAnalysis": "Get My Color Analysis",
     "otherCelebrities": "Explore Other Celebrity Color Analyses",
     "relatedArticles": "Related Articles",
-    "backToGuide": "Back to Color Analysis Guide"
+    "backToGuide": "Back to Color Analysis Guide",
+    "detailedAnalysisTitle": "Why {name} Is This Color Season — Detailed Analysis",
+    "iconicLooksTitle": "Iconic Looks — {name}'s Best Color Moments",
+    "iconicLooksDesc": "A breakdown of this celebrity's most impactful color choices and why they work from a color analysis perspective.",
+    "whyItWorks": "Why It Works",
+    "colorMistakesTitle": "When Color Went Wrong — {name}'s Less Flattering Moments",
+    "colorMistakesDesc": "Even style icons occasionally wear colors outside their season. These examples illustrate what happens when color harmony breaks down.",
+    "whyItClashed": "Why It Clashed",
+    "getTheLookTitle": "Get the {name} Look — How to Apply {season} Colors in Your Life",
+    "getTheLookDesc": "Practical tips for incorporating this celebrity's color strategy into your everyday wardrobe and beauty routine.",
+    "seasonPeersTitle": "Other {season} Celebrities",
+    "seasonPeersDesc": "{name} shares the {season} color season with these celebrities. Compare their styling approaches to see how the same season can be expressed in different ways."
   },
   "celeb": {
     "taylor-swift": {
@@ -2741,7 +2779,15 @@
     "getAnalysis": "Get My Color Analysis",
     "takeQuiz": "Take the Color Quiz",
     "otherComparisons": "Other Season Comparisons",
-    "backToGuide": "Back to Color Analysis Guide"
+    "backToGuide": "Back to Color Analysis Guide",
+    "paletteComparison": "Color Palette Comparison",
+    "paletteComparisonDesc": "See the actual color swatches side by side. Notice how one palette leans warm while the other leans cool, even when both share similar depth or mutedness.",
+    "commonMistakes": "Common Typing Mistakes",
+    "commonMistakesDesc": "These are the most frequent errors people make when trying to determine whether they are {season1} or {season2}.",
+    "drapingTest": "DIY Draping Test",
+    "drapingTestDesc": "Try this at-home color comparison to determine which season matches your natural coloring. Use natural daylight near a window with no makeup.",
+    "realWorldExample": "Real-World Color Comparison",
+    "realWorldExampleDesc": "Here is what happens when each type wears the same everyday color — the difference illustrates why season typing matters."
   },
   "cmp": {
     "soft-autumn-vs-soft-summer": {

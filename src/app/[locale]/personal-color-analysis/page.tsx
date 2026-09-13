@@ -3,6 +3,10 @@ import { Link } from "@/i18n/navigation";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import Image from "next/image";
 import type { Metadata } from "next";
+import {
+  PARENT_SEASON_ORDER,
+  getSeasonsByParent,
+} from "@/lib/color-palette-data";
 
 export async function generateMetadata({
   params,
@@ -126,29 +130,57 @@ export default async function PersonalColorAnalysisPage({
 
       {/* Seasonal Color Types Preview */}
       <section className="bg-muted/30 py-16">
-        <div className="mx-auto max-w-4xl px-4">
-          <h2 className="mb-8 text-center text-2xl font-bold">
+        <div className="mx-auto max-w-5xl px-4">
+          <h2 className="mb-4 text-center text-2xl font-bold">
             12 Seasonal Color Types
           </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {SEASONS.map((season) => (
-              <Link
-                href={`/color-palette/${season.name.toLowerCase().replace(/\s+/g, "-")}`}
-                key={season.name}
-                className="rounded-xl border border-border bg-card p-4 text-center transition hover:border-primary/40 hover:shadow-md"
-              >
-                <div className="mx-auto mb-2 flex gap-1 justify-center">
-                  {season.colors.map((color) => (
-                    <div
-                      key={color}
-                      className="h-6 w-6 rounded-full"
-                      style={{ backgroundColor: color }}
+          <p className="mx-auto mb-10 max-w-2xl text-center text-muted-foreground">
+            {t("description")}
+          </p>
+          <div className="grid gap-8 sm:grid-cols-2">
+            {PARENT_SEASON_ORDER.map((parent) => {
+              const subSeasons = getSeasonsByParent(parent);
+              const seasonImage = `/images/season_${parent}.webp`;
+              const parentLabel = parent.charAt(0).toUpperCase() + parent.slice(1);
+              return (
+                <div key={parent} className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:shadow-lg">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden">
+                    <Image
+                      src={seasonImage}
+                      alt={`${parentLabel} color palettes`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, 50vw"
                     />
-                  ))}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                    <h3 className="absolute bottom-3 left-4 text-lg font-bold text-white drop-shadow-md">
+                      {parentLabel}
+                    </h3>
+                  </div>
+                  <div className="divide-y divide-border">
+                    {subSeasons.map((season) => (
+                      <Link
+                        href={`/color-palette/${season.slug}`}
+                        key={season.slug}
+                        className="flex items-center gap-3 px-4 py-3 transition hover:bg-muted/50"
+                      >
+                        <div className="flex shrink-0 gap-1">
+                          {season.bestColors.slice(0, 5).map((c) => (
+                            <div
+                              key={c.hex}
+                              className="h-5 w-5 rounded-full border border-white/50 shadow-sm"
+                              style={{ backgroundColor: c.hex }}
+                            />
+                          ))}
+                        </div>
+                        <span className="text-sm font-medium">{season.name}</span>
+                        <span className="ml-auto text-xs text-muted-foreground">→</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-                <p className="text-sm font-medium">{season.name}</p>
-              </Link>
-            ))}
+              );
+            })}
           </div>
           <div className="mt-10 text-center">
             <Link
@@ -207,19 +239,4 @@ const COLOR_DIMENSIONS = [
   { image: "/images/dim_color_palette.webp" },
   { image: "/images/dim_color_makeup.webp" },
   { image: "/images/dim_color_clothing.webp" },
-];
-
-const SEASONS = [
-  { name: "Light Spring", colors: ["#F9E4B7", "#FBBF77", "#E8A87C"] },
-  { name: "Warm Spring", colors: ["#F5C16C", "#E8963E", "#D4712B"] },
-  { name: "Bright Spring", colors: ["#FF6B6B", "#FFD93D", "#6BCB77"] },
-  { name: "Light Summer", colors: ["#B5C7D3", "#D4A5B9", "#C8B6D9"] },
-  { name: "Cool Summer", colors: ["#8BAAB7", "#C0A1C1", "#96ADC8"] },
-  { name: "Soft Summer", colors: ["#A8B5A0", "#C4ADA0", "#B8A9C0"] },
-  { name: "Soft Autumn", colors: ["#C4A882", "#B8976A", "#8B9A6B"] },
-  { name: "Warm Autumn", colors: ["#C87533", "#8B6914", "#6B4226"] },
-  { name: "Deep Autumn", colors: ["#8B4513", "#CD853F", "#556B2F"] },
-  { name: "Deep Winter", colors: ["#1C1C3A", "#8B0000", "#006400"] },
-  { name: "Cool Winter", colors: ["#2F4F6F", "#C71585", "#008B8B"] },
-  { name: "Bright Winter", colors: ["#FF1493", "#00BFFF", "#7CFC00"] },
 ];

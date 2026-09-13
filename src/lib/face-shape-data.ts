@@ -16,6 +16,11 @@ export interface FaceShapeData {
     avoid: string[];
   };
   makeupTips: string[];
+  earringTips: {
+    best: string[];
+    avoid: string[];
+  };
+  facialHairTips?: string[];
   celebrities: string[];
   relatedSlugs: string[];
 }
@@ -75,6 +80,22 @@ export const FACE_SHAPES: Record<string, FaceShapeData> = {
       "Blush applied to the apples of the cheeks, blended upward toward temples",
       "Keep brows naturally arched — avoid over-plucking",
     ],
+    earringTips: {
+      best: [
+        "Nearly any earring style works — drops, studs, hoops, chandeliers",
+        "Medium-length drop earrings that follow the jawline curve",
+        "Classic pearl or diamond studs for everyday elegance",
+        "Teardrop shapes that echo the natural oval proportions",
+      ],
+      avoid: [
+        "Extremely oversized earrings that widen the face beyond its natural frame",
+      ],
+    },
+    facialHairTips: [
+      "Most beard styles suit oval faces — full beards, goatees, stubble, and clean-shaven all work",
+      "A well-maintained full beard with slightly tapered sides preserves the natural balance",
+      "Avoid overly long or wide beards that disrupt the face's natural proportions",
+    ],
     celebrities: ["Bella Hadid", "Beyoncé", "Jessica Alba"],
     relatedSlugs: [
       "face-shape-hairstyle-guide",
@@ -127,6 +148,23 @@ export const FACE_SHAPES: Record<string, FaceShapeData> = {
       "Use angular brow shapes to add structure",
       "Apply blush slightly higher, along the cheekbone ridge",
     ],
+    earringTips: {
+      best: [
+        "Long, angular drop earrings to elongate the face and add vertical lines",
+        "Geometric or rectangular shapes that contrast the roundness",
+        "Dangle earrings that hang below the jawline to create length",
+        "Narrow, vertical designs like bar earrings or chain drops",
+      ],
+      avoid: [
+        "Round hoops and circular studs that mirror and emphasize the face's roundness",
+        "Button earrings that sit flat and add width to the cheek area",
+      ],
+    },
+    facialHairTips: [
+      "A goatee or Van Dyke beard adds vertical length and angular definition to the chin area",
+      "Beards longer at the chin and shorter on the sides create an elongating illusion",
+      "Avoid round, full beards that add more width and reinforce the circular shape",
+    ],
     celebrities: ["Selena Gomez", "Chrissy Teigen", "Ginnifer Goodwin"],
     relatedSlugs: [
       "face-shape-hairstyle-guide",
@@ -177,6 +215,23 @@ export const FACE_SHAPES: Record<string, FaceShapeData> = {
       "Highlight the center of the face and under the eyes",
       "Opt for softly arched brows rather than angular shapes",
       "Use bronzer along the jaw corners to visually round the face",
+    ],
+    earringTips: {
+      best: [
+        "Round hoops and circular designs to soften the angular jawline",
+        "Medium-sized hoop earrings that introduce curves",
+        "Teardrop or pear-shaped drops that contrast the jaw's sharpness",
+        "Cluster or floral earrings with rounded, organic shapes",
+      ],
+      avoid: [
+        "Square or geometric angular earrings that duplicate the jaw's hard angles",
+        "Very long rectangular drops that emphasize the face's structural lines",
+      ],
+    },
+    facialHairTips: [
+      "Rounded beard styles soften the strong jawline — a circle beard or rounded full beard works well",
+      "Stubble can highlight the strong jaw attractively without adding more angularity",
+      "Avoid very sculpted, angular beards that reinforce the jaw's sharpness",
     ],
     celebrities: ["Angelina Jolie", "Margot Robbie", "Keira Knightley"],
     relatedSlugs: [
@@ -229,6 +284,23 @@ export const FACE_SHAPES: Record<string, FaceShapeData> = {
       "Define brows with a soft, rounded arch",
       "Use a slightly darker shade along the temples",
     ],
+    earringTips: {
+      best: [
+        "Teardrop and chandelier earrings that add width at the jaw to balance proportions",
+        "Bottom-heavy designs that bring visual weight downward",
+        "Wide hoops that fill the narrow jaw area",
+        "Triangle-shaped earrings pointing downward to balance the wide forehead",
+      ],
+      avoid: [
+        "Pointed or upward-narrowing earrings that mimic the chin's taper and exaggerate it",
+        "Very small studs that don't add any balancing width near the jawline",
+      ],
+    },
+    facialHairTips: [
+      "A full beard or wide jawline beard adds width to the narrow chin area, balancing the forehead",
+      "Stubble along the full jawline creates a visual widening of the lower face",
+      "Avoid goatees or chin-only beards that further narrow the already pointed chin",
+    ],
     celebrities: ["Scarlett Johansson", "Reese Witherspoon", "Taylor Swift"],
     relatedSlugs: [
       "face-shape-hairstyle-guide",
@@ -279,6 +351,23 @@ export const FACE_SHAPES: Record<string, FaceShapeData> = {
       "Highlight the cheekbones outward toward the temples",
       "Use a wider, flatter brow shape to create horizontal lines",
       "Avoid vertical highlight strips down the center of the face",
+    ],
+    earringTips: {
+      best: [
+        "Wide, round studs or button earrings that add width without length",
+        "Short drop earrings or cluster studs that sit close to the earlobe",
+        "Horizontal designs like bar earrings that create width",
+        "Small to medium hoops that add visual width without further elongating",
+      ],
+      avoid: [
+        "Very long, dangling earrings that add even more vertical length to an already long face",
+        "Narrow vertical drops like chain earrings that emphasize the elongation",
+      ],
+    },
+    facialHairTips: [
+      "A full, wide beard adds horizontal width to balance the elongated face",
+      "Mutton chops or sideburns create visual width at the sides",
+      "Avoid long goatees or pointed beards that add more vertical length",
     ],
     celebrities: ["Sarah Jessica Parker", "Liv Tyler", "Gisele Bündchen"],
     relatedSlugs: [
@@ -331,6 +420,23 @@ export const FACE_SHAPES: Record<string, FaceShapeData> = {
       "Use a lighter foundation shade on the forehead to make it appear wider",
       "Shape brows with a soft curve to widen the brow area",
     ],
+    earringTips: {
+      best: [
+        "Long, narrow drop earrings that follow the face's angular lines elegantly",
+        "Linear or stick earrings that complement the high cheekbones",
+        "Pear-shaped or teardrop earrings that echo the face's narrow-to-wide proportions",
+        "Statement chandeliers that add width near the narrow forehead",
+      ],
+      avoid: [
+        "Very wide studs that further emphasize the cheekbone width",
+        "Round, large hoops at ear level that add horizontal bulk at the widest point",
+      ],
+    },
+    facialHairTips: [
+      "A goatee or chin beard adds width and definition to the narrow jawline",
+      "A short, groomed full beard helps fill out the narrow jaw area and balance the wide cheekbones",
+      "Avoid very long, pointed beards that exaggerate the chin's narrow taper",
+    ],
     celebrities: ["Rihanna", "Vanessa Hudgens", "Ashley Greene"],
     relatedSlugs: [
       "face-shape-hairstyle-guide",
@@ -381,6 +487,23 @@ export const FACE_SHAPES: Record<string, FaceShapeData> = {
       "Apply blush higher on the cheekbones, angled upward",
       "Use a slightly deeper shade along the jawline edges",
       "Create fuller, wider brows to add width to the forehead area",
+    ],
+    earringTips: {
+      best: [
+        "Wide, ornate studs or button earrings that add width at the upper face",
+        "Cat-eye or upward-sweeping designs that widen the temple area",
+        "Cluster earrings and wide hoops that create visual width at ear level",
+        "Decorative, top-heavy earrings that draw attention upward and outward",
+      ],
+      avoid: [
+        "Long, narrow drops that draw attention downward toward the wide jaw",
+        "Triangle-shaped earrings pointing down that echo the face's pear shape",
+      ],
+    },
+    facialHairTips: [
+      "A groomed, shorter beard that doesn't add extra width to the already wide jaw",
+      "A chinstrap or closely trimmed beard that follows the jawline without extending it outward",
+      "Avoid very full, bushy beards that further widen the lower face",
     ],
     celebrities: ["Kelly Osbourne", "Minnie Driver", "Jennifer Aniston"],
     relatedSlugs: [

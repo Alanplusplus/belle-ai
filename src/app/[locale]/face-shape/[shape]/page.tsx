@@ -275,6 +275,69 @@ function FaceShapeContent({ slug }: { slug: string }) {
           </ul>
         </section>
 
+        {/* Earring Tips */}
+        <section className="border-t border-border py-12">
+          <h2 className="text-2xl font-bold">
+            {t("earringTitle", { shape: displayName })}
+          </h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            {t("earringDesc")}
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-xl border border-border bg-card p-5">
+              <h3 className="font-semibold text-primary">
+                {t("bestEarrings")}
+              </h3>
+              <ul className="mt-3 space-y-1.5">
+                {data.earringTips.best.map((tip) => (
+                  <li
+                    key={tip}
+                    className="flex items-center gap-2 text-sm text-muted-foreground"
+                  >
+                    <span className="text-primary">✓</span> {tip}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-xl border border-border bg-card p-5">
+              <h3 className="font-semibold">{t("avoidEarrings")}</h3>
+              <ul className="mt-3 space-y-1.5">
+                {data.earringTips.avoid.map((tip) => (
+                  <li
+                    key={tip}
+                    className="flex items-center gap-2 text-sm text-muted-foreground"
+                  >
+                    <span className="text-red-400">✕</span> {tip}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Facial Hair Tips (for men) */}
+        {data.facialHairTips && data.facialHairTips.length > 0 && (
+          <section className="border-t border-border py-12">
+            <h2 className="text-2xl font-bold">
+              {t("facialHairTitle", { shape: displayName })}
+            </h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {t("facialHairDesc")}
+            </p>
+            <ul className="mt-6 space-y-3">
+              {data.facialHairTips.map((tip) => (
+                <li
+                  key={tip}
+                  className="flex items-start gap-3 text-sm text-muted-foreground"
+                >
+                  <span className="mt-0.5 text-primary">→</span>
+                  <span>{tip}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
         {/* Celebrities */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">

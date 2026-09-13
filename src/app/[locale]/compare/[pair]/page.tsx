@@ -209,6 +209,92 @@ function CompareContent({ slug }: { slug: string }) {
           </ul>
         </section>
 
+        {/* Visual Palette Comparison */}
+        <section className="border-t border-border py-12">
+          <h2 className="text-2xl font-bold">{t("paletteComparison")}</h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            {t("paletteComparisonDesc")}
+          </p>
+          <div className="mt-6 grid gap-6 sm:grid-cols-2">
+            {[data.season1, data.season2].map((seasonSlug) => {
+              const palette = SEASON_PALETTES[seasonSlug];
+              const name = sd(`${seasonSlug}.name`);
+              return (
+                <div key={seasonSlug} className="rounded-xl border border-border bg-card p-5">
+                  <h3 className="font-semibold text-primary">{name}</h3>
+                  <div className="mt-3 grid grid-cols-5 gap-2">
+                    {palette.bestColors.slice(0, 10).map((c) => (
+                      <div key={c.hex} className="text-center">
+                        <div
+                          className="mx-auto h-10 w-10 rounded-lg border border-border/50"
+                          style={{ backgroundColor: c.hex }}
+                        />
+                        <p className="mt-1 text-[10px] text-muted-foreground">
+                          {c.name}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* Common Mistakes */}
+        {data.commonMistakes && data.commonMistakes.length > 0 && (
+          <section className="border-t border-border py-12">
+            <h2 className="text-2xl font-bold">{t("commonMistakes")}</h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {t("commonMistakesDesc", {
+                season1: season1Name,
+                season2: season2Name,
+              })}
+            </p>
+            <ul className="mt-6 space-y-3">
+              {data.commonMistakes.map((mistake) => (
+                <li
+                  key={mistake}
+                  className="flex items-start gap-3 text-sm text-muted-foreground"
+                >
+                  <span className="mt-0.5 text-amber-500">⚠</span>
+                  <span>{mistake}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {/* Draping Test */}
+        {data.drapingTest && (
+          <section className="border-t border-border py-12">
+            <h2 className="text-2xl font-bold">{t("drapingTest")}</h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {t("drapingTestDesc")}
+            </p>
+            <div className="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-6">
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {data.drapingTest}
+              </p>
+            </div>
+          </section>
+        )}
+
+        {/* Real-World Example */}
+        {data.realWorldExample && (
+          <section className="border-t border-border py-12">
+            <h2 className="text-2xl font-bold">{t("realWorldExample")}</h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {t("realWorldExampleDesc")}
+            </p>
+            <div className="mt-6 rounded-xl border border-border bg-card p-6">
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {data.realWorldExample}
+              </p>
+            </div>
+          </section>
+        )}
+
         {/* Season Palette Links */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">{t("explorePalettes")}</h2>

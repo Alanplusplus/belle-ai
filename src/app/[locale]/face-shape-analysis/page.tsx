@@ -127,20 +127,36 @@ export default async function FaceShapeAnalysisPage({
       {/* Face Shapes Grid */}
       <section className="bg-muted/30 py-16">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="mb-8 text-center text-2xl font-bold">
+          <h2 className="mb-4 text-center text-2xl font-bold">
             7 Face Shapes
           </h2>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          <p className="mx-auto mb-8 max-w-2xl text-center text-muted-foreground">
+            {t("description")}
+          </p>
+          <div className="mb-8 overflow-hidden rounded-2xl border border-border shadow-sm">
+            <Image
+              src="/images/face_shapes_all.webp"
+              alt="7 face shapes: Oval, Round, Square, Heart, Oblong, Diamond, Triangle"
+              width={1536}
+              height={864}
+              className="w-full"
+              sizes="(max-width: 768px) 100vw, 800px"
+              priority
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {FACE_SHAPES.map((shape) => (
               <div
                 key={shape.name}
-                className="flex flex-col items-center rounded-xl border border-border bg-card p-5 text-center"
+                className="flex items-start gap-3 rounded-xl border border-border bg-card p-4 transition hover:border-primary/40 hover:shadow-md"
               >
-                <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
                   {shape.icon}
                 </div>
-                <p className="text-sm font-medium">{shape.name}</p>
-                <p className="mt-1 text-xs text-muted-foreground">{shape.desc}</p>
+                <div>
+                  <p className="text-sm font-semibold">{shape.name}</p>
+                  <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">{shape.desc}</p>
+                </div>
               </div>
             ))}
           </div>
