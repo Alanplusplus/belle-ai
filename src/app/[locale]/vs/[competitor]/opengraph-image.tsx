@@ -17,10 +17,8 @@ export default async function OgImage({
 }: {
   params: Promise<{ locale: string; competitor: string }>;
 }) {
-  const { locale, competitor } = await params;
-  const messages = (await import(`@/messages/${locale}.json`)).default;
-  const competitorName =
-    messages.vs?.[competitor]?.name ?? formatSlug(competitor);
+  const { competitor } = await params;
+  const competitorName = formatSlug(competitor);
 
   return createOgImage(
     <>

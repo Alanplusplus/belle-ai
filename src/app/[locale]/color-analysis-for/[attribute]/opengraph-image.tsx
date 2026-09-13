@@ -18,12 +18,9 @@ export default async function OgImage({
 }: {
   params: Promise<{ locale: string; attribute: string }>;
 }) {
-  const { locale, attribute } = await params;
+  const { attribute } = await params;
   const data = ATTRIBUTES[attribute];
-  const messages = (await import(`@/messages/${locale}.json`)).default;
-
-  const audienceName =
-    messages.ad?.[attribute]?.name ?? data?.name ?? formatSlug(attribute);
+  const audienceName = data?.name ?? formatSlug(attribute);
 
   return createOgImage(
     <>

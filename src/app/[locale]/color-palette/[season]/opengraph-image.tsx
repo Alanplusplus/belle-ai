@@ -28,8 +28,7 @@ export default async function OgImage({
 }: {
   params: Promise<{ locale: string; season: string }>;
 }) {
-  const { locale, season } = await params;
-  const messages = (await import(`@/messages/${locale}.json`)).default;
+  const { season } = await params;
 
   let title: string;
   let subtitle: string;
@@ -47,8 +46,7 @@ export default async function OgImage({
       subtitle = "Color Palette";
       swatchColors = [];
     } else {
-      title =
-        messages.sd?.[season]?.name ?? data.name.split(" (")[0];
+      title = data.name.split(" (")[0];
       subtitle = data.tagline;
       swatchColors = data.bestColors;
     }

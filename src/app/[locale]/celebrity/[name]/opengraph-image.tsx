@@ -19,17 +19,14 @@ export default async function OgImage({
 }: {
   params: Promise<{ locale: string; name: string }>;
 }) {
-  const { locale, name } = await params;
+  const { name } = await params;
   const data = CELEBRITY_DATA[name];
-  const messages = (await import(`@/messages/${locale}.json`)).default;
 
   const celebrityName = data?.name ?? formatSlug(name);
   const seasonSlug = data?.season ?? "";
   const seasonData = seasonSlug ? SEASON_PALETTES[seasonSlug] : undefined;
   const seasonName =
-    messages.sd?.[seasonSlug]?.name ??
-    seasonData?.name.split(" (")[0] ??
-    formatSlug(seasonSlug);
+    seasonData?.name.split(" (")[0] ?? formatSlug(seasonSlug);
 
   return createOgImage(
     <>

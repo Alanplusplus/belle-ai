@@ -20,15 +20,14 @@ export default async function OgImage({
 }: {
   params: Promise<{ locale: string; pair: string }>;
 }) {
-  const { locale, pair } = await params;
+  const { pair } = await params;
   const data = COMPARISON_DATA[pair];
-  const messages = (await import(`@/messages/${locale}.json`)).default;
 
   const season1Name = data
-    ? messages.sd?.[data.season1]?.name ?? getSeasonDisplayName(data.season1)
+    ? getSeasonDisplayName(data.season1)
     : "Season 1";
   const season2Name = data
-    ? messages.sd?.[data.season2]?.name ?? getSeasonDisplayName(data.season2)
+    ? getSeasonDisplayName(data.season2)
     : "Season 2";
 
   return createOgImage(
