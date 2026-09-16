@@ -13,6 +13,7 @@ import {
   fetchProcessingTask,
   getCachedUserId,
   getReferralCode,
+  webCheckin,
   type HistoryEntry,
   type AnalysisType as ApiAnalysisType,
 } from "@/lib/api";
@@ -259,6 +260,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [showLangPicker, setShowLangPicker] = useState(false);
   const [generateElapsed, setGenerateElapsed] = useState(0);
   const [referralCode, setReferralCode] = useState<string | null>(null);
+  const [checkinAvailable, setCheckinAvailable] = useState(false);
+  const [checkinLoading, setCheckinLoading] = useState(false);
+  const [checkinJustDone, setCheckinJustDone] = useState(false);
 
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -302,6 +306,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           subPlan: data.subscription?.plan ?? null,
           totalRemaining: data.total_remaining ?? data.web_quota.remaining,
         });
+        setCheckinAvailable(data.checkin_available ?? false);
         setIsReady(true);
 
         setHistoryLoading(true);
@@ -427,12 +432,23 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     const isMobile = /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
       (navigator.maxTouchPoints > 0 && window.innerWidth < 768);
 
-    const refUrl = referralCode ? `${SITE_URL}?ref=${referralCode}` : SITE_URL;
-    const shareData = { title: t("shareTitle"), text: `${t("shareText")} ${refUrl}`, url: refUrl };
+    const refUrl = referralCode ? `${SITE_URL}/try?ref=${referralCode}` : `${SITE_URL}/try`;
 
-    if (isMobile && navigator.share && navigator.canShare?.(shareData)) {
+    if (isMobile && navigator.share) {
       trackEvent("result_share", { method: "native", type: analysisType });
-      try { await navigator.share(shareData); } catch { /* user cancelled */ }
+      try {
+        const res = await fetch(url);
+        const blob = await res.blob();
+        const file = new File([blob], `belle-ai-report.jpg`, { type: "image/jpeg" });
+        const shareWithFile = { title: t("shareTitle"), text: `${t("shareText")} ${refUrl}`, files: [file] };
+        if (navigator.canShare?.(shareWithFile)) {
+          await navigator.share(shareWithFile);
+          return;
+        }
+      } catch { /* fallback to text-only share */ }
+      try {
+        await navigator.share({ title: t("shareTitle"), text: `${t("shareText")} ${refUrl}`, url: refUrl });
+      } catch { /* user cancelled */ }
     } else {
       trackEvent("result_share", { method: "panel", type: analysisType });
       setShareModal(url);
@@ -627,6 +643,32 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     setResultUrls([]);
     setErrorMsg("");
   }, [lastUploadedPhotoUrl]);
+
+  const handleCheckin = useCallback(async () => {
+    if (!checkinAvailable || checkinLoading) return;
+    setCheckinLoading(true);
+    try {
+      const res = await webCheckin();
+      if (res.code === 200 && res.data) {
+        const d = res.data;
+        if (d.checked_in) {
+          setCheckinAvailable(false);
+          setCheckinJustDone(true);
+          setTimeout(() => setCheckinJustDone(false), 3000);
+          if (d.total_remaining != null) {
+            setUserCredits((prev) => prev ? { ...prev, paid: d.paid_credits ?? prev.paid, totalRemaining: d.total_remaining! } : prev);
+          }
+          trackEvent("checkin_completed");
+        } else {
+          setCheckinAvailable(false);
+        }
+      }
+    } catch {
+      /* ignore */
+    } finally {
+      setCheckinLoading(false);
+    }
+  }, [checkinAvailable, checkinLoading]);
 
   const recommendedTypes = (RECOMMENDED_TYPES[analysisType] || []).filter(
     (t) => !backgroundTasks.some((bt) => bt.type === t)
@@ -995,6 +1037,31 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           </p>
         )}
 
+        {/* Daily Check-in */}
+        {(checkinAvailable || checkinJustDone) && phase !== "uploading" && phase !== "generating" && phase !== "preparing" && (
+          <div className="mt-3">
+            {checkinJustDone ? (
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-green-300 bg-green-50 px-4 py-1.5 text-xs font-medium text-green-700 dark:border-green-700 dark:bg-green-900/20 dark:text-green-400">
+                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                {t("checkinDone")}
+              </span>
+            ) : (
+              <button
+                onClick={handleCheckin}
+                disabled={checkinLoading}
+                className="inline-flex items-center gap-1.5 rounded-full border border-amber-300 bg-gradient-to-r from-amber-50 to-orange-50 px-4 py-1.5 text-xs font-medium text-amber-700 shadow-sm transition hover:shadow-md hover:from-amber-100 hover:to-orange-100 disabled:opacity-50 dark:border-amber-600 dark:from-amber-900/30 dark:to-orange-900/30 dark:text-amber-300"
+              >
+                {checkinLoading ? (
+                  <Spinner />
+                ) : (
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+                )}
+                {t("checkinBtn")}
+              </button>
+            )}
+          </div>
+        )}
+
         {/* Show NoQuotaCard when credits are exhausted (regardless of phase) */}
         {(phase === "no_quota" || (userCredits && userCredits.totalRemaining <= 0) || (!userCredits && quota && quota.remaining <= 0)) && (
           <div className="mt-4">
@@ -1098,6 +1165,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       {phase === "done" && resultUrls.length > 0 && (
         <div className="mt-8">
           <h2 className="text-center text-xl font-bold">{t("resultTitle")}</h2>
+          <p className="mt-1 text-center text-sm text-muted-foreground">
+            {t("sharePrompt")}
+          </p>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {resultUrls.map((url, i) => (
               <div key={i} className="group relative overflow-hidden rounded-2xl border border-border transition hover:border-primary/40 hover:shadow-lg">
@@ -1660,7 +1730,8 @@ const SHARE_PLATFORMS = [
         <path d="M12 0a12 12 0 00-4.373 23.178c-.07-.633-.134-1.606.028-2.298.146-.625.943-3.998.943-3.998s-.24-.482-.24-1.194c0-1.118.648-1.953 1.457-1.953.687 0 1.019.516 1.019 1.134 0 .691-.44 1.724-.667 2.681-.19.8.402 1.452 1.192 1.452 1.43 0 2.529-1.508 2.529-3.683 0-1.926-1.384-3.27-3.361-3.27-2.289 0-3.633 1.717-3.633 3.493 0 .692.267 1.433.599 1.835a.24.24 0 01.056.23c-.061.255-.197.8-.224.912-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A12 12 0 1012 0z" />
       </svg>
     ),
-    buildUrl: (url: string, text: string) => `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&description=${encodeURIComponent(text)}`,
+    buildUrl: (url: string, text: string, _tags: string, media?: string) =>
+      `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&description=${encodeURIComponent(text)}${media ? `&media=${encodeURIComponent(media)}` : ""}`,
   },
 ] as const;
 
@@ -1680,7 +1751,7 @@ function SharePanel({
   const tReferral = useTranslations("referral");
   const [caption, setCaption] = useState(t("shareText"));
   const [tags, setTags] = useState("BelleAI,ColorAnalysis,Beauty");
-  const refUrl = referralCode ? `${SITE_URL}?ref=${referralCode}` : SITE_URL;
+  const refUrl = referralCode ? `${SITE_URL}/try?ref=${referralCode}` : `${SITE_URL}/try`;
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -1689,7 +1760,9 @@ function SharePanel({
 
   const handlePlatformClick = (platform: typeof SHARE_PLATFORMS[number]) => {
     trackEvent("share_platform_click", { platform: platform.id });
-    const shareUrl = platform.buildUrl(refUrl, caption, tags);
+    const shareUrl = platform.id === "pinterest"
+      ? (platform.buildUrl as (u: string, t: string, tg: string, m?: string) => string)(refUrl, caption, tags, url)
+      : platform.buildUrl(refUrl, caption, tags);
     window.open(shareUrl, "_blank", "noopener,noreferrer,width=600,height=500");
   };
 

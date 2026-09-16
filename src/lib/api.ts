@@ -32,6 +32,7 @@ export interface WebInitData {
   paid_credits: number;
   subscription: { plan: string | null; status: string; remaining: number };
   total_remaining: number;
+  checkin_available: boolean;
 }
 
 export type WebSignInData = WebInitData;
@@ -241,6 +242,18 @@ export interface ReferralStatsData {
   referral_count: number;
   referral_credits_earned: number;
   recent_events: ReferralEvent[];
+}
+
+export interface CheckinData {
+  checked_in: boolean;
+  credits_added: number;
+  checkin_available: boolean;
+  total_remaining?: number;
+  paid_credits?: number;
+}
+
+export async function webCheckin() {
+  return belleApi<CheckinData>({ action: "checkin" });
 }
 
 export async function getReferralCode() {

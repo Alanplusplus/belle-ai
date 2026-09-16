@@ -147,6 +147,13 @@ export async function POST(req: NextRequest) {
         return NextResponse.json(data);
       }
 
+      case "checkin": {
+        const data = await proxyPost("/common/v1/web/checkin", {
+          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
+        });
+        return NextResponse.json(data);
+      }
+
       case "referral-code": {
         if (googleId) {
           const data = await proxyGet(`/common/v1/web/referral-code?google_user_id=${googleId}`);
