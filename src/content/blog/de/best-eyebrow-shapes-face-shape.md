@@ -1,7 +1,7 @@
 ---
 title: "Die besten Augenbrauenformen für jede Gesichtsform: Ein vollständiger Leitfaden"
 description: "Entdecken Sie, welche Augenbrauenformen ovale, runde, eckige, herzförmige und längliche Gesichter schmeicheln. Erfahren Sie, wie die Gesichtsform Ihre vorteilhaftesten Brauen bestimmt."
-date: 2026-09-17
+date: "2026-09-17"
 category: face_shape
 tags: ["Gesichtsform", "Augenbrauen", "Beauty", "Stilratgeber", "Make-up"]
 image: "/images/blog/best-eyebrow-shapes-face-shape.webp"

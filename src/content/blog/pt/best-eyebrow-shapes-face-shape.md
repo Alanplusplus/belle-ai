@@ -1,7 +1,7 @@
 ---
 title: "As melhores formas de sobrancelha para cada formato de rosto: guia completo"
 description: "Descubra quais formas de sobrancelha favorecem rostos ovais, redondos, quadrados, em coração e alongados. Aprenda como o formato do rosto determina as suas sobrancelhas mais favorecedoras."
-date: 2026-09-17
+date: "2026-09-17"
 category: face_shape
 tags: ["Formato de rosto", "Sobrancelha", "Beleza", "Guia de estilo", "Maquiagem"]
 image: "/images/blog/best-eyebrow-shapes-face-shape.webp"

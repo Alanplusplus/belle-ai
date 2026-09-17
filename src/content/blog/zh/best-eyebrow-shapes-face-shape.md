@@ -1,7 +1,7 @@
 ---
 title: "各脸型最佳眉形完整指南"
 description: "了解鹅蛋脸、圆脸、方脸、心形脸和长脸分别适合哪种眉形。读懂脸型与眉形之间的比例关系，找到最衬你的眉毛。"
-date: 2026-09-17
+date: "2026-09-17"
 category: face_shape
 tags: ["脸型", "眉毛", "美妆", "穿搭指南", "化妆"]
 image: "/images/blog/best-eyebrow-shapes-face-shape.webp"

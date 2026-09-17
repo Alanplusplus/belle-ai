@@ -1,7 +1,7 @@
 ---
 title: "Dáng lông mày phù hợp nhất cho mọi khuôn mặt: Hướng dẫn đầy đủ"
 description: "Khám phá dáng lông mày nào hợp với mặt trái xoan, tròn, vuông, trái tim và dài. Hiểu cách khuôn mặt quyết định dáng lông mày đẹp nhất cho bạn."
-date: 2026-09-17
+date: "2026-09-17"
 category: face_shape
 tags: ["Dạng khuôn mặt", "Lông mày", "Làm đẹp", "Hướng dẫn phong cách", "Trang điểm"]
 image: "/images/blog/best-eyebrow-shapes-face-shape.webp"

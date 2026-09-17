@@ -1,7 +1,7 @@
 ---
 title: "얼굴형별 어울리는 눈썹 모양 완벽 가이드"
 description: "계란형, 둥근형, 각진형, 하트형, 긴형 얼굴에 어울리는 눈썹 모양을 알아보세요. 얼굴형이 가장 잘 어울리는 눈썹을 어떻게 결정하는지 이해해 보세요."
-date: 2026-09-17
+date: "2026-09-17"
 category: face_shape
 tags: ["얼굴형", "눈썹", "뷰티", "스타일 가이드", "메이크업"]
 image: "/images/blog/best-eyebrow-shapes-face-shape.webp"

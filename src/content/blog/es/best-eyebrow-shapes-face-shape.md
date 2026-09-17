@@ -1,7 +1,7 @@
 ---
 title: "Las mejores formas de cejas para cada forma de rostro: guía completa"
 description: "Descubre qué formas de cejas favorecen rostros ovalados, redondos, cuadrados, en corazón y alargados. Aprende cómo la forma del rostro determina tus cejas más favorecedoras."
-date: 2026-09-17
+date: "2026-09-17"
 category: face_shape
 tags: ["Forma del rostro", "Cejas", "Belleza", "Guía de estilo", "Maquillaje"]
 image: "/images/blog/best-eyebrow-shapes-face-shape.webp"

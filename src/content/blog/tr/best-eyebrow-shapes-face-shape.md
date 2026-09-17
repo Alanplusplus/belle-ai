@@ -1,7 +1,7 @@
 ---
 title: "Her Yüz Şekli İçin En İyi Kaş Şekilleri: Eksiksiz Rehber"
 description: "Oval, yuvarlak, kare, kalp ve uzun yüzler için hangi kaş şekillerinin daha uygun olduğunu keşfedin. Yüz şeklinizin en uygun kaşlarını nasıl belirlediğini öğrenin."
-date: 2026-09-17
+date: "2026-09-17"
 category: face_shape
 tags: ["Yüz Şekli", "Kaş", "Güzellik", "Stil Rehberi", "Makyaj"]
 image: "/images/blog/best-eyebrow-shapes-face-shape.webp"

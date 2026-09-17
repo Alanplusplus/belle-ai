@@ -1,7 +1,7 @@
 ---
 title: "The Best Eyebrow Shapes for Every Face Shape: A Complete Guide"
 description: "Discover which eyebrow shapes flatter oval, round, square, heart, and oblong faces. Learn how face shape determines your most flattering brows."
-date: 2026-09-17
+date: "2026-09-17"
 category: face_shape
 tags: ["Face Shape", "Eyebrow", "Beauty", "Style Guide", "Makeup"]
 image: "/images/blog/best-eyebrow-shapes-face-shape.webp"

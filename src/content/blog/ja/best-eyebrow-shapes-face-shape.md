@@ -1,7 +1,7 @@
 ---
 title: "顔型別・似合う眉の形完全ガイド"
 description: "卵型、丸顔、四角型、ハート型、面長など、各顔型に似合う眉の形を解説。顔型と眉の関係を理解し、最も似合う眉を見つけましょう。"
-date: 2026-09-17
+date: "2026-09-17"
 category: face_shape
 tags: ["顔型", "眉毛", "ビューティー", "スタイルガイド", "メイク"]
 image: "/images/blog/best-eyebrow-shapes-face-shape.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Les meilleures formes de sourcils pour chaque forme de visage : guide complet"
 description: "Découvrez quelles formes de sourcils flattent les visages ovales, ronds, carrés, en cœur et allongés. Comprenez comment la forme du visage détermine vos sourcils les plus flatteurs."
-date: 2026-09-17
+date: "2026-09-17"
 category: face_shape
 tags: ["Forme du visage", "Sourcils", "Beauté", "Guide de style", "Maquillage"]
 image: "/images/blog/best-eyebrow-shapes-face-shape.webp"

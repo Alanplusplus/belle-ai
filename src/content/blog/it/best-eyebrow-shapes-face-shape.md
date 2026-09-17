@@ -1,7 +1,7 @@
 ---
 title: "Le migliori forme di sopracciglia per ogni forma del viso: guida completa"
 description: "Scopri quali forme di sopracciglia valorizzano visi ovali, rotondi, quadrati, a cuore e allungati. Capisci come la forma del viso determina le sopracciglia più favorevoli."
-date: 2026-09-17
+date: "2026-09-17"
 category: face_shape
 tags: ["Forma del viso", "Sopracciglia", "Bellezza", "Guida di stile", "Trucco"]
 image: "/images/blog/best-eyebrow-shapes-face-shape.webp"

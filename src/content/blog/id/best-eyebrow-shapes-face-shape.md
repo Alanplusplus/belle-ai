@@ -1,7 +1,7 @@
 ---
 title: "Bentuk Alis Terbaik untuk Setiap Bentuk Wajah: Panduan Lengkap"
 description: "Temukan bentuk alis yang cocok untuk wajah oval, bulat, persegi, hati, dan panjang. Pelajari bagaimana bentuk wajah menentukan alis paling cocok untuk Anda."
-date: 2026-09-17
+date: "2026-09-17"
 category: face_shape
 tags: ["Bentuk Wajah", "Alis", "Kecantikan", "Panduan Gaya", "Makeup"]
 image: "/images/blog/best-eyebrow-shapes-face-shape.webp"
