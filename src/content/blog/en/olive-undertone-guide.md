@@ -1,5 +1,6 @@
 ---
 title: "Olive Undertone: The Most Misunderstood Skin Tone Explained"
+seoTitle: "Olive Undertone Guide – How to Identify Olive Skin & Best Colors"
 description: "Think you might have olive undertones? This complete guide explains what olive undertone actually is, why it gets misidentified, and how to find your best colors in makeup, clothing, and hair."
 date: "2026-07-14"
 tags: ["olive undertone", "skin undertone", "personal color analysis", "beauty", "makeup"]

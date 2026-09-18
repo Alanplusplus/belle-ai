@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getPostBySlug, getAllSlugs } from "@/lib/blog";
+import { getPostBySlug, getAllSlugs, slugifyTag } from "@/lib/blog";
 import { Link } from "@/i18n/navigation";
 import { SITE_URL } from "@/lib/constants";
 import { canonicalUrl, buildAlternates, buildBreadcrumbJsonLd } from "@/lib/seo";
@@ -32,7 +32,7 @@ export async function generateMetadata({
   if (!post) return {};
 
   return {
-    title: post.title,
+    title: post.seoTitle || post.title,
     description: post.description,
     alternates: buildAlternates(locale, `/blog/${slug}`),
     openGraph: {
@@ -125,12 +125,13 @@ function BlogPostContent({ post }: { post: { date: string; readingTime: string; 
           {post.tags.length > 0 && (
             <div className="mt-4 flex flex-wrap gap-2">
               {post.tags.map((tag) => (
-                <span
+                <Link
                   key={tag}
-                  className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+                  href={`/blog/tag/${slugifyTag(tag)}`}
+                  className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary hover:bg-primary/20 transition-colors"
                 >
                   {tag}
-                </span>
+                </Link>
               ))}
             </div>
           )}

@@ -40,8 +40,8 @@ export async function generateMetadata({
 
   return {
     title: {
-      default: meta.homeTitle,
-      template: `%s | ${meta.siteName}`,
+      default: `${meta.homeTitle} | ${meta.siteName}`,
+      template: "%s",
     },
     description: meta.homeDescription,
     metadataBase: new URL(SITE_URL),

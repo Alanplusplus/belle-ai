@@ -1,5 +1,6 @@
 ---
 title: "Subtono Oliva Piel: Guía para Identificarlo"
+seoTitle: "Subtono Oliva Piel – Cómo Identificarlo y Mejores Colores"
 description: "¿Tienes subtono oliva? Aprende a identificarlo, por qué se confunde, y los mejores colores en maquillaje, ropa y pelo. Análisis AI gratis."
 date: "2026-07-14"
 tags: ["subtono oliva", "subtono oliva piel", "tono oliva", "análisis de color personal", "belleza"]

@@ -109,6 +109,15 @@ export function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 md:flex">
+          {/* Try Now CTA */}
+          <Link
+            href="/try"
+            className="mr-1 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-primary to-accent px-4 py-1.5 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:shadow-lg hover:shadow-primary/30 hover:brightness-110 active:scale-[0.97]"
+          >
+            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
+            {t("tryNow")}
+          </Link>
+
           <NavDropdown label={t("features")} items={features} />
           <NavDropdown label={t("tools")} items={tools} />
           <NavLink href="/blog">{t("blog")}</NavLink>
@@ -216,14 +225,6 @@ export function Header() {
 
                 {/* Menu items — shown for all users */}
                 <Link
-                  href="/try"
-                  className="flex items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-muted"
-                  onClick={() => setUserMenuOpen(false)}
-                >
-                  <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
-                  {t("tryNow")}
-                </Link>
-                <Link
                   href="/try#history"
                   className="flex items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-muted"
                   onClick={() => setUserMenuOpen(false)}
@@ -310,8 +311,19 @@ export function Header() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="border-t border-border bg-background px-4 pb-4 md:hidden">
-          <div className="space-y-1 py-2">
-            <p className="px-3 pt-2 text-xs font-semibold uppercase text-muted-foreground">
+          {/* Mobile Try Now CTA */}
+          <div className="py-3">
+            <Link
+              href="/try"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-accent px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-primary/20 transition active:scale-[0.97]"
+              onClick={() => setMobileOpen(false)}
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
+              {t("tryNow")}
+            </Link>
+          </div>
+          <div className="space-y-1">
+            <p className="px-3 text-xs font-semibold uppercase text-muted-foreground">
               {t("features")}
             </p>
             {features.map((f) => (
@@ -363,14 +375,6 @@ export function Header() {
 
           {/* Mobile quick actions — shown for all users */}
           <div className="mt-3 space-y-1 border-t border-border pt-3">
-            <Link
-              href="/try"
-              className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-primary hover:bg-muted"
-              onClick={() => setMobileOpen(false)}
-            >
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
-              {t("tryNow")}
-            </Link>
             <Link
               href="/try#history"
               className="flex items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-muted"

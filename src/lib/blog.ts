@@ -8,6 +8,7 @@ const CONTENT_DIR = path.join(process.cwd(), "src/content/blog");
 export interface BlogPost {
   slug: string;
   title: string;
+  seoTitle: string;
   description: string;
   date: string;
   tags: string[];
@@ -32,6 +33,7 @@ export function getAllPosts(locale: string): BlogPost[] {
       return {
         slug: file.replace(/\.md$/, ""),
         title: data.title || "",
+        seoTitle: data.seoTitle || "",
         description: data.description || "",
         date: data.date || "",
         tags: data.tags || [],
@@ -58,6 +60,7 @@ export function getPostBySlug(
   return {
     slug,
     title: data.title || "",
+    seoTitle: data.seoTitle || "",
     description: data.description || "",
     date: data.date || "",
     tags: data.tags || [],
@@ -75,4 +78,43 @@ export function getAllSlugs(locale: string): string[] {
     .readdirSync(dir)
     .filter((f) => f.endsWith(".md"))
     .map((f) => f.replace(/\.md$/, ""));
+}
+
+export function slugifyTag(tag: string): string {
+  return tag
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+}
+
+export function getAllTags(
+  locale: string
+): { tag: string; slug: string; count: number }[] {
+  const posts = getAllPosts(locale);
+  const tagMap = new Map<string, { tag: string; count: number }>();
+
+  for (const post of posts) {
+    for (const tag of post.tags) {
+      const normalized = tag.toLowerCase();
+      const existing = tagMap.get(normalized);
+      if (existing) {
+        existing.count++;
+      } else {
+        tagMap.set(normalized, { tag: normalized, count: 1 });
+      }
+    }
+  }
+
+  return Array.from(tagMap.values())
+    .map(({ tag, count }) => ({ tag, slug: slugifyTag(tag), count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export function getPostsByTag(locale: string, tagSlug: string): BlogPost[] {
+  const posts = getAllPosts(locale);
+  return posts.filter((post) =>
+    post.tags.some((t) => slugifyTag(t) === tagSlug)
+  );
 }

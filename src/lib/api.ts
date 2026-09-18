@@ -33,6 +33,8 @@ export interface WebInitData {
   subscription: { plan: string | null; status: string; remaining: number };
   total_remaining: number;
   checkin_available: boolean;
+  checkin_streak?: number;
+  checkin_max_streak?: number;
 }
 
 export type WebSignInData = WebInitData;
@@ -250,6 +252,9 @@ export interface CheckinData {
   checkin_available: boolean;
   total_remaining?: number;
   paid_credits?: number;
+  checkin_streak?: number;
+  checkin_max_streak?: number;
+  streak_bonus?: number;
 }
 
 export async function webCheckin() {

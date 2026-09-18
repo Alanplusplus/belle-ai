@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { getAllPosts } from "@/lib/blog";
+import { getAllPosts, slugifyTag } from "@/lib/blog";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import type { Metadata } from "next";
 
@@ -78,12 +78,14 @@ function BlogList({
                 key={post.slug}
                 className="group overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary/40 hover:shadow-md"
               >
-                <Link
-                  href={`/blog/${post.slug}`}
+                <div
                   className={`grid ${post.image ? "sm:grid-cols-[200px_1fr]" : ""}`}
                 >
                   {post.image && (
-                    <div className="relative hidden self-stretch overflow-hidden sm:block">
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="relative hidden self-stretch overflow-hidden sm:block"
+                    >
                       <Image
                         src={post.image}
                         alt={post.title}
@@ -91,36 +93,39 @@ function BlogList({
                         className="object-cover transition duration-300 group-hover:scale-105"
                         sizes="200px"
                       />
-                    </div>
+                    </Link>
                   )}
                   <div className="flex flex-1 flex-col justify-center p-4 sm:p-5">
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                      <time>{post.date}</time>
-                      <span>·</span>
-                      <span>
-                        {post.readingTime} {t("minRead")}
-                      </span>
-                    </div>
-                    <h2 className="mt-1.5 text-base font-semibold leading-snug group-hover:text-primary sm:text-lg">
-                      {post.title}
-                    </h2>
-                    <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
-                      {post.description}
-                    </p>
+                    <Link href={`/blog/${post.slug}`}>
+                      <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                        <time>{post.date}</time>
+                        <span>·</span>
+                        <span>
+                          {post.readingTime} {t("minRead")}
+                        </span>
+                      </div>
+                      <h2 className="mt-1.5 text-base font-semibold leading-snug group-hover:text-primary sm:text-lg">
+                        {post.title}
+                      </h2>
+                      <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
+                        {post.description}
+                      </p>
+                    </Link>
                     {post.tags.length > 0 && (
                       <div className="mt-2 flex flex-wrap gap-1.5">
                         {post.tags.map((tag: string) => (
-                          <span
+                          <Link
                             key={tag}
-                            className="rounded-full bg-muted px-2 py-0.5 text-xs text-muted-foreground"
+                            href={`/blog/tag/${slugifyTag(tag)}`}
+                            className="rounded-full bg-muted px-2 py-0.5 text-xs text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
                           >
                             {tag}
-                          </span>
+                          </Link>
                         ))}
                       </div>
                     )}
                   </div>
-                </Link>
+                </div>
               </article>
             ))}
           </div>

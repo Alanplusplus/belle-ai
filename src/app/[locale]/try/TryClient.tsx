@@ -21,7 +21,7 @@ import { getStoredReferralCode, storeReferralCode } from "@/lib/referral";
 import { SITE_URL } from "@/lib/constants";
 import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
 import { PricingModal } from "@/components/PricingModal";
-import { WelcomeOfferSheet } from "@/components/WelcomeOfferSheet";
+// import { WelcomeOfferSheet } from "@/components/WelcomeOfferSheet"; // Creem payment broken
 
 interface LightboxState {
   entry: HistoryEntry;
@@ -252,7 +252,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [backgroundTasks, setBackgroundTasks] = useState<BackgroundTask[]>([]);
   const [lastUploadedPhotoUrl, setLastUploadedPhotoUrl] = useState<string | null>(null);
   const [showTaskPanel, setShowTaskPanel] = useState(false);
-  const [showWelcomeOffer, setShowWelcomeOffer] = useState(false);
+  // const [showWelcomeOffer, setShowWelcomeOffer] = useState(false); // Creem payment broken
   const [examplePreview, setExamplePreview] = useState<string | null>(null);
 
   const [resolution, setResolution] = useState<Resolution>("2K");
@@ -263,6 +263,11 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [checkinAvailable, setCheckinAvailable] = useState(false);
   const [checkinLoading, setCheckinLoading] = useState(false);
   const [checkinJustDone, setCheckinJustDone] = useState(false);
+  const [checkinStreak, setCheckinStreak] = useState(0);
+  const [checkinMaxStreak, setCheckinMaxStreak] = useState(0);
+  const [streakBonus, setStreakBonus] = useState(0);
+  const [showInvitePopup, setShowInvitePopup] = useState(false);
+  const [invitePopupCopied, setInvitePopupCopied] = useState(false);
 
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -293,6 +298,17 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   }, []);
 
   useEffect(() => {
+    if (phase !== "done" || resultUrls.length === 0) return;
+    if (localStorage.getItem("belle_invite_popup_shown") === "true") return;
+
+    const timer = window.setTimeout(() => {
+      setShowInvitePopup(true);
+    }, 2000);
+
+    return () => window.clearTimeout(timer);
+  }, [phase, resultUrls.length]);
+
+  useEffect(() => {
     if (resumedRef.current) return;
     resumedRef.current = true;
 
@@ -307,6 +323,8 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           totalRemaining: data.total_remaining ?? data.web_quota.remaining,
         });
         setCheckinAvailable(data.checkin_available ?? false);
+        setCheckinStreak(data.checkin_streak ?? 0);
+        setCheckinMaxStreak(data.checkin_max_streak ?? 0);
         setIsReady(true);
 
         setHistoryLoading(true);
@@ -336,14 +354,15 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     });
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  useEffect(() => {
-    if (!isReady) return;
-    try {
-      if (localStorage.getItem("belle_welcome_offer_seen")) return;
-    } catch { return; }
-    const timer = setTimeout(() => setShowWelcomeOffer(true), 1500);
-    return () => clearTimeout(timer);
-  }, [isReady]);
+  // Creem payment broken — welcome offer disabled
+  // useEffect(() => {
+  //   if (!isReady) return;
+  //   try {
+  //     if (localStorage.getItem("belle_welcome_offer_seen")) return;
+  //   } catch { return; }
+  //   const timer = setTimeout(() => setShowWelcomeOffer(true), 1500);
+  //   return () => clearTimeout(timer);
+  // }, [isReady]);
 
   useEffect(() => {
     const isGenerating = phase === "uploading" || phase === "generating" || phase === "preparing";
@@ -654,6 +673,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         if (d.checked_in) {
           setCheckinAvailable(false);
           setCheckinJustDone(true);
+          setCheckinStreak(d.checkin_streak ?? 0);
+          setCheckinMaxStreak(d.checkin_max_streak ?? 0);
+          setStreakBonus(d.streak_bonus ?? 0);
           setTimeout(() => setCheckinJustDone(false), 3000);
           if (d.total_remaining != null) {
             setUserCredits((prev) => prev ? { ...prev, paid: d.paid_credits ?? prev.paid, totalRemaining: d.total_remaining! } : prev);
@@ -1024,41 +1046,70 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
             {userCredits.subPlan ? (
               <span className="inline-flex items-center gap-1">
                 <span className="rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-semibold text-primary uppercase">Pro</span>
-                {t("quotaInfo", { remaining: userCredits.totalRemaining, total: userCredits.subRemaining + userCredits.paid + (quota?.remaining ?? 0) })}
+                {t("quotaInfo", { remaining: userCredits.totalRemaining })}
               </span>
             ) : (
-              t("quotaInfo", { remaining: userCredits.totalRemaining, total: quota?.total ?? 1 })
+              t("quotaInfo", { remaining: userCredits.totalRemaining })
             )}
           </p>
         )}
         {!userCredits && quota && phase !== "done" && (
           <p className="mt-2 text-xs text-muted-foreground">
-            {t("quotaInfo", { remaining: quota.remaining, total: quota.total })}
+            {t("quotaInfo", { remaining: quota.remaining })}
           </p>
         )}
 
-        {/* Daily Check-in */}
-        {(checkinAvailable || checkinJustDone) && phase !== "uploading" && phase !== "generating" && phase !== "preparing" && (
-          <div className="mt-3">
+        {/* Check-in + Streak Section */}
+        {(checkinAvailable || checkinJustDone || checkinStreak > 0) && phase !== "uploading" && phase !== "generating" && phase !== "preparing" && (
+          <div className="mt-4 rounded-xl border border-amber-200/50 bg-gradient-to-r from-amber-50 to-orange-50 p-4">
+            {/* Streak counter */}
+            <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center gap-2">
+                <span className="text-xl">🔥</span>
+                <span className="font-semibold text-amber-800">
+                  {t("streakDays", { count: checkinStreak })}
+                </span>
+              </div>
+              {checkinMaxStreak > 0 && (
+                <span className="text-xs text-amber-600">
+                  {t("streakBest", { count: checkinMaxStreak })}
+                </span>
+              )}
+            </div>
+
+            {/* 7-day calendar strip */}
+            <div className="flex gap-1.5 mb-3">
+              {Array.from({ length: 7 }, (_, i) => {
+                const dayIndex = i + 1;
+                const isCompleted = dayIndex <= (checkinStreak % 7 || (checkinStreak > 0 && checkinStreak % 7 === 0 ? 7 : 0));
+                return (
+                  <div key={i} className={`flex-1 h-2 rounded-full ${isCompleted ? "bg-amber-400" : "bg-amber-200/50"}`} />
+                );
+              })}
+            </div>
+
+            {/* Milestone indicators */}
+            <div className="flex justify-between text-xs text-amber-600 mb-3">
+              <span>{checkinStreak >= 7 ? "✅" : `${Math.min(checkinStreak, 7)}/7`} {t("streakBonus7")}</span>
+              <span>{checkinStreak >= 30 ? "✅" : `${Math.min(checkinStreak, 30)}/30`} {t("streakBonus30")}</span>
+            </div>
+
+            {/* Check-in button */}
             {checkinJustDone ? (
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-green-300 bg-green-50 px-4 py-1.5 text-xs font-medium text-green-700 dark:border-green-700 dark:bg-green-900/20 dark:text-green-400">
-                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                {t("checkinDone")}
-              </span>
-            ) : (
+              <div className="flex items-center justify-center gap-2 rounded-lg bg-green-100 px-4 py-2 text-sm font-medium text-green-700">
+                <span>✓</span>
+                <span>{t("checkinDone")}</span>
+                {streakBonus > 0 && <span className="ml-1 font-bold">+{streakBonus} bonus!</span>}
+              </div>
+            ) : checkinAvailable ? (
               <button
                 onClick={handleCheckin}
                 disabled={checkinLoading}
-                className="inline-flex items-center gap-1.5 rounded-full border border-amber-300 bg-gradient-to-r from-amber-50 to-orange-50 px-4 py-1.5 text-xs font-medium text-amber-700 shadow-sm transition hover:shadow-md hover:from-amber-100 hover:to-orange-100 disabled:opacity-50 dark:border-amber-600 dark:from-amber-900/30 dark:to-orange-900/30 dark:text-amber-300"
+                className="w-full rounded-lg bg-amber-400 px-4 py-2 text-sm font-semibold text-amber-900 hover:bg-amber-500 transition-colors disabled:opacity-50"
               >
-                {checkinLoading ? (
-                  <Spinner />
-                ) : (
-                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-                )}
-                {t("checkinBtn")}
+                {checkinLoading ? "..." : t("checkinBtn")}
               </button>
-            )}
+            ) : null}
           </div>
         )}
 
@@ -1189,6 +1240,10 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
             ))}
           </div>
 
+          <div className="mt-6">
+            <InviteEarnBanner variant="card" referralCode={referralCode} />
+          </div>
+
           <div className="mt-4 flex justify-center">
             <button
               onClick={() => handleCorrectionOpen({ id: "current", status: "success", type: analysisType, image_urls: resultUrls, source_image_url: sourceImageUrl ?? undefined, created_at: Date.now() / 1000 })}
@@ -1240,9 +1295,6 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               <NoQuotaCard t={t} onViewPlans={() => { trackEvent("pricing_modal_opened", { source: "no_quota_result" }); setShowPricingModal(true); }} />
             </div>
           )}
-          <div className="mt-4 text-center">
-            <InviteEarnBanner />
-          </div>
         </div>
       )}
 
@@ -1371,23 +1423,186 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       {/* Pricing Modal */}
       <PricingModal open={showPricingModal} onClose={() => setShowPricingModal(false)} />
 
-      {/* Welcome Offer */}
-      <WelcomeOfferSheet open={showWelcomeOffer} onClose={() => setShowWelcomeOffer(false)} />
+      {/* Welcome Offer — disabled while Creem is broken */}
+      {/* <WelcomeOfferSheet open={showWelcomeOffer} onClose={() => setShowWelcomeOffer(false)} /> */}
+
+      {/* First-time invite popup */}
+      {showInvitePopup && (
+        <InvitePopup
+          referralCode={referralCode}
+          copied={invitePopupCopied}
+          onCopy={async () => {
+            const refUrl = referralCode ? `${SITE_URL}/try?ref=${referralCode}` : `${SITE_URL}/try`;
+            trackEvent("invite_earn_click", { source: "result_popup" });
+            await navigator.clipboard.writeText(refUrl);
+            setInvitePopupCopied(true);
+            setTimeout(() => setInvitePopupCopied(false), 2000);
+          }}
+          onDismiss={() => {
+            localStorage.setItem("belle_invite_popup_shown", "true");
+            setShowInvitePopup(false);
+          }}
+          t={t}
+        />
+      )}
     </div>
   );
 }
 
-function InviteEarnBanner() {
+function InviteEarnBanner({ variant = "compact", referralCode }: { variant?: "compact" | "card"; referralCode?: string | null }) {
   const t = useTranslations("tryPage");
+  const [linkCopied, setLinkCopied] = useState(false);
+
+  if (variant === "compact") {
+    return (
+      <Link
+        href="/referral"
+        className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary transition hover:bg-primary/10"
+        onClick={() => trackEvent("invite_earn_click", { source: "quota_area" })}
+      >
+        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z" /></svg>
+        {t("inviteEarn")}
+      </Link>
+    );
+  }
+
+  const refUrl = referralCode ? `${SITE_URL}/try?ref=${referralCode}` : null;
+  const shareText = t("shareText");
+  const shareTags = "BelleAI,ColorAnalysis,Beauty";
+
+  const handleCopyLink = async () => {
+    if (!refUrl) return;
+    trackEvent("invite_earn_click", { source: "result_card" });
+    await navigator.clipboard.writeText(refUrl);
+    setLinkCopied(true);
+    setTimeout(() => setLinkCopied(false), 2000);
+  };
+
+  const handlePlatformShare = (platform: typeof SHARE_PLATFORMS[number]) => {
+    if (!refUrl) return;
+    trackEvent("invite_earn_click", { source: "result_card" });
+    trackEvent("share_platform_click", { platform: platform.id });
+    const shareUrl = platform.id === "pinterest"
+      ? (platform.buildUrl as (u: string, txt: string, tg: string, m?: string) => string)(refUrl, shareText, shareTags)
+      : platform.buildUrl(refUrl, shareText, shareTags);
+    window.open(shareUrl, "_blank", "noopener,noreferrer,width=600,height=500");
+  };
+
   return (
-    <Link
-      href="/referral"
-      className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary transition hover:bg-primary/10"
-      onClick={() => trackEvent("invite_earn_click", { source: "quota_area" })}
-    >
-      <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z" /></svg>
-      {t("inviteEarn")}
-    </Link>
+    <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/10 via-violet-50/80 to-purple-50/60 p-5 shadow-sm dark:from-primary/15 dark:via-violet-950/30 dark:to-purple-950/20">
+      <div className="flex items-start gap-3">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
+          </svg>
+        </div>
+        <div className="flex-1 min-w-0">
+          <h3 className="font-serif text-base font-bold text-foreground">{t("inviteCardTitle")}</h3>
+          <p className="mt-1 text-sm font-medium text-primary">{t("inviteEarn")}</p>
+          <p className="mt-0.5 text-xs text-muted-foreground">{t("inviteCardDesc")}</p>
+        </div>
+      </div>
+
+      {refUrl ? (
+        <div className="mt-4 space-y-3">
+          <div className="flex items-center gap-2 rounded-xl border border-primary/15 bg-background/70 px-3 py-2">
+            <p className="flex-1 truncate text-xs text-muted-foreground">{refUrl}</p>
+            <button
+              onClick={handleCopyLink}
+              className="shrink-0 rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-primary/90"
+            >
+              {linkCopied ? t("linkCopied") : t("copyLink")}
+            </button>
+          </div>
+          <div className="grid grid-cols-4 gap-2">
+            {SHARE_PLATFORMS.map((platform) => (
+              <button
+                key={platform.id}
+                onClick={() => handlePlatformShare(platform)}
+                className="flex flex-col items-center gap-1 rounded-xl p-2 transition hover:bg-primary/5"
+              >
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-background/80 shadow-sm">
+                  {platform.icon}
+                </div>
+                <span className="text-[10px] text-muted-foreground">{platform.name.split(" ")[0]}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <Link
+          href="/referral"
+          onClick={() => trackEvent("invite_earn_click", { source: "result_card" })}
+          className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary/90"
+        >
+          {t("inviteEarn")}
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+        </Link>
+      )}
+    </div>
+  );
+}
+
+function InvitePopup({
+  referralCode,
+  copied,
+  onCopy,
+  onDismiss,
+  t,
+}: {
+  referralCode: string | null;
+  copied: boolean;
+  onCopy: () => void;
+  onDismiss: () => void;
+  t: (key: string) => string;
+}) {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = ""; };
+  }, []);
+
+  return (
+    <div className="fixed inset-0 z-[160] flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm" onClick={onDismiss}>
+      <div
+        className="w-full max-w-sm rounded-2xl border border-primary/20 bg-card p-6 shadow-2xl animate-in zoom-in-95"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="text-center">
+          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-violet-200/60 text-2xl">
+            🎉
+          </div>
+          <h3 className="font-serif text-xl font-bold">{t("invitePopupTitle")}</h3>
+          <p className="mt-2 text-sm text-muted-foreground">{t("invitePopupDesc")}</p>
+        </div>
+        <div className="mt-6 flex flex-col gap-2">
+          {referralCode ? (
+            <button
+              onClick={onCopy}
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark py-3 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
+              {copied ? t("linkCopied") : t("invitePopupCta")}
+            </button>
+          ) : (
+            <Link
+              href="/referral"
+              onClick={() => trackEvent("invite_earn_click", { source: "result_popup" })}
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark py-3 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+            >
+              {t("invitePopupCta")}
+            </Link>
+          )}
+          <button
+            onClick={onDismiss}
+            className="w-full rounded-full py-2.5 text-sm text-muted-foreground transition hover:bg-muted"
+          >
+            {t("invitePopupDismiss")}
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 

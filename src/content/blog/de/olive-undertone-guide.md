@@ -1,5 +1,6 @@
 ---
 title: "Olive Hautton: Oliv-Unterton erkennen & Farben"
+seoTitle: "Olive Hautton erkennen – Oliv-Unterton Farbberatung & beste Farben"
 description: "Haben Sie einen Oliv-Unterton? So erkennen Sie ihn, warum er oft falsch bestimmt wird und welche Farben in Make-up, Kleidung und Haar am besten passen."
 date: "2026-07-14"
 tags: ["olive Hautton", "Oliv-Unterton", "oliv Hautton", "Farbanalyse", "Beauty"]

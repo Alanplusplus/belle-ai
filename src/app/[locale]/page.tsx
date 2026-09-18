@@ -14,7 +14,7 @@ export async function generateMetadata({
   const meta = messages.meta;
 
   return {
-    title: meta.homeTitle,
+    title: `${meta.homeTitle} | ${meta.siteName}`,
     description: meta.homeDescription,
     alternates: buildAlternates(locale, ""),
   };
