@@ -22,7 +22,7 @@ import { getStoredReferralCode, storeReferralCode } from "@/lib/referral";
 import { SITE_URL } from "@/lib/constants";
 import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
 import { PricingModal } from "@/components/PricingModal";
-// import { WelcomeOfferSheet } from "@/components/WelcomeOfferSheet";
+import { WelcomeOfferSheet } from "@/components/WelcomeOfferSheet";
 
 interface LightboxState {
   entry: HistoryEntry;
@@ -253,7 +253,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [backgroundTasks, setBackgroundTasks] = useState<BackgroundTask[]>([]);
   const [lastUploadedPhotoUrl, setLastUploadedPhotoUrl] = useState<string | null>(null);
   const [showTaskPanel, setShowTaskPanel] = useState(false);
-  // const [showWelcomeOffer, setShowWelcomeOffer] = useState(false);
+  const [showWelcomeOffer, setShowWelcomeOffer] = useState(false);
   const [examplePreview, setExamplePreview] = useState<string | null>(null);
 
   const [resolution, setResolution] = useState<Resolution>("2K");
@@ -355,15 +355,14 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     });
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Welcome offer disabled
-  // useEffect(() => {
-  //   if (!isReady) return;
-  //   try {
-  //     if (localStorage.getItem("belle_welcome_offer_seen")) return;
-  //   } catch { return; }
-  //   const timer = setTimeout(() => setShowWelcomeOffer(true), 1500);
-  //   return () => clearTimeout(timer);
-  // }, [isReady]);
+  useEffect(() => {
+    if (!isReady) return;
+    try {
+      if (localStorage.getItem("belle_welcome_offer_seen")) return;
+    } catch { return; }
+    const timer = setTimeout(() => setShowWelcomeOffer(true), 1500);
+    return () => clearTimeout(timer);
+  }, [isReady]);
 
   useEffect(() => {
     const isGenerating = phase === "uploading" || phase === "generating" || phase === "preparing";
@@ -1424,8 +1423,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       {/* Pricing Modal */}
       <PricingModal open={showPricingModal} onClose={() => setShowPricingModal(false)} />
 
-      {/* Welcome Offer — disabled */}
-      {/* <WelcomeOfferSheet open={showWelcomeOffer} onClose={() => setShowWelcomeOffer(false)} /> */}
+      <WelcomeOfferSheet open={showWelcomeOffer} onClose={() => setShowWelcomeOffer(false)} />
 
       {/* First-time invite popup */}
       {showInvitePopup && (

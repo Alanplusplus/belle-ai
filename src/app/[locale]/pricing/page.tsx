@@ -176,9 +176,6 @@ export default async function PricingPage({
                 {t("yearlyBadge")}
               </span>
               <h3 className="text-xl font-bold">{t("yearly")}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">
-                {t("yearlyDesc")}
-              </p>
               <div className="mt-4">
                 <span className="text-4xl font-bold">{t("yearlyPrice")}</span>
                 <span className="text-muted-foreground">{t("yearlyPer")}</span>
@@ -216,9 +213,6 @@ export default async function PricingPage({
 
               {/* 30 Credits */}
               <div className="rounded-2xl border border-border bg-card p-6">
-                <span className="inline-block rounded-full bg-muted px-2.5 py-0.5 text-xs font-semibold text-muted-foreground mb-2">
-                  {t("largeBestValue")}
-                </span>
                 <h3 className="text-xl font-bold">{t("largePack")}</h3>
                 <div className="mt-4">
                   <span className="text-4xl font-bold text-primary">{t("largePrice")}</span>

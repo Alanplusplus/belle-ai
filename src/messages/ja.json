@@ -338,13 +338,13 @@
   "welcomeOffer": {
     "title": "Belle AI へようこそ",
     "subtitle": "あなた専用のビューティー分析が待っています",
-    "discountBadge": "67% OFF",
-    "offerPrice": "$0.99",
-    "originalPrice": "$2.99",
-    "packDesc": "AI ビューティーレポート 5回分",
-    "firstPurchase": "初回購入限定 · 有効期限なし",
+    "trialBadge": "3日間無料",
+    "planName": "ウィークリー Pro",
+    "planPrice": "$3.99/週",
+    "planDesc": "週50回分析 · 4K解像度 · 修正・再生成",
+    "trialNote": "3日間無料、その後 $3.99/週。いつでもキャンセル可能。",
     "freeReminder": "無料分析が2回あります。まずお試しください！",
-    "cta": "$0.99 オファーを獲得",
+    "cta": "無料トライアルを開始",
     "skip": "まず無料で試す"
   },
   "quiz": {

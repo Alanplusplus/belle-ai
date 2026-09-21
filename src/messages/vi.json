@@ -338,13 +338,13 @@
   "welcomeOffer": {
     "title": "Chào mừng đến Belle AI",
     "subtitle": "Phân tích sắc đẹp cá nhân đang chờ bạn",
-    "discountBadge": "67% OFF",
-    "offerPrice": "$0.99",
-    "originalPrice": "$2.99",
-    "packDesc": "5 báo cáo sắc đẹp AI",
-    "firstPurchase": "Chỉ lần mua đầu tiên · Không hết hạn",
+    "trialBadge": "Miễn phí 3 ngày",
+    "planName": "Tuần Pro",
+    "planPrice": "$3.99/tuần",
+    "planDesc": "50 phân tích mỗi tuần · Độ phân giải 4K · Chỉnh sửa",
+    "trialNote": "Miễn phí 3 ngày, sau đó $3.99/tuần. Hủy bất cứ lúc nào.",
     "freeReminder": "Bạn đã có 2 lần phân tích miễn phí — hãy thử trước!",
-    "cta": "Nhận ưu đãi $0.99",
+    "cta": "Bắt đầu dùng thử miễn phí",
     "skip": "Dùng lượt miễn phí trước"
   },
   "quiz": {

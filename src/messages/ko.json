@@ -338,13 +338,13 @@
   "welcomeOffer": {
     "title": "Belle AI에 오신 것을 환영합니다",
     "subtitle": "나만의 뷰티 분석이 준비되었습니다",
-    "discountBadge": "67% OFF",
-    "offerPrice": "$0.99",
-    "originalPrice": "$2.99",
-    "packDesc": "AI 뷰티 리포트 5회",
-    "firstPurchase": "첫 구매 한정 · 만료 없음",
+    "trialBadge": "3일 무료",
+    "planName": "위클리 Pro",
+    "planPrice": "$3.99/주",
+    "planDesc": "주 50회 분석 · 4K 해상도 · 수정 및 재생성",
+    "trialNote": "3일 무료 후 $3.99/주. 언제든 취소 가능.",
     "freeReminder": "무료 분석 2회가 있습니다. 먼저 체험해보세요!",
-    "cta": "$0.99 혜택 받기",
+    "cta": "무료 체험 시작",
     "skip": "먼저 무료로 사용하기"
   },
   "quiz": {

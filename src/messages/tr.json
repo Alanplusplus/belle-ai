@@ -338,13 +338,13 @@
   "welcomeOffer": {
     "title": "Belle AI'ye Hoş Geldiniz",
     "subtitle": "Kişisel güzellik analiziniz hazır",
-    "discountBadge": "67% OFF",
-    "offerPrice": "$0.99",
-    "originalPrice": "$2.99",
-    "packDesc": "5 AI güzellik raporu",
-    "firstPurchase": "Yalnızca ilk satın alma · Süresiz geçerli",
+    "trialBadge": "3 gün ücretsiz",
+    "planName": "Haftalık Pro",
+    "planPrice": "$3.99/hafta",
+    "planDesc": "Haftada 50 analiz · 4K çözünürlük · Düzeltmeler",
+    "trialNote": "3 gün ücretsiz, sonra $3.99/hafta. İstediğiniz zaman iptal edin.",
     "freeReminder": "2 ücretsiz analiziniz var — önce bunları deneyin!",
-    "cta": "$0.99'a teklifi al",
+    "cta": "Ücretsiz denemeyi başlat",
     "skip": "Önce ücretsiz deneyin"
   },
   "quiz": {

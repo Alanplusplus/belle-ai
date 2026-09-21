@@ -338,13 +338,13 @@
   "welcomeOffer": {
     "title": "Bienvenida a Belle AI",
     "subtitle": "Tu análisis de belleza personalizado te espera",
-    "discountBadge": "67% OFF",
-    "offerPrice": "$0.99",
-    "originalPrice": "$2.99",
-    "packDesc": "5 informes de belleza con IA",
-    "firstPurchase": "Solo primera compra · Sin caducidad",
+    "trialBadge": "3 días gratis",
+    "planName": "Semanal Pro",
+    "planPrice": "$3.99/semana",
+    "planDesc": "50 análisis por semana · Resolución 4K · Correcciones",
+    "trialNote": "Gratis 3 días, luego $3.99/semana. Cancela cuando quieras.",
     "freeReminder": "Ya tienes 2 análisis gratis — ¡pruébalos primero!",
-    "cta": "Obtener oferta $0.99",
+    "cta": "Iniciar prueba gratuita",
     "skip": "Usar mis análisis gratis"
   },
   "quiz": {

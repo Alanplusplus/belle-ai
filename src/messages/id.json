@@ -338,13 +338,13 @@
   "welcomeOffer": {
     "title": "Selamat datang di Belle AI",
     "subtitle": "Analisis kecantikan pribadimu sudah siap",
-    "discountBadge": "67% OFF",
-    "offerPrice": "$0.99",
-    "originalPrice": "$2.99",
-    "packDesc": "5 laporan kecantikan AI",
-    "firstPurchase": "Hanya pembelian pertama · Tidak ada kedaluwarsa",
+    "trialBadge": "Gratis 3 hari",
+    "planName": "Mingguan Pro",
+    "planPrice": "$3.99/minggu",
+    "planDesc": "50 analisis per minggu · Resolusi 4K · Koreksi",
+    "trialNote": "Gratis 3 hari, lalu $3.99/minggu. Batalkan kapan saja.",
     "freeReminder": "Kamu punya 2 analisis gratis — coba dulu!",
-    "cta": "Dapatkan penawaran $0.99",
+    "cta": "Mulai uji coba gratis",
     "skip": "Gunakan gratis dulu"
   },
   "quiz": {

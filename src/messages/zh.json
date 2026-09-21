@@ -338,13 +338,13 @@
   "welcomeOffer": {
     "title": "欢迎来到 Belle AI",
     "subtitle": "你的专属美学报告已准备好",
-    "discountBadge": "67% OFF",
-    "offerPrice": "$0.99",
-    "originalPrice": "$2.99",
-    "packDesc": "5 次 AI 美学分析",
-    "firstPurchase": "仅限首次购买 · 永久有效",
+    "trialBadge": "免费试用 3 天",
+    "planName": "周订阅 Pro",
+    "planPrice": "$3.99/周",
+    "planDesc": "每周 50 次分析 · 4K 分辨率 · 修正重生成",
+    "trialNote": "免费试用 3 天，之后 $3.99/周，随时取消。",
     "freeReminder": "你已有 2 次免费分析机会，可以先体验！",
-    "cta": "领取 $0.99 优惠",
+    "cta": "开始免费试用",
     "skip": "先用免费次数试试"
   },
   "quiz": {
