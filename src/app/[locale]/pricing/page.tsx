@@ -61,36 +61,36 @@ export default async function PricingPage({
       },
       {
         "@type": "Offer",
-        name: "Monthly",
-        price: "9.99",
+        name: "Weekly",
+        price: "3.99",
         priceCurrency: "USD",
-        description: "200 analyses per month, 4K resolution",
+        description: "50 analyses per week, 4K resolution",
         availability: "https://schema.org/InStock",
         priceValidUntil: new Date(new Date().getFullYear() + 1, 0, 1).toISOString().split("T")[0],
       },
       {
         "@type": "Offer",
         name: "Yearly",
-        price: "39.99",
+        price: "29.99",
         priceCurrency: "USD",
-        description: "200 analyses per month, 4K resolution, billed yearly",
+        description: "50 analyses per week, 4K resolution, billed yearly",
         availability: "https://schema.org/InStock",
         priceValidUntil: new Date(new Date().getFullYear() + 1, 0, 1).toISOString().split("T")[0],
       },
       {
         "@type": "Offer",
-        name: "5 Credits",
-        price: "2.99",
+        name: "10 Credits",
+        price: "3.99",
         priceCurrency: "USD",
-        description: "5 one-time credits, never expire",
+        description: "10 one-time credits, never expire",
         availability: "https://schema.org/InStock",
       },
       {
         "@type": "Offer",
-        name: "12 Credits",
-        price: "5.99",
+        name: "30 Credits",
+        price: "9.99",
         priceCurrency: "USD",
-        description: "12 one-time credits, never expire",
+        description: "30 one-time credits, never expire",
         availability: "https://schema.org/InStock",
       },
     ],
@@ -148,27 +148,26 @@ export default async function PricingPage({
         <PricingTabs labels={[t("tabSubscription"), t("tabCredits")]}>
           {/* Tab 1: Subscriptions */}
           <div className="grid gap-6 md:grid-cols-2">
-            {/* Monthly - highlighted */}
+            {/* Weekly - highlighted */}
             <div className="relative rounded-2xl border-2 border-primary bg-card p-6 shadow-lg">
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-green-500 px-3 py-0.5 text-xs font-semibold text-white">
-                {t("monthlyOfferBadge")}
+                {t("weeklyTrialBadge")}
               </span>
-              <h3 className="text-xl font-bold">{t("monthly")}</h3>
+              <h3 className="text-xl font-bold">{t("weekly")}</h3>
               <p className="mt-1 text-sm text-muted-foreground">
-                {t("monthlyDesc")}
+                {t("weeklyDesc")}
               </p>
               <div className="mt-4">
-                <span className="text-base text-muted-foreground line-through mr-2">{t("monthlyPrice")}</span>
-                <span className="text-4xl font-bold text-primary">{t("monthlyOfferPrice")}</span>
-                <span className="text-muted-foreground">{t("monthlyPer")}</span>
+                <span className="text-4xl font-bold text-primary">{t("weeklyPrice")}</span>
+                <span className="text-muted-foreground">{t("weeklyPer")}</span>
               </div>
-              <p className="mt-2 text-sm text-muted-foreground">{t("monthlyFirstMonth")}</p>
+              <p className="mt-2 text-sm text-muted-foreground">{t("weeklyTrialNote")}</p>
               <ul className="mt-4 space-y-3">
-                <PricingFeature text={t("monthlyFeature1")} />
-                <PricingFeature text={t("monthlyFeature2")} />
-                <PricingFeature text={t("monthlyFeature3")} />
+                <PricingFeature text={t("weeklyFeature1")} />
+                <PricingFeature text={t("weeklyFeature2")} />
+                <PricingFeature text={t("weeklyFeature3")} />
               </ul>
-              <PricingButtons product="monthly" variant="primary" label={t("monthlyCta")} />
+              <PricingButtons product="weekly" variant="primary" label={t("weeklyCta")} />
             </div>
 
             {/* Yearly */}
@@ -203,24 +202,23 @@ export default async function PricingPage({
               </p>
             </div>
             <div className="mx-auto grid max-w-2xl gap-6 md:grid-cols-2">
-              {/* 5 Credits - with first-buy discount */}
-              <div className="relative rounded-2xl border-2 border-primary bg-card p-6 shadow-lg">
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-green-500 px-3 py-0.5 text-xs font-semibold text-white">
-                  {t("smallFirstBuyNote")}
-                </span>
+              {/* 10 Credits */}
+              <div className="rounded-2xl border-2 border-primary bg-card p-6 shadow-lg">
                 <h3 className="text-xl font-bold">{t("smallPack")}</h3>
                 <div className="mt-4">
-                  <span className="text-base text-muted-foreground line-through mr-2">{t("smallPrice")}</span>
-                  <span className="text-4xl font-bold text-primary">{t("smallFirstBuyPrice")}</span>
+                  <span className="text-4xl font-bold text-primary">{t("smallPrice")}</span>
                 </div>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  {t("smallPrice")} {t("creditsNeverExpire")}
+                  {t("creditsNeverExpire")}
                 </p>
-                <PricingButtons product="credits5" variant="primary" label={t("creditsCta")} />
+                <PricingButtons product="credits10" variant="primary" label={t("creditsCta")} />
               </div>
 
-              {/* 12 Credits */}
+              {/* 30 Credits */}
               <div className="rounded-2xl border border-border bg-card p-6">
+                <span className="inline-block rounded-full bg-muted px-2.5 py-0.5 text-xs font-semibold text-muted-foreground mb-2">
+                  {t("largeBestValue")}
+                </span>
                 <h3 className="text-xl font-bold">{t("largePack")}</h3>
                 <div className="mt-4">
                   <span className="text-4xl font-bold text-primary">{t("largePrice")}</span>
@@ -228,7 +226,7 @@ export default async function PricingPage({
                 <p className="mt-2 text-sm text-muted-foreground">
                   {t("creditsNeverExpire")}
                 </p>
-                <PricingButtons product="credits12" variant="outline" label={t("creditsCta")} />
+                <PricingButtons product="credits30" variant="outline" label={t("creditsCta")} />
               </div>
             </div>
           </div>
@@ -299,14 +297,13 @@ export default async function PricingPage({
         {/* Payment badge */}
         <div className="mt-10 flex justify-center">
           <a
-            href="https://www.creem.io/"
+            href="https://www.paddle.com/"
             target="_blank"
             rel="noopener"
-            className="inline-flex items-center gap-1.5 rounded-[10px] border-2 border-[#151617] bg-[#F5F2F0] px-3.5 py-2 shadow-[0_2px_0_0_#151617] transition hover:shadow-[0_1px_0_0_#151617] hover:translate-y-[1px] no-underline"
+            className="inline-flex items-center gap-1.5 rounded-[10px] border border-border bg-muted/50 px-3.5 py-2 transition hover:bg-muted no-underline"
           >
-            <span className="text-[13px] font-semibold leading-none text-[#5b5c5e]">Payments secured by</span>
-            <CreemLogo />
-            <span className="text-[13px] font-bold leading-none text-[#151617]">Creem</span>
+            <span className="text-[13px] font-semibold leading-none text-muted-foreground">Payments secured by</span>
+            <span className="text-[13px] font-bold leading-none text-foreground">Paddle</span>
           </a>
         </div>
 
@@ -361,10 +358,3 @@ function PricingFeature({ text }: { text: string }) {
   );
 }
 
-function CreemLogo() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 121 121" fill="none" aria-hidden="true" className="block flex-shrink-0">
-      <path d="M22.1102 11C24.1187 11 25.9669 12.0982 26.9281 13.8619L51.2059 58.4106C52.5699 60.9134 55.7048 61.8368 58.2077 60.473C60.7108 59.109 61.6342 55.9742 60.2701 53.4712L41.5466 19.113C39.554 15.4566 42.2004 11 46.3645 11H103.806C107.885 11 110.539 15.2933 108.715 18.9416L65.0579 106.254C63.0356 110.298 57.2654 110.298 55.2431 106.254L11.5863 18.9416C9.76212 15.2933 12.4156 11 16.4946 11H22.1102Z" fill="#B09CFB" />
-    </svg>
-  );
-}

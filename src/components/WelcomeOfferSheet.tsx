@@ -2,9 +2,10 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { openCheckout } from "@creem_io/embed";
 import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
 import { getCachedUserId, webInit } from "@/lib/api";
+import { PADDLE_PRICES } from "@/lib/constants";
+import { getPaddle } from "@/lib/paddle-client";
 
 const STORAGE_KEY = "belle_welcome_offer_seen";
 
@@ -49,26 +50,21 @@ export function WelcomeOfferSheet({ open, onClose }: Props) {
         alert("Please try again.");
         return;
       }
-      const res = await fetch("/api/creem/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ product: "credits5", userId }),
-      });
-      const data = await res.json();
-      if (data.checkoutUrl) {
-        openCheckout({
-          checkoutUrl: data.checkoutUrl,
-          theme: "light",
-          onComplete: () => {
-            trackCheckoutEvent("checkout_completed", { product: "credits5", source: "welcome_offer" });
-            handleDismiss();
-            window.location.reload();
-          },
-          onClose: () => {
-            trackCheckoutEvent("checkout_cancelled", { product: "credits5", source: "welcome_offer" });
-          },
-        });
+      const paddle = await getPaddle();
+      if (!paddle) {
+        alert("Payment system loading, please try again.");
+        return;
       }
+      paddle.Checkout.open({
+        items: [{ priceId: PADDLE_PRICES.credits10, quantity: 1 }],
+        customData: { userId },
+        settings: {
+          displayMode: "overlay",
+          variant: "one-page",
+          successUrl: `${window.location.origin}/en/payment/success`,
+        },
+      });
+      trackCheckoutEvent("checkout_opened", { product: "credits10", source: "welcome_offer" });
     } catch {
       /* ignore */
     } finally {

@@ -1,19 +1,29 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.aicoloranalysis.io";
 
-export const CREEM_PRODUCTS = {
-  monthly: process.env.CREEM_PRODUCT_MONTHLY!,
-  yearly: process.env.CREEM_PRODUCT_YEARLY!,
-  credits5: process.env.CREEM_PRODUCT_5CREDITS!,
-  credits12: process.env.CREEM_PRODUCT_12CREDITS!,
+export const PADDLE_PRICES = {
+  weekly: process.env.PADDLE_PRICE_WEEKLY!,
+  yearly: process.env.PADDLE_PRICE_YEARLY!,
+  credits10: process.env.PADDLE_PRICE_10CREDITS!,
+  credits30: process.env.PADDLE_PRICE_30CREDITS!,
 } as const;
 
-export type CreemProductKey = keyof typeof CREEM_PRODUCTS;
+export type PaddlePriceKey = keyof typeof PADDLE_PRICES;
 
-export const FIRST_MONTH_DISCOUNT_CODE = process.env.CREEM_FIRST_MONTH_DISCOUNT || "FIRST90";
-export const FIRST_MONTH_DISCOUNT_PERCENT = 90;
+export const CREDITS_MAP: Record<string, number> = {
+  [process.env.PADDLE_PRICE_10CREDITS!]: 10,
+  [process.env.PADDLE_PRICE_30CREDITS!]: 30,
+};
 
-export const CREDITS5_FIRST_BUY_DISCOUNT_CODE = process.env.CREEM_CREDITS5_FIRST_BUY_DISCOUNT || "CREDITS5FIRST";
-export const CREDITS5_FIRST_BUY_PRICE = "$0.99";
+export const SUBSCRIPTION_PRICES = new Set([
+  process.env.PADDLE_PRICE_WEEKLY!,
+  process.env.PADDLE_PRICE_YEARLY!,
+]);
+
+export function determinePlan(priceId: string): string {
+  if (priceId === process.env.PADDLE_PRICE_WEEKLY) return "weekly";
+  if (priceId === process.env.PADDLE_PRICE_YEARLY) return "yearly";
+  return "unknown";
+}
 
 export const LOCALES = [
   "en", "zh", "ja", "ko",

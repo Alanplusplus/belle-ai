@@ -3,7 +3,8 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { openCheckout } from "@creem_io/embed";
+import { getPaddle } from "@/lib/paddle-client";
+import { PADDLE_PRICES } from "@/lib/constants";
 import {
   webInit,
   uploadImage,
@@ -21,7 +22,7 @@ import { getStoredReferralCode, storeReferralCode } from "@/lib/referral";
 import { SITE_URL } from "@/lib/constants";
 import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
 import { PricingModal } from "@/components/PricingModal";
-// import { WelcomeOfferSheet } from "@/components/WelcomeOfferSheet"; // Creem payment broken
+// import { WelcomeOfferSheet } from "@/components/WelcomeOfferSheet";
 
 interface LightboxState {
   entry: HistoryEntry;
@@ -252,7 +253,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [backgroundTasks, setBackgroundTasks] = useState<BackgroundTask[]>([]);
   const [lastUploadedPhotoUrl, setLastUploadedPhotoUrl] = useState<string | null>(null);
   const [showTaskPanel, setShowTaskPanel] = useState(false);
-  // const [showWelcomeOffer, setShowWelcomeOffer] = useState(false); // Creem payment broken
+  // const [showWelcomeOffer, setShowWelcomeOffer] = useState(false);
   const [examplePreview, setExamplePreview] = useState<string | null>(null);
 
   const [resolution, setResolution] = useState<Resolution>("2K");
@@ -354,7 +355,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     });
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Creem payment broken — welcome offer disabled
+  // Welcome offer disabled
   // useEffect(() => {
   //   if (!isReady) return;
   //   try {
@@ -1423,7 +1424,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       {/* Pricing Modal */}
       <PricingModal open={showPricingModal} onClose={() => setShowPricingModal(false)} />
 
-      {/* Welcome Offer — disabled while Creem is broken */}
+      {/* Welcome Offer — disabled */}
       {/* <WelcomeOfferSheet open={showWelcomeOffer} onClose={() => setShowWelcomeOffer(false)} /> */}
 
       {/* First-time invite popup */}
@@ -1625,25 +1626,23 @@ function NoQuotaCard({ t, onViewPlans }: { t: (key: string) => string; onViewPla
         setLoading(null);
         return;
       }
-      const res = await fetch("/api/creem/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ product, userId }),
-      });
-      const data = await res.json();
-      if (data.checkoutUrl) {
-        openCheckout({
-          checkoutUrl: data.checkoutUrl,
-          theme: "light",
-          onComplete: () => {
-            trackCheckoutEvent("checkout_completed", { product, source: "no_quota_card" });
-            window.location.reload();
-          },
-          onClose: () => {
-            trackCheckoutEvent("checkout_cancelled", { product, source: "no_quota_card" });
-          },
-        });
+      const paddle = await getPaddle();
+      if (!paddle) {
+        alert("Payment system loading, please try again.");
+        return;
       }
+      const priceId = PADDLE_PRICES[product as keyof typeof PADDLE_PRICES];
+      if (!priceId) return;
+      paddle.Checkout.open({
+        items: [{ priceId, quantity: 1 }],
+        customData: { userId },
+        settings: {
+          displayMode: "overlay",
+          variant: "one-page",
+          successUrl: `${window.location.origin}/en/payment/success`,
+        },
+      });
+      trackCheckoutEvent("checkout_opened", { product, source: "no_quota_card" });
     } catch { /* ignore */ } finally {
       setLoading(null);
     }
@@ -1655,18 +1654,18 @@ function NoQuotaCard({ t, onViewPlans }: { t: (key: string) => string; onViewPla
       <p className="mt-1 text-sm text-amber-700">{t("noQuotaDesc")}</p>
       <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <button
-          onClick={() => handleBuy("credits5")}
+          onClick={() => handleBuy("credits10")}
           disabled={loading !== null}
           className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:opacity-50"
         >
-          {loading === "credits5" ? t("processing") : t("buy5Credits")}
+          {loading === "credits10" ? t("processing") : t("buy10Credits")}
         </button>
         <button
-          onClick={() => handleBuy("credits12")}
+          onClick={() => handleBuy("credits30")}
           disabled={loading !== null}
           className="inline-flex items-center gap-2 rounded-full border-2 border-primary px-6 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 disabled:opacity-50"
         >
-          {loading === "credits12" ? t("processing") : t("buy12Credits")}
+          {loading === "credits30" ? t("processing") : t("buy30Credits")}
         </button>
       </div>
       <button

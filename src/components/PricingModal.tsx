@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { openCheckout } from "@creem_io/embed";
 import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
 import { getCachedUserId, webInit } from "@/lib/api";
-import type { CreemProductKey } from "@/lib/constants";
+import { PADDLE_PRICES, type PaddlePriceKey } from "@/lib/constants";
+import { getPaddle } from "@/lib/paddle-client";
 
 interface Props {
   open: boolean;
@@ -19,9 +19,8 @@ export function PricingModal({ open, onClose }: Props) {
 
   if (!open) return null;
 
-  const handleCheckout = async (product: CreemProductKey) => {
+  const handleCheckout = async (product: PaddlePriceKey) => {
     trackEvent("pricing_modal_cta_clicked", { product });
-
     setLoading(product);
     trackCheckoutEvent("checkout_started", { product, source: "pricing_modal" });
     try {
@@ -36,25 +35,25 @@ export function PricingModal({ open, onClose }: Props) {
         alert("Please try again.");
         return;
       }
-      const res = await fetch("/api/creem/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ product, userId }),
-      });
-      const data = await res.json();
-      if (data.checkoutUrl) {
-        openCheckout({
-          checkoutUrl: data.checkoutUrl,
-          theme: "light",
-          onComplete: () => {
-            trackCheckoutEvent("checkout_completed", { product, source: "pricing_modal" });
-            window.location.reload();
-          },
-          onClose: () => {
-            trackCheckoutEvent("checkout_cancelled", { product, source: "pricing_modal" });
-          },
-        });
+
+      const paddle = await getPaddle();
+      if (!paddle) {
+        alert("Payment system loading, please try again.");
+        return;
       }
+
+      const priceId = PADDLE_PRICES[product];
+      paddle.Checkout.open({
+        items: [{ priceId, quantity: 1 }],
+        customData: { userId },
+        settings: {
+          displayMode: "overlay",
+          variant: "one-page",
+          successUrl: `${window.location.origin}/en/payment/success`,
+        },
+      });
+
+      trackCheckoutEvent("checkout_opened", { product, source: "pricing_modal" });
     } catch {
       /* ignore */
     } finally {
@@ -106,29 +105,28 @@ export function PricingModal({ open, onClose }: Props) {
         <div className="mt-5">
           {tab === 0 ? (
             <div className="grid gap-4 sm:grid-cols-2">
-              {/* Monthly - highlighted */}
+              {/* Weekly - highlighted */}
               <div className="relative rounded-xl border-2 border-primary bg-card p-5">
                 <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 rounded-full bg-green-500 px-2.5 py-0.5 text-[11px] font-semibold text-white">
-                  {t("monthlyOfferBadge")}
+                  {t("weeklyTrialBadge")}
                 </span>
-                <h3 className="text-lg font-bold">{t("monthly")}</h3>
+                <h3 className="text-lg font-bold">{t("weekly")}</h3>
                 <div className="mt-2">
-                  <span className="text-sm text-muted-foreground line-through mr-1.5">{t("monthlyPrice")}</span>
-                  <span className="text-3xl font-bold text-primary">{t("monthlyOfferPrice")}</span>
-                  <span className="text-sm text-muted-foreground">{t("monthlyPer")}</span>
+                  <span className="text-3xl font-bold text-primary">{t("weeklyPrice")}</span>
+                  <span className="text-sm text-muted-foreground">{t("weeklyPer")}</span>
                 </div>
-                <p className="mt-1 text-xs text-muted-foreground">{t("monthlyFirstMonth")}</p>
+                <p className="mt-1 text-xs text-muted-foreground">{t("weeklyTrialNote")}</p>
                 <ul className="mt-3 space-y-1.5">
-                  <ModalFeature text={t("monthlyFeature1")} />
-                  <ModalFeature text={t("monthlyFeature2")} />
-                  <ModalFeature text={t("monthlyFeature3")} />
+                  <ModalFeature text={t("weeklyFeature1")} />
+                  <ModalFeature text={t("weeklyFeature2")} />
+                  <ModalFeature text={t("weeklyFeature3")} />
                 </ul>
                 <button
-                  onClick={() => handleCheckout("monthly")}
+                  onClick={() => handleCheckout("weekly")}
                   disabled={loading !== null}
                   className="mt-4 w-full rounded-full bg-primary py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-50"
                 >
-                  {loading === "monthly" ? <LoadingDots /> : t("monthlyCta")}
+                  {loading === "weekly" ? <LoadingDots /> : t("weeklyCta")}
                 </button>
               </div>
 
@@ -158,39 +156,38 @@ export function PricingModal({ open, onClose }: Props) {
             </div>
           ) : (
             <div className="grid gap-4 sm:grid-cols-2">
-              {/* 5 Credits */}
-              <div className="relative rounded-xl border-2 border-primary bg-card p-5">
-                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 rounded-full bg-green-500 px-2.5 py-0.5 text-[11px] font-semibold text-white">
-                  {t("smallFirstBuyNote")}
-                </span>
+              {/* 10 Credits */}
+              <div className="rounded-xl border-2 border-primary bg-card p-5">
                 <h3 className="text-lg font-bold">{t("smallPack")}</h3>
                 <div className="mt-2">
-                  <span className="text-sm text-muted-foreground line-through mr-1.5">{t("smallPrice")}</span>
-                  <span className="text-3xl font-bold text-primary">{t("smallFirstBuyPrice")}</span>
+                  <span className="text-3xl font-bold text-primary">{t("smallPrice")}</span>
                 </div>
                 <p className="mt-2 text-xs text-muted-foreground">{t("creditsNeverExpire")}</p>
                 <button
-                  onClick={() => handleCheckout("credits5")}
+                  onClick={() => handleCheckout("credits10")}
                   disabled={loading !== null}
                   className="mt-4 w-full rounded-full bg-primary py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-50"
                 >
-                  {loading === "credits5" ? <LoadingDots /> : t("creditsCta")}
+                  {loading === "credits10" ? <LoadingDots /> : t("creditsCta")}
                 </button>
               </div>
 
-              {/* 12 Credits */}
+              {/* 30 Credits */}
               <div className="rounded-xl border border-border bg-card p-5">
+                <span className="inline-block rounded-full bg-muted px-2 py-0.5 text-[11px] font-semibold text-muted-foreground mb-1">
+                  {t("largeBestValue")}
+                </span>
                 <h3 className="text-lg font-bold">{t("largePack")}</h3>
                 <div className="mt-2">
                   <span className="text-3xl font-bold text-primary">{t("largePrice")}</span>
                 </div>
                 <p className="mt-2 text-xs text-muted-foreground">{t("creditsNeverExpire")}</p>
                 <button
-                  onClick={() => handleCheckout("credits12")}
+                  onClick={() => handleCheckout("credits30")}
                   disabled={loading !== null}
                   className="mt-4 w-full rounded-full border border-primary py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 disabled:opacity-50"
                 >
-                  {loading === "credits12" ? <LoadingDots /> : t("creditsCta")}
+                  {loading === "credits30" ? <LoadingDots /> : t("creditsCta")}
                 </button>
               </div>
             </div>

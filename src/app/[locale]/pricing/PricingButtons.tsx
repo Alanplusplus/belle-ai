@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { openCheckout } from "@creem_io/embed";
-import type { CreemProductKey } from "@/lib/constants";
+import type { PaddlePriceKey } from "@/lib/constants";
+import { PADDLE_PRICES } from "@/lib/constants";
 import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
 import { getCachedUserId, webInit } from "@/lib/api";
+import { getPaddle } from "@/lib/paddle-client";
 
 interface Props {
-  product: CreemProductKey;
+  product: PaddlePriceKey;
   variant: "primary" | "outline" | "small";
   label: string;
 }
@@ -17,7 +18,6 @@ export function PricingButtons({ product, variant, label }: Props) {
 
   const handleClick = async () => {
     trackEvent("pricing_cta_clicked", { product, variant });
-
     trackCheckoutEvent("checkout_started", { product, source: "pricing_page" });
     setLoading(true);
     try {
@@ -32,32 +32,28 @@ export function PricingButtons({ product, variant, label }: Props) {
         alert("Please try again.");
         return;
       }
-      const res = await fetch("/api/creem/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ product, userId }),
-      });
-      const data = await res.json();
 
-      if (data.checkoutUrl) {
-        openCheckout({
-          checkoutUrl: data.checkoutUrl,
-          theme: "light",
-          onComplete: () => {
-            trackCheckoutEvent("checkout_completed", { product, source: "pricing_page" });
-            window.location.href = "/en/payment/success";
-          },
-          onClose: () => {
-            trackCheckoutEvent("checkout_cancelled", { product, source: "pricing_page" });
-          },
-        });
-      } else {
-        trackCheckoutEvent("checkout_failed", { product, error: data.error || "unknown" });
-        alert(data.error || "Failed to create checkout");
+      const paddle = await getPaddle();
+      if (!paddle) {
+        alert("Payment system loading, please try again.");
+        return;
       }
+
+      const priceId = PADDLE_PRICES[product];
+      paddle.Checkout.open({
+        items: [{ priceId, quantity: 1 }],
+        customData: { userId },
+        settings: {
+          displayMode: "overlay",
+          variant: "one-page",
+          successUrl: `${window.location.origin}/en/payment/success`,
+        },
+      });
+
+      trackCheckoutEvent("checkout_opened", { product, source: "pricing_page" });
     } catch {
-      trackCheckoutEvent("checkout_failed", { product, error: "network_error" });
-      alert("Network error. Please try again.");
+      trackCheckoutEvent("checkout_failed", { product, error: "paddle_error" });
+      alert("Failed to open checkout. Please try again.");
     } finally {
       setLoading(false);
     }

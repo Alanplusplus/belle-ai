@@ -29,15 +29,13 @@ export function Header() {
     setUserMenuOpen(false);
     setPortalLoading(true);
     try {
-      const res = await fetch("/api/creem/portal");
+      const res = await fetch("/api/paddle/portal");
       const data = await res.json();
       if (res.ok && data.portalUrl) {
         window.open(data.portalUrl, "_blank", "noopener,noreferrer");
-      } else {
-        window.open("https://app.creem.io/portal", "_blank", "noopener,noreferrer");
       }
     } catch {
-      window.open("https://app.creem.io/portal", "_blank", "noopener,noreferrer");
+      console.error("Failed to open billing portal");
     } finally {
       setPortalLoading(false);
     }
