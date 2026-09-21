@@ -1,27 +1,27 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.aicoloranalysis.io";
 
 export const PADDLE_PRICES = {
-  weekly: process.env.PADDLE_PRICE_WEEKLY!,
-  yearly: process.env.PADDLE_PRICE_YEARLY!,
-  credits10: process.env.PADDLE_PRICE_10CREDITS!,
-  credits30: process.env.PADDLE_PRICE_30CREDITS!,
+  weekly: process.env.NEXT_PUBLIC_PADDLE_PRICE_WEEKLY!,
+  yearly: process.env.NEXT_PUBLIC_PADDLE_PRICE_YEARLY!,
+  credits10: process.env.NEXT_PUBLIC_PADDLE_PRICE_10CREDITS!,
+  credits30: process.env.NEXT_PUBLIC_PADDLE_PRICE_30CREDITS!,
 } as const;
 
 export type PaddlePriceKey = keyof typeof PADDLE_PRICES;
 
 export const CREDITS_MAP: Record<string, number> = {
-  [process.env.PADDLE_PRICE_10CREDITS!]: 10,
-  [process.env.PADDLE_PRICE_30CREDITS!]: 30,
+  [process.env.NEXT_PUBLIC_PADDLE_PRICE_10CREDITS!]: 10,
+  [process.env.NEXT_PUBLIC_PADDLE_PRICE_30CREDITS!]: 30,
 };
 
 export const SUBSCRIPTION_PRICES = new Set([
-  process.env.PADDLE_PRICE_WEEKLY!,
-  process.env.PADDLE_PRICE_YEARLY!,
+  process.env.NEXT_PUBLIC_PADDLE_PRICE_WEEKLY!,
+  process.env.NEXT_PUBLIC_PADDLE_PRICE_YEARLY!,
 ]);
 
 export function determinePlan(priceId: string): string {
-  if (priceId === process.env.PADDLE_PRICE_WEEKLY) return "weekly";
-  if (priceId === process.env.PADDLE_PRICE_YEARLY) return "yearly";
+  if (priceId === process.env.NEXT_PUBLIC_PADDLE_PRICE_WEEKLY) return "weekly";
+  if (priceId === process.env.NEXT_PUBLIC_PADDLE_PRICE_YEARLY) return "yearly";
   return "unknown";
 }
 
