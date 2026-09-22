@@ -3,8 +3,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { getPaddle } from "@/lib/paddle-client";
-import { PADDLE_PRICES } from "@/lib/constants";
+import type { ProductKey } from "@/lib/constants";
 import {
   webInit,
   uploadImage,
@@ -1624,22 +1623,16 @@ function NoQuotaCard({ t, onViewPlans }: { t: (key: string) => string; onViewPla
         setLoading(null);
         return;
       }
-      const paddle = await getPaddle();
-      if (!paddle) {
-        alert("Payment system loading, please try again.");
-        return;
-      }
-      const priceId = PADDLE_PRICES[product as keyof typeof PADDLE_PRICES];
-      if (!priceId) return;
-      paddle.Checkout.open({
-        items: [{ priceId, quantity: 1 }],
-        customData: { userId },
-        settings: {
-          displayMode: "overlay",
-          variant: "one-page",
-          successUrl: `${window.location.origin}/en/payment/success`,
-        },
+      const res = await fetch("/api/waffo/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ product: product as ProductKey, userId }),
       });
+      const data = await res.json();
+      if (!res.ok || !data.checkoutUrl) {
+        throw new Error(data.error || "Checkout failed");
+      }
+      window.open(data.checkoutUrl, "_blank", "noopener,noreferrer");
       trackCheckoutEvent("checkout_opened", { product, source: "no_quota_card" });
     } catch { /* ignore */ } finally {
       setLoading(null);

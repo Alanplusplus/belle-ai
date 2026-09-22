@@ -4,8 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
 import { getCachedUserId, webInit } from "@/lib/api";
-import { PADDLE_PRICES, type PaddlePriceKey } from "@/lib/constants";
-import { getPaddle } from "@/lib/paddle-client";
+import type { ProductKey } from "@/lib/constants";
 
 interface Props {
   open: boolean;
@@ -19,7 +18,7 @@ export function PricingModal({ open, onClose }: Props) {
 
   if (!open) return null;
 
-  const handleCheckout = async (product: PaddlePriceKey) => {
+  const handleCheckout = async (product: ProductKey) => {
     trackEvent("pricing_modal_cta_clicked", { product });
     setLoading(product);
     trackCheckoutEvent("checkout_started", { product, source: "pricing_modal" });
@@ -36,22 +35,16 @@ export function PricingModal({ open, onClose }: Props) {
         return;
       }
 
-      const paddle = await getPaddle();
-      if (!paddle) {
-        alert("Payment system loading, please try again.");
-        return;
-      }
-
-      const priceId = PADDLE_PRICES[product];
-      paddle.Checkout.open({
-        items: [{ priceId, quantity: 1 }],
-        customData: { userId },
-        settings: {
-          displayMode: "overlay",
-          variant: "one-page",
-          successUrl: `${window.location.origin}/en/payment/success`,
-        },
+      const res = await fetch("/api/waffo/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ product, userId }),
       });
+      const data = await res.json();
+      if (!res.ok || !data.checkoutUrl) {
+        throw new Error(data.error || "Checkout failed");
+      }
+      window.open(data.checkoutUrl, "_blank", "noopener,noreferrer");
 
       trackCheckoutEvent("checkout_opened", { product, source: "pricing_modal" });
     } catch {

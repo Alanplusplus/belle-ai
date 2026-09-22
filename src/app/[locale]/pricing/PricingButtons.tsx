@@ -1,16 +1,27 @@
 "use client";
 
 import { useState } from "react";
-import type { PaddlePriceKey } from "@/lib/constants";
-import { PADDLE_PRICES } from "@/lib/constants";
+import type { ProductKey } from "@/lib/constants";
 import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
 import { getCachedUserId, webInit } from "@/lib/api";
-import { getPaddle } from "@/lib/paddle-client";
 
 interface Props {
-  product: PaddlePriceKey;
+  product: ProductKey;
   variant: "primary" | "outline" | "small";
   label: string;
+}
+
+async function openCheckout(product: ProductKey, userId: string, email?: string) {
+  const res = await fetch("/api/waffo/checkout", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ product, userId, email }),
+  });
+  const data = await res.json();
+  if (!res.ok || !data.checkoutUrl) {
+    throw new Error(data.error || "Checkout failed");
+  }
+  window.open(data.checkoutUrl, "_blank", "noopener,noreferrer");
 }
 
 export function PricingButtons({ product, variant, label }: Props) {
@@ -33,26 +44,10 @@ export function PricingButtons({ product, variant, label }: Props) {
         return;
       }
 
-      const paddle = await getPaddle();
-      if (!paddle) {
-        alert("Payment system loading, please try again.");
-        return;
-      }
-
-      const priceId = PADDLE_PRICES[product];
-      paddle.Checkout.open({
-        items: [{ priceId, quantity: 1 }],
-        customData: { userId },
-        settings: {
-          displayMode: "overlay",
-          variant: "one-page",
-          successUrl: `${window.location.origin}/en/payment/success`,
-        },
-      });
-
+      await openCheckout(product, userId);
       trackCheckoutEvent("checkout_opened", { product, source: "pricing_page" });
     } catch {
-      trackCheckoutEvent("checkout_failed", { product, error: "paddle_error" });
+      trackCheckoutEvent("checkout_failed", { product, error: "waffo_error" });
       alert("Failed to open checkout. Please try again.");
     } finally {
       setLoading(false);

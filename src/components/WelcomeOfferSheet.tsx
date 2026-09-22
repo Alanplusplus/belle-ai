@@ -4,8 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
 import { getCachedUserId, webInit } from "@/lib/api";
-import { PADDLE_PRICES } from "@/lib/constants";
-import { getPaddle } from "@/lib/paddle-client";
 
 const STORAGE_KEY = "belle_welcome_offer_seen";
 
@@ -50,20 +48,16 @@ export function WelcomeOfferSheet({ open, onClose }: Props) {
         alert("Please try again.");
         return;
       }
-      const paddle = await getPaddle();
-      if (!paddle) {
-        alert("Payment system loading, please try again.");
-        return;
-      }
-      paddle.Checkout.open({
-        items: [{ priceId: PADDLE_PRICES.weekly, quantity: 1 }],
-        customData: { userId },
-        settings: {
-          displayMode: "overlay",
-          variant: "one-page",
-          successUrl: `${window.location.origin}/en/payment/success`,
-        },
+      const res = await fetch("/api/waffo/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ product: "weekly", userId }),
       });
+      const data = await res.json();
+      if (!res.ok || !data.checkoutUrl) {
+        throw new Error(data.error || "Checkout failed");
+      }
+      window.open(data.checkoutUrl, "_blank", "noopener,noreferrer");
       trackCheckoutEvent("checkout_opened", { product: "weekly", source: "welcome_offer" });
     } catch {
       /* ignore */

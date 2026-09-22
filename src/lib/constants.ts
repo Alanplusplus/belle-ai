@@ -1,27 +1,27 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.aicoloranalysis.io";
 
-export const PADDLE_PRICES = {
-  weekly: process.env.NEXT_PUBLIC_PADDLE_PRICE_WEEKLY!,
-  yearly: process.env.NEXT_PUBLIC_PADDLE_PRICE_YEARLY!,
-  credits10: process.env.NEXT_PUBLIC_PADDLE_PRICE_10CREDITS!,
-  credits30: process.env.NEXT_PUBLIC_PADDLE_PRICE_30CREDITS!,
+export const WAFFO_PRODUCTS = {
+  weekly: { id: process.env.WAFFO_PRODUCT_WEEKLY!, type: "subscription" as const },
+  yearly: { id: process.env.WAFFO_PRODUCT_YEARLY!, type: "subscription" as const },
+  credits10: { id: process.env.WAFFO_PRODUCT_10CREDITS!, type: "onetime" as const },
+  credits30: { id: process.env.WAFFO_PRODUCT_30CREDITS!, type: "onetime" as const },
 } as const;
 
-export type PaddlePriceKey = keyof typeof PADDLE_PRICES;
+export type ProductKey = keyof typeof WAFFO_PRODUCTS;
 
 export const CREDITS_MAP: Record<string, number> = {
-  [process.env.NEXT_PUBLIC_PADDLE_PRICE_10CREDITS!]: 10,
-  [process.env.NEXT_PUBLIC_PADDLE_PRICE_30CREDITS!]: 30,
+  [process.env.WAFFO_PRODUCT_10CREDITS!]: 10,
+  [process.env.WAFFO_PRODUCT_30CREDITS!]: 30,
 };
 
-export const SUBSCRIPTION_PRICES = new Set([
-  process.env.NEXT_PUBLIC_PADDLE_PRICE_WEEKLY!,
-  process.env.NEXT_PUBLIC_PADDLE_PRICE_YEARLY!,
+export const SUBSCRIPTION_PRODUCT_IDS = new Set([
+  process.env.WAFFO_PRODUCT_WEEKLY!,
+  process.env.WAFFO_PRODUCT_YEARLY!,
 ]);
 
-export function determinePlan(priceId: string): string {
-  if (priceId === process.env.NEXT_PUBLIC_PADDLE_PRICE_WEEKLY) return "weekly";
-  if (priceId === process.env.NEXT_PUBLIC_PADDLE_PRICE_YEARLY) return "yearly";
+export function determinePlan(productId: string): string {
+  if (productId === process.env.WAFFO_PRODUCT_WEEKLY) return "weekly";
+  if (productId === process.env.WAFFO_PRODUCT_YEARLY) return "yearly";
   return "unknown";
 }
 

@@ -23,22 +23,11 @@ export function Header() {
   const langRef = useRef<HTMLDivElement>(null);
   const userMenuRef = useRef<HTMLDivElement>(null);
   const fetchedRef = useRef(false);
-  const [portalLoading, setPortalLoading] = useState(false);
+  const portalLoading = false;
 
-  const openCustomerPortal = async () => {
+  const openCustomerPortal = () => {
     setUserMenuOpen(false);
-    setPortalLoading(true);
-    try {
-      const res = await fetch("/api/paddle/portal");
-      const data = await res.json();
-      if (res.ok && data.portalUrl) {
-        window.open(data.portalUrl, "_blank", "noopener,noreferrer");
-      }
-    } catch {
-      console.error("Failed to open billing portal");
-    } finally {
-      setPortalLoading(false);
-    }
+    window.location.href = `/${locale}/pricing`;
   };
 
   useEffect(() => {

@@ -291,13 +291,13 @@ export default async function PricingPage({
         {/* Payment badge */}
         <div className="mt-10 flex justify-center">
           <a
-            href="https://www.paddle.com/"
+            href="https://waffo.ai/"
             target="_blank"
             rel="noopener"
             className="inline-flex items-center gap-1.5 rounded-[10px] border border-border bg-muted/50 px-3.5 py-2 transition hover:bg-muted no-underline"
           >
             <span className="text-[13px] font-semibold leading-none text-muted-foreground">Payments secured by</span>
-            <span className="text-[13px] font-bold leading-none text-foreground">Paddle</span>
+            <span className="text-[13px] font-bold leading-none text-foreground">Waffo</span>
           </a>
         </div>
 
