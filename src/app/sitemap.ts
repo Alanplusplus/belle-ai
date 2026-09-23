@@ -72,6 +72,7 @@ const STATIC_PAGE_SOURCE: Record<string, string> = {
   "/about": "src/app/[locale]/about/page.tsx",
   "/privacy": "src/app/[locale]/privacy/page.tsx",
   "/terms": "src/app/[locale]/terms/page.tsx",
+  "/acceptable-use": "src/app/[locale]/acceptable-use/page.tsx",
 };
 
 const staticPageDates = new Map<string, Date>();

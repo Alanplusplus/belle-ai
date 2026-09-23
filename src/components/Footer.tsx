@@ -194,6 +194,14 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/acceptable-use"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {ft("acceptableUse")}
+                </Link>
+              </li>
+              <li>
                 <a
                   href="mailto:support@aicoloranalysis.io"
                   className="text-muted-foreground hover:text-foreground"
