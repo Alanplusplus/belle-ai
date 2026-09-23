@@ -4,6 +4,13 @@ description: "The complete guide to personal color analysis with the 12-season s
 date: "2026-07-04"
 tags: ["personal color analysis", "seasonal color", "color theory", "beauty guide", "12 season color analysis"]
 image: "/images/blog/personal-color-analysis-guide.webp"
+faq:
+  - q: "What is personal color analysis?"
+    a: "Personal color analysis (also called seasonal color analysis) identifies which colors look most flattering on you based on your skin's undertone, hair color, and eye color. The 12-season system classifies people into types like Soft Autumn, Deep Winter, or Light Spring, each with a specific best-color palette."
+  - q: "How many color seasons are there?"
+    a: "The most widely used system has 12 seasons: 4 main families (Spring, Summer, Autumn, Winter) each divided into 3 sub-seasons. For example, Autumn includes Soft Autumn, True (Warm) Autumn, and Deep Autumn. Each sub-season has a distinct palette of 30-50 best colors."
+  - q: "Can I do color analysis with AI?"
+    a: "Yes. AI color analysis uses your photo to detect skin undertone, eye color, and hair color, then matches you to your 12-season type. It's faster and more accessible than in-person draping — and free tools like Belle AI give results in 60 seconds."
 ---
 
 ## What Is Personal Color Analysis?

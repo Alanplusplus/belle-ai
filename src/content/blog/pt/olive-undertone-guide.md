@@ -1,9 +1,17 @@
 ---
 title: "Subtom Oliva: O Tom de Pele Mais Mal Entendido Explicado"
-description: "Acha que pode ter subtom oliva? Este guia completo explica o que subtom oliva realmente é, por que é mal identificado e como encontrar suas melhores cores em maquiagem, roupas e cabelo."
+seoTitle: "Subtom oliva? 5 sinais claros + teste de IA grátis"
+description: "Nem ouro nem prata fica bem? Base quente fica alaranjada e fria fica rosada? Você pode ter subtom oliva. 5 sinais claros e teste de IA gratuito em 60 segundos."
 date: "2026-07-14"
 tags: ["subtom oliva", "subtom de pele", "análise de coloração pessoal", "beleza", "maquiagem"]
 image: "/images/blog/olive-undertone-guide.webp"
+faq:
+  - q: "Como sei se tenho subtom oliva?"
+    a: "Procure 5 sinais: suas veias parecem azuis e verdes ao mesmo tempo, nem ouro nem prata fica perfeito, bases quentes ficam alaranjadas e frias ficam rosadas, sua pele tem um tom esverdeado ou acinzentado na luz natural, e você bronzeia em tom oliva ou cáqui."
+  - q: "O subtom oliva é quente ou frio?"
+    a: "O oliva não é quente nem frio — é um modificador que se sobrepõe ao seu subtom base. Você pode ser oliva-quente (reflexo verde-dourado) ou oliva-frio (reflexo verde-acinzentado). Por isso testes padrão costumam dar resultados confusos."
+  - q: "Quais cores combinam com pele oliva?"
+    a: "Peles oliva ficam melhor com tons terrosos e suaves: verde oliva, terracota, rosa antigo, taupe quente e azul petróleo profundo. Evite neons e pastéis claros que podem deixar a pele oliva sem vida."
 ---
 
 ## Por Que Ninguém Fala Sobre Subtom Oliva

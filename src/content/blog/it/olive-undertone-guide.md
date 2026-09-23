@@ -1,9 +1,17 @@
 ---
 title: "Subtono olivastro: il tono di pelle più frainteso spiegato"
-description: "Pensi di avere un subtono olivastro? Questa guida completa spiega cos'è davvero il subtono olivastro, perché viene identificato male e come trovare i tuoi colori migliori in trucco, abbigliamento e capelli."
+seoTitle: "Subtono olivastro? 5 segnali chiari + test IA gratuito"
+description: "Né l'oro né l'argento ti stanno bene? Fondotinta caldo arancione, freddo rosa? Potresti avere un subtono olivastro. 5 segnali chiari + test IA gratuito."
 date: "2026-07-14"
 tags: ["subtono olivastro", "subtono della pelle", "analisi del colore personale", "beauty", "trucco"]
 image: "/images/blog/olive-undertone-guide.webp"
+faq:
+  - q: "Come capisco se ho un subtono olivastro?"
+    a: "Cerca 5 segnali: le vene appaiono sia blu che verdi, né l'oro né l'argento ti stanno perfettamente, i fondotinta caldi virano all'arancione e quelli freddi al rosa, la pelle ha un riflesso verdastro o grigiastro alla luce naturale, e l'abbronzatura tende all'olivastro o al kaki."
+  - q: "Il subtono olivastro è caldo o freddo?"
+    a: "L'olivastro non è né caldo né freddo — è un modificatore che si sovrappone al tuo subtono di base. Puoi essere oliva-caldo (riflesso verde-dorato) o oliva-freddo (riflesso verde-grigio). Per questo i test standard danno risultati confusi."
+  - q: "Quali colori stanno bene con la pelle olivastra?"
+    a: "La pelle olivastra sta benissimo con toni terrosi e smorzati: verde oliva, terracotta, rosa cipria, taupe caldo e blu petrolio profondo. Evita i neon e i pastelli brillanti che possono spegnere il colorito olivastro."
 ---
 
 ## Perché nessuno parla dei subtoni olivastri

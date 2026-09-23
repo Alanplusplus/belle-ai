@@ -1,10 +1,17 @@
 ---
 title: "Olive Skin by Ethnicity: How Olive Undertones Present Across Cultures"
-seoTitle: "Olive Skin Asian, Mediterranean & More – Olive Tone by Ethnicity"
-description: "Olive skin appears across ethnicities — Mediterranean, East Asian, South Asian, Middle Eastern, Latinx. Learn how melanin depth interacts with olive undertone in diverse skin."
+seoTitle: "Olive Skin Across Ethnicities — Asian, Mediterranean, Latinx & More"
+description: "Olive undertones appear in every ethnicity but look different at each melanin depth. See how olive skin presents in Asian, Mediterranean, South Asian, and Latinx skin."
 date: "2026-09-18"
 tags: ["olive undertone", "dark skin", "personal color analysis", "beauty", "skin tone"]
 image: "/images/blog/olive-skin-by-ethnicity.webp"
+faq:
+  - q: "Which ethnicities have olive skin?"
+    a: "Olive skin appears across many ethnicities including Mediterranean (Greek, Italian, Turkish), East Asian (Korean, Japanese, Chinese), South Asian (Indian), Middle Eastern (Lebanese, Iranian), and Latinx (Mexican, Brazilian). Olive undertone is about pigment composition, not racial background."
+  - q: "Can dark skin have olive undertones?"
+    a: "Yes. Olive undertones appear at every melanin depth. In deeper skin, the green cast is harder to spot visually but still affects which colors look flattering. Deep-olive skin often gets mistyped as neutral or warm."
+  - q: "How does olive skin look different across ethnicities?"
+    a: "The olive modifier looks the same (green or gray-green cast), but melanin depth changes how it presents. Light-olive skin shows a visible green tinge; medium-olive has a warm khaki quality; deep-olive may look grayish or ashy instead of obviously green."
 ---
 
 ## Olive Skin Is Global — But Beauty Advice Isn't

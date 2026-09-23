@@ -1,6 +1,7 @@
 ---
 title: "Winter Color Palettes Decoded: Deep Winter vs True Winter vs Bright Winter"
-description: "Confused about your Winter sub-season? Learn the key differences between Deep Winter, True Winter, and Bright Winter — including best colors, styling tips, and how to identify which one you are."
+seoTitle: "Deep vs True vs Bright Winter — Which Winter Are You? (Side-by-Side)"
+description: "Know you're a Winter but not which kind? Compare Deep, True, and Bright Winter side by side — defining differences, best colors, and a free AI quiz."
 date: "2026-08-06"
 tags: ["personal color analysis", "winter color palette", "color season", "beauty", "style guide"]
 image: "/images/blog/winter-color-palettes-decoded.webp"
@@ -238,6 +239,14 @@ AI-powered color analysis tools have made this much more accessible. Platforms l
 - When in doubt, try the muted vs clear test: if muted colors always make you look dull, you're confirmed Winter. Your brightness preference reveals your sub-season.
 
 Knowing your specific Winter sub-season changes everything about how you shop, do your makeup, and put outfits together. You're not just "a Winter wearing dark colors" — you're a specific flavor of cool drama, and dressing for your exact type is the difference between looking good and looking *magnetic*.
+
+## Find Your Exact Winter Sub-Season
+
+Descriptions aren't enough? Our [free AI color analysis](/color-analysis) identifies your exact Winter sub-season from a selfie — in 60 seconds, no signup.
+
+[Take the Free AI Color Analysis →](/try)
+
+---
 
 ## Related Articles
 

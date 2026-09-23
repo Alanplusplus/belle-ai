@@ -5,6 +5,11 @@ import readingTime from "reading-time";
 
 const CONTENT_DIR = path.join(process.cwd(), "src/content/blog");
 
+export interface FaqItem {
+  q: string;
+  a: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -16,6 +21,7 @@ export interface BlogPost {
   readingTime: string;
   content: string;
   locale: string;
+  faq: FaqItem[];
 }
 
 export function getAllPosts(locale: string): BlogPost[] {
@@ -41,6 +47,7 @@ export function getAllPosts(locale: string): BlogPost[] {
         readingTime: Math.ceil(stats.minutes).toString(),
         content,
         locale,
+        faq: Array.isArray(data.faq) ? data.faq : [],
       };
     })
     .sort((a, b) => (a.date > b.date ? -1 : 1));
@@ -68,6 +75,7 @@ export function getPostBySlug(
     readingTime: Math.ceil(stats.minutes).toString(),
     content,
     locale,
+    faq: Array.isArray(data.faq) ? data.faq : [],
   };
 }
 

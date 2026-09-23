@@ -1,7 +1,7 @@
 ---
 title: "Olive vs Neutral Undertone: How to Tell the Difference"
-seoTitle: "Olive vs Neutral Undertone – Key Differences & How to Identify"
-description: "Is your skin olive or neutral? Learn why olive gets misidentified as neutral, the key differences in green cast and foundation matching, and how to distinguish via draping."
+seoTitle: "Olive vs Neutral Undertone — How to Tell Which One You Actually Have"
+description: "Told you're neutral but foundations still look off? You might be olive. See the 3 key differences — green cast, foundation behavior, and draping results."
 date: "2026-09-18"
 tags: ["olive undertone", "neutral undertone", "skin undertone", "color analysis", "beauty"]
 image: "/images/blog/olive-vs-neutral-undertone.webp"

@@ -1,6 +1,7 @@
 ---
 title: "Autumn Color Palettes Decoded: Deep Autumn vs True Autumn vs Soft Autumn"
-description: "Deep, True, or Soft Autumn? Compare all 3 sub-seasons side by side — best colors, makeup picks, and how to tell them apart instantly."
+seoTitle: "Deep vs True vs Soft Autumn — Which Autumn Are You? (Side-by-Side)"
+description: "Know you're an Autumn but can't tell which kind? Compare Deep, True (Warm), and Soft Autumn side by side — key differences, best colors, and a free AI quiz."
 date: "2026-08-03"
 tags: ["personal color analysis", "autumn color palette", "color season", "beauty", "style guide"]
 image: "/images/blog/autumn-color-palettes-decoded.webp"
@@ -241,6 +242,16 @@ Today, AI-powered color analysis tools can examine your skin undertone, eye colo
 - When in doubt, try the depth test: your sub-season is revealed by how much color weight your features can carry without being overpowered.
 
 Understanding your specific Autumn sub-season transforms how you shop, how you get dressed in the morning, and how confident you feel walking out the door. You're not just "an Autumn" — you're a specific shade of warm, and knowing exactly which one unlocks a wardrobe that genuinely works for you.
+
+## Find Your Exact Autumn Sub-Season
+
+Can't tell which Autumn you are from descriptions alone? Our [free AI color analysis](/color-analysis) pinpoints your exact sub-season by analyzing your skin, hair, and eye coloring.
+
+[Take the Free AI Color Analysis →](/try)
+
+60 seconds, free, no signup. Works for all skin tones.
+
+---
 
 ## Related Articles
 

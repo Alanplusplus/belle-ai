@@ -1,6 +1,7 @@
 ---
 title: "Summer Color Palettes Decoded: Cool Summer vs True Summer vs Soft Summer"
-description: "Cool, True, or Soft Summer? See all 3 sub-seasons compared — best colors, styling tips, and a fast way to find which one you are."
+seoTitle: "Cool vs True vs Soft Summer — Which Summer Are You? (Side-by-Side)"
+description: "Can't tell Cool, True, and Soft Summer apart? All 3 sub-seasons compared side by side — key differences, best colors, what to avoid, and a free AI quiz."
 date: "2026-07-30"
 tags: ["personal color analysis", "summer color palette", "color season", "beauty", "style guide"]
 image: "/images/blog/summer-color-palettes-decoded.webp"
@@ -231,6 +232,14 @@ Tools like [AI color analysis](https://aicoloranalysis.io) use computer vision t
 - **Soft Summer:** The most muted of all 12 seasons. Ultra-gentle, cool-neutral, whisper-soft colors.
 - All Summers share cool undertones and muted qualities — the difference is degree.
 - When in doubt, try the saturation test: your sub-season is revealed by how much color intensity your skin can handle.
+
+## Find Your Exact Summer Sub-Season
+
+Still unsure which Summer you are? Our [free AI color analysis](/color-analysis) pinpoints your exact sub-season from a selfie — 60 seconds, no signup.
+
+[Take the Free AI Color Analysis →](/try)
+
+---
 
 ## Related Articles
 

@@ -1,6 +1,7 @@
 ---
 title: "Deep Winter Color Palette: Your Complete Style Guide for 2026"
-description: "Everything you need to know about the Deep Winter season — from signature colors to makeup, wardrobe building, jewelry metals, and how to tell Deep Winter apart from similar seasons."
+seoTitle: "Deep Winter Color Palette — Best Colors, Makeup & What to Avoid"
+description: "A Deep Winter? Here are your 40+ best colors, ideal makeup shades, wardrobe staples, and metals — plus how to tell Deep Winter from Deep Autumn."
 date: "2026-07-13"
 tags: ["deep winter", "personal color analysis", "color palette", "style guide", "seasonal color"]
 image: "/images/blog/deep-winter-color-palette.webp"

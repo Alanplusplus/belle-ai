@@ -1,9 +1,17 @@
 ---
 title: "Sous-ton olive : le teint le plus mal compris expliqué"
-description: "Vous pensez avoir un sous-ton olive ? Ce guide complet explique ce qu'est réellement le sous-ton olive, pourquoi il est mal identifié, et comment trouver vos meilleures couleurs en maquillage, vêtements et cheveux."
+seoTitle: "Sous-ton olive ? 5 signes révélateurs + test IA gratuit"
+description: "Ni l'or ni l'argent ne vous vont ? Fond de teint chaud trop orange, froid trop rose ? Vous avez peut-être un sous-ton olive. 5 signes clairs + test IA gratuit."
 date: "2026-07-14"
 tags: ["sous-ton olive", "sous-ton de peau", "colorimétrie personnelle", "beauté", "maquillage"]
 image: "/images/blog/olive-undertone-guide.webp"
+faq:
+  - q: "Comment savoir si j'ai un sous-ton olive ?"
+    a: "Cherchez 5 signes : vos veines paraissent bleues et vertes à la fois, ni l'or ni l'argent ne vous va parfaitement, les fonds de teint chauds tirent sur l'orange et les froids sur le rose, votre peau a un reflet verdâtre ou grisâtre en lumière naturelle, et vous bronzez olive ou kaki."
+  - q: "Le sous-ton olive est-il chaud ou froid ?"
+    a: "Le sous-ton olive n'est ni chaud ni froid — c'est un modificateur qui se superpose à votre sous-ton de base. Vous pouvez être olive-chaud (reflet vert-doré) ou olive-froid (reflet vert-gris). C'est pourquoi les tests standard donnent des résultats confus."
+  - q: "Quelles couleurs conviennent aux peaux olive ?"
+    a: "Les peaux olive sont sublimées par des tons terreux et atténués : vert olive, terre cuite, rose poudré, taupe chaud et bleu canard profond. Évitez les néons et les pastels vifs qui peuvent ternir le teint olive."
 ---
 
 ## Pourquoi personne ne parle des sous-tons olive

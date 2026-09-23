@@ -1,7 +1,7 @@
 ---
 title: "Olive Skin Jewelry Guide: Gold, Silver, or Rose Gold?"
-seoTitle: "Olive Skin Gold or Silver – Best Jewelry Metals for Olive Undertones"
-description: "Should olive skin wear gold or silver jewelry? Learn why rose gold often wins, which gemstones complement olive undertones, and how your color season affects metal choices."
+seoTitle: "Gold, Silver, or Rose Gold for Olive Skin? The Surprising Answer"
+description: "Neither gold nor silver looks right on your olive skin? There's a reason. See which metals complement olive undertones and why rose gold might be your best bet."
 date: "2026-09-18"
 tags: ["olive undertone", "jewelry", "accessories", "personal color analysis", "style guide"]
 image: "/images/blog/olive-skin-jewelry-metals.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Best Hair Colors for Olive Skin: A Complete Shade Guide"
-seoTitle: "Olive Skin Hair Color – Best Shades for Olive Undertones"
-description: "Discover the best hair colors for olive skin. From warm-olive to cool-olive rules, seasonal shade recommendations, and colors to avoid for a flattering glow."
+seoTitle: "Best Hair Colors for Olive Skin — Shades That Won't Wash You Out"
+description: "Some hair colors make olive skin glow; others turn it sallow. See the best shades for warm-olive vs cool-olive, colors to avoid, and seasonal recommendations."
 date: "2026-09-18"
 tags: ["olive undertone", "hair color", "beauty", "personal color analysis", "style guide"]
 image: "/images/blog/olive-skin-best-hair-colors.webp"

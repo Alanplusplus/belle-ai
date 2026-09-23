@@ -1,6 +1,7 @@
 ---
 title: "Soft Autumn vs Soft Summer: The Most Commonly Confused Color Seasons"
-description: "Struggling to tell Soft Autumn and Soft Summer apart? Learn the key differences in undertone, best colors, makeup choices, and how to finally determine which muted season you truly are."
+seoTitle: "Soft Autumn vs Soft Summer — How to Finally Tell Which One You Are"
+description: "Both are muted and low-contrast, so tests give mixed results? See the 3 key differences between Soft Autumn and Soft Summer — plus a free AI analysis to settle it."
 date: "2026-08-10"
 tags: ["personal color analysis", "soft autumn", "soft summer", "color season", "beauty"]
 image: "/images/blog/soft-autumn-vs-soft-summer.webp"
@@ -192,6 +193,16 @@ Modern tools can analyze the exact undertone of your skin using photo data — a
 The beauty of understanding your color season isn't about restriction — it's about having a reliable starting point for decisions that used to feel random. Once you know whether you're Soft Autumn or Soft Summer, you'll stop buying clothes that look great on the hanger but somehow wrong on you.
 
 And that's worth figuring out.
+
+## Still Not Sure? Let AI Settle It
+
+If you're still torn between Soft Autumn and Soft Summer, our [free AI color analysis](/color-analysis) can detect the subtle undertone differences that quizzes miss.
+
+[Take the Free AI Color Analysis →](/try)
+
+Upload a photo, get your season in 60 seconds. No signup needed.
+
+---
 
 ## Related Articles
 

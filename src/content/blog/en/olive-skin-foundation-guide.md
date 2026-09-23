@@ -1,7 +1,7 @@
 ---
 title: "Olive Skin Foundation Guide: How to Find Your Perfect Match"
-seoTitle: "Olive Skin Foundation – Best Shades & Brands for Olive Undertones"
-description: "Struggling to find foundation for olive skin? Learn why warm and cool formulas fail, which brands offer olive undertone shades, and how to pick the perfect match by depth."
+seoTitle: "Foundation for Olive Skin — Why Warm & Cool Both Look Wrong (+ Fixes)"
+description: "Every foundation pulls too orange or too pink? That's the olive undertone problem. See which brands make olive-friendly shades and how to pick the right one."
 date: "2026-09-18"
 tags: ["olive undertone", "foundation", "makeup", "skin undertone", "beauty tips"]
 image: "/images/blog/olive-skin-foundation-guide.webp"

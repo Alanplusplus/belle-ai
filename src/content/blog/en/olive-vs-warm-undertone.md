@@ -1,7 +1,7 @@
 ---
 title: "Olive vs Warm Undertone: Why Olive Skin Isn't Simply Warm"
-seoTitle: "Olive vs Warm Undertone – How to Tell If Your Skin Is Olive or Warm"
-description: "Is olive skin warm or cool? Learn why olive is neither, which test results mislead, side-by-side comparisons, and how color matching differs for olive vs warm skin."
+seoTitle: "Olive vs Warm Undertone — Why Olive Skin Isn't Simply 'Warm'"
+description: "Everyone says you're warm-toned, but warm advice doesn't work? Olive skin breaks the warm/cool binary. See side-by-side comparisons and how to tell them apart."
 date: "2026-09-18"
 tags: ["olive undertone", "warm undertone", "skin undertone", "color analysis", "beauty"]
 image: "/images/blog/olive-vs-warm-undertone.webp"

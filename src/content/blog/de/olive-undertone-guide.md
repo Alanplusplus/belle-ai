@@ -1,10 +1,17 @@
 ---
 title: "Olive Hautton: Oliv-Unterton erkennen & Farben"
-seoTitle: "Olive Hautton erkennen – Oliv-Unterton Farbberatung & beste Farben"
-description: "Haben Sie einen Oliv-Unterton? So erkennen Sie ihn, warum er oft falsch bestimmt wird und welche Farben in Make-up, Kleidung und Haar am besten passen."
+seoTitle: "Oliv-Unterton? 5 Anzeichen + kostenloser KI-Farbtest"
+description: "Weder Gold noch Silber passt? Foundation zu orange oder rosa? Du könntest Oliv-Unterton haben. 5 klare Anzeichen + kostenloser KI-Farbtest in 60 Sekunden."
 date: "2026-07-14"
 tags: ["olive Hautton", "Oliv-Unterton", "oliv Hautton", "Farbanalyse", "Beauty"]
 image: "/images/blog/olive-undertone-guide.webp"
+faq:
+  - q: "Wie erkenne ich, ob ich einen Oliv-Unterton habe?"
+    a: "Achte auf 5 Anzeichen: Deine Venen sehen sowohl blau als auch grün aus, weder Gold- noch Silberschmuck passt perfekt, warme Foundations wirken orange und kühle rosa, deine Haut hat bei Tageslicht einen grünlichen oder gräulichen Schimmer, und du wirst oliv- oder khakifarben braun."
+  - q: "Ist Oliv-Unterton warm oder kalt?"
+    a: "Oliv ist weder warm noch kalt — es ist ein Modifikator, der auf deinem Basis-Unterton liegt. Du kannst warm-oliv (grün-goldener Schimmer) oder kühl-oliv (grün-grauer Schimmer) sein. Deshalb liefern Standard-Tests oft verwirrende Ergebnisse."
+  - q: "Welche Farben stehen olivfarbener Haut am besten?"
+    a: "Oliv-Hauttöne sehen in gedämpften Erdtönen am besten aus: Olivgrün, Terrakotta, Altrosa, warme Taupes und tiefes Petrol. Vermeide Neonfarben und helle Pastelltöne, die oliv-Haut fahl wirken lassen."
 ---
 
 ## Warum niemand über Oliv-Untertöne spricht
@@ -192,6 +199,16 @@ Es ist selten, dass oliv getönte Menschen in Frühling- oder Winter-Saisons get
 Wenn Sie ein Farbanalyse-Quiz gemacht haben und die Ergebnisse sich nicht richtig anfühlten, könnte Ihr Oliv-Unterton der Grund sein. Standard-Quizs berücksichtigen den grünen Modifikator nicht und typisieren Sie möglicherweise in eine Saison, die technisch zu Ihrer warmen/kühlen Basis passt, aber die gedämpfte Qualität ignoriert, die Oliv hinzufügt.
 
 Für genauere Ergebnisse kann [KI-basierte Farbanalyse](/de/personal-color-analysis) Oliv-Untertöne erkennen, indem sie die tatsächlichen Farbwerte in Ihrer Haut misst — einschließlich des graubrünen Schimmers, der für die meisten Basistests unsichtbar ist, aber für Computer-Vision-Algorithmen klar sichtbar.
+
+---
+
+## Bestätige deinen Unterton mit KI
+
+Nicht sicher, ob du oliv bist? Unsere [kostenlose KI-Farbanalyse](/de/color-analysis) erkennt Oliv-Untertöne, indem sie das grün-graue Pigment in deiner Haut misst — etwas, das Standard-Tests übersehen.
+
+[Kostenlose KI-Farbanalyse starten →](/de/try)
+
+Selfie hochladen, Ergebnis in 60 Sekunden. Keine Anmeldung nötig.
 
 ---
 

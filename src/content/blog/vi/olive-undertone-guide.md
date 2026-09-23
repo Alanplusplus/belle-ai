@@ -1,9 +1,17 @@
 ---
 title: "Tông Nền Olive: Giải Thích Tông Da Bị Hiểu Lầm Nhiều Nhất"
-description: "Nghĩ bạn có thể có tông nền olive? Hướng dẫn đầy đủ giải thích tông olive thực sự là gì, tại sao hay bị nhận diện sai, và cách tìm màu tốt nhất trong trang điểm, quần áo và tóc."
+seoTitle: "Tông nền olive? 5 dấu hiệu rõ ràng + kiểm tra AI miễn phí"
+description: "Cả vàng lẫn bạc đều không hợp? Kem nền warm quá cam, cool quá hồng? Bạn có thể có tông nền olive. 5 dấu hiệu nhận biết và kiểm tra AI miễn phí trong 60 giây."
 date: "2026-07-14"
 tags: ["tông nền olive", "tông nền da", "phân tích màu cá nhân", "làm đẹp", "trang điểm"]
 image: "/images/blog/olive-undertone-guide.webp"
+faq:
+  - q: "Làm sao biết mình có tông nền olive?"
+    a: "Tìm 5 dấu hiệu: tĩnh mạch vừa xanh dương vừa xanh lá, cả trang sức vàng và bạc đều không hoàn hảo, kem nền warm quá cam còn cool quá hồng, da có ánh xanh lá hoặc xám dưới ánh sáng tự nhiên, và da rám nắng thành màu olive hoặc kaki."
+  - q: "Tông nền olive là warm hay cool?"
+    a: "Olive không phải warm cũng không phải cool — đó là một yếu tố bổ sung nằm trên tông nền cơ bản. Bạn có thể là warm-olive (ánh xanh lá-vàng) hoặc cool-olive (ánh xanh lá-xám). Vì vậy các bài test warm/cool thường cho kết quả khó hiểu."
+  - q: "Màu nào hợp với da olive?"
+    a: "Da olive hợp nhất với tông đất muted: xanh olive, terracotta, hồng bụi, taupe ấm và teal đậm. Tránh neon và pastel sáng vì chúng có thể làm da olive trông xỉn màu."
 ---
 
 ## Tại Sao Không Ai Nói Về Tông Nền Olive

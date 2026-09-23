@@ -9,8 +9,8 @@
     "colorDescription": "Free AI personal color analysis. Discover your 12-season color type and get your best color palette for makeup, fashion, hair, and jewelry.",
     "colorGuideTitle": "Color Analysis: The Complete Guide to Finding Your Best Colors (2026)",
     "colorGuideDescription": "Everything you need to know about color analysis — what it is, how it works, the 12-season system, how to find your season, and how to use your results for makeup, wardrobe, and hair. Free AI analysis included.",
-    "seasonPaletteTitle": "{season} Color Palette – Best Colors, Makeup & Wardrobe Guide",
-    "seasonPaletteDescription": "Complete {season} color palette guide. Discover your best colors, makeup shades, hair colors, wardrobe essentials, and jewelry for the {season} seasonal color type.",
+    "seasonPaletteTitle": "{season} Color Palette — 40+ Best Colors, Makeup & Outfit Ideas",
+    "seasonPaletteDescription": "The complete {season} color palette with 40+ colors and hex codes. See your best makeup shades, hair colors, wardrobe essentials, and metals — plus which colors to avoid.",
     "colorForTitle": "Color Analysis for {audience} – Find Your Best Colors",
     "colorForDescription": "Color analysis guide for {audience}. Discover your seasonal color type and find the most flattering colors for makeup, wardrobe, and accessories.",
     "faceTitle": "Face Shape & Hairstyle Analysis – Find Your Perfect Style",
@@ -51,8 +51,8 @@
     "seasonHubDescription": "Explore the {season} color family — discover all three sub-seasons, signature colors, best makeup & fashion choices. Free AI color analysis.",
     "celebrityPseoTitle": "{name}'s Color Season & Best Colors",
     "celebrityPseoDescription": "Discover {name}'s color season ({season}), signature colors, and styling tips. Learn how their personal color palette influences their iconic looks and find similar colors for yourself.",
-    "compareTitle": "{season1} vs {season2}: How to Tell the Difference",
-    "compareDescription": "Confused between {season1} and {season2}? Compare undertones, depth, chroma, and contrast side by side. Learn how to tell them apart with expert tips and a free AI color analysis.",
+    "compareTitle": "{season1} vs {season2}: 3 Key Differences + Free Quiz",
+    "compareDescription": "Not sure if you're {season1} or {season2}? See the defining differences in undertone, depth, and chroma — with side-by-side color swatches. Take our free AI quiz to settle it.",
     "vsTitle": "Belle AI vs {competitor} – Color Analysis Comparison"
   },
   "nav": {

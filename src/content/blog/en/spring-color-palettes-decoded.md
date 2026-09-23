@@ -1,6 +1,7 @@
 ---
 title: "Spring Color Palettes Decoded: Bright Spring vs True Spring vs Light Spring"
-description: "Can't tell the difference between Bright Spring, True Spring, and Light Spring? This guide breaks down each sub-season's best colors, characteristics, and styling tips so you can finally dress with confidence."
+seoTitle: "Bright vs True vs Light Spring — Which Spring Are You? (Side-by-Side)"
+description: "Not sure which Spring you are? Compare Bright, True (Warm), and Light Spring side by side — differences in warmth, clarity, depth, and best colors for each."
 date: "2026-07-27"
 tags: ["personal color analysis", "spring color palette", "color season", "beauty", "style guide"]
 image: "/images/blog/spring-color-palettes-decoded.webp"
@@ -200,6 +201,14 @@ Regardless of which Spring sub-season you are, these principles apply:
 - **Light Spring** = warm + delicate. Low contrast, light and soft shades. Best in blush, pistachio, and rose gold.
 - All three Spring types share warmth as their foundation — the key differentiator is how much contrast and saturation your coloring can handle.
 - When in doubt, test colors against your face in natural daylight. Your skin's reaction (glowing vs. washed out) tells you everything.
+
+## Find Your Exact Spring Sub-Season
+
+Want a definitive answer? Our [free AI color analysis](/color-analysis) identifies your exact Spring sub-season from a selfie — 60 seconds, no signup.
+
+[Take the Free AI Color Analysis →](/try)
+
+---
 
 ## Related Articles
 

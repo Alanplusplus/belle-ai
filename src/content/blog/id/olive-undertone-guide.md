@@ -1,9 +1,17 @@
 ---
 title: "Undertone Olive: Warna Kulit Paling Sering Disalahpahami Dijelaskan"
-description: "Curiga memiliki undertone olive? Panduan lengkap ini menjelaskan apa undertone olive sebenarnya, mengapa sering salah diidentifikasi, dan cara menemukan warna terbaik dalam makeup, pakaian, dan rambut."
+seoTitle: "Undertone Olive? 5 Tanda yang Sering Terlewat + Tes AI Gratis"
+description: "Emas dan perak kurang cocok? Foundation warm oranye, cool pink? Kamu mungkin punya undertone olive. 5 tanda jelas dan tes AI gratis dalam 60 detik."
 date: "2026-07-14"
 tags: ["undertone olive", "undertone kulit", "analisis warna personal", "kecantikan", "makeup"]
 image: "/images/blog/olive-undertone-guide.webp"
+faq:
+  - q: "Bagaimana cara tahu kalau saya punya undertone olive?"
+    a: "Perhatikan 5 tanda: pembuluh darah terlihat biru dan hijau, emas maupun perak tidak pas sempurna, foundation warm terlihat oranye dan cool terlihat pink, kulit punya nuansa kehijauan atau keabuan di cahaya alami, dan kulit menjadi olive atau khaki saat tanning."
+  - q: "Apakah undertone olive itu warm atau cool?"
+    a: "Olive bukan warm atau cool — ini adalah modifier yang menumpang di atas undertone dasar Anda. Anda bisa warm-olive (nuansa hijau-emas) atau cool-olive (nuansa hijau-abu). Makanya tes warm/cool standar sering memberikan hasil yang membingungkan."
+  - q: "Warna apa yang cocok untuk kulit olive?"
+    a: "Kulit olive paling cocok dengan warna earth tone yang muted: olive green, terracotta, dusty rose, warm taupe, dan deep teal. Hindari neon dan pastel terang yang bisa membuat kulit olive terlihat kusam."
 ---
 
 ## Mengapa Tidak Ada yang Membahas Undertone Olive

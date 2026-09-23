@@ -1,7 +1,7 @@
 ---
 title: "Olive Skin Lip Color Guide: Best Lipsticks for Olive Undertones"
-seoTitle: "Olive Undertone Lip Color – Best Lipsticks for Olive Skin"
-description: "Find the best lip colors for olive skin. Why standard reds fail, the best berry, mauve, brick, and nude shades, plus when coral works — and when it doesn't."
+seoTitle: "Best Lip Colors for Olive Skin — Why Most Reds Look Terrible (+ What Works)"
+description: "Classic reds wash you out, nudes look gray, corals are hit-or-miss? That's olive skin. The best berry, mauve, brick, and nude shades that actually work."
 date: "2026-09-18"
 tags: ["olive undertone", "makeup", "lip color", "beauty tips", "personal color analysis"]
 image: "/images/blog/olive-skin-lip-color-guide.webp"

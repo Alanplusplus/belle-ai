@@ -1,9 +1,17 @@
 ---
 title: "Zeytin Alt Tonu: En Yanlış Anlaşılan Cilt Tonu Açıklanıyor"
-description: "Zeytin alt tonunuz olabilir mi? Bu kapsamlı rehber zeytin alt tonunun gerçekte ne olduğunu, neden yanlış tanımlandığını ve makyaj, kıyafet ve saçta en iyi renklerinizi nasıl bulacağınızı açıklıyor."
+seoTitle: "Zeytin Alt Tonu mu? 5 İşaret + Ücretsiz Yapay Zeka Testi"
+description: "Ne altın ne gümüş yakışıyor mu? Fondöten ya turuncu ya pembe mi? Zeytin alt tonunuz olabilir. 5 net işaret + 60 saniyede ücretsiz yapay zeka renk testi."
 date: "2026-07-14"
 tags: ["zeytin alt tonu", "cilt alt tonu", "kişisel renk analizi", "güzellik", "makyaj"]
 image: "/images/blog/olive-undertone-guide.webp"
+faq:
+  - q: "Zeytin alt tonuna sahip olduğumu nasıl anlarım?"
+    a: "5 işarete bakın: damarlarınız hem mavi hem yeşil görünür, ne altın ne gümüş mücevher tam olarak yakışır, sıcak fondötenler turuncu soğuk olanlar pembe görünür, cildiniz doğal ışıkta yeşilimsi veya grimsi bir ton taşır ve bronzlaşma renginiz zeytin veya haki tonundadır."
+  - q: "Zeytin alt tonu sıcak mı soğuk mu?"
+    a: "Zeytin ne sıcak ne soğuktur — temel alt tonunuzun üzerine binen bir modifiyedir. Sıcak-zeytin (yeşil-altın yansıma) veya soğuk-zeytin (yeşil-gri yansıma) olabilirsiniz. Bu yüzden standart sıcak/soğuk testleri kafa karıştırıcı sonuçlar verir."
+  - q: "Zeytinyağı cilde hangi renkler yakışır?"
+    a: "Zeytin ciltler, zeytin yeşili, terrakota, pudra pembesi, sıcak taupe ve derin petrol mavisi gibi toprak tonlarında en iyi görünür. Neon renklerden ve parlak pastellerden kaçının — bunlar zeytin cildi solgun gösterebilir."
 ---
 
 ## Neden Kimse Zeytin Alt Tonlarından Bahsetmiyor?

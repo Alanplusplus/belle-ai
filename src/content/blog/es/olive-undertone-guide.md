@@ -1,10 +1,17 @@
 ---
 title: "Subtono Oliva Piel: Guía para Identificarlo"
-seoTitle: "Subtono Oliva Piel – Cómo Identificarlo y Mejores Colores"
-description: "¿Tienes subtono oliva? Aprende a identificarlo, por qué se confunde, y los mejores colores en maquillaje, ropa y pelo. Análisis AI gratis."
+seoTitle: "¿Tienes Subtono Oliva? 5 Señales Claras + Test AI Gratis"
+description: "¿Ni el dorado ni el plateado te quedan bien? ¿Las bases cálidas naranjas y las frías rosadas? Podrías tener subtono oliva. 5 señales clave + test AI gratis."
 date: "2026-07-14"
 tags: ["subtono oliva", "subtono oliva piel", "tono oliva", "análisis de color personal", "belleza"]
 image: "/images/blog/olive-undertone-guide.webp"
+faq:
+  - q: "¿Cómo sé si tengo subtono oliva?"
+    a: "Busca 5 señales: tus venas parecen azules y verdes a la vez, ni el dorado ni el plateado te quedan perfecto, las bases cálidas se ven naranjas y las frías rosadas, tu piel tiene un matiz verdoso o grisáceo con luz natural, y te bronceas en tono oliva o caqui."
+  - q: "¿El subtono oliva es cálido o frío?"
+    a: "El oliva no es cálido ni frío — es un modificador que se superpone a tu subtono base. Puedes ser oliva-cálido (matiz verde-dorado) u oliva-frío (matiz verde-grisáceo). Por eso los tests estándar de cálido/frío dan resultados confusos."
+  - q: "¿Qué colores favorecen más a la piel oliva?"
+    a: "La piel oliva luce mejor con tonos terrosos y apagados como verde oliva, terracota, rosa empolvado, taupes cálidos y azul petróleo profundo. Evita los neones y los pasteles muy claros, que pueden dar un aspecto apagado."
 ---
 
 ## Por qué nadie habla de los subtonos oliva
@@ -192,6 +199,16 @@ Es raro que las personas con tono oliva se clasifiquen en estaciones Primavera o
 Si has hecho un test de análisis de color y los resultados no encajaban, tu subtono oliva podría ser la razón. Los tests estándar no tienen en cuenta el modificador verde, por lo que pueden clasificarte en una estación que técnicamente coincide con tu base cálida/fría pero ignora la cualidad apagada que añade el oliva.
 
 Para resultados más precisos, el [análisis de color con IA](/es/personal-color-analysis) puede detectar subtonos oliva midiendo los valores de color reales de tu piel, incluido ese matiz gris-verde invisible para la mayoría de pruebas básicas pero claramente visible para los algoritmos de visión por computadora.
+
+---
+
+## Confirma tu subtono con IA
+
+¿No estás segura de si eres oliva? Nuestro [análisis de color con IA gratuito](/es/color-analysis) detecta subtonos oliva midiendo el pigmento verde-gris real de tu piel — algo que los tests estándar de cálido/frío no captan.
+
+[Prueba el análisis de color con IA gratis →](/es/try)
+
+Sube una selfie y obtén tu resultado en 60 segundos. Sin registro.
 
 ---
 
