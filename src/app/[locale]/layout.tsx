@@ -55,6 +55,7 @@ export async function generateMetadata({
     alternates: buildAlternates(locale, ""),
     other: {
       "application/rss+xml": `${SITE_URL}/feed.xml`,
+      "pinterest-rss": `${SITE_URL}/pinterest-feed.xml`,
     },
     manifest: "/manifest.json",
     openGraph: {

@@ -1,0 +1,31 @@
+---
+description: Language tier strategy for SEO — which locales to prioritize
+globs: 
+alwaysApply: true
+---
+
+# Language Tier Strategy
+
+## Active Locales (Tier 1)
+en, zh, ja, ko, es, de, pt, ru, tr, id
+
+These 10 locales have demonstrated organic search traffic. All new content, features, and SEO optimizations should target these locales.
+
+## Demoted Locales (Tier 2)  
+ar, hi, th, vi
+
+These locales show zero or near-zero organic traffic in Google Search Console. Policy:
+- Do NOT create new blog posts for these locales
+- Do NOT invest in translating new pSEO content for these locales
+- Existing content remains indexed (no noindex)
+- Sitemap priority is set to 0.1 with yearly change frequency
+- Keep hreflang alternates intact
+
+## Borderline Locales (Under Review)
+fr, it
+
+These have some impressions but very low CTR and poor positions. They remain in Tier 1 for now.
+
+## Implementation
+- Sitemap demotion: `src/app/sitemap.ts` — `DEMOTED_LOCALES` constant
+- Blog creation: `blog-content.mdc` — translation targets

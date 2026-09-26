@@ -1,0 +1,58 @@
+---
+description: Rules for creating or editing blog posts — internal linking, Pillar Page integration, and SEO checklist
+globs: src/content/blog/**/*.md
+alwaysApply: false
+---
+
+# Blog Content Rules
+
+## Pillar Page Internal Linking
+
+Every color-analysis-related blog post MUST include a link to the Pillar Page in its "Related Articles" section:
+
+```markdown
+## Related Articles
+
+- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+```
+
+A blog post is "color-analysis-related" if it covers ANY of these topics:
+- Color analysis / seasonal color analysis / personal color analysis
+- Color seasons (Spring, Summer, Autumn, Winter and their 12 sub-seasons)
+- Undertone, skin tone, color matching
+- Makeup colors, wardrobe colors, hair colors by season
+- Color quiz, draping, AI color analysis
+
+## Sub-Season Palette Linking
+
+If a blog post covers a specific season or sub-season, also link to its palette page:
+
+```markdown
+- [Light Spring Color Palette](/en/color-palette/light-spring) — Full palette guide for Light Spring
+```
+
+## Audience-Specific Linking
+
+If a blog post covers a specific audience (e.g., men, dark skin, redheads), also link to the corresponding attribute page:
+
+```markdown
+- [Color Analysis for Men](/en/color-analysis-for/men) — Complete guide for men
+```
+
+## Checklist for New Blog Posts
+
+1. Add the blog post markdown file to `src/content/blog/en/`
+2. Add the Pillar Page link to the "Related Articles" section
+3. Add relevant sub-season or attribute page links if applicable
+4. Ensure the post is linked FROM the Pillar Page's "Further Reading" section if it's a key article (edit `src/app/[locale]/color-analysis/page.tsx`)
+5. Update the sitemap if needed (usually automatic for blog posts)
+
+## Language Tier Policy
+
+Active locales (create new blog content for these): en, zh, ja, ko, es, de, pt, ru, tr, id
+
+Demoted locales (DO NOT create new blog posts for these): ar, hi, th, vi
+
+When creating a new blog post, only create translations for the 10 active locales above. Existing content in demoted locales should be left as-is.
+
+Note: fr and it are borderline — they have some impressions but very low CTR. They remain active for now but are under review.

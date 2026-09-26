@@ -1,0 +1,416 @@
+import { notFound } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import Image from "next/image";
+import { Link } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
+import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import { SEASON_PALETTES, SEASON_SLUGS, getSeasonsByParent, PARENT_SEASON_ORDER } from "@/lib/color-palette-data";
+import { LOOKBOOK_DATA, LOOKBOOK_SLUGS } from "@/lib/lookbook-data";
+import { SITE_URL } from "@/lib/constants";
+import type { Metadata } from "next";
+
+export function generateStaticParams() {
+  const params: { locale: string; season: string }[] = [];
+  for (const locale of routing.locales) {
+    for (const slug of LOOKBOOK_SLUGS) {
+      params.push({ locale, season: slug });
+    }
+  }
+  return params;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; season: string }>;
+}): Promise<Metadata> {
+  const { locale, season } = await params;
+  const data = SEASON_PALETTES[season];
+  if (!data) return {};
+
+  const messages = (await import(`@/messages/${locale}.json`)).default;
+  const localName = messages.sd?.[season]?.name ?? data.name.split(" (")[0];
+  const alternates = buildAlternates(locale, `/lookbook/${season}`);
+
+  const title = messages.meta.lookbookTitle.replace(/\{season\}/g, localName);
+  const description = messages.meta.lookbookDescription.replace(/\{season\}/g, localName);
+
+  return {
+    title,
+    description,
+    alternates,
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
+      images: data.bestColors.slice(0, 4).map((c) => ({
+        url: `${SITE_URL}/lookbook/${season}/opengraph-image`,
+        width: 1200,
+        height: 630,
+      })),
+    },
+    twitter: { card: "summary_large_image", title, description },
+  };
+}
+
+export default async function LookbookPage({
+  params,
+}: {
+  params: Promise<{ locale: string; season: string }>;
+}) {
+  const { locale, season } = await params;
+  setRequestLocale(locale);
+
+  const data = SEASON_PALETTES[season];
+  const lookbook = LOOKBOOK_DATA[season];
+  if (!data || !lookbook) notFound();
+
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: "Color Analysis", path: "/color-analysis" },
+    { name: `${data.name.split(" (")[0]} Lookbook`, path: `/lookbook/${season}` },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <LookbookContent slug={season} />
+    </>
+  );
+}
+
+function ColorSwatch({ hex, name, size = "md" }: { hex: string; name: string; size?: "sm" | "md" | "lg" }) {
+  const sizeClasses = { sm: "h-10 w-10", md: "h-16 w-16", lg: "h-20 w-20" };
+  return (
+    <div className="text-center">
+      <div
+        className={`mx-auto ${sizeClasses[size]} rounded-xl border border-border/50 shadow-sm`}
+        style={{ backgroundColor: hex }}
+        role="img"
+        aria-label={`${name} color swatch: ${hex}`}
+      />
+      <p className="mt-1.5 text-xs font-medium">{name}</p>
+      <p className="text-xs text-muted-foreground">{hex}</p>
+    </div>
+  );
+}
+
+function LookbookContent({ slug }: { slug: string }) {
+  const t = useTranslations("lookbook");
+  const sd = useTranslations(`sd.${slug}`);
+  const qt = useTranslations("quiz");
+  const bt = useTranslations("blogTitles");
+
+  const data = SEASON_PALETTES[slug];
+  const lookbook = LOOKBOOK_DATA[slug];
+  const displayName = sd("name");
+  const parentLabel = data.parentSeason.charAt(0).toUpperCase() + data.parentSeason.slice(1);
+
+  const siblings = SEASON_SLUGS.filter((s) => s !== slug);
+  const sameFamilySiblings = getSeasonsByParent(data.parentSeason).filter((s) => s.slug !== slug);
+
+  const bestColors = data.bestColors.map((c, i) => ({ name: sd(`bc${i}`), hex: c.hex }));
+  const neutrals = data.neutrals.map((c, i) => ({ name: sd(`nc${i}`), hex: c.hex }));
+  const avoidColors = data.avoidColors.map((c, i) => ({ name: sd(`ac${i}`), hex: c.hex }));
+
+  const makeupItems = [
+    { label: "💄 Lips", value: sd("lips") },
+    { label: "👁️ Eyes", value: sd("eyes") },
+    { label: "🌸 Blush", value: sd("blush") },
+    { label: "✨ Foundation", value: sd("found") },
+  ];
+
+  const hairColors = data.hairColors.map((_, i) => sd(`hr${i}`));
+
+  return (
+    <>
+      {/* Hero */}
+      <section className="bg-gradient-to-b from-primary/5 to-transparent py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-4 text-center">
+          <p className="text-sm font-medium text-primary">
+            <Link href="/color-analysis" className="hover:underline">{t("backToGuide").replace("← ", "")}</Link>
+            {" / "}
+            <Link href={`/color-palette/${slug}`} className="hover:underline">{displayName}</Link>
+            {" / Lookbook"}
+          </p>
+          <h1 className="mt-3 font-serif text-3xl font-bold sm:text-5xl">
+            {t("title", { season: displayName })}
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            {t("heroDesc", { season: displayName })}
+          </p>
+          {/* Palette preview strip */}
+          <div className="mt-8 flex justify-center gap-2">
+            {data.bestColors.slice(0, 8).map((c) => (
+              <div
+                key={c.hex}
+                className="h-10 w-10 rounded-full border border-white/50 shadow-md sm:h-12 sm:w-12"
+                style={{ backgroundColor: c.hex }}
+                title={c.name}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-5xl px-4">
+        {/* Best Colors Grid */}
+        <section className="py-12">
+          <h2 className="text-2xl font-bold">{t("paletteSection")} — {displayName}</h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            {lookbook.sections[0]?.description}
+          </p>
+          <div className="mt-6 grid grid-cols-3 gap-3 sm:grid-cols-5">
+            {bestColors.map((c) => (
+              <ColorSwatch key={c.hex} hex={c.hex} name={c.name} size="lg" />
+            ))}
+          </div>
+          <div className="mt-6">
+            <h3 className="text-lg font-semibold">Neutrals</h3>
+            <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {neutrals.map((c) => (
+                <ColorSwatch key={c.hex} hex={c.hex} name={c.name} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Outfit Inspiration */}
+        <section className="border-t border-border py-12">
+          <h2 className="text-2xl font-bold">{t("outfitSection")} — {displayName}</h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            {data.fashionTips[0]}
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {lookbook.sections
+              .find((s) => s.title === "Outfit Inspiration")
+              ?.images.map((img) => (
+                <div key={img.src} className="group overflow-hidden rounded-xl border border-border bg-card">
+                  <div className="relative aspect-[3/4] bg-muted">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover transition-transform group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      unoptimized
+                    />
+                  </div>
+                  <p className="p-3 text-sm text-muted-foreground">{img.alt}</p>
+                </div>
+              ))}
+          </div>
+          <div className="mt-6 rounded-xl border border-border bg-card p-5">
+            <h3 className="font-semibold">Fashion Tips for {displayName}</h3>
+            <ul className="mt-3 space-y-2">
+              {data.fashionTips.map((tip, i) => {
+                const localTip = sd(`ft${i}`);
+                return (
+                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <span className="mt-0.5 text-primary">→</span>
+                    <span>{localTip}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </section>
+
+        {/* Makeup Looks */}
+        <section className="border-t border-border py-12">
+          <h2 className="text-2xl font-bold">{t("makeupSection")} — {displayName}</h2>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {makeupItems.map((item) => (
+              <div key={item.label} className="rounded-xl border border-border bg-card p-5">
+                <p className="text-sm font-semibold">{item.label}</p>
+                <p className="mt-1 text-sm text-muted-foreground">{item.value}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+            {lookbook.sections
+              .find((s) => s.title === "Makeup Looks")
+              ?.images.map((img) => (
+                <div key={img.src} className="group overflow-hidden rounded-xl border border-border bg-card">
+                  <div className="relative aspect-square bg-muted">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover transition-transform group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                      unoptimized
+                    />
+                  </div>
+                  <p className="p-3 text-sm text-muted-foreground">{img.alt}</p>
+                </div>
+              ))}
+          </div>
+        </section>
+
+        {/* Hair Color Ideas */}
+        <section className="border-t border-border py-12">
+          <h2 className="text-2xl font-bold">{t("hairSection")} — {displayName}</h2>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-xl border border-border bg-card p-5">
+              <h3 className="font-semibold text-primary">Recommended</h3>
+              <ul className="mt-3 space-y-1.5">
+                {hairColors.map((c) => (
+                  <li key={c} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <span className="text-primary">✓</span> {c}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="grid gap-3">
+              {lookbook.sections
+                .find((s) => s.title === "Hair Color Ideas")
+                ?.images.map((img) => (
+                  <div key={img.src} className="group overflow-hidden rounded-xl border border-border bg-card">
+                    <div className="relative aspect-[16/9] bg-muted">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        className="object-cover transition-transform group-hover:scale-105"
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                        unoptimized
+                      />
+                    </div>
+                    <p className="p-2 text-xs text-muted-foreground">{img.alt}</p>
+                  </div>
+                ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Jewelry & Accessories */}
+        <section className="border-t border-border py-12">
+          <h2 className="text-2xl font-bold">{t("jewelrySection")} — {displayName}</h2>
+          <p className="mt-3 text-sm text-muted-foreground">{sd("jewelry")}</p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {lookbook.sections
+              .find((s) => s.title === "Jewelry & Accessories")
+              ?.images.map((img) => (
+                <div key={img.src} className="group overflow-hidden rounded-xl border border-border bg-card">
+                  <div className="relative aspect-square bg-muted">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover transition-transform group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                      unoptimized
+                    />
+                  </div>
+                  <p className="p-3 text-sm text-muted-foreground">{img.alt}</p>
+                </div>
+              ))}
+          </div>
+        </section>
+
+        {/* Colors to Avoid */}
+        <section className="border-t border-border py-12">
+          <h2 className="text-2xl font-bold">{t("avoidSection")} — {displayName}</h2>
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-5">
+            {avoidColors.map((c) => (
+              <div key={c.hex} className="text-center opacity-70">
+                <div
+                  className="relative mx-auto h-14 w-14 rounded-xl border border-border/50 shadow-sm"
+                  style={{ backgroundColor: c.hex }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center text-xl font-bold text-white/80 drop-shadow">
+                    ✕
+                  </div>
+                </div>
+                <p className="mt-2 text-xs font-medium">{c.name}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="my-6 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
+          <h2 className="text-xl font-bold">{t("ctaTitle", { season: displayName })}</h2>
+          <p className="mt-2 text-muted-foreground">{t("ctaDesc", { season: displayName })}</p>
+          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <Link
+              href="/try?type=color_analysis"
+              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+            >
+              {t("getAnalysis")}
+            </Link>
+            <Link
+              href={`/color-palette/${slug}`}
+              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
+            >
+              {t("viewPalette", { season: displayName })}
+            </Link>
+          </div>
+        </section>
+
+        {/* Other Lookbooks */}
+        <section className="border-t border-border py-12">
+          <h2 className="text-2xl font-bold">{t("exploreLookbooks")}</h2>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {sameFamilySiblings.map((sib) => {
+              const SibCard = () => {
+                const sibSd = useTranslations(`sd.${sib.slug}`);
+                return (
+                  <Link
+                    href={`/lookbook/${sib.slug}`}
+                    className="group flex items-center gap-3 rounded-xl border border-border bg-card p-4 transition hover:border-primary/40 hover:shadow-md"
+                  >
+                    <div className="flex shrink-0 gap-1">
+                      {sib.bestColors.slice(0, 3).map((c) => (
+                        <div
+                          key={c.hex}
+                          className="h-6 w-6 rounded-full border border-border/30"
+                          style={{ backgroundColor: c.hex }}
+                        />
+                      ))}
+                    </div>
+                    <div>
+                      <p className="font-semibold group-hover:text-primary">{sibSd("name")} Lookbook</p>
+                      <p className="text-xs text-muted-foreground">{sibSd("tagline")}</p>
+                    </div>
+                  </Link>
+                );
+              };
+              return <SibCard key={sib.slug} />;
+            })}
+          </div>
+        </section>
+
+        {/* Related Articles */}
+        <section className="border-t border-border py-12 mb-10">
+          <h2 className="text-2xl font-bold">{t("relatedArticles")}</h2>
+          <div className="mt-4 grid gap-2 sm:grid-cols-2">
+            {data.relatedSlugs.map((s) => (
+              <Link
+                key={s}
+                href={`/blog/${s}`}
+                className="rounded-lg border border-border px-4 py-3 text-sm transition hover:border-primary/40 hover:bg-muted"
+              >
+                {bt.has(s)
+                  ? bt(s)
+                  : s.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
+              </Link>
+            ))}
+            <Link
+              href="/color-analysis"
+              className="rounded-lg border border-primary/30 bg-primary/5 px-4 py-3 text-sm font-medium text-primary transition hover:bg-primary/10"
+            >
+              {t("backToGuide")}
+            </Link>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}

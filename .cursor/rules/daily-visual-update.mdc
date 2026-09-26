@@ -1,0 +1,123 @@
+---
+description: Daily content update rules for Lookbook, Transformations, Guides, and Blog images — triggered by user daily
+globs:
+alwaysApply: false
+---
+
+# Pinterest & Image SEO 每日更新规则
+
+用户会通过以下 prompt 触发每日更新任务。每次触发时，按当日进度表执行对应任务。
+
+## 触发方式
+
+用户输入以下任一指令时执行：
+- "更新 Pinterest 内容"
+- "每日图片更新"
+- "daily visual update"
+
+## 每日进度调度
+
+使用 `social-automation/content/visual-content-progress.json` 跟踪进度。如果文件不存在则创建：
+
+```json
+{
+  "lastUpdated": "2026-09-26",
+  "lookbook": {
+    "completedSeasons": [],
+    "currentSeason": null
+  },
+  "blogImages": {
+    "completedSlugs": [],
+    "currentBatch": []
+  },
+  "guideSections": {
+    "completedImages": []
+  }
+}
+```
+
+## 每日任务分配（按优先级顺序）
+
+### 优先级 1: Lookbook 图片生成（每天 1 个季型）
+
+12 个子季型按以下顺序生成：
+1. soft-autumn（最常见季型，优先）
+2. soft-summer
+3. warm-autumn
+4. cool-summer
+5. light-spring
+6. light-summer
+7. deep-winter
+8. cool-winter
+9. bright-winter
+10. warm-spring
+11. bright-spring
+12. deep-autumn
+
+**每天处理 1 个季型**。执行脚本：
+```bash
+cd social-automation && bash scripts/generate-lookbook-images.sh <season-slug>
+```
+
+完成后在 progress.json 中标记该季型已完成。
+
+### 优先级 2: Blog 头图重新生成（每天 5 张）
+
+按文章日期倒序（最新的先更新），每天重新生成 5 张 blog 头图：
+
+```bash
+cd social-automation && bash scripts/regenerate-blog-images.sh <slug1> <slug2> <slug3> <slug4> <slug5>
+```
+
+从 `belle-website/src/content/blog/en/` 中读取所有 slug，跳过 progress.json 中已完成的，选择下一批 5 个。
+
+### 优先级 3: Guide 页面图片
+
+Guide 页面大部分使用已有图片（season_*.webp, face_shapes_all.webp 等），但缺少以下图片时需要生成：
+- `/images/dim_hair_warm.webp` — 暖色调发色参考
+- `/images/dim_hair_cool.webp` — 冷色调发色参考
+- `/images/dim_hair_neutral.webp` — 中性色调发色参考
+
+使用 kie-image flare 生成后放入 `belle-website/public/images/`：
+```bash
+node ~/.cursor/skills/kie-image/generate.mjs "<prompt>" "16:9" --resolution 2K --model flare
+curl -o /tmp/img.png "<url>"
+cwebp -q 80 /tmp/img.png -o belle-website/public/images/<name>.webp
+```
+
+### 优先级 4: Transformation 页面
+
+Transformation 页面使用已有的 showcase + examples 图片，无需额外生成。
+如果未来要扩展更多 before/after 案例，使用后端 API 生成报告图：
+```bash
+cd social-automation && npx tsx scripts/generate-image.ts [model_photo] [type] [language]
+```
+
+## 图片质量标准
+
+1. **格式**: 所有生产图片必须是 `.webp` 格式
+2. **压缩**: 使用 `cwebp -q 80` 压缩，目标单文件 < 500KB
+3. **尺寸**:
+   - Blog 头图: 16:9, 2K resolution (2048x1152)
+   - Lookbook outfit: 3:4, 1K (768x1024)
+   - Lookbook palette/makeup/jewelry: 1:1, 1K (1024x1024)
+   - Lookbook avoid: 16:9, 1K (1536x864)
+4. **Alt Text**: 所有图片必须有描述性 alt text（在 data 文件中定义）
+5. **清理**: 生成后删除临时 PNG 文件
+
+## 完成标准
+
+每次执行完成后：
+1. 更新 `social-automation/content/visual-content-progress.json`
+2. 如果有新文件生成，`git add` 并 commit（消息: "chore: daily visual content update [date]"）
+3. Push 到 main（触发 Vercel 部署）
+4. 发送飞书通知汇报进度：
+   ```bash
+   cd social-automation && npx tsx scripts/notify.ts "✅ Visual Content Update" "**Lookbook:** [season] done\n**Blog Images:** 5 regenerated\n**Progress:** X/12 seasons, Y/65 blog images"
+   ```
+
+## 错误处理
+
+- kie-image 生成失败 → 跳过该图片，记录到 progress.json 的 `failed` 数组，下次重试
+- cwebp 转换失败 → 使用 PNG 作为临时替代（文件较大但可用）
+- 全部失败 → 发送飞书通知，停止执行

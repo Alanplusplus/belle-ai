@@ -9,6 +9,9 @@ import { FACE_SHAPE_SLUGS } from "@/lib/face-shape-data";
 import { PARENT_SEASONS } from "@/lib/parent-season-data";
 import { CELEBRITY_SLUGS } from "@/lib/celebrity-data";
 import { COMPARISON_SLUGS } from "@/lib/season-compare-data";
+import { LOOKBOOK_SLUGS } from "@/lib/lookbook-data";
+import { TRANSFORMATION_SLUGS } from "@/lib/transformation-data";
+import { GUIDE_SLUGS } from "@/lib/guide-data";
 
 const DEMOTED_LOCALES = ["ar", "hi", "th", "vi"];
 
@@ -73,6 +76,8 @@ const STATIC_PAGE_SOURCE: Record<string, string> = {
   "/privacy": "src/app/[locale]/privacy/page.tsx",
   "/terms": "src/app/[locale]/terms/page.tsx",
   "/acceptable-use": "src/app/[locale]/acceptable-use/page.tsx",
+  "/transformations": "src/app/[locale]/transformations/page.tsx",
+  "/guides": "src/app/[locale]/guides/page.tsx",
 };
 
 const staticPageDates = new Map<string, Date>();
@@ -107,6 +112,21 @@ const celebrityLastModified = maxDate(
 const compareLastModified = maxDate(
   gitLastModified("src/app/[locale]/compare/[pair]/page.tsx"),
   gitLastModified("src/lib/season-compare-data.ts")
+);
+
+const lookbookLastModified = maxDate(
+  gitLastModified("src/app/[locale]/lookbook/[season]/page.tsx"),
+  gitLastModified("src/lib/lookbook-data.ts")
+);
+
+const transformationLastModified = maxDate(
+  gitLastModified("src/app/[locale]/transformations/[type]/page.tsx"),
+  gitLastModified("src/lib/transformation-data.ts")
+);
+
+const guideLastModified = maxDate(
+  gitLastModified("src/app/[locale]/guides/[topic]/page.tsx"),
+  gitLastModified("src/lib/guide-data.ts")
 );
 
 function localePath(locale: string, path: string): string {
@@ -310,6 +330,60 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: localePath(locale, `/blog/tag/${tagSlug}`),
         lastModified: tagLastModified,
         ...localeSitemapMeta(locale, 0.4, "weekly"),
+        alternates: { languages: alternates },
+      });
+    }
+  }
+
+  // Lookbook pages (12 sub-seasons)
+  for (const slug of LOOKBOOK_SLUGS) {
+    for (const locale of locales) {
+      const alternates: Record<string, string> = {};
+      for (const l of locales) {
+        alternates[l] = localePath(l, `/lookbook/${slug}`);
+      }
+      alternates["x-default"] = localePath("en", `/lookbook/${slug}`);
+
+      entries.push({
+        url: localePath(locale, `/lookbook/${slug}`),
+        lastModified: lookbookLastModified,
+        ...localeSitemapMeta(locale, 0.7, "monthly"),
+        alternates: { languages: alternates },
+      });
+    }
+  }
+
+  // Transformation type pages
+  for (const slug of TRANSFORMATION_SLUGS) {
+    for (const locale of locales) {
+      const alternates: Record<string, string> = {};
+      for (const l of locales) {
+        alternates[l] = localePath(l, `/transformations/${slug}`);
+      }
+      alternates["x-default"] = localePath("en", `/transformations/${slug}`);
+
+      entries.push({
+        url: localePath(locale, `/transformations/${slug}`),
+        lastModified: transformationLastModified,
+        ...localeSitemapMeta(locale, 0.6, "monthly"),
+        alternates: { languages: alternates },
+      });
+    }
+  }
+
+  // Guide topic pages
+  for (const slug of GUIDE_SLUGS) {
+    for (const locale of locales) {
+      const alternates: Record<string, string> = {};
+      for (const l of locales) {
+        alternates[l] = localePath(l, `/guides/${slug}`);
+      }
+      alternates["x-default"] = localePath("en", `/guides/${slug}`);
+
+      entries.push({
+        url: localePath(locale, `/guides/${slug}`),
+        lastModified: guideLastModified,
+        ...localeSitemapMeta(locale, 0.6, "monthly"),
         alternates: { languages: alternates },
       });
     }
