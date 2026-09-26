@@ -96,7 +96,10 @@
     "noPlan": "暂无订阅",
     "manage": "管理",
     "inviteFriends": "邀请好友",
-    "vsCompare": "Belle AI vs Competitors"
+    "vsCompare": "Belle AI vs Competitors",
+    "lookbook": "Style Lookbook",
+    "transformations": "Transformations",
+    "guides": "Visual Guides"
   },
   "home": {
     "heroTitle": "AI色彩分析：",
@@ -701,7 +704,10 @@
     "contact": "联系我们",
     "jewelryGuide": "Jewelry Guide",
     "vsDressika": "Belle AI vs Dressika",
-    "vsColorwise": "Belle AI vs Colorwise"
+    "vsColorwise": "Belle AI vs Colorwise",
+    "lookbook": "Style Lookbook",
+    "transformations": "Transformations",
+    "guides": "Visual Guides"
   },
   "privacy": {
     "title": "隐私政策",

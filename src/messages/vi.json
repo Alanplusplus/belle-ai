@@ -96,7 +96,10 @@
     "noPlan": "Chưa có gói",
     "manage": "Quản lý",
     "inviteFriends": "Mời bạn bè",
-    "vsCompare": "Belle AI vs Competitors"
+    "vsCompare": "Belle AI vs Competitors",
+    "lookbook": "Style Lookbook",
+    "transformations": "Transformations",
+    "guides": "Visual Guides"
   },
   "home": {
     "heroTitle": "Phân Tích Màu AI:",
@@ -701,7 +704,10 @@
     "contact": "Liên hệ",
     "jewelryGuide": "Jewelry Guide",
     "vsDressika": "Belle AI vs Dressika",
-    "vsColorwise": "Belle AI vs Colorwise"
+    "vsColorwise": "Belle AI vs Colorwise",
+    "lookbook": "Style Lookbook",
+    "transformations": "Transformations",
+    "guides": "Visual Guides"
   },
   "privacy": {
     "title": "Privacy Policy",

@@ -96,7 +96,10 @@
     "noPlan": "Нет подписки",
     "manage": "Управление",
     "inviteFriends": "Пригласить друзей",
-    "vsCompare": "Belle AI vs Competitors"
+    "vsCompare": "Belle AI vs Competitors",
+    "lookbook": "Style Lookbook",
+    "transformations": "Transformations",
+    "guides": "Visual Guides"
   },
   "home": {
     "heroTitle": "ИИ-анализ цветотипа:",
@@ -701,7 +704,10 @@
     "contact": "Связаться",
     "jewelryGuide": "Jewelry Guide",
     "vsDressika": "Belle AI vs Dressika",
-    "vsColorwise": "Belle AI vs Colorwise"
+    "vsColorwise": "Belle AI vs Colorwise",
+    "lookbook": "Style Lookbook",
+    "transformations": "Transformations",
+    "guides": "Visual Guides"
   },
   "privacy": {
     "title": "Privacy Policy",

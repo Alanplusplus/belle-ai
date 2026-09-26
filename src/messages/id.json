@@ -96,7 +96,10 @@
     "noPlan": "Tidak ada paket",
     "manage": "Kelola",
     "inviteFriends": "Undang teman",
-    "vsCompare": "Belle AI vs Competitors"
+    "vsCompare": "Belle AI vs Competitors",
+    "lookbook": "Style Lookbook",
+    "transformations": "Transformations",
+    "guides": "Visual Guides"
   },
   "home": {
     "heroTitle": "Analisis Warna AI:",
@@ -701,7 +704,10 @@
     "contact": "Hubungi Kami",
     "jewelryGuide": "Jewelry Guide",
     "vsDressika": "Belle AI vs Dressika",
-    "vsColorwise": "Belle AI vs Colorwise"
+    "vsColorwise": "Belle AI vs Colorwise",
+    "lookbook": "Style Lookbook",
+    "transformations": "Transformations",
+    "guides": "Visual Guides"
   },
   "privacy": {
     "title": "Privacy Policy",

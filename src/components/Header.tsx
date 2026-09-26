@@ -79,6 +79,9 @@ export function Header() {
     { href: "/color-analysis", label: t("colorAnalysisGuide") },
     { href: "/tools/color-quiz", label: t("colorQuiz") },
     { href: "/tools/face-shape-quiz", label: t("faceQuiz") },
+    { href: "/lookbook/soft-autumn", label: t("lookbook") },
+    { href: "/transformations", label: t("transformations") },
+    { href: "/guides", label: t("guides") },
     { href: "/vs/dressika", label: t("vsCompare") },
   ];
 

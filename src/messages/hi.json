@@ -96,7 +96,10 @@
     "noPlan": "कोई योजना नहीं",
     "manage": "प्रबंधित करें",
     "inviteFriends": "दोस्तों को आमंत्रित करें",
-    "vsCompare": "Belle AI vs Competitors"
+    "vsCompare": "Belle AI vs Competitors",
+    "lookbook": "Style Lookbook",
+    "transformations": "Transformations",
+    "guides": "Visual Guides"
   },
   "home": {
     "heroTitle": "AI कलर एनालिसिस:",
@@ -701,7 +704,10 @@
     "contact": "संपर्क करें",
     "jewelryGuide": "Jewelry Guide",
     "vsDressika": "Belle AI vs Dressika",
-    "vsColorwise": "Belle AI vs Colorwise"
+    "vsColorwise": "Belle AI vs Colorwise",
+    "lookbook": "Style Lookbook",
+    "transformations": "Transformations",
+    "guides": "Visual Guides"
   },
   "privacy": {
     "title": "Privacy Policy",

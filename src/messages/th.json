@@ -96,7 +96,10 @@
     "noPlan": "ไม่มีแพลน",
     "manage": "จัดการ",
     "inviteFriends": "ชวนเพื่อน",
-    "vsCompare": "Belle AI vs Competitors"
+    "vsCompare": "Belle AI vs Competitors",
+    "lookbook": "Style Lookbook",
+    "transformations": "Transformations",
+    "guides": "Visual Guides"
   },
   "home": {
     "heroTitle": "วิเคราะห์สีด้วย AI:",
@@ -701,7 +704,10 @@
     "contact": "ติดต่อเรา",
     "jewelryGuide": "Jewelry Guide",
     "vsDressika": "Belle AI vs Dressika",
-    "vsColorwise": "Belle AI vs Colorwise"
+    "vsColorwise": "Belle AI vs Colorwise",
+    "lookbook": "Style Lookbook",
+    "transformations": "Transformations",
+    "guides": "Visual Guides"
   },
   "privacy": {
     "title": "Privacy Policy",

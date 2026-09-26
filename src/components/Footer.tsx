@@ -162,6 +162,30 @@ export function Footer() {
                   {ft("vsColorwise")}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/lookbook/soft-autumn"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {ft("lookbook")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/transformations"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {ft("transformations")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {ft("guides")}
+                </Link>
+              </li>
             </ul>
           </div>
 
