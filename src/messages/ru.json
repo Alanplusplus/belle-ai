@@ -53,7 +53,17 @@
     "celebrityPseoDescription": "Discover {name}'s color season ({season}), signature colors, and styling tips. Learn how their personal color palette influences their iconic looks and find similar colors for yourself.",
     "compareTitle": "{season1} vs {season2}: How to Tell the Difference",
     "compareDescription": "Confused between {season1} and {season2}? Compare undertones, depth, chroma, and contrast side by side. Learn how to tell them apart with expert tips and a free AI color analysis.",
-    "vsTitle": "Belle AI vs {competitor} – Color Analysis Comparison"
+    "vsTitle": "Belle AI vs {competitor} – Color Analysis Comparison",
+    "lookbookTitle": "{season} Lookbook — Outfit, Makeup & Hair Inspiration",
+    "lookbookDescription": "Visual inspiration board for {season}: outfit ideas, makeup looks, hair colors, jewelry & accessories. Curated color palette guide with pinnable images.",
+    "transformationsTitle": "Before & After Transformations — AI Color Analysis Results",
+    "transformationsDescription": "See real before-and-after results from AI-powered personal color analysis, makeup, hair, and styling. Discover the difference the right colors make.",
+    "transformationTypeTitle": "{type} Transformation — Before & After Results",
+    "transformationTypeDescription": "See {type} before-and-after transformations from AI analysis. Real results showing the difference personalized recommendations make.",
+    "guidesTitle": "Visual Style Guides — Color Analysis & Styling Quick Reference",
+    "guidesDescription": "Quick-reference visual guides for 12-season color analysis, face shape styling, and hair color matching. Infographic-style guides to save and share.",
+    "guideTopicTitle": "{topic} — Visual Style Guide",
+    "guideTopicDescription": "{description}"
   },
   "nav": {
     "home": "Главная",
@@ -3236,5 +3246,55 @@
       "faq3Q": "Which is better for a quick free color check?",
       "faq3A": "Palette Hunt offers more free colors without payment. Belle AI provides 1 free analysis with a comprehensive magazine-quality report."
     }
+  },
+  "lookbook": {
+    "title": "{season} Lookbook — Visual Style Inspiration",
+    "subtitle": "Visual inspiration for your {season} palette",
+    "heroDesc": "Outfit ideas, makeup looks, hair colors, and accessories curated for {season}. Save your favorites to Pinterest!",
+    "outfitSection": "Outfit Inspiration",
+    "makeupSection": "Makeup Looks",
+    "hairSection": "Hair Color Ideas",
+    "jewelrySection": "Jewelry & Accessories",
+    "avoidSection": "Colors to Avoid",
+    "paletteSection": "Color Palette Swatches",
+    "saveToPinterest": "Save to Pinterest",
+    "ctaTitle": "Discover Your Color Season",
+    "ctaDesc": "Not sure if you're {season}? Upload a selfie and our AI will identify your 12-season color type in 60 seconds.",
+    "getAnalysis": "Get My Color Analysis",
+    "takeQuiz": "Take Free Quiz",
+    "relatedArticles": "Related Reading",
+    "viewPalette": "View Full {season} Palette →",
+    "exploreLookbooks": "Explore Other Lookbooks",
+    "backToGuide": "← Back to Color Analysis Guide"
+  },
+  "transformations": {
+    "indexTitle": "Before & After Transformations",
+    "indexDescription": "See real results from AI-powered color analysis, makeup, and styling recommendations.",
+    "heroTitle": "AI Beauty Transformations",
+    "heroSubtitle": "See the Difference",
+    "heroDesc": "Real before-and-after results from AI-powered personal color analysis, makeup, hair, and styling recommendations.",
+    "before": "Before",
+    "after": "After",
+    "seasonLabel": "Season",
+    "detailsLabel": "Analysis Notes",
+    "viewAll": "View All Transformations",
+    "ctaTitle": "Ready for Your Transformation?",
+    "ctaDesc": "Upload a selfie and get your personalized color analysis and styling recommendations in 60 seconds.",
+    "startAnalysis": "Start My Analysis",
+    "viewPricing": "View Pricing",
+    "otherTypes": "More Transformation Types",
+    "backToAll": "← All Transformations"
+  },
+  "guides": {
+    "indexTitle": "Visual Style Guides",
+    "indexDescription": "Quick-reference visual guides for color analysis, face shapes, and styling.",
+    "heroTitle": "Visual Style Guides",
+    "heroDesc": "Quick-reference visual guides for color seasons, face shape styling, and hair color matching. Save and share these infographic-style guides.",
+    "ctaTitle": "Get Personalized Recommendations",
+    "ctaDesc": "These guides show general rules. For recommendations tailored specifically to your features, try our free AI analysis.",
+    "getAnalysis": "Try Free Analysis",
+    "relatedArticles": "Related Articles",
+    "otherGuides": "More Guides",
+    "backToAll": "← All Guides"
   }
 }
