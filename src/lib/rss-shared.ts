@@ -9,6 +9,16 @@ function escapeXml(s: string): string {
     .replace(/'/g, "&apos;");
 }
 
+function guessImageType(url: string): string {
+  if (url.endsWith(".png")) return "image/png";
+  if (url.endsWith(".jpg") || url.endsWith(".jpeg")) return "image/jpeg";
+  if (url.endsWith(".gif")) return "image/gif";
+  if (url.endsWith(".svg")) return "image/svg+xml";
+  if (url.endsWith(".webp")) return "image/webp";
+  if (url.includes("opengraph-image")) return "image/png";
+  return "image/webp";
+}
+
 export function absUrl(path: string): string {
   if (path.startsWith("http")) return path;
   return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
@@ -19,6 +29,7 @@ export interface RssFeedItem {
   link: string;
   description: string;
   imageUrl?: string;
+  imageType?: string;
   pubDate: string;
   category?: string;
 }
@@ -33,9 +44,10 @@ export function buildRssFeed(opts: {
   const xmlItems = opts.items
     .map((item) => {
       const imgUrl = item.imageUrl ? escapeXml(absUrl(item.imageUrl)) : "";
+      const imgType = item.imageType || guessImageType(item.imageUrl || "");
       const imgTags = imgUrl
-        ? `\n      <enclosure url="${imgUrl}" type="image/webp" length="0"/>
-      <media:content url="${imgUrl}" medium="image" type="image/webp">
+        ? `\n      <enclosure url="${imgUrl}" type="${imgType}" length="0"/>
+      <media:content url="${imgUrl}" medium="image" type="${imgType}">
         <media:title type="plain">${escapeXml(item.title)}</media:title>
         <media:description type="plain">${escapeXml(item.description)}</media:description>
       </media:content>`

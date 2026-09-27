@@ -96,16 +96,16 @@ function TransformationTypeContent({ slug }: { slug: string }) {
           <div className="space-y-12">
             {data.examples.map((example, idx) => (
               <div key={idx} className="rounded-2xl border border-border bg-card overflow-hidden">
-                {/* Before/After Images */}
-                <div className="flex flex-col sm:flex-row">
-                  <div className="relative flex-1 bg-muted">
-                    <div className="relative aspect-[4/3]">
+                {/* Before → After → Report */}
+                <div className="grid grid-cols-1 sm:grid-cols-3">
+                  <div className="relative bg-muted">
+                    <div className="relative aspect-[3/4]">
                       <Image
                         src={example.before}
                         alt={`${data.name} before — ${example.label}`}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 640px) 100vw, 50vw"
+                        sizes="(max-width: 640px) 100vw, 33vw"
                         unoptimized
                       />
                       <span className="absolute left-3 top-3 rounded-full bg-black/60 px-3 py-1 text-sm font-medium text-white">
@@ -113,18 +113,33 @@ function TransformationTypeContent({ slug }: { slug: string }) {
                       </span>
                     </div>
                   </div>
-                  <div className="relative flex-1 bg-muted">
-                    <div className="relative aspect-[4/3]">
+                  <div className="relative bg-muted">
+                    <div className="relative aspect-[3/4]">
                       <Image
                         src={example.after}
                         alt={`${data.name} after — ${example.label}`}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 640px) 100vw, 50vw"
+                        sizes="(max-width: 640px) 100vw, 33vw"
                         unoptimized
                       />
-                      <span className="absolute right-3 top-3 rounded-full bg-primary/80 px-3 py-1 text-sm font-medium text-white">
+                      <span className="absolute left-1/2 -translate-x-1/2 top-3 rounded-full bg-primary/80 px-3 py-1 text-sm font-medium text-white">
                         {t("after")}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="relative bg-muted">
+                    <div className="relative aspect-[3/4]">
+                      <Image
+                        src={example.report}
+                        alt={`${data.name} AI report — ${example.label}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, 33vw"
+                        unoptimized
+                      />
+                      <span className="absolute right-3 top-3 rounded-full bg-emerald-600/80 px-3 py-1 text-sm font-medium text-white">
+                        AI Report
                       </span>
                     </div>
                   </div>

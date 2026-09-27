@@ -1,7 +1,7 @@
 import { SITE_URL } from "@/lib/constants";
 import { SEASON_PALETTES, SEASON_SLUGS } from "@/lib/color-palette-data";
 import { LOOKBOOK_DATA } from "@/lib/lookbook-data";
-import { buildRssFeed, rssResponse, absUrl, type RssFeedItem } from "@/lib/rss-shared";
+import { buildRssFeed, rssResponse, type RssFeedItem } from "@/lib/rss-shared";
 
 export async function GET() {
   const items: RssFeedItem[] = [];
@@ -12,28 +12,19 @@ export async function GET() {
     if (!season || !lookbook) continue;
 
     const name = season.name.split(" (")[0];
+    const parentCat = season.parentSeason.charAt(0).toUpperCase() + season.parentSeason.slice(1);
+
+    const sectionSummary = lookbook.sections.map((s) => s.title).join(", ");
 
     items.push({
       title: `${name} Lookbook — Visual Style Inspiration`,
       link: `${SITE_URL}/lookbook/${slug}`,
-      description: lookbook.heroDescription,
+      description: `${lookbook.heroDescription} Includes: ${sectionSummary}.`,
       imageUrl: `${SITE_URL}/lookbook/${slug}/opengraph-image`,
+      imageType: "image/png",
       pubDate: new Date().toUTCString(),
-      category: season.parentSeason.charAt(0).toUpperCase() + season.parentSeason.slice(1),
+      category: parentCat,
     });
-
-    for (const section of lookbook.sections) {
-      for (const img of section.images) {
-        items.push({
-          title: `${name} ${section.title} — ${img.alt}`,
-          link: `${SITE_URL}/lookbook/${slug}`,
-          description: `${name} lookbook: ${section.title.toLowerCase()} inspiration. ${img.alt}`,
-          imageUrl: absUrl(img.src),
-          pubDate: new Date().toUTCString(),
-          category: season.parentSeason.charAt(0).toUpperCase() + season.parentSeason.slice(1),
-        });
-      }
-    }
   }
 
   return rssResponse(

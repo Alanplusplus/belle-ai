@@ -91,14 +91,6 @@ export async function POST(req: NextRequest) {
         return NextResponse.json(data);
       }
 
-      case "upload": {
-        const data = await proxyPost("/common/v1/web/upload", {
-          imageBase64: params.imageBase64,
-          fileType: params.fileType || "jpg",
-        });
-        return NextResponse.json(data);
-      }
-
       case "generate": {
         const data = await proxyPost("/common/v1/web/generate", {
           ...(googleId ? { google_user_id: googleId } : { fingerprint }),

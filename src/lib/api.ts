@@ -91,12 +91,16 @@ export async function webMergeAccount(email?: string, name?: string, avatarUrl?:
   return res;
 }
 
+const DIRECT_API_BASE =
+  process.env.NEXT_PUBLIC_BELLE_API_BASE || "https://api.chibistyle.app";
+
 export async function uploadImage(base64Data: string) {
-  return belleApi<{ url: string }>({
-    action: "upload",
-    imageBase64: base64Data,
-    fileType: "jpg",
+  const res = await fetch(`${DIRECT_API_BASE}/common/v1/web/upload`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ imageBase64: base64Data, fileType: "jpg" }),
   });
+  return res.json() as Promise<ApiResponse<{ url: string }>>;
 }
 
 export type AnalysisType =

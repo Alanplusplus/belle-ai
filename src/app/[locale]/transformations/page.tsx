@@ -79,32 +79,45 @@ function TransformationsIndexContent() {
                 href={`/transformations/${type.slug}`}
                 className="group overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg"
               >
-                {/* Before/After Preview */}
+                {/* Before → After → Report Preview */}
                 <div className="relative flex h-48">
-                  <div className="relative w-1/2 overflow-hidden bg-muted">
+                  <div className="relative w-1/3 overflow-hidden bg-muted">
                     <Image
                       src={type.examples[0].before}
                       alt={`${type.name} before`}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 640px) 50vw, 25vw"
+                      sizes="(max-width: 640px) 33vw, 17vw"
                       unoptimized
                     />
                     <span className="absolute bottom-2 left-2 rounded bg-black/60 px-2 py-0.5 text-xs font-medium text-white">
                       {t("before")}
                     </span>
                   </div>
-                  <div className="relative w-1/2 overflow-hidden bg-muted">
+                  <div className="relative w-1/3 overflow-hidden bg-muted">
                     <Image
                       src={type.examples[0].after}
                       alt={`${type.name} after`}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 640px) 50vw, 25vw"
+                      sizes="(max-width: 640px) 33vw, 17vw"
                       unoptimized
                     />
-                    <span className="absolute bottom-2 right-2 rounded bg-primary/80 px-2 py-0.5 text-xs font-medium text-white">
+                    <span className="absolute bottom-2 left-1/2 -translate-x-1/2 rounded bg-primary/80 px-2 py-0.5 text-xs font-medium text-white">
                       {t("after")}
+                    </span>
+                  </div>
+                  <div className="relative w-1/3 overflow-hidden bg-muted">
+                    <Image
+                      src={type.examples[0].report}
+                      alt={`${type.name} AI report`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 33vw, 17vw"
+                      unoptimized
+                    />
+                    <span className="absolute bottom-2 right-2 rounded bg-emerald-600/80 px-2 py-0.5 text-xs font-medium text-white">
+                      Report
                     </span>
                   </div>
                 </div>
