@@ -2186,7 +2186,8 @@
       "faq1Q": "Which color season is best for neutral undertones?",
       "faq1A": "Neutral undertones most commonly fall into Soft Summer (cool-leaning) or Soft Autumn (warm-leaning). AI analysis can detect the subtle lean in your undertone.",
       "faq2Q": "Can neutral undertones wear both warm and cool colors?",
-      "faq2A": "Yes — that is the biggest advantage. You can pull from both warm and cool palettes, though muted and medium-saturation shades tend to be most flattering."
+      "faq2A": "Yes — that is the biggest advantage. You can pull from both warm and cool palettes, though muted and medium-saturation shades tend to be most flattering.",
+      "undertone": "Neutral undertones often have a mix of both warm and cool indicators. Your veins may appear blue-green. You likely tan easily without burning but do not turn very golden. The key is identifying whether you lean slightly warm-neutral or cool-neutral."
     },
     "mature-skin": {
       "name": "Mature Skin (40+)",
@@ -2227,7 +2228,8 @@
       "faq1Q": "What colors make mature skin look younger?",
       "faq1A": "Rich, saturated colors like teal, raspberry, plum, and sapphire add vibrancy near the face. Avoid washed-out pastels and heavy black.",
       "faq2Q": "Should I still wear black after 40?",
-      "faq2A": "Black can create harsh contrast against aging skin. Consider softer dark neutrals like charcoal, deep navy, or espresso. If you love black, add a flattering color near your face."
+      "faq2A": "Black can create harsh contrast against aging skin. Consider softer dark neutrals like charcoal, deep navy, or espresso. If you love black, add a flattering color near your face.",
+      "undertone": "Your undertone typically stays consistent as you age, but depth and contrast often shift. As hair grays, warm types may appear cooler. Reassess your color season every few years."
     },
     "brides": {
       "name": "Brides & Wedding",
@@ -2266,7 +2268,9 @@
       "faq1Q": "Should I wear white or ivory on my wedding day?",
       "faq1A": "It depends on your undertone. Warm undertones look best in ivory or champagne. Cool undertones glow in pure white. AI analysis can determine your ideal shade.",
       "faq2Q": "How do I choose bridesmaid dress colors?",
-      "faq2A": "Bridesmaid colors should complement your wedding palette. Popular universally flattering options include dusty rose, sage green, and dusty blue."
+      "faq2A": "Bridesmaid colors should complement your wedding palette. Popular universally flattering options include dusty rose, sage green, and dusty blue.",
+      "undertone": "Your undertone determines which shade of white looks best — warm undertones glow in ivory or champagne, cool undertones shine in pure white or blue-white, neutral undertones can wear almost any shade.",
+      "cs4": "Winter brides are stunning in pure white, jewel tones, and metallic accents"
     },
     "teenagers": {
       "name": "Teenagers & Young Adults",
@@ -2304,7 +2308,8 @@
       "faq1Q": "Can teens do color analysis for free?",
       "faq1A": "Yes! Belle offers free AI color analysis — just upload a clear selfie in natural light to get your seasonal color type and palette.",
       "faq2Q": "How does knowing my colors help with shopping on a budget?",
-      "faq2A": "When you know your best colors, you buy fewer wrong pieces. Every item works together, creating more outfit combinations with fewer clothes."
+      "faq2A": "When you know your best colors, you buy fewer wrong pieces. Every item works together, creating more outfit combinations with fewer clothes.",
+      "undertone": "Your undertone is determined by genetics and generally stays consistent. Look at your inner wrist — blue veins suggest cool, green suggests warm, mix suggests neutral."
     },
     "curly-hair": {
       "name": "Curly & Coily Hair",
@@ -2342,7 +2347,8 @@
       "faq1Q": "What hair colors work best on curly hair?",
       "faq1A": "Colors with dimension — like balayage, highlights, or rich shades — look stunning on curls because the pattern naturally creates light play.",
       "faq2Q": "How do I maintain colored curly hair?",
-      "faq2A": "Use sulfate-free, color-safe products. Deep condition regularly. Avoid excessive heat styling. Refresh color every 8-10 weeks."
+      "faq2A": "Use sulfate-free, color-safe products. Deep condition regularly. Avoid excessive heat styling. Refresh color every 8-10 weeks.",
+      "undertone": "Determine your undertone independently from hair color. Your natural curl color is a good indicator — warm-toned curls (golden, copper) suggest warm undertones, ashy or cool-brown curls suggest cool."
     }
   },
   "blogTitles": {

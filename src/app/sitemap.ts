@@ -13,8 +13,6 @@ import { LOOKBOOK_SLUGS } from "@/lib/lookbook-data";
 import { TRANSFORMATION_SLUGS } from "@/lib/transformation-data";
 import { GUIDE_SLUGS } from "@/lib/guide-data";
 
-const DEMOTED_LOCALES = ["ar", "hi", "th", "vi"];
-
 const COMPETITOR_SLUGS = [
   "dressika",
   "colorwise",
@@ -25,13 +23,9 @@ const COMPETITOR_SLUGS = [
 ];
 
 function localeSitemapMeta(
-  locale: string,
   priority: number,
   changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]
 ): Pick<MetadataRoute.Sitemap[number], "priority" | "changeFrequency"> {
-  if (DEMOTED_LOCALES.includes(locale)) {
-    return { priority: 0.1, changeFrequency: "yearly" };
-  }
   return { priority, changeFrequency };
 }
 
@@ -156,7 +150,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: localePath(locale, page),
         lastModified,
         ...localeSitemapMeta(
-          locale,
           isHome ? 1 : 0.8,
           isHome || isBlogIndex ? "daily" : "weekly"
         ),
@@ -176,7 +169,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: localePath(locale, `/vs/${slug}`),
         lastModified: vsLastModified,
-        ...localeSitemapMeta(locale, 0.7, "monthly"),
+        ...localeSitemapMeta(0.7, "monthly"),
         alternates: { languages: alternates },
       });
     }
@@ -193,7 +186,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: localePath(locale, `/color-palette/${slug}`),
         lastModified: seasonLastModified,
-        ...localeSitemapMeta(locale, 0.7, "monthly"),
+        ...localeSitemapMeta(0.7, "monthly"),
         alternates: { languages: alternates },
       });
     }
@@ -210,7 +203,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: localePath(locale, `/color-palette/${slug}`),
         lastModified: seasonLastModified,
-        ...localeSitemapMeta(locale, 0.8, "monthly"),
+        ...localeSitemapMeta(0.8, "monthly"),
         alternates: { languages: alternates },
       });
     }
@@ -227,7 +220,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: localePath(locale, `/color-analysis-for/${slug}`),
         lastModified: attributeLastModified,
-        ...localeSitemapMeta(locale, 0.7, "monthly"),
+        ...localeSitemapMeta(0.7, "monthly"),
         alternates: { languages: alternates },
       });
     }
@@ -244,7 +237,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: localePath(locale, `/face-shape/${slug}`),
         lastModified: faceShapeLastModified,
-        ...localeSitemapMeta(locale, 0.7, "monthly"),
+        ...localeSitemapMeta(0.7, "monthly"),
         alternates: { languages: alternates },
       });
     }
@@ -261,7 +254,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: localePath(locale, `/celebrity/${slug}`),
         lastModified: celebrityLastModified,
-        ...localeSitemapMeta(locale, 0.7, "monthly"),
+        ...localeSitemapMeta(0.7, "monthly"),
         alternates: { languages: alternates },
       });
     }
@@ -278,7 +271,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: localePath(locale, `/compare/${slug}`),
         lastModified: compareLastModified,
-        ...localeSitemapMeta(locale, 0.7, "monthly"),
+        ...localeSitemapMeta(0.7, "monthly"),
         alternates: { languages: alternates },
       });
     }
@@ -308,7 +301,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: localePath(locale, `/blog/${slug}`),
         lastModified: post?.date ? new Date(post.date) : new Date(),
-        ...localeSitemapMeta(locale, 0.6, "weekly"),
+        ...localeSitemapMeta(0.6, "weekly"),
         alternates: { languages: alternates },
       });
     }
@@ -329,7 +322,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: localePath(locale, `/blog/tag/${tagSlug}`),
         lastModified: tagLastModified,
-        ...localeSitemapMeta(locale, 0.4, "weekly"),
+        ...localeSitemapMeta(0.4, "weekly"),
         alternates: { languages: alternates },
       });
     }
@@ -347,7 +340,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: localePath(locale, `/lookbook/${slug}`),
         lastModified: lookbookLastModified,
-        ...localeSitemapMeta(locale, 0.7, "monthly"),
+        ...localeSitemapMeta(0.7, "monthly"),
         alternates: { languages: alternates },
       });
     }
@@ -365,7 +358,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: localePath(locale, `/transformations/${slug}`),
         lastModified: transformationLastModified,
-        ...localeSitemapMeta(locale, 0.6, "monthly"),
+        ...localeSitemapMeta(0.6, "monthly"),
         alternates: { languages: alternates },
       });
     }
@@ -383,7 +376,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url: localePath(locale, `/guides/${slug}`),
         lastModified: guideLastModified,
-        ...localeSitemapMeta(locale, 0.6, "monthly"),
+        ...localeSitemapMeta(0.6, "monthly"),
         alternates: { languages: alternates },
       });
     }

@@ -4,14 +4,15 @@ import { buildRssFeed, rssResponse, type RssFeedItem } from "@/lib/rss-shared";
 import { NextRequest } from "next/server";
 
 export function generateStaticParams() {
-  return TRANSFORMATION_SLUGS.map((type) => ({ type }));
+  return TRANSFORMATION_SLUGS.map((slug) => ({ type: `${slug}.xml` }));
 }
 
 export async function GET(
   _req: NextRequest,
-  context: { params: Promise<Record<string, string>> },
+  { params }: { params: Promise<{ type: string }> },
 ) {
-  const { type } = (await context.params) as { type: string };
+  const { type: raw } = await params;
+  const type = raw.replace(/\.xml$/, "");
   const t = TRANSFORMATION_TYPES.find((t) => t.slug === type);
   if (!t) {
     return new Response("Not found", { status: 404 });

@@ -27,8 +27,7 @@ export function determinePlan(productId: string): string {
 
 export const LOCALES = [
   "en", "zh", "ja", "ko",
-  "es", "fr", "de", "pt", "it", "ru",
-  "ar", "hi", "th", "vi", "id", "tr",
+  "es", "fr", "de", "ru", "tr",
 ] as const;
 
 export const LOCALE_NAMES: Record<string, string> = {
@@ -39,13 +38,6 @@ export const LOCALE_NAMES: Record<string, string> = {
   es: "Español",
   fr: "Français",
   de: "Deutsch",
-  pt: "Português",
-  it: "Italiano",
   ru: "Русский",
-  ar: "العربية",
-  hi: "हिन्दी",
-  th: "ไทย",
-  vi: "Tiếng Việt",
-  id: "Bahasa Indonesia",
   tr: "Türkçe",
 };

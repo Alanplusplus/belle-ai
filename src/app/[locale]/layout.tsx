@@ -117,7 +117,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      dir={locale === "ar" ? "rtl" : "ltr"}
+      dir="ltr"
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
       style={{ colorScheme: "light" }}
       suppressHydrationWarning

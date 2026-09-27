@@ -29,14 +29,7 @@ const BREADCRUMB_HOME: Record<string, string> = {
   es: "Inicio",
   fr: "Accueil",
   de: "Startseite",
-  pt: "Início",
-  it: "Home",
   ru: "Главная",
-  ar: "الرئيسية",
-  hi: "होम",
-  th: "หน้าแรก",
-  vi: "Trang chủ",
-  id: "Beranda",
   tr: "Ana Sayfa",
 };
 
@@ -48,14 +41,7 @@ const OG_LOCALE_MAP: Record<string, string> = {
   es: "es_ES",
   fr: "fr_FR",
   de: "de_DE",
-  pt: "pt_BR",
-  it: "it_IT",
   ru: "ru_RU",
-  ar: "ar_SA",
-  hi: "hi_IN",
-  th: "th_TH",
-  vi: "vi_VN",
-  id: "id_ID",
   tr: "tr_TR",
 };
 
