@@ -69,9 +69,17 @@ export default async function GuideTopicPage({
   );
 }
 
+const SEASON_LABEL_TO_SLUG: Record<string, string> = {
+  "Light Spring": "light-spring", "Warm Spring": "warm-spring", "Bright Spring": "bright-spring",
+  "Light Summer": "light-summer", "Cool Summer": "cool-summer", "Soft Summer": "soft-summer",
+  "Soft Autumn": "soft-autumn", "Warm Autumn": "warm-autumn", "Deep Autumn": "deep-autumn",
+  "Deep Winter": "deep-winter", "Cool Winter": "cool-winter", "Bright Winter": "bright-winter",
+};
+
 function GuideTopicContent({ slug }: { slug: string }) {
   const t = useTranslations("guides");
   const bt = useTranslations("blogTitles");
+  const sdRoot = useTranslations("sd");
 
   const data = GUIDE_TOPICS.find((g) => g.slug === slug)!;
   const otherGuides = GUIDE_TOPICS.filter((g) => g.slug !== slug);
@@ -86,9 +94,9 @@ function GuideTopicContent({ slug }: { slug: string }) {
               {t("backToAll").replace("← ", "")}
             </Link>
           </p>
-          <h1 className="mt-3 font-serif text-3xl font-bold sm:text-5xl">{data.name}</h1>
-          <p className="mt-2 text-lg text-primary">{data.tagline}</p>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{data.description}</p>
+          <h1 className="mt-3 font-serif text-3xl font-bold sm:text-5xl">{t.has(`guide_${data.i18nKey}_name`) ? t(`guide_${data.i18nKey}_name`) : data.name}</h1>
+          <p className="mt-2 text-lg text-primary">{t.has(`guide_${data.i18nKey}_tagline`) ? t(`guide_${data.i18nKey}_tagline`) : data.tagline}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{t.has(`guide_${data.i18nKey}_desc`) ? t(`guide_${data.i18nKey}_desc`) : data.description}</p>
         </div>
       </section>
 
@@ -96,12 +104,12 @@ function GuideTopicContent({ slug }: { slug: string }) {
         {/* Sections */}
         {data.sections.map((section, idx) => (
           <section key={idx} className={`py-12 ${idx > 0 ? "border-t border-border" : ""}`}>
-            <h2 className="text-2xl font-bold">{section.title}</h2>
-            <p className="mt-2 text-muted-foreground">{section.description}</p>
+            <h2 className="text-2xl font-bold">{t.has(`guide_${data.i18nKey}_s${idx}_title`) ? t(`guide_${data.i18nKey}_s${idx}_title`) : section.title}</h2>
+            <p className="mt-2 text-muted-foreground">{t.has(`guide_${data.i18nKey}_s${idx}_desc`) ? t(`guide_${data.i18nKey}_s${idx}_desc`) : section.description}</p>
 
             {section.image && (
               <div className="mt-6 overflow-hidden rounded-xl border border-border">
-                <div className="relative aspect-[16/9] bg-muted">
+                <div className={`relative bg-muted ${guideImageAspect(section.image)}`}>
                   <Image
                     src={section.image}
                     alt={`${data.name} — ${section.title}`}
@@ -129,10 +137,7 @@ function GuideTopicContent({ slug }: { slug: string }) {
                         aria-label={`${item.label} color: ${item.hex}`}
                       />
                     )}
-                    <div>
-                      <p className="text-sm font-semibold">{item.label}</p>
-                      <p className="mt-0.5 text-sm text-muted-foreground">{item.detail}</p>
-                    </div>
+                    <GuideItemText t={t} sdRoot={sdRoot} guideKey={data.i18nKey} sIdx={idx} iIdx={i} item={item} />
                   </div>
                 ))}
               </div>
@@ -182,8 +187,8 @@ function GuideTopicContent({ slug }: { slug: string }) {
                 href={`/guides/${g.slug}`}
                 className="group rounded-xl border border-border bg-card p-4 transition hover:border-primary/40 hover:shadow-md"
               >
-                <h3 className="font-semibold group-hover:text-primary">{g.name}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{g.tagline}</p>
+                <h3 className="font-semibold group-hover:text-primary">{t.has(`guide_${g.i18nKey}_name`) ? t(`guide_${g.i18nKey}_name`) : g.name}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{t.has(`guide_${g.i18nKey}_tagline`) ? t(`guide_${g.i18nKey}_tagline`) : g.tagline}</p>
               </Link>
             ))}
           </div>
@@ -196,4 +201,65 @@ function GuideTopicContent({ slug }: { slug: string }) {
       </div>
     </>
   );
+}
+
+function GuideItemText({ t, sdRoot, guideKey, sIdx, iIdx, item }: {
+  t: ReturnType<typeof useTranslations>;
+  sdRoot: ReturnType<typeof useTranslations>;
+  guideKey: string;
+  sIdx: number;
+  iIdx: number;
+  item: { label: string; detail: string };
+}) {
+  const labelKey = `guide_${guideKey}_s${sIdx}_i${iIdx}_label`;
+  const detailKey = `guide_${guideKey}_s${sIdx}_i${iIdx}_detail`;
+  const shortKey = `guide_${guideKey}_s${sIdx}_i${iIdx}`;
+  const bestKey = `guide_${guideKey}_s${sIdx}_best`;
+  const avoidKey = `guide_${guideKey}_s${sIdx}_avoid`;
+  const tipKey = `guide_${guideKey}_s${sIdx}_tip`;
+  const bestLabelKey = `guide_${guideKey}_bestFrames`;
+  const avoidLabelKey = `guide_${guideKey}_avoid`;
+  const tipLabelKey = `guide_${guideKey}_tipLabel`;
+  const avoidHairLabelKey = `guide_${guideKey}_avoidLabel`;
+
+  let label = item.label;
+  let detail = item.detail;
+
+  if (t.has(labelKey)) {
+    label = t(labelKey);
+    detail = t.has(detailKey) ? t(detailKey) : item.detail;
+  } else if (item.label === "Best Frames" && t.has(bestLabelKey)) {
+    label = t(bestLabelKey);
+    detail = t.has(bestKey) ? t(bestKey) : item.detail;
+  } else if (item.label === "Avoid" && t.has(avoidLabelKey)) {
+    label = t(avoidLabelKey);
+    detail = t.has(avoidKey) ? t(avoidKey) : item.detail;
+  } else if (item.label === "Avoid" && t.has(avoidHairLabelKey)) {
+    label = t(avoidHairLabelKey);
+    detail = t.has(avoidKey) ? t(avoidKey) : item.detail;
+  } else if (item.label === "Tip" && t.has(tipLabelKey)) {
+    label = t(tipLabelKey);
+    detail = t.has(tipKey) ? t(tipKey) : item.detail;
+  } else if (t.has(shortKey)) {
+    detail = t(shortKey);
+  }
+
+  const seasonSlug = SEASON_LABEL_TO_SLUG[item.label];
+  if (seasonSlug) {
+    const sdNameKey = `${seasonSlug}.name` as Parameters<typeof sdRoot>[0];
+    if (sdRoot.has(sdNameKey)) label = sdRoot(sdNameKey);
+  }
+
+  return (
+    <div>
+      <p className="text-sm font-semibold">{label}</p>
+      <p className="mt-0.5 text-sm text-muted-foreground">{detail}</p>
+    </div>
+  );
+}
+
+function guideImageAspect(src: string): string {
+  if (src.includes("season_")) return "aspect-[4/3]";
+  if (src.includes("dim_hair_")) return "aspect-square";
+  return "aspect-[16/9]";
 }

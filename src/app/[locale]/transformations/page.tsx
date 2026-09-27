@@ -117,15 +117,15 @@ function TransformationsIndexContent() {
                       unoptimized
                     />
                     <span className="absolute bottom-2 right-2 rounded bg-emerald-600/80 px-2 py-0.5 text-xs font-medium text-white">
-                      Report
+                      {t("report")}
                     </span>
                   </div>
                 </div>
                 <div className="p-4">
-                  <h2 className="text-lg font-semibold group-hover:text-primary">{type.name}</h2>
-                  <p className="mt-1 text-sm text-muted-foreground">{type.tagline}</p>
+                  <h2 className="text-lg font-semibold group-hover:text-primary">{t(`type_${type.slug}_name`)}</h2>
+                  <p className="mt-1 text-sm text-muted-foreground">{t(`type_${type.slug}_tagline`)}</p>
                   <p className="mt-2 text-xs font-medium text-primary">
-                    {type.examples.length} example{type.examples.length > 1 ? "s" : ""} →
+                    {type.examples.length > 1 ? t("examplesCount", { count: type.examples.length }) : t("examplesSingle")}
                   </p>
                 </div>
               </Link>

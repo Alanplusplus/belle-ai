@@ -7,13 +7,32 @@ export async function GET() {
 
   for (const t of TRANSFORMATION_TYPES) {
     for (const example of t.examples) {
-      const parts: string[] = [example.description];
-      if (example.details) parts.push(example.details);
+      const link = `${SITE_URL}/transformations/${t.slug}`;
 
       items.push({
-        title: `${t.name} — ${example.label}`,
-        link: `${SITE_URL}/transformations/${t.slug}`,
-        description: parts.join(" "),
+        title: `${t.name}: Before — ${example.label}`,
+        link,
+        description: `The problem: ${example.description}`,
+        imageUrl: example.originalBefore,
+        imageType: "image/png",
+        pubDate: new Date().toUTCString(),
+        category: t.name,
+      });
+
+      items.push({
+        title: `${t.name}: After — ${example.label}`,
+        link,
+        description: `The transformation: ${example.description}${example.details ? ` ${example.details}` : ""}`,
+        imageUrl: example.originalAfter,
+        imageType: "image/png",
+        pubDate: new Date().toUTCString(),
+        category: t.name,
+      });
+
+      items.push({
+        title: `${t.name}: AI Report — ${example.label}`,
+        link,
+        description: `The answer: AI analyzed her features and created a personalized ${t.name.toLowerCase()} report. ${example.details || ""}`.trim(),
         imageUrl: example.originalReport,
         imageType: "image/png",
         pubDate: new Date().toUTCString(),

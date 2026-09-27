@@ -76,10 +76,10 @@ function GuidesIndexContent() {
                 href={`/guides/${guide.slug}`}
                 className="group rounded-xl border border-border bg-card p-6 transition hover:border-primary/40 hover:shadow-lg"
               >
-                <h2 className="text-lg font-bold group-hover:text-primary">{guide.name}</h2>
-                <p className="mt-1 text-sm text-primary">{guide.tagline}</p>
-                <p className="mt-3 line-clamp-3 text-sm text-muted-foreground">{guide.description}</p>
-                <p className="mt-4 text-xs font-medium text-primary">{guide.sections.length} sections →</p>
+                <h2 className="text-lg font-bold group-hover:text-primary">{t.has(`guide_${guide.i18nKey}_name`) ? t(`guide_${guide.i18nKey}_name`) : guide.name}</h2>
+                <p className="mt-1 text-sm text-primary">{t.has(`guide_${guide.i18nKey}_tagline`) ? t(`guide_${guide.i18nKey}_tagline`) : guide.tagline}</p>
+                <p className="mt-3 line-clamp-3 text-sm text-muted-foreground">{t.has(`guide_${guide.i18nKey}_desc`) ? t(`guide_${guide.i18nKey}_desc`) : guide.description}</p>
+                <p className="mt-4 text-xs font-medium text-primary">{t("sectionsCount", { count: guide.sections.length })}</p>
               </Link>
             ))}
           </div>

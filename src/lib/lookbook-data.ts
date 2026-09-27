@@ -3,6 +3,8 @@ import { SEASON_PALETTES } from "./color-palette-data";
 export interface LookbookImage {
   src: string;
   alt: string;
+  /** Image filename without extension, used as key for original URL lookup */
+  key: string;
 }
 
 export interface LookbookSection {
@@ -39,24 +41,25 @@ function buildLookbook(slug: string): LookbookEntry {
         images: season.bestColors.slice(0, 5).map((c, i) => ({
           src: `${seasonImages(slug)}/palette-${i + 1}.webp`,
           alt: `${name} palette swatch: ${c.name} (${c.hex})`,
+          key: `palette-${i + 1}`,
         })),
       },
       {
         title: "Outfit Inspiration",
         description: `Wardrobe ideas built around ${name} colors. ${season.fashionTips[0]}`,
         images: [
-          { src: `${seasonImages(slug)}/outfit-casual.webp`, alt: `${name} casual outfit in ${season.bestColors[0].name.toLowerCase()} and ${season.neutrals[0].name.toLowerCase()}` },
-          { src: `${seasonImages(slug)}/outfit-work.webp`, alt: `${name} workwear look featuring ${season.bestColors[1].name.toLowerCase()} tones` },
-          { src: `${seasonImages(slug)}/outfit-evening.webp`, alt: `${name} evening outfit with ${season.bestColors[2].name.toLowerCase()} accents` },
+          { src: `${seasonImages(slug)}/outfit-casual.webp`, alt: `${name} casual outfit in ${season.bestColors[0].name.toLowerCase()} and ${season.neutrals[0].name.toLowerCase()}`, key: "outfit-casual" },
+          { src: `${seasonImages(slug)}/outfit-work.webp`, alt: `${name} workwear look featuring ${season.bestColors[1].name.toLowerCase()} tones`, key: "outfit-work" },
+          { src: `${seasonImages(slug)}/outfit-evening.webp`, alt: `${name} evening outfit with ${season.bestColors[2].name.toLowerCase()} accents`, key: "outfit-evening" },
         ],
       },
       {
         title: "Makeup Looks",
         description: `Flattering makeup combinations for ${name}: ${season.makeup.lips.split(",")[0]} lips paired with ${season.makeup.eyes.split(",")[0]} eyeshadow.`,
         images: [
-          { src: `${seasonImages(slug)}/makeup-everyday.webp`, alt: `${name} everyday makeup — ${season.makeup.blush.split(",")[0]} blush with ${season.makeup.lips.split(",")[0]} lip` },
-          { src: `${seasonImages(slug)}/makeup-glam.webp`, alt: `${name} glam makeup look — ${season.makeup.eyes.split(",")[0]} smoky eye with bold lip` },
-          { src: `${seasonImages(slug)}/makeup-natural.webp`, alt: `${name} natural makeup — subtle ${season.makeup.blush.split(",")[0]} glow` },
+          { src: `${seasonImages(slug)}/makeup-everyday.webp`, alt: `${name} everyday makeup — ${season.makeup.blush.split(",")[0]} blush with ${season.makeup.lips.split(",")[0]} lip`, key: "makeup-everyday" },
+          { src: `${seasonImages(slug)}/makeup-glam.webp`, alt: `${name} glam makeup look — ${season.makeup.eyes.split(",")[0]} smoky eye with bold lip`, key: "makeup-glam" },
+          { src: `${seasonImages(slug)}/makeup-natural.webp`, alt: `${name} natural makeup — subtle ${season.makeup.blush.split(",")[0]} glow`, key: "makeup-natural" },
         ],
       },
       {
@@ -65,14 +68,15 @@ function buildLookbook(slug: string): LookbookEntry {
         images: season.hairColors.slice(0, 3).map((color, i) => ({
           src: `${seasonImages(slug)}/hair-${i + 1}.webp`,
           alt: `${name} hair color inspiration: ${color}`,
+          key: `hair-${i + 1}`,
         })),
       },
       {
         title: "Jewelry & Accessories",
         description: `${name} metals and stones: ${season.jewelry}.`,
         images: [
-          { src: `${seasonImages(slug)}/jewelry-1.webp`, alt: `${name} jewelry — ${season.jewelry.split(",")[0]} pieces` },
-          { src: `${seasonImages(slug)}/jewelry-2.webp`, alt: `${name} accessories — ${season.jewelry.split(",").slice(1, 3).join(" and ").trim()} accents` },
+          { src: `${seasonImages(slug)}/jewelry-1.webp`, alt: `${name} jewelry — ${season.jewelry.split(",")[0]} pieces`, key: "jewelry-1" },
+          { src: `${seasonImages(slug)}/jewelry-2.webp`, alt: `${name} accessories — ${season.jewelry.split(",").slice(1, 3).join(" and ").trim()} accents`, key: "jewelry-2" },
         ],
       },
       {
@@ -81,6 +85,7 @@ function buildLookbook(slug: string): LookbookEntry {
         images: season.avoidColors.slice(0, 3).map((c, i) => ({
           src: `${seasonImages(slug)}/avoid-${i + 1}.webp`,
           alt: `${name} color to avoid: ${c.name} (${c.hex})`,
+          key: `avoid-${i + 1}`,
         })),
       },
     ],

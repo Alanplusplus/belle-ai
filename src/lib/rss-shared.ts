@@ -27,6 +27,8 @@ export function absUrl(path: string): string {
 export interface RssFeedItem {
   title: string;
   link: string;
+  /** Optional unique id; defaults to link */
+  guid?: string;
   description: string;
   imageUrl?: string;
   imageType?: string;
@@ -55,10 +57,12 @@ export function buildRssFeed(opts: {
       const catTag = item.category
         ? `\n      <category>${escapeXml(item.category)}</category>`
         : "";
+      const guidVal = item.guid || item.link;
+      const isPerma = !item.guid || item.guid === item.link;
       return `    <item>
       <title><![CDATA[${item.title}]]></title>
       <link>${escapeXml(item.link)}</link>
-      <guid isPermaLink="true">${escapeXml(item.link)}</guid>
+      <guid isPermaLink="${isPerma ? "true" : "false"}">${escapeXml(guidVal)}</guid>
       <description><![CDATA[${item.description}]]></description>
       <pubDate>${item.pubDate}</pubDate>${catTag}${imgTags}
     </item>`;

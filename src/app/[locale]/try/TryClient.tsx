@@ -698,7 +698,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const activeTaskCount = backgroundTasks.filter((t) => t.phase === "generating" || t.phase === "uploading").length;
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-12">
       <div className="text-center">
         <h1 className="font-serif text-3xl font-bold sm:text-4xl">
           {t("title")}
@@ -808,93 +808,353 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         </div>
       )}
 
-      {/* Settings: Resolution + Report Language */}
-      <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
-        {/* Resolution */}
-        <div className="flex items-center rounded-full border border-border bg-card p-0.5">
-          {(["2K", "4K"] as Resolution[]).map((r) => (
-            <button
-              key={r}
-              onClick={() => { setResolution(r); savePrefs(r, reportLang); trackEvent("resolution_changed", { resolution: r }); }}
-              className={`rounded-full px-3.5 py-1 text-xs font-medium transition ${
-                resolution === r
-                  ? "bg-primary text-white shadow-sm"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {r}
-            </button>
-          ))}
-        </div>
+      {/* Example / Result + Upload — Left/Right Layout */}
+      <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        {/* Left: Before/After comparison — always same structure */}
+        {(() => {
+          const isActive = phase === "preparing" || phase === "uploading" || phase === "generating" || phase === "done" || phase === "error";
+          const hasExample = !!EXAMPLE_IMAGES[analysisType];
+          const leftLabel = isActive
+            ? t(`type_${analysisType}`)
+            : hasExample ? t("exampleBefore") : "";
+          const rightLabel = isActive
+            ? (phase === "done" ? t("resultTitle") : phase === "error" ? t("error") : t("generating"))
+            : hasExample ? t("exampleAfter") : "";
+          const leftImage = isActive && previewUrl
+            ? previewUrl
+            : hasExample ? "/images/examples/before.webp" : null;
 
-        {/* Report Language */}
-        <div className="relative">
-          <button
-            onClick={() => setShowLangPicker(!showLangPicker)}
-            className="flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-medium text-foreground transition hover:border-primary/40"
-          >
-            <svg className="h-3.5 w-3.5 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
-            {REPORT_LANGUAGES.find((l) => l.code === reportLang)?.label || reportLang}
-            <svg className="h-3 w-3 text-muted-foreground" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4" /></svg>
-          </button>
-          {showLangPicker && (
-            <>
-              <div className="fixed inset-0 z-30" onClick={() => setShowLangPicker(false)} />
-              <div className="absolute left-1/2 top-full z-40 mt-1 -translate-x-1/2 max-h-64 w-44 overflow-y-auto rounded-xl border border-border bg-card p-1 shadow-xl">
-                {REPORT_LANGUAGES.map((lang) => (
+          return (
+            <div className="flex flex-col">
+              <p className="mb-3 text-center text-sm font-medium text-muted-foreground">
+                {isActive
+                  ? (phase === "done" ? t("resultTitle") : t(`type_${analysisType}`))
+                  : hasExample ? t("exampleTitle") : t(`type_${analysisType}`)}
+              </p>
+              <div className="grid grid-cols-2 gap-3 rounded-2xl border border-border/60 bg-muted/20 p-3 sm:p-4">
+                {/* Left column — photo */}
+                <div className="space-y-1.5">
+                  <span className="block text-center text-xs font-medium text-muted-foreground">{leftLabel}</span>
+                  <div className="overflow-hidden rounded-xl border border-border/40 bg-background">
+                    {leftImage ? (
+                      <img
+                        src={leftImage}
+                        alt="Photo"
+                        className="h-auto w-full object-cover"
+                        style={{ aspectRatio: "3/4" }}
+                      />
+                    ) : (
+                      <div className="flex items-center justify-center bg-muted/30" style={{ aspectRatio: "3/4" }}>
+                        <svg className="h-10 w-10 text-muted-foreground/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" /></svg>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Right column — report / progress / error / example */}
+                <div className="space-y-1.5">
+                  <span className="block text-center text-xs font-medium text-muted-foreground">{rightLabel}</span>
+
+                  {(phase === "preparing" || phase === "uploading" || phase === "generating") ? (
+                    /* Generating progress */
+                    <div className="flex flex-col items-center justify-center overflow-hidden rounded-xl border border-border/40 bg-gradient-to-br from-primary/5 to-violet-50/50 dark:from-primary/10 dark:to-violet-950/20" style={{ aspectRatio: "3/4" }}>
+                      <div className="relative mb-4">
+                        <div className="h-16 w-16 rounded-full border-[3px] border-primary/20">
+                          <div className="h-full w-full animate-spin rounded-full border-[3px] border-transparent border-t-primary" style={{ animationDuration: "1.5s" }} />
+                        </div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span className="text-sm font-bold text-primary">
+                            {Math.floor(generateElapsed / 60)}:{String(generateElapsed % 60).padStart(2, "0")}
+                          </span>
+                        </div>
+                      </div>
+                      <p className="px-3 text-center text-xs font-medium text-foreground">
+                        {phase === "preparing"
+                          ? t("preparing")
+                          : phase === "uploading"
+                            ? t("uploading")
+                            : t("generating")}
+                      </p>
+                      {phase === "generating" && generateElapsed > 60 && (
+                        <p className="mt-2 px-3 text-center text-[11px] text-muted-foreground">{t("almostDone")}</p>
+                      )}
+                    </div>
+                  ) : phase === "done" && resultUrls.length > 0 ? (
+                    /* Result report image */
+                    <div
+                      className="group cursor-pointer overflow-hidden rounded-xl border border-border/40 bg-background transition hover:border-primary/40 hover:shadow-md"
+                      onClick={() => {
+                        trackEvent("result_viewed_full", { type: analysisType });
+                        setLightbox({ entry: { id: "current", status: "success", type: analysisType, image_urls: resultUrls, source_image_url: sourceImageUrl ?? undefined, created_at: Date.now() / 1000 }, imageIndex: 0 });
+                      }}
+                    >
+                      <div className="relative">
+                        <img
+                          src={resultUrls[0]}
+                          alt="AI Report"
+                          className="h-auto w-full object-cover"
+                          style={{ aspectRatio: "3/4" }}
+                        />
+                        {/* Click to view full hint */}
+                        <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transition group-hover:opacity-100">
+                          <div className="mb-3 flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-foreground shadow-lg backdrop-blur-sm">
+                            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" /></svg>
+                            {t("viewFull")}
+                          </div>
+                        </div>
+                        {/* Page count badge */}
+                        {resultUrls.length > 1 && (
+                          <div className="absolute right-2 top-2 rounded-full bg-black/60 px-2 py-0.5 text-[10px] font-medium text-white backdrop-blur-sm">
+                            1/{resultUrls.length}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ) : phase === "error" ? (
+                    /* Error state */
+                    <div className="flex flex-col items-center justify-center overflow-hidden rounded-xl border border-red-200/60 bg-red-50/30 dark:border-red-900/30 dark:bg-red-950/10" style={{ aspectRatio: "3/4" }}>
+                      <svg className="mb-3 h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg>
+                      <p className="px-3 text-center text-xs font-medium text-red-600 dark:text-red-400">{errorMsg}</p>
+                    </div>
+                  ) : hasExample ? (
+                    /* Idle — example report */
+                    <div
+                      className="cursor-pointer overflow-hidden rounded-xl border border-border/40 bg-background transition hover:shadow-md"
+                      onClick={() => {
+                        trackEvent("example_viewed", { type: analysisType });
+                        setExamplePreview(EXAMPLE_IMAGES[analysisType]!);
+                      }}
+                    >
+                      <img
+                        src={EXAMPLE_IMAGES[analysisType]!}
+                        alt="Example AI report"
+                        className="h-auto w-full object-cover"
+                        style={{ aspectRatio: "3/4" }}
+                      />
+                    </div>
+                  ) : (
+                    /* Idle — no example */
+                    <div className="flex items-center justify-center overflow-hidden rounded-xl border border-border/40 bg-muted/30" style={{ aspectRatio: "3/4" }}>
+                      <svg className="h-10 w-10 text-muted-foreground/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Bottom actions / hints */}
+              {phase === "done" && resultUrls.length > 0 ? (
+                <div className="mt-2 flex items-center justify-center gap-3">
                   <button
-                    key={lang.code}
-                    onClick={() => { setReportLang(lang.code); savePrefs(resolution, lang.code); setShowLangPicker(false); trackEvent("report_language_changed", { language: lang.code }); }}
-                    className={`w-full rounded-lg px-3 py-1.5 text-left text-xs transition hover:bg-muted ${
-                      reportLang === lang.code ? "bg-primary/10 font-medium text-primary" : ""
-                    }`}
+                    onClick={() => handleDownload(resultUrls[0])}
+                    className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition hover:text-foreground"
                   >
-                    {lang.label}
+                    <DownloadIcon />
+                    {t("download")}
                   </button>
-                ))}
-              </div>
-            </>
-          )}
-        </div>
-      </div>
-
-      {/* Example Showcase */}
-      {EXAMPLE_IMAGES[analysisType] && (
-        <div className="mt-8">
-          <p className="mb-3 text-center text-sm font-medium text-muted-foreground">{t("exampleTitle")}</p>
-          <div className="grid grid-cols-2 gap-3 rounded-2xl border border-border/60 bg-muted/20 p-3 sm:p-4">
-            <div className="space-y-1.5">
-              <span className="block text-center text-xs font-medium text-muted-foreground">{t("exampleBefore")}</span>
-              <div className="overflow-hidden rounded-xl border border-border/40 bg-background">
-                <img
-                  src="/images/examples/before.webp"
-                  alt="Example photo"
-                  className="h-auto w-full object-cover"
-                  style={{ aspectRatio: "3/4" }}
-                />
-              </div>
+                  <button
+                    onClick={() => handleShare(resultUrls[0])}
+                    className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition hover:text-foreground"
+                  >
+                    <ShareIcon />
+                    {t("share")}
+                  </button>
+                  <button
+                    onClick={() => handleCorrectionOpen({ id: "current", status: "success", type: analysisType, image_urls: resultUrls, source_image_url: sourceImageUrl ?? undefined, created_at: Date.now() / 1000 })}
+                    disabled={!sourceImageUrl}
+                    className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition hover:text-foreground disabled:opacity-50"
+                  >
+                    <CorrectionIcon />
+                    {t("correction")}
+                  </button>
+                </div>
+              ) : (
+                <p className="mt-2 text-center text-xs text-muted-foreground">
+                  {phase === "error" ? "" : hasExample || isActive ? t("exampleCta") : ""}
+                </p>
+              )}
             </div>
-            <div className="space-y-1.5">
-              <span className="block text-center text-xs font-medium text-muted-foreground">{t("exampleAfter")}</span>
-              <div
-                className="cursor-pointer overflow-hidden rounded-xl border border-border/40 bg-background transition hover:shadow-md"
-                onClick={() => {
-                  trackEvent("example_viewed", { type: analysisType });
-                  setExamplePreview(EXAMPLE_IMAGES[analysisType]!);
-                }}
+          );
+        })()}
+
+
+        {/* Right: Settings + Upload + Generate */}
+        <div className="flex flex-col gap-5">
+          {/* Settings: Resolution + Report Language */}
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {/* Resolution */}
+            <div className="flex items-center rounded-full border border-border bg-card p-0.5">
+              {(["2K", "4K"] as Resolution[]).map((r) => (
+                <button
+                  key={r}
+                  onClick={() => { setResolution(r); savePrefs(r, reportLang); trackEvent("resolution_changed", { resolution: r }); }}
+                  className={`rounded-full px-3.5 py-1 text-xs font-medium transition ${
+                    resolution === r
+                      ? "bg-primary text-white shadow-sm"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {r}
+                </button>
+              ))}
+            </div>
+
+            {/* Report Language */}
+            <div className="relative">
+              <button
+                onClick={() => setShowLangPicker(!showLangPicker)}
+                className="flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-medium text-foreground transition hover:border-primary/40"
               >
-                <img
-                  src={EXAMPLE_IMAGES[analysisType]!}
-                  alt="Example AI report"
-                  className="h-auto w-full object-cover"
-                  style={{ aspectRatio: "3/4" }}
-                />
-              </div>
+                <svg className="h-3.5 w-3.5 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
+                {REPORT_LANGUAGES.find((l) => l.code === reportLang)?.label || reportLang}
+                <svg className="h-3 w-3 text-muted-foreground" viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4" /></svg>
+              </button>
+              {showLangPicker && (
+                <>
+                  <div className="fixed inset-0 z-30" onClick={() => setShowLangPicker(false)} />
+                  <div className="absolute left-1/2 top-full z-40 mt-1 -translate-x-1/2 max-h-64 w-44 overflow-y-auto rounded-xl border border-border bg-card p-1 shadow-xl">
+                    {REPORT_LANGUAGES.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => { setReportLang(lang.code); savePrefs(resolution, lang.code); setShowLangPicker(false); trackEvent("report_language_changed", { language: lang.code }); }}
+                        className={`w-full rounded-lg px-3 py-1.5 text-left text-xs transition hover:bg-muted ${
+                          reportLang === lang.code ? "bg-primary/10 font-medium text-primary" : ""
+                        }`}
+                      >
+                        {lang.label}
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           </div>
-          <p className="mt-2 text-center text-xs text-muted-foreground">{t("exampleCta")}</p>
+
+          {/* Upload Area — fixed height */}
+          <div>
+            <div
+              onClick={handleUploadClick}
+              className={`group relative flex cursor-pointer flex-col items-center justify-center overflow-hidden rounded-2xl border-2 border-dashed transition ${
+                previewUrl
+                  ? "border-primary/40 bg-primary/5"
+                  : "border-border hover:border-primary/40 hover:bg-muted/30"
+              }`}
+              style={{ height: 280 }}
+            >
+              {previewUrl ? (
+                <img
+                  src={previewUrl}
+                  alt="Preview"
+                  className="h-full w-full rounded-2xl object-contain"
+                />
+              ) : (
+                <>
+                  <svg
+                    className="mb-3 h-10 w-10 text-muted-foreground/50"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
+                    />
+                  </svg>
+                  <p className="text-center text-sm font-medium text-foreground">
+                    {t("uploadTitle")}
+                  </p>
+                  <p className="mt-1 text-center text-xs text-muted-foreground">
+                    {t("uploadHint")}
+                  </p>
+                  <p className="mt-2 flex items-center justify-center gap-1 text-center text-[11px] text-muted-foreground/70">
+                    <svg className="h-3 w-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+                    {t("uploadTrust")}
+                  </p>
+                  <p className="mt-1 text-center text-[11px] text-muted-foreground/50">
+                    {t("uploadConsent")}
+                  </p>
+                  {lastUploadedPhotoUrl && !previewUrl && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); handleUseLastPhoto(); }}
+                      className="mt-3 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary/10"
+                    >
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
+                      {t("useLastPhoto")}
+                    </button>
+                  )}
+                </>
+              )}
+              <input
+                ref={fileRef}
+                type="file"
+                accept="image/jpeg,image/png,image/webp"
+                className="hidden"
+                onChange={handleFileSelect}
+              />
+            </div>
+
+            {previewUrl && (
+              <div className="mt-2 text-center">
+                <button
+                  onClick={() => {
+                    setPreviewUrl(null);
+                    setResultUrls([]);
+                    setPhase("idle");
+                    if (fileRef.current) fileRef.current.value = "";
+                  }}
+                  className="text-sm text-muted-foreground hover:text-foreground"
+                >
+                  {t("changePhoto")}
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Generate Button */}
+          <div className="text-center">
+            <button
+              onClick={() => {
+                handleGenerate();
+              }}
+              disabled={
+                !previewUrl ||
+                phase === "uploading" ||
+                phase === "generating" ||
+                phase === "preparing"
+              }
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
+            >
+              {(phase === "uploading" ||
+                phase === "generating" ||
+                phase === "preparing") && <Spinner />}
+              {(phase === "preparing" || phase === "uploading" || phase === "generating")
+                ? t("generating")
+                : t("generate")}
+            </button>
+
+            {userCredits && phase !== "done" && (
+              <p className="mt-2 text-xs text-muted-foreground">
+                {userCredits.subPlan ? (
+                  <span className="inline-flex items-center gap-1">
+                    <span className="rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-semibold text-primary uppercase">Pro</span>
+                    {t("quotaInfo", { remaining: userCredits.totalRemaining })}
+                  </span>
+                ) : (
+                  t("quotaInfo", { remaining: userCredits.totalRemaining })
+                )}
+              </p>
+            )}
+            {!userCredits && quota && phase !== "done" && (
+              <p className="mt-2 text-xs text-muted-foreground">
+                {t("quotaInfo", { remaining: quota.remaining })}
+              </p>
+            )}
+
+            <InviteEarnBanner />
+          </div>
         </div>
-      )}
+      </div>
 
       {/* Example Preview Modal */}
       {examplePreview && (
@@ -916,214 +1176,66 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         </div>
       )}
 
-      {/* Upload Area */}
-      <div className="mt-8">
-        <div
-          onClick={handleUploadClick}
-          className={`group relative flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed transition ${
-            previewUrl
-              ? "border-primary/40 bg-primary/5"
-              : "border-border hover:border-primary/40 hover:bg-muted/30"
-          } ${previewUrl ? "max-h-[480px]" : "py-16"}`}
-        >
-          {previewUrl ? (
-            <div className="relative flex w-full items-center justify-center overflow-hidden rounded-2xl" style={{ maxHeight: 480 }}>
-              <img
-                src={previewUrl}
-                alt="Preview"
-                className="max-h-[480px] max-w-full rounded-2xl object-contain"
-              />
-              {(phase === "preparing" || phase === "uploading" || phase === "generating") && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-black/50 backdrop-blur-[2px]">
-                  <Spinner className="h-8 w-8 text-white" />
-                  <p className="mt-3 text-sm font-medium text-white">
-                    {phase === "preparing"
-                      ? t("preparing")
-                      : phase === "uploading"
-                        ? t("uploading")
-                        : t("generating")}
-                  </p>
-                  {phase === "generating" && generateElapsed > 60 && (
-                    <p className="mt-1.5 text-xs text-white/80">
-                      {t("almostDone")}
-                    </p>
-                  )}
-                  {phase === "generating" && generateElapsed > 0 && (
-                    <p className="mt-1 text-[11px] text-white/60">
-                      {Math.floor(generateElapsed / 60)}:{String(generateElapsed % 60).padStart(2, "0")}
-                    </p>
-                  )}
-                </div>
-              )}
-            </div>
-          ) : (
-            <>
-              <svg
-                className="mb-3 h-12 w-12 text-muted-foreground/50"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1.5}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"
-                />
-              </svg>
-              <p className="text-center text-sm font-medium text-foreground">
-                {t("uploadTitle")}
-              </p>
-              <p className="mt-1 text-center text-xs text-muted-foreground">
-                {t("uploadHint")}
-              </p>
-              <p className="mt-2 flex items-center justify-center gap-1 text-center text-[11px] text-muted-foreground/70">
-                <svg className="h-3 w-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
-                {t("uploadTrust")}
-              </p>
-              <p className="mt-1 text-center text-[11px] text-muted-foreground/50">
-                {t("uploadConsent")}
-              </p>
-              {lastUploadedPhotoUrl && !previewUrl && (
-                <button
-                  onClick={(e) => { e.stopPropagation(); handleUseLastPhoto(); }}
-                  className="mt-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary/10"
-                >
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
-                  {t("useLastPhoto")}
-                </button>
-              )}
-            </>
-          )}
-          <input
-            ref={fileRef}
-            type="file"
-            accept="image/jpeg,image/png,image/webp"
-            className="hidden"
-            onChange={handleFileSelect}
-          />
-        </div>
-
-        {previewUrl && (
-          <div className="mt-2 text-center">
-            <button
-              onClick={() => {
-                setPreviewUrl(null);
-                setResultUrls([]);
-                setPhase("idle");
-                if (fileRef.current) fileRef.current.value = "";
-              }}
-              className="text-sm text-muted-foreground hover:text-foreground"
-            >
-              {t("changePhoto")}
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* Generate Button */}
-      <div className="mt-6 text-center">
-        <button
-          onClick={() => {
-            handleGenerate();
-          }}
-          disabled={
-            !previewUrl ||
-            phase === "uploading" ||
-            phase === "generating" ||
-            phase === "preparing"
-          }
-          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
-        >
-          {(phase === "uploading" ||
-            phase === "generating" ||
-            phase === "preparing") && <Spinner />}
-          {(phase === "preparing" || phase === "uploading" || phase === "generating")
-            ? t("generating")
-            : t("generate")}
-        </button>
-
-        {userCredits && phase !== "done" && (
-          <p className="mt-2 text-xs text-muted-foreground">
-            {userCredits.subPlan ? (
-              <span className="inline-flex items-center gap-1">
-                <span className="rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-semibold text-primary uppercase">Pro</span>
-                {t("quotaInfo", { remaining: userCredits.totalRemaining })}
+      {/* Check-in + Streak Section */}
+      {(checkinAvailable || checkinJustDone || checkinStreak > 0) && phase !== "uploading" && phase !== "generating" && phase !== "preparing" && (
+        <div className="mt-6 rounded-xl border border-amber-200/50 bg-gradient-to-r from-amber-50 to-orange-50 p-4">
+          {/* Streak counter */}
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2">
+              <span className="text-xl">🔥</span>
+              <span className="font-semibold text-amber-800">
+                {t("streakDays", { count: checkinStreak })}
               </span>
-            ) : (
-              t("quotaInfo", { remaining: userCredits.totalRemaining })
+            </div>
+            {checkinMaxStreak > 0 && (
+              <span className="text-xs text-amber-600">
+                {t("streakBest", { count: checkinMaxStreak })}
+              </span>
             )}
-          </p>
-        )}
-        {!userCredits && quota && phase !== "done" && (
-          <p className="mt-2 text-xs text-muted-foreground">
-            {t("quotaInfo", { remaining: quota.remaining })}
-          </p>
-        )}
-
-        {/* Check-in + Streak Section */}
-        {(checkinAvailable || checkinJustDone || checkinStreak > 0) && phase !== "uploading" && phase !== "generating" && phase !== "preparing" && (
-          <div className="mt-4 rounded-xl border border-amber-200/50 bg-gradient-to-r from-amber-50 to-orange-50 p-4">
-            {/* Streak counter */}
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex items-center gap-2">
-                <span className="text-xl">🔥</span>
-                <span className="font-semibold text-amber-800">
-                  {t("streakDays", { count: checkinStreak })}
-                </span>
-              </div>
-              {checkinMaxStreak > 0 && (
-                <span className="text-xs text-amber-600">
-                  {t("streakBest", { count: checkinMaxStreak })}
-                </span>
-              )}
-            </div>
-
-            {/* 7-day calendar strip */}
-            <div className="flex gap-1.5 mb-3">
-              {Array.from({ length: 7 }, (_, i) => {
-                const dayIndex = i + 1;
-                const isCompleted = dayIndex <= (checkinStreak % 7 || (checkinStreak > 0 && checkinStreak % 7 === 0 ? 7 : 0));
-                return (
-                  <div key={i} className={`flex-1 h-2 rounded-full ${isCompleted ? "bg-amber-400" : "bg-amber-200/50"}`} />
-                );
-              })}
-            </div>
-
-            {/* Milestone indicators */}
-            <div className="flex justify-between text-xs text-amber-600 mb-3">
-              <span>{checkinStreak >= 7 ? "✅" : `${Math.min(checkinStreak, 7)}/7`} {t("streakBonus7")}</span>
-              <span>{checkinStreak >= 30 ? "✅" : `${Math.min(checkinStreak, 30)}/30`} {t("streakBonus30")}</span>
-            </div>
-
-            {/* Check-in button */}
-            {checkinJustDone ? (
-              <div className="flex items-center justify-center gap-2 rounded-lg bg-green-100 px-4 py-2 text-sm font-medium text-green-700">
-                <span>✓</span>
-                <span>{t("checkinDone")}</span>
-                {streakBonus > 0 && <span className="ml-1 font-bold">+{streakBonus} bonus!</span>}
-              </div>
-            ) : checkinAvailable ? (
-              <button
-                onClick={handleCheckin}
-                disabled={checkinLoading}
-                className="w-full rounded-lg bg-amber-400 px-4 py-2 text-sm font-semibold text-amber-900 hover:bg-amber-500 transition-colors disabled:opacity-50"
-              >
-                {checkinLoading ? "..." : t("checkinBtn")}
-              </button>
-            ) : null}
           </div>
-        )}
 
-        {/* Show NoQuotaCard when credits are exhausted (regardless of phase) */}
-        {(phase === "no_quota" || (userCredits && userCredits.totalRemaining <= 0) || (!userCredits && quota && quota.remaining <= 0)) && (
-          <div className="mt-4">
-            <NoQuotaCard t={t} onViewPlans={() => { trackEvent("pricing_modal_opened", { source: "no_quota_generate" }); setShowPricingModal(true); }} />
+          {/* 7-day calendar strip */}
+          <div className="flex gap-1.5 mb-3">
+            {Array.from({ length: 7 }, (_, i) => {
+              const dayIndex = i + 1;
+              const isCompleted = dayIndex <= (checkinStreak % 7 || (checkinStreak > 0 && checkinStreak % 7 === 0 ? 7 : 0));
+              return (
+                <div key={i} className={`flex-1 h-2 rounded-full ${isCompleted ? "bg-amber-400" : "bg-amber-200/50"}`} />
+              );
+            })}
           </div>
-        )}
 
-        <InviteEarnBanner />
-      </div>
+          {/* Milestone indicators */}
+          <div className="flex justify-between text-xs text-amber-600 mb-3">
+            <span>{checkinStreak >= 7 ? "✅" : `${Math.min(checkinStreak, 7)}/7`} {t("streakBonus7")}</span>
+            <span>{checkinStreak >= 30 ? "✅" : `${Math.min(checkinStreak, 30)}/30`} {t("streakBonus30")}</span>
+          </div>
+
+          {/* Check-in button */}
+          {checkinJustDone ? (
+            <div className="flex items-center justify-center gap-2 rounded-lg bg-green-100 px-4 py-2 text-sm font-medium text-green-700">
+              <span>✓</span>
+              <span>{t("checkinDone")}</span>
+              {streakBonus > 0 && <span className="ml-1 font-bold">+{streakBonus} bonus!</span>}
+            </div>
+          ) : checkinAvailable ? (
+            <button
+              onClick={handleCheckin}
+              disabled={checkinLoading}
+              className="w-full rounded-lg bg-amber-400 px-4 py-2 text-sm font-semibold text-amber-900 hover:bg-amber-500 transition-colors disabled:opacity-50"
+            >
+              {checkinLoading ? "..." : t("checkinBtn")}
+            </button>
+          ) : null}
+        </div>
+      )}
+
+      {/* Show NoQuotaCard when credits are exhausted (regardless of phase) */}
+      {(phase === "no_quota" || (userCredits && userCredits.totalRemaining <= 0) || (!userCredits && quota && quota.remaining <= 0)) && (
+        <div className="mt-4">
+          <NoQuotaCard t={t} onViewPlans={() => { trackEvent("pricing_modal_opened", { source: "no_quota_generate" }); setShowPricingModal(true); }} />
+        </div>
+      )}
 
       {/* Recommendations during generation */}
       {(phase === "generating" || phase === "uploading") && recommendedTypes.length > 0 && (sourceImageUrl || lastUploadedPhotoUrl) && (
@@ -1207,62 +1319,15 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         </div>
       )}
 
-      {/* Error */}
-      {phase === "error" && (
-        <div className="mt-4 rounded-xl border border-red-200 bg-red-50 p-4 text-center text-sm text-red-700">
-          {errorMsg}
-        </div>
-      )}
-
-      {/* Result */}
+      {/* Post-result: Invite + Recommendations */}
       {phase === "done" && resultUrls.length > 0 && (
         <div className="mt-8">
-          <h2 className="text-center text-xl font-bold">{t("resultTitle")}</h2>
-          <p className="mt-1 text-center text-xs text-muted-foreground/70">
-            {t("aiDisclaimer")}
-          </p>
-          <p className="mt-1 text-center text-sm text-muted-foreground">
-            {t("sharePrompt")}
-          </p>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2">
-            {resultUrls.map((url, i) => (
-              <div key={i} className="group relative overflow-hidden rounded-2xl border border-border transition hover:border-primary/40 hover:shadow-lg">
-                <img
-                  src={url}
-                  alt={`Result ${i + 1}`}
-                  className="w-full cursor-pointer transition duration-300 group-hover:scale-[1.02]"
-                  onClick={() => setLightbox({ entry: { id: "current", status: "success", type: analysisType, image_urls: resultUrls, source_image_url: sourceImageUrl ?? undefined, created_at: Date.now() / 1000 }, imageIndex: i })}
-                />
-                <div className="absolute bottom-2 right-2 flex gap-1.5 opacity-0 transition group-hover:opacity-100">
-                  <button onClick={() => handleDownload(url)} className="rounded-full bg-black/60 p-2 text-white backdrop-blur-sm hover:bg-black/80" title={t("download")}>
-                    <DownloadIcon />
-                  </button>
-                  <button onClick={() => handleShare(url)} className="rounded-full bg-black/60 p-2 text-white backdrop-blur-sm hover:bg-black/80" title={t("share")}>
-                    <ShareIcon />
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-6">
+          <div className="mb-6">
             <InviteEarnBanner variant="card" referralCode={referralCode} />
           </div>
 
-          <div className="mt-4 flex justify-center">
-            <button
-              onClick={() => handleCorrectionOpen({ id: "current", status: "success", type: analysisType, image_urls: resultUrls, source_image_url: sourceImageUrl ?? undefined, created_at: Date.now() / 1000 })}
-              disabled={!sourceImageUrl}
-              className="inline-flex items-center gap-2 rounded-full border border-primary px-5 py-2 text-sm font-medium text-primary transition hover:bg-primary/5 disabled:opacity-50"
-            >
-              <CorrectionIcon />
-              {t("correction")}
-            </button>
-          </div>
-
-          {/* Post-result recommendations */}
           {recommendedTypes.length > 0 && (sourceImageUrl || lastUploadedPhotoUrl) && (
-            <div className="mt-8 rounded-2xl border border-border bg-gradient-to-br from-muted/30 to-muted/10 p-5">
+            <div className="rounded-2xl border border-border bg-gradient-to-br from-muted/30 to-muted/10 p-5">
               <div className="flex items-center gap-2 mb-1">
                 <svg className="h-4 w-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" /></svg>
                 <h3 className="font-serif text-base font-bold">{t("tryAnother")}</h3>

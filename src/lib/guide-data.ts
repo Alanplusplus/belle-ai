@@ -7,6 +7,8 @@ export interface GuideSection {
 
 export interface GuideTopic {
   slug: string;
+  /** Short key for i18n lookups (e.g. "cheat-sheet", "glasses", "hair") */
+  i18nKey: string;
   name: string;
   tagline: string;
   description: string;
@@ -17,6 +19,7 @@ export interface GuideTopic {
 export const GUIDE_TOPICS: GuideTopic[] = [
   {
     slug: "12-season-color-cheat-sheet",
+    i18nKey: "cheat-sheet",
     name: "12-Season Color Cheat Sheet",
     tagline: "Quick visual reference for all 12 color seasons",
     description:
@@ -71,6 +74,7 @@ export const GUIDE_TOPICS: GuideTopic[] = [
   },
   {
     slug: "face-shape-glasses-guide",
+    i18nKey: "glasses",
     name: "Face Shape × Glasses Guide",
     tagline: "Find the perfect frames for your face shape",
     description:
@@ -142,6 +146,7 @@ export const GUIDE_TOPICS: GuideTopic[] = [
   },
   {
     slug: "skin-tone-hair-color-guide",
+    i18nKey: "hair",
     name: "Skin Tone × Hair Color Guide",
     tagline: "Find the best hair color for your undertone",
     description:
@@ -150,7 +155,7 @@ export const GUIDE_TOPICS: GuideTopic[] = [
       {
         title: "Warm Undertone",
         description: "Warm undertones (yellow, golden, peachy) pair best with warm-toned hair colors that enhance the natural glow.",
-        image: "/images/dim_hair_warm.webp",
+        image: "/images/dim_hair_best.webp",
         items: [
           { label: "Golden Blonde", detail: "Adds sun-kissed warmth to fair warm skin" },
           { label: "Rich Auburn", detail: "Complements golden undertones beautifully" },
@@ -162,7 +167,7 @@ export const GUIDE_TOPICS: GuideTopic[] = [
       {
         title: "Cool Undertone",
         description: "Cool undertones (pink, blue, rosy) are enhanced by ash and cool-toned hair colors.",
-        image: "/images/dim_hair_cool.webp",
+        image: "/images/dim_hair_undertone.webp",
         items: [
           { label: "Ash Blonde", detail: "Complements pink undertones without adding warmth" },
           { label: "Cool Brown", detail: "A neutral-cool shade that enhances cool complexions" },
@@ -174,7 +179,7 @@ export const GUIDE_TOPICS: GuideTopic[] = [
       {
         title: "Neutral Undertone",
         description: "Neutral undertones can wear both warm and cool shades — the most versatile skin tone for hair color.",
-        image: "/images/dim_hair_neutral.webp",
+        image: "/images/dim_hair_style.webp",
         items: [
           { label: "Bronde", detail: "The perfect warm-cool middle ground" },
           { label: "Mushroom Brown", detail: "A cool-neutral shade with muted warmth" },

@@ -84,9 +84,9 @@ function TransformationTypeContent({ slug }: { slug: string }) {
               {t("backToAll").replace("← ", "")}
             </Link>
           </p>
-          <h1 className="mt-3 font-serif text-3xl font-bold sm:text-5xl">{data.name}</h1>
-          <p className="mt-2 text-lg text-primary">{data.tagline}</p>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{data.description}</p>
+          <h1 className="mt-3 font-serif text-3xl font-bold sm:text-5xl">{t(`type_${data.slug}_name`)}</h1>
+          <p className="mt-2 text-lg text-primary">{t(`type_${data.slug}_tagline`)}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{t(`type_${data.slug}_desc`)}</p>
         </div>
       </section>
 
@@ -139,15 +139,15 @@ function TransformationTypeContent({ slug }: { slug: string }) {
                         unoptimized
                       />
                       <span className="absolute right-3 top-3 rounded-full bg-emerald-600/80 px-3 py-1 text-sm font-medium text-white">
-                        AI Report
+                        {t("aiReport")}
                       </span>
                     </div>
                   </div>
                 </div>
                 {/* Details */}
                 <div className="p-6">
-                  <h2 className="text-xl font-bold">{example.label}</h2>
-                  <p className="mt-2 text-muted-foreground">{example.description}</p>
+                  <h2 className="text-xl font-bold">{t.has(`type_${data.slug}_ex${idx}_label`) ? t(`type_${data.slug}_ex${idx}_label`) : example.label}</h2>
+                  <p className="mt-2 text-muted-foreground">{t.has(`type_${data.slug}_ex${idx}_desc`) ? t(`type_${data.slug}_ex${idx}_desc`) : example.description}</p>
                   {example.season && (
                     <p className="mt-3 text-sm">
                       <span className="font-semibold text-primary">{t("seasonLabel")}:</span>{" "}
@@ -159,7 +159,7 @@ function TransformationTypeContent({ slug }: { slug: string }) {
                       <p className="text-xs font-semibold uppercase tracking-wide text-primary">
                         {t("detailsLabel")}
                       </p>
-                      <p className="mt-1 text-sm text-muted-foreground">{example.details}</p>
+                      <p className="mt-1 text-sm text-muted-foreground">{t.has(`type_${data.slug}_ex${idx}_details`) ? t(`type_${data.slug}_ex${idx}_details`) : example.details}</p>
                     </div>
                   )}
                 </div>
@@ -198,8 +198,8 @@ function TransformationTypeContent({ slug }: { slug: string }) {
                 href={`/transformations/${other.slug}`}
                 className="group rounded-xl border border-border bg-card p-4 transition hover:border-primary/40 hover:shadow-md"
               >
-                <h3 className="font-semibold group-hover:text-primary">{other.name}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{other.tagline}</p>
+                <h3 className="font-semibold group-hover:text-primary">{t(`type_${other.slug}_name`)}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{t(`type_${other.slug}_tagline`)}</p>
               </Link>
             ))}
           </div>

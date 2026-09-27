@@ -109,7 +109,8 @@ function LookbookContent({ slug }: { slug: string }) {
   const data = SEASON_PALETTES[slug];
   const lookbook = LOOKBOOK_DATA[slug];
   const displayName = sd("name");
-  const parentLabel = data.parentSeason.charAt(0).toUpperCase() + data.parentSeason.slice(1);
+  const parentKeys: Record<string, string> = { spring: "parentSpring", summer: "parentSummer", autumn: "parentAutumn", winter: "parentWinter" };
+  const parentLabel = t(parentKeys[data.parentSeason] || data.parentSeason);
 
   const siblings = SEASON_SLUGS.filter((s) => s !== slug);
   const sameFamilySiblings = getSeasonsByParent(data.parentSeason).filter((s) => s.slug !== slug);
@@ -119,13 +120,44 @@ function LookbookContent({ slug }: { slug: string }) {
   const avoidColors = data.avoidColors.map((c, i) => ({ name: sd(`ac${i}`), hex: c.hex }));
 
   const makeupItems = [
-    { label: "💄 Lips", value: sd("lips") },
-    { label: "👁️ Eyes", value: sd("eyes") },
-    { label: "🌸 Blush", value: sd("blush") },
-    { label: "✨ Foundation", value: sd("found") },
+    { label: t("lips"), value: sd("lips") },
+    { label: t("eyes"), value: sd("eyes") },
+    { label: t("blush"), value: sd("blush") },
+    { label: t("foundation"), value: sd("found") },
   ];
 
   const hairColors = data.hairColors.map((_, i) => sd(`hr${i}`));
+
+  const bc0 = sd("bc0");
+  const nc0 = sd("nc0");
+  const lips0 = sd("lips").split(",")[0].trim();
+  const eyes0 = sd("eyes").split(",")[0].trim();
+  const blush0 = sd("blush").split(",")[0].trim();
+  const jewelry0 = sd("jewelry").split(",")[0].trim();
+  const jewelryRest = sd("jewelry").split(",").slice(1, 3).map((s: string) => s.trim()).filter(Boolean).join(", ");
+
+  const imgCaptions: Record<string, string> = {
+    "outfit-casual": t("imgCasual", { season: displayName, color1: bc0, color2: nc0 }),
+    "outfit-work": t("imgWork", { season: displayName, color: sd("bc1") }),
+    "outfit-evening": t("imgEvening", { season: displayName, color: sd("bc2") }),
+    "makeup-everyday": t("imgMakeupEveryday", { season: displayName, blush: blush0, lips: lips0 }),
+    "makeup-glam": t("imgMakeupGlam", { season: displayName, eyes: eyes0 }),
+    "makeup-natural": t("imgMakeupNatural", { season: displayName, blush: blush0 }),
+    "hair-1": t("imgHair", { season: displayName, color: hairColors[0] || "" }),
+    "hair-2": t("imgHair", { season: displayName, color: hairColors[1] || "" }),
+    "hair-3": t("imgHair", { season: displayName, color: hairColors[2] || "" }),
+    "jewelry-1": t("imgJewelry1", { season: displayName, metal: jewelry0 }),
+    "jewelry-2": t("imgJewelry2", { season: displayName, materials: jewelryRest || jewelry0 }),
+  };
+
+  const sectionDescs = {
+    palette: t("paletteDesc", { season: displayName, undertone: sd("charUndertone"), depth: sd("charDepth"), chroma: sd("charChroma") }),
+    outfit: t("outfitDesc", { season: displayName, tip: sd("ft0") }),
+    makeup: t("makeupDesc", { season: displayName, lips: sd("lips").split(",")[0], eyes: sd("eyes").split(",")[0] }),
+    hair: t("hairDesc", { season: displayName, colors: hairColors.slice(0, 3).join(", ") }),
+    jewelry: t("jewelryDesc", { season: displayName, jewelry: sd("jewelry") }),
+    avoid: t("avoidDesc", { season: displayName }),
+  };
 
   return (
     <>
@@ -133,10 +165,9 @@ function LookbookContent({ slug }: { slug: string }) {
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-16 sm:py-20">
         <div className="mx-auto max-w-5xl px-4 text-center">
           <p className="text-sm font-medium text-primary">
-            <Link href="/color-analysis" className="hover:underline">{t("backToGuide").replace("← ", "")}</Link>
+            <Link href="/lookbook" className="hover:underline">{t("breadcrumbLookbook")}</Link>
             {" / "}
-            <Link href={`/color-palette/${slug}`} className="hover:underline">{displayName}</Link>
-            {" / Lookbook"}
+            <span>{displayName}</span>
           </p>
           <h1 className="mt-3 font-serif text-3xl font-bold sm:text-5xl">
             {t("title", { season: displayName })}
@@ -163,7 +194,7 @@ function LookbookContent({ slug }: { slug: string }) {
         <section className="py-12">
           <h2 className="text-2xl font-bold">{t("paletteSection")} — {displayName}</h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            {lookbook.sections[0]?.description}
+            {sectionDescs.palette}
           </p>
           <div className="mt-6 grid grid-cols-3 gap-3 sm:grid-cols-5">
             {bestColors.map((c) => (
@@ -171,7 +202,7 @@ function LookbookContent({ slug }: { slug: string }) {
             ))}
           </div>
           <div className="mt-6">
-            <h3 className="text-lg font-semibold">Neutrals</h3>
+            <h3 className="text-lg font-semibold">{t("neutrals")}</h3>
             <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {neutrals.map((c) => (
                 <ColorSwatch key={c.hex} hex={c.hex} name={c.name} />
@@ -184,7 +215,7 @@ function LookbookContent({ slug }: { slug: string }) {
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">{t("outfitSection")} — {displayName}</h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            {data.fashionTips[0]}
+            {sectionDescs.outfit}
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {lookbook.sections
@@ -201,12 +232,12 @@ function LookbookContent({ slug }: { slug: string }) {
                       unoptimized
                     />
                   </div>
-                  <p className="p-3 text-sm text-muted-foreground">{img.alt}</p>
+                  <p className="p-3 text-sm text-muted-foreground">{imgCaptions[img.key] || img.alt}</p>
                 </div>
               ))}
           </div>
           <div className="mt-6 rounded-xl border border-border bg-card p-5">
-            <h3 className="font-semibold">Fashion Tips for {displayName}</h3>
+            <h3 className="font-semibold">{t("fashionTipsFor", { season: displayName })}</h3>
             <ul className="mt-3 space-y-2">
               {data.fashionTips.map((tip, i) => {
                 const localTip = sd(`ft${i}`);
@@ -247,7 +278,7 @@ function LookbookContent({ slug }: { slug: string }) {
                       unoptimized
                     />
                   </div>
-                  <p className="p-3 text-sm text-muted-foreground">{img.alt}</p>
+                  <p className="p-3 text-sm text-muted-foreground">{imgCaptions[img.key] || img.alt}</p>
                 </div>
               ))}
           </div>
@@ -256,36 +287,31 @@ function LookbookContent({ slug }: { slug: string }) {
         {/* Hair Color Ideas */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">{t("hairSection")} — {displayName}</h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-xl border border-border bg-card p-5">
-              <h3 className="font-semibold text-primary">Recommended</h3>
-              <ul className="mt-3 space-y-1.5">
-                {hairColors.map((c) => (
-                  <li key={c} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <span className="text-primary">✓</span> {c}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="grid gap-3">
-              {lookbook.sections
-                .find((s) => s.title === "Hair Color Ideas")
-                ?.images.map((img) => (
-                  <div key={img.src} className="group overflow-hidden rounded-xl border border-border bg-card">
-                    <div className="relative aspect-[16/9] bg-muted">
-                      <Image
-                        src={img.src}
-                        alt={img.alt}
-                        fill
-                        className="object-cover transition-transform group-hover:scale-105"
-                        sizes="(max-width: 640px) 100vw, 50vw"
-                        unoptimized
-                      />
-                    </div>
-                    <p className="p-2 text-xs text-muted-foreground">{img.alt}</p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {hairColors.map((c) => (
+              <span key={c} className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-sm font-medium text-primary">
+                <span className="text-xs">✓</span> {c}
+              </span>
+            ))}
+          </div>
+          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+            {lookbook.sections
+              .find((s) => s.title === "Hair Color Ideas")
+              ?.images.map((img) => (
+                <div key={img.src} className="group overflow-hidden rounded-xl border border-border bg-card">
+                  <div className="relative aspect-[3/4] bg-muted">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover transition-transform group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                      unoptimized
+                    />
                   </div>
-                ))}
-            </div>
+                  <p className="p-3 text-sm text-muted-foreground">{imgCaptions[img.key] || img.alt}</p>
+                </div>
+              ))}
           </div>
         </section>
 
@@ -308,7 +334,7 @@ function LookbookContent({ slug }: { slug: string }) {
                       unoptimized
                     />
                   </div>
-                  <p className="p-3 text-sm text-muted-foreground">{img.alt}</p>
+                  <p className="p-3 text-sm text-muted-foreground">{imgCaptions[img.key] || img.alt}</p>
                 </div>
               ))}
           </div>
@@ -403,7 +429,7 @@ function LookbookContent({ slug }: { slug: string }) {
               </Link>
             ))}
             <Link
-              href="/color-analysis"
+              href="/lookbook"
               className="rounded-lg border border-primary/30 bg-primary/5 px-4 py-3 text-sm font-medium text-primary transition hover:bg-primary/10"
             >
               {t("backToGuide")}
