@@ -9,9 +9,9 @@ export function generateStaticParams() {
 
 export async function GET(
   _req: NextRequest,
-  { params }: { params: Promise<{ type: string }> },
+  context: { params: Promise<Record<string, string>> },
 ) {
-  const { type } = await params;
+  const { type } = (await context.params) as { type: string };
   const t = TRANSFORMATION_TYPES.find((t) => t.slug === type);
   if (!t) {
     return new Response("Not found", { status: 404 });
