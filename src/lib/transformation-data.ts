@@ -39,6 +39,17 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/ea923799-fbed-488f-ba58-6d3c5cb1dc31.png",
         originalReport: "https://pic-cdn.chibistyle.app/image/advanced/2413bcdfee356dd3d4486290b4f06724_0.png",
       },
+      {
+        label: "Closet Confusion → Color Confidence",
+        description: "She stood in front of a messy closet full of mismatched colors, feeling lost. AI color analysis revealed her perfect warm palette — now every outfit choice feels effortless.",
+        before: "/images/transformations/before-color-analysis-2.webp",
+        after: "/images/transformations/after-color-analysis-2.webp",
+        report: "/images/transformations/report-color-analysis-2.webp",
+        details: "The analysis identified her warm undertone and recommended coral, peach, and golden tones that instantly brighten her complexion and create a cohesive wardrobe.",
+        originalBefore: "https://pic.chibistyle.app/image/upload/3946ab59-33ee-43db-b50c-8085bb8c775e.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/3a333f4c-bc7a-44da-acc7-250f1eb206a3.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/e9090f99de30cd60e20f1cff1442b9a3_0.png",
+      },
     ],
   },
   {
