@@ -38,38 +38,54 @@ alwaysApply: false
 
 ## 每日任务分配（按优先级顺序）
 
-### 优先级 1: Lookbook 图片生成（每天 1 个季型）
+### 优先级 1: Lookbook 图片生成 ✅ 已完成 (12/12)
 
-12 个子季型按以下顺序生成：
-1. soft-autumn（最常见季型，优先）
-2. soft-summer
-3. warm-autumn
-4. cool-summer
-5. light-spring
-6. light-summer
-7. deep-winter
-8. cool-winter
-9. bright-winter
-10. warm-spring
-11. bright-spring
-12. deep-autumn
+所有 12 个季型的 Lookbook 图片已于 2026-09-27 全部生成。每个季型 19 张图片，共 228 张。
 
-**每天处理 1 个季型**。执行脚本：
+#### 网站图片 vs RSS 图片
+
+- **网站** 使用 webp 压缩图，存放在 `belle-website/public/images/lookbook/<season>/`
+- **RSS** 使用原始 PNG 的永久 CDN URL，存储在 `social-automation/content/lookbook-originals.json`
+- `lookbook-originals.json` 结构：`{ "season-slug": { "image-key": "CDN URL" } }`
+- `lookbook-data.ts` 每张图有 `key` 字段，与 originals JSON 的 key 对应
+
+#### RSS Feed 结构
+
+Lookbook RSS 按季节拆分为 12 个独立 feed，对应 Pinterest 不同 Board：
+
+| Feed URL | Pinterest Board | 内容 |
+|---|---|---|
+| `/feed/lookbook.xml` | — | 聚合所有季节（兼容旧订阅） |
+| `/feed/lookbook/light-spring.xml` | Light Spring | 浅暖型 |
+| `/feed/lookbook/warm-spring.xml` | Warm Spring | 暖春型 |
+| `/feed/lookbook/bright-spring.xml` | Bright Spring | 亮春型 |
+| `/feed/lookbook/light-summer.xml` | Light Summer | 浅夏型 |
+| `/feed/lookbook/cool-summer.xml` | Cool Summer | 冷夏型 |
+| `/feed/lookbook/soft-summer.xml` | Soft Summer | 柔夏型 |
+| `/feed/lookbook/soft-autumn.xml` | Soft Autumn | 柔秋型 |
+| `/feed/lookbook/warm-autumn.xml` | Warm Autumn | 暖秋型 |
+| `/feed/lookbook/deep-autumn.xml` | Deep Autumn | 深秋型 |
+| `/feed/lookbook/deep-winter.xml` | Deep Winter | 深冬型 |
+| `/feed/lookbook/cool-winter.xml` | Cool Winter | 冷冬型 |
+| `/feed/lookbook/bright-winter.xml` | Bright Winter | 亮冬型 |
+
+#### 后续维护
+
+如需重新生成单个季型或添加新图片：
 ```bash
 cd social-automation && bash scripts/generate-lookbook-images.sh <season-slug>
 ```
+脚本会自动跳过已有 webp + CDN 记录的图片。生成后需要 commit 并 push 触发部署。
 
-完成后在 progress.json 中标记该季型已完成。
+### 优先级 2: Blog 头图重新生成 ✅ 已完成 (65/65)
 
-### 优先级 2: Blog 头图重新生成（每天 5 张）
-
-按文章日期倒序（最新的先更新），每天重新生成 5 张 blog 头图：
+所有 65 篇博客头图已于 2026-09-27 全部重新生成。后续新增博客时，使用以下脚本单独生成：
 
 ```bash
-cd social-automation && bash scripts/regenerate-blog-images.sh <slug1> <slug2> <slug3> <slug4> <slug5>
+cd social-automation && bash scripts/regenerate-blog-images.sh <new-slug>
 ```
 
-从 `belle-website/src/content/blog/en/` 中读取所有 slug，跳过 progress.json 中已完成的，选择下一批 5 个。
+**注意：** Blog 图片已接入 RSS → Pinterest 自动创建 Pin，不要再批量重新生成，以免重复发布。只在新增博客文章时生成新图。
 
 ### 优先级 3: Guide 页面图片
 
@@ -87,11 +103,63 @@ cwebp -q 80 /tmp/img.png -o belle-website/public/images/<name>.webp
 
 ### 优先级 4: Transformation 页面
 
-Transformation 页面使用已有的 showcase + examples 图片，无需额外生成。
-如果未来要扩展更多 before/after 案例，使用后端 API 生成报告图：
+Transformation 页面每个类型展示 3 张图（Before → After → AI Report），来源于 painpoint 视频流程：
+- **Before** = painpoint 图（AI 生成的痛点场景）
+- **After** = afterglow 图（AI 生成的蜕变场景）
+- **Report** = 后端分析报告图
+
+#### 网站图片 vs RSS 图片
+
+- **网站**展示的是原图经过 `cwebp -q 80` 压缩后的 `.webp` 文件，存放在 `belle-website/public/images/transformations/`，命名格式：`before-{slug}.webp`、`after-{slug}.webp`、`report-{slug}.webp`
+- **RSS** 使用原始未压缩图片的永久 CDN URL（`pic.chibistyle.app` / `pic-cdn.chibistyle.app`），存储在 `transformation-data.ts` 的 `originalBefore`/`originalAfter`/`originalReport` 字段
+
+两者内容一致，只是格式和质量不同。
+
+#### 添加新 Transformation 的流程
+
+每次生成 painpoint 视频时，如果其 `analysisType` 匹配以下 transformation 类型，需要同步更新：
+
+| analysisType | transformation slug |
+|---|---|
+| `color_analysis` | `color-analysis` |
+| `makeup` | `makeup` |
+| `face_shape` | `face-shape` |
+| `hair_preview` | `hair-color` |
+| `outfit_color` | `outfit-color` |
+| `glow_up_report` | `complete-glow-up` |
+
+操作步骤：
+
+1. 将 painpoint、afterglow 原始 PNG 通过后端 API 上传到永久 CDN：
 ```bash
-cd social-automation && npx tsx scripts/generate-image.ts [model_photo] [type] [language]
+cd social-automation && npx tsx scripts/utils/upload-to-cdn.ts <painpoint.png> <afterglow.png>
 ```
+（report 图来自 `generate-image.ts`，已经在 `pic-cdn.chibistyle.app` 上）
+
+2. 将原始 PNG 压缩为 webp 放入网站：
+```bash
+cwebp -q 80 painpoint.png -o belle-website/public/images/transformations/before-{slug}.webp
+cwebp -q 80 afterglow.png -o belle-website/public/images/transformations/after-{slug}.webp
+curl -sL -o /tmp/report.png "<report_cdn_url>" && cwebp -q 80 /tmp/report.png -o belle-website/public/images/transformations/report-{slug}.webp
+```
+
+3. 在 `belle-website/src/lib/transformation-data.ts` 对应 type 的 `examples` 数组中添加新条目
+
+#### RSS Feed 结构
+
+Transformation RSS 按类型拆分为独立 feed，方便 Pinterest 不同 Board 订阅：
+
+| Feed URL | Pinterest Board | 内容 |
+|---|---|---|
+| `/feed/transformations.xml` | — | 聚合所有类型（兼容旧订阅） |
+| `/feed/transformations/color-analysis.xml` | Color Analysis | 色彩分析 before/after |
+| `/feed/transformations/makeup.xml` | Makeup | 妆容变化 |
+| `/feed/transformations/face-shape.xml` | Face Shape | 脸型分析 |
+| `/feed/transformations/hair-color.xml` | Hair Color | 发色预览 |
+| `/feed/transformations/outfit-color.xml` | Outfit Colors | 穿搭配色 |
+| `/feed/transformations/complete-glow-up.xml` | Glow Up | 完整蜕变 |
+
+**添加新类型时：** 在 `transformation-data.ts` 添加数据后，feed 会自动生成。需要手动在 Pinterest 创建对应 Board 并配置 RSS 订阅 URL。
 
 ## 图片质量标准
 
@@ -102,6 +170,8 @@ cd social-automation && npx tsx scripts/generate-image.ts [model_photo] [type] [
    - Lookbook outfit: 3:4, 1K (768x1024)
    - Lookbook palette/makeup/jewelry: 1:1, 1K (1024x1024)
    - Lookbook avoid: 16:9, 1K (1536x864)
+   - Transformation before/after: 原始尺寸（来自 painpoint 视频流程，9:16, 2K）
+   - Transformation report: 原始尺寸（来自后端 API）
 4. **Alt Text**: 所有图片必须有描述性 alt text（在 data 文件中定义）
 5. **清理**: 生成后删除临时 PNG 文件
 

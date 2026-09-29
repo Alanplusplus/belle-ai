@@ -4,28 +4,19 @@ globs:
 alwaysApply: true
 ---
 
-# Language Tier Strategy
+# Language Strategy
 
-## Active Locales (Tier 1)
-en, zh, ja, ko, es, de, pt, ru, tr, id
+## Supported Locales (9 languages)
+en, zh, ja, ko, es, fr, de, ru, tr
 
-These 10 locales have demonstrated organic search traffic. All new content, features, and SEO optimizations should target these locales.
+All new content, features, blog posts, and SEO optimizations target these 9 locales.
 
-## Demoted Locales (Tier 2)  
-ar, hi, th, vi
+## Removed Locales (Sep 2026)
+ar, hi, th, vi, id, pt, it
 
-These locales show zero or near-zero organic traffic in Google Search Console. Policy:
-- Do NOT create new blog posts for these locales
-- Do NOT invest in translating new pSEO content for these locales
-- Existing content remains indexed (no noindex)
-- Sitemap priority is set to 0.1 with yearly change frequency
-- Keep hreflang alternates intact
-
-## Borderline Locales (Under Review)
-fr, it
-
-These have some impressions but very low CTR and poor positions. They remain in Tier 1 for now.
+These 7 locales were removed due to near-zero organic search traffic in GSC (30-day data: all under 15 clicks). Their routing, translations (messages JSON), blog content, and sitemap entries have been fully removed.
 
 ## Implementation
-- Sitemap demotion: `src/app/sitemap.ts` — `DEMOTED_LOCALES` constant
+- Locale list: `src/i18n/routing.ts` — authoritative locale array
+- Constants: `src/lib/constants.ts` — `LOCALES` and `LOCALE_NAMES`
 - Blog creation: `blog-content.mdc` — translation targets

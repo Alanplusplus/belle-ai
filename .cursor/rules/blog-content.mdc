@@ -47,12 +47,10 @@ If a blog post covers a specific audience (e.g., men, dark skin, redheads), also
 4. Ensure the post is linked FROM the Pillar Page's "Further Reading" section if it's a key article (edit `src/app/[locale]/color-analysis/page.tsx`)
 5. Update the sitemap if needed (usually automatic for blog posts)
 
-## Language Tier Policy
+## Supported Locales
 
-Active locales (create new blog content for these): en, zh, ja, ko, es, de, pt, ru, tr, id
+All supported locales (create blog content for all 9): en, zh, ja, ko, es, fr, de, ru, tr
 
-Demoted locales (DO NOT create new blog posts for these): ar, hi, th, vi
+When creating a new blog post, create translations for all 9 locales above.
 
-When creating a new blog post, only create translations for the 10 active locales above. Existing content in demoted locales should be left as-is.
-
-Note: fr and it are borderline — they have some impressions but very low CTR. They remain active for now but are under review.
+Removed locales (no longer supported — do NOT create content): ar, hi, th, vi, id, pt, it

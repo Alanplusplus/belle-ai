@@ -90,6 +90,17 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/ed632955-b59e-4c68-a840-c8584471bb50.png",
         originalReport: "https://pic-cdn.chibistyle.app/image/advanced/ad06b89b9f3914d3931044212a8e3bbf_0.png",
       },
+      {
+        label: "Wrong Hairstyle → Perfect Face-Framing Cut",
+        description: "She struggled with a hairstyle that fought her face shape. AI face shape analysis revealed the perfect cut and layers that balance her proportions beautifully.",
+        before: "/images/transformations/before-face-shape-2.webp",
+        after: "/images/transformations/after-face-shape-2.webp",
+        report: "/images/transformations/report-face-shape-2.webp",
+        details: "The analysis identified her face shape and recommended flattering layers and a cut that frames her features, replacing the previous unflattering style that emphasized the wrong proportions.",
+        originalBefore: "https://pic.chibistyle.app/image/upload/70f529b3-0625-4b27-9743-7a9c7bf0ffa8.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/ca0c07fd-f372-4eea-a252-8e69a7c0338c.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/617a4cb22ceb4bd816a8b43bc7ad8a12_0.png",
+      },
     ],
   },
   {
