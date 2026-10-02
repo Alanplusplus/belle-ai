@@ -143,6 +143,17 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/fec12897-adef-472c-bb84-38f3926fd8b8.png",
         originalReport: "https://pic-cdn.chibistyle.app/image/advanced/6cef06257dd74bcd4103ab40de2623cc_0.png",
       },
+      {
+        label: "Warm Honey Brown Transformation",
+        description: "AI previewed the ideal hair color based on skin undertone — warm honey brown with subtle highlights for a natural glow.",
+        before: "/images/transformations/before-hair-color-2.webp",
+        after: "/images/transformations/after-hair-color-2.webp",
+        report: "/images/transformations/report-hair-color-2.webp",
+        details: "The previous dye didn't complement her skin tone. AI matched warm honey brown with golden highlights that catch light beautifully and harmonize with her warm undertone.",
+        originalBefore: "https://pic.chibistyle.app/image/upload/cd7cc8d1-8c60-49e0-a85d-054843e2f667.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/ebb9290e-72fb-4b65-8737-1ad1bdf6a40a.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/dcf38ae36b7f90ddea589e9c955c96d4_0.png",
+      },
     ],
   },
   {
