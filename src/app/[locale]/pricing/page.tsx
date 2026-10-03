@@ -3,7 +3,6 @@ import { Link } from "@/i18n/navigation";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import type { Metadata } from "next";
 import { PricingButtons } from "./PricingButtons";
-import { PricingTabs } from "./PricingTabs";
 
 export async function generateMetadata({
   params,
@@ -77,22 +76,6 @@ export default async function PricingPage({
         availability: "https://schema.org/InStock",
         priceValidUntil: new Date(new Date().getFullYear() + 1, 0, 1).toISOString().split("T")[0],
       },
-      {
-        "@type": "Offer",
-        name: "10 Credits",
-        price: "3.99",
-        priceCurrency: "USD",
-        description: "10 one-time credits, never expire",
-        availability: "https://schema.org/InStock",
-      },
-      {
-        "@type": "Offer",
-        name: "30 Credits",
-        price: "9.99",
-        priceCurrency: "USD",
-        description: "30 one-time credits, never expire",
-        availability: "https://schema.org/InStock",
-      },
     ],
   };
 
@@ -113,118 +96,70 @@ export default async function PricingPage({
           <p className="mt-3 text-lg text-muted-foreground">{t("subtitle")}</p>
         </div>
 
-        {/* Free tier - always visible */}
-        <div className="mx-auto mt-10 max-w-md rounded-2xl border border-border bg-card p-5">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="text-lg font-bold">{t("free")}</h3>
-              <p className="text-sm text-muted-foreground">{t("freeDesc")}</p>
+        {/* All plans in one row */}
+        <div className="mx-auto mt-10 grid max-w-5xl gap-6 lg:grid-cols-3">
+          {/* Free */}
+          <div className="rounded-2xl border border-border bg-card p-6">
+            <h3 className="text-xl font-bold">{t("free")}</h3>
+            <p className="mt-1 text-sm text-muted-foreground">{t("freeDesc")}</p>
+            <div className="mt-4">
+              <span className="text-4xl font-bold">$0</span>
             </div>
-            <span className="text-3xl font-bold">$0</span>
+            <ul className="mt-6 space-y-3">
+              <PricingFeature text={t("freeFeature1")} />
+              <PricingFeature text={t("freeFeature2")} />
+              <PricingFeature text={t("freeFeature3")} />
+            </ul>
+            <Link
+              href="/try"
+              className="mt-6 block w-full rounded-full border border-primary py-2.5 text-center text-sm font-semibold text-primary transition hover:bg-primary/5"
+            >
+              {t("freeCta")}
+            </Link>
           </div>
-          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1.5">
-              <CheckIcon />
-              {t("freeFeature1")}
+
+          {/* Weekly - highlighted */}
+          <div className="relative rounded-2xl border-2 border-primary bg-card p-6 shadow-lg">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-green-500 px-3 py-0.5 text-xs font-semibold text-white">
+              {t("weeklyTrialBadge")}
             </span>
-            <span className="flex items-center gap-1.5">
-              <CheckIcon />
-              {t("freeFeature2")}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckIcon />
-              {t("freeFeature3")}
-            </span>
+            <h3 className="text-xl font-bold">{t("weekly")}</h3>
+            <p className="mt-1 text-sm text-muted-foreground">
+              {t("weeklyDesc")}
+            </p>
+            <div className="mt-4">
+              <span className="text-4xl font-bold text-primary">{t("weeklyPrice")}</span>
+              <span className="text-muted-foreground">{t("weeklyPer")}</span>
+            </div>
+            <p className="mt-2 text-sm text-muted-foreground">{t("weeklyTrialNote")}</p>
+            <ul className="mt-4 space-y-3">
+              <PricingFeature text={t("weeklyFeature1")} />
+              <PricingFeature text={t("weeklyFeature2")} />
+              <PricingFeature text={t("weeklyFeature3")} />
+              <PricingFeature text={t("weeklyFeature4")} />
+            </ul>
+            <PricingButtons product="weekly" variant="primary" label={t("weeklyCta")} />
           </div>
-          <Link
-            href="/try"
-            className="mt-4 block w-full rounded-full border border-primary py-2 text-center text-sm font-semibold text-primary transition hover:bg-primary/5"
-          >
-            {t("freeCta")}
-          </Link>
+
+          {/* Yearly */}
+          <div className="rounded-2xl border border-border bg-card p-6">
+            <span className="inline-block rounded-full bg-muted px-2.5 py-0.5 text-xs font-semibold text-muted-foreground mb-2">
+              {t("yearlyBadge")}
+            </span>
+            <h3 className="text-xl font-bold">{t("yearly")}</h3>
+            <div className="mt-4">
+              <span className="text-4xl font-bold">{t("yearlyPrice")}</span>
+              <span className="text-muted-foreground">{t("yearlyPer")}</span>
+            </div>
+            <ul className="mt-6 space-y-3">
+              <PricingFeature text={t("yearlyFeature1")} />
+              <PricingFeature text={t("yearlyFeature2")} />
+              <PricingFeature text={t("yearlyFeature3")} />
+              <PricingFeature text={t("yearlyFeature4")} />
+            </ul>
+            <PricingButtons product="yearly" variant="outline" label={t("yearlyCta")} />
+          </div>
         </div>
-
-        {/* Tab switcher */}
-        <PricingTabs labels={[t("tabSubscription"), t("tabCredits")]}>
-          {/* Tab 1: Subscriptions */}
-          <div className="grid gap-6 md:grid-cols-2">
-            {/* Weekly - highlighted */}
-            <div className="relative rounded-2xl border-2 border-primary bg-card p-6 shadow-lg">
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-green-500 px-3 py-0.5 text-xs font-semibold text-white">
-                {t("weeklyTrialBadge")}
-              </span>
-              <h3 className="text-xl font-bold">{t("weekly")}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">
-                {t("weeklyDesc")}
-              </p>
-              <div className="mt-4">
-                <span className="text-4xl font-bold text-primary">{t("weeklyPrice")}</span>
-                <span className="text-muted-foreground">{t("weeklyPer")}</span>
-              </div>
-              <p className="mt-2 text-sm text-muted-foreground">{t("weeklyTrialNote")}</p>
-              <ul className="mt-4 space-y-3">
-                <PricingFeature text={t("weeklyFeature1")} />
-                <PricingFeature text={t("weeklyFeature2")} />
-                <PricingFeature text={t("weeklyFeature3")} />
-              </ul>
-              <PricingButtons product="weekly" variant="primary" label={t("weeklyCta")} />
-            </div>
-
-            {/* Yearly */}
-            <div className="rounded-2xl border border-border bg-card p-6">
-              <span className="inline-block rounded-full bg-muted px-2.5 py-0.5 text-xs font-semibold text-muted-foreground mb-2">
-                {t("yearlyBadge")}
-              </span>
-              <h3 className="text-xl font-bold">{t("yearly")}</h3>
-              <div className="mt-4">
-                <span className="text-4xl font-bold">{t("yearlyPrice")}</span>
-                <span className="text-muted-foreground">{t("yearlyPer")}</span>
-              </div>
-              <ul className="mt-6 space-y-3">
-                <PricingFeature text={t("yearlyFeature1")} />
-                <PricingFeature text={t("yearlyFeature2")} />
-                <PricingFeature text={t("yearlyFeature3")} />
-              </ul>
-              <PricingButtons product="yearly" variant="outline" label={t("yearlyCta")} />
-            </div>
-          </div>
-
-          {/* Tab 2: Credit Packs */}
-          <div>
-            <div className="mb-4 text-center">
-              <p className="text-sm text-muted-foreground">
-                {t("creditsDesc")}
-                <span className="mx-1.5 text-border">·</span>
-                <span className="font-medium text-primary">{t("creditsNeverExpire")}</span>
-              </p>
-            </div>
-            <div className="mx-auto grid max-w-2xl gap-6 md:grid-cols-2">
-              {/* 10 Credits */}
-              <div className="rounded-2xl border-2 border-primary bg-card p-6 shadow-lg">
-                <h3 className="text-xl font-bold">{t("smallPack")}</h3>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold text-primary">{t("smallPrice")}</span>
-                </div>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  {t("creditsNeverExpire")}
-                </p>
-                <PricingButtons product="credits10" variant="primary" label={t("creditsCta")} />
-              </div>
-
-              {/* 30 Credits */}
-              <div className="rounded-2xl border border-border bg-card p-6">
-                <h3 className="text-xl font-bold">{t("largePack")}</h3>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold text-primary">{t("largePrice")}</span>
-                </div>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  {t("creditsNeverExpire")}
-                </p>
-                <PricingButtons product="credits30" variant="outline" label={t("creditsCta")} />
-              </div>
-            </div>
-          </div>
-        </PricingTabs>
 
         {/* Analysis Types & Credit Cost */}
         <div className="mt-12 rounded-2xl border border-border bg-card p-6">
@@ -304,14 +239,6 @@ export default async function PricingPage({
       </div>
     </section>
     </>
-  );
-}
-
-function CheckIcon() {
-  return (
-    <svg className="h-3.5 w-3.5 shrink-0 text-primary" fill="currentColor" viewBox="0 0 20 20">
-      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-    </svg>
   );
 }
 

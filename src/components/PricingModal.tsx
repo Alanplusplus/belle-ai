@@ -14,7 +14,6 @@ interface Props {
 export function PricingModal({ open, onClose }: Props) {
   const t = useTranslations("pricing");
   const [loading, setLoading] = useState<string | null>(null);
-  const [tab, setTab] = useState(0);
 
   if (!open) return null;
 
@@ -55,7 +54,7 @@ export function PricingModal({ open, onClose }: Props) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[200] flex items-center justify-center p-4">
       <div
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
@@ -75,116 +74,54 @@ export function PricingModal({ open, onClose }: Props) {
           <p className="mt-1 text-sm text-muted-foreground">{t("subtitle")}</p>
         </div>
 
-        {/* Tab switcher */}
-        <div className="mt-5 flex justify-center">
-          <div className="inline-flex rounded-full border border-border bg-muted/50 p-1">
-            {[t("tabSubscription"), t("tabCredits")].map((label, i) => (
-              <button
-                key={i}
-                onClick={() => setTab(i)}
-                className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all ${
-                  tab === i
-                    ? "bg-primary text-white shadow-sm"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {label}
-              </button>
-            ))}
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          {/* Weekly */}
+          <div className="rounded-xl border-2 border-primary bg-card p-5">
+            <h3 className="text-lg font-bold">{t("weekly")}</h3>
+            <div className="mt-2 flex justify-center">
+              <span className="rounded-full bg-primary px-4 py-1.5 text-sm font-bold text-white">
+                {t("weeklyTrialBadge")}
+              </span>
+            </div>
+            <p className="mt-2 text-center text-xs text-muted-foreground">{t("weeklyTrialNote")}</p>
+            <ul className="mt-3 space-y-1.5">
+              <ModalFeature text={t("weeklyFeature1")} />
+              <ModalFeature text={t("weeklyFeature2")} />
+              <ModalFeature text={t("weeklyFeature3")} />
+              <ModalFeature text={t("weeklyFeature4")} />
+            </ul>
+            <button
+              onClick={() => handleCheckout("weekly")}
+              disabled={loading !== null}
+              className="mt-4 w-full rounded-full bg-primary py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-50"
+            >
+              {loading === "weekly" ? <LoadingDots /> : t("weeklyCta")}
+            </button>
           </div>
-        </div>
 
-        {/* Tab content */}
-        <div className="mt-5">
-          {tab === 0 ? (
-            <div className="grid gap-4 sm:grid-cols-2">
-              {/* Weekly - highlighted */}
-              <div className="relative rounded-xl border-2 border-primary bg-card p-5">
-                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 rounded-full bg-green-500 px-2.5 py-0.5 text-[11px] font-semibold text-white">
-                  {t("weeklyTrialBadge")}
-                </span>
-                <h3 className="text-lg font-bold">{t("weekly")}</h3>
-                <div className="mt-2">
-                  <span className="text-3xl font-bold text-primary">{t("weeklyPrice")}</span>
-                  <span className="text-sm text-muted-foreground">{t("weeklyPer")}</span>
-                </div>
-                <p className="mt-1 text-xs text-muted-foreground">{t("weeklyTrialNote")}</p>
-                <ul className="mt-3 space-y-1.5">
-                  <ModalFeature text={t("weeklyFeature1")} />
-                  <ModalFeature text={t("weeklyFeature2")} />
-                  <ModalFeature text={t("weeklyFeature3")} />
-                </ul>
-                <button
-                  onClick={() => handleCheckout("weekly")}
-                  disabled={loading !== null}
-                  className="mt-4 w-full rounded-full bg-primary py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-50"
-                >
-                  {loading === "weekly" ? <LoadingDots /> : t("weeklyCta")}
-                </button>
-              </div>
-
-              {/* Yearly */}
-              <div className="rounded-xl border border-border bg-card p-5">
-                <span className="inline-block rounded-full bg-muted px-2 py-0.5 text-[11px] font-semibold text-muted-foreground mb-1">
-                  {t("yearlyBadge")}
-                </span>
-                <h3 className="text-lg font-bold">{t("yearly")}</h3>
-                <div className="mt-2">
-                  <span className="text-3xl font-bold">{t("yearlyPrice")}</span>
-                  <span className="text-sm text-muted-foreground">{t("yearlyPer")}</span>
-                </div>
-                <ul className="mt-3 space-y-1.5">
-                  <ModalFeature text={t("yearlyFeature1")} />
-                  <ModalFeature text={t("yearlyFeature2")} />
-                  <ModalFeature text={t("yearlyFeature3")} />
-                </ul>
-                <button
-                  onClick={() => handleCheckout("yearly")}
-                  disabled={loading !== null}
-                  className="mt-4 w-full rounded-full border border-primary py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 disabled:opacity-50"
-                >
-                  {loading === "yearly" ? <LoadingDots /> : t("yearlyCta")}
-                </button>
-              </div>
+          {/* Yearly */}
+          <div className="rounded-xl border border-border bg-card p-5">
+            <h3 className="text-lg font-bold">{t("yearly")}</h3>
+            <div className="mt-2 flex justify-center">
+              <span className="rounded-full bg-muted px-4 py-1.5 text-sm font-bold text-muted-foreground">
+                {t("yearlyBadge")}
+              </span>
             </div>
-          ) : (
-            <div className="grid gap-4 sm:grid-cols-2">
-              {/* 10 Credits */}
-              <div className="rounded-xl border-2 border-primary bg-card p-5">
-                <h3 className="text-lg font-bold">{t("smallPack")}</h3>
-                <div className="mt-2">
-                  <span className="text-3xl font-bold text-primary">{t("smallPrice")}</span>
-                </div>
-                <p className="mt-2 text-xs text-muted-foreground">{t("creditsNeverExpire")}</p>
-                <button
-                  onClick={() => handleCheckout("credits10")}
-                  disabled={loading !== null}
-                  className="mt-4 w-full rounded-full bg-primary py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-50"
-                >
-                  {loading === "credits10" ? <LoadingDots /> : t("creditsCta")}
-                </button>
-              </div>
-
-              {/* 30 Credits */}
-              <div className="rounded-xl border border-border bg-card p-5">
-                <span className="inline-block rounded-full bg-muted px-2 py-0.5 text-[11px] font-semibold text-muted-foreground mb-1">
-                  {t("largeBestValue")}
-                </span>
-                <h3 className="text-lg font-bold">{t("largePack")}</h3>
-                <div className="mt-2">
-                  <span className="text-3xl font-bold text-primary">{t("largePrice")}</span>
-                </div>
-                <p className="mt-2 text-xs text-muted-foreground">{t("creditsNeverExpire")}</p>
-                <button
-                  onClick={() => handleCheckout("credits30")}
-                  disabled={loading !== null}
-                  className="mt-4 w-full rounded-full border border-primary py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 disabled:opacity-50"
-                >
-                  {loading === "credits30" ? <LoadingDots /> : t("creditsCta")}
-                </button>
-              </div>
-            </div>
-          )}
+            <p className="mt-2 text-center text-xs text-muted-foreground">{t("yearlyPrice")} {t("yearlyPer")}</p>
+            <ul className="mt-3 space-y-1.5">
+              <ModalFeature text={t("yearlyFeature1")} />
+              <ModalFeature text={t("yearlyFeature2")} />
+              <ModalFeature text={t("yearlyFeature3")} />
+              <ModalFeature text={t("yearlyFeature4")} />
+            </ul>
+            <button
+              onClick={() => handleCheckout("yearly")}
+              disabled={loading !== null}
+              className="mt-4 w-full rounded-full border border-primary py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 disabled:opacity-50"
+            >
+              {loading === "yearly" ? <LoadingDots /> : t("yearlyCta")}
+            </button>
+          </div>
         </div>
       </div>
     </div>

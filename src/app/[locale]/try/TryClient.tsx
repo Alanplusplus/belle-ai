@@ -3,7 +3,6 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import type { ProductKey } from "@/lib/constants";
 import {
   webInit,
   uploadImage,
@@ -124,7 +123,7 @@ const OCCASIONS = [
   { value: "vacation", label: "Vacation" },
 ];
 
-type Resolution = "2K" | "4K";
+type Resolution = "1K" | "2K" | "4K";
 
 const REPORT_LANGUAGES = [
   { code: "en", label: "English" },
@@ -155,12 +154,12 @@ const PREFS_KEY = "belle_try_prefs";
 const LAST_PHOTO_KEY = "belle_last_photo_url";
 
 function loadPrefs(): { resolution: Resolution; reportLang: string | null } {
-  if (typeof window === "undefined") return { resolution: "2K", reportLang: null };
+  if (typeof window === "undefined") return { resolution: "1K", reportLang: null };
   try {
     const raw = localStorage.getItem(PREFS_KEY);
     if (raw) return JSON.parse(raw);
   } catch {}
-  return { resolution: "2K", reportLang: null };
+  return { resolution: "1K", reportLang: null };
 }
 
 function savePrefs(resolution: Resolution, reportLang: string) {
@@ -255,7 +254,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [showWelcomeOffer, setShowWelcomeOffer] = useState(false);
   const [examplePreview, setExamplePreview] = useState<string | null>(null);
 
-  const [resolution, setResolution] = useState<Resolution>("2K");
+  const [resolution, setResolution] = useState<Resolution>("1K");
   const [reportLang, setReportLang] = useState(LOCALE_TO_REPORT_LANG[locale] || "en");
   const [showLangPicker, setShowLangPicker] = useState(false);
   const [generateElapsed, setGenerateElapsed] = useState(0);
@@ -268,6 +267,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [streakBonus, setStreakBonus] = useState(0);
   const [showInvitePopup, setShowInvitePopup] = useState(false);
   const [invitePopupCopied, setInvitePopupCopied] = useState(false);
+  const [isPaid, setIsPaid] = useState(false);
 
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -322,6 +322,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           subPlan: data.subscription?.plan ?? null,
           totalRemaining: data.total_remaining ?? data.web_quota.remaining,
         });
+        setIsPaid(data.subscription?.status === "active");
         setCheckinAvailable(data.checkin_available ?? false);
         setCheckinStreak(data.checkin_streak ?? 0);
         setCheckinMaxStreak(data.checkin_max_streak ?? 0);
@@ -532,6 +533,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         subPlan: data.subscription?.plan ?? null,
         totalRemaining: data.total_remaining ?? webQuota.remaining,
       });
+      setIsPaid(data.subscription?.status === "active");
 
       if ((data.total_remaining ?? webQuota.remaining) <= 0) {
         trackEvent("quota_exhausted", { type: analysisType });
@@ -943,29 +945,48 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
               {/* Bottom actions / hints */}
               {phase === "done" && resultUrls.length > 0 ? (
-                <div className="mt-2 flex items-center justify-center gap-3">
-                  <button
-                    onClick={() => handleDownload(resultUrls[0])}
-                    className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition hover:text-foreground"
-                  >
-                    <DownloadIcon />
-                    {t("download")}
-                  </button>
-                  <button
-                    onClick={() => handleShare(resultUrls[0])}
-                    className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition hover:text-foreground"
-                  >
-                    <ShareIcon />
-                    {t("share")}
-                  </button>
-                  <button
-                    onClick={() => handleCorrectionOpen({ id: "current", status: "success", type: analysisType, image_urls: resultUrls, source_image_url: sourceImageUrl ?? undefined, created_at: Date.now() / 1000 })}
-                    disabled={!sourceImageUrl}
-                    className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition hover:text-foreground disabled:opacity-50"
-                  >
-                    <CorrectionIcon />
-                    {t("correction")}
-                  </button>
+                <div className="mt-2 space-y-2">
+                  {/* Watermark upgrade banner for free users */}
+                  {!isPaid && (
+                    <button
+                      onClick={() => { trackEvent("watermark_upgrade_clicked", { source: "result_banner" }); setShowPricingModal(true); }}
+                      className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-primary/10 to-primary/5 px-3 py-2 text-xs font-medium text-primary transition hover:from-primary/15 hover:to-primary/10"
+                    >
+                      <svg className="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+                      {t("watermarkBanner")}
+                    </button>
+                  )}
+                  <div className="flex items-center justify-center gap-3">
+                    <button
+                      onClick={() => {
+                        if (!isPaid) {
+                          trackEvent("download_blocked_free", { type: analysisType });
+                          setShowPricingModal(true);
+                        } else {
+                          handleDownload(resultUrls[0]);
+                        }
+                      }}
+                      className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition hover:text-foreground"
+                    >
+                      <DownloadIcon />
+                      {isPaid ? t("download") : t("upgradeToDownload")}
+                    </button>
+                    <button
+                      onClick={() => handleShare(resultUrls[0])}
+                      className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition hover:text-foreground"
+                    >
+                      <ShareIcon />
+                      {t("share")}
+                    </button>
+                    <button
+                      onClick={() => handleCorrectionOpen({ id: "current", status: "success", type: analysisType, image_urls: resultUrls, source_image_url: sourceImageUrl ?? undefined, created_at: Date.now() / 1000 })}
+                      disabled={!sourceImageUrl}
+                      className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition hover:text-foreground disabled:opacity-50"
+                    >
+                      <CorrectionIcon />
+                      {t("correction")}
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <p className="mt-2 text-center text-xs text-muted-foreground">
@@ -983,19 +1004,31 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           <div className="flex flex-wrap items-center justify-center gap-3">
             {/* Resolution */}
             <div className="flex items-center rounded-full border border-border bg-card p-0.5">
-              {(["2K", "4K"] as Resolution[]).map((r) => (
-                <button
-                  key={r}
-                  onClick={() => { setResolution(r); savePrefs(r, reportLang); trackEvent("resolution_changed", { resolution: r }); }}
-                  className={`rounded-full px-3.5 py-1 text-xs font-medium transition ${
-                    resolution === r
-                      ? "bg-primary text-white shadow-sm"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {r}
-                </button>
-              ))}
+              {(["1K", "2K", "4K"] as Resolution[]).map((r) => {
+                const needsPro = r !== "1K" && !isPaid;
+                return (
+                  <button
+                    key={r}
+                    onClick={() => {
+                      if (needsPro) {
+                        trackEvent("resolution_upgrade_clicked", { resolution: r });
+                        setShowPricingModal(true);
+                      } else {
+                        setResolution(r); savePrefs(r, reportLang); trackEvent("resolution_changed", { resolution: r });
+                      }
+                    }}
+                    className={`rounded-full px-3.5 py-1 text-xs font-medium transition ${
+                      resolution === r
+                        ? "bg-primary text-white shadow-sm"
+                        : needsPro
+                          ? "text-muted-foreground/50"
+                          : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {r}{needsPro && <span className="ml-0.5 text-[9px] opacity-70">Pro</span>}
+                  </button>
+                );
+              })}
             </div>
 
             {/* Report Language */}
@@ -1442,6 +1475,8 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           onCorrection={handleCorrectionOpen}
           onDownload={handleDownload}
           onShare={handleShare}
+          isPaid={isPaid}
+          onUpgrade={() => { trackEvent("watermark_upgrade_clicked", { source: "lightbox" }); setShowPricingModal(true); }}
           t={t}
         />
       )}
@@ -1676,66 +1711,18 @@ function InvitePopup({
 }
 
 function NoQuotaCard({ t, onViewPlans }: { t: (key: string) => string; onViewPlans: () => void }) {
-  const [loading, setLoading] = useState<string | null>(null);
-
-  const handleBuy = async (product: string) => {
-    trackCheckoutEvent("checkout_started", { product, source: "no_quota_card" });
-    setLoading(product);
-    try {
-      let userId = getCachedUserId();
-      if (!userId) {
-        const initRes = await webInit();
-        if (initRes.code === 200 && initRes.data) {
-          userId = initRes.data.user_id;
-        }
-      }
-      if (!userId) {
-        alert("Please try again.");
-        setLoading(null);
-        return;
-      }
-      const res = await fetch("/api/waffo/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ product: product as ProductKey, userId }),
-      });
-      const data = await res.json();
-      if (!res.ok || !data.checkoutUrl) {
-        throw new Error(data.error || "Checkout failed");
-      }
-      window.open(data.checkoutUrl, "_blank", "noopener,noreferrer");
-      trackCheckoutEvent("checkout_opened", { product, source: "no_quota_card" });
-    } catch { /* ignore */ } finally {
-      setLoading(null);
-    }
-  };
-
   return (
     <div className="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50 to-orange-50 p-6 text-center">
       <p className="text-lg font-semibold text-amber-900">{t("noQuotaTitle")}</p>
       <p className="mt-1 text-sm text-amber-700">{t("noQuotaDesc")}</p>
-      <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+      <div className="mt-4 flex flex-col items-center gap-3">
         <button
-          onClick={() => handleBuy("credits10")}
-          disabled={loading !== null}
-          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:opacity-50"
+          onClick={onViewPlans}
+          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
         >
-          {loading === "credits10" ? t("processing") : t("buy10Credits")}
-        </button>
-        <button
-          onClick={() => handleBuy("credits30")}
-          disabled={loading !== null}
-          className="inline-flex items-center gap-2 rounded-full border-2 border-primary px-6 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 disabled:opacity-50"
-        >
-          {loading === "credits30" ? t("processing") : t("buy30Credits")}
+          {t("viewAllPlans")}
         </button>
       </div>
-      <button
-        onClick={onViewPlans}
-        className="mt-3 inline-block text-sm font-medium text-primary hover:underline"
-      >
-        {t("viewAllPlans")}
-      </button>
       <div className="mt-3 flex items-center justify-center gap-2 text-xs text-amber-700">
         <span>{t("noQuotaOr")}</span>
         <Link
@@ -1787,6 +1774,8 @@ function ImageLightbox({
   onCorrection,
   onDownload,
   onShare,
+  isPaid,
+  onUpgrade,
   t,
 }: {
   entry: HistoryEntry;
@@ -1795,6 +1784,8 @@ function ImageLightbox({
   onCorrection: (entry: HistoryEntry) => void;
   onDownload: (url: string) => void;
   onShare: (url: string) => void;
+  isPaid: boolean;
+  onUpgrade: () => void;
   t: (key: string) => string;
 }) {
   const [index, setIndex] = useState(initialIndex);
@@ -1856,14 +1847,25 @@ function ImageLightbox({
           </div>
         )}
 
-        {/* Action bar */}
-        <div className="mt-4 flex items-center gap-3">
+        {/* Watermark upgrade banner */}
+        {!isPaid && (
           <button
-            onClick={() => onDownload(currentUrl)}
+            onClick={onUpgrade}
+            className="mt-3 flex items-center gap-2 rounded-full bg-gradient-to-r from-primary/90 to-primary px-5 py-2 text-sm font-medium text-white shadow-lg transition hover:shadow-primary/25"
+          >
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+            {t("watermarkBanner")}
+          </button>
+        )}
+
+        {/* Action bar */}
+        <div className="mt-3 flex items-center gap-3">
+          <button
+            onClick={() => isPaid ? onDownload(currentUrl) : onUpgrade()}
             className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm hover:bg-white/20"
           >
             <DownloadIcon />
-            {t("download")}
+            {isPaid ? t("download") : t("upgradeToDownload")}
           </button>
           <button
             onClick={() => onShare(currentUrl)}

@@ -103,22 +103,23 @@ export function WelcomeOfferSheet({ open, onClose }: Props) {
             {t("subtitle")}
           </p>
 
-          {/* Offer card */}
-          <div className="mt-6 rounded-xl border-2 border-transparent bg-gradient-to-br from-[#c78fad]/5 to-[#c7a87d]/5 p-5 ring-1 ring-[#c78fad]/20">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-base font-semibold text-foreground">{t("planName")}</p>
-                <p className="mt-1 text-2xl font-bold bg-gradient-to-r from-[#c78fad] to-[#c7a87d] bg-clip-text text-transparent">
-                  {t("planPrice")}
-                </p>
-              </div>
-              <span className="rounded-full bg-gradient-to-r from-[#c78fad] to-[#c7a87d] px-3 py-1 text-xs font-bold text-white">
-                {t("trialBadge")}
-              </span>
-            </div>
-            <p className="mt-3 text-sm text-muted-foreground">{t("planDesc")}</p>
-            <p className="mt-2 text-xs text-muted-foreground">{t("trialNote")}</p>
+          {/* Free trial badge - prominent */}
+          <div className="mt-6 flex justify-center">
+            <span className="rounded-full bg-gradient-to-r from-[#c78fad] to-[#c7a87d] px-5 py-2 text-base font-bold text-white shadow-lg shadow-[#c78fad]/20">
+              {t("trialBadge")}
+            </span>
           </div>
+
+          {/* Trial note */}
+          <p className="mt-3 text-center text-sm text-muted-foreground">{t("trialNote")}</p>
+
+          {/* Features list */}
+          <ul className="mt-5 space-y-2.5">
+            <FeatureItem text={t("feature1")} />
+            <FeatureItem text={t("feature2")} />
+            <FeatureItem text={t("feature3")} />
+            <FeatureItem text={t("feature4")} />
+          </ul>
 
           {/* Free reminder */}
           <p className="mt-5 text-center text-xs text-muted-foreground">
@@ -153,6 +154,17 @@ export function WelcomeOfferSheet({ open, onClose }: Props) {
         </div>
       </div>
     </div>
+  );
+}
+
+function FeatureItem({ text }: { text: string }) {
+  return (
+    <li className="flex items-center gap-2.5 text-sm text-foreground">
+      <svg className="h-4 w-4 shrink-0 text-[#c78fad]" fill="currentColor" viewBox="0 0 20 20">
+        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+      </svg>
+      {text}
+    </li>
   );
 }
 

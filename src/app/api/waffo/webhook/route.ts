@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyWebhook } from "@waffo/pancake-ts";
-import { CREDITS_MAP, SUBSCRIPTION_PRODUCT_IDS, determinePlan } from "@/lib/constants";
+import { SUBSCRIPTION_PRODUCT_IDS, determinePlan } from "@/lib/constants";
 
 const API_BASE = process.env.BELLE_API_BASE || "https://api.chibistyle.app";
 const API_TOKEN = process.env.BELLE_API_TOKEN!;
@@ -103,13 +103,7 @@ export async function POST(req: NextRequest) {
 
     switch (eventType) {
       case "order.completed": {
-        if (productId && CREDITS_MAP[productId]) {
-          await callBackend("/common/v1/web/add-credits", {
-            user_id: userId,
-            credits: CREDITS_MAP[productId],
-            order_id: orderId,
-          });
-        } else if (productId && SUBSCRIPTION_PRODUCT_IDS.has(productId)) {
+        if (productId && SUBSCRIPTION_PRODUCT_IDS.has(productId)) {
           await callBackend("/common/v1/web/set-subscription", {
             user_id: userId,
             plan: determinePlan(productId),
