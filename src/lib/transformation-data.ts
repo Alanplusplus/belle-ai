@@ -177,6 +177,26 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
     ],
   },
   {
+    slug: "glasses-match",
+    name: "Glasses Frame Matching",
+    tagline: "Find the perfect frames for your face shape",
+    description:
+      "AI-powered glasses frame analysis matches your face shape, proportions, and personal color season to recommend the most flattering eyewear styles — no more guessing at the optician.",
+    examples: [
+      {
+        label: "Wrong Frames → Perfect Fit",
+        description: "She tried on dozens of frames at the optician — none looked right. AI face shape analysis found the frames that perfectly complement her features.",
+        before: "/images/transformations/before-glasses-match.webp",
+        after: "/images/transformations/after-glasses-match.webp",
+        report: "/images/transformations/report-glasses-match.webp",
+        details: "The AI analysis identified her face shape and proportions, recommending frame styles that balance her features — replacing years of guessing with data-driven eyewear selection.",
+        originalBefore: "https://pic.chibistyle.app/image/upload/6a4acc55-fa65-4550-8516-daf8286eb555.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/c105f6b0-c8bd-4b41-ab4b-e970a3f8e294.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/244e746fddc7acd6c0999bcb5a9ec736_0.png",
+      },
+    ],
+  },
+  {
     slug: "complete-glow-up",
     name: "Complete Glow-Up",
     tagline: "Full personal styling transformation — color, makeup, hair, and more",
