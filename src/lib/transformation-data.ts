@@ -123,6 +123,17 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/ca0c07fd-f372-4eea-a252-8e69a7c0338c.png",
         originalReport: "https://pic-cdn.chibistyle.app/image/advanced/617a4cb22ceb4bd816a8b43bc7ad8a12_0.png",
       },
+      {
+        label: "Frustrated Reflection → Salon Confidence",
+        description: "She hated how her hairstyle looked — it didn't suit her face shape at all. AI analysis found the perfect face-framing cut that brings balance and joy.",
+        before: "/images/transformations/before-face-shape-3.webp",
+        after: "/images/transformations/after-face-shape-3.webp",
+        report: "/images/transformations/report-face-shape-3.webp",
+        details: "The old hairstyle clashed with her face proportions, making her feel frustrated every time she looked in the mirror. AI recommended flattering layers and a balanced cut that frames her face beautifully.",
+        originalBefore: "https://pic.chibistyle.app/image/upload/601f5342-7883-4185-bda0-c04e3c36dd1f.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/67222f8f-0352-4f8a-80a1-3b2726fb0694.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/1465c4f8caf1db05c2b14ba8b8546d3a_0.png",
+      },
     ],
   },
   {
