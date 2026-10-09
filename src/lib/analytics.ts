@@ -10,51 +10,20 @@ export function trackEvent(name: string, params?: GtagParams) {
   window.gtag?.("event", name, params);
 }
 
-const FEISHU_WEBHOOK =
-  "https://open.feishu.cn/open-apis/bot/v2/hook/8bfecb84-d551-422e-b0c4-93a93651ed3a";
-
-type FeishuTemplate = "green" | "orange" | "red";
-
-function feishuColor(event: string): FeishuTemplate {
-  if (event.includes("completed")) return "green";
-  if (event.includes("cancel") || event.includes("close")) return "orange";
-  return "red";
-}
-
-export function notifyFeishu(title: string, event: string, params?: GtagParams) {
-  const lines = Object.entries(params ?? {})
-    .filter(([, v]) => v !== undefined)
-    .map(([k, v]) => `**${k}:** ${v}`)
-    .join("\n");
-
-  const time = new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" });
-  const content = `**Event:** ${event}\n**Time:** ${time}\n${lines}`;
-
-  fetch(FEISHU_WEBHOOK, {
+/**
+ * 飞书通知走服务端中转 /api/notify（机器人地址只存在服务端环境变量里）。
+ * keepalive：结算会立刻整页跳转到支付页，普通 fetch 会在跳转时被取消，通知就丢了。
+ */
+function notifyCheckout(event: string, params?: GtagParams) {
+  fetch("/api/notify", {
     method: "POST",
+    keepalive: true,
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      msg_type: "interactive",
-      card: {
-        header: {
-          title: { content: title, tag: "plain_text" },
-          template: feishuColor(event),
-        },
-        elements: [{ tag: "markdown", content }],
-      },
-    }),
+    body: JSON.stringify({ event, params }),
   }).catch(() => {});
 }
 
 export function trackCheckoutEvent(event: string, params?: GtagParams) {
   trackEvent(event, params);
-
-  const titleMap: Record<string, string> = {
-    checkout_started: "🛒 Checkout Started",
-    checkout_completed: "✅ Checkout Completed",
-    checkout_failed: "❌ Checkout Failed",
-    checkout_cancelled: "🚫 Checkout Cancelled",
-  };
-
-  notifyFeishu(titleMap[event] ?? `💰 ${event}`, event, params);
+  notifyCheckout(event, params);
 }

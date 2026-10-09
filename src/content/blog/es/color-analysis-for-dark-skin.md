@@ -1,5 +1,6 @@
 ---
 title: "Análisis de color para piel oscura: Guía completa"
+seoTitle: "Análisis de color para piel oscura: guía + test IA gratis"
 description: "El análisis de color funciona perfectamente para pieles ricas en melanina. Encuentra tu estación, mejor paleta y consejos de estilo — herramienta IA gratuita incluida."
 date: "2026-07-22"
 tags: ["análisis de color", "piel oscura", "tono de piel profundo", "melanina", "color estacional"]

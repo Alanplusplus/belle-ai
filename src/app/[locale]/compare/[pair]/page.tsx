@@ -229,7 +229,7 @@ function CompareContent({ slug }: { slug: string }) {
                           className="mx-auto h-10 w-10 rounded-lg border border-border/50"
                           style={{ backgroundColor: c.hex }}
                         />
-                        <p className="mt-1 text-[10px] text-muted-foreground">
+                        <p className="mt-1 text-xs text-muted-foreground">
                           {c.name}
                         </p>
                       </div>

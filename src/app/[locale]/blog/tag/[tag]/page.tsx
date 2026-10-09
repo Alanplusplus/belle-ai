@@ -11,8 +11,8 @@ import {
   type BlogPost,
 } from "@/lib/blog";
 import {
-  buildAlternates,
   buildBreadcrumbJsonLd,
+  canonicalUrl,
   ogLocale,
 } from "@/lib/seo";
 
@@ -46,19 +46,21 @@ export async function generateMetadata({
 
   const tagName = getTagDisplayName(posts, tagSlug);
   const title = `${tagName} – Blog`;
-  const alternates = buildAlternates(locale, `/blog/tag/${tagSlug}`);
+  const canonical = canonicalUrl(locale, `/blog/tag/${tagSlug}`);
 
   return {
     title,
     description: `Browse ${posts.length} articles tagged with ${tagName}.`,
-    alternates,
-    ...(posts.length < 3 ? { robots: { index: false } } : {}),
+    // 标签页只做内部导航，不参与搜索收录：统一 noindex（保留 follow 让链接权重继续传递），
+    // 也不输出 hreflang —— 各语种的标签 slug 不同，互指的地址大多不存在
+    alternates: { canonical },
+    robots: { index: false, follow: true },
     openGraph: {
       title,
       description: `Browse ${posts.length} articles tagged with ${tagName}.`,
       type: "website",
       locale: ogLocale(locale),
-      url: alternates.canonical,
+      url: canonical,
     },
     twitter: {
       card: "summary",

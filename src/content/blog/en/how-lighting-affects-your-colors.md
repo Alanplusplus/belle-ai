@@ -1,6 +1,7 @@
 ---
 title: "How Lighting Affects Your Colors (Fix It Now)"
-description: "Washed out in office light but glowing at golden hour? Here's why — and how to fix your colors for any lighting. Science-backed tips inside."
+seoTitle: "Why Your Colors Look Off in Different Lighting (Fix It)"
+description: "Washed out in office light but glowing at golden hour? Learn why lighting changes how your skin and clothes look, and how to find your true colors in any light."
 date: "2026-08-08"
 tags: ["color analysis", "lighting", "personal color", "beauty", "style guide"]
 image: "/images/blog/lighting-affects-colors.webp"

@@ -21,6 +21,32 @@ export function buildAlternates(locale: string, path: string) {
   };
 }
 
+/**
+ * 只列出「确实存在且值得索引」的语种，而不是所有语种。
+ * 博客文章不是每个语种都有，或者译文过薄被 noindex；把这些 URL 写进 hreflang 会指向 404 / noindex 页面，
+ * 违反 hreflang 的互相引用规则，Google 会直接忽略整组标注。
+ */
+export function buildAlternatesForLocales(
+  locale: string,
+  path: string,
+  availableLocales: readonly string[],
+) {
+  const languages: Record<string, string> = {};
+  for (const l of availableLocales) {
+    languages[l] =
+      l === routing.defaultLocale
+        ? `${SITE_URL}${path}`
+        : `${SITE_URL}/${l}${path}`;
+  }
+  if (availableLocales.includes(routing.defaultLocale)) {
+    languages["x-default"] = `${SITE_URL}${path}`;
+  }
+  return {
+    canonical: canonicalUrl(locale, path),
+    languages,
+  };
+}
+
 const BREADCRUMB_HOME: Record<string, string> = {
   en: "Home",
   zh: "首页",

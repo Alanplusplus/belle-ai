@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useRef, useCallback, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useState, useRef, useCallback, useEffect, useSyncExternalStore } from "react";
+import { useTranslations, useLocale } from "next-intl";
+import { useSession } from "next-auth/react";
 import { Link } from "@/i18n/navigation";
 import {
   webInit,
@@ -13,14 +14,28 @@ import {
   getCachedUserId,
   getReferralCode,
   webCheckin,
+  createShare,
+  REFERRAL_BONUS_EVENT,
   type HistoryEntry,
   type AnalysisType as ApiAnalysisType,
 } from "@/lib/api";
-import { getStoredReferralCode, storeReferralCode } from "@/lib/referral";
-import { SITE_URL } from "@/lib/constants";
+import {
+  storeReferralCode,
+  buildReferralUrl,
+  buildSharePageUrl,
+  tagShareLink,
+} from "@/lib/referral";
+import { SITE_URL, WEEKLY_INTRO_PRICE } from "@/lib/constants";
 import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
+import { consumeCheckoutContext } from "@/lib/checkout";
+import { prepareImageForUpload } from "@/lib/imageUpload";
+import { isMobileDevice, copyText, canUseNativeShare, nativeShare, openShareWindow } from "@/lib/device";
+import { RESULT_READY_EVENT } from "@/lib/google-signin";
+import { useSignIn } from "@/lib/useSignIn";
 import { PricingModal } from "@/components/PricingModal";
-import { WelcomeOfferSheet } from "@/components/WelcomeOfferSheet";
+import { InAppBrowserNotice, InAppSignInSheet } from "@/components/InAppBrowserNotice";
+
+const MAX_PHOTO_BYTES = 25 * 1024 * 1024;
 
 interface LightboxState {
   entry: HistoryEntry;
@@ -246,12 +261,16 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [lightbox, setLightbox] = useState<LightboxState | null>(null);
   const [shareToast, setShareToast] = useState(false);
   const [correctionModal, setCorrectionModal] = useState<HistoryEntry | null>(null);
-  const [shareModal, setShareModal] = useState<string | null>(null);
+  const [shareModal, setShareModal] = useState<{ imageUrl: string; link: string } | null>(null);
+  // 当前结果页对应的任务 ID：创建公开分享链接时需要
+  const [resultTaskId, setResultTaskId] = useState<string | null>(null);
+  const shareBusyRef = useRef(false);
   const [showPricingModal, setShowPricingModal] = useState(false);
+  const [pricingSource, setPricingSource] = useState("unknown");
+  const [checkoutStatus, setCheckoutStatus] = useState<"idle" | "confirming" | "success" | "delayed">("idle");
   const [backgroundTasks, setBackgroundTasks] = useState<BackgroundTask[]>([]);
   const [lastUploadedPhotoUrl, setLastUploadedPhotoUrl] = useState<string | null>(null);
   const [showTaskPanel, setShowTaskPanel] = useState(false);
-  const [showWelcomeOffer, setShowWelcomeOffer] = useState(false);
   const [examplePreview, setExamplePreview] = useState<string | null>(null);
 
   const [resolution, setResolution] = useState<Resolution>("1K");
@@ -268,11 +287,50 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [showInvitePopup, setShowInvitePopup] = useState(false);
   const [invitePopupCopied, setInvitePopupCopied] = useState(false);
   const [isPaid, setIsPaid] = useState(false);
+  const [referralBonus, setReferralBonus] = useState<number | null>(null);
 
   const fileRef = useRef<HTMLInputElement>(null);
+  // 手机上有「拍一张自拍」和「从相册选择」两个入口（两个 input），所以不能再从某个 input 的 files 里取文件
+  const cameraRef = useRef<HTMLInputElement>(null);
+  const selectedFileRef = useRef<File | null>(null);
 
-  const [isReady, setIsReady] = useState(false);
+  // 手机上结果/进度卡片排在上传区下面：生成开始、出结果、出错时需要主动滚到它，否则用户只看到按钮上的转圈
+  const [showTypeInfo, setShowTypeInfo] = useState(false);
+  const [saveImageUrl, setSaveImageUrl] = useState<string | null>(null);
+  const { status: authStatus } = useSession();
+  const signIn = useSignIn();
+  const [saveSubDismissed, setSaveSubDismissed] = useState(false);
+  const resultSectionRef = useRef<HTMLDivElement>(null);
+  const noQuotaRef = useRef<HTMLDivElement>(null);
+  const autoScrollRef = useRef(false);
+
+  const scrollToElement = useCallback((el: HTMLElement | null) => {
+    if (!el || typeof window === "undefined") return;
+    if (!window.matchMedia("(max-width: 1023px)").matches) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
+
+  const scrollToResult = useCallback(() => {
+    autoScrollRef.current = true;
+    scrollToElement(resultSectionRef.current);
+  }, [scrollToElement]);
+
   const resumedRef = useRef(false);
+
+  useEffect(() => {
+    if (phase === "no_quota") {
+      autoScrollRef.current = false;
+      // 额度墙卡片刚渲染，等下一帧再滚动
+      const id = window.requestAnimationFrame(() => scrollToElement(noQuotaRef.current));
+      return () => window.cancelAnimationFrame(id);
+    }
+    if (!autoScrollRef.current) return;
+    if (phase === "done" || phase === "error") {
+      autoScrollRef.current = false;
+      const id = window.requestAnimationFrame(() => scrollToElement(resultSectionRef.current));
+      return () => window.cancelAnimationFrame(id);
+    }
+  }, [phase, scrollToElement]);
 
   useEffect(() => {
     setLastUploadedPhotoUrl(loadLastPhotoUrl());
@@ -297,13 +355,56 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     });
   }, []);
 
+  // 被邀请人第一次分析成功后，后端发放奖励；这里提示用户并刷新积分
+  useEffect(() => {
+    let hideTimer: number | undefined;
+    const onBonus = (e: Event) => {
+      const count = Number((e as CustomEvent<number>).detail) || 0;
+      if (count <= 0) return;
+      setReferralBonus(count);
+      trackEvent("referral_bonus_received", { credits: count });
+      webInit().then((res) => {
+        const data = res.data;
+        if (res.code === 200 && data) {
+          setQuota(data.web_quota);
+          setUserCredits({
+            paid: data.paid_credits ?? 0,
+            subRemaining: data.subscription?.remaining ?? 0,
+            subPlan: data.subscription?.plan ?? null,
+            totalRemaining: data.total_remaining ?? data.web_quota.remaining,
+          });
+        }
+      });
+      window.clearTimeout(hideTimer);
+      hideTimer = window.setTimeout(() => setReferralBonus(null), 7000);
+    };
+    window.addEventListener(REFERRAL_BONUS_EVENT, onBonus);
+    return () => {
+      window.removeEventListener(REFERRAL_BONUS_EVENT, onBonus);
+      window.clearTimeout(hideTimer);
+    };
+  }, []);
+
+  // 出结果后通知全局：匿名用户会在几秒后看到一次 Google One Tap（保存记录/订阅）
+  useEffect(() => {
+    if (phase === "done" && resultUrls.length > 0) {
+      window.dispatchEvent(new Event(RESULT_READY_EVENT));
+    }
+  }, [phase, resultUrls.length]);
+
   useEffect(() => {
     if (phase !== "done" || resultUrls.length === 0) return;
-    if (localStorage.getItem("belle_invite_popup_shown") === "true") return;
+    try {
+      if (localStorage.getItem("belle_invite_popup_shown") === "true") return;
+    } catch {
+      /* 隐私模式读不到时按未展示处理 */
+    }
 
+    // 手机屏幕小，弹窗会整个盖住刚出的报告：多给用户一点时间先看结果
     const timer = window.setTimeout(() => {
       setShowInvitePopup(true);
-    }, 2000);
+      trackEvent("invite_popup_shown");
+    }, isMobileDevice() ? 10000 : 2000);
 
     return () => window.clearTimeout(timer);
   }, [phase, resultUrls.length]);
@@ -326,8 +427,6 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         setCheckinAvailable(data.checkin_available ?? false);
         setCheckinStreak(data.checkin_streak ?? 0);
         setCheckinMaxStreak(data.checkin_max_streak ?? 0);
-        setIsReady(true);
-
         setHistoryLoading(true);
         Promise.all([fetchHistory(), fetchProcessingTask()])
           .then(([historyRes, procRes]) => {
@@ -341,6 +440,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               pollUntilDone(pendingTask.task_id)
                 .then((images) => {
                   setResultUrls(images);
+                  setResultTaskId(pendingTask.task_id);
                   setPhase("done");
                   reloadHistory();
                 })
@@ -354,15 +454,6 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       }
     });
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  useEffect(() => {
-    if (!isReady) return;
-    try {
-      if (localStorage.getItem("belle_welcome_offer_seen")) return;
-    } catch { return; }
-    const timer = setTimeout(() => setShowWelcomeOffer(true), 1500);
-    return () => clearTimeout(timer);
-  }, [isReady]);
 
   useEffect(() => {
     const isGenerating = phase === "uploading" || phase === "generating" || phase === "preparing";
@@ -392,6 +483,62 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     });
   }, []);
 
+  /** 按意图打开付费墙（点下载 / 水印条幅 / 选 2K4K / 额度用完…），source 用于归因 */
+  const openPricing = useCallback((source: string) => {
+    trackEvent("pricing_modal_opened", { source });
+    setPricingSource(source);
+    setShowPricingModal(true);
+  }, []);
+
+  // 从 Waffo 支付页返回（successUrl 带 ?checkout=success）：
+  // 订阅权益由 webhook 异步写入，这里轮询状态，开通后刷新额度与历史记录（历史图片会换成无水印的签名地址）
+  const checkoutHandledRef = useRef(false);
+  useEffect(() => {
+    if (checkoutHandledRef.current) return;
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("checkout") !== "success") return;
+    checkoutHandledRef.current = true;
+
+    const ctx = consumeCheckoutContext();
+    trackEvent("checkout_returned", { product: ctx?.product, source: ctx?.source });
+
+    // 清掉地址栏参数，避免刷新页面时重复触发
+    params.delete("checkout");
+    const qs = params.toString();
+    window.history.replaceState(null, "", window.location.pathname + (qs ? `?${qs}` : ""));
+
+    setCheckoutStatus("confirming");
+    (async () => {
+      const deadline = Date.now() + 20_000;
+      while (Date.now() < deadline) {
+        try {
+          const res = await webInit();
+          const data = res.data;
+          if (res.code === 200 && data?.subscription?.status === "active") {
+            setQuota(data.web_quota);
+            setUserCredits({
+              paid: data.paid_credits ?? 0,
+              subRemaining: data.subscription?.remaining ?? 0,
+              subPlan: data.subscription?.plan ?? null,
+              totalRemaining: data.total_remaining ?? data.web_quota.remaining,
+            });
+            setIsPaid(true);
+            setCheckoutStatus("success");
+            reloadHistory();
+            trackCheckoutEvent("checkout_completed", { product: ctx?.product, source: ctx?.source });
+            window.setTimeout(() => setCheckoutStatus("idle"), 6000);
+            return;
+          }
+        } catch {
+          /* 网络抖动，继续轮询 */
+        }
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+      }
+      setCheckoutStatus("delayed");
+      trackEvent("checkout_activation_delayed", { product: ctx?.product, source: ctx?.source });
+    })();
+  }, [reloadHistory]);
+
   const handleCorrectionOpen = useCallback((entry: HistoryEntry) => {
     if (!entry.source_image_url) return;
     trackEvent("correction_opened", { type: entry.type || "unknown" });
@@ -408,6 +555,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     setErrorMsg("");
     setResultUrls([]);
     setAnalysisType(type);
+    scrollToResult();
 
     try {
       const signInRes = await webInit();
@@ -424,19 +572,45 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
       const images = await pollUntilDone(taskRes.data.task_id);
       setResultUrls(images);
+      setResultTaskId(taskRes.data.task_id);
       setPhase("done");
       reloadHistory();
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : "Correction failed");
       setPhase("error");
     }
-  }, [reportLang, resolution, reloadHistory]);
+  }, [reportLang, resolution, reloadHistory, scrollToResult]);
 
   const handleDownload = useCallback(async (url: string) => {
     trackEvent("result_download", { type: analysisType });
+    const isMobile = isMobileDevice();
     try {
       const res = await fetch(url);
       const blob = await res.blob();
+
+      // 手机上 <a download> 在 iOS Safari / 内置浏览器里基本无效：优先走系统分享面板（可直接「存储图像」到相册）
+      if (isMobile && typeof navigator.share === "function") {
+        const type = blob.type || "image/jpeg";
+        const ext = type.includes("png") ? "png" : type.includes("webp") ? "webp" : "jpg";
+        const file = new File([blob], `belle-ai-report-${Date.now()}.${ext}`, { type });
+        if (navigator.canShare?.({ files: [file] })) {
+          try {
+            await navigator.share({ files: [file] });
+            trackEvent("result_download_method", { method: "share_sheet" });
+            return;
+          } catch (err) {
+            if (err instanceof DOMException && err.name === "AbortError") return; // 用户主动取消
+          }
+        }
+      }
+
+      if (isMobile) {
+        // 不支持文件分享时，给出整宽大图和「长按保存」说明
+        trackEvent("result_download_method", { method: "long_press_sheet" });
+        setSaveImageUrl(url);
+        return;
+      }
+
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
       a.download = `belle-ai-report-${Date.now()}.jpg`;
@@ -444,59 +618,116 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(a.href);
-    } catch { window.open(url, "_blank"); }
+    } catch {
+      if (isMobile) setSaveImageUrl(url);
+      else window.open(url, "_blank");
+    }
   }, [analysisType]);
 
-  const handleShare = useCallback(async (url: string) => {
-    const isMobile = /Android|webOS|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
-      (navigator.maxTouchPoints > 0 && window.innerWidth < 768);
+  /**
+   * 分享链接优先用「公开分享页」（好友先看到报告，再被引导去试），失败时退回普通邀请链接。
+   * 分享页由用户主动点击分享时才创建，不会自动公开任何报告。
+   */
+  const resolveShareLink = useCallback(async (taskId?: string | null): Promise<string> => {
+    const fallback = buildReferralUrl(SITE_URL, referralCode);
+    if (!taskId) return fallback;
+    try {
+      const res = await createShare(taskId);
+      if (res.code === 200 && res.data?.token) {
+        return buildSharePageUrl(SITE_URL, locale, res.data.token);
+      }
+    } catch { /* 退回邀请链接 */ }
+    return fallback;
+  }, [referralCode, locale]);
 
-    const refUrl = referralCode ? `${SITE_URL}/try?ref=${referralCode}` : `${SITE_URL}/try`;
+  const handleShare = useCallback(async (url: string, taskId?: string | null) => {
+    if (shareBusyRef.current) return;
+    shareBusyRef.current = true;
+    try {
+      const isMobile = isMobileDevice();
 
-    if (isMobile && navigator.share) {
-      trackEvent("result_share", { method: "native", type: analysisType });
-      try {
-        const res = await fetch(url);
-        const blob = await res.blob();
-        const file = new File([blob], `belle-ai-report.jpg`, { type: "image/jpeg" });
-        const shareWithFile = { title: t("shareTitle"), text: `${t("shareText")} ${refUrl}`, files: [file] };
-        if (navigator.canShare?.(shareWithFile)) {
-          await navigator.share(shareWithFile);
-          return;
+      const link = await resolveShareLink(taskId ?? resultTaskId);
+      const isSharePage = link.includes("/share/");
+      trackEvent("share_link_created", { type: analysisType, kind: isSharePage ? "share_page" : "invite_link" });
+
+      if (isMobile && navigator.share) {
+        trackEvent("result_share", { method: "native", type: analysisType });
+        const nativeLink = tagShareLink(link, "native");
+        // 分享页本身带有报告图和邀请码，所以只发文字 + 链接，让社交平台抓取 OG 卡片；
+        // 退回邀请链接时才附带图片文件，保证好友至少能看到报告
+        if (!isSharePage) {
+          try {
+            const res = await fetch(url);
+            const blob = await res.blob();
+            const file = new File([blob], `belle-ai-report.jpg`, { type: "image/jpeg" });
+            const shareWithFile = { title: t("shareTitle"), text: `${t("shareText")} ${nativeLink}`, files: [file] };
+            if (navigator.canShare?.(shareWithFile)) {
+              await navigator.share(shareWithFile);
+              return;
+            }
+          } catch (err) {
+            // 用户在分享面板里点了取消：不要再弹第二次纯文字分享
+            if (err instanceof DOMException && err.name === "AbortError") return;
+            /* 其它错误退回纯文字分享 */
+          }
         }
-      } catch { /* fallback to text-only share */ }
-      try {
-        await navigator.share({ title: t("shareTitle"), text: `${t("shareText")} ${refUrl}`, url: refUrl });
-      } catch { /* user cancelled */ }
-    } else {
-      trackEvent("result_share", { method: "panel", type: analysisType });
-      setShareModal(url);
+        const status = await nativeShare({ title: t("shareTitle"), text: t("shareText"), url: nativeLink });
+        // 系统分享面板失败（部分内置浏览器声明支持但调用报错）：退回自带的分享面板，保证点了有反应
+        if (status === "failed") setShareModal({ imageUrl: url, link });
+      } else {
+        trackEvent("result_share", { method: "panel", type: analysisType });
+        setShareModal({ imageUrl: url, link });
+      }
+    } finally {
+      shareBusyRef.current = false;
     }
-  }, [t, analysisType, referralCode]);
+  }, [t, analysisType, resolveShareLink, resultTaskId]);
 
   const handleUploadClick = useCallback(() => {
     trackEvent("upload_area_clicked");
     fileRef.current?.click();
   }, []);
 
+  const handleTakeSelfie = useCallback(() => {
+    trackEvent("upload_camera_clicked");
+    cameraRef.current?.click();
+  }, []);
+
+  const clearSelectedFile = useCallback(() => {
+    selectedFileRef.current = null;
+    if (fileRef.current) fileRef.current.value = "";
+    if (cameraRef.current) cameraRef.current.value = "";
+  }, []);
+
   const handleFileSelect = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const file = e.target.files?.[0];
       if (!file) return;
-      if (file.size > 10 * 1024 * 1024) {
+      const fromCamera = e.target === cameraRef.current;
+      // 上传前会在浏览器里压缩到长边 2048px，所以这里可以放宽到 25MB（手机原图常见 5–12MB）
+      if (file.size > MAX_PHOTO_BYTES) {
         trackEvent("photo_rejected", { reason: "file_too_large", size_mb: Math.round(file.size / 1024 / 1024) });
+        setPreviewUrl(null);
+        setSourceImageUrl(null);
+        clearSelectedFile();
         setErrorMsg(t("fileTooLarge"));
+        autoScrollRef.current = true;
         setPhase("error");
         return;
       }
-      trackEvent("photo_selected", { size_kb: Math.round(file.size / 1024), type: file.type });
+      trackEvent("photo_selected", { size_kb: Math.round(file.size / 1024), type: file.type, source: fromCamera ? "camera" : "library" });
+      selectedFileRef.current = file;
+      // 清空 input：之后再选同一张照片也会触发 change；File 对象本身不受影响
+      e.target.value = "";
+      // 选了新照片就必须丢掉上一张已上传的地址，否则「再来一张」会继续用上一次上传的照片生成
+      setSourceImageUrl(null);
       const url = URL.createObjectURL(file);
       setPreviewUrl(url);
       setPhase("idle");
       setResultUrls([]);
       setErrorMsg("");
     },
-    [t]
+    [t, clearSelectedFile]
   );
 
   const handleGenerate = useCallback(async () => {
@@ -512,16 +743,22 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       Notification.requestPermission();
     }
 
-    const fail = (event: string, message: string) => {
-      setErrorMsg(message);
+    // rawMessage 只上报给统计（用于排查），界面上展示翻译过的、能告诉用户下一步怎么做的提示
+    const fail = (event: string, rawMessage: string, userMessage: string) => {
+      setErrorMsg(userMessage);
+      autoScrollRef.current = true;
       setPhase("error");
-      trackEvent(event, { type: analysisType, error: message });
+      trackEvent(event, {
+        type: analysisType,
+        error: rawMessage.slice(0, 100),
+        size_kb: Math.round((selectedFileRef.current?.size ?? 0) / 1024),
+      });
     };
 
     try {
       const signInRes = await webInit();
       if (signInRes.code !== 200 || !signInRes.data) {
-        fail("init_failed", signInRes.message || "Init failed");
+        fail("init_failed", signInRes.message || "Init failed", t("errorGenerate"));
         return;
       }
       const data = signInRes.data;
@@ -541,21 +778,25 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         return;
       }
 
+      // 额度检查通过后，把手机视口滚到进度卡片，生成完成时会再滚到结果
+      scrollToResult();
+
       let imageUrl = sourceImageUrl;
 
       if (!imageUrl) {
         setPhase("uploading");
-        const file = fileRef.current?.files?.[0];
+        const file = selectedFileRef.current;
         if (!file) {
-          fail("upload_failed", "No file selected");
+          fail("upload_failed", "No file selected", t("errorUpload"));
           return;
         }
 
         try {
-          const base64 = await fileToBase64(file);
+          // 先压缩再上传：大图 + 移动网络是 upload_failed 的主要来源
+          const base64 = await prepareImageForUpload(file);
           const uploadRes = await uploadImage(base64);
           if (uploadRes.code !== 200 || !uploadRes.data?.url) {
-            fail("upload_failed", uploadRes.message || "Upload failed");
+            fail("upload_failed", uploadRes.message || "Upload failed", t("errorUpload"));
             return;
           }
           imageUrl = uploadRes.data.url;
@@ -564,7 +805,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           saveLastPhotoUrl(imageUrl);
         } catch (err) {
           const message = err instanceof Error ? err.message : "Upload error";
-          fail("upload_failed", message);
+          fail("upload_failed", message, t("errorUpload"));
           return;
         }
       }
@@ -580,28 +821,34 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         });
       } catch (err) {
         const message = err instanceof Error ? err.message : "Task creation error";
-        fail("task_create_failed", message);
+        fail("task_create_failed", message, t("errorGenerate"));
         return;
       }
 
       if (taskRes.code === 429) {
         trackEvent("quota_exhausted", { type: analysisType });
-        setQuota(taskRes.data?.quota ?? { total: 1, used: 1, remaining: 0 });
+        setQuota(taskRes.data?.quota ?? { total: 3, used: 3, remaining: 0 });
         setPhase("no_quota");
         return;
       }
       if (taskRes.code !== 200 || !taskRes.data?.task_id) {
-        fail("task_create_failed", taskRes.message || "Task creation failed");
+        fail("task_create_failed", taskRes.message || "Task creation failed", t("errorGenerate"));
         return;
       }
 
       if (taskRes.data.quota) {
         setQuota(taskRes.data.quota);
       }
+      const remainingAfter = taskRes.data.total_remaining;
 
       const images = await pollUntilDone(taskRes.data.task_id);
       setResultUrls(images);
+      setResultTaskId(taskRes.data.task_id);
       setPhase("done");
+      // 出图后再更新剩余次数：生成过程中就显示「额度已用完」会很突兀
+      if (typeof remainingAfter === "number") {
+        setUserCredits((prev) => (prev ? { ...prev, totalRemaining: remainingAfter } : prev));
+      }
       trackEvent("generate_completed", {
         type: analysisType,
         resolution,
@@ -615,9 +862,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       reloadHistory();
     } catch (err) {
       const message = err instanceof Error ? err.message : "Unknown error";
-      fail("generate_failed", message);
+      fail("generate_failed", message, t("errorGenerate"));
     }
-  }, [previewUrl, sourceImageUrl, analysisType, reportLang, resolution, occasion, reloadHistory]);
+  }, [previewUrl, sourceImageUrl, analysisType, reportLang, resolution, occasion, reloadHistory, scrollToResult, t]);
 
   const startRecommendedAnalysis = useCallback(async (type: AnalysisType) => {
     const photoUrl = sourceImageUrl || lastUploadedPhotoUrl;
@@ -633,14 +880,14 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       if (signInRes.code !== 200 || !signInRes.data) throw new Error(signInRes.message);
       if ((signInRes.data.total_remaining ?? signInRes.data.web_quota.remaining) <= 0) {
         setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: "No credits" } : t));
-        setShowPricingModal(true);
+        openPricing("no_quota_recommended");
         return;
       }
 
       const taskRes = await createTask(photoUrl, type, reportLang, { resolution });
       if (taskRes.code === 429) {
         setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: "No credits" } : t));
-        setShowPricingModal(true);
+        openPricing("no_quota_recommended");
         return;
       }
       if (taskRes.code !== 200 || !taskRes.data?.task_id) throw new Error(taskRes.message);
@@ -652,7 +899,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     } catch (err) {
       setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: err instanceof Error ? err.message : "Failed" } : t));
     }
-  }, [sourceImageUrl, lastUploadedPhotoUrl, reportLang, resolution, reloadHistory]);
+  }, [sourceImageUrl, lastUploadedPhotoUrl, reportLang, resolution, reloadHistory, openPricing]);
 
   const handleUseLastPhoto = useCallback(async () => {
     if (!lastUploadedPhotoUrl) return;
@@ -700,7 +947,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const activeTaskCount = backgroundTasks.filter((t) => t.phase === "generating" || t.phase === "uploading").length;
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12">
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:py-12">
       <div className="text-center">
         <h1 className="font-serif text-3xl font-bold sm:text-4xl">
           {t("title")}
@@ -708,10 +955,39 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         <p className="mt-2 text-muted-foreground">{t("subtitle")}</p>
       </div>
 
+      {/* 从 Instagram / TikTok / Pinterest 等 App 内置浏览器进来时，提示用系统浏览器打开（记录与订阅才会保存） */}
+      <InAppBrowserNotice className="mx-auto mt-4 max-w-2xl" />
+
+      {/* 已付费但未登录：订阅挂在当前浏览器的匿名账号上，换浏览器/设备就找不回，提示登录保存 */}
+      {isPaid && authStatus === "unauthenticated" && !saveSubDismissed && (
+        <div className="relative mx-auto mt-4 flex max-w-2xl items-center gap-3 rounded-xl border border-green-200 bg-green-50 p-3 pr-10">
+          <div className="min-w-0 flex-1">
+            <p className="text-sm font-semibold text-green-900">{t("saveSubscriptionTitle")}</p>
+            <p className="mt-0.5 text-xs text-green-800">{t("saveSubscriptionDesc")}</p>
+          </div>
+          <button
+            type="button"
+            onClick={() => signIn.start("subscription_save")}
+            className="min-h-10 shrink-0 rounded-full bg-green-600 px-4 text-sm font-semibold text-white transition hover:bg-green-700"
+          >
+            {t("saveSubscriptionCta")}
+          </button>
+          <button
+            type="button"
+            onClick={() => setSaveSubDismissed(true)}
+            aria-label="Close"
+            className="absolute right-1 top-1 flex h-9 w-9 items-center justify-center rounded-full text-green-800/70 hover:bg-green-100"
+          >
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+        </div>
+      )}
+      <InAppSignInSheet open={signIn.blockedOpen} onClose={signIn.closeBlocked} />
+
       {/* Analysis Type Selector — Category Tabs + Type Grid */}
       <div className="mt-8">
         {/* Category Tabs */}
-        <div className="flex justify-center border-b border-border">
+        <div className="-mx-4 flex overflow-x-auto overscroll-x-contain border-b border-border px-4 [scrollbar-width:none] sm:mx-0 sm:justify-center sm:px-0 [&::-webkit-scrollbar]:hidden">
           {ANALYSIS_TYPE_GROUPS.map((group) => (
             <button
               key={group.category}
@@ -722,7 +998,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                   trackEvent("analysis_type_selected", { type: firstItem.value, source: "category_tab" });
                 }
               }}
-              className={`relative px-4 py-2.5 text-sm font-medium transition ${
+              className={`relative shrink-0 whitespace-nowrap px-4 py-3 text-sm font-medium transition ${
                 group.items.some((i) => i.value === analysisType)
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
@@ -745,7 +1021,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               <button
                 key={at.value}
                 onClick={() => { setAnalysisType(at.value); trackEvent("analysis_type_selected", { type: at.value, source: "type_pill" }); }}
-                className={`flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition ${
+                className={`flex min-h-10 items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition ${
                   analysisType === at.value
                     ? "bg-primary text-white shadow-md shadow-primary/30"
                     : "border border-border bg-card text-foreground hover:border-primary/40"
@@ -754,7 +1030,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                 <span className="shrink-0">{at.icon}</span>
                 {t(`type_${at.value}`)}
                 {at.creditCost && at.creditCost > 1 && (
-                  <span className="ml-1 rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-semibold text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">
+                  <span className="ml-1 rounded bg-amber-100 px-1.5 py-0.5 text-xs font-semibold text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">
                     {at.creditCost}x
                   </span>
                 )}
@@ -764,7 +1040,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         ))}
 
         {/* Type Info Panel: Photo Requirement + Output */}
-        <div className="mt-4 rounded-xl border border-border bg-muted/30 p-4">
+        <div className="mt-4 rounded-xl border border-border bg-muted/30 p-3 sm:p-4">
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="flex items-start gap-2.5">
               <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30">
@@ -775,7 +1051,8 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                 <p className="mt-0.5 text-sm">{t(`req_${analysisType}`)}</p>
               </div>
             </div>
-            <div className="flex items-start gap-2.5">
+            {/* 手机上默认只展示拍摄要求，输出说明折叠，让上传区更靠前 */}
+            <div className={`${showTypeInfo ? "flex" : "hidden"} items-start gap-2.5 sm:flex`}>
               <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30">
                 <svg className="h-3 w-3 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               </div>
@@ -785,6 +1062,15 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               </div>
             </div>
           </div>
+          <button
+            type="button"
+            onClick={() => setShowTypeInfo((v) => !v)}
+            aria-expanded={showTypeInfo}
+            className="mt-1 inline-flex min-h-9 items-center gap-1 text-xs font-medium text-primary sm:hidden"
+          >
+            {t("output")}
+            <svg className={`h-3 w-3 transition ${showTypeInfo ? "rotate-180" : ""}`} viewBox="0 0 12 12" fill="currentColor"><path d="M2 4l4 4 4-4" /></svg>
+          </button>
         </div>
       </div>
 
@@ -827,15 +1113,16 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
             : hasExample ? "/images/examples/before.webp" : null;
 
           return (
-            <div className="flex flex-col">
+            <div ref={resultSectionRef} className="flex scroll-mt-20 flex-col max-lg:order-2">
               <p className="mb-3 text-center text-sm font-medium text-muted-foreground">
                 {isActive
                   ? (phase === "done" ? t("resultTitle") : t(`type_${analysisType}`))
                   : hasExample ? t("exampleTitle") : t(`type_${analysisType}`)}
               </p>
-              <div className="grid grid-cols-2 gap-3 rounded-2xl border border-border/60 bg-muted/20 p-3 sm:p-4">
+              {/* 手机上出结果后，报告图独占整行（原来被挤在约 165px 的半宽栏里，文字根本看不清）；原照片列在小屏隐藏 */}
+              <div className={`grid grid-cols-2 gap-3 rounded-2xl border border-border/60 bg-muted/20 p-3 sm:p-4 ${phase === "done" && resultUrls.length > 0 ? "max-sm:grid-cols-1" : ""}`}>
                 {/* Left column — photo */}
-                <div className="space-y-1.5">
+                <div className={`space-y-1.5 ${phase === "done" && resultUrls.length > 0 ? "max-sm:hidden" : ""}`}>
                   <span className="block text-center text-xs font-medium text-muted-foreground">{leftLabel}</span>
                   <div className="overflow-hidden rounded-xl border border-border/40 bg-background">
                     {leftImage ? (
@@ -875,10 +1162,14 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                           ? t("preparing")
                           : phase === "uploading"
                             ? t("uploading")
-                            : t("generating")}
+                            : generateElapsed < 15
+                              ? t("generating")
+                              : generateElapsed < 40
+                                ? t("generatingStage2")
+                                : t("generatingStage3")}
                       </p>
                       {phase === "generating" && generateElapsed > 60 && (
-                        <p className="mt-2 px-3 text-center text-[11px] text-muted-foreground">{t("almostDone")}</p>
+                        <p className="mt-2 px-3 text-center text-xs text-muted-foreground">{t("almostDone")}</p>
                       )}
                     </div>
                   ) : phase === "done" && resultUrls.length > 0 ? (
@@ -894,11 +1185,11 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                         <img
                           src={resultUrls[0]}
                           alt="AI Report"
-                          className="h-auto w-full object-cover"
+                          className="h-auto w-full bg-muted/30 object-contain"
                           style={{ aspectRatio: "3/4" }}
                         />
-                        {/* Click to view full hint */}
-                        <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transition group-hover:opacity-100">
+                        {/* 触屏没有 hover：提示常显；只有支持 hover 的设备才改成悬停显示 */}
+                        <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-100 transition [@media(hover:hover)]:from-black/50 [@media(hover:hover)]:opacity-0 group-hover:opacity-100">
                           <div className="mb-3 flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-foreground shadow-lg backdrop-blur-sm">
                             <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" /></svg>
                             {t("viewFull")}
@@ -906,7 +1197,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                         </div>
                         {/* Page count badge */}
                         {resultUrls.length > 1 && (
-                          <div className="absolute right-2 top-2 rounded-full bg-black/60 px-2 py-0.5 text-[10px] font-medium text-white backdrop-blur-sm">
+                          <div className="absolute right-2 top-2 rounded-full bg-black/60 px-2 py-0.5 text-xs font-medium text-white backdrop-blur-sm">
                             1/{resultUrls.length}
                           </div>
                         )}
@@ -917,6 +1208,17 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                     <div className="flex flex-col items-center justify-center overflow-hidden rounded-xl border border-red-200/60 bg-red-50/30 dark:border-red-900/30 dark:bg-red-950/10" style={{ aspectRatio: "3/4" }}>
                       <svg className="mb-3 h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg>
                       <p className="px-3 text-center text-xs font-medium text-red-600 dark:text-red-400">{errorMsg}</p>
+                      {previewUrl && (
+                        <button
+                          onClick={() => {
+                            trackEvent("generate_retry_clicked", { type: analysisType });
+                            handleGenerate();
+                          }}
+                          className="mt-3 rounded-full bg-primary px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-primary-dark"
+                        >
+                          {t("retryBtn")}
+                        </button>
+                      )}
                     </div>
                   ) : hasExample ? (
                     /* Idle — example report */
@@ -949,31 +1251,31 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                   {/* Watermark upgrade banner for free users */}
                   {!isPaid && (
                     <button
-                      onClick={() => { trackEvent("watermark_upgrade_clicked", { source: "result_banner" }); setShowPricingModal(true); }}
-                      className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-primary/10 to-primary/5 px-3 py-2 text-xs font-medium text-primary transition hover:from-primary/15 hover:to-primary/10"
+                      onClick={() => { trackEvent("watermark_upgrade_clicked", { source: "result_banner" }); openPricing("watermark_banner"); }}
+                      className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-3 py-2.5 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:bg-primary-dark"
                     >
                       <svg className="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
                       {t("watermarkBanner")}
                     </button>
                   )}
-                  <div className="flex items-center justify-center gap-3">
+                  <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
                     <button
                       onClick={() => {
                         if (!isPaid) {
                           trackEvent("download_blocked_free", { type: analysisType });
-                          setShowPricingModal(true);
+                          openPricing("download");
                         } else {
                           handleDownload(resultUrls[0]);
                         }
                       }}
-                      className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition hover:text-foreground"
+                      className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-border bg-card px-4 text-xs font-medium text-foreground transition hover:border-primary/40 sm:min-h-0 sm:border-0 sm:bg-transparent sm:px-0 sm:font-normal sm:text-muted-foreground sm:hover:text-foreground"
                     >
                       <DownloadIcon />
                       {isPaid ? t("download") : t("upgradeToDownload")}
                     </button>
                     <button
                       onClick={() => handleShare(resultUrls[0])}
-                      className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition hover:text-foreground"
+                      className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-primary/40 bg-primary/5 px-4 text-xs font-semibold text-primary transition hover:bg-primary/10 sm:min-h-0 sm:border-0 sm:bg-transparent sm:px-0 sm:font-normal sm:text-muted-foreground sm:hover:text-foreground"
                     >
                       <ShareIcon />
                       {t("share")}
@@ -981,7 +1283,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                     <button
                       onClick={() => handleCorrectionOpen({ id: "current", status: "success", type: analysisType, image_urls: resultUrls, source_image_url: sourceImageUrl ?? undefined, created_at: Date.now() / 1000 })}
                       disabled={!sourceImageUrl}
-                      className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition hover:text-foreground disabled:opacity-50"
+                      className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-border bg-card px-4 text-xs font-medium text-foreground transition hover:border-primary/40 disabled:opacity-50 sm:min-h-0 sm:border-0 sm:bg-transparent sm:px-0 sm:font-normal sm:text-muted-foreground sm:hover:text-foreground"
                     >
                       <CorrectionIcon />
                       {t("correction")}
@@ -998,8 +1300,8 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         })()}
 
 
-        {/* Right: Settings + Upload + Generate */}
-        <div className="flex flex-col gap-5">
+        {/* Right: Settings + Upload + Generate（手机上排在示例/结果之前，让上传入口更靠前） */}
+        <div className="flex flex-col gap-5 max-lg:order-1">
           {/* Settings: Resolution + Report Language */}
           <div className="flex flex-wrap items-center justify-center gap-3">
             {/* Resolution */}
@@ -1012,7 +1314,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                     onClick={() => {
                       if (needsPro) {
                         trackEvent("resolution_upgrade_clicked", { resolution: r });
-                        setShowPricingModal(true);
+                        openPricing(`resolution_${r}`);
                       } else {
                         setResolution(r); savePrefs(r, reportLang); trackEvent("resolution_changed", { resolution: r });
                       }
@@ -1100,11 +1402,11 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                   <p className="mt-1 text-center text-xs text-muted-foreground">
                     {t("uploadHint")}
                   </p>
-                  <p className="mt-2 flex items-center justify-center gap-1 text-center text-[11px] text-muted-foreground/70">
+                  <p className="mt-2 flex items-center justify-center gap-1 text-center text-xs text-muted-foreground/70">
                     <svg className="h-3 w-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
                     {t("uploadTrust")}
                   </p>
-                  <p className="mt-1 text-center text-[11px] text-muted-foreground/50">
+                  <p className="mt-1 text-center text-xs text-muted-foreground/50">
                     {t("uploadConsent")}
                   </p>
                   {lastUploadedPhotoUrl && !previewUrl && (
@@ -1118,25 +1420,60 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                   )}
                 </>
               )}
-              <input
-                ref={fileRef}
-                type="file"
-                accept="image/jpeg,image/png,image/webp"
-                className="hidden"
-                onChange={handleFileSelect}
-              />
             </div>
+
+            {/* image/*：手机相册里的 HEIC / 截图等也能选（Safari 会自动转成 JPEG，上传前还会统一压缩）。
+                两个 input 放在虚线框外面：程序化 click 会冒泡到虚线框的 onClick，导致同时弹出两个选择器 */}
+            <input
+              ref={fileRef}
+              type="file"
+              accept="image/*"
+              className="hidden"
+              onChange={handleFileSelect}
+            />
+            {/* 前置摄像头直接拍自拍；桌面浏览器会忽略 capture，等同普通选择文件 */}
+            <input
+              ref={cameraRef}
+              type="file"
+              accept="image/*"
+              capture="user"
+              className="hidden"
+              onChange={handleFileSelect}
+            />
+
+            {/* 手机上的两个明确入口：拍自拍 / 从相册选；桌面端直接点上面的虚线框 */}
+            {!previewUrl && (
+              <div className="mt-3 grid grid-cols-2 gap-3 lg:hidden">
+                <button
+                  type="button"
+                  onClick={handleTakeSelfie}
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-primary bg-primary/5 px-3 py-2 text-sm font-semibold text-primary transition active:scale-[0.98]"
+                >
+                  <svg className="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" /><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" /></svg>
+                  <span className="text-center leading-tight">{t("takeSelfie")}</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={handleUploadClick}
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-border bg-background px-3 py-2 text-sm font-semibold text-foreground transition active:scale-[0.98]"
+                >
+                  <svg className="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" /></svg>
+                  <span className="text-center leading-tight">{t("chooseFromGallery")}</span>
+                </button>
+              </div>
+            )}
 
             {previewUrl && (
               <div className="mt-2 text-center">
                 <button
                   onClick={() => {
                     setPreviewUrl(null);
+                    setSourceImageUrl(null);
                     setResultUrls([]);
                     setPhase("idle");
-                    if (fileRef.current) fileRef.current.value = "";
+                    clearSelectedFile();
                   }}
-                  className="text-sm text-muted-foreground hover:text-foreground"
+                  className="min-h-11 px-4 text-sm text-muted-foreground hover:text-foreground"
                 >
                   {t("changePhoto")}
                 </button>
@@ -1144,8 +1481,14 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
             )}
           </div>
 
-          {/* Generate Button */}
-          <div className="text-center">
+          {/* Generate Button：手机上选好照片后吸在视口底部，不用再往下找按钮 */}
+          <div
+            className={`text-center ${
+              previewUrl
+                ? "max-lg:sticky max-lg:bottom-0 max-lg:z-30 max-lg:-mx-4 max-lg:border-t max-lg:border-border/60 max-lg:bg-background/95 max-lg:px-4 max-lg:pb-[max(0.75rem,env(safe-area-inset-bottom))] max-lg:pt-3 max-lg:backdrop-blur-md"
+                : ""
+            }`}
+          >
             <button
               onClick={() => {
                 handleGenerate();
@@ -1156,7 +1499,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                 phase === "generating" ||
                 phase === "preparing"
               }
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
             >
               {(phase === "uploading" ||
                 phase === "generating" ||
@@ -1165,12 +1508,14 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                 ? t("generating")
                 : t("generate")}
             </button>
+          </div>
 
+          <div className="-mt-2 text-center lg:-mt-3">
             {userCredits && phase !== "done" && (
               <p className="mt-2 text-xs text-muted-foreground">
                 {userCredits.subPlan ? (
                   <span className="inline-flex items-center gap-1">
-                    <span className="rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-semibold text-primary uppercase">Pro</span>
+                    <span className="rounded bg-primary/10 px-1.5 py-0.5 text-xs font-semibold text-primary uppercase">Pro</span>
                     {t("quotaInfo", { remaining: userCredits.totalRemaining })}
                   </span>
                 ) : (
@@ -1192,13 +1537,14 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       {/* Example Preview Modal */}
       {examplePreview && (
         <div
-          className="fixed inset-0 z-[70] flex items-center justify-center bg-black/60 backdrop-blur-sm"
+          className="fixed inset-0 z-[70] flex items-center justify-center bg-black/60 p-3 backdrop-blur-sm"
           onClick={() => setExamplePreview(null)}
         >
-          <div className="relative max-h-[90vh] max-w-lg overflow-auto rounded-2xl" onClick={(e) => e.stopPropagation()}>
+          <div className="relative max-h-[90dvh] max-w-lg overflow-auto rounded-2xl" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setExamplePreview(null)}
-              className="absolute right-3 top-3 z-10 rounded-full bg-black/50 p-1.5 text-white transition hover:bg-black/70"
+              aria-label="Close"
+              className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white transition hover:bg-black/70"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -1264,9 +1610,15 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       )}
 
       {/* Show NoQuotaCard when credits are exhausted (regardless of phase) */}
-      {(phase === "no_quota" || (userCredits && userCredits.totalRemaining <= 0) || (!userCredits && quota && quota.remaining <= 0)) && (
-        <div className="mt-4">
-          <NoQuotaCard t={t} onViewPlans={() => { trackEvent("pricing_modal_opened", { source: "no_quota_generate" }); setShowPricingModal(true); }} />
+      {(phase === "no_quota" || (phase !== "done" && phase !== "generating" && phase !== "uploading" && phase !== "preparing" && ((userCredits && userCredits.totalRemaining <= 0) || (!userCredits && quota && quota.remaining <= 0)))) && (
+        <div ref={noQuotaRef} className="mt-4 scroll-mt-20">
+          <NoQuotaCard
+            t={t}
+            onViewPlans={() => openPricing("no_quota_generate")}
+            checkinAvailable={checkinAvailable}
+            checkinLoading={checkinLoading}
+            onCheckin={handleCheckin}
+          />
         </div>
       )}
 
@@ -1296,7 +1648,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                   <p className="text-xs font-semibold truncate">{t(`type_${type}`)}</p>
                   <div className="mt-1.5 flex items-center gap-1 text-primary">
                     <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                    <span className="text-[11px] font-medium">{t("startNow")}</span>
+                    <span className="text-xs font-medium">{t("startNow")}</span>
                   </div>
                 </div>
               </button>
@@ -1314,7 +1666,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               <h3 className="text-sm font-semibold">{t("multiTaskTitle")}</h3>
             </div>
             {activeTaskCount > 0 && (
-              <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-medium text-primary">
+              <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
                 {t("tasksRunning", { count: activeTaskCount })}
               </span>
             )}
@@ -1355,6 +1707,8 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       {/* Post-result: Invite + Recommendations */}
       {phase === "done" && resultUrls.length > 0 && (
         <div className="mt-8">
+          {/* AI 生成内容标注 */}
+          <p className="mb-4 text-center text-xs text-muted-foreground">{t("aiGeneratedNote")}</p>
           <div className="mb-6">
             <InviteEarnBanner variant="card" referralCode={referralCode} />
           </div>
@@ -1384,7 +1738,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                       <p className="text-xs font-semibold truncate">{t(`type_${type}`)}</p>
                       <div className="mt-1 flex items-center justify-center gap-1 text-primary">
                         <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                        <span className="text-[11px] font-medium">{t("startNow")}</span>
+                        <span className="text-xs font-medium">{t("startNow")}</span>
                       </div>
                     </div>
                   </button>
@@ -1393,9 +1747,16 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
             </div>
           )}
 
-          {quota && quota.remaining <= 0 && (
+          {/* 以「总剩余次数」为准：免费额度用完但还有付费积分 / 订阅额度的用户不应该看到额度墙 */}
+          {(userCredits ? userCredits.totalRemaining <= 0 : !!quota && quota.remaining <= 0) && (
             <div className="mt-6">
-              <NoQuotaCard t={t} onViewPlans={() => { trackEvent("pricing_modal_opened", { source: "no_quota_result" }); setShowPricingModal(true); }} />
+              <NoQuotaCard
+                t={t}
+                onViewPlans={() => openPricing("no_quota_result")}
+                checkinAvailable={checkinAvailable}
+                checkinLoading={checkinLoading}
+                onCheckin={handleCheckin}
+              />
             </div>
           )}
         </div>
@@ -1476,9 +1837,14 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           onDownload={handleDownload}
           onShare={handleShare}
           isPaid={isPaid}
-          onUpgrade={() => { trackEvent("watermark_upgrade_clicked", { source: "lightbox" }); setShowPricingModal(true); }}
+          onUpgrade={() => { trackEvent("watermark_upgrade_clicked", { source: "lightbox" }); openPricing("lightbox"); }}
           t={t}
         />
+      )}
+
+      {/* 手机端「长按保存」兜底 */}
+      {saveImageUrl && (
+        <SaveImageSheet url={saveImageUrl} onClose={() => setSaveImageUrl(null)} t={t} />
       )}
 
       {/* Correction Modal */}
@@ -1494,7 +1860,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       {/* Share Panel */}
       {shareModal && (
         <SharePanel
-          url={shareModal}
+          url={shareModal.imageUrl}
+          shareLink={shareModal.link}
+          locale={locale}
           onClose={() => setShareModal(null)}
           onCopied={() => { setShareToast(true); setTimeout(() => setShareToast(false), 2000); }}
           t={t}
@@ -1502,22 +1870,32 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         />
       )}
 
+      {/* 邀请奖励到账提示 */}
+      {referralBonus !== null && (
+        <div
+          role="status"
+          className="fixed left-1/2 top-4 z-[250] w-[calc(100%-2rem)] max-w-md -translate-x-1/2 rounded-xl bg-green-600 px-4 py-3 text-sm font-medium text-white shadow-lg"
+        >
+          🎁 {t("referralBonusToast", { count: referralBonus })}
+        </div>
+      )}
+
       {/* Share Toast */}
       {shareToast && (
-        <div className="fixed bottom-6 left-1/2 z-[200] -translate-x-1/2 rounded-full bg-foreground px-4 py-2 text-sm text-background shadow-lg">
+        <div className="fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] left-1/2 z-[200] max-w-[calc(100vw-2rem)] -translate-x-1/2 rounded-full bg-foreground px-4 py-2 text-center text-sm text-background shadow-lg max-lg:bottom-[calc(5.5rem+env(safe-area-inset-bottom))]">
           {t("shareCopied")}
         </div>
       )}
 
       {/* Floating task indicator */}
       {activeTaskCount > 0 && (
-        <div className="fixed bottom-6 right-6 z-50">
+        <div className="fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] right-4 z-50 max-lg:bottom-[calc(5.5rem+env(safe-area-inset-bottom))] lg:right-6">
           <button
             onClick={() => {
               const el = document.querySelector('[data-task-panel]');
               el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }}
-            className="flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-medium text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+            className="flex min-h-11 items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-medium text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
           >
             <Spinner />
             {t("tasksRunning", { count: activeTaskCount })}
@@ -1526,9 +1904,41 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       )}
 
       {/* Pricing Modal */}
-      <PricingModal open={showPricingModal} onClose={() => setShowPricingModal(false)} />
+      <PricingModal open={showPricingModal} onClose={() => setShowPricingModal(false)} source={pricingSource} />
 
-      <WelcomeOfferSheet open={showWelcomeOffer} onClose={() => setShowWelcomeOffer(false)} />
+      {/* 从支付页返回后的状态提示 */}
+      {checkoutStatus !== "idle" && (
+        <div
+          role="status"
+          className={`fixed left-1/2 top-4 z-[250] w-[calc(100%-2rem)] max-w-md -translate-x-1/2 rounded-xl px-4 py-3 text-sm font-medium shadow-lg ${
+            checkoutStatus === "success"
+              ? "bg-green-600 text-white"
+              : checkoutStatus === "delayed"
+                ? "bg-amber-500 text-white"
+                : "bg-foreground text-background"
+          }`}
+        >
+          <div className="flex items-start gap-2">
+            {checkoutStatus === "confirming" && <Spinner />}
+            <span className="flex-1">
+              {checkoutStatus === "confirming"
+                ? t("checkoutConfirming")
+                : checkoutStatus === "success"
+                  ? t("checkoutSuccess")
+                  : t("checkoutDelayed")}
+            </span>
+            {checkoutStatus !== "confirming" && (
+              <button
+                onClick={() => setCheckoutStatus("idle")}
+                aria-label="Close"
+                className="-mr-1 rounded-full px-1.5 text-white/80 transition hover:text-white"
+              >
+                ×
+              </button>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* First-time invite popup */}
       {showInvitePopup && (
@@ -1536,14 +1946,20 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           referralCode={referralCode}
           copied={invitePopupCopied}
           onCopy={async () => {
-            const refUrl = referralCode ? `${SITE_URL}/try?ref=${referralCode}` : `${SITE_URL}/try`;
+            const refUrl = buildReferralUrl(SITE_URL, referralCode);
             trackEvent("invite_earn_click", { source: "result_popup" });
-            await navigator.clipboard.writeText(refUrl);
+            // 手机上直接调起系统分享面板；不支持或失败时复制链接
+            if (canUseNativeShare()) {
+              const status = await nativeShare({ title: t("shareTitle"), text: t("shareText"), url: tagShareLink(refUrl, "native") });
+              if (status !== "failed") return;
+            }
+            const ok = await copyText(refUrl);
+            if (!ok) return;
             setInvitePopupCopied(true);
             setTimeout(() => setInvitePopupCopied(false), 2000);
           }}
           onDismiss={() => {
-            localStorage.setItem("belle_invite_popup_shown", "true");
+            try { localStorage.setItem("belle_invite_popup_shown", "true"); } catch { /* 隐私模式不可写，忽略 */ }
             setShowInvitePopup(false);
           }}
           t={t}
@@ -1555,7 +1971,14 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
 function InviteEarnBanner({ variant = "compact", referralCode }: { variant?: "compact" | "card"; referralCode?: string | null }) {
   const t = useTranslations("tryPage");
+  const locale = useLocale();
   const [linkCopied, setLinkCopied] = useState(false);
+  // 服务端恒为 false、客户端挂载后才读真实能力：不会触发 hydration 不一致
+  const nativeReady = useSyncExternalStore(
+    () => () => {},
+    canUseNativeShare,
+    () => false
+  );
 
   if (variant === "compact") {
     return (
@@ -1570,26 +1993,39 @@ function InviteEarnBanner({ variant = "compact", referralCode }: { variant?: "co
     );
   }
 
-  const refUrl = referralCode ? `${SITE_URL}/try?ref=${referralCode}` : null;
+  const refUrl = referralCode ? buildReferralUrl(SITE_URL, referralCode) : null;
   const shareText = t("shareText");
   const shareTags = "BelleAI,ColorAnalysis,Beauty";
 
   const handleCopyLink = async () => {
     if (!refUrl) return;
     trackEvent("invite_earn_click", { source: "result_card" });
-    await navigator.clipboard.writeText(refUrl);
+    const ok = await copyText(refUrl);
+    if (!ok) {
+      trackEvent("share_link_copy_failed", { source: "result_card" });
+      return;
+    }
     setLinkCopied(true);
     setTimeout(() => setLinkCopied(false), 2000);
   };
 
-  const handlePlatformShare = (platform: typeof SHARE_PLATFORMS[number]) => {
+  const handleNativeInvite = async () => {
+    if (!refUrl) return;
+    trackEvent("invite_earn_click", { source: "result_card" });
+    trackEvent("share_platform_click", { platform: "native" });
+    const status = await nativeShare({ title: t("shareTitle"), text: shareText, url: tagShareLink(refUrl, "native") });
+    if (status === "failed") handleCopyLink();
+  };
+
+  const handlePlatformShare = (platform: SharePlatform) => {
     if (!refUrl) return;
     trackEvent("invite_earn_click", { source: "result_card" });
     trackEvent("share_platform_click", { platform: platform.id });
+    const taggedUrl = tagShareLink(refUrl, platform.id);
     const shareUrl = platform.id === "pinterest"
-      ? (platform.buildUrl as (u: string, txt: string, tg: string, m?: string) => string)(refUrl, shareText, shareTags)
-      : platform.buildUrl(refUrl, shareText, shareTags);
-    window.open(shareUrl, "_blank", "noopener,noreferrer,width=600,height=500");
+      ? (platform.buildUrl as (u: string, txt: string, tg: string, m?: string) => string)(taggedUrl, shareText, shareTags)
+      : platform.buildUrl(taggedUrl, shareText, shareTags);
+    openShareWindow(shareUrl);
   };
 
   return (
@@ -1609,29 +2045,41 @@ function InviteEarnBanner({ variant = "compact", referralCode }: { variant?: "co
 
       {refUrl ? (
         <div className="mt-4 space-y-3">
+          {/* 手机上主推系统分享面板：覆盖所有已安装的 App（含内置浏览器里 window.open 打不开的平台） */}
+          {nativeReady && (
+            <button
+              onClick={handleNativeInvite}
+              className="flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition active:scale-[0.98]"
+            >
+              <ShareIcon />
+              {t("share")}
+            </button>
+          )}
           <div className="flex items-center gap-2 rounded-xl border border-primary/15 bg-background/70 px-3 py-2">
-            <p className="flex-1 truncate text-xs text-muted-foreground">{refUrl}</p>
+            <p className="min-w-0 flex-1 truncate text-xs text-muted-foreground">{refUrl}</p>
             <button
               onClick={handleCopyLink}
-              className="shrink-0 rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-primary/90"
+              className="min-h-10 shrink-0 rounded-full bg-primary px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-primary/90"
             >
               {linkCopied ? t("linkCopied") : t("copyLink")}
             </button>
           </div>
-          <div className="grid grid-cols-4 gap-2">
-            {SHARE_PLATFORMS.map((platform) => (
-              <button
-                key={platform.id}
-                onClick={() => handlePlatformShare(platform)}
-                className="flex flex-col items-center gap-1 rounded-xl p-2 transition hover:bg-primary/5"
-              >
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-background/80 shadow-sm">
-                  {platform.icon}
-                </div>
-                <span className="text-[10px] text-muted-foreground">{platform.name.split(" ")[0]}</span>
-              </button>
-            ))}
-          </div>
+          {!nativeReady && (
+            <div className="grid grid-cols-4 gap-2">
+              {getSharePlatforms(locale).map((platform) => (
+                <button
+                  key={platform.id}
+                  onClick={() => handlePlatformShare(platform)}
+                  className="flex flex-col items-center gap-1 rounded-xl p-2 transition hover:bg-primary/5"
+                >
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-background/80 shadow-sm">
+                    {platform.icon}
+                  </div>
+                  <span className="text-xs text-muted-foreground">{platform.name.split(" ")[0]}</span>
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       ) : (
         <Link
@@ -1710,29 +2158,66 @@ function InvitePopup({
   );
 }
 
-function NoQuotaCard({ t, onViewPlans }: { t: (key: string) => string; onViewPlans: () => void }) {
+/**
+ * 额度用完时的「三选一」：付费升级（主推）/ 邀请好友 +3 / 每日签到 +1。
+ * 之前只有一个付费按钮加一个小号邀请链接，用户到这里只有「付费」或「离开」两条路。
+ */
+function NoQuotaCard({
+  t,
+  onViewPlans,
+  checkinAvailable,
+  checkinLoading,
+  onCheckin,
+}: {
+  t: (key: string, values?: Record<string, string | number>) => string;
+  onViewPlans: () => void;
+  checkinAvailable: boolean;
+  checkinLoading: boolean;
+  onCheckin: () => void;
+}) {
+  useEffect(() => {
+    trackEvent("quota_wall_shown", { checkin_available: checkinAvailable });
+    // 只在卡片出现时上报一次
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50 to-orange-50 p-6 text-center">
       <p className="text-lg font-semibold text-amber-900">{t("noQuotaTitle")}</p>
       <p className="mt-1 text-sm text-amber-700">{t("noQuotaDesc")}</p>
-      <div className="mt-4 flex flex-col items-center gap-3">
+      <div className="mx-auto mt-4 flex max-w-sm flex-col gap-2.5">
         <button
-          onClick={onViewPlans}
-          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+          onClick={() => {
+            trackEvent("quota_wall_option_click", { option: "pay" });
+            onViewPlans();
+          }}
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
         >
-          {t("viewAllPlans")}
+          {t("noQuotaProCta", { price: WEEKLY_INTRO_PRICE })}
         </button>
-      </div>
-      <div className="mt-3 flex items-center justify-center gap-2 text-xs text-amber-700">
-        <span>{t("noQuotaOr")}</span>
         <Link
           href="/referral"
-          className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
-          onClick={() => trackEvent("invite_earn_click", { source: "no_quota_card" })}
+          className="inline-flex items-center justify-center gap-1.5 rounded-full border border-primary/40 bg-white/70 px-6 py-2.5 text-sm font-semibold text-primary transition hover:bg-white"
+          onClick={() => {
+            trackEvent("quota_wall_option_click", { option: "invite" });
+            trackEvent("invite_earn_click", { source: "no_quota_card" });
+          }}
         >
-          <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z" /></svg>
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z" /></svg>
           {t("inviteEarnFree")}
         </Link>
+        {checkinAvailable && (
+          <button
+            onClick={() => {
+              trackEvent("quota_wall_option_click", { option: "checkin" });
+              onCheckin();
+            }}
+            disabled={checkinLoading}
+            className="inline-flex items-center justify-center rounded-full border border-amber-300 bg-white/70 px-6 py-2.5 text-sm font-medium text-amber-800 transition hover:bg-white disabled:opacity-60"
+          >
+            {checkinLoading ? "..." : t("checkinBtn")}
+          </button>
+        )}
       </div>
     </div>
   );
@@ -1758,15 +2243,6 @@ function Spinner({ className }: { className?: string }) {
   );
 }
 
-function fileToBase64(file: File): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result as string);
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  });
-}
-
 function ImageLightbox({
   entry,
   initialIndex,
@@ -1783,7 +2259,7 @@ function ImageLightbox({
   onClose: () => void;
   onCorrection: (entry: HistoryEntry) => void;
   onDownload: (url: string) => void;
-  onShare: (url: string) => void;
+  onShare: (url: string, taskId?: string | null) => void;
   isPaid: boolean;
   onUpgrade: () => void;
   t: (key: string) => string;
@@ -1807,42 +2283,75 @@ function ImageLightbox({
     return () => { document.body.style.overflow = ""; };
   }, []);
 
-  return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm" onClick={onClose}>
-      <div className="relative flex max-h-[90vh] max-w-[90vw] flex-col items-center" onClick={(e) => e.stopPropagation()}>
-        {/* Close */}
-        <button onClick={onClose} className="absolute -top-10 right-0 rounded-full bg-white/10 p-2 text-white hover:bg-white/20">
-          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
-        </button>
+  // 手机上左右滑动翻页（多页报告）
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const touch = e.touches[0];
+    touchStartRef.current = touch ? { x: touch.clientX, y: touch.clientY } : null;
+  };
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const start = touchStartRef.current;
+    touchStartRef.current = null;
+    const touch = e.changedTouches[0];
+    if (!start || !touch || urls.length < 2) return;
+    const dx = touch.clientX - start.x;
+    const dy = touch.clientY - start.y;
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    if (dx < 0 && index < urls.length - 1) setIndex(index + 1);
+    if (dx > 0 && index > 0) setIndex(index - 1);
+  };
 
+  return (
+    <div className="fixed inset-0 z-[100] overflow-y-auto overscroll-contain bg-black/80 backdrop-blur-sm" onClick={onClose}>
+      {/* Close：固定在右上角并避开刘海，不再依赖内容容器的 -top 偏移 */}
+      <button
+        onClick={onClose}
+        aria-label="Close"
+        className="fixed right-3 top-[max(0.75rem,env(safe-area-inset-top))] z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm hover:bg-white/25"
+      >
+        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+
+      <div className="flex min-h-full flex-col items-center justify-center px-3 pb-[max(1rem,env(safe-area-inset-bottom))] pt-16">
+        <div className="flex w-full max-w-full flex-col items-center sm:w-auto" onClick={(e) => e.stopPropagation()}>
         {/* Image */}
-        <div className="relative flex items-center justify-center">
+        <div
+          className="relative flex items-center justify-center"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           {index > 0 && (
-            <button onClick={() => setIndex(index - 1)} className="absolute left-2 z-10 rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
+            <button onClick={() => setIndex(index - 1)} aria-label="Previous" className="absolute left-2 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70">
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
             </button>
           )}
           <img
             src={currentUrl}
             alt={`Report ${index + 1}`}
-            className="max-h-[75vh] max-w-[85vw] rounded-xl object-contain shadow-2xl"
+            className="max-h-[68dvh] w-auto max-w-full rounded-xl object-contain shadow-2xl sm:max-h-[75dvh] sm:max-w-[85vw]"
           />
           {index < urls.length - 1 && (
-            <button onClick={() => setIndex(index + 1)} className="absolute right-2 z-10 rounded-full bg-black/50 p-2 text-white hover:bg-black/70">
+            <button onClick={() => setIndex(index + 1)} aria-label="Next" className="absolute right-2 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70">
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
             </button>
           )}
         </div>
 
-        {/* Page indicator */}
+        {/* 触屏设备：提示可长按图片保存到相册（桌面不显示） */}
+        <p className="mt-2 hidden text-center text-xs text-white/70 [@media(hover:none)]:block">{t("saveImageHint")}</p>
+
+        {/* Page indicator：圆点外层加大到 24px 的点击区域 */}
         {urls.length > 1 && (
-          <div className="mt-3 flex gap-1.5">
+          <div className="mt-1 flex items-center">
             {urls.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setIndex(i)}
-                className={`h-2 w-2 rounded-full transition ${i === index ? "bg-white" : "bg-white/40"}`}
-              />
+                aria-label={`Page ${i + 1}`}
+                className="flex h-6 w-6 items-center justify-center"
+              >
+                <span className={`block h-2 w-2 rounded-full transition ${i === index ? "bg-white" : "bg-white/40"}`} />
+              </button>
             ))}
           </div>
         )}
@@ -1859,17 +2368,17 @@ function ImageLightbox({
         )}
 
         {/* Action bar */}
-        <div className="mt-3 flex items-center gap-3">
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
           <button
             onClick={() => isPaid ? onDownload(currentUrl) : onUpgrade()}
-            className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm hover:bg-white/20"
+            className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm hover:bg-white/20"
           >
             <DownloadIcon />
             {isPaid ? t("download") : t("upgradeToDownload")}
           </button>
           <button
-            onClick={() => onShare(currentUrl)}
-            className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm hover:bg-white/20"
+            onClick={() => onShare(currentUrl, entry.id)}
+            className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm hover:bg-white/20"
           >
             <ShareIcon />
             {t("share")}
@@ -1877,13 +2386,50 @@ function ImageLightbox({
           {entry.source_image_url && (
             <button
               onClick={() => onCorrection(entry)}
-              className="inline-flex items-center gap-1.5 rounded-full bg-primary/80 px-4 py-2 text-sm text-white hover:bg-primary"
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-primary/80 px-4 py-2 text-sm text-white hover:bg-primary"
             >
               <CorrectionIcon />
               {t("correction")}
             </button>
           )}
         </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/** 手机上无法调起系统分享面板时的「长按保存」兜底：整宽大图 + 说明 */
+function SaveImageSheet({
+  url,
+  onClose,
+  t,
+}: {
+  url: string;
+  onClose: () => void;
+  t: (key: string) => string;
+}) {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = ""; };
+  }, []);
+
+  return (
+    <div className="fixed inset-0 z-[180] flex items-end justify-center bg-black/60 backdrop-blur-sm sm:items-center" onClick={onClose}>
+      <div
+        className="flex max-h-[92dvh] w-full max-w-md flex-col rounded-t-2xl border border-border bg-card p-4 pb-[max(1rem,env(safe-area-inset-bottom))] shadow-2xl sm:rounded-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="mb-3 flex items-center justify-between">
+          <h3 className="text-base font-bold">{t("saveImageTitle")}</h3>
+          <button onClick={onClose} aria-label="Close" className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-muted">
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+        </div>
+        <div className="min-h-0 flex-1 overflow-y-auto rounded-xl">
+          <img src={url} alt="Report" className="h-auto w-full rounded-xl" />
+        </div>
+        <p className="mt-3 text-center text-sm text-muted-foreground">{t("saveImageHint")}</p>
       </div>
     </div>
   );
@@ -1934,12 +2480,12 @@ function CorrectionSheet({
   return (
     <div className="fixed inset-0 z-[150] flex items-end justify-center sm:items-center bg-black/50 backdrop-blur-sm" onClick={onClose}>
       <div
-        className="w-full max-w-lg rounded-t-2xl sm:rounded-2xl bg-card border border-border p-6 shadow-2xl animate-in slide-in-from-bottom-4"
+        className="max-h-[90dvh] w-full max-w-lg overflow-y-auto rounded-t-2xl sm:rounded-2xl bg-card border border-border p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-2xl animate-in slide-in-from-bottom-4"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-bold">{t("correction")}</h3>
-          <button onClick={onClose} className="rounded-full p-1.5 hover:bg-muted">
+          <button onClick={onClose} aria-label="Close" className="-mr-2 flex h-11 w-11 items-center justify-center rounded-full hover:bg-muted">
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
         </div>
@@ -1950,14 +2496,14 @@ function CorrectionSheet({
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder={t("correctionPlaceholder")}
-          className="w-full h-32 resize-none rounded-xl border border-border bg-muted/30 px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          className="w-full h-32 resize-none rounded-xl border border-border bg-muted/30 px-4 py-3 text-base sm:text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
           autoFocus
         />
 
         <button
           onClick={() => { if (text.trim()) onSubmit(entry, text.trim()); }}
           disabled={!text.trim()}
-          className="mt-4 w-full rounded-full bg-gradient-to-r from-primary to-primary-dark py-3 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+          className="mt-4 min-h-12 w-full rounded-full bg-gradient-to-r from-primary to-primary-dark py-3 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {t("correctionSubmit")}
         </button>
@@ -2011,16 +2557,67 @@ const SHARE_PLATFORMS = [
     buildUrl: (url: string, text: string, _tags: string, media?: string) =>
       `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&description=${encodeURIComponent(text)}${media ? `&media=${encodeURIComponent(media)}` : ""}`,
   },
+  {
+    id: "telegram",
+    name: "Telegram",
+    icon: <span className="text-xs font-bold text-sky-500">TG</span>,
+    buildUrl: (url: string, text: string) => `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
+  },
+  {
+    id: "line",
+    name: "LINE",
+    icon: <span className="text-xs font-bold text-green-500">LINE</span>,
+    buildUrl: (url: string, text: string) => `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
+  },
+  {
+    id: "vk",
+    name: "VK",
+    icon: <span className="text-xs font-bold text-blue-600">VK</span>,
+    buildUrl: (url: string, text: string) => `https://vk.com/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(text)}`,
+  },
+  {
+    id: "weibo",
+    name: "Weibo",
+    icon: <span className="text-xs font-bold text-red-500">微博</span>,
+    buildUrl: (url: string, text: string) => `https://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(text)}`,
+  },
 ] as const;
+
+type SharePlatform = typeof SHARE_PLATFORMS[number];
+
+// 按语种挑选当地人真正在用的 4 个分享渠道（每行 4 列）
+// 韩国（KakaoTalk）、中国大陆（微信）没有可用的网页分享链接，手机端靠系统分享面板，这里用 X / 微博 补位
+const PLATFORM_IDS_BY_LOCALE: Record<string, string[]> = {
+  en: ["x", "facebook", "whatsapp", "pinterest"],
+  zh: ["weibo", "x", "telegram", "whatsapp"],
+  ja: ["line", "x", "facebook", "pinterest"],
+  ko: ["x", "facebook", "telegram", "pinterest"],
+  es: ["whatsapp", "facebook", "x", "pinterest"],
+  fr: ["whatsapp", "facebook", "x", "pinterest"],
+  de: ["whatsapp", "telegram", "facebook", "x"],
+  ru: ["vk", "telegram", "whatsapp", "x"],
+  tr: ["whatsapp", "x", "telegram", "facebook"],
+};
+
+function getSharePlatforms(locale: string): SharePlatform[] {
+  const ids = PLATFORM_IDS_BY_LOCALE[locale] ?? PLATFORM_IDS_BY_LOCALE.en;
+  return ids
+    .map((id) => SHARE_PLATFORMS.find((p) => p.id === id))
+    .filter((p): p is SharePlatform => Boolean(p));
+}
 
 function SharePanel({
   url,
+  shareLink,
+  locale,
   onClose,
   onCopied,
   t,
   referralCode,
 }: {
   url: string;
+  shareLink: string;
+  locale: string;
   onClose: () => void;
   onCopied: () => void;
   t: (key: string) => string;
@@ -2029,24 +2626,30 @@ function SharePanel({
   const tReferral = useTranslations("referral");
   const [caption, setCaption] = useState(t("shareText"));
   const [tags, setTags] = useState("BelleAI,ColorAnalysis,Beauty");
-  const refUrl = referralCode ? `${SITE_URL}/try?ref=${referralCode}` : `${SITE_URL}/try`;
+  const platforms = getSharePlatforms(locale);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = ""; };
   }, []);
 
-  const handlePlatformClick = (platform: typeof SHARE_PLATFORMS[number]) => {
+  const handlePlatformClick = (platform: SharePlatform) => {
     trackEvent("share_platform_click", { platform: platform.id });
-    const shareUrl = platform.id === "pinterest"
-      ? (platform.buildUrl as (u: string, t: string, tg: string, m?: string) => string)(refUrl, caption, tags, url)
-      : platform.buildUrl(refUrl, caption, tags);
-    window.open(shareUrl, "_blank", "noopener,noreferrer,width=600,height=500");
+    // 每个渠道的链接带上 utm_content，之后可以在 GA 里比较各渠道的带来的访问与转化
+    const link = tagShareLink(shareLink, platform.id);
+    const target = platform.id === "pinterest"
+      ? (platform.buildUrl as (u: string, t: string, tg: string, m?: string) => string)(link, caption, tags, url)
+      : platform.buildUrl(link, caption, tags);
+    openShareWindow(target);
   };
 
   const handleCopyLink = async () => {
     trackEvent("share_link_copied");
-    await navigator.clipboard.writeText(refUrl);
+    const ok = await copyText(tagShareLink(shareLink, "copy"));
+    if (!ok) {
+      trackEvent("share_link_copy_failed", { source: "share_panel" });
+      return;
+    }
     onCopied();
     onClose();
   };
@@ -2054,12 +2657,12 @@ function SharePanel({
   return (
     <div className="fixed inset-0 z-[150] flex items-end justify-center sm:items-center bg-black/50 backdrop-blur-sm" onClick={onClose}>
       <div
-        className="w-full max-w-md rounded-t-2xl sm:rounded-2xl bg-card border border-border p-6 shadow-2xl animate-in slide-in-from-bottom-4"
+        className="max-h-[92dvh] w-full max-w-md overflow-y-auto overscroll-contain rounded-t-2xl sm:rounded-2xl bg-card border border-border p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-2xl animate-in slide-in-from-bottom-4"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-bold">{t("share")}</h3>
-          <button onClick={onClose} className="rounded-full p-1.5 hover:bg-muted">
+          <button onClick={onClose} aria-label="Close" className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-muted">
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
         </div>
@@ -2068,17 +2671,18 @@ function SharePanel({
         <div className="mb-4 flex gap-3 rounded-xl border border-border p-3">
           <img src={url} alt="" className="h-16 w-12 rounded-lg object-cover" />
           <div className="flex-1 min-w-0">
+            {/* 输入框字号至少 16px，否则 iOS 聚焦时会自动放大整页 */}
             <textarea
               value={caption}
               onChange={(e) => setCaption(e.target.value)}
-              className="w-full resize-none rounded-lg border-0 bg-transparent p-0 text-sm focus:outline-none focus:ring-0"
+              className="w-full resize-none rounded-lg border-0 bg-transparent p-0 text-base focus:outline-none focus:ring-0 sm:text-sm"
               rows={2}
               placeholder={t("shareText")}
             />
             <input
               value={tags}
               onChange={(e) => setTags(e.target.value)}
-              className="w-full border-0 bg-transparent p-0 text-xs text-primary focus:outline-none focus:ring-0"
+              className="w-full border-0 bg-transparent p-0 text-base text-primary focus:outline-none focus:ring-0 sm:text-xs"
               placeholder="#BelleAI #Beauty"
             />
           </div>
@@ -2086,7 +2690,7 @@ function SharePanel({
 
         {/* Platform buttons */}
         <div className="grid grid-cols-4 gap-3">
-          {SHARE_PLATFORMS.map((platform) => (
+          {platforms.map((platform) => (
             <button
               key={platform.id}
               onClick={() => handlePlatformClick(platform)}
@@ -2095,10 +2699,11 @@ function SharePanel({
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-muted">
                 {platform.icon}
               </div>
-              <span className="text-[11px] text-muted-foreground">{platform.name}</span>
+              <span className="text-xs text-muted-foreground">{platform.name}</span>
             </button>
           ))}
         </div>
+        <p className="mt-3 text-center text-xs text-muted-foreground">{t("shareLinkNotice")}</p>
 
         {referralCode && (
           <div className="mt-4 rounded-xl border border-primary/20 bg-primary/5 p-3 text-center">

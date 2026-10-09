@@ -1,39 +1,47 @@
 ---
-title: "Ben hangi mevsimim?"
+title: "Ben Hangi Mevsimim? Renk Mevsiminizi Bulun (İlkbahar, Yaz, Sonbahar, Kış)"
 description: "«Ben hangi mevsimim?» diye mi merak ediyorsunuz? Kişisel renk analizinde İlkbahar, Yaz, Sonbahar veya Kış olup olmadığınızı öğrenin. Ücretsiz quiz ve AI analizi dahil."
 date: "2026-07-20"
 tags: ["ben hangi mevsimim", "renk mevsimi", "ilkbahar yaz sonbahar kış", "mevsimsel renk tipi", "renk analizi quizi"]
 image: "/images/blog/what-color-season-am-i.webp"
 ---
 
-## «Renk mevsimi» ne anlama gelir?
+## «Renk Mevsimi» Ne Anlama Gelir?
 
-Kişisel renk analizinde «mevsiminiz», doğal renklerinizle en iyi uyum sağlayan renk grubudur:
+Kişisel renk analizinde «mevsiminiz», doğal renklendirmenizle en iyi uyum sağlayan renk grubunu ifade eder. Sistem dört mevsimi metafor olarak kullanır:
 
-- **İlkbahar** — sıcak, açık, net renkler
-- **Yaz** — soğuk, açık, yumuşak renkler
-- **Sonbahar** — sıcak, koyu, soluk renkler
-- **Kış** — soğuk, koyu, net renkler
+- **İlkbahar** — Sıcak, açık, net renkler (çiçek açışı gibi)
+- **Yaz** — Soğuk, açık, yumuşak renkler (puslu bir plaj günü gibi)
+- **Sonbahar** — Sıcak, koyu, soluk renkler (düşen yapraklar gibi)
+- **Kış** — Soğuk, koyu, net renkler (buz gibi karlı manzara gibi)
 
-Mevsiminiz alt ton (sıcak/soğuk), derinlik (açık/koyu) ve kroma (parlak/yumuşak) ile belirlenir.
+Mevsiminiz üç faktörle belirlenir: alt tonunuz (sıcak veya soğuk), derinliğiniz (açık veya koyu) ve kromanız (parlak/net veya yumuşak/soluk).
 
-## 3 soruda hızlı bulucu
+## Hızlı Mevsim Bulucu
+
+Hızlı bir tahmin için şu üç soruyu yanıtlayın:
 
 ### Soru 1: Sıcak mı soğuk muyum?
 
-Bilek damarları:
-- Yeşil → **Sıcak** (İlkbahar veya Sonbahar)
-- Mavi/mor → **Soğuk** (Yaz veya Kış)
+Doğal ışıkta bilek içindeki damarlara bakın:
+- Yeşil damarlar → **Sıcak** (İlkbahar veya Sonbahar)
+- Mavi/mor damarlar → **Soğuk** (Yaz veya Kış)
+- İkisi karışık → Her ikisi de olabilir; Soru 2'ye geçin
 
 ### Soru 2: Açık mı koyu muyum?
 
+Genel renklendirmenizi düşünün (cilt + saç + göz birlikte):
 - Açık saç + açık göz + açık cilt → **Açık** (İlkbahar veya Yaz)
 - Koyu saç + koyu göz + orta/koyu cilt → **Koyu** (Sonbahar veya Kış)
+- Arada bir yerde → Netlik için Soru 3'e geçin
 
 ### Soru 3: Parlak mı yumuşak mıyım?
 
-- Yüksek kontrast → **Parlak/net**
-- Düşük kontrast → **Yumuşak/soluk**
+Özellikleriniz arasındaki kontrasta bakın:
+- Yüksek kontrast (açık ciltte koyu kaşlar, canlı gözler) → **Parlak/Net**
+- Düşük kontrast (her şey yumuşakça birbirine karışır) → **Yumuşak/Soluk**
+
+### Yanıtlarınızı Birleştirin
 
 | Alt ton | Derinlik | = Mevsim |
 |---------|----------|----------|
@@ -42,50 +50,105 @@ Bilek damarları:
 | Sıcak | Koyu | **Sonbahar** |
 | Soğuk | Koyu | **Kış** |
 
-## Detaylı mevsim profilleri
+## Ayrıntılı Mevsim Profilleri
 
 ### İlkbahar
 
-**İlkbahar olabilirsiniz eğer:** sıcak altın veya şeftali parlaklığı, kolay bronzlaşma, sıcak saç vurguları, şeftali/mercan yakıştırıyor, siyah sert duruyor.
+**İlkbahar olabilirsiniz eğer:**
+- Cildiniz sıcak, altın veya şeftali parlaklığı taşır
+- Kolay bronzlaşır, nadiren yanarsınız
+- Doğal saçınızda sıcak vurgular vardır (altın, çilek, bakır)
+- Gözleriniz sıcaktır (yeşil, ela, sıcak kahve, altın halkalı mavi)
+- Şeftali, mercan veya sıcak yeşil giymek sizi sağlıklı gösterir
+- Siyah kıyafet size çok sert durur
 
-**Alt tipler:** Light Spring, Warm Spring, Bright Spring
+**İlkbahar alt tipleri:**
 
-**Örnekler:** Emma Stone, Amy Adams, Blake Lively
+- **Açık İlkbahar:** Çok açık, narin sıcak renklendirme. Sarı saç, açık gözler, şeftali cilt düşünün. Sıcak alt tonlu pastel renklerde en iyi.
+- **Sıcak İlkbahar:** Belirgin sıcak renklendirme. Altın sarıdan kestane kızılına saç, sıcak cilt. Çok koyu olmadan zengin sıcak renklerde en iyi.
+- **Parlak İlkbahar:** Yüksek netlikle sıcak. Parlak, canlı renklendirme. Doygun sıcak renklerde en iyi.
+
+**Ünlü örnekler:** Emma Stone, Amy Adams, Blake Lively, Jennifer Lawrence
 
 ### Yaz
 
-**Yaz olabilirsiniz eğer:** soğuk veya nötr-soğuk alt ton, kolay yanma, küllü saç, lavanta/pudra pembesi parlak gösteriyor, turuncu sarartıyor.
+**Yaz olabilirsiniz eğer:**
+- Cildiniz soğuk pembe veya nötr alt tona sahip
+- Bronzlaşmadan önce yanarsınız veya pembe/gri tonlu bronzlaşırsınız
+- Doğal saçınız kül sarısı, kül kahve veya soluk kahverengidir
+- Gözleriniz soğuktur (gri-mavi, yumuşak mavi, gri-yeşil, soluk kahve)
+- Lavanta, pudra pembesi veya arduvaz mavisi giymek sizi ışıltılı gösterir
+- Turuncu veya altın renkler sizi sarımsı gösterir
 
-**Alt tipler:** Light Summer, Cool Summer, Soft Summer
+**Yaz alt tipleri:**
 
-**Örnekler:** Cate Blanchett, Kate Middleton, Taylor Swift
+- **Açık Yaz:** Çok açık, yumuşak soğuk renklendirme. Kül sarısı saç, açık gözler. Soğuk pastel renklerde en iyi.
+- **Soğuk Yaz:** Belirgin soğukluk, orta derinlik. Gül veya mavi alt ton. Net soğuk renklerde en iyi.
+- **Yumuşak Yaz:** Soğuk-nötr, çok soluk renklendirme. Düşük kontrast. Tozlu, grileşmiş tonlarda en iyi.
+
+**Ünlü örnekler:** Cate Blanchett, Kate Middleton, Jennifer Aniston, Taylor Swift
 
 ### Sonbahar
 
-**Sonbahar olabilirsiniz eğer:** sıcak/altın/zeytin alt ton, zeytin/pas rengi parlatıyor, soğuk pastel tonlar soluk gösteriyor.
+**Sonbahar olabilirsiniz eğer:**
+- Cildiniz sıcak, altın, zeytin veya kehribar alt tona sahip
+- Altın veya kahverengi tona bronzlaşırsınız
+- Doğal saçınız sıcak kahve, kestane kızılı, kızıl veya sıcak alt tonlu koyu saçtır
+- Gözleriniz sıcaktır (ela, kehribar, sıcak kahve, yeşil)
+- Zeytin, pas rengi veya hardal giymek cildinizi parlatır
+- Soğuk pastel renkler (lavanta, buz pembesi) sizi soluk gösterir
 
-**Alt tipler:** Soft Autumn, Warm Autumn, Deep Autumn
+**Sonbahar alt tipleri:**
 
-**Örnekler:** Jessica Alba, Beyoncé, Julia Roberts
+- **Yumuşak Sonbahar:** Sıcak-nötr, çok soluk renklendirme. Harmanik, nazik sıcaklık. Yumuşak toprak tonlarında en iyi.
+- **Sıcak Sonbahar:** Belirgin sıcaklık, orta-koyu renklendirme. Zengin altın kalite. Baharatlı, sıcak renklerde en iyi.
+- **Derin Sonbahar:** Sıcak alt tonlu çok koyu renklendirme. Koyu saç, koyu gözler. Zengin, sıcak koyu tonlarda en iyi.
+
+**Ünlü örnekler:** Jessica Alba, Drew Barrymore, Beyoncé, Julia Roberts
 
 ### Kış
 
-**Kış olabilirsiniz eğer:** soğuk alt ton, yüksek kontrast, koyu saç, saf beyaz/siyah güçlü duruyor, soluk toprak renkleri uymuyor.
+**Kış olabilirsiniz eğer:**
+- Cildiniz soğuk veya nötr-soğuk alt tona sahip
+- Cilt, saç ve gözler arasında yüksek kontrast vardır
+- Doğal saçınız koyu kahverengiden siyaha kadar
+- Gözleriniz koyu veya cildinize karşı çarpıcı biçimde parlaktır
+- Saf beyaz, siyah veya mücevher tonları giymek sizi güçlü gösterir
+- Soluk veya toprak renkleri sizi «uyumsuz» gösterir
 
-**Alt tipler:** Deep Winter, Cool Winter, Bright Winter
+**Kış alt tipleri:**
 
-**Örnekler:** Lupita Nyong'o, Anne Hathaway, Lily Collins
+- **Derin Kış:** Çok koyu renklendirme, her şey koyu, soğuk alt ton. Zengin, koyu soğuk renklerde en iyi.
+- **Soğuk Kış:** Belirgin soğukluk, orta ila koyu derinlik. Buz gibi kalite. Açıktan koyuya gerçek soğuk renklerde en iyi.
+- **Parlak Kış:** Son derece yüksek kontrast ve canlı renklendirme ile soğuk. Cesur, doygun renklerde en iyi.
 
-## İki mevsim arasındaysanız
+**Ünlü örnekler:** Lupita Nyong'o, Anne Hathaway, Lily Collins, Fan Bingbing
 
-Çok yaygın (Soft Summer vs. Soft Autumn vb.). Her iki paletten de renkler giyebilirsiniz.
+## İki Mevsim Arasındaysanız Ne Olur?
 
-## Ücretsiz quizi yapın
+İki mevsim arasında kalmak çok yaygındır. Genelde şu durumlarda olur:
 
-[Ücretsiz renk mevsimi quizi →](/tools/color-quiz)
+- **Yumuşak Yaz vs. Yumuşak Sonbahar** — Soluk renklendirme ile ne net sıcak ne net soğuk (nötr alt ton)
+- **Parlak İlkbahar vs. Parlak Kış** — Canlı, net renklendirme ile nötr alt ton
+- **Derin Sonbahar vs. Derin Kış** — Çok koyu renklendirme ile nötr alt ton
+- **Açık İlkbahar vs. Açık Yaz** — Çok açık renklendirme ile nötr alt ton
 
-## AI ile anında sonuç
+İki mevsim arasındaysanız genelde her iki paletten de renk giyebilirsiniz. Ortak özelliklere odaklanın (her iki Yumuşak mevsim soluk tonları paylaşır; her iki Parlak mevsim canlı tonları paylaşır) ve sınır renklerle deneyin.
 
-[Ücretsiz AI renk analizi →](/try)
+## Ücretsiz Quizi Yapın
 
-Kayıt yok. 60 saniyede tam kişisel palet.
+Nerede olduğunuzdan emin değil misiniz? Quizimiz renklendirmeniz hakkında hedefli sorular sorar ve 2 dakikadan kısa sürede en olası mevsiminize indirger.
+
+[Ücretsiz Renk Mevsimi Quizini Yapın →](/tr/tools/color-quiz)
+
+## Anında Yapay Zekâ Sonuçları
+
+En doğru sonuç için net bir selfie yükleyin ve yapay zekânın tam 12 mevsim tipinizi belirlemesine izin verin:
+
+[Ücretsiz Yapay Zekâ Renk Analizi →](/tr/try)
+
+Kayıt yok, ücret yok. 60 saniyede tam kişisel paletinizle sonuç.
+
+## İlgili Makaleler
+
+- [Renk Analizi: Eksiksiz Rehber](/tr/color-analysis) — En iyi renklerinizi bulmak için bilmeniz gereken her şey

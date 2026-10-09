@@ -159,6 +159,9 @@ export async function POST(req: NextRequest) {
         const data = await proxyPost("/common/v1/web/referral-apply", {
           ...(googleId ? { google_user_id: googleId } : { fingerprint }),
           referral_code: params.referral_code,
+          // 透传访客 IP / UA 给后端做同设备防刷（浏览器直连时后端只能看到代理服务器的 IP）
+          client_ip: req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || req.headers.get("x-real-ip") || undefined,
+          client_ua: req.headers.get("user-agent") || undefined,
         });
         return NextResponse.json(data);
       }
@@ -169,6 +172,14 @@ export async function POST(req: NextRequest) {
           return NextResponse.json(data);
         }
         const data = await proxyGet(`/common/v1/web/referral-stats?fingerprint=${fingerprint}`);
+        return NextResponse.json(data);
+      }
+
+      case "share-create": {
+        const data = await proxyPost("/common/v1/web/share-create", {
+          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
+          task_id: params.task_id,
+        });
         return NextResponse.json(data);
       }
 

@@ -4,8 +4,8 @@
   "description": "Free AI-powered personal color analysis",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#c8a2c8",
+  "background_color": "#FFF9F5",
+  "theme_color": "#FFF9F5",
   "icons": [
     {
       "src": "/icon-192.png",

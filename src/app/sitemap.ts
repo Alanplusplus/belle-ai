@@ -2,7 +2,11 @@ import { execSync } from "child_process";
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/constants";
-import { getAllSlugs, getPostBySlug, getAllTags } from "@/lib/blog";
+import {
+  getAllSlugs,
+  getPostBySlug,
+  getAvailableLocales,
+} from "@/lib/blog";
 import { SEASON_SLUGS } from "@/lib/color-palette-data";
 import { ATTRIBUTE_SLUGS } from "@/lib/color-analysis-for-data";
 import { FACE_SHAPE_SLUGS } from "@/lib/face-shape-data";
@@ -289,13 +293,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const locale of locales) {
     const slugs = allLocaleSlugs.get(locale) ?? new Set<string>();
     for (const slug of slugs) {
+      // hreflang 只列出实际存在的语种，与页面 <head> 中的 alternates 保持一致
       const alternates: Record<string, string> = {};
-      for (const l of locales) {
-        if (allLocaleSlugs.get(l)?.has(slug)) {
-          alternates[l] = localePath(l, `/blog/${slug}`);
-        }
+      for (const l of getAvailableLocales(slug, locales)) {
+        alternates[l] = localePath(l, `/blog/${slug}`);
       }
-      alternates["x-default"] = localePath("en", `/blog/${slug}`);
+      if (alternates["en"]) alternates["x-default"] = localePath("en", `/blog/${slug}`);
 
       const post = getPostBySlug(locale, slug);
       entries.push({
@@ -307,26 +310,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  const tagLastModified =
-    staticPageDates.get("/blog") ?? new Date();
-  const enTags = getAllTags(routing.defaultLocale);
-
-  for (const { slug: tagSlug } of enTags) {
-    for (const locale of locales) {
-      const alternates: Record<string, string> = {};
-      for (const l of locales) {
-        alternates[l] = localePath(l, `/blog/tag/${tagSlug}`);
-      }
-      alternates["x-default"] = localePath("en", `/blog/tag/${tagSlug}`);
-
-      entries.push({
-        url: localePath(locale, `/blog/tag/${tagSlug}`),
-        lastModified: tagLastModified,
-        ...localeSitemapMeta(0.4, "weekly"),
-        alternates: { languages: alternates },
-      });
-    }
-  }
+  // 注意：不收录 /blog/tag/*。标签页都是 noindex（见 blog/tag/[tag]/page.tsx），
+  // 而且非英语语种的标签 slug 是本地化的，拿英文 slug 拼出来的 URL 会是 404。
 
   // Lookbook pages (12 sub-seasons)
   for (const slug of LOOKBOOK_SLUGS) {

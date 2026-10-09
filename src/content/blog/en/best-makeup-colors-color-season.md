@@ -1,6 +1,7 @@
 ---
 title: "The Best Makeup Colors for Every Color Season: A Complete Chart"
-description: "Complete makeup chart for all 12 color seasons. Find your best foundation, lip, eye & blush shades — organized by season with comparison tables."
+seoTitle: "Best Makeup Colors for Your Color Season: 12-Season Chart"
+description: "Which foundation, lipstick, eyeshadow and blush suits your season? Complete 12-season makeup chart with comparison tables — plus a free AI season test."
 date: "2026-08-07"
 tags: ["makeup", "personal color analysis", "color season", "beauty", "style guide"]
 image: "/images/blog/best-makeup-colors-color-season.webp"

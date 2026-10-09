@@ -10,9 +10,9 @@ import { AuthProvider } from "@/components/AuthProvider";
 import { GoogleOneTap } from "@/components/GoogleOneTap";
 import { PageViewTracker } from "@/components/PageViewTracker";
 import { buildAlternates, ogLocale } from "@/lib/seo";
-import { SITE_URL } from "@/lib/constants";
+import { SITE_URL, GA_MEASUREMENT_ID } from "@/lib/constants";
 import Script from "next/script";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -24,6 +24,13 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
+
+// 手机浏览器地址栏/状态栏颜色与页面底色一致（manifest.json 里的 theme_color 保持同一个值）
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#FFF9F5",
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -133,7 +140,7 @@ export default async function LocaleLayout({
         />
       </head>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-H526RRVE9N"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -141,7 +148,7 @@ export default async function LocaleLayout({
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-H526RRVE9N');
+          gtag('config', '${GA_MEASUREMENT_ID}');
         `}
       </Script>
       <body className="min-h-full flex flex-col font-sans">

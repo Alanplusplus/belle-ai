@@ -1,29 +1,12 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
-import { useSession, signIn } from "next-auth/react";
-import Script from "next/script";
+import { useEffect } from "react";
+import { useSession } from "next-auth/react";
 import { trackEvent } from "@/lib/analytics";
 import { webMergeAccount } from "@/lib/api";
+import { promptOneTap, RESULT_READY_EVENT } from "@/lib/google-signin";
 
-declare global {
-  interface Window {
-    google?: {
-      accounts: {
-        id: {
-          initialize: (config: Record<string, unknown>) => void;
-          prompt: (cb?: (notification: {
-            isNotDisplayed: () => boolean;
-            isSkippedMoment: () => boolean;
-          }) => void) => void;
-          cancel: () => void;
-        };
-      };
-    };
-  }
-}
-
-const CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID!;
+const ONE_TAP_SHOWN_KEY = "belle_one_tap_shown";
 
 export function GoogleOneTap() {
   const { data: session, status } = useSession();
@@ -43,37 +26,32 @@ export function GoogleOneTap() {
     });
   }, [status, session]);
 
-  const initOneTap = useCallback(() => {
-    if (!window.google || status === "authenticated" || status === "loading") return;
-
-    window.google.accounts.id.initialize({
-      client_id: CLIENT_ID,
-      callback: async (response: { credential: string }) => {
-        trackEvent("one_tap_sign_in", { method: "one_tap" });
-        await signIn("google-one-tap", {
-          credential: response.credential,
-          redirect: false,
-        });
-        window.location.reload();
-      },
-      auto_select: false,
-      cancel_on_tap_outside: true,
-      use_fedcm_for_prompt: true,
-    });
-  }, [status]);
-
+  // 只在「出结果之后」才加载 Google 脚本并弹出 One Tap，每个会话最多一次；其余页面不再预加载脚本
   useEffect(() => {
     if (status !== "unauthenticated") return;
-    if (window.google) {
-      initOneTap();
-    }
-  }, [status, initOneTap]);
 
-  return (
-    <Script
-      src="https://accounts.google.com/gsi/client"
-      strategy="afterInteractive"
-      onLoad={initOneTap}
-    />
-  );
+    let timer: number | undefined;
+    const onResultReady = () => {
+      try {
+        if (sessionStorage.getItem(ONE_TAP_SHOWN_KEY)) return;
+        sessionStorage.setItem(ONE_TAP_SHOWN_KEY, "1");
+      } catch {
+        /* 隐私模式读写失败时仍然继续，但会话内不会去重 */
+      }
+      window.clearTimeout(timer);
+      // 让用户先看几秒报告，再弹登录提示
+      timer = window.setTimeout(() => {
+        trackEvent("one_tap_prompted", { trigger: "result_ready" });
+        promptOneTap();
+      }, 6000);
+    };
+
+    window.addEventListener(RESULT_READY_EVENT, onResultReady);
+    return () => {
+      window.removeEventListener(RESULT_READY_EVENT, onResultReady);
+      window.clearTimeout(timer);
+    };
+  }, [status]);
+
+  return null;
 }

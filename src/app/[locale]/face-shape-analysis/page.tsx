@@ -91,7 +91,7 @@ export default async function FaceShapeAnalysisPage({
               href="/tools/face-shape-quiz"
               className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
             >
-              Free Quiz
+              {ft("freeQuiz")}
             </Link>
           </div>
         </div>

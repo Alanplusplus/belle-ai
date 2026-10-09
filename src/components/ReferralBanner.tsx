@@ -30,13 +30,13 @@ export function ReferralBanner() {
   };
 
   return (
-    <div className="relative bg-gradient-to-r from-primary to-primary-dark px-4 py-2.5 text-center text-sm text-white">
+    <div className="relative bg-gradient-to-r from-primary to-primary-dark py-2.5 pl-4 pr-12 text-center text-[13px] leading-snug text-white sm:text-sm">
       <p>
         🎁 {t("bannerText")}
       </p>
       <button
         onClick={handleDismiss}
-        className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-1 hover:bg-white/20"
+        className="absolute right-1 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full hover:bg-white/20"
         aria-label="Close"
       >
         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

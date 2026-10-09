@@ -144,7 +144,7 @@ function HomeContent() {
                       sizes="(max-width: 768px) 30vw, 10vw"
                     />
                   </div>
-                  <div className="absolute right-3 top-3 rounded-full bg-primary/90 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur-sm">
+                  <div className="absolute right-3 top-3 rounded-full bg-primary/90 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-sm">
                     {t("resultsAfter")}
                   </div>
                 </div>
@@ -254,7 +254,7 @@ function HomeContent() {
                     <h3 className="text-sm font-semibold">{t(f.titleKey)}</h3>
                     <p className="mt-1 text-xs leading-relaxed text-muted-foreground line-clamp-2">{t(f.descKey)}</p>
                     {f.premium && (
-                      <span className="mt-2 inline-block rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-semibold text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+                      <span className="mt-2 inline-block rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
                         Premium
                       </span>
                     )}
@@ -316,59 +316,31 @@ function HomeContent() {
       {/* Comparison Table */}
       <section className="py-12">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-center font-serif text-3xl font-bold">
-            AI Color Analysis vs. In-Person Consultation
+          <h2 className="text-center font-serif text-2xl font-bold sm:text-3xl">
+            {t("compareTitle")}
           </h2>
           <p className="mt-2 text-center text-muted-foreground">
-            See how our AI-powered analysis compares to traditional methods
+            {t("compareSubtitle")}
           </p>
           <div className="mt-8 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
                 <tr className="border-b border-border">
-                  <th className="px-4 py-3 text-left font-medium text-muted-foreground" />
-                  <th className="px-4 py-3 text-center font-semibold text-primary">Belle AI</th>
-                  <th className="px-4 py-3 text-center font-medium">In-Person Stylist</th>
-                  <th className="px-4 py-3 text-center font-medium">Basic Quiz</th>
+                  <th className="px-3 py-3 text-left font-medium text-muted-foreground sm:px-4" />
+                  <th className="px-3 py-3 text-center font-semibold text-primary sm:px-4">Belle AI</th>
+                  <th className="px-3 py-3 text-center font-medium sm:px-4">{t("compareStylist")}</th>
+                  <th className="px-3 py-3 text-center font-medium sm:px-4">{t("compareQuiz")}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
-                <tr>
-                  <td className="px-4 py-3 font-medium">Time</td>
-                  <td className="px-4 py-3 text-center text-primary font-medium">60 seconds</td>
-                  <td className="px-4 py-3 text-center">1–2 hours</td>
-                  <td className="px-4 py-3 text-center">3 minutes</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium">Cost</td>
-                  <td className="px-4 py-3 text-center text-primary font-medium">Free / $2.99</td>
-                  <td className="px-4 py-3 text-center">$200–$500</td>
-                  <td className="px-4 py-3 text-center">Free</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium">Accuracy</td>
-                  <td className="px-4 py-3 text-center text-primary font-medium">High (AI Vision)</td>
-                  <td className="px-4 py-3 text-center">Highest</td>
-                  <td className="px-4 py-3 text-center">Low–Medium</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium">Color System</td>
-                  <td className="px-4 py-3 text-center text-primary font-medium">12 Seasons</td>
-                  <td className="px-4 py-3 text-center">12–16 Seasons</td>
-                  <td className="px-4 py-3 text-center">4 Seasons</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium">Includes Makeup Tips</td>
-                  <td className="px-4 py-3 text-center text-primary font-medium">✓</td>
-                  <td className="px-4 py-3 text-center">Sometimes</td>
-                  <td className="px-4 py-3 text-center">✗</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium">Visual Report</td>
-                  <td className="px-4 py-3 text-center text-primary font-medium">✓ Magazine-quality</td>
-                  <td className="px-4 py-3 text-center">Verbal / PDF</td>
-                  <td className="px-4 py-3 text-center">✗</td>
-                </tr>
+                {[1, 2, 3, 4, 5, 6].map((n) => (
+                  <tr key={n}>
+                    <td className="px-3 py-3 font-medium sm:px-4">{t(`compareRow${n}Label`)}</td>
+                    <td className="px-3 py-3 text-center font-medium text-primary sm:px-4">{t(`compareRow${n}Belle`)}</td>
+                    <td className="px-3 py-3 text-center sm:px-4">{t(`compareRow${n}Stylist`)}</td>
+                    <td className="px-3 py-3 text-center sm:px-4">{t(`compareRow${n}Quiz`)}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

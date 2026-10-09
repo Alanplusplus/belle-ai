@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import type { ProductKey } from "@/lib/constants";
-import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
-import { getCachedUserId, webInit } from "@/lib/api";
+import { trackEvent } from "@/lib/analytics";
+import { startCheckout } from "@/lib/checkout";
 
 interface Props {
   product: ProductKey;
@@ -11,81 +12,77 @@ interface Props {
   label: string;
 }
 
-async function openCheckout(product: ProductKey, userId: string, email?: string) {
-  const res = await fetch("/api/waffo/checkout", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ product, userId, email }),
-  });
-  const data = await res.json();
-  if (!res.ok || !data.checkoutUrl) {
-    throw new Error(data.error || "Checkout failed");
-  }
-  window.open(data.checkoutUrl, "_blank", "noopener,noreferrer");
-}
-
 export function PricingButtons({ product, variant, label }: Props) {
+  const t = useTranslations("pricing");
+  const locale = useLocale();
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleClick = async () => {
     trackEvent("pricing_cta_clicked", { product, variant });
-    trackCheckoutEvent("checkout_started", { product, source: "pricing_page" });
     setLoading(true);
+    setError(false);
     try {
-      let userId = getCachedUserId();
-      if (!userId) {
-        const initRes = await webInit();
-        if (initRes.code === 200 && initRes.data) {
-          userId = initRes.data.user_id;
-        }
-      }
-      if (!userId) {
-        alert("Please try again.");
-        return;
-      }
-
-      await openCheckout(product, userId);
-      trackCheckoutEvent("checkout_opened", { product, source: "pricing_page" });
+      await startCheckout({
+        product,
+        source: "pricing_page",
+        locale,
+        onRestore: () => setLoading(false),
+      });
+      // 成功后页面会整页跳转到支付页，保持 loading 状态
     } catch {
-      trackCheckoutEvent("checkout_failed", { product, error: "waffo_error" });
-      alert("Failed to open checkout. Please try again.");
-    } finally {
+      setError(true);
       setLoading(false);
     }
   };
 
+  const errorNode = error ? (
+    <p role="alert" className="mt-2 text-center text-xs text-red-500">
+      {t("checkoutError")}
+    </p>
+  ) : null;
+
   if (variant === "primary") {
     return (
-      <button
-        onClick={handleClick}
-        disabled={loading}
-        className="mt-6 block w-full rounded-full bg-primary py-2.5 text-center text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-50"
-      >
-        {loading ? <LoadingDots /> : label}
-      </button>
+      <>
+        <button
+          onClick={handleClick}
+          disabled={loading}
+          className="mt-6 block min-h-12 w-full rounded-full bg-primary py-3 text-center text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-50"
+        >
+          {loading ? <LoadingDots /> : label}
+        </button>
+        {errorNode}
+      </>
     );
   }
 
   if (variant === "outline") {
     return (
-      <button
-        onClick={handleClick}
-        disabled={loading}
-        className="mt-6 block w-full rounded-full border border-primary py-2.5 text-center text-sm font-semibold text-primary transition hover:bg-primary/5 disabled:opacity-50"
-      >
-        {loading ? <LoadingDots /> : label}
-      </button>
+      <>
+        <button
+          onClick={handleClick}
+          disabled={loading}
+          className="mt-6 block min-h-12 w-full rounded-full border border-primary py-3 text-center text-sm font-semibold text-primary transition hover:bg-primary/5 disabled:opacity-50"
+        >
+          {loading ? <LoadingDots /> : label}
+        </button>
+        {errorNode}
+      </>
     );
   }
 
   return (
-    <button
-      onClick={handleClick}
-      disabled={loading}
-      className="rounded-full bg-primary px-5 py-2 text-sm font-medium text-white transition hover:bg-primary-dark disabled:opacity-50"
-    >
-      {loading ? <LoadingDots /> : label}
-    </button>
+    <>
+      <button
+        onClick={handleClick}
+        disabled={loading}
+        className="rounded-full bg-primary px-5 py-2 text-sm font-medium text-white transition hover:bg-primary-dark disabled:opacity-50"
+      >
+        {loading ? <LoadingDots /> : label}
+      </button>
+      {errorNode}
+    </>
   );
 }
 

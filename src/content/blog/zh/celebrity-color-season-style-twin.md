@@ -1,6 +1,7 @@
 ---
 title: "哪位明星和你是同一个色彩季型？找到你的风格双胞胎"
-description: "发现哪些明星与你拥有相同的色彩季型——从Taylor Swift的浅夏到Lupita Nyong'o的深冬。学习如何研究你的风格双胞胎的时尚选择，将她们的穿搭灵感应用到自己的衣橱中。"
+seoTitle: "哪个明星和你同一色彩季型？明星季型对照 + AI测试"
+description: "从 Taylor Swift 的浅夏到 Lupita Nyong'o 的深冬，看看哪位明星和你是同一个色彩季型，学会借鉴她们的配色而不是照抄穿搭。上传自拍免费测你的季型。"
 date: "2026-08-13"
 tags: ["个人色彩分析", "明星穿搭", "色彩季型", "时尚", "个人风格"]
 image: "/images/blog/celebrity-color-season-style-twin.webp"

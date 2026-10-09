@@ -1,4 +1,5 @@
 import { getFingerprint } from "./fingerprint";
+import { trackEvent } from "./analytics";
 
 interface ApiResponse<T> {
   code: number;
@@ -30,7 +31,14 @@ export interface WebInitData {
   avatar_url: string;
   web_quota: { total: number; used: number; remaining: number };
   paid_credits: number;
-  subscription: { plan: string | null; status: string; remaining: number };
+  subscription: {
+    plan: string | null;
+    /** "active" 表示当前享有 Pro 权益（已取消但仍在已付费周期内也算 active） */
+    status: string;
+    remaining: number;
+    period_end?: string | null;
+    cancel_at_period_end?: boolean;
+  };
   total_remaining: number;
   checkin_available: boolean;
   checkin_streak?: number;
@@ -48,8 +56,14 @@ async function _tryApplyReferral() {
         action: "referral-apply",
         referral_code: code,
       });
+      // 200 = 绑定成功；400/404/429 = 邀请码无效 / 老用户 / 被防刷拦截，重试也不会成功，直接清掉避免每次初始化都重复请求。
+      // 只有服务端错误(5xx)才保留，等下次再试
       if (res.code === 200) {
         clearStoredReferralCode();
+        trackEvent("referral_applied");
+      } else if (res.code && res.code < 500) {
+        clearStoredReferralCode();
+        trackEvent("referral_apply_rejected", { code: res.code });
       }
     }
   } catch {}
@@ -94,13 +108,48 @@ export async function webMergeAccount(email?: string, name?: string, avatarUrl?:
 const DIRECT_API_BASE =
   process.env.NEXT_PUBLIC_BELLE_API_BASE || "https://api.chibistyle.app";
 
-export async function uploadImage(base64Data: string) {
-  const res = await fetch(`${DIRECT_API_BASE}/common/v1/web/upload`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ imageBase64: base64Data, fileType: "jpg" }),
-  });
-  return res.json() as Promise<ApiResponse<{ url: string }>>;
+const UPLOAD_MAX_ATTEMPTS = 3;
+const UPLOAD_TIMEOUT_MS = 45_000;
+
+/**
+ * 上传图片。移动网络下偶发超时 / 断连很常见，所以带超时 + 最多 3 次重试（退避 1s、2s）；
+ * 只对网络错误和 5xx 重试，业务错误（4xx / code != 200）直接返回给调用方。
+ */
+export async function uploadImage(base64Data: string): Promise<ApiResponse<{ url: string }>> {
+  let lastError: unknown = null;
+
+  for (let attempt = 1; attempt <= UPLOAD_MAX_ATTEMPTS; attempt++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), UPLOAD_TIMEOUT_MS);
+    try {
+      const res = await fetch(`${DIRECT_API_BASE}/common/v1/web/upload`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ imageBase64: base64Data, fileType: "jpg" }),
+        signal: controller.signal,
+      });
+
+      if (res.status >= 500 && attempt < UPLOAD_MAX_ATTEMPTS) {
+        lastError = new Error(`HTTP ${res.status}`);
+      } else {
+        const json = (await res.json()) as ApiResponse<{ url: string }>;
+        if (json.code === 500 && attempt < UPLOAD_MAX_ATTEMPTS) {
+          lastError = new Error(json.message || "upload_server_error");
+        } else {
+          return json;
+        }
+      }
+    } catch (err) {
+      lastError = err;
+      if (attempt === UPLOAD_MAX_ATTEMPTS) throw err;
+    } finally {
+      clearTimeout(timer);
+    }
+
+    await new Promise((resolve) => setTimeout(resolve, attempt * 1000));
+  }
+
+  throw lastError instanceof Error ? lastError : new Error("upload_failed");
 }
 
 export type AnalysisType =
@@ -133,6 +182,8 @@ export async function createTask(
     task_id: string;
     api_task_id: string;
     quota: { used: number; total: number; remaining: number };
+    /** 本次扣费后的总剩余次数（免费 + 付费积分 + 订阅额度） */
+    total_remaining?: number;
     credit_cost?: number;
   }>({
     action: "generate",
@@ -147,6 +198,9 @@ export async function createTask(
   });
 }
 
+/** 轮询到任务成功且发放了邀请奖励时在 window 上广播，页面据此刷新积分并弹出提示 */
+export const REFERRAL_BONUS_EVENT = "belle:referral-bonus";
+
 export async function pollTask(taskId: string) {
   return belleApi<{
     task_id: string;
@@ -155,9 +209,41 @@ export async function pollTask(taskId: string) {
       image_urls?: string[];
       source_image_url?: string;
     };
+    /** 被邀请人第一次分析成功后发放的奖励积分（只出现一次） */
+    referral_bonus?: number;
   }>({
     action: "poll",
     task_id: taskId,
+  });
+}
+
+/** 首次轮询的等待时间：任务偶尔几秒内就完成，不必先空等一个完整间隔 */
+const FIRST_POLL_DELAY_MS = 3000;
+
+/**
+ * 等待 ms 毫秒，或者页面从后台回到前台时立刻结束。
+ * 手机上切到别的 App 再切回来，定时器可能被系统冻结/大幅延后，
+ * 回到前台立即补拉一次，用户就不会盯着一个其实早已完成的进度条。
+ */
+function waitForNextPoll(ms: number): Promise<void> {
+  return new Promise((resolve) => {
+    if (typeof document === "undefined") {
+      setTimeout(resolve, ms);
+      return;
+    }
+    let finished = false;
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      clearTimeout(timer);
+      document.removeEventListener("visibilitychange", onVisible);
+      resolve();
+    };
+    const onVisible = () => {
+      if (document.visibilityState === "visible") finish();
+    };
+    const timer = setTimeout(finish, ms);
+    document.addEventListener("visibilitychange", onVisible);
   });
 }
 
@@ -169,9 +255,12 @@ export async function pollUntilDone(
 ): Promise<string[]> {
   let consecutiveErrors = 0;
   const maxConsecutiveErrors = 5;
+  // 总时长上限保持不变（maxAttempts × intervalMs），用墙上时间计，后台冻结的时间也算在内
+  const deadline = Date.now() + maxAttempts * intervalMs;
 
-  for (let i = 0; i < maxAttempts; i++) {
-    await new Promise((r) => setTimeout(r, intervalMs));
+  for (let first = true; ; first = false) {
+    if (!first && Date.now() > deadline) break;
+    await waitForNextPoll(first ? Math.min(FIRST_POLL_DELAY_MS, intervalMs) : intervalMs);
     try {
       const res = await pollTask(taskId);
       if (res.code === 500) {
@@ -186,6 +275,9 @@ export async function pollUntilDone(
       if (!res.data) continue;
 
       if (res.data.status === "done") {
+        if (res.data.referral_bonus && res.data.referral_bonus > 0 && typeof window !== "undefined") {
+          window.dispatchEvent(new CustomEvent(REFERRAL_BONUS_EVENT, { detail: res.data.referral_bonus }));
+        }
         return res.data.result?.image_urls ?? [];
       }
       if (res.data.status === "failed") {
@@ -245,8 +337,10 @@ export interface ReferralEvent {
 
 export interface ReferralStatsData {
   referral_code: string;
+  /** 有效好友数：好友成功完成第一次分析才计数 */
   referral_count: number;
   referral_credits_earned: number;
+  next_milestone?: { target: number; bonus: number } | null;
   recent_events: ReferralEvent[];
 }
 
@@ -273,6 +367,14 @@ export async function applyReferralCode(referralCode: string) {
   return belleApi<{ success: boolean }>({
     action: "referral-apply",
     referral_code: referralCode,
+  });
+}
+
+/** 为某次成功的分析创建公开分享链接（用户主动点击分享时才会调用）。 */
+export async function createShare(taskId: string) {
+  return belleApi<{ token: string; referral_code: string }>({
+    action: "share-create",
+    task_id: taskId,
   });
 }
 

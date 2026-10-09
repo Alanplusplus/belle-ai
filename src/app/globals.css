@@ -32,9 +32,43 @@
 }
 
 
+/* 手机基线：横屏时不自动放大文字；去掉点按时的灰色高亮块（按钮自带 active/过渡反馈） */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 去掉双击缩放的判定延迟，点按即时响应 */
+button,
+a,
+[role="button"] {
+  touch-action: manipulation;
+}
+
+/* 系统开启「减少动态效果」时，关闭装饰性动画与平滑滚动（加载转圈 animate-spin 保留，它是必要的进度反馈） */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-in,
+  .animate-bounce,
+  .animate-ping,
+  .animate-pulse {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }
 
 .font-serif {

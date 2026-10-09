@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { getReferralCode, getReferralStats, type ReferralStatsData } from "@/lib/api";
 import { SITE_URL } from "@/lib/constants";
 import { trackEvent } from "@/lib/analytics";
+import { buildReferralUrl, tagShareLink } from "@/lib/referral";
+import { canUseNativeShare, copyText, nativeShare, openShareWindow } from "@/lib/device";
 
 export function ReferralCenter() {
   const t = useTranslations("referral");
@@ -12,6 +14,13 @@ export function ReferralCenter() {
   const [stats, setStats] = useState<ReferralStatsData | null>(null);
   const [loading, setLoading] = useState(true);
   const [copied, setCopied] = useState(false);
+  const [nativeShareReady, setNativeShareReady] = useState(false);
+  const linkInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    // navigator.share 只有手机浏览器才可靠，且依赖运行环境，放到 effect 里判断避免 SSR 水合不一致
+    setNativeShareReady(canUseNativeShare());
+  }, []);
 
   const loadData = useCallback(async () => {
     try {
@@ -36,27 +45,49 @@ export function ReferralCenter() {
     loadData();
   }, [loadData]);
 
-  const referralUrl = referralCode ? `${SITE_URL}?ref=${referralCode}` : "";
+  // 直接落到工具页：好友打开链接就能上传照片，少一次点击；UTM 用来区分「邀请」带来的流量
+  const referralUrl = referralCode ? buildReferralUrl(SITE_URL, referralCode) : "";
 
   const handleCopy = async () => {
     if (!referralUrl) return;
-    await navigator.clipboard.writeText(referralUrl);
+    const ok = await copyText(referralUrl);
+    if (!ok) {
+      // 剪贴板不可用（内置浏览器 / 私密模式）：选中链接，用户可以长按手动复制
+      const input = linkInputRef.current;
+      input?.focus();
+      input?.select();
+      input?.setSelectionRange(0, referralUrl.length);
+      trackEvent("referral_link_copy_failed");
+      return;
+    }
     setCopied(true);
     trackEvent("referral_link_copied");
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleNativeShare = async () => {
+    if (!referralUrl) return;
+    trackEvent("referral_share_click", { platform: "native" });
+    const status = await nativeShare({
+      title: t("title"),
+      text: t("shareText"),
+      url: tagShareLink(referralUrl, "native"),
+    });
+    if (status === "failed") handleCopy();
   };
 
   const handleSharePlatform = (platform: string) => {
     if (!referralUrl) return;
     trackEvent("referral_share_click", { platform });
     const text = t("shareText");
+    const tagged = tagShareLink(referralUrl, platform);
     const urls: Record<string, string> = {
-      x: `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(referralUrl)}`,
-      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(referralUrl)}`,
-      whatsapp: `https://wa.me/?text=${encodeURIComponent(`${text} ${referralUrl}`)}`,
+      x: `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(tagged)}`,
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(tagged)}`,
+      whatsapp: `https://wa.me/?text=${encodeURIComponent(`${text} ${tagged}`)}`,
     };
     if (urls[platform]) {
-      window.open(urls[platform], "_blank", "noopener,noreferrer,width=600,height=500");
+      openShareWindow(urls[platform]);
     }
   };
 
@@ -84,16 +115,27 @@ export function ReferralCenter() {
         {/* Invite Link Card */}
         <div className="mt-10 rounded-2xl border-2 border-primary bg-card p-6 shadow-lg">
           <h2 className="text-lg font-bold">{t("yourLink")}</h2>
-          <div className="mt-3 flex items-center gap-2">
+          {nativeShareReady && referralUrl && (
+            <button
+              onClick={handleNativeShare}
+              className="mt-3 flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-6 py-3 text-base font-semibold text-white shadow-lg shadow-primary/30 transition active:scale-[0.98]"
+            >
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
+              {t("shareNative")}
+            </button>
+          )}
+          {/* 窄屏上下排列：链接在上、复制按钮整行，避免输入框被挤到只剩几个字符 */}
+          <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:items-center">
             <input
+              ref={linkInputRef}
               type="text"
               readOnly
               value={referralUrl}
-              className="flex-1 rounded-lg border border-border bg-muted px-3 py-2 text-sm"
+              className="min-w-0 flex-1 rounded-lg border border-border bg-muted px-3 py-2 text-base sm:text-sm"
             />
             <button
               onClick={handleCopy}
-              className="shrink-0 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-dark"
+              className="min-h-11 shrink-0 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-primary-dark"
             >
               {copied ? t("copied") : t("copy")}
             </button>
@@ -144,6 +186,17 @@ export function ReferralCenter() {
             </div>
           </div>
         )}
+
+        {stats?.next_milestone && (
+          <p className="mt-4 text-center text-sm font-semibold text-primary">
+            {t("nextMilestone", {
+              remaining: Math.max(1, stats.next_milestone.target - stats.referral_count),
+              bonus: stats.next_milestone.bonus,
+            })}
+          </p>
+        )}
+
+        <p className="mt-4 text-center text-xs text-muted-foreground">{t("limitNote")}</p>
       </div>
     </section>
   );

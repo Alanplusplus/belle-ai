@@ -1,7 +1,7 @@
 ---
 title: "Los mejores colores de cabello para piel oliva: guía completa de tonos"
-seoTitle: "Colores de cabello para piel oliva — Tonos que no apagan tu piel"
-description: "Algunos colores de cabello hacen brillar la piel oliva; otros la vuelven opaca. Descubre las reglas para oliva cálido vs frío, recomendaciones por temporada y colores que evitar."
+seoTitle: "Mejores colores de cabello para piel oliva (cálido vs frío)"
+description: "¿Qué tinte favorece a la piel oliva? Reglas para oliva cálido y frío, recomendaciones por estación y los colores que debes evitar. Pruébalo gratis con IA antes de teñirte."
 date: "2026-09-18"
 tags: ["subtono oliva", "color de cabello", "belleza", "análisis de color personal", "guía de estilo"]
 image: "/images/blog/olive-skin-best-hair-colors.webp"
