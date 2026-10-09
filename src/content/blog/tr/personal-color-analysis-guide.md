@@ -104,9 +104,9 @@ Belle AI gibi yapay zekâ destekli uygulamalar, bilgisayarlı görü kullanarak 
 
 - **Maliyet:** Ücretsiz ila 5 $
 - **Süre:** 60 saniye
-- **Doğruluk:** İyi (profesyonel draping'e karşı %73–82 eşleşme oranı)
+- **Doğruluk:** İyi bir başlangıç noktası (ışığa ve fotoğraf kalitesine göre değişir)
 
-Yapay zekâ analizi önemli ölçüde gelişti ve artık çoğu kişi için profesyonel sonuçlarla eşleşiyor; bu da onu en erişilebilir seçenek haline getiriyor.
+Yapay zekâ analizi önemli ölçüde gelişti ve çoğu kişiye faydalı bir başlangıç noktası sunuyor; bu da onu en erişilebilir seçenek haline getiriyor.
 
 ### Yöntem 3: Kendi Kendine Değerlendirme Testi
 

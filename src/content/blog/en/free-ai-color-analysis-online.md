@@ -19,7 +19,7 @@ Here's what the average cost looks like in major cities:
 | Seoul | ₩150,000–₩300,000 | 60 minutes |
 | Sydney | AUD $300–$500 | 90 minutes |
 
-The good news: AI technology trained on thousands of professional analyses can now deliver accurate results — for free.
+The good news: AI can now give you a useful starting point — for free.
 
 ## How Free AI Color Analysis Works
 
@@ -75,7 +75,7 @@ Our AI color analysis tool provides everything listed above — completely free 
 
 ### How Accurate Is It?
 
-Our AI has been trained on professional color analysis data and uses the same principles certified colorists apply. For most people, the results match what a professional would determine in person. 
+Our AI evaluates your photo with the same 12-season framework certified colorists use. The result is an AI's visual judgment and can differ from an in-person analysis, so treat it as a solid starting point. 
 
 Where AI excels:
 - Objective measurement (no "bad lighting" days)

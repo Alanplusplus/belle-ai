@@ -225,7 +225,7 @@ Altın genel olarak tüm Kış tipleri için zordur. Altın takı seviyorsanız 
 
 Kış alt tipinizi belirlemek geleneksel olarak profesyonel bir renk draping seansı gerektirirdi — kontrollü aydınlatmada oturup analistin farklı derinlik ve parlaklıktaki soğuk tonlu kumaşları sistematik biçimde yüzünüze tutması. Etkili ama şehre göre genellikle 150–400 dolar.
 
-Yapay zeka destekli renk analizi araçları bunu çok daha erişilebilir kıldı. [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) gibi platformlar cilt alt tonunuzu, kontrast seviyenizi, göz renginizi ve saç tonunuzu analiz ederek bir dakikadan kısa sürede tam alt tipinizi belirler — profesyonel analistlerin değerlendirdiği aynı görsel ipuçlarını, binlerce renk tiplenmiş yüz üzerinde eğitilmiş bilgisayar görüşüyle.
+Yapay zeka destekli renk analizi araçları bunu çok daha erişilebilir kıldı. [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) gibi platformlar cilt alt tonunuzu, kontrast seviyenizi, göz renginizi ve saç tonunuzu analiz ederek bir dakikadan kısa sürede tam alt tipinizi belirler — profesyonel analistlerin değerlendirdiği aynı görsel ipuçlarını, tüm fotoğrafınızı okuyan bir yapay zekâ görüntü modeliyle.
 
 ---
 

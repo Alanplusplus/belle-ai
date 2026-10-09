@@ -19,7 +19,7 @@ Voici à quoi ressemble le coût moyen dans les grandes villes :
 | Séoul | 150 000–300 000 ₩ | 60 minutes |
 | Sydney | 300–500 AUD $ | 90 minutes |
 
-La bonne nouvelle : la technologie IA entraînée sur des milliers d'analyses professionnelles peut désormais fournir des résultats précis — gratuitement.
+La bonne nouvelle : l'IA peut désormais vous offrir un bon point de départ — gratuitement.
 
 ## Comment fonctionne l'analyse de couleur IA gratuite
 
@@ -75,7 +75,7 @@ Notre outil d'analyse de couleur IA fournit tout ce qui précède — entièreme
 
 ### Quelle est sa précision ?
 
-Notre IA a été entraînée sur des données d'analyse de couleur professionnelle et applique les mêmes principes que les coloristes certifiés. Pour la plupart des personnes, les résultats correspondent à ce qu'un professionnel déterminerait en personne.
+Notre IA évalue votre photo selon le même système de 12 saisons que les coloristes certifiés. Le résultat est une appréciation visuelle de l'IA et peut différer d'une analyse en personne ; considérez-le comme un point de départ fiable.
 
 Où l'IA excelle :
 - Mesure objective (pas de jours de « mauvaise lumière »)

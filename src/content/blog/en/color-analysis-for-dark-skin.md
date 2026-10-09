@@ -147,7 +147,7 @@ If your AI color analysis result doesn't feel right:
 
 ## Find Your Colors Today
 
-Ready to discover your exact seasonal color type? Our AI has been trained on diverse skin tones and provides accurate analysis for all complexions.
+Ready to discover your exact seasonal color type? Our AI gives you a starting point for any complexion — and we recommend double-checking the result against your own judgment, since AI tools can be less reliable on deeper skin tones.
 
 [Start Free Color Analysis →](/try)
 

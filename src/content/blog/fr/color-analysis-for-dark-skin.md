@@ -147,7 +147,7 @@ Si votre résultat d'analyse IA ne vous semble pas juste :
 
 ## Trouvez vos couleurs aujourd'hui
 
-Prête à découvrir votre type de couleur saisonnier exact ? Notre IA a été entraînée sur des teints diversifiés et fournit une analyse précise pour tous les types de peau.
+Prête à découvrir votre type de couleur saisonnier exact ? Notre IA vous donne un point de départ pour tous les types de peau ; vérifiez toutefois le résultat avec votre propre jugement, car les outils IA peuvent être moins fiables sur les peaux plus foncées.
 
 [Lancer l'analyse de couleur gratuite →](/try)
 

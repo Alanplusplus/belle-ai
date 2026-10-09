@@ -29,7 +29,7 @@ export const ATTRIBUTES: Record<string, AttributeData> = {
       "Many online quizzes rely on vein color tests that are less visible on darker skin",
       "Color season descriptions often default to examples of lighter complexions",
       "Undertone can be harder to identify visually in deeper skin tones",
-      "AI tools may have bias if not trained on diverse skin tones (Belle AI is trained for all skin tones)",
+      "AI tools can be less reliable on deeper skin tones — treat results as a starting point and double-check them",
     ],
     undertoneGuidance:
       "For dark skin tones, check undertone by comparing pure gold jewelry vs. silver jewelry against your skin. Look at the inside of your lower lip — cooler undertones appear more pink-purple, while warmer undertones appear more orange-coral. You can also check behind your ear, where sun damage is minimal.",
@@ -72,7 +72,7 @@ export const ATTRIBUTES: Record<string, AttributeData> = {
     faq: [
       {
         q: "Does color analysis work for dark skin?",
-        a: "Absolutely. Color analysis works for all skin tones. The 12-season system categorizes people based on undertone (warm vs. cool), depth (light vs. dark), and chroma (clear vs. muted) — these dimensions apply equally to every skin tone. The key is finding a method (like AI analysis) that has been calibrated for diverse complexions.",
+        a: "Absolutely. Color analysis works for all skin tones. The 12-season system categorizes people based on undertone (warm vs. cool), depth (light vs. dark), and chroma (clear vs. muted) — these dimensions apply equally to every skin tone. The key is finding a method that works well on diverse complexions — and checking any AI result against your own judgment, since AI tools can be less reliable on deeper skin tones.",
       },
       {
         q: "What color season are most dark-skinned people?",

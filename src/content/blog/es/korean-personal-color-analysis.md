@@ -140,7 +140,7 @@ Estas tipificaciones de famosos impulsan el engagement de los fans y ayudan a id
 
 ## Prueba el análisis de color con IA (precisión al estilo coreano)
 
-Nuestra IA se ha entrenado con tonos de piel diversos, incluida la coloración asiática oriental, ofreciendo resultados comparables al análisis de salón coreano. Obtén tu tipo de 12 estaciones, mejores colores y recomendaciones de maquillaje al instante.
+Nuestra IA usa el mismo sistema de 12 estaciones que el análisis de salón coreano para ofrecerte un punto de partida. Obtén tu tipo de 12 estaciones, mejores colores y recomendaciones de maquillaje al instante.
 
 [Empezar análisis de color gratis →](/try)
 

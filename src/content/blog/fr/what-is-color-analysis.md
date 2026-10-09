@@ -127,7 +127,7 @@ Or vs. argent, or rose vs. platine — votre saison simplifie cette décision.
 
 ## Analyse de couleur par IA : l'approche moderne
 
-L'analyse de couleur traditionnelle nécessitait de réserver un rendez-vous coûteux en personne. Aujourd'hui, l'IA entraînée sur des milliers d'analyses professionnelles peut fournir des résultats précis à partir d'une seule photo.
+L'analyse de couleur traditionnelle nécessitait de réserver un rendez-vous coûteux en personne. Aujourd'hui, l'IA peut offrir un bon point de départ à partir d'une seule photo.
 
 ### Comment fonctionne l'analyse de couleur par IA
 
@@ -138,7 +138,7 @@ L'analyse de couleur traditionnelle nécessitait de réserver un rendez-vous co�
 
 ### L'IA est-elle précise ?
 
-L'analyse de couleur par IA obtient des résultats comparables aux consultations en personne pour la majorité des personnes. Elle excelle particulièrement dans :
+L'analyse de couleur par IA est un bon point de départ, mais les résultats peuvent différer d'une consultation en personne. Elle excelle particulièrement dans :
 - L'identification du sous-ton (chaud vs. froid)
 - La mesure des niveaux de contraste
 - La détermination de la profondeur/valeur

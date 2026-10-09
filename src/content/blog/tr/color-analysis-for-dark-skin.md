@@ -147,7 +147,7 @@ Yapay zeka renk analizi sonucu doğru gelmiyorsa:
 
 ## Renklerinizi Bugün Keşfedin
 
-Tam mevsimsel renk tipinizi keşfetmeye hazır mısınız? Yapay zekamız çeşitli ten tonları üzerinde eğitildi ve tüm renklendirmeler için doğru analiz sunar.
+Tam mevsimsel renk tipinizi keşfetmeye hazır mısınız? Yapay zekamız her ten rengi için bir başlangıç noktası sunar; yine de sonucu kendi değerlendirmenizle kontrol edin, çünkü AI araçları koyu ten tonlarında daha az güvenilir olabilir.
 
 [Ücretsiz Renk Analizine Başlayın →](/tr/try)
 

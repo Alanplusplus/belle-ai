@@ -19,7 +19,7 @@ Büyük şehirlerde ortalama maliyetler şöyle görünür:
 | Seul | 150.000–300.000 ₩ | 60 dakika |
 | Sydney | 300–500 AUD $ | 90 dakika |
 
-İyi haber: binlerce profesyonel analizle eğitilmiş yapay zekâ teknolojisi artık doğru sonuçları — ücretsiz — sunabiliyor.
+İyi haber: yapay zekâ artık size ücretsiz olarak iyi bir başlangıç noktası sunabiliyor.
 
 ## Ücretsiz Yapay Zekâ Renk Analizi Nasıl Çalışır?
 
@@ -75,7 +75,7 @@ Yapay zekâ renk analizi aracımız yukarıda listelenen her şeyi sunar — ilk
 
 ### Ne kadar doğru?
 
-Yapay zekâmız profesyonel renk analizi verileriyle eğitildi ve sertifikalı renk uzmanlarının uyguladığı aynı ilkelere dayanır. Çoğu kişi için sonuçlar, yüz yüze profesyonel değerlendirme ile örtüşür.
+Yapay zekâmız fotoğrafınızı sertifikalı renk uzmanlarının kullandığı 12 mevsim sistemine göre değerlendirir. Sonuç yapay zekânın görsel bir değerlendirmesidir ve yüz yüze analizden farklı olabilir; güvenilir bir başlangıç noktası olarak görün.
 
 Yapay zekânın güçlü olduğu alanlar:
 - Nesnel ölçüm («kötü ışık» günü yok)

@@ -225,7 +225,7 @@ L'or est généralement difficile pour tous les types Hiver. Si vous aimez les b
 
 Identifier votre sous-saison Hiver exigeait traditionnellement une séance professionnelle de drapage colorimétrique — ce qui signifiait s'asseoir sous un éclairage contrôlé pendant qu'une conseillère plaçait systématiquement des étoffes aux tons froids de profondeurs et luminosités variées contre votre visage. C'est efficace, mais cela coûte généralement entre 150 et 400 € selon votre ville.
 
-Les outils d'analyse de couleurs par IA ont rendu tout cela bien plus accessible. Des plateformes comme [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) analysent votre sous-ton de peau, votre niveau de contraste, la couleur de vos yeux et la nuance de vos cheveux pour déterminer votre sous-saison exacte en moins d'une minute — en utilisant les mêmes indices visuels que les analystes professionnels, mais via une vision par ordinateur entraînée sur des milliers de visages typés.
+Les outils d'analyse de couleurs par IA ont rendu tout cela bien plus accessible. Des plateformes comme [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) analysent votre sous-ton de peau, votre niveau de contraste, la couleur de vos yeux et la nuance de vos cheveux pour déterminer votre sous-saison exacte en moins d'une minute — en utilisant les mêmes indices visuels que les analystes professionnels, mais via un modèle d'image IA qui lit l'ensemble de votre photo.
 
 ---
 

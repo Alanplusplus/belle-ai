@@ -104,9 +104,9 @@ Las aplicaciones con IA como Belle AI analizan tu foto mediante visión por comp
 
 - **Coste:** gratuito a 5 €
 - **Tiempo:** 60 segundos
-- **Precisión:** buena (73–82 % de coincidencia con el drapeado profesional)
+- **Precisión:** buen punto de partida (varía según la luz y la calidad de la foto)
 
-El análisis con IA ha mejorado mucho y ahora coincide con los resultados profesionales en la mayoría de los casos, lo que lo convierte en la opción más accesible.
+El análisis con IA ha mejorado mucho y ofrece a la mayoría de las personas un punto de partida útil, lo que lo convierte en la opción más accesible.
 
 ### Método 3: Test de autoevaluación
 

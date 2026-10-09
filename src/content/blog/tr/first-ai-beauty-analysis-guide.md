@@ -141,7 +141,7 @@ Paletinizi bildiğinize göre her gelecek alışveriş kolaylaşır. Mağazada "
 
 **"Yapay zeka gerçekten profesyonel analist kadar doğru olabilir mi?"**
 
-Çoğu insan için evet. Birden fazla karşılaştırma çalışması [yapay zeka ile profesyonel analistlerin mevsim sınıflandırmasında yaklaşık %85 oranında hemfikir olduğunu](https://aicoloranalysis.io/personal-color-analysis) gösteriyor. Ana anlaşmazlık alanı renklendirmesi tam iki mevsim sınırında oturan kişiler — ama dürüstçe profesyonel analistler de sınır vakalarında anlaşmaz. Hiçbir sistem mükemmel değil; yapay zekanın avantajı tutarlılık ve nesnelliktir.
+İyi bir başlangıç noktası olabilir, ancak profesyonel bir analistin yerini tutmaz. Belirsizliğin ana alanı renklendirmesi tam iki mevsim sınırında oturan kişilerdir — profesyonel analistler de sınır vakalarında anlaşmaz. Hiçbir sistem mükemmel değil; yapay zekâ sonuçları ışığa ve fotoğraf kalitesine göre de değişebilir, bu yüzden sonuç size uymuyorsa birden fazla fotoğraf deneyin.
 
 **"Sonuçlarımla aynı fikirde değilsem ne olur?"**
 

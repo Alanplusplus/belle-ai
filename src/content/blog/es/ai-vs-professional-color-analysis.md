@@ -48,7 +48,7 @@ El enfoque con IA es radicalmente distinto en velocidad, coste y método.
 
 Subí una selfie tomada con luz natural a una herramienta de análisis de color con IA. Todo el proceso tomó unos 30 segundos. Esto ocurrió entre bastidores:
 
-**Análisis de la foto:** La IA examinó mi tono de piel, color de cabello y ojos, junto con el contraste entre esos rasgos. Los modelos modernos se entrenan con miles de ejemplos analizados profesionalmente; han aprendido a reconocer los patrones que buscan los analistas humanos — calidez del subtono, niveles de saturación, ratios de contraste.
+**Análisis de la foto:** La IA examinó mi tono de piel, color de cabello y ojos, junto con el contraste entre esos rasgos. Los modelos multimodales modernos pueden reconocer los patrones que buscan los analistas humanos — calidez del subtono, niveles de saturación, ratios de contraste.
 
 **Extracción de rasgos:** El algoritmo aisló las características del subtono de mi piel, comprobando inclinaciones cálidas (amarillo/dorado) frente a frías (rosa/azul), midió la profundidad e intensidad de mi coloración natural y calculó el contraste entre piel, cabello y ojos.
 
@@ -130,7 +130,7 @@ Muchas personas descubren que el análisis con IA les da el 90 % de lo que neces
 
 ## La Brecha Tecnológica Se Cierra Rápido
 
-Algo a tener en cuenta: la brecha entre la precisión de la IA y la profesional se reduce con rapidez. Hace dos años, el análisis de color con IA era una novedad — divertido pero poco fiable. Hoy, las mejores herramientas se entrenan con rostros analizados profesionalmente, usan visión artificial avanzada para detectar variaciones sutiles de subtono y entregan resultados que coinciden con valoraciones profesionales en la mayoría de los casos.
+Algo a tener en cuenta: la brecha entre la precisión de la IA y la profesional se reduce con rapidez. Hace dos años, el análisis de color con IA era una novedad — divertido pero poco fiable. Hoy, las mejores herramientas usan modelos multimodales avanzados para captar variaciones sutiles de subtono y ofrecen una primera lectura útil, aunque pueden diferir de una valoración profesional, sobre todo con iluminación difícil o coloraciones intermedias.
 
 Herramientas como [aicoloranalysis.io](https://aicoloranalysis.io) van más allá al combinar varios tipos de análisis — estación de color, detección de subtono, forma facial y recomendaciones personalizadas — en una sola experiencia instantánea. Lo que antes requería tres citas profesionales separadas puede explorarse ahora en minutos.
 

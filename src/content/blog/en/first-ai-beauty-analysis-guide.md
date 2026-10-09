@@ -141,7 +141,7 @@ Now that you know your palette, every future purchase becomes easier. No more st
 
 **"Can AI really be as accurate as a professional analyst?"**
 
-For the majority of people, yes. Multiple comparison studies show that [AI and professional analysts agree on the season classification around 85% of the time](https://aicoloranalysis.io/personal-color-analysis). The main area of disagreement is with people whose coloring sits right on the border between two seasons — but honestly, professional analysts disagree on borderline cases too. No system is perfect, but AI has the advantage of consistency and objectivity.
+It can be a useful starting point, but it is not a replacement for a professional analyst. The main area of uncertainty is people whose coloring sits right on the border between two seasons — and professional analysts disagree on borderline cases too. No system is perfect, and AI results can also shift with lighting and photo quality, so try more than one photo if the result feels off.
 
 **"What if I don't agree with my results?"**
 

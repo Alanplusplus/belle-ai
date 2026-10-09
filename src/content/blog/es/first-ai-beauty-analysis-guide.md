@@ -141,7 +141,7 @@ Ahora que conoces tu paleta, cada compra futura es más fácil. Ya no te quedar�
 
 **«¿Puede la IA ser tan precisa como un analista profesional?»**
 
-Para la mayoría de las personas, sí. Varios estudios comparativos muestran que [la IA y los analistas profesionales coinciden en la clasificación de estación alrededor del 85 % de las veces](https://aicoloranalysis.io/personal-color-analysis). La principal zona de desacuerdo son personas cuya coloración está justo en la frontera entre dos estaciones — pero, sinceramente, los analistas profesionales también discrepan en casos límite. Ningún sistema es perfecto, pero la IA tiene la ventaja de consistencia y objetividad.
+Puede ser un buen punto de partida, pero no sustituye a un analista profesional. La principal zona de incertidumbre son las personas cuya coloración está justo en la frontera entre dos estaciones — y los analistas profesionales también discrepan en casos límite. Ningún sistema es perfecto, y los resultados de la IA también pueden variar con la iluminación y la calidad de la foto, así que prueba con más de una foto si el resultado no te convence.
 
 **«¿Y si no estoy de acuerdo con mis resultados?»**
 

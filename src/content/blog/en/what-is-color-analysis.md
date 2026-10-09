@@ -127,7 +127,7 @@ Gold vs. silver, rose gold vs. platinum — your season makes this decision simp
 
 ## AI Color Analysis: The Modern Approach
 
-Traditional color analysis required booking an expensive in-person appointment. Today, AI technology trained on thousands of professional color analyses can deliver accurate results from a single photo.
+Traditional color analysis required booking an expensive in-person appointment. Today, AI can give you a useful starting point from a single photo.
 
 ### How AI Color Analysis Works
 
@@ -138,7 +138,7 @@ Traditional color analysis required booking an expensive in-person appointment. 
 
 ### Is AI Accurate?
 
-AI color analysis achieves comparable results to in-person consultations for the majority of people. It's particularly strong at:
+AI color analysis is a useful starting point, though results can differ from an in-person consultation. It's particularly strong at:
 - Identifying undertone (warm vs. cool)
 - Measuring contrast levels
 - Determining depth/value

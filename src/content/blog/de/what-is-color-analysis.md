@@ -127,7 +127,7 @@ Gold vs. Silber, Roségold vs. Platin – deine Saison macht diese Entscheidung 
 
 ## KI-Farbanalyse: Der moderne Ansatz
 
-Traditionelle Farbanalyse erforderte einen teuren Termin vor Ort. Heute liefert KI, trainiert auf Tausenden professioneller Analysen, präzise Ergebnisse aus einem einzigen Foto.
+Traditionelle Farbanalyse erforderte einen teuren Termin vor Ort. Heute liefert KI aus einem einzigen Foto einen brauchbaren Ausgangspunkt.
 
 ### Wie KI-Farbanalyse funktioniert
 
@@ -138,7 +138,7 @@ Traditionelle Farbanalyse erforderte einen teuren Termin vor Ort. Heute liefert 
 
 ### Ist KI genau?
 
-KI-Farbanalyse erreicht für die Mehrheit vergleichbare Ergebnisse wie persönliche Beratungen. Besonders stark bei:
+KI-Farbanalyse ist ein brauchbarer Ausgangspunkt, die Ergebnisse können aber von einer persönlichen Beratung abweichen. Besonders stark bei:
 - Unterton-Bestimmung (warm vs. kühl)
 - Kontrastmessung
 - Tiefe/Wert-Bestimmung

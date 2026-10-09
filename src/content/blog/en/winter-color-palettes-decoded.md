@@ -226,7 +226,7 @@ Gold is generally a struggle for all Winter types. If you love gold jewelry, opt
 
 Identifying your Winter sub-season traditionally required a professional color draping session — which meant sitting in controlled lighting while an analyst systematically holds cool-toned fabrics of varying depth and brightness against your face. It's effective but typically costs $150-400 depending on your city.
 
-AI-powered color analysis tools have made this much more accessible. Platforms like [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) analyze your skin undertone, contrast level, eye color, and hair shade to pinpoint your exact sub-season in under a minute — using the same visual cues that professional analysts assess, but through computer vision trained on thousands of color-typed faces.
+AI-powered color analysis tools have made this much more accessible. Platforms like [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) analyze your skin undertone, contrast level, eye color, and hair shade to pinpoint your exact sub-season in under a minute — using the same visual cues that professional analysts assess, but through an AI image model that reads your whole photo.
 
 ---
 

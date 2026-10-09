@@ -148,7 +148,7 @@ Si tu resultado de análisis con IA no te convence:
 
 ## Encuentra tus colores hoy
 
-¿Lista para descubrir tu tipo de color estacional exacto? Nuestra IA se ha entrenado con tonos de piel diversos y ofrece análisis preciso para todos los tipos de tez.
+¿Lista para descubrir tu tipo de color estacional exacto? Nuestra IA te da un punto de partida para cualquier tipo de tez; contrasta el resultado con tu propio criterio, ya que las herramientas de IA pueden ser menos fiables con tonos de piel más oscuros.
 
 [Empezar análisis de color gratis →](/try)
 

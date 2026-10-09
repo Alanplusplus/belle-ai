@@ -127,7 +127,7 @@ Oro vs. plata, oro rosa vs. platino — tu estación simplifica esta decisión.
 
 ## Análisis de color con IA: el enfoque moderno
 
-El análisis de color tradicional requería reservar una cita presencial costosa. Hoy, la IA entrenada con miles de análisis profesionales puede ofrecer resultados precisos a partir de una sola foto.
+El análisis de color tradicional requería reservar una cita presencial costosa. Hoy, la IA puede ofrecer un buen punto de partida a partir de una sola foto.
 
 ### Cómo funciona el análisis de color con IA
 
@@ -138,7 +138,7 @@ El análisis de color tradicional requería reservar una cita presencial costosa
 
 ### ¿Es precisa la IA?
 
-El análisis de color con IA logra resultados comparables a las consultas presenciales para la mayoría de las personas. Destaca especialmente en:
+El análisis de color con IA es un buen punto de partida, aunque los resultados pueden diferir de una consulta presencial. Destaca especialmente en:
 - Identificar el subtono (cálido vs. frío)
 - Medir los niveles de contraste
 - Determinar la profundidad/valor

@@ -225,7 +225,7 @@ Gold ist für alle Wintertypen generell schwierig. Wenn du Goldschmuck liebst, w
 
 Die Bestimmung deines Winter-Subtyps erforderte traditionell eine professionelle Farbdraping-Sitzung — das hieß, bei kontrollierter Beleuchtung zu sitzen, während eine Beraterin systematisch kühle Stoffe unterschiedlicher Tiefe und Helligkeit an dein Gesicht hält. Es ist effektiv, kostet aber typischerweise 150–400 €, je nach Stadt.
 
-KI-gestützte Farbanalyse-Tools haben das deutlich zugänglicher gemacht. Plattformen wie [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) analysieren deinen Hautunterton, Kontrastlevel, Augenfarbe und Haarnuance, um deinen exakten Subtyp in unter einer Minute zu bestimmen — mit denselben visuellen Hinweisen, die professionelle Analysten bewerten, aber durch Computer Vision, die an Tausenden farbtypisierter Gesichter trainiert wurde.
+KI-gestützte Farbanalyse-Tools haben das deutlich zugänglicher gemacht. Plattformen wie [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) analysieren deinen Hautunterton, Kontrastlevel, Augenfarbe und Haarnuance, um deinen exakten Subtyp in unter einer Minute zu bestimmen — mit denselben visuellen Hinweisen, die professionelle Analysten bewerten, aber durch ein KI-Bildmodell, das dein gesamtes Foto auswertet.
 
 ---
 

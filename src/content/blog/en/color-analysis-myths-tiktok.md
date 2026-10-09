@@ -124,15 +124,11 @@ Representation matters here: you deserve to know your full palette potential, no
 
 **Why it's outdated:** This claim made more sense five years ago when color analysis apps were essentially quizzes wearing a tech costume. But the technology has changed dramatically:
 
-Modern AI color analysis uses:
-- **Pixel-level skin tone sampling** across multiple facial zones (forehead, cheeks, jawline) — averaging out lighting inconsistencies
-- **Color space conversion** — transforming RGB camera data into perceptually uniform LAB color space, where undertone differences become mathematically measurable
-- **Comparison against calibrated reference databases** — matching your measured values against thousands of professionally typed individuals
-- **Adaptive algorithms** — compensating for common photo issues (white balance, flash, mixed lighting)
+Modern AI color analysis relies on multimodal image models that look at your whole photo — skin, eyes, hair, and the contrast between them — and judge it against the 12-season framework. It is an AI's visual judgment rather than a lab measurement, so lighting, camera settings, and makeup can shift the result.
 
 Is it perfect? No. Is it significantly better than a TikTok creator glancing at a selfie and declaring your season in 15 seconds? Absolutely.
 
-The honest comparison: professional in-person draping with a certified analyst remains the most accurate method (roughly 90-95% accuracy from reputable analysts). AI tools using genuine color science are next (roughly 80-90% depending on photo quality). TikTok self-diagnosis comes last — studies suggest people self-type correctly only 30-40% of the time.
+The honest comparison: professional in-person draping with a certified analyst remains the gold standard. AI tools come next as a fast, low-cost starting point whose results vary with photo quality. TikTok self-diagnosis comes last, since it is easy to mistype yourself from a screen.
 
 **The practical reality:** A professional analysis costs $150-400 and requires booking weeks in advance. AI gives you an immediate, reasonably accurate starting point for free or low cost — and you can always verify with a professional later if you want.
 

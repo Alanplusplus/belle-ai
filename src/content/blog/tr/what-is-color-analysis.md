@@ -127,7 +127,7 @@ Altın mı gümüş mü, gül altını mı platin mi — mevsiminiz bu kararı b
 
 ## Yapay Zekâ Renk Analizi: Modern Yaklaşım
 
-Geleneksel renk analizi pahalı yüz yüze randevu gerektiriyordu. Bugün binlerce profesyonel renk analizi üzerinde eğitilmiş yapay zekâ teknolojisi tek bir fotoğraftan doğru sonuçlar verebilir.
+Geleneksel renk analizi pahalı yüz yüze randevu gerektiriyordu. Bugün yapay zekâ, tek bir fotoğraftan iyi bir başlangıç noktası sunabilir.
 
 ### Yapay zekâ renk analizi nasıl çalışır
 
@@ -138,7 +138,7 @@ Geleneksel renk analizi pahalı yüz yüze randevu gerektiriyordu. Bugün binler
 
 ### Yapay zekâ doğru mu?
 
-Yapay zekâ renk analizi çoğu insan için yüz yüze danışmanlıkla karşılaştırılabilir sonuçlar verir. Özellikle güçlü olduğu alanlar:
+Yapay zekâ renk analizi faydalı bir başlangıç noktasıdır, ancak sonuçlar yüz yüze danışmanlıktan farklı olabilir. Özellikle güçlü olduğu alanlar:
 - Alt ton belirleme (sıcak vs. soğuk)
 - Kontrast seviyesi ölçümü
 - Derinlik/değer belirleme

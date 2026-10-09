@@ -104,9 +104,9 @@ Les applications alimentées par l'IA, comme Belle AI, analysent votre photo gr�
 
 - **Coût :** gratuit à 5 €
 - **Durée :** 60 secondes
-- **Précision :** bonne (73–82 % de correspondance avec le drapage professionnel)
+- **Précision :** bon point de départ (varie selon la lumière et la qualité de la photo)
 
-L'analyse par IA s'est considérablement améliorée et correspond désormais aux résultats professionnels pour la plupart des personnes, ce qui en fait l'option la plus accessible.
+L'analyse par IA s'est considérablement améliorée et offre à la plupart des personnes un point de départ utile, ce qui en fait l'option la plus accessible.
 
 ### Méthode 3 : Test d'auto-évaluation
 

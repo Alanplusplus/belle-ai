@@ -104,9 +104,9 @@ KI-gestützte Apps wie Belle AI analysieren Ihr Foto mittels Computer Vision, um
 
 - **Kosten:** Kostenlos bis 5 €
 - **Dauer:** 60 Sekunden
-- **Genauigkeit:** Gut (73–82 % Übereinstimmung mit professioneller Drapierung)
+- **Genauigkeit:** Guter Ausgangspunkt (abhängig von Licht und Fotoqualität)
 
-Die KI-Analyse hat sich deutlich verbessert und stimmt bei den meisten Menschen mit professionellen Ergebnissen überein – sie ist damit die zugänglichste Option.
+Die KI-Analyse hat sich deutlich verbessert und liefert den meisten Menschen einen brauchbaren Ausgangspunkt – sie ist damit die zugänglichste Option.
 
 ### Methode 3: Selbsttest-Quiz
 

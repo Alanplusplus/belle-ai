@@ -48,7 +48,7 @@ The AI approach is radically different in every way — speed, cost, and method.
 
 I uploaded a selfie taken in natural light to an AI color analysis tool. The whole process took about 30 seconds. Here's what happened behind the scenes:
 
-**Photo analysis:** The AI examined my skin tone, hair color, and eye color from the photo, along with the contrast between these features. Modern AI models are trained on thousands of professionally analyzed examples, so they've learned to recognize the patterns that human analysts look for — things like undertone warmth, saturation levels, and contrast ratios.
+**Photo analysis:** The AI examined my skin tone, hair color, and eye color from the photo, along with the contrast between these features. Modern multimodal AI models can recognize the kinds of patterns that human analysts look for — things like undertone warmth, saturation levels, and contrast ratios.
 
 **Feature extraction:** The algorithm isolated my skin's undertone characteristics, checking for warm (yellow/golden) vs. cool (pink/blue) leanings, measured the depth and intensity of my natural coloring, and calculated the contrast between my skin, hair, and eyes.
 
@@ -130,7 +130,7 @@ Many people find that AI analysis gives them 90% of what they need — their sea
 
 ## The Technology Gap Is Closing Fast
 
-Something worth noting: the gap between AI and professional accuracy is shrinking rapidly. Two years ago, AI color analysis was a novelty — fun but unreliable. Today, the best AI tools are trained on datasets of professionally analyzed faces, use advanced computer vision to detect subtle undertone variations, and deliver results that match professional assessments in the majority of cases.
+Something worth noting: the gap between AI and professional accuracy is shrinking rapidly. Two years ago, AI color analysis was a novelty — fun but unreliable. Today, the best AI tools use advanced multimodal models to pick up subtle undertone variations and can give a useful first read — though they can still differ from a professional assessment, especially with difficult lighting or in-between coloring.
 
 Tools like [aicoloranalysis.io](https://aicoloranalysis.io) are pushing this further by combining multiple analysis types — color season, undertone detection, face shape analysis, and personalized recommendations — into a single, instant experience. What used to require three separate professional appointments can now be explored in minutes.
 

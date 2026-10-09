@@ -141,7 +141,7 @@ Maintenant que vous connaissez votre palette, chaque futur achat devient plus si
 
 **« L'IA peut-elle vraiment être aussi précise qu'un analyste professionnel ? »**
 
-Pour la majorité des gens, oui. Plusieurs études comparatives montrent que [l'IA et les analystes professionnels s'accordent sur la classification de saison environ 85 % du temps](https://aicoloranalysis.io/personal-color-analysis). Le principal désaccord concerne les personnes dont la coloration se situe à la frontière entre deux saisons — mais honnêtement, les analystes professionnels divergent aussi sur les cas limites. Aucun système n'est parfait, mais l'IA a l'avantage de la cohérence et de l'objectivité.
+Elle peut être un bon point de départ, mais ne remplace pas un analyste professionnel. La principale zone d'incertitude concerne les personnes dont la coloration se situe à la frontière entre deux saisons — et les analystes professionnels divergent aussi sur les cas limites. Aucun système n'est parfait, et les résultats de l'IA peuvent aussi varier selon l'éclairage et la qualité de la photo ; essayez plusieurs photos si le résultat vous semble décalé.
 
 **« Et si je ne suis pas d'accord avec mes résultats ? »**
 

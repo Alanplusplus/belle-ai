@@ -48,7 +48,7 @@ Yapay zeka yaklaşımı her açıdan — hız, maliyet ve yöntem — köklü bi
 
 Doğal ışıkta çektiğim bir selfie'yi bir yapay zeka renk analizi aracına yükledim. Tüm süreç yaklaşık 30 saniye sürdü. Perde arkasında olanlar:
 
-**Fotoğraf analizi:** Yapay zeka fotoğraftan cilt tonumu, saç rengimi ve göz rengimi; ayrıca bu özellikler arasındaki kontrastı inceledi. Modern yapay zeka modelleri binlerce profesyonelce analiz edilmiş örnek üzerinde eğitildi; insan analistlerin aradığı kalıpları — alt ton sıcaklığı, doygunluk seviyeleri, kontrast oranları gibi — tanımayı öğrendiler.
+**Fotoğraf analizi:** Yapay zeka fotoğraftan cilt tonumu, saç rengimi ve göz rengimi; ayrıca bu özellikler arasındaki kontrastı inceledi. Modern çok modlu yapay zeka modelleri, insan analistlerin aradığı kalıpları — alt ton sıcaklığı, doygunluk seviyeleri, kontrast oranları gibi — tanıyabilir.
 
 **Özellik çıkarımı:** Algoritma cildimin alt ton özelliklerini izole etti; sıcak (sarı/altın) ile soğuk (pembe/mavi) eğilimleri kontrol etti, doğal renklendirmemin derinliğini ve yoğunluğunu ölçtü ve cilt, saç ve gözler arasındaki kontrastı hesapladı.
 
@@ -130,7 +130,7 @@ Birçok kişi yapay zeka analizinin ihtiyaç duyduklarının %90'ını — mevsi
 
 ## Teknoloji Açığı Hızla Kapanıyor
 
-Dikkate değer bir nokta: yapay zeka ile profesyonel doğruluk arasındaki boşluk hızla daralıyor. İki yıl önce yapay zeka renk analizi bir yenilikti — eğlenceli ama güvenilmez. Bugün en iyi yapay zeka araçları profesyonelce analiz edilmiş yüzlerden oluşan veri setleriyle eğitiliyor, ince alt ton farklarını tespit etmek için gelişmiş bilgisayarla görü kullanıyor ve çoğu vakada profesyonel değerlendirmelerle eşleşen sonuçlar veriyor.
+Dikkate değer bir nokta: yapay zeka ile profesyonel doğruluk arasındaki boşluk hızla daralıyor. İki yıl önce yapay zeka renk analizi bir yenilikti — eğlenceli ama güvenilmez. Bugün en iyi yapay zeka araçları ince alt ton farklarını yakalamak için gelişmiş çok modlu modeller kullanıyor ve işe yarar bir ilk değerlendirme sunuyor; yine de özellikle zor aydınlatmada ya da iki mevsim arasındaki tonlarda profesyonel değerlendirmeden farklı olabilirler.
 
 [aicoloranalysis.io](https://aicoloranalysis.io) gibi araçlar renk mevsimi, alt ton tespiti, yüz şekli analizi ve kişiselleştirilmiş öneriler gibi birden fazla analiz türünü tek anlık deneyimde birleştirerek bunu daha da ileri taşıyor. Eskiden üç ayrı profesyonel randevu gerektiren şey artık dakikalar içinde keşfedilebiliyor.
 

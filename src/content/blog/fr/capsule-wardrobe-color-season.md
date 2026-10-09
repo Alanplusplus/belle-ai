@@ -178,7 +178,7 @@ Après plus d'un an avec ma propre garde-robe capsule, voici les pièges que j'a
 
 La partie la plus difficile pour construire une garde-robe capsule par saison était autrefois de déterminer votre saison en premier lieu. Les séances de drapage traditionnelles avec un coloriste coûtent 200-500 $ et exigent une réservation des semaines à l'avance.
 
-Aujourd'hui, les outils d'analyse colorimétrique par IA peuvent déterminer votre saison à partir d'un selfie en quelques secondes. Ils analysent le sous-ton de votre peau, le contraste entre vos traits, et la chaleur ou froideur de votre coloration naturelle — les mêmes facteurs qu'un analyste humain évaluerait, mais via la vision par ordinateur entraînée sur des milliers de cas.
+Aujourd'hui, les outils d'analyse colorimétrique par IA peuvent déterminer votre saison à partir d'un selfie en quelques secondes. Ils analysent le sous-ton de votre peau, le contraste entre vos traits, et la chaleur ou froideur de votre coloration naturelle — les mêmes facteurs qu'un analyste humain évaluerait, mais via un modèle d'image IA qui lit l'ensemble de votre photo.
 
 Une fois votre saison connue, vous pouvez utiliser des outils de palette numériques pour comparer les articles en shopping en ligne. Certaines apps permettent même d'« essayer » virtuellement les couleurs avant d'acheter — moins de retours et de déceptions.
 

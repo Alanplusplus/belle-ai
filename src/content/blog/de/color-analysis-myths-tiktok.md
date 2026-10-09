@@ -124,15 +124,11 @@ Repräsentation zählt hier: Sie verdienen es, Ihr volles Palettenpotenzial zu k
 
 **Warum das veraltet ist:** Diese Behauptung machte vor fünf Jahren mehr Sinn, als Farbanalyse-Apps im Wesentlichen Quizze in Tech-Verkleidung waren. Aber die Technologie hat sich dramatisch verändert:
 
-Moderne KI-Farbanalyse nutzt:
-- **Hautton-Sampling auf Pixelebene** über mehrere Gesichtszonen (Stirn, Wangen, Kieferlinie) — um Lichtinkonsistenzen auszugleichen
-- **Farbraum-Konvertierung** — Umwandlung von RGB-Kameradaten in den perceptuell einheitlichen LAB-Farbraum, wo Unterton-Unterschiede mathematisch messbar werden
-- **Vergleich mit kalibrierten Referenzdatenbanken** — Abgleich Ihrer gemessenen Werte mit Tausenden professionell getypisierter Personen
-- **Adaptive Algorithmen** — Kompensation gängiger Foto-Probleme (Weißabgleich, Blitz, gemischtes Licht)
+Moderne KI-Farbanalyse stützt sich auf multimodale Bildmodelle, die Ihr gesamtes Foto betrachten — Haut, Augen, Haare und den Kontrast zwischen ihnen — und es am 12-Season-System bewerten. Das ist eine visuelle KI-Einschätzung und keine Labormessung; Licht, Kameraeinstellungen und Make-up können das Ergebnis daher verschieben.
 
 Ist es perfekt? Nein. Ist es deutlich besser als ein TikTok-Creator, der ein Selfie ansieht und in 15 Sekunden Ihre Saison erklärt? Absolut.
 
-Der ehrliche Vergleich: Professionelles Draping vor Ort mit zertifizierter Analystin bleibt die genaueste Methode (ca. 90-95 % Genauigkeit bei renommierten Analystinnen). KI-Tools mit echter Farbwissenschaft folgen (ca. 80-90 % je nach Fotoqualität). TikTok-Selbstdiagnose kommt zuletzt — Studien deuten darauf hin, dass Menschen sich nur in 30-40 % der Fälle richtig typisieren.
+Der ehrliche Vergleich: Professionelles Draping vor Ort mit zertifizierter Analystin bleibt der Goldstandard. KI-Tools folgen als schneller, günstiger Ausgangspunkt, dessen Ergebnis je nach Fotoqualität variiert. TikTok-Selbstdiagnose kommt zuletzt, denn am Bildschirm typisiert man sich leicht falsch.
 
 **Die praktische Realität:** Eine professionelle Analyse kostet 150-400 € und erfordert eine Buchung Wochen im Voraus. KI liefert einen sofortigen, einigermaßen genauen Ausgangspunkt kostenlos oder günstig — und Sie können später immer noch mit einem Profi verifizieren, wenn Sie möchten.
 

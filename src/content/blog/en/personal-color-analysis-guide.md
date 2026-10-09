@@ -111,9 +111,9 @@ AI-powered apps like Belle AI analyze your photo using computer vision to detect
 
 - **Cost:** Free to $5
 - **Time:** 60 seconds
-- **Accuracy:** Good (73–82% match rate vs. professional draping)
+- **Accuracy:** A good starting point (varies with lighting and photo quality)
 
-AI analysis has improved significantly and now matches professional results for most people, making it the most accessible option.
+AI analysis has improved significantly and gives most people a useful starting point, making it the most accessible option.
 
 ### Method 3: Self-Assessment Quiz
 

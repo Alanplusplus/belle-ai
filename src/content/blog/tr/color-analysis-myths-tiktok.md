@@ -124,15 +124,11 @@ Temsil burada önemli: sadece "deep"e varsayılan bırakılmayı değil, tam pal
 
 **Neden modası geçmiş:** Bu iddia, renk analizi uygulamaları esasen teknoloji kostümlü testlerken beş yıl önce daha mantıklıydı. Ama teknoloji dramatik değişti:
 
-Modern AI renk analizi şunları kullanır:
-- **Birden fazla yüz bölgesinde piksel düzeyinde cilt tonu örnekleme** (alın, yanak, çene hattı) — aydınlatma tutarsızlıklarını ortalama
-- **Renk uzayı dönüşümü** — RGB kamera verisini algısal olarak uniform LAB renk uzayına dönüştürme; alt ton farkları matematiksel ölçülebilir hale gelir
-- **Kalibre referans veritabanlarıyla karşılaştırma** — ölçülen değerleri binlerce profesyonelce tipelenmiş bireyle eşleştirme
-- **Uyarlanabilir algoritmalar** — yaygın fotoğraf sorunlarını (white balance, flaş, karışık aydınlatma) telafi etme
+Modern AI renk analizi, fotoğrafınızın tamamına — cilt, gözler, saçlar ve aralarındaki kontrasta — bakan çok modlu görüntü modellerine dayanır ve bunu 12 mevsim çerçevesine göre değerlendirir. Bu bir laboratuvar ölçümü değil, yapay zekânın görsel değerlendirmesidir; bu yüzden ışık, kamera ayarları ve makyaj sonucu kaydırabilir.
 
 Mükemmel mi? Hayır. TikTok içerik üreticisinin selfie'ye bakıp 15 saniyede mevsim ilan etmesinden çok daha iyi mi? Kesinlikle.
 
-Dürüst karşılaştırma: sertifikalı analistle yüz yüze profesyonel draping en doğru yöntem olmaya devam ediyor (saygın analistlerden kabaca %90-95 doğruluk). Gerçek renk bilimi kullanan AI araçları sırada (fotoğraf kalitesine bağlı kabaca %80-90). TikTok öz teşhisi en sonda — çalışmalar insanların kendini doğru tiplemesinin yalnızca %30-40 olduğunu öneriyor.
+Dürüst karşılaştırma: sertifikalı analistle yüz yüze profesyonel draping altın standart olmaya devam ediyor. AI araçları ikinci sırada; hızlı ve düşük maliyetli bir başlangıç noktası, ancak sonuçları fotoğraf kalitesine göre değişiyor. TikTok öz teşhisi en sonda, çünkü ekrandan kendi tipinizi yanlış belirlemek kolay.
 
 **Pratik gerçek:** Profesyonel analiz $150-400 tutar ve haftalar önceden randevu gerektirir. AI ücretsiz veya düşük maliyetle anında makul doğrulukta bir başlangıç noktası verir — isterseniz sonra profesyonelle doğrulayabilirsiniz.
 

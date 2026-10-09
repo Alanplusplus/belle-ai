@@ -225,7 +225,7 @@ El oro es generalmente un desafío para todos los tipos de Invierno. Si amas la 
 
 Tradicionalmente, identificar tu subtipo de Invierno requería una sesión profesional de draping de color — sentarse bajo iluminación controlada mientras un analista sostiene sistemáticamente telas de tonos fríos de distinta profundidad y brillo contra tu rostro. Es efectivo pero típicamente cuesta $150-400 según tu ciudad.
 
-Las herramientas de análisis de color con IA han hecho esto mucho más accesible. Plataformas como [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) analizan tu subtono de piel, nivel de contraste, color de ojos y tono de cabello para identificar tu subtipo exacto en menos de un minuto — usando las mismas señales visuales que evalúan los analistas profesionales, pero a través de visión por computadora entrenada con miles de rostros tipificados por color.
+Las herramientas de análisis de color con IA han hecho esto mucho más accesible. Plataformas como [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) analizan tu subtono de piel, nivel de contraste, color de ojos y tono de cabello para identificar tu subtipo exacto en menos de un minuto — usando las mismas señales visuales que evalúan los analistas profesionales, pero a través de un modelo de imagen con IA que interpreta toda tu foto.
 
 ---
 

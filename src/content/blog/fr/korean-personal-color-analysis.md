@@ -140,7 +140,7 @@ Ces typages de célébrités stimulent l'engagement des fans et aident à identi
 
 ## Essayez l'analyse de couleur IA (précision style coréen)
 
-Notre IA a été entraînée sur des teints diversifiés incluant la coloration est-asiatique, fournissant des résultats comparables à l'analyse en salon coréen. Obtenez votre type 12 saisons, meilleures couleurs et recommandations maquillage instantanément.
+Notre IA utilise le même système de 12 saisons que l'analyse en salon coréen pour vous offrir un point de départ. Obtenez votre type 12 saisons, meilleures couleurs et recommandations maquillage instantanément.
 
 [Lancer l'analyse de couleur gratuite →](/try)
 

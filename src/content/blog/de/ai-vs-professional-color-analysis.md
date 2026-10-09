@@ -48,7 +48,7 @@ Der KI-Ansatz unterscheidet sich radikal — in Geschwindigkeit, Kosten und Meth
 
 Ich lud ein Selfie bei Tageslicht in ein KI-Farbanalyse-Tool hoch. Der gesamte Prozess dauerte etwa 30 Sekunden. Im Hintergrund passierte Folgendes:
 
-**Fotoanalyse:** Die KI untersuchte meinen Hautton, meine Haar- und Augenfarbe sowie den Kontrast zwischen diesen Merkmalen. Moderne KI-Modelle sind an Tausenden professionell analysierter Beispiele trainiert und haben gelernt, die Muster zu erkennen, nach denen auch menschliche Analysten suchen — etwa Unterton-Wärme, Sättigungsstufen und Kontrastverhältnisse.
+**Fotoanalyse:** Die KI untersuchte meinen Hautton, meine Haar- und Augenfarbe sowie den Kontrast zwischen diesen Merkmalen. Moderne multimodale KI-Modelle können die Muster erkennen, nach denen auch menschliche Analysten suchen — etwa Unterton-Wärme, Sättigungsstufen und Kontrastverhältnisse.
 
 **Merkmalsextraktion:** Der Algorithmus isolierte die Untertoneigenschaften meiner Haut, prüfte warme (gelb/golden) versus kühle (rosa/blau) Tendenzen, maß Tiefe und Intensität meiner natürlichen Färbung und berechnete den Kontrast zwischen Haut, Haar und Augen.
 
@@ -130,7 +130,7 @@ Viele stellen fest, dass die KI-Analyse 90 % dessen liefert, was sie brauchen �
 
 ## Die Technologielücke Schließt Sich Schnell
 
-Beachtenswert: Die Lücke zwischen KI- und Profi-Genauigkeit schrumpft rasant. Vor zwei Jahren war KI-Farbanalyse eher ein Spielzeug — unterhaltsam, aber unzuverlässig. Heute sind die besten KI-Tools auf Datensätzen professionell analysierter Gesichter trainiert, nutzen fortgeschrittene Computer Vision für feine Unterton-Variationen und liefern in den meisten Fällen Ergebnisse, die professionellen Einschätzungen entsprechen.
+Beachtenswert: Die Lücke zwischen KI- und Profi-Genauigkeit schrumpft rasant. Vor zwei Jahren war KI-Farbanalyse eher ein Spielzeug — unterhaltsam, aber unzuverlässig. Heute erfassen die besten KI-Tools mit fortgeschrittenen multimodalen Modellen feine Unterton-Variationen und liefern eine brauchbare erste Einschätzung — die aber, besonders bei schwierigem Licht oder Mischtypen, von einer professionellen Einschätzung abweichen kann.
 
 Tools wie [aicoloranalysis.io](https://aicoloranalysis.io) treiben das weiter voran, indem sie mehrere Analysetypen — Farbsaison, Unterton-Erkennung, Gesichtsform-Analyse und personalisierte Empfehlungen — in einem einzigen, sofortigen Erlebnis vereinen. Was früher drei separate Profi-Termine erforderte, lässt sich heute in Minuten erkunden.
 

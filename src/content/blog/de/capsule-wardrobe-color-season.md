@@ -178,7 +178,7 @@ Nach über einem Jahr mit meiner eigenen Capsule Wardrobe — Fallstricke, die i
 
 Der schwierigste Teil beim Aufbau einer Farbtyp-Capsule war früher, den Typ überhaupt zu finden. Traditionelles Draping mit Farbberaterin kostet 200–500 $ und erfordert Termine Wochen im Voraus.
 
-Heute bestimmen KI-Farbanalyse-Tools deinen Typ in Sekunden aus einem Selfie. Sie analysieren Hautunterton, Kontrast zwischen deinen Merkmalen und Wärme oder Kühle deiner natürlichen Färbung — dieselben Faktoren wie ein menschlicher Analyst, mit Computer Vision, trainiert auf tausenden Fällen.
+Heute bestimmen KI-Farbanalyse-Tools deinen Typ in Sekunden aus einem Selfie. Sie analysieren Hautunterton, Kontrast zwischen deinen Merkmalen und Wärme oder Kühle deiner natürlichen Färbung — dieselben Faktoren wie ein menschlicher Analyst, aber mit einem KI-Bildmodell, das dein ganzes Foto auswertet.
 
 Hast du deinen Typ, kannst du digitale Paletten-Tools beim Online-Shopping nutzen. Manche Apps lassen dich Farben virtuell „anprobieren“ — weniger Retouren und Enttäuschung.
 

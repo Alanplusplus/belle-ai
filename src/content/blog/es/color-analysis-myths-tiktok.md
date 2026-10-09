@@ -124,15 +124,11 @@ La representación importa aquí: mereces conocer todo el potencial de tu paleta
 
 **Por qué está desactualizado:** Esta afirmación tenía más sentido hace cinco años, cuando las apps de análisis de color eran esencialmente cuestionarios disfrazados de tecnología. Pero la tecnología ha cambiado drásticamente:
 
-El análisis de color con IA moderno usa:
-- **Muestreo de tono de piel a nivel de píxel** en múltiples zonas faciales (frente, mejillas, mandíbula) — promediando inconsistencias de iluminación
-- **Conversión de espacio de color** — transformando datos RGB de la cámara al espacio LAB perceptualmente uniforme, donde las diferencias de subtono se vuelven matemáticamente medibles
-- **Comparación con bases de referencia calibradas** — comparando tus valores medidos con miles de personas tipificadas profesionalmente
-- **Algoritmos adaptativos** — compensando problemas habituales de las fotos (balance de blancos, flash, iluminación mixta)
+El análisis de color con IA moderno se apoya en modelos de imagen multimodales que observan toda tu foto — piel, ojos, cabello y el contraste entre ellos — y la valoran con el sistema de 12 estaciones. Es una valoración visual de la IA y no una medición de laboratorio, así que la iluminación, los ajustes de la cámara y el maquillaje pueden alterar el resultado.
 
 ¿Es perfecto? No. ¿Es significativamente mejor que un creador de TikTok mirando un selfie y declarando tu estación en 15 segundos? Absolutamente.
 
-La comparación honesta: el drapeado profesional presencial con un analista certificado sigue siendo el método más preciso (aproximadamente 90-95 % de precisión con analistas de reputación). Las herramientas de IA que usan ciencia del color genuina vienen después (aproximadamente 80-90 % según la calidad de la foto). El autodiagnóstico en TikTok queda último — estudios sugieren que las personas se tipifican correctamente solo el 30-40 % de las veces.
+La comparación honesta: el drapeado profesional presencial con un analista certificado sigue siendo el estándar de referencia. Las herramientas de IA vienen después, como punto de partida rápido y económico cuyos resultados varían según la calidad de la foto. El autodiagnóstico en TikTok queda último, porque es fácil tipificarse mal desde una pantalla.
 
 **La realidad práctica:** Un análisis profesional cuesta 150-400 € y requiere reservar con semanas de antelación. La IA te da un punto de partida inmediato y razonablemente preciso gratis o a bajo coste — y siempre puedes verificarlo con un profesional después si lo deseas.
 

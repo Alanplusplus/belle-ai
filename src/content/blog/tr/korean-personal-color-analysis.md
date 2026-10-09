@@ -140,7 +140,7 @@ Bu ünlü tiplemeler hayran etkileşimini artırır ve insanların kendi mevsiml
 
 ## Yapay Zekâ Renk Analizini Deneyin (Kore Tarzı Hassasiyet)
 
-Yapay zekâmız Doğu Asya renklendirmesi dahil çeşitli ten tonları üzerinde eğitildi; Kore salon tarzı analize benzer sonuçlar sunar. 12 mevsim tipinizi, en iyi renklerinizi ve makyaj önerilerinizi anında alın.
+Yapay zekâmız, Kore salon tarzı analizle aynı 12 mevsim sistemini kullanarak size bir başlangıç noktası sunar. 12 mevsim tipinizi, en iyi renklerinizi ve makyaj önerilerinizi anında alın.
 
 [Ücretsiz Renk Analizine Başlayın →](/tr/try)
 

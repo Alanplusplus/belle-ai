@@ -48,7 +48,7 @@ L'approche IA est radicalement différente — vitesse, coût et méthode.
 
 J'ai téléchargé un selfie pris en lumière naturelle dans un outil d'analyse par IA. Tout a duré environ 30 secondes. Voici ce qui s'est passé en coulisses :
 
-**Analyse photo :** L'IA a examiné mon teint, la couleur de mes cheveux et de mes yeux, ainsi que le contraste entre ces traits. Les modèles modernes sont entraînés sur des milliers d'exemples analysés professionnellement ; ils ont appris à reconnaître les schémas que les analystes humains recherchent — chaleur du sous-ton, niveaux de saturation, ratios de contraste.
+**Analyse photo :** L'IA a examiné mon teint, la couleur de mes cheveux et de mes yeux, ainsi que le contraste entre ces traits. Les modèles multimodaux modernes savent reconnaître les schémas que les analystes humains recherchent — chaleur du sous-ton, niveaux de saturation, ratios de contraste.
 
 **Extraction des traits :** L'algorithme a isolé les caractéristiques du sous-ton de ma peau, vérifiant les tendances chaudes (jaune/doré) vs froides (rose/bleu), mesuré la profondeur et l'intensité de ma coloration naturelle, et calculé le contraste entre peau, cheveux et yeux.
 
@@ -130,7 +130,7 @@ Beaucoup constatent que l'analyse IA leur apporte 90 % de ce dont ils ont besoin
 
 ## L'Écart Technologique Se Réduit Rapidement
 
-Point important : l'écart entre la précision de l'IA et celle des professionnels se réduit vite. Il y a deux ans, l'analyse par IA était une nouveauté — amusante mais peu fiable. Aujourd'hui, les meilleurs outils sont entraînés sur des visages analysés professionnellement, utilisent la vision par ordinateur avancée pour détecter de subtiles variations de sous-ton, et livrent des résultats alignés sur les évaluations pro dans la majorité des cas.
+Point important : l'écart entre la précision de l'IA et celle des professionnels se réduit vite. Il y a deux ans, l'analyse par IA était une nouveauté — amusante mais peu fiable. Aujourd'hui, les meilleurs outils s'appuient sur des modèles multimodaux avancés pour saisir de subtiles variations de sous-ton et offrent une première lecture utile, même s'ils peuvent encore différer d'une évaluation professionnelle, surtout avec un éclairage difficile ou une coloration intermédiaire.
 
 Des outils comme [aicoloranalysis.io](https://aicoloranalysis.io) vont plus loin en combinant plusieurs types d'analyse — saison de couleurs, détection de sous-ton, forme du visage et recommandations personnalisées — en une expérience instantanée unique. Ce qui exigeait autrefois trois rendez-vous professionnels distincts peut désormais être exploré en quelques minutes.
 

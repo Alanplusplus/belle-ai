@@ -178,7 +178,7 @@ After working with my own capsule wardrobe for over a year, here are the pitfall
 
 The hardest part of building a color-season capsule wardrobe used to be figuring out your season in the first place. Traditional draping sessions with a color consultant cost $200-500 and require booking weeks in advance.
 
-Today, AI-powered color analysis tools can determine your season from a selfie in seconds. They analyze your skin's undertone, the contrast between your features, and the warmth or coolness of your natural coloring — the same factors a human analyst would assess, but using computer vision trained on thousands of cases.
+Today, AI-powered color analysis tools can determine your season from a selfie in seconds. They analyze your skin's undertone, the contrast between your features, and the warmth or coolness of your natural coloring — the same factors a human analyst would assess, but through an AI image model that reads your whole photo.
 
 Once you have your season, you can use digital palette tools to compare against items while shopping online. Some apps even let you virtually "try on" colors before buying — saving the returns and disappointment.
 

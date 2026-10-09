@@ -140,7 +140,7 @@ Diese Promi-Typisierungen treiben Fan-Engagement und helfen, die eigene Saison d
 
 ## KI-Farbanalyse testen (koreanische Präzision)
 
-Unsere KI wurde mit diversen Hauttönen inklusive ostasiatischer Färbung trainiert und liefert Ergebnisse vergleichbar mit koreanischer Salon-Analyse. Hol dir deinen 12-Saisons-Typ, beste Farben und Make-up-Empfehlungen sofort.
+Unsere KI nutzt dasselbe 12-Saisons-System wie die koreanische Salon-Analyse und liefert dir einen Ausgangspunkt. Hol dir deinen 12-Saisons-Typ, beste Farben und Make-up-Empfehlungen sofort.
 
 [Kostenlose Farbanalyse starten →](/try)
 

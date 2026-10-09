@@ -225,7 +225,7 @@ image: "/images/blog/winter-color-palettes-decoded.webp"
 
 전통적으로 윈터 서브시즌 판별에는 전문 컬러 드레이핑이 필요했습니다 — 조절된 조명 아래 분석가가 깊이와 밝기가 다른 쿨톤 원단을 체계적으로 얼굴에 대는 방식. 효과적이지만 보통 150~400달러, 도시에 따라 다릅니다.
 
-AI 컬러 분석 도구가 이를 훨씬 접근하기 쉽게 만들었습니다. [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) 같은 플랫폼은 피부 언더톤, 대비 수준, 눈 색, 머리 색을 분석해 1분 이내에 정확한 서브시즌을 특정합니다 — 전문 분석가가 평가하는 것과 같은 시각적 단서를, 수천 장의 컬러 분류 얼굴로 훈련된 컴퓨터 비전으로 측정합니다.
+AI 컬러 분석 도구가 이를 훨씬 접근하기 쉽게 만들었습니다. [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) 같은 플랫폼은 피부 언더톤, 대비 수준, 눈 색, 머리 색을 분석해 1분 이내에 정확한 서브시즌을 특정합니다 — 전문 분석가가 평가하는 것과 같은 시각적 단서를, 사진 전체를 읽는 AI 이미지 모델로 판단합니다.
 
 ---
 

@@ -140,7 +140,7 @@ These celebrity typings drive fan engagement and help people identify their own 
 
 ## Try AI Color Analysis (Korean-Style Accuracy)
 
-Our AI has been trained on diverse skin tones including East Asian coloring, providing results comparable to Korean salon-style analysis. Get your 12-season type, best colors, and makeup recommendations instantly.
+Our AI uses the same 12-season framework as Korean salon-style analysis to give you a starting point. Get your 12-season type, best colors, and makeup recommendations instantly.
 
 [Start Free Color Analysis →](/try)
 

@@ -19,7 +19,7 @@ So sehen die Durchschnittskosten in großen Städten aus:
 | Seoul | 150.000–300.000 ₩ | 60 Minuten |
 | Sydney | 300–500 AUD $ | 90 Minuten |
 
-Die gute Nachricht: KI-Technologie, trainiert auf Tausenden professioneller Analysen, liefert jetzt präzise Ergebnisse – kostenlos.
+Die gute Nachricht: KI liefert dir jetzt einen brauchbaren Ausgangspunkt – kostenlos.
 
 ## Wie kostenlose KI-Farbanalyse funktioniert
 
@@ -75,7 +75,7 @@ Unser KI-Farbanalyse-Tool liefert alles Obige – komplett kostenlos für deine 
 
 ### Wie genau ist es?
 
-Unsere KI wurde mit professionellen Farbanalyse-Daten trainiert und wendet dieselben Prinzipien an wie zertifizierte Coloristen. Für die meisten Menschen stimmen die Ergebnisse mit einer persönlichen Beratung überein.
+Unsere KI bewertet dein Foto nach demselben 12-Season-System wie zertifizierte Coloristen. Das Ergebnis ist eine visuelle KI-Einschätzung und kann von einer persönlichen Beratung abweichen — sieh es als verlässlichen Ausgangspunkt.
 
 Wo KI glänzt:
 - Objektive Messung (keine „schlechten Licht“-Tage)

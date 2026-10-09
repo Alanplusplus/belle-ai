@@ -141,7 +141,7 @@ Kennt du deine Palette, wird jeder Kauf einfacher. Kein Grübeln mehr: „Steht 
 
 **„Kann KI wirklich so genau sein wie ein professioneller Analyst?“**
 
-Für die Mehrheit der Menschen, ja. Mehrere Vergleichsstudien zeigen, dass [KI und professionelle Analysten bei der Saison-Klassifikation in etwa 85 % der Fälle übereinstimmen](https://aicoloranalysis.io/personal-color-analysis). Der Hauptbereich der Abweichung betrifft Menschen, deren Färbung genau an der Grenze zwischen zwei Saisons liegt — ehrlich gesagt sind sich professionelle Analysten in solchen Grenzfällen oft ebenfalls nicht einig. Kein System ist perfekt, aber KI hat den Vorteil von Konsistenz und Objektivität bei jedem erneuten Durchlauf.
+Sie kann ein brauchbarer Ausgangspunkt sein, ersetzt aber keine professionelle Analystin. Der Hauptbereich der Unsicherheit betrifft Menschen, deren Färbung genau an der Grenze zwischen zwei Saisons liegt — ehrlich gesagt sind sich professionelle Analysten in solchen Grenzfällen oft ebenfalls nicht einig. Kein System ist perfekt, und KI-Ergebnisse können sich auch mit Licht und Fotoqualität verschieben; probiere also mehrere Fotos aus, wenn das Ergebnis nicht passt.
 
 **„Was, wenn ich mit meinen Ergebnissen nicht einverstanden bin?“**
 

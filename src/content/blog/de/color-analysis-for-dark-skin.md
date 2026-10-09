@@ -147,7 +147,7 @@ Wenn dein KI-Ergebnis nicht stimmig wirkt:
 
 ## Finde deine Farben heute
 
-Bereit, deinen exakten saisonalen Farbtyp zu entdecken? Unsere KI wurde mit diversen Hauttönen trainiert und liefert präzise Analysen für alle Teint-Typen.
+Bereit, deinen exakten saisonalen Farbtyp zu entdecken? Unsere KI liefert dir für jeden Teint einen Ausgangspunkt — prüfe das Ergebnis aber zusätzlich mit deinem eigenen Urteil, denn KI-Tools können bei dunkleren Hauttönen weniger zuverlässig sein.
 
 [Kostenlose Farbanalyse starten →](/try)
 

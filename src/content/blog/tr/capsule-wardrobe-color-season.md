@@ -178,7 +178,7 @@ Kendi kapsül gardırobumla bir yıldan fazla çalıştıktan sonra öğrendiği
 
 Renk mevsimi kapsül gardırop kurmanın en zor kısmı eskiden önce mevsimini bulmaktı. Renk danışmanıyla geleneksel draping seansları 200–500 dolar tutar ve haftalar öncesinden randevu gerektirir.
 
-Bugün yapay zeka destekli renk analizi araçları bir selfie'den saniyeler içinde mevsimini belirleyebilir. Cildinin alt tonunu, özellikler arası kontrastı ve doğal renklendirmenin sıcaklık/soğukluğunu analiz eder — insan analistin değerlendirdiği faktörler; binlerce vaka üzerinde eğitilmiş bilgisayarla görü ile.
+Bugün yapay zeka destekli renk analizi araçları bir selfie'den saniyeler içinde mevsimini belirleyebilir. Cildinin alt tonunu, özellikler arası kontrastı ve doğal renklendirmenin sıcaklık/soğukluğunu analiz eder — insan analistin değerlendirdiği faktörler; ancak tüm fotoğrafı okuyan bir yapay zekâ görüntü modeliyle.
 
 Mevsimini bildikten sonra çevrimiçi alışverişte ürünleri dijital palet araçlarıyla karşılaştırabilirsin. Bazı uygulamalar satın almadan renkleri sanal "denemenizi" sağlar — iade ve hayal kırıklığını azaltır.
 

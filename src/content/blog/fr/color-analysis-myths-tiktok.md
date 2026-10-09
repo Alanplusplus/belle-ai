@@ -124,15 +124,11 @@ La représentation compte ici : vous méritez de connaître tout le potentiel de
 
 **Pourquoi c'est dépassé :** Cette affirmation avait plus de sens il y a cinq ans, quand les apps de colorimétrie étaient essentiellement des quiz déguisés en technologie. Mais la technologie a changé radicalement :
 
-La colorimétrie IA moderne utilise :
-- **L'échantillonnage du teint au niveau des pixels** sur plusieurs zones faciales (front, joues, mâchoire) — en moyennant les incohérences d'éclairage
-- **La conversion d'espace colorimétrique** — transformation des données RGB de l'appareil en espace LAB perceptuellement uniforme, où les différences de sous-ton deviennent mathématiquement mesurables
-- **La comparaison avec des bases de référence calibrées** — rapprochement de vos valeurs mesurées avec des milliers de personnes typées professionnellement
-- **Des algorithmes adaptatifs** — compensation des problèmes photo courants (balance des blancs, flash, éclairage mixte)
+La colorimétrie IA moderne s'appuie sur des modèles d'image multimodaux qui examinent l'ensemble de votre photo — peau, yeux, cheveux et contraste entre eux — et l'évaluent selon le système des 12 saisons. C'est une appréciation visuelle de l'IA et non une mesure de laboratoire : l'éclairage, les réglages de l'appareil et le maquillage peuvent donc faire varier le résultat.
 
 Est-ce parfait ? Non. Est-ce significativement mieux qu'un créateur TikTok jetant un coup d'œil à un selfie et déclarant votre saison en 15 secondes ? Absolument.
 
-La comparaison honnête : le drapage professionnel en personne avec un analyste certifié reste la méthode la plus précise (environ 90-95 % de précision chez les analystes réputés). Les outils IA utilisant une vraie science des couleurs viennent ensuite (environ 80-90 % selon la qualité de la photo). L'auto-diagnostic TikTok arrive en dernier — des études suggèrent que les gens se typent correctement seulement 30 à 40 % du temps.
+La comparaison honnête : le drapage professionnel en personne avec un analyste certifié reste la référence. Les outils IA viennent ensuite, comme point de départ rapide et peu coûteux dont les résultats varient selon la qualité de la photo. L'auto-diagnostic TikTok arrive en dernier, car il est facile de se tromper de type devant un écran.
 
 **La réalité pratique :** Une analyse professionnelle coûte 150 à 400 € et nécessite de réserver des semaines à l'avance. L'IA vous donne un point de départ immédiat et raisonnablement précis gratuitement ou à faible coût — et vous pouvez toujours vérifier avec un professionnel plus tard si vous le souhaitez.
 
