@@ -3439,7 +3439,16 @@
     "type_complete-glow-up_desc": "The complete Belle AI glow-up combines color analysis, makeup, hairstyle, glasses, jewelry, and wardrobe recommendations into one comprehensive transformation.",
     "type_complete-glow-up_ex0_label": "Full Glow-Up Report",
     "type_complete-glow-up_ex0_desc": "A comprehensive AI analysis covering color season, face shape, makeup, hair, glasses, jewelry, and outfit recommendations.",
-    "type_complete-glow-up_ex0_details": "All elements work together — hair color, makeup shades, jewelry metals, and clothing colors are all coordinated with the personal color season."
+    "type_complete-glow-up_ex0_details": "All elements work together — hair color, makeup shades, jewelry metals, and clothing colors are all coordinated with the personal color season.",
+    "type_jewelry-guide_name": "Jewelry Metal Guide",
+    "type_jewelry-guide_tagline": "Gold or silver? Find the metal that makes you glow",
+    "type_jewelry-guide_desc": "AI jewelry analysis reads your skin undertone and color season to tell you which metals, stones, and tones brighten your complexion, ending the gold-or-silver guessing game.",
+    "type_style-personality_name": "Style Personality",
+    "type_style-personality_tagline": "Find the style that is unmistakably you",
+    "type_style-personality_desc": "AI style personality analysis identifies your fashion archetype from your features and coloring, so your wardrobe feels cohesive and intentional instead of a mix of unrelated trends.",
+    "type_celebrity-match_name": "Celebrity Match",
+    "type_celebrity-match_tagline": "Find the celebrities who share your coloring",
+    "type_celebrity-match_desc": "AI celebrity match compares your features and color season with well-known faces, so you copy looks that were actually made for your coloring instead of someone else's."
   },
   "guides": {
     "indexTitle": "Visual Style Guides",
