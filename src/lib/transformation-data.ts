@@ -78,6 +78,18 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/fdd29366-aff9-42b6-9a28-7983e045de32.png",
         originalReport: "https://pic-cdn.chibistyle.app/image/advanced/71b7dd98091ea2bb0fe603f7d89ed666_0.png",
       },
+      {
+        label: "Fitting Room Frustration → Soft Autumn Glow",
+        description: "Under harsh fitting-room light, a mustard top left her looking sallow. After an AI personal color analysis identified her as Soft Autumn, a warm coral top made her complexion glow.",
+        before: "/images/transformations/before-color-analysis-5.webp",
+        after: "/images/transformations/after-color-analysis-5.webp",
+        report: "/images/transformations/report-color-analysis-5.webp",
+        details: "Her report shows a warm, muted, medium-contrast Soft Autumn palette: terracotta, coral, olive and warm camel flatter her, while neon yellow, icy pink and stark black overpower her natural coloring.",
+        date: "2026-10-12",
+        originalBefore: "https://pic.chibistyle.app/image/upload/08f3bf5e-4c5f-4f5f-be24-f485c98d4226.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/99a7a2f5-90f0-4057-bf66-567f4909879c.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/2220d3f34ce0e926e1ef2b6f6a093d97_0.png",
+      },
     ],
   },
   {
