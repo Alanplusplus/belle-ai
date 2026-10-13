@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
@@ -78,6 +79,7 @@ export default async function ComparisonPage({
   params: Promise<{ locale: string; competitor: string }>;
 }) {
   const { locale, competitor } = await params;
+  setRequestLocale(locale);
   if (!VS_COUNTS[competitor]) notFound();
 
   const messages = (await import(`@/messages/${locale}.json`)).default;

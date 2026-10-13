@@ -13,6 +13,7 @@ import { SITE_URL } from "@/lib/constants";
 import { canonicalUrl, buildAlternatesForLocales, buildBreadcrumbJsonLd } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
@@ -63,6 +64,7 @@ export default async function BlogPostPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const post = getPostBySlug(locale, slug);
   if (!post) notFound();
 

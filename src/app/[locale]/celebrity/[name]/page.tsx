@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
@@ -67,6 +68,7 @@ export default async function CelebrityPage({
   params: Promise<{ locale: string; name: string }>;
 }) {
   const { locale, name } = await params;
+  setRequestLocale(locale);
   const data = CELEBRITY_DATA[name];
   if (!data) notFound();
 

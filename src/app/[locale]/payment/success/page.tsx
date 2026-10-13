@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 
@@ -7,7 +8,17 @@ export const metadata: Metadata = {
   robots: { index: false },
 };
 
-export default function PaymentSuccessPage() {
+export default async function PaymentSuccessPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <PaymentSuccessContent />;
+}
+
+function PaymentSuccessContent() {
   const t = useTranslations("paymentSuccess");
 
   return (

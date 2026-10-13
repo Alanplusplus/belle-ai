@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -76,6 +77,7 @@ export default async function TagPage({
   params: Promise<{ locale: string; tag: string }>;
 }) {
   const { locale, tag: tagSlug } = await params;
+  setRequestLocale(locale);
   const posts = getPostsByTag(locale, tagSlug);
   if (posts.length === 0) notFound();
 

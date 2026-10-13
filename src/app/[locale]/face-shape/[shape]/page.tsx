@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
@@ -63,6 +64,7 @@ export default async function FaceShapePage({
   params: Promise<{ locale: string; shape: string }>;
 }) {
   const { locale, shape } = await params;
+  setRequestLocale(locale);
   const data = FACE_SHAPES[shape];
   if (!data) notFound();
 

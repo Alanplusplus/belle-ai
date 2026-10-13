@@ -32,6 +32,26 @@ export const viewport: Viewport = {
   themeColor: "#FFF9F5",
 };
 
+// 客户端组件（"use client"）实际用到的文案命名空间。
+// 只把这些传给 NextIntlClientProvider：服务端组件的文案走 getRequestConfig，不依赖这里。
+// 若传整份语言包（约 260KB），它会被复制进每个页面的 .html / .rsc / 预取分段，
+// 2300+ 个静态页面的构建产物膨胀到近 3GB，Vercel 部署时间主要耗在处理和上传这些产物上。
+// 新增或修改客户端组件时，如果 useTranslations("xxx") 用了新的命名空间，必须同步加到这里，
+// 否则该组件在客户端会取不到文案。
+const CLIENT_NAMESPACES = [
+  "nav",
+  "footer",
+  "inApp",
+  "blog",
+  "features",
+  "pricing",
+  "referral",
+  "tryPage",
+  "quiz",
+  "colorQuiz",
+  "faceQuiz",
+] as const;
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -96,6 +116,9 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
   const meta = (messages as Record<string, Record<string, string>>).meta;
+  const clientMessages = Object.fromEntries(
+    CLIENT_NAMESPACES.filter((ns) => ns in messages).map((ns) => [ns, messages[ns]])
+  );
 
   const websiteJsonLd = {
     "@context": "https://schema.org",
@@ -155,7 +178,7 @@ export default async function LocaleLayout({
         <AuthProvider>
           <GoogleOneTap />
           <PageViewTracker />
-          <NextIntlClientProvider messages={messages}>
+          <NextIntlClientProvider messages={clientMessages}>
             <ReferralBanner />
             <Header />
             <main className="flex-1">{children}</main>

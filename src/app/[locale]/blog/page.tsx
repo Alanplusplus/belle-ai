@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { getAllPosts, slugifyTag } from "@/lib/blog";
@@ -38,6 +39,7 @@ export default async function BlogPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const posts = getAllPosts(locale);
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
     { name: "Blog", path: "/blog" },

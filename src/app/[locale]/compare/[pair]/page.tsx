@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
@@ -71,6 +72,7 @@ export default async function ComparePage({
   params: Promise<{ locale: string; pair: string }>;
 }) {
   const { locale, pair } = await params;
+  setRequestLocale(locale);
   const data = COMPARISON_DATA[pair];
   if (!data) notFound();
 

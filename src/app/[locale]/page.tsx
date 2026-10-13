@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -20,7 +21,15 @@ export async function generateMetadata({
   };
 }
 
-export default function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  // 必须在页面里设置：layout 与 page 并行渲染，只靠 layout 的 setRequestLocale 会让
+  // 同步组件里的 useTranslations 回退到 headers()，整页被降级成动态渲染。
+  setRequestLocale(locale);
   return <HomeContent />;
 }
 

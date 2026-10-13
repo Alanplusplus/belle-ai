@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { buildAlternates } from "@/lib/seo";
 import type { Metadata } from "next";
 
@@ -16,7 +17,17 @@ export async function generateMetadata({
   };
 }
 
-export default function TermsPage() {
+export default async function TermsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <TermsContent />;
+}
+
+function TermsContent() {
   const t = useTranslations("terms");
 
   const sections = [
