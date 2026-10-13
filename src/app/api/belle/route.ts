@@ -183,6 +183,14 @@ export async function POST(req: NextRequest) {
         return NextResponse.json(data);
       }
 
+      case "unlock-report": {
+        const data = await proxyPost("/common/v1/web/unlock-report", {
+          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
+          task_id: params.task_id,
+        });
+        return NextResponse.json(data);
+      }
+
       default:
         return NextResponse.json({ code: 400, message: "Unknown action" }, { status: 400 });
     }

@@ -15,8 +15,12 @@ import {
   getReferralCode,
   webCheckin,
   createShare,
+  unlockReport,
   REFERRAL_BONUS_EVENT,
+  DEFAULT_LOCK_START,
   type HistoryEntry,
+  type ReportResult,
+  type WebInitData,
   type AnalysisType as ApiAnalysisType,
 } from "@/lib/api";
 import {
@@ -236,11 +240,57 @@ const EXAMPLE_IMAGES: Partial<Record<AnalysisType, string>> = {
 
 interface BackgroundTask {
   id: string;
+  /** 后端任务 ID（解锁、分享需要）；id 是前端自己生成的本地标识 */
+  taskId?: string;
   type: AnalysisType;
   phase: "uploading" | "generating" | "done" | "error";
   resultUrls: string[];
+  locked?: boolean;
+  unlocked?: boolean;
+  lockStart?: number;
   errorMsg?: string;
 }
+
+/** 积分分三类显示：免费（每日额度 + 签到/邀请，只能生成预览报告）、积分包（完整报告）、订阅额度 */
+interface UserCredits {
+  /** 免费额度剩余 */
+  free: number;
+  /** 签到 / 邀请获得的积分 */
+  bonus: number;
+  /** 积分包积分：用它生成或解锁的报告是完整的 */
+  pack: number;
+  subRemaining: number;
+  subPlan: string | null;
+  totalRemaining: number;
+}
+
+function toUserCredits(data: WebInitData): UserCredits {
+  return {
+    free: data.web_quota.remaining,
+    bonus: data.paid_credits ?? 0,
+    pack: data.pack_credits ?? 0,
+    subRemaining: data.subscription?.remaining ?? 0,
+    subPlan: data.subscription?.plan ?? null,
+    totalRemaining: data.total_remaining ?? data.web_quota.remaining,
+  };
+}
+
+/** 与后端 _credit_cost 保持一致：Glow-Up 报告 3 积分，其余 1 积分 */
+function creditCostOf(type: string): number {
+  return type === "glow_up_report" ? 3 : 1;
+}
+
+function lockStateOf(result: Pick<ReportResult, "locked" | "unlocked" | "lockStart">): ResultLock {
+  return { locked: result.locked, unlocked: result.unlocked, lockStart: result.lockStart };
+}
+
+interface ResultLock {
+  locked: boolean;
+  unlocked: boolean;
+  lockStart: number;
+}
+
+const NO_LOCK: ResultLock = { locked: false, unlocked: false, lockStart: DEFAULT_LOCK_START };
 
 export function TryClient({ locale, initialType }: { locale: string; initialType?: string }) {
   const t = useTranslations("tryPage");
@@ -255,7 +305,11 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [resultUrls, setResultUrls] = useState<string[]>([]);
   const [errorMsg, setErrorMsg] = useState("");
   const [quota, setQuota] = useState<{ total: number; used: number; remaining: number } | null>(null);
-  const [userCredits, setUserCredits] = useState<{ paid: number; subRemaining: number; subPlan: string | null; totalRemaining: number } | null>(null);
+  const [userCredits, setUserCredits] = useState<UserCredits | null>(null);
+  // 当前结果卡片的锁定状态：locked=细节被服务端打码；unlocked=完整可下载
+  const [resultLock, setResultLock] = useState<ResultLock>(NO_LOCK);
+  const [unlockingId, setUnlockingId] = useState<string | null>(null);
+  const [toastMsg, setToastMsg] = useState<string | null>(null);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [historyLoading, setHistoryLoading] = useState(false);
   const [lightbox, setLightbox] = useState<LightboxState | null>(null);
@@ -267,7 +321,12 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const shareBusyRef = useRef(false);
   const [showPricingModal, setShowPricingModal] = useState(false);
   const [pricingSource, setPricingSource] = useState("unknown");
+  // 从锁定报告点进来时，付费弹窗里展示这份报告的打码预览，让用户知道买的是什么
+  const [pricingPreview, setPricingPreview] = useState<string | null>(null);
+  // 同时记下是哪份报告：买完积分包回到页面后，自动用积分解锁它
+  const [pricingTaskId, setPricingTaskId] = useState<string | null>(null);
   const [checkoutStatus, setCheckoutStatus] = useState<"idle" | "confirming" | "success" | "delayed">("idle");
+  const [checkoutBought, setCheckoutBought] = useState<"pack" | "pack_unlocked" | "sub">("sub");
   const [backgroundTasks, setBackgroundTasks] = useState<BackgroundTask[]>([]);
   const [lastUploadedPhotoUrl, setLastUploadedPhotoUrl] = useState<string | null>(null);
   const [showTaskPanel, setShowTaskPanel] = useState(false);
@@ -367,12 +426,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         const data = res.data;
         if (res.code === 200 && data) {
           setQuota(data.web_quota);
-          setUserCredits({
-            paid: data.paid_credits ?? 0,
-            subRemaining: data.subscription?.remaining ?? 0,
-            subPlan: data.subscription?.plan ?? null,
-            totalRemaining: data.total_remaining ?? data.web_quota.remaining,
-          });
+          setUserCredits(toUserCredits(data));
         }
       });
       window.clearTimeout(hideTimer);
@@ -394,6 +448,8 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
   useEffect(() => {
     if (phase !== "done" || resultUrls.length === 0) return;
+    // 报告还被锁着时用户的注意力在「解锁」上，邀请弹窗留到下一份完整报告再弹
+    if (resultLock.locked) return;
     try {
       if (localStorage.getItem("belle_invite_popup_shown") === "true") return;
     } catch {
@@ -407,7 +463,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     }, isMobileDevice() ? 10000 : 2000);
 
     return () => window.clearTimeout(timer);
-  }, [phase, resultUrls.length]);
+  }, [phase, resultUrls.length, resultLock.locked]);
 
   useEffect(() => {
     if (resumedRef.current) return;
@@ -417,12 +473,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       if (initRes.code === 200 && initRes.data) {
         const data = initRes.data;
         setQuota(data.web_quota);
-        setUserCredits({
-          paid: data.paid_credits ?? 0,
-          subRemaining: data.subscription?.remaining ?? 0,
-          subPlan: data.subscription?.plan ?? null,
-          totalRemaining: data.total_remaining ?? data.web_quota.remaining,
-        });
+        setUserCredits(toUserCredits(data));
         setIsPaid(data.subscription?.status === "active");
         setCheckinAvailable(data.checkin_available ?? false);
         setCheckinStreak(data.checkin_streak ?? 0);
@@ -438,8 +489,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               setAnalysisType(pendingTask.type as AnalysisType);
               setPhase("generating");
               pollUntilDone(pendingTask.task_id)
-                .then((images) => {
-                  setResultUrls(images);
+                .then((result) => {
+                  setResultUrls(result.urls);
+                  setResultLock(lockStateOf(result));
                   setResultTaskId(pendingTask.task_id);
                   setPhase("done");
                   reloadHistory();
@@ -483,15 +535,94 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     });
   }, []);
 
-  /** 按意图打开付费墙（点下载 / 水印条幅 / 选 2K4K / 额度用完…），source 用于归因 */
-  const openPricing = useCallback((source: string) => {
+  /** 按意图打开付费墙（点下载 / 解锁条幅 / 选 2K4K / 额度用完…），source 用于归因 */
+  const openPricing = useCallback((source: string, previewImage?: string | null, taskId?: string | null) => {
     trackEvent("pricing_modal_opened", { source });
     setPricingSource(source);
+    setPricingPreview(previewImage ?? null);
+    setPricingTaskId(taskId ?? null);
     setShowPricingModal(true);
   }, []);
 
+  /** 生成 / 解锁 / 签到之后，从服务端同步最新的三类积分 */
+  const refreshCredits = useCallback(async () => {
+    try {
+      const res = await webInit();
+      if (res.code === 200 && res.data) {
+        setQuota(res.data.web_quota);
+        setUserCredits(toUserCredits(res.data));
+        setIsPaid(res.data.subscription?.status === "active");
+      }
+    } catch {
+      /* 同步失败不影响主流程，下次操作会再同步 */
+    }
+  }, []);
+
+  const showToast = useCallback((message: string) => {
+    setToastMsg(message);
+    window.setTimeout(() => setToastMsg(null), 3500);
+  }, []);
+
+  /** 解锁成功后把新的（无打码）图片同步到当前结果、后台任务和已打开的大图 */
+  const applyUnlocked = useCallback((taskId: string, imageUrls: string[]) => {
+    if (taskId === resultTaskId) {
+      setResultUrls(imageUrls);
+      setResultLock((prev) => ({ ...prev, locked: false, unlocked: true }));
+    }
+    setBackgroundTasks((prev) => prev.map((task) => (
+      task.taskId === taskId ? { ...task, resultUrls: imageUrls, locked: false, unlocked: true } : task
+    )));
+    setLightbox((prev) => (
+      prev && prev.entry.id === taskId
+        ? { ...prev, entry: { ...prev.entry, image_urls: imageUrls, locked: false, unlocked: true } }
+        : prev
+    ));
+    reloadHistory();
+  }, [resultTaskId, reloadHistory]);
+
+  /**
+   * 点击锁定报告上的「解锁」：
+   * - 积分包够用：直接花积分解锁这份报告（不重新生成）
+   * - 不够：打开付费弹窗（积分包为主，订阅为辅）
+   */
+  const handleUnlock = useCallback(async (taskId: string | null | undefined, type: string, previewImage?: string | null) => {
+    const cost = creditCostOf(type);
+    const pack = userCredits?.pack ?? 0;
+    trackEvent("locked_cta_clicked", { type, has_pack: pack >= cost });
+    if (!taskId || pack < cost) {
+      openPricing("report_lock", previewImage, taskId);
+      return;
+    }
+    if (unlockingId) return;
+    setUnlockingId(taskId);
+    try {
+      const res = await unlockReport(taskId);
+      if (res.code === 200 && res.data?.unlocked) {
+        const packAfter = res.data.pack_credits;
+        applyUnlocked(taskId, res.data.image_urls);
+        trackEvent("report_unlocked_with_credits", { type, cost: res.data.credit_cost ?? cost });
+        // 先本地扣掉，界面立即变化；随后用服务端数据校准
+        setUserCredits((prev) => {
+          if (!prev || packAfter == null) return prev;
+          const delta = packAfter - prev.pack;
+          return { ...prev, pack: packAfter, totalRemaining: Math.max(0, prev.totalRemaining + delta) };
+        });
+        refreshCredits();
+      } else if (res.code === 429) {
+        openPricing("report_lock", previewImage, taskId);
+      } else {
+        showToast(t("unlockFailed"));
+      }
+    } catch {
+      showToast(t("unlockFailed"));
+    } finally {
+      setUnlockingId(null);
+    }
+  }, [userCredits, unlockingId, openPricing, applyUnlocked, refreshCredits, showToast, t]);
+
   // 从 Waffo 支付页返回（successUrl 带 ?checkout=success）：
-  // 订阅权益由 webhook 异步写入，这里轮询状态，开通后刷新额度与历史记录（历史图片会换成无水印的签名地址）
+  // 订阅 / 积分包都由 webhook 异步写入，这里轮询状态：订阅看 status，积分包看 pack_credits 是否比下单前增加；
+  // 到账后刷新额度与历史记录（订阅用户的历史图片会换成无打码的签名地址）
   const checkoutHandledRef = useRef(false);
   useEffect(() => {
     if (checkoutHandledRef.current) return;
@@ -514,18 +645,39 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         try {
           const res = await webInit();
           const data = res.data;
-          if (res.code === 200 && data?.subscription?.status === "active") {
+          const subActive = data?.subscription?.status === "active";
+          const packArrived = (data?.pack_credits ?? 0) > (ctx?.packBefore ?? 0);
+          const arrived = ctx?.product === "pack" ? packArrived : ctx?.product ? subActive : (subActive || packArrived);
+          if (res.code === 200 && data && arrived) {
             setQuota(data.web_quota);
-            setUserCredits({
-              paid: data.paid_credits ?? 0,
-              subRemaining: data.subscription?.remaining ?? 0,
-              subPlan: data.subscription?.plan ?? null,
-              totalRemaining: data.total_remaining ?? data.web_quota.remaining,
-            });
-            setIsPaid(true);
-            setCheckoutStatus("success");
+            setUserCredits(toUserCredits(data));
+            setIsPaid(subActive);
             reloadHistory();
             trackCheckoutEvent("checkout_completed", { product: ctx?.product, source: ctx?.source });
+
+            // 买积分包就是为了看某份被锁的报告：到账后直接用积分把它解锁并打开，不让用户再多点一步
+            let unlockedAfterPurchase = false;
+            if (ctx?.product === "pack" && ctx.unlockTaskId) {
+              try {
+                const unlockRes = await unlockReport(ctx.unlockTaskId);
+                if (unlockRes.code === 200 && unlockRes.data?.unlocked) {
+                  unlockedAfterPurchase = true;
+                  trackEvent("report_unlocked_with_credits", { source: "after_purchase" });
+                  const [histRes] = await Promise.all([fetchHistory(), refreshCredits()]);
+                  const list = histRes.data?.list;
+                  if (histRes.code === 200 && list) {
+                    setHistory(list);
+                    const entry = list.find((item) => item.id === ctx.unlockTaskId);
+                    if (entry) setLightbox({ entry, imageIndex: 0 });
+                  }
+                }
+              } catch {
+                /* 自动解锁失败不影响到账：用户可以在报告上手动点「用积分解锁」 */
+              }
+            }
+
+            setCheckoutBought(ctx?.product === "pack" ? (unlockedAfterPurchase ? "pack_unlocked" : "pack") : "sub");
+            setCheckoutStatus("success");
             window.setTimeout(() => setCheckoutStatus("idle"), 6000);
             return;
           }
@@ -537,7 +689,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       setCheckoutStatus("delayed");
       trackEvent("checkout_activation_delayed", { product: ctx?.product, source: ctx?.source });
     })();
-  }, [reloadHistory]);
+  }, [reloadHistory, refreshCredits]);
 
   const handleCorrectionOpen = useCallback((entry: HistoryEntry) => {
     if (!entry.source_image_url) return;
@@ -554,6 +706,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     setPhase("generating");
     setErrorMsg("");
     setResultUrls([]);
+    setResultLock(NO_LOCK);
     setAnalysisType(type);
     scrollToResult();
 
@@ -570,16 +723,18 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       if (taskRes.code === 429) { setPhase("no_quota"); return; }
       if (taskRes.code !== 200 || !taskRes.data?.task_id) throw new Error(taskRes.message);
 
-      const images = await pollUntilDone(taskRes.data.task_id);
-      setResultUrls(images);
+      const result = await pollUntilDone(taskRes.data.task_id);
+      setResultUrls(result.urls);
+      setResultLock(lockStateOf(result));
       setResultTaskId(taskRes.data.task_id);
       setPhase("done");
       reloadHistory();
+      refreshCredits();
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : "Correction failed");
       setPhase("error");
     }
-  }, [reportLang, resolution, reloadHistory, scrollToResult]);
+  }, [reportLang, resolution, reloadHistory, refreshCredits, scrollToResult]);
 
   const handleDownload = useCallback(async (url: string) => {
     trackEvent("result_download", { type: analysisType });
@@ -764,12 +919,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       const data = signInRes.data;
       const webQuota = data.web_quota;
       setQuota(webQuota);
-      setUserCredits({
-        paid: data.paid_credits ?? 0,
-        subRemaining: data.subscription?.remaining ?? 0,
-        subPlan: data.subscription?.plan ?? null,
-        totalRemaining: data.total_remaining ?? webQuota.remaining,
-      });
+      setUserCredits(toUserCredits(data));
       setIsPaid(data.subscription?.status === "active");
 
       if ((data.total_remaining ?? webQuota.remaining) <= 0) {
@@ -839,22 +989,24 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       if (taskRes.data.quota) {
         setQuota(taskRes.data.quota);
       }
-      const remainingAfter = taskRes.data.total_remaining;
 
-      const images = await pollUntilDone(taskRes.data.task_id);
-      setResultUrls(images);
+      const result = await pollUntilDone(taskRes.data.task_id);
+      setResultUrls(result.urls);
+      setResultLock(lockStateOf(result));
       setResultTaskId(taskRes.data.task_id);
       setPhase("done");
-      // 出图后再更新剩余次数：生成过程中就显示「额度已用完」会很突兀
-      if (typeof remainingAfter === "number") {
-        setUserCredits((prev) => (prev ? { ...prev, totalRemaining: remainingAfter } : prev));
-      }
+      // 出图后再同步剩余积分：生成过程中就显示「额度已用完」会很突兀
+      refreshCredits();
       trackEvent("generate_completed", {
         type: analysisType,
         resolution,
-        image_count: images.length,
+        image_count: result.urls.length,
+        locked: result.locked,
         duration_sec: Math.round((Date.now() - generateStart) / 1000),
       });
+      if (result.locked) {
+        trackEvent("locked_report_shown", { type: analysisType });
+      }
       if (document.hidden && "Notification" in window && Notification.permission === "granted") {
         const n = new Notification(t("notifyTitle"), { body: t("notifyBody"), icon: "/favicon-32.png" });
         n.onclick = () => { window.focus(); n.close(); };
@@ -864,7 +1016,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       const message = err instanceof Error ? err.message : "Unknown error";
       fail("generate_failed", message, t("errorGenerate"));
     }
-  }, [previewUrl, sourceImageUrl, analysisType, reportLang, resolution, occasion, reloadHistory, scrollToResult, t]);
+  }, [previewUrl, sourceImageUrl, analysisType, reportLang, resolution, occasion, reloadHistory, refreshCredits, scrollToResult, t]);
 
   const startRecommendedAnalysis = useCallback(async (type: AnalysisType) => {
     const photoUrl = sourceImageUrl || lastUploadedPhotoUrl;
@@ -892,14 +1044,21 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       }
       if (taskRes.code !== 200 || !taskRes.data?.task_id) throw new Error(taskRes.message);
 
-      const images = await pollUntilDone(taskRes.data.task_id);
-      setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "done", resultUrls: images } : t));
-      trackEvent("recommended_analysis_completed", { type, image_count: images.length });
+      const backendTaskId = taskRes.data.task_id;
+      setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, taskId: backendTaskId } : t));
+
+      const result = await pollUntilDone(backendTaskId);
+      setBackgroundTasks((prev) => prev.map((t) => t.id === taskId
+        ? { ...t, phase: "done", resultUrls: result.urls, locked: result.locked, unlocked: result.unlocked, lockStart: result.lockStart }
+        : t));
+      trackEvent("recommended_analysis_completed", { type, image_count: result.urls.length, locked: result.locked });
+      if (result.locked) trackEvent("locked_report_shown", { type, source: "recommendation" });
       reloadHistory();
+      refreshCredits();
     } catch (err) {
       setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: err instanceof Error ? err.message : "Failed" } : t));
     }
-  }, [sourceImageUrl, lastUploadedPhotoUrl, reportLang, resolution, reloadHistory, openPricing]);
+  }, [sourceImageUrl, lastUploadedPhotoUrl, reportLang, resolution, reloadHistory, refreshCredits, openPricing]);
 
   const handleUseLastPhoto = useCallback(async () => {
     if (!lastUploadedPhotoUrl) return;
@@ -926,7 +1085,12 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           setStreakBonus(d.streak_bonus ?? 0);
           setTimeout(() => setCheckinJustDone(false), 3000);
           if (d.total_remaining != null) {
-            setUserCredits((prev) => prev ? { ...prev, paid: d.paid_credits ?? prev.paid, totalRemaining: d.total_remaining! } : prev);
+            setUserCredits((prev) => prev ? {
+              ...prev,
+              bonus: d.paid_credits ?? prev.bonus,
+              pack: d.pack_credits ?? prev.pack,
+              totalRemaining: d.total_remaining!,
+            } : prev);
           }
           trackEvent("checkin_completed");
         } else {
@@ -945,6 +1109,26 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   );
 
   const activeTaskCount = backgroundTasks.filter((t) => t.phase === "generating" || t.phase === "uploading").length;
+
+  // 点开大图 / 改错重生成时用：id 用真实任务 ID，分享、解锁都靠它
+  const buildCurrentEntry = (): HistoryEntry => ({
+    id: resultTaskId ?? "current",
+    status: "success",
+    type: analysisType,
+    image_urls: resultUrls,
+    source_image_url: sourceImageUrl ?? undefined,
+    created_at: Date.now() / 1000,
+    locked: resultLock.locked,
+    unlocked: resultLock.unlocked,
+    lock_start: resultLock.lockStart,
+  });
+
+  // 免费预览只能 1K；有积分包积分（或订阅）才能选 2K / 4K，积分用完后自动退回 1K，避免界面选着 2K 实际出 1K
+  const canUseHd = isPaid || (userCredits?.pack ?? 0) > 0;
+  const creditsLoaded = userCredits !== null;
+  useEffect(() => {
+    if (creditsLoaded && !canUseHd && resolution !== "1K") setResolution("1K");
+  }, [creditsLoaded, canUseHd, resolution]);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:py-12">
@@ -1177,8 +1361,8 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                     <div
                       className="group cursor-pointer overflow-hidden rounded-xl border border-border/40 bg-background transition hover:border-primary/40 hover:shadow-md"
                       onClick={() => {
-                        trackEvent("result_viewed_full", { type: analysisType });
-                        setLightbox({ entry: { id: "current", status: "success", type: analysisType, image_urls: resultUrls, source_image_url: sourceImageUrl ?? undefined, created_at: Date.now() / 1000 }, imageIndex: 0 });
+                        trackEvent("result_viewed_full", { type: analysisType, locked: resultLock.locked });
+                        setLightbox({ entry: buildCurrentEntry(), imageIndex: 0 });
                       }}
                     >
                       <div className="relative">
@@ -1188,13 +1372,25 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                           className="h-auto w-full bg-muted/30 object-contain"
                           style={{ aspectRatio: "3/4" }}
                         />
-                        {/* 触屏没有 hover：提示常显；只有支持 hover 的设备才改成悬停显示 */}
-                        <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-100 transition [@media(hover:hover)]:from-black/50 [@media(hover:hover)]:opacity-0 group-hover:opacity-100">
-                          <div className="mb-3 flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-foreground shadow-lg backdrop-blur-sm">
-                            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" /></svg>
-                            {t("viewFull")}
+                        {resultLock.locked ? (
+                          /* 服务端已把细节打码：覆盖层只负责引导解锁，点图片其它位置仍可放大查看免费预览 */
+                          <LockOverlay
+                            lockStart={resultLock.lockStart}
+                            cost={creditCostOf(analysisType)}
+                            packCredits={userCredits?.pack ?? 0}
+                            busy={unlockingId === resultTaskId}
+                            onUnlock={() => handleUnlock(resultTaskId, analysisType, resultUrls[0])}
+                            t={t}
+                          />
+                        ) : (
+                          /* 触屏没有 hover：提示常显；只有支持 hover 的设备才改成悬停显示 */
+                          <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-100 transition [@media(hover:hover)]:from-black/50 [@media(hover:hover)]:opacity-0 group-hover:opacity-100">
+                            <div className="mb-3 flex items-center gap-1.5 rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-foreground shadow-lg backdrop-blur-sm">
+                              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" /></svg>
+                              {t("viewFull")}
+                            </div>
                           </div>
-                        </div>
+                        )}
                         {/* Page count badge */}
                         {resultUrls.length > 1 && (
                           <div className="absolute right-2 top-2 rounded-full bg-black/60 px-2 py-0.5 text-xs font-medium text-white backdrop-blur-sm">
@@ -1248,22 +1444,25 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               {/* Bottom actions / hints */}
               {phase === "done" && resultUrls.length > 0 ? (
                 <div className="mt-2 space-y-2">
-                  {/* Watermark upgrade banner for free users */}
-                  {!isPaid && (
+                  {/* 报告还没解锁（打码预览；预览补生成失败时的带水印兜底图也算）：给出解锁入口；积分包够用时直接用积分解锁 */}
+                  {!resultLock.unlocked && (
                     <button
-                      onClick={() => { trackEvent("watermark_upgrade_clicked", { source: "result_banner" }); openPricing("watermark_banner"); }}
-                      className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-3 py-2.5 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:bg-primary-dark"
+                      onClick={() => handleUnlock(resultTaskId, analysisType, resultUrls[0])}
+                      disabled={unlockingId !== null && unlockingId === resultTaskId}
+                      className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-3 py-2.5 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:bg-primary-dark disabled:opacity-60"
                     >
-                      <svg className="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
-                      {t("watermarkBanner")}
+                      <svg className="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 21.75h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H3.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+                      {(userCredits?.pack ?? 0) >= creditCostOf(analysisType)
+                        ? t("unlockWithCredits", { count: creditCostOf(analysisType) })
+                        : t("watermarkBanner")}
                     </button>
                   )}
                   <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
                     <button
                       onClick={() => {
-                        if (!isPaid) {
+                        if (!resultLock.unlocked) {
                           trackEvent("download_blocked_free", { type: analysisType });
-                          openPricing("download");
+                          handleUnlock(resultTaskId, analysisType, resultUrls[0]);
                         } else {
                           handleDownload(resultUrls[0]);
                         }
@@ -1271,7 +1470,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                       className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-border bg-card px-4 text-xs font-medium text-foreground transition hover:border-primary/40 sm:min-h-0 sm:border-0 sm:bg-transparent sm:px-0 sm:font-normal sm:text-muted-foreground sm:hover:text-foreground"
                     >
                       <DownloadIcon />
-                      {isPaid ? t("download") : t("upgradeToDownload")}
+                      {resultLock.unlocked ? t("download") : t("upgradeToDownload")}
                     </button>
                     <button
                       onClick={() => handleShare(resultUrls[0])}
@@ -1281,7 +1480,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                       {t("share")}
                     </button>
                     <button
-                      onClick={() => handleCorrectionOpen({ id: "current", status: "success", type: analysisType, image_urls: resultUrls, source_image_url: sourceImageUrl ?? undefined, created_at: Date.now() / 1000 })}
+                      onClick={() => handleCorrectionOpen(buildCurrentEntry())}
                       disabled={!sourceImageUrl}
                       className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-border bg-card px-4 text-xs font-medium text-foreground transition hover:border-primary/40 disabled:opacity-50 sm:min-h-0 sm:border-0 sm:bg-transparent sm:px-0 sm:font-normal sm:text-muted-foreground sm:hover:text-foreground"
                     >
@@ -1307,7 +1506,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
             {/* Resolution */}
             <div className="flex items-center rounded-full border border-border bg-card p-0.5">
               {(["1K", "2K", "4K"] as Resolution[]).map((r) => {
-                const needsPro = r !== "1K" && !isPaid;
+                const needsPro = r !== "1K" && !canUseHd;
                 return (
                   <button
                     key={r}
@@ -1327,7 +1526,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                           : "text-muted-foreground hover:text-foreground"
                     }`}
                   >
-                    {r}{needsPro && <span className="ml-0.5 text-[9px] opacity-70">Pro</span>}
+                    {r}{needsPro && <span className="ml-0.5 text-[9px] opacity-70">{t("hdPaidTag")}</span>}
                   </button>
                 );
               })}
@@ -1512,16 +1711,35 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
           <div className="-mt-2 text-center lg:-mt-3">
             {userCredits && phase !== "done" && (
-              <p className="mt-2 text-xs text-muted-foreground">
-                {userCredits.subPlan ? (
+              userCredits.subPlan && isPaid ? (
+                <p className="mt-2 text-xs text-muted-foreground">
                   <span className="inline-flex items-center gap-1">
                     <span className="rounded bg-primary/10 px-1.5 py-0.5 text-xs font-semibold text-primary uppercase">Pro</span>
                     {t("quotaInfo", { remaining: userCredits.totalRemaining })}
                   </span>
-                ) : (
-                  t("quotaInfo", { remaining: userCredits.totalRemaining })
-                )}
-              </p>
+                </p>
+              ) : (
+                /* 两种积分分开显示：免费积分只能出打码预览，积分包积分出完整报告 */
+                <div className="mt-2">
+                  <div className="flex flex-wrap items-center justify-center gap-2 text-xs">
+                    <span className="inline-flex items-center gap-1 rounded-full border border-border bg-card px-3 py-1 text-muted-foreground">
+                      {t("creditsFree", { count: userCredits.free + userCredits.bonus })}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => openPricing("credits_chip")}
+                      className="inline-flex items-center gap-1 rounded-full border border-primary/40 bg-primary/5 px-3 py-1 font-medium text-primary transition hover:bg-primary/10"
+                    >
+                      {userCredits.pack > 0
+                        ? t("creditsPack", { count: userCredits.pack })
+                        : t("creditsGetPack")}
+                    </button>
+                  </div>
+                  <p className="mt-1.5 text-[11px] leading-snug text-muted-foreground">
+                    {userCredits.pack > 0 ? t("creditsExplainPack") : t("creditsExplainFree")}
+                  </p>
+                </div>
+              )
             )}
             {!userCredits && quota && phase !== "done" && (
               <p className="mt-2 text-xs text-muted-foreground">
@@ -1688,7 +1906,20 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                 </div>
                 {task.phase === "done" && task.resultUrls[0] && (
                   <button
-                    onClick={() => setLightbox({ entry: { id: task.id, status: "success", type: task.type, image_urls: task.resultUrls, source_image_url: sourceImageUrl ?? lastUploadedPhotoUrl ?? undefined, created_at: Date.now() / 1000 }, imageIndex: 0 })}
+                    onClick={() => setLightbox({
+                      entry: {
+                        id: task.taskId ?? task.id,
+                        status: "success",
+                        type: task.type,
+                        image_urls: task.resultUrls,
+                        source_image_url: sourceImageUrl ?? lastUploadedPhotoUrl ?? undefined,
+                        created_at: Date.now() / 1000,
+                        locked: task.locked,
+                        unlocked: task.unlocked,
+                        lock_start: task.lockStart,
+                      },
+                      imageIndex: 0,
+                    })}
                     className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary hover:bg-primary/20"
                   >
                     {t("viewResults")}
@@ -1799,11 +2030,19 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                   onClick={() => { trackEvent("history_item_opened", { type: entry.type || "unknown" }); setLightbox({ entry, imageIndex: 0 }); }}
                 >
                   {entry.image_urls[0] && (
-                    <img
-                      src={entry.image_urls[0]}
-                      alt="Analysis"
-                      className="aspect-[3/4] w-full object-cover"
-                    />
+                    <div className="relative">
+                      <img
+                        src={entry.image_urls[0]}
+                        alt="Analysis"
+                        className="aspect-[3/4] w-full object-cover"
+                      />
+                      {entry.locked && (
+                        <span className="absolute bottom-2 left-2 inline-flex items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur-sm">
+                          <LockIcon className="h-3 w-3" />
+                          {t("lockedBadge")}
+                        </span>
+                      )}
+                    </div>
                   )}
                   <div className="flex items-center justify-between p-3">
                     <div>
@@ -1836,8 +2075,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           onCorrection={handleCorrectionOpen}
           onDownload={handleDownload}
           onShare={handleShare}
-          isPaid={isPaid}
-          onUpgrade={() => { trackEvent("watermark_upgrade_clicked", { source: "lightbox" }); openPricing("lightbox"); }}
+          packCredits={userCredits?.pack ?? 0}
+          unlocking={unlockingId !== null && unlockingId === lightbox.entry.id}
+          onUnlock={(entry) => handleUnlock(entry.id, entry.type || "color_analysis", entry.image_urls[0])}
           t={t}
         />
       )}
@@ -1904,7 +2144,24 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       )}
 
       {/* Pricing Modal */}
-      <PricingModal open={showPricingModal} onClose={() => setShowPricingModal(false)} source={pricingSource} />
+      <PricingModal
+        open={showPricingModal}
+        onClose={() => setShowPricingModal(false)}
+        source={pricingSource}
+        previewUrl={pricingPreview}
+        unlockTaskId={pricingTaskId}
+        packCredits={userCredits?.pack ?? 0}
+      />
+
+      {/* 解锁失败等一次性提示 */}
+      {toastMsg && (
+        <div
+          role="status"
+          className="fixed bottom-[max(1.5rem,env(safe-area-inset-bottom))] left-1/2 z-[260] max-w-[calc(100vw-2rem)] -translate-x-1/2 rounded-full bg-foreground px-4 py-2 text-center text-sm text-background shadow-lg max-lg:bottom-[calc(5.5rem+env(safe-area-inset-bottom))]"
+        >
+          {toastMsg}
+        </div>
+      )}
 
       {/* 从支付页返回后的状态提示 */}
       {checkoutStatus !== "idle" && (
@@ -1924,7 +2181,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               {checkoutStatus === "confirming"
                 ? t("checkoutConfirming")
                 : checkoutStatus === "success"
-                  ? t("checkoutSuccess")
+                  ? t(checkoutBought === "pack_unlocked" ? "checkoutSuccessPackUnlocked" : checkoutBought === "pack" ? "checkoutSuccessPack" : "checkoutSuccess")
                   : t("checkoutDelayed")}
             </span>
             {checkoutStatus !== "confirming" && (
@@ -2250,8 +2507,9 @@ function ImageLightbox({
   onCorrection,
   onDownload,
   onShare,
-  isPaid,
-  onUpgrade,
+  packCredits,
+  unlocking,
+  onUnlock,
   t,
 }: {
   entry: HistoryEntry;
@@ -2260,13 +2518,18 @@ function ImageLightbox({
   onCorrection: (entry: HistoryEntry) => void;
   onDownload: (url: string) => void;
   onShare: (url: string, taskId?: string | null) => void;
-  isPaid: boolean;
-  onUpgrade: () => void;
-  t: (key: string) => string;
+  packCredits: number;
+  unlocking: boolean;
+  /** 解锁：积分包够就直接扣积分，不够则由调用方打开付费弹窗 */
+  onUnlock: (entry: HistoryEntry) => void;
+  t: (key: string, values?: Record<string, string | number>) => string;
 }) {
   const [index, setIndex] = useState(initialIndex);
   const urls = entry.image_urls;
   const currentUrl = urls[index];
+  const reportUnlocked = !!entry.unlocked;
+  const reportLocked = !!entry.locked;
+  const unlockCost = creditCostOf(entry.type || "color_analysis");
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -2325,11 +2588,25 @@ function ImageLightbox({
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
             </button>
           )}
-          <img
-            src={currentUrl}
-            alt={`Report ${index + 1}`}
-            className="max-h-[68dvh] w-auto max-w-full rounded-xl object-contain shadow-2xl sm:max-h-[75dvh] sm:max-w-[85vw]"
-          />
+          {/* 外层 relative 紧贴图片尺寸（宽度上限用视口单位，避免百分比 max-width 让外层塌缩），锁定覆盖层按图片高度的比例定位 */}
+          <div className="relative">
+            <img
+              src={currentUrl}
+              alt={`Report ${index + 1}`}
+              className="block max-h-[68dvh] w-auto max-w-[calc(100vw-1.5rem)] rounded-xl object-contain shadow-2xl sm:max-h-[75dvh] sm:max-w-[85vw]"
+            />
+            {reportLocked && (
+              <LockOverlay
+                lockStart={entry.lock_start ?? DEFAULT_LOCK_START}
+                cost={unlockCost}
+                packCredits={packCredits}
+                busy={unlocking}
+                onUnlock={() => onUnlock(entry)}
+                rounded
+                t={t}
+              />
+            )}
+          </div>
           {index < urls.length - 1 && (
             <button onClick={() => setIndex(index + 1)} aria-label="Next" className="absolute right-2 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70">
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
@@ -2338,7 +2615,9 @@ function ImageLightbox({
         </div>
 
         {/* 触屏设备：提示可长按图片保存到相册（桌面不显示） */}
-        <p className="mt-2 hidden text-center text-xs text-white/70 [@media(hover:none)]:block">{t("saveImageHint")}</p>
+        {!reportLocked && (
+          <p className="mt-2 hidden text-center text-xs text-white/70 [@media(hover:none)]:block">{t("saveImageHint")}</p>
+        )}
 
         {/* Page indicator：圆点外层加大到 24px 的点击区域 */}
         {urls.length > 1 && (
@@ -2356,25 +2635,26 @@ function ImageLightbox({
           </div>
         )}
 
-        {/* Watermark upgrade banner */}
-        {!isPaid && (
+        {/* 未解锁（打码预览；预览补生成失败时的带水印兜底图也算）的解锁入口 */}
+        {!reportUnlocked && (
           <button
-            onClick={onUpgrade}
-            className="mt-3 flex items-center gap-2 rounded-full bg-gradient-to-r from-primary/90 to-primary px-5 py-2 text-sm font-medium text-white shadow-lg transition hover:shadow-primary/25"
+            onClick={() => onUnlock(entry)}
+            disabled={unlocking}
+            className="mt-3 flex items-center gap-2 rounded-full bg-gradient-to-r from-primary/90 to-primary px-5 py-2 text-sm font-medium text-white shadow-lg transition hover:shadow-primary/25 disabled:opacity-60"
           >
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
-            {t("watermarkBanner")}
+            <LockIcon className="h-4 w-4" />
+            {packCredits >= unlockCost ? t("unlockWithCredits", { count: unlockCost }) : t("watermarkBanner")}
           </button>
         )}
 
         {/* Action bar */}
         <div className="mt-3 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
           <button
-            onClick={() => isPaid ? onDownload(currentUrl) : onUpgrade()}
+            onClick={() => reportUnlocked ? onDownload(currentUrl) : onUnlock(entry)}
             className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm hover:bg-white/20"
           >
             <DownloadIcon />
-            {isPaid ? t("download") : t("upgradeToDownload")}
+            {reportUnlocked ? t("download") : t("upgradeToDownload")}
           </button>
           <button
             onClick={() => onShare(currentUrl, entry.id)}
@@ -2431,6 +2711,58 @@ function SaveImageSheet({
         </div>
         <p className="mt-3 text-center text-sm text-muted-foreground">{t("saveImageHint")}</p>
       </div>
+    </div>
+  );
+}
+
+function LockIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+    </svg>
+  );
+}
+
+/**
+ * 锁定报告上的「解锁」覆盖层：图片下半部分已经由服务端打码（原图根本没下发），
+ * 这里只是把引导文案和按钮摆在打码区域里，top 按服务端给出的 lock_start 比例定位。
+ */
+function LockOverlay({
+  lockStart,
+  cost,
+  packCredits,
+  busy,
+  onUnlock,
+  rounded,
+  t,
+}: {
+  lockStart: number;
+  cost: number;
+  packCredits: number;
+  busy: boolean;
+  onUnlock: () => void;
+  rounded?: boolean;
+  t: (key: string, values?: Record<string, string | number>) => string;
+}) {
+  const canSpend = packCredits >= cost;
+  return (
+    <div
+      className={`absolute inset-x-0 bottom-0 flex flex-col items-center justify-center gap-2 px-4 text-center ${rounded ? "rounded-b-xl" : ""}`}
+      style={{ top: `${Math.round(lockStart * 100)}%` }}
+    >
+      <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-primary shadow">
+        <LockIcon className="h-4 w-4" />
+      </span>
+      <p className="max-w-[16rem] text-xs font-semibold leading-snug text-neutral-800">{t("lockedHint")}</p>
+      <button
+        type="button"
+        onClick={(e) => { e.stopPropagation(); onUnlock(); }}
+        disabled={busy}
+        className="inline-flex min-h-10 items-center justify-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary-dark disabled:opacity-60"
+      >
+        {busy ? <Spinner className="h-3.5 w-3.5" /> : null}
+        {canSpend ? t("unlockWithCredits", { count: cost }) : t("unlockReport")}
+      </button>
     </div>
   );
 }

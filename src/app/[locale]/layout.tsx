@@ -2,7 +2,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing, type Locale } from "@/i18n/routing";
-import { Inter, Playfair_Display } from "next/font/google";
+import localFont from "next/font/local";
 import { Header } from "@/components/Header";
 import { ReferralBanner } from "@/components/ReferralBanner";
 import { Footer } from "@/components/Footer";
@@ -14,15 +14,20 @@ import { SITE_URL, GA_MEASUREMENT_ID } from "@/lib/constants";
 import Script from "next/script";
 import type { Metadata, Viewport } from "next";
 
-const inter = Inter({
+// 字体自托管（latin 子集的可变字体，来自 Google Fonts）：
+// next/font/google 在 dev / build 时要联网拉取，网络不通或 Turbopack 解析出错时整站打不开
+const inter = localFont({
+  src: "../fonts/Inter-latin-variable.woff2",
   variable: "--font-sans",
-  subsets: ["latin"],
+  weight: "100 900",
+  display: "swap",
 });
 
-const playfair = Playfair_Display({
+const playfair = localFont({
+  src: "../fonts/PlayfairDisplay-latin-variable.woff2",
   variable: "--font-serif",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: "400 900",
+  display: "swap",
 });
 
 // 手机浏览器地址栏/状态栏颜色与页面底色一致（manifest.json 里的 theme_color 保持同一个值）

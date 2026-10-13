@@ -10,6 +10,10 @@ export interface CheckoutContext {
   product: ProductKey;
   source: string;
   ts: number;
+  /** 下单前的积分包余额：支付返回后据此判断积分是否到账 */
+  packBefore?: number;
+  /** 从哪份锁定报告进入的付费弹窗：积分包到账后自动解锁它 */
+  unlockTaskId?: string;
 }
 
 function saveContext(ctx: CheckoutContext) {
@@ -47,17 +51,24 @@ export async function startCheckout(params: {
   source: string;
   locale: string;
   email?: string;
+  /** 下单前的积分包余额（购买积分包时传入） */
+  packBefore?: number;
+  /** 购买积分包时，从哪份锁定报告进入（到账后自动解锁） */
+  unlockTaskId?: string;
   onRestore?: () => void;
 }): Promise<void> {
-  const { product, source, locale, email, onRestore } = params;
+  const { product, source, locale, email, unlockTaskId, onRestore } = params;
+  let packBefore = params.packBefore;
   trackCheckoutEvent("checkout_started", { product, source });
 
   try {
     let userId = getCachedUserId();
-    if (!userId) {
+    // 买积分包而调用方没传下单前余额（比如 /pricing 页）：这里取一次，返回页面后据此判断积分是否到账
+    if (!userId || (product === "pack" && packBefore == null)) {
       const initRes = await webInit();
       if (initRes.code === 200 && initRes.data) {
-        userId = initRes.data.user_id;
+        userId = userId ?? initRes.data.user_id;
+        if (packBefore == null) packBefore = initRes.data.pack_credits ?? 0;
       }
     }
     if (!userId) throw new Error("no_user_id");
@@ -81,7 +92,13 @@ export async function startCheckout(params: {
       throw new Error(data.error || "checkout_session_failed");
     }
 
-    saveContext({ product, source, ts: Date.now() });
+    saveContext({
+      product,
+      source,
+      ts: Date.now(),
+      ...(packBefore != null ? { packBefore } : {}),
+      ...(unlockTaskId ? { unlockTaskId } : {}),
+    });
     trackEvent("checkout_opened", { product, source });
 
     // 从支付页点浏览器「返回」会通过 bfcache 恢复页面，此时 loading 状态还停在旧值，需要让调用方复位

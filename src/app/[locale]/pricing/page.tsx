@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
-import { WEEKLY_INTRO_PRICE } from "@/lib/constants";
+import { PACK_CREDITS, PACK_PRICE, WEEKLY_INTRO_PRICE } from "@/lib/constants";
 import type { Metadata } from "next";
 import { PricingButtons } from "./PricingButtons";
 import { PricingStickyBar } from "./PricingStickyBar";
@@ -59,7 +59,15 @@ export default async function PricingPage({
         name: "Free",
         price: "0",
         priceCurrency: "USD",
-        description: "3 free AI analyses",
+        description: "3 free AI analysis previews",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "Credit Pack",
+        price: PACK_PRICE,
+        priceCurrency: "USD",
+        description: `${PACK_CREDITS} credits, one-time purchase. 1 credit = 1 full report without blur`,
         availability: "https://schema.org/InStock",
       },
       {
@@ -103,8 +111,34 @@ export default async function PricingPage({
         {/* 内置浏览器里订阅与记录不会跟随到系统浏览器：提前提示用系统浏览器打开再付款 */}
         <InAppBrowserNotice className="mx-auto mt-6 max-w-xl" />
 
-        {/* All plans in one row */}
-        <div className="mx-auto mt-10 grid max-w-5xl gap-6 lg:grid-cols-3">
+        {/* 积分包：一次性付费、不绑订阅，门槛最低，放在最前面作为主推 */}
+        <div id="pricing-pack-card" className="relative mx-auto mt-10 max-w-5xl scroll-mt-24 rounded-2xl border-2 border-primary bg-card p-6 shadow-lg sm:p-8">
+          <span className="absolute -top-3 left-6 rounded-full bg-green-500 px-3 py-0.5 text-xs font-semibold text-white">
+            {t("packBadge")}
+          </span>
+          <div className="grid gap-6 lg:grid-cols-[1fr_20rem] lg:items-center">
+            <div>
+              <h3 className="text-xl font-bold">{t("packTitle", { credits: PACK_CREDITS })}</h3>
+              <ul className="mt-4 space-y-3">
+                <PricingFeature text={t("packFeature1", { credits: PACK_CREDITS })} />
+                <PricingFeature text={t("packFeature2")} />
+                <PricingFeature text={t("packFeature3")} />
+              </ul>
+            </div>
+            <div>
+              <div className="lg:text-center">
+                <span className="text-4xl font-bold text-primary">${PACK_PRICE}</span>
+              </div>
+              <PricingButtons product="pack" variant="primary" label={t("packCta", { credits: PACK_CREDITS, price: PACK_PRICE })} />
+              <p className="mt-2 text-center text-xs text-muted-foreground">{t("packNote")}</p>
+            </div>
+          </div>
+        </div>
+
+        <p className="mt-8 text-center text-xs font-medium uppercase tracking-wide text-muted-foreground">{t("orSubscribe")}</p>
+
+        {/* Free + subscriptions */}
+        <div className="mx-auto mt-4 grid max-w-5xl gap-6 lg:grid-cols-3">
           {/* Free（手机上排最后：主推的 Weekly 放最前，Free 不抢首屏） */}
           <div className="rounded-2xl border border-border bg-card p-6 max-lg:order-3">
             <h3 className="text-xl font-bold">{t("free")}</h3>
@@ -125,8 +159,8 @@ export default async function PricingPage({
             </Link>
           </div>
 
-          {/* Weekly - highlighted */}
-          <div id="pricing-weekly-card" className="relative scroll-mt-24 rounded-2xl border-2 border-primary bg-card p-6 shadow-lg max-lg:order-1">
+          {/* Weekly：首周优惠，订阅里的主推（整页的主推是上面的积分包，所以这里不再用粗边框和阴影） */}
+          <div id="pricing-weekly-card" className="relative scroll-mt-24 rounded-2xl border border-primary/50 bg-card p-6 max-lg:order-1">
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-green-500 px-3 py-0.5 text-xs font-semibold text-white">
               {t("weeklyIntroBadge", { price: WEEKLY_INTRO_PRICE })}
             </span>
@@ -145,7 +179,7 @@ export default async function PricingPage({
               <PricingFeature text={t("weeklyFeature3")} />
               <PricingFeature text={t("weeklyFeature4")} />
             </ul>
-            <PricingButtons product="weekly" variant="primary" label={t("weeklyCta", { price: WEEKLY_INTRO_PRICE })} />
+            <PricingButtons product="weekly" variant="outline" label={t("weeklyCta", { price: WEEKLY_INTRO_PRICE })} />
           </div>
 
           {/* Yearly */}
@@ -251,7 +285,7 @@ export default async function PricingPage({
 
       </div>
     </section>
-    <PricingStickyBar targetId="pricing-weekly-card" />
+    <PricingStickyBar targetId="pricing-pack-card" />
     </>
   );
 }

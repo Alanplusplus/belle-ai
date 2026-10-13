@@ -11,7 +11,7 @@ const TOKEN_PATTERN = /^[A-Za-z0-9]{6,16}$/;
 
 /**
  * 读取公开分享页数据（只在服务端调用，访客不会直接访问后端）。
- * 图片 URL 是后端每次实时签名的（带水印），所以不能缓存。
+ * 图片 URL 是后端每次实时签名的（未解锁的分享带水印、付费用户的不带），所以不能缓存。
  */
 export async function fetchSharedReport(
   token: string,

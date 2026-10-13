@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { trackEvent } from "@/lib/analytics";
 import { startCheckout } from "@/lib/checkout";
-import { WEEKLY_INTRO_PRICE } from "@/lib/constants";
+import { PACK_CREDITS, PACK_PRICE } from "@/lib/constants";
 
 /**
- * 手机上的吸底购买栏：用户滚过主推的 Weekly 卡片后，购买按钮仍然在拇指范围内。
- * Weekly 卡片本身在视口里时不显示，避免和卡片里的按钮重复。
+ * 手机上的吸底购买栏：用户滚过主推的积分包卡片后，购买按钮仍然在拇指范围内。
+ * 积分包卡片本身在视口里时不显示，避免和卡片里的按钮重复。
  */
 export function PricingStickyBar({ targetId }: { targetId: string }) {
   const t = useTranslations("pricing");
@@ -30,12 +30,12 @@ export function PricingStickyBar({ targetId }: { targetId: string }) {
   }, [targetId]);
 
   const handleClick = async () => {
-    trackEvent("pricing_cta_clicked", { product: "weekly", variant: "sticky_bar" });
+    trackEvent("pricing_cta_clicked", { product: "pack", variant: "sticky_bar" });
     setLoading(true);
     setError(false);
     try {
       await startCheckout({
-        product: "weekly",
+        product: "pack",
         source: "pricing_sticky_bar",
         locale,
         onRestore: () => setLoading(false),
@@ -62,7 +62,7 @@ export function PricingStickyBar({ targetId }: { targetId: string }) {
             <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-current" />
           </span>
         ) : (
-          t("weeklyCta", { price: WEEKLY_INTRO_PRICE })
+          t("packCta", { credits: PACK_CREDITS, price: PACK_PRICE })
         )}
       </button>
       {error && (

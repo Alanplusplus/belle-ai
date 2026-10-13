@@ -30,7 +30,10 @@ export interface WebInitData {
   nickname: string;
   avatar_url: string;
   web_quota: { total: number; used: number; remaining: number };
+  /** 沿用旧字段名：实际是签到 / 邀请获得的免费积分（只能生成预览报告），不是付费积分 */
   paid_credits: number;
+  /** 积分包购买的积分：用它生成或解锁的报告是完整无模糊的 */
+  pack_credits?: number;
   subscription: {
     plan: string | null;
     /** "active" 表示当前享有 Pro 权益（已取消但仍在已付费周期内也算 active） */
@@ -182,9 +185,11 @@ export async function createTask(
     task_id: string;
     api_task_id: string;
     quota: { used: number; total: number; remaining: number };
-    /** 本次扣费后的总剩余次数（免费 + 付费积分 + 订阅额度） */
+    /** 本次扣费后的总剩余次数（免费 + 签到/邀请积分 + 积分包 + 订阅额度） */
     total_remaining?: number;
     credit_cost?: number;
+    /** 这份报告是否直接解锁（订阅有效或用积分包生成） */
+    unlocked?: boolean;
   }>({
     action: "generate",
     image_url_list: [imageUrl],
@@ -201,11 +206,30 @@ export async function createTask(
 /** 轮询到任务成功且发放了邀请奖励时在 window 上广播，页面据此刷新积分并弹出提示 */
 export const REFERRAL_BONUS_EVENT = "belle:referral-bonus";
 
+/** 报告的锁定状态：免费用户拿到的是下半部分被模糊的预览图，付费解锁后换成完整原图 */
+export interface ReportLockInfo {
+  /** 当前图片是模糊预览图 */
+  locked?: boolean;
+  /** 已解锁：订阅有效，或这份报告用积分包生成 / 解锁过 */
+  unlocked?: boolean;
+  /** 预览图从图片高度的这个比例（0~1）开始被模糊，用来摆放「解锁」按钮 */
+  lock_start?: number | null;
+}
+
+export interface ReportResult {
+  urls: string[];
+  locked: boolean;
+  unlocked: boolean;
+  lockStart: number;
+}
+
+export const DEFAULT_LOCK_START = 0.5;
+
 export async function pollTask(taskId: string) {
   return belleApi<{
     task_id: string;
     status: string;
-    result?: {
+    result?: ReportLockInfo & {
       image_urls?: string[];
       source_image_url?: string;
     };
@@ -252,7 +276,7 @@ export async function pollUntilDone(
   onProgress?: () => void,
   maxAttempts = 60,
   intervalMs = 10000
-): Promise<string[]> {
+): Promise<ReportResult> {
   let consecutiveErrors = 0;
   const maxConsecutiveErrors = 5;
   // 总时长上限保持不变（maxAttempts × intervalMs），用墙上时间计，后台冻结的时间也算在内
@@ -278,7 +302,13 @@ export async function pollUntilDone(
         if (res.data.referral_bonus && res.data.referral_bonus > 0 && typeof window !== "undefined") {
           window.dispatchEvent(new CustomEvent(REFERRAL_BONUS_EVENT, { detail: res.data.referral_bonus }));
         }
-        return res.data.result?.image_urls ?? [];
+        const result = res.data.result;
+        return {
+          urls: result?.image_urls ?? [],
+          locked: !!result?.locked,
+          unlocked: !!result?.unlocked,
+          lockStart: result?.lock_start ?? DEFAULT_LOCK_START,
+        };
       }
       if (res.data.status === "failed") {
         throw new Error(res.message || "Generation failed");
@@ -298,13 +328,28 @@ export async function pollUntilDone(
   throw new Error("Timed out");
 }
 
-export interface HistoryEntry {
+export interface HistoryEntry extends ReportLockInfo {
   id: string;
   status: string;
   type: string;
   image_urls: string[];
   source_image_url?: string;
   created_at: number;
+}
+
+/** 用积分包积分解锁一份已生成的锁定报告（不用重新生成），成功后返回完整原图地址 */
+export async function unlockReport(taskId: string) {
+  return belleApi<{
+    task_id: string;
+    image_urls: string[];
+    locked: boolean;
+    unlocked: boolean;
+    credit_cost: number;
+    pack_credits: number;
+  }>({
+    action: "unlock-report",
+    task_id: taskId,
+  });
 }
 
 export async function fetchHistory(page = 1, pageSize = 20) {
@@ -350,6 +395,7 @@ export interface CheckinData {
   checkin_available: boolean;
   total_remaining?: number;
   paid_credits?: number;
+  pack_credits?: number;
   checkin_streak?: number;
   checkin_max_streak?: number;
   streak_bonus?: number;

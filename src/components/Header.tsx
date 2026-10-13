@@ -12,7 +12,8 @@ import { trackEvent } from "@/lib/analytics";
 import { useSignIn } from "@/lib/useSignIn";
 import { InAppSignInSheet } from "@/components/InAppBrowserNotice";
 
-type UserInfo = { credits: number; subPlan: string | null; subRemaining: number };
+/** free：免费额度 + 签到/邀请积分（只出打码预览）；pack：积分包积分（出完整报告）。两种分开显示，避免混淆 */
+type UserInfo = { free: number; pack: number; subPlan: string | null; subRemaining: number };
 
 export function Header() {
   const t = useTranslations("nav");
@@ -77,7 +78,8 @@ export function Header() {
     ).then((res) => {
       if (res.code === 200 && res.data) {
         setUserInfo({
-          credits: res.data.paid_credits ?? 0,
+          free: (res.data.web_quota?.remaining ?? 0) + (res.data.paid_credits ?? 0),
+          pack: res.data.pack_credits ?? 0,
           subPlan: res.data.subscription?.plan ?? null,
           subRemaining: res.data.subscription?.remaining ?? 0,
         });
@@ -502,12 +504,20 @@ function UserQuotaCard({
           </div>
         </div>
       )}
-      {(userInfo?.credits ?? 0) > 0 && (
+      {userInfo && (
+        <div className="flex items-center gap-2.5 border-t border-border px-3 py-1.5">
+          <div className="flex h-5 w-5 items-center justify-center">
+            <svg className="h-3.5 w-3.5 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>
+          </div>
+          <span className="text-xs text-muted-foreground">{t("freeCredits", { count: userInfo.free })}</span>
+        </div>
+      )}
+      {(userInfo?.pack ?? 0) > 0 && (
         <div className="flex items-center gap-2.5 border-t border-border px-3 py-1.5">
           <div className="flex h-5 w-5 items-center justify-center">
             <svg className="h-3.5 w-3.5 text-amber-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H11.5v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.65c.1 1.7 1.36 2.66 2.85 2.97V19h1.73v-1.67c1.52-.29 2.72-1.16 2.72-2.74 0-2.08-1.87-2.93-3.64-3.45z" /></svg>
           </div>
-          <span className="text-xs font-medium">{userInfo!.credits} {t("credits")}</span>
+          <span className="text-xs font-medium">{t("packCredits", { count: userInfo!.pack })}</span>
         </div>
       )}
     </div>

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyWebhook } from "@waffo/pancake-ts";
-import { SUBSCRIPTION_PRODUCT_IDS, GA_MEASUREMENT_ID, determinePlan } from "@/lib/constants";
+import { SUBSCRIPTION_PRODUCT_IDS, GA_MEASUREMENT_ID, PACK_CREDITS, determinePlan } from "@/lib/constants";
 
 const API_BASE = process.env.BELLE_API_BASE || "https://api.chibistyle.app";
 const API_TOKEN = process.env.BELLE_API_TOKEN!;
@@ -179,6 +179,56 @@ async function notifyFeishu(
   }
 }
 
+/**
+ * 一次性积分包订单：结算时 metadata.product 记为 "pack"，到账后给用户发放积分包积分。
+ * 幂等由后端按 order_id 保证；后端异常返回 500 让 Waffo 重试，避免付了钱没到账。
+ */
+async function handlePackOrder(
+  eventType: string,
+  eventKey: string,
+  userId: string | null,
+  orderId: string,
+  data: Record<string, unknown>,
+  metadata: Record<string, string>,
+): Promise<Response> {
+  if (!userId || !orderId) {
+    console.error("Waffo pack order missing userId/orderId:", orderId);
+    await notifyFeishu(eventType, null, data, ["⚠️ 积分包订单缺少 userId 或 orderId,未发放积分,需人工核对"]);
+    return NextResponse.json({ received: true, warning: "no user id" });
+  }
+
+  const result = await callBackend("/common/v1/web/add-credits", {
+    user_id: userId,
+    credits: PACK_CREDITS,
+    order_id: orderId,
+  });
+  const code = result.code ?? 500;
+
+  if (code >= 500 || code === 403) {
+    console.error("Backend add-credits failed:", orderId, result);
+    await notifyFeishu(eventType, userId, data, [`❗ 积分包发放失败(将由 Waffo 重试): ${result.message || code}`]);
+    return new Response("Backend processing failed", { status: 500 });
+  }
+
+  if (code === 404) {
+    console.error("Backend add-credits: user not found", userId, orderId);
+    await notifyFeishu(eventType, userId, data, ["⚠️ 后端找不到该用户,积分包未发放,需人工核对"]);
+    return NextResponse.json({ received: true, warning: "user not found" });
+  }
+
+  if (result.message !== "Order already processed") {
+    const attributionNote = [metadata.utm_source, metadata.utm_medium, metadata.utm_campaign, metadata.source]
+      .filter(Boolean)
+      .join(" / ");
+    await notifyFeishu(eventType, userId, data, [
+      `积分包: +${PACK_CREDITS} 积分`,
+      ...(attributionNote ? [`来源: ${attributionNote}`] : []),
+    ]);
+    await sendGaPurchase(eventKey, userId, "pack", data, metadata);
+  }
+  return new Response("OK");
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.text();
@@ -201,6 +251,11 @@ export async function POST(req: NextRequest) {
     const metadata = (data.orderMetadata ?? data.metadata ?? {}) as Record<string, string>;
     const userId = metadata.userId || str(data.merchantProvidedBuyerIdentity) || null;
     const orderId = str(data.orderId);
+
+    // 一次性积分包：订阅链路之外单独处理（订阅首单也会触发 order.completed，所以必须看 metadata.product）
+    if (eventType === "order.completed" && metadata.product === "pack") {
+      return handlePackOrder(eventType, `${eventType}:${event.eventId || event.id}`, userId, orderId, data, metadata);
+    }
 
     // 幂等由后端按 eventType:eventId 落库保证（多实例 / 重启都安全），这里不再用内存 Set
     if (!SYNCED_EVENTS.has(eventType)) {

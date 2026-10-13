@@ -3,9 +3,18 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.aicolor
 export const WAFFO_PRODUCTS = {
   weekly: { id: process.env.WAFFO_PRODUCT_WEEKLY!, type: "subscription" as const },
   yearly: { id: process.env.WAFFO_PRODUCT_YEARLY!, type: "subscription" as const },
+  /** 一次性积分包：用积分生成 / 解锁的报告才是完整无打码的（不是永久解锁） */
+  pack: { id: process.env.WAFFO_PRODUCT_PACK!, type: "onetime" as const },
 } as const;
 
 export type ProductKey = keyof typeof WAFFO_PRODUCTS;
+
+/**
+ * 积分包内容与展示价（美元）。积分数由 webhook 发放，价格只用于展示 ——
+ * 实际扣款金额由 Waffo 后台的一次性商品决定，改价时两边必须同步。
+ */
+export const PACK_CREDITS = 10;
+export const PACK_PRICE = "2.99";
 
 /** GA4 衡量 ID：layout 里的 gtag 和 webhook 里的服务端 purchase 共用 */
 export const GA_MEASUREMENT_ID = "G-H526RRVE9N";
