@@ -180,6 +180,18 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/7e8dc958-e091-4efe-baa6-54551271a60e.png",
         originalReport: "https://pic-cdn.chibistyle.app/image/advanced/0c647904644e746037782a785cb078a4_0.png",
       },
+      {
+        label: "Deleted Selfies → Soft Waves & Face-Framing Layers for an Oval Face",
+        description: "She kept deleting selfies in a flat ponytail that did nothing for her face. AI face shape analysis identified an oval face and recommended long face-framing layers and soft waves that add movement and balance.",
+        before: "/images/transformations/before-face-shape-5.webp",
+        after: "/images/transformations/after-face-shape-5.webp",
+        report: "/images/transformations/report-face-shape-5.webp",
+        details: "Her result was OVAL: a balanced shape where the cheekbones are the widest point and the face is slightly longer than wide. The report recommends long layers with a face frame, a textured lob and soft waves with volume at the sides, and warns against very sleek, pin-straight styles that make the face look longer.",
+        date: "2026-10-13",
+        originalBefore: "https://pic.chibistyle.app/image/upload/5b20bfd3-84b8-4141-affb-36e6ccac5dbb.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/0eb4cec5-1b48-4dc1-aaa4-e7a4d3af74e7.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/10aca5344e18824417523707a3996312_0.png",
+      },
     ],
   },
   {
