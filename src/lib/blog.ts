@@ -24,7 +24,25 @@ export interface BlogPost {
   faq: FaqItem[];
 }
 
+// 构建期（SSG）每个 blog/[slug]、blog/tag/[tag] 页面都会调用 getAllPosts
+// （相关文章、标签聚合、generateMetadata 各一次），约 1800 次调用都在重复解析
+// 同样的 md 文件（其中 reading-time 占 ~90% 耗时）。生产环境按语种缓存解析结果，
+// 开发环境不缓存以保证改 md 后热更新。
+const postsCache = new Map<string, BlogPost[]>();
+
 export function getAllPosts(locale: string): BlogPost[] {
+  if (process.env.NODE_ENV !== "production") return readAllPosts(locale);
+
+  let posts = postsCache.get(locale);
+  if (!posts) {
+    posts = readAllPosts(locale);
+    postsCache.set(locale, posts);
+  }
+  // 返回浅拷贝，避免调用方原地修改（sort/push 等）污染缓存
+  return posts.slice();
+}
+
+function readAllPosts(locale: string): BlogPost[] {
   const dir = path.join(CONTENT_DIR, locale);
   if (!fs.existsSync(dir)) return [];
 
