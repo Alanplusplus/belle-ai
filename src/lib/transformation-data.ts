@@ -90,6 +90,18 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/99a7a2f5-90f0-4057-bf66-567f4909879c.png",
         originalReport: "https://pic-cdn.chibistyle.app/image/advanced/2220d3f34ce0e926e1ef2b6f6a093d97_0.png",
       },
+      {
+        label: "Tired on Video Calls → Soft Autumn Radiance",
+        description: "On every video call, a cool gray blouse made her skin look flat and tired. After an AI personal color analysis placed her in Soft Autumn, a muted terracotta blouse brought a healthy glow back to her face on camera.",
+        before: "/images/transformations/before-color-analysis-6.webp",
+        after: "/images/transformations/after-color-analysis-6.webp",
+        report: "/images/transformations/report-color-analysis-6.webp",
+        details: "Her report shows a warm, muted, medium-deep palette: terracotta, rust, deep teal and olive keep her complexion lively on screen, while cool gray, lavender and icy pink wash out her warm undertone, which is why she looked drained on camera.",
+        date: "2026-10-14",
+        originalBefore: "https://pic.chibistyle.app/image/upload/69ff3cc7-db9a-4504-a8dc-66ce9c6be49c.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/9ad93c74-a301-4377-8c04-8b185ab4efc6.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/cab46d51cfe593d5bca661cc171bc0b6_0.png",
+      },
     ],
   },
   {
