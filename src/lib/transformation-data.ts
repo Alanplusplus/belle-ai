@@ -135,6 +135,18 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/63da12c3-41f6-4bda-a5a8-05761df89c7f.png",
         originalReport: "https://pic.chibistyle.app/image/upload/fd32e72c-52b5-4229-81ab-74ef30a8f383.png",
       },
+      {
+        label: "Drugstore Foundation Mismatch → Warm Olive Shade Match",
+        description: "In a drugstore aisle, two foundations looked chalky against her warm skin. After an AI makeup analysis revealed a warm olive undertone, she picked one shade that blends seamlessly.",
+        before: "/images/transformations/before-makeup-3.webp",
+        after: "/images/transformations/after-makeup-3.webp",
+        report: "/images/transformations/report-makeup-3.webp",
+        details: "The report identified a warm olive undertone with medium contrast, so warm neutrals, golden browns, terracotta, peach and rose flatter her best. Choosing foundation in that warm family removes the visible line at the wrist.",
+        date: "2026-10-15",
+        originalBefore: "https://pic.chibistyle.app/image/upload/dde7ce8d-db85-4363-a2ac-d73acf0f47ae.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/fbd31d26-49fe-49e9-a0fb-6d9d5bddd4b7.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/99eececf5f14527af71cb264db674f3c_0.png",
+      },
     ],
   },
   {
