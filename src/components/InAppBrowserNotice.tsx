@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import { useDialogA11y } from "@/lib/useDialogA11y";
 import { trackEvent } from "@/lib/analytics";
 import { copyText } from "@/lib/device";
 import { buildChromeIntentUrl, detectInAppBrowser, isAndroid } from "@/lib/inAppBrowser";
@@ -101,9 +102,40 @@ export function InAppBrowserNotice({ className = "" }: { className?: string }) {
   );
 }
 
+/**
+ * 在内置浏览器里点「付费」时的强提示：说明在这里付款后换到系统浏览器可能看不到已购内容，
+ * 给出换浏览器的办法；用户仍可选择继续付款（不阻断）。
+ */
+export function InAppCheckoutWarning({ onContinue }: { onContinue: () => void }) {
+  const t = useTranslations("inApp");
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // 弹层里按钮在底部，提示出现在视口外时用户看不到，主动滚到可见
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }, []);
+
+  return (
+    <div ref={ref} role="alert" className="mt-4 rounded-xl border-2 border-amber-400 bg-amber-50 p-4 text-sm dark:bg-amber-950/30">
+      <p className="font-semibold text-amber-900 dark:text-amber-200">{t("checkoutWarnTitle")}</p>
+      <p className="mt-1 text-xs text-amber-800 dark:text-amber-300">{t("checkoutWarnText")}</p>
+      <p className="mt-1 text-xs text-amber-800 dark:text-amber-300">{t(isAndroid() ? "androidSteps" : "iosSteps")}</p>
+      <HelpActions source="checkout_warning" />
+      <button
+        type="button"
+        onClick={onContinue}
+        className="mt-2 min-h-10 w-full rounded-full px-4 text-sm font-medium text-amber-900 underline-offset-4 hover:underline dark:text-amber-200"
+      >
+        {t("checkoutContinue")}
+      </button>
+    </div>
+  );
+}
+
 /** 在内置浏览器里点「Google 登录」时弹出：说明为什么不能登录，并给出打开系统浏览器的办法 */
 export function InAppSignInSheet({ open, onClose }: { open: boolean; onClose: () => void }) {
   const t = useTranslations("inApp");
+  const dialogRef = useDialogA11y<HTMLDivElement>(onClose, open);
 
   useEffect(() => {
     if (!open) return;
@@ -118,7 +150,15 @@ export function InAppSignInSheet({ open, onClose }: { open: boolean; onClose: ()
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[260] flex items-end justify-center bg-black/50 backdrop-blur-sm sm:items-center" onClick={onClose}>
+    <div
+      ref={dialogRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label={t("title")}
+      tabIndex={-1}
+      className="fixed inset-0 z-[260] flex items-end justify-center bg-black/50 outline-none backdrop-blur-sm sm:items-center"
+      onClick={onClose}
+    >
       <div
         className="w-full max-w-md rounded-t-2xl border border-border bg-card p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-2xl sm:rounded-2xl"
         onClick={(e) => e.stopPropagation()}

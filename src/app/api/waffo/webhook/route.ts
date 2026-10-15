@@ -4,9 +4,8 @@ import { SUBSCRIPTION_PRODUCT_IDS, GA_MEASUREMENT_ID, PACK_CREDITS, determinePla
 
 const API_BASE = process.env.BELLE_API_BASE || "https://api.chibistyle.app";
 const API_TOKEN = process.env.BELLE_API_TOKEN!;
-const FEISHU_WEBHOOK_URL =
-  process.env.FEISHU_WEBHOOK_URL ||
-  "https://open.feishu.cn/open-apis/bot/v2/hook/8bfecb84-d551-422e-b0c4-93a93651ed3a";
+// 飞书机器人地址只从环境变量读取，不再在源码里留默认值；未配置时仅跳过通知，不影响权益同步
+const FEISHU_WEBHOOK_URL = process.env.FEISHU_WEBHOOK_URL;
 
 type BackendResult = { code?: number; message?: string };
 
@@ -130,6 +129,10 @@ async function sendGaPurchase(
                 campaign_medium: metadata.utm_medium,
                 campaign_name: metadata.utm_campaign,
                 referral_code: metadata.ref,
+                // 没带 UTM 的自然流量（Pinterest、搜索、社媒）靠来源域名和落地页归因；
+                // 需要在 GA4 里把这两个参数注册为事件级自定义维度才能在报表里按它们拆分
+                referrer_host: metadata.referrer_host,
+                landing_page: metadata.landing,
                 ...(sessionId ? { session_id: sessionId, engagement_time_msec: 1 } : {}),
               },
             },
@@ -164,6 +167,11 @@ async function notifyFeishu(
     ...extra,
     `时间: ${new Date().toISOString()}`,
   ].filter(Boolean) as string[];
+
+  if (!FEISHU_WEBHOOK_URL) {
+    console.warn("FEISHU_WEBHOOK_URL not configured, skip Feishu notify");
+    return;
+  }
 
   try {
     await fetch(FEISHU_WEBHOOK_URL, {
@@ -217,7 +225,7 @@ async function handlePackOrder(
   }
 
   if (result.message !== "Order already processed") {
-    const attributionNote = [metadata.utm_source, metadata.utm_medium, metadata.utm_campaign, metadata.source]
+    const attributionNote = [metadata.utm_source, metadata.utm_medium, metadata.utm_campaign, metadata.source, metadata.referrer_host]
       .filter(Boolean)
       .join(" / ");
     await notifyFeishu(eventType, userId, data, [
@@ -305,7 +313,7 @@ export async function POST(req: NextRequest) {
 
     // 重复投递不再重复通知 / 重复上报
     if (result.message !== "Event already processed") {
-      const attributionNote = [metadata.utm_source, metadata.utm_medium, metadata.utm_campaign, metadata.source]
+      const attributionNote = [metadata.utm_source, metadata.utm_medium, metadata.utm_campaign, metadata.source, metadata.referrer_host]
         .filter(Boolean)
         .join(" / ");
       await notifyFeishu(eventType, userId, data, [

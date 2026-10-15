@@ -62,3 +62,8 @@ export function getComplementaryTools(type: ToolType): ToolType[] {
 export function toolHref(type: ToolType): string {
   return `/try?type=${type}`;
 }
+
+/** 该工具的示例报告缩略图（public/images/examples 下每个 ToolType 都有对应的 report_*.webp） */
+export function exampleReportImage(type: ToolType): string {
+  return `/images/examples/report_${type}.webp`;
+}

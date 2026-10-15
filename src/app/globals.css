@@ -71,6 +71,17 @@ a,
   }
 }
 
+/* Playfair 只有 latin 字形，中日韩标题会回落成系统默认黑体。这里给 zh / ja / ko 单独补一组系统自带的衬线字体，
+   不引入网页字体（CJK 字体动辄数 MB，手机流量下不值得），拉丁字母 / 数字仍然用 Playfair。 */
 .font-serif {
-  font-family: var(--font-serif);
+  font-family: var(--font-serif), serif;
+}
+html:lang(zh) .font-serif {
+  font-family: var(--font-serif), "Songti SC", "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "STSong", "SimSun", serif;
+}
+html:lang(ja) .font-serif {
+  font-family: var(--font-serif), "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", "Noto Serif CJK JP", "Source Han Serif JP", "MS PMincho", serif;
+}
+html:lang(ko) .font-serif {
+  font-family: var(--font-serif), "AppleMyungjo", "Apple Myungjo", "Noto Serif KR", "Noto Serif CJK KR", "Source Han Serif K", "Batang", serif;
 }

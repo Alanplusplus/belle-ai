@@ -41,6 +41,8 @@ export function buildRssFeed(opts: {
   link: string;
   description: string;
   selfHref: string;
+  /** RSS <language>，默认 en；多语言 feed 传对应语种代码（zh / ja / ...） */
+  language?: string;
   items: RssFeedItem[];
 }): string {
   const xmlItems = opts.items
@@ -77,7 +79,7 @@ export function buildRssFeed(opts: {
     <title>${escapeXml(opts.title)}</title>
     <link>${escapeXml(opts.link)}</link>
     <description>${escapeXml(opts.description)}</description>
-    <language>en</language>
+    <language>${escapeXml(opts.language ?? "en")}</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${escapeXml(opts.selfHref)}" rel="self" type="application/rss+xml"/>
 ${xmlItems}

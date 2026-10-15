@@ -1,9 +1,15 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import {
+  buildAlternates,
+  buildBreadcrumbJsonLd,
+  ogLocale,
+  OG_IMAGES,
+  TWITTER_IMAGES,
+} from "@/lib/seo";
 import { PACK_CREDITS, PACK_PRICE, WEEKLY_INTRO_PRICE } from "@/lib/constants";
 import type { Metadata } from "next";
-import { PricingButtons } from "./PricingButtons";
+import { PricingButtons, PricingViewTracker } from "./PricingButtons";
 import { PricingStickyBar } from "./PricingStickyBar";
 import { InAppBrowserNotice } from "@/components/InAppBrowserNotice";
 import { RestoreSubscriptionHint } from "@/components/RestoreSubscriptionHint";
@@ -21,6 +27,7 @@ export async function generateMetadata({
     description: messages.meta.pricingDescription,
     alternates,
     openGraph: {
+      images: OG_IMAGES,
       title: messages.meta.pricingTitle,
       description: messages.meta.pricingDescription,
       type: "website",
@@ -28,6 +35,7 @@ export async function generateMetadata({
       url: alternates.canonical,
     },
     twitter: {
+      images: TWITTER_IMAGES,
       card: "summary_large_image",
       title: messages.meta.pricingTitle,
       description: messages.meta.pricingDescription,
@@ -286,6 +294,7 @@ export default async function PricingPage({
       </div>
     </section>
     <PricingStickyBar targetId="pricing-pack-card" />
+    <PricingViewTracker />
     </>
   );
 }

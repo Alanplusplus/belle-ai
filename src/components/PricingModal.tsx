@@ -5,7 +5,9 @@ import { useLocale, useTranslations } from "next-intl";
 import { trackEvent } from "@/lib/analytics";
 import { startCheckout } from "@/lib/checkout";
 import { PACK_CREDITS, PACK_PRICE, WEEKLY_INTRO_PRICE, type ProductKey } from "@/lib/constants";
-import { InAppBrowserNotice } from "@/components/InAppBrowserNotice";
+import { InAppBrowserNotice, InAppCheckoutWarning } from "@/components/InAppBrowserNotice";
+import { detectInAppBrowser } from "@/lib/inAppBrowser";
+import { useDialogA11y } from "@/lib/useDialogA11y";
 
 interface Props {
   open: boolean;
@@ -22,9 +24,12 @@ interface Props {
 
 export function PricingModal({ open, onClose, source = "unknown", previewUrl, unlockTaskId, packCredits = 0 }: Props) {
   const t = useTranslations("pricing");
+  const tCommon = useTranslations("tryPage");
   const locale = useLocale();
   const [loading, setLoading] = useState<string | null>(null);
   const [error, setError] = useState(false);
+  // 在 App 内置浏览器里点付费：先出强提示，用户确认后才真正发起结算
+  const [inAppWarnProduct, setInAppWarnProduct] = useState<ProductKey | null>(null);
 
   // 弹层打开时锁定背景滚动，避免手机上在弹层里滑动时底下的页面跟着滚
   useEffect(() => {
@@ -36,17 +41,38 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
     };
   }, [open]);
 
+  // 付费漏斗第一步：每次打开付费弹层记一次 view_pricing（/pricing 页在页面里单独记）
+  useEffect(() => {
+    if (!open) return;
+    trackEvent("view_pricing", { source, surface: "modal" });
+  }, [open, source]);
+
+  // 弹层无障碍：焦点移入 / Tab 循环 / Esc 关闭 / 关闭后焦点归还
+  const dialogRef = useDialogA11y<HTMLDivElement>(() => {
+    trackEvent("pricing_modal_closed", { source, had_preview: !!previewUrl });
+    setInAppWarnProduct(null);
+    onClose();
+  }, open);
+
   if (!open) return null;
 
   const isLockSource = source === "report_lock";
 
   const handleClose = () => {
     trackEvent("pricing_modal_closed", { source, had_preview: !!previewUrl });
+    setInAppWarnProduct(null);
     onClose();
   };
 
-  const handleCheckout = async (product: ProductKey) => {
+  const handleCheckout = async (product: ProductKey, confirmedInApp = false) => {
     trackEvent("pricing_modal_cta_clicked", { product, source });
+    const inApp = detectInAppBrowser();
+    if (inApp && !confirmedInApp) {
+      trackEvent("inapp_checkout_warned", { product, source, app: inApp });
+      setInAppWarnProduct(product);
+      return;
+    }
+    setInAppWarnProduct(null);
     setLoading(product);
     setError(false);
     try {
@@ -65,7 +91,14 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
   };
 
   return (
-    <div className="fixed inset-0 z-[200] flex items-end justify-center sm:items-center sm:p-4">
+    <div
+      ref={dialogRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label={isLockSource ? t("lockTitle") : t("title")}
+      tabIndex={-1}
+      className="fixed inset-0 z-[200] flex items-end justify-center outline-none sm:items-center sm:p-4"
+    >
       <div
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
         onClick={handleClose}
@@ -74,7 +107,7 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
       <div className="relative max-h-[92dvh] w-full max-w-xl overflow-y-auto overscroll-contain rounded-t-2xl bg-background p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-2xl sm:max-h-[90dvh] sm:rounded-2xl sm:p-8">
         <button
           onClick={handleClose}
-          aria-label="Close"
+          aria-label={tCommon("close")}
           className="absolute right-2 top-2 flex h-11 w-11 items-center justify-center rounded-full text-muted-foreground transition hover:bg-muted hover:text-foreground sm:right-4 sm:top-4"
         >
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -114,6 +147,7 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
             <ModalFeature text={t("packFeature2")} />
             <ModalFeature text={t("packFeature3")} />
           </ul>
+          <p className="mt-2 text-xs text-muted-foreground">{t("packCostNote")}</p>
           <button
             onClick={() => handleCheckout("pack")}
             disabled={loading !== null}
@@ -136,11 +170,12 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
               </span>
             </div>
             <p className="mt-2 text-center text-xs text-muted-foreground">{t("weeklyIntroNote", { price: WEEKLY_INTRO_PRICE })}</p>
-            <ul className="mt-3 hidden space-y-1.5 sm:block">
+            {/* 手机上也要看到订阅包含什么：只收起次要的两条 */}
+            <ul className="mt-3 space-y-1.5">
               <ModalFeature text={t("weeklyFeature1")} />
-              <ModalFeature text={t("weeklyFeature2")} />
+              <ModalFeature text={t("weeklyFeature2")} className="max-sm:hidden" />
               <ModalFeature text={t("weeklyFeature3")} />
-              <ModalFeature text={t("weeklyFeature4")} />
+              <ModalFeature text={t("weeklyFeature4")} className="max-sm:hidden" />
             </ul>
             <button
               onClick={() => handleCheckout("weekly")}
@@ -160,11 +195,11 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
               </span>
             </div>
             <p className="mt-2 text-center text-xs text-muted-foreground">{t("yearlyPrice")} {t("yearlyPer")}</p>
-            <ul className="mt-3 hidden space-y-1.5 sm:block">
+            <ul className="mt-3 space-y-1.5">
               <ModalFeature text={t("yearlyFeature1")} />
-              <ModalFeature text={t("yearlyFeature2")} />
+              <ModalFeature text={t("yearlyFeature2")} className="max-sm:hidden" />
               <ModalFeature text={t("yearlyFeature3")} />
-              <ModalFeature text={t("yearlyFeature4")} />
+              <ModalFeature text={t("yearlyFeature4")} className="max-sm:hidden" />
             </ul>
             <button
               onClick={() => handleCheckout("yearly")}
@@ -176,21 +211,32 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
           </div>
         </div>
 
+        {inAppWarnProduct && (
+          <InAppCheckoutWarning onContinue={() => handleCheckout(inAppWarnProduct, true)} />
+        )}
+
         {error && (
           <p role="alert" className="mt-4 text-center text-sm text-red-500">
             {t("checkoutError")}
           </p>
         )}
-        <p className="mt-4 text-center text-xs text-muted-foreground">{t("billingNote")}</p>
+
+        {/* 保障条：手机上也常驻，付款前最后一眼看到的是「随时取消 / 隐私 / 不用注册」 */}
+        <ul className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5">
+          <ModalFeature text={t("guaranteeCancelTitle")} />
+          <ModalFeature text={t("guaranteePrivacyTitle")} />
+          <ModalFeature text={t("guaranteeNoAccountTitle")} />
+        </ul>
+        <p className="mt-3 text-center text-xs text-muted-foreground">{t("billingNote")}</p>
         <p className="mt-1.5 text-center text-xs text-muted-foreground">{t("aiDisclosure")}</p>
       </div>
     </div>
   );
 }
 
-function ModalFeature({ text }: { text: string }) {
+function ModalFeature({ text, className = "" }: { text: string; className?: string }) {
   return (
-    <li className="flex items-center gap-1.5 text-xs text-muted-foreground">
+    <li className={`flex items-center gap-1.5 text-xs text-muted-foreground ${className}`}>
       <svg className="h-3.5 w-3.5 shrink-0 text-primary" fill="currentColor" viewBox="0 0 20 20">
         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
       </svg>

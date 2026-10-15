@@ -105,10 +105,11 @@ export function Header() {
     { href: "/color-analysis", label: t("colorAnalysisGuide") },
     { href: "/tools/color-quiz", label: t("colorQuiz") },
     { href: "/tools/face-shape-quiz", label: t("faceQuiz") },
+    { href: "/tools/undertone-test", label: t("undertoneTest") },
     { href: "/lookbook", label: t("lookbook") },
     { href: "/transformations", label: t("transformations") },
     { href: "/guides", label: t("guides") },
-    { href: "/vs/dressika", label: t("vsCompare") },
+    { href: "/vs", label: t("vsCompare") },
   ];
 
   return (
@@ -143,6 +144,9 @@ export function Header() {
           <div className="relative ml-2" ref={langRef}>
             <button
               onClick={() => setLangOpen(!langOpen)}
+              aria-haspopup="true"
+              aria-expanded={langOpen}
+              aria-label={t("language")}
               className="rounded-md px-2 py-1 text-sm text-muted-foreground hover:bg-muted"
             >
               {LOCALE_NAMES[locale]}
@@ -172,6 +176,9 @@ export function Header() {
           <div className="relative ml-2" ref={userMenuRef}>
             <button
               onClick={() => setUserMenuOpen(!userMenuOpen)}
+              aria-haspopup="true"
+              aria-expanded={userMenuOpen}
+              aria-label={status === "authenticated" && session?.user?.email ? session.user.email : t("signInGoogle")}
               className="flex items-center gap-2 rounded-full border border-border px-2 py-1 transition hover:bg-muted"
             >
               {status === "authenticated" && session?.user?.image ? (
@@ -491,7 +498,7 @@ function UserQuotaCard({
               <span className="text-xs font-semibold text-primary uppercase">{userInfo.subPlan}</span>
               <span className="text-xs text-muted-foreground">· {t("activeUntil")}</span>
             </div>
-            <p className="text-xs text-muted-foreground">{userInfo.subRemaining} analyses left this month</p>
+            <p className="text-xs text-muted-foreground">{t("analysesLeft", { count: userInfo.subRemaining })}</p>
           </div>
         </div>
       ) : (
@@ -552,17 +559,48 @@ function NavDropdown({
   items: { href: string; label: string }[];
 }) {
   const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const isWide = items.length > 5;
+
+  // 触屏没有 mouseleave：点击菜单外面也要能收起
+  useEffect(() => {
+    if (!open) return;
+    const onPointerDown = (e: PointerEvent) => {
+      if (!rootRef.current?.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [open]);
 
   return (
     <div
+      ref={rootRef}
       className="relative"
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
+      onKeyDown={(e) => {
+        if (e.key === "Escape" && open) {
+          setOpen(false);
+          buttonRef.current?.focus();
+        }
+      }}
+      // 焦点移出整个下拉区域（Tab 走开）时收起
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOpen(false);
+      }}
     >
-      <button className="flex items-center gap-1 rounded-md px-3 py-2 text-sm text-foreground/80 transition hover:bg-muted hover:text-foreground">
+      <button
+        ref={buttonRef}
+        type="button"
+        aria-haspopup="true"
+        aria-expanded={open}
+        // 键盘 Enter / 空格触发的 click 的 detail 为 0：切换开合；鼠标 / 触屏的点击（hover 已经展开）保持展开，避免「悬停后点击反而关掉」
+        onClick={(e) => setOpen((prev) => (e.detail === 0 ? !prev : true))}
+        className="flex items-center gap-1 rounded-md px-3 py-2 text-sm text-foreground/80 transition hover:bg-muted hover:text-foreground"
+      >
         {label}
-        <svg className="h-3 w-3" viewBox="0 0 12 12" fill="currentColor">
+        <svg className="h-3 w-3" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true">
           <path d="M2 4l4 4 4-4" />
         </svg>
       </button>

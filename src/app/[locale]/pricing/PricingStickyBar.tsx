@@ -5,6 +5,8 @@ import { useLocale, useTranslations } from "next-intl";
 import { trackEvent } from "@/lib/analytics";
 import { startCheckout } from "@/lib/checkout";
 import { PACK_CREDITS, PACK_PRICE } from "@/lib/constants";
+import { InAppCheckoutWarning } from "@/components/InAppBrowserNotice";
+import { detectInAppBrowser } from "@/lib/inAppBrowser";
 
 /**
  * 手机上的吸底购买栏：用户滚过主推的积分包卡片后，购买按钮仍然在拇指范围内。
@@ -16,6 +18,7 @@ export function PricingStickyBar({ targetId }: { targetId: string }) {
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [inAppWarn, setInAppWarn] = useState(false);
 
   useEffect(() => {
     const el = document.getElementById(targetId);
@@ -29,8 +32,15 @@ export function PricingStickyBar({ targetId }: { targetId: string }) {
     return () => observer.disconnect();
   }, [targetId]);
 
-  const handleClick = async () => {
+  const handleClick = async (confirmedInApp = false) => {
     trackEvent("pricing_cta_clicked", { product: "pack", variant: "sticky_bar" });
+    const inApp = detectInAppBrowser();
+    if (inApp && !confirmedInApp) {
+      trackEvent("inapp_checkout_warned", { product: "pack", source: "pricing_sticky_bar", app: inApp });
+      setInAppWarn(true);
+      return;
+    }
+    setInAppWarn(false);
     setLoading(true);
     setError(false);
     try {
@@ -50,8 +60,13 @@ export function PricingStickyBar({ targetId }: { targetId: string }) {
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-primary/20 bg-background/95 px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] backdrop-blur-md lg:hidden">
+      {inAppWarn && (
+        <div className="mb-3 max-h-[60dvh] overflow-y-auto">
+          <InAppCheckoutWarning onContinue={() => handleClick(true)} />
+        </div>
+      )}
       <button
-        onClick={handleClick}
+        onClick={() => handleClick()}
         disabled={loading}
         className="flex min-h-12 w-full items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-white shadow-md shadow-primary/25 transition active:scale-[0.98] disabled:opacity-60"
       >

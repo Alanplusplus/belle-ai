@@ -2,7 +2,13 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import {
+  buildAlternates,
+  buildBreadcrumbJsonLd,
+  ogLocale,
+  OG_IMAGES,
+  TWITTER_IMAGES,
+} from "@/lib/seo";
 import { GUIDE_TOPICS } from "@/lib/guide-data";
 import type { Metadata } from "next";
 

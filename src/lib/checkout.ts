@@ -1,7 +1,14 @@
 import { getCachedUserId, webInit } from "./api";
 import { trackEvent, trackCheckoutEvent } from "./analytics";
 import { getAttribution, getGaClientId, getGaSessionId } from "./attribution";
-import { GA_MEASUREMENT_ID, type ProductKey } from "./constants";
+import { GA_MEASUREMENT_ID, PACK_PRICE, WEEKLY_INTRO_PRICE, type ProductKey } from "./constants";
+
+/** begin_checkout 事件的金额（USD）：周订阅按首周优惠价，与支付页实际首笔扣款一致 */
+const CHECKOUT_VALUE_USD: Record<ProductKey, number> = {
+  pack: Number(PACK_PRICE),
+  weekly: Number(WEEKLY_INTRO_PRICE),
+  yearly: 29.99,
+};
 
 const CONTEXT_KEY = "belle_checkout_ctx";
 const CONTEXT_TTL_MS = 2 * 60 * 60 * 1000;
@@ -60,6 +67,14 @@ export async function startCheckout(params: {
   const { product, source, locale, email, unlockTaskId, onRestore } = params;
   let packBefore = params.packBefore;
   trackCheckoutEvent("checkout_started", { product, source });
+  // GA4 推荐事件：付费漏斗 view_pricing → begin_checkout → purchase（purchase 由服务端 Measurement Protocol 发送）
+  trackEvent("begin_checkout", {
+    currency: "USD",
+    value: CHECKOUT_VALUE_USD[product],
+    item_id: product,
+    item_name: product,
+    source,
+  });
 
   try {
     let userId = getCachedUserId();

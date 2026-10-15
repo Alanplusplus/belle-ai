@@ -70,12 +70,15 @@ const STATIC_PAGE_SOURCE: Record<string, string> = {
   "/blog": "src/app/[locale]/blog/page.tsx",
   "/tools/color-quiz": "src/app/[locale]/tools/color-quiz/page.tsx",
   "/tools/face-shape-quiz": "src/app/[locale]/tools/face-shape-quiz/page.tsx",
+  "/tools/undertone-test": "src/app/[locale]/tools/undertone-test/page.tsx",
   "/about": "src/app/[locale]/about/page.tsx",
   "/privacy": "src/app/[locale]/privacy/page.tsx",
   "/terms": "src/app/[locale]/terms/page.tsx",
   "/acceptable-use": "src/app/[locale]/acceptable-use/page.tsx",
   "/transformations": "src/app/[locale]/transformations/page.tsx",
+  "/lookbook": "src/app/[locale]/lookbook/page.tsx",
   "/guides": "src/app/[locale]/guides/page.tsx",
+  "/vs": "src/app/[locale]/vs/page.tsx",
 };
 
 const staticPageDates = new Map<string, Date>();

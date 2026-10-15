@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { buildAlternates } from "@/lib/seo";
+import { SITE_URL } from "@/lib/constants";
 
 export async function generateMetadata({
   params,
@@ -60,11 +61,45 @@ function HomeContent() {
     })),
   };
 
+  // 「怎么用」三步，对应页面里的 How It Works 区块（文案直接复用，保证与页面一致）
+  const howToJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: t("howTitle"),
+    description: t("howSubtitle"),
+    step: [1, 2, 3].map((n) => ({
+      "@type": "HowToStep",
+      position: n,
+      name: t(`step${n}Title`),
+      text: t(`step${n}Desc`),
+    })),
+  };
+
+  // 网页应用：免费起步；没有真实评分数据，不写 aggregateRating
+  const appJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "Belle AI",
+    url: SITE_URL,
+    description: t("heroDescription"),
+    applicationCategory: "LifestyleApplication",
+    operatingSystem: "Any (web browser)",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
       />
 
       {/* Hero */}
@@ -93,11 +128,12 @@ function HomeContent() {
             </Link>
             <Link
               href="/tools/color-quiz"
-              className="rounded-full border border-primary/30 px-8 py-3 text-base font-medium text-primary transition hover:bg-primary/5"
+              className="rounded-full border-2 border-primary/60 bg-background/70 px-8 py-[10px] text-base font-semibold text-foreground transition hover:border-primary hover:bg-primary/10"
             >
               {t("heroSecondaryCta")}
             </Link>
           </div>
+          <p className="mt-3 text-sm text-muted-foreground">{t("heroNote")}</p>
 
           {/* Product Stats Bar */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
@@ -138,7 +174,7 @@ function HomeContent() {
                   <div className="relative aspect-[3/4]">
                     <Image
                       src={pair.after}
-                      alt={`${t(pair.labelKey)} result`}
+                      alt={`${t(pair.labelKey)} – ${t("resultsAfter")}`}
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, 33vw"
@@ -161,6 +197,15 @@ function HomeContent() {
               </div>
             ))}
           </div>
+          <p className="mt-6 text-center text-xs text-muted-foreground">{t("resultsNote")}</p>
+          <div className="mt-6 text-center">
+            <Link
+              href="/try"
+              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 text-base font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl hover:shadow-primary/40"
+            >
+              {ft("tryItFree")}
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -175,6 +220,26 @@ function HomeContent() {
             <StepCard number="1" title={t("step1Title")} desc={t("step1Desc")} />
             <StepCard number="2" title={t("step2Title")} desc={t("step2Desc")} />
             <StepCard number="3" title={t("step3Title")} desc={t("step3Desc")} />
+          </div>
+        </div>
+      </section>
+
+      {/* Photo privacy commitments */}
+      <section className="py-6">
+        <div className="mx-auto max-w-4xl px-4">
+          <div className="rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/5 to-gold/5 px-6 py-6 text-center sm:px-8">
+            <h2 className="font-serif text-xl font-bold sm:text-2xl">{t("privacyTitle")}</h2>
+            <ul className="mt-4 grid gap-3 text-sm text-muted-foreground sm:grid-cols-3">
+              {(["privacyItem1", "privacyItem2", "privacyItem3"] as const).map((key) => (
+                <li key={key} className="flex items-start justify-center gap-2 text-left sm:text-center">
+                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  <span>{t(key)}</span>
+                </li>
+              ))}
+            </ul>
+            <Link href="/privacy" className="mt-4 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline">
+              {t("privacyLink")}
+            </Link>
           </div>
         </div>
       </section>
@@ -264,7 +329,7 @@ function HomeContent() {
                     <p className="mt-1 text-xs leading-relaxed text-muted-foreground line-clamp-2">{t(f.descKey)}</p>
                     {f.premium && (
                       <span className="mt-2 inline-block rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
-                        Premium
+                        {t("premiumBadge")}
                       </span>
                     )}
                   </div>
@@ -284,40 +349,6 @@ function HomeContent() {
             <WhyCard icon={<WhyAccuracyIcon />} title={t("whyAccurate")} text={t("whyAccurateDesc")} />
             <WhyCard icon={<WhyCostIcon />} title={t("whyCost")} text={t("whyCostDesc")} />
             <WhyCard icon={<WhyPersonalIcon />} title={t("whyPersonal")} text={t("whyPersonalDesc")} />
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="bg-muted/30 py-12">
-        <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-center font-serif text-3xl font-bold">{t("testimonialsTitle")}</h2>
-          <p className="mt-2 text-center text-muted-foreground">{t("testimonialsSubtitle")}</p>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {TESTIMONIALS.map((item, idx) => (
-              <div key={idx} className="rounded-2xl border border-border bg-card p-5">
-                <div className="flex text-amber-400 text-sm">
-                  {"★".repeat(Math.floor(item.stars))}
-                  {item.stars % 1 > 0 && <span className="text-amber-300">★</span>}
-                </div>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  &ldquo;{t(`testimonial${idx + 1}`)}&rdquo;
-                </p>
-                <div className="mt-4 flex items-center gap-3">
-                  <Image
-                    src={item.avatar}
-                    alt={item.name}
-                    width={36}
-                    height={36}
-                    className="h-9 w-9 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="text-sm font-medium">{item.name} {item.flag}</p>
-                    <p className="text-xs text-muted-foreground">{t(`testimonialRole${idx + 1}`)}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -392,7 +423,7 @@ function HomeContent() {
             </Link>
           </div>
           <p className="mt-4 text-xs text-muted-foreground">
-            Free &bull; No signup required &bull; Results in 60 seconds &bull; 12-season analysis
+            {t("ctaNote")}
           </p>
         </div>
       </section>
@@ -550,14 +581,5 @@ const BEFORE_AFTER = [
   { before: "/images/showcase/before-color.webp", after: "/images/showcase/after-color.webp", type: "color", labelKey: "resultsColorLabel" },
   { before: "/images/showcase/before-makeup.webp", after: "/images/showcase/after-makeup.webp", type: "makeup", labelKey: "resultsMakeupLabel" },
   { before: "/images/showcase/before-face.webp", after: "/images/showcase/after-face.webp", type: "face", labelKey: "resultsFaceLabel" },
-];
-
-const TESTIMONIALS = [
-  { name: "Sarah M.", flag: "🇺🇸", avatar: "/images/avatars/sarah.webp", stars: 5 },
-  { name: "Yuki T.", flag: "🇯🇵", avatar: "/images/avatars/yuki.webp", stars: 5 },
-  { name: "Emma L.", flag: "🇬🇧", avatar: "/images/avatars/emma.webp", stars: 5 },
-  { name: "Priya K.", flag: "🇮🇳", avatar: "/images/avatars/priya.webp", stars: 5 },
-  { name: "Maria G.", flag: "🇧🇷", avatar: "/images/avatars/maria.webp", stars: 4.5 },
-  { name: "Lisa W.", flag: "🇩🇪", avatar: "/images/avatars/lisa.webp", stars: 5 },
 ];
 

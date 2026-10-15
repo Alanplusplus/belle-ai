@@ -229,7 +229,6 @@ function LookbookContent({ slug }: { slug: string }) {
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      unoptimized
                     />
                   </div>
                   <p className="p-3 text-sm text-muted-foreground">{imgCaptions[img.key] || img.alt}</p>
@@ -275,7 +274,6 @@ function LookbookContent({ slug }: { slug: string }) {
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, 33vw"
-                      unoptimized
                     />
                   </div>
                   <p className="p-3 text-sm text-muted-foreground">{imgCaptions[img.key] || img.alt}</p>
@@ -306,7 +304,6 @@ function LookbookContent({ slug }: { slug: string }) {
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, 33vw"
-                      unoptimized
                     />
                   </div>
                   <p className="p-3 text-sm text-muted-foreground">{imgCaptions[img.key] || img.alt}</p>
@@ -331,7 +328,6 @@ function LookbookContent({ slug }: { slug: string }) {
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, 50vw"
-                      unoptimized
                     />
                   </div>
                   <p className="p-3 text-sm text-muted-foreground">{imgCaptions[img.key] || img.alt}</p>

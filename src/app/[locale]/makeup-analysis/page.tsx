@@ -1,6 +1,12 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import {
+  buildAlternates,
+  buildBreadcrumbJsonLd,
+  ogLocale,
+  OG_IMAGES,
+  TWITTER_IMAGES,
+} from "@/lib/seo";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -17,6 +23,7 @@ export async function generateMetadata({
     description: messages.meta.makeupDescription,
     alternates,
     openGraph: {
+      images: OG_IMAGES,
       title: messages.meta.makeupTitle,
       description: messages.meta.makeupDescription,
       type: "website",
@@ -24,6 +31,7 @@ export async function generateMetadata({
       url: alternates.canonical,
     },
     twitter: {
+      images: TWITTER_IMAGES,
       card: "summary_large_image",
       title: messages.meta.makeupTitle,
       description: messages.meta.makeupDescription,

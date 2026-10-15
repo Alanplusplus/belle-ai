@@ -225,14 +225,14 @@ function CompareContent({ slug }: { slug: string }) {
                 <div key={seasonSlug} className="rounded-xl border border-border bg-card p-5">
                   <h3 className="font-semibold text-primary">{name}</h3>
                   <div className="mt-3 grid grid-cols-5 gap-2">
-                    {palette.bestColors.slice(0, 10).map((c) => (
+                    {palette.bestColors.slice(0, 10).map((c, i) => (
                       <div key={c.hex} className="text-center">
                         <div
                           className="mx-auto h-10 w-10 rounded-lg border border-border/50"
                           style={{ backgroundColor: c.hex }}
                         />
                         <p className="mt-1 text-xs text-muted-foreground">
-                          {c.name}
+                          {sd.has(`${seasonSlug}.bc${i}`) ? sd(`${seasonSlug}.bc${i}`) : c.name}
                         </p>
                       </div>
                     ))}
@@ -314,7 +314,7 @@ function CompareContent({ slug }: { slug: string }) {
                     {name}
                   </h3>
                   <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">
-                    {palette.tagline}
+                    {sd.has(`${seasonSlug}.tagline`) ? sd(`${seasonSlug}.tagline`) : palette.tagline}
                   </p>
                   <p className="mt-3 text-sm font-medium text-primary">
                     {t("viewPalette", { season: name })} →

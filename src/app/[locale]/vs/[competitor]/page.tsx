@@ -4,16 +4,8 @@ import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import { VS_SLUGS } from "@/lib/vs";
 import type { Metadata } from "next";
-
-const VS_SLUGS = [
-  "dressika",
-  "colorwise",
-  "professional-stylist",
-  "mycoloranalysis",
-  "color-analysis-app",
-  "palettehunt",
-] as const;
 
 const VS_COUNTS: Record<
   string,
@@ -86,6 +78,7 @@ export default async function ComparisonPage({
   const name = messages.vs?.[competitor]?.name ?? competitor;
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: messages.vsPage?.indexTitle ?? "Comparisons", path: "/vs" },
     { name, path: `/vs/${competitor}` },
   ]);
 
@@ -103,6 +96,7 @@ export default async function ComparisonPage({
 function VsContent({ slug }: { slug: string }) {
   const t = useTranslations("vsPage");
   const v = useTranslations(`vs.${slug}`);
+  const vAll = useTranslations("vs");
   const counts = VS_COUNTS[slug];
   const name = v("name");
 
@@ -235,6 +229,23 @@ function VsContent({ slug }: { slug: string }) {
               {v("verdict")}
             </p>
           </div>
+
+          {/* 其余对比页互链：让 /vs/* 之间形成内链网，不再只有两个入口 */}
+          <nav className="mt-10" aria-label={t("moreComparisons")}>
+            <h2 className="text-lg font-semibold">{t("moreComparisons")}</h2>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {VS_SLUGS.filter((s) => s !== slug).map((s) => (
+                <li key={s}>
+                  <Link
+                    href={`/vs/${s}`}
+                    className="inline-block rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm font-medium text-primary transition hover:bg-primary/10"
+                  >
+                    {t("title", { competitor: vAll(`${s}.name`) })}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
           <div className="mt-10 text-center">
             <p className="text-lg font-semibold">{t("ctaTitle")}</p>

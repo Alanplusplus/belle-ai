@@ -1,6 +1,12 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import {
+  buildAlternates,
+  buildBreadcrumbJsonLd,
+  ogLocale,
+  OG_IMAGES,
+  TWITTER_IMAGES,
+} from "@/lib/seo";
 import Image from "next/image";
 import type { Metadata } from "next";
 import {
@@ -21,6 +27,7 @@ export async function generateMetadata({
     description: messages.meta.colorDescription,
     alternates,
     openGraph: {
+      images: OG_IMAGES,
       title: messages.meta.colorTitle,
       description: messages.meta.colorDescription,
       type: "website",
@@ -28,6 +35,7 @@ export async function generateMetadata({
       url: alternates.canonical,
     },
     twitter: {
+      images: TWITTER_IMAGES,
       card: "summary_large_image",
       title: messages.meta.colorTitle,
       description: messages.meta.colorDescription,
@@ -44,6 +52,7 @@ export default async function PersonalColorAnalysisPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "color" });
   const ft = await getTranslations({ locale, namespace: "features" });
+  const cg = await getTranslations({ locale, namespace: "colorGuide" });
 
   const items = [t("item1"), t("item2"), t("item3"), t("item4"), t("item5"), t("item6")];
 
@@ -132,7 +141,7 @@ export default async function PersonalColorAnalysisPage({
       <section className="bg-muted/30 py-16">
         <div className="mx-auto max-w-5xl px-4">
           <h2 className="mb-4 text-center text-2xl font-bold">
-            12 Seasonal Color Types
+            {t("seasonsTitle")}
           </h2>
           <p className="mx-auto mb-10 max-w-2xl text-center text-muted-foreground">
             {t("description")}
@@ -141,13 +150,13 @@ export default async function PersonalColorAnalysisPage({
             {PARENT_SEASON_ORDER.map((parent) => {
               const subSeasons = getSeasonsByParent(parent);
               const seasonImage = `/images/season_${parent}.webp`;
-              const parentLabel = parent.charAt(0).toUpperCase() + parent.slice(1);
+              const parentLabel = cg(`${parent}Name`);
               return (
                 <div key={parent} className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:shadow-lg">
                   <div className="relative aspect-[4/3] w-full overflow-hidden">
                     <Image
                       src={seasonImage}
-                      alt={`${parentLabel} color palettes`}
+                      alt={parentLabel}
                       fill
                       className="object-cover"
                       sizes="(max-width: 640px) 100vw, 50vw"

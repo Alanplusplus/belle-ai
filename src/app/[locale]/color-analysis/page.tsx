@@ -1,7 +1,14 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { SITE_URL } from "@/lib/constants";
-import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import {
+  buildAlternates,
+  buildBreadcrumbJsonLd,
+  canonicalUrl,
+  ogLocale,
+  OG_IMAGES,
+  TWITTER_IMAGES,
+} from "@/lib/seo";
 import {
   SEASON_PALETTES,
   PARENT_SEASON_ORDER,
@@ -26,6 +33,7 @@ export async function generateMetadata({
     description: messages.meta.colorGuideDescription,
     alternates,
     openGraph: {
+      images: OG_IMAGES,
       title: messages.meta.colorGuideTitle,
       description: messages.meta.colorGuideDescription,
       type: "website",
@@ -33,6 +41,7 @@ export async function generateMetadata({
       url: alternates.canonical,
     },
     twitter: {
+      images: TWITTER_IMAGES,
       card: "summary_large_image",
       title: messages.meta.colorGuideTitle,
       description: messages.meta.colorGuideDescription,
@@ -78,7 +87,7 @@ export default async function ColorAnalysisPillarPage({
     },
     datePublished: "2026-06-01T00:00:00+00:00",
     dateModified: new Date().toISOString(),
-    mainEntityOfPage: `${SITE_URL}/color-analysis`,
+    mainEntityOfPage: canonicalUrl(locale, "/color-analysis"),
   };
 
   const dimensions = [

@@ -106,7 +106,6 @@ function TransformationTypeContent({ slug }: { slug: string }) {
                         fill
                         className="object-cover"
                         sizes="(max-width: 640px) 100vw, 33vw"
-                        unoptimized
                       />
                       <span className="absolute left-3 top-3 rounded-full bg-black/60 px-3 py-1 text-sm font-medium text-white">
                         {t("before")}
@@ -121,7 +120,6 @@ function TransformationTypeContent({ slug }: { slug: string }) {
                         fill
                         className="object-cover"
                         sizes="(max-width: 640px) 100vw, 33vw"
-                        unoptimized
                       />
                       <span className="absolute left-1/2 -translate-x-1/2 top-3 rounded-full bg-primary/80 px-3 py-1 text-sm font-medium text-white">
                         {t("after")}
@@ -136,7 +134,6 @@ function TransformationTypeContent({ slug }: { slug: string }) {
                         fill
                         className="object-cover"
                         sizes="(max-width: 640px) 100vw, 33vw"
-                        unoptimized
                       />
                       <span className="absolute right-3 top-3 rounded-full bg-emerald-600/80 px-3 py-1 text-sm font-medium text-white">
                         {t("aiReport")}

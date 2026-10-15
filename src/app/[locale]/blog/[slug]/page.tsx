@@ -7,10 +7,17 @@ import {
   getAvailableLocales,
   type BlogPost,
 } from "@/lib/blog";
-import { detectToolType, getComplementaryTools, toolHref } from "@/lib/blogTools";
+import { detectToolType, exampleReportImage, getComplementaryTools, toolHref } from "@/lib/blogTools";
 import { Link } from "@/i18n/navigation";
 import { SITE_URL } from "@/lib/constants";
-import { canonicalUrl, buildAlternatesForLocales, buildBreadcrumbJsonLd } from "@/lib/seo";
+import {
+  canonicalUrl,
+  buildAlternatesForLocales,
+  buildBreadcrumbJsonLd,
+  ogLocale,
+  OG_IMAGES,
+  TWITTER_IMAGES,
+} from "@/lib/seo";
 import { routing } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
@@ -18,7 +25,7 @@ import type { Metadata } from "next";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import remarkGfm from "remark-gfm";
-import { StickyBottomCta, InlineCta, BottomCta } from "@/components/BlogCtaBanner";
+import { StickyBottomCta, TopCta, BottomCta } from "@/components/BlogCtaBanner";
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -40,20 +47,34 @@ export async function generateMetadata({
   const post = getPostBySlug(locale, slug);
   if (!post) return {};
 
+  const alternates = buildAlternatesForLocales(
+    locale,
+    `/blog/${slug}`,
+    getAvailableLocales(slug, routing.locales),
+  );
+  const imageUrl = post.image
+    ? post.image.startsWith("http") ? post.image : `${SITE_URL}${post.image}`
+    : null;
+
   return {
     title: post.seoTitle || post.title,
     description: post.description,
-    alternates: buildAlternatesForLocales(
-      locale,
-      `/blog/${slug}`,
-      getAvailableLocales(slug, routing.locales),
-    ),
+    alternates,
     openGraph: {
       title: post.title,
       description: post.description,
       type: "article",
+      locale: ogLocale(locale),
+      url: alternates.canonical,
       publishedTime: `${post.date}T00:00:00+00:00`,
-      ...(post.image ? { images: [{ url: post.image }] } : {}),
+      // 没有头图的文章回退到全站默认分享图，避免分享时没有预览
+      images: imageUrl ? [{ url: imageUrl }] : OG_IMAGES,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: imageUrl ? [imageUrl] : TWITTER_IMAGES,
     },
   };
 }
@@ -84,6 +105,8 @@ export default async function BlogPostPage({
       "@type": "Organization",
       name: "Belle AI",
       url: SITE_URL,
+      // Article 富结果要求 publisher 带 logo
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/icon-512.png`, width: 512, height: 512 },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -158,8 +181,6 @@ function BlogPostContent({
   const toolLabel = tt(`type_${toolType}`);
   const complementaryTools = getComplementaryTools(toolType);
 
-  const { before, after } = splitContentAtSecondH2(post.content);
-
   return (
     <article className="py-10 pb-28 sm:py-16 sm:pb-16">
       <div className="mx-auto max-w-3xl px-4">
@@ -177,6 +198,16 @@ function BlogPostContent({
             <span>{post.readingTime} {t("minRead")}</span>
           </div>
           <h1 className="mt-3 text-3xl font-bold sm:text-4xl">{post.title}</h1>
+          {/* 顶部 CTA：直接搜索 / 社媒进来的读者首屏就能看到入口 */}
+          <TopCta
+            title={t("topCtaTitle")}
+            description={tt(`out_${toolType}`)}
+            note={t("sidebarCtaFree")}
+            tryItFree={ft("tryItFree")}
+            toolLabel={toolLabel}
+            image={exampleReportImage(toolType)}
+            target={target}
+          />
           {post.tags.length > 0 && (
             <div className="mt-4 flex flex-wrap gap-2">
               {post.tags.map((tag) => (
@@ -207,24 +238,8 @@ function BlogPostContent({
         )}
 
         <div className="prose prose-neutral mt-10 max-w-none break-words prose-headings:font-bold prose-a:text-primary prose-img:h-auto prose-img:max-w-full">
-          <MarkdownContent content={before} toolType={toolType} />
+          <MarkdownContent content={post.content} toolType={toolType} />
         </div>
-
-        {/* Inline CTA — inserted after the 2nd h2 section */}
-        <InlineCta
-          after={after}
-          inlineCtaTitle={t("inlineCtaTitle")}
-          inlineCtaDesc={t("inlineCtaDesc")}
-          tryItFree={ft("tryItFree")}
-          toolLabel={toolLabel}
-          target={target}
-        />
-
-        {after && (
-          <div className="prose prose-neutral max-w-none break-words prose-headings:font-bold prose-a:text-primary prose-img:h-auto prose-img:max-w-full">
-            <MarkdownContent content={after} toolType={toolType} />
-          </div>
-        )}
 
         {/* Bottom CTA card */}
         <BottomCta
@@ -272,35 +287,10 @@ function BlogPostContent({
         </section>
       </div>
 
-      {/* Sticky bottom bar */}
+      {/* 底部吸附条：顶部 CTA 滚出视口后接力 */}
       <StickyBottomCta target={target} />
     </article>
   );
-}
-
-function splitContentAtSecondH2(content: string): { before: string; after: string | null } {
-  const lines = content.split("\n");
-  let h2Count = 0;
-  for (let i = 0; i < lines.length; i++) {
-    if (/^##\s/.test(lines[i])) {
-      h2Count++;
-      if (h2Count === 3) {
-        return {
-          before: lines.slice(0, i).join("\n"),
-          after: lines.slice(i).join("\n"),
-        };
-      }
-    }
-  }
-  // If fewer than 3 h2s, split at ~40% of the content
-  const splitPoint = Math.floor(lines.length * 0.4);
-  if (lines.length > 20) {
-    return {
-      before: lines.slice(0, splitPoint).join("\n"),
-      after: lines.slice(splitPoint).join("\n"),
-    };
-  }
-  return { before: content, after: null };
 }
 
 /** 文章正文里写死的 `/try` 链接（含 /de/try 这类带语言前缀的）统一改成直达本文对应的工具 */

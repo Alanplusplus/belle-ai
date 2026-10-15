@@ -1,7 +1,13 @@
-import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import {
+  buildAlternates,
+  buildBreadcrumbJsonLd,
+  ogLocale,
+  OG_IMAGES,
+  TWITTER_IMAGES,
+} from "@/lib/seo";
 import type { Metadata } from "next";
 import { ColorQuizClient } from "./ColorQuizClient";
-import { Link } from "@/i18n/navigation";
+import { ToolFaq, ToolIntro, ToolRelated } from "@/components/ToolPageSections";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({
@@ -17,6 +23,7 @@ export async function generateMetadata({
     description: messages.meta.colorQuizDescription,
     alternates,
     openGraph: {
+      images: OG_IMAGES,
       title: messages.meta.colorQuizTitle,
       description: messages.meta.colorQuizDescription,
       type: "website",
@@ -24,6 +31,7 @@ export async function generateMetadata({
       url: alternates.canonical,
     },
     twitter: {
+      images: TWITTER_IMAGES,
       card: "summary_large_image",
       title: messages.meta.colorQuizTitle,
       description: messages.meta.colorQuizDescription,
@@ -38,6 +46,14 @@ export default async function ColorQuizPage({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "colorQuiz" });
+  const nav = await getTranslations({ locale, namespace: "nav" });
+  const quiz = await getTranslations({ locale, namespace: "quiz" });
+  const related = [
+    { href: "/color-analysis", label: nav("colorAnalysisGuide") },
+    { href: "/personal-color-analysis", label: nav("colorAnalysis") },
+    { href: "/tools/undertone-test", label: nav("undertoneTest") },
+    { href: "/lookbook", label: nav("lookbook") },
+  ];
 
   const faqs = [
     { q: t("faq1Q"), a: t("faq1A") },
@@ -73,67 +89,9 @@ export default async function ColorQuizPage({
 
       <ColorQuizClient />
 
-      <section className="max-w-3xl mx-auto px-4 py-12">
-        <p className="text-gray-700 leading-relaxed text-base">
-          {t("seoIntro")}
-        </p>
-      </section>
-
-      <section className="max-w-3xl mx-auto px-4 pb-12">
-        <h2 className="text-2xl font-semibold mb-6">FAQ</h2>
-        <div className="space-y-6">
-          {faqs.map((faq, i) => (
-            <details key={i} className="group border-b border-gray-200 pb-4">
-              <summary className="cursor-pointer font-medium text-gray-900 group-open:text-rose-600 transition-colors">
-                {faq.q}
-              </summary>
-              <p className="mt-3 text-gray-600 leading-relaxed">{faq.a}</p>
-            </details>
-          ))}
-        </div>
-      </section>
-
-      <section className="max-w-3xl mx-auto px-4 pb-16">
-        <h2 className="text-2xl font-semibold mb-4">{t("relatedTitle")}</h2>
-        <div className="grid sm:grid-cols-2 gap-4">
-          <Link
-            href="/color-analysis"
-            className="block p-4 rounded-xl border border-gray-200 hover:border-rose-300 hover:shadow-sm transition-all"
-          >
-            <span className="font-medium text-gray-900">AI Color Analysis</span>
-            <span className="block text-sm text-gray-500 mt-1">
-              Upload a photo for AI-powered 12-season analysis
-            </span>
-          </Link>
-          <Link
-            href="/personal-color-analysis"
-            className="block p-4 rounded-xl border border-gray-200 hover:border-rose-300 hover:shadow-sm transition-all"
-          >
-            <span className="font-medium text-gray-900">Personal Color Analysis</span>
-            <span className="block text-sm text-gray-500 mt-1">
-              Learn about the 12 seasonal color types
-            </span>
-          </Link>
-          <Link
-            href="/color-palette/light-spring"
-            className="block p-4 rounded-xl border border-gray-200 hover:border-rose-300 hover:shadow-sm transition-all"
-          >
-            <span className="font-medium text-gray-900">Spring Palettes</span>
-            <span className="block text-sm text-gray-500 mt-1">
-              Explore Light, True & Bright Spring colors
-            </span>
-          </Link>
-          <Link
-            href="/color-palette/cool-summer"
-            className="block p-4 rounded-xl border border-gray-200 hover:border-rose-300 hover:shadow-sm transition-all"
-          >
-            <span className="font-medium text-gray-900">Summer Palettes</span>
-            <span className="block text-sm text-gray-500 mt-1">
-              Explore Cool, True & Soft Summer colors
-            </span>
-          </Link>
-        </div>
-      </section>
+      <ToolIntro text={t("seoIntro")} />
+      <ToolFaq title={quiz("faqTitle")} faqs={faqs} />
+      <ToolRelated title={t("relatedTitle")} links={related} />
     </>
   );
 }

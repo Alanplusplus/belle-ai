@@ -55,6 +55,7 @@ const CLIENT_NAMESPACES = [
   "quiz",
   "colorQuiz",
   "faceQuiz",
+  "undertoneTest",
 ] as const;
 
 export function generateStaticParams() {
@@ -84,10 +85,10 @@ export async function generateMetadata({
       ],
       apple: "/apple-touch-icon.png",
     },
+    // 含标准的 RSS 自动发现（types）；非英语页面指向该语种自己的博客 feed
     alternates: buildAlternates(locale, ""),
     other: {
-      "application/rss+xml": `${SITE_URL}/feed.xml`,
-      "pinterest-rss": `${SITE_URL}/pinterest-feed.xml`,
+      "pinterest-rss": locale === "en" ? `${SITE_URL}/pinterest-feed.xml` : `${SITE_URL}/pinterest-feed/${locale}.xml`,
     },
     manifest: "/manifest.json",
     openGraph: {

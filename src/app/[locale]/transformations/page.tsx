@@ -3,7 +3,13 @@ import { setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import {
+  buildAlternates,
+  buildBreadcrumbJsonLd,
+  ogLocale,
+  OG_IMAGES,
+  TWITTER_IMAGES,
+} from "@/lib/seo";
 import { TRANSFORMATION_TYPES } from "@/lib/transformation-data";
 import type { Metadata } from "next";
 
@@ -88,7 +94,6 @@ function TransformationsIndexContent() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 640px) 33vw, 17vw"
-                      unoptimized
                     />
                     <span className="absolute bottom-2 left-2 rounded bg-black/60 px-2 py-0.5 text-xs font-medium text-white">
                       {t("before")}
@@ -101,7 +106,6 @@ function TransformationsIndexContent() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 640px) 33vw, 17vw"
-                      unoptimized
                     />
                     <span className="absolute bottom-2 left-1/2 -translate-x-1/2 rounded bg-primary/80 px-2 py-0.5 text-xs font-medium text-white">
                       {t("after")}
@@ -114,7 +118,6 @@ function TransformationsIndexContent() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 640px) 33vw, 17vw"
-                      unoptimized
                     />
                     <span className="absolute bottom-2 right-2 rounded bg-emerald-600/80 px-2 py-0.5 text-xs font-medium text-white">
                       {t("report")}

@@ -1,5 +1,3 @@
-"use client";
-
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
@@ -52,7 +50,6 @@ const socialLinks = [
 ];
 
 export function Footer() {
-  const t = useTranslations();
   const nav = useTranslations("nav");
   const ft = useTranslations("footer");
   const year = new Date().getFullYear();
@@ -148,6 +145,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/tools/undertone-test"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {nav("undertoneTest")}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/vs/dressika"
                   className="text-muted-foreground hover:text-foreground"
                 >
@@ -160,6 +165,14 @@ export function Footer() {
                   className="text-muted-foreground hover:text-foreground"
                 >
                   {ft("vsColorwise")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/vs"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {ft("vsAll")}
                 </Link>
               </li>
               <li>

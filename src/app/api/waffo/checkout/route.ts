@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getWaffoClient } from "@/lib/waffo-client";
-import { WAFFO_PRODUCTS, SITE_URL, LOCALES, type ProductKey } from "@/lib/constants";
+import { WAFFO_PRODUCTS, LOCALES, type ProductKey } from "@/lib/constants";
+import { canonicalUrl } from "@/lib/seo";
 
 /** 只接受短字符串、字符集受限的归因字段，避免把任意用户输入写进订单 metadata */
 function safeValue(value: unknown): string | undefined {
@@ -69,7 +70,8 @@ export async function POST(req: NextRequest) {
       buyerIdentity: userId,
       ...(email ? { buyerEmail: email } : {}),
       // 支付完成后用户点击 Done 才会跳转；必须是绝对 https 地址。回到 /try 后由前端轮询权益状态
-      successUrl: `${SITE_URL}/${safeLocale}/try?checkout=success`,
+      // 用规范 URL：默认语种 en 不带前缀，拼成 /en/try 会多一次 308 重定向，还产生重复 URL 信号
+      successUrl: `${canonicalUrl(safeLocale ?? "en", "/try")}?checkout=success`,
       // metadata 会原样出现在 webhook 的 orderMetadata 里：除了 userId / product，
       // 还带上来源归因，webhook 据此给 GA4 补发带来源的服务端 purchase 事件
       metadata: buildMetadata({ userId, product, source, attribution, gaClientId, gaSessionId }),

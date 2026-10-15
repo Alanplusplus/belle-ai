@@ -29,13 +29,14 @@ import {
   buildSharePageUrl,
   tagShareLink,
 } from "@/lib/referral";
-import { SITE_URL, WEEKLY_INTRO_PRICE } from "@/lib/constants";
-import { trackEvent, trackCheckoutEvent } from "@/lib/analytics";
+import { SITE_URL, PACK_CREDITS, PACK_PRICE } from "@/lib/constants";
+import { trackEvent, trackCheckoutEvent, trackFeedbackSubmitted } from "@/lib/analytics";
 import { consumeCheckoutContext } from "@/lib/checkout";
 import { prepareImageForUpload } from "@/lib/imageUpload";
 import { isMobileDevice, copyText, canUseNativeShare, nativeShare, openShareWindow } from "@/lib/device";
 import { RESULT_READY_EVENT } from "@/lib/google-signin";
 import { useSignIn } from "@/lib/useSignIn";
+import { useDialogA11y } from "@/lib/useDialogA11y";
 import { PricingModal } from "@/components/PricingModal";
 import { InAppBrowserNotice, InAppSignInSheet } from "@/components/InAppBrowserNotice";
 
@@ -115,21 +116,6 @@ const ANALYSIS_TYPE_GROUPS: AnalysisTypeGroup[] = [
 ];
 
 const FLAT_ANALYSIS_TYPES = ANALYSIS_TYPE_GROUPS.flatMap((g) => g.items);
-
-const TYPE_LABELS: Record<AnalysisType, string> = {
-  makeup: "Makeup",
-  color_analysis: "Color",
-  face_shape: "Face & Hair",
-  hair_preview: "Hair Preview",
-  outfit_color: "Outfit Colors",
-  glasses_match: "Glasses",
-  occasion_makeup: "Occasion",
-  jewelry_guide: "Jewelry",
-  glow_up_report: "Glow-Up Report",
-  style_personality: "Style DNA",
-  palette_scan: "Palette Scan",
-  celebrity_match: "Celebrity Match",
-};
 
 const OCCASIONS = [
   { value: "date_night", label: "Date Night" },
@@ -238,6 +224,11 @@ const EXAMPLE_IMAGES: Partial<Record<AnalysisType, string>> = {
   celebrity_match: "/images/examples/report_celebrity_match.webp",
 };
 
+/** 示例照片：所有类型的示例报告都是用这张照片预先生成好的 */
+const SAMPLE_PHOTO_URL = "/images/examples/before.webp";
+/** 演示模式的「生成」只放一个很短的动画：流程完整，但不让人干等 */
+const DEMO_DELAY_MS = 1600;
+
 interface BackgroundTask {
   id: string;
   /** 后端任务 ID（解锁、分享需要）；id 是前端自己生成的本地标识 */
@@ -291,6 +282,8 @@ interface ResultLock {
 }
 
 const NO_LOCK: ResultLock = { locked: false, unlocked: false, lockStart: DEFAULT_LOCK_START };
+/** 演示报告是预先生成好的完整图，不打码、不用解锁 */
+const DEMO_LOCK: ResultLock = { locked: false, unlocked: true, lockStart: DEFAULT_LOCK_START };
 
 export function TryClient({ locale, initialType }: { locale: string; initialType?: string }) {
   const t = useTranslations("tryPage");
@@ -347,6 +340,15 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [invitePopupCopied, setInvitePopupCopied] = useState(false);
   const [isPaid, setIsPaid] = useState(false);
   const [referralBonus, setReferralBonus] = useState<number | null>(null);
+  // 默认只露出当前分析类型，其余折叠成「更多分析类型」；带 ?type= 深链进来时直接展开，保持原来的选择体验
+  const [typesExpanded, setTypesExpanded] = useState(!!initialType && validInitialType !== "color_analysis");
+  // 上传阶段拆成「压缩」和「上传」两步，大图在手机上压缩要几秒，用户需要知道在做什么
+  const [uploadStage, setUploadStage] = useState<"compressing" | "uploading">("compressing");
+  const [notifyPermission, setNotifyPermission] = useState<NotificationPermission | "unsupported">("unsupported");
+  // 示例照片演示模式：不上传、不扣积分、不请求后端，直接展示预先生成好的完整示例报告
+  const [demoMode, setDemoMode] = useState(false);
+  const demoTimerRef = useRef<number | null>(null);
+  const demoTypeRef = useRef<AnalysisType>(validInitialType);
 
   const fileRef = useRef<HTMLInputElement>(null);
   // 手机上有「拍一张自拍」和「从相册选择」两个入口（两个 input），所以不能再从某个 input 的 files 里取文件
@@ -441,13 +443,14 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
   // 出结果后通知全局：匿名用户会在几秒后看到一次 Google One Tap（保存记录/订阅）
   useEffect(() => {
-    if (phase === "done" && resultUrls.length > 0) {
+    // 演示报告不算真实结果：不触发「保存记录 / 订阅」的 One Tap
+    if (phase === "done" && resultUrls.length > 0 && !demoMode) {
       window.dispatchEvent(new Event(RESULT_READY_EVENT));
     }
-  }, [phase, resultUrls.length]);
+  }, [phase, resultUrls.length, demoMode]);
 
   useEffect(() => {
-    if (phase !== "done" || resultUrls.length === 0) return;
+    if (phase !== "done" || resultUrls.length === 0 || demoMode) return;
     // 报告还被锁着时用户的注意力在「解锁」上，邀请弹窗留到下一份完整报告再弹
     if (resultLock.locked) return;
     try {
@@ -463,7 +466,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     }, isMobileDevice() ? 10000 : 2000);
 
     return () => window.clearTimeout(timer);
-  }, [phase, resultUrls.length, resultLock.locked]);
+  }, [phase, resultUrls.length, resultLock.locked, demoMode]);
 
   useEffect(() => {
     if (resumedRef.current) return;
@@ -854,10 +857,95 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     if (cameraRef.current) cameraRef.current.value = "";
   }, []);
 
+  const clearDemoTimer = useCallback(() => {
+    if (demoTimerRef.current !== null) {
+      window.clearTimeout(demoTimerRef.current);
+      demoTimerRef.current = null;
+    }
+  }, []);
+
+  // 卸载时清掉演示计时器
+  useEffect(() => clearDemoTimer, [clearDemoTimer]);
+
+  /** 直接展示某个类型预先生成好的示例报告；该类型没有示例时返回 false */
+  const showDemoResult = useCallback((type: AnalysisType) => {
+    const example = EXAMPLE_IMAGES[type];
+    if (!example) return false;
+    setResultUrls([example]);
+    setResultLock(DEMO_LOCK);
+    setResultTaskId(null);
+    setPhase("done");
+    return true;
+  }, []);
+
+  const exitDemo = useCallback(() => {
+    clearDemoTimer();
+    setDemoMode(false);
+    setPreviewUrl(null);
+    setSourceImageUrl(null);
+    setResultUrls([]);
+    setResultLock(NO_LOCK);
+    setResultTaskId(null);
+    setErrorMsg("");
+    setPhase("idle");
+    clearSelectedFile();
+  }, [clearDemoTimer, clearSelectedFile]);
+
+  /** 示例照片体验：不上传、不请求后端、不扣积分，放一个很短的动画后直接出完整示例报告 */
+  const startDemo = useCallback((type: AnalysisType) => {
+    if (!EXAMPLE_IMAGES[type]) return;
+    clearDemoTimer();
+    demoTypeRef.current = type;
+    setDemoMode(true);
+    selectedFileRef.current = null;
+    setSourceImageUrl(null);
+    setPreviewUrl(SAMPLE_PHOTO_URL);
+    setResultUrls([]);
+    setResultLock(NO_LOCK);
+    setResultTaskId(null);
+    setErrorMsg("");
+    setPhase("generating");
+    scrollToResult();
+    trackEvent("demo_started", { type });
+    demoTimerRef.current = window.setTimeout(() => {
+      demoTimerRef.current = null;
+      // 等待期间用户可能已经换了类型：以最新的类型为准
+      const finalType = demoTypeRef.current;
+      if (showDemoResult(finalType)) trackEvent("demo_completed", { type: finalType });
+    }, DEMO_DELAY_MS);
+  }, [clearDemoTimer, scrollToResult, showDemoResult]);
+
+  /** 选择分析类型；演示模式下所有类型都有现成的示例报告，直接切过去，不用再等 */
+  const selectType = useCallback((type: AnalysisType) => {
+    setAnalysisType(type);
+    if (!demoMode) return;
+    demoTypeRef.current = type;
+    clearDemoTimer();
+    if (showDemoResult(type)) {
+      scrollToResult();
+    } else {
+      exitDemo();
+    }
+  }, [demoMode, clearDemoTimer, showDemoResult, scrollToResult, exitDemo]);
+
+  /** 看完演示后用自己的照片生成：退出演示并直接打开选择照片 */
+  const handleUseOwnPhoto = useCallback(() => {
+    trackEvent("demo_use_own_photo_clicked", { type: analysisType });
+    exitDemo();
+    fileRef.current?.click();
+  }, [analysisType, exitDemo]);
+
   const handleFileSelect = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const file = e.target.files?.[0];
       if (!file) return;
+      // 换成自己的照片：退出演示模式，之后走真实的生成流程
+      if (demoMode) {
+        clearDemoTimer();
+        setDemoMode(false);
+        setResultLock(NO_LOCK);
+        setResultTaskId(null);
+      }
       const fromCamera = e.target === cameraRef.current;
       // 上传前会在浏览器里压缩到长边 2048px，所以这里可以放宽到 25MB（手机原图常见 5–12MB）
       if (file.size > MAX_PHOTO_BYTES) {
@@ -882,21 +970,22 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       setResultUrls([]);
       setErrorMsg("");
     },
-    [t, clearSelectedFile]
+    [t, clearSelectedFile, demoMode, clearDemoTimer]
   );
 
   const handleGenerate = useCallback(async () => {
     if (!previewUrl) return;
+    // 示例照片：不请求后端、不扣积分，直接重放演示
+    if (demoMode) {
+      startDemo(analysisType);
+      return;
+    }
 
     const generateStart = Date.now();
     setPhase("preparing");
     setErrorMsg("");
     setGenerateElapsed(0);
     trackEvent("generate_started", { type: analysisType, resolution, language: reportLang });
-
-    if ("Notification" in window && Notification.permission === "default") {
-      Notification.requestPermission();
-    }
 
     // rawMessage 只上报给统计（用于排查），界面上展示翻译过的、能告诉用户下一步怎么做的提示
     const fail = (event: string, rawMessage: string, userMessage: string) => {
@@ -934,6 +1023,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       let imageUrl = sourceImageUrl;
 
       if (!imageUrl) {
+        setUploadStage("compressing");
         setPhase("uploading");
         const file = selectedFileRef.current;
         if (!file) {
@@ -944,6 +1034,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         try {
           // 先压缩再上传：大图 + 移动网络是 upload_failed 的主要来源
           const base64 = await prepareImageForUpload(file);
+          setUploadStage("uploading");
           const uploadRes = await uploadImage(base64);
           if (uploadRes.code !== 200 || !uploadRes.data?.url) {
             fail("upload_failed", uploadRes.message || "Upload failed", t("errorUpload"));
@@ -1016,9 +1107,15 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       const message = err instanceof Error ? err.message : "Unknown error";
       fail("generate_failed", message, t("errorGenerate"));
     }
-  }, [previewUrl, sourceImageUrl, analysisType, reportLang, resolution, occasion, reloadHistory, refreshCredits, scrollToResult, t]);
+  }, [previewUrl, sourceImageUrl, analysisType, reportLang, resolution, occasion, reloadHistory, refreshCredits, scrollToResult, t, demoMode, startDemo]);
 
   const startRecommendedAnalysis = useCallback(async (type: AnalysisType) => {
+    // 演示模式：直接切到该类型的示例报告，不开后台任务、不扣积分
+    if (demoMode) {
+      trackEvent("analysis_type_selected", { type, source: "demo_recommendation" });
+      selectType(type);
+      return;
+    }
     const photoUrl = sourceImageUrl || lastUploadedPhotoUrl;
     if (!photoUrl) return;
 
@@ -1058,7 +1155,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     } catch (err) {
       setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: err instanceof Error ? err.message : "Failed" } : t));
     }
-  }, [sourceImageUrl, lastUploadedPhotoUrl, reportLang, resolution, reloadHistory, refreshCredits, openPricing]);
+  }, [sourceImageUrl, lastUploadedPhotoUrl, reportLang, resolution, reloadHistory, refreshCredits, openPricing, demoMode, selectType]);
 
   const handleUseLastPhoto = useCallback(async () => {
     if (!lastUploadedPhotoUrl) return;
@@ -1069,6 +1166,31 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     setResultUrls([]);
     setErrorMsg("");
   }, [lastUploadedPhotoUrl]);
+
+  // 没有合适照片的访客：用示例照片体验。直接展示预先生成好的完整示例报告：不等待、不扣积分、不用解锁
+  const handleUseSamplePhoto = useCallback(() => {
+    trackEvent("sample_photo_clicked", { type: analysisType });
+    startDemo(analysisType);
+  }, [analysisType, startDemo]);
+
+  // 通知权限不再在点「生成」时弹出：等用户等得久了，主动点「完成后通知我」才请求（必须由点击触发，Safari 也才会弹）
+  useEffect(() => {
+    if (typeof window !== "undefined" && "Notification" in window) {
+      setNotifyPermission(Notification.permission);
+    }
+  }, []);
+
+  const handleRequestNotify = useCallback(async () => {
+    if (!("Notification" in window)) return;
+    trackEvent("notify_permission_requested");
+    try {
+      const result = await Notification.requestPermission();
+      setNotifyPermission(result);
+      trackEvent("notify_permission_result", { result });
+    } catch {
+      setNotifyPermission(Notification.permission);
+    }
+  }, []);
 
   const handleCheckin = useCallback(async () => {
     if (!checkinAvailable || checkinLoading) return;
@@ -1105,14 +1227,14 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   }, [checkinAvailable, checkinLoading]);
 
   const recommendedTypes = (RECOMMENDED_TYPES[analysisType] || []).filter(
-    (t) => !backgroundTasks.some((bt) => bt.type === t)
+    (t) => !backgroundTasks.some((bt) => bt.type === t) && (!demoMode || !!EXAMPLE_IMAGES[t])
   );
 
   const activeTaskCount = backgroundTasks.filter((t) => t.phase === "generating" || t.phase === "uploading").length;
 
   // 点开大图 / 改错重生成时用：id 用真实任务 ID，分享、解锁都靠它
   const buildCurrentEntry = (): HistoryEntry => ({
-    id: resultTaskId ?? "current",
+    id: demoMode ? "demo" : resultTaskId ?? "current",
     status: "success",
     type: analysisType,
     image_urls: resultUrls,
@@ -1142,16 +1264,16 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       {/* 从 Instagram / TikTok / Pinterest 等 App 内置浏览器进来时，提示用系统浏览器打开（记录与订阅才会保存） */}
       <InAppBrowserNotice className="mx-auto mt-4 max-w-2xl" />
 
-      {/* 已付费但未登录：订阅挂在当前浏览器的匿名账号上，换浏览器/设备就找不回，提示登录保存 */}
-      {isPaid && authStatus === "unauthenticated" && !saveSubDismissed && (
+      {/* 已付费（订阅或积分包）但未登录：订阅 / 积分都挂在当前浏览器的匿名账号上，换浏览器/设备就找不回，提示登录保存 */}
+      {(isPaid || (userCredits?.pack ?? 0) > 0) && authStatus === "unauthenticated" && !saveSubDismissed && (
         <div className="relative mx-auto mt-4 flex max-w-2xl items-center gap-3 rounded-xl border border-green-200 bg-green-50 p-3 pr-10">
           <div className="min-w-0 flex-1">
-            <p className="text-sm font-semibold text-green-900">{t("saveSubscriptionTitle")}</p>
-            <p className="mt-0.5 text-xs text-green-800">{t("saveSubscriptionDesc")}</p>
+            <p className="text-sm font-semibold text-green-900">{isPaid ? t("saveSubscriptionTitle") : t("saveCreditsTitle")}</p>
+            <p className="mt-0.5 text-xs text-green-800">{isPaid ? t("saveSubscriptionDesc") : t("saveCreditsDesc")}</p>
           </div>
           <button
             type="button"
-            onClick={() => signIn.start("subscription_save")}
+            onClick={() => signIn.start(isPaid ? "subscription_save" : "credits_save")}
             className="min-h-10 shrink-0 rounded-full bg-green-600 px-4 text-sm font-semibold text-white transition hover:bg-green-700"
           >
             {t("saveSubscriptionCta")}
@@ -1159,7 +1281,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           <button
             type="button"
             onClick={() => setSaveSubDismissed(true)}
-            aria-label="Close"
+            aria-label={t("close")}
             className="absolute right-1 top-1 flex h-9 w-9 items-center justify-center rounded-full text-green-800/70 hover:bg-green-100"
           >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -1170,6 +1292,25 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
       {/* Analysis Type Selector — Category Tabs + Type Grid */}
       <div className="mt-8">
+        {!typesExpanded ? (
+          /* 折叠态：只显示当前类型 + 展开入口，首屏焦点留给上传 */
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <span className="flex min-h-10 items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-medium text-white shadow-md shadow-primary/30">
+              <span className="shrink-0">{FLAT_ANALYSIS_TYPES.find((i) => i.value === analysisType)?.icon}</span>
+              {t(`type_${analysisType}`)}
+            </span>
+            <button
+              type="button"
+              onClick={() => { setTypesExpanded(true); trackEvent("analysis_types_expanded"); }}
+              aria-expanded={false}
+              className="inline-flex min-h-10 items-center gap-1 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground transition hover:border-primary/40"
+            >
+              {t("moreTypes")}
+              <svg className="h-3 w-3" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M2 4l4 4 4-4" /></svg>
+            </button>
+          </div>
+        ) : (
+        <>
         {/* Category Tabs */}
         <div className="-mx-4 flex overflow-x-auto overscroll-x-contain border-b border-border px-4 [scrollbar-width:none] sm:mx-0 sm:justify-center sm:px-0 [&::-webkit-scrollbar]:hidden">
           {ANALYSIS_TYPE_GROUPS.map((group) => (
@@ -1178,7 +1319,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               onClick={() => {
                 const firstItem = group.items[0];
                 if (firstItem && !group.items.some((i) => i.value === analysisType)) {
-                  setAnalysisType(firstItem.value);
+                  selectType(firstItem.value);
                   trackEvent("analysis_type_selected", { type: firstItem.value, source: "category_tab" });
                 }
               }}
@@ -1204,7 +1345,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
             {group.items.map((at) => (
               <button
                 key={at.value}
-                onClick={() => { setAnalysisType(at.value); trackEvent("analysis_type_selected", { type: at.value, source: "type_pill" }); }}
+                onClick={() => { selectType(at.value); trackEvent("analysis_type_selected", { type: at.value, source: "type_pill" }); }}
                 className={`flex min-h-10 items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition ${
                   analysisType === at.value
                     ? "bg-primary text-white shadow-md shadow-primary/30"
@@ -1222,6 +1363,8 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
             ))}
           </div>
         ))}
+        </>
+        )}
 
         {/* Type Info Panel: Photo Requirement + Output */}
         <div className="mt-4 rounded-xl border border-border bg-muted/30 p-3 sm:p-4">
@@ -1312,7 +1455,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                     {leftImage ? (
                       <img
                         src={leftImage}
-                        alt="Photo"
+                        alt={leftLabel}
                         className="h-auto w-full object-cover"
                         style={{ aspectRatio: "3/4" }}
                       />
@@ -1345,7 +1488,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                         {phase === "preparing"
                           ? t("preparing")
                           : phase === "uploading"
-                            ? t("uploading")
+                            ? (uploadStage === "compressing" ? t("compressing") : t("uploading"))
                             : generateElapsed < 15
                               ? t("generating")
                               : generateElapsed < 40
@@ -1354,6 +1497,15 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                       </p>
                       {phase === "generating" && generateElapsed > 60 && (
                         <p className="mt-2 px-3 text-center text-xs text-muted-foreground">{t("almostDone")}</p>
+                      )}
+                      {phase === "generating" && generateElapsed >= 20 && notifyPermission === "default" && (
+                        <button
+                          type="button"
+                          onClick={handleRequestNotify}
+                          className="mt-3 min-h-9 rounded-full border border-primary/40 bg-background/70 px-3 text-xs font-medium text-primary transition hover:bg-primary/10"
+                        >
+                          {t("notifyMe")}
+                        </button>
                       )}
                     </div>
                   ) : phase === "done" && resultUrls.length > 0 ? (
@@ -1368,10 +1520,15 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                       <div className="relative">
                         <img
                           src={resultUrls[0]}
-                          alt="AI Report"
+                          alt={`${t(`type_${analysisType}`)} — ${t("exampleAfter")}`}
                           className="h-auto w-full bg-muted/30 object-contain"
                           style={{ aspectRatio: "3/4" }}
                         />
+                        {demoMode && (
+                          <span className="absolute left-2 top-2 rounded-full bg-black/60 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur-sm">
+                            {t("demoBadge")}
+                          </span>
+                        )}
                         {resultLock.locked ? (
                           /* 服务端已把细节打码：覆盖层只负责引导解锁，点图片其它位置仍可放大查看免费预览 */
                           <LockOverlay
@@ -1427,7 +1584,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                     >
                       <img
                         src={EXAMPLE_IMAGES[analysisType]!}
-                        alt="Example AI report"
+                        alt={`${t(`type_${analysisType}`)} — ${t("exampleAfter")}`}
                         className="h-auto w-full object-cover"
                         style={{ aspectRatio: "3/4" }}
                       />
@@ -1442,7 +1599,10 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               </div>
 
               {/* Bottom actions / hints */}
-              {phase === "done" && resultUrls.length > 0 ? (
+              {phase === "done" && resultUrls.length > 0 && demoMode ? (
+                /* 示例报告：说明这是现成的演示，引导换成自己的照片；不提供下载 / 分享 / 反馈（不是真实生成的结果） */
+                <p className="mt-2 text-center text-xs text-muted-foreground">{t("demoNotice")}</p>
+              ) : phase === "done" && resultUrls.length > 0 ? (
                 <div className="mt-2 space-y-2">
                   {/* 报告还没解锁（打码预览；预览补生成失败时的带水印兜底图也算）：给出解锁入口；积分包够用时直接用积分解锁 */}
                   {!resultLock.unlocked && (
@@ -1488,6 +1648,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                       {t("correction")}
                     </button>
                   </div>
+                  <ResultFeedback key={resultTaskId ?? "current"} taskId={resultTaskId} type={analysisType} />
                 </div>
               ) : (
                 <p className="mt-2 text-center text-xs text-muted-foreground">
@@ -1577,7 +1738,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               {previewUrl ? (
                 <img
                   src={previewUrl}
-                  alt="Preview"
+                  alt={t("exampleBefore")}
                   className="h-full w-full rounded-2xl object-contain"
                 />
               ) : (
@@ -1601,13 +1762,15 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                   <p className="mt-1 text-center text-xs text-muted-foreground">
                     {t("uploadHint")}
                   </p>
-                  <p className="mt-2 flex items-center justify-center gap-1 text-center text-xs text-muted-foreground/70">
-                    <svg className="h-3 w-3 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
-                    {t("uploadTrust")}
-                  </p>
-                  <p className="mt-1 text-center text-xs text-muted-foreground/50">
-                    {t("uploadConsent")}
-                  </p>
+                  {EXAMPLE_IMAGES[analysisType] && (
+                    <button
+                      type="button"
+                      onClick={(e) => { e.stopPropagation(); handleUseSamplePhoto(); }}
+                      className="mt-3 min-h-9 px-3 text-xs font-medium text-primary underline-offset-4 hover:underline"
+                    >
+                      {t("useSamplePhoto")}
+                    </button>
+                  )}
                   {lastUploadedPhotoUrl && !previewUrl && (
                     <button
                       onClick={(e) => { e.stopPropagation(); handleUseLastPhoto(); }}
@@ -1620,6 +1783,20 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                 </>
               )}
             </div>
+
+            {/* 隐私说明放在上传框外面、常驻显示：用户决定传不传脸部照片之前就能看到，并能点进隐私政策 */}
+            <p className="mt-3 flex items-start justify-center gap-1.5 text-center text-xs text-muted-foreground">
+              <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+              <span>
+                {t("uploadTrust")}{" "}
+                <Link href="/privacy" className="font-medium text-primary underline-offset-2 hover:underline">
+                  {t("privacyLink")}
+                </Link>
+              </span>
+            </p>
+            {!previewUrl && (
+              <p className="mt-1 text-center text-[11px] text-muted-foreground/80">{t("uploadConsent")}</p>
+            )}
 
             {/* image/*：手机相册里的 HEIC / 截图等也能选（Safari 会自动转成 JPEG，上传前还会统一压缩）。
                 两个 input 放在虚线框外面：程序化 click 会冒泡到虚线框的 onClick，导致同时弹出两个选择器 */}
@@ -1666,6 +1843,10 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               <div className="mt-2 text-center">
                 <button
                   onClick={() => {
+                    if (demoMode) {
+                      exitDemo();
+                      return;
+                    }
                     setPreviewUrl(null);
                     setSourceImageUrl(null);
                     setResultUrls([]);
@@ -1690,6 +1871,11 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           >
             <button
               onClick={() => {
+                // 看完示例报告后，主按钮变成「用我自己的照片试试」
+                if (demoMode && phase === "done") {
+                  handleUseOwnPhoto();
+                  return;
+                }
                 handleGenerate();
               }}
               disabled={
@@ -1705,7 +1891,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                 phase === "preparing") && <Spinner />}
               {(phase === "preparing" || phase === "uploading" || phase === "generating")
                 ? t("generating")
-                : t("generate")}
+                : demoMode && phase === "done"
+                  ? t("demoUseMyPhoto")
+                  : t("generate")}
             </button>
           </div>
 
@@ -1753,25 +1941,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       </div>
 
       {/* Example Preview Modal */}
-      {examplePreview && (
-        <div
-          className="fixed inset-0 z-[70] flex items-center justify-center bg-black/60 p-3 backdrop-blur-sm"
-          onClick={() => setExamplePreview(null)}
-        >
-          <div className="relative max-h-[90dvh] max-w-lg overflow-auto rounded-2xl" onClick={(e) => e.stopPropagation()}>
-            <button
-              onClick={() => setExamplePreview(null)}
-              aria-label="Close"
-              className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white transition hover:bg-black/70"
-            >
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            <img src={examplePreview} alt="Example report full view" className="h-auto w-full rounded-2xl" />
-          </div>
-        </div>
-      )}
+      {examplePreview && <ExamplePreviewModal src={examplePreview} onClose={() => setExamplePreview(null)} t={t} />}
 
       {/* Check-in + Streak Section */}
       {(checkinAvailable || checkinJustDone || checkinStreak > 0) && phase !== "uploading" && phase !== "generating" && phase !== "preparing" && (
@@ -1858,7 +2028,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                 <div className="relative h-[100px] overflow-hidden">
                   <img
                     src={CARD_IMAGES[type]}
-                    alt={TYPE_LABELS[type]}
+                    alt={t(`type_${type}`)}
                     className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                   />
                 </div>
@@ -1940,11 +2110,13 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         <div className="mt-8">
           {/* AI 生成内容标注 */}
           <p className="mb-4 text-center text-xs text-muted-foreground">{t("aiGeneratedNote")}</p>
-          <div className="mb-6">
-            <InviteEarnBanner variant="card" referralCode={referralCode} />
-          </div>
+          {!demoMode && (
+            <div className="mb-6">
+              <InviteEarnBanner variant="card" referralCode={referralCode} />
+            </div>
+          )}
 
-          {recommendedTypes.length > 0 && (sourceImageUrl || lastUploadedPhotoUrl) && (
+          {recommendedTypes.length > 0 && (demoMode || sourceImageUrl || lastUploadedPhotoUrl) && (
             <div className="rounded-2xl border border-border bg-gradient-to-br from-muted/30 to-muted/10 p-5">
               <div className="flex items-center gap-2 mb-1">
                 <svg className="h-4 w-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" /></svg>
@@ -1961,7 +2133,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <img
                         src={CARD_IMAGES[type]}
-                        alt={TYPE_LABELS[type]}
+                        alt={t(`type_${type}`)}
                         className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                       />
                     </div>
@@ -1979,7 +2151,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           )}
 
           {/* 以「总剩余次数」为准：免费额度用完但还有付费积分 / 订阅额度的用户不应该看到额度墙 */}
-          {(userCredits ? userCredits.totalRemaining <= 0 : !!quota && quota.remaining <= 0) && (
+          {!demoMode && (userCredits ? userCredits.totalRemaining <= 0 : !!quota && quota.remaining <= 0) && (
             <div className="mt-6">
               <NoQuotaCard
                 t={t}
@@ -2033,7 +2205,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                     <div className="relative">
                       <img
                         src={entry.image_urls[0]}
-                        alt="Analysis"
+                        alt={t(`type_${entry.type || "color_analysis"}`)}
                         className="aspect-[3/4] w-full object-cover"
                       />
                       {entry.locked && (
@@ -2047,7 +2219,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                   <div className="flex items-center justify-between p-3">
                     <div>
                       <span className="inline-block rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
-                        {TYPE_LABELS[entry.type as AnalysisType] || entry.type}
+                        {ALL_VALID_TYPES.includes(entry.type as AnalysisType) ? t(`type_${entry.type}`) : entry.type}
                       </span>
                       <p className="mt-1 text-xs text-muted-foreground">
                         {new Date(entry.created_at * 1000).toLocaleDateString()}
@@ -2078,6 +2250,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           packCredits={userCredits?.pack ?? 0}
           unlocking={unlockingId !== null && unlockingId === lightbox.entry.id}
           onUnlock={(entry) => handleUnlock(entry.id, entry.type || "color_analysis", entry.image_urls[0])}
+          demo={lightbox.entry.id === "demo"}
           t={t}
         />
       )}
@@ -2187,7 +2360,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
             {checkoutStatus !== "confirming" && (
               <button
                 onClick={() => setCheckoutStatus("idle")}
-                aria-label="Close"
+                aria-label={t("close")}
                 className="-mr-1 rounded-full px-1.5 text-white/80 transition hover:text-white"
               >
                 ×
@@ -2221,6 +2394,69 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           }}
           t={t}
         />
+      )}
+    </div>
+  );
+}
+
+/** 结果下方的真实反馈入口：1–5 星 + 可选一句话。评分进 GA；点「发送」才把评分和留言发给团队（不含照片）。 */
+function ResultFeedback({ taskId, type }: { taskId: string | null; type: string }) {
+  const t = useTranslations("tryPage");
+  const [rating, setRating] = useState(0);
+  const [comment, setComment] = useState("");
+  const [sent, setSent] = useState(false);
+
+  const submit = (text: string) => {
+    trackFeedbackSubmitted({ type, rating, comment: text.trim() || undefined, taskId });
+    setSent(true);
+  };
+
+  if (sent) {
+    return <p className="rounded-xl bg-muted/40 px-3 py-2 text-center text-xs text-muted-foreground">{t("feedbackThanks")}</p>;
+  }
+
+  return (
+    <div className="rounded-xl border border-border/60 bg-muted/20 px-3 py-3 text-center">
+      <p className="text-xs font-medium text-foreground">{t("feedbackQuestion")}</p>
+      <div className="mt-1.5 flex items-center justify-center gap-1" role="radiogroup" aria-label={t("feedbackQuestion")}>
+        {[1, 2, 3, 4, 5].map((n) => (
+          <button
+            key={n}
+            type="button"
+            role="radio"
+            aria-checked={rating === n}
+            aria-label={t("feedbackStar", { count: n })}
+            onClick={() => {
+              setRating(n);
+              trackEvent("result_rated", { type, rating: n });
+            }}
+            className="flex h-10 w-10 items-center justify-center rounded-full transition hover:bg-primary/10"
+          >
+            <svg className={`h-6 w-6 ${n <= rating ? "text-amber-400" : "text-muted-foreground/40"}`} viewBox="0 0 24 24" fill={n <= rating ? "currentColor" : "none"} stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+            </svg>
+          </button>
+        ))}
+      </div>
+      {rating > 0 && (
+        <div className="mt-2 space-y-2">
+          <textarea
+            value={comment}
+            onChange={(e) => setComment(e.target.value.slice(0, 120))}
+            maxLength={120}
+            rows={2}
+            placeholder={t("feedbackPlaceholder")}
+            className="w-full resize-none rounded-lg border border-border bg-background px-3 py-2 text-xs outline-none focus:border-primary/60"
+          />
+          <p className="text-[11px] text-muted-foreground">{t("feedbackPrivacy")}</p>
+          <button
+            type="button"
+            onClick={() => submit(comment)}
+            className="min-h-10 rounded-full bg-primary px-5 text-xs font-semibold text-white transition hover:bg-primary-dark"
+          >
+            {t("feedbackSend")}
+          </button>
+        </div>
       )}
     </div>
   );
@@ -2352,6 +2588,36 @@ function InviteEarnBanner({ variant = "compact", referralCode }: { variant?: "co
   );
 }
 
+function ExamplePreviewModal({ src, onClose, t }: { src: string; onClose: () => void; t: (key: string) => string }) {
+  const dialogRef = useDialogA11y<HTMLDivElement>(onClose);
+
+  return (
+    <div
+      ref={dialogRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label={t("exampleTitle")}
+      tabIndex={-1}
+      className="fixed inset-0 z-[70] flex items-center justify-center bg-black/60 p-3 outline-none backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div className="relative max-h-[90dvh] max-w-lg overflow-auto rounded-2xl" onClick={(e) => e.stopPropagation()}>
+        <button
+          onClick={onClose}
+          aria-label={t("close")}
+          className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white transition hover:bg-black/70"
+        >
+          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={src} alt={t("exampleAfter")} className="h-auto w-full rounded-2xl" />
+      </div>
+    </div>
+  );
+}
+
 function InvitePopup({
   referralCode,
   copied,
@@ -2365,13 +2631,15 @@ function InvitePopup({
   onDismiss: () => void;
   t: (key: string) => string;
 }) {
+  const dialogRef = useDialogA11y<HTMLDivElement>(onDismiss);
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = ""; };
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[160] flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm" onClick={onDismiss}>
+    <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={t("invitePopupTitle")} tabIndex={-1} className="fixed inset-0 z-[160] flex items-center justify-center bg-black/50 p-4 outline-none backdrop-blur-sm" onClick={onDismiss}>
       <div
         className="w-full max-w-sm rounded-2xl border border-primary/20 bg-card p-6 shadow-2xl animate-in zoom-in-95"
         onClick={(e) => e.stopPropagation()}
@@ -2450,7 +2718,7 @@ function NoQuotaCard({
           }}
           className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
         >
-          {t("noQuotaProCta", { price: WEEKLY_INTRO_PRICE })}
+          {t("noQuotaPackCta", { credits: PACK_CREDITS, price: PACK_PRICE })}
         </button>
         <Link
           href="/referral"
@@ -2510,6 +2778,7 @@ function ImageLightbox({
   packCredits,
   unlocking,
   onUnlock,
+  demo = false,
   t,
 }: {
   entry: HistoryEntry;
@@ -2522,6 +2791,8 @@ function ImageLightbox({
   unlocking: boolean;
   /** 解锁：积分包够就直接扣积分，不够则由调用方打开付费弹窗 */
   onUnlock: (entry: HistoryEntry) => void;
+  /** 示例报告：不是真实生成的结果，不提供下载 / 分享 / 改错 */
+  demo?: boolean;
   t: (key: string, values?: Record<string, string | number>) => string;
 }) {
   const [index, setIndex] = useState(initialIndex);
@@ -2531,15 +2802,16 @@ function ImageLightbox({
   const reportLocked = !!entry.locked;
   const unlockCost = creditCostOf(entry.type || "color_analysis");
 
+  const dialogRef = useDialogA11y<HTMLDivElement>(onClose);
+
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") onClose();
       if (e.key === "ArrowLeft" && index > 0) setIndex(index - 1);
       if (e.key === "ArrowRight" && index < urls.length - 1) setIndex(index + 1);
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [index, urls.length, onClose]);
+  }, [index, urls.length]);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -2565,11 +2837,11 @@ function ImageLightbox({
   };
 
   return (
-    <div className="fixed inset-0 z-[100] overflow-y-auto overscroll-contain bg-black/80 backdrop-blur-sm" onClick={onClose}>
+    <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={t("exampleAfter")} tabIndex={-1} className="fixed inset-0 z-[100] overflow-y-auto overscroll-contain bg-black/80 outline-none backdrop-blur-sm" onClick={onClose}>
       {/* Close：固定在右上角并避开刘海，不再依赖内容容器的 -top 偏移 */}
       <button
         onClick={onClose}
-        aria-label="Close"
+        aria-label={t("close")}
         className="fixed right-3 top-[max(0.75rem,env(safe-area-inset-top))] z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm hover:bg-white/25"
       >
         <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
@@ -2584,7 +2856,7 @@ function ImageLightbox({
           onTouchEnd={handleTouchEnd}
         >
           {index > 0 && (
-            <button onClick={() => setIndex(index - 1)} aria-label="Previous" className="absolute left-2 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70">
+            <button onClick={() => setIndex(index - 1)} aria-label={t("prev")} className="absolute left-2 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70">
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
             </button>
           )}
@@ -2592,7 +2864,7 @@ function ImageLightbox({
           <div className="relative">
             <img
               src={currentUrl}
-              alt={`Report ${index + 1}`}
+              alt={`${t(`type_${entry.type || "color_analysis"}`)} ${index + 1}/${urls.length}`}
               className="block max-h-[68dvh] w-auto max-w-[calc(100vw-1.5rem)] rounded-xl object-contain shadow-2xl sm:max-h-[75dvh] sm:max-w-[85vw]"
             />
             {reportLocked && (
@@ -2608,14 +2880,14 @@ function ImageLightbox({
             )}
           </div>
           {index < urls.length - 1 && (
-            <button onClick={() => setIndex(index + 1)} aria-label="Next" className="absolute right-2 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70">
+            <button onClick={() => setIndex(index + 1)} aria-label={t("next")} className="absolute right-2 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70">
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
             </button>
           )}
         </div>
 
         {/* 触屏设备：提示可长按图片保存到相册（桌面不显示） */}
-        {!reportLocked && (
+        {!reportLocked && !demo && (
           <p className="mt-2 hidden text-center text-xs text-white/70 [@media(hover:none)]:block">{t("saveImageHint")}</p>
         )}
 
@@ -2648,6 +2920,7 @@ function ImageLightbox({
         )}
 
         {/* Action bar */}
+        {!demo && (
         <div className="mt-3 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
           <button
             onClick={() => reportUnlocked ? onDownload(currentUrl) : onUnlock(entry)}
@@ -2673,6 +2946,7 @@ function ImageLightbox({
             </button>
           )}
         </div>
+        )}
         </div>
       </div>
     </div>
@@ -2689,25 +2963,27 @@ function SaveImageSheet({
   onClose: () => void;
   t: (key: string) => string;
 }) {
+  const dialogRef = useDialogA11y<HTMLDivElement>(onClose);
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = ""; };
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[180] flex items-end justify-center bg-black/60 backdrop-blur-sm sm:items-center" onClick={onClose}>
+    <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={t("saveImageTitle")} tabIndex={-1} className="fixed inset-0 z-[180] flex items-end justify-center bg-black/60 outline-none backdrop-blur-sm sm:items-center" onClick={onClose}>
       <div
         className="flex max-h-[92dvh] w-full max-w-md flex-col rounded-t-2xl border border-border bg-card p-4 pb-[max(1rem,env(safe-area-inset-bottom))] shadow-2xl sm:rounded-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mb-3 flex items-center justify-between">
           <h3 className="text-base font-bold">{t("saveImageTitle")}</h3>
-          <button onClick={onClose} aria-label="Close" className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-muted">
+          <button onClick={onClose} aria-label={t("close")} className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-muted">
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
         </div>
         <div className="min-h-0 flex-1 overflow-y-auto rounded-xl">
-          <img src={url} alt="Report" className="h-auto w-full rounded-xl" />
+          <img src={url} alt={t("saveImageTitle")} className="h-auto w-full rounded-xl" />
         </div>
         <p className="mt-3 text-center text-sm text-muted-foreground">{t("saveImageHint")}</p>
       </div>
@@ -2804,20 +3080,22 @@ function CorrectionSheet({
 }) {
   const [text, setText] = useState("");
 
+  const dialogRef = useDialogA11y<HTMLDivElement>(onClose);
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = ""; };
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[150] flex items-end justify-center sm:items-center bg-black/50 backdrop-blur-sm" onClick={onClose}>
+    <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={t("correction")} tabIndex={-1} className="fixed inset-0 z-[150] flex items-end justify-center outline-none sm:items-center bg-black/50 backdrop-blur-sm" onClick={onClose}>
       <div
         className="max-h-[90dvh] w-full max-w-lg overflow-y-auto rounded-t-2xl sm:rounded-2xl bg-card border border-border p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-2xl animate-in slide-in-from-bottom-4"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-bold">{t("correction")}</h3>
-          <button onClick={onClose} aria-label="Close" className="-mr-2 flex h-11 w-11 items-center justify-center rounded-full hover:bg-muted">
+          <button onClick={onClose} aria-label={t("close")} className="-mr-2 flex h-11 w-11 items-center justify-center rounded-full hover:bg-muted">
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
         </div>
@@ -2960,6 +3238,8 @@ function SharePanel({
   const [tags, setTags] = useState("BelleAI,ColorAnalysis,Beauty");
   const platforms = getSharePlatforms(locale);
 
+  const dialogRef = useDialogA11y<HTMLDivElement>(onClose);
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = ""; };
@@ -2987,14 +3267,14 @@ function SharePanel({
   };
 
   return (
-    <div className="fixed inset-0 z-[150] flex items-end justify-center sm:items-center bg-black/50 backdrop-blur-sm" onClick={onClose}>
+    <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={t("share")} tabIndex={-1} className="fixed inset-0 z-[150] flex items-end justify-center outline-none sm:items-center bg-black/50 backdrop-blur-sm" onClick={onClose}>
       <div
         className="max-h-[92dvh] w-full max-w-md overflow-y-auto overscroll-contain rounded-t-2xl sm:rounded-2xl bg-card border border-border p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-2xl animate-in slide-in-from-bottom-4"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-bold">{t("share")}</h3>
-          <button onClick={onClose} aria-label="Close" className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-muted">
+          <button onClick={onClose} aria-label={t("close")} className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-muted">
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
         </div>

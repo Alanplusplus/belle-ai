@@ -1,5 +1,11 @@
 import { getTranslations } from "next-intl/server";
-import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import {
+  buildAlternates,
+  buildBreadcrumbJsonLd,
+  ogLocale,
+  OG_IMAGES,
+  TWITTER_IMAGES,
+} from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 
@@ -16,6 +22,7 @@ export async function generateMetadata({
     description: messages.about.intro,
     alternates,
     openGraph: {
+      images: OG_IMAGES,
       title: messages.about.title,
       description: messages.about.intro,
       type: "website",
@@ -23,6 +30,7 @@ export async function generateMetadata({
       url: alternates.canonical,
     },
     twitter: {
+      images: TWITTER_IMAGES,
       card: "summary_large_image",
       title: messages.about.title,
       description: messages.about.intro,

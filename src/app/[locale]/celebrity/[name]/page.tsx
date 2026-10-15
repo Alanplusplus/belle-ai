@@ -96,6 +96,7 @@ function CelebrityContent({ slug }: { slug: string }) {
   const data = CELEBRITY_DATA[slug];
   const seasonData = SEASON_PALETTES[data.season];
   const sd = useTranslations(`sd.${data.season}`);
+  const sdAll = useTranslations("sd");
   const seasonName = sd.has("name") ? sd("name") : seasonData.name;
 
   const hasDeepContent = !!data.detailedAnalysis;
@@ -419,7 +420,7 @@ function CelebrityContent({ slug }: { slug: string }) {
                     {celeb.name}
                   </h3>
                   <p className="mt-1 text-xs text-primary">
-                    {celebSeason.name}
+                    {sdAll.has(`${celeb.season}.name`) ? sdAll(`${celeb.season}.name`) : celebSeason.name}
                   </p>
                   <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">
                     {celeb.description}

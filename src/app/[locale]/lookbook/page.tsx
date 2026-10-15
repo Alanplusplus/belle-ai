@@ -2,7 +2,13 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import {
+  buildAlternates,
+  buildBreadcrumbJsonLd,
+  ogLocale,
+  OG_IMAGES,
+  TWITTER_IMAGES,
+} from "@/lib/seo";
 import { SEASON_PALETTES, PARENT_SEASON_ORDER, getSeasonsByParent } from "@/lib/color-palette-data";
 import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
@@ -28,6 +34,7 @@ export async function generateMetadata({
     description,
     alternates,
     openGraph: {
+      images: OG_IMAGES,
       title,
       description,
       type: "website",
