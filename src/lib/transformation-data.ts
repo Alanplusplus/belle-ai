@@ -249,6 +249,18 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/ebb9290e-72fb-4b65-8737-1ad1bdf6a40a.png",
         originalReport: "https://pic-cdn.chibistyle.app/image/advanced/dcf38ae36b7f90ddea589e9c955c96d4_0.png",
       },
+      {
+        label: "Salon Swatch Overload to Honey Blonde Balayage",
+        description: "AI hair color preview turns salon swatch-book overwhelm into a confident choice: a honey blonde balayage matched to her warm golden undertone.",
+        before: "/images/transformations/before-hair-color-3.webp",
+        after: "/images/transformations/after-hair-color-3.webp",
+        report: "/images/transformations/report-hair-color-3.webp",
+        details: "The analysis found a warm golden undertone and ranked Warm Chestnut Brown and Honey Blonde Balayage as the best matches, while Ash Blonde (too cool-toned) and Jet Black (too harsh and heavy) were flagged to avoid.",
+        date: "2026-10-16",
+        originalBefore: "https://pic.chibistyle.app/image/upload/babbbb78-9fc6-4410-b05d-8d119702caf0.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/1c3b09e1-2100-4eb9-af70-8e7bb80329ba.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/06d984e2d70e5296029a0e41617c81f7_0.png",
+      },
     ],
   },
   {
