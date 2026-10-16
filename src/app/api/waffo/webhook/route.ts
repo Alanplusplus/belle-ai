@@ -128,6 +128,7 @@ async function sendGaPurchase(
                 campaign_source: metadata.utm_source,
                 campaign_medium: metadata.utm_medium,
                 campaign_name: metadata.utm_campaign,
+                campaign_content: metadata.utm_content,
                 referral_code: metadata.ref,
                 // 没带 UTM 的自然流量（Pinterest、搜索、社媒）靠来源域名和落地页归因；
                 // 需要在 GA4 里把这两个参数注册为事件级自定义维度才能在报表里按它们拆分
@@ -225,7 +226,7 @@ async function handlePackOrder(
   }
 
   if (result.message !== "Order already processed") {
-    const attributionNote = [metadata.utm_source, metadata.utm_medium, metadata.utm_campaign, metadata.source, metadata.referrer_host]
+    const attributionNote = [metadata.utm_source, metadata.utm_medium, metadata.utm_campaign, metadata.utm_content, metadata.source, metadata.referrer_host]
       .filter(Boolean)
       .join(" / ");
     await notifyFeishu(eventType, userId, data, [
@@ -313,7 +314,7 @@ export async function POST(req: NextRequest) {
 
     // 重复投递不再重复通知 / 重复上报
     if (result.message !== "Event already processed") {
-      const attributionNote = [metadata.utm_source, metadata.utm_medium, metadata.utm_campaign, metadata.source, metadata.referrer_host]
+      const attributionNote = [metadata.utm_source, metadata.utm_medium, metadata.utm_campaign, metadata.utm_content, metadata.source, metadata.referrer_host]
         .filter(Boolean)
         .join(" / ");
       await notifyFeishu(eventType, userId, data, [

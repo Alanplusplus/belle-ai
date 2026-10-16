@@ -11,6 +11,8 @@ export interface Attribution {
   utm_source?: string;
   utm_medium?: string;
   utm_campaign?: string;
+  /** 广告 / Pin 素材编号（独立 Pin 池用它标记是哪一张图、哪个钩子） */
+  utm_content?: string;
   ref?: string;
   /** 外部来源站点的 host，例如 www.google.com / www.pinterest.com */
   referrer_host?: string;
@@ -54,6 +56,7 @@ export function captureAttribution(): void {
       utm_source: clean(params.get("utm_source")),
       utm_medium: clean(params.get("utm_medium")),
       utm_campaign: clean(params.get("utm_campaign")),
+      utm_content: clean(params.get("utm_content")),
       ref: clean(params.get("ref")),
       referrer_host: externalReferrerHost(),
     };

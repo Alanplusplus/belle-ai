@@ -24,6 +24,7 @@ function buildMetadata(input: {
     utm_source: safeValue(input.attribution?.utm_source),
     utm_medium: safeValue(input.attribution?.utm_medium),
     utm_campaign: safeValue(input.attribution?.utm_campaign),
+    utm_content: safeValue(input.attribution?.utm_content),
     ref: safeValue(input.attribution?.ref),
     referrer_host: safeValue(input.attribution?.referrer_host),
     landing: safeValue(input.attribution?.landing),
