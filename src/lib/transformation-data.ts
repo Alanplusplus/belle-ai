@@ -282,6 +282,18 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/f5f95186-0e18-4394-8b58-c87aad299121.png",
         originalReport: "https://pic-cdn.chibistyle.app/image/advanced/ab5c64971f7c55a66bd275ac394b8bef_0.png",
       },
+      {
+        label: "Closet Overwhelm → Warm Spring Wardrobe Colors",
+        description: "A closet full of clothes and still nothing to wear. AI outfit color analysis revealed a Warm Spring palette, turning a pile of mismatched pieces into a tidy wardrobe of flattering colors.",
+        before: "/images/transformations/before-outfit-color-2.webp",
+        after: "/images/transformations/after-outfit-color-2.webp",
+        report: "/images/transformations/report-outfit-color-2.webp",
+        details: "The report identified a warm, bright, clear undertone: Coral Peach, Emerald Green and Teal Blue brighten her complexion, while Icy Pastel Pink and Cool Light Gray wash it out. Dressing in an emerald green top instantly made her skin glow.",
+        date: "2026-10-17",
+        originalBefore: "https://pic.chibistyle.app/image/upload/ce554df2-b02b-4372-994b-0b20610189a2.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/f8b0eec0-04ba-406e-aed2-85dac6b4327c.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/501b65fb42c1100eb9f651dadb1c4cec_0.png",
+      },
     ],
   },
   {
