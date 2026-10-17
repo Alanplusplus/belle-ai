@@ -137,7 +137,7 @@ image: "/images/blog/color-analysis-for-men.webp"
 
 [무료 컬러 분석 시작 →](/ko/try)
 
-60초, 무료, 가입 불필요. 시즌과 실용 쇼핑 팔레트를 바로 확인.
+60초, 무료 미리보기, 가입 불필요. 시즌과 실용 쇼핑 팔레트를 바로 확인.
 
 빠른 질문만 원하면: [무료 퀴즈 →](/ko/tools/color-quiz)
 

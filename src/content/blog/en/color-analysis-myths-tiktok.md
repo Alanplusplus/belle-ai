@@ -162,7 +162,7 @@ The best thing TikTok did for color analysis was make people curious. The worst 
 
 ## Related Articles
 
-- [The Science Behind Personal Color Analysis: How It Actually Works](/en/blog/science-behind-personal-color-analysis) — The color science fundamentals explained
-- [Why Online Color Analysis Quizzes Get It Wrong](/en/blog/why-color-analysis-quizzes-are-wrong) — Why most quiz-style tools fail
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [How to Do Color Analysis at Home](/en/blog/how-to-do-color-analysis-at-home) — Reliable self-draping methods that actually work
+- [The Science Behind Personal Color Analysis: How It Actually Works](/blog/science-behind-personal-color-analysis) — The color science fundamentals explained
+- [Why Online Color Analysis Quizzes Get It Wrong](/blog/why-color-analysis-quizzes-are-wrong) — Why most quiz-style tools fail
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [How to Do Color Analysis at Home](/blog/how-to-do-color-analysis-at-home) — Reliable self-draping methods that actually work

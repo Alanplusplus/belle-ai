@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer";
 import { AuthProvider } from "@/components/AuthProvider";
 import { GoogleOneTap } from "@/components/GoogleOneTap";
 import { PageViewTracker } from "@/components/PageViewTracker";
+import { PurchaseRestoredToast } from "@/components/PurchaseRestoredToast";
 import { buildAlternates, ogLocale } from "@/lib/seo";
 import { SITE_URL, GA_MEASUREMENT_ID } from "@/lib/constants";
 import Script from "next/script";
@@ -186,6 +187,7 @@ export default async function LocaleLayout({
           <PageViewTracker />
           <NextIntlClientProvider messages={clientMessages}>
             <ReferralBanner />
+            <PurchaseRestoredToast />
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />

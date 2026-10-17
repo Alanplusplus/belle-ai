@@ -162,7 +162,7 @@ Hair color is one of the most impactful changes you can make to your appearance.
 
 ## Related Articles
 
-- [How to Find Your Best Hair Color Based on Your Color Season](/en/blog/best-hair-color-for-color-season) — Complete guide to flattering shades for all 12 seasons
-- [AI vs Professional Color Analysis: I Tried Both](/en/blog/ai-vs-professional-color-analysis) — Honest comparison of AI tools versus traditional draping
-- [How Lighting Affects Your Colors](/en/blog/how-lighting-affects-your-colors) — Why you look different in photos versus real life
-- [The Science Behind Personal Color Analysis](/en/blog/science-behind-personal-color-analysis) — The color science that powers seasonal typing
+- [How to Find Your Best Hair Color Based on Your Color Season](/blog/best-hair-color-for-color-season) — Complete guide to flattering shades for all 12 seasons
+- [AI vs Professional Color Analysis: I Tried Both](/blog/ai-vs-professional-color-analysis) — Honest comparison of AI tools versus traditional draping
+- [How Lighting Affects Your Colors](/blog/how-lighting-affects-your-colors) — Why you look different in photos versus real life
+- [The Science Behind Personal Color Analysis](/blog/science-behind-personal-color-analysis) — The color science that powers seasonal typing

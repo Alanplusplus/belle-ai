@@ -175,4 +175,4 @@ Unsere KI analysiert dieselben Farbsignale wie ein Profi — Unterton, Tiefe, Ko
 
 [Kostenlose KI-Farbanalyse starten →](/try)
 
-Kostenlos, sofort, kein Konto nötig. Vollständige Palette und Styling-Guide erscheinen sofort.
+Die Vorschau ist kostenlos, ein Konto ist nicht nötig. Die kostenlose Version zeigt einige Details unscharf; die vollständige Palette und den Styling-Guide schaltest du mit einem Credit-Paket oder Pro frei.

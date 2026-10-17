@@ -214,7 +214,7 @@ Adivinar entre oro y plata me hizo perder tiempo y dinero. Entender mi **subtipo
 
 [Prueba gratis el análisis de color con IA →](/try)
 
-Unos 60 segundos, gratis, sin registro — orientación personalizada para metales, gemas y tu paleta más amplia.
+Unos 60 segundos, vista previa gratis, sin registro — orientación personalizada para metales, gemas y tu paleta más amplia.
 
 ## Artículos relacionados
 

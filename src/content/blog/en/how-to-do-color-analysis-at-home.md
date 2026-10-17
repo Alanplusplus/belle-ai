@@ -1,7 +1,9 @@
 ---
 title: "How to Do Color Analysis at Home: DIY Guide (No Stylist Needed)"
-description: "Learn how to do your own color analysis at home with simple tests. Find your undertone, determine your season, and discover your best colors without a professional appointment."
+seoTitle: "How to Do Color Analysis at Home (DIY Guide, No Stylist)"
+description: "Learn how to do your own color analysis at home with simple tests. Find your undertone, work out your season and your best colors without a stylist."
 date: "2026-07-21"
+updated: "2026-10-17"
 tags: ["color analysis at home", "DIY color analysis", "self color analysis", "find your colors", "undertone test"]
 image: "/images/blog/color-analysis-at-home.webp"
 ---
@@ -159,7 +161,7 @@ After doing your self-assessment, validate your results with AI analysis. Upload
 If they agree — great, you can be very confident.
 If they differ — consider which of your tests might have been affected by lighting or bias, and try again.
 
-[Verify with Free AI Color Analysis →](/try)
+[Verify with AI Color Analysis →](/try)
 
 ## Next Steps After Finding Your Season
 
@@ -175,8 +177,12 @@ Our AI analyzes the exact same color signals a professional looks at — underto
 
 [Start Free AI Color Analysis →](/try)
 
-Free, instant, no account needed. Your full palette and styling guide appears immediately.
+Free to preview with no account needed. The free version blurs some details; a credit pack or Pro unlocks your full palette and styling guide.
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [What Is Color Analysis?](/blog/what-is-color-analysis) — The beginner's guide
+- [What Season Am I?](/blog/what-color-season-am-i) — Match your results to a season
+- [Free AI Color Analysis Online](/blog/free-ai-color-analysis-online) — Double-check your result with AI
+- [Best AI Color Analysis Apps & Tools (2026)](/blog/best-ai-color-analysis-apps) — Honest comparison of the leading tools

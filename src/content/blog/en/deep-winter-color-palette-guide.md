@@ -163,11 +163,11 @@ Color analysis can feel confusing because so many variables are at play — ligh
 
 If you suspect you're a Deep Winter, start by testing the core principle: **do deep, cool, high-contrast colors make your skin look clearer and your eyes brighter?** If yes, you're very likely in Winter territory — and the depth of your natural coloring will tell you whether you're Deep, True, or Bright.
 
-For precise results without the guesswork, [AI color analysis](/en/personal-color-analysis) uses computer vision to measure your actual skin, hair, and eye color values — giving you an objective 12-season typing based on your unique coloring.
+For precise results without the guesswork, [AI color analysis](/personal-color-analysis) uses computer vision to measure your actual skin, hair, and eye color values — giving you an objective 12-season typing based on your unique coloring.
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Personal Color Analysis: All 12 Types Explained](/en/blog/personal-color-analysis-guide) — Understand where Deep Winter fits in the full system
-- [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Broader cool-toned color guide
-- [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Confirm your undertone first
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Personal Color Analysis: All 12 Types Explained](/blog/personal-color-analysis-guide) — Understand where Deep Winter fits in the full system
+- [Best Colors for Cool Undertones](/blog/best-colors-for-cool-undertones) — Broader cool-toned color guide
+- [Cool Tone vs Warm Tone: 5 Easy Tests](/blog/cool-tone-vs-warm-tone) — Confirm your undertone first

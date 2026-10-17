@@ -19,7 +19,7 @@ import {
   TWITTER_IMAGES,
 } from "@/lib/seo";
 import { routing } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import ReactMarkdown from "react-markdown";
@@ -67,6 +67,7 @@ export async function generateMetadata({
       locale: ogLocale(locale),
       url: alternates.canonical,
       publishedTime: `${post.date}T00:00:00+00:00`,
+      modifiedTime: `${post.updated}T00:00:00+00:00`,
       // 没有头图的文章回退到全站默认分享图，避免分享时没有预览
       images: imageUrl ? [{ url: imageUrl }] : OG_IMAGES,
     },
@@ -95,7 +96,7 @@ export default async function BlogPostPage({
     headline: post.title,
     description: post.description,
     datePublished: `${post.date}T00:00:00+00:00`,
-    dateModified: `${post.date}T00:00:00+00:00`,
+    dateModified: `${post.updated}T00:00:00+00:00`,
     author: {
       "@type": "Organization",
       name: "Belle AI",
@@ -167,10 +168,11 @@ function BlogPostContent({
   slug,
   related,
 }: {
-  post: { date: string; readingTime: string; title: string; tags: string[]; image: string; content: string };
+  post: { date: string; updated: string; readingTime: string; title: string; tags: string[]; image: string; content: string };
   slug: string;
   related: BlogPost[];
 }) {
+  const locale = useLocale();
   const t = useTranslations("blog");
   const ft = useTranslations("features");
   const tt = useTranslations("tryPage");
@@ -193,7 +195,15 @@ function BlogPostContent({
 
         <header className="mt-6">
           <div className="flex items-center gap-3 text-sm text-muted-foreground">
-            <time>{post.date}</time>
+            <time dateTime={post.date}>{post.date}</time>
+            {post.updated !== post.date && (
+              <>
+                <span>·</span>
+                <span>
+                  {t("updatedOn")} <time dateTime={post.updated}>{post.updated}</time>
+                </span>
+              </>
+            )}
             <span>·</span>
             <span>{post.readingTime} {t("minRead")}</span>
           </div>
@@ -238,7 +248,7 @@ function BlogPostContent({
         )}
 
         <div className="prose prose-neutral mt-10 max-w-none break-words prose-headings:font-bold prose-a:text-primary prose-img:h-auto prose-img:max-w-full">
-          <MarkdownContent content={post.content} toolType={toolType} />
+          <MarkdownContent content={post.content} toolType={toolType} locale={locale} />
         </div>
 
         {/* Bottom CTA card */}
@@ -293,14 +303,36 @@ function BlogPostContent({
   );
 }
 
-/** 文章正文里写死的 `/try` 链接（含 /de/try 这类带语言前缀的）统一改成直达本文对应的工具 */
-function rewriteTryLink(href: string | undefined, toolType: string): string | undefined {
-  if (!href) return href;
-  const match = href.match(/^((?:\/[a-z]{2})?)\/try\/?$/);
-  return match ? `${match[1]}/try?type=${toolType}` : href;
+/**
+ * 文章正文里的站内链接统一处理：
+ * 1. 没写语种前缀的站内链接（如德语文章里的 `/try`、`/tools/color-quiz`）补上当前语种，
+ *    否则读者会被带到英文页面，内链权重也流向了错误语种的 URL（默认语种 en 本来就不带前缀）。
+ * 2. `/try`（含 /de/try 这类带语言前缀的）改成直达本文对应的工具 `/try?type=...`。
+ * 静态资源、外链和锚点保持原样。
+ */
+function localizeHref(href: string | undefined, locale: string, toolType: string): string | undefined {
+  if (!href || !href.startsWith("/") || href.startsWith("//")) return href;
+
+  const hasLocalePrefix = routing.locales.some(
+    (l) =>
+      href === `/${l}` ||
+      href.startsWith(`/${l}/`) ||
+      href.startsWith(`/${l}?`) ||
+      href.startsWith(`/${l}#`),
+  );
+  const isAsset = /^\/(images|_next|feed|api)\b/.test(href) || /\.[a-z0-9]+$/i.test(href);
+
+  let path = href;
+  if (!hasLocalePrefix && !isAsset && locale !== routing.defaultLocale) {
+    // 根路径 "/" 在非默认语种下是 /de，而不是 /de/
+    path = href === "/" ? `/${locale}` : `/${locale}${href}`;
+  }
+
+  const match = path.match(/^((?:\/[a-z]{2})?)\/try\/?$/);
+  return match ? `${match[1]}/try?type=${toolType}` : path;
 }
 
-function MarkdownContent({ content, toolType }: { content: string; toolType: string }) {
+function MarkdownContent({ content, toolType, locale }: { content: string; toolType: string; locale: string }) {
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
@@ -316,7 +348,7 @@ function MarkdownContent({ content, toolType }: { content: string; toolType: str
           </div>
         ),
         a: ({ href, children }) => (
-          <a href={rewriteTryLink(href, toolType)} className="text-primary hover:underline">
+          <a href={localizeHref(href, locale, toolType)} className="text-primary hover:underline">
             {children}
           </a>
         ),

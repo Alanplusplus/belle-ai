@@ -226,7 +226,7 @@ Our AI color analysis works across all skin tones and ethnicities — detecting 
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Olive Undertone Guide](/en/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
-- [Olive Skin Color Season Guide](/en/blog/olive-skin-color-season) — Which seasonal type olive skin typically falls into
-- [Olive vs Warm Undertone](/en/blog/olive-vs-warm-undertone) — Why olive skin isn't simply warm or cool
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Olive Undertone Guide](/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
+- [Olive Skin Color Season Guide](/blog/olive-skin-color-season) — Which seasonal type olive skin typically falls into
+- [Olive vs Warm Undertone](/blog/olive-vs-warm-undertone) — Why olive skin isn't simply warm or cool

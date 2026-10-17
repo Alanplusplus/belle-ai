@@ -166,7 +166,7 @@ Curious about your color season? Try a free [AI color analysis](https://aicolora
 
 ## Related Articles
 
-- [I Wore Only My 'Season Colors' for 30 Days — Here's What Happened](/en/blog/wearing-season-colors-30-days) — One month wearing exclusively my seasonal palette
-- [How to Build a Capsule Wardrobe for Your Color Season](/en/blog/capsule-wardrobe-color-season) — Practical wardrobe building using your seasonal colors
-- [The Science Behind Personal Color Analysis: How It Actually Works](/en/blog/science-behind-personal-color-analysis) — The color science that makes this work
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [I Wore Only My 'Season Colors' for 30 Days — Here's What Happened](/blog/wearing-season-colors-30-days) — One month wearing exclusively my seasonal palette
+- [How to Build a Capsule Wardrobe for Your Color Season](/blog/capsule-wardrobe-color-season) — Practical wardrobe building using your seasonal colors
+- [The Science Behind Personal Color Analysis: How It Actually Works](/blog/science-behind-personal-color-analysis) — The color science that makes this work
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

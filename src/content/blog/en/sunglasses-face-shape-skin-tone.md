@@ -274,7 +274,7 @@ Finding the right sunglasses isn't about following a trend or grabbing whatever'
 
 ## Related Articles
 
-- [How to Choose Glasses That Flatter Your Face Shape AND Your Color Season](/en/blog/glasses-face-shape-color-season) — The indoor glasses version of this guide
-- [Best Earring Styles for Every Face Shape — A Visual Guide](/en/blog/best-earring-styles-face-shape) — Another face-shape-based accessory guide
-- [How to Accessorize Based on Your Color Season](/en/blog/accessorize-by-color-season) — The complete accessories guide by color season
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [How to Choose Glasses That Flatter Your Face Shape AND Your Color Season](/blog/glasses-face-shape-color-season) — The indoor glasses version of this guide
+- [Best Earring Styles for Every Face Shape — A Visual Guide](/blog/best-earring-styles-face-shape) — Another face-shape-based accessory guide
+- [How to Accessorize Based on Your Color Season](/blog/accessorize-by-color-season) — The complete accessories guide by color season
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

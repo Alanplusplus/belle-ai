@@ -187,11 +187,11 @@ Not all cool-toned people wear the same colors. It depends on your seasonal subt
 
 ## Not Sure If You're Cool? Get AI Analysis
 
-If you're unsure about your exact undertone or seasonal type, [AI color analysis](/en/personal-color-analysis) removes the guesswork. Belle AI analyzes your photo using computer vision to determine your precise 12-season color type, giving you a personalized color palette tailored to your specific skin, hair, and eye coloring.
+If you're unsure about your exact undertone or seasonal type, [AI color analysis](/personal-color-analysis) removes the guesswork. Belle AI analyzes your photo using computer vision to determine your precise 12-season color type, giving you a personalized color palette tailored to your specific skin, hair, and eye coloring.
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Confirm whether you're actually cool-toned
-- [Am I Warm or Cool Toned? 7 Methods](/en/blog/how-to-determine-skin-undertone) — The definitive undertone guide
-- [Personal Color Analysis: 12 Types Explained](/en/blog/personal-color-analysis-guide) — Understand all 12 seasonal types
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Cool Tone vs Warm Tone: 5 Easy Tests](/blog/cool-tone-vs-warm-tone) — Confirm whether you're actually cool-toned
+- [Am I Warm or Cool Toned? 7 Methods](/blog/how-to-determine-skin-undertone) — The definitive undertone guide
+- [Personal Color Analysis: 12 Types Explained](/blog/personal-color-analysis-guide) — Understand all 12 seasonal types

@@ -317,7 +317,7 @@ Understanding your sub-season narrows your palette from "generally warm" to "spe
 
 The line between warm and cool isn't always obvious — especially if you're neutral-warm or have olive skin with warm undertones. Guessing can lead to a closet full of "almost right" pieces.
 
-[AI color analysis](/en/personal-color-analysis) takes the subjectivity out of the equation. By analyzing your photo with computer vision, it identifies not just whether you're warm or cool, but your precise 12-season color type — giving you a palette that's calibrated to your exact skin, hair, and eye combination.
+[AI color analysis](/personal-color-analysis) takes the subjectivity out of the equation. By analyzing your photo with computer vision, it identifies not just whether you're warm or cool, but your precise 12-season color type — giving you a palette that's calibrated to your exact skin, hair, and eye combination.
 
 ---
 
@@ -340,11 +340,11 @@ Avoid icy pastels, stark white, cool grays, and blue-based colors like fuchsia a
 While black isn't the ideal neutral for warm undertones, you can wear it. Soften it by pairing with warm colors near your face — a warm scarf, gold jewelry, or warm-toned makeup can help balance it.
 
 ### How do I know if I'm warm or cool?
-The quickest test is the vein test: look at the veins on your inner wrist in natural light. Green veins suggest warm, blue/purple veins suggest cool, and a mix suggests neutral. For a definitive answer, try our [free AI color analysis](/en/color-analysis).
+The quickest test is the vein test: look at the veins on your inner wrist in natural light. Green veins suggest warm, blue/purple veins suggest cool, and a mix suggests neutral. For a definitive answer, try our [free AI color analysis](/color-analysis).
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Confirm whether you're actually warm-toned
-- [Am I Warm or Cool Toned? 7 Methods](/en/blog/how-to-determine-skin-undertone) — The definitive undertone guide
-- [Personal Color Analysis: 12 Types Explained](/en/blog/personal-color-analysis-guide) — Understand all 12 seasonal types
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Cool Tone vs Warm Tone: 5 Easy Tests](/blog/cool-tone-vs-warm-tone) — Confirm whether you're actually warm-toned
+- [Am I Warm or Cool Toned? 7 Methods](/blog/how-to-determine-skin-undertone) — The definitive undertone guide
+- [Personal Color Analysis: 12 Types Explained](/blog/personal-color-analysis-guide) — Understand all 12 seasonal types

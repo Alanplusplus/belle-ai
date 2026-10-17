@@ -119,7 +119,7 @@ Traditional color analysis — where a consultant holds fabric drapes next to yo
 
 **The three dimensions interact.** A person might clearly be cool-toned (hue), but are they light or deep? Bright or muted? Each subsequent dimension narrows the 12-season result, and getting any one wrong cascades through the whole analysis.
 
-This is where computational approaches offer a genuine advantage. A camera sensor, unlike the human eye, measures actual light wavelengths consistently. [AI-powered color analysis](/en/personal-color-analysis) can extract precise color values from skin, hair, and eye pixels, map them onto the three-dimensional color space, and determine which season shows the strongest mathematical harmony — without the variability of human perception or ambient lighting compensation.
+This is where computational approaches offer a genuine advantage. A camera sensor, unlike the human eye, measures actual light wavelengths consistently. [AI-powered color analysis](/personal-color-analysis) can extract precise color values from skin, hair, and eye pixels, map them onto the three-dimensional color space, and determine which season shows the strongest mathematical harmony — without the variability of human perception or ambient lighting compensation.
 
 That's not to say technology is perfect. Photo quality, lighting in the selfie, and camera white balance all introduce variables. But the core advantage — **objective, repeatable measurement of color values** — addresses the biggest weakness of traditional draping.
 
@@ -148,7 +148,7 @@ The next time someone tells you a color "isn't your shade," remember — there's
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Personal Color Analysis: All 12 Types Explained](/en/blog/personal-color-analysis-guide) — Understand the full 12-season system
-- [How to Determine Your Skin Undertone](/en/blog/how-to-determine-skin-undertone) — Apply the science with practical undertone tests
-- [Why Online Color Analysis Quizzes Get It Wrong](/en/blog/why-color-analysis-quizzes-are-wrong) — Understanding the limitations of self-assessment
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Personal Color Analysis: All 12 Types Explained](/blog/personal-color-analysis-guide) — Understand the full 12-season system
+- [How to Determine Your Skin Undertone](/blog/how-to-determine-skin-undertone) — Apply the science with practical undertone tests
+- [Why Online Color Analysis Quizzes Get It Wrong](/blog/why-color-analysis-quizzes-are-wrong) — Understanding the limitations of self-assessment

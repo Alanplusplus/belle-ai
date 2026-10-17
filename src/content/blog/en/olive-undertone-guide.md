@@ -198,7 +198,7 @@ It's rare for olive-toned people to type into Spring or Winter seasons because t
 
 If you've taken a color analysis quiz and the results didn't feel right, your olive undertone might be the reason. Standard quizzes don't account for the green modifier, so they may type you into a season that technically matches your warm/cool base but ignores the muted quality that olive adds.
 
-For more accurate results, [AI-based color analysis](/en/personal-color-analysis) can detect olive undertones by measuring the actual color values in your skin — including that green-grey cast that's invisible to most basic tests but clearly visible to computer vision algorithms.
+For more accurate results, [AI-based color analysis](/personal-color-analysis) can detect olive undertones by measuring the actual color values in your skin — including that green-grey cast that's invisible to most basic tests but clearly visible to computer vision algorithms.
 
 ---
 
@@ -224,7 +224,7 @@ Understanding your olive undertone is genuinely liberating. Once you stop trying
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [How to Determine Your Skin Undertone](/en/blog/how-to-determine-skin-undertone) — The full undertone guide with 7 testing methods
-- [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Compare cool and warm basics
-- [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Specifically for cool-toned skin
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [How to Determine Your Skin Undertone](/blog/how-to-determine-skin-undertone) — The full undertone guide with 7 testing methods
+- [Cool Tone vs Warm Tone: 5 Easy Tests](/blog/cool-tone-vs-warm-tone) — Compare cool and warm basics
+- [Best Colors for Cool Undertones](/blog/best-colors-for-cool-undertones) — Specifically for cool-toned skin

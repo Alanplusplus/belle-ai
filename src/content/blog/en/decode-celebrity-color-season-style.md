@@ -218,7 +218,7 @@ The goal was never to dress *as* someone else. It's to understand the color logi
 
 ## Related Articles
 
-- [Celebrity Color Transformations: What Red Carpet Before-and-Afters Teach Us](/en/blog/celebrity-color-transformations) — See how hair color changes reveal color season in real time
-- [How to Find Your Best Hair Color Based on Your Color Season](/en/blog/best-hair-color-for-color-season) — Apply the same celebrity analysis method to choosing your hair color
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [The Best Makeup Colors for Every Color Season](/en/blog/best-makeup-colors-color-season) — Once you know your season, here's your full makeup palette
+- [Celebrity Color Transformations: What Red Carpet Before-and-Afters Teach Us](/blog/celebrity-color-transformations) — See how hair color changes reveal color season in real time
+- [How to Find Your Best Hair Color Based on Your Color Season](/blog/best-hair-color-for-color-season) — Apply the same celebrity analysis method to choosing your hair color
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [The Best Makeup Colors for Every Color Season](/blog/best-makeup-colors-color-season) — Once you know your season, here's your full makeup palette

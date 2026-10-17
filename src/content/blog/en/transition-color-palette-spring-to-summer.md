@@ -152,7 +152,7 @@ The best-dressed people don't fight the seasonal shift — they ride it. And the
 
 ## Related Articles
 
-- [Spring Color Palettes Decoded: Bright Spring vs True Spring vs Light Spring](/en/blog/spring-color-palettes-decoded) — The complete breakdown of all three Spring sub-seasons
-- [Summer Color Palettes Decoded: Cool Summer vs True Summer vs Soft Summer](/en/blog/summer-color-palettes-decoded) — Everything you need to know about Summer sub-seasons
-- [How to Build a Capsule Wardrobe for Your Color Season](/en/blog/capsule-wardrobe-color-season) — Build a versatile wardrobe around your seasonal palette
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Spring Color Palettes Decoded: Bright Spring vs True Spring vs Light Spring](/blog/spring-color-palettes-decoded) — The complete breakdown of all three Spring sub-seasons
+- [Summer Color Palettes Decoded: Cool Summer vs True Summer vs Soft Summer](/blog/summer-color-palettes-decoded) — Everything you need to know about Summer sub-seasons
+- [How to Build a Capsule Wardrobe for Your Color Season](/blog/capsule-wardrobe-color-season) — Build a versatile wardrobe around your seasonal palette
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

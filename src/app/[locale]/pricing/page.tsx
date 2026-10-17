@@ -7,12 +7,19 @@ import {
   OG_IMAGES,
   TWITTER_IMAGES,
 } from "@/lib/seo";
-import { PACK_CREDITS, PACK_PRICE, WEEKLY_INTRO_PRICE } from "@/lib/constants";
+import {
+  CREDIT_PACKS,
+  WEEKLY_INTRO_PRICE,
+  WEEKLY_PRICE,
+  YEARLY_PRICE,
+} from "@/lib/constants";
 import type { Metadata } from "next";
 import { PricingButtons, PricingViewTracker } from "./PricingButtons";
 import { PricingStickyBar } from "./PricingStickyBar";
 import { InAppBrowserNotice } from "@/components/InAppBrowserNotice";
 import { RestoreSubscriptionHint } from "@/components/RestoreSubscriptionHint";
+import { LocalPrice, PricedText } from "@/components/LocalPrice";
+import { PaymentTrust } from "@/components/PaymentTrust";
 
 export async function generateMetadata({
   params,
@@ -70,27 +77,27 @@ export default async function PricingPage({
         description: "3 free AI analysis previews",
         availability: "https://schema.org/InStock",
       },
-      {
+      ...(["pack", "pack30"] as const).map((key) => ({
         "@type": "Offer",
-        name: "Credit Pack",
-        price: PACK_PRICE,
+        name: `Credit Pack (${CREDIT_PACKS[key].credits} credits)`,
+        price: CREDIT_PACKS[key].price,
         priceCurrency: "USD",
-        description: `${PACK_CREDITS} credits, one-time purchase. 1 credit = 1 full report without blur`,
+        description: `${CREDIT_PACKS[key].credits} credits, one-time purchase. 1 credit = 1 full report without blur`,
         availability: "https://schema.org/InStock",
-      },
+      })),
       {
         "@type": "Offer",
         name: "Weekly",
-        price: "3.99",
+        price: WEEKLY_PRICE,
         priceCurrency: "USD",
-        description: `50 analyses per week, 4K resolution. New subscribers: first week $${WEEKLY_INTRO_PRICE}, then $3.99/week`,
+        description: `50 analyses per week, 4K resolution. New subscribers: first week $${WEEKLY_INTRO_PRICE}, then $${WEEKLY_PRICE}/week`,
         availability: "https://schema.org/InStock",
         priceValidUntil: new Date(new Date().getFullYear() + 1, 0, 1).toISOString().split("T")[0],
       },
       {
         "@type": "Offer",
         name: "Yearly",
-        price: "29.99",
+        price: YEARLY_PRICE,
         priceCurrency: "USD",
         description: "50 analyses per week, 4K resolution, billed yearly",
         availability: "https://schema.org/InStock",
@@ -119,40 +126,14 @@ export default async function PricingPage({
         {/* 内置浏览器里订阅与记录不会跟随到系统浏览器：提前提示用系统浏览器打开再付款 */}
         <InAppBrowserNotice className="mx-auto mt-6 max-w-xl" />
 
-        {/* 积分包：一次性付费、不绑订阅，门槛最低，放在最前面作为主推 */}
-        <div id="pricing-pack-card" className="relative mx-auto mt-10 max-w-5xl scroll-mt-24 rounded-2xl border-2 border-primary bg-card p-6 shadow-lg sm:p-8">
-          <span className="absolute -top-3 left-6 rounded-full bg-green-500 px-3 py-0.5 text-xs font-semibold text-white">
-            {t("packBadge")}
-          </span>
-          <div className="grid gap-6 lg:grid-cols-[1fr_20rem] lg:items-center">
-            <div>
-              <h3 className="text-xl font-bold">{t("packTitle", { credits: PACK_CREDITS })}</h3>
-              <ul className="mt-4 space-y-3">
-                <PricingFeature text={t("packFeature1", { credits: PACK_CREDITS })} />
-                <PricingFeature text={t("packFeature2")} />
-                <PricingFeature text={t("packFeature3")} />
-              </ul>
-            </div>
-            <div>
-              <div className="lg:text-center">
-                <span className="text-4xl font-bold text-primary">${PACK_PRICE}</span>
-              </div>
-              <PricingButtons product="pack" variant="primary" label={t("packCta", { credits: PACK_CREDITS, price: PACK_PRICE })} />
-              <p className="mt-2 text-center text-xs text-muted-foreground">{t("packNote")}</p>
-            </div>
-          </div>
-        </div>
-
-        <p className="mt-8 text-center text-xs font-medium uppercase tracking-wide text-muted-foreground">{t("orSubscribe")}</p>
-
-        {/* Free + subscriptions */}
-        <div className="mx-auto mt-4 grid max-w-5xl gap-6 lg:grid-cols-3">
+        {/* 订阅是整页主推：周订阅（首周优惠）最醒目，年订阅是长期划算的选项，积分包放在下面给「不想订阅」的人 */}
+        <div className="mx-auto mt-10 grid max-w-5xl gap-6 pt-3 lg:grid-cols-3">
           {/* Free（手机上排最后：主推的 Weekly 放最前，Free 不抢首屏） */}
           <div className="rounded-2xl border border-border bg-card p-6 max-lg:order-3">
             <h3 className="text-xl font-bold">{t("free")}</h3>
             <p className="mt-1 text-sm text-muted-foreground">{t("freeDesc")}</p>
             <div className="mt-4">
-              <span className="text-4xl font-bold">$0</span>
+              <span className="text-4xl font-bold"><LocalPrice spec="free" /></span>
             </div>
             <ul className="mt-6 space-y-3">
               <PricingFeature text={t("freeFeature1")} />
@@ -167,48 +148,84 @@ export default async function PricingPage({
             </Link>
           </div>
 
-          {/* Weekly：首周优惠，订阅里的主推（整页的主推是上面的积分包，所以这里不再用粗边框和阴影） */}
-          <div id="pricing-weekly-card" className="relative scroll-mt-24 rounded-2xl border border-primary/50 bg-card p-6 max-lg:order-1">
-            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-green-500 px-3 py-0.5 text-xs font-semibold text-white">
-              {t("weeklyIntroBadge", { price: WEEKLY_INTRO_PRICE })}
+          {/* Weekly：整页主推 —— 粗边框 + 阴影 + 实心按钮。价格区与 PricingModal 一致：
+              大号显示首周优惠价，原价放在下面的说明里，不抢首周价的位置 */}
+          <div id="pricing-weekly-card" className="relative scroll-mt-24 rounded-2xl border-2 border-primary bg-card p-6 shadow-lg max-lg:order-1">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-primary px-3 py-0.5 text-xs font-semibold text-white">
+              {t("weeklyRecommendedBadge")}
             </span>
             <h3 className="text-xl font-bold">{t("weekly")}</h3>
             <p className="mt-1 text-sm text-muted-foreground">
               {t("weeklyDesc")}
             </p>
             <div className="mt-4">
-              <span className="text-4xl font-bold text-primary">{t("weeklyPrice")}</span>
-              <span className="text-muted-foreground">{t("weeklyPer")}</span>
+              <span className="text-4xl font-bold text-primary"><LocalPrice spec="weeklyIntro" /></span>
+              <span className="text-muted-foreground"> / {t("weeklyIntroLabel")}</span>
             </div>
-            <p className="mt-2 text-sm text-muted-foreground">{t("weeklyIntroNote", { price: WEEKLY_INTRO_PRICE })}</p>
-            <ul className="mt-4 space-y-3">
+            <p className="mt-1 text-sm text-muted-foreground"><PricedText k="weeklyThen" prices={{ price: "weekly" }} /></p>
+            <ul className="mt-5 space-y-3">
               <PricingFeature text={t("weeklyFeature1")} />
               <PricingFeature text={t("weeklyFeature2")} />
               <PricingFeature text={t("weeklyFeature3")} />
               <PricingFeature text={t("weeklyFeature4")} />
             </ul>
-            <PricingButtons product="weekly" variant="outline" label={t("weeklyCta", { price: WEEKLY_INTRO_PRICE })} />
+            <PricingButtons product="weekly" variant="primary" label={<PricedText k="weeklyCta" prices={{ price: "weeklyIntro" }} />} />
           </div>
 
-          {/* Yearly */}
+          {/* Yearly：折合每周只要几毛钱，和周订阅的正常价对比 */}
           <div className="rounded-2xl border border-border bg-card p-6 max-lg:order-2">
-            <span className="inline-block rounded-full bg-muted px-2.5 py-0.5 text-xs font-semibold text-muted-foreground mb-2">
+            <span className="inline-block rounded-full bg-green-500/15 px-2.5 py-0.5 text-xs font-semibold text-green-700 mb-2 dark:text-green-400">
               {t("yearlyBadge")}
             </span>
             <h3 className="text-xl font-bold">{t("yearly")}</h3>
             <div className="mt-4">
-              <span className="text-4xl font-bold">{t("yearlyPrice")}</span>
-              <span className="text-muted-foreground">{t("yearlyPer")}</span>
+              <span className="text-4xl font-bold"><LocalPrice spec="yearly" /></span>
+              <span className="text-muted-foreground"> {t("yearlyPer")}</span>
             </div>
-            <ul className="mt-6 space-y-3">
+            <p className="mt-1 text-sm font-medium text-primary"><PricedText k="yearlyPerWeek" prices={{ price: "yearlyPerWeek" }} /></p>
+            <ul className="mt-5 space-y-3">
               <PricingFeature text={t("yearlyFeature1")} />
               <PricingFeature text={t("yearlyFeature2")} />
               <PricingFeature text={t("yearlyFeature3")} />
               <PricingFeature text={t("yearlyFeature4")} />
             </ul>
-            <PricingButtons product="yearly" variant="outline" label={t("yearlyCta")} />
+            <PricingButtons product="yearly" variant="outline" label={<>{t("yearlyCta")} · <LocalPrice spec="yearly" /></>} />
           </div>
         </div>
+
+        {/* 积分包：一次性付费、不绑订阅，给不想订阅的人。30 积分更划算，折算每份报告的单价写在卡片上 */}
+        <p className="mt-12 text-center text-xs font-medium uppercase tracking-wide text-muted-foreground">{t("orPack")}</p>
+        <div className="mx-auto mt-5 grid max-w-3xl gap-6 sm:grid-cols-2">
+          {(["pack", "pack30"] as const).map((key) => {
+            const { credits } = CREDIT_PACKS[key];
+            return (
+              <div key={key} id={`pricing-${key}-card`} className="relative rounded-2xl border border-border bg-card p-6">
+                {key === "pack30" && (
+                  <span className="absolute -top-3 left-6 rounded-full bg-green-500 px-3 py-0.5 text-xs font-semibold text-white">
+                    <PricedText k="packSaveBadge" prices={{ percent: "pack30:savePercent" }} />
+                  </span>
+                )}
+                <div className="flex items-baseline justify-between gap-3">
+                  <h3 className="text-lg font-bold">{t("packTitle", { credits })}</h3>
+                  <p className="text-2xl font-bold"><LocalPrice spec={key} /></p>
+                </div>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  <PricedText k="packPerReport" prices={{ price: `${key}:perReport` as "pack:perReport" | "pack30:perReport" }} />
+                </p>
+                <ul className="mt-4 space-y-2.5">
+                  <PricingFeature text={t("packFeature1", { credits })} />
+                  <PricingFeature text={t("packFeature2")} />
+                  <PricingFeature text={t("packFeature3")} />
+                </ul>
+                <PricingButtons product={key} variant="outline" label={<PricedText k="packCta" prices={{ price: key }} values={{ credits }} />} />
+              </div>
+            );
+          })}
+        </div>
+        <p className="mt-3 text-center text-xs text-muted-foreground">{t("packNote")}</p>
+
+        {/* 支付信任信息：离购买按钮最近的地方说清「怎么付、安不安全」 */}
+        <PaymentTrust className="mt-5" />
 
         <RestoreSubscriptionHint className="mx-auto mt-6 max-w-2xl" />
 
@@ -293,7 +310,7 @@ export default async function PricingPage({
 
       </div>
     </section>
-    <PricingStickyBar targetId="pricing-pack-card" />
+    <PricingStickyBar targetId="pricing-weekly-card" />
     <PricingViewTracker />
     </>
   );

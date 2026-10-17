@@ -152,7 +152,7 @@ Para mejores resultados, usa una foto clara con luz natural diurna, sin maquilla
 
 ## Obtén tu análisis de color gratis
 
-¿Lista para descubrir tu tipo de color estacional? Nuestra herramienta con IA analiza tu foto y te entrega tu perfil cromático completo en 60 segundos — completamente gratis, sin registro.
+¿Lista para descubrir tu tipo de color estacional? Nuestra herramienta con IA analiza tu foto y te muestra una vista previa de tu perfil cromático en 60 segundos — gratis para probar, sin registro. La versión gratuita desenfoca algunos detalles; un pack de créditos o Pro desbloquea el informe completo.
 
 [Empezar análisis de color con IA gratis →](/try)
 

@@ -151,7 +151,7 @@ Tam mevsimsel renk tipinizi keşfetmeye hazır mısınız? Yapay zekamız her te
 
 [Ücretsiz Renk Analizine Başlayın →](/tr/try)
 
-60 saniye, ücretsiz, kayıt gerekmez. Kişiselleştirilmiş paletinizi ve stil rehberinizi alın.
+60 saniye, ücretsiz önizleme, kayıt gerekmez. Kişiselleştirilmiş paletinizi ve stil rehberinizi alın.
 
 ## İlgili Makaleler
 

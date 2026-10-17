@@ -16,6 +16,8 @@ export interface BlogPost {
   seoTitle: string;
   description: string;
   date: string;
+  /** 内容真实更新日期（frontmatter 的 updated，可选）；没有时等同于 date */
+  updated: string;
   tags: string[];
   image: string;
   readingTime: string;
@@ -60,6 +62,7 @@ function readAllPosts(locale: string): BlogPost[] {
         seoTitle: data.seoTitle || "",
         description: data.description || "",
         date: data.date || "",
+        updated: data.updated || data.date || "",
         tags: data.tags || [],
         image: data.image || "",
         readingTime: Math.ceil(stats.minutes).toString(),
@@ -88,6 +91,7 @@ export function getPostBySlug(
     seoTitle: data.seoTitle || "",
     description: data.description || "",
     date: data.date || "",
+    updated: data.updated || data.date || "",
     tags: data.tags || [],
     image: data.image || "",
     readingTime: Math.ceil(stats.minutes).toString(),

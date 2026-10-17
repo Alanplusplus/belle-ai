@@ -167,7 +167,7 @@ image: "/images/blog/olive-vs-neutral-undertone.webp"
 
 [免费体验 AI 色彩分析 →](/zh/try)
 
-60 秒、免费、无需注册。获得含橄榄检测在内的准确底色解读。
+60 秒、免费预览、无需注册。获得含橄榄检测在内的准确底色解读。
 
 ## 相关文章
 

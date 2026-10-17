@@ -165,7 +165,7 @@ The next wedding invitation you get doesn't have to trigger a shopping panic. Kn
 
 ## Related Articles
 
-- [How to Build a Capsule Wardrobe for Your Color Season](/en/blog/capsule-wardrobe-color-season) — Apply seasonal colors to your everyday wardrobe
-- [The Best Makeup Colors for Every Color Season: A Complete Chart](/en/blog/best-makeup-colors-color-season) — Complete your wedding guest look with the right makeup
-- [How to Shop Online for Your Color Season (Without Getting It Wrong)](/en/blog/online-shopping-color-season) — Buy the right colors online with confidence
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [How to Build a Capsule Wardrobe for Your Color Season](/blog/capsule-wardrobe-color-season) — Apply seasonal colors to your everyday wardrobe
+- [The Best Makeup Colors for Every Color Season: A Complete Chart](/blog/best-makeup-colors-color-season) — Complete your wedding guest look with the right makeup
+- [How to Shop Online for Your Color Season (Without Getting It Wrong)](/blog/online-shopping-color-season) — Buy the right colors online with confidence
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

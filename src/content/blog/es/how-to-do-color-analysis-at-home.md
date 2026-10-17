@@ -175,4 +175,4 @@ Nuestra IA analiza las mismas señales cromáticas que mira un profesional — s
 
 [Empezar análisis de color IA gratis →](/try)
 
-Gratis, instantáneo, sin cuenta. Tu paleta completa y guía de estilo aparecen al momento.
+Vista previa gratis y sin cuenta. La versión gratuita desenfoca algunos detalles; un pack de créditos o Pro desbloquea tu paleta completa y la guía de estilo.

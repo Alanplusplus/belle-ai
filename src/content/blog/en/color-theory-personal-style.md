@@ -266,7 +266,7 @@ The color wheel has been around for centuries. It's time your closet caught up.
 
 ## Related Articles
 
-- [The Science Behind Personal Color Analysis: How It Actually Works](/en/blog/science-behind-personal-color-analysis) — The optical science behind why certain colors flatter certain people
-- [How to Build a Capsule Wardrobe for Your Color Season (Step-by-Step)](/en/blog/capsule-wardrobe-color-season) — Put color theory into action with a curated wardrobe
-- [Soft Autumn vs Soft Summer: The Most Commonly Confused Color Seasons](/en/blog/soft-autumn-vs-soft-summer) — A deep dive into two seasons where saturation is the key differentiator
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [The Science Behind Personal Color Analysis: How It Actually Works](/blog/science-behind-personal-color-analysis) — The optical science behind why certain colors flatter certain people
+- [How to Build a Capsule Wardrobe for Your Color Season (Step-by-Step)](/blog/capsule-wardrobe-color-season) — Put color theory into action with a curated wardrobe
+- [Soft Autumn vs Soft Summer: The Most Commonly Confused Color Seasons](/blog/soft-autumn-vs-soft-summer) — A deep dive into two seasons where saturation is the key differentiator
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

@@ -179,7 +179,7 @@ The best online shoppers I know don't have perfect color vision. They have syste
 
 ## Related Articles
 
-- [How to Build a Capsule Wardrobe for Your Color Season](/en/blog/capsule-wardrobe-color-season) — Build a versatile wardrobe within your palette
-- [Best Colors for Warm Undertones: Your Complete Style Guide](/en/blog/best-colors-for-warm-undertones) — Color recommendations for warm-toned shoppers
-- [Soft Autumn vs Soft Summer: The Most Commonly Confused Color Seasons](/en/blog/soft-autumn-vs-soft-summer) — Tell these similar seasons apart
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [How to Build a Capsule Wardrobe for Your Color Season](/blog/capsule-wardrobe-color-season) — Build a versatile wardrobe within your palette
+- [Best Colors for Warm Undertones: Your Complete Style Guide](/blog/best-colors-for-warm-undertones) — Color recommendations for warm-toned shoppers
+- [Soft Autumn vs Soft Summer: The Most Commonly Confused Color Seasons](/blog/soft-autumn-vs-soft-summer) — Tell these similar seasons apart
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

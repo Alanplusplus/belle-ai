@@ -1,7 +1,9 @@
 ---
 title: "Free AI Color Analysis Online: How to Find Your Colors Without Paying $300"
-description: "Get a free AI color analysis online in 60 seconds. No signup, no appointment needed. Discover your seasonal color type, best palette, and styling recommendations with AI."
+seoTitle: "Free AI Color Analysis Online: Find Your Colors in 60s"
+description: "Get a free AI color analysis online in about 60 seconds. Find your season, best palette and styling tips from one selfie, with no appointment needed."
 date: "2026-07-23"
+updated: "2026-10-17"
 tags: ["free color analysis", "AI color analysis", "online color analysis", "color analysis tool", "free"]
 image: "/images/blog/free-ai-color-analysis-online.webp"
 ---
@@ -19,7 +21,7 @@ Here's what the average cost looks like in major cities:
 | Seoul | ₩150,000–₩300,000 | 60 minutes |
 | Sydney | AUD $300–$500 | 90 minutes |
 
-The good news: AI can now give you a useful starting point — for free.
+The good news: AI can now give you a useful starting point, and you can preview your result for free. (If you search for it as a free AI colour analysis, that is the UK, Australian and Canadian spelling of the same thing.)
 
 ## How Free AI Color Analysis Works
 
@@ -55,7 +57,7 @@ Your color measurements are compared against the 12-season color framework. The 
 
 ### Step 4: Results
 
-You receive:
+The full report includes:
 - Your seasonal color type (e.g., "Soft Autumn" or "Bright Winter")
 - A personalized color palette of your most flattering shades
 - Colors to avoid
@@ -63,9 +65,9 @@ You receive:
 
 ## Belle AI: Free Color Analysis in 60 Seconds
 
-Our AI color analysis tool provides everything listed above — completely free for your first analysis. No email required, no signup wall, no hidden paywall on your results.
+Our [AI color analysis tool](/) produces everything listed above. Your first analysis is free to preview with no signup, but the free version is a preview with some details blurred. A credit pack or Pro unlocks the full report. We would rather say that up front than promise a "completely free" report.
 
-### What You Get
+### What the Full Report Includes
 
 - **12-season color type** — not just "Autumn" but your specific sub-type
 - **Visual color palette** — your best 24+ colors displayed in a shareable format
@@ -92,7 +94,7 @@ Where in-person may be better:
 
 | Tool | Cost | Method | Accuracy | Speed |
 |------|------|--------|----------|-------|
-| **Belle AI** | Free | AI photo analysis | High | 60 seconds |
+| **Belle AI** | Free preview, paid full report | AI photo analysis | Medium–High | 60 seconds |
 | Basic Quiz | Free | Self-assessment questions | Low–Medium | 3 minutes |
 | Professional Consultation | $200–$500 | In-person draping | Highest | 60–90 min |
 | Video Consultation | $50–$150 | Video call + swatches | High | 30–45 min |
@@ -125,14 +127,17 @@ Keep your color palette on your phone. When shopping, compare items against your
 
 ## Start Your Free Color Analysis Now
 
-Ready to find your best colors? Upload a selfie and get your complete color analysis in 60 seconds.
+Ready to find your best colors? Upload a selfie and preview your color analysis in about 60 seconds.
 
-[Get My Free Color Analysis →](/try)
+[Get My Free Color Analysis Preview →](/try)
 
-No signup required. No credit card. Your results appear instantly.
+No signup or credit card needed to preview. The free version blurs some details; a credit pack or Pro unlocks the full report.
 
 Prefer not to upload a photo? [Take our free color analysis quiz instead →](/tools/color-quiz)
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [What Is Color Analysis?](/blog/what-is-color-analysis) — How the 4-season and 12-season systems work
+- [What Season Am I?](/blog/what-color-season-am-i) — Find your season with a free quiz
+- [Best AI Color Analysis Apps & Tools (2026)](/blog/best-ai-color-analysis-apps) — Honest comparison of the leading tools

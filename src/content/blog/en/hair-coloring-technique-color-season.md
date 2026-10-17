@@ -191,7 +191,7 @@ This isn't about replacing your stylist's expertise — it's about arriving at t
 
 ## Related Articles
 
-- [How to Find Your Best Hair Color Based on Your Color Season](/en/blog/best-hair-color-for-color-season) — A complete shade guide for all 12 seasonal types
-- [How AI Hair Color Preview Can Save You From a Bad Dye Job](/en/blog/ai-hair-color-preview-guide) — How technology helps you avoid expensive color mistakes
-- [The Science Behind Personal Color Analysis: How It Actually Works](/en/blog/science-behind-personal-color-analysis) — Understanding the color science that makes this work
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [How to Find Your Best Hair Color Based on Your Color Season](/blog/best-hair-color-for-color-season) — A complete shade guide for all 12 seasonal types
+- [How AI Hair Color Preview Can Save You From a Bad Dye Job](/blog/ai-hair-color-preview-guide) — How technology helps you avoid expensive color mistakes
+- [The Science Behind Personal Color Analysis: How It Actually Works](/blog/science-behind-personal-color-analysis) — Understanding the color science that makes this work
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

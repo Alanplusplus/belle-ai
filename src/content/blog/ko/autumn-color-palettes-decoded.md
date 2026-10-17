@@ -249,7 +249,7 @@ image: "/images/blog/autumn-color-palettes-decoded.webp"
 
 [무료 AI 컬러 분석 시작 →](/ko/try)
 
-60초, 무료, 가입 불필요. 모든 피부톤에 적용.
+60초, 무료 미리보기, 가입 불필요. 모든 피부톤에 적용.
 
 ---
 

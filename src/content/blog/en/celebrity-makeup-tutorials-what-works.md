@@ -98,7 +98,7 @@ Before matching with any celebrity, you need to know your own season. Are you a 
 
 If you're unsure, study how different color families react with your skin. Do warm peachy shades make you glow or look sallow? Do cool pinks brighten you or make you look washed out?
 
-For a deeper framework, our guide on [decoding any celebrity's color season](/en/blog/decode-celebrity-color-season-style) walks through the same temperature, value, and chroma signals professionals use.
+For a deeper framework, our guide on [decoding any celebrity's color season](/blog/decode-celebrity-color-season-style) walks through the same temperature, value, and chroma signals professionals use.
 
 ### Step 2: Find Celebrities in Your Season
 
@@ -106,7 +106,7 @@ Once you know your season, seek celebrities with similar coloring — not simila
 
 A Light Summer shouldn't study Deep Winter makeup tutorials, even if she loves the aesthetic. She should study Light Summer celebrities — people whose fair, cool, low-contrast coloring responds to the same soft pinks, cool taupes, and sheer finishes.
 
-If you want a head start on identifying your match, see our article on [finding your celebrity color season style twin](/en/blog/celebrity-color-season-style-twin) for recognizable examples across all 12 seasons.
+If you want a head start on identifying your match, see our article on [finding your celebrity color season style twin](/blog/celebrity-color-season-style-twin) for recognizable examples across all 12 seasons.
 
 ### Step 3: Study Their Makeup, Not Their Products
 
@@ -122,7 +122,7 @@ This shift from product copying to color logic copying changed everything for me
 
 ## Your Season-by-Season Celebrity Makeup Guide
 
-Different seasons need different celebrity references. Use this table as a starting point — then dive deeper into the makeup specifics for your season in our [complete makeup color chart](/en/blog/best-makeup-colors-color-season).
+Different seasons need different celebrity references. Use this table as a starting point — then dive deeper into the makeup specifics for your season in our [complete makeup color chart](/blog/best-makeup-colors-color-season).
 
 | Color Season | Celebrity Reference | Signature Makeup Moves | What to Avoid |
 |---|---|---|---|
@@ -207,7 +207,7 @@ The best celebrity makeup reference isn't the most famous one. It's the one whos
 
 ## Related Articles
 
-- [Which Celebrity Has Your Color Season? Find Your Style Twin](/en/blog/celebrity-color-season-style-twin) — Find your celebrity color match
-- [How to Decode Any Celebrity's Color Season (And Steal Their Best Style Moves)](/en/blog/decode-celebrity-color-season-style) — Decode celebrity style logic
-- [The Best Makeup Colors for Every Color Season: A Complete Chart](/en/blog/best-makeup-colors-color-season) — Your complete makeup color guide
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Which Celebrity Has Your Color Season? Find Your Style Twin](/blog/celebrity-color-season-style-twin) — Find your celebrity color match
+- [How to Decode Any Celebrity's Color Season (And Steal Their Best Style Moves)](/blog/decode-celebrity-color-season-style) — Decode celebrity style logic
+- [The Best Makeup Colors for Every Color Season: A Complete Chart](/blog/best-makeup-colors-color-season) — Your complete makeup color guide
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

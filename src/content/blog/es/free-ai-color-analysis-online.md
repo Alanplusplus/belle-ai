@@ -63,7 +63,7 @@ Recibes:
 
 ## Belle AI: análisis de color gratis en 60 segundos
 
-Nuestra herramienta de análisis de color con IA ofrece todo lo anterior — completamente gratis en tu primer análisis. Sin email, sin muro de registro, sin paywall oculto en tus resultados.
+Nuestra [herramienta de análisis de color con IA](/) ofrece todo lo anterior. Tu primer análisis es gratis como vista previa y sin registro, pero la versión gratuita es una vista previa con algunos detalles desenfocados. Un pack de créditos o Pro desbloquea el informe completo. Preferimos decirlo desde el principio antes que prometer un informe «completamente gratis».
 
 ### Qué obtienes
 
@@ -92,7 +92,7 @@ Donde el análisis presencial puede ser mejor:
 
 | Herramienta | Coste | Método | Precisión | Velocidad |
 |-------------|-------|--------|-----------|-----------|
-| **Belle AI** | Gratis | Análisis fotográfico con IA | Alta | 60 segundos |
+| **Belle AI** | Vista previa gratis, informe completo de pago | Análisis fotográfico con IA | Media–Alta | 60 segundos |
 | Test básico | Gratis | Preguntas de autoevaluación | Baja–Media | 3 minutos |
 | Consulta profesional | 200–500 $ | Draping presencial | Máxima | 60–90 min |
 | Consulta por vídeo | 50–150 $ | Videollamada + muestras | Alta | 30–45 min |
@@ -129,6 +129,6 @@ Ten tu paleta de colores en el móvil. Al comprar, compara los artículos con tu
 
 [Obtener mi análisis de color gratis →](/try)
 
-Sin registro. Sin tarjeta de crédito. Tus resultados aparecen al instante.
+Sin registro ni tarjeta de crédito para la vista previa. La versión gratuita desenfoca algunos detalles; un pack de créditos o Pro desbloquea el informe completo.
 
 ¿Prefieres no subir foto? [Haz nuestro test de análisis de color gratis →](/tools/color-quiz)

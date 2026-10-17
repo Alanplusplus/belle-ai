@@ -138,11 +138,11 @@ Your undertone tells you the temperature (warm vs. cool), but your season also a
 - **Depth:** How light or dark your best colors are
 - **Chroma:** How bright or muted your best colors are
 
-For a complete analysis, try [Belle AI's personal color analysis](/en/personal-color-analysis) feature — it determines your full 12-type seasonal classification in 60 seconds from a single photo. Or start with our [free color quiz](/en/tools/color-quiz).
+For a complete analysis, try [Belle AI's personal color analysis](/personal-color-analysis) feature — it determines your full 12-type seasonal classification in 60 seconds from a single photo. Or start with our [free color quiz](/tools/color-quiz).
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Quick tests to confirm your undertone
-- [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Complete style guide if you're cool-toned
-- [Personal Color Analysis: 12 Types Explained](/en/blog/personal-color-analysis-guide) — Understand the full seasonal color system
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Cool Tone vs Warm Tone: 5 Easy Tests](/blog/cool-tone-vs-warm-tone) — Quick tests to confirm your undertone
+- [Best Colors for Cool Undertones](/blog/best-colors-for-cool-undertones) — Complete style guide if you're cool-toned
+- [Personal Color Analysis: 12 Types Explained](/blog/personal-color-analysis-guide) — Understand the full seasonal color system

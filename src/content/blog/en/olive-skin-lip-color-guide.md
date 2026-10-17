@@ -238,11 +238,11 @@ If you are still guessing between warm berry and cool plum, a quick AI color ana
 
 [Try Free AI Color Analysis →](/try)
 
-60 seconds, free, no signup. Get personalized makeup color recommendations.
+60 seconds, free to preview, no signup. Get personalized makeup color recommendations.
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Olive Undertone Guide](/en/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
-- [Olive Skin Foundation Guide](/en/blog/olive-skin-foundation-guide) — How to find the perfect foundation for olive undertones
-- [Olive vs Warm Undertone](/en/blog/olive-vs-warm-undertone) — Why olive skin isn't simply warm or cool
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Olive Undertone Guide](/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
+- [Olive Skin Foundation Guide](/blog/olive-skin-foundation-guide) — How to find the perfect foundation for olive undertones
+- [Olive vs Warm Undertone](/blog/olive-vs-warm-undertone) — Why olive skin isn't simply warm or cool

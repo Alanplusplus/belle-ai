@@ -199,7 +199,7 @@ Color analysis gives you the science. Style gives you the art. The magic happens
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [How Color Theory From Art Class Applies to Your Personal Style](/en/blog/color-theory-personal-style) — The science behind why certain color combinations work
-- [How to Build a Capsule Wardrobe for Your Color Season](/en/blog/capsule-wardrobe-color-season) — Build a foundation wardrobe in your best colors first
-- [I Wore Only My 'Season Colors' for 30 Days — Here's What Happened](/en/blog/wearing-season-colors-30-days) — What strict palette adherence taught one writer about flexibility
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [How Color Theory From Art Class Applies to Your Personal Style](/blog/color-theory-personal-style) — The science behind why certain color combinations work
+- [How to Build a Capsule Wardrobe for Your Color Season](/blog/capsule-wardrobe-color-season) — Build a foundation wardrobe in your best colors first
+- [I Wore Only My 'Season Colors' for 30 Days — Here's What Happened](/blog/wearing-season-colors-30-days) — What strict palette adherence taught one writer about flexibility

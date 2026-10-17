@@ -249,7 +249,7 @@ Aus Beschreibungen allein nicht sicher? Unsere [kostenlose KI-Farbanalyse](/de/c
 
 [Kostenlose KI-Farbanalyse starten →](/de/try)
 
-60 Sekunden, kostenlos, ohne Anmeldung. Funktioniert für alle Hauttöne.
+60 Sekunden, kostenlose Vorschau, ohne Anmeldung. Funktioniert für alle Hauttöne.
 
 ---
 

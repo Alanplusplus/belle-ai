@@ -1,17 +1,37 @@
-import { getCachedUserId, webInit } from "./api";
+import { getCachedEmail, getCachedUserId, webInit } from "./api";
 import { trackEvent, trackCheckoutEvent } from "./analytics";
 import { getAttribution, getGaClientId, getGaSessionId } from "./attribution";
-import { GA_MEASUREMENT_ID, PACK_PRICE, WEEKLY_INTRO_PRICE, type ProductKey } from "./constants";
-
-/** begin_checkout 事件的金额（USD）：周订阅按首周优惠价，与支付页实际首笔扣款一致 */
-const CHECKOUT_VALUE_USD: Record<ProductKey, number> = {
-  pack: Number(PACK_PRICE),
-  weekly: Number(WEEKLY_INTRO_PRICE),
-  yearly: 29.99,
-};
+import { GA_MEASUREMENT_ID, isPackProduct, type ProductKey } from "./constants";
+import { checkoutPriceKey, priceAmount } from "./currency";
+import { getCurrentCurrency } from "./usePrices";
 
 const CONTEXT_KEY = "belle_checkout_ctx";
 const CONTEXT_TTL_MS = 2 * 60 * 60 * 1000;
+
+const EMAIL_KEY = "belle_checkout_email";
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+export function isValidEmail(value: string): boolean {
+  const v = value.trim();
+  return v.length <= 254 && EMAIL_RE.test(v);
+}
+
+/** 上次在结算前填过的邮箱（内置浏览器的「保存购买」步骤里填的），用来预填 */
+export function getSavedCheckoutEmail(): string {
+  try {
+    return localStorage.getItem(EMAIL_KEY) ?? "";
+  } catch {
+    return "";
+  }
+}
+
+export function saveCheckoutEmail(email: string) {
+  try {
+    localStorage.setItem(EMAIL_KEY, email.trim());
+  } catch {
+    /* localStorage 不可用时忽略，不影响支付 */
+  }
+}
 
 export interface CheckoutContext {
   product: ProductKey;
@@ -64,13 +84,17 @@ export async function startCheckout(params: {
   unlockTaskId?: string;
   onRestore?: () => void;
 }): Promise<void> {
-  const { product, source, locale, email, unlockTaskId, onRestore } = params;
+  const { product, source, locale, unlockTaskId, onRestore } = params;
+  // 没手动填邮箱时，用已知的：Google 登录的账号邮箱，或上次填过的。预填付款页，也让后端能凭邮箱找回购买
+  const email = params.email?.trim() || getCachedEmail() || getSavedCheckoutEmail() || undefined;
   let packBefore = params.packBefore;
   trackCheckoutEvent("checkout_started", { product, source });
   // GA4 推荐事件：付费漏斗 view_pricing → begin_checkout → purchase（purchase 由服务端 Measurement Protocol 发送）
+  // 金额与币种取访客当前看到的（周订阅按首周优惠价，与支付页首笔扣款一致）
+  const displayCurrency = getCurrentCurrency();
   trackEvent("begin_checkout", {
-    currency: "USD",
-    value: CHECKOUT_VALUE_USD[product],
+    currency: displayCurrency,
+    value: priceAmount(displayCurrency, checkoutPriceKey(product)),
     item_id: product,
     item_name: product,
     source,
@@ -79,7 +103,7 @@ export async function startCheckout(params: {
   try {
     let userId = getCachedUserId();
     // 买积分包而调用方没传下单前余额（比如 /pricing 页）：这里取一次，返回页面后据此判断积分是否到账
-    if (!userId || (product === "pack" && packBefore == null)) {
+    if (!userId || (isPackProduct(product) && packBefore == null)) {
       const initRes = await webInit();
       if (initRes.code === 200 && initRes.data) {
         userId = userId ?? initRes.data.user_id;

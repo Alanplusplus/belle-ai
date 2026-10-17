@@ -53,6 +53,9 @@ export default async function PersonalColorAnalysisPage({
   const t = await getTranslations({ locale, namespace: "color" });
   const ft = await getTranslations({ locale, namespace: "features" });
   const cg = await getTranslations({ locale, namespace: "colorGuide" });
+  // 文末相关文章：标题取各语种的 blogTitles，小标题复用已翻译的 seasonPalette.relatedArticles
+  const bt = await getTranslations({ locale, namespace: "blogTitles" });
+  const rt = await getTranslations({ locale, namespace: "seasonPalette" });
 
   const items = [t("item1"), t("item2"), t("item3"), t("item4"), t("item5"), t("item6")];
 
@@ -216,32 +219,45 @@ export default async function PersonalColorAnalysisPage({
         </div>
       </section>
 
+      {/* 落地页 → 专题页：「color analysis」这个词由 /color-analysis 承接，这里用描述性锚文本把权重导过去 */}
+      <section className="mx-auto max-w-4xl px-4 pb-10">
+        <Link
+          href="/color-analysis"
+          className="group flex items-center justify-between rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/5 to-gold/5 px-6 py-5 transition hover:border-primary/40 hover:shadow-md sm:px-8"
+        >
+          <div>
+            <h2 className="font-serif text-lg font-bold group-hover:text-primary sm:text-xl">
+              {cg("homeBannerTitle")}
+            </h2>
+            <p className="mt-1 text-sm text-muted-foreground">{cg("homeBannerDesc")}</p>
+          </div>
+          <span className="ml-4 shrink-0 text-primary transition group-hover:translate-x-1">&rarr;</span>
+        </Link>
+      </section>
+
       <section className="max-w-4xl mx-auto px-4 pb-16">
-        <h2 className="text-2xl font-bold mb-6">Related Articles</h2>
+        <h2 className="text-2xl font-bold mb-6">{rt("relatedArticles")}</h2>
         <div className="grid sm:grid-cols-3 gap-4">
-          <Link
-            href="/blog/best-colors-for-warm-undertones"
-            className="block p-4 rounded-xl border border-gray-200 hover:border-rose-300 hover:shadow-sm transition-all"
-          >
-            <span className="font-medium text-gray-900">Best Colors for Warm Undertones</span>
-          </Link>
-          <Link
-            href="/blog/cool-tone-vs-warm-tone"
-            className="block p-4 rounded-xl border border-gray-200 hover:border-rose-300 hover:shadow-sm transition-all"
-          >
-            <span className="font-medium text-gray-900">Cool Tone vs Warm Tone: 5 Easy Tests</span>
-          </Link>
-          <Link
-            href="/blog/best-makeup-colors-color-season"
-            className="block p-4 rounded-xl border border-gray-200 hover:border-rose-300 hover:shadow-sm transition-all"
-          >
-            <span className="font-medium text-gray-900">Best Makeup Colors for Every Season</span>
-          </Link>
+          {RELATED_POST_SLUGS.map((slug) => (
+            <Link
+              key={slug}
+              href={`/blog/${slug}`}
+              className="block p-4 rounded-xl border border-gray-200 hover:border-rose-300 hover:shadow-sm transition-all"
+            >
+              <span className="font-medium text-gray-900">{bt(slug)}</span>
+            </Link>
+          ))}
         </div>
       </section>
     </>
   );
 }
+
+const RELATED_POST_SLUGS = [
+  "best-colors-for-warm-undertones",
+  "cool-tone-vs-warm-tone",
+  "best-makeup-colors-color-season",
+] as const;
 
 const COLOR_DIMENSIONS = [
   { image: "/images/dim_color_season.webp" },

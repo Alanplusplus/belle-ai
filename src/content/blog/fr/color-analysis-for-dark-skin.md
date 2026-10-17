@@ -151,4 +151,4 @@ Prête à découvrir votre type de couleur saisonnier exact ? Notre IA vous donn
 
 [Lancer l'analyse de couleur gratuite →](/try)
 
-60 secondes, gratuit, sans inscription. Obtenez votre palette personnalisée et guide de style.
+60 secondes, aperçu gratuit, sans inscription. Obtenez votre palette personnalisée et guide de style.

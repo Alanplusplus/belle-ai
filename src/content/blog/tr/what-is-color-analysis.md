@@ -152,7 +152,7 @@ En iyi sonuç için doğal gün ışığında net bir fotoğraf, makyajsız yüz
 
 ## Ücretsiz Renk Analizinizi Alın
 
-Mevsimsel renk tipinizi keşfetmeye hazır mısınız? Yapay zekâ destekli aracımız fotoğrafınızı analiz eder ve 60 saniyede eksiksiz renk profilinizi sunar — tamamen ücretsiz, kayıt gerekmez.
+Mevsimsel renk tipinizi keşfetmeye hazır mısınız? Yapay zekâ destekli aracımız fotoğrafınızı analiz eder ve 60 saniyede renk profilinizin önizlemesini sunar — denemesi ücretsiz, kayıt gerekmez. Ücretsiz sürüm bazı detayları bulanık gösterir; tam raporun kilidini kredi paketi veya Pro ile açabilirsiniz.
 
 [Ücretsiz Yapay Zekâ Renk Analizine Başlayın →](/tr/try)
 

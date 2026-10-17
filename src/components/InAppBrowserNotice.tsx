@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
 import { useDialogA11y } from "@/lib/useDialogA11y";
 import { trackEvent } from "@/lib/analytics";
+import { getCachedEmail } from "@/lib/api";
+import { getSavedCheckoutEmail, isValidEmail, saveCheckoutEmail } from "@/lib/checkout";
 import { copyText } from "@/lib/device";
 import { buildChromeIntentUrl, detectInAppBrowser, isAndroid } from "@/lib/inAppBrowser";
 
@@ -103,32 +105,94 @@ export function InAppBrowserNotice({ className = "" }: { className?: string }) {
 }
 
 /**
- * 在内置浏览器里点「付费」时的强提示：说明在这里付款后换到系统浏览器可能看不到已购内容，
- * 给出换浏览器的办法；用户仍可选择继续付款（不阻断）。
+ * 在内置浏览器里点「付费」时出现的「保存购买」步骤。
+ *
+ * 内置浏览器和系统浏览器的账号是隔离的，付款后换浏览器会看不到购买，而 Google 登录在这里又用不了。
+ * 以前是一个醒目的警告，要用户自己跑去系统浏览器重新操作，很多人就此放弃。
+ * 现在改成：填一个邮箱（可跳过）就能继续付款 —— 邮箱会预填到付款页，付款后后端记下它，
+ * 用户之后在 Safari / Chrome 里用同一个邮箱的 Google 账号登录，购买会自动找回来。
+ * 想直接换到系统浏览器的用户仍然可以点下面的次要链接。
  */
-export function InAppCheckoutWarning({ onContinue }: { onContinue: () => void }) {
+export function InAppCheckoutEmailStep({ onContinue }: { onContinue: (email?: string) => void }) {
   const t = useTranslations("inApp");
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLFormElement>(null);
+  // 这个组件只在用户点了付费按钮之后才渲染（纯客户端），所以初始值可以直接读本地缓存，不会造成 hydration 不一致
+  const [email, setEmail] = useState(() => getCachedEmail() ?? getSavedCheckoutEmail());
+  const [invalid, setInvalid] = useState(false);
+  const [showBrowserHelp, setShowBrowserHelp] = useState(false);
 
   useEffect(() => {
     // 弹层里按钮在底部，提示出现在视口外时用户看不到，主动滚到可见
     ref.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }, []);
 
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    const value = email.trim();
+    if (value && !isValidEmail(value)) {
+      setInvalid(true);
+      return;
+    }
+    if (value) saveCheckoutEmail(value);
+    trackEvent("inapp_checkout_email_continue", { has_email: Boolean(value) });
+    onContinue(value || undefined);
+  };
+
   return (
-    <div ref={ref} role="alert" className="mt-4 rounded-xl border-2 border-amber-400 bg-amber-50 p-4 text-sm dark:bg-amber-950/30">
-      <p className="font-semibold text-amber-900 dark:text-amber-200">{t("checkoutWarnTitle")}</p>
-      <p className="mt-1 text-xs text-amber-800 dark:text-amber-300">{t("checkoutWarnText")}</p>
-      <p className="mt-1 text-xs text-amber-800 dark:text-amber-300">{t(isAndroid() ? "androidSteps" : "iosSteps")}</p>
-      <HelpActions source="checkout_warning" />
+    <form
+      ref={ref}
+      onSubmit={handleSubmit}
+      noValidate
+      className="mt-4 rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm"
+    >
+      <p className="font-semibold text-foreground">{t("emailTitle")}</p>
+      <p className="mt-1 text-xs text-muted-foreground">{t("emailText")}</p>
+      <input
+        type="email"
+        inputMode="email"
+        autoComplete="email"
+        value={email}
+        onChange={(e) => {
+          setEmail(e.target.value);
+          setInvalid(false);
+        }}
+        placeholder={t("emailPlaceholder")}
+        aria-label={t("emailPlaceholder")}
+        aria-invalid={invalid}
+        // 字号 16px：iOS Safari 对小于 16px 的输入框会在聚焦时自动放大页面
+        className="mt-3 min-h-11 w-full rounded-lg border border-border bg-background px-3 text-base outline-none focus:border-primary"
+      />
+      {invalid && (
+        <p role="alert" className="mt-1 text-xs text-red-500">
+          {t("emailInvalid")}
+        </p>
+      )}
+      {/* 收集邮箱时就告知可能发提醒邮件（弃单提醒），退订链接在邮件里；不填邮箱不会收到任何邮件 */}
+      <p className="mt-2 text-xs text-muted-foreground">{t("emailReminderNote")}</p>
+      <button
+        type="submit"
+        className="mt-3 min-h-12 w-full rounded-full bg-primary px-4 text-sm font-semibold text-white transition hover:bg-primary-dark"
+      >
+        {t("emailContinue")}
+      </button>
       <button
         type="button"
-        onClick={onContinue}
-        className="mt-2 min-h-10 w-full rounded-full px-4 text-sm font-medium text-amber-900 underline-offset-4 hover:underline dark:text-amber-200"
+        onClick={() => {
+          if (!showBrowserHelp) trackEvent("inapp_checkout_browser_help_opened");
+          setShowBrowserHelp((v) => !v);
+        }}
+        aria-expanded={showBrowserHelp}
+        className="mt-2 min-h-10 w-full rounded-full px-4 text-xs font-medium text-muted-foreground underline-offset-4 hover:underline"
       >
-        {t("checkoutContinue")}
+        {t("emailOpenBrowser")}
       </button>
-    </div>
+      {showBrowserHelp && (
+        <div>
+          <p className="text-xs text-muted-foreground">{t(isAndroid() ? "androidSteps" : "iosSteps")}</p>
+          <HelpActions source="checkout_email_step" />
+        </div>
+      )}
+    </form>
   );
 }
 

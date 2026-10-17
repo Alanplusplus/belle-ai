@@ -249,7 +249,7 @@ Sadece açıklamalardan hangi Sonbahar olduğunuzu ayırt edemiyor musunuz? [Üc
 
 [Ücretsiz Yapay Zeka Renk Analizini Yapın →](/tr/try)
 
-60 saniye, ücretsiz, kayıt gerekmez. Tüm ten tonları için çalışır.
+60 saniye, ücretsiz önizleme, kayıt gerekmez. Tüm ten tonları için çalışır.
 
 ---
 

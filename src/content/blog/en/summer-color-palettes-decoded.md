@@ -243,8 +243,8 @@ Still unsure which Summer you are? Our [free AI color analysis](/color-analysis)
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Light Summer Color Palette](/en/color-palette/light-summer) — Full palette, makeup & wardrobe guide
-- [Cool Summer Color Palette](/en/color-palette/cool-summer) — Full palette, makeup & wardrobe guide
-- [Soft Summer Color Palette](/en/color-palette/soft-summer) — Full palette, makeup & wardrobe guide
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Light Summer Color Palette](/color-palette/light-summer) — Full palette, makeup & wardrobe guide
+- [Cool Summer Color Palette](/color-palette/cool-summer) — Full palette, makeup & wardrobe guide
+- [Soft Summer Color Palette](/color-palette/soft-summer) — Full palette, makeup & wardrobe guide
 

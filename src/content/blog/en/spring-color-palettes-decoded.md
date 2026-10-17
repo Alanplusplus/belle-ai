@@ -212,8 +212,8 @@ Want a definitive answer? Our [free AI color analysis](/color-analysis) identifi
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Light Spring Color Palette](/en/color-palette/light-spring) — Full palette, makeup & wardrobe guide
-- [Warm Spring Color Palette](/en/color-palette/warm-spring) — Full palette, makeup & wardrobe guide
-- [Bright Spring Color Palette](/en/color-palette/bright-spring) — Full palette, makeup & wardrobe guide
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Light Spring Color Palette](/color-palette/light-spring) — Full palette, makeup & wardrobe guide
+- [Warm Spring Color Palette](/color-palette/warm-spring) — Full palette, makeup & wardrobe guide
+- [Bright Spring Color Palette](/color-palette/bright-spring) — Full palette, makeup & wardrobe guide
 

@@ -55,7 +55,7 @@ Understanding these names gives you vocabulary for the salon conversation. Inste
 
 Your skin undertone — the permanent hue beneath the surface that never changes with tanning or redness — is the single most important variable when choosing a blonde shade. Warm undertones need warm blondes. Cool undertones need cool blondes. Neutral undertones have the most flexibility but still benefit from knowing which direction to lean.
 
-If you're unsure of your undertone, start with the basics: check your wrist veins in natural daylight (blue/purple suggests cool, green suggests warm), or hold pure gold and silver jewelry against your face and note which metal makes your skin look brighter. For a deeper dive, our guide on [how to determine your skin undertone](/en/blog/how-to-determine-skin-undertone) walks through seven reliable at-home methods.
+If you're unsure of your undertone, start with the basics: check your wrist veins in natural daylight (blue/purple suggests cool, green suggests warm), or hold pure gold and silver jewelry against your face and note which metal makes your skin look brighter. For a deeper dive, our guide on [how to determine your skin undertone](/blog/how-to-determine-skin-undertone) walks through seven reliable at-home methods.
 
 ### Cool Blonde vs. Warm Blonde vs. Neutral Blonde
 
@@ -71,7 +71,7 @@ Here's the comparison table I wish someone had shown me before my first salon di
 
 **Warm blondes** carry golden, copper, or honey pigments that echo the warmth in your skin. They create that sun-kissed, healthy glow that reads as effortless rather than processed. In my experience, warm blondes are the most requested shade in salons — and the most commonly applied to the wrong undertones. When a cool-toned person gets honey blonde, the gold in the hair amplifies any pinkness in the skin, creating an unintentionally ruddy effect.
 
-**Neutral blondes** sit in the middle — neither distinctly warm nor cool. They're the safest starting point if you're unsure of your undertone, but they can also read as "flat" if your features have strong contrast. Sandy and wheat blondes work beautifully on neutral undertones and on people whose [personal color analysis](/en/color-analysis) places them in blended or soft seasons.
+**Neutral blondes** sit in the middle — neither distinctly warm nor cool. They're the safest starting point if you're unsure of your undertone, but they can also read as "flat" if your features have strong contrast. Sandy and wheat blondes work beautifully on neutral undertones and on people whose [personal color analysis](/color-analysis) places them in blended or soft seasons.
 
 ### The Olive Undertone Exception
 
@@ -229,7 +229,7 @@ This doesn't replace a great colorist. Bleaching, toning, and maintaining blonde
 
 ## Related Articles
 
-- [How to Find Your Best Hair Color Based on Your Color Season](/en/blog/best-hair-color-for-color-season) — A comprehensive guide to choosing hair color by season
-- [Balayage, Highlights, or All-Over Color? How to Choose](/en/blog/hair-coloring-technique-color-season) — Comparing coloring techniques for each season
-- [How AI Hair Color Preview Can Save You From a Bad Dye Job](/en/blog/ai-hair-color-preview-guide) — Why previewing with AI beats guessing
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [How to Find Your Best Hair Color Based on Your Color Season](/blog/best-hair-color-for-color-season) — A comprehensive guide to choosing hair color by season
+- [Balayage, Highlights, or All-Over Color? How to Choose](/blog/hair-coloring-technique-color-season) — Comparing coloring techniques for each season
+- [How AI Hair Color Preview Can Save You From a Bad Dye Job](/blog/ai-hair-color-preview-guide) — Why previewing with AI beats guessing
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

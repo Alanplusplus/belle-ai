@@ -18,7 +18,22 @@ import { ATTRIBUTES } from "@/lib/color-analysis-for-data";
 import { FACE_SHAPE_SLUGS, FACE_SHAPES } from "@/lib/face-shape-data";
 import { CELEBRITY_SLUGS, CELEBRITY_DATA } from "@/lib/celebrity-data";
 import { COMPARISON_SLUGS } from "@/lib/season-compare-data";
+import { getPostBySlug } from "@/lib/blog";
 import type { Metadata } from "next";
+
+/**
+ * 专题页内容的真实最近更新日期（页面可见 + Article schema 的 dateModified 共用）。
+ * 以前 dateModified 每次渲染都取当前时间，属于虚假新鲜度；改内容时请同步修改这个日期。
+ */
+const LAST_UPDATED = "2026-10-17";
+
+/** 12 季型对比表的单元格只取「—」/「:」之前的要点，去掉括号里的补充说明 */
+function briefTrait(value: string): string {
+  return value
+    .split(/\s—\s|:\s/)[0]
+    .replace(/\s*[（(].*$/, "")
+    .trim();
+}
 
 export async function generateMetadata({
   params,
@@ -86,7 +101,7 @@ export default async function ColorAnalysisPillarPage({
       logo: { "@type": "ImageObject", url: `${SITE_URL}/logo-full.webp` },
     },
     datePublished: "2026-06-01T00:00:00+00:00",
-    dateModified: new Date().toISOString(),
+    dateModified: `${LAST_UPDATED}T00:00:00+00:00`,
     mainEntityOfPage: canonicalUrl(locale, "/color-analysis"),
   };
 
@@ -111,6 +126,8 @@ export default async function ColorAnalysisPillarPage({
       pros: [t("aiPro0"), t("aiPro1"), t("aiPro2"), t("aiPro3")],
       link: "/try?type=color_analysis",
       linkLabelKey: "tryFreeAnalysis" as const,
+      // 专题页 → 首页：首页是「AI color analysis」这组词的落地页，用描述性锚文本回链
+      extraLink: { href: "/" as const, labelKey: "aiToolLink" as const },
     },
     {
       titleKey: "methodQuizTitle" as const,
@@ -146,6 +163,12 @@ export default async function ColorAnalysisPillarPage({
     "how-to-determine-skin-undertone",
   ];
 
+  // 「延伸阅读」后追加的文章：用各语种文章自己的标题；该语种没有这篇时不显示，避免链到 404
+  const extraReading = ["free-ai-color-analysis-online", "best-ai-color-analysis-apps"].flatMap((slug) => {
+    const post = getPostBySlug(locale, slug);
+    return post ? [{ slug, title: post.title }] : [];
+  });
+
   const tocItems = Array.from({ length: 8 }, (_, i) => t(`toc${i + 1}`));
   const tocAnchors = [
     "#what-is", "#how-it-works", "#4-season", "#12-season",
@@ -174,6 +197,15 @@ export default async function ColorAnalysisPillarPage({
             <Link href="/tools/color-quiz" className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted">
               {t("takeFreeQuiz")}
             </Link>
+          </div>
+
+          {/* 一句话定义：搜索「color analysis」的人首屏就能拿到答案，也是精选摘要的候选段落 */}
+          <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-primary/20 bg-card/80 p-5 text-left shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary">{t("quickAnswerLabel")}</p>
+            <p className="mt-2 leading-relaxed">{t("quickAnswer")}</p>
+            <p className="mt-3 text-xs text-muted-foreground">
+              {t("updatedLabel")} <time dateTime={LAST_UPDATED}>{LAST_UPDATED}</time>
+            </p>
           </div>
         </div>
       </section>
@@ -263,6 +295,38 @@ export default async function ColorAnalysisPillarPage({
         <section id="12-season" className="scroll-mt-20 border-t border-border py-16">
           <h2 className="text-3xl font-bold">{t("twelveSeasonTitle")}</h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">{t("twelveSeasonDesc")}</p>
+
+          {/* 12 季型一览：直接回答「各季型有什么区别」，数据来自各季型页同一份文案 */}
+          <h3 className="mt-8 text-xl font-semibold">{t("seasonTableTitle")}</h3>
+          <div className="mt-4 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+            <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+              <thead>
+                <tr className="border-b border-border text-xs uppercase tracking-wide text-muted-foreground">
+                  <th scope="col" className="py-2 pr-3 font-semibold">{t("tableSeason")}</th>
+                  <th scope="col" className="py-2 pr-3 font-semibold">{t("dimUndertoneTitle").replace(/\s*[（(].*$/, "")}</th>
+                  <th scope="col" className="py-2 pr-3 font-semibold">{t("dimDepthTitle").replace(/\s*[（(].*$/, "")}</th>
+                  <th scope="col" className="py-2 pr-3 font-semibold">{t("dimChromaTitle").replace(/\s*[（(].*$/, "")}</th>
+                  <th scope="col" className="py-2 font-semibold">{t("dimContrastTitle")}</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                {PARENT_SEASON_ORDER.flatMap((parent) => getSeasonsByParent(parent)).map((season) => (
+                  <tr key={season.slug}>
+                    <th scope="row" className="py-2 pr-3 font-medium">
+                      <Link href={`/color-palette/${season.slug}`} className="text-primary hover:underline">
+                        {sd(`${season.slug}.name`)}
+                      </Link>
+                    </th>
+                    <td className="py-2 pr-3 text-muted-foreground">{briefTrait(sd(`${season.slug}.charUndertone`))}</td>
+                    <td className="py-2 pr-3 text-muted-foreground">{briefTrait(sd(`${season.slug}.charDepth`))}</td>
+                    <td className="py-2 pr-3 text-muted-foreground">{briefTrait(sd(`${season.slug}.charChroma`))}</td>
+                    <td className="py-2 text-muted-foreground">{briefTrait(sd(`${season.slug}.charContrast`))}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
           {PARENT_SEASON_ORDER.map((parent) => {
             const seasons = getSeasonsByParent(parent);
             const keys = parentSeasonKeys[parent];
@@ -302,7 +366,12 @@ export default async function ColorAnalysisPillarPage({
                     <span key={pro} className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">{pro}</span>
                   ))}
                 </div>
-                <Link href={method.link} className="mt-4 inline-block text-sm font-medium text-primary hover:underline">{t(method.linkLabelKey)} →</Link>
+                <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
+                  <Link href={method.link} className="inline-block text-sm font-medium text-primary hover:underline">{t(method.linkLabelKey)} →</Link>
+                  {"extraLink" in method && method.extraLink && (
+                    <Link href={method.extraLink.href} className="inline-block text-sm text-primary hover:underline">{t(method.extraLink.labelKey)}</Link>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -350,6 +419,11 @@ export default async function ColorAnalysisPillarPage({
             {blogSlugs.map((slug, i) => (
               <Link key={slug} href={`/blog/${slug}`} className="rounded-lg border border-border px-4 py-3 text-sm transition hover:border-primary/40 hover:bg-muted">
                 {t(`fr${i}`)}
+              </Link>
+            ))}
+            {extraReading.map((item) => (
+              <Link key={item.slug} href={`/blog/${item.slug}`} className="rounded-lg border border-border px-4 py-3 text-sm transition hover:border-primary/40 hover:bg-muted">
+                {item.title}
               </Link>
             ))}
           </div>

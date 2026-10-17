@@ -194,7 +194,7 @@ Wenn Raten müde macht, kann **KI-Farbanalyse** Oliv signalisieren und harmonisc
 
 [Kostenlose KI-Farbanalyse testen →](/try)
 
-Gratis, etwa eine Minute, ohne Anmeldung. Unterton und make-up-freundliche Farbrichtung sehen.
+Kostenlose Vorschau, etwa eine Minute, ohne Anmeldung. Unterton und make-up-freundliche Farbrichtung sehen.
 
 ## Verwandte Artikel
 

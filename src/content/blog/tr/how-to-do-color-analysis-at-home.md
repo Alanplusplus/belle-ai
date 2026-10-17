@@ -175,7 +175,7 @@ Yapay zekâmız profesyonelin baktığı aynı renk sinyallerini — alt ton, de
 
 [Ücretsiz Yapay Zekâ Renk Analizine Başlayın →](/tr/try)
 
-Ücretsiz, anında, hesap gerekmez. Tam paletiniz ve stil rehberiniz hemen görünür.
+Önizleme ücretsizdir ve hesap gerekmez. Ücretsiz sürüm bazı detayları bulanık gösterir; tam palet ve stil rehberinin kilidini kredi paketi veya Pro ile açabilirsiniz.
 
 ## İlgili Makaleler
 

@@ -151,4 +151,4 @@ Bereit, deinen exakten saisonalen Farbtyp zu entdecken? Unsere KI liefert dir fÃ
 
 [Kostenlose Farbanalyse starten â†’](/try)
 
-60 Sekunden, kostenlos, ohne Anmeldung. Personalisierte Palette und Styling-Guide inklusive.
+60 Sekunden, kostenlose Vorschau, ohne Anmeldung. Personalisierte Palette und Styling-Guide inklusive.

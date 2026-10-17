@@ -80,6 +80,6 @@ See the difference between your best and worst colors instantly.
 
 ## Related Articles
 
-- [What Is Color Analysis? The Complete Beginner's Guide (2026)](/en/blog/what-is-color-analysis) — Understand the basics before trying AI color matching
-- [How to Build a Capsule Wardrobe for Your Color Season (Step-by-Step)](/en/blog/capsule-wardrobe-color-season) — Apply your palette to everyday shopping
-- [How to Shop Online for Your Color Season (Without Getting It Wrong)](/en/blog/online-shopping-color-season) — Buy flattering colors online with confidence
+- [What Is Color Analysis? The Complete Beginner's Guide (2026)](/blog/what-is-color-analysis) — Understand the basics before trying AI color matching
+- [How to Build a Capsule Wardrobe for Your Color Season (Step-by-Step)](/blog/capsule-wardrobe-color-season) — Apply your palette to everyday shopping
+- [How to Shop Online for Your Color Season (Without Getting It Wrong)](/blog/online-shopping-color-season) — Buy flattering colors online with confidence

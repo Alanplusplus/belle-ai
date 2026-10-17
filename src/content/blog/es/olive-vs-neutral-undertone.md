@@ -167,7 +167,7 @@ Deja de aceptar «neutro» si la etiqueta nunca encajó del todo. Puede que seas
 
 [Prueba gratis el análisis de color con IA →](/es/try)
 
-60 segundos, gratis, sin registro. Lectura precisa del subtono, con detección de oliva.
+60 segundos, vista previa gratis, sin registro. Lectura precisa del subtono, con detección de oliva.
 
 ## Artículos relacionados
 

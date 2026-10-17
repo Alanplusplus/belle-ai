@@ -238,7 +238,7 @@ Wenn Sie noch zwischen warmer Beere und kühler Pflaume raten, kann eine schnell
 
 [Kostenlose KI-Farbanalyse testen →](/try)
 
-60 Sekunden, kostenlos, keine Anmeldung. Personalisierte Make-up-Farbempfehlungen.
+60 Sekunden, kostenlose Vorschau, keine Anmeldung. Personalisierte Make-up-Farbempfehlungen.
 
 ## Verwandte Artikel
 

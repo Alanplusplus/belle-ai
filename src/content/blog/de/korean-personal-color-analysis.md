@@ -144,7 +144,7 @@ Unsere KI nutzt dasselbe 12-Saisons-System wie die koreanische Salon-Analyse und
 
 [Kostenlose Farbanalyse starten →](/try)
 
-60 Sekunden, kostenlos, ohne Anmeldung. Verfügbar auf Koreanisch (한국어) und 15 weiteren Sprachen.
+60 Sekunden, kostenlose Vorschau, ohne Anmeldung. Verfügbar auf Koreanisch (한국어) und 8 weiteren Sprachen.
 
 [한국어로 색상 분석 받기 →](/ko/try)
 

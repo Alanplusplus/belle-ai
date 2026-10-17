@@ -171,7 +171,7 @@ Warm oder Oliv? Unsere KI-Analyse erkennt den grün-grauen Modifikator, den Stan
 
 [Kostenlose KI-Farbanalyse testen →](/try)
 
-60 Sekunden, kostenlos, ohne Anmeldung. Präzise Unterton-Erkennung für Olivhaut.
+60 Sekunden, kostenlose Vorschau, ohne Anmeldung. Präzise Unterton-Erkennung für Olivhaut.
 
 ## Verwandte Artikel
 

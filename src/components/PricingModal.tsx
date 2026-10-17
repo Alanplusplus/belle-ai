@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { trackEvent } from "@/lib/analytics";
 import { startCheckout } from "@/lib/checkout";
-import { PACK_CREDITS, PACK_PRICE, WEEKLY_INTRO_PRICE, type ProductKey } from "@/lib/constants";
-import { InAppBrowserNotice, InAppCheckoutWarning } from "@/components/InAppBrowserNotice";
+import { CREDIT_PACKS, isPackProduct, type ProductKey } from "@/lib/constants";
+import { usePrices } from "@/lib/usePrices";
+import { PaymentTrust } from "@/components/PaymentTrust";
+import { InAppBrowserNotice, InAppCheckoutEmailStep } from "@/components/InAppBrowserNotice";
 import { detectInAppBrowser } from "@/lib/inAppBrowser";
 import { useDialogA11y } from "@/lib/useDialogA11y";
 
@@ -26,9 +28,10 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
   const t = useTranslations("pricing");
   const tCommon = useTranslations("tryPage");
   const locale = useLocale();
+  const { money } = usePrices();
   const [loading, setLoading] = useState<string | null>(null);
   const [error, setError] = useState(false);
-  // 在 App 内置浏览器里点付费：先出强提示，用户确认后才真正发起结算
+  // 在 App 内置浏览器里点付费：先出「保存购买」步骤（填邮箱，可跳过），用户继续后才真正发起结算
   const [inAppWarnProduct, setInAppWarnProduct] = useState<ProductKey | null>(null);
 
   // 弹层打开时锁定背景滚动，避免手机上在弹层里滑动时底下的页面跟着滚
@@ -64,8 +67,9 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
     onClose();
   };
 
-  const handleCheckout = async (product: ProductKey, confirmedInApp = false) => {
-    trackEvent("pricing_modal_cta_clicked", { product, source });
+  const handleCheckout = async (product: ProductKey, confirmedInApp = false, email?: string) => {
+    // 「保存购买」步骤里点继续会再调一次本函数，这次不重复记点击
+    if (!confirmedInApp) trackEvent("pricing_modal_cta_clicked", { product, source });
     const inApp = detectInAppBrowser();
     if (inApp && !confirmedInApp) {
       trackEvent("inapp_checkout_warned", { product, source, app: inApp });
@@ -80,7 +84,8 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
         product,
         source: `pricing_modal:${source}`,
         locale,
-        ...(product === "pack" ? { packBefore: packCredits, ...(unlockTaskId ? { unlockTaskId } : {}) } : {}),
+        ...(email ? { email } : {}),
+        ...(isPackProduct(product) ? { packBefore: packCredits, ...(unlockTaskId ? { unlockTaskId } : {}) } : {}),
         onRestore: () => setLoading(null),
       });
       // 成功后页面会整页跳转到支付页，保持 loading 状态
@@ -133,86 +138,93 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
 
         <InAppBrowserNotice className="mt-3" />
 
-        {/* 积分包：一次性付费，买完用积分生成 / 解锁完整报告，不绑订阅 */}
-        <div className="relative mt-5 rounded-xl border-2 border-primary bg-card p-5">
-          <span className="absolute -top-3 left-5 rounded-full bg-primary px-3 py-0.5 text-xs font-bold text-white">
-            {t("packBadge")}
+        {/* 订阅是主推：周订阅（首周优惠）最醒目。价格区与 /pricing 页一致：大号显示首周优惠价，原价放在说明里 */}
+        <div className="relative mt-6 rounded-xl border-2 border-primary bg-card p-5 shadow-md">
+          <span className="absolute -top-3 left-5 whitespace-nowrap rounded-full bg-primary px-3 py-0.5 text-xs font-bold text-white">
+            {t("weeklyRecommendedBadge")}
           </span>
           <div className="flex items-baseline justify-between gap-3">
-            <h3 className="text-lg font-bold">{t("packTitle", { credits: PACK_CREDITS })}</h3>
-            <p className="text-2xl font-bold text-primary">${PACK_PRICE}</p>
+            <h3 className="text-lg font-bold">{t("weekly")}</h3>
+            <p className="text-right">
+              <span className="text-3xl font-bold text-primary">{money("weeklyIntro")}</span>
+              <span className="text-sm text-muted-foreground"> / {t("weeklyIntroLabel")}</span>
+            </p>
           </div>
+          <p className="mt-1 text-right text-xs text-muted-foreground">{t("weeklyThen", { price: money("weekly") })}</p>
+          {/* 手机上也要看到订阅包含什么：只收起次要的两条 */}
           <ul className="mt-3 space-y-1.5">
-            <ModalFeature text={t("packFeature1", { credits: PACK_CREDITS })} />
-            <ModalFeature text={t("packFeature2")} />
-            <ModalFeature text={t("packFeature3")} />
+            <ModalFeature text={t("weeklyFeature1")} />
+            <ModalFeature text={t("weeklyFeature2")} className="max-sm:hidden" />
+            <ModalFeature text={t("weeklyFeature3")} />
+            <ModalFeature text={t("weeklyFeature4")} className="max-sm:hidden" />
           </ul>
-          <p className="mt-2 text-xs text-muted-foreground">{t("packCostNote")}</p>
           <button
-            onClick={() => handleCheckout("pack")}
+            onClick={() => handleCheckout("weekly")}
             disabled={loading !== null}
             className="mt-4 min-h-12 w-full rounded-full bg-primary py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-50"
           >
-            {loading === "pack" ? <LoadingDots /> : t("packCta", { credits: PACK_CREDITS, price: PACK_PRICE })}
+            {loading === "weekly" ? <LoadingDots /> : t("weeklyCta", { price: money("weeklyIntro") })}
           </button>
-          <p className="mt-2 text-center text-xs text-muted-foreground">{t("packNote")}</p>
         </div>
 
-        <p className="mt-5 text-center text-xs font-medium uppercase tracking-wide text-muted-foreground">{t("orSubscribe")}</p>
-
-        <div className="mt-3 grid gap-4 sm:grid-cols-2">
-          {/* Weekly */}
-          <div className="rounded-xl border border-border bg-card p-5">
-            <h3 className="text-lg font-bold">{t("weekly")}</h3>
-            <div className="mt-2 flex justify-center">
-              <span className="rounded-full bg-primary/10 px-4 py-1.5 text-sm font-bold text-primary">
-                {t("weeklyIntroBadge", { price: WEEKLY_INTRO_PRICE })}
-              </span>
-            </div>
-            <p className="mt-2 text-center text-xs text-muted-foreground">{t("weeklyIntroNote", { price: WEEKLY_INTRO_PRICE })}</p>
-            {/* 手机上也要看到订阅包含什么：只收起次要的两条 */}
-            <ul className="mt-3 space-y-1.5">
-              <ModalFeature text={t("weeklyFeature1")} />
-              <ModalFeature text={t("weeklyFeature2")} className="max-sm:hidden" />
-              <ModalFeature text={t("weeklyFeature3")} />
-              <ModalFeature text={t("weeklyFeature4")} className="max-sm:hidden" />
-            </ul>
-            <button
-              onClick={() => handleCheckout("weekly")}
-              disabled={loading !== null}
-              className="mt-4 min-h-12 w-full rounded-full border border-primary py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5 disabled:opacity-50"
-            >
-              {loading === "weekly" ? <LoadingDots /> : t("weeklyCta", { price: WEEKLY_INTRO_PRICE })}
-            </button>
-          </div>
-
-          {/* Yearly */}
-          <div className="rounded-xl border border-border bg-card p-5">
-            <h3 className="text-lg font-bold">{t("yearly")}</h3>
-            <div className="mt-2 flex justify-center">
-              <span className="rounded-full bg-muted px-4 py-1.5 text-sm font-bold text-muted-foreground">
+        {/* Yearly：权益和周订阅相同，所以只用紧凑的一行：折合每周的价格 + 省多少 */}
+        <div className="mt-3 flex items-center justify-between gap-3 rounded-xl border border-border bg-card p-4">
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <h3 className="text-base font-bold">{t("yearly")}</h3>
+              <span className="rounded-full bg-green-500/15 px-2 py-0.5 text-xs font-semibold text-green-700 dark:text-green-400">
                 {t("yearlyBadge")}
               </span>
             </div>
-            <p className="mt-2 text-center text-xs text-muted-foreground">{t("yearlyPrice")} {t("yearlyPer")}</p>
-            <ul className="mt-3 space-y-1.5">
-              <ModalFeature text={t("yearlyFeature1")} />
-              <ModalFeature text={t("yearlyFeature2")} className="max-sm:hidden" />
-              <ModalFeature text={t("yearlyFeature3")} />
-              <ModalFeature text={t("yearlyFeature4")} className="max-sm:hidden" />
-            </ul>
-            <button
-              onClick={() => handleCheckout("yearly")}
-              disabled={loading !== null}
-              className="mt-4 min-h-12 w-full rounded-full border border-border py-2.5 text-sm font-semibold text-foreground transition hover:bg-muted disabled:opacity-50"
-            >
-              {loading === "yearly" ? <LoadingDots /> : t("yearlyCta")}
-            </button>
+            <p className="mt-0.5 text-xs text-muted-foreground">
+              {money("yearly")} {t("yearlyPer")} · {t("yearlyPerWeek", { price: money("yearlyPerWeek") })}
+            </p>
           </div>
+          <button
+            onClick={() => handleCheckout("yearly")}
+            disabled={loading !== null}
+            className="min-h-11 shrink-0 rounded-full border border-border px-4 py-2 text-sm font-semibold text-foreground transition hover:bg-muted disabled:opacity-50"
+          >
+            {loading === "yearly" ? <LoadingDots /> : t("yearlyCta")}
+          </button>
         </div>
 
+        {/* 积分包：一次性付费、不绑订阅，给不想订阅的人；30 积分更划算 */}
+        <p className="mt-6 text-center text-xs font-medium uppercase tracking-wide text-muted-foreground">{t("orPack")}</p>
+        <div className="mt-4 grid grid-cols-2 gap-3">
+          {(["pack", "pack30"] as const).map((key) => {
+            const { credits } = CREDIT_PACKS[key];
+            const price = money(key);
+            return (
+              <div key={key} className="relative rounded-xl border border-border bg-card p-4">
+                {key === "pack30" && (
+                  <span className="absolute -top-2.5 right-3 whitespace-nowrap rounded-full bg-green-500 px-2 py-0.5 text-[11px] font-semibold text-white">
+                    {t("packSaveBadge", { percent: money("pack30:savePercent") })}
+                  </span>
+                )}
+                <h3 className="text-sm font-bold">{t("packTitle", { credits })}</h3>
+                <p className="mt-1 text-xl font-bold">{price}</p>
+                <p className="text-xs text-muted-foreground">{t("packPerReport", { price: money(`${key}:perReport` as "pack:perReport" | "pack30:perReport") })}</p>
+                <button
+                  onClick={() => handleCheckout(key)}
+                  disabled={loading !== null}
+                  className="mt-3 min-h-11 w-full rounded-full border border-primary px-2 py-2 text-xs font-semibold text-primary transition hover:bg-primary/5 disabled:opacity-50"
+                >
+                  {loading === key ? <LoadingDots /> : t("packCta", { credits, price })}
+                </button>
+              </div>
+            );
+          })}
+        </div>
+        {/* 从锁定报告点进来：买积分包能顺手把这份报告解锁，这点要说清楚 */}
+        {isLockSource && <p className="mt-2 text-center text-xs font-medium text-foreground">{t("packFeature2")}</p>}
+        <p className="mt-2 text-center text-xs text-muted-foreground">{t("packNote")} {t("packCostNote")}</p>
+
+        {/* 支付信任信息：离购买按钮最近的地方说清「怎么付、安不安全」 */}
+        <PaymentTrust className="mt-4" />
+
         {inAppWarnProduct && (
-          <InAppCheckoutWarning onContinue={() => handleCheckout(inAppWarnProduct, true)} />
+          <InAppCheckoutEmailStep onContinue={(email) => handleCheckout(inAppWarnProduct, true, email)} />
         )}
 
         {error && (

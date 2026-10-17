@@ -8,9 +8,26 @@ interface ApiResponse<T> {
 }
 
 let cachedUserId: string | null = null;
+let cachedEmail: string | null = null;
 
 export function getCachedUserId(): string | null {
   return cachedUserId;
+}
+
+/** 当前账号的邮箱（登录了 Google 才有）：结算时用来预填付款页的邮箱 */
+export function getCachedEmail(): string | null {
+  return cachedEmail;
+}
+
+/** 登录后发现「在其他浏览器里付过款」的购买已被找回时在 window 上广播，页面据此刷新并提示 */
+export const PURCHASE_RESTORED_EVENT = "belle:purchase-restored";
+
+function cacheAccount(data: WebInitData) {
+  cachedUserId = data.user_id;
+  if (data.email) cachedEmail = data.email;
+  if (data.restored_purchases && data.restored_purchases > 0 && typeof window !== "undefined") {
+    window.dispatchEvent(new CustomEvent(PURCHASE_RESTORED_EVENT, { detail: data.restored_purchases }));
+  }
 }
 
 async function belleApi<T>(body: Record<string, unknown>): Promise<ApiResponse<T>> {
@@ -46,6 +63,8 @@ export interface WebInitData {
   checkin_available: boolean;
   checkin_streak?: number;
   checkin_max_streak?: number;
+  /** 本次登录时按付款邮箱找回的购买（账号）数：>0 表示在其他浏览器里付的款已经转到当前账号 */
+  restored_purchases?: number;
 }
 
 export type WebSignInData = WebInitData;
@@ -75,7 +94,7 @@ async function _tryApplyReferral() {
 export async function webInit() {
   const res = await belleApi<WebInitData>({ action: "init" });
   if (res.code === 200 && res.data) {
-    cachedUserId = res.data.user_id;
+    cacheAccount(res.data);
     _tryApplyReferral();
   }
   return res;
@@ -89,7 +108,7 @@ export async function webSignIn(email?: string, name?: string, avatarUrl?: strin
     avatar_url: avatarUrl,
   });
   if (res.code === 200 && res.data) {
-    cachedUserId = res.data.user_id;
+    cacheAccount(res.data);
     _tryApplyReferral();
   }
   return res;
@@ -103,7 +122,7 @@ export async function webMergeAccount(email?: string, name?: string, avatarUrl?:
     avatar_url: avatarUrl,
   });
   if (res.code === 200 && res.data) {
-    cachedUserId = res.data.user_id;
+    cacheAccount(res.data);
   }
   return res;
 }

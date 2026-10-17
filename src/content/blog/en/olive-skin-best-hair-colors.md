@@ -203,7 +203,7 @@ Not sure whether you're warm olive or cool olive? Our free AI color analysis ide
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Olive Undertone Guide](/en/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
-- [Olive Skin Color Season Guide](/en/blog/olive-skin-color-season) — Which seasonal type olive skin typically falls into
-- [Olive Skin Jewelry & Metals Guide](/en/blog/olive-skin-jewelry-metals) — Gold, silver, and rose gold for olive undertones
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Olive Undertone Guide](/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
+- [Olive Skin Color Season Guide](/blog/olive-skin-color-season) — Which seasonal type olive skin typically falls into
+- [Olive Skin Jewelry & Metals Guide](/blog/olive-skin-jewelry-metals) — Gold, silver, and rose gold for olive undertones

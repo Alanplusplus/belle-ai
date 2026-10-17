@@ -169,7 +169,7 @@ The next time you see a celebrity on a "best dressed" list and think "wow, that 
 
 ## Related Articles
 
-- [The Complete Guide to the 12 Color Seasons](/en/blog/personal-color-analysis-guide) — Full breakdown of all 12 seasons with palettes and characteristics
-- [8 Style Personality Types: Which One Are You?](/en/blog/style-personality-types-guide) — Discover your fashion DNA beyond just color
-- [How to Accessorize Based on Your Color Season](/en/blog/accessorize-by-color-season) — Jewelry, scarves, and accessories for every season
-- [The Best Makeup Colors for Every Color Season](/en/blog/best-makeup-colors-color-season) — Complete makeup shade chart across all 12 seasons
+- [The Complete Guide to the 12 Color Seasons](/blog/personal-color-analysis-guide) — Full breakdown of all 12 seasons with palettes and characteristics
+- [8 Style Personality Types: Which One Are You?](/blog/style-personality-types-guide) — Discover your fashion DNA beyond just color
+- [How to Accessorize Based on Your Color Season](/blog/accessorize-by-color-season) — Jewelry, scarves, and accessories for every season
+- [The Best Makeup Colors for Every Color Season](/blog/best-makeup-colors-color-season) — Complete makeup shade chart across all 12 seasons

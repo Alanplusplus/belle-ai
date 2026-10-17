@@ -63,7 +63,7 @@ Vous recevez :
 
 ## Belle AI : analyse de couleur gratuite en 60 secondes
 
-Notre outil d'analyse de couleur IA fournit tout ce qui précède — entièrement gratuit pour votre première analyse. Pas d'e-mail, pas de mur d'inscription, pas de paywall caché sur vos résultats.
+Notre [outil d'analyse de couleur IA](/) fournit tout ce qui précède. Votre première analyse est gratuite en aperçu, sans inscription, mais la version gratuite est un aperçu dont certains détails sont floutés. Un pack de crédits ou Pro débloque le rapport complet. Nous préférons le dire d'emblée plutôt que de promettre un rapport « entièrement gratuit ».
 
 ### Ce que vous obtenez
 
@@ -92,7 +92,7 @@ Où l'analyse en personne peut être meilleure :
 
 | Outil | Coût | Méthode | Précision | Rapidité |
 |-------|------|---------|-----------|----------|
-| **Belle AI** | Gratuit | Analyse photo IA | Élevée | 60 secondes |
+| **Belle AI** | Aperçu gratuit, rapport complet payant | Analyse photo IA | Moyenne–élevée | 60 secondes |
 | Quiz basique | Gratuit | Questions d'auto-évaluation | Faible–Moyenne | 3 minutes |
 | Consultation professionnelle | 200–500 € | Drapage en personne | Maximale | 60–90 min |
 | Consultation vidéo | 50–150 € | Appel vidéo + échantillons | Élevée | 30–45 min |
@@ -129,6 +129,6 @@ Prête à trouver vos meilleures couleurs ? Téléchargez un selfie et obtenez v
 
 [Obtenir mon analyse de couleur gratuite →](/try)
 
-Sans inscription. Sans carte bancaire. Vos résultats apparaissent instantanément.
+Sans inscription ni carte bancaire pour l'aperçu. La version gratuite floute certains détails ; un pack de crédits ou Pro débloque le rapport complet.
 
 Vous préférez ne pas envoyer de photo ? [Faites notre quiz d'analyse de couleur gratuit →](/tools/color-quiz)

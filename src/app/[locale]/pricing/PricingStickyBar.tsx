@@ -4,17 +4,18 @@ import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { trackEvent } from "@/lib/analytics";
 import { startCheckout } from "@/lib/checkout";
-import { PACK_CREDITS, PACK_PRICE } from "@/lib/constants";
-import { InAppCheckoutWarning } from "@/components/InAppBrowserNotice";
+import { usePrices } from "@/lib/usePrices";
+import { InAppCheckoutEmailStep } from "@/components/InAppBrowserNotice";
 import { detectInAppBrowser } from "@/lib/inAppBrowser";
 
 /**
- * 手机上的吸底购买栏：用户滚过主推的积分包卡片后，购买按钮仍然在拇指范围内。
- * 积分包卡片本身在视口里时不显示，避免和卡片里的按钮重复。
+ * 手机上的吸底购买栏：用户滚过主推的周订阅卡片后，购买按钮仍然在拇指范围内。
+ * 周订阅卡片本身在视口里时不显示，避免和卡片里的按钮重复。
  */
 export function PricingStickyBar({ targetId }: { targetId: string }) {
   const t = useTranslations("pricing");
   const locale = useLocale();
+  const { money } = usePrices();
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -32,11 +33,12 @@ export function PricingStickyBar({ targetId }: { targetId: string }) {
     return () => observer.disconnect();
   }, [targetId]);
 
-  const handleClick = async (confirmedInApp = false) => {
-    trackEvent("pricing_cta_clicked", { product: "pack", variant: "sticky_bar" });
+  const handleClick = async (confirmedInApp = false, email?: string) => {
+    // 「保存购买」步骤里点继续会再调一次本函数，这次不重复记点击
+    if (!confirmedInApp) trackEvent("pricing_cta_clicked", { product: "weekly", variant: "sticky_bar" });
     const inApp = detectInAppBrowser();
     if (inApp && !confirmedInApp) {
-      trackEvent("inapp_checkout_warned", { product: "pack", source: "pricing_sticky_bar", app: inApp });
+      trackEvent("inapp_checkout_warned", { product: "weekly", source: "pricing_sticky_bar", app: inApp });
       setInAppWarn(true);
       return;
     }
@@ -45,9 +47,10 @@ export function PricingStickyBar({ targetId }: { targetId: string }) {
     setError(false);
     try {
       await startCheckout({
-        product: "pack",
+        product: "weekly",
         source: "pricing_sticky_bar",
         locale,
+        ...(email ? { email } : {}),
         onRestore: () => setLoading(false),
       });
     } catch {
@@ -62,7 +65,7 @@ export function PricingStickyBar({ targetId }: { targetId: string }) {
     <div className="fixed inset-x-0 bottom-0 z-40 border-t border-primary/20 bg-background/95 px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] backdrop-blur-md lg:hidden">
       {inAppWarn && (
         <div className="mb-3 max-h-[60dvh] overflow-y-auto">
-          <InAppCheckoutWarning onContinue={() => handleClick(true)} />
+          <InAppCheckoutEmailStep onContinue={(email) => handleClick(true, email)} />
         </div>
       )}
       <button
@@ -77,7 +80,7 @@ export function PricingStickyBar({ targetId }: { targetId: string }) {
             <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-current" />
           </span>
         ) : (
-          t("packCta", { credits: PACK_CREDITS, price: PACK_PRICE })
+          t("weeklyCta", { price: money("weeklyIntro") })
         )}
       </button>
       {error && (

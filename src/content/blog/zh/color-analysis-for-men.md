@@ -137,7 +137,7 @@ image: "/images/blog/color-analysis-for-men.webp"
 
 [开始免费色彩分析 →](/zh/try)
 
-60 秒，免费，无需注册。你会知道自己的季型，并获得实用的购物色盘。
+60 秒，免费预览，无需注册。你会知道自己的季型，并获得实用的购物色盘。
 
 或回答几个快问：[参加免费测验 →](/zh/tools/color-quiz)
 

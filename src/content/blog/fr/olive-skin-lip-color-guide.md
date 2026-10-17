@@ -234,7 +234,7 @@ Entre baie chaude et prune froide, une analyse colorimétrique par IA peut ident
 
 [Essayer l’analyse colorimétrique IA gratuite →](/try)
 
-60 secondes, gratuit, sans inscription. Recommandations maquillage personnalisées.
+60 secondes, aperçu gratuit, sans inscription. Recommandations maquillage personnalisées.
 
 ## Articles connexes
 

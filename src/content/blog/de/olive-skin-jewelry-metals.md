@@ -214,7 +214,7 @@ Zwischen Gold und Silber zu raten kostete mich Zeit und Geld. Als ich meinen **O
 
 [Kostenlose KI-Farbanalyse testen →](/try)
 
-Etwa 60 Sekunden, kostenlos, ohne Anmeldung — personalisierte Orientierung für Metalle, Edelsteine und Ihre breitere Palette.
+Etwa 60 Sekunden, kostenlose Vorschau, ohne Anmeldung — personalisierte Orientierung für Metalle, Edelsteine und Ihre breitere Palette.
 
 ## Verwandte Artikel
 

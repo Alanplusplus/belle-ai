@@ -181,7 +181,7 @@ The mirror becomes an ally instead of a critic. And that shift changes more than
 
 ## Related Articles
 
-- [The Complete Guide to the 12 Color Seasons](/en/blog/personal-color-analysis-guide) — Discover which of the 12 seasons matches your natural coloring
-- [I Wore Only My 'Season Colors' for 30 Days — Here's What Happened](/en/blog/wearing-season-colors-30-days) — A real experiment showing what changes when you commit to your palette
-- [How to Build a Capsule Wardrobe for Your Color Season](/en/blog/capsule-wardrobe-color-season) — Turn your color knowledge into a practical, streamlined wardrobe
-- [The Science Behind Personal Color Analysis: How It Actually Works](/en/blog/science-behind-personal-color-analysis) — The optical science explaining why certain colors flatter you
+- [The Complete Guide to the 12 Color Seasons](/blog/personal-color-analysis-guide) — Discover which of the 12 seasons matches your natural coloring
+- [I Wore Only My 'Season Colors' for 30 Days — Here's What Happened](/blog/wearing-season-colors-30-days) — A real experiment showing what changes when you commit to your palette
+- [How to Build a Capsule Wardrobe for Your Color Season](/blog/capsule-wardrobe-color-season) — Turn your color knowledge into a practical, streamlined wardrobe
+- [The Science Behind Personal Color Analysis: How It Actually Works](/blog/science-behind-personal-color-analysis) — The optical science explaining why certain colors flatter you

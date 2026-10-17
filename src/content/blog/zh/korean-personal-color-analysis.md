@@ -144,7 +144,7 @@ image: "/images/blog/korean-personal-color-analysis.webp"
 
 [开始免费色彩分析 →](/zh/try)
 
-60 秒，免费，无需注册。支持韩语（한국어）及另外 15 种语言。
+60 秒，免费预览，无需注册。支持韩语（한국어）及另外 8 种语言。
 
 [한국어로 색상 분석 받기 →](/ko/try)
 

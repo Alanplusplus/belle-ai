@@ -147,4 +147,4 @@ Para el resultado más preciso, sube una selfie clara y deja que la IA determine
 
 [Análisis de color con IA gratis →](/try)
 
-Sin registro, sin coste. Resultados en 60 segundos con tu paleta personalizada completa.
+Sin registro para la vista previa. Tu estación aparece en unos 60 segundos; la versión gratuita desenfoca algunos detalles y un pack de créditos o Pro desbloquea la paleta completa.

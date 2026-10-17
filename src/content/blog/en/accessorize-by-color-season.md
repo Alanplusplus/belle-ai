@@ -202,7 +202,7 @@ The beauty of accessorizing by color season is that it actually simplifies your 
 
 ## Related Articles
 
-- [Gold or Silver? How Your Skin Undertone Determines Your Best Metal](/en/blog/jewelry-metals-skin-tone-guide) — A deep dive into metal selection
-- [Soft Autumn vs Soft Summer: The Most Commonly Confused Color Seasons](/en/blog/soft-autumn-vs-soft-summer) — If you're unsure which muted season you are
-- [How to Build a Capsule Wardrobe for Your Color Season](/en/blog/capsule-wardrobe-color-season) — Extend your seasonal strategy to clothing
-- [The Best Makeup Colors for Every Color Season](/en/blog/best-makeup-colors-color-season) — Complete your head-to-toe color harmony
+- [Gold or Silver? How Your Skin Undertone Determines Your Best Metal](/blog/jewelry-metals-skin-tone-guide) — A deep dive into metal selection
+- [Soft Autumn vs Soft Summer: The Most Commonly Confused Color Seasons](/blog/soft-autumn-vs-soft-summer) — If you're unsure which muted season you are
+- [How to Build a Capsule Wardrobe for Your Color Season](/blog/capsule-wardrobe-color-season) — Extend your seasonal strategy to clothing
+- [The Best Makeup Colors for Every Color Season](/blog/best-makeup-colors-color-season) — Complete your head-to-toe color harmony

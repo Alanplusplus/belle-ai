@@ -249,7 +249,7 @@ Impossible de trancher entre les Automnes rien qu'avec les descriptions ? Notre 
 
 [Essayer l'analyse colorimétrique IA gratuite →](/fr/try)
 
-60 secondes, gratuit, sans inscription. Convient à tous les tons de peau.
+60 secondes, aperçu gratuit, sans inscription. Convient à tous les tons de peau.
 
 ---
 

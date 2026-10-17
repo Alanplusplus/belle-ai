@@ -185,7 +185,7 @@ Use this flow at home before you buy a whole new wardrobe.
 
 ### Step 1: Confirm olive undertone
 
-Season typing only works if undertone is right. Check green cast, foundation mismatch, and how white fabric looks on your neck. My [olive undertone guide](/en/blog/olive-undertone-guide) walks through reliable tests.
+Season typing only works if undertone is right. Check green cast, foundation mismatch, and how white fabric looks on your neck. My [olive undertone guide](/blog/olive-undertone-guide) walks through reliable tests.
 
 ### Step 2: Split warm olive vs cool olive
 
@@ -222,7 +222,7 @@ Try one lip and one blush from each candidate season on the same day. Clothing c
 
 ### Step 6: Confirm with objective analysis (optional)
 
-Home tests help, but olive is where human eyes slip most. [AI color analysis](/en/color-analysis) reads the green-grey modifier from a photo and maps your values to seasonal palettes — useful when you sit between Soft Autumn and Soft Summer or between Deep Autumn and Deep Winter.
+Home tests help, but olive is where human eyes slip most. [AI color analysis](/color-analysis) reads the green-grey modifier from a photo and maps your values to seasonal palettes — useful when you sit between Soft Autumn and Soft Summer or between Deep Autumn and Deep Winter.
 
 ---
 
@@ -259,13 +259,13 @@ Not sure which bucket you are in? Belle AI color analysis is built to detect oli
 
 [Try Free AI Color Analysis →](/try)
 
-About 60 seconds, free, no signup — your personalized palette ready to use.
+About 60 seconds, free to preview, no signup — your personalized palette ready to use.
 
 ---
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors  
-- [Olive Undertone Guide](/en/blog/olive-undertone-guide) — How to identify and style olive skin  
-- [Olive Skin by Ethnicity](/en/blog/olive-skin-by-ethnicity) — How olive presents across backgrounds  
-- [Olive vs Neutral Undertone](/en/blog/olive-vs-neutral-undertone) — Tell olive apart from true neutral skin  
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors  
+- [Olive Undertone Guide](/blog/olive-undertone-guide) — How to identify and style olive skin  
+- [Olive Skin by Ethnicity](/blog/olive-skin-by-ethnicity) — How olive presents across backgrounds  
+- [Olive vs Neutral Undertone](/blog/olive-vs-neutral-undertone) — Tell olive apart from true neutral skin  

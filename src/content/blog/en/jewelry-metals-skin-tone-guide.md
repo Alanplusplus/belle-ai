@@ -97,6 +97,6 @@ Our AI analyzes your skin undertone, face shape, and overall coloring to generat
 
 ## Related Articles
 
-- [How to Accessorize Based on Your Color Season: Jewelry, Scarves & More](/en/blog/accessorize-by-color-season) — Match metals and gemstones to your seasonal palette
-- [Best Earring Styles for Every Face Shape — A Visual Guide](/en/blog/best-earring-styles-face-shape) — Choose earring shapes that flatter your face
-- [Cool Tone vs Warm Tone: 5 Easy Tests to Find Your Undertone (With Photos)](/en/blog/cool-tone-vs-warm-tone) — Confirm whether gold or silver suits you best
+- [How to Accessorize Based on Your Color Season: Jewelry, Scarves & More](/blog/accessorize-by-color-season) — Match metals and gemstones to your seasonal palette
+- [Best Earring Styles for Every Face Shape — A Visual Guide](/blog/best-earring-styles-face-shape) — Choose earring shapes that flatter your face
+- [Cool Tone vs Warm Tone: 5 Easy Tests to Find Your Undertone (With Photos)](/blog/cool-tone-vs-warm-tone) — Confirm whether gold or silver suits you best

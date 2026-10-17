@@ -167,7 +167,7 @@ Oliv oder neutral unsicher? Unsere KI-Farbanalyse erkennt den grün-grauen Stich
 
 [Kostenlose KI-Farbanalyse testen →](/de/try)
 
-60 Sekunden, kostenlos, ohne Anmeldung. Genaue Unterton-Analyse inklusive Oliv-Erkennung.
+60 Sekunden, kostenlose Vorschau, ohne Anmeldung. Genaue Unterton-Analyse inklusive Oliv-Erkennung.
 
 ## Verwandte Artikel
 

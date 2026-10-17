@@ -214,7 +214,7 @@ Altın ile gümüş arasında tahmin etmek zaman ve paramı boşa harcadı. **Ze
 
 [Ücretsiz Yapay Zekâ Renk Analizi Deneyin →](/try)
 
-Yaklaşık 60 saniye, ücretsiz, kayıt yok — metaller, taşlar ve daha geniş paletiniz için kişisel yön.
+Yaklaşık 60 saniye, ücretsiz önizleme, kayıt yok — metaller, taşlar ve daha geniş paletiniz için kişisel yön.
 
 ## İlgili Yazılar
 

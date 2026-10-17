@@ -188,7 +188,7 @@ Finding your foundation match isn't about trying more shades — it's about unde
 
 ## Related Articles
 
-- [Neutral Undertone: The Hardest Skin Tone to Diagnose (Here's How)](/en/blog/neutral-undertone-guide) — Why neutral undertone breaks standard tests and how to identify it
-- [The Best Makeup Colors for Every Color Season: A Complete Chart](/en/blog/best-makeup-colors-color-season) — Foundation, lips, eyes, and blush recommendations by season
-- [Olive Undertone: The Most Misunderstood Skin Tone Explained](/en/blog/olive-undertone-guide) — Deep dive into olive undertone identification and styling
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Neutral Undertone: The Hardest Skin Tone to Diagnose (Here's How)](/blog/neutral-undertone-guide) — Why neutral undertone breaks standard tests and how to identify it
+- [The Best Makeup Colors for Every Color Season: A Complete Chart](/blog/best-makeup-colors-color-season) — Foundation, lips, eyes, and blush recommendations by season
+- [Olive Undertone: The Most Misunderstood Skin Tone Explained](/blog/olive-undertone-guide) — Deep dive into olive undertone identification and styling
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

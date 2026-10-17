@@ -259,7 +259,7 @@ Pas sûre de votre case ? Belle AI détecte les sous-tons olive et vous assigne 
 
 [Essayer l’analyse colorimétrique IA gratuite →](/try)
 
-Environ 60 secondes, gratuit, sans inscription — votre palette personnalisée prête à l’emploi.
+Environ 60 secondes, aperçu gratuit, sans inscription — votre palette personnalisée prête à l’emploi.
 
 ---
 

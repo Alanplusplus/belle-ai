@@ -107,6 +107,6 @@ Upload your photo and discover your perfect frames in seconds.
 
 ## Related Articles
 
-- [Best Hairstyle for Your Face Shape: 7 Types with Visual Examples (2026)](/en/blog/face-shape-hairstyle-guide) — Complete your look with a flattering haircut
-- [Best Earring Styles for Every Face Shape — A Visual Guide](/en/blog/best-earring-styles-face-shape) — Balance your face shape with the right earrings
-- [The Complete AI Glow-Up: How to Transform Your Style with Technology](/en/blog/complete-ai-glow-up-guide) — Get glasses, hair, color, and makeup recommendations in one report
+- [Best Hairstyle for Your Face Shape: 7 Types with Visual Examples (2026)](/blog/face-shape-hairstyle-guide) — Complete your look with a flattering haircut
+- [Best Earring Styles for Every Face Shape — A Visual Guide](/blog/best-earring-styles-face-shape) — Balance your face shape with the right earrings
+- [The Complete AI Glow-Up: How to Transform Your Style with Technology](/blog/complete-ai-glow-up-guide) — Get glasses, hair, color, and makeup recommendations in one report

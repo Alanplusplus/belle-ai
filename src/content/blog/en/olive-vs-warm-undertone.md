@@ -171,11 +171,11 @@ Warm or olive? Our AI analysis detects the green-grey modifier that standard tes
 
 [Try Free AI Color Analysis →](/try)
 
-60 seconds, free, no signup. Accurate undertone detection for olive skin.
+60 seconds, free to preview, no signup. Accurate undertone detection for olive skin.
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Olive Undertone Guide](/en/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
-- [Olive vs Neutral Undertone](/en/blog/olive-vs-neutral-undertone) — How to tell olive apart from neutral skin
-- [Olive Skin Color Season Guide](/en/blog/olive-skin-color-season) — Which seasonal type olive skin typically falls into
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Olive Undertone Guide](/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
+- [Olive vs Neutral Undertone](/blog/olive-vs-neutral-undertone) — How to tell olive apart from neutral skin
+- [Olive Skin Color Season Guide](/blog/olive-skin-color-season) — Which seasonal type olive skin typically falls into

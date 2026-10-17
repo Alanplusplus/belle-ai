@@ -29,8 +29,9 @@ import {
   buildSharePageUrl,
   tagShareLink,
 } from "@/lib/referral";
-import { SITE_URL, PACK_CREDITS, PACK_PRICE } from "@/lib/constants";
-import { trackEvent, trackCheckoutEvent, trackFeedbackSubmitted } from "@/lib/analytics";
+import { SITE_URL, isPackProduct } from "@/lib/constants";
+import { usePrices } from "@/lib/usePrices";
+import { trackEvent, trackCheckoutEvent, trackFeedbackSubmitted, saveReportFeedback } from "@/lib/analytics";
 import { consumeCheckoutContext } from "@/lib/checkout";
 import { prepareImageForUpload } from "@/lib/imageUpload";
 import { isMobileDevice, copyText, canUseNativeShare, nativeShare, openShareWindow } from "@/lib/device";
@@ -138,21 +139,13 @@ const REPORT_LANGUAGES = [
   { code: "es", label: "Español" },
   { code: "fr", label: "Français" },
   { code: "de", label: "Deutsch" },
-  { code: "pt", label: "Português" },
-  { code: "it", label: "Italiano" },
   { code: "ru", label: "Русский" },
-  { code: "ar", label: "العربية" },
-  { code: "hi", label: "हिन्दी" },
-  { code: "th", label: "ไทย" },
-  { code: "id", label: "Bahasa" },
   { code: "tr", label: "Türkçe" },
-  { code: "vi", label: "Tiếng Việt" },
 ];
 
 const LOCALE_TO_REPORT_LANG: Record<string, string> = {
   en: "en", zh: "zh-Hans", ja: "ja", ko: "ko", es: "es", fr: "fr",
-  de: "de", pt: "pt", it: "it", ru: "ru", ar: "ar", hi: "hi",
-  th: "th", id: "id", tr: "tr", vi: "vi",
+  de: "de", ru: "ru", tr: "tr",
 };
 
 const PREFS_KEY = "belle_try_prefs";
@@ -396,7 +389,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   useEffect(() => {
     setLastUploadedPhotoUrl(loadLastPhotoUrl());
     const prefs = loadPrefs();
-    if (prefs.reportLang) setReportLang(prefs.reportLang);
+    if (prefs.reportLang && REPORT_LANGUAGES.some((l) => l.code === prefs.reportLang)) setReportLang(prefs.reportLang);
     if (prefs.resolution) setResolution(prefs.resolution);
   }, []);
 
@@ -650,7 +643,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           const data = res.data;
           const subActive = data?.subscription?.status === "active";
           const packArrived = (data?.pack_credits ?? 0) > (ctx?.packBefore ?? 0);
-          const arrived = ctx?.product === "pack" ? packArrived : ctx?.product ? subActive : (subActive || packArrived);
+          const arrived = isPackProduct(ctx?.product) ? packArrived : ctx?.product ? subActive : (subActive || packArrived);
           if (res.code === 200 && data && arrived) {
             setQuota(data.web_quota);
             setUserCredits(toUserCredits(data));
@@ -660,7 +653,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
             // 买积分包就是为了看某份被锁的报告：到账后直接用积分把它解锁并打开，不让用户再多点一步
             let unlockedAfterPurchase = false;
-            if (ctx?.product === "pack" && ctx.unlockTaskId) {
+            if (isPackProduct(ctx?.product) && ctx?.unlockTaskId) {
               try {
                 const unlockRes = await unlockReport(ctx.unlockTaskId);
                 if (unlockRes.code === 200 && unlockRes.data?.unlocked) {
@@ -679,7 +672,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               }
             }
 
-            setCheckoutBought(ctx?.product === "pack" ? (unlockedAfterPurchase ? "pack_unlocked" : "pack") : "sub");
+            setCheckoutBought(isPackProduct(ctx?.product) ? (unlockedAfterPurchase ? "pack_unlocked" : "pack") : "sub");
             setCheckoutStatus("success");
             window.setTimeout(() => setCheckoutStatus("idle"), 6000);
             return;
@@ -2399,15 +2392,26 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   );
 }
 
-/** 结果下方的真实反馈入口：1–5 星 + 可选一句话。评分进 GA；点「发送」才把评分和留言发给团队（不含照片）。 */
+/**
+ * 结果下方的真实反馈入口：1–5 星 + 可选一句话。评分进 GA；点「发送」才把评分和留言发给团队并存进后端（不含照片）。
+ * 评分较高且写了像样的一句话时，才询问「是否允许匿名展示」，默认不勾选——只展示用户明确同意的真实评价。
+ */
 function ResultFeedback({ taskId, type }: { taskId: string | null; type: string }) {
   const t = useTranslations("tryPage");
+  const locale = useLocale();
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
+  const [allowDisplay, setAllowDisplay] = useState(false);
   const [sent, setSent] = useState(false);
 
+  const canOfferConsent = rating >= 4 && comment.trim().length >= 10;
+
   const submit = (text: string) => {
-    trackFeedbackSubmitted({ type, rating, comment: text.trim() || undefined, taskId });
+    const trimmed = text.trim() || undefined;
+    // 用户先勾选、后来又把留言删短了：同意作废，以最终提交时的状态为准
+    const consent = canOfferConsent && allowDisplay;
+    trackFeedbackSubmitted({ type, rating, comment: trimmed, taskId, allowDisplay: consent });
+    saveReportFeedback({ userId: getCachedUserId(), taskId, rating, comment: trimmed, allowDisplay: consent, locale });
     setSent(true);
   };
 
@@ -2448,6 +2452,17 @@ function ResultFeedback({ taskId, type }: { taskId: string | null; type: string 
             placeholder={t("feedbackPlaceholder")}
             className="w-full resize-none rounded-lg border border-border bg-background px-3 py-2 text-xs outline-none focus:border-primary/60"
           />
+          {canOfferConsent && (
+            <label className="flex cursor-pointer items-start gap-2 py-1 text-left text-[11px] text-muted-foreground">
+              <input
+                type="checkbox"
+                checked={allowDisplay}
+                onChange={(e) => setAllowDisplay(e.target.checked)}
+                className="mt-0.5 h-4 w-4 shrink-0 accent-primary"
+              />
+              <span>{t("feedbackConsent")}</span>
+            </label>
+          )}
           <p className="text-[11px] text-muted-foreground">{t("feedbackPrivacy")}</p>
           <button
             type="button"
@@ -2700,6 +2715,7 @@ function NoQuotaCard({
   checkinLoading: boolean;
   onCheckin: () => void;
 }) {
+  const { money } = usePrices();
   useEffect(() => {
     trackEvent("quota_wall_shown", { checkin_available: checkinAvailable });
     // 只在卡片出现时上报一次
@@ -2718,7 +2734,7 @@ function NoQuotaCard({
           }}
           className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
         >
-          {t("noQuotaPackCta", { credits: PACK_CREDITS, price: PACK_PRICE })}
+          {t("noQuotaPayCta", { price: money("weeklyIntro") })}
         </button>
         <Link
           href="/referral"

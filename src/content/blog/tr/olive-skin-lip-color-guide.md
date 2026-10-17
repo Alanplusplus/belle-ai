@@ -238,7 +238,7 @@ Hâlâ sıcak böğürtlen ile soğuk erik arasında kalıyorsanız, hızlı bir
 
 [Ücretsiz Yapay Zekâ Renk Analizini Deneyin →](/try)
 
-60 saniye, ücretsiz, kayıt yok. Kişiselleştirilmiş makyaj renk önerileri.
+60 saniye, ücretsiz önizleme, kayıt yok. Kişiselleştirilmiş makyaj renk önerileri.
 
 ## İlgili Yazılar
 

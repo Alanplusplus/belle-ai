@@ -194,7 +194,7 @@ Si estás cansada de adivinar, el **análisis de color con IA** puede señalar s
 
 [Prueba gratis el análisis de color con IA →](/try)
 
-Gratis, un minuto, sin registro. Ve tu subtono y dirección de color para maquillaje.
+Vista previa gratis, un minuto, sin registro. Ve tu subtono y dirección de color para maquillaje.
 
 ## Artículos relacionados
 

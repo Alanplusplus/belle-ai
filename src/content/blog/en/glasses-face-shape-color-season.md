@@ -233,7 +233,7 @@ Your glasses are the most visible accessory you own. Getting both the shape and 
 
 ## Related Articles
 
-- [Best Glasses for Your Face Shape: The Complete Guide](/en/blog/best-glasses-for-face-shape) — Deep dive into frame shapes for every face type
-- [How to Accessorize Based on Your Color Season: Jewelry, Scarves & More](/en/blog/accessorize-by-color-season) — The complete accessories guide for your color palette
-- [Best Earring Styles for Every Face Shape — A Visual Guide](/en/blog/best-earring-styles-face-shape) — Another face shape × accessories deep dive
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Best Glasses for Your Face Shape: The Complete Guide](/blog/best-glasses-for-face-shape) — Deep dive into frame shapes for every face type
+- [How to Accessorize Based on Your Color Season: Jewelry, Scarves & More](/blog/accessorize-by-color-season) — The complete accessories guide for your color palette
+- [Best Earring Styles for Every Face Shape — A Visual Guide](/blog/best-earring-styles-face-shape) — Another face shape × accessories deep dive
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

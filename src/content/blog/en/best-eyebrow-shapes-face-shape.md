@@ -190,7 +190,7 @@ When your brow shape works with your face rather than fighting it, you look poli
 
 ## Related Articles
 
-- [How to Determine Your Face Shape in 60 Seconds](/en/blog/face-shape-hairstyle-guide) — The complete face shape guide with hairstyle recommendations
-- [How to Choose Glasses That Flatter Your Face Shape AND Your Color Season](/en/blog/glasses-face-shape-color-season) — Extend face-shape logic to your everyday frames
-- [Best Earring Styles for Every Face Shape — A Visual Guide](/en/blog/best-earring-styles-face-shape) — Another accessory guide built on the same proportion principles
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [How to Determine Your Face Shape in 60 Seconds](/blog/face-shape-hairstyle-guide) — The complete face shape guide with hairstyle recommendations
+- [How to Choose Glasses That Flatter Your Face Shape AND Your Color Season](/blog/glasses-face-shape-color-season) — Extend face-shape logic to your everyday frames
+- [Best Earring Styles for Every Face Shape — A Visual Guide](/blog/best-earring-styles-face-shape) — Another accessory guide built on the same proportion principles
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

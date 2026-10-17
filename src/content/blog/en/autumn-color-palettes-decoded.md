@@ -249,17 +249,17 @@ Can't tell which Autumn you are from descriptions alone? Our [free AI color anal
 
 [Take the Free AI Color Analysis →](/try)
 
-60 seconds, free, no signup. Works for all skin tones.
+60 seconds, free to preview, no signup. Works for all skin tones.
 
 ---
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Soft Autumn Color Palette](/en/color-palette/soft-autumn) — Full palette, makeup & wardrobe guide
-- [Warm Autumn Color Palette](/en/color-palette/warm-autumn) — Full palette, makeup & wardrobe guide
-- [Deep Autumn Color Palette](/en/color-palette/deep-autumn) — Full palette, makeup & wardrobe guide
-- [Spring Color Palettes Decoded: Bright Spring vs True Spring vs Light Spring](/en/blog/spring-color-palettes-decoded) — The warm-season counterpart to this guide
-- [Summer Color Palettes Decoded: Cool Summer vs True Summer vs Soft Summer](/en/blog/summer-color-palettes-decoded) — How the cool muted seasons compare
-- [Deep Winter Color Palette: Your Complete Style Guide](/en/blog/deep-winter-color-palette-guide) — Deep Autumn's cool-toned neighbor
-- [Best Colors for Warm Undertones](/en/blog/best-colors-for-warm-undertones) — Broader warm-toned color guide for all Autumn types
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Soft Autumn Color Palette](/color-palette/soft-autumn) — Full palette, makeup & wardrobe guide
+- [Warm Autumn Color Palette](/color-palette/warm-autumn) — Full palette, makeup & wardrobe guide
+- [Deep Autumn Color Palette](/color-palette/deep-autumn) — Full palette, makeup & wardrobe guide
+- [Spring Color Palettes Decoded: Bright Spring vs True Spring vs Light Spring](/blog/spring-color-palettes-decoded) — The warm-season counterpart to this guide
+- [Summer Color Palettes Decoded: Cool Summer vs True Summer vs Soft Summer](/blog/summer-color-palettes-decoded) — How the cool muted seasons compare
+- [Deep Winter Color Palette: Your Complete Style Guide](/blog/deep-winter-color-palette-guide) — Deep Autumn's cool-toned neighbor
+- [Best Colors for Warm Undertones](/blog/best-colors-for-warm-undertones) — Broader warm-toned color guide for all Autumn types

@@ -152,7 +152,7 @@ Pour de meilleurs résultats, utilisez une photo nette en lumière naturelle du 
 
 ## Obtenez votre analyse de couleur gratuite
 
-Prête à découvrir votre type de couleur saisonnier ? Notre outil IA analyse votre photo et vous livre votre profil chromatique complet en 60 secondes — entièrement gratuit, sans inscription.
+Prête à découvrir votre type de couleur saisonnier ? Notre outil IA analyse votre photo et vous montre un aperçu de votre profil chromatique en 60 secondes — gratuit à essayer, sans inscription. La version gratuite floute certains détails ; un pack de crédits ou Pro débloque le rapport complet.
 
 [Lancer l'analyse de couleur IA gratuite →](/try)
 

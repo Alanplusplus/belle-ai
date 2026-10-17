@@ -250,11 +250,11 @@ Descriptions aren't enough? Our [free AI color analysis](/color-analysis) identi
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Deep Winter Color Palette](/en/color-palette/deep-winter) — Full palette, makeup & wardrobe guide
-- [Cool Winter Color Palette](/en/color-palette/cool-winter) — Full palette, makeup & wardrobe guide
-- [Bright Winter Color Palette](/en/color-palette/bright-winter) — Full palette, makeup & wardrobe guide
-- [Autumn Color Palettes Decoded: Deep Autumn vs True Autumn vs Soft Autumn](/en/blog/autumn-color-palettes-decoded) — The warm counterpart to this guide
-- [Summer Color Palettes Decoded: Cool Summer vs True Summer vs Soft Summer](/en/blog/summer-color-palettes-decoded) — The other cool-season family decoded
-- [Spring Color Palettes Decoded: Bright Spring vs True Spring vs Light Spring](/en/blog/spring-color-palettes-decoded) — Bright Winter's warm neighbor
-- [Deep Winter Color Palette: Your Complete Style Guide](/en/blog/deep-winter-color-palette-guide) — An even deeper dive into Deep Winter specifically
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Deep Winter Color Palette](/color-palette/deep-winter) — Full palette, makeup & wardrobe guide
+- [Cool Winter Color Palette](/color-palette/cool-winter) — Full palette, makeup & wardrobe guide
+- [Bright Winter Color Palette](/color-palette/bright-winter) — Full palette, makeup & wardrobe guide
+- [Autumn Color Palettes Decoded: Deep Autumn vs True Autumn vs Soft Autumn](/blog/autumn-color-palettes-decoded) — The warm counterpart to this guide
+- [Summer Color Palettes Decoded: Cool Summer vs True Summer vs Soft Summer](/blog/summer-color-palettes-decoded) — The other cool-season family decoded
+- [Spring Color Palettes Decoded: Bright Spring vs True Spring vs Light Spring](/blog/spring-color-palettes-decoded) — Bright Winter's warm neighbor
+- [Deep Winter Color Palette: Your Complete Style Guide](/blog/deep-winter-color-palette-guide) — An even deeper dive into Deep Winter specifically

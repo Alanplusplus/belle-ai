@@ -214,11 +214,11 @@ Guessing between gold and silver used to waste my time and money. Once I underst
 
 [Try Free AI Color Analysis →](/try)
 
-About 60 seconds, free, no signup — personalized direction for metals, gems, and your wider palette.
+About 60 seconds, free to preview, no signup — personalized direction for metals, gems, and your wider palette.
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Olive Undertone Guide](/en/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
-- [Olive Skin Best Hair Colors](/en/blog/olive-skin-best-hair-colors) — Flattering hair shades for olive undertones
-- [Olive Skin Color Season Guide](/en/blog/olive-skin-color-season) — Which seasonal type olive skin typically falls into
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Olive Undertone Guide](/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
+- [Olive Skin Best Hair Colors](/blog/olive-skin-best-hair-colors) — Flattering hair shades for olive undertones
+- [Olive Skin Color Season Guide](/blog/olive-skin-color-season) — Which seasonal type olive skin typically falls into

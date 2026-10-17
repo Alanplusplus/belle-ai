@@ -159,8 +159,8 @@ Color harmony theory has roots in color science and has been used in art and des
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Cool Tone vs Warm Tone: 5 Easy Tests](/en/blog/cool-tone-vs-warm-tone) — Start with the basics of undertone
-- [Am I Warm or Cool Toned? 7 Methods](/en/blog/how-to-determine-skin-undertone) — Detailed undertone determination guide
-- [Best Colors for Cool Undertones](/en/blog/best-colors-for-cool-undertones) — Style guide for cool types
-- [Face Shape & Hairstyle Guide](/en/blog/face-shape-hairstyle-guide) — Pair your color analysis with face shape advice
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Cool Tone vs Warm Tone: 5 Easy Tests](/blog/cool-tone-vs-warm-tone) — Start with the basics of undertone
+- [Am I Warm or Cool Toned? 7 Methods](/blog/how-to-determine-skin-undertone) — Detailed undertone determination guide
+- [Best Colors for Cool Undertones](/blog/best-colors-for-cool-undertones) — Style guide for cool types
+- [Face Shape & Hairstyle Guide](/blog/face-shape-hairstyle-guide) — Pair your color analysis with face shape advice

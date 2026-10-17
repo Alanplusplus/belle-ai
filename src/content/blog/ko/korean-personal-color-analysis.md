@@ -144,7 +144,7 @@ image: "/images/blog/korean-personal-color-analysis.webp"
 
 [무료 컬러 분석 시작 →](/ko/try)
 
-60초, 무료, 가입 불필요. 한국어 및 15개 이상 언어로 이용 가능.
+60초, 무료 미리보기, 가입 불필요. 한국어를 포함해 9개 언어로 이용 가능.
 
 [한국어로 색상 분석 받기 →](/ko/try)
 

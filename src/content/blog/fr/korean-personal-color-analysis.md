@@ -144,7 +144,7 @@ Notre IA utilise le même système de 12 saisons que l'analyse en salon coréen 
 
 [Lancer l'analyse de couleur gratuite →](/try)
 
-60 secondes, gratuit, sans inscription. Disponible en coréen (한국어) et 15 autres langues.
+60 secondes, aperçu gratuit, sans inscription. Disponible en coréen (한국어) et 8 autres langues.
 
 [한국어로 색상 분석 받기 →](/ko/try)
 

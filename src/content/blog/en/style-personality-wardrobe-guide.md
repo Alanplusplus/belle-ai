@@ -143,7 +143,7 @@ Once your style personality framework is set, bring in your color season as the 
 
 A Romantic Soft Summer might choose heathered gray and soft navy as neutrals, dusty rose and muted lavender as accents, and a floral blouse combining both as a statement piece. A Dramatic Deep Winter might build on true black and crisp white, with jewel-tone accents in emerald or ruby.
 
-For a detailed walkthrough of building a color-season capsule wardrobe, see our [step-by-step capsule wardrobe guide](/en/blog/capsule-wardrobe-color-season).
+For a detailed walkthrough of building a color-season capsule wardrobe, see our [step-by-step capsule wardrobe guide](/blog/capsule-wardrobe-color-season).
 
 ---
 
@@ -218,6 +218,6 @@ That said, technology is a starting point, not a replacement for intuition. Use 
 
 ## Related Articles
 
-- [8 Style Personality Types: Which One Are You?](/en/blog/style-personality-types-guide) — Discover the 8 style archetypes and which one matches your features
-- [How to Build a Capsule Wardrobe for Your Color Season](/en/blog/capsule-wardrobe-color-season) — Step-by-step wardrobe building with your best colors
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [8 Style Personality Types: Which One Are You?](/blog/style-personality-types-guide) — Discover the 8 style archetypes and which one matches your features
+- [How to Build a Capsule Wardrobe for Your Color Season](/blog/capsule-wardrobe-color-season) — Step-by-step wardrobe building with your best colors
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

@@ -167,7 +167,7 @@ Zeytin mi nötr mü emin değil misiniz? Yapay zekâ renk analizimiz standart te
 
 [Ücretsiz yapay zekâ renk analizini deneyin →](/tr/try)
 
-60 saniye, ücretsiz, kayıt yok. Zeytin tespiti dahil doğru alt ton okuması.
+60 saniye, ücretsiz önizleme, kayıt yok. Zeytin tespiti dahil doğru alt ton okuması.
 
 ## İlgili yazılar
 

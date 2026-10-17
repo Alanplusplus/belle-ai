@@ -194,11 +194,11 @@ If you are tired of guessing, **AI color analysis** can flag olive undertones an
 
 [Try Free AI Color Analysis →](/try)
 
-Free, about a minute, no signup. See your undertone and makeup-friendly color direction.
+Free to preview, about a minute, no signup. See your undertone and makeup-friendly color direction.
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Olive Undertone Guide](/en/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
-- [Olive Skin Lip Color Guide](/en/blog/olive-skin-lip-color-guide) — Best lipsticks and lip colors for olive undertones
-- [Olive vs Neutral Undertone](/en/blog/olive-vs-neutral-undertone) — How to tell olive apart from neutral skin
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Olive Undertone Guide](/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
+- [Olive Skin Lip Color Guide](/blog/olive-skin-lip-color-guide) — Best lipsticks and lip colors for olive undertones
+- [Olive vs Neutral Undertone](/blog/olive-vs-neutral-undertone) — How to tell olive apart from neutral skin

@@ -214,7 +214,7 @@ Deviner entre or et argent m’a fait perdre temps et argent. Comprendre mon **s
 
 [Essayer l’analyse colorimétrique IA gratuite →](/try)
 
-Environ 60 secondes, gratuit, sans inscription — orientation personnalisée pour métaux, pierres et votre palette élargie.
+Environ 60 secondes, aperçu gratuit, sans inscription — orientation personnalisée pour métaux, pierres et votre palette élargie.
 
 ## Articles connexes
 

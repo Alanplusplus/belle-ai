@@ -137,6 +137,6 @@ Arrêtez de deviner et trouvez votre type saisonnier exact. Notre IA fonctionne 
 
 [Lancer l'analyse de couleur gratuite →](/try)
 
-60 secondes, gratuit, sans inscription. Vous connaîtrez votre saison et aurez une palette pratique pour le shopping.
+60 secondes, aperçu gratuit, sans inscription. Vous connaîtrez votre saison et aurez une palette pratique pour le shopping.
 
 Ou répondez à des questions rapides : [Faire le quiz gratuit →](/tools/color-quiz)

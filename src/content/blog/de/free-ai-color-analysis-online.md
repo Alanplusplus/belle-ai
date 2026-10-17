@@ -63,7 +63,7 @@ Du erhältst:
 
 ## Belle AI: Kostenlose Farbanalyse in 60 Sekunden
 
-Unser KI-Farbanalyse-Tool liefert alles Obige – komplett kostenlos für deine erste Analyse. Keine E-Mail, keine Anmeldebarriere, kein versteckter Paywall bei den Ergebnissen.
+Unser [KI-Farbanalyse-Tool](/) liefert alles Obige. Deine erste Analyse kannst du ohne Anmeldung kostenlos als Vorschau ansehen, die kostenlose Version zeigt aber einige Details unscharf. Den vollständigen Bericht schaltest du mit einem Credit-Paket oder Pro frei. Das sagen wir lieber offen, als einen „komplett kostenlosen“ Bericht zu versprechen.
 
 ### Was du bekommst
 
@@ -92,7 +92,7 @@ Wo persönliche Beratung besser sein kann:
 
 | Tool | Kosten | Methode | Genauigkeit | Geschwindigkeit |
 |------|--------|---------|-------------|-----------------|
-| **Belle AI** | Kostenlos | KI-Fotoanalyse | Hoch | 60 Sekunden |
+| **Belle AI** | Kostenlose Vorschau, Vollbericht kostenpflichtig | KI-Fotoanalyse | Mittel–Hoch | 60 Sekunden |
 | Basis-Quiz | Kostenlos | Selbsttest-Fragen | Niedrig–Mittel | 3 Minuten |
 | Professionelle Beratung | 200–500 € | Draping vor Ort | Höchste | 60–90 Min. |
 | Video-Beratung | 50–150 € | Videoanruf + Muster | Hoch | 30–45 Min. |
@@ -129,6 +129,6 @@ Bereit, deine besten Farben zu finden? Lade ein Selfie hoch und erhalte deine vo
 
 [Meine kostenlose Farbanalyse holen →](/try)
 
-Keine Anmeldung. Keine Kreditkarte. Ergebnisse erscheinen sofort.
+Für die Vorschau brauchst du weder Anmeldung noch Kreditkarte. Die kostenlose Version zeigt einige Details unscharf; den vollständigen Bericht schaltest du mit einem Credit-Paket oder Pro frei.
 
 Kein Foto? [Kostenloses Farbanalyse-Quiz machen →](/tools/color-quiz)

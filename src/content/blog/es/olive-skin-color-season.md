@@ -259,7 +259,7 @@ Acertar la estación no reduce tu estilo. Te da una lista más corta de colores 
 
 [Prueba gratis el análisis de color con IA →](/try)
 
-Unos 60 segundos, gratis, sin registro — tu paleta personalizada lista para usar.
+Unos 60 segundos, vista previa gratis, sin registro — tu paleta personalizada lista para usar.
 
 ---
 

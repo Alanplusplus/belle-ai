@@ -98,7 +98,7 @@ Look at your skin next to someone you know is clearly warm or clearly cool.
 
 ### Step 4: AI Analysis Confirmation
 
-Standard draping tests can still be ambiguous for borderline cases. [AI color analysis](/en/personal-color-analysis) measures the actual color values in your skin — including the green-grey cast that's invisible to casual observation but clearly detectable by computer vision. This is the most reliable way to distinguish olive from neutral.
+Standard draping tests can still be ambiguous for borderline cases. [AI color analysis](/personal-color-analysis) measures the actual color values in your skin — including the green-grey cast that's invisible to casual observation but clearly detectable by computer vision. This is the most reliable way to distinguish olive from neutral.
 
 ---
 
@@ -167,11 +167,11 @@ Not sure if you're olive or neutral? Our AI color analysis detects the green-gre
 
 [Try Free AI Color Analysis →](/try)
 
-60 seconds, free, no signup. Get an accurate undertone reading including olive detection.
+60 seconds, free to preview, no signup. Get an accurate undertone reading including olive detection.
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Olive Undertone Guide](/en/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
-- [Olive vs Warm Undertone](/en/blog/olive-vs-warm-undertone) — Why olive skin isn't simply warm or cool
-- [How to Determine Your Skin Undertone](/en/blog/how-to-determine-skin-undertone) — Seven testing methods for undertone identification
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Olive Undertone Guide](/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
+- [Olive vs Warm Undertone](/blog/olive-vs-warm-undertone) — Why olive skin isn't simply warm or cool
+- [How to Determine Your Skin Undertone](/blog/how-to-determine-skin-undertone) — Seven testing methods for undertone identification

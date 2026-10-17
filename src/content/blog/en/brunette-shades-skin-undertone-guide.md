@@ -59,7 +59,7 @@ Once you can name these, "just a nice brown" becomes "a level 4 neutral mocha wi
 
 Your undertone is the permanent hue beneath your skin's surface. It doesn't change with tanning or blushing, which makes it the most reliable guide for choosing a hair temperature.
 
-If you're not sure of yours, try two quick checks in natural daylight: hold gold and silver jewelry against your face and see which one makes your skin look brighter, and look at your wrist veins (blue or purple suggests cool, green suggests warm). For a more thorough walkthrough, see our guide on [how to determine your skin undertone](/en/blog/how-to-determine-skin-undertone).
+If you're not sure of yours, try two quick checks in natural daylight: hold gold and silver jewelry against your face and see which one makes your skin look brighter, and look at your wrist veins (blue or purple suggests cool, green suggests warm). For a more thorough walkthrough, see our guide on [how to determine your skin undertone](/blog/how-to-determine-skin-undertone).
 
 ### Warm Undertones: Go Golden, Chestnut, or Caramel
 
@@ -79,7 +79,7 @@ If gold and silver both look fine on you, you're probably neutral. **Mocha, choc
 
 ### The Olive Exception
 
-Olive skin carries a greenish cast under the surface, so it breaks the simple warm-versus-cool rule. In my experience, olive tones usually look best in **neutral-to-cool browns with a slightly muted finish**, like mocha or soft mushroom brown. Strongly golden or red browns can pull out the green. If this is you, our guide to the [best hair colors for olive skin](/en/blog/olive-skin-best-hair-colors) goes much deeper.
+Olive skin carries a greenish cast under the surface, so it breaks the simple warm-versus-cool rule. In my experience, olive tones usually look best in **neutral-to-cool browns with a slightly muted finish**, like mocha or soft mushroom brown. Strongly golden or red browns can pull out the green. If this is you, our guide to the [best hair colors for olive skin](/blog/olive-skin-best-hair-colors) goes much deeper.
 
 ---
 
@@ -112,7 +112,7 @@ Your color season combines undertone, depth, and clarity, so it refines the choi
 | True Winter | Blue-toned espresso, deep cool brown | Chestnut, caramel, auburn |
 | Bright Winter | High-shine dark brown with cool depth | Muted mushroom, warm caramel |
 
-If you can't tell which season is yours, a [personal color analysis](/en/color-analysis) can narrow it to a specific sub-season, which matters because Soft Summer and True Summer need very different browns.
+If you can't tell which season is yours, a [personal color analysis](/color-analysis) can narrow it to a specific sub-season, which matters because Soft Summer and True Summer need very different browns.
 
 ### If You're Between Seasons
 
@@ -155,7 +155,7 @@ Hair grows roughly half an inch per month, so regrowth lines show up faster on a
 3. **Going too dark for your contrast level.** If your coloring is soft, jet-dark hair can look severe instead of rich.
 4. **Ignoring fade.** The brown you leave the salon with is not the brown you'll have in six weeks. Plan your care routine around the color you'll actually be wearing.
 
-For a broader look at how undertone and season steer every hair choice, read our full guide on [how to find your best hair color based on your color season](/en/blog/best-hair-color-for-color-season). And if you're thinking of going lighter instead, the [complete guide to going blonde](/en/blog/going-blonde-best-shade-skin-tone) covers that side of the spectrum. Dermatology groups like the [American Academy of Dermatology](https://www.aad.org/public/everyday-care/hair-scalp-care) also publish useful guidance on keeping colored hair healthy.
+For a broader look at how undertone and season steer every hair choice, read our full guide on [how to find your best hair color based on your color season](/blog/best-hair-color-for-color-season). And if you're thinking of going lighter instead, the [complete guide to going blonde](/blog/going-blonde-best-shade-skin-tone) covers that side of the spectrum. Dermatology groups like the [American Academy of Dermatology](https://www.aad.org/public/everyday-care/hair-scalp-care) also publish useful guidance on keeping colored hair healthy.
 
 ---
 
@@ -183,8 +183,8 @@ Brown might be the quietest hair color, but the right one can change how your sk
 
 ## Related Articles
 
-- [How to Find Your Best Hair Color Based on Your Color Season](/en/blog/best-hair-color-for-color-season) — A comprehensive guide to choosing hair color by season
-- [The Complete Guide to Going Blonde: Which Blonde Shade Works for Your Skin Tone](/en/blog/going-blonde-best-shade-skin-tone) — The lighter side of the hair color spectrum
-- [Best Hair Colors for Olive Skin: A Complete Shade Guide](/en/blog/olive-skin-best-hair-colors) — Hair color picks for olive undertones
-- [How AI Hair Color Preview Can Save You From a Bad Dye Job](/en/blog/ai-hair-color-preview-guide) — Why previewing with AI beats guessing
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [How to Find Your Best Hair Color Based on Your Color Season](/blog/best-hair-color-for-color-season) — A comprehensive guide to choosing hair color by season
+- [The Complete Guide to Going Blonde: Which Blonde Shade Works for Your Skin Tone](/blog/going-blonde-best-shade-skin-tone) — The lighter side of the hair color spectrum
+- [Best Hair Colors for Olive Skin: A Complete Shade Guide](/blog/olive-skin-best-hair-colors) — Hair color picks for olive undertones
+- [How AI Hair Color Preview Can Save You From a Bad Dye Job](/blog/ai-hair-color-preview-guide) — Why previewing with AI beats guessing
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

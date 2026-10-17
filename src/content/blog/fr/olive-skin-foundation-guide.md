@@ -194,7 +194,7 @@ Fatiguée de deviner, l’**analyse couleur par IA** peut signaler l’olive et 
 
 [Essai gratuit analyse couleur IA →](/try)
 
-Gratuit, environ une minute, sans inscription. Voir votre sous-ton et direction maquillage.
+Aperçu gratuit, environ une minute, sans inscription. Voir votre sous-ton et direction maquillage.
 
 ## Articles liés
 

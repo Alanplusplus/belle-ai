@@ -60,7 +60,7 @@ If you're unsure, try tracing your face outline on a mirror with a washable mark
 
 **Sizing guide:** You can go medium to large confidently. Your proportions can handle statement pieces that other shapes might not be able to pull off.
 
-**My go-to pick for oval faces:** A medium-length teardrop earring. It follows your face's natural taper and adds just enough movement to catch the light. Whether you go for gold or silver depends on your [skin undertone](/en/blog/jewelry-metals-skin-tone-guide) — not your face shape.
+**My go-to pick for oval faces:** A medium-length teardrop earring. It follows your face's natural taper and adds just enough movement to catch the light. Whether you go for gold or silver depends on your [skin undertone](/blog/jewelry-metals-skin-tone-guide) — not your face shape.
 
 ---
 
@@ -189,7 +189,7 @@ Shape gets the most attention, but material and finish matter too:
 - Cool undertones → silver, platinum, white gold, cool-toned metals
 - Neutral undertones → you can wear either
 
-For a deeper dive into metal selection, check out my [complete guide to jewelry metals and skin tone](/en/blog/jewelry-metals-skin-tone-guide).
+For a deeper dive into metal selection, check out my [complete guide to jewelry metals and skin tone](/blog/jewelry-metals-skin-tone-guide).
 
 ---
 
@@ -205,7 +205,7 @@ After years of earring trial-and-error, here are the shortcuts I wish someone ha
 
 4. **Consider your hairstyle.** Hair up? Your earrings become the primary frame for your face — shape matching matters most. Hair down? Earrings interact with your hair as much as your face, and you can be more flexible.
 
-5. **Don't forget about your glasses.** If you wear glasses daily, your earrings need to harmonize with your frames too. I wrote a full guide on [choosing glasses for your face shape](/en/blog/best-glasses-for-face-shape) that covers this interaction.
+5. **Don't forget about your glasses.** If you wear glasses daily, your earrings need to harmonize with your frames too. I wrote a full guide on [choosing glasses for your face shape](/blog/best-glasses-for-face-shape) that covers this interaction.
 
 ---
 
@@ -237,7 +237,7 @@ The best part about understanding face shape and earring geometry? It works at e
 
 ## Related Articles
 
-- [How to Choose Glasses Frames That Actually Flatter Your Face Shape](/en/blog/best-glasses-for-face-shape) — Another face-shape-based accessory guide
-- [Gold or Silver? How Your Skin Undertone Determines Your Best Metal](/en/blog/jewelry-metals-skin-tone-guide) — Pair the right shape with the right metal
-- [How to Accessorize Based on Your Color Season](/en/blog/accessorize-by-color-season) — Extend your accessory strategy beyond earrings
-- [How to Determine Your Face Shape in 60 Seconds](/en/blog/face-shape-hairstyle-guide) — The complete face shape guide with hairstyle recommendations
+- [How to Choose Glasses Frames That Actually Flatter Your Face Shape](/blog/best-glasses-for-face-shape) — Another face-shape-based accessory guide
+- [Gold or Silver? How Your Skin Undertone Determines Your Best Metal](/blog/jewelry-metals-skin-tone-guide) — Pair the right shape with the right metal
+- [How to Accessorize Based on Your Color Season](/blog/accessorize-by-color-season) — Extend your accessory strategy beyond earrings
+- [How to Determine Your Face Shape in 60 Seconds](/blog/face-shape-hairstyle-guide) — The complete face shape guide with hairstyle recommendations

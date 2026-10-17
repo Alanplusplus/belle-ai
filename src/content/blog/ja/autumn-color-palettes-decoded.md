@@ -249,7 +249,7 @@ image: "/images/blog/autumn-color-palettes-decoded.webp"
 
 [無料AIカラー分析を受ける →](/ja/try)
 
-60秒、無料、登録不要。すべての肌トーンに対応。
+60秒、無料プレビュー、登録不要。すべての肌トーンに対応。
 
 ---
 

@@ -191,7 +191,7 @@ The era of guessing what looks good on you is genuinely ending. Whether you're s
 
 ## Related Articles
 
-- [AI vs Professional Color Analysis: I Tried Both](/en/blog/ai-vs-professional-color-analysis) — Honest comparison of cost, accuracy, and experience
-- [The Science Behind Personal Color Analysis](/en/blog/science-behind-personal-color-analysis) — How color theory and skin science actually work together
-- [The Complete Guide to the 12 Color Seasons](/en/blog/personal-color-analysis-guide) — Deep dive into every season type
-- [The Best Makeup Colors for Every Color Season](/en/blog/best-makeup-colors-color-season) — Practical shade chart for all 12 seasons
+- [AI vs Professional Color Analysis: I Tried Both](/blog/ai-vs-professional-color-analysis) — Honest comparison of cost, accuracy, and experience
+- [The Science Behind Personal Color Analysis](/blog/science-behind-personal-color-analysis) — How color theory and skin science actually work together
+- [The Complete Guide to the 12 Color Seasons](/blog/personal-color-analysis-guide) — Deep dive into every season type
+- [The Best Makeup Colors for Every Color Season](/blog/best-makeup-colors-color-season) — Practical shade chart for all 12 seasons

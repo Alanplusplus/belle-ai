@@ -238,7 +238,7 @@ Si aún dudas entre baya cálida y ciruela fría, un análisis de color con IA p
 
 [Prueba el análisis de color con IA gratis →](/try)
 
-60 segundos, gratis, sin registro. Recomendaciones personalizadas de maquillaje.
+60 segundos, vista previa gratis, sin registro. Recomendaciones personalizadas de maquillaje.
 
 ## Artículos relacionados
 

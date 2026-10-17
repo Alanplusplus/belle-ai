@@ -249,7 +249,7 @@ Entender tu subestación Otoño concreta transforma cómo compras, cómo te vist
 
 [Prueba el análisis de color con IA gratis →](/es/try)
 
-60 segundos, gratis, sin registro. Funciona para todos los tonos de piel.
+60 segundos, vista previa gratis, sin registro. Funciona para todos los tonos de piel.
 
 ---
 

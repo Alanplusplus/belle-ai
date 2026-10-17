@@ -147,4 +147,4 @@ Für das genaueste Ergebnis: Lade ein klares Selfie hoch und lass die KI deinen 
 
 [Kostenlose KI-Farbanalyse →](/try)
 
-Keine Anmeldung, keine Kosten. Ergebnisse in 60 Sekunden mit vollständiger personalisierter Palette.
+Für die Vorschau ist keine Anmeldung nötig. Deine Saison erscheint in etwa 60 Sekunden; die kostenlose Version zeigt einige Details unscharf, die vollständige Palette schaltest du mit einem Credit-Paket oder Pro frei.

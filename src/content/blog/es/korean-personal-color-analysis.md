@@ -144,7 +144,7 @@ Nuestra IA usa el mismo sistema de 12 estaciones que el análisis de salón core
 
 [Empezar análisis de color gratis →](/try)
 
-60 segundos, gratis, sin registro. Disponible en coreano (한국어) y 15 idiomas más.
+60 segundos, vista previa gratis, sin registro. Disponible en coreano (한국어) y 8 idiomas más.
 
 [한국어로 색상 분석 받기 →](/ko/try)
 

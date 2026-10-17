@@ -171,7 +171,7 @@ Chaude ou olive ? Notre analyse par intelligence artificielle détecte le modifi
 
 [Essayer l'analyse colorimétrique IA gratuite →](/try)
 
-60 secondes, gratuit, sans inscription. Détection précise du sous-ton pour peau olive.
+60 secondes, aperçu gratuit, sans inscription. Détection précise du sous-ton pour peau olive.
 
 ## Articles connexes
 

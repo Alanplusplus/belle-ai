@@ -167,7 +167,7 @@ Olive ou neutre ? Notre analyse colorimétrique par IA détecte le reflet vert-g
 
 [Essayer l’analyse colorimétrique IA gratuite →](/fr/try)
 
-60 secondes, gratuit, sans inscription. Lecture précise du sous-ton, avec détection olive.
+60 secondes, aperçu gratuit, sans inscription. Lecture précise du sous-ton, avec détection olive.
 
 ## Articles connexes
 

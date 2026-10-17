@@ -137,6 +137,6 @@ Hör auf zu raten und finde deinen exakten Saison-Typ. Unsere KI funktioniert f�
 
 [Kostenlose Farbanalyse starten →](/try)
 
-60 Sekunden, kostenlos, ohne Anmeldung. Du kennst deine Saison und hast eine praktische Farbpalette fürs Shopping.
+60 Sekunden, kostenlose Vorschau, ohne Anmeldung. Du kennst deine Saison und hast eine praktische Farbpalette fürs Shopping.
 
 Oder schnelle Fragen beantworten: [Kostenloses Quiz machen →](/tools/color-quiz)

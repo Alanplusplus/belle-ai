@@ -152,4 +152,4 @@ Si tu resultado de análisis con IA no te convence:
 
 [Empezar análisis de color gratis →](/try)
 
-60 segundos, gratis, sin registro. Obtén tu paleta personalizada y guía de estilo.
+60 segundos, vista previa gratis, sin registro. Obtén tu paleta personalizada y guía de estilo.

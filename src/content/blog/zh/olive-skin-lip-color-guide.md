@@ -238,7 +238,7 @@ image: "/images/blog/olive-skin-lip-color-guide.webp"
 
 [免费体验 AI 色彩分析 →](/try)
 
-约 60 秒，免费，无需注册。获取个性化彩妆色号建议。
+约 60 秒，免费预览，无需注册。获取个性化彩妆色号建议。
 
 ## 相关文章
 

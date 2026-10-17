@@ -137,6 +137,6 @@ Deja de adivinar y encuentra tu tipo estacional exacto. Nuestra IA funciona igua
 
 [Empezar análisis de color gratis →](/try)
 
-60 segundos, gratis, sin registro. Conocerás tu estación y tendrás una paleta práctica para ir de compras.
+60 segundos, vista previa gratis, sin registro. Conocerás tu estación y tendrás una paleta práctica para ir de compras.
 
 O responde preguntas rápidas: [Hacer el test gratis →](/tools/color-quiz)

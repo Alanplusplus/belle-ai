@@ -188,6 +188,6 @@ Understanding lighting won't change your color season — but it will change how
 
 ## Related Articles
 
-- [The Science Behind Personal Color Analysis: How It Actually Works](/en/blog/science-behind-personal-color-analysis) — Deep dive into the optics and biology of seasonal color typing
-- [How to Do Color Analysis at Home](/en/blog/how-to-do-color-analysis-at-home) — Step-by-step guide including lighting setup tips
-- [AI vs Professional Color Analysis: I Tried Both](/en/blog/ai-vs-professional-color-analysis) — How technology handles the lighting variable differently
+- [The Science Behind Personal Color Analysis: How It Actually Works](/blog/science-behind-personal-color-analysis) — Deep dive into the optics and biology of seasonal color typing
+- [How to Do Color Analysis at Home](/blog/how-to-do-color-analysis-at-home) — Step-by-step guide including lighting setup tips
+- [AI vs Professional Color Analysis: I Tried Both](/blog/ai-vs-professional-color-analysis) — How technology handles the lighting variable differently

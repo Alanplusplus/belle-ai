@@ -282,5 +282,5 @@ The best approach: know your season, research shades within your palette, bring 
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
 

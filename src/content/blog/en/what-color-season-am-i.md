@@ -1,7 +1,9 @@
 ---
 title: "What Season Am I? Find Your Color Season (Spring, Summer, Autumn, Winter)"
-description: "Wondering 'what season am I?' Learn how to determine if you're a Spring, Summer, Autumn, or Winter in personal color analysis. Free quiz and AI analysis included."
+seoTitle: "What Season Am I? Find Your Color Season (Free Quiz)"
+description: "Wondering what season you are? Learn how to tell Spring, Summer, Autumn or Winter in color analysis, then take the free quiz or try AI color analysis."
 date: "2026-07-20"
+updated: "2026-10-17"
 tags: ["what season am I", "color season", "spring summer autumn winter", "seasonal color type", "color analysis quiz"]
 image: "/images/blog/what-color-season-am-i.webp"
 ---
@@ -141,14 +143,17 @@ Not sure where you fall? Our quiz asks targeted questions about your coloring an
 
 [Take the Free Color Season Quiz →](/tools/color-quiz)
 
-## Get Instant AI Results
+## Get AI Results in About a Minute
 
 For the most accurate result, upload a clear selfie and let AI determine your exact 12-season type:
 
 [Free AI Color Analysis →](/try)
 
-No signup, no cost. Results in 60 seconds with your full personalized palette.
+No signup needed to preview. Your season appears in about 60 seconds; the free version blurs some details, and a credit pack or Pro unlocks the full palette.
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [What Is Color Analysis?](/blog/what-is-color-analysis) — The beginner's guide to seasonal color theory
+- [Free AI Color Analysis Online](/blog/free-ai-color-analysis-online) — Find your season from a selfie
+- [How to Do Color Analysis at Home](/blog/how-to-do-color-analysis-at-home) — Simple tests you can run yourself

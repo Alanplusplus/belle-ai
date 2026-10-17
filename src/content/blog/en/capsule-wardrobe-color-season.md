@@ -197,5 +197,5 @@ Free tools like [aicoloranalysis.io](https://aicoloranalysis.io) offer an instan
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
 

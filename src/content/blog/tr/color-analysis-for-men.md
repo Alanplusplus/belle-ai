@@ -137,7 +137,7 @@ Tahmin etmeyi bırakın ve tam mevsimsel tipinizi bulun. Yapay zekamız kadın v
 
 [Ücretsiz Renk Analizine Başlayın →](/tr/try)
 
-60 saniye, ücretsiz, kayıt gerekmez. Mevsiminizi ve alışveriş için pratik bir renk paletini öğrenirsiniz.
+60 saniye, ücretsiz önizleme, kayıt gerekmez. Mevsiminizi ve alışveriş için pratik bir renk paletini öğrenirsiniz.
 
 Veya kısa soruları yanıtlayın: [Ücretsiz Quizi Yapın →](/tr/tools/color-quiz)
 

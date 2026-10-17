@@ -151,7 +151,7 @@ The most valuable thing celebrity transformations teach us isn't which shade to 
 
 ## Related Articles
 
-- [Which Celebrity Has Your Color Season? Find Your Style Twin](/en/blog/celebrity-color-season-style-twin) — Discover celebrities who share your exact color season
-- [How to Find Your Best Hair Color Based on Your Color Season](/en/blog/best-hair-color-for-color-season) — The complete guide to choosing hair colors by season
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [AI vs Professional Color Analysis: I Tried Both](/en/blog/ai-vs-professional-color-analysis) — An honest comparison of both approaches
+- [Which Celebrity Has Your Color Season? Find Your Style Twin](/blog/celebrity-color-season-style-twin) — Discover celebrities who share your exact color season
+- [How to Find Your Best Hair Color Based on Your Color Season](/blog/best-hair-color-for-color-season) — The complete guide to choosing hair colors by season
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [AI vs Professional Color Analysis: I Tried Both](/blog/ai-vs-professional-color-analysis) — An honest comparison of both approaches

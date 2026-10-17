@@ -257,8 +257,8 @@ For undertone accuracy, I've found that AI-powered color analysis tools actually
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Deep Winter Color Palette: Your Complete Style Guide](/en/blog/deep-winter-color-palette-guide) — Everything Deep Winters need to know about their signature colors
-- [How to Find the Perfect Red Lipstick for Your Skin Tone](/en/blog/perfect-red-lipstick-skin-tone) — A deep dive into matching red lipstick shades to warm, cool, and neutral undertones
-- [The Science Behind Personal Color Analysis](/en/blog/science-behind-personal-color-analysis) — Understanding the color science that makes seasonal typing work
-- [Occasion Makeup Guide: The Right Look for Every Event](/en/blog/occasion-makeup-guide-by-event) — How to adapt your makeup intensity for different settings
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Deep Winter Color Palette: Your Complete Style Guide](/blog/deep-winter-color-palette-guide) — Everything Deep Winters need to know about their signature colors
+- [How to Find the Perfect Red Lipstick for Your Skin Tone](/blog/perfect-red-lipstick-skin-tone) — A deep dive into matching red lipstick shades to warm, cool, and neutral undertones
+- [The Science Behind Personal Color Analysis](/blog/science-behind-personal-color-analysis) — Understanding the color science that makes seasonal typing work
+- [Occasion Makeup Guide: The Right Look for Every Event](/blog/occasion-makeup-guide-by-event) — How to adapt your makeup intensity for different settings

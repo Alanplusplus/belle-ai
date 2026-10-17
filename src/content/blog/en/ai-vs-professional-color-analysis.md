@@ -90,7 +90,7 @@ After going through both experiences, here's how they stack up across the factor
 
 **Professional:** $100–400 for a single session. Worth it if you can afford it and have access, but it's a significant investment — especially when you consider that some people benefit from re-analysis as their coloring changes (hair goes grey, skin tans or lightens seasonally, etc.).
 
-**AI:** Free or very low cost. You can re-analyze anytime — after a tan, after dyeing your hair, with different makeup looks — without spending another dollar. For someone who's curious but not ready to commit $200 to the question, AI eliminates the financial barrier entirely.
+**AI:** Free to preview, with full reports costing a fraction of a session. You can re-analyze anytime — after a tan, after dyeing your hair, with different makeup looks — for the price of a credit instead of a whole appointment. For someone who's curious but not ready to commit $200 to the question, AI lowers the financial barrier considerably.
 
 ### Accessibility
 
@@ -148,5 +148,5 @@ This doesn't make human analysts obsolete. It makes color analysis accessible to
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
 

@@ -306,7 +306,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const post = getPostBySlug(locale, slug);
       entries.push({
         url: localePath(locale, `/blog/${slug}`),
-        lastModified: post?.date ? new Date(post.date) : new Date(),
+        lastModified: post?.updated ? new Date(post.updated) : post?.date ? new Date(post.date) : new Date(),
         ...localeSitemapMeta(0.6, "weekly"),
         alternates: { languages: alternates },
       });

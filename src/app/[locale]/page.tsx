@@ -5,6 +5,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { buildAlternates } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
+import { PARENT_SEASON_ORDER, getSeasonsByParent } from "@/lib/color-palette-data";
 
 export async function generateMetadata({
   params,
@@ -38,6 +39,18 @@ function HomeContent() {
   const t = useTranslations("home");
   const ft = useTranslations("features");
   const cg = useTranslations("colorGuide");
+  const sd = useTranslations("sd");
+
+  const allSeasons = PARENT_SEASON_ORDER.flatMap((parent) => getSeasonsByParent(parent));
+  // 首页正文向下链接的站内页面：专题页（color analysis）、落地页（personal color analysis）、测验、免费在线分析指南
+  const inlineLink = (href: string) =>
+    function InlineLink(chunks: React.ReactNode) {
+      return (
+        <Link href={href} className="font-medium text-primary underline-offset-4 hover:underline">
+          {chunks}
+        </Link>
+      );
+    };
 
   const faqs = [
     { q: t("faq1Q"), a: t("faq1A") },
@@ -353,6 +366,51 @@ function HomeContent() {
         </div>
       </section>
 
+      {/* AI color analysis 深度内容：它测什么、怎么对应 12 季型；正文内链把权重分给专题页 / 落地页 / 测验 / 季型页 */}
+      <section className="py-12">
+        <div className="mx-auto max-w-5xl px-4">
+          <h2 className="text-center font-serif text-3xl font-bold">{t("aiDeepTitle")}</h2>
+          <p className="mx-auto mt-4 max-w-3xl text-center leading-relaxed text-muted-foreground">
+            {t.rich("aiDeepIntro", { guide: inlineLink("/color-analysis") })}
+          </p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {AI_DIMENSIONS.map((dim) => (
+              <div key={dim.titleKey} className="rounded-xl border border-border bg-card p-5">
+                <h3 className="text-sm font-semibold">{cg(dim.titleKey)}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{cg(dim.descKey)}</p>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="mt-12 text-center font-serif text-2xl font-bold">{t("aiSeasonsTitle")}</h3>
+          <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-muted-foreground">{t("aiSeasonsDesc")}</p>
+          <div className="mt-6 flex flex-wrap justify-center gap-2.5">
+            {allSeasons.map((season) => (
+              <Link
+                key={season.slug}
+                href={`/color-palette/${season.slug}`}
+                className="flex items-center gap-2 rounded-full border border-border bg-card px-3 py-2 text-sm transition hover:border-primary/40 hover:shadow-sm"
+              >
+                <span className="flex gap-0.5">
+                  {season.bestColors.slice(0, 3).map((c) => (
+                    <span key={c.hex} className="h-3.5 w-3.5 rounded-full border border-border/40" style={{ backgroundColor: c.hex }} />
+                  ))}
+                </span>
+                {sd(`${season.slug}.name`)}
+              </Link>
+            ))}
+          </div>
+
+          <p className="mx-auto mt-8 max-w-3xl text-center text-sm leading-relaxed text-muted-foreground">
+            {t.rich("aiDeepOutro", {
+              quiz: inlineLink("/tools/color-quiz"),
+              personal: inlineLink("/personal-color-analysis"),
+              free: inlineLink("/blog/free-ai-color-analysis-online"),
+            })}
+          </p>
+        </div>
+      </section>
+
       {/* Comparison Table */}
       <section className="py-12">
         <div className="mx-auto max-w-4xl px-4">
@@ -576,6 +634,14 @@ const MORE_FEATURES = [
   { titleKey: "styleTitle", descKey: "styleDesc", href: "/style-personality" as const, image: "/images/card_style.webp" },
   { titleKey: "celebTitle", descKey: "celebDesc", href: "/celebrity-match" as const, image: "/images/card_celebrity.webp" },
 ];
+
+// 复用专题页已翻译好的四个维度文案，不需要额外翻译
+const AI_DIMENSIONS = [
+  { titleKey: "dimUndertoneTitle", descKey: "dimUndertoneDesc" },
+  { titleKey: "dimDepthTitle", descKey: "dimDepthDesc" },
+  { titleKey: "dimChromaTitle", descKey: "dimChromaDesc" },
+  { titleKey: "dimContrastTitle", descKey: "dimContrastDesc" },
+] as const;
 
 const BEFORE_AFTER = [
   { before: "/images/showcase/before-color.webp", after: "/images/showcase/after-color.webp", type: "color", labelKey: "resultsColorLabel" },

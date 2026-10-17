@@ -144,10 +144,10 @@ Our AI uses the same 12-season framework as Korean salon-style analysis to give 
 
 [Start Free Color Analysis →](/try)
 
-60 seconds, free, no signup. Available in Korean (한국어) and 15 other languages.
+60 seconds, free to preview, no signup. Available in Korean (한국어) and 8 other languages.
 
 [한국어로 색상 분석 받기 →](/ko/try)
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors

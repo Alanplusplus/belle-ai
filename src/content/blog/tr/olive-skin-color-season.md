@@ -259,7 +259,7 @@ Hangi grupta olduğunuzdan emin değil misiniz? Belle AI zeytin alt tonunu algı
 
 [Ücretsiz yapay zeka renk analizini deneyin →](/try)
 
-Yaklaşık 60 saniye, ücretsiz, kayıt yok — kişisel paletiniz hazır.
+Yaklaşık 60 saniye, ücretsiz önizleme, kayıt yok — kişisel paletiniz hazır.
 
 ---
 

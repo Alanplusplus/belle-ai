@@ -206,8 +206,8 @@ Upload a photo, get your season in 60 seconds. No signup needed.
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
-- [Autumn Color Palettes Decoded: Deep Autumn vs True Autumn vs Soft Autumn](/en/blog/autumn-color-palettes-decoded) — Full deep-dive into all three Autumn sub-seasons
-- [Summer Color Palettes Decoded: Cool Summer vs True Summer vs Soft Summer](/en/blog/summer-color-palettes-decoded) — Complete guide to the three Summer sub-seasons
-- [The Best Makeup Colors for Every Color Season](/en/blog/best-makeup-colors-color-season) — A complete chart of makeup shades across all 12 seasons
-- [How to Find Your Best Hair Color Based on Your Color Season](/en/blog/best-hair-color-for-color-season) — Choosing the right hair color for any season type
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Autumn Color Palettes Decoded: Deep Autumn vs True Autumn vs Soft Autumn](/blog/autumn-color-palettes-decoded) — Full deep-dive into all three Autumn sub-seasons
+- [Summer Color Palettes Decoded: Cool Summer vs True Summer vs Soft Summer](/blog/summer-color-palettes-decoded) — Complete guide to the three Summer sub-seasons
+- [The Best Makeup Colors for Every Color Season](/blog/best-makeup-colors-color-season) — A complete chart of makeup shades across all 12 seasons
+- [How to Find Your Best Hair Color Based on Your Color Season](/blog/best-hair-color-for-color-season) — Choosing the right hair color for any season type

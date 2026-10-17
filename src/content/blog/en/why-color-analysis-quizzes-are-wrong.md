@@ -112,7 +112,7 @@ Modern AI tools use computer vision to measure actual color values in your skin,
 
 The science here is straightforward: algorithms can measure the ratio of warm-to-cool pigments in your skin pixels, calculate contrast ratios between features, and match against established color system databases — all without asking you to guess your own undertone.
 
-[Try a free AI color analysis →](/en/tools/color-quiz)
+[Try a free AI color analysis →](/tools/color-quiz)
 
 ### 3. DIY Draping at Home (Good Supporting Method)
 
@@ -162,7 +162,7 @@ The beauty of modern technology is that getting an objective color analysis no l
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/en/color-analysis) — Everything you need to know about finding your best colors
+- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
 
 ---
 

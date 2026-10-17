@@ -259,7 +259,7 @@ Unsicher, in welcher Schublade du landest? Belle AI erkennt Oliv-Unterton und or
 
 [Kostenlose KI-Farbanalyse testen →](/try)
 
-Etwa 60 Sekunden, kostenlos, ohne Anmeldung — deine personalisierte Palette sofort nutzbar.
+Etwa 60 Sekunden, kostenlose Vorschau, ohne Anmeldung — deine personalisierte Palette sofort nutzbar.
 
 ---
 

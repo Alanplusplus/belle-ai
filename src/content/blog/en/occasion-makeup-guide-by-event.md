@@ -104,6 +104,6 @@ Select your occasion, upload your photo, and get a complete personalized makeup 
 
 ## Related Articles
 
-- [The Best Makeup Colors for Every Color Season: A Complete Chart](/en/blog/best-makeup-colors-color-season) — Season-specific lip, eye, and blush recommendations
-- [How to Find the Perfect Red Lipstick for Your Skin Tone (2026 Guide)](/en/blog/perfect-red-lipstick-skin-tone) — Match red shades to your undertone for evening looks
-- [Why Your Foundation Never Matches: An Undertone Deep Dive](/en/blog/foundation-undertone-guide) — Build a flawless base for any occasion
+- [The Best Makeup Colors for Every Color Season: A Complete Chart](/blog/best-makeup-colors-color-season) — Season-specific lip, eye, and blush recommendations
+- [How to Find the Perfect Red Lipstick for Your Skin Tone (2026 Guide)](/blog/perfect-red-lipstick-skin-tone) — Match red shades to your undertone for evening looks
+- [Why Your Foundation Never Matches: An Undertone Deep Dive](/blog/foundation-undertone-guide) — Build a flawless base for any occasion

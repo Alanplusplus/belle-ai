@@ -171,7 +171,7 @@ Entender que eres oliva (no solo cálida) es el cambio que hace encajar por fin 
 
 [Prueba gratis el análisis de color con IA →](/try)
 
-60 segundos, gratis, sin registro. Detección precisa de subtono para piel oliva.
+60 segundos, vista previa gratis, sin registro. Detección precisa de subtono para piel oliva.
 
 ## Artículos relacionados
 

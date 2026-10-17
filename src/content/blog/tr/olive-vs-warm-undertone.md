@@ -171,7 +171,7 @@ Sıcak mı zeytin mi? Yapay zeka analizimiz standart testlerin kaçırdığı ye
 
 [Ücretsiz yapay zeka renk analizini deneyin →](/try)
 
-60 saniye, ücretsiz, kayıt yok. Zeytin teni için doğru alt ton tespiti.
+60 saniye, ücretsiz önizleme, kayıt yok. Zeytin teni için doğru alt ton tespiti.
 
 ## İlgili yazılar
 

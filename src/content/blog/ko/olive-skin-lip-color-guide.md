@@ -238,7 +238,7 @@ image: "/images/blog/olive-skin-lip-color-guide.webp"
 
 [무료 AI 컬러 분석 체험 →](/try)
 
-60초, 무료, 가입 불필요. 맞춤 메이크업 컬러 추천.
+60초, 무료 미리보기, 가입 불필요. 맞춤 메이크업 컬러 추천.
 
 ## 관련 글
 

@@ -93,6 +93,6 @@ Discover your Style DNA in 60 seconds.
 
 ## Related Articles
 
-- [The Complete AI Glow-Up: How to Transform Your Style with Technology](/en/blog/complete-ai-glow-up-guide) — Combine style personality with color season, face shape, and more
-- [How to Build a Capsule Wardrobe for Your Color Season (Step-by-Step)](/en/blog/capsule-wardrobe-color-season) — Dress for your aesthetic with a curated palette
-- [Which Celebrity Has Your Color Season? Find Your Style Twin](/en/blog/celebrity-color-season-style-twin) — See how celebrities express similar style personalities
+- [The Complete AI Glow-Up: How to Transform Your Style with Technology](/blog/complete-ai-glow-up-guide) — Combine style personality with color season, face shape, and more
+- [How to Build a Capsule Wardrobe for Your Color Season (Step-by-Step)](/blog/capsule-wardrobe-color-season) — Dress for your aesthetic with a curated palette
+- [Which Celebrity Has Your Color Season? Find Your Style Twin](/blog/celebrity-color-season-style-twin) — See how celebrities express similar style personalities

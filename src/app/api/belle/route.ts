@@ -10,6 +10,17 @@ async function getGoogleId(): Promise<string | null> {
   return (session?.user as any)?.googleId ?? null;
 }
 
+/**
+ * 登录会话里经 Google 校验过的邮箱（没登录 / 邮箱未验证时为 null）。
+ * 后端用它把「用这个邮箱在内置浏览器里付过款」的匿名账号认领回来，所以只能取自服务端会话，
+ * 绝不能用客户端请求体里的 email（可以随便伪造）。
+ */
+async function getVerifiedEmail(): Promise<string | null> {
+  const session = await auth();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return (session?.user as any)?.verifiedEmail ?? null;
+}
+
 function proxyHeaders(): Record<string, string> {
   return {
     Authorization: `Bearer ${API_TOKEN}`,
@@ -58,6 +69,7 @@ export async function POST(req: NextRequest) {
             email: params.email,
             name: params.name,
             avatar_url: params.avatar_url,
+            verified_email: await getVerifiedEmail(),
           });
           return NextResponse.json(data);
         }
@@ -73,6 +85,7 @@ export async function POST(req: NextRequest) {
           email: params.email,
           name: params.name,
           avatar_url: params.avatar_url,
+          verified_email: await getVerifiedEmail(),
         });
         return NextResponse.json(data);
       }
@@ -87,6 +100,7 @@ export async function POST(req: NextRequest) {
           email: params.email,
           name: params.name,
           avatar_url: params.avatar_url,
+          verified_email: await getVerifiedEmail(),
         });
         return NextResponse.json(data);
       }

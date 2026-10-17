@@ -144,7 +144,7 @@ Yapay zekâmız, Kore salon tarzı analizle aynı 12 mevsim sistemini kullanarak
 
 [Ücretsiz Renk Analizine Başlayın →](/tr/try)
 
-60 saniye, ücretsiz, kayıt gerekmez. Korece (한국어) ve 15 diğer dilde mevcut.
+60 saniye, ücretsiz önizleme, kayıt gerekmez. Korece (한국어) ve 8 diğer dilde mevcut.
 
 [한국어로 색상 분석 받기 →](/ko/try)
 
