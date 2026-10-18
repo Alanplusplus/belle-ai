@@ -3544,7 +3544,10 @@
     "type_style-personality_ex0_details": "分析が顔立ちと色味を明確なスタイルの方向性に変換 — 場当たり的な買い物を、厳選された意図あるコーディネートに置き換えました。",
     "type_celebrity-match_ex0_label": "合わないセレブの真似 → 自分だけのスターパワー",
     "type_celebrity-match_ex0_desc": "何時間もセレブのメイク動画を真似したのに、自分の顔には似合わなかった。AIセレブマッチが同じ色味を持つスターを見つけ、本当に自分に似合うルックを教えてくれました。",
-    "type_celebrity-match_ex0_details": "アンダートーン・コントラスト・顔立ちのバランスでマッチングし、似合うセレブのルックがわかります。違う色味向けのスタイルを真似するのをやめ、自分らしさを活かせます。"
+    "type_celebrity-match_ex0_details": "アンダートーン・コントラスト・顔立ちのバランスでマッチングし、似合うセレブのルックがわかります。違う色味向けのスタイルを真似するのをやめ、自分らしさを活かせます。",
+    "type_occasion-makeup_name": "Occasion Makeup",
+    "type_occasion-makeup_tagline": "The right makeup look for every event",
+    "type_occasion-makeup_desc": "From weddings to job interviews, AI occasion makeup analysis recommends a look that suits both the event and your personal coloring, so you walk in confident instead of second-guessing in the mirror."
   },
   "guides": {
     "indexTitle": "ビジュアルスタイルガイド",

@@ -3544,7 +3544,10 @@
     "type_style-personality_ex0_details": "Анализ перевёл её черты и цвета в чёткое стилевое направление, заменив разрозненные покупки продуманным, осознанным образом.",
     "type_celebrity-match_ex0_label": "Копирует Не Ту Знаменитость → Её Собственная Звёздная Сила",
     "type_celebrity-match_ex0_desc": "Она часами копировала макияж знаменитости из видеоурока, но он ей не подходил. ИИ-подбор знаменитостей нашёл звёзд с точно такой же цветовой гаммой и показал, какие образы действительно созданы для неё.",
-    "type_celebrity-match_ex0_details": "Подбор по подтону, контрасту и балансу черт показывает, какие образы знаменитостей ей подходят, чтобы она перестала копировать стили для другой гаммы и подчеркнула свою."
+    "type_celebrity-match_ex0_details": "Подбор по подтону, контрасту и балансу черт показывает, какие образы знаменитостей ей подходят, чтобы она перестала копировать стили для другой гаммы и подчеркнула свою.",
+    "type_occasion-makeup_name": "Occasion Makeup",
+    "type_occasion-makeup_tagline": "The right makeup look for every event",
+    "type_occasion-makeup_desc": "From weddings to job interviews, AI occasion makeup analysis recommends a look that suits both the event and your personal coloring, so you walk in confident instead of second-guessing in the mirror."
   },
   "guides": {
     "indexTitle": "Визуальные гиды по стилю",

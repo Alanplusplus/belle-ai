@@ -3544,7 +3544,10 @@
     "type_style-personality_ex0_details": "分析把她的五官和色彩特征转化为清晰的风格方向，用精心策划、有明确意图的搭配取代零散的冲动购买。",
     "type_celebrity-match_ex0_label": "模仿错的明星 → 属于她的明星气场",
     "type_celebrity-match_ex0_desc": "她花了几个小时模仿一位明星的妆容教程，却始终不适合自己的脸。AI 明星匹配找到了与她色彩完全一致的明星，并指出哪些造型才是真正适合她的。",
-    "type_celebrity-match_ex0_details": "基于底调、对比度和五官平衡的匹配，显示哪些明星造型适合她，让她不再模仿为其他色彩打造的风格，而是发挥自己的特色。"
+    "type_celebrity-match_ex0_details": "基于底调、对比度和五官平衡的匹配，显示哪些明星造型适合她，让她不再模仿为其他色彩打造的风格，而是发挥自己的特色。",
+    "type_occasion-makeup_name": "Occasion Makeup",
+    "type_occasion-makeup_tagline": "The right makeup look for every event",
+    "type_occasion-makeup_desc": "From weddings to job interviews, AI occasion makeup analysis recommends a look that suits both the event and your personal coloring, so you walk in confident instead of second-guessing in the mirror."
   },
   "guides": {
     "indexTitle": "视觉风格指南",

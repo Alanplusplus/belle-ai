@@ -413,6 +413,27 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
       },
     ],
   },
+  {
+    slug: "occasion-makeup",
+    name: "Occasion Makeup",
+    tagline: "The right makeup look for every event",
+    description:
+      "From weddings to job interviews, AI occasion makeup analysis recommends a look that suits both the event and your personal coloring, so you walk in confident instead of second-guessing in the mirror.",
+    examples: [
+      {
+        label: "Panicked wrong date-night makeup → polished soft glam occasion look",
+        description: "She is minutes from an event, surrounded by tutorials, with makeup that is too heavy and clashes with her outfit. AI occasion makeup plans a soft glam Romantic Date Night look that actually matches the moment.",
+        before: "/images/transformations/before-occasion-makeup.webp",
+        after: "/images/transformations/after-occasion-makeup.webp",
+        report: "/images/transformations/report-occasion-makeup.webp",
+        details: "The report picks warm shimmer eyeshadow from champagne to cocoa brown, a soft wing, and dusty rose, berry or nude peach lips, so the look stays elegant and photo-ready instead of heavy.",
+        date: "2026-10-19",
+        originalBefore: "https://pic.chibistyle.app/image/upload/f595c510-d554-48fd-9a69-187386d4b978.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/5421366c-dca1-4fcb-aaa7-2609eeb0b0f8.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/6913765629b160cd2bb025795ea0312b_0.png",
+      },
+    ],
+  },
 ];
 
 export const TRANSFORMATION_SLUGS = TRANSFORMATION_TYPES.map((t) => t.slug);

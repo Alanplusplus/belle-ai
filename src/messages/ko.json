@@ -3544,7 +3544,10 @@
     "type_style-personality_ex0_details": "분석이 이목구비와 컬러감을 명확한 스타일 방향으로 바꿔 즉흥적인 쇼핑을 잘 큐레이션된 의도적인 코디로 대체했습니다.",
     "type_celebrity-match_ex0_label": "안 맞는 셀럽 따라하기 → 나만의 스타 파워",
     "type_celebrity-match_ex0_desc": "그녀는 몇 시간 동안 셀럽의 메이크업 튜토리얼을 따라 했지만 자신의 얼굴에는 맞지 않았어요. AI 셀럽 매치가 같은 컬러를 가진 스타를 찾아 진짜 자신에게 맞는 룩을 알려주었습니다.",
-    "type_celebrity-match_ex0_details": "언더톤, 대비, 이목구비 균형으로 매칭하면 어떤 셀럽 룩이 어울리는지 알 수 있어, 다른 컬러를 위한 스타일을 따라 하는 대신 자신의 매력을 살릴 수 있습니다."
+    "type_celebrity-match_ex0_details": "언더톤, 대비, 이목구비 균형으로 매칭하면 어떤 셀럽 룩이 어울리는지 알 수 있어, 다른 컬러를 위한 스타일을 따라 하는 대신 자신의 매력을 살릴 수 있습니다.",
+    "type_occasion-makeup_name": "Occasion Makeup",
+    "type_occasion-makeup_tagline": "The right makeup look for every event",
+    "type_occasion-makeup_desc": "From weddings to job interviews, AI occasion makeup analysis recommends a look that suits both the event and your personal coloring, so you walk in confident instead of second-guessing in the mirror."
   },
   "guides": {
     "indexTitle": "비주얼 스타일 가이드",

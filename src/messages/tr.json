@@ -3544,7 +3544,10 @@
     "type_style-personality_ex0_details": "Analiz, yüz hatlarını ve renklerini net bir stil yönüne çevirdi; rastgele alışverişlerin yerine özenle seçilmiş, bilinçli bir kombin koydu.",
     "type_celebrity-match_ex0_label": "Yanlış Ünlüyü Taklit Etmek → Kendi Yıldız Gücü",
     "type_celebrity-match_ex0_desc": "Saatlerce bir ünlünün makyaj eğitimini taklit etti ama yüzüne hiç yakışmadı. AI ünlü eşleştirme, tamamen aynı renk özelliklerini paylaşan yıldızları buldu ve hangi görünümlerin gerçekten ona göre olduğunu gösterdi.",
-    "type_celebrity-match_ex0_details": "Alt ton, kontrast ve yüz hatları dengesine göre eşleştirme, hangi ünlü görünümlerinin ona yakıştığını gösterir; böylece başka renkler için tasarlanmış stilleri taklit etmeyi bırakıp kendi özelliklerini öne çıkarır."
+    "type_celebrity-match_ex0_details": "Alt ton, kontrast ve yüz hatları dengesine göre eşleştirme, hangi ünlü görünümlerinin ona yakıştığını gösterir; böylece başka renkler için tasarlanmış stilleri taklit etmeyi bırakıp kendi özelliklerini öne çıkarır.",
+    "type_occasion-makeup_name": "Occasion Makeup",
+    "type_occasion-makeup_tagline": "The right makeup look for every event",
+    "type_occasion-makeup_desc": "From weddings to job interviews, AI occasion makeup analysis recommends a look that suits both the event and your personal coloring, so you walk in confident instead of second-guessing in the mirror."
   },
   "guides": {
     "indexTitle": "Görsel Stil Rehberleri",

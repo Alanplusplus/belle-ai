@@ -3544,7 +3544,10 @@
     "type_style-personality_ex0_details": "Die Analyse übersetzte ihre Gesichtszüge und Farbgebung in eine klare Stilrichtung und ersetzte vereinzelte Spontankäufe durch ein durchdachtes, bewusst zusammengestelltes Outfit.",
     "type_celebrity-match_ex0_label": "Die falsche Prominente kopieren → Ihre eigene Starpower",
     "type_celebrity-match_ex0_desc": "Sie verbrachte Stunden damit, das Make-up-Tutorial eines Stars nachzumachen, das bei ihr nie funktionierte. Das KI-Celebrity-Match fand die Stars mit exakt ihrer Farbgebung und zeigte, welche Looks wirklich für sie gemacht waren.",
-    "type_celebrity-match_ex0_details": "Das Matching nach Unterton, Kontrast und Gesichtsbalance zeigt, welche Promi-Looks zu ihr passen, sodass sie aufhört, Stile für andere Farbgebungen zu kopieren, und ihre eigene betont."
+    "type_celebrity-match_ex0_details": "Das Matching nach Unterton, Kontrast und Gesichtsbalance zeigt, welche Promi-Looks zu ihr passen, sodass sie aufhört, Stile für andere Farbgebungen zu kopieren, und ihre eigene betont.",
+    "type_occasion-makeup_name": "Occasion Makeup",
+    "type_occasion-makeup_tagline": "The right makeup look for every event",
+    "type_occasion-makeup_desc": "From weddings to job interviews, AI occasion makeup analysis recommends a look that suits both the event and your personal coloring, so you walk in confident instead of second-guessing in the mirror."
   },
   "guides": {
     "indexTitle": "Visuelle Style-Guides",

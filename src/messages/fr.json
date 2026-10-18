@@ -3537,7 +3537,10 @@
     "type_style-personality_ex0_details": "L'analyse a traduit ses traits et sa colorimétrie en une direction de style claire, remplaçant les achats dispersés par une tenue choisie et intentionnelle.",
     "type_celebrity-match_ex0_label": "Copier la Mauvaise Célébrité → Son Propre Pouvoir d'Étoile",
     "type_celebrity-match_ex0_desc": "Elle a passé des heures à copier le tutoriel maquillage d'une célébrité qui ne lui allait jamais. Le match de célébrités par IA a trouvé les stars qui partagent exactement sa colorimétrie et montré quels looks étaient vraiment faits pour elle.",
-    "type_celebrity-match_ex0_details": "Le matching sur le sous-ton, le contraste et l'équilibre des traits montre quels looks de célébrités lui conviennent, pour qu'elle cesse de copier des styles conçus pour une autre colorimétrie et mette la sienne en valeur."
+    "type_celebrity-match_ex0_details": "Le matching sur le sous-ton, le contraste et l'équilibre des traits montre quels looks de célébrités lui conviennent, pour qu'elle cesse de copier des styles conçus pour une autre colorimétrie et mette la sienne en valeur.",
+    "type_occasion-makeup_name": "Occasion Makeup",
+    "type_occasion-makeup_tagline": "The right makeup look for every event",
+    "type_occasion-makeup_desc": "From weddings to job interviews, AI occasion makeup analysis recommends a look that suits both the event and your personal coloring, so you walk in confident instead of second-guessing in the mirror."
   },
   "guides": {
     "indexTitle": "Guides de Style Visuels",
