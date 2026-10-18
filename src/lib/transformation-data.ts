@@ -315,6 +315,18 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/c105f6b0-c8bd-4b41-ab4b-e970a3f8e294.png",
         originalReport: "https://pic-cdn.chibistyle.app/image/advanced/244e746fddc7acd6c0999bcb5a9ec736_0.png",
       },
+      {
+        label: "Virtual Try-On Doubt → Cat-Eye Frames for an Oval Face",
+        description: "Scrolling virtual try-on pages and still unsure which frames work, she feels stuck. The AI report identifies an oval face shape and points to frames that actually flatter her.",
+        before: "/images/transformations/before-glasses-match-2.webp",
+        after: "/images/transformations/after-glasses-match-2.webp",
+        report: "/images/transformations/report-glasses-match-2.webp",
+        details: "The AI face shape analysis found balanced oval proportions with gentle curves, so cat-eye, rectangular and soft square frames add lift and structure, while oversized round and oversized square frames overwhelm her features.",
+        date: "2026-10-18",
+        originalBefore: "https://pic.chibistyle.app/image/upload/c2bcbeba-728d-4c1d-9530-a86a1fe693e4.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/83fa5e2b-a087-4c60-b84b-7370ea6ffd42.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/09ef88a3108c25b845cb09f32253c15a_0.png",
+      },
     ],
   },
   {
