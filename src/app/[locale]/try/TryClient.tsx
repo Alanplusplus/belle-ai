@@ -1525,6 +1525,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                         {resultLock.locked ? (
                           /* 服务端已把细节打码：覆盖层只负责引导解锁，点图片其它位置仍可放大查看免费预览 */
                           <LockOverlay
+                            type={analysisType}
                             lockStart={resultLock.lockStart}
                             cost={creditCostOf(analysisType)}
                             packCredits={userCredits?.pack ?? 0}
@@ -2885,6 +2886,7 @@ function ImageLightbox({
             />
             {reportLocked && (
               <LockOverlay
+                type={entry.type}
                 lockStart={entry.lock_start ?? DEFAULT_LOCK_START}
                 cost={unlockCost}
                 packCredits={packCredits}
@@ -3016,10 +3018,32 @@ function LockIcon({ className = "h-4 w-4" }: { className?: string }) {
 }
 
 /**
+ * 覆盖层里点名「解锁后能看到什么」的报告类型。文案（tryPage.lockedUnlocks_<type>）列的是各类报告
+ * 打码线以下实际会生成的章节，来源是后端提示词里的章节结构，改提示词章节时这里的文案要一起改。
+ * 不在这个集合里的类型（旧类型、未知类型）回退到通用提示 lockedHint。
+ */
+const LOCK_CONTENT_TYPES = new Set([
+  "color_analysis",
+  "makeup",
+  "face_shape",
+  "hair_preview",
+  "outfit_color",
+  "glasses_match",
+  "occasion_makeup",
+  "jewelry_guide",
+  "glow_up_report",
+  "style_personality",
+  "celebrity_match",
+  "palette_scan",
+]);
+
+/**
  * 锁定报告上的「解锁」覆盖层：图片下半部分已经由服务端打码（原图根本没下发），
  * 这里只是把引导文案和按钮摆在打码区域里，top 按服务端给出的 lock_start 比例定位。
+ * 文案不说「细节被隐藏」这种负面提示，而是点名这份报告解锁后会看到的具体内容。
  */
 function LockOverlay({
+  type,
   lockStart,
   cost,
   packCredits,
@@ -3028,6 +3052,7 @@ function LockOverlay({
   rounded,
   t,
 }: {
+  type?: string | null;
   lockStart: number;
   cost: number;
   packCredits: number;
@@ -3037,6 +3062,7 @@ function LockOverlay({
   t: (key: string, values?: Record<string, string | number>) => string;
 }) {
   const canSpend = packCredits >= cost;
+  const hint = type && LOCK_CONTENT_TYPES.has(type) ? t(`lockedUnlocks_${type}`) : t("lockedHint");
   return (
     <div
       className={`absolute inset-x-0 bottom-0 flex flex-col items-center justify-center gap-2 px-4 text-center ${rounded ? "rounded-b-xl" : ""}`}
@@ -3045,7 +3071,7 @@ function LockOverlay({
       <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-primary shadow">
         <LockIcon className="h-4 w-4" />
       </span>
-      <p className="max-w-[16rem] text-xs font-semibold leading-snug text-neutral-800">{t("lockedHint")}</p>
+      <p className="max-w-[17rem] text-xs font-semibold leading-snug text-neutral-800">{hint}</p>
       <button
         type="button"
         onClick={(e) => { e.stopPropagation(); onUnlock(); }}
