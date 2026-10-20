@@ -369,6 +369,18 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/c498c066-9e21-4d16-9391-d07071831e30.png",
         originalReport: "https://pic-cdn.chibistyle.app/image/advanced/45832217b047dba15fd9019378aa98d6_0.png",
       },
+      {
+        label: "Gold vs Silver Earrings at the Market → Her Perfect Metal Match",
+        description: "Standing at a market stall with a gold and a silver earring in hand, she couldn't tell which one suited her. AI jewelry analysis read her neutral-cool undertone and ranked gold as her best metal, with studs and drop earrings as her best styles.",
+        before: "/images/transformations/before-jewelry-guide-2.webp",
+        after: "/images/transformations/after-jewelry-guide-2.webp",
+        report: "/images/transformations/report-jewelry-guide-2.webp",
+        details: "Her profile showed a soft oval face with a neutral-cool undertone. The guide ranked gold as best, silver and rose gold as good, and platinum as the one to avoid, then matched earring styles, necklace length and gemstones like pearl, ruby and diamond.",
+        date: "2026-10-20",
+        originalBefore: "https://pic.chibistyle.app/image/upload/c5a5c371-b941-414a-aa17-6c47da5621a8.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/0364bee0-9df8-46d0-b1f8-604df1880c89.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/dbccc4670309ef5cb8f2e9be0e2b4386_0.png",
+      },
     ],
   },
   {
