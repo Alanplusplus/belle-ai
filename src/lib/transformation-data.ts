@@ -402,6 +402,18 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/61afff4f-576b-4556-b2fd-72e0068b8bbc.png",
         originalReport: "https://pic-cdn.chibistyle.app/image/advanced/65adeca4822422cb062bdbb8325a94d2_0.png",
       },
+      {
+        label: "Too many aesthetic mood boards, no answer → one cohesive Sensual style identity",
+        description: "She scrolls dozens of conflicting minimalist, boho and streetwear style boards with a bed full of mismatched clothes and cannot choose a direction. AI style personality analysis names her archetype, Sensual, and builds one cohesive moodboard and outfit in rich espresso, chocolate and gold tones.",
+        before: "/images/transformations/before-style-personality-2.webp",
+        after: "/images/transformations/after-style-personality-2.webp",
+        report: "/images/transformations/report-style-personality-2.webp",
+        details: "The report reads her warm, deep coloring and soft, defined features as a Sensual archetype: draped silhouettes, luxe fabrics like satin and leather, warm neutrals and gold accents. Instead of chasing every aesthetic, she gets one palette (warm espresso, rich chocolate, soft taupe, golden bronze) and one signature look she can repeat.",
+        date: "2026-10-21",
+        originalBefore: "https://pic.chibistyle.app/image/upload/d22e49f8-f9f9-4a69-b8eb-681a4037dc5f.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/cdda4c6d-e7cf-40ad-9432-9632e1e28aab.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/a73b18ab4aa2fc80eb9b9726f9afc538_0.png",
+      },
     ],
   },
   {
