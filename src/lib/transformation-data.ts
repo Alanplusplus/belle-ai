@@ -435,6 +435,18 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/f2b5b43a-534d-44a7-84d9-fdee47fa4cd0.png",
         originalReport: "https://pic-cdn.chibistyle.app/image/advanced/5dfe8fc6fe39f2428061f16591860525_0.png",
       },
+      {
+        label: "Celebrity Tutorial Fail → Tailored Star Match (Modern Romantic Muse)",
+        description: "She kept copying celebrity makeup tutorials that never suited her features. AI matched her to the celebrities who share her face shape and coloring, then gave her a tailored look.",
+        before: "/images/transformations/before-celebrity-match-2.webp",
+        after: "/images/transformations/after-celebrity-match-2.webp",
+        report: "/images/transformations/report-celebrity-match-2.webp",
+        details: "The AI compares face shape, coloring and features to find top celebrity matches (Rosie Huntington-Whiteley 90%), then translates their signature style into makeup, hair and outfit lessons that fit her own features.",
+        date: "2026-10-22",
+        originalBefore: "https://pic.chibistyle.app/image/upload/d34753a8-73c7-4e16-bb0e-c3a55cc597f7.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/59645f70-38ca-49ec-ac56-8ece8c299195.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/94e5de5af9d12c60025f6c6289775c88_0.png",
+      },
     ],
   },
   {
