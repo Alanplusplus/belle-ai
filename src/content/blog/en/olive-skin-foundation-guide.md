@@ -1,7 +1,7 @@
 ---
 title: "Olive Skin Foundation Guide: How to Find Your Perfect Match"
-seoTitle: "Foundation for Olive Skin — Why Warm & Cool Both Look Wrong (+ Fixes)"
-description: "Warm foundation turns orange and cool turns pink? Learn why olive undertones need yellow-green bases, which brands carry olive shades, and how to match by depth and season."
+seoTitle: "Foundation for Olive Skin: Why Warm and Cool Both Look Wrong"
+description: "Warm foundation turns orange, cool turns pink? Olive undertones need yellow-green bases. See which brands carry olive shades and how to match."
 date: "2026-09-18"
 tags: ["olive undertone", "foundation", "makeup", "skin undertone", "beauty tips"]
 image: "/images/blog/olive-skin-foundation-guide.webp"

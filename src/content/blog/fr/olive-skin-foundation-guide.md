@@ -1,7 +1,7 @@
 ---
 title: "Guide fond de teint peau olive : trouver votre teinte idéale"
-seoTitle: "Fond de teint peau olive — pourquoi chaud et froid ratent (+ solutions)"
-description: "Le chaud devient orange et le froid rose ? Découvrez pourquoi les sous-tons olive exigent des bases jaune-vert, quelles marques proposent des teintes olive et comment choisir selon la profondeur et la saison."
+seoTitle: "Fond de teint peau olive : pourquoi chaud et froid ratent"
+description: "Le chaud vire à l'orange, le froid au rose ? Les sous-tons olive exigent des bases jaune-vert. Marques avec teintes olive et choix selon profondeur et saison."
 date: "2026-09-18"
 tags: ["sous-ton olive", "fond de teint", "maquillage", "sous-ton de peau", "conseils beauté"]
 image: "/images/blog/olive-skin-foundation-guide.webp"

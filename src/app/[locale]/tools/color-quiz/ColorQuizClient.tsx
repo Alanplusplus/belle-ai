@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { ShareQuizResult } from "@/components/ShareQuizResult";
 
 export function ColorQuizClient() {
   const t = useTranslations("quiz");
@@ -162,9 +163,12 @@ export function ColorQuizClient() {
               </div>
             </div>
 
+            <div>
+              <ShareQuizResult resultLabel={cq(`result_${season}_title`)} campaign="color-quiz" />
+            </div>
             <button
               onClick={reset}
-              className="mt-6 text-sm text-muted-foreground underline"
+              className="mt-4 text-sm text-muted-foreground underline"
             >
               {t("retakeQuiz")}
             </button>

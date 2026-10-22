@@ -1,7 +1,7 @@
 ---
 title: "Subtono oliva vs neutro: cómo distinguirlos"
 seoTitle: "Subtono oliva vs neutro — cómo saber cuál tienes realmente"
-description: "¿Te dicen que eres neutra pero las bases siguen sin encajar? Puede que seas oliva. Tres diferencias clave: matiz verde, comportamiento del maquillaje base y resultados del drapeado."
+description: "¿Te dicen que eres neutra pero la base no encaja? Puede que seas oliva. Tres diferencias clave: matiz verde, cómo se comporta la base y el drapeado."
 date: "2026-09-18"
 tags: ["subtono oliva", "subtono neutro", "subtono de piel", "análisis de color", "belleza"]
 image: "/images/blog/olive-vs-neutral-undertone.webp"

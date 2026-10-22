@@ -1,4 +1,5 @@
 import { SEASON_PALETTES } from "./color-palette-data";
+import { LOOKBOOK_DRIP_PAGE_LIMIT, getDripItems } from "./lookbook-drip";
 
 export interface LookbookImage {
   src: string;
@@ -65,11 +66,21 @@ function buildLookbook(slug: string): LookbookEntry {
       {
         title: "Hair Color Ideas",
         description: `Best hair colors for ${name}: ${season.hairColors.slice(0, 3).join(", ")}.`,
-        images: season.hairColors.slice(0, 3).map((color, i) => ({
-          src: `${seasonImages(slug)}/hair-${i + 1}.webp`,
-          alt: `${name} hair color inspiration: ${color}`,
-          key: `hair-${i + 1}`,
-        })),
+        images: [
+          ...season.hairColors.slice(0, 3).map((color, i) => ({
+            src: `${seasonImages(slug)}/hair-${i + 1}.webp`,
+            alt: `${name} hair color inspiration: ${color}`,
+            key: `hair-${i + 1}`,
+          })),
+          // 每日补货的发色图（见 lookbook-drip.ts），只展示最新的若干张
+          ...getDripItems(slug)
+            .slice(-LOOKBOOK_DRIP_PAGE_LIMIT)
+            .map((item) => ({
+              src: `${seasonImages(slug)}/${item.key}.webp`,
+              alt: item.alt,
+              key: item.key,
+            })),
+        ],
       },
       {
         title: "Jewelry & Accessories",
@@ -90,6 +101,22 @@ function buildLookbook(slug: string): LookbookEntry {
       },
     ],
   };
+}
+
+/**
+ * 自动同步到 Pinterest 的 Lookbook 图片类型（按 img.key 前缀判断）。
+ *
+ * 依据 2026-09-22 ~ 10-22 的 Pinterest 数据：发色（hair）、妆容（makeup）、穿搭（outfit）贡献了
+ * Top 50 Pin 的绝大部分曝光；色卡（palette）、避雷色（avoid）、首饰（jewelry）共 120 张，几乎没有曝光。
+ * 网站页面照常展示全部图片，只有 RSS（Pinterest 自动发 Pin 的来源）不再输出后三类。
+ *
+ * 注意：feed 里移除条目不会删除 Pinterest 上已有的 Pin（Pinterest 只会为新 guid 建 Pin）。
+ * 以后补充的发色图沿用 `hair-<n>` 命名即可自动进 feed。
+ */
+export const PINTEREST_LOOKBOOK_KEY_PREFIXES = ["hair-", "makeup-", "outfit-"] as const;
+
+export function isPinterestLookbookImage(key: string): boolean {
+  return PINTEREST_LOOKBOOK_KEY_PREFIXES.some((prefix) => key.startsWith(prefix));
 }
 
 export const LOOKBOOK_DATA: Record<string, LookbookEntry> = Object.fromEntries(

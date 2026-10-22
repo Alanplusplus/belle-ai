@@ -1,6 +1,7 @@
 ---
 title: "Guía de análisis de color personal: los 12 tipos estacionales explicados (con test gratuito)"
-description: "La guía completa del análisis de color personal con el sistema de 12 estaciones. Descubre tu tipo de color, las mejores tonalidades de maquillaje y los colores ideales para tu armario. Incluye un test de color con IA gratuito."
+seoTitle: "Análisis de color personal: 12 estaciones (test gratis)"
+description: "Guía completa del análisis de color personal con 12 estaciones: tu tipo de color, tonos de maquillaje y colores de armario. Incluye test de IA gratis."
 date: "2026-07-04"
 tags: ["análisis de color personal", "color estacional", "teoría del color", "guía de belleza", "análisis de color de 12 estaciones"]
 image: "/images/blog/personal-color-analysis-guide.webp"

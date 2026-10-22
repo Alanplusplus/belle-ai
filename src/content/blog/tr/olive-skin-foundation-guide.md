@@ -1,7 +1,7 @@
 ---
 title: "Zeytin Ten Fondöten Rehberi: Mükemmel Tonu Bulma"
-seoTitle: "Zeytin Teni Fondöten — Sıcak ve Soğuk Neden Yanlış (+ Çözümler)"
-description: "Sıcak fondöten turuncu, soğuk pembe mi görünüyor? Zeytin alt tonunun neden sarı-yeşil taban istediğini, hangi markaların zeytin tonları sunduğunu ve derinlik ile mevsime göre seçimi öğrenin."
+seoTitle: "Zeytin teni fondöten: sıcak ve soğuk neden yanlış?"
+description: "Sıcak fondöten turuncu, soğuk pembe mi görünüyor? Zeytin alt tonu sarı-yeşil taban ister. Markaları ve derinliğe göre seçimi öğrenin."
 date: "2026-09-18"
 tags: ["zeytin alt tonu", "fondöten", "makyaj", "cilt alt tonu", "güzellik ipuçları"]
 image: "/images/blog/olive-skin-foundation-guide.webp"

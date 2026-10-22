@@ -1,7 +1,7 @@
 ---
 title: "Saison chromatique peau olive : laquelle êtes-vous ?"
 seoTitle: "Peau olive et saison — Automne Doux, Hiver Profond ou autre ?"
-description: "La peau olive rentre rarement dans une seule saison via un quiz. Comprenez pourquoi, comparez Automne Doux, Été Doux, Automne Profond et Hiver Profond, et suivez un test pas à pas pour trouver votre palette."
+description: "La peau olive entre rarement dans une seule saison via un quiz. Comparez Automne Doux, Été Doux, Automne Profond et Hiver Profond avec un test pas à pas."
 date: "2026-09-18"
 tags: ["sous-ton olive", "saison chromatique", "analyse colorimétrique", "couleur saisonnière", "beauté"]
 image: "/images/blog/olive-skin-color-season.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Olivfarbene Haut nach Herkunft: Wie Oliv-Untertöne in verschiedenen Kulturen wirken"
-seoTitle: "Olivfarbene Haut in verschiedenen Ethnien — asiatisch, mediterran, lateinamerikanisch und mehr"
-description: "Oliv-Untertöne kommen in jeder Herkunft vor, sehen aber je nach Melanintiefe anders aus. So zeigt sich olivfarbene Haut bei Asiaten, Mediterranern, Südasiaten und Latinos — und warum Standardtests danebenliegen."
+seoTitle: "Olivfarbene Haut: asiatisch, mediterran, lateinamerikanisch"
+description: "Oliv-Untertöne gibt es in jeder Herkunft, sie wirken aber je nach Hauttiefe anders. So sieht olivfarbene Haut aus und warum Standardtests sie übersehen."
 date: "2026-09-18"
 tags: ["Oliv-Unterton", "Hautton", "Farbanalyse", "Beauty", "Vielfalt"]
 image: "/images/blog/olive-skin-by-ethnicity.webp"

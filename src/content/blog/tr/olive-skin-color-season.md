@@ -1,7 +1,7 @@
 ---
 title: "Zeytin teni renk sezonu: hangi sezonsunuz?"
-seoTitle: "Zeytin teni renk sezonu — Yumuşak Sonbahar, Derin Kış mı, başka mı?"
-description: "Zeytin teni nadiren tek bir test sonucuna sığar. Nedenini öğrenin, Yumuşak Sonbahar, Yumuşak Yaz, Derin Sonbahar ve Derin Kış'ı karşılaştırın ve paletinizi bulmak için adım adım testi uygulayın."
+seoTitle: "Zeytin teni renk sezonu: Yumuşak Sonbahar mı, Derin Kış mı?"
+description: "Zeytin teni nadiren tek bir test sonucuna sığar. Yumuşak Sonbahar, Yumuşak Yaz, Derin Sonbahar ve Derin Kış'ı karşılaştırın, adım adım testi uygulayın."
 date: "2026-09-18"
 tags: ["zeytin alt tonu", "renk sezonu", "kişisel renk analizi", "mevsimsel renk", "güzellik"]
 image: "/images/blog/olive-skin-color-season.webp"

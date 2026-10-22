@@ -1,7 +1,7 @@
 ---
 title: "Sous-ton olive vs neutre : comment les distinguer"
 seoTitle: "Sous-ton olive vs neutre — savoir lequel vous avez vraiment"
-description: "On vous dit neutre mais les fonds de teint ne conviennent toujours pas ? Vous êtes peut-être olive. Trois différences clés : reflet vert, comportement du fond de teint et résultats du drapé."
+description: "On vous dit neutre mais le fond de teint ne convient pas ? Vous êtes peut-être olive. Trois différences clés : reflet vert, fond de teint, drapé."
 date: "2026-09-18"
 tags: ["sous-ton olive", "sous-ton neutre", "sous-ton de peau", "analyse colorimétrique", "beauté"]
 image: "/images/blog/olive-vs-neutral-undertone.webp"

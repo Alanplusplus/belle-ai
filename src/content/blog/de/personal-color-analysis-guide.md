@@ -1,6 +1,7 @@
 ---
 title: "Persönliche Farbanalyse: Alle 12 Saison-Typen erklärt (mit kostenlosem Quiz)"
-description: "Der komplette Leitfaden zur persönlichen Farbanalyse mit dem 12-Saison-System. Finden Sie Ihren Farbtyp, die besten Make-up-Töne und Garderobenfarben. Inklusive kostenlosem KI-Farbquiz."
+seoTitle: "Persönliche Farbanalyse: Alle 12 Typen erklärt (+ Gratis-Quiz)"
+description: "Der komplette Leitfaden zur persönlichen Farbanalyse mit 12 Jahreszeiten: Farbtyp, beste Make-up-Töne und Garderobenfarben, inklusive kostenlosem KI-Farbquiz."
 date: "2026-07-04"
 tags: ["persönliche Farbanalyse", "Saisonfarben", "Farbtheorie", "Beauty-Ratgeber", "12-Saison-Farbanalyse"]
 image: "/images/blog/personal-color-analysis-guide.webp"

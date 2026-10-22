@@ -69,6 +69,9 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  // proxy 的 matcher 排除了带点号的路径（/llms.txt、/foo.txt 等），这类请求会被当成 [locale]；
+  // 不先校验的话下面的动态 import 会抛错，返回 500 而不是 404。
+  if (!hasLocale(routing.locales, locale)) notFound();
   const messages = (await import(`@/messages/${locale}.json`)).default;
   const meta = messages.meta;
 

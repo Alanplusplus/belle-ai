@@ -1,7 +1,7 @@
 ---
 title: "Guía de base para piel oliva: cómo encontrar tu tono perfecto"
-seoTitle: "Base para piel oliva — por qué cálido y frío fallan (+ soluciones)"
-description: "¿La base cálida se ve naranja y la fría rosada? Descubre por qué los subtonos oliva necesitan bases amarillo-verde, qué marcas tienen tonos oliva y cómo elegir según profundidad y estación."
+seoTitle: "Base para piel oliva: por qué el cálido y el frío fallan"
+description: "¿La base cálida sale naranja y la fría rosada? El subtono oliva necesita bases amarillo-verdosas. Marcas con tonos oliva y cómo elegir por profundidad."
 date: "2026-09-18"
 tags: ["subtono oliva", "base de maquillaje", "maquillaje", "subtono de piel", "consejos de belleza"]
 image: "/images/blog/olive-skin-foundation-guide.webp"

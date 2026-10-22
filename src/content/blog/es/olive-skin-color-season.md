@@ -1,7 +1,7 @@
 ---
 title: "Estación cromática con piel oliva: ¿cuál es la tuya?"
-seoTitle: "Piel oliva y estación cromática — ¿Otoño Suave, Invierno Profundo u otra?"
-description: "La piel oliva rara vez encaja en un solo resultado de un cuestionario. Descubre por qué, compara Otoño Suave, Verano Suave, Otoño Profundo e Invierno Profundo y sigue una prueba paso a paso para encontrar tu paleta."
+seoTitle: "Piel oliva y estación cromática: guía para encontrar la tuya"
+description: "La piel oliva rara vez encaja en una sola estación. Compara Otoño Suave, Verano Suave, Otoño Profundo e Invierno Profundo con una prueba paso a paso."
 date: "2026-09-18"
 tags: ["subtono oliva", "estación cromática", "análisis de color personal", "color estacional", "belleza"]
 image: "/images/blog/olive-skin-color-season.webp"

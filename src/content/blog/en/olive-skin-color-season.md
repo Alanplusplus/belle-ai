@@ -1,7 +1,7 @@
 ---
 title: "Olive Skin Color Season: Which Season Are You?"
-seoTitle: "Olive Skin Color Season — Soft Autumn, Deep Winter, or Something Else?"
-description: "Olive skin rarely fits one season on a quiz. Learn why, compare Soft Autumn, Soft Summer, Deep Autumn, and Deep Winter, and follow a step-by-step test to find your palette."
+seoTitle: "Olive Skin Color Season: Soft Autumn, Deep Winter or Other?"
+description: "Olive skin rarely fits one season on a quiz. Compare Soft Autumn, Soft Summer, Deep Autumn and Deep Winter, then follow a step-by-step test."
 date: "2026-09-18"
 tags: ["olive undertone", "color season", "personal color analysis", "seasonal color", "beauty"]
 image: "/images/blog/olive-skin-color-season.webp"

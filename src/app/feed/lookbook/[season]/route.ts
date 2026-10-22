@@ -1,13 +1,12 @@
 import { SITE_URL } from "@/lib/constants";
-import { SEASON_PALETTES, SEASON_SLUGS } from "@/lib/color-palette-data";
+import { SEASON_PALETTES } from "@/lib/color-palette-data";
 import { LOOKBOOK_DATA } from "@/lib/lookbook-data";
-import { getOriginalUrl } from "@/lib/lookbook-originals";
-import { buildRssFeed, rssResponse, type RssFeedItem } from "@/lib/rss-shared";
+import { buildLookbookFeedItems } from "@/lib/lookbook-feed";
+import { buildRssFeed, rssResponse } from "@/lib/rss-shared";
 import { NextRequest } from "next/server";
 
-export function generateStaticParams() {
-  return SEASON_SLUGS.map((slug) => ({ season: `${slug}.xml` }));
-}
+// 发色图按 publishAt 到点才进 feed（每天 1 张），必须在请求时计算，不能静态化
+export const dynamic = "force-dynamic";
 
 export async function GET(
   _req: NextRequest,
@@ -23,33 +22,14 @@ export async function GET(
   }
 
   const name = season.name.split(" (")[0];
-  const items: RssFeedItem[] = [];
-
-  for (const section of lookbook.sections) {
-    for (const img of section.images) {
-      const originalUrl = getOriginalUrl(slug, img.key);
-      if (!originalUrl) continue;
-
-      items.push({
-        title: `${name} — ${section.title}: ${img.alt}`,
-        link: `${SITE_URL}/lookbook/${slug}`,
-        guid: `${SITE_URL}/lookbook/${slug}#${img.key}`,
-        description: `${section.description} — ${img.alt}`,
-        imageUrl: originalUrl,
-        imageType: "image/png",
-        pubDate: new Date().toUTCString(),
-        category: name,
-      });
-    }
-  }
 
   return rssResponse(
     buildRssFeed({
       title: `Belle AI — ${name} Lookbook`,
       link: `${SITE_URL}/lookbook/${slug}`,
-      description: `Visual style inspiration for ${name} color season: outfits, makeup, hair, jewelry, and palette guidance.`,
+      description: `Visual style inspiration for ${name} color season: hair color, makeup and outfit ideas.`,
       selfHref: `${SITE_URL}/feed/lookbook/${slug}.xml`,
-      items,
+      items: buildLookbookFeedItems(slug, name),
     }),
   );
 }

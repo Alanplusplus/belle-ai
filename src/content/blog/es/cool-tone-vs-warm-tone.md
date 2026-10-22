@@ -1,6 +1,7 @@
 ---
 title: "Tono frío vs. tono cálido: 5 pruebas sencillas para descubrir tu subtono (con fotos)"
-description: "5 tests caseros fáciles para encontrar tu subtono en menos de 2 minutos — con fotos. Funciona con TODOS los tonos de piel. El test de las venas tiene un 70% de precisión."
+seoTitle: "Tono frío vs cálido: 5 pruebas para hallar tu subtono"
+description: "5 tests caseros para hallar tu subtono en menos de 2 minutos, con fotos. Funciona con TODOS los tonos de piel. El test de las venas tiene un 70% de precisión."
 date: "2026-07-02"
 tags: ["subtono", "tono frío", "tono cálido", "tono de piel", "análisis de color"]
 image: "/images/blog/cool-tone-vs-warm-tone.webp"

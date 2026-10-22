@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { trackEvent } from "@/lib/analytics";
+import { ShareQuizResult } from "@/components/ShareQuizResult";
 
 type Undertone = "warm" | "cool" | "neutral";
 
@@ -92,6 +93,9 @@ export function UndertoneTestClient() {
             </div>
 
             <p className="mt-6 text-xs text-muted-foreground">{ut("resultNote")}</p>
+            <div>
+              <ShareQuizResult resultLabel={ut(`${result}_title`)} campaign="undertone-test" />
+            </div>
             <button onClick={reset} className="mt-4 text-sm text-muted-foreground underline">
               {t("retakeQuiz")}
             </button>

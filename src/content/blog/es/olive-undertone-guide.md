@@ -1,7 +1,7 @@
 ---
 title: "Subtono Oliva Piel: Guía para Identificarlo"
-seoTitle: "Subtono oliva: 5 señales para saber si lo tienes (+ test gratis)"
-description: "¿Ni el oro ni la plata te favorecen y la base te sale naranja o rosa? Puede ser subtono oliva. Descubre las 5 señales, los mejores colores y haz el test de color con IA gratis en 60 segundos."
+seoTitle: "Subtono oliva: 5 señales para reconocerlo (+ test gratis)"
+description: "¿Ni el oro ni la plata te favorecen y la base sale naranja o rosa? Puede ser subtono oliva. Descubre las 5 señales y haz el test con IA gratis."
 date: "2026-07-14"
 tags: ["subtono oliva", "subtono oliva piel", "tono oliva", "análisis de color personal", "belleza"]
 image: "/images/blog/olive-undertone-guide.webp"

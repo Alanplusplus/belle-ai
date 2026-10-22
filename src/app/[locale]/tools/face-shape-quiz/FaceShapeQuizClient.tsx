@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { ShareQuizResult } from "@/components/ShareQuizResult";
 
 type FaceShape = "oval" | "round" | "square" | "heart" | "oblong" | "diamond" | "triangle";
 
@@ -120,7 +121,10 @@ export function FaceShapeQuizClient() {
               </div>
             </div>
 
-            <button onClick={reset} className="mt-6 text-sm text-muted-foreground underline">
+            <div>
+              <ShareQuizResult resultLabel={fq(`result_${result}_title`)} campaign="face-shape-quiz" />
+            </div>
+            <button onClick={reset} className="mt-4 text-sm text-muted-foreground underline">
               {t("retakeQuiz")}
             </button>
           </div>

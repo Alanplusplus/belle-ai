@@ -1,39 +1,23 @@
 import { SITE_URL } from "@/lib/constants";
 import { SEASON_PALETTES, SEASON_SLUGS } from "@/lib/color-palette-data";
-import { LOOKBOOK_DATA } from "@/lib/lookbook-data";
-import { getOriginalUrl } from "@/lib/lookbook-originals";
+import { buildLookbookFeedItems } from "@/lib/lookbook-feed";
 import { buildRssFeed, rssResponse, type RssFeedItem } from "@/lib/rss-shared";
+
+// 发色图按 publishAt 到点才进 feed（每天 1 张），必须在请求时计算，不能静态化
+export const dynamic = "force-dynamic";
 
 export async function GET() {
   const items: RssFeedItem[] = [];
 
   for (const slug of SEASON_SLUGS) {
     const season = SEASON_PALETTES[slug];
-    const lookbook = LOOKBOOK_DATA[slug];
-    if (!season || !lookbook) continue;
+    if (!season) continue;
 
-    const name = season.name.split(" (")[0];
     const parentCat =
       season.parentSeason.charAt(0).toUpperCase() +
       season.parentSeason.slice(1);
 
-    for (const section of lookbook.sections) {
-      for (const img of section.images) {
-        const originalUrl = getOriginalUrl(slug, img.key);
-        if (!originalUrl) continue;
-
-        items.push({
-          title: `${name} — ${section.title}: ${img.alt}`,
-          link: `${SITE_URL}/lookbook/${slug}`,
-          guid: `${SITE_URL}/lookbook/${slug}#${img.key}`,
-          description: `${section.description} — ${img.alt}`,
-          imageUrl: originalUrl,
-          imageType: "image/png",
-          pubDate: new Date().toUTCString(),
-          category: parentCat,
-        });
-      }
-    }
+    items.push(...buildLookbookFeedItems(slug, parentCat));
   }
 
   return rssResponse(
@@ -41,7 +25,7 @@ export async function GET() {
       title: "Belle AI — Seasonal Lookbooks",
       link: `${SITE_URL}/lookbook`,
       description:
-        "Visual inspiration boards for all 12 color seasons: outfits, makeup, hair, and accessories.",
+        "Visual inspiration boards for all 12 color seasons: hair color, makeup and outfit ideas.",
       selfHref: `${SITE_URL}/feed/lookbook.xml`,
       items,
     }),

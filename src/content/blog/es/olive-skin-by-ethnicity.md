@@ -1,7 +1,7 @@
 ---
 title: "Piel oliva según etnia: cómo se manifiesta el subtono oliva en distintas culturas"
-seoTitle: "Piel oliva en distintas etnias — asiática, mediterránea, latina y más"
-description: "El subtono oliva aparece en todas las etnias, pero se ve distinto según la profundidad del melanina. Descubre cómo se presenta en piel asiática, mediterránea, del sur de Asia y latina, y por qué las pruebas habituales fallan."
+seoTitle: "Piel oliva según etnia: asiática, mediterránea y latina"
+description: "El subtono oliva existe en todas las etnias, pero cambia según la profundidad de la piel. Así se ve en piel asiática, mediterránea y latina."
 date: "2026-09-18"
 tags: ["subtono oliva", "tono de piel", "análisis de color personal", "belleza", "diversidad"]
 image: "/images/blog/olive-skin-by-ethnicity.webp"

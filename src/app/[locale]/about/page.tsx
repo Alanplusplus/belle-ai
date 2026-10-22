@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import {
   buildAlternates,
   buildBreadcrumbJsonLd,
@@ -95,6 +96,19 @@ export default async function AboutPage({
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               {t("technologyContent")}
             </p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold">{t("pressTitle")}</h2>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              {t("pressContent")}
+            </p>
+            <Link
+              href="/press"
+              className="mt-3 inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/5 px-4 py-2.5 text-sm font-medium text-primary transition hover:bg-primary/10"
+            >
+              {t("pressCta")}
+            </Link>
           </div>
 
           <div>

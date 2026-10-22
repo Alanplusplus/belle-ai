@@ -1,7 +1,7 @@
 ---
 title: "Foundation-Guide für Olivhaut: den perfekten Ton finden"
-seoTitle: "Foundation für Olivhaut — warum Warm & Kalt beide falsch wirken (+ Fixes)"
-description: "Warm wird orange, kalt wird rosa? Erfahren Sie, warum Oliv-Untertöne gelb-grüne Basen brauchen, welche Marken Oliv-Töne führen und wie Sie nach Tiefe und Jahreszeit wählen."
+seoTitle: "Foundation für Olivhaut: Warum Warm und Kalt falsch wirken"
+description: "Warm wird orange, kalt wird rosa? Oliv-Untertöne brauchen gelb-grüne Töne. Welche Marken Olivtöne führen und wie du nach Tiefe und Saison wählst."
 date: "2026-09-18"
 tags: ["Oliv-Unterton", "Foundation", "Make-up", "Hautunterton", "Beauty-Tipps"]
 image: "/images/blog/olive-skin-foundation-guide.webp"

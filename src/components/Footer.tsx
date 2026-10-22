@@ -216,6 +216,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/press"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {ft("press")}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/privacy"
                   className="text-muted-foreground hover:text-foreground"
                 >

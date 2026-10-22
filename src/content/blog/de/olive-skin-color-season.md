@@ -1,7 +1,7 @@
 ---
 title: "Farbsaison bei Olivhaut: Welche Saison bist du?"
-seoTitle: "Olivhaut Farbsaison — Weicher Herbst, Tiefer Winter oder etwas anderes?"
-description: "Olivhaut passt selten per Quiz in eine Saison. Erfahre warum, vergleiche Weicher Herbst, Weicher Sommer, Tiefer Herbst und Tiefer Winter und folge einem Schritt-für-Schritt-Test zu Hause."
+seoTitle: "Farbsaison bei Olivhaut: Weicher Herbst oder Tiefer Winter?"
+description: "Olivhaut passt selten per Quiz in eine Saison. Vergleiche Weicher Herbst, Weicher Sommer, Tiefer Herbst und Tiefer Winter mit einem Schritt-für-Schritt-Test."
 date: "2026-09-18"
 tags: ["Oliv-Unterton", "Farbsaison", "Persönliche Farbanalyse", "Saisonale Farben", "Beauty"]
 image: "/images/blog/olive-skin-color-season.webp"

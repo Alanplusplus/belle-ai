@@ -1,6 +1,8 @@
-import { useTranslations } from "next-intl";
+import { hasLocale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { buildAlternates } from "@/lib/seo";
@@ -13,6 +15,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  // 带点号的未知路径（/foo.txt）会落到这里，先校验才能返回 404 而不是 500
+  if (!hasLocale(routing.locales, locale)) notFound();
   const messages = (await import(`@/messages/${locale}.json`)).default;
   const meta = messages.meta;
 
@@ -29,6 +33,7 @@ export default async function HomePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
   // 必须在页面里设置：layout 与 page 并行渲染，只靠 layout 的 setRequestLocale 会让
   // 同步组件里的 useTranslations 回退到 headers()，整页被降级成动态渲染。
   setRequestLocale(locale);

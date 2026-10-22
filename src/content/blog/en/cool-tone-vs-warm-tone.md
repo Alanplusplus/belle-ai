@@ -1,5 +1,6 @@
 ---
 title: "Cool Tone vs Warm Tone: 5 Easy Tests to Find Your Undertone (With Photos)"
+seoTitle: "Cool vs Warm Undertone: 5 Easy Tests (With Photos)"
 description: "5 easy at-home tests to find your undertone in under 2 minutes — with photo examples. Works for ALL skin tones. The vein test is 70% accurate."
 date: "2026-07-02"
 tags: ["undertone", "cool tone", "warm tone", "skin tone", "color analysis"]

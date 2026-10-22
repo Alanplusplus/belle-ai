@@ -1,7 +1,7 @@
 ---
 title: "Etnik kökene göre zeytin ten: Zeytin alt tonu kültürler arasında nasıl görünür?"
-seoTitle: "Etnik gruplara göre zeytin ten — Asya, Akdeniz, Latin kökenli ve daha fazlası"
-description: "Zeytin alt tonu her etnik grupta görülür ancak melanin derinliğine göre farklı görünür. Asya, Akdeniz, Güney Asya ve Latin kökenli tenlerde zeytin tenin nasıl ortaya çıktığını ve standart testlerin neden kaçırdığını öğrenin."
+seoTitle: "Etnik kökene göre zeytin ten: Asya, Akdeniz, Latin"
+description: "Zeytin alt tonu her etnik grupta görülür, ancak ten derinliğine göre farklı görünür. Nasıl göründüğünü ve testlerin neden kaçırdığını öğrenin."
 date: "2026-09-18"
 tags: ["zeytin alt ton", "ten rengi", "kişisel renk analizi", "güzellik", "çeşitlilik"]
 image: "/images/blog/olive-skin-by-ethnicity.webp"

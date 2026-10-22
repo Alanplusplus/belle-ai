@@ -1,6 +1,6 @@
 ---
 title: "Zeytin vs nötr alt ton: farkı nasıl anlarsınız"
-seoTitle: "Zeytin vs nötr alt ton — gerçekte hangisine sahip olduğunuzu öğrenin"
+seoTitle: "Zeytin vs nötr alt ton: hangisine sahipsiniz?"
 description: "Testler nötr diyor ama fondöten yine oturmuyor mu? Zeytin alt tonlu olabilirsiniz. Yeşil yansıma, fondöten davranışı ve kumaş deneme sonuçlarındaki 3 temel fark."
 date: "2026-09-18"
 tags: ["zeytin alt tonu", "nötr alt ton", "cilt alt tonu", "renk analizi", "güzellik"]

@@ -1,6 +1,7 @@
 ---
 title: "Kişisel Renk Analizi Rehberi: 12 Mevsimsel Tip Açıklanıyor (Ücretsiz Test Dahil)"
-description: "12 mevsim sistemine göre kişisel renk analizinin kapsamlı rehberi. Renk tipinizi, en iyi makyaj tonlarınızı ve gardırop renklerinizi öğrenin. Ücretsiz yapay zekâ renk testi dahil."
+seoTitle: "Kişisel Renk Analizi Rehberi: 12 Mevsim (Ücretsiz Test)"
+description: "12 mevsim sistemine göre kişisel renk analizi rehberi: renk tipiniz, makyaj tonlarınız ve gardırop renkleriniz. Ücretsiz yapay zekâ testi dahil."
 date: "2026-07-04"
 tags: ["kişisel renk analizi", "mevsimsel renk", "renk teorisi", "güzellik rehberi", "12 mevsim renk analizi"]
 image: "/images/blog/personal-color-analysis-guide.webp"

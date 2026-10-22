@@ -1,6 +1,7 @@
 ---
 title: "Guide de colorimétrie personnelle : les 12 types saisonniers expliqués (avec test gratuit)"
-description: "Le guide complet de la colorimétrie personnelle avec le système des 12 saisons. Découvrez votre type colorimétrique, vos meilleures teintes de maquillage et les couleurs idéales pour votre garde-robe. Inclut un test colorimétrique IA gratuit."
+seoTitle: "Colorimétrie personnelle : les 12 saisons (test gratuit)"
+description: "Le guide complet de la colorimétrie en 12 saisons : votre type, vos teintes de maquillage et les couleurs de votre garde-robe. Test IA gratuit inclus."
 date: "2026-07-04"
 tags: ["colorimétrie personnelle", "couleurs saisonnières", "théorie des couleurs", "guide beauté", "colorimétrie 12 saisons"]
 image: "/images/blog/personal-color-analysis-guide.webp"

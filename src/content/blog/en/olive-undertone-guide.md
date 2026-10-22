@@ -1,7 +1,7 @@
 ---
 title: "Olive Undertone: The Most Misunderstood Skin Tone Explained"
 seoTitle: "Do You Have Olive Undertones? 5 Signs You're Missing"
-description: "Neither gold nor silver looks right? Foundations pull orange or pink? You might have olive undertones — the most misidentified skin tone. 5 clear signs + free AI test."
+description: "Neither gold nor silver looks right? Foundation turns orange or pink? You may have olive undertones. See 5 clear signs and take a free AI test."
 date: "2026-07-14"
 tags: ["olive undertone", "skin undertone", "personal color analysis", "beauty", "makeup"]
 image: "/images/blog/olive-undertone-guide.webp"

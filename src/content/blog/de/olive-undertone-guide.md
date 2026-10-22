@@ -1,7 +1,7 @@
 ---
 title: "Oliv-Unterton: Der am häufigsten missverstandene Hautton einfach erklärt"
 seoTitle: "Oliv-Unterton: 5 Anzeichen bei olivfarbener Haut (+ Gratis-Test)"
-description: "Weder Gold noch Silber steht dir? Make-up wirkt orange oder rosa? So erkennst du olivfarbene Haut und den Oliv-Unterton – 5 Anzeichen, beste Farben und ein kostenloser KI-Test in 60 Sekunden."
+description: "Weder Gold noch Silber steht dir? Make-up wirkt orange oder rosa? So erkennst du den Oliv-Unterton: 5 Anzeichen und ein kostenloser KI-Test."
 date: "2026-09-18"
 tags: ["Oliv-Unterton", "olivfarbene Haut", "Hautunterton", "Farbanalyse", "Make-up"]
 image: "/images/blog/olive-undertone-guide.webp"

@@ -1,7 +1,7 @@
 ---
 title: "Peau olive selon l'origine : comment le sous-ton olive se manifeste à travers les cultures"
-seoTitle: "Peau olive selon les origines — asiatique, méditerranéenne, latino-américaine et plus"
-description: "Le sous-ton olive existe dans toutes les origines, mais se voit différemment selon la profondeur de mélanine. Découvrez la peau olive en Asie, en Méditerranée, en Asie du Sud et chez les Latino-américains — et pourquoi les tests classiques la ratent."
+seoTitle: "Peau olive selon les origines : asiatique, méditerranéenne"
+description: "Le sous-ton olive existe dans toutes les origines et varie selon la profondeur de peau. À quoi il ressemble, et pourquoi les tests classiques le ratent."
 date: "2026-09-18"
 tags: ["sous-ton olive", "teint", "analyse colorimétrique", "beauté", "diversité"]
 image: "/images/blog/olive-skin-by-ethnicity.webp"
