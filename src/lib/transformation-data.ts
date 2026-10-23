@@ -348,6 +348,18 @@ export const TRANSFORMATION_TYPES: TransformationType[] = [
         originalAfter: "https://pic.chibistyle.app/image/upload/039ea6a4-b4bc-4a25-999a-c9ef76a549e2.png",
         originalReport: "https://pic-cdn.chibistyle.app/image/advanced/9d477df32dee2a505efc947ca70242dd_0.png",
       },
+      {
+        label: "Comparing Herself to Inspo Photos → Full Glow-Up: Soft Autumn Hair, Makeup and Wardrobe",
+        description: "She stood in front of her wardrobe mirror comparing herself with a styled inspiration photo, unsure where to start. One AI glow-up report gave her a Soft Autumn palette, flattering hair, makeup and outfit direction.",
+        before: "/images/transformations/before-glow-up-2.webp",
+        after: "/images/transformations/after-glow-up-2.webp",
+        report: "/images/transformations/report-glow-up-2.webp",
+        details: "The report combined her warm-muted Soft Autumn season, oval face proportions, mocha long layers and chestnut soft waves, warm nude to terracotta rose lips, warm gold jewelry and a 10-color capsule wardrobe, so every piece of the new look works together.",
+        date: "2026-10-23",
+        originalBefore: "https://pic.chibistyle.app/image/upload/677a0c70-223d-480e-b853-2f89209a462c.png",
+        originalAfter: "https://pic.chibistyle.app/image/upload/ba001566-bd07-42a6-b272-286865cd5f95.png",
+        originalReport: "https://pic-cdn.chibistyle.app/image/advanced/741069f8961f918d683bb7cdaafbf372_0.png",
+      },
     ],
   },
   {
