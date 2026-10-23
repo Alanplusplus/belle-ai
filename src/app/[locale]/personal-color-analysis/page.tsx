@@ -60,6 +60,7 @@ export default async function PersonalColorAnalysisPage({
   const bt = await getTranslations({ locale, namespace: "blogTitles" });
   const rt = await getTranslations({ locale, namespace: "seasonPalette" });
   const ph = await getTranslations({ locale, namespace: "paletteHub" });
+  const sd = await getTranslations({ locale, namespace: "sd" });
 
   const items = [t("item1"), t("item2"), t("item3"), t("item4"), t("item5"), t("item6")];
 
@@ -182,12 +183,12 @@ export default async function PersonalColorAnalysisPage({
                       >
                         <PaletteCardImage
                           slug={season.slug}
-                          alt={ph("cardAlt", { season: season.name.split(" (")[0] })}
+                          alt={ph("cardAlt", { season: sd(`${season.slug}.name`) })}
                           sizes="40px"
                           className="w-10 shrink-0 shadow-sm"
                           rounded="rounded"
                         />
-                        <span className="text-sm font-medium">{season.name}</span>
+                        <span className="text-sm font-medium">{sd(`${season.slug}.name`)}</span>
                         <span className="ml-auto text-xs text-muted-foreground">→</span>
                       </Link>
                     ))}

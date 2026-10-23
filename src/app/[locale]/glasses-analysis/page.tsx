@@ -50,6 +50,7 @@ export default async function GlassesAnalysisPage({
   const t = await getTranslations({ locale, namespace: "glassesPage" });
   const ft = await getTranslations({ locale, namespace: "features" });
   const tp = await getTranslations({ locale, namespace: "tryPage" });
+  const nt = await getTranslations({ locale, namespace: "nav" });
 
   const faqCount = 4;
   const faqs = Array.from({ length: faqCount }, (_, i) => ({
@@ -154,33 +155,33 @@ export default async function GlassesAnalysisPage({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 pb-16">
-        <h2 className="mb-6 text-2xl font-bold">Related Tools</h2>
+        <h2 className="mb-6 text-2xl font-bold">{ft("relatedTools")}</h2>
         <div className="grid gap-4 sm:grid-cols-3">
           <Link
             href="/face-shape-analysis"
             className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
           >
-            <span className="font-medium text-gray-900">Face Shape Analysis</span>
+            <span className="font-medium text-gray-900">{nt("faceAnalysis")}</span>
             <span className="mt-1 block text-sm text-gray-500">
-              Know your face shape first
+              {ft("relFaceShapeForGlasses")}
             </span>
           </Link>
           <Link
             href="/tools/face-shape-quiz"
             className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
           >
-            <span className="font-medium text-gray-900">Face Shape Quiz</span>
+            <span className="font-medium text-gray-900">{nt("faceQuiz")}</span>
             <span className="mt-1 block text-sm text-gray-500">
-              Quick face shape test
+              {ft("relQuizForGlasses")}
             </span>
           </Link>
           <Link
             href="/personal-color-analysis"
             className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
           >
-            <span className="font-medium text-gray-900">Color Analysis</span>
+            <span className="font-medium text-gray-900">{nt("colorAnalysis")}</span>
             <span className="mt-1 block text-sm text-gray-500">
-              Find your best colors for frame color
+              {ft("relColorForGlasses")}
             </span>
           </Link>
         </div>

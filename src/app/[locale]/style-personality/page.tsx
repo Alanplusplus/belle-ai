@@ -101,19 +101,19 @@ export default async function StylePersonalityPage({
           <h2 className="text-center text-2xl font-bold">{t("archetypes")}</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {PERSONALITIES.map((p) => (
-              <div key={p.name} className="group overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
+              <div key={p.key} className="group overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
                 <div className="relative aspect-square w-full overflow-hidden">
                   <Image
                     src={p.image}
-                    alt={p.name}
+                    alt={t(`style${p.key}`)}
                     fill
                     className="object-cover transition duration-300 group-hover:scale-105"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 25vw"
                   />
                 </div>
                 <div className="p-3 text-center">
-                  <p className="font-medium">{p.name}</p>
-                  <p className="mt-0.5 text-xs text-muted-foreground">{p.essence}</p>
+                  <p className="font-medium">{t(`style${p.key}`)}</p>
+                  <p className="mt-0.5 text-xs text-muted-foreground">{t(`style${p.key}Essence`)}</p>
                 </div>
               </div>
             ))}
@@ -162,15 +162,16 @@ export default async function StylePersonalityPage({
   );
 }
 
+// key 对应 messages 里 stylePage.style<Key> / style<Key>Essence
 const PERSONALITIES = [
-  { name: "Romantic", image: "/images/dim_style_romantic.webp", essence: "Soft, feminine, curves" },
-  { name: "Dramatic", image: "/images/dim_style_dramatic.webp", essence: "Bold, angular, striking" },
-  { name: "Classic", image: "/images/dim_style_classic.webp", essence: "Timeless, balanced, refined" },
-  { name: "Natural", image: "/images/dim_style_natural.webp", essence: "Relaxed, earthy, effortless" },
-  { name: "Gamine", image: "/images/dim_style_gamine.webp", essence: "Playful, youthful, petite" },
-  { name: "Ethereal", image: "/images/dim_style_ethereal.webp", essence: "Delicate, luminous, airy" },
-  { name: "Creative", image: "/images/dim_style_creative.webp", essence: "Eclectic, artistic, bold" },
-  { name: "Sensual", image: "/images/dim_style_sensual.webp", essence: "Confident, magnetic, chic" },
-];
+  { key: "Romantic", image: "/images/dim_style_romantic.webp" },
+  { key: "Dramatic", image: "/images/dim_style_dramatic.webp" },
+  { key: "Classic", image: "/images/dim_style_classic.webp" },
+  { key: "Natural", image: "/images/dim_style_natural.webp" },
+  { key: "Gamine", image: "/images/dim_style_gamine.webp" },
+  { key: "Ethereal", image: "/images/dim_style_ethereal.webp" },
+  { key: "Creative", image: "/images/dim_style_creative.webp" },
+  { key: "Sensual", image: "/images/dim_style_sensual.webp" },
+] as const;
 
 const INCLUDES = ["inc1", "inc2", "inc3", "inc4", "inc5", "inc6"];

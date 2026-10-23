@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { FeatureHero } from "@/components/FeatureHero";
 import { SITE_URL } from "@/lib/constants";
 import {
   buildAlternates,
@@ -72,9 +73,11 @@ export default async function ColorAnalysisPillarPage({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "colorGuide" });
+  const tp = await getTranslations({ locale, namespace: "tryPage" });
   const sd = await getTranslations({ locale, namespace: "sd" });
   const adT = await getTranslations({ locale, namespace: "ad" });
   const ph = await getTranslations({ locale, namespace: "paletteHub" });
+  const fc = await getTranslations({ locale, namespace: "face" });
 
   const faqs = Array.from({ length: 10 }, (_, i) => ({
     q: t(`faq${i + 1}Q`),
@@ -187,28 +190,32 @@ export default async function ColorAnalysisPillarPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
 
-      {/* Hero */}
-      <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <h1 className="font-serif text-4xl font-bold leading-tight sm:text-5xl">{t("heroTitle")}</h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">{t("heroDesc")}</p>
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+      {/* Hero：左文右图（真实示例报告），按钮和以前一致 */}
+      <FeatureHero
+        title={t("heroTitle")}
+        description={t("heroDesc")}
+        image="/images/examples/report_color_analysis.webp"
+        sampleLabel={tp("demoBadge")}
+        actions={
+          <>
             <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
               {t("tryFreeAI")}
             </Link>
             <Link href="/tools/color-quiz" className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted">
               {t("takeFreeQuiz")}
             </Link>
-          </div>
+          </>
+        }
+      />
 
-          {/* 一句话定义：搜索「color analysis」的人首屏就能拿到答案，也是精选摘要的候选段落 */}
-          <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-primary/20 bg-card/80 p-5 text-left shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-widest text-primary">{t("quickAnswerLabel")}</p>
-            <p className="mt-2 leading-relaxed">{t("quickAnswer")}</p>
-            <p className="mt-3 text-xs text-muted-foreground">
-              {t("updatedLabel")} <time dateTime={LAST_UPDATED}>{LAST_UPDATED}</time>
-            </p>
-          </div>
+      {/* 一句话定义：搜索「color analysis」的人首屏就能拿到答案，也是精选摘要的候选段落 */}
+      <section className="px-4 pt-8">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-primary/20 bg-card/80 p-5 text-left shadow-sm">
+          <p className="text-xs font-semibold uppercase tracking-widest text-primary">{t("quickAnswerLabel")}</p>
+          <p className="mt-2 leading-relaxed">{t("quickAnswer")}</p>
+          <p className="mt-3 text-xs text-muted-foreground">
+            {t("updatedLabel")} <time dateTime={LAST_UPDATED}>{LAST_UPDATED}</time>
+          </p>
         </div>
       </section>
 
@@ -474,7 +481,7 @@ export default async function ColorAnalysisPillarPage({
                     href={`/face-shape/${slug}`}
                     className="rounded-lg border border-border px-4 py-3 text-sm transition hover:border-primary/40 hover:bg-muted"
                   >
-                    {FACE_SHAPES[slug].name}
+                    {fc.has(`shape${FACE_SHAPES[slug].name}`) ? fc(`shape${FACE_SHAPES[slug].name}`) : FACE_SHAPES[slug].name}
                   </Link>
                 ))}
               </div>
@@ -501,13 +508,16 @@ export default async function ColorAnalysisPillarPage({
               <p className="mt-2 text-sm text-muted-foreground">{t("seasonComparisonsDesc")}</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {COMPARISON_SLUGS.slice(0, 8).map((slug) => {
+                  // 季型名取当前语言的 sd.<slug>.name,查不到才退回英文标题
                   const label = slug
                     .split("-vs-")
                     .map((s) =>
-                      s
-                        .split("-")
-                        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-                        .join(" ")
+                      sd.has(`${s}.name`)
+                        ? sd(`${s}.name`)
+                        : s
+                            .split("-")
+                            .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+                            .join(" ")
                     )
                     .join(" vs ");
                   return (

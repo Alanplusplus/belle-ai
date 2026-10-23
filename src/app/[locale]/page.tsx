@@ -329,8 +329,8 @@ function HomeContent() {
           <SectionHeading title={t("moreTitle")} subtitle={t("moreSubtitle")} />
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {MORE_FEATURES.map((f) => (
-              <Link key={f.href} href={f.href} className="group">
-                <div className="overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
+              <Link key={f.href} href={f.href} className="group block h-full">
+                <div className="h-full overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
                   <div className="relative aspect-[4/3]">
                     <Image
                       src={f.image}
@@ -339,15 +339,16 @@ function HomeContent() {
                       className="object-cover transition duration-300 group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />
+                    {/* 标签浮在图片右上角,不占文字区高度,保证所有卡片等高 */}
+                    {f.premium && (
+                      <span className="absolute right-2 top-2 rounded-full bg-amber-100/95 px-2.5 py-0.5 text-xs font-semibold text-amber-800 shadow-sm backdrop-blur-sm dark:bg-amber-900/70 dark:text-amber-200">
+                        {t("premiumBadge")}
+                      </span>
+                    )}
                   </div>
                   <div className="p-4">
                     <h3 className="text-sm font-semibold">{t(f.titleKey)}</h3>
                     <p className="mt-1 text-xs leading-relaxed text-muted-foreground line-clamp-2">{t(f.descKey)}</p>
-                    {f.premium && (
-                      <span className="mt-2 inline-block rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
-                        {t("premiumBadge")}
-                      </span>
-                    )}
                   </div>
                 </div>
               </Link>

@@ -50,6 +50,7 @@ export default async function FaceShapeAnalysisPage({
   const t = await getTranslations({ locale, namespace: "face" });
   const ft = await getTranslations({ locale, namespace: "features" });
   const tp = await getTranslations({ locale, namespace: "tryPage" });
+  const nt = await getTranslations({ locale, namespace: "nav" });
 
   const items = [t("item1"), t("item2"), t("item3"), t("item4"), t("item5"), t("item6")];
 
@@ -138,34 +139,45 @@ export default async function FaceShapeAnalysisPage({
       <section className="bg-muted/30 py-16">
         <div className="mx-auto max-w-4xl px-4">
           <h2 className="mb-4 text-center text-2xl font-bold">
-            7 Face Shapes
+            {t("shapesTitle")}
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-center text-muted-foreground">
             {t("description")}
           </p>
-          <div className="mb-8 overflow-hidden rounded-2xl border border-border shadow-sm">
+          {/* 插画本身不带文字,七个名称用当前语言渲染在每张脸下方,避免图里烤死英文 */}
+          <div className="mb-8 overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
             <Image
-              src="/images/face_shapes_all.webp"
-              alt="7 face shapes: Oval, Round, Square, Heart, Oblong, Diamond, Triangle"
-              width={1536}
-              height={864}
+              src="/images/face_shapes_nolabel.webp"
+              alt={t("shapesAlt")}
+              width={1672}
+              height={520}
               className="w-full"
               sizes="(max-width: 768px) 100vw, 800px"
               priority
             />
+            <div className="grid grid-cols-7 px-1 pb-4 pt-1 sm:pb-5">
+              {FACE_SHAPES.map((shape) => (
+                <p
+                  key={shape.key}
+                  className="px-0.5 text-center font-serif text-[10px] leading-tight text-foreground/80 sm:text-sm"
+                >
+                  {t(`shape${shape.key}`)}
+                </p>
+              ))}
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {FACE_SHAPES.map((shape) => (
               <div
-                key={shape.name}
+                key={shape.key}
                 className="flex items-start gap-3 rounded-xl border border-border bg-card p-4 transition hover:border-primary/40 hover:shadow-md"
               >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
                   {shape.icon}
                 </div>
                 <div>
-                  <p className="text-sm font-semibold">{shape.name}</p>
-                  <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">{shape.desc}</p>
+                  <p className="text-sm font-semibold">{t(`shape${shape.key}`)}</p>
+                  <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">{t(`shape${shape.key}Desc`)}</p>
                 </div>
               </div>
             ))}
@@ -196,33 +208,33 @@ export default async function FaceShapeAnalysisPage({
       </section>
 
       <section className="mx-auto max-w-4xl px-4 pb-16">
-        <h2 className="mb-6 text-2xl font-bold">Related Tools</h2>
+        <h2 className="mb-6 text-2xl font-bold">{ft("relatedTools")}</h2>
         <div className="grid gap-4 sm:grid-cols-3">
           <Link
             href="/glasses-analysis"
             className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
           >
-            <span className="font-medium text-gray-900">Glasses Analysis</span>
+            <span className="font-medium text-gray-900">{nt("glassesMatch")}</span>
             <span className="mt-1 block text-sm text-gray-500">
-              Find frames for your face shape
+              {ft("relGlassesForFace")}
             </span>
           </Link>
           <Link
             href="/tools/face-shape-quiz"
             className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
           >
-            <span className="font-medium text-gray-900">Face Shape Quiz</span>
+            <span className="font-medium text-gray-900">{nt("faceQuiz")}</span>
             <span className="mt-1 block text-sm text-gray-500">
-              Determine your shape in 1 minute
+              {ft("relQuizForFace")}
             </span>
           </Link>
           <Link
             href="/hair-color-analysis"
             className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
           >
-            <span className="font-medium text-gray-900">Hair Color Analysis</span>
+            <span className="font-medium text-gray-900">{nt("hairPreview")}</span>
             <span className="mt-1 block text-sm text-gray-500">
-              Best hair colors for your features
+              {ft("relHairForFace")}
             </span>
           </Link>
         </div>
@@ -294,12 +306,13 @@ function TriangleIcon() {
   );
 }
 
+// key 对应 messages 里 face.shape<Key> / face.shape<Key>Desc,顺序与插图中七张脸一致
 const FACE_SHAPES = [
-  { name: "Oval", icon: <OvalIcon />, desc: "Balanced proportions, gently rounded — the most versatile shape" },
-  { name: "Round", icon: <RoundIcon />, desc: "Equal width and length with soft angles and full cheeks" },
-  { name: "Square", icon: <SquareIcon />, desc: "Strong jawline with angular, well-defined features" },
-  { name: "Heart", icon: <HeartIcon />, desc: "Wider forehead tapering to a narrower, pointed chin" },
-  { name: "Oblong", icon: <OblongIcon />, desc: "Noticeably longer than wide with even proportions" },
-  { name: "Diamond", icon: <DiamondIcon />, desc: "Wide cheekbones with narrow forehead and jawline" },
-  { name: "Triangle", icon: <TriangleIcon />, desc: "Wider jawline that tapers to a narrower forehead" },
-];
+  { key: "Oval", icon: <OvalIcon /> },
+  { key: "Round", icon: <RoundIcon /> },
+  { key: "Square", icon: <SquareIcon /> },
+  { key: "Heart", icon: <HeartIcon /> },
+  { key: "Oblong", icon: <OblongIcon /> },
+  { key: "Diamond", icon: <DiamondIcon /> },
+  { key: "Triangle", icon: <TriangleIcon /> },
+] as const;
