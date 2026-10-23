@@ -15,6 +15,7 @@ import { LOCALE_NAMES, SITE_URL } from "@/lib/constants";
 
 const APP_STORE_URL = "https://apps.apple.com/app/id6765602370";
 const CONTACT_EMAIL = "support@aicoloranalysis.io";
+const LANDING_PAGE_URL = "https://color-analysis-ai.lovable.app/";
 
 /** 可下载素材：文件都在 public/ 下，下载链接直接指向静态资源 */
 const ASSETS = [
@@ -77,6 +78,19 @@ export default async function PressPage({
       value: (
         <a href={SITE_URL} className="text-primary underline-offset-4 hover:underline">
           {SITE_URL.replace("https://", "")}
+        </a>
+      ),
+    },
+    {
+      label: t("factLandingPage"),
+      value: (
+        <a
+          href={LANDING_PAGE_URL}
+          target="_blank"
+          rel="noopener"
+          className="text-primary underline-offset-4 hover:underline"
+        >
+          {LANDING_PAGE_URL.replace("https://", "").replace(/\/$/, "")}
         </a>
       ),
     },
