@@ -12,10 +12,9 @@ import {
   TWITTER_IMAGES,
 } from "@/lib/seo";
 import { LOCALE_NAMES, SITE_URL } from "@/lib/constants";
+import { EXTERNAL_PAGES } from "@/lib/external-pages";
 
-const APP_STORE_URL = "https://apps.apple.com/app/id6765602370";
 const CONTACT_EMAIL = "support@aicoloranalysis.io";
-const LANDING_PAGE_URL = "https://color-analysis-ai.lovable.app/";
 
 /** 可下载素材：文件都在 public/ 下，下载链接直接指向静态资源 */
 const ASSETS = [
@@ -78,19 +77,6 @@ export default async function PressPage({
       value: (
         <a href={SITE_URL} className="text-primary underline-offset-4 hover:underline">
           {SITE_URL.replace("https://", "")}
-        </a>
-      ),
-    },
-    {
-      label: t("factLandingPage"),
-      value: (
-        <a
-          href={LANDING_PAGE_URL}
-          target="_blank"
-          rel="noopener"
-          className="text-primary underline-offset-4 hover:underline"
-        >
-          {LANDING_PAGE_URL.replace("https://", "").replace(/\/$/, "")}
         </a>
       ),
     },
@@ -174,17 +160,34 @@ export default async function PressPage({
               </ul>
             </div>
 
+            {EXTERNAL_PAGES.length > 0 && (
+              <div>
+                <h2 className="text-lg font-semibold">{t("officialPagesTitle")}</h2>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t("officialPagesIntro")}</p>
+                <ul className="mt-4 divide-y divide-border rounded-xl border border-border text-sm">
+                  {EXTERNAL_PAGES.map((page) => (
+                    <li key={page.id} className="px-4 py-3">
+                      <a
+                        href={page.url}
+                        target="_blank"
+                        rel="noopener"
+                        className="font-medium text-primary underline-offset-4 hover:underline"
+                      >
+                        {page.name}
+                      </a>
+                      <span className="ml-2 rounded border border-border px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
+                        {page.lang}
+                      </span>
+                      <p className="mt-1 text-muted-foreground">{page.description}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <div>
               <h2 className="text-lg font-semibold">{t("usageTitle")}</h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t("usage")}</p>
-              <a
-                href={APP_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/5 px-4 py-2.5 text-sm font-medium text-primary transition hover:bg-primary/10"
-              >
-                {t("appStoreCta")}
-              </a>
             </div>
 
             <div>

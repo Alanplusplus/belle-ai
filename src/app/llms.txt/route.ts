@@ -29,7 +29,7 @@ export function GET() {
   lines.push("# Belle AI");
   lines.push("");
   lines.push(
-    "> Belle AI (aicoloranalysis.io) is an AI personal color analysis service. From one selfie it estimates your skin undertone and your 12-season color palette, and also offers makeup, face shape, hair color, outfit color and glasses recommendations. It is free to try in the browser, also available as an iOS app, and the site is published in 9 languages.",
+    "> Belle AI (aicoloranalysis.io) is an AI personal color analysis service. From one selfie it estimates your skin undertone and your 12-season color palette, and also offers makeup, face shape, hair color, outfit color and glasses recommendations. It is free to try in the browser, and the site is published in 9 languages.",
   );
   lines.push("");
   lines.push(
