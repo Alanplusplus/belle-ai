@@ -90,7 +90,7 @@ function TransformationsIndexContent() {
                   <div className="relative w-1/3 overflow-hidden bg-muted">
                     <Image
                       src={type.examples[0].before}
-                      alt={`${type.name} before`}
+                      alt={`${type.name} · ${t("before")}`}
                       fill
                       className="object-cover"
                       sizes="(max-width: 640px) 33vw, 17vw"
@@ -102,7 +102,7 @@ function TransformationsIndexContent() {
                   <div className="relative w-1/3 overflow-hidden bg-muted">
                     <Image
                       src={type.examples[0].after}
-                      alt={`${type.name} after`}
+                      alt={`${type.name} · ${t("after")}`}
                       fill
                       className="object-cover"
                       sizes="(max-width: 640px) 33vw, 17vw"
@@ -114,7 +114,7 @@ function TransformationsIndexContent() {
                   <div className="relative w-1/3 overflow-hidden bg-muted">
                     <Image
                       src={type.examples[0].report}
-                      alt={`${type.name} AI report`}
+                      alt={`${type.name} · ${t("report")}`}
                       fill
                       className="object-cover"
                       sizes="(max-width: 640px) 33vw, 17vw"

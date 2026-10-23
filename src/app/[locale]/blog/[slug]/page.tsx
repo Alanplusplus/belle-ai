@@ -182,6 +182,7 @@ function BlogPostContent({
   const target = { href: toolHref(toolType), postSlug: slug, toolType };
   const toolLabel = tt(`type_${toolType}`);
   const complementaryTools = getComplementaryTools(toolType);
+  const headings = extractH2Headings(post.content);
 
   return (
     <article className="py-10 pb-28 sm:py-16 sm:pb-16">
@@ -245,6 +246,37 @@ function BlogPostContent({
               sizes="(max-width: 768px) 100vw, 768px"
             />
           </div>
+        )}
+
+        {/* 长文目录：5 个以上二级标题才出现；用原生 <details>，手机上默认收起，不占首屏 */}
+        {headings.length >= 5 && (
+          <details className="group mt-8 rounded-2xl border border-gold/40 bg-white/70 px-5 py-3 open:pb-4">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold marker:content-none [&::-webkit-details-marker]:hidden">
+              <span>
+                {t("toc")} <span className="font-normal text-muted-foreground">· {headings.length}</span>
+              </span>
+              <svg
+                className="h-4 w-4 shrink-0 text-gold-deep transition-transform group-open:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+                aria-hidden="true"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <ol className="mt-3 space-y-2 border-t border-gold/30 pt-3 text-sm">
+              {headings.map((text, i) => (
+                <li key={i} className="flex gap-2">
+                  <span className="w-5 shrink-0 text-right tabular-nums text-gold-deep">{i + 1}.</span>
+                  <a href={`#${headingId(i)}`} className="text-foreground/85 hover:text-primary hover:underline">
+                    {text}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </details>
         )}
 
         <div className="prose prose-neutral mt-10 max-w-none break-words prose-headings:font-bold prose-a:text-primary prose-img:h-auto prose-img:max-w-full">
@@ -332,11 +364,40 @@ function localizeHref(href: string | undefined, locale: string, toolType: string
   return match ? `${match[1]}/try?type=${toolType}` : path;
 }
 
+/** 目录和正文标题按「第几个二级标题」对号入座，比按标题文字生成锚点稳（各语种、带符号的标题都不会对不上） */
+function headingId(index: number): string {
+  return `section-${index + 1}`;
+}
+
+/** 取正文里的二级标题文字（跳过代码块），去掉行内的 markdown 标记 */
+function extractH2Headings(content: string): string[] {
+  const result: string[] = [];
+  let inFence = false;
+  for (const line of content.split("\n")) {
+    if (/^\s*(```|~~~)/.test(line)) {
+      inFence = !inFence;
+      continue;
+    }
+    if (inFence) continue;
+    const match = line.match(/^##\s+(.+?)\s*#*\s*$/);
+    if (!match) continue;
+    result.push(
+      match[1]
+        .replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1")
+        .replace(/[*_`~]/g, "")
+        .trim(),
+    );
+  }
+  return result;
+}
+
 function MarkdownContent({ content, toolType, locale }: { content: string; toolType: string; locale: string }) {
+  let h2Count = 0;
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
       components={{
+        h2: ({ children }) => <h2 id={headingId(h2Count++)} className="scroll-mt-24">{children}</h2>,
         img: ({ src, alt }) => (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={src} alt={alt || ""} className="h-auto max-w-full rounded-lg" loading="lazy" decoding="async" />

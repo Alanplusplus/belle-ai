@@ -51,6 +51,7 @@ export default async function UndertoneTestPage({
   const nav = await getTranslations({ locale, namespace: "nav" });
   const cq = await getTranslations({ locale, namespace: "colorQuiz" });
   const quiz = await getTranslations({ locale, namespace: "quiz" });
+  const embed = await getTranslations({ locale, namespace: "embed" });
 
   const faqs = [
     { q: t("faq1Q"), a: t("faq1A") },
@@ -90,6 +91,7 @@ export default async function UndertoneTestPage({
     { href: "/color-analysis", label: nav("colorAnalysisGuide") },
     { href: "/personal-color-analysis", label: nav("colorAnalysis") },
     { href: "/try?type=color_analysis", label: nav("tryNow") },
+    { href: "/tools/embed", label: embed("linkLabel") },
   ];
 
   return (

@@ -1,9 +1,13 @@
+import { SectionNav } from "@/components/SectionNav";
 import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, canonicalUrl, ogLocale } from "@/lib/seo";
+import { PaletteCardDownload, PaletteCardImage, PaletteCardLarge } from "@/components/PaletteCardImage";
+import { ColorTextList } from "@/components/ColorTextList";
+import { celebrityCardKey, paletteImageJsonLd } from "@/lib/palette-card";
 import {
   CELEBRITY_DATA,
   CELEBRITY_SLUGS,
@@ -77,11 +81,22 @@ export default async function CelebrityPage({
     { name: data.name, path: `/celebrity/${name}` },
   ]);
 
+  // 页面上真实嵌入了这位明星的色板卡片：写明授权和署名，授权说明在 /color-palette#license
+  const imageJsonLd = paletteImageJsonLd({
+    slug: celebrityCardKey(name),
+    name: data.name,
+    licenseUrl: `${canonicalUrl(locale, "/color-palette")}#license`,
+  });
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageJsonLd) }}
       />
       <CelebrityContent slug={name} />
     </>
@@ -97,6 +112,8 @@ function CelebrityContent({ slug }: { slug: string }) {
   const seasonData = SEASON_PALETTES[data.season];
   const sd = useTranslations(`sd.${data.season}`);
   const sdAll = useTranslations("sd");
+  const ph = useTranslations("paletteHub");
+  const st = useTranslations("seasonPalette");
   const seasonName = sd.has("name") ? sd("name") : seasonData.name;
 
   const hasDeepContent = !!data.detailedAnalysis;
@@ -126,7 +143,7 @@ function CelebrityContent({ slug }: { slug: string }) {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
+      <section className="hero-soft py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <p className="text-sm font-medium text-primary">
             <Link href="/color-analysis" className="hover:underline">
@@ -142,26 +159,25 @@ function CelebrityContent({ slug }: { slug: string }) {
         </div>
       </section>
 
-      <div className="mx-auto max-w-4xl px-4">
+      <SectionNav />
+
+      <div className="content-page mx-auto max-w-4xl px-4">
         {/* Color Season */}
         <section className="py-12">
           <h2 className="text-2xl font-bold">
             {t("seasonLabel")} — {data.name}
           </h2>
-          <div className="mt-6 rounded-xl border border-border bg-card p-6">
+          <div className="mt-6 card-soft p-6">
             <Link
               href={`/color-palette/${data.season}`}
               className="group inline-flex items-center gap-3"
             >
-              <div className="flex gap-1.5">
-                {seasonData.bestColors.slice(0, 5).map((c) => (
-                  <div
-                    key={c.hex}
-                    className="h-8 w-8 rounded-full border border-border/50"
-                    style={{ backgroundColor: c.hex }}
-                  />
-                ))}
-              </div>
+              <PaletteCardImage
+                slug={data.season}
+                alt={ph("cardAlt", { season: seasonName })}
+                sizes="72px"
+                className="w-[72px] shrink-0 shadow-sm"
+              />
               <div>
                 <p className="font-semibold group-hover:text-primary">
                   {seasonName}
@@ -182,17 +198,19 @@ function CelebrityContent({ slug }: { slug: string }) {
           <p className="mt-2 text-sm text-muted-foreground">
             {t("bestColorsDesc")}
           </p>
-          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {data.bestColors.map((c) => (
-              <div key={c.hex} className="text-center">
-                <div
-                  className="mx-auto h-20 w-20 rounded-xl border border-border/50 shadow-sm"
-                  style={{ backgroundColor: c.hex }}
-                />
-                <p className="mt-2 text-sm font-medium">{c.name}</p>
-                <p className="text-xs text-muted-foreground">{c.hex}</p>
-              </div>
-            ))}
+          <div className="mt-8 grid items-start gap-8 md:grid-cols-[minmax(0,26rem)_1fr]">
+            <PaletteCardLarge
+              slug={celebrityCardKey(slug)}
+              alt={ph("cardAltCelebrity", { name: data.name })}
+            />
+            <div className="space-y-8">
+              <ColorTextList colors={data.bestColors} className="mt-0" />
+              <PaletteCardDownload
+                slug={celebrityCardKey(slug)}
+                label={st("downloadPalette")}
+                termsLabel={st("downloadTerms")}
+              />
+            </div>
           </div>
         </section>
 
@@ -250,7 +268,7 @@ function CelebrityContent({ slug }: { slug: string }) {
               {data.iconicLooks.map((look) => (
                 <div
                   key={look.event}
-                  className="rounded-xl border border-border bg-card p-6"
+                  className="card-soft p-6"
                 >
                   <h3 className="font-semibold">{look.event}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">
@@ -283,7 +301,7 @@ function CelebrityContent({ slug }: { slug: string }) {
               {data.colorMistakes.map((mistake) => (
                 <div
                   key={mistake.description}
-                  className="rounded-xl border border-border bg-card p-6"
+                  className="card-soft p-6"
                 >
                   <p className="text-sm text-muted-foreground">
                     {mistake.description}
@@ -405,17 +423,14 @@ function CelebrityContent({ slug }: { slug: string }) {
                 <Link
                   key={s}
                   href={`/celebrity/${s}`}
-                  className="group rounded-xl border border-border bg-card p-5 transition hover:border-primary/40 hover:shadow-md"
+                  className="group card-soft p-5 transition hover:border-primary/40 hover:shadow-md"
                 >
-                  <div className="flex gap-1.5">
-                    {celeb.bestColors.slice(0, 4).map((c) => (
-                      <div
-                        key={c.hex}
-                        className="h-5 w-5 rounded-full border border-border/50"
-                        style={{ backgroundColor: c.hex }}
-                      />
-                    ))}
-                  </div>
+                  <PaletteCardImage
+                    slug={celebrityCardKey(s)}
+                    alt={ph("cardAltCelebrity", { name: celeb.name })}
+                    sizes="64px"
+                    className="w-16 shadow-sm"
+                  />
                   <h3 className="mt-3 font-semibold group-hover:text-primary">
                     {celeb.name}
                   </h3>

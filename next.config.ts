@@ -13,10 +13,19 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
   },
   async redirects() {
-    return REMOVED_LOCALES.flatMap((locale) => [
-      { source: `/${locale}`, destination: "/", permanent: true },
-      { source: `/${locale}/:path*`, destination: "/:path*", permanent: true },
-    ]);
+    return [
+      ...REMOVED_LOCALES.flatMap((locale) => [
+        { source: `/${locale}`, destination: "/", permanent: true },
+        { source: `/${locale}/:path*`, destination: "/:path*", permanent: true },
+      ]),
+      // 色板卡片的旧下载地址（/color-palette/<季>/download）已改成固定的 PNG 地址 /palette-cards/<季>.png
+      { source: "/color-palette/:season/download", destination: "/palette-cards/:season.png", permanent: true },
+      {
+        source: "/:locale(en|zh|ja|ko|es|fr|de|ru|tr)/color-palette/:season/download",
+        destination: "/palette-cards/:season.png",
+        permanent: true,
+      },
+    ];
   },
 };
 

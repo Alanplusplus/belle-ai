@@ -6,7 +6,7 @@ import {
   TWITTER_IMAGES,
 } from "@/lib/seo";
 import type { Metadata } from "next";
-import { ColorQuizClient } from "./ColorQuizClient";
+import { ColorQuizClient, type ParentCardTexts } from "./ColorQuizClient";
 import { ToolFaq, ToolIntro, ToolRelated } from "@/components/ToolPageSections";
 import { getTranslations } from "next-intl/server";
 
@@ -48,11 +48,22 @@ export default async function ColorQuizPage({
   const t = await getTranslations({ locale, namespace: "colorQuiz" });
   const nav = await getTranslations({ locale, namespace: "nav" });
   const quiz = await getTranslations({ locale, namespace: "quiz" });
+  const embed = await getTranslations({ locale, namespace: "embed" });
+  const ph = await getTranslations({ locale, namespace: "paletteHub" });
+  const cg = await getTranslations({ locale, namespace: "colorGuide" });
+  // 结果页的色板卡片文案：这两个命名空间不在客户端语言包里，由这里取好传下去
+  const parentCards: ParentCardTexts = Object.fromEntries(
+    (["spring", "summer", "autumn", "winter"] as const).map((season) => {
+      const name = cg(`${season}Name`);
+      return [season, { alt: ph("cardAltParent", { season: name }), link: ph("viewParent", { season: name }) }];
+    }),
+  );
   const related = [
     { href: "/color-analysis", label: nav("colorAnalysisGuide") },
     { href: "/personal-color-analysis", label: nav("colorAnalysis") },
     { href: "/tools/undertone-test", label: nav("undertoneTest") },
     { href: "/lookbook", label: nav("lookbook") },
+    { href: "/tools/embed", label: embed("linkLabel") },
   ];
 
   const faqs = [
@@ -87,7 +98,7 @@ export default async function ColorQuizPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <ColorQuizClient />
+      <ColorQuizClient parentCards={parentCards} />
 
       <ToolIntro text={t("seoIntro")} />
       <ToolFaq title={quiz("faqTitle")} faqs={faqs} />

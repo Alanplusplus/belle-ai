@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { FeatureHero } from "@/components/FeatureHero";
 import {
   buildAlternates,
   buildBreadcrumbJsonLd,
@@ -8,6 +9,7 @@ import {
   TWITTER_IMAGES,
 } from "@/lib/seo";
 import Image from "next/image";
+import { PaletteCardImage } from "@/components/PaletteCardImage";
 import type { Metadata } from "next";
 import {
   PARENT_SEASON_ORDER,
@@ -52,10 +54,12 @@ export default async function PersonalColorAnalysisPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "color" });
   const ft = await getTranslations({ locale, namespace: "features" });
+  const tp = await getTranslations({ locale, namespace: "tryPage" });
   const cg = await getTranslations({ locale, namespace: "colorGuide" });
   // 文末相关文章：标题取各语种的 blogTitles，小标题复用已翻译的 seasonPalette.relatedArticles
   const bt = await getTranslations({ locale, namespace: "blogTitles" });
   const rt = await getTranslations({ locale, namespace: "seasonPalette" });
+  const ph = await getTranslations({ locale, namespace: "paletteHub" });
 
   const items = [t("item1"), t("item2"), t("item3"), t("item4"), t("item5"), t("item6")];
 
@@ -89,14 +93,14 @@ export default async function PersonalColorAnalysisPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <h1 className="font-serif text-4xl font-bold sm:text-5xl">{t("title")}</h1>
-          <p className="mt-3 text-lg text-primary">{t("subtitle")}</p>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            {t("description")}
-          </p>
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+      <FeatureHero
+        title={t("title")}
+        subtitle={t("subtitle")}
+        description={t("description")}
+        image="/images/examples/report_color_analysis.webp"
+        sampleLabel={tp("demoBadge")}
+        actions={
+          <>
             <Link
               href="/try?type=color_analysis"
               className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
@@ -109,9 +113,9 @@ export default async function PersonalColorAnalysisPage({
             >
               {ft("freeQuiz")}
             </Link>
-          </div>
-        </div>
-      </section>
+          </>
+        }
+      />
 
       <section className="py-16">
         <div className="mx-auto max-w-4xl px-4">
@@ -156,7 +160,7 @@ export default async function PersonalColorAnalysisPage({
               const parentLabel = cg(`${parent}Name`);
               return (
                 <div key={parent} className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:shadow-lg">
-                  <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <Link href={`/color-palette/${parent}`} className="relative block aspect-[4/3] w-full overflow-hidden">
                     <Image
                       src={seasonImage}
                       alt={parentLabel}
@@ -168,7 +172,7 @@ export default async function PersonalColorAnalysisPage({
                     <h3 className="absolute bottom-3 left-4 text-lg font-bold text-white drop-shadow-md">
                       {parentLabel}
                     </h3>
-                  </div>
+                  </Link>
                   <div className="divide-y divide-border">
                     {subSeasons.map((season) => (
                       <Link
@@ -176,15 +180,13 @@ export default async function PersonalColorAnalysisPage({
                         key={season.slug}
                         className="flex items-center gap-3 px-4 py-3 transition hover:bg-muted/50"
                       >
-                        <div className="flex shrink-0 gap-1">
-                          {season.bestColors.slice(0, 5).map((c) => (
-                            <div
-                              key={c.hex}
-                              className="h-5 w-5 rounded-full border border-white/50 shadow-sm"
-                              style={{ backgroundColor: c.hex }}
-                            />
-                          ))}
-                        </div>
+                        <PaletteCardImage
+                          slug={season.slug}
+                          alt={ph("cardAlt", { season: season.name.split(" (")[0] })}
+                          sizes="40px"
+                          className="w-10 shrink-0 shadow-sm"
+                          rounded="rounded"
+                        />
                         <span className="text-sm font-medium">{season.name}</span>
                         <span className="ml-auto text-xs text-muted-foreground">→</span>
                       </Link>

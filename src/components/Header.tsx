@@ -1,5 +1,6 @@
 "use client";
 
+import { BrandLogo } from "@/components/BrandLogo";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
@@ -115,21 +116,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="flex items-baseline gap-1">
-          <span className="font-serif text-xl font-bold tracking-tight bg-gradient-to-r from-primary via-accent to-gold bg-clip-text text-transparent">
-            Belle
-          </span>
-          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">
-            AI
-          </span>
-        </Link>
+        <BrandLogo />
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-1 lg:flex">
           {/* Try Now CTA */}
           <Link
             href="/try"
-            className="mr-1 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-primary to-accent px-4 py-1.5 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:shadow-lg hover:shadow-primary/30 hover:brightness-110 active:scale-[0.97]"
+            className="mr-1 inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-gradient-to-r from-primary to-primary-dark px-4 py-1.5 text-sm font-semibold text-white shadow-md shadow-primary/20 transition hover:shadow-lg hover:shadow-primary/30 hover:brightness-110 active:scale-[0.97]"
           >
             <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
             {t("tryNow")}
@@ -279,11 +273,11 @@ export function Header() {
         </nav>
 
         {/* Mobile: 常驻 Try 按钮 + 汉堡。以前手机顶栏只有 Logo 和汉堡，主 CTA 要点开菜单才能看到 */}
-        <div className="flex items-center gap-1 md:hidden">
+        <div className="flex items-center gap-1 lg:hidden">
           <Link
             href="/try"
             onClick={() => trackEvent("header_try_click", { device: "mobile" })}
-            className="inline-flex min-h-9 items-center gap-1 rounded-full bg-gradient-to-r from-primary to-accent px-3.5 text-xs font-semibold text-white shadow-md shadow-primary/20 transition active:scale-[0.97]"
+            className="inline-flex min-h-9 items-center gap-1 rounded-full bg-gradient-to-r from-primary to-primary-dark px-3.5 text-xs font-semibold text-white shadow-md shadow-primary/20 transition active:scale-[0.97]"
           >
             <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
             {t("tryNow")}
@@ -322,7 +316,7 @@ export function Header() {
 
       {/* Mobile menu：限制在视口高度内并可滚动，否则菜单很长时底部的语言/登录/历史记录根本够不着 */}
       {mobileOpen && (
-        <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-border bg-background px-4 pb-[max(1rem,env(safe-area-inset-bottom))] md:hidden">
+        <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-border bg-background px-4 pb-[max(1rem,env(safe-area-inset-bottom))] lg:hidden">
           {/* 账号区：登录用户显示头像 + 额度；匿名用户显示登录入口 */}
           <div className="py-3">
             {status === "authenticated" && session?.user ? (

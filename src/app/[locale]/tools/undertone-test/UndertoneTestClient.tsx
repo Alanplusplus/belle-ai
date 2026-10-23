@@ -2,17 +2,10 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import { trackEvent } from "@/lib/analytics";
 import { ShareQuizResult } from "@/components/ShareQuizResult";
-
-type Undertone = "warm" | "cool" | "neutral";
-
-const SWATCHES: Record<Undertone, string[]> = {
-  warm: ["#F2A07B", "#E8B04A", "#8A8F3C", "#C4623A", "#D9A066", "#B5651D"],
-  cool: ["#B7A6D9", "#E58FB1", "#1F2F5C", "#2E8B6E", "#8E2F5B", "#9AA5B1"],
-  neutral: ["#5FA8A0", "#C9909C", "#4FA58A", "#A89080", "#C8403F", "#E0709C"],
-};
+import { QuizCta } from "@/components/QuizCta";
+import { UNDERTONE_SWATCHES as SWATCHES, type Undertone } from "@/lib/undertone-data";
 
 type Option = { key: string; score?: Undertone };
 type Question = { key: string; options: Option[] };
@@ -33,10 +26,13 @@ function pickResult(scores: Record<Undertone, number>): Undertone {
   return "neutral";
 }
 
-export function UndertoneTestClient() {
+/** embedded：在别人网站的 iframe 里显示（/embed 路由）。去掉大留白和分享按钮，转化入口改为新标签页 */
+export function UndertoneTestClient({ embedded = false }: { embedded?: boolean }) {
   const t = useTranslations("quiz");
   const cq = useTranslations("colorQuiz");
   const ut = useTranslations("undertoneTest");
+  const pad = embedded ? "py-6" : "py-20";
+  const h1 = embedded ? "text-3xl font-bold" : "text-4xl font-bold";
   const [current, setCurrent] = useState(-1);
   // 每题的选择单独记录（而不是累加分数），点「上一题」重选时不会重复计分
   const [picks, setPicks] = useState<(Undertone | null)[]>([]);
@@ -64,11 +60,11 @@ export function UndertoneTestClient() {
 
   if (result) {
     return (
-      <section className="py-20">
+      <section className={pad}>
         <div className="mx-auto max-w-2xl px-4">
           <div className="rounded-2xl border border-primary/30 bg-card p-8 text-center">
             <p className="text-sm font-medium text-primary">{t("resultTitle")}</p>
-            <h1 className="mt-2 text-4xl font-bold">{ut(`${result}_title`)}</h1>
+            <h1 className={`mt-2 ${h1}`}>{ut(`${result}_title`)}</h1>
             <p className="mt-4 text-muted-foreground">{ut(`${result}_desc`)}</p>
 
             <div className="mt-6 flex justify-center gap-2">
@@ -93,25 +89,21 @@ export function UndertoneTestClient() {
             </div>
 
             <p className="mt-6 text-xs text-muted-foreground">{ut("resultNote")}</p>
-            <div>
-              <ShareQuizResult resultLabel={ut(`${result}_title`)} campaign="undertone-test" />
-            </div>
+            {!embedded && (
+              <div>
+                <ShareQuizResult resultLabel={ut(`${result}_title`)} campaign="undertone-test" cardKey={`undertone-${result}`} />
+              </div>
+            )}
             <button onClick={reset} className="mt-4 text-sm text-muted-foreground underline">
               {t("retakeQuiz")}
             </button>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-primary/30 bg-primary/5 p-6 text-center">
-            <h3 className="text-lg font-bold">{t("wantMoreAccurate")}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">{t("wantMoreAccurateDesc")}</p>
-            <Link
-              href="/try"
-              onClick={() => trackEvent("undertone_test_cta_clicked", { result })}
-              className="mt-4 inline-block rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark"
-            >
-              {t("tryAiAnalysis")}
-            </Link>
-          </div>
+          <QuizCta
+            embedded={embedded}
+            quiz="undertone-test"
+            onClick={() => trackEvent("undertone_test_cta_clicked", { result })}
+          />
         </div>
       </section>
     );
@@ -119,9 +111,9 @@ export function UndertoneTestClient() {
 
   if (current === -1) {
     return (
-      <section className="py-20">
+      <section className={pad}>
         <div className="mx-auto max-w-2xl px-4 text-center">
-          <h1 className="text-4xl font-bold">{ut("title")}</h1>
+          <h1 className={h1}>{ut("title")}</h1>
           <p className="mt-4 text-lg text-muted-foreground">{ut("description")}</p>
           <button
             onClick={() => {
@@ -141,7 +133,7 @@ export function UndertoneTestClient() {
   const q = QUESTIONS[current];
 
   return (
-    <section className="py-20">
+    <section className={pad}>
       <div className="mx-auto max-w-2xl px-4">
         <div className="mb-6 flex items-center justify-between text-sm text-muted-foreground">
           <span>

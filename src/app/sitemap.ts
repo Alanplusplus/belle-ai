@@ -71,6 +71,10 @@ const STATIC_PAGE_SOURCE: Record<string, string> = {
   "/tools/color-quiz": "src/app/[locale]/tools/color-quiz/page.tsx",
   "/tools/face-shape-quiz": "src/app/[locale]/tools/face-shape-quiz/page.tsx",
   "/tools/undertone-test": "src/app/[locale]/tools/undertone-test/page.tsx",
+  "/tools/embed": "src/app/[locale]/tools/embed/page.tsx",
+  "/color-palette": "src/app/[locale]/color-palette/page.tsx",
+  "/ai-color-analysis-accuracy":
+    "src/app/[locale]/ai-color-analysis-accuracy/page.tsx",
   "/about": "src/app/[locale]/about/page.tsx",
   "/press": "src/app/[locale]/press/page.tsx",
   "/privacy": "src/app/[locale]/privacy/page.tsx",

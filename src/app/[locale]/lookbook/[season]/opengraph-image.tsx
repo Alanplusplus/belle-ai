@@ -33,6 +33,7 @@ export default async function OgImage({
       <OgTitle>{title}</OgTitle>
       <OgSubtitle>{subtitle}</OgSubtitle>
       {swatchColors.length > 0 && <OgColorSwatches colors={swatchColors} />}
-    </>
+    </>,
+    { stripe: swatchColors.map((c) => c.hex) },
   );
 }

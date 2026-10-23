@@ -48,11 +48,13 @@ export default async function FaceShapeQuizPage({
   const t = await getTranslations({ locale, namespace: "faceQuiz" });
   const nav = await getTranslations({ locale, namespace: "nav" });
   const quiz = await getTranslations({ locale, namespace: "quiz" });
+  const embed = await getTranslations({ locale, namespace: "embed" });
   const related = [
     { href: "/face-shape-analysis", label: nav("faceAnalysis") },
     { href: "/glasses-analysis", label: nav("glassesMatch") },
     { href: "/hair-color-analysis", label: nav("hairPreview") },
     { href: "/blog", label: nav("blog") },
+    { href: "/tools/embed", label: embed("linkLabel") },
   ];
 
   const faqs = [

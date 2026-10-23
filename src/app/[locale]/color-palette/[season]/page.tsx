@@ -3,7 +3,13 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, canonicalUrl, ogLocale } from "@/lib/seo";
+import { PaletteCardDownload, PaletteCardImage, PaletteCardLarge } from "@/components/PaletteCardImage";
+import { PageHero } from "@/components/PageHero";
+import { SectionNav } from "@/components/SectionNav";
+import { ParentArchTrio, SeasonPhotoCollage } from "@/components/SeasonHeroVisuals";
+import { ColorTextList } from "@/components/ColorTextList";
+import { paletteImageJsonLd } from "@/lib/palette-card";
 import {
   SEASON_PALETTES,
   SEASON_SLUGS,
@@ -96,9 +102,16 @@ export default async function SeasonPalettePage({
       { name: "Color Analysis", path: "/color-analysis" },
       { name: season.charAt(0).toUpperCase() + season.slice(1), path: `/color-palette/${season}` },
     ]);
+    // 页面上真实嵌入了这张大类卡片：写明授权和署名（图上的文字是英文，名称也用英文）
+    const parentImageJsonLd = paletteImageJsonLd({
+      slug: season,
+      name: season.charAt(0).toUpperCase() + season.slice(1),
+      licenseUrl: `${canonicalUrl(locale, "/color-palette")}#license`,
+    });
     return (
       <>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(parentImageJsonLd) }} />
         <ParentSeasonContent parent={season} />
       </>
     );
@@ -116,11 +129,22 @@ export default async function SeasonPalettePage({
     { name: seasonName, path: `/color-palette/${season}` },
   ]);
 
+  // 页面上真实嵌入了这张卡片：写明授权和署名，授权说明在 /color-palette#license（图上的文字是英文，名称也用英文）
+  const imageJsonLd = paletteImageJsonLd({
+    slug: season,
+    name: seasonName,
+    licenseUrl: `${canonicalUrl(locale, "/color-palette")}#license`,
+  });
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageJsonLd) }}
       />
       <SeasonPaletteContent slug={season} />
     </>
@@ -132,6 +156,7 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
   const sd = useTranslations(`sd.${slug}`);
   const qt = useTranslations("quiz");
   const bt = useTranslations("blogTitles");
+  const ph = useTranslations("paletteHub");
 
   const data = SEASON_PALETTES[slug];
   const displayName = sd("name");
@@ -194,25 +219,38 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      {/* Hero */}
-      <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <p className="text-sm font-medium text-primary">
-            <Link href="/color-analysis" className="hover:underline">{t("guideLink")}</Link> / {parentLabel}
-          </p>
-          <h1 className="mt-3 font-serif text-4xl font-bold sm:text-5xl">{displayName}</h1>
-          <p className="mt-3 text-lg text-primary">{sd("tagline")}</p>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{sd("desc")}</p>
-        </div>
-      </section>
+      {/* Hero：左边文案和按钮，右边是该季型的色板平铺照和妆容特写 */}
+      <PageHero
+        crumb={
+          <>
+            <Link href="/color-analysis" className="hover:underline">{t("guideLink")}</Link> /{" "}
+            <Link href={`/color-palette/${data.parentSeason}`} className="hover:underline">{parentLabel}</Link>
+          </>
+        }
+        title={displayName}
+        subtitle={sd("tagline")}
+        description={sd("desc")}
+        actions={
+          <>
+            <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-7 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
+              {t("getMyAnalysis")}
+            </Link>
+            <Link href="/tools/color-quiz" className="rounded-full border-2 border-primary/70 bg-white/70 px-7 py-[10px] font-semibold text-primary-dark transition hover:border-primary hover:bg-primary/10">
+              {qt("startQuiz")}
+            </Link>
+          </>
+        }
+        visual={<SeasonPhotoCollage slug={slug} faceAlt={ph("photoAlt", { season: displayName })} />}
+      />
+      <SectionNav />
 
-      <div className="mx-auto max-w-4xl px-4">
+      <div className="content-page mx-auto max-w-4xl px-4">
         {/* Characteristics */}
         <section className="py-12">
           <h2 className="text-2xl font-bold">{t("characteristics")} — {displayName}</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {chars.map((ch) => (
-              <div key={ch.key} className="rounded-xl border border-border bg-card p-4">
+              <div key={ch.key} className="card-spec p-4">
                 <p className="text-xs font-semibold uppercase tracking-wide text-primary">{ch.key}</p>
                 <p className="mt-1 text-sm text-muted-foreground">{ch.val}</p>
               </div>
@@ -220,60 +258,31 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
           </div>
         </section>
 
-        {/* Best Colors */}
+        {/* 色板：用 PNG 卡片展示，不再由浏览器用 CSS 画色块。颜色名和色值保留为纯文本（可复制、可被搜索引擎读到） */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">{t("bestColors", { season: displayName })}</h2>
           <p className="mt-2 text-sm text-muted-foreground">{t("bestColorsDesc")}</p>
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-5">
-            {bestColors.map((c) => (
-              <div key={c.hex} className="text-center">
-                <div className="mx-auto h-16 w-16 rounded-xl border border-border/50 shadow-sm" style={{ backgroundColor: c.hex }} />
-                <p className="mt-2 text-xs font-medium">{c.name}</p>
-                <p className="text-xs text-muted-foreground">{c.hex}</p>
-              </div>
-            ))}
-          </div>
-          {/* 直接指向默认语种（无前缀）的下载地址：图是同一张，不需要按语种分发 */}
-          <a
-            href={`/color-palette/${slug}/download`}
-            download
-            className="mt-6 inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/5 px-4 py-2.5 text-sm font-medium text-primary transition hover:bg-primary/10"
-          >
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-            </svg>
-            {t("downloadPalette")}
-          </a>
-        </section>
 
-        {/* Neutrals */}
-        <section className="border-t border-border py-12">
-          <h2 className="text-2xl font-bold">{t("neutrals", { season: displayName })}</h2>
-          <p className="mt-2 text-sm text-muted-foreground">{t("neutralsDesc")}</p>
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {neutrals.map((c) => (
-              <div key={c.hex} className="text-center">
-                <div className="mx-auto h-14 w-14 rounded-xl border border-border/50 shadow-sm" style={{ backgroundColor: c.hex }} />
-                <p className="mt-2 text-xs font-medium">{c.name}</p>
-                <p className="text-xs text-muted-foreground">{c.hex}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+          <div className="mt-8 grid items-start gap-8 md:grid-cols-[minmax(0,26rem)_1fr]">
+            <PaletteCardLarge slug={slug} alt={ph("cardAlt", { season: displayName })} priority />
 
-        {/* Avoid */}
-        <section className="border-t border-border py-12">
-          <h2 className="text-2xl font-bold">{t("avoidColors", { season: displayName })}</h2>
-          <p className="mt-2 text-sm text-muted-foreground">{t("avoidColorsDesc")}</p>
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-5">
-            {avoidColors.map((c) => (
-              <div key={c.hex} className="text-center opacity-70">
-                <div className="relative mx-auto h-14 w-14 rounded-xl border border-border/50 shadow-sm" style={{ backgroundColor: c.hex }}>
-                  <div className="absolute inset-0 flex items-center justify-center text-white/80 text-xl font-bold drop-shadow">✕</div>
-                </div>
-                <p className="mt-2 text-xs font-medium">{c.name}</p>
+            <div className="space-y-8">
+              <ColorTextList colors={bestColors} />
+
+              <div>
+                <h3 className="text-lg font-semibold">{t("neutrals", { season: displayName })}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{t("neutralsDesc")}</p>
+                <ColorTextList colors={neutrals} />
               </div>
-            ))}
+
+              <div>
+                <h3 className="text-lg font-semibold">{t("avoidColors", { season: displayName })}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{t("avoidColorsDesc")}</p>
+                <ColorTextList colors={avoidColors} />
+              </div>
+
+              <PaletteCardDownload slug={slug} label={t("downloadPalette")} termsLabel={t("downloadTerms")} />
+            </div>
           </div>
         </section>
 
@@ -282,7 +291,7 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
           <h2 className="text-2xl font-bold">{t("makeupGuide", { season: displayName })}</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {makeupItems.map((item) => (
-              <div key={item.label} className="rounded-xl border border-border bg-card p-4">
+              <div key={item.label} className="card-spec p-4">
                 <p className="text-xs font-semibold uppercase tracking-wide text-primary">{item.label}</p>
                 <p className="mt-1 text-sm text-muted-foreground">{item.value}</p>
               </div>
@@ -294,7 +303,7 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">{t("bestHairColors", { season: displayName })}</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-xl border border-border bg-card p-5">
+            <div className="card-tint p-5">
               <h3 className="font-semibold text-primary">{t("recommended")}</h3>
               <ul className="mt-3 space-y-1.5">
                 {hairColors.map((c) => (
@@ -304,7 +313,7 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
                 ))}
               </ul>
             </div>
-            <div className="rounded-xl border border-border bg-card p-5">
+            <div className="card-soft p-5">
               <h3 className="font-semibold">{t("avoid")}</h3>
               <ul className="mt-3 space-y-1.5">
                 {hairColorsAvoid.map((c) => (
@@ -383,14 +392,17 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
               const SibName = () => {
                 const sibSd = useTranslations(`sd.${sib.slug}`);
                 return (
-                  <Link href={`/color-palette/${sib.slug}`} className="group rounded-xl border border-border bg-card p-5 transition hover:border-primary/40 hover:shadow-md">
-                    <div className="flex gap-1.5">
-                      {sib.bestColors.slice(0, 4).map((c) => (
-                        <div key={c.hex} className="h-6 w-6 rounded-full border border-border/30" style={{ backgroundColor: c.hex }} />
-                      ))}
+                  <Link href={`/color-palette/${sib.slug}`} className="group card-soft flex gap-4 p-4 transition hover:border-primary/40 hover:shadow-md">
+                    <PaletteCardImage
+                      slug={sib.slug}
+                      alt={ph("cardAlt", { season: sibSd("name") })}
+                      sizes="96px"
+                      className="w-24 shrink-0 self-start"
+                    />
+                    <div className="min-w-0">
+                      <h3 className="font-semibold group-hover:text-primary">{sibSd("name")}</h3>
+                      <p className="mt-1 text-sm text-muted-foreground">{sibSd("tagline")}</p>
                     </div>
-                    <h3 className="mt-3 font-semibold group-hover:text-primary">{sibSd("name")}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">{sibSd("tagline")}</p>
                   </Link>
                 );
               };
@@ -423,8 +435,12 @@ function ParentSeasonContent({ parent }: { parent: string }) {
   const sh = useTranslations(`sh.${parent}`);
   const qt = useTranslations("quiz");
   const bt = useTranslations("blogTitles");
+  const ph = useTranslations("paletteHub");
+  const st = useTranslations("seasonPalette");
+  const cg = useTranslations("colorGuide");
 
   const label = parent.charAt(0).toUpperCase() + parent.slice(1);
+  const parentName = cg(`${parent}Name` as "springName");
   const subSeasons = getSeasonsByParent(parent);
   const colors = PARENT_SEASON_COLORS[parent as keyof typeof PARENT_SEASON_COLORS];
   const relatedBlogs = PARENT_SEASON_RELATED_BLOGS[parent as keyof typeof PARENT_SEASON_RELATED_BLOGS];
@@ -456,26 +472,32 @@ function ParentSeasonContent({ parent }: { parent: string }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      {/* Hero */}
-      <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <p className="text-sm font-medium text-primary">
-            <Link href="/color-analysis" className="hover:underline">{t("backToGuide")}</Link>
-          </p>
-          <h1 className="mt-3 font-serif text-4xl font-bold sm:text-5xl">
-            {t("subtitle", { season: label })}
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{sh("heroDesc")}</p>
-        </div>
-      </section>
+      {/* Hero：右边是三个子季型的妆容照（拱形），点哪个进哪个子季型页 */}
+      <PageHero
+        crumb={<Link href="/color-analysis" className="hover:underline">{t("backToGuide")}</Link>}
+        title={t("subtitle", { season: label })}
+        description={sh("heroDesc")}
+        actions={
+          <>
+            <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-7 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
+              {t("getAnalysis")}
+            </Link>
+            <Link href="/tools/color-quiz" className="rounded-full border-2 border-primary/70 bg-white/70 px-7 py-[10px] font-semibold text-primary-dark transition hover:border-primary hover:bg-primary/10">
+              {qt("startQuiz")}
+            </Link>
+          </>
+        }
+        visual={<ParentArchTrio slugs={subSeasons.map((x) => x.slug)} />}
+      />
+      <SectionNav />
 
-      <div className="mx-auto max-w-4xl px-4">
+      <div className="content-page mx-auto max-w-4xl px-4">
         {/* Characteristics */}
         <section className="py-12">
           <h2 className="text-2xl font-bold">{t("characteristics", { season: label })}</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {chars.map((ch) => (
-              <div key={ch.key} className="rounded-xl border border-border bg-card p-4">
+              <div key={ch.key} className="card-spec p-4">
                 <p className="text-xs font-semibold uppercase tracking-wide text-primary">{t(ch.key as "undertone" | "depth" | "chroma" | "contrast")}</p>
                 <p className="mt-1 text-sm text-muted-foreground">{ch.val}</p>
               </div>
@@ -487,14 +509,13 @@ function ParentSeasonContent({ parent }: { parent: string }) {
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">{t("signatureColors", { season: label })}</h2>
           <p className="mt-2 text-sm text-muted-foreground">{t("signatureDesc", { season: label })}</p>
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-5">
-            {colors.map((c, i) => (
-              <div key={c.hex} className="text-center">
-                <div className="mx-auto h-16 w-16 rounded-xl border border-border/50 shadow-sm" style={{ backgroundColor: c.hex }} />
-                <p className="mt-2 text-xs font-medium">{sh(`sc${i}`)}</p>
-                <p className="text-xs text-muted-foreground">{c.hex}</p>
-              </div>
-            ))}
+          <div className="mt-8 grid items-start gap-8 md:grid-cols-[minmax(0,26rem)_1fr]">
+            <PaletteCardLarge slug={parent} alt={ph("cardAltParent", { season: parentName })} priority />
+
+            <div className="space-y-8">
+              <ColorTextList colors={colors.map((c, i) => ({ name: sh(`sc${i}`), hex: c.hex }))} className="mt-0" />
+              <PaletteCardDownload slug={parent} label={st("downloadPalette")} termsLabel={st("downloadTerms")} />
+            </div>
           </div>
         </section>
 
@@ -507,16 +528,19 @@ function ParentSeasonContent({ parent }: { parent: string }) {
               const SubCard = () => {
                 const sd = useTranslations(`sd.${sub.slug}`);
                 return (
-                  <Link href={`/color-palette/${sub.slug}`} className="group rounded-xl border border-border bg-card p-5 transition hover:border-primary/40 hover:shadow-lg">
-                    <div className="flex gap-1.5">
-                      {sub.bestColors.slice(0, 5).map((c) => (
-                        <div key={c.hex} className="h-8 w-8 rounded-full border border-border/30 shadow-sm" style={{ backgroundColor: c.hex }} />
-                      ))}
+                  <Link href={`/color-palette/${sub.slug}`} className="group card-soft flex flex-col p-3 transition hover:border-primary/40 hover:shadow-lg">
+                    <PaletteCardImage
+                      slug={sub.slug}
+                      alt={ph("cardAlt", { season: sd("name") })}
+                      sizes="(min-width: 896px) 272px, (min-width: 640px) 30vw, 90vw"
+                      className="w-full shadow-sm"
+                    />
+                    <div className="flex flex-1 flex-col px-2 pb-2">
+                      <h3 className="mt-4 text-lg font-semibold group-hover:text-primary">{sd("name")}</h3>
+                      <p className="mt-1 text-sm text-primary">{sd("tagline")}</p>
+                      <p className="mt-2 line-clamp-2 flex-1 text-sm text-muted-foreground">{sd("desc")}</p>
+                      <p className="mt-3 text-xs font-medium text-primary">{t("exploreSubSeason")} →</p>
                     </div>
-                    <h3 className="mt-4 text-lg font-semibold group-hover:text-primary">{sd("name")}</h3>
-                    <p className="mt-1 text-sm text-primary">{sd("tagline")}</p>
-                    <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{sd("desc")}</p>
-                    <p className="mt-3 text-xs font-medium text-primary">{t("exploreSubSeason")} →</p>
                   </Link>
                 );
               };
@@ -557,15 +581,16 @@ function ParentSeasonContent({ parent }: { parent: string }) {
           <h2 className="text-2xl font-bold">{t("otherSeasons")}</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {otherParents.map((p) => {
-              const pColors = PARENT_SEASON_COLORS[p as keyof typeof PARENT_SEASON_COLORS];
+              const pName = cg(`${p}Name` as "springName");
               return (
-                <Link key={p} href={`/color-palette/${p}`} className="group rounded-xl border border-border bg-card p-5 transition hover:border-primary/40 hover:shadow-md">
-                  <div className="flex gap-1.5">
-                    {pColors.slice(0, 4).map((c) => (
-                      <div key={c.hex} className="h-6 w-6 rounded-full border border-border/30" style={{ backgroundColor: c.hex }} />
-                    ))}
-                  </div>
-                  <h3 className="mt-3 font-semibold group-hover:text-primary">{p.charAt(0).toUpperCase() + p.slice(1)}</h3>
+                <Link key={p} href={`/color-palette/${p}`} className="group card-soft flex items-center gap-4 p-4 transition hover:border-primary/40 hover:shadow-md">
+                  <PaletteCardImage
+                    slug={p}
+                    alt={ph("cardAltParent", { season: pName })}
+                    sizes="64px"
+                    className="w-16 shrink-0 shadow-sm"
+                  />
+                  <h3 className="font-semibold group-hover:text-primary">{pName}</h3>
                 </Link>
               );
             })}

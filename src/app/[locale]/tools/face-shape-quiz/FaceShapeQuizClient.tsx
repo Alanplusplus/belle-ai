@@ -2,14 +2,17 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import { ShareQuizResult } from "@/components/ShareQuizResult";
+import { QuizCta } from "@/components/QuizCta";
 
 type FaceShape = "oval" | "round" | "square" | "heart" | "oblong" | "diamond" | "triangle";
 
-export function FaceShapeQuizClient() {
+/** embedded：在别人网站的 iframe 里显示（/embed 路由）。去掉大留白和分享按钮，转化入口改为新标签页 */
+export function FaceShapeQuizClient({ embedded = false }: { embedded?: boolean }) {
   const t = useTranslations("quiz");
   const fq = useTranslations("faceQuiz");
+  const pad = embedded ? "py-6" : "py-20";
+  const h1 = embedded ? "text-3xl font-bold" : "text-4xl font-bold";
   const [currentQ, setCurrentQ] = useState(-1);
   const [scores, setScores] = useState<Record<string, number>>({});
   const [result, setResult] = useState<FaceShape | null>(null);
@@ -93,11 +96,11 @@ export function FaceShapeQuizClient() {
 
   if (result) {
     return (
-      <section className="py-20">
+      <section className={pad}>
         <div className="mx-auto max-w-2xl px-4">
           <div className="rounded-2xl border border-primary/30 bg-card p-8 text-center">
             <p className="text-sm font-medium text-primary">{t("resultFaceTitle")}</p>
-            <h1 className="mt-2 text-4xl font-bold">{fq(`result_${result}_title`)}</h1>
+            <h1 className={`mt-2 ${h1}`}>{fq(`result_${result}_title`)}</h1>
             <p className="mt-4 text-muted-foreground">{fq(`result_${result}_desc`)}</p>
 
             <div className="mt-6 space-y-4 text-left">
@@ -121,24 +124,17 @@ export function FaceShapeQuizClient() {
               </div>
             </div>
 
-            <div>
-              <ShareQuizResult resultLabel={fq(`result_${result}_title`)} campaign="face-shape-quiz" />
-            </div>
+            {!embedded && (
+              <div>
+                <ShareQuizResult resultLabel={fq(`result_${result}_title`)} campaign="face-shape-quiz" cardKey={`face-${result}`} />
+              </div>
+            )}
             <button onClick={reset} className="mt-4 text-sm text-muted-foreground underline">
               {t("retakeQuiz")}
             </button>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-primary/30 bg-primary/5 p-6 text-center">
-            <h3 className="text-lg font-bold">{t("wantMoreAccurate")}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">{t("wantMoreAccurateDesc")}</p>
-            <Link
-              href="/try"
-              className="mt-4 inline-block rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark"
-            >
-              {t("tryAiAnalysis")}
-            </Link>
-          </div>
+          <QuizCta embedded={embedded} quiz="face-shape-quiz" />
         </div>
       </section>
     );
@@ -146,9 +142,9 @@ export function FaceShapeQuizClient() {
 
   if (currentQ === -1) {
     return (
-      <section className="py-20">
+      <section className={pad}>
         <div className="mx-auto max-w-2xl px-4 text-center">
-          <h1 className="text-4xl font-bold">{fq("title")}</h1>
+          <h1 className={h1}>{fq("title")}</h1>
           <p className="mt-4 text-lg text-muted-foreground">
             {fq("description")}
           </p>
@@ -167,7 +163,7 @@ export function FaceShapeQuizClient() {
   const q = questions[currentQ];
 
   return (
-    <section className="py-20">
+    <section className={pad}>
       <div className="mx-auto max-w-2xl px-4">
         <div className="mb-6 flex items-center justify-between text-sm text-muted-foreground">
           <span>{t("question")} {currentQ + 1} / {questions.length}</span>

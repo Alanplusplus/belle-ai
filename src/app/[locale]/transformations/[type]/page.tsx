@@ -77,7 +77,7 @@ function TransformationTypeContent({ slug }: { slug: string }) {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-primary/5 to-transparent py-16 sm:py-20">
+      <section className="hero-soft py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <p className="text-sm font-medium text-primary">
             <Link href="/transformations" className="hover:underline">
@@ -90,7 +90,7 @@ function TransformationTypeContent({ slug }: { slug: string }) {
         </div>
       </section>
 
-      <div className="mx-auto max-w-4xl px-4">
+      <div className="content-page mx-auto max-w-4xl px-4">
         {/* Examples */}
         <section className="py-12">
           <div className="space-y-12">
@@ -102,7 +102,7 @@ function TransformationTypeContent({ slug }: { slug: string }) {
                     <div className="relative aspect-[3/4]">
                       <Image
                         src={example.before}
-                        alt={`${data.name} before — ${example.label}`}
+                        alt={`${data.name} · ${t("before")} — ${example.label}`}
                         fill
                         className="object-cover"
                         sizes="(max-width: 640px) 100vw, 33vw"
@@ -116,7 +116,7 @@ function TransformationTypeContent({ slug }: { slug: string }) {
                     <div className="relative aspect-[3/4]">
                       <Image
                         src={example.after}
-                        alt={`${data.name} after — ${example.label}`}
+                        alt={`${data.name} · ${t("after")} — ${example.label}`}
                         fill
                         className="object-cover"
                         sizes="(max-width: 640px) 100vw, 33vw"
@@ -130,7 +130,7 @@ function TransformationTypeContent({ slug }: { slug: string }) {
                     <div className="relative aspect-[3/4]">
                       <Image
                         src={example.report}
-                        alt={`${data.name} AI report — ${example.label}`}
+                        alt={`${data.name} · ${t("aiReport")} — ${example.label}`}
                         fill
                         className="object-cover"
                         sizes="(max-width: 640px) 100vw, 33vw"
@@ -193,7 +193,7 @@ function TransformationTypeContent({ slug }: { slug: string }) {
               <Link
                 key={other.slug}
                 href={`/transformations/${other.slug}`}
-                className="group rounded-xl border border-border bg-card p-4 transition hover:border-primary/40 hover:shadow-md"
+                className="group card-soft p-4 transition hover:border-primary/40 hover:shadow-md"
               >
                 <h3 className="font-semibold group-hover:text-primary">{t(`type_${other.slug}_name`)}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{t(`type_${other.slug}_tagline`)}</p>

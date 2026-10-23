@@ -57,6 +57,8 @@ const CLIENT_NAMESPACES = [
   "colorQuiz",
   "faceQuiz",
   "undertoneTest",
+  // QuizCta 在站内也会渲染（只是不取 embed 的文案），命名空间很小，放进来免得客户端报缺失
+  "embed",
 ] as const;
 
 export function generateStaticParams() {

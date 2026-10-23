@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import {
   buildAlternates,
@@ -129,6 +130,12 @@ export default async function PressPage({
             <div>
               <h2 className="text-lg font-semibold">{t("limitsTitle")}</h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t("limits")}</p>
+              <Link
+                href="/ai-color-analysis-accuracy"
+                className="mt-2 inline-block text-sm text-primary underline-offset-4 hover:underline"
+              >
+                {t("limitsLink")}
+              </Link>
             </div>
 
             <div>
@@ -157,6 +164,19 @@ export default async function PressPage({
                     </a>
                   </li>
                 ))}
+              </ul>
+              <p className="mt-6 text-sm leading-relaxed text-muted-foreground">{t("moreAssetsIntro")}</p>
+              <ul className="mt-3 space-y-2 text-sm">
+                <li>
+                  <Link href="/color-palette" className="text-primary underline-offset-4 hover:underline">
+                    {t("paletteCardsLink")}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/embed" className="text-primary underline-offset-4 hover:underline">
+                    {t("embedLink")}
+                  </Link>
+                </li>
               </ul>
             </div>
 

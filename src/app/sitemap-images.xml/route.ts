@@ -10,6 +10,7 @@ import { PARENT_SEASONS } from "@/lib/parent-season-data";
 import { LOOKBOOK_DATA, LOOKBOOK_SLUGS } from "@/lib/lookbook-data";
 import { TRANSFORMATION_TYPES } from "@/lib/transformation-data";
 import { GUIDE_TOPICS } from "@/lib/guide-data";
+import { attributeCardKey, celebrityCardKey, paletteCardUrl } from "@/lib/palette-card";
 
 function localePath(locale: string, path: string): string {
   const isDefault = locale === routing.defaultLocale;
@@ -140,11 +141,21 @@ export async function GET() {
         : slug.charAt(0).toUpperCase() + slug.slice(1);
       entries.push({
         loc: localePath(locale, `/color-palette/${slug}`),
-        images: [{
-          url: ogImageUrl(locale, `/color-palette/${slug}`),
-          title: `${seasonName} Color Palette`,
-          caption: `Complete ${seasonName} color palette with best colors, neutrals, and styling guide`,
-        }],
+        images: [
+          {
+            url: ogImageUrl(locale, `/color-palette/${slug}`),
+            title: `${seasonName} Color Palette`,
+            caption: `Complete ${seasonName} color palette with best colors, neutrals, and styling guide`,
+          },
+          // 页面上嵌入的色板卡片：12 个子季型是最佳色/中性色/避开色，4 个大类是代表色和三个子季型的色板
+          {
+            url: paletteCardUrl(slug),
+            title: `${seasonName} Color Palette Card`,
+            caption: season
+              ? `${seasonName} color palette card with hex codes for the best colors, neutrals and colors to avoid. Free to use with credit to Belle AI`
+              : `${seasonName} color palette card with the signature colors and the three ${seasonName} sub-season palettes, with hex codes. Free to use with credit to Belle AI`,
+          },
+        ],
       });
     }
 
@@ -168,6 +179,10 @@ export async function GET() {
           url: ogImageUrl(locale, `/celebrity/${slug}`),
           title: `${celebName}'s Color Season`,
           caption: `${celebName}'s seasonal color analysis — discover their color season and signature palette`,
+        }, {
+          url: paletteCardUrl(celebrityCardKey(slug)),
+          title: `${celebName} Color Palette Card`,
+          caption: `${celebName}'s signature colors and season palette with hex codes. Free to use with credit to Belle AI`,
         }],
       });
     }
@@ -192,6 +207,10 @@ export async function GET() {
           url: ogImageUrl(locale, `/color-analysis-for/${slug}`),
           title: `Color Analysis for ${audience}`,
           caption: `Personal color analysis guide tailored for ${audience} — find your best colors`,
+        }, {
+          url: paletteCardUrl(attributeCardKey(slug)),
+          title: `Color Palette Card for ${audience}`,
+          caption: `Best colors and colors to avoid for ${audience}, with hex codes. Free to use with credit to Belle AI`,
         }],
       });
     }

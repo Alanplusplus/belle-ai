@@ -1,3 +1,4 @@
+import { SectionNav } from "@/components/SectionNav";
 import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
@@ -5,6 +6,8 @@ import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import { SEASON_PALETTES } from "@/lib/color-palette-data";
+import { PaletteCardImage } from "@/components/PaletteCardImage";
+import { ColorTextList } from "@/components/ColorTextList";
 import {
   COMPARISON_DATA,
   COMPARISON_SLUGS,
@@ -107,6 +110,7 @@ function CompareContent({ slug }: { slug: string }) {
   const t = useTranslations("comparePage");
   const cmp = useTranslations(`cmp.${slug}`);
   const sd = useTranslations("sd");
+  const ph = useTranslations("paletteHub");
 
   const data = COMPARISON_DATA[slug];
   const season1Name = sd(`${data.season1}.name`);
@@ -138,7 +142,7 @@ function CompareContent({ slug }: { slug: string }) {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
+      <section className="hero-soft py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <p className="text-sm font-medium text-primary">
             <Link href="/color-analysis" className="hover:underline">
@@ -156,7 +160,9 @@ function CompareContent({ slug }: { slug: string }) {
         </div>
       </section>
 
-      <div className="mx-auto max-w-4xl px-4">
+      <SectionNav />
+
+      <div className="content-page mx-auto max-w-4xl px-4">
         {/* Key Differences */}
         <section className="py-12">
           <h2 className="text-2xl font-bold">{t("keyDifferences")}</h2>
@@ -222,21 +228,24 @@ function CompareContent({ slug }: { slug: string }) {
               const palette = SEASON_PALETTES[seasonSlug];
               const name = sd(`${seasonSlug}.name`);
               return (
-                <div key={seasonSlug} className="rounded-xl border border-border bg-card p-5">
+                <div key={seasonSlug} className="card-soft p-5">
                   <h3 className="font-semibold text-primary">{name}</h3>
-                  <div className="mt-3 grid grid-cols-5 gap-2">
-                    {palette.bestColors.slice(0, 10).map((c, i) => (
-                      <div key={c.hex} className="text-center">
-                        <div
-                          className="mx-auto h-10 w-10 rounded-lg border border-border/50"
-                          style={{ backgroundColor: c.hex }}
-                        />
-                        <p className="mt-1 text-xs text-muted-foreground">
-                          {sd.has(`${seasonSlug}.bc${i}`) ? sd(`${seasonSlug}.bc${i}`) : c.name}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
+                  {/* 两个季型的卡片并排：色号和颜色名保留为纯文本 */}
+                  <Link href={`/color-palette/${seasonSlug}`} className="mt-3 block">
+                    <PaletteCardImage
+                      slug={seasonSlug}
+                      alt={ph("cardAlt", { season: name })}
+                      sizes="(min-width: 896px) 400px, (min-width: 640px) 45vw, 90vw"
+                      className="mx-auto w-full max-w-sm shadow-md transition hover:shadow-lg"
+                    />
+                  </Link>
+                  <ColorTextList
+                    colors={palette.bestColors.slice(0, 10).map((c, i) => ({
+                      name: sd.has(`${seasonSlug}.bc${i}`) ? sd(`${seasonSlug}.bc${i}`) : c.name,
+                      hex: c.hex,
+                    }))}
+                    className="mt-4 justify-center text-xs"
+                  />
                 </div>
               );
             })}
@@ -289,7 +298,7 @@ function CompareContent({ slug }: { slug: string }) {
             <p className="mt-2 text-sm text-muted-foreground">
               {t("realWorldExampleDesc")}
             </p>
-            <div className="mt-6 rounded-xl border border-border bg-card p-6">
+            <div className="mt-6 card-soft p-6">
               <p className="text-sm leading-relaxed text-muted-foreground">
                 {data.realWorldExample}
               </p>
@@ -308,7 +317,7 @@ function CompareContent({ slug }: { slug: string }) {
                 <Link
                   key={seasonSlug}
                   href={`/color-palette/${seasonSlug}`}
-                  className="group rounded-xl border border-border bg-card p-5 transition hover:border-primary/40 hover:shadow-md"
+                  className="group card-soft p-5 transition hover:border-primary/40 hover:shadow-md"
                 >
                   <h3 className="font-semibold group-hover:text-primary">
                     {name}
@@ -374,7 +383,7 @@ function CompareContent({ slug }: { slug: string }) {
                 <Link
                   key={s}
                   href={`/compare/${s}`}
-                  className="group rounded-xl border border-border bg-card p-5 transition hover:border-primary/40 hover:shadow-md"
+                  className="group card-soft p-5 transition hover:border-primary/40 hover:shadow-md"
                 >
                   <h3 className="font-semibold group-hover:text-primary">
                     {s1} {t("vsLabel")} {s2}

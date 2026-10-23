@@ -19,6 +19,7 @@ import { FACE_SHAPE_SLUGS, FACE_SHAPES } from "@/lib/face-shape-data";
 import { CELEBRITY_SLUGS, CELEBRITY_DATA } from "@/lib/celebrity-data";
 import { COMPARISON_SLUGS } from "@/lib/season-compare-data";
 import { getPostBySlug } from "@/lib/blog";
+import { PaletteCardImage } from "@/components/PaletteCardImage";
 import type { Metadata } from "next";
 
 /**
@@ -73,6 +74,7 @@ export default async function ColorAnalysisPillarPage({
   const t = await getTranslations({ locale, namespace: "colorGuide" });
   const sd = await getTranslations({ locale, namespace: "sd" });
   const adT = await getTranslations({ locale, namespace: "ad" });
+  const ph = await getTranslations({ locale, namespace: "paletteHub" });
 
   const faqs = Array.from({ length: 10 }, (_, i) => ({
     q: t(`faq${i + 1}Q`),
@@ -264,19 +266,30 @@ export default async function ColorAnalysisPillarPage({
             {PARENT_SEASON_ORDER.map((parent) => {
               const seasons = getSeasonsByParent(parent);
               const keys = parentSeasonKeys[parent];
+              const parentName = t(keys.nameKey);
               return (
-                <div key={parent} className="rounded-2xl border border-border bg-card p-6">
-                  <h3 className="text-xl font-bold">{t(keys.nameKey)}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{t(keys.descKey)}</p>
-                  <div className="mt-3 flex gap-1">
-                    {seasons.flatMap((s) => s.bestColors.slice(0, 2)).map((c) => (
-                      <div key={c.hex + c.name} className="h-5 w-5 rounded-full border border-border/50" style={{ backgroundColor: c.hex }} title={c.name} />
-                    ))}
+                <Link
+                  key={parent}
+                  href={`/color-palette/${parent}`}
+                  className="group flex gap-5 rounded-2xl border border-border bg-card p-6 transition hover:border-primary/40 hover:shadow-md"
+                >
+                  <PaletteCardImage
+                    slug={parent}
+                    alt={ph("cardAltParent", { season: parentName })}
+                    sizes="112px"
+                    className="w-28 shrink-0 self-start shadow-sm"
+                  />
+                  <div>
+                    <h3 className="text-xl font-bold group-hover:text-primary">{parentName}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{t(keys.descKey)}</p>
+                    <p className="mt-3 text-xs text-muted-foreground">
+                      {t("subSeasons", { list: seasons.map((s) => sd(`${s.slug}.name`)).join(", ") })}
+                    </p>
+                    <span className="mt-3 inline-block text-sm font-medium text-primary">
+                      {ph("viewParent", { season: parentName })} →
+                    </span>
                   </div>
-                  <p className="mt-3 text-xs text-muted-foreground">
-                    {t("subSeasons", { list: seasons.map((s) => sd(`${s.slug}.name`)).join(", ") })}
-                  </p>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -335,15 +348,18 @@ export default async function ColorAnalysisPillarPage({
                 <h3 className="text-2xl font-bold">{t("subSeasonsOf", { season: t(keys.nameKey) })}</h3>
                 <div className="mt-4 grid gap-4 sm:grid-cols-3">
                   {seasons.map((season) => (
-                    <Link key={season.slug} href={`/color-palette/${season.slug}`} className="group rounded-xl border border-border bg-card p-5 transition hover:border-primary/40 hover:shadow-md">
-                      <div className="flex gap-1.5">
-                        {season.bestColors.slice(0, 5).map((c) => (
-                          <div key={c.hex} className="h-7 w-7 rounded-full border border-border/30" style={{ backgroundColor: c.hex }} />
-                        ))}
+                    <Link key={season.slug} href={`/color-palette/${season.slug}`} className="group flex gap-4 rounded-xl border border-border bg-card p-4 transition hover:border-primary/40 hover:shadow-md">
+                      <PaletteCardImage
+                        slug={season.slug}
+                        alt={ph("cardAlt", { season: sd(`${season.slug}.name`) })}
+                        sizes="72px"
+                        className="w-[72px] shrink-0 self-start shadow-sm"
+                      />
+                      <div className="min-w-0">
+                        <h4 className="font-semibold group-hover:text-primary">{sd(`${season.slug}.name`)}</h4>
+                        <p className="mt-1 text-xs text-muted-foreground">{sd(`${season.slug}.tagline`)}</p>
+                        <span className="mt-2 inline-block text-xs text-primary">{t("viewFullPalette")} →</span>
                       </div>
-                      <h4 className="mt-3 font-semibold group-hover:text-primary">{sd(`${season.slug}.name`)}</h4>
-                      <p className="mt-1 text-xs text-muted-foreground">{sd(`${season.slug}.tagline`)}</p>
-                      <span className="mt-2 inline-block text-xs text-primary">{t("viewFullPalette")} →</span>
                     </Link>
                   ))}
                 </div>

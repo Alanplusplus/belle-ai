@@ -45,6 +45,7 @@ export function GET() {
   lines.push(`- [Face shape analysis](${SITE_URL}/face-shape-analysis): face shape with hairstyle and glasses guidance`);
   lines.push(`- [About Belle AI](${SITE_URL}/about): who we are, how the technology works and its limits`);
   lines.push(`- [Press kit](${SITE_URL}/press): boilerplate, key facts, logos and contact`);
+  lines.push(`- [How accurate is AI color analysis?](${SITE_URL}/ai-color-analysis-accuracy): how Belle AI works, why we publish no accuracy percentage, what changes the result and when to see a human analyst`);
   lines.push(`- [Pricing](${SITE_URL}/pricing)`);
   lines.push("");
 
@@ -53,11 +54,13 @@ export function GET() {
   lines.push(`- [Color season quiz](${SITE_URL}/tools/color-quiz): find your seasonal color type by answering questions`);
   lines.push(`- [Undertone test](${SITE_URL}/tools/undertone-test): warm, cool, neutral or olive undertone`);
   lines.push(`- [Face shape quiz](${SITE_URL}/tools/face-shape-quiz)`);
+  lines.push(`- [Embed the quizzes on your site](${SITE_URL}/tools/embed): free iframe embeds of the three quizzes in 9 languages, no signup`);
   lines.push("");
 
   lines.push("## 12-season color palettes");
   lines.push("");
   lines.push("Each page lists the best colors with hex codes, colors to avoid, neutrals, makeup, hair and jewelry guidance.");
+  lines.push(`Free downloadable palette cards (PNG, free to use with credit to Belle AI) for all 12 seasons: ${SITE_URL}/color-palette`);
   lines.push("");
   for (const slug of SEASON_SLUGS) {
     const season = SEASON_PALETTES[slug];

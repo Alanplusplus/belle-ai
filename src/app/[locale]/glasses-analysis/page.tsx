@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { FeatureHero } from "@/components/FeatureHero";
 import Image from "next/image";
 import {
   buildAlternates,
@@ -48,6 +49,7 @@ export default async function GlassesAnalysisPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "glassesPage" });
   const ft = await getTranslations({ locale, namespace: "features" });
+  const tp = await getTranslations({ locale, namespace: "tryPage" });
 
   const faqCount = 4;
   const faqs = Array.from({ length: faqCount }, (_, i) => ({
@@ -79,19 +81,21 @@ export default async function GlassesAnalysisPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <h1 className="font-serif text-4xl font-bold sm:text-5xl">{t("title")}</h1>
-          <p className="mt-3 text-lg text-primary">{t("subtitle")}</p>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{t("description")}</p>
+      <FeatureHero
+        title={t("title")}
+        subtitle={t("subtitle")}
+        description={t("description")}
+        image="/images/examples/report_glasses_match.webp"
+        sampleLabel={tp("demoBadge")}
+        actions={
           <Link
             href="/try?type=glasses_match"
-            className="mt-8 inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+            className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
           >
             {ft("tryItFree")}
           </Link>
-        </div>
-      </section>
+        }
+      />
 
       <section className="py-16">
         <div className="mx-auto max-w-5xl px-4">

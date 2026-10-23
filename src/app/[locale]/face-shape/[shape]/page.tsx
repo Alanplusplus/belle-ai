@@ -1,3 +1,4 @@
+import { SectionNav } from "@/components/SectionNav";
 import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
@@ -125,7 +126,7 @@ function FaceShapeContent({ slug }: { slug: string }) {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
+      <section className="hero-soft py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <p className="text-sm font-medium text-primary">
             <Link href="/face-shape-analysis" className="hover:underline">
@@ -141,7 +142,9 @@ function FaceShapeContent({ slug }: { slug: string }) {
         </div>
       </section>
 
-      <div className="mx-auto max-w-4xl px-4">
+      <SectionNav />
+
+      <div className="content-page mx-auto max-w-4xl px-4">
         {/* Characteristics */}
         <section className="py-12">
           <h2 className="text-2xl font-bold">
@@ -158,7 +161,7 @@ function FaceShapeContent({ slug }: { slug: string }) {
             ).map(([key, val]) => (
               <div
                 key={key}
-                className="rounded-xl border border-border bg-card p-4"
+                className="card-soft p-4"
               >
                 <p className="text-xs font-semibold uppercase tracking-wide text-primary">
                   {t(key)}
@@ -230,7 +233,7 @@ function FaceShapeContent({ slug }: { slug: string }) {
             {t("glassesDesc")}
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-xl border border-border bg-card p-5">
+            <div className="card-soft p-5">
               <h3 className="font-semibold text-primary">{t("bestFrames")}</h3>
               <ul className="mt-3 space-y-1.5">
                 {data.glassesFrames.best.map((f) => (
@@ -243,7 +246,7 @@ function FaceShapeContent({ slug }: { slug: string }) {
                 ))}
               </ul>
             </div>
-            <div className="rounded-xl border border-border bg-card p-5">
+            <div className="card-soft p-5">
               <h3 className="font-semibold">{t("avoidFrames")}</h3>
               <ul className="mt-3 space-y-1.5">
                 {data.glassesFrames.avoid.map((f) => (
@@ -286,7 +289,7 @@ function FaceShapeContent({ slug }: { slug: string }) {
             {t("earringDesc")}
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-xl border border-border bg-card p-5">
+            <div className="card-soft p-5">
               <h3 className="font-semibold text-primary">
                 {t("bestEarrings")}
               </h3>
@@ -301,7 +304,7 @@ function FaceShapeContent({ slug }: { slug: string }) {
                 ))}
               </ul>
             </div>
-            <div className="rounded-xl border border-border bg-card p-5">
+            <div className="card-soft p-5">
               <h3 className="font-semibold">{t("avoidEarrings")}</h3>
               <ul className="mt-3 space-y-1.5">
                 {data.earringTips.avoid.map((tip) => (
@@ -407,7 +410,7 @@ function FaceShapeContent({ slug }: { slug: string }) {
                 <Link
                   key={s}
                   href={`/face-shape/${s}`}
-                  className="group rounded-xl border border-border bg-card p-5 transition hover:border-primary/40 hover:shadow-md"
+                  className="group card-soft p-5 transition hover:border-primary/40 hover:shadow-md"
                 >
                   <h3 className="font-semibold group-hover:text-primary">
                     {shapeData.name}

@@ -1,3 +1,4 @@
+import { BrandLogo } from "@/components/BrandLogo";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
@@ -60,14 +61,7 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-baseline gap-1">
-              <span className="font-serif text-2xl font-bold tracking-tight bg-gradient-to-r from-primary via-accent to-gold bg-clip-text text-transparent">
-                Belle
-              </span>
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                AI
-              </span>
-            </Link>
+            <BrandLogo />
             <p className="mt-2 text-sm text-muted-foreground">
               {ft("tagline")}
             </p>
@@ -153,6 +147,22 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/color-palette"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {ft("colorPalettes")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tools/embed"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {ft("embedQuizzes")}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/vs/dressika"
                   className="text-muted-foreground hover:text-foreground"
                 >
@@ -212,6 +222,14 @@ export function Footer() {
                   className="text-muted-foreground hover:text-foreground"
                 >
                   {ft("about")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/ai-color-analysis-accuracy"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {ft("aiAccuracy")}
                 </Link>
               </li>
               <li>

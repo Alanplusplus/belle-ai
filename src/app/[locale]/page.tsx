@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 import { buildAlternates } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
 import { PARENT_SEASON_ORDER, getSeasonsByParent } from "@/lib/color-palette-data";
+import { PaletteCardImage } from "@/components/PaletteCardImage";
 
 export async function generateMetadata({
   params,
@@ -45,6 +46,7 @@ function HomeContent() {
   const ft = useTranslations("features");
   const cg = useTranslations("colorGuide");
   const sd = useTranslations("sd");
+  const ph = useTranslations("paletteHub");
 
   const allSeasons = PARENT_SEASON_ORDER.flatMap((parent) => getSeasonsByParent(parent));
   // 首页正文向下链接的站内页面：专题页（color analysis）、落地页（personal color analysis）、测验、免费在线分析指南
@@ -120,71 +122,78 @@ function HomeContent() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
       />
 
-      {/* Hero */}
+      {/* Hero：左边文案和按钮，右边是「自拍 → 季型 → 色板卡片」的成品预览；手机上文案在前、预览在后，按钮仍在首屏 */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-gold/5" />
-        <div className="relative mx-auto max-w-6xl px-4 py-12 text-center sm:py-12 lg:py-18">
-          <p className="mb-4 inline-block rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-sm font-medium tracking-widest uppercase text-primary">
-            {t("heroSubtitle")}
-          </p>
-          <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-            {t("heroTitle")}
-            <br />
-            <span className="bg-gradient-to-r from-primary to-gold bg-clip-text text-transparent">
-              {t("heroTitleAccent")}
-            </span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            {t("heroDescription")}
-          </p>
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link
-              href="/try"
-              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 text-base font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl hover:shadow-primary/40"
-            >
-              {ft("tryItFree")}
-            </Link>
-            <Link
-              href="/tools/color-quiz"
-              className="rounded-full border-2 border-primary/60 bg-background/70 px-8 py-[10px] text-base font-semibold text-foreground transition hover:border-primary hover:bg-primary/10"
-            >
-              {t("heroSecondaryCta")}
-            </Link>
-          </div>
-          <p className="mt-3 text-sm text-muted-foreground">{t("heroNote")}</p>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.07] via-transparent to-gold/10" />
+        <div aria-hidden="true" className="pointer-events-none absolute -right-24 top-6 h-96 w-96 rounded-full bg-accent/25 blur-3xl" />
+        <div aria-hidden="true" className="pointer-events-none absolute -left-28 bottom-0 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-6 lg:py-16">
+          <div className="text-center lg:text-left">
+            <p className="mb-4 inline-block rounded-full border border-primary/40 bg-white/60 px-4 py-1.5 text-sm font-semibold tracking-widest uppercase text-primary">
+              {t("heroSubtitle")}
+            </p>
+            <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl xl:text-[3.4rem] xl:leading-[1.1]">
+              {t("heroTitle")}
+              <br />
+              <span className="bg-gradient-to-r from-primary-dark via-primary to-gold-deep bg-clip-text text-transparent">
+                {t("heroTitleAccent")}
+              </span>
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground lg:mx-0">
+              {t("heroDescription")}
+            </p>
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+              <Link
+                href="/try"
+                className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 text-base font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl hover:shadow-primary/40"
+              >
+                {ft("tryItFree")}
+              </Link>
+              <Link
+                href="/tools/color-quiz"
+                className="rounded-full border-2 border-primary/70 bg-white/70 px-8 py-[10px] text-base font-semibold text-primary-dark transition hover:border-primary hover:bg-primary/10"
+              >
+                {t("heroSecondaryCta")}
+              </Link>
+            </div>
+            <p className="mt-3 text-sm text-muted-foreground">{t("heroNote")}</p>
 
-          {/* Product Stats Bar */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>
-              <span><span className="font-semibold text-foreground">{t("statsAnalysisTypes")}</span></span>
-            </div>
-            <span className="text-border">·</span>
-            <div className="flex items-center gap-2">
-              <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" /></svg>
-              <span><span className="font-semibold text-foreground">{t("statsSeasonSystem")}</span></span>
-            </div>
-            <span className="text-border">·</span>
-            <div className="flex items-center gap-2">
-              <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
-              <span><span className="font-semibold text-foreground">{t("statsLanguages")}</span></span>
-            </div>
-            <span className="text-border">·</span>
-            <div className="flex items-center gap-2">
-              <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
-              <span><span className="font-semibold text-foreground">{t("statsSpeed")}</span></span>
+            {/* Product Stats Bar */}
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground lg:justify-start">
+              <div className="flex items-center gap-2">
+                <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>
+                <span><span className="font-semibold text-foreground">{t("statsAnalysisTypes")}</span></span>
+              </div>
+              <span className="text-border lg:hidden">·</span>
+              <div className="flex items-center gap-2">
+                <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" /></svg>
+                <span><span className="font-semibold text-foreground">{t("statsSeasonSystem")}</span></span>
+              </div>
+              <span className="text-border lg:hidden">·</span>
+              <div className="flex items-center gap-2">
+                <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
+                <span><span className="font-semibold text-foreground">{t("statsLanguages")}</span></span>
+              </div>
+              <span className="text-border lg:hidden">·</span>
+              <div className="flex items-center gap-2">
+                <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+                <span><span className="font-semibold text-foreground">{t("statsSpeed")}</span></span>
+              </div>
             </div>
           </div>
+
+          <HeroPreview
+            cardAlt={ph("cardAltParent", { season: cg("autumnName") })}
+            selfieAlt={t("resultsColorLabel")}
+            seasonName={sd("soft-autumn.name")}
+          />
         </div>
       </section>
 
       {/* Before / After Results */}
       <section className="py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="text-center">
-            <h2 className="font-serif text-3xl font-bold">{t("resultsTitle")}</h2>
-            <p className="mt-2 text-muted-foreground">{t("resultsSubtitle")}</p>
-          </div>
+          <SectionHeading title={t("resultsTitle")} subtitle={t("resultsSubtitle")} />
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {BEFORE_AFTER.map((pair) => (
               <div key={pair.type} className="group">
@@ -228,12 +237,9 @@ function HomeContent() {
       </section>
 
       {/* How It Works */}
-      <section className="py-12">
+      <section className="bg-primary/[0.05] py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="text-center">
-            <h2 className="font-serif text-3xl font-bold">{t("howTitle")}</h2>
-            <p className="mt-2 text-muted-foreground">{t("howSubtitle")}</p>
-          </div>
+          <SectionHeading title={t("howTitle")} subtitle={t("howSubtitle")} />
           <div className="mt-8 grid gap-8 md:grid-cols-3">
             <StepCard number="1" title={t("step1Title")} desc={t("step1Desc")} />
             <StepCard number="2" title={t("step2Title")} desc={t("step2Desc")} />
@@ -243,9 +249,9 @@ function HomeContent() {
       </section>
 
       {/* Photo privacy commitments */}
-      <section className="py-6">
+      <section className="bg-primary/[0.05] pb-12">
         <div className="mx-auto max-w-4xl px-4">
-          <div className="rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/5 to-gold/5 px-6 py-6 text-center sm:px-8">
+          <div className="rounded-2xl border border-primary/20 bg-white/80 px-6 py-6 text-center shadow-sm sm:px-8">
             <h2 className="font-serif text-xl font-bold sm:text-2xl">{t("privacyTitle")}</h2>
             <ul className="mt-4 grid gap-3 text-sm text-muted-foreground sm:grid-cols-3">
               {(["privacyItem1", "privacyItem2", "privacyItem3"] as const).map((key) => (
@@ -265,12 +271,7 @@ function HomeContent() {
       {/* Core Features */}
       <section className="bg-muted/30 py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="text-center">
-            <h2 className="font-serif text-3xl font-bold">{t("featuresTitle")}</h2>
-            <p className="mt-2 text-muted-foreground">
-              {t("featuresSubtitle")}
-            </p>
-          </div>
+          <SectionHeading title={t("featuresTitle")} subtitle={t("featuresSubtitle")} />
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             <FeatureCard
               image="/images/card_color_analysis.webp"
@@ -325,10 +326,7 @@ function HomeContent() {
       {/* More Analysis Types */}
       <section className="py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="text-center">
-            <h2 className="font-serif text-3xl font-bold">{t("moreTitle")}</h2>
-            <p className="mt-2 text-muted-foreground">{t("moreSubtitle")}</p>
-          </div>
+          <SectionHeading title={t("moreTitle")} subtitle={t("moreSubtitle")} />
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {MORE_FEATURES.map((f) => (
               <Link key={f.href} href={f.href} className="group">
@@ -359,9 +357,9 @@ function HomeContent() {
       </section>
 
       {/* Why AI Color Analysis */}
-      <section className="py-12">
+      <section className="bg-primary/[0.05] py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-center font-serif text-3xl font-bold">{t("whyTitle")}</h2>
+          <SectionHeading title={t("whyTitle")} />
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <WhyCard icon={<WhyFreeIcon />} title={t("whyFree")} text={t("whyFreeDesc")} />
             <WhyCard icon={<WhyAccuracyIcon />} title={t("whyAccurate")} text={t("whyAccurateDesc")} />
@@ -374,8 +372,8 @@ function HomeContent() {
       {/* AI color analysis 深度内容：它测什么、怎么对应 12 季型；正文内链把权重分给专题页 / 落地页 / 测验 / 季型页 */}
       <section className="py-12">
         <div className="mx-auto max-w-5xl px-4">
-          <h2 className="text-center font-serif text-3xl font-bold">{t("aiDeepTitle")}</h2>
-          <p className="mx-auto mt-4 max-w-3xl text-center leading-relaxed text-muted-foreground">
+          <SectionHeading title={t("aiDeepTitle")} />
+          <p className="mx-auto mt-5 max-w-3xl text-center leading-relaxed text-muted-foreground">
             {t.rich("aiDeepIntro", { guide: inlineLink("/color-analysis") })}
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -417,14 +415,9 @@ function HomeContent() {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-12">
+      <section className="bg-muted/50 py-12">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-center font-serif text-2xl font-bold sm:text-3xl">
-            {t("compareTitle")}
-          </h2>
-          <p className="mt-2 text-center text-muted-foreground">
-            {t("compareSubtitle")}
-          </p>
+          <SectionHeading title={t("compareTitle")} subtitle={t("compareSubtitle")} />
           <div className="mt-8 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -453,8 +446,8 @@ function HomeContent() {
       {/* FAQ Section */}
       <section className="py-12">
         <div className="mx-auto max-w-3xl px-4">
-          <h2 className="text-center font-serif text-3xl font-bold">{t("faqTitle")}</h2>
-          <div className="mt-6 divide-y divide-border">
+          <SectionHeading title={t("faqTitle")} />
+          <div className="mt-8 divide-y divide-border">
             {faqs.map((faq, i) => (
               <details key={i} className="group py-5">
                 <summary className="flex cursor-pointer items-center justify-between font-medium">
@@ -471,10 +464,13 @@ function HomeContent() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-br from-primary/5 to-gold/5 py-14">
+      <section className="bg-gradient-to-br from-primary/10 to-gold/20 py-16">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="font-serif text-3xl font-bold">{t("ctaTitle")}</h2>
-          <p className="mt-2 text-lg text-muted-foreground">
+          <h2 className="font-serif text-3xl font-bold sm:text-4xl">{t("ctaTitle")}</h2>
+          <div className="section-ornament" aria-hidden="true">
+            <span />
+          </div>
+          <p className="mt-4 text-lg text-muted-foreground">
             {t("ctaSubtitle")}
           </p>
           <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
@@ -491,6 +487,60 @@ function HomeContent() {
         </div>
       </section>
     </>
+  );
+}
+
+/** 首屏右侧的成品预览：一张自拍、一张该季型的色板卡片、一枚季型标签（示例，和下面「查看效果」里的示例报告同一人） */
+function HeroPreview({
+  cardAlt,
+  selfieAlt,
+  seasonName,
+}: {
+  cardAlt: string;
+  selfieAlt: string;
+  seasonName: string;
+}) {
+  return (
+    <div className="relative mx-auto aspect-[6/7] w-full max-w-[22rem] sm:max-w-[26rem] lg:max-w-[27rem]">
+      <div className="absolute right-0 top-0 w-[64%] rotate-[3deg]">
+        <PaletteCardImage
+          slug="autumn"
+          alt={cardAlt}
+          sizes="(min-width: 1024px) 300px, 60vw"
+          priority
+          rounded="rounded-xl"
+          className="w-full shadow-2xl shadow-primary/25"
+        />
+      </div>
+      <div className="absolute bottom-0 left-0 w-[47%] -rotate-[3deg]">
+        <div className="relative aspect-[3/4] overflow-hidden rounded-t-full rounded-b-2xl border-[5px] border-white bg-card shadow-xl shadow-primary/20">
+          <Image
+            src="/images/showcase/before-color.webp"
+            alt={selfieAlt}
+            fill
+            className="object-cover"
+            sizes="(min-width: 1024px) 200px, 45vw"
+          />
+        </div>
+      </div>
+      <div className="absolute left-[3%] top-[9%] flex items-center gap-2 rounded-full bg-white/95 px-3.5 py-2 text-sm font-semibold text-foreground shadow-lg shadow-primary/15 ring-1 ring-primary/20">
+        <svg className="h-4 w-4 text-gold-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg>
+        {seasonName}
+      </div>
+    </div>
+  );
+}
+
+/** 区块标题：衬线标题 + 金色装饰线 + 副标题 */
+function SectionHeading({ title, subtitle }: { title: string; subtitle?: string }) {
+  return (
+    <div className="text-center">
+      <h2 className="font-serif text-3xl font-bold sm:text-4xl">{title}</h2>
+      <div className="section-ornament" aria-hidden="true">
+        <span />
+      </div>
+      {subtitle && <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">{subtitle}</p>}
+    </div>
   );
 }
 

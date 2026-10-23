@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import Image from "next/image";
+import { PageHero } from "@/components/PageHero";
+import { SectionNav } from "@/components/SectionNav";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
@@ -87,20 +89,19 @@ function GuideTopicContent({ slug }: { slug: string }) {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-primary/5 to-transparent py-16 sm:py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <p className="text-sm font-medium text-primary">
-            <Link href="/guides" className="hover:underline">
-              {t("backToAll").replace("← ", "")}
-            </Link>
-          </p>
-          <h1 className="mt-3 font-serif text-3xl font-bold sm:text-5xl">{t.has(`guide_${data.i18nKey}_name`) ? t(`guide_${data.i18nKey}_name`) : data.name}</h1>
-          <p className="mt-2 text-lg text-primary">{t.has(`guide_${data.i18nKey}_tagline`) ? t(`guide_${data.i18nKey}_tagline`) : data.tagline}</p>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{t.has(`guide_${data.i18nKey}_desc`) ? t(`guide_${data.i18nKey}_desc`) : data.description}</p>
-        </div>
-      </section>
+      <PageHero
+        crumb={
+          <Link href="/guides" className="hover:underline">
+            {t("backToAll").replace("← ", "")}
+          </Link>
+        }
+        title={t.has(`guide_${data.i18nKey}_name`) ? t(`guide_${data.i18nKey}_name`) : data.name}
+        subtitle={t.has(`guide_${data.i18nKey}_tagline`) ? t(`guide_${data.i18nKey}_tagline`) : data.tagline}
+        description={t.has(`guide_${data.i18nKey}_desc`) ? t(`guide_${data.i18nKey}_desc`) : data.description}
+      />
+      <SectionNav />
 
-      <div className="mx-auto max-w-4xl px-4">
+      <div className="content-page mx-auto max-w-4xl px-4">
         {/* Sections */}
         {data.sections.map((section, idx) => (
           <section key={idx} className={`py-12 ${idx > 0 ? "border-t border-border" : ""}`}>
@@ -126,7 +127,7 @@ function GuideTopicContent({ slug }: { slug: string }) {
                 {section.items.map((item, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-3 rounded-xl border border-border bg-card p-4"
+                    className="card-soft flex items-start gap-3 p-4"
                   >
                     {item.hex && (
                       <div

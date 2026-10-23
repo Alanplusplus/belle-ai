@@ -3,7 +3,12 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import { buildAlternates, buildBreadcrumbJsonLd, canonicalUrl, ogLocale } from "@/lib/seo";
+import { PaletteCardDownload, PaletteCardImage, PaletteCardLarge } from "@/components/PaletteCardImage";
+import { PageHero } from "@/components/PageHero";
+import { SectionNav } from "@/components/SectionNav";
+import { ColorTextList } from "@/components/ColorTextList";
+import { attributeCardKey, isColorNote, paletteImageJsonLd } from "@/lib/palette-card";
 import { ATTRIBUTES, ATTRIBUTE_SLUGS } from "@/lib/color-analysis-for-data";
 import type { Metadata } from "next";
 
@@ -72,11 +77,22 @@ export default async function ColorAnalysisForPage({
     { name: attributeName, path: `/color-analysis-for/${attribute}` },
   ]);
 
+  // 页面上真实嵌入了这张色板卡片：写明授权和署名，授权说明在 /color-palette#license
+  const imageJsonLd = paletteImageJsonLd({
+    slug: attributeCardKey(attribute),
+    name: data.name,
+    licenseUrl: `${canonicalUrl(locale, "/color-palette")}#license`,
+  });
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageJsonLd) }}
       />
       <ColorAnalysisForContent slug={attribute} />
     </>
@@ -87,6 +103,8 @@ function ColorAnalysisForContent({ slug }: { slug: string }) {
   const t = useTranslations("colorFor");
   const ad = useTranslations(`ad.${slug}`);
   const bt = useTranslations("blogTitles");
+  const ph = useTranslations("paletteHub");
+  const st = useTranslations("seasonPalette");
 
   const data = ATTRIBUTES[slug];
   const displayName = ad("name");
@@ -94,7 +112,7 @@ function ColorAnalysisForContent({ slug }: { slug: string }) {
   const challenges = data.challenges.map((_, i) => ad(`ch${i}`));
   const commonSeasons = data.commonSeasons.map((_, i) => ad(`cs${i}`));
   const bestColors = data.bestColors.map((c, i) => ({ name: ad(`bc${i}`), hex: c.hex }));
-  const avoidColors = data.avoidColors.map((c, i) => ({ name: ad(`ac${i}`), hex: c.hex }));
+  const avoidColors = data.avoidColors.map((c, i) => ({ name: ad(`ac${i}`), hex: c.hex, note: isColorNote(c.name) }));
   const makeupTips = data.makeupTips.map((_, i) => ad(`mt${i}`));
   const wardrobeTips = data.wardrobeTips.map((_, i) => ad(`wt${i}`));
   const faqs = data.faq.map((_, i) => ({ q: ad(`faq${i}Q`), a: ad(`faq${i}A`) }));
@@ -115,21 +133,37 @@ function ColorAnalysisForContent({ slug }: { slug: string }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      {/* Hero */}
-      <section className="bg-gradient-to-b from-primary/5 to-transparent py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <p className="text-sm font-medium text-primary">
+      {/* Hero：右边是这个人群的色板卡片（微微倾斜） */}
+      <PageHero
+        crumb={
+          <>
             <Link href="/color-analysis" className="hover:underline">{t("guideLink")}</Link>{" "}
             / {t("forLabel", { audience: displayName })}
-          </p>
-          <h1 className="mt-3 font-serif text-4xl font-bold sm:text-5xl">
-            {t("colorAnalysisFor", { audience: displayName })}
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{ad("heroDesc")}</p>
-        </div>
-      </section>
+          </>
+        }
+        title={t("colorAnalysisFor", { audience: displayName })}
+        description={ad("heroDesc")}
+        actions={
+          <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-7 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
+            {t("getMyAnalysis")}
+          </Link>
+        }
+        visual={
+          <div className="mx-auto w-[62%] max-w-[17rem] rotate-[3deg] lg:w-[78%]">
+            <PaletteCardImage
+              slug={attributeCardKey(slug)}
+              alt={ph("cardAltGuide", { name: displayName })}
+              sizes="(min-width: 1024px) 260px, 60vw"
+              priority
+              rounded="rounded-xl"
+              className="w-full shadow-2xl shadow-primary/25"
+            />
+          </div>
+        }
+      />
+      <SectionNav />
 
-      <div className="mx-auto max-w-4xl px-4">
+      <div className="content-page mx-auto max-w-4xl px-4">
         {/* Challenges */}
         <section className="py-12">
           <h2 className="text-2xl font-bold">{t("challenges", { audience: displayName })}</h2>
@@ -156,7 +190,7 @@ function ColorAnalysisForContent({ slug }: { slug: string }) {
               const [seasonName, reason] = cs.includes(" — ") ? cs.split(" — ") : [cs, ""];
               const csSlug = seasonName.toLowerCase().replace(/ /g, "-");
               return (
-                <Link key={cs} href={`/color-palette/${csSlug}`} className="group rounded-xl border border-border bg-card p-5 transition hover:border-primary/40 hover:shadow-md">
+                <Link key={cs} href={`/color-palette/${csSlug}`} className="group card-soft p-5 transition hover:border-primary/40 hover:shadow-md">
                   <h3 className="font-semibold group-hover:text-primary">{seasonName}</h3>
                   {reason && <p className="mt-1 text-sm text-muted-foreground">{reason}</p>}
                 </Link>
@@ -166,32 +200,28 @@ function ColorAnalysisForContent({ slug }: { slug: string }) {
           <p className="mt-4 text-xs text-muted-foreground italic">{t("commonSeasonsNote")}</p>
         </section>
 
-        {/* Best Colors */}
+        {/* 色板：用 PNG 卡片展示，不再由浏览器用 CSS 画色块。颜色名和色值保留为纯文本（可复制、可被搜索引擎读到） */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">{t("bestColors", { audience: displayName })}</h2>
           <p className="mt-2 text-sm text-muted-foreground">{t("bestColorsDesc", { audience: displayName })}</p>
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-5">
-            {bestColors.map((c) => (
-              <div key={c.hex} className="text-center">
-                <div className="mx-auto h-14 w-14 rounded-xl border border-border/50 shadow-sm" style={{ backgroundColor: c.hex }} />
-                <p className="mt-2 text-xs font-medium">{c.name}</p>
-              </div>
-            ))}
-          </div>
-        </section>
 
-        {/* Avoid */}
-        <section className="border-t border-border py-12">
-          <h2 className="text-2xl font-bold">{t("avoidColors")}</h2>
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-5">
-            {avoidColors.map((c) => (
-              <div key={c.hex} className="text-center opacity-70">
-                <div className="relative mx-auto h-14 w-14 rounded-xl border border-border/50 shadow-sm" style={{ backgroundColor: c.hex }}>
-                  <div className="absolute inset-0 flex items-center justify-center text-white/80 text-xl font-bold drop-shadow">✕</div>
-                </div>
-                <p className="mt-2 text-xs font-medium">{c.name}</p>
+          <div className="mt-8 grid items-start gap-8 md:grid-cols-[minmax(0,26rem)_1fr]">
+            <PaletteCardLarge slug={attributeCardKey(slug)} alt={ph("cardAltGuide", { name: displayName })} />
+
+            <div className="space-y-8">
+              <ColorTextList colors={bestColors} className="mt-0" />
+
+              <div>
+                <h3 className="text-lg font-semibold">{t("avoidColors")}</h3>
+                <ColorTextList colors={avoidColors} />
               </div>
-            ))}
+
+              <PaletteCardDownload
+                slug={attributeCardKey(slug)}
+                label={st("downloadPalette")}
+                termsLabel={st("downloadTerms")}
+              />
+            </div>
           </div>
         </section>
 

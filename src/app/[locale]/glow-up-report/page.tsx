@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { FeatureHero } from "@/components/FeatureHero";
 import Image from "next/image";
 import {
   buildAlternates,
@@ -47,6 +48,7 @@ export default async function GlowUpReportPage({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "glowUpPage" });
   const ft = await getTranslations({ locale, namespace: "features" });
+  const tp = await getTranslations({ locale, namespace: "tryPage" });
 
   const faqCount = 5;
   const faqs = Array.from({ length: faqCount }, (_, i) => ({
@@ -78,22 +80,26 @@ export default async function GlowUpReportPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <section className="bg-gradient-to-b from-amber-50/50 to-transparent py-20 dark:from-amber-950/10">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <span className="mb-4 inline-block rounded-full bg-amber-100 px-4 py-1 text-sm font-semibold text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+      <FeatureHero
+        title={t("title")}
+        subtitle={t("subtitle")}
+        description={t("description")}
+        image="/images/examples/report_glow_up_report.webp"
+        sampleLabel={tp("demoBadge")}
+        badge={
+          <span className="inline-block rounded-full bg-amber-100 px-4 py-1 text-sm font-semibold text-amber-800">
             {t("premiumBadge")}
           </span>
-          <h1 className="font-serif text-4xl font-bold sm:text-5xl">{t("title")}</h1>
-          <p className="mt-3 text-lg text-primary">{t("subtitle")}</p>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{t("description")}</p>
+        }
+        actions={
           <Link
             href="/try?type=glow_up_report"
-            className="mt-8 inline-block rounded-full bg-gradient-to-r from-amber-500 to-amber-600 px-8 py-3 font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:shadow-xl"
+            className="inline-block rounded-full bg-gradient-to-r from-amber-500 to-amber-600 px-8 py-3 font-semibold text-white shadow-lg shadow-amber-500/30 transition hover:shadow-xl"
           >
             {ft("tryItFree")}
           </Link>
-        </div>
-      </section>
+        }
+      />
 
       <section className="py-16">
         <div className="mx-auto max-w-5xl px-4">

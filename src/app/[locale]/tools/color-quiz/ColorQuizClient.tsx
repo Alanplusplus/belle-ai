@@ -2,12 +2,30 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import { ShareQuizResult } from "@/components/ShareQuizResult";
+import { QuizCta } from "@/components/QuizCta";
+import { PaletteCardImage } from "@/components/PaletteCardImage";
+import { Link } from "@/i18n/navigation";
 
-export function ColorQuizClient() {
+/** 结果页里「大类色板卡片」的文案：由服务端页面取好传进来（见 tools/color-quiz/page.tsx） */
+export type ParentCardTexts = Record<string, { alt: string; link: string }>;
+
+/**
+ * embedded：在别人网站的 iframe 里显示（/embed 路由）。去掉大留白和分享按钮，转化入口改为新标签页。
+ * parentCards：结果页的色板卡片的图片说明和链接文字。这两条文案在 paletteHub / colorGuide 命名空间里，
+ * 而这两个命名空间不在客户端的语言包里（colorGuide 有十几 KB，放进去会让每个页面都变大），所以不在这里取。
+ */
+export function ColorQuizClient({
+  embedded = false,
+  parentCards,
+}: {
+  embedded?: boolean;
+  parentCards?: ParentCardTexts;
+}) {
   const t = useTranslations("quiz");
   const cq = useTranslations("colorQuiz");
+  const pad = embedded ? "py-6" : "py-20";
+  const h1 = embedded ? "text-3xl font-bold" : "text-4xl font-bold";
   const [currentQ, setCurrentQ] = useState(-1);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [result, setResult] = useState<{ season: string; scores: Record<string, number> } | null>(null);
@@ -129,24 +147,41 @@ export function ColorQuizClient() {
   if (result) {
     const season = result.season;
     const colors = SEASON_COLORS[season as keyof typeof SEASON_COLORS];
+    const parentCard = parentCards?.[season];
 
     return (
-      <section className="py-20">
+      <section className={pad}>
         <div className="mx-auto max-w-2xl px-4">
           <div className="rounded-2xl border border-primary/30 bg-card p-8 text-center">
             <p className="text-sm font-medium text-primary">{t("resultTitle")}</p>
-            <h1 className="mt-2 text-4xl font-bold">{cq(`result_${season}_title`)}</h1>
+            <h1 className={`mt-2 ${h1}`}>{cq(`result_${season}_title`)}</h1>
             <p className="mt-4 text-muted-foreground">{cq(`result_${season}_desc`)}</p>
 
-            <div className="mt-6 flex justify-center gap-2">
-              {colors.map((color) => (
-                <div
-                  key={color}
-                  className="h-10 w-10 rounded-full border border-border"
-                  style={{ backgroundColor: color }}
-                />
-              ))}
-            </div>
+            {embedded ? (
+              // 嵌在别人网站的 iframe 里高度固定（见 EMBED_FRAME_HEIGHT），只放紧凑的色点
+              <div className="mt-6 flex justify-center gap-2">
+                {colors.map((color) => (
+                  <div
+                    key={color}
+                    className="h-10 w-10 rounded-full border border-border"
+                    style={{ backgroundColor: color }}
+                  />
+                ))}
+              </div>
+            ) : parentCard ? (
+              // 结果页是用户的「高光时刻」：给一张可以保存、转发的大类色板卡片，点开是该季型的完整说明
+              <div className="mt-6">
+                <Link href={`/color-palette/${season}`} className="mx-auto block w-56">
+                  <PaletteCardImage slug={season} alt={parentCard.alt} sizes="224px" className="w-full shadow-lg" />
+                </Link>
+                <Link
+                  href={`/color-palette/${season}`}
+                  className="mt-3 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  {parentCard.link} →
+                </Link>
+              </div>
+            ) : null}
 
             <div className="mt-6 grid gap-4 text-left sm:grid-cols-2">
               <div className="rounded-xl bg-green-50 p-4 dark:bg-green-950/20">
@@ -163,9 +198,11 @@ export function ColorQuizClient() {
               </div>
             </div>
 
-            <div>
-              <ShareQuizResult resultLabel={cq(`result_${season}_title`)} campaign="color-quiz" />
-            </div>
+            {!embedded && (
+              <div>
+                <ShareQuizResult resultLabel={cq(`result_${season}_title`)} campaign="color-quiz" cardKey={`season-${season}`} />
+              </div>
+            )}
             <button
               onClick={reset}
               className="mt-4 text-sm text-muted-foreground underline"
@@ -174,18 +211,7 @@ export function ColorQuizClient() {
             </button>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-primary/30 bg-primary/5 p-6 text-center">
-            <h3 className="text-lg font-bold">{t("wantMoreAccurate")}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
-              {t("wantMoreAccurateDesc")}
-            </p>
-            <Link
-              href="/try"
-              className="mt-4 inline-block rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark"
-            >
-              {t("tryAiAnalysis")}
-            </Link>
-          </div>
+          <QuizCta embedded={embedded} quiz="color-quiz" />
         </div>
       </section>
     );
@@ -193,9 +219,9 @@ export function ColorQuizClient() {
 
   if (currentQ === -1) {
     return (
-      <section className="py-20">
+      <section className={pad}>
         <div className="mx-auto max-w-2xl px-4 text-center">
-          <h1 className="text-4xl font-bold">{cq("title")}</h1>
+          <h1 className={h1}>{cq("title")}</h1>
           <p className="mt-4 text-lg text-muted-foreground">
             {cq("description")}
           </p>
@@ -216,7 +242,7 @@ export function ColorQuizClient() {
   const q = questions[currentQ];
 
   return (
-    <section className="py-20">
+    <section className={pad}>
       <div className="mx-auto max-w-2xl px-4">
         <div className="mb-6 flex items-center justify-between text-sm text-muted-foreground">
           <span>

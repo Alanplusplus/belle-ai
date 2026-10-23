@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/*
+ * 站点只有浅色主题。Tailwind 的 dark: 默认跟随系统深色模式，会让部分页面（测验结果、
+ * 试用页、定价页……）在深色模式的手机上出现「浅色页面里嵌深色半透明块」的错乱。
+ * 改成只在 .dark 类下生效；页面上不会出现这个类，所以 dark: 样式整体失效。
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -8,6 +15,7 @@
   --color-primary-dark: var(--primary-dark);
   --color-accent: var(--accent);
   --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-fg);
   --color-card: var(--card);
@@ -17,18 +25,30 @@
   --font-serif: var(--font-serif);
 }
 
+/* 文字和按钮用的主色要够深：原来的 #D18FAD 放在奶油底色上只有约 2.5:1，小字和按钮文字都看不清。
+   现在 primary 在 #FFF9F5 上约 4.7:1、白字在 primary 上约 5:1（达到 WCAG AA）；
+   需要更柔和的粉色（装饰、渐变）时用 accent / primary 加透明度。 */
 :root {
   --background: #FFF9F5;
   --foreground: #1F1F2E;
-  --primary: #D18FAD;
-  --primary-dark: #B97A96;
+  --primary: #B0517C;
+  --primary-dark: #8E3C63;
   --accent: #E8A1BF;
   --gold: #C7A87D;
+  --gold-deep: #A9843F;
   --muted: #F5EDE8;
-  --muted-fg: #807873;
+  --muted-fg: #736A66;
   --card: #ffffff;
   --card-fg: #1F1F2E;
   --border-color: #E6E0DB;
+}
+
+/* 手机上 12px / 14px 的灰色小字太吃力：整站的 text-xs、text-sm 各放大 1px */
+@theme {
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.25rem;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.45rem;
 }
 
 
@@ -73,15 +93,163 @@ a,
 
 /* Playfair 只有 latin 字形，中日韩标题会回落成系统默认黑体。这里给 zh / ja / ko 单独补一组系统自带的衬线字体，
    不引入网页字体（CJK 字体动辄数 MB，手机流量下不值得），拉丁字母 / 数字仍然用 Playfair。 */
-.font-serif {
+/* 所有 h1 / h2 统一用衬线体（之前只有首页和部分页面用，博客和内页是无衬线，风格不统一） */
+.font-serif,
+h1,
+h2 {
   font-family: var(--font-serif), serif;
 }
-html:lang(zh) .font-serif {
+html:lang(zh) .font-serif,
+html:lang(zh) h1,
+html:lang(zh) h2 {
   font-family: var(--font-serif), "Songti SC", "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "STSong", "SimSun", serif;
 }
-html:lang(ja) .font-serif {
+html:lang(ja) .font-serif,
+html:lang(ja) h1,
+html:lang(ja) h2 {
   font-family: var(--font-serif), "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", "Noto Serif CJK JP", "Source Han Serif JP", "MS PMincho", serif;
 }
-html:lang(ko) .font-serif {
+html:lang(ko) .font-serif,
+html:lang(ko) h1,
+html:lang(ko) h2 {
   font-family: var(--font-serif), "AppleMyungjo", "Apple Myungjo", "Noto Serif KR", "Noto Serif CJK KR", "Source Han Serif K", "Batang", serif;
+}
+
+/* 区块标题下的装饰线：金色细线加小菱形，和色板卡片的风格一致 */
+.section-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0.9rem auto 0;
+  width: 7.5rem;
+  color: var(--gold-deep);
+}
+.section-ornament::before,
+.section-ornament::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(to right, transparent, currentColor);
+  opacity: 0.55;
+}
+.section-ornament::after {
+  background: linear-gradient(to left, transparent, currentColor);
+}
+.section-ornament > span {
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  background: currentColor;
+}
+
+/* ===== 内页（季型、lookbook、人群、指南、明星等长页面）的共用外观 ===== */
+
+/* 章节标题下的金色短线；分隔线从灰色改成淡金色；点目录跳转时给吸顶的页眉和目录条留位置 */
+.content-page > section {
+  scroll-margin-top: 7rem;
+}
+.content-page > section.border-t {
+  border-color: color-mix(in srgb, var(--gold) 38%, transparent);
+}
+.content-page > section > h2:first-child::after {
+  content: "";
+  display: block;
+  width: 2.75rem;
+  height: 2px;
+  margin-top: 0.65rem;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold-deep), transparent);
+}
+.content-page > section.text-center > h2:first-child::after {
+  margin-inline: auto;
+  background: linear-gradient(90deg, transparent, var(--gold-deep), transparent);
+}
+/* 页尾的行动区块：淡粉到淡金的底，带一圈细边 */
+.content-page > section.rounded-2xl {
+  border: 1px solid color-mix(in srgb, var(--primary) 18%, transparent);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 9%, white), color-mix(in srgb, var(--gold) 20%, white));
+}
+
+/* 卡片变体：不再全站都是同一种白底灰边框。
+   soft = 白卡加柔和的粉色投影；tint = 淡粉到淡金的渐变；spec = 左侧带渐变竖条的规格卡（用于"特征/参数"类小块）。
+   放在 components 层，页面里的 hover: 等工具类仍然优先。 */
+@layer components {
+  .card-soft {
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    background: var(--card);
+    box-shadow: 0 1px 2px rgb(31 31 46 / 0.04), 0 12px 28px -18px rgb(176 81 124 / 0.32);
+  }
+  .card-tint {
+    border-radius: 1rem;
+    border: 1px solid color-mix(in srgb, var(--primary) 18%, transparent);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 7%, white), color-mix(in srgb, var(--gold) 14%, white));
+  }
+  .card-spec {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    background: var(--card);
+    padding-left: 1.4rem;
+  }
+  .card-spec::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+    bottom: 0.8rem;
+    width: 3px;
+    border-radius: 0 3px 3px 0;
+    background: linear-gradient(180deg, var(--primary), var(--gold-deep));
+  }
+}
+
+/* 横向滚动的条（目录条）：隐藏滚动条 */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* 沿用旧结构的英雄区（明星、脸型、对比、改造页）：加同样的渐变底、光晕和标题下的金色细线，不需要改它们的内部结构 */
+.hero-soft {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 7%, transparent), transparent 50%, color-mix(in srgb, var(--gold) 10%, transparent));
+}
+.hero-soft::before,
+.hero-soft::after {
+  content: "";
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(64px);
+  pointer-events: none;
+}
+.hero-soft::before {
+  right: -6rem;
+  top: 1rem;
+  width: 20rem;
+  height: 20rem;
+  background: color-mix(in srgb, var(--accent) 25%, transparent);
+}
+.hero-soft::after {
+  left: -6rem;
+  bottom: 0;
+  width: 16rem;
+  height: 16rem;
+  background: color-mix(in srgb, var(--gold) 20%, transparent);
+}
+.hero-soft > * {
+  position: relative;
+}
+.hero-soft h1::after {
+  content: "";
+  display: block;
+  width: 7.5rem;
+  height: 1px;
+  margin: 1rem auto 0;
+  background: linear-gradient(to right, transparent, var(--gold-deep), transparent);
 }
