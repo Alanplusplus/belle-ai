@@ -26,6 +26,8 @@ import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import remarkGfm from "remark-gfm";
 import { StickyBottomCta, TopCta, BottomCta } from "@/components/BlogCtaBanner";
+import { VideoSection } from "@/components/VideoEmbed";
+import { getVideoForBlog } from "@/lib/videos";
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -183,6 +185,7 @@ function BlogPostContent({
   const toolLabel = tt(`type_${toolType}`);
   const complementaryTools = getComplementaryTools(toolType);
   const headings = extractH2Headings(post.content);
+  const video = getVideoForBlog(slug);
 
   return (
     <article className="py-10 pb-28 sm:py-16 sm:pb-16">
@@ -278,6 +281,9 @@ function BlogPostContent({
             </ol>
           </details>
         )}
+
+        {/* 有配套 YouTube 视频的文章：正文之前给一个视频版入口（点击才加载播放器，不影响首屏） */}
+        {video && <VideoSection video={video} page={`blog:${slug}`} className="mt-8" />}
 
         <div className="prose prose-neutral mt-10 max-w-none break-words prose-headings:font-bold prose-a:text-primary prose-img:h-auto prose-img:max-w-full">
           <MarkdownContent content={post.content} toolType={toolType} locale={locale} />

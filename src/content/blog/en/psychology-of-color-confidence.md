@@ -159,7 +159,7 @@ These signals reinforce the habit. The confidence boost becomes self-sustaining.
 
 Traditional professional color analysis involves in-person draping sessions with fabric swatches — valuable, but expensive ($150-400+) and not available everywhere. Many people never get properly analyzed simply because of access barriers.
 
-AI-powered color analysis tools like [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) have changed this equation. Using computer vision to analyze skin undertone, contrast level, and color characteristics from a photo, these tools can identify your color season in seconds rather than hours — and from anywhere in the world.
+AI-powered color analysis tools like [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) have changed this equation. Using an AI image model to judge skin undertone, contrast level, and color characteristics from a photo, these tools can suggest your color season in seconds rather than hours, and from anywhere in the world.
 
 The democratization matters for the confidence conversation because it means more people can access this information. When everyone can discover their best colors regardless of location or budget, the psychological benefits become available to everyone too.
 

@@ -134,16 +134,16 @@ Traditional color analysis required booking an expensive in-person appointment. 
 ### How AI Color Analysis Works
 
 1. **Upload a selfie** taken in natural daylight with no makeup or filters
-2. **Computer vision** extracts color data from your skin, hair, and eyes at the pixel level
-3. **Machine learning** compares your color profile against the 12-season framework
+2. **An AI image model** looks at your skin, hair, and eyes in the photo
+3. **The AI** compares what it sees against the 12-season framework
 4. **Instant results** — your season, palette, and styling recommendations in under 60 seconds
 
 ### Is AI Accurate?
 
 AI color analysis is a useful starting point, though results can differ from an in-person consultation. It's particularly strong at:
 - Identifying undertone (warm vs. cool)
-- Measuring contrast levels
-- Determining depth/value
+- Judging contrast levels
+- Judging depth/value
 
 Where it may be less precise:
 - People whose coloring falls exactly between two seasons

@@ -108,7 +108,7 @@ The gold standard. A trained color analyst holds fabric drapes in various colors
 
 ### Method 2: AI Color Analysis
 
-AI-powered apps like Belle AI analyze your photo using computer vision to detect your undertone, contrast level, and coloring characteristics.
+AI-powered apps like Belle AI use an AI image model to judge your undertone, contrast level, and coloring characteristics from your photo.
 
 - **Cost:** Free to $5
 - **Time:** 60 seconds

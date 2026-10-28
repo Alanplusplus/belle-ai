@@ -145,10 +145,10 @@ Before diving into recommendations, let's identify your face shape. Stand in fro
 
 ## How AI Can Help
 
-While this guide gives you a starting point, AI face shape analysis takes the guesswork out of the equation. Apps like Belle AI:
+While this guide gives you a starting point, AI face shape analysis can give you a quicker second opinion. Apps like Belle AI:
 
-1. Precisely classify your face shape using computer vision
-2. Analyze your specific proportions (not just the general shape)
+1. Suggest your face shape from a photo using an AI image model (a visual judgment, not a measurement)
+2. Comment on your specific proportions (not just the general shape)
 3. Generate visual hairstyle recommendations tailored to your unique features
 4. Show you actual hairstyle previews, not just text descriptions
 

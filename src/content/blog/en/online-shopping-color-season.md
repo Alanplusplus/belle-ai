@@ -138,7 +138,7 @@ Here's a quick-reference table for common online color names and what they *actu
 
 Here's where things get interesting. Traditional color matching required you to become a human colorimeter — training your eye to detect undertones through screens, fabric, and lighting distortions. That's a real skill, but it takes time to develop.
 
-Modern AI color analysis tools can shortcut this process. Instead of guessing whether a "dusty mauve" will work for your Soft Summer palette, you can use tools that analyze the actual color values and compare them against your season's characteristics.
+Modern AI color analysis tools can shortcut this process. Instead of guessing whether a "dusty mauve" will work for your Soft Summer palette, you can use tools that look at your photo and judge how the color sits against your season's characteristics. It is a visual judgment, not a measurement, so treat it as a quick check rather than a verdict.
 
 For example, [aicoloranalysis.io](https://aicoloranalysis.io/outfit-color-analysis) offers outfit color analysis that evaluates whether specific clothing colors harmonize with your skin tone. You upload a photo wearing the item, and it tells you whether the color is enhancing or clashing with your natural coloring. It's essentially the "draping test" you'd do in a stylist's office, but accessible from your living room.
 

@@ -200,7 +200,7 @@ The result? A wardrobe where every piece feels intentional, everything mixes and
 
 The traditional approach to identifying your style personality involved booking sessions with image consultants — expensive, time-consuming, and often based on subjective opinion rather than systematic analysis.
 
-Today, [style personality analysis tools](https://aicoloranalysis.io/style-personality) can assess your facial geometry, proportions, and coloring to determine your archetype from a selfie. The same computer vision principles that power color season analysis now extend to style DNA — giving you a data-informed starting point rather than guessing based on Pinterest boards.
+Today, [style personality analysis tools](https://aicoloranalysis.io/style-personality) can look at your facial features, proportions, and coloring and suggest an archetype from a selfie. The same kind of AI image analysis used for color seasons now extends to style DNA, giving you a visual starting point rather than guessing based on Pinterest boards.
 
 That said, technology is a starting point, not a replacement for intuition. Use your analysis results as a framework, then refine based on what you actually reach for and feel confident wearing. The best wardrobe is one that combines systematic insight with personal truth.
 

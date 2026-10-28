@@ -198,13 +198,13 @@ It's rare for olive-toned people to type into Spring or Winter seasons because t
 
 If you've taken a color analysis quiz and the results didn't feel right, your olive undertone might be the reason. Standard quizzes don't account for the green modifier, so they may type you into a season that technically matches your warm/cool base but ignores the muted quality that olive adds.
 
-For more accurate results, [AI-based color analysis](/personal-color-analysis) can detect olive undertones by measuring the actual color values in your skin — including that green-grey cast that's invisible to most basic tests but clearly visible to computer vision algorithms.
+If you are still unsure, [AI-based color analysis](/personal-color-analysis) can give you a second opinion. An AI image model looks at your whole photo and may notice the green-grey cast that basic tests often miss. It is a visual judgment, not a measurement, so lighting and camera settings can shift it. Treat it as a starting point.
 
 ---
 
 ## Confirm Your Undertone with AI
 
-Not sure if you're olive? Our [free AI color analysis](/color-analysis) detects olive undertones by measuring the actual green-grey pigment in your skin — something standard warm/cool tests miss entirely.
+Not sure if you're olive? Our [free AI color analysis](/color-analysis) can give you a second opinion on whether your coloring leans olive, something standard warm/cool tests often miss.
 
 [Try Free AI Color Analysis →](/try)
 

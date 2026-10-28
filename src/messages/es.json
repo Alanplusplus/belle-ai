@@ -3912,5 +3912,14 @@
     "faq4Q": "¿Por qué otra foto me dio otra estación?",
     "faq4A": "La iluminación, los ajustes de la cámara, el maquillaje y los filtros cambian los colores de una foto, y la IA lee lo que ve. Si tus resultados difieren, quizá estés entre dos estaciones. Prueba ambas paletas y compáralas con tela real a la luz del día.",
     "relatedTitle": "Relacionado"
+  },
+  "video": {
+    "homeTitle": "Aprende en vídeo",
+    "homeSubtitle": "Explicaciones breves y claras sobre teoría del color, subtonos y cómo encontrar tu estación.",
+    "inlineTitle": "¿Prefieres verlo? Aquí tienes la versión en vídeo",
+    "playLabel": "Reproducir vídeo: {title}",
+    "minutes": "{n} min",
+    "watchOnYouTube": "Ver en YouTube",
+    "englishNarration": "Narración en inglés. Activa los subtítulos de YouTube en tu idioma."
   }
 }

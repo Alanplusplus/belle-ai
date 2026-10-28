@@ -92,11 +92,11 @@ Many people discover their undertone through years of foundation trial and error
 
 ### Method 7: AI Color Analysis
 
-The most objective method. AI tools like Belle AI analyze your photo using computer vision to detect your exact undertone without subjective bias or lighting confusion.
+A quick second opinion. AI tools like Belle AI use an AI image model to judge your undertone from a photo. It is a visual judgment rather than a measurement, so lighting, camera settings and makeup can still shift the result.
 
-- No need for natural light or specific conditions
-- Analyzes actual color values in your skin
-- Provides a specific seasonal classification (12-type system)
+- Works best with natural light and no makeup
+- Looks at your skin, eyes and hair together
+- Suggests a seasonal type (12-type system)
 - Takes 60 seconds
 
 ## Warm vs. Cool Toned: Complete Comparison
@@ -138,7 +138,7 @@ Your undertone tells you the temperature (warm vs. cool), but your season also a
 - **Depth:** How light or dark your best colors are
 - **Chroma:** How bright or muted your best colors are
 
-For a complete analysis, try [Belle AI's personal color analysis](/personal-color-analysis) feature — it determines your full 12-type seasonal classification in 60 seconds from a single photo. Or start with our [free color quiz](/tools/color-quiz).
+For a complete analysis, try [Belle AI's personal color analysis](/personal-color-analysis) feature — it suggests your 12-type seasonal classification in about 60 seconds from a single photo. Or start with our [free color quiz](/tools/color-quiz).
 
 ## Related Articles
 

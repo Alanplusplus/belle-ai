@@ -9,6 +9,8 @@ import {
 import type { Metadata } from "next";
 import { UndertoneTestClient } from "./UndertoneTestClient";
 import { ToolFaq, ToolIntro, ToolRelated } from "@/components/ToolPageSections";
+import { VideoSection } from "@/components/VideoEmbed";
+import { getVideoForTool } from "@/lib/videos";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({
@@ -86,6 +88,9 @@ export default async function UndertoneTestPage({
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   };
 
+  // 配套的英文教程视频（已发布才有值）
+  const video = getVideoForTool("/tools/undertone-test");
+
   const related = [
     { href: "/tools/color-quiz", label: nav("colorQuiz") },
     { href: "/color-analysis", label: nav("colorAnalysisGuide") },
@@ -103,6 +108,7 @@ export default async function UndertoneTestPage({
       <UndertoneTestClient />
 
       <ToolIntro text={t("seoIntro")} />
+      {video && <VideoSection video={video} page="tool:undertone-test" contained />}
       <ToolFaq title={quiz("faqTitle")} faqs={faqs} />
       <ToolRelated title={cq("relatedTitle")} links={related} />
     </>

@@ -3912,5 +3912,14 @@
     "faq4Q": "Başka bir fotoğraf neden bana başka bir mevsim verdi?",
     "faq4A": "Işık, kamera ayarları, makyaj ve filtreler fotoğraftaki renkleri değiştirir ve yapay zekâ gördüğünü okur. Sonuçlarınız farklıysa iki mevsim arasında olabilirsiniz. Her iki paleti deneyin ve gün ışığında gerçek kumaşla karşılaştırın.",
     "relatedTitle": "İlgili sayfalar"
+  },
+  "video": {
+    "homeTitle": "Videoyla öğrenin",
+    "homeSubtitle": "Renk teorisi, alt tonlar ve mevsiminizi bulma hakkında kısa ve net anlatımlar.",
+    "inlineTitle": "İzlemeyi mi tercih edersiniz? İşte video sürümü",
+    "playLabel": "Videoyu oynat: {title}",
+    "minutes": "{n} dk",
+    "watchOnYouTube": "YouTube'da izle",
+    "englishNarration": "İngilizce seslendirme. YouTube altyazılarını kendi dilinize çevirin."
   }
 }

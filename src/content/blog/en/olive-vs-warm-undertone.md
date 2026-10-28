@@ -151,7 +151,7 @@ If you're warm olive and you've been choosing colors for "warm undertones" using
 1. **Test bright vs muted warm:** If terracotta flatters you but bright orange doesn't, you're olive (possibly warm olive)
 2. **Check foundation behavior:** If warm foundations consistently turn orange, you're not standard warm
 3. **Compare against known warm-toned person:** Stand next to someone clearly warm-toned. If your skin has a greenish quality theirs lacks, you're olive
-4. **Try AI analysis:** Computer vision detects the green-grey cast that distinguishes olive from warm
+4. **Try AI analysis as a second opinion:** An AI image model looks at your whole photo and may notice the green-grey cast that distinguishes olive from warm
 
 ---
 

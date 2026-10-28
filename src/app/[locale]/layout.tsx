@@ -85,11 +85,13 @@ export async function generateMetadata({
     description: meta.homeDescription,
     metadataBase: new URL(SITE_URL),
     icons: {
+      // 花瓣图标；?v=2 用来让浏览器丢掉旧的缓存图标
       icon: [
-        { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
-        { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+        { url: "/icon.svg?v=2", type: "image/svg+xml", sizes: "any" },
+        { url: "/favicon-32.png?v=2", sizes: "32x32", type: "image/png" },
+        { url: "/favicon-16.png?v=2", sizes: "16x16", type: "image/png" },
       ],
-      apple: "/apple-touch-icon.png",
+      apple: "/apple-touch-icon.png?v=2",
     },
     // 含标准的 RSS 自动发现（types）；非英语页面指向该语种自己的博客 feed
     alternates: buildAlternates(locale, ""),

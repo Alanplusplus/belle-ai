@@ -116,7 +116,7 @@ The color temperature that makes your skin look brighter and more even is your u
 
 If you've tried all five tests and still aren't sure, you likely have a neutral undertone — which is actually great news. Neutral undertones have the most flexibility with color choices.
 
-For a definitive answer, consider [AI-powered color analysis](/personal-color-analysis). Apps like Belle AI use computer vision to analyze the actual color values in your skin, providing objective results that aren't affected by subjective perception or lighting conditions. You can also try our [free color quiz](/tools/color-quiz) for a quick estimate.
+If the home tests leave you unsure, an [AI color analysis](/personal-color-analysis) can give you a second opinion. Belle AI uses an AI image model to judge your undertone from a photo. It is a visual judgment, not a measurement, so lighting, camera settings and makeup can still shift the result (see [how accurate AI color analysis really is](/ai-color-analysis-accuracy)). You can also try our [free color quiz](/tools/color-quiz) for a quick estimate.
 
 ## Frequently Asked Questions
 
@@ -134,4 +134,5 @@ Olive skin has a greenish cast that can be either warm-olive or cool-olive. The 
 - [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
 - [Am I Warm or Cool Toned? 7 Proven Methods](/blog/how-to-determine-skin-undertone) — A deeper dive into undertone determination
 - [Best Colors for Cool Undertones](/blog/best-colors-for-cool-undertones) — Complete style guide for cool-toned people
+- [Cool Undertone: Are You a Summer or a Winter?](/blog/cool-undertone-summer-or-winter) — Cool is only half the answer; here's how to tell your season
 - [Personal Color Analysis: 12 Types Explained](/blog/personal-color-analysis-guide) — Go beyond undertone to find your full seasonal type

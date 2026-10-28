@@ -1,196 +1,164 @@
 ---
-title: "Die besten Farben für kühle Untertöne: Ihr kompletter Styling-Ratgeber"
-description: "Entdecken Sie die schmeichelhaftesten Farben für kühle Untertöne in Make-up, Kleidung, Haaren und Accessoires. Mit spezifischen Farbtonempfehlungen für kühl getönte Haut."
+title: "Beste Farben für kühle Untertöne: Kleidung, Make-up und Haar"
+seoTitle: "Beste Farben für kühle Untertöne: Mode, Make-up & Haar"
+description: "Marine, Beere, Smaragd, Pflaume und Silber passen zu den meisten kühlen Untertönen. Tabus, Kontrast-Tipps und ein 2-Minuten-Test bei Tageslicht."
 date: "2026-07-09"
-tags: ["kühler Unterton", "kühle Haut", "Farbpalette", "Styling-Ratgeber", "Mode"]
+updated: "2026-10-27"
+tags: ["kühler Unterton", "kühle Haut", "Farbpalette", "Styling-Ratgeber", "Mode", "Farbsaison"]
 image: "/images/blog/best-colors-for-cool-undertones.webp"
+faq:
+  - q: "Welche Farben stehen kühlen Untertönen am besten?"
+    a: "Blau-, violett- und kühl-neutrale Farben wirken meist am harmonischsten: Marine, Kobalt, Saphir, Himbeere, Cranberry, Pflaume, Lavendel, Smaragd, Petrol, Anthrazit, kühles Grau sowie klares oder sanftes Weiß — dazu Schmuck aus Silber, Platin oder Weißgold. Wählen Sie weichere Nuancen, wenn Ihre Merkmale ineinanderfließen, und klarere, wenn sie stark kontrastieren."
+  - q: "Können kühle Untertöne Schwarz tragen?"
+    a: "Oft ja, besonders bei hohem Kontrast in der Färbung (die Wintertypen). Ist Ihre Färbung weich oder hell, wirkt reines Schwarz im Gesichtsbereich schnell hart — Anthrazit, Marine oder Blaugrau sind dann meist sanfter."
+  - q: "Können kühle Untertöne Goldschmuck tragen?"
+    a: "Silber, Platin und Weißgold passen meist am leichtesten. Weichere kühle Typen tragen oft gebürstetes oder mattes Gold und Roségold. Knallgelbes Gold direkt am Gesicht ist typischerweise am schwierigsten."
+  - q: "Können kühle Untertöne warme Farben wie Orange oder Kamel tragen?"
+    a: "Sie wirken oft am besten weiter unten — in Hosen, Röcken, Schuhen oder Taschen. Am Gesicht können warme Farben graue Schatten oder Rötungen betonen. Ein kühler Farbtrenner wie Schal oder Kragen zwischen warmer Farbe und Gesicht hilft oft."
+  - q: "Ist ein kühler Unterton dasselbe wie ein Sommertyp?"
+    a: "Nein. Ein kühler Unterton kann im 12-Jahreszeiten-System Sommer oder Winter sein. Sommer-Färbung ist kühl und weich, Winter-Färbung ist kühl und klar mit höherem Kontrast."
+  - q: "Kann tiefe oder dunkle Haut einen kühlen Unterton haben?"
+    a: "Ja. Der Unterton ist unabhängig davon, wie hell oder dunkel Ihre Haut ist. Tiefe Haut mit kühlem Unterton wirkt oft am besten in Juwelentönen, blau-basierten Rottönen und Silber."
 ---
 
-## Ihre Farbpalette für kühle Untertöne
+## Die Kurzantwort
 
-Wenn Sie kühle Untertöne haben (Haut mit rosa-, rot- oder bläulichen Farbtönen unter der Oberfläche), lassen bestimmte Farben Sie absolut strahlen. Dieser Ratgeber deckt alles ab – von Alltags-Neutraltönen bis zu kräftigen Statement-Farben.
+Kühle Untertöne wirken meist am besten in blau-, violett- und kühl-neutralen Farben:
 
-## Die Wissenschaft hinter kühlen Farben
+- **Blau:** Marine, Kobalt, Saphir, Schiefer, Puderblau
+- **Rosa und Rot:** Himbeere, Cranberry, Rose, Fuchsia, Blaurot
+- **Violett:** Pflaume, Violett, Lavendel, Heide
+- **Grün:** Smaragd, Petrol, Kiefer, kühler Salbei, Blau-Mint
+- **Neutral:** Anthrazit, kühles Grau, Marine, klares oder sanftes Weiß
+- **Metalle:** Silber, Platin, Weißgold
 
-Kühl getönte Haut harmonisiert mit Farben, die Blau als Basis haben. Wenn Sie diese blau-basierten Farben in Gesichtsnähe tragen, entsteht eine visuelle Harmonie, die:
+Farben mit gelber oder orangefarbener Basis (Orange, Rost, Senf, Kamel, Gelb-Beige, Gelb-Oliv) sind in Gesichtsnähe meist die problematischsten.
 
-- Die Haut klarer und strahlender wirken lässt
-- Rötungen oder Unebenheiten reduziert
-- Die Augen hervorhebt
-- Einen insgesamt gepflegten, stimmigen Eindruck erzeugt
+Sehen Sie die Liste als Ausgangspunkt, nicht als Regel. Zwei kühl getönte Menschen können im gleichen Ton sehr unterschiedlich wirken, weil **Tiefe** (wie hell oder dunkel Sie sind) und **Kontrast** (wie unterschiedlich Haut, Haar und Augen zueinander sind) bestimmen, wie weich oder wie klar eine Farbe sein sollte. Die Abschnitte unten zeigen, wie Sie das anpassen.
 
-## Die besten Neutraltöne für kühle Untertöne
+## Sind Sie wirklich kühl getönt?
 
-Nicht alle Neutraltöne sind gleich. Kühl getönte Menschen sehen am besten aus in:
+Ihr Unterton ist der subtile Farbton unter der Hautoberfläche. Er bleibt gleich, wenn Sie bräunen oder erröten. Diese Signale deuten auf Kühl hin — keines davon ist allein ein Beweis:
 
-**Weißtöne:**
-- Leuchtendes Weiß (nicht Creme)
-- Blauweiß
-- Kühles Grauweiß
+- Silber und weiße Metalle wirken auf Ihnen sauberer als Gelbgold.
+- Neben weißem Papier bei Tageslicht wirkt Ihre Haut eher rosa oder rosig als golden.
+- Die Venen am Handgelenk wirken blau oder violett (am unzuverlässigsten der drei Hinweise).
 
-**Grautöne:**
-- Anthrazit
-- Stahlgrau
-- Taubengrau
-- Kühles Taupe
+Widersprechen sich die Signale, sind Sie vielleicht neutral oder oliv. Lesen Sie [Kühl vs. Warm: 5 einfache Tests](/de/blog/cool-tone-vs-warm-tone), probieren Sie den [kostenlosen Unterton-Test](/de/tools/undertone-test) oder die [Anleitung für neutrale Untertöne](/de/blog/neutral-undertone-guide) und die [Anleitung für olivfarbene Untertöne](/de/blog/olive-undertone-guide).
 
-**Schwarztöne:**
-- Tiefschwarz (ja, reines Schwarz ist kühl getönt)
-- Blauschwarz
+## Kühler Unterton ist nicht eine einzige Palette
 
-**Vermeiden:** Beige, Kamel, warmes Tan und Elfenbein — diese können kühle Haut fahl wirken lassen.
+„Kühl“ beschreibt die Temperatur Ihrer besten Farben. Es sagt nicht, wie hell, weich oder lebhaft sie sein sollten. Im 12-Jahreszeiten-System neigen sechs Typen kühl: drei Sommer und drei Winter.
 
-## Die besten Farben nach Kategorie
+- [Heller Sommer](/de/color-palette/light-summer): sehr hell, zart, niedriger Kontrast
+- [Kühler Sommer (True Summer)](/de/color-palette/cool-summer): mittlere Tiefe, moderater Kontrast, leicht gedämpft
+- [Sanfter Sommer](/de/color-palette/soft-summer): gedämpft und staubig, niedriger Kontrast
+- [Kühler Winter (True Winter)](/de/color-palette/cool-winter): kräftig und klar, mittel-tief
+- [Tiefer Winter](/de/color-palette/deep-winter): sehr tief und reich, hoher Kontrast
+- [Leuchtender Winter](/de/color-palette/bright-winter): am lebhaftesten, höchster Kontrast
 
-### Blau (Ihre Power-Farbe)
-Blau ist auf kühler Haut fast immer schmeichelhaft:
-- Marineblau
-- Königsblau
-- Fliederblau
-- Eisblau
-- Kobaltblau
-- Schieferblau
+Sanfter Sommer, Tiefer Winter und Leuchtender Winter liegen in unseren Paletten näher in der Mitte der Temperaturskala und vertragen meist ein paar Nuancen, die für Kühler Sommer oder Kühler Winter schwieriger sind.
 
-### Rosa & Rot
-Bleiben Sie bei blau-basierten Versionen:
-- Altrosa
-- Mauve
-- Fuchsia
-- Beere
-- Wein/Burgunderrot
-- Blaurot (nicht Orangerot)
-- Himbeere
+Unsicher, welcher der sechs Typen zu Ihnen passt? Lesen Sie [Kühler Unterton: Sommer oder Winter? So erkennen Sie es](/de/blog/cool-undertone-summer-or-winter). Auf den Palettenseiten oben finden Sie die exakten Farben mit Hex-Codes.
 
-### Grün
-Wählen Sie kühl tendierende Grüntöne:
-- Smaragdgrün
-- Petrol
-- Jadegrün
-- Mint
-- Tannengrün
-- Blaugrün
+## Beste Farben für kühle Untertöne, nach Farbfamilie
 
-### Violett (eine weitere Power-Farbe)
-Fast alle Violetttöne sind kühl getönt:
-- Lavendel
-- Pflaumenrot
-- Violett
-- Amethyst
-- Aubergine
-- Flieder
+Pro Familie beginnen Sie mit dem ersten Ton und wechseln zu einer weicheren oder klareren Variante passend zu Ihrem Kontrast.
 
-### Gelb (vorsichtig verwenden)
-Die meisten Gelbtöne sind warm, aber diese funktionieren:
-- Zitronengelb (hat einen kühlen Schimmer)
-- Eisgelb
-- Tragen Sie Gelb im Allgemeinen als Akzent statt als Hauptstück in Gesichtsnähe
+**Blau.** Marine ist der vielseitigste Einstieg und kann Schwarz in Business-Mode, Denim und Mänteln ersetzen. Weicher: Schiefer, staubiges Blau, Puderblau. Klarer: Kobalt, Saphir, Königsblau.
 
-## Make-up-Ratgeber für kühle Untertöne
+**Rosa und Rot.** Achten Sie auf die Farbbasis. Kirsche, Cranberry, Himbeere und Wein neigen zu Blau. Tomate, Ziegel, Lachs und Orange-Koralle neigen zu Gelb. Weicher: staubige Rose, Mauve. Klarer: Kirsche, Fuchsia, echtes Rot.
 
-### Foundation
-- Suchen Sie nach Kennzeichnungen „cool" oder „pink"
-- Marken zum Ausprobieren: Fenty Beauty (viele kühle Optionen), MAC (C = cool), NARS
+**Violett.** Fast jedes Violett neigt kühl. Pflaume ist ein praktischer dunkler Akzent für Strick und Jacken. Lavendel und Heide passen zu weicherer Färbung, klares Violett zu stärkerem Kontrast.
 
-### Lippen
-**Alltag:** Mauve, Altrosa, beerengetönter Balm
-**Kräftig:** Blaurot, tiefes Beerenrot, Fuchsia, Pflaumenrot
-**Vermeiden:** Koralle, Pfirsich, warmer Nude, Orange
+**Grün.** Petrol und Smaragd funktionieren meist gut, weil sie zwischen Blau und Grün liegen. Wählen Sie Blau-Mint statt Gelb-Mint, Kiefer statt Oliv und kühlen Salbei statt Moos.
 
-### Augen
-**Lidschatten-Paletten, nach denen Sie suchen sollten:**
-- Kühle Brauntöne (Taupe, Kakao)
-- Violett und Mauve
-- Silber und Gunmetal
-- Kühle Rosatöne
-- Marineblau und Schiefergrau
+**Gelb.** Die meisten Gelbtöne sind warm. Wenn Sie eines wollen, probieren Sie kühles Zitronengelb oder blasses Primelgelb als Akzent — weg vom Gesicht.
 
-**Vermeiden:** Warme Goldtöne, Kupfer, Rosttöne und orange-braune Töne
+## Neutraltöne und Metalle
 
-### Rouge
-- Sanftes Rosa
-- Mauve
-- Beere
-- Kühles Pflaumenrot
+- **Weiß:** Klares Weiß passt zu hochkontrastiger Färbung. Sanftes Weiß ist bei weicherer Färbung leichter. Creme und Elfenbein wirken neben kühler Haut oft gelbstichig.
+- **Schwarz:** Für Wintertypen funktioniert es gut. Für Hellen Sommer, Kühler Sommer und Sanften Sommer sind Anthrazit, Marine oder Blaugrau meist sanfter als reines Schwarz.
+- **Grau:** Kühles Grau, Anthrazit, Taubengrau und Blaugrau sind für jeden kühlen Typ sicher.
+- **Beige und Kamel:** Gelb-basiertes Beige und Kamel wirken oft fahl. Für ein warm-neigendes Neutral probieren Sie kühles Taupe oder Pilzbraun mit grauem Stich.
+- **Metalle:** Silber, Platin und Weißgold passen fast jedem kühlen Typ. Sanfter Sommer trägt auch gebürstetes oder mattes Gold und Roségold. Siehe [Metalle mischen nach Farbsaison](/de/blog/mixed-metals-jewelry-color-season).
 
-**Vermeiden:** Pfirsich, Koralle, warmes Terrakotta
+## An Kontrast und Tiefe anpassen
 
-### Bronzer
-- Kühl getönte Bronzer (gräulich-braun statt orange-braun)
-- Suchen Sie nach „Contour"-Tönen statt warmer Bronzer
+Diesen Schritt überspringen die meisten Farblisten.
 
-## Haarfarben für kühle Untertöne
+- **Niedriger Kontrast** (Haut, Haar und Augen ähnlich hell): Bleiben Sie bei benachbarten Helligkeiten, z. B. Taubengrau mit staubiger Rose oder Schiefer mit rauchigem Blau. Scharfe Schwarz-Weiß-Kombinationen können wirken, als wären Sie in zwei Hälften geteilt.
+- **Hoher Kontrast:** Klare Trennung, z. B. Marine mit klarem Weiß, Anthrazit mit Fuchsia oder Schwarz mit eisigem Rosa.
+- **Helle Färbung:** Kühle Pastelle wie Puderblau, eisiges Rosa und Lavendel wirken meist besser als schwere, sehr dunkle Farben.
+- **Tiefe Färbung:** Dunklere, reichere kühle Töne wie Mitternachts-Marine, tiefe Pflaume, Smaragd und Wein wirken oft natürlicher.
 
-**Beste Optionen:**
-- Aschblond (jede Tiefe)
-- Platinblond
-- Kühles Braun / Aschbraun
-- Espresso (blauschwarz)
-- Burgunderrot / Weinrot
-- Farben mit violettem Unterton
+**Kühler Unterton bei tieferer Haut.** Unterton ist unabhängig von der Tiefe — tiefe Haut kann kühl sein. Juwelentöne, blau-basierte Rottöne und Silber funktionieren oft gut. Siehe [Farbanalyse für dunkle Haut](/de/blog/color-analysis-for-dark-skin).
 
-**Vermeiden:**
-- Goldblond
-- Kupfer / Kastanienbraun
-- Warmes Karamell
-- Honig-Strähnchen
+## Farben, die mit kühler Färbung kollidieren (und wie Sie sie trotzdem tragen)
 
-## Schmuck & Accessoires für kühle Untertöne
+Orange, Rost, Senf, Kamel, Gelb-Oliv sowie warmes Pfirsich oder Koralle sind häufige Problemfarben. Am kühlen Gesicht können sie graue Schatten, Rötungen oder einen müden Eindruck verstärken. Das ist ein optischer Effekt, kein Gesetz — am stärksten an der Halslinie.
 
-**Metalle:**
-- Silber
-- Platin
-- Weißgold
-- Rhodium
-- Zinn
+Wenn Sie eine davon lieben:
 
-**Edelsteine:**
-- Saphir, Amethyst, Smaragd
-- Diamant (strahlendes Weiß)
-- Perle (weiß oder grau)
-- Aquamarin
+- Tragen Sie sie weiter unten — in Hosen, Rock, Schuhen oder Tasche.
+- Setzen Sie eine kühle Farbe dazwischen, z. B. Schal, Kragen oder Halskette.
+- Testen Sie das konkrete Kleidungsstück, bevor Sie es ausschließen. Farbnamen variieren stark zwischen Shops.
 
-## Saison-spezifische Paletten innerhalb von Kühl
+## Make-up für kühle Untertöne
 
-Nicht alle kühl getönten Menschen tragen dieselben Farben. Es hängt von Ihrem saisonalen Untertyp ab:
+- **Foundation:** Suchen Sie Töne mit der Bezeichnung kühl, rosa oder rosig. Labels unterscheiden sich je Marke — swatchen Sie entlang des Kiefers bei Tageslicht und prüfen Sie den Übergang zum Hals.
+- **Lippen:** Mauve, staubige Rose, Beere und Pflaume für einen weicheren Look. Blaurot, Himbeere und Fuchsia für einen kräftigeren. Orange-neigendes Koralle, Pfirsich und warmes Nude kollidieren oft mit kühler Haut.
+- **Rouge:** Sanftes Rosa, Rose, Beere oder kühle Pflaume. Pfirsich, Aprikose und Terrakotta wirken oft falsch.
+- **Augen:** Grau-neigendes Taupe, Pflaume, Mauve, Silber, Marine und Schiefer. Warmes Gold, Kupfer und Rost kollidieren oft.
+- **Bronzer:** Wählen Sie ein grau-braunes Kontur-Produkt — orange-braun wirkt schnell schlammig.
 
-### Kühler Sommer
-- Weiche, gedämpfte kühle Farben
-- Altrosa, Puderschwarzblau, Salbei
-- Niedriger Kontrast, sanfte Palette
+Weitere Nuancen nach Saison finden Sie in [Beste Make-up-Farben für Ihre Farbsaison](/de/blog/best-makeup-colors-color-season).
 
-### Kühler Winter
-- Kräftige, klare kühle Farben
-- Echtes Rot, Königsblau, Knallpink
-- Hoher Kontrast, dramatische Palette
+## Haarfarbe für kühle Untertöne
 
-### Heller Sommer
-- Sehr helle kühle Farben
-- Lavendel, sanftes Aqua, helles Rosa
-- Zarte, ätherische Palette
+- **Meist schmeichelhaft:** Aschblond, kühles oder aschiges Braun, Pilzbraun, Espresso oder Blau-Schwarz bei hohem Kontrast sowie Burgunder-, Wein- und Pflaumentöne.
+- **Meist schwieriger:** Goldblond, Kupfer, Karamell und Honig.
+- **Platin:** Hängt vom Typ ab. Heller Sommer passt zu weichem Platin, Wintertypen tragen eisiges Platin, wenn der natürliche Kontrast es zulässt — Sanfter Sommer wirkt oft besser in weicheren Asch-Nuancen.
 
-### Tiefer Winter
-- Dunkle, reiche kühle Farben
-- Schwarz, Marineblau, tiefes Smaragdgrün
-- Intensiv, kraftvolle Palette
+Saison-spezifische Nuancen finden Sie unter [Beste Haarfarbe für Ihre Farbsaison](/de/blog/best-hair-color-for-color-season).
 
-## So bauen Sie eine kühl getönte Garderobe auf
+## Ein 2-Minuten-Test bei Tageslicht
 
-**Schritt 1:** Starten Sie mit kühlen Neutraltönen (Marineblau, Anthrazit, kühles Grau, Schwarz, Weiß)
-**Schritt 2:** Fügen Sie Ihre besten Akzentfarben hinzu (wählen Sie 2–3 Favoriten von oben)
-**Schritt 3:** Achten Sie darauf, dass Oberteile und Schals in Gesichtsnähe immer in Ihren besten Farben sind
-**Schritt 4:** Hosen und Oberbekleidung können flexibler sein
+1. Setzen Sie sich tagsüber ans Fenster — ungeschminkt, Haare zurückgebunden. Vermeiden Sie Filter, farbige Wände und warme Lampen.
+2. Halten Sie eine warme und eine kühle Variante derselben Farbe unter das Kinn: Tomatenrot und Himbeere, Oliv und Smaragd, Pfirsich und kühles Rosa.
+3. Achten Sie auf Augen, Schatten darunter und wie gleichmäßig die Haut wirkt. Die bessere Farbe lässt Haut gleichmäßig und Augen klar wirken. Die schlechtere lässt Haut gelblich, grau oder gerötet erscheinen.
+4. Nehmen Sie die gewinnende Farbe und vergleichen Sie eine weichere mit einer klareren Variante, z. B. staubige Rose und Fuchsia oder Schiefer und Kobalt. Die Nuance, die zu Ihrer natürlichen Intensität passt, zeigt, ob Sie eher weich (Sommer) oder klar (Winter) tendieren.
 
-**Capsule-Wardrobe-Neutraltöne für kühle Haut:**
-- Marineblau + Weiß + Anthrazit ist eine sichere Kombination
-- Burgunderrot oder Smaragdgrün für mehr Tiefe
-- Schwarz funktioniert das ganze Jahr
+Das ist eine subjektive Einschätzung — Licht verändert, was Sie sehen. Wenn die Ergebnisse hin und her springen, lesen Sie [Wie Beleuchtung Ihre Farben beeinflusst](/de/blog/how-lighting-affects-your-colors).
 
-## Unsicher, ob Sie kühl sind? KI-Analyse nutzen
+## Wo die KI-Analyse einordnen ist
 
-Wenn Sie sich bei Ihrem exakten Unterton oder saisonalen Typ unsicher sind, beseitigt die [KI-Farbanalyse](/de/personal-color-analysis) das Rätselraten. Belle AI analysiert Ihr Foto mittels Computer Vision, um Ihren präzisen 12-Saisonen-Farbtyp zu bestimmen und liefert eine personalisierte Farbpalette, abgestimmt auf Ihre spezifische Haut-, Haar- und Augenfärbung.
+Belle AI schätzt Ihre Farbsaison anhand eines Selfies ein. Es handelt sich um eine visuelle KI-Einschätzung eines einzelnen Fotos, nicht um eine Messung — Licht, Kameraeinstellungen und Make-up können das Ergebnis beeinflussen. Nutzen Sie es als Ausgangspunkt und bestätigen Sie es mit dem Stofftest oben. Was möglich ist und was nicht, erklären wir in [Wie genau ist KI-Farbanalyse?](/de/ai-color-analysis-accuracy). Zum Ausprobieren starten Sie mit [KI-Farbanalyse](/de/personal-color-analysis).
+
+## Häufig gestellte Fragen
+
+**Welche Farben stehen kühlen Untertönen am besten?**
+Blau-, violett- und kühl-neutrale Farben wirken meist am harmonischsten: Marine, Kobalt, Saphir, Himbeere, Cranberry, Pflaume, Lavendel, Smaragd, Petrol, Anthrazit, kühles Grau sowie klares oder sanftes Weiß — dazu Schmuck aus Silber, Platin oder Weißgold. Wählen Sie weichere Nuancen, wenn Ihre Merkmale ineinanderfließen, und klarere, wenn sie stark kontrastieren.
+
+**Können kühle Untertöne Schwarz tragen?**
+Oft ja, besonders bei hohem Kontrast in der Färbung (die Wintertypen). Ist Ihre Färbung weich oder hell, wirkt reines Schwarz im Gesichtsbereich schnell hart — Anthrazit, Marine oder Blaugrau sind dann meist sanfter.
+
+**Können kühle Untertöne Goldschmuck tragen?**
+Silber, Platin und Weißgold passen meist am leichtesten. Weichere kühle Typen tragen oft gebürstetes oder mattes Gold und Roségold. Knallgelbes Gold direkt am Gesicht ist typischerweise am schwierigsten.
+
+**Können kühle Untertöne warme Farben wie Orange oder Kamel tragen?**
+Sie wirken oft am besten weiter unten — in Hosen, Röcken, Schuhen oder Taschen. Am Gesicht können warme Farben graue Schatten oder Rötungen betonen. Ein kühler Farbtrenner wie Schal oder Kragen zwischen warmer Farbe und Gesicht hilft oft.
+
+**Ist ein kühler Unterton dasselbe wie ein Sommertyp?**
+Nein. Ein kühler Unterton kann im 12-Jahreszeiten-System Sommer oder Winter sein. Sommer-Färbung ist kühl und weich, Winter-Färbung ist kühl und klar mit höherem Kontrast.
+
+**Kann tiefe oder dunkle Haut einen kühlen Unterton haben?**
+Ja. Der Unterton ist unabhängig davon, wie hell oder dunkel Ihre Haut ist. Tiefe Haut mit kühlem Unterton wirkt oft am besten in Juwelentönen, blau-basierten Rottönen und Silber.
 
 ## Verwandte Artikel
 
-- [Kühl vs. Warm: 5 einfache Tests](/de/blog/cool-tone-vs-warm-tone) — Bestätigen Sie, ob Sie wirklich kühl getönt sind
-- [Bin ich warm oder kühl getönt? 7 Methoden](/de/blog/how-to-determine-skin-undertone) — Der definitive Unterton-Ratgeber
-- [Persönliche Farbanalyse: 12 Typen erklärt](/de/blog/personal-color-analysis-guide) — Alle 12 saisonalen Typen verstehen
+- [Kühler Unterton: Sommer oder Winter? So erkennen Sie es](/de/blog/cool-undertone-summer-or-winter): Die kühlen Saisons auseinanderhalten
+- [Farbanalyse: Der komplette Guide](/de/color-analysis): Alles, was Sie für Ihre besten Farben wissen müssen
+- [Kühl vs. Warm: 5 einfache Tests](/de/blog/cool-tone-vs-warm-tone): Bestätigen, ob Sie wirklich kühl getönt sind
+- [Warm oder kühl? 7 Methoden](/de/blog/how-to-determine-skin-undertone): Der definitive Unterton-Guide
+- [Persönliche Farbanalyse: 12 Typen erklärt](/de/blog/personal-color-analysis-guide): Alle 12 saisonalen Typen verstehen

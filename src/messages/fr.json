@@ -3912,5 +3912,14 @@
     "faq4Q": "Pourquoi une autre photo m'a-t-elle donné une autre saison ?",
     "faq4A": "L'éclairage, les réglages de l'appareil, le maquillage et les filtres modifient les couleurs d'une photo, et l'IA lit ce qu'elle voit. Si vos résultats diffèrent, vous vous situez peut-être entre deux saisons. Essayez les deux palettes et comparez-les avec de vrais tissus à la lumière du jour.",
     "relatedTitle": "À lire aussi"
+  },
+  "video": {
+    "homeTitle": "Apprendre en vidéo",
+    "homeSubtitle": "Des explications courtes et claires sur la théorie des couleurs, les sous-tons et la découverte de votre saison.",
+    "inlineTitle": "Vous préférez regarder ? Voici la version vidéo",
+    "playLabel": "Lire la vidéo : {title}",
+    "minutes": "{n} min",
+    "watchOnYouTube": "Voir sur YouTube",
+    "englishNarration": "Narration en anglais. Activez les sous-titres YouTube dans votre langue."
   }
 }

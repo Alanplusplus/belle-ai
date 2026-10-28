@@ -98,7 +98,7 @@ Look at your skin next to someone you know is clearly warm or clearly cool.
 
 ### Step 4: AI Analysis Confirmation
 
-Standard draping tests can still be ambiguous for borderline cases. [AI color analysis](/personal-color-analysis) measures the actual color values in your skin — including the green-grey cast that's invisible to casual observation but clearly detectable by computer vision. This is the most reliable way to distinguish olive from neutral.
+Standard draping tests can still be ambiguous for borderline cases. An [AI color analysis](/personal-color-analysis) can give you a useful second opinion, because an AI image model looks at your whole photo and may pick up a green-grey cast that is easy to miss by eye. It is still a visual judgment that lighting and camera settings can shift, so use it alongside the tests above rather than instead of them.
 
 ---
 
@@ -157,13 +157,13 @@ You might be very subtle olive or neutral with olive tendencies. Try an olive-sp
 - **The green cast is the key differentiator** — visible against white, on jawline/neck, in natural daylight
 - **Both warm and cool look "off" on olive for different reasons** than they do on neutral skin
 - **Muted colors reveal olive** — if dusty rose and warm taupe both flatter you while pure warm and pure cool don't, you're olive
-- **AI analysis is the most reliable distinguisher** for borderline cases
+- **AI analysis can be a helpful second opinion** for borderline cases
 
 Stop accepting "neutral" as your undertone if the label never quite fit. You might be olive — and that changes everything.
 
 ## Find Your True Undertone
 
-Not sure if you're olive or neutral? Our AI color analysis detects the green-grey cast that standard tests miss.
+Not sure if you're olive or neutral? Our AI color analysis can give you a second opinion on the green-grey cast that standard tests often miss.
 
 [Try Free AI Color Analysis →](/try)
 

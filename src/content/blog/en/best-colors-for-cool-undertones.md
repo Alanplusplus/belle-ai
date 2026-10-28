@@ -1,197 +1,164 @@
 ---
-title: "Best Colors for Cool Undertones: Your Complete Style Guide"
-description: "Discover the most flattering colors for cool undertones in makeup, clothing, hair, and accessories. Includes specific shade recommendations for cool-toned skin."
+title: "Best Colors for Cool Undertones: Clothes, Makeup and Hair"
+seoTitle: "Best Colors for Cool Undertones: Clothes, Makeup & Hair"
+description: "Navy, berry, emerald, plum and silver suit most cool undertones. See what to avoid, how to adjust for contrast, and a 2-minute daylight test."
 date: "2026-07-09"
-tags: ["cool undertone", "cool skin", "color palette", "style guide", "fashion"]
+updated: "2026-10-27"
+tags: ["cool undertone", "cool skin", "color palette", "style guide", "fashion", "color season"]
 image: "/images/blog/best-colors-for-cool-undertones.webp"
+faq:
+  - q: "What colors look best on cool undertones?"
+    a: "Blue-based, violet-based and cool-neutral colors usually work best: navy, cobalt, sapphire, raspberry, cranberry, plum, lavender, emerald, teal, charcoal, cool gray and crisp or soft white, with silver, platinum or white gold jewelry. Choose softer versions if your features blend together and clearer versions if they contrast strongly."
+  - q: "Can cool undertones wear black?"
+    a: "Often yes, especially if your coloring is high in contrast (the Winter types). If your coloring is soft or light, pure black can look harsh near the face, and charcoal, navy or blue-gray is usually gentler."
+  - q: "Can cool undertones wear gold jewelry?"
+    a: "Silver, platinum and white gold are usually the easiest. Softer cool types can often wear brushed or matte gold and rose gold. Bright yellow gold right next to the face is typically the hardest to wear."
+  - q: "Can cool undertones wear warm colors like orange or camel?"
+    a: "They tend to look best lower down, in trousers, skirts, shoes or bags. Near the face, warm colors can bring out gray shadows or redness. Putting a cool color such as a scarf or collar between the warm color and your face often helps."
+  - q: "Is a cool undertone the same as being a Summer?"
+    a: "No. A cool undertone can be a Summer or a Winter in the 12-season system. Summer coloring is cool and soft, Winter coloring is cool and clear with higher contrast."
+  - q: "Can deep or dark skin have a cool undertone?"
+    a: "Yes. Undertone is separate from how light or dark your skin is. Deep skin with a cool undertone often looks best in jewel tones, blue-based reds and silver."
 ---
 
-## Your Cool Undertone Color Palette
+## The short answer
 
-If you have cool undertones (skin with pink, red, or blue hues beneath the surface), certain colors will make you absolutely glow. This guide covers everything from everyday neutrals to bold statement colors.
+Cool undertones usually look best in blue-based, violet-based and cool-neutral colors:
 
-## The Science Behind Cool-Toned Colors
+- **Blues:** navy, cobalt, sapphire, slate, powder blue
+- **Pinks and reds:** raspberry, cranberry, rose, fuchsia, blue-red
+- **Purples:** plum, violet, lavender, heather
+- **Greens:** emerald, teal, pine, cool sage, blue-mint
+- **Neutrals:** charcoal, cool gray, navy, crisp or soft white
+- **Metals:** silver, platinum, white gold
 
-Cool undertone skin harmonizes with colors that have blue as a base. When you wear these blue-based colors near your face, they create a visual harmony that:
+Colors with a yellow or orange base (orange, rust, mustard, camel, yellow-beige, yellow-olive) are the usual trouble spots near the face.
 
-- Makes your skin look clearer and more radiant
-- Reduces the appearance of redness or unevenness
-- Makes your eyes pop
-- Creates an overall polished, put-together appearance
+Treat that list as a starting point, not a rule. Two cool-toned people can look very different in the same shade, because your **depth** (how light or dark you are) and your **contrast** (how different your skin, hair and eyes are from each other) decide how soft or how clear a color should be. The sections below show how to make that adjustment.
 
-## Best Neutrals for Cool Undertones
+## First, are you really cool-toned?
 
-Not all neutrals are created equal. Cool-toned people look best in:
+Your undertone is the subtle hue under the surface of your skin. It stays the same when you tan or flush. These signals point cool, though none of them is proof on its own:
 
-**Whites:**
-- Bright white (not cream)
-- Blue-white
-- Cool gray-white
+- Silver and white metals look cleaner on you than yellow gold.
+- Next to plain white paper in daylight, your skin looks pink or rosy rather than golden.
+- The veins on your wrist look blue or purple (the least reliable of the three).
 
-**Grays:**
-- Charcoal
-- Steel gray
-- Dove gray
-- Cool taupe
+If the signals disagree, you may be neutral or olive instead. See [Cool Tone vs Warm Tone: 5 Easy Tests](/blog/cool-tone-vs-warm-tone), try the [free undertone test](/tools/undertone-test), or read the [neutral undertone guide](/blog/neutral-undertone-guide) and the [olive undertone guide](/blog/olive-undertone-guide).
 
-**Blacks:**
-- Jet black (yes, pure black is cool-toned)
-- Blue-black
+## Cool undertone is not one single palette
 
-**Avoid:** Beige, camel, warm tan, and ivory — these can make cool skin look sallow.
+"Cool" describes the temperature of your best colors. It does not say how light, soft or vivid they should be. In the 12-season system, six types lean cool: three Summers and three Winters.
 
-## Best Colors by Category
+- [Light Summer](/color-palette/light-summer): very light, delicate, low contrast
+- [Cool Summer (True Summer)](/color-palette/cool-summer): medium depth, moderate contrast, slightly muted
+- [Soft Summer](/color-palette/soft-summer): muted and dusty, low contrast
+- [Cool Winter (True Winter)](/color-palette/cool-winter): bold and clear, medium-deep
+- [Deep Winter](/color-palette/deep-winter): very deep and rich, high contrast
+- [Bright Winter](/color-palette/bright-winter): the most vivid, highest contrast
 
-### Blues (Your Power Color)
-Blue is almost always flattering on cool skin:
-- Navy
-- Royal blue
-- Periwinkle
-- Ice blue
-- Cobalt
-- Slate blue
+Soft Summer, Deep Winter and Bright Winter sit nearer the middle of the temperature range in our palettes, so they can usually handle a few shades that Cool Summer or Cool Winter cannot.
 
-### Pinks & Reds
-Stick to blue-based versions:
-- Dusty rose
-- Mauve
-- Fuchsia
-- Berry
-- Wine/burgundy
-- Blue-red (not orange-red)
-- Raspberry
+Not sure which of the six is yours? Read [Cool Undertone: Are You a Summer or a Winter?](/blog/cool-undertone-summer-or-winter) Each palette page above lists the exact colors with hex codes.
 
-### Greens
-Choose cool-leaning greens:
-- Emerald
-- Teal
-- Jade
-- Mint
-- Pine green
-- Blue-green
+## Best colors for cool undertones, by color family
 
-### Purples (Another Power Color)
-Almost all purples are cool-toned:
-- Lavender
-- Plum
-- Violet
-- Amethyst
-- Eggplant
-- Lilac
+For each family, start with the first shade, then move to a softer or clearer version to match your contrast.
 
-### Yellows (Use Carefully)
-Most yellows are warm, but these work:
-- Lemon yellow (has a cool cast)
-- Icy yellow
-- Generally, wear yellow as an accent rather than a main piece near your face
+**Blues.** Navy is the most versatile starting point, and it can replace black in workwear, denim and coats. Softer: slate, dusty blue, powder blue. Clearer: cobalt, sapphire, royal blue.
 
-## Cool Undertone Makeup Guide
+**Pinks and reds.** Look at the base of the color. Cherry, cranberry, raspberry and wine lean blue. Tomato, brick, salmon and orange-coral lean yellow. Softer: dusty rose, mauve. Clearer: cherry, fuchsia, true red.
 
-### Foundation
-- Look for "cool" or "pink" undertone labels
-- Brands to try: Fenty Beauty (shade range includes many cool options), MAC (C = cool), NARS
+**Purples.** Almost every purple leans cool. Plum is a practical dark accent for knitwear and jackets. Lavender and heather suit softer coloring, and clear violet suits stronger contrast.
 
-### Lips
-**Everyday:** Mauve, dusty rose, berry-tinted balm
-**Bold:** Blue-red, deep berry, fuchsia, plum
-**Avoid:** Coral, peach, warm nude, orange
+**Greens.** Teal and emerald usually work well because they sit between blue and green. Choose blue-mint over yellow-mint, pine over olive, and cool sage over moss.
 
-### Eyes
-**Eyeshadow palettes to look for:**
-- Cool browns (taupe, cocoa)
-- Purples and mauves
-- Silver and gunmetal
-- Cool pinks
-- Navy and slate
+**Yellows.** Most yellows are warm. If you want one, try cool lemon or pale primrose as an accent, away from the face.
 
-**Avoid:** Warm golds, coppers, rusts, and orangey-browns
+## Neutrals and metals
 
-### Blush
-- Soft pink
-- Mauve
-- Berry
-- Cool plum
+- **White:** crisp white suits high-contrast coloring. Soft white is easier on softer coloring. Cream and ivory often turn yellowish next to cool skin.
+- **Black:** it works well for the Winter types. For Light Summer, Cool Summer and Soft Summer, charcoal, navy or blue-gray is usually gentler than pure black.
+- **Gray:** cool gray, charcoal, dove gray and blue-gray are safe for every cool type.
+- **Beige and camel:** yellow-based beige and camel tend to look sallow. If you want a warm-leaning neutral, try cool taupe or mushroom, which carry a gray cast.
+- **Metals:** silver, platinum and white gold suit nearly every cool type. Soft Summer can also wear brushed or matte gold and rose gold. See [mixing metals by color season](/blog/mixed-metals-jewelry-color-season).
 
-**Avoid:** Peach, coral, warm terracotta
+## Adjust for contrast and depth
 
-### Bronzer
-- Cool-toned bronzers (grayish-brown rather than orange-brown)
-- Look for "contour" shades rather than warm bronzers
+This is the step most color lists skip.
 
-## Cool Undertone Hair Colors
+- **Low contrast** (skin, hair and eyes close in lightness): stay in neighboring values, such as dove gray with dusty rose or slate with smoky blue. Sharp black-and-white pairings can make you look split in two.
+- **High contrast:** use clear separation, such as navy with crisp white, charcoal with fuchsia, or black with icy pink.
+- **Light coloring:** cool pastels such as powder blue, icy pink and lavender usually work better than heavy, very dark colors.
+- **Deep coloring:** darker, richer cool tones such as midnight navy, deep plum, emerald and wine usually look more natural.
 
-**Best options:**
-- Ash blonde (any depth)
-- Platinum blonde
-- Cool brown / ash brown
-- Espresso (blue-black)
-- Burgundy / wine
-- Violet undertone colors
+**Cool undertone on deeper skin.** Undertone is separate from depth, so deep skin can be cool. Jewel tones, blue-based reds and silver often work well. See [color analysis for dark skin](/blog/color-analysis-for-dark-skin).
 
-**Avoid:**
-- Golden blonde
-- Copper / auburn
-- Warm caramel
-- Honey highlights
+## Colors that fight cool coloring (and how to wear them anyway)
 
-## Cool Undertone Jewelry & Accessories
+Orange, rust, mustard, camel, yellow-olive and warm peach or coral are the common problem colors. Near a cool face they can bring out gray shadows, redness or a tired look. This is an optical effect, not a law, and it is strongest at the neckline.
 
-**Metals:**
-- Silver
-- Platinum
-- White gold
-- Rhodium
-- Pewter
+If you love one of them:
 
-**Gemstones:**
-- Sapphire, amethyst, emerald
-- Diamond (brilliant white)
-- Pearl (white or gray)
-- Aquamarine
+- Wear it lower down, in trousers, a skirt, shoes or a bag.
+- Put a cool color between it and your face, such as a scarf, collar or necklace.
+- Test the actual garment before ruling it out. Color names vary a lot between stores.
 
-## Season-Specific Palettes Within Cool
+## Makeup for cool undertones
 
-Not all cool-toned people wear the same colors. It depends on your seasonal subtype:
+- **Foundation:** look for shades labeled cool, pink or rosy. Labels differ by brand, so swatch along the jaw in daylight and check that it blends into the neck.
+- **Lips:** mauve, dusty rose, berry and plum for a softer look. Blue-red, raspberry and fuchsia for a bolder one. Orange-leaning coral, peach and warm nude tend to fight cool skin.
+- **Blush:** soft pink, rose, berry or cool plum. Peach, apricot and terracotta tend to look off.
+- **Eyes:** gray-leaning taupe, plum, mauve, silver, navy and slate. Warm gold, copper and rust tend to clash.
+- **Bronzer:** choose a gray-brown contour shade, because orange-brown can look muddy.
 
-### Cool Summer
-- Soft, muted cool colors
-- Dusty rose, powder blue, sage
-- Low contrast, gentle palette
+More shade ideas by season are in [best makeup colors for your color season](/blog/best-makeup-colors-color-season).
 
-### Cool Winter
-- Bold, clear cool colors
-- True red, royal blue, hot pink
-- High contrast, dramatic palette
+## Hair color for cool undertones
 
-### Light Summer
-- Very light cool colors
-- Lavender, soft aqua, pale pink
-- Delicate, ethereal palette
+- **Usually flattering:** ash blonde, cool or ash brown, mushroom brown, espresso or blue-black for high contrast, and burgundy, wine or plum tones.
+- **Usually harder to wear:** golden blonde, copper, caramel and honey.
+- **Platinum:** it depends on your type. Light Summer suits a soft platinum, the Winter types can carry icy platinum when their natural contrast allows it, and Soft Summer usually looks better in softer ash shades.
 
-### Deep Winter
-- Dark, rich cool colors
-- Black, navy, deep emerald
-- Intense, powerful palette
+See [best hair color for your color season](/blog/best-hair-color-for-color-season) for season-specific shades.
 
-## How to Build a Cool-Toned Wardrobe
+## A 2-minute test you can do in daylight
 
-**Step 1:** Start with cool neutrals (navy, charcoal, cool gray, black, white)
-**Step 2:** Add your best accent colors (choose 2-3 favorites from above)
-**Step 3:** Ensure tops and scarves near your face are always in your best colors
-**Step 4:** Bottoms and outerwear can be more flexible
+1. Sit by a window in daylight with a bare face and hair pulled back. Avoid filters, colored walls and warm lamps.
+2. Hold a warm and a cool version of the same color under your chin: tomato red and raspberry, olive and emerald, peach and cool pink.
+3. Look at your eyes, the shadows under them and how even your skin looks. The better color makes your skin look even and your eyes clear. The worse one makes your skin look yellow, gray or ruddy.
+4. Take the winning color and compare a softer and a clearer version, such as dusty rose and fuchsia, or slate and cobalt. The one that matches your natural intensity tells you whether you lean soft (Summer) or clear (Winter).
 
-**Capsule wardrobe neutrals for cool skin:**
-- Navy + white + charcoal is a failproof combination
-- Add burgundy or emerald for richness
-- Black works year-round
+This is a judgment call, and lighting changes what you see. If your results keep flipping, read [how lighting affects your colors](/blog/how-lighting-affects-your-colors).
 
-## Not Sure If You're Cool? Get AI Analysis
+## Where an AI analysis fits
 
-If you're unsure about your exact undertone or seasonal type, [AI color analysis](/personal-color-analysis) removes the guesswork. Belle AI analyzes your photo using computer vision to determine your precise 12-season color type, giving you a personalized color palette tailored to your specific skin, hair, and eye coloring.
+Belle AI estimates your color season from one selfie. It is an AI's visual judgment of one photo, not a measurement, so lighting, camera settings and makeup can change the result. Use it as a starting point, then confirm it with the fabric test above. We explain what it can and cannot do in [How accurate is AI color analysis?](/ai-color-analysis-accuracy). To try it, start with [AI color analysis](/personal-color-analysis).
+
+## Frequently Asked Questions
+
+**What colors look best on cool undertones?**
+Blue-based, violet-based and cool-neutral colors usually work best: navy, cobalt, sapphire, raspberry, cranberry, plum, lavender, emerald, teal, charcoal, cool gray and crisp or soft white, with silver, platinum or white gold jewelry. Choose softer versions if your features blend together and clearer versions if they contrast strongly.
+
+**Can cool undertones wear black?**
+Often yes, especially if your coloring is high in contrast (the Winter types). If your coloring is soft or light, pure black can look harsh near the face, and charcoal, navy or blue-gray is usually gentler.
+
+**Can cool undertones wear gold jewelry?**
+Silver, platinum and white gold are usually the easiest. Softer cool types can often wear brushed or matte gold and rose gold. Bright yellow gold right next to the face is typically the hardest to wear.
+
+**Can cool undertones wear warm colors like orange or camel?**
+They tend to look best lower down, in trousers, skirts, shoes or bags. Near the face, warm colors can bring out gray shadows or redness. Putting a cool color such as a scarf or collar between the warm color and your face often helps.
+
+**Is a cool undertone the same as being a Summer?**
+No. A cool undertone can be a Summer or a Winter in the 12-season system. Summer coloring is cool and soft, Winter coloring is cool and clear with higher contrast.
+
+**Can deep or dark skin have a cool undertone?**
+Yes. Undertone is separate from how light or dark your skin is. Deep skin with a cool undertone often looks best in jewel tones, blue-based reds and silver.
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
-- [Cool Tone vs Warm Tone: 5 Easy Tests](/blog/cool-tone-vs-warm-tone) — Confirm whether you're actually cool-toned
-- [Am I Warm or Cool Toned? 7 Methods](/blog/how-to-determine-skin-undertone) — The definitive undertone guide
-- [Personal Color Analysis: 12 Types Explained](/blog/personal-color-analysis-guide) — Understand all 12 seasonal types
+- [Cool Undertone: Are You a Summer or a Winter?](/blog/cool-undertone-summer-or-winter): How to tell the cool seasons apart
+- [Color Analysis: The Complete Guide](/color-analysis): Everything you need to know about finding your best colors
+- [Cool Tone vs Warm Tone: 5 Easy Tests](/blog/cool-tone-vs-warm-tone): Confirm whether you're actually cool-toned
+- [Am I Warm or Cool Toned? 7 Methods](/blog/how-to-determine-skin-undertone): The definitive undertone guide
+- [Personal Color Analysis: 12 Types Explained](/blog/personal-color-analysis-guide): Understand all 12 seasonal types

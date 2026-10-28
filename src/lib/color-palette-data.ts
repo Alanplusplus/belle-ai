@@ -772,8 +772,8 @@ export const SEASON_PALETTES: Record<string, SeasonPalette> = {
       contrast: "High — clear distinction between features",
     },
     bestColors: [
-      { name: "Royal Blue", hex: "#2F4F6F" },
-      { name: "Hot Pink", hex: "#C71585" },
+      { name: "Royal Blue", hex: "#4169E1" },
+      { name: "Hot Pink", hex: "#E0218A" },
       { name: "Deep Teal", hex: "#008B8B" },
       { name: "True Red", hex: "#CC0000" },
       { name: "Icy Lavender", hex: "#D8BFD8" },

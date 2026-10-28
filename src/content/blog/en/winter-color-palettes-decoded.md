@@ -258,3 +258,4 @@ Descriptions aren't enough? Our [free AI color analysis](/color-analysis) identi
 - [Summer Color Palettes Decoded: Cool Summer vs True Summer vs Soft Summer](/blog/summer-color-palettes-decoded) — The other cool-season family decoded
 - [Spring Color Palettes Decoded: Bright Spring vs True Spring vs Light Spring](/blog/spring-color-palettes-decoded) — Bright Winter's warm neighbor
 - [Deep Winter Color Palette: Your Complete Style Guide](/blog/deep-winter-color-palette-guide) — An even deeper dive into Deep Winter specifically
+- [Cool Undertone: Are You a Summer or a Winter?](/blog/cool-undertone-summer-or-winter) — How to tell the cool seasons apart

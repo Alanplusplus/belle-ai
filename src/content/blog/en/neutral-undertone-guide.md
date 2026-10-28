@@ -115,11 +115,11 @@ Wear a strongly warm color (orange, mustard, warm red) for a full day. The next 
 
 ### 5. The AI Analysis Method
 
-This is where technology genuinely helps. AI-powered color analysis tools use computer vision to measure the actual spectral properties of your skin — the precise balance of warm and cool pigments — rather than relying on subjective visual comparison.
+This is where technology can help as a second opinion. AI-powered color analysis tools use an AI image model to judge the balance of warm and cool in your photo, rather than relying only on your own visual comparison. It is a visual judgment, not a measurement, so lighting and camera settings can still shift the result.
 
-Modern AI analysis can detect the subtle warm-cool balance that human eyes struggle with, especially in tricky lighting. Tools like [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) analyze your photo under standardized conditions and can specifically identify neutral undertones, often breaking down the warm-to-cool ratio in a way that manual tests can't.
+Tools like [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) look at your whole photo and can flag a neutral undertone, which is useful because manual tests often force a binary warm-or-cool answer.
 
-I've found AI analysis particularly useful for neutral-toned people because it doesn't force a binary choice — it can report "neutral with a slight warm lean" or "neutral-cool," which is exactly the nuanced answer neutrals need.
+AI analysis can be handy for neutral-toned people because it is not limited to a binary choice. A good result can describe your coloring as leaning slightly warm or slightly cool, which is the nuance neutrals usually need. Check it against the other methods in this guide.
 
 ---
 

@@ -9,6 +9,8 @@ import { buildAlternates } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
 import { PARENT_SEASON_ORDER, getSeasonsByParent } from "@/lib/color-palette-data";
 import { PaletteCardImage } from "@/components/PaletteCardImage";
+import { VideoCard } from "@/components/VideoEmbed";
+import { getPublishedVideos } from "@/lib/videos";
 
 export async function generateMetadata({
   params,
@@ -47,6 +49,8 @@ function HomeContent() {
   const cg = useTranslations("colorGuide");
   const sd = useTranslations("sd");
   const ph = useTranslations("paletteHub");
+  const vt = useTranslations("video");
+  const videos = getPublishedVideos();
 
   const allSeasons = PARENT_SEASON_ORDER.flatMap((parent) => getSeasonsByParent(parent));
   // 首页正文向下链接的站内页面：专题页（color analysis）、落地页（personal color analysis）、测验、免费在线分析指南
@@ -267,6 +271,20 @@ function HomeContent() {
           </div>
         </div>
       </section>
+
+      {/* Learn in video：只在有已发布的 YouTube 视频时出现，放在 How It Works 之后，首屏不动 */}
+      {videos.length > 0 && (
+        <section className="py-12">
+          <div className="mx-auto max-w-6xl px-4">
+            <SectionHeading title={vt("homeTitle")} subtitle={vt("homeSubtitle")} />
+            <div className="mx-auto mt-8 grid max-w-4xl gap-6 sm:grid-cols-2">
+              {videos.map((video) => (
+                <VideoCard key={video.id} video={video} page="home" showDescription sizes="(max-width: 640px) 100vw, 400px" />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Core Features */}
       <section className="bg-muted/30 py-12">

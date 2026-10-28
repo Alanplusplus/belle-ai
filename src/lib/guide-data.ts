@@ -61,7 +61,7 @@ export const GUIDE_TOPICS: GuideTopic[] = [
         image: "/images/season_winter.webp",
         items: [
           { label: "Deep Winter", detail: "Dark, cool, dramatically intense", hex: "#1C1C3A" },
-          { label: "Cool Winter", detail: "Pure cool, bold, strikingly clear", hex: "#2F4F6F" },
+          { label: "Cool Winter", detail: "Pure cool, bold, strikingly clear", hex: "#4169E1" },
           { label: "Bright Winter", detail: "Vivid, high-contrast, electrifying", hex: "#FF1493" },
         ],
       },

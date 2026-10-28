@@ -3903,5 +3903,14 @@
     "faq4Q": "Why did a different photo give me a different season?",
     "faq4A": "Lighting, camera settings, makeup and filters change the colors in a photo, and the AI reads what it sees. If your results differ, you may sit between two seasons. Try both palettes and compare them against real fabric in daylight.",
     "relatedTitle": "Related"
+  },
+  "video": {
+    "homeTitle": "Learn in video",
+    "homeSubtitle": "Short, clear explainers on color theory, undertones and finding your season.",
+    "inlineTitle": "Prefer to watch? Here's the video version",
+    "playLabel": "Play video: {title}",
+    "minutes": "{n} min",
+    "watchOnYouTube": "Watch on YouTube",
+    "englishNarration": "English narration. Turn on YouTube subtitles for your language."
   }
 }

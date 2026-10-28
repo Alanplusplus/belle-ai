@@ -145,7 +145,7 @@ Not sure where you fall? Our quiz asks targeted questions about your coloring an
 
 ## Get AI Results in About a Minute
 
-For the most accurate result, upload a clear selfie and let AI determine your exact 12-season type:
+For a quick second opinion, upload a clear selfie and let AI suggest your 12-season type:
 
 [Free AI Color Analysis →](/try)
 

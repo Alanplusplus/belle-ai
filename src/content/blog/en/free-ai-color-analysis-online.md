@@ -25,11 +25,11 @@ The good news: AI can now give you a useful starting point, and you can preview 
 
 ## How Free AI Color Analysis Works
 
-AI color analysis uses computer vision and machine learning to replicate what a professional colorist does with their trained eye:
+AI color analysis uses an AI image model to imitate, in a rough way, what a professional colorist does with a trained eye. Here is the general flow:
 
 ### Step 1: Photo Upload
 
-Take a clear selfie in natural daylight. Remove makeup, take off glasses, and pull hair away from your face so the AI can accurately read your natural coloring.
+Take a clear selfie in natural daylight. Remove makeup, take off glasses, and pull hair away from your face so the AI can see your natural coloring clearly.
 
 **Tips for the best results:**
 - Face a window (indirect natural light is ideal)
@@ -40,15 +40,15 @@ Take a clear selfie in natural daylight. Remove makeup, take off glasses, and pu
 
 ### Step 2: AI Analysis
 
-The AI extracts color data from three areas:
+The AI looks at three areas of your photo:
 
-- **Skin:** Measures undertone (warm/cool/neutral), depth, and clarity across multiple points on your face
-- **Eyes:** Identifies the dominant iris color and any secondary patterns
+- **Skin:** Judges undertone (warm/cool/neutral), depth, and clarity across your face
+- **Eyes:** Notes the dominant iris color and any secondary patterns
 - **Hair:** Reads the natural shade (roots if dyed) for depth and warmth
 
 ### Step 3: Season Classification
 
-Your color measurements are compared against the 12-season color framework. The AI determines which season your coloring most closely matches, considering:
+Those observations are compared against the 12-season color framework. The AI suggests which season your coloring most closely resembles, considering:
 
 - Undertone alignment (warm or cool)
 - Value/depth (light or deep)
@@ -79,14 +79,15 @@ Our [AI color analysis tool](/) produces everything listed above. Your first ana
 
 Our AI evaluates your photo with the same 12-season framework certified colorists use. The result is an AI's visual judgment and can differ from an in-person analysis, so treat it as a solid starting point. 
 
-Where AI excels:
-- Objective measurement (no "bad lighting" days)
-- Consistency (same photo = same result every time)
+Where AI helps:
 - Speed (60 seconds vs. 90 minutes)
-- Detecting subtle undertone differences
+- Cost (a free preview instead of a $200+ session)
+- Low pressure (no appointment, easy to try again with another photo)
+- A visual second opinion on subtle undertone differences
 
 Where in-person may be better:
 - Borderline cases between two close seasons
+- Photos taken in poor lighting or with makeup, which can shift an AI result
 - People with highly unusual coloring combinations
 - Those who want the experience of physical fabric draping
 
@@ -105,11 +106,11 @@ Where in-person may be better:
 
 2. **Remove all makeup** — Even "no-makeup makeup" affects how AI reads your skin tone.
 
-3. **Show your natural hair** — If your hair is dyed, the AI will analyze the visible color. For most accurate results with dyed hair, consider showing your roots or noting your natural shade.
+3. **Show your natural hair** — If your hair is dyed, the AI will analyze the visible color. For a more useful result with dyed hair, consider showing your roots or noting your natural shade.
 
 4. **Keep a neutral expression** — Smiling hard can change how light hits your skin and affect readings.
 
-5. **Try multiple times** — If you're unsure about your result, take photos on different days in different natural lighting conditions. If you consistently get the same season, you can be confident in the result.
+5. **Try multiple times** — If you're unsure about your result, take photos on different days in different natural lighting conditions. If you keep getting the same season, you can be more confident in the result.
 
 ## What to Do After Getting Your Results
 

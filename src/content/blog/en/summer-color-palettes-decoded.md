@@ -219,9 +219,9 @@ Gold can work for Soft Summers in its most muted, rose-toned form, but yellow go
 
 ## The Technology Shortcut
 
-Figuring out your sub-season used to require a two-hour professional draping session with dozens of colored fabrics held against your face. Today, AI-powered color analysis tools can analyze your skin tone, eye color, and hair shade to determine your exact sub-season in under a minute.
+Figuring out your sub-season used to require a two-hour professional draping session with dozens of colored fabrics held against your face. Today, AI color analysis tools can look at your skin tone, eye color, and hair shade and suggest a likely sub-season in under a minute.
 
-Tools like [AI color analysis](https://aicoloranalysis.io) use computer vision to measure the same undertone and contrast signals that professional colorists assess — making it accessible to anyone with a smartphone and natural lighting.
+Tools like [AI color analysis](https://aicoloranalysis.io) use an AI image model to judge the same undertone and contrast cues that professional colorists look at. The result is a visual judgment rather than a measurement, so treat it as a starting point. What it changes is access: anyone with a smartphone and natural lighting can take the first step.
 
 ---
 
@@ -235,7 +235,7 @@ Tools like [AI color analysis](https://aicoloranalysis.io) use computer vision t
 
 ## Find Your Exact Summer Sub-Season
 
-Still unsure which Summer you are? Our [free AI color analysis](/color-analysis) pinpoints your exact sub-season from a selfie — 60 seconds, no signup.
+Still unsure which Summer you are? Our [free AI color analysis](/color-analysis) can suggest your likely sub-season from a selfie — about 60 seconds, no signup to preview.
 
 [Take the Free AI Color Analysis →](/try)
 
@@ -247,4 +247,5 @@ Still unsure which Summer you are? Our [free AI color analysis](/color-analysis)
 - [Light Summer Color Palette](/color-palette/light-summer) — Full palette, makeup & wardrobe guide
 - [Cool Summer Color Palette](/color-palette/cool-summer) — Full palette, makeup & wardrobe guide
 - [Soft Summer Color Palette](/color-palette/soft-summer) — Full palette, makeup & wardrobe guide
+- [Cool Undertone: Are You a Summer or a Winter?](/blog/cool-undertone-summer-or-winter) — How to tell the cool seasons apart
 

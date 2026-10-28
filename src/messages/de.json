@@ -3912,5 +3912,14 @@
     "faq4Q": "Warum hat ein anderes Foto eine andere Season ergeben?",
     "faq4A": "Licht, Kameraeinstellungen, Make-up und Filter verändern die Farben eines Fotos, und die KI liest, was sie sieht. Weichen deine Ergebnisse ab, liegst du vielleicht zwischen zwei Seasons. Probiere beide Paletten und vergleiche sie bei Tageslicht mit echtem Stoff.",
     "relatedTitle": "Verwandte Seiten"
+  },
+  "video": {
+    "homeTitle": "Lernen im Video",
+    "homeSubtitle": "Kurze, klare Erklärungen zu Farbtheorie, Unterton und dazu, wie du deinen Farbtyp findest.",
+    "inlineTitle": "Lieber ansehen? Hier ist die Videoversion",
+    "playLabel": "Video abspielen: {title}",
+    "minutes": "{n} Min.",
+    "watchOnYouTube": "Auf YouTube ansehen",
+    "englishNarration": "Englischer Sprechertext. Aktiviere die YouTube-Untertitel in deiner Sprache."
   }
 }

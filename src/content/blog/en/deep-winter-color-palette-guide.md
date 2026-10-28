@@ -163,7 +163,7 @@ Color analysis can feel confusing because so many variables are at play — ligh
 
 If you suspect you're a Deep Winter, start by testing the core principle: **do deep, cool, high-contrast colors make your skin look clearer and your eyes brighter?** If yes, you're very likely in Winter territory — and the depth of your natural coloring will tell you whether you're Deep, True, or Bright.
 
-For precise results without the guesswork, [AI color analysis](/personal-color-analysis) uses computer vision to measure your actual skin, hair, and eye color values — giving you an objective 12-season typing based on your unique coloring.
+If you would rather not guess, [AI color analysis](/personal-color-analysis) uses an AI image model to judge your skin, hair, and eye coloring from a photo and suggest a 12-season type. It is a visual judgment, not a measurement, so use it as a starting point and check it against how the colors look on you.
 
 ## Related Articles
 

@@ -3912,5 +3912,14 @@
     "faq4Q": "为什么换一张照片，季型就不一样了？",
     "faq4A": "光线、相机设置、妆容和滤镜都会改变照片里的颜色，而 AI 读取的是它看到的内容。如果结果不一致，你可能介于两个季型之间。可以两个色板都试试，并在自然光下用真实布料对照。",
     "relatedTitle": "相关内容"
+  },
+  "video": {
+    "homeTitle": "看视频学色彩",
+    "homeSubtitle": "用几分钟讲清楚色彩理论、肤色底调，以及如何找到你的季型。",
+    "inlineTitle": "更喜欢看视频？这是视频版",
+    "playLabel": "播放视频：{title}",
+    "minutes": "{n} 分钟",
+    "watchOnYouTube": "在 YouTube 观看",
+    "englishNarration": "英文配音，可在 YouTube 开启中文字幕。"
   }
 }
