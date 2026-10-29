@@ -12,6 +12,12 @@ export const WAFFO_PRODUCTS = {
 export type ProductKey = keyof typeof WAFFO_PRODUCTS;
 
 /**
+ * 「管理订阅」入口：服务端现生成 Waffo 客户门户链接后跳转（查看 / 取消 / 恢复订阅）。
+ * 页面上必须用普通 <a> 指向它，不能用 next/link —— 预取会白白生成门户链接。
+ */
+export const SUBSCRIPTION_PORTAL_PATH = "/api/waffo/portal";
+
+/**
  * 积分包内容与展示价（美元）。积分数由 webhook 按 metadata.product 发放，价格只用于展示 ——
  * 实际扣款金额由 Waffo 后台的一次性商品决定，改价时两边必须同步。
  */

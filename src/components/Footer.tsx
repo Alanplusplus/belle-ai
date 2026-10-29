@@ -1,6 +1,7 @@
 import { BrandLogo } from "@/components/BrandLogo";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { SUBSCRIPTION_PORTAL_PATH } from "@/lib/constants";
 
 const socialLinks = [
   {
@@ -255,6 +256,16 @@ export function Footer() {
                 >
                   {ft("terms")}
                 </Link>
+              </li>
+              <li>
+                {/* 普通 <a>：点击时服务端才生成 Waffo 门户链接，next/link 的预取会白白生成 */}
+                <a
+                  href={SUBSCRIPTION_PORTAL_PATH}
+                  rel="nofollow"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  {nav("manageSubscription")}
+                </a>
               </li>
               <li>
                 <Link

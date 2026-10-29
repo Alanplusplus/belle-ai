@@ -9,6 +9,7 @@ import {
 } from "@/lib/seo";
 import {
   CREDIT_PACKS,
+  SUBSCRIPTION_PORTAL_PATH,
   WEEKLY_INTRO_PRICE,
   WEEKLY_PRICE,
   YEARLY_PRICE,
@@ -230,6 +231,12 @@ export default async function PricingPage({
         <RestoreSubscriptionHint className="mx-auto mt-6 max-w-2xl" />
 
         <p className="mt-4 text-center text-xs text-muted-foreground">{t("billingNote")}</p>
+        {/* 取消入口放在购买前就能看到的地方；普通 <a>：点击时服务端才生成 Waffo 门户链接，next/link 的预取会白白生成 */}
+        <p className="mt-1 text-center text-xs text-muted-foreground">
+          <a href={SUBSCRIPTION_PORTAL_PATH} rel="nofollow" className="font-medium text-primary underline underline-offset-2 hover:text-primary-dark">
+            {t("manageCta")}
+          </a>
+        </p>
         {/* 底层模型披露 + AI 生成内容标注（支付服务商的 AIGC 合规要求） */}
         <p className="mt-2 text-center text-xs text-muted-foreground">{t("aiDisclosure")}</p>
 
