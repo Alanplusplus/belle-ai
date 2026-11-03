@@ -405,7 +405,24 @@
     "orPack": "Abonelik istemiyor musunuz? Kredilerle tek seferlik ödeyin",
     "packSaveBadge": "%{percent} tasarruf",
     "packPerReport": "Tam rapor başına {price}",
-    "purchaseRestored": "Tekrar hoş geldiniz — satın alımınız bu hesaba geri yüklendi."
+    "purchaseRestored": "Tekrar hoş geldiniz — satın alımınız bu hesaba geri yüklendi.",
+    "singleTitle": "Sadece bu rapor",
+    "singleDesc": "Tek seferlik ödeme. Abonelik yok, otomatik yenileme yok.",
+    "singleCta": "Kilidi aç · {price}",
+    "orPackMore": "Birden fazla raporun kilidini mi açacaksınız? Kredilerle rapor başına daha ucuz",
+    "emailUnlockTitle": "Şimdilik ödeme yapmak istemiyor musunuz? Bu raporu e-postayla ücretsiz alın",
+    "emailUnlockDesc": "Tek seferlik fırsat: bulanıklaştırılmamış tam raporu e-postanıza gönderelim. Ödeme gerekmez.",
+    "emailUnlockLabel": "E-posta adresiniz",
+    "emailUnlockCta": "Raporu e-postama gönder",
+    "emailUnlockNote": "Kişi başı bir kez ücretsiz. Ara sıra ipuçları ve fırsatlar gönderebiliriz; istediğiniz zaman abonelikten çıkabilirsiniz.",
+    "emailUnlockSentTitle": "Yola çıktı!",
+    "emailUnlockSentDesc": "Tam raporunuzu {email} adresine gönderdik. Birkaç dakika sürebilir; spam veya promosyonlar klasörüne de bakın.",
+    "emailUnlockErrorInvalid": "Lütfen geçerli bir e-posta adresi girin.",
+    "emailUnlockErrorUsed": "Ücretsiz e-posta ile açma hakkınızı zaten kullandınız. Bu raporu açmak için yukarıdan bir plan seçin.",
+    "emailUnlockErrorEmailUsed": "Bu adrese zaten ücretsiz bir rapor gönderildi. Başka bir adres deneyin veya yukarıdan bir plan seçin.",
+    "emailUnlockErrorBusy": "Şu anda çok fazla istek var. Lütfen daha sonra tekrar deneyin veya yukarıdan bir plan seçin.",
+    "emailUnlockErrorGeneric": "E-posta gönderilemedi. Adresi kontrol edip tekrar deneyin.",
+    "planShare": "Yakın zamandaki müşterilerimizin %{percent} kadarı bu planı seçti"
   },
   "quiz": {
     "shareResult": "Sonucumu paylaş",
@@ -834,7 +851,10 @@
     "lockedBadge": "Kilitli",
     "hdPaidTag": "Ücretli",
     "checkoutSuccessPack": "Krediler eklendi! Tamamını görmek için herhangi bir raporda “Kilidi aç”a dokunun.",
-    "checkoutSuccessPackUnlocked": "Krediler eklendi — raporunuzun kilidi açıldı!"
+    "checkoutSuccessPackUnlocked": "Krediler eklendi — raporunuzun kilidi açıldı!",
+    "unlockPriceCta": "Tam raporun kilidini aç · {price}",
+    "errorUploadTooLarge": "Bu fotoğraf çok büyük ya da okuyamadığımız bir biçimde. Lütfen 6 MB altında bir JPG veya PNG seçin ya da yeni bir fotoğraf çekin.",
+    "checkoutSuccessSingle": "Ödeme onaylandı — raporunuzun kilidi açıldı!"
   },
   "footer": {
     "tagline": "Yapay zeka destekli kişisel güzellik analizi",

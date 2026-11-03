@@ -3,12 +3,15 @@ import { SITE_URL } from "@/lib/constants";
 /**
  * 站内可嵌入的 YouTube 视频注册表。
  *
- * youtubeId 为 null 表示视频还没发布到 YouTube：这种视频不会在站内任何位置出现，
- * 也不会输出结构化数据。发布后只需要把 11 位 videoId 填进来（uploadDate 也按实际发布日期改一下），全站自动生效。
+ * 做好的长视频提前全部登记在这里，youtubeId 先留 null：没有 youtubeId 的视频不会在站内任何位置出现，
+ * 也不会输出结构化数据。视频发布后只需要把 11 位 videoId 填进对应条目的 youtubeId（重新部署后全站生效），
+ * 其他字段（标题、简介、时长、缩略图、挂载的文章/工具页）已预填，不用动。
+ * uploadDate 预填的是计划发布日期，和实际发布日期差得多时顺手改一下，不改也不影响展示。
  * 视频是英文配音，所以标题和简介都只有英文；非英文页面会在视频旁标注 English narration。
+ * 条目上方注释里的 LFxx 是视频中心（video-hub）里的编号，id 对应 video-hub/studio/belle/content/longform/<id>.json。
  */
 export interface VideoEntry {
-  /** 与 social-automation/content/longform/<id>.json 的 id 一致 */
+  /** 与 video-hub 里 studio/belle/content/longform/<id>.json 的 id 一致 */
   id: string;
   /** YouTube 的 11 位 videoId，未发布时为 null */
   youtubeId: string | null;
@@ -26,6 +29,7 @@ export interface VideoEntry {
 }
 
 export const VIDEOS: VideoEntry[] = [
+  // LF01
   {
     id: "color-theory-basics",
     youtubeId: "5HZ0TStRCGA",
@@ -38,6 +42,20 @@ export const VIDEOS: VideoEntry[] = [
     blogSlugs: ["color-theory-personal-style"],
     toolPaths: [],
   },
+  // LF02
+  {
+    id: "twelve-seasons-explained",
+    youtubeId: "pTL6y9_F5dU", // ← 发布后只填这里
+    title: "The 12 Color Seasons Explained (and How to Find Yours)",
+    description:
+      "Spring, summer, autumn and winter are only the beginning. See how the twelve color seasons fit together, learn the six dominant traits (light, deep, warm, cool, bright and soft) that separate them, meet the signature colors of all twelve seasons, and find out how to work out which one is yours.",
+    durationSeconds: 257,
+    uploadDate: "2026-10-28",
+    thumbnail: "/images/videos/twelve-seasons-explained.webp",
+    blogSlugs: ["personal-color-analysis-guide"],
+    toolPaths: [],
+  },
+  // LF03
   {
     id: "undertone-at-home",
     youtubeId: "6vkFmnIh3Vk",
@@ -49,6 +67,32 @@ export const VIDEOS: VideoEntry[] = [
     thumbnail: "/images/videos/undertone-at-home.webp",
     blogSlugs: ["how-to-determine-skin-undertone"],
     toolPaths: ["/tools/undertone-test"],
+  },
+  // LF04
+  {
+    id: "color-draping-at-home",
+    youtubeId: "Y1tF9kTMIjs", // ← 发布后只填这里
+    title: "Color Analysis at Home: The Draping Test, Step by Step",
+    description:
+      "Professional color analysts rely on draping: holding fabric in different colors under your chin and watching what happens to your face. Do a simple version at home: set up the light, build a small drape kit, run three rounds (warm vs cool, light vs deep, soft vs bright), learn how to read what you see, and avoid the three mistakes that mislead almost everyone.",
+    durationSeconds: 294,
+    uploadDate: "2026-11-03",
+    thumbnail: "/images/videos/color-draping-at-home.webp",
+    blogSlugs: ["how-to-do-color-analysis-at-home"],
+    toolPaths: [],
+  },
+  // LF05
+  {
+    id: "soft-autumn-vs-soft-summer",
+    youtubeId: null, // ← 发布后只填这里
+    title: "Soft Autumn vs Soft Summer: How to Tell the Difference (3 Tests)",
+    description:
+      "Soft Autumn and Soft Summer are two of the most commonly confused color seasons: both are muted and low contrast, so quizzes and photos often give mixed results. See what they share, how their skin, eyes, hair and palettes differ, and three simple tests (gold vs silver, olive vs lavender, warm beige vs cool gray) that settle it at home, plus what to do if you land in between.",
+    durationSeconds: 297,
+    uploadDate: "2026-11-05",
+    thumbnail: "/images/videos/soft-autumn-vs-soft-summer.webp",
+    blogSlugs: ["soft-autumn-vs-soft-summer"],
+    toolPaths: [],
   },
 ];
 

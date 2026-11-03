@@ -205,6 +205,18 @@ export async function POST(req: NextRequest) {
         return NextResponse.json(data);
       }
 
+      case "email-unlock": {
+        const data = await proxyPost("/common/v1/web/email-unlock", {
+          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
+          task_id: params.task_id,
+          email: params.email,
+          locale: params.locale,
+          // 访客 IP 由这里（服务端）填写，后端用它限制同一 IP 的领取次数，不能让浏览器自己声明
+          client_ip: req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || req.headers.get("x-real-ip") || undefined,
+        });
+        return NextResponse.json(data);
+      }
+
       default:
         return NextResponse.json({ code: 400, message: "Unknown action" }, { status: 400 });
     }

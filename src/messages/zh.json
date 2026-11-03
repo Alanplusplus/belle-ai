@@ -405,7 +405,24 @@
     "orPack": "不想订阅？一次性购买积分",
     "packSaveBadge": "省{percent}%",
     "packPerReport": "每份完整报告约 {price}",
-    "purchaseRestored": "欢迎回来，你之前的购买已恢复到当前账号。"
+    "purchaseRestored": "欢迎回来，你之前的购买已恢复到当前账号。",
+    "singleTitle": "只解锁这一份",
+    "singleDesc": "一次付费，无需订阅，不会自动续费。",
+    "singleCta": "解锁 · {price}",
+    "orPackMore": "要解锁多份？买积分包每份更便宜",
+    "emailUnlockTitle": "暂时不想付费？免费把这份报告发到你的邮箱",
+    "emailUnlockDesc": "限一次：我们会把无打码的完整报告发到你的邮箱，无需付款。",
+    "emailUnlockLabel": "你的邮箱地址",
+    "emailUnlockCta": "发送到我的邮箱",
+    "emailUnlockNote": "每人限免费一次。我们偶尔会发送使用技巧和优惠信息，可随时退订。",
+    "emailUnlockSentTitle": "已发送！",
+    "emailUnlockSentDesc": "完整报告已发送到 {email}。可能需要一分钟，也请看看垃圾邮件或促销邮件文件夹。",
+    "emailUnlockErrorInvalid": "请输入有效的邮箱地址。",
+    "emailUnlockErrorUsed": "你已经用过一次免费邮件解锁了。请在上方选择方案来解锁这份报告。",
+    "emailUnlockErrorEmailUsed": "这个邮箱已经领取过免费报告。请换一个邮箱，或在上方选择方案。",
+    "emailUnlockErrorBusy": "当前请求太多，请稍后再试，或在上方选择方案。",
+    "emailUnlockErrorGeneric": "邮件没能发出去。请检查邮箱地址后重试。",
+    "planShare": "近期有 {percent}% 的顾客选择了这个方案"
   },
   "quiz": {
     "shareResult": "分享我的结果",
@@ -834,7 +851,10 @@
     "lockedBadge": "已锁定",
     "hdPaidTag": "付费",
     "checkoutSuccessPack": "积分已到账！点击任意报告上的「解锁」即可查看完整版。",
-    "checkoutSuccessPackUnlocked": "积分已到账，报告已解锁！"
+    "checkoutSuccessPackUnlocked": "积分已到账，报告已解锁！",
+    "unlockPriceCta": "解锁完整报告 · {price}",
+    "errorUploadTooLarge": "这张照片太大，或格式无法读取。请换一张 6 MB 以内的 JPG / PNG 照片，或重新拍一张。",
+    "checkoutSuccessSingle": "支付成功，报告已解锁！"
   },
   "footer": {
     "tagline": "AI驱动的个人美学分析",

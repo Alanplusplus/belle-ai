@@ -7,6 +7,8 @@ export const WAFFO_PRODUCTS = {
   pack: { id: process.env.WAFFO_PRODUCT_PACK!, type: "onetime" as const },
   /** 大号积分包（30 积分）：商品 ID 取自 WAFFO_PRODUCT_30CREDITS，价格要和 CREDIT_PACKS.pack30.price 一致 */
   pack30: { id: process.env.WAFFO_PRODUCT_30CREDITS!, type: "onetime" as const },
+  /** 单份解锁（1 积分）：只想看眼前这份锁定报告的人，不订阅、不囤积分。商品 ID 取自 WAFFO_PRODUCT_SINGLE */
+  single: { id: process.env.WAFFO_PRODUCT_SINGLE!, type: "onetime" as const },
 } as const;
 
 export type ProductKey = keyof typeof WAFFO_PRODUCTS;
@@ -22,6 +24,14 @@ export const SUBSCRIPTION_PORTAL_PATH = "/api/waffo/portal";
  * 实际扣款金额由 Waffo 后台的一次性商品决定，改价时两边必须同步。
  */
 export const CREDIT_PACKS = {
+  /**
+   * 单份解锁：1 积分，买完回到页面会自动用掉它解锁当前这份报告（同一套 add-credits / unlock-report 链路，后端无需改动）。
+   * 定价：$1.00，目的是让用户低门槛先体验一次完整报告，不追求这一单赚钱。
+   * 为什么是 1 而不是 0.99：Waffo 不支持低于 1（币种单位）的价格，所以 1 是能设的最低价。
+   * 对照：Waffo 每笔收 0.50 + 3.9%，到手 = 价格 × 0.961 − 0.50，$1.00 到手约 $0.46（手续费占 54%）。
+   * 同时低于周订阅首周价 $1.99 和 10 积分包 $2.99。
+   */
+  single: { credits: 1, price: "1" },
   pack: { credits: 10, price: "2.99" },
   pack30: { credits: 30, price: "6.99" },
 } as const;
@@ -29,8 +39,14 @@ export const CREDIT_PACKS = {
 export type PackKey = keyof typeof CREDIT_PACKS;
 
 export function isPackProduct(product: string | null | undefined): product is PackKey {
-  return product === "pack" || product === "pack30";
+  return product === "single" || product === "pack" || product === "pack30";
 }
+
+/**
+ * 单份解锁的开关。Waffo 后台建好 single 商品并配置 WAFFO_PRODUCT_SINGLE 之前保持关闭，
+ * 避免用户点到一个创建不了结账会话的按钮。NEXT_PUBLIC_ 变量在构建时内联，改完需要重新部署。
+ */
+export const SINGLE_UNLOCK_ENABLED = process.env.NEXT_PUBLIC_SINGLE_UNLOCK === "1";
 
 /** 最小积分包（保留旧名字：额度用完卡片、JSON-LD 等处沿用） */
 export const PACK_CREDITS = CREDIT_PACKS.pack.credits;

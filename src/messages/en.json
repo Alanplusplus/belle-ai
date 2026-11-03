@@ -405,7 +405,24 @@
     "orPack": "Prefer not to subscribe? Pay once with credits",
     "packSaveBadge": "Save {percent}%",
     "packPerReport": "{price} per full report",
-    "purchaseRestored": "Welcome back — your purchase has been restored to this account."
+    "purchaseRestored": "Welcome back — your purchase has been restored to this account.",
+    "singleTitle": "Just this report",
+    "singleDesc": "One-time payment. No subscription, no auto-renewal.",
+    "singleCta": "Unlock · {price}",
+    "orPackMore": "Unlocking more than one? Credits cost less per report",
+    "emailUnlockTitle": "Not ready to pay? Get this report free by email",
+    "emailUnlockDesc": "One-time offer: we'll email you the full, unblurred report. No payment needed.",
+    "emailUnlockLabel": "Your email address",
+    "emailUnlockCta": "Email me the report",
+    "emailUnlockNote": "Free once per person. We may send occasional tips and offers — unsubscribe anytime.",
+    "emailUnlockSentTitle": "It's on its way!",
+    "emailUnlockSentDesc": "We sent your full report to {email}. It can take a minute — check your spam or promotions folder too.",
+    "emailUnlockErrorInvalid": "Please enter a valid email address.",
+    "emailUnlockErrorUsed": "You've already used your free email unlock. Choose a plan above to unlock this report.",
+    "emailUnlockErrorEmailUsed": "This email address has already received a free report. Try another address or choose a plan above.",
+    "emailUnlockErrorBusy": "Too many requests right now. Please try again later or choose a plan above.",
+    "emailUnlockErrorGeneric": "We couldn't send the email. Please check the address and try again.",
+    "planShare": "Chosen by {percent}% of our recent customers"
   },
   "quiz": {
     "shareResult": "Share my result",
@@ -834,7 +851,10 @@
     "lockedBadge": "Locked",
     "hdPaidTag": "Paid",
     "checkoutSuccessPack": "Credits added! Tap “Unlock” on any report to see it in full.",
-    "checkoutSuccessPackUnlocked": "Credits added — your report is unlocked!"
+    "checkoutSuccessPackUnlocked": "Credits added — your report is unlocked!",
+    "unlockPriceCta": "Unlock full report · {price}",
+    "errorUploadTooLarge": "This photo is too large or in a format we can't read. Please choose a JPG or PNG under 6 MB, or take a new photo.",
+    "checkoutSuccessSingle": "Payment confirmed — your report is unlocked!"
   },
   "footer": {
     "tagline": "AI-powered personal beauty analysis",

@@ -405,7 +405,24 @@
     "packSaveBadge": "Économisez {percent} %",
     "packPerReport": "{price} par rapport complet",
     "purchaseRestored": "Bon retour : votre achat a été restauré sur ce compte.",
-    "at_palette_scan": "Scan de palette de fards à paupières"
+    "at_palette_scan": "Scan de palette de fards à paupières",
+    "singleTitle": "Seulement ce rapport",
+    "singleDesc": "Paiement unique. Pas d'abonnement, pas de renouvellement automatique.",
+    "singleCta": "Débloquer · {price}",
+    "orPackMore": "Plusieurs rapports à débloquer ? Les crédits coûtent moins cher par rapport",
+    "emailUnlockTitle": "Pas prêt à payer ? Recevez ce rapport gratuitement par e-mail",
+    "emailUnlockDesc": "Offre unique : nous vous envoyons le rapport complet, sans flou, par e-mail. Aucun paiement requis.",
+    "emailUnlockLabel": "Votre adresse e-mail",
+    "emailUnlockCta": "Recevoir le rapport par e-mail",
+    "emailUnlockNote": "Gratuit une seule fois par personne. Nous pouvons vous envoyer de temps en temps des conseils et des offres ; désabonnement possible à tout moment.",
+    "emailUnlockSentTitle": "C'est parti !",
+    "emailUnlockSentDesc": "Nous avons envoyé votre rapport complet à {email}. Cela peut prendre une minute ; vérifiez aussi vos spams ou l'onglet Promotions.",
+    "emailUnlockErrorInvalid": "Veuillez saisir une adresse e-mail valide.",
+    "emailUnlockErrorUsed": "Vous avez déjà utilisé votre déverrouillage gratuit par e-mail. Choisissez une formule ci-dessus pour déverrouiller ce rapport.",
+    "emailUnlockErrorEmailUsed": "Cette adresse a déjà reçu un rapport gratuit. Essayez une autre adresse ou choisissez une formule ci-dessus.",
+    "emailUnlockErrorBusy": "Trop de demandes en ce moment. Réessayez plus tard ou choisissez une formule ci-dessus.",
+    "emailUnlockErrorGeneric": "Nous n'avons pas pu envoyer l'e-mail. Vérifiez l'adresse et réessayez.",
+    "planShare": "Choisi par {percent} % de nos clients récents"
   },
   "quiz": {
     "shareResult": "Partager mon résultat",
@@ -834,7 +851,10 @@
     "paletteUploadHint": "Photographiez de face, en bonne lumière, avec chaque teinte visible",
     "paletteChange": "Changer la photo de palette",
     "paletteNeeded": "Ajoutez une photo de votre palette pour continuer",
-    "paletteAlt": "Votre palette de fards à paupières"
+    "paletteAlt": "Votre palette de fards à paupières",
+    "unlockPriceCta": "Débloquer le rapport complet · {price}",
+    "errorUploadTooLarge": "Cette photo est trop volumineuse ou dans un format illisible. Choisissez un JPG ou PNG de moins de 6 Mo, ou prenez une nouvelle photo.",
+    "checkoutSuccessSingle": "Paiement confirmé — votre rapport est débloqué !"
   },
   "footer": {
     "tagline": "Analyse beauté personnelle par IA",

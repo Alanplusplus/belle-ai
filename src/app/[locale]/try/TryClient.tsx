@@ -29,11 +29,11 @@ import {
   buildSharePageUrl,
   tagShareLink,
 } from "@/lib/referral";
-import { SITE_URL, isPackProduct } from "@/lib/constants";
+import { SITE_URL, SINGLE_UNLOCK_ENABLED, isPackProduct } from "@/lib/constants";
 import { usePrices } from "@/lib/usePrices";
 import { trackEvent, trackCheckoutEvent, trackFeedbackSubmitted, saveReportFeedback } from "@/lib/analytics";
 import { consumeCheckoutContext } from "@/lib/checkout";
-import { prepareImageForUpload } from "@/lib/imageUpload";
+import { prepareImageForUpload, IMAGE_TOO_LARGE } from "@/lib/imageUpload";
 import { isMobileDevice, copyText, canUseNativeShare, nativeShare, openShareWindow } from "@/lib/device";
 import { RESULT_READY_EVENT } from "@/lib/google-signin";
 import { useSignIn } from "@/lib/useSignIn";
@@ -246,10 +246,13 @@ interface UserCredits {
   subRemaining: number;
   subPlan: string | null;
   totalRemaining: number;
+  /** 「留邮箱免费解锁一次」还可用（后端功能开着、邮件已配置、这个账号还没领过） */
+  emailUnlock: boolean;
 }
 
 function toUserCredits(data: WebInitData): UserCredits {
   return {
+    emailUnlock: data.email_unlock_available ?? false,
     free: data.web_quota.remaining,
     bonus: data.paid_credits ?? 0,
     pack: data.pack_credits ?? 0,
@@ -311,8 +314,13 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [pricingPreview, setPricingPreview] = useState<string | null>(null);
   // 同时记下是哪份报告：买完积分包回到页面后，自动用积分解锁它
   const [pricingTaskId, setPricingTaskId] = useState<string | null>(null);
+  // 这份报告要几个积分才能解锁：单份解锁只含 1 积分，Glow-Up（3 积分）不适用
+  const [pricingUnlockCost, setPricingUnlockCost] = useState(1);
+  const { money } = usePrices();
+  // 锁定报告上的按钮直接标价：用户点开弹窗前就知道最低多少钱，不会在弹窗里被价格吓退
+  const singleUnlockPrice = SINGLE_UNLOCK_ENABLED ? money("single") : null;
   const [checkoutStatus, setCheckoutStatus] = useState<"idle" | "confirming" | "success" | "delayed">("idle");
-  const [checkoutBought, setCheckoutBought] = useState<"pack" | "pack_unlocked" | "sub">("sub");
+  const [checkoutBought, setCheckoutBought] = useState<"pack" | "pack_unlocked" | "single_unlocked" | "sub">("sub");
   const [backgroundTasks, setBackgroundTasks] = useState<BackgroundTask[]>([]);
   const [lastUploadedPhotoUrl, setLastUploadedPhotoUrl] = useState<string | null>(null);
   const [showTaskPanel, setShowTaskPanel] = useState(false);
@@ -532,11 +540,12 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   }, []);
 
   /** 按意图打开付费墙（点下载 / 解锁条幅 / 选 2K4K / 额度用完…），source 用于归因 */
-  const openPricing = useCallback((source: string, previewImage?: string | null, taskId?: string | null) => {
+  const openPricing = useCallback((source: string, previewImage?: string | null, taskId?: string | null, unlockCost = 1) => {
     trackEvent("pricing_modal_opened", { source });
     setPricingSource(source);
     setPricingPreview(previewImage ?? null);
     setPricingTaskId(taskId ?? null);
+    setPricingUnlockCost(unlockCost);
     setShowPricingModal(true);
   }, []);
 
@@ -586,7 +595,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     const pack = userCredits?.pack ?? 0;
     trackEvent("locked_cta_clicked", { type, has_pack: pack >= cost });
     if (!taskId || pack < cost) {
-      openPricing("report_lock", previewImage, taskId);
+      openPricing("report_lock", previewImage, taskId, cost);
       return;
     }
     if (unlockingId) return;
@@ -605,7 +614,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         });
         refreshCredits();
       } else if (res.code === 429) {
-        openPricing("report_lock", previewImage, taskId);
+        openPricing("report_lock", previewImage, taskId, cost);
       } else {
         showToast(t("unlockFailed"));
       }
@@ -672,7 +681,13 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               }
             }
 
-            setCheckoutBought(isPackProduct(ctx?.product) ? (unlockedAfterPurchase ? "pack_unlocked" : "pack") : "sub");
+            setCheckoutBought(
+              isPackProduct(ctx?.product)
+                ? unlockedAfterPurchase
+                  ? ctx?.product === "single" ? "single_unlocked" : "pack_unlocked"
+                  : "pack"
+                : "sub",
+            );
             setCheckoutStatus("success");
             window.setTimeout(() => setCheckoutStatus("idle"), 6000);
             return;
@@ -940,7 +955,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         setResultTaskId(null);
       }
       const fromCamera = e.target === cameraRef.current;
-      // 上传前会在浏览器里压缩到长边 2048px，所以这里可以放宽到 25MB（手机原图常见 5–12MB）
+      // 上传前会在浏览器里重新编码（保持原始宽高，只有放不进约 6MB 预算时才降质量 / 缩小），所以这里可以放宽到 25MB（手机原图常见 5–12MB）
       if (file.size > MAX_PHOTO_BYTES) {
         trackEvent("photo_rejected", { reason: "file_too_large", size_mb: Math.round(file.size / 1024 / 1024) });
         setPreviewUrl(null);
@@ -981,7 +996,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     trackEvent("generate_started", { type: analysisType, resolution, language: reportLang });
 
     // rawMessage 只上报给统计（用于排查），界面上展示翻译过的、能告诉用户下一步怎么做的提示
-    const fail = (event: string, rawMessage: string, userMessage: string) => {
+    const fail = (event: string, rawMessage: string, userMessage: string, extra?: Record<string, string | number>) => {
       setErrorMsg(userMessage);
       autoScrollRef.current = true;
       setPhase("error");
@@ -989,6 +1004,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         type: analysisType,
         error: rawMessage.slice(0, 100),
         size_kb: Math.round((selectedFileRef.current?.size ?? 0) / 1024),
+        ...extra,
       });
     };
 
@@ -1024,13 +1040,22 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           return;
         }
 
+        // 上报到 GA 的排查信息：压缩后的请求体大小、文件格式（在 GA 里把 error / payload_kb / file_type 注册成自定义维度就能拆分）
+        let payloadKb = 0;
+        const uploadDiag = () => ({ payload_kb: payloadKb, file_type: file.type || "unknown" });
         try {
           // 先压缩再上传：大图 + 移动网络是 upload_failed 的主要来源
           const base64 = await prepareImageForUpload(file);
+          payloadKb = Math.round(base64.length / 1024);
           setUploadStage("uploading");
           const uploadRes = await uploadImage(base64);
           if (uploadRes.code !== 200 || !uploadRes.data?.url) {
-            fail("upload_failed", uploadRes.message || "Upload failed", t("errorUpload"));
+            fail(
+              "upload_failed",
+              uploadRes.message || "Upload failed",
+              uploadRes.code === 413 ? t("errorUploadTooLarge") : t("errorUpload"),
+              { ...uploadDiag(), http: uploadRes.code },
+            );
             return;
           }
           imageUrl = uploadRes.data.url;
@@ -1039,7 +1064,12 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           saveLastPhotoUrl(imageUrl);
         } catch (err) {
           const message = err instanceof Error ? err.message : "Upload error";
-          fail("upload_failed", message, t("errorUpload"));
+          fail(
+            "upload_failed",
+            message,
+            message === IMAGE_TOO_LARGE ? t("errorUploadTooLarge") : t("errorUpload"),
+            uploadDiag(),
+          );
           return;
         }
       }
@@ -1529,6 +1559,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                             lockStart={resultLock.lockStart}
                             cost={creditCostOf(analysisType)}
                             packCredits={userCredits?.pack ?? 0}
+                            priceLabel={creditCostOf(analysisType) <= 1 ? singleUnlockPrice : null}
                             busy={unlockingId === resultTaskId}
                             onUnlock={() => handleUnlock(resultTaskId, analysisType, resultUrls[0])}
                             t={t}
@@ -1608,7 +1639,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                       <svg className="h-3.5 w-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 21.75h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H3.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
                       {(userCredits?.pack ?? 0) >= creditCostOf(analysisType)
                         ? t("unlockWithCredits", { count: creditCostOf(analysisType) })
-                        : t("watermarkBanner")}
+                        : singleUnlockPrice && creditCostOf(analysisType) <= 1
+                          ? t("unlockPriceCta", { price: singleUnlockPrice })
+                          : t("watermarkBanner")}
                     </button>
                   )}
                   <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
@@ -1792,7 +1825,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               <p className="mt-1 text-center text-[11px] text-muted-foreground/80">{t("uploadConsent")}</p>
             )}
 
-            {/* image/*：手机相册里的 HEIC / 截图等也能选（Safari 会自动转成 JPEG，上传前还会统一压缩）。
+            {/* image/*：手机相册里的 HEIC / 截图等也能选（Safari 会自动转成 JPEG，上传前还会统一重新编码成 JPEG）。
                 两个 input 放在虚线框外面：程序化 click 会冒泡到虚线框的 onClick，导致同时弹出两个选择器 */}
             <input
               ref={fileRef}
@@ -2242,6 +2275,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           onDownload={handleDownload}
           onShare={handleShare}
           packCredits={userCredits?.pack ?? 0}
+          singleUnlockPrice={singleUnlockPrice}
           unlocking={unlockingId !== null && unlockingId === lightbox.entry.id}
           onUnlock={(entry) => handleUnlock(entry.id, entry.type || "color_analysis", entry.image_urls[0])}
           demo={lightbox.entry.id === "demo"}
@@ -2318,6 +2352,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         previewUrl={pricingPreview}
         unlockTaskId={pricingTaskId}
         packCredits={userCredits?.pack ?? 0}
+        unlockCost={pricingUnlockCost}
+        emailUnlockAvailable={userCredits?.emailUnlock ?? false}
+        onEmailUnlocked={refreshCredits}
       />
 
       {/* 解锁失败等一次性提示 */}
@@ -2348,7 +2385,15 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
               {checkoutStatus === "confirming"
                 ? t("checkoutConfirming")
                 : checkoutStatus === "success"
-                  ? t(checkoutBought === "pack_unlocked" ? "checkoutSuccessPackUnlocked" : checkoutBought === "pack" ? "checkoutSuccessPack" : "checkoutSuccess")
+                  ? t(
+                      checkoutBought === "single_unlocked"
+                        ? "checkoutSuccessSingle"
+                        : checkoutBought === "pack_unlocked"
+                          ? "checkoutSuccessPackUnlocked"
+                          : checkoutBought === "pack"
+                            ? "checkoutSuccessPack"
+                            : "checkoutSuccess",
+                    )
                   : t("checkoutDelayed")}
             </span>
             {checkoutStatus !== "confirming" && (
@@ -2793,6 +2838,7 @@ function ImageLightbox({
   onDownload,
   onShare,
   packCredits,
+  singleUnlockPrice = null,
   unlocking,
   onUnlock,
   demo = false,
@@ -2805,6 +2851,8 @@ function ImageLightbox({
   onDownload: (url: string) => void;
   onShare: (url: string, taskId?: string | null) => void;
   packCredits: number;
+  /** 单份解锁的标价（未开启时为 null）：写在解锁按钮上，用户点开付费弹窗前就知道最低多少钱 */
+  singleUnlockPrice?: string | null;
   unlocking: boolean;
   /** 解锁：积分包够就直接扣积分，不够则由调用方打开付费弹窗 */
   onUnlock: (entry: HistoryEntry) => void;
@@ -2890,6 +2938,7 @@ function ImageLightbox({
                 lockStart={entry.lock_start ?? DEFAULT_LOCK_START}
                 cost={unlockCost}
                 packCredits={packCredits}
+                priceLabel={unlockCost <= 1 ? singleUnlockPrice : null}
                 busy={unlocking}
                 onUnlock={() => onUnlock(entry)}
                 rounded
@@ -2933,7 +2982,11 @@ function ImageLightbox({
             className="mt-3 flex items-center gap-2 rounded-full bg-gradient-to-r from-primary/90 to-primary px-5 py-2 text-sm font-medium text-white shadow-lg transition hover:shadow-primary/25 disabled:opacity-60"
           >
             <LockIcon className="h-4 w-4" />
-            {packCredits >= unlockCost ? t("unlockWithCredits", { count: unlockCost }) : t("watermarkBanner")}
+            {packCredits >= unlockCost
+              ? t("unlockWithCredits", { count: unlockCost })
+              : singleUnlockPrice && unlockCost <= 1
+                ? t("unlockPriceCta", { price: singleUnlockPrice })
+                : t("watermarkBanner")}
           </button>
         )}
 
@@ -3047,6 +3100,7 @@ function LockOverlay({
   lockStart,
   cost,
   packCredits,
+  priceLabel = null,
   busy,
   onUnlock,
   rounded,
@@ -3056,6 +3110,8 @@ function LockOverlay({
   lockStart: number;
   cost: number;
   packCredits: number;
+  /** 单份解锁的标价；有值时按钮写成「解锁完整报告 · $1.00」 */
+  priceLabel?: string | null;
   busy: boolean;
   onUnlock: () => void;
   rounded?: boolean;
@@ -3079,7 +3135,11 @@ function LockOverlay({
         className="inline-flex min-h-10 items-center justify-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-primary/30 transition hover:bg-primary-dark disabled:opacity-60"
       >
         {busy ? <Spinner className="h-3.5 w-3.5" /> : null}
-        {canSpend ? t("unlockWithCredits", { count: cost }) : t("unlockReport")}
+        {canSpend
+          ? t("unlockWithCredits", { count: cost })
+          : priceLabel
+            ? t("unlockPriceCta", { price: priceLabel })
+            : t("unlockReport")}
       </button>
     </div>
   );

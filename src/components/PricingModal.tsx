@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { trackEvent } from "@/lib/analytics";
+import { emailUnlockReport, getCachedEmail } from "@/lib/api";
 import { startCheckout } from "@/lib/checkout";
-import { CREDIT_PACKS, isPackProduct, type ProductKey } from "@/lib/constants";
+import { CREDIT_PACKS, SINGLE_UNLOCK_ENABLED, isPackProduct, type ProductKey } from "@/lib/constants";
 import { usePrices } from "@/lib/usePrices";
+import { usePlanShare, type PlanShareKey } from "@/lib/usePlanShare";
 import { PaymentTrust } from "@/components/PaymentTrust";
 import { InAppBrowserNotice, InAppCheckoutEmailStep } from "@/components/InAppBrowserNotice";
 import { detectInAppBrowser } from "@/lib/inAppBrowser";
@@ -22,17 +24,63 @@ interface Props {
   unlockTaskId?: string | null;
   /** 当前积分包余额：支付返回后据此判断积分是否到账 */
   packCredits?: number;
+  /** 解锁这份报告要花几个积分（Glow-Up 报告是 3）。单份解锁只含 1 积分，所以只有 1 时才展示 */
+  unlockCost?: number;
+  /** 「留邮箱免费解锁一次」是否还可用（后端按账号判断，邮件没配好 / 已经领过都是 false）：true 才展示入口 */
+  emailUnlockAvailable?: boolean;
+  /** 邮件发送成功后回调：父组件据此刷新账号信息，下次打开就不再展示入口 */
+  onEmailUnlocked?: () => void;
 }
 
-export function PricingModal({ open, onClose, source = "unknown", previewUrl, unlockTaskId, packCredits = 0 }: Props) {
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+type EmailUnlockError =
+  | "emailUnlockErrorInvalid"
+  | "emailUnlockErrorUsed"
+  | "emailUnlockErrorEmailUsed"
+  | "emailUnlockErrorBusy"
+  | "emailUnlockErrorGeneric";
+
+export function PricingModal({
+  open,
+  onClose,
+  source = "unknown",
+  previewUrl,
+  unlockTaskId,
+  packCredits = 0,
+  unlockCost = 1,
+  emailUnlockAvailable = false,
+  onEmailUnlocked,
+}: Props) {
   const t = useTranslations("pricing");
   const tCommon = useTranslations("tryPage");
   const locale = useLocale();
   const { money } = usePrices();
+  // 真实统计：近期新顾客里最多人选的方案及占比。后端样本量不够 / 占比不高时是 null，下面各处就什么都不显示
+  const planShare = usePlanShare(open);
   const [loading, setLoading] = useState<string | null>(null);
   const [error, setError] = useState(false);
   // 在 App 内置浏览器里点付费：先出「保存购买」步骤（填邮箱，可跳过），用户继续后才真正发起结算
   const [inAppWarnProduct, setInAppWarnProduct] = useState<ProductKey | null>(null);
+
+  // 留邮箱免费解锁一次：折叠入口 → 填邮箱 → 发送中 → 已发送
+  const [emailFormOpen, setEmailFormOpen] = useState(false);
+  const [emailValue, setEmailValue] = useState("");
+  const [emailSending, setEmailSending] = useState(false);
+  const [emailSentTo, setEmailSentTo] = useState<string | null>(null);
+  const [emailError, setEmailError] = useState<EmailUnlockError | null>(null);
+  const emailSubmittingRef = useRef(false);
+
+  // 弹层关闭时重置邮箱表单（在渲染期间根据 open 的变化调整状态，是 React 推荐的写法，避免在 effect 里同步 setState）
+  const [wasOpen, setWasOpen] = useState(open);
+  if (wasOpen !== open) {
+    setWasOpen(open);
+    if (!open) {
+      setEmailFormOpen(false);
+      setEmailSentTo(null);
+      setEmailError(null);
+    }
+  }
 
   // 弹层打开时锁定背景滚动，避免手机上在弹层里滑动时底下的页面跟着滚
   useEffect(() => {
@@ -60,6 +108,72 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
   if (!open) return null;
 
   const isLockSource = source === "report_lock";
+  // 单份解锁：只在「从某份锁定报告点进来、且这份报告 1 积分就能解锁」时出现
+  const showSingle = SINGLE_UNLOCK_ENABLED && isLockSource && !!unlockTaskId && unlockCost <= 1;
+  // 免费邮件解锁：只在「从某份锁定报告点进来」时出现；发送成功后即使父组件刷新成不可用，也要继续显示「已发送」
+  const emailAlreadyUsed = emailError === "emailUnlockErrorUsed";
+  const showEmailUnlock = isLockSource && !!unlockTaskId && (emailUnlockAvailable || !!emailSentTo || emailAlreadyUsed);
+
+  const openEmailForm = () => {
+    setEmailFormOpen(true);
+    setEmailValue((current) => current || getCachedEmail() || "");
+    trackEvent("email_unlock_opened", { source });
+  };
+
+  const handleEmailUnlock = async (event: FormEvent) => {
+    event.preventDefault();
+    if (!unlockTaskId || emailSubmittingRef.current) return;
+
+    const email = emailValue.trim();
+    if (!EMAIL_PATTERN.test(email)) {
+      setEmailError("emailUnlockErrorInvalid");
+      return;
+    }
+
+    emailSubmittingRef.current = true;
+    setEmailSending(true);
+    setEmailError(null);
+    trackEvent("email_unlock_submitted", { source });
+    try {
+      const res = await emailUnlockReport(unlockTaskId, email, locale);
+      if (res.code === 200) {
+        if (res.data?.already_unlocked) {
+          // 这份报告其实已经是完整的（比如刚订阅）：让父组件刷新，直接关掉弹层
+          onEmailUnlocked?.();
+          onClose();
+          return;
+        }
+        trackEvent("email_unlock_sent", { source });
+        setEmailSentTo(email);
+        onEmailUnlocked?.();
+        return;
+      }
+
+      const reason = res.data?.reason;
+      let key: EmailUnlockError = "emailUnlockErrorGeneric";
+      // 只有后端明确说「邮箱不对」才提示邮箱有问题；报告没有可发的图、任务没完成这类 400 属于别的原因，给通用提示
+      if (res.code === 400 && res.message === "invalid_email") key = "emailUnlockErrorInvalid";
+      else if (res.code === 409 && reason === "account_used") key = "emailUnlockErrorUsed";
+      else if (res.code === 409 && reason === "email_used") key = "emailUnlockErrorEmailUsed";
+      else if (res.code === 429) key = "emailUnlockErrorBusy";
+      trackEvent("email_unlock_failed", { source, code: res.code, reason: reason ?? res.message });
+      setEmailError(key);
+      // 这个账号已经领过：让父组件刷新，下次打开就不再展示入口
+      if (reason === "account_used") onEmailUnlocked?.();
+    } catch {
+      trackEvent("email_unlock_failed", { source, code: 0, reason: "network" });
+      setEmailError("emailUnlockErrorGeneric");
+    } finally {
+      emailSubmittingRef.current = false;
+      setEmailSending(false);
+    }
+  };
+
+  /** 这个方案正是「近期最多顾客选择」的那个时，返回那句真实的统计文案；否则 null */
+  const shareNote = (plan: PlanShareKey) =>
+    planShare?.plan === plan ? (
+      <p className="mt-0.5 text-xs font-semibold text-primary">{t("planShare", { percent: planShare.percent })}</p>
+    ) : null;
 
   const handleClose = () => {
     trackEvent("pricing_modal_closed", { source, had_preview: !!previewUrl });
@@ -158,6 +272,7 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
             <ModalFeature text={t("weeklyFeature3")} />
             <ModalFeature text={t("weeklyFeature4")} className="max-sm:hidden" />
           </ul>
+          {planShare?.plan === "weekly" && <div className="mt-3 text-center">{shareNote("weekly")}</div>}
           <button
             onClick={() => handleCheckout("weekly")}
             disabled={loading !== null}
@@ -166,6 +281,95 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
             {loading === "weekly" ? <LoadingDots /> : t("weeklyCta", { price: money("weeklyIntro") })}
           </button>
         </div>
+
+        {/* 单份解锁：给「只想看眼前这份、不想订阅」的人。紧凑一行、紧贴周订阅卡片下方，手机首屏就能看到；
+            强调「一次付费、不自动续费」，打消订阅顾虑 */}
+        {showSingle && (
+          <div className="mt-3 flex items-center justify-between gap-3 rounded-xl border border-primary/40 bg-card p-4">
+            <div className="min-w-0">
+              <h3 className="text-base font-bold">{t("singleTitle")}</h3>
+              <p className="mt-0.5 text-xs text-muted-foreground">{t("singleDesc")}</p>
+            </div>
+            <button
+              onClick={() => handleCheckout("single")}
+              disabled={loading !== null}
+              className="min-h-11 shrink-0 rounded-full border border-primary px-4 py-2 text-sm font-semibold text-primary transition hover:bg-primary/5 disabled:opacity-50"
+            >
+              {loading === "single" ? <LoadingDots /> : t("singleCta", { price: money("single") })}
+            </button>
+          </div>
+        )}
+
+        {/* 免费邮件解锁（每个账号 / 每个邮箱一次）：给「想看但不想现在付钱」的人一条不流失的出路——
+            报告发到邮箱，我们留下一个能再次联系的人。视觉上比订阅卡片弱（虚线框、无填充按钮），不抢主推 */}
+        {showEmailUnlock && (
+          <div className="mt-3 rounded-xl border border-dashed border-primary/50 bg-card/60 p-4">
+            {emailSentTo ? (
+              <div role="status" className="text-center">
+                <p className="text-sm font-bold">{t("emailUnlockSentTitle")}</p>
+                <p className="mt-1 text-xs text-muted-foreground">{t("emailUnlockSentDesc", { email: emailSentTo })}</p>
+                <button
+                  type="button"
+                  onClick={handleClose}
+                  className="mt-3 min-h-11 rounded-full border border-border px-6 py-2 text-sm font-semibold text-foreground transition hover:bg-muted"
+                >
+                  {tCommon("close")}
+                </button>
+              </div>
+            ) : emailAlreadyUsed ? (
+              <p role="alert" className="text-xs text-muted-foreground">{t("emailUnlockErrorUsed")}</p>
+            ) : !emailFormOpen ? (
+              <button type="button" onClick={openEmailForm} className="flex w-full items-center justify-between gap-3 text-left">
+                <span className="min-w-0">
+                  <span className="block text-sm font-bold text-foreground">{t("emailUnlockTitle")}</span>
+                  <span className="mt-0.5 block text-xs text-muted-foreground">{t("emailUnlockDesc")}</span>
+                </span>
+                <svg className="h-4 w-4 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            ) : (
+              <form onSubmit={handleEmailUnlock} noValidate>
+                <label htmlFor="email-unlock-input" className="block text-sm font-bold text-foreground">
+                  {t("emailUnlockTitle")}
+                </label>
+                <div className="mt-2 flex gap-2 max-sm:flex-col">
+                  <input
+                    id="email-unlock-input"
+                    type="email"
+                    inputMode="email"
+                    autoComplete="email"
+                    autoCapitalize="none"
+                    autoCorrect="off"
+                    spellCheck={false}
+                    aria-label={t("emailUnlockLabel")}
+                    aria-invalid={emailError === "emailUnlockErrorInvalid"}
+                    placeholder="name@example.com"
+                    value={emailValue}
+                    onChange={(e) => {
+                      setEmailValue(e.target.value);
+                      if (emailError) setEmailError(null);
+                    }}
+                    className="min-h-11 min-w-0 flex-1 rounded-full border border-border bg-background px-4 text-base outline-none transition focus:border-primary sm:text-sm"
+                  />
+                  <button
+                    type="submit"
+                    disabled={emailSending || loading !== null}
+                    className="min-h-11 shrink-0 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-50"
+                  >
+                    {emailSending ? <LoadingDots /> : t("emailUnlockCta")}
+                  </button>
+                </div>
+                <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">{t("emailUnlockNote")}</p>
+                {emailError && (
+                  <p role="alert" className="mt-2 text-xs text-red-500">
+                    {t(emailError)}
+                  </p>
+                )}
+              </form>
+            )}
+          </div>
+        )}
 
         {/* Yearly：权益和周订阅相同，所以只用紧凑的一行：折合每周的价格 + 省多少 */}
         <div className="mt-3 flex items-center justify-between gap-3 rounded-xl border border-border bg-card p-4">
@@ -179,6 +383,7 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
             <p className="mt-0.5 text-xs text-muted-foreground">
               {money("yearly")} {t("yearlyPer")} · {t("yearlyPerWeek", { price: money("yearlyPerWeek") })}
             </p>
+            {shareNote("yearly")}
           </div>
           <button
             onClick={() => handleCheckout("yearly")}
@@ -190,7 +395,9 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
         </div>
 
         {/* 积分包：一次性付费、不绑订阅，给不想订阅的人；30 积分更划算 */}
-        <p className="mt-6 text-center text-xs font-medium uppercase tracking-wide text-muted-foreground">{t("orPack")}</p>
+        <p className="mt-6 text-center text-xs font-medium uppercase tracking-wide text-muted-foreground">
+          {showSingle ? t("orPackMore") : t("orPack")}
+        </p>
         <div className="mt-4 grid grid-cols-2 gap-3">
           {(["pack", "pack30"] as const).map((key) => {
             const { credits } = CREDIT_PACKS[key];
@@ -205,6 +412,7 @@ export function PricingModal({ open, onClose, source = "unknown", previewUrl, un
                 <h3 className="text-sm font-bold">{t("packTitle", { credits })}</h3>
                 <p className="mt-1 text-xl font-bold">{price}</p>
                 <p className="text-xs text-muted-foreground">{t("packPerReport", { price: money(`${key}:perReport` as "pack:perReport" | "pack30:perReport") })}</p>
+                {shareNote(key)}
                 <button
                   onClick={() => handleCheckout(key)}
                   disabled={loading !== null}

@@ -405,7 +405,24 @@
     "packSaveBadge": "Ahorra {percent}%",
     "packPerReport": "{price} por informe completo",
     "purchaseRestored": "Te damos la bienvenida de nuevo: tu compra se ha restaurado en esta cuenta.",
-    "at_palette_scan": "Escaneo de paleta de sombras"
+    "at_palette_scan": "Escaneo de paleta de sombras",
+    "singleTitle": "Solo este informe",
+    "singleDesc": "Pago único. Sin suscripción ni renovación automática.",
+    "singleCta": "Desbloquear · {price}",
+    "orPackMore": "¿Vas a desbloquear más de uno? Con créditos sale más barato por informe",
+    "emailUnlockTitle": "¿Aún no quieres pagar? Recibe este informe gratis por correo",
+    "emailUnlockDesc": "Oferta única: te enviamos por correo el informe completo, sin difuminar. Sin pagar nada.",
+    "emailUnlockLabel": "Tu correo electrónico",
+    "emailUnlockCta": "Enviarme el informe",
+    "emailUnlockNote": "Gratis una vez por persona. Podemos enviarte consejos y ofertas de vez en cuando; puedes darte de baja cuando quieras.",
+    "emailUnlockSentTitle": "¡Ya va de camino!",
+    "emailUnlockSentDesc": "Hemos enviado tu informe completo a {email}. Puede tardar un minuto; mira también la carpeta de spam o promociones.",
+    "emailUnlockErrorInvalid": "Introduce un correo electrónico válido.",
+    "emailUnlockErrorUsed": "Ya usaste tu desbloqueo gratuito por correo. Elige un plan arriba para desbloquear este informe.",
+    "emailUnlockErrorEmailUsed": "Esta dirección ya recibió un informe gratuito. Prueba con otra o elige un plan arriba.",
+    "emailUnlockErrorBusy": "Hay demasiadas solicitudes ahora mismo. Inténtalo más tarde o elige un plan arriba.",
+    "emailUnlockErrorGeneric": "No pudimos enviar el correo. Revisa la dirección e inténtalo de nuevo.",
+    "planShare": "Elegido por el {percent} % de nuestros clientes recientes"
   },
   "quiz": {
     "shareResult": "Compartir mi resultado",
@@ -834,7 +851,10 @@
     "paletteUploadHint": "Fotografía desde arriba con buena luz, con todos los tonos visibles",
     "paletteChange": "Cambiar foto de la paleta",
     "paletteNeeded": "Añade una foto de tu paleta para continuar",
-    "paletteAlt": "Tu paleta de sombras"
+    "paletteAlt": "Tu paleta de sombras",
+    "unlockPriceCta": "Desbloquear informe completo · {price}",
+    "errorUploadTooLarge": "Esta foto es demasiado grande o tiene un formato que no podemos leer. Elige un JPG o PNG de menos de 6 MB, o haz una foto nueva.",
+    "checkoutSuccessSingle": "Pago confirmado: ¡tu informe está desbloqueado!"
   },
   "footer": {
     "tagline": "Análisis de belleza personal con IA",

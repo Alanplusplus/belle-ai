@@ -7,6 +7,8 @@ import { CREDIT_PACKS, WEEKLY_INTRO_PRICE, WEEKLY_PRICE, YEARLY_PRICE } from "./
  * - 其他币种的数字必须和 Waffo 后台里同一个商品的对应币种价格一致（含首周优惠价 trialAmount）——
  *   这里只负责「展示」，实际扣款金额由 Waffo 商品配置决定。改价时两边同步。
  * - 价格是「含当地消费税」的最终价（Waffo 后台这几个币种请把 taxIncluded 设为 true）。
+ * - 单份解锁 single 是特例：Waffo 不支持低于 1（币种单位）的价格，所以美元 / 欧元 / 英镑都定成 1，
+ *   这三个币种的数字不是按汇率换算的（€1、£1 比 $1 略贵）；日元、港币的数值本身远大于 1，仍按汇率换算。
  *
  * 这个文件前后端通用，不读环境变量；哪些币种已启用由服务端 currency-server.ts 决定。
  */
@@ -17,20 +19,21 @@ export function isCurrencyCode(value: unknown): value is CurrencyCode {
   return typeof value === "string" && (CURRENCIES as readonly string[]).includes(value);
 }
 
-export type PriceKey = "weeklyIntro" | "weekly" | "yearly" | "pack" | "pack30";
+export type PriceKey = "weeklyIntro" | "weekly" | "yearly" | "single" | "pack" | "pack30";
 
 export const PRICE_TABLE: Record<CurrencyCode, Record<PriceKey, string>> = {
   USD: {
     weeklyIntro: WEEKLY_INTRO_PRICE,
     weekly: WEEKLY_PRICE,
     yearly: YEARLY_PRICE,
+    single: CREDIT_PACKS.single.price,
     pack: CREDIT_PACKS.pack.price,
     pack30: CREDIT_PACKS.pack30.price,
   },
-  EUR: { weeklyIntro: "1.79", weekly: "3.55", yearly: "26.99", pack: "2.66", pack30: "6.22" },
-  GBP: { weeklyIntro: "1.49", weekly: "2.99", yearly: "22.49", pack: "2.24", pack30: "5.24" },
-  JPY: { weeklyIntro: "314", weekly: "629", yearly: "4799", pack: "479", pack30: "1099" },
-  HKD: { weeklyIntro: "16", weekly: "32", yearly: "236", pack: "23", pack30: "55" },
+  EUR: { weeklyIntro: "1.79", weekly: "3.55", yearly: "26.99", single: "1", pack: "2.66", pack30: "6.22" },
+  GBP: { weeklyIntro: "1.49", weekly: "2.99", yearly: "22.49", single: "1", pack: "2.24", pack30: "5.24" },
+  JPY: { weeklyIntro: "314", weekly: "629", yearly: "4799", single: "159", pack: "479", pack30: "1099" },
+  HKD: { weeklyIntro: "16", weekly: "32", yearly: "236", single: "8", pack: "23", pack30: "55" },
 };
 
 const SYMBOL: Record<CurrencyCode, string> = { USD: "$", EUR: "€", GBP: "£", JPY: "¥", HKD: "HK$" };
@@ -90,7 +93,7 @@ export function resolvePrice(currency: CurrencyCode, spec: PriceSpec): string {
 }
 
 /** 商品 → 展示价 key（周订阅按首周优惠价，与支付页首笔扣款一致） */
-export function checkoutPriceKey(product: "weekly" | "yearly" | "pack" | "pack30"): PriceKey {
+export function checkoutPriceKey(product: "weekly" | "yearly" | "single" | "pack" | "pack30"): PriceKey {
   return product === "weekly" ? "weeklyIntro" : product;
 }
 

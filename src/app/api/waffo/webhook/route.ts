@@ -81,7 +81,11 @@ function resolvePlan(data: Record<string, unknown>, metadata: Record<string, str
 /**
  * 服务端 GA4 purchase：用户在 Waffo 支付页付款后不会可靠地回到站点，浏览器端拿不到真实付费数据。
  * 这里用 Measurement Protocol 补发，并带上结算时保存的 client_id / session_id / UTM，
- * 让 GA 能把收入归到真实的流量渠道。需要配置环境变量 GA_API_SECRET，未配置时静默跳过。
+ * 让 GA 能把收入归到真实的流量渠道。需要配置环境变量 GA_API_SECRET；
+ * 没配置时不再静默：写一条 warn 日志（部署平台的 Logs 里能搜到 GA_API_SECRET），方便发现「购买一直没上报」。
+ *
+ * 排查用：设置环境变量 GA_MP_DEBUG=1，会改走 GA 的校验接口 /debug/mp/collect（只校验、不入库），
+ * 把 validationMessages 打到日志里；校验没有报错后再去掉它，才会真正写入 GA。
  */
 async function sendGaPurchase(
   eventKey: string,
@@ -89,19 +93,34 @@ async function sendGaPurchase(
   plan: string | null,
   data: Record<string, unknown>,
   metadata: Record<string, string>,
+  mode: string,
 ) {
-  const apiSecret = process.env.GA_API_SECRET;
-  if (!apiSecret) return;
+  // Waffo 测试环境的订单不进 GA：否则测试付款会混进真实收入
+  if (mode === "test") {
+    console.log("GA purchase skipped: Waffo test-mode order", eventKey);
+    return;
+  }
 
-  const value = toNumber(data.chargedAmount);
-  if (value <= 0) return;
+  const apiSecret = process.env.GA_API_SECRET;
+  if (!apiSecret) {
+    console.warn("GA_API_SECRET is not configured: purchase NOT reported to GA", eventKey);
+    return;
+  }
+
+  // chargedAmount 是实际扣款；渠道没返回时缺失，此时用 amount（Waffo 保证它回退到应收金额）
+  const value = toNumber(data.chargedAmount) || toNumber(data.amount);
+  if (value <= 0) {
+    console.warn("GA purchase skipped: no positive charged amount", eventKey);
+    return;
+  }
 
   const currency = str(data.currency) || "USD";
   const sessionId = metadata.ga_sid ? Number(metadata.ga_sid) : undefined;
+  const debug = process.env.GA_MP_DEBUG === "1";
 
   try {
-    await fetch(
-      `https://www.google-analytics.com/mp/collect?measurement_id=${GA_MEASUREMENT_ID}&api_secret=${apiSecret}`,
+    const res = await fetch(
+      `https://www.google-analytics.com/${debug ? "debug/" : ""}mp/collect?measurement_id=${GA_MEASUREMENT_ID}&api_secret=${apiSecret}`,
       {
         method: "POST",
         body: JSON.stringify({
@@ -141,6 +160,14 @@ async function sendGaPurchase(
         }),
       },
     );
+    // 正式接口不论成败都回 204，只有校验接口会返回详细问题；HTTP 层面失败（密钥错误等）也要留下痕迹
+    if (!res.ok) {
+      console.error("GA purchase HTTP error:", res.status, eventKey);
+    } else if (debug) {
+      console.log("GA purchase validation (GA_MP_DEBUG=1, not recorded):", eventKey, await res.text());
+    } else {
+      console.log("GA purchase sent:", eventKey, currency, value);
+    }
   } catch (e) {
     console.error("GA purchase send failed:", e);
   }
@@ -201,6 +228,7 @@ async function handlePackOrder(
   packKey: PackKey,
   data: Record<string, unknown>,
   metadata: Record<string, string>,
+  mode: string,
 ): Promise<Response> {
   const packCredits = CREDIT_PACKS[packKey].credits;
   if (!userId || !orderId) {
@@ -240,7 +268,7 @@ async function handlePackOrder(
       `积分包: +${packCredits} 积分`,
       ...(attributionNote ? [`来源: ${attributionNote}`] : []),
     ]);
-    await sendGaPurchase(eventKey, userId, packKey, data, metadata);
+    await sendGaPurchase(eventKey, userId, packKey, data, metadata, mode);
   }
   return new Response("OK");
 }
@@ -270,7 +298,7 @@ export async function POST(req: NextRequest) {
 
     // 一次性积分包：订阅链路之外单独处理（订阅首单也会触发 order.completed，所以必须看 metadata.product）
     if (eventType === "order.completed" && isPackProduct(metadata.product)) {
-      return handlePackOrder(eventType, `${eventType}:${event.eventId || event.id}`, userId, orderId, metadata.product, data, metadata);
+      return handlePackOrder(eventType, `${eventType}:${event.eventId || event.id}`, userId, orderId, metadata.product, data, metadata, event.mode);
     }
 
     // 幂等由后端按 eventType:eventId 落库保证（多实例 / 重启都安全），这里不再用内存 Set
@@ -340,6 +368,7 @@ export async function POST(req: NextRequest) {
           resolvePlan(data, metadata),
           data,
           metadata,
+          event.mode,
         );
       }
     }

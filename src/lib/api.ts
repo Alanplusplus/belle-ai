@@ -65,6 +65,8 @@ export interface WebInitData {
   checkin_max_streak?: number;
   /** 本次登录时按付款邮箱找回的购买（账号）数：>0 表示在其他浏览器里付的款已经转到当前账号 */
   restored_purchases?: number;
+  /** 「留邮箱免费解锁一次」是否还可用：后端功能开着 + 邮件已配置 + 这个账号还没领过。false / 缺省时前端不展示入口 */
+  email_unlock_available?: boolean;
 }
 
 export type WebSignInData = WebInitData;
@@ -131,18 +133,33 @@ const DIRECT_API_BASE =
   process.env.NEXT_PUBLIC_BELLE_API_BASE || "https://api.chibistyle.app";
 
 const UPLOAD_MAX_ATTEMPTS = 3;
-const UPLOAD_TIMEOUT_MS = 45_000;
+const UPLOAD_MIN_TIMEOUT_MS = 45_000;
+const UPLOAD_MAX_TIMEOUT_MS = 150_000;
+
+/**
+ * 单次上传的超时：基础 30s，再按请求体大小每 MB 加 12s（按约 80KB/s 的慢速移动网络估算），夹在 45s ~ 150s。
+ * 保留原图画质后一张图可能有 3–6MB，固定的 45s 在弱网下不够；小图仍然是 45s，不会让真正的故障拖得更久。
+ */
+function uploadTimeoutMs(payloadChars: number): number {
+  const mb = payloadChars / (1024 * 1024);
+  return Math.round(Math.min(UPLOAD_MAX_TIMEOUT_MS, Math.max(UPLOAD_MIN_TIMEOUT_MS, 30_000 + mb * 12_000)));
+}
 
 /**
  * 上传图片。移动网络下偶发超时 / 断连很常见，所以带超时 + 最多 3 次重试（退避 1s、2s）；
  * 只对网络错误和 5xx 重试，业务错误（4xx / code != 200）直接返回给调用方。
+ *
+ * 413（请求体超过 nginx 10MB 上限）和网关返回的 HTML 错误页都不是 JSON：
+ * 以前 res.json() 会抛 SyntaxError 被当成网络错误白白重试 3 次，现在直接按状态码返回、不重试。
  */
 export async function uploadImage(base64Data: string): Promise<ApiResponse<{ url: string }>> {
   let lastError: unknown = null;
+  const timeoutMs = uploadTimeoutMs(base64Data.length);
 
   for (let attempt = 1; attempt <= UPLOAD_MAX_ATTEMPTS; attempt++) {
+    const isLastAttempt = attempt === UPLOAD_MAX_ATTEMPTS;
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), UPLOAD_TIMEOUT_MS);
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
     try {
       const res = await fetch(`${DIRECT_API_BASE}/common/v1/web/upload`, {
         method: "POST",
@@ -151,23 +168,32 @@ export async function uploadImage(base64Data: string): Promise<ApiResponse<{ url
         signal: controller.signal,
       });
 
-      if (res.status >= 500 && attempt < UPLOAD_MAX_ATTEMPTS) {
+      if (res.status === 413) return { code: 413, message: "payload_too_large" };
+
+      let json: ApiResponse<{ url: string }> | null = null;
+      try {
+        json = (await res.json()) as ApiResponse<{ url: string }>;
+      } catch {
+        json = null;
+      }
+
+      if (!json) {
+        // 非 JSON：网关 / 代理的错误页。4xx 重试没有意义，5xx 才值得再试
+        if (res.status < 500) return { code: res.status, message: `HTTP ${res.status}` };
         lastError = new Error(`HTTP ${res.status}`);
+      } else if ((res.status >= 500 || json.code === 500) && !isLastAttempt) {
+        lastError = new Error(json.message || `HTTP ${res.status}`);
       } else {
-        const json = (await res.json()) as ApiResponse<{ url: string }>;
-        if (json.code === 500 && attempt < UPLOAD_MAX_ATTEMPTS) {
-          lastError = new Error(json.message || "upload_server_error");
-        } else {
-          return json;
-        }
+        return json;
       }
     } catch (err) {
       lastError = err;
-      if (attempt === UPLOAD_MAX_ATTEMPTS) throw err;
+      if (isLastAttempt) throw err;
     } finally {
       clearTimeout(timer);
     }
 
+    if (isLastAttempt) break;
     await new Promise((resolve) => setTimeout(resolve, attempt * 1000));
   }
 
@@ -368,6 +394,20 @@ export async function unlockReport(taskId: string) {
   }>({
     action: "unlock-report",
     task_id: taskId,
+  });
+}
+
+/**
+ * 留邮箱免费解锁一次：后端把这份报告的完整图片作为附件发到邮箱。每个账号 / 每个邮箱只能用一次。
+ * 失败时 code 为：400 邮箱无效 | 409 已经领过（data.reason: account_used / email_used / in_progress）|
+ * 429 太频繁 | 502 发送失败 | 503 功能不可用。
+ */
+export async function emailUnlockReport(taskId: string, email: string, locale: string) {
+  return belleApi<{ sent?: boolean; already_unlocked?: boolean; reason?: string }>({
+    action: "email-unlock",
+    task_id: taskId,
+    email,
+    locale,
   });
 }
 

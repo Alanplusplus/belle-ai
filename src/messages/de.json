@@ -405,7 +405,24 @@
     "orPack": "Kein Abo? Einmal zahlen mit Credits",
     "packSaveBadge": "{percent} % sparen",
     "packPerReport": "{price} pro vollständigem Bericht",
-    "purchaseRestored": "Willkommen zurück – dein Kauf wurde in dieses Konto übernommen."
+    "purchaseRestored": "Willkommen zurück – dein Kauf wurde in dieses Konto übernommen.",
+    "singleTitle": "Nur diesen Bericht",
+    "singleDesc": "Einmalzahlung. Kein Abo, keine automatische Verlängerung.",
+    "singleCta": "Freischalten · {price}",
+    "orPackMore": "Mehrere freischalten? Mit Credits ist jeder Bericht günstiger",
+    "emailUnlockTitle": "Noch nicht bereit zu zahlen? Hol dir diesen Bericht kostenlos per E-Mail",
+    "emailUnlockDesc": "Einmaliges Angebot: Wir schicken dir den vollständigen Bericht ohne Unschärfe per E-Mail. Ohne Bezahlung.",
+    "emailUnlockLabel": "Deine E-Mail-Adresse",
+    "emailUnlockCta": "Bericht per E-Mail senden",
+    "emailUnlockNote": "Einmal pro Person kostenlos. Wir senden dir gelegentlich Tipps und Angebote – jederzeit abbestellbar.",
+    "emailUnlockSentTitle": "Unterwegs zu dir!",
+    "emailUnlockSentDesc": "Wir haben deinen vollständigen Bericht an {email} geschickt. Es kann eine Minute dauern – schau auch in deinen Spam- oder Werbung-Ordner.",
+    "emailUnlockErrorInvalid": "Bitte gib eine gültige E-Mail-Adresse ein.",
+    "emailUnlockErrorUsed": "Du hast deine kostenlose Freischaltung per E-Mail bereits genutzt. Wähle oben ein Paket, um diesen Bericht freizuschalten.",
+    "emailUnlockErrorEmailUsed": "An diese Adresse wurde bereits ein kostenloser Bericht gesendet. Nimm eine andere Adresse oder wähle oben ein Paket.",
+    "emailUnlockErrorBusy": "Gerade zu viele Anfragen. Versuche es später erneut oder wähle oben ein Paket.",
+    "emailUnlockErrorGeneric": "Die E-Mail konnte nicht gesendet werden. Prüfe die Adresse und versuche es erneut.",
+    "planShare": "Von {percent} % unserer neuen Kunden gewählt"
   },
   "quiz": {
     "shareResult": "Ergebnis teilen",
@@ -834,7 +851,10 @@
     "lockedBadge": "Gesperrt",
     "hdPaidTag": "Bezahlt",
     "checkoutSuccessPack": "Credits gutgeschrieben! Tippe bei einem Bericht auf „Freischalten“, um ihn vollständig zu sehen.",
-    "checkoutSuccessPackUnlocked": "Credits gutgeschrieben – dein Bericht ist freigeschaltet!"
+    "checkoutSuccessPackUnlocked": "Credits gutgeschrieben – dein Bericht ist freigeschaltet!",
+    "unlockPriceCta": "Vollbericht freischalten · {price}",
+    "errorUploadTooLarge": "Dieses Foto ist zu groß oder hat ein nicht lesbares Format. Wähle bitte ein JPG oder PNG unter 6 MB oder mache ein neues Foto.",
+    "checkoutSuccessSingle": "Zahlung bestätigt – dein Bericht ist freigeschaltet!"
   },
   "footer": {
     "tagline": "KI-gestützte persönliche Schönheitsanalyse",

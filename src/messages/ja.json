@@ -405,7 +405,24 @@
     "orPack": "定期購入しない場合は、クレジットを1回払いで",
     "packSaveBadge": "{percent}%お得",
     "packPerReport": "完全版レポート1件あたり {price}",
-    "purchaseRestored": "おかえりなさい。以前のご購入がこのアカウントに復元されました。"
+    "purchaseRestored": "おかえりなさい。以前のご購入がこのアカウントに復元されました。",
+    "singleTitle": "このレポートだけ解除",
+    "singleDesc": "1回払い。定期購入なし、自動更新なし。",
+    "singleCta": "解除 · {price}",
+    "orPackMore": "複数のレポートを解除するなら、クレジットのほうが1件あたりお得",
+    "emailUnlockTitle": "今は購入しない？このレポートをメールで無料で受け取る",
+    "emailUnlockDesc": "1回限り：ぼかしなしの完全版レポートをメールでお送りします。お支払いは不要です。",
+    "emailUnlockLabel": "メールアドレス",
+    "emailUnlockCta": "メールで受け取る",
+    "emailUnlockNote": "無料はお一人様1回まで。ときどきヒントやお得な情報をお送りすることがあります（いつでも配信停止できます）。",
+    "emailUnlockSentTitle": "送信しました！",
+    "emailUnlockSentDesc": "完全版レポートを {email} に送信しました。届くまで1分ほどかかることがあります。迷惑メール・プロモーションフォルダもご確認ください。",
+    "emailUnlockErrorInvalid": "有効なメールアドレスを入力してください。",
+    "emailUnlockErrorUsed": "無料のメール解除はすでにご利用済みです。上のプランからこのレポートを解除してください。",
+    "emailUnlockErrorEmailUsed": "このメールアドレスにはすでに無料レポートを送信済みです。別のアドレスを使うか、上のプランをお選びください。",
+    "emailUnlockErrorBusy": "ただいまリクエストが集中しています。しばらくしてからお試しいただくか、上のプランをお選びください。",
+    "emailUnlockErrorGeneric": "メールを送信できませんでした。アドレスをご確認のうえ、もう一度お試しください。",
+    "planShare": "最近のお客様の {percent}% がこのプランを選んでいます"
   },
   "quiz": {
     "shareResult": "結果をシェア",
@@ -834,7 +851,10 @@
     "lockedBadge": "ロック中",
     "hdPaidTag": "有料",
     "checkoutSuccessPack": "クレジットを追加しました！レポートの「解除」をタップすると全体が見られます。",
-    "checkoutSuccessPackUnlocked": "クレジットを追加し、レポートを解除しました！"
+    "checkoutSuccessPackUnlocked": "クレジットを追加し、レポートを解除しました！",
+    "unlockPriceCta": "フルレポートを解除 · {price}",
+    "errorUploadTooLarge": "この写真はサイズが大きすぎるか、読み取れない形式です。6 MB 以下の JPG / PNG を選ぶか、撮り直してください。",
+    "checkoutSuccessSingle": "お支払いを確認しました。レポートを解除しました！"
   },
   "footer": {
     "tagline": "AI搭載パーソナルビューティー分析",
