@@ -642,7 +642,17 @@
     "sidebarCtaDesc": "Téléchargez une photo et découvrez vos meilleures couleurs en 60 secondes.",
     "sidebarCtaFree": "Gratuit · Sans inscription",
     "relatedTools": "Plus d'outils IA gratuits",
-    "updatedOn": "Mis à jour"
+    "updatedOn": "Mis à jour",
+    "oliveHub": {
+      "title": "Vous ne savez pas si votre sous-ton est olive ?",
+      "desc": "Un teint olive est souvent pris pour un sous-ton neutre. Commencez par notre test gratuit de sous-ton en 4 questions (environ une minute). Si le résultat est neutre mais que votre fond de teint ne convient toujours pas, l'olive est peut-être la pièce manquante.",
+      "cta": "Faire le test de sous-ton gratuit",
+      "moreTitle": "Pour aller plus loin",
+      "linkOlivePage": "Les meilleures couleurs pour une peau olive",
+      "linkAsianPage": "Analyse colorimétrique pour les teints asiatiques",
+      "linkSigns": "Avez-vous un sous-ton olive ? 5 signes",
+      "linkVsNeutral": "Sous-ton olive vs neutre : comment les distinguer"
+    }
   },
   "tryPage": {
     "title": "Essayez l'analyse beauté IA",

@@ -642,7 +642,17 @@
     "sidebarCtaDesc": "上传照片，60秒发现最适合你的颜色。",
     "sidebarCtaFree": "免费 · 无需注册",
     "relatedTools": "更多免费 AI 工具",
-    "updatedOn": "更新于"
+    "updatedOn": "更新于",
+    "oliveHub": {
+      "title": "不确定自己是不是橄榄色底调？",
+      "desc": "橄榄肤色常被误判为中性底调。先做一个免费的 4 题底调测试（约 1 分钟）。如果结果是中性，但粉底还是怎么选都不对，可能就是橄榄色底调在作怪。",
+      "cta": "免费做肤色底调测试",
+      "moreTitle": "继续了解",
+      "linkOlivePage": "橄榄肤色最适合的颜色",
+      "linkAsianPage": "亚洲肤色的色彩分析",
+      "linkSigns": "你是橄榄色底调吗？5 个信号",
+      "linkVsNeutral": "橄榄色调与中性色调：如何区分"
+    }
   },
   "tryPage": {
     "title": "AI 美妆分析",

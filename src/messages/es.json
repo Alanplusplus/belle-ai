@@ -642,7 +642,17 @@
     "sidebarCtaDesc": "Sube una foto y descubre tus mejores colores en 60 segundos.",
     "sidebarCtaFree": "Gratis · Sin registro",
     "relatedTools": "Más herramientas de IA gratis",
-    "updatedOn": "Actualizado"
+    "updatedOn": "Actualizado",
+    "oliveHub": {
+      "title": "¿No sabes si tu subtono es oliva?",
+      "desc": "La piel oliva se confunde a menudo con un subtono neutro. Empieza con nuestro test gratuito de subtono de 4 preguntas (un minuto aproximadamente). Si te sale neutro pero la base sigue sin favorecerte, puede que sea oliva.",
+      "cta": "Hacer el test gratuito de subtono",
+      "moreTitle": "Sigue explorando",
+      "linkOlivePage": "Mejores colores para piel oliva",
+      "linkAsianPage": "Análisis de color para tonos de piel asiáticos",
+      "linkSigns": "¿Tienes subtono oliva? 5 señales",
+      "linkVsNeutral": "Subtono oliva vs neutro: cómo distinguirlos"
+    }
   },
   "tryPage": {
     "title": "Prueba el análisis de belleza con IA",

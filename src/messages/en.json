@@ -642,7 +642,17 @@
     "sidebarCtaDesc": "Upload a photo and discover your best colors in 60 seconds.",
     "sidebarCtaFree": "Free · No signup needed",
     "relatedTools": "More free AI tools",
-    "updatedOn": "Updated"
+    "updatedOn": "Updated",
+    "oliveHub": {
+      "title": "Not sure if your undertone is olive?",
+      "desc": "Olive skin is often mistaken for neutral. Start with our free 4-question undertone test (about a minute). If it says neutral but foundation still looks off, olive may be the missing piece.",
+      "cta": "Take the free undertone test",
+      "moreTitle": "Keep exploring",
+      "linkOlivePage": "Best colors for olive skin",
+      "linkAsianPage": "Color analysis for Asian skin tones",
+      "linkSigns": "Do you have olive undertones? 5 signs",
+      "linkVsNeutral": "Olive vs neutral undertone: how to tell"
+    }
   },
   "tryPage": {
     "title": "Try AI Beauty Analysis",

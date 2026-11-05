@@ -3,6 +3,7 @@ title: "Peau olive selon l'origine : comment le sous-ton olive se manifeste à t
 seoTitle: "Peau olive selon les origines : asiatique, méditerranéenne"
 description: "Le sous-ton olive existe dans toutes les origines et varie selon la profondeur de peau. À quoi il ressemble, et pourquoi les tests classiques le ratent."
 date: "2026-09-18"
+updated: "2026-11-05"
 tags: ["sous-ton olive", "teint", "analyse colorimétrique", "beauté", "diversité"]
 image: "/images/blog/olive-skin-by-ethnicity.webp"
 faq:
@@ -15,6 +16,8 @@ faq:
 ---
 
 ## La peau olive est mondiale — mais la plupart des conseils beauté ne le sont pas
+
+**Réponse rapide :** La peau olive n'est liée à aucune origine ni nationalité en particulier. On la retrouve chez des personnes méditerranéennes, moyen-orientales, sud-asiatiques, est-asiatiques et latino-américaines, à toutes les profondeurs, du clair au foncé. « Olive » désigne un sous-ton verdâtre ou gris-vert, pas une ethnie : on ne peut donc pas le rattacher à un seul groupe.
 
 Cherchez « peau olive » en ligne et vous trouverez surtout des conseils pensés pour les carnations méditerranéennes — peau claire à moyenne avec une nuance verte européenne. Cherchez en coréen et la conversation change entièrement : on parle du sous-ton olive sur peau d'Asie de l'Est avec une teinte vert-gris. Aucune des deux ne rend compte à elle seule de la diversité des populations.
 

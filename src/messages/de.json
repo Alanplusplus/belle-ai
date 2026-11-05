@@ -642,7 +642,17 @@
     "sidebarCtaDesc": "Lade ein Foto hoch und finde in 60 Sekunden deine besten Farben.",
     "sidebarCtaFree": "Kostenlos · Keine Registrierung",
     "relatedTools": "Weitere kostenlose KI-Tools",
-    "updatedOn": "Aktualisiert"
+    "updatedOn": "Aktualisiert",
+    "oliveHub": {
+      "title": "Nicht sicher, ob dein Unterton oliv ist?",
+      "desc": "Olivfarbene Haut wird oft für einen neutralen Unterton gehalten. Starte mit unserem kostenlosen Unterton-Test mit 4 Fragen (ca. eine Minute). Kommt „neutral“ heraus und die Foundation passt trotzdem nicht, steckt vielleicht ein Oliv-Unterton dahinter.",
+      "cta": "Kostenlosen Unterton-Test machen",
+      "moreTitle": "Weiterlesen",
+      "linkOlivePage": "Die besten Farben für olivfarbene Haut",
+      "linkAsianPage": "Farbanalyse für asiatische Hauttöne",
+      "linkSigns": "Hast du einen Oliv-Unterton? 5 Anzeichen",
+      "linkVsNeutral": "Oliv vs. neutraler Unterton: So erkennst du den Unterschied"
+    }
   },
   "tryPage": {
     "title": "KI-Schönheitsanalyse testen",

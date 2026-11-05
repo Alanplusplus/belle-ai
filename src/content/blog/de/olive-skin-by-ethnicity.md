@@ -3,6 +3,7 @@ title: "Olivfarbene Haut nach Herkunft: Wie Oliv-Untertöne in verschiedenen Kul
 seoTitle: "Olivfarbene Haut: asiatisch, mediterran, lateinamerikanisch"
 description: "Oliv-Untertöne gibt es in jeder Herkunft, sie wirken aber je nach Hauttiefe anders. So sieht olivfarbene Haut aus und warum Standardtests sie übersehen."
 date: "2026-09-18"
+updated: "2026-11-05"
 tags: ["Oliv-Unterton", "Hautton", "Farbanalyse", "Beauty", "Vielfalt"]
 image: "/images/blog/olive-skin-by-ethnicity.webp"
 faq:
@@ -15,6 +16,8 @@ faq:
 ---
 
 ## Olivfarbene Haut ist weltweit verbreitet — die meisten Beauty-Tipps nicht
+
+**Kurze Antwort:** Olivfarbene Haut ist nicht an eine bestimmte Herkunft oder Nationalität gebunden. Sie kommt bei Menschen mit mediterranen, nahöstlichen, südasiatischen, ostasiatischen und lateinamerikanischen Wurzeln vor – in jeder Tiefe, von hell bis dunkel. „Oliv“ beschreibt einen grünlichen oder graugrünen Unterton, keine Ethnie, und lässt sich deshalb keiner einzelnen Gruppe zuordnen.
 
 Sucht man online nach „olivfarbene Haut“, findet man vor allem Ratschläge für mediterrane Typen — hell bis mittel mit europäischem Grünstich. Sucht man auf Koreanisch, dreht sich das Gespräch ganz anders um Oliv-Töne bei ostasiatischer Haut mit grau-grünem Schimmer. Keines der beiden Bilder erfasst vollständig, wie Oliv-Untertöne in der Weltbevölkerung auftreten.
 

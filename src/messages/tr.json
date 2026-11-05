@@ -642,7 +642,17 @@
     "sidebarCtaDesc": "Bir fotoğraf yükle ve 60 saniyede en iyi renklerini keşfet.",
     "sidebarCtaFree": "Ücretsiz · Kayıt gerekmez",
     "relatedTools": "Daha fazla ücretsiz yapay zeka aracı",
-    "updatedOn": "Güncellendi"
+    "updatedOn": "Güncellendi",
+    "oliveHub": {
+      "title": "Alt tonunun zeytin olup olmadığından emin değil misin?",
+      "desc": "Zeytin ten çoğu zaman nötr alt ton sanılır. Önce 4 soruluk ücretsiz alt ton testiyle başla (yaklaşık bir dakika). Sonuç nötr çıkıyor ama fondöten hâlâ uymuyorsa, eksik parça zeytin alt tonu olabilir.",
+      "cta": "Ücretsiz alt ton testini çöz",
+      "moreTitle": "Okumaya devam et",
+      "linkOlivePage": "Zeytin ten için en iyi renkler",
+      "linkAsianPage": "Asya ten tonları için renk analizi",
+      "linkSigns": "Zeytin alt tonun var mı? 5 işaret",
+      "linkVsNeutral": "Zeytin vs nötr alt ton: farkı nasıl anlarsın"
+    }
   },
   "tryPage": {
     "title": "Yapay Zeka Güzellik Analizini Deneyin",

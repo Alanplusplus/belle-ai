@@ -27,6 +27,8 @@ import Image from "next/image";
 import remarkGfm from "remark-gfm";
 import { StickyBottomCta, TopCta, BottomCta } from "@/components/BlogCtaBanner";
 import { VideoSection } from "@/components/VideoEmbed";
+import { OliveHub } from "@/components/OliveHub";
+import { isOliveClusterPost } from "@/lib/oliveCluster";
 import { getVideoForBlog } from "@/lib/videos";
 
 export async function generateStaticParams() {
@@ -186,6 +188,9 @@ function BlogPostContent({
   const complementaryTools = getComplementaryTools(toolType);
   const headings = extractH2Headings(post.content);
   const video = getVideoForBlog(slug);
+  // olive 主题簇：在第一节之后插入「底调测试 + 相关页面」模块，把读完开头的读者接到转化更高的页面
+  const oliveHub = isOliveClusterPost(slug);
+  const [bodyBefore, bodyAfter] = oliveHub ? splitAfterFirstSection(post.content) : [post.content, ""];
 
   return (
     <article className="py-10 pb-28 sm:py-16 sm:pb-16">
@@ -286,7 +291,12 @@ function BlogPostContent({
         {video && <VideoSection video={video} page={`blog:${slug}`} className="mt-8" />}
 
         <div className="prose prose-neutral mt-10 max-w-none break-words prose-headings:font-bold prose-a:text-primary prose-img:h-auto prose-img:max-w-full">
-          <MarkdownContent content={post.content} toolType={toolType} locale={locale} />
+          <MarkdownContent content={bodyBefore} toolType={toolType} locale={locale} />
+          {oliveHub && <OliveHub slug={slug} />}
+          {bodyAfter && (
+            // 第一节已经渲染过 1 个二级标题，后半部分的标题序号接着往下排，目录锚点才对得上
+            <MarkdownContent content={bodyAfter} toolType={toolType} locale={locale} startH2Index={1} />
+          )}
         </div>
 
         {/* Bottom CTA card */}
@@ -397,8 +407,44 @@ function extractH2Headings(content: string): string[] {
   return result;
 }
 
-function MarkdownContent({ content, toolType, locale }: { content: string; toolType: string; locale: string }) {
-  let h2Count = 0;
+/**
+ * 在「第一节」（第一个二级标题到第二个二级标题之间）之后把正文切成两段，供中间插入模块。
+ * 只有一个（或没有）二级标题时不切，后半段为空字符串。
+ * 第一节末尾如果是分隔线 `---`，一并去掉：模块本身就是分隔，不要出现「横线 + 卡片」叠在一起。
+ */
+function splitAfterFirstSection(content: string): [string, string] {
+  const lines = content.split("\n");
+  let inFence = false;
+  let h2Seen = 0;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    if (/^\s*(```|~~~)/.test(line)) {
+      inFence = !inFence;
+      continue;
+    }
+    if (inFence || !/^##\s+\S/.test(line)) continue;
+    h2Seen += 1;
+    if (h2Seen === 2) {
+      const before = lines.slice(0, i).join("\n").replace(/\n\s*---\s*$/, "\n");
+      return [before, lines.slice(i).join("\n")];
+    }
+  }
+  return [content, ""];
+}
+
+function MarkdownContent({
+  content,
+  toolType,
+  locale,
+  startH2Index = 0,
+}: {
+  content: string;
+  toolType: string;
+  locale: string;
+  /** 这段内容之前已经渲染过几个二级标题（正文被切成两段时用，保证标题 id 与目录一致） */
+  startH2Index?: number;
+}) {
+  let h2Count = startH2Index;
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}

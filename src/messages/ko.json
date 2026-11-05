@@ -642,7 +642,17 @@
     "sidebarCtaDesc": "사진을 업로드하고 60초 만에 어울리는 색상을 발견하세요.",
     "sidebarCtaFree": "무료 · 가입 불필요",
     "relatedTools": "더 많은 무료 AI 도구",
-    "updatedOn": "업데이트"
+    "updatedOn": "업데이트",
+    "oliveHub": {
+      "title": "내 언더톤이 올리브톤인지 헷갈리세요?",
+      "desc": "올리브톤은 뉴트럴로 오해받기 쉬워요. 먼저 무료 4문항 언더톤 테스트(약 1분)로 확인해 보세요. 결과가 뉴트럴인데도 파운데이션이 계속 안 맞는다면 올리브톤일 수 있어요.",
+      "cta": "무료 언더톤 테스트 하기",
+      "moreTitle": "함께 읽어보세요",
+      "linkOlivePage": "올리브 피부톤에 어울리는 색",
+      "linkAsianPage": "아시아인 피부톤 컬러 분석",
+      "linkSigns": "올리브톤인지 확인하는 5가지 신호",
+      "linkVsNeutral": "올리브톤 vs 뉴트럴: 구분하는 방법"
+    }
   },
   "tryPage": {
     "title": "AI 뷰티 분석 체험하기",
