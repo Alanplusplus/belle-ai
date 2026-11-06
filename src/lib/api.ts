@@ -1,5 +1,6 @@
 import { getFingerprint } from "./fingerprint";
 import { trackEvent } from "./analytics";
+import type { ColorReportData } from "./color-report";
 
 interface ApiResponse<T> {
   code: number;
@@ -212,7 +213,18 @@ export type AnalysisType =
   | "glow_up_report"
   | "style_personality"
   | "palette_scan"
-  | "celebrity_match";
+  | "celebrity_match"
+  /** 买前扫一扫里的真人试穿：image_url_list = [本人照片, 单品照片] */
+  | "scan_tryon";
+
+/** 试穿的单品信息（扫一扫识别结果）。target_hex = 想换成的适配色（仅单色衣物 / 彩妆 / 染发） */
+export interface TryOnItem {
+  category: string;
+  hex?: string;
+  pattern?: string;
+  finish?: string;
+  target_hex?: string;
+}
 
 export async function createTask(
   imageUrl: string,
@@ -224,6 +236,9 @@ export async function createTask(
     occasion?: string;
     personality_type?: string;
     color_season?: string;
+    /** 试穿：单品照片地址（排在本人照片后面）+ 单品信息 */
+    itemImageUrl?: string;
+    tryon?: TryOnItem;
   }
 ) {
   return belleApi<{
@@ -237,7 +252,7 @@ export async function createTask(
     unlocked?: boolean;
   }>({
     action: "generate",
-    image_url_list: [imageUrl],
+    image_url_list: options?.itemImageUrl ? [imageUrl, options.itemImageUrl] : [imageUrl],
     analysis_type: analysisType,
     language,
     ...(options?.corrections ? { corrections: options.corrections } : {}),
@@ -245,6 +260,7 @@ export async function createTask(
     ...(options?.occasion ? { occasion: options.occasion } : {}),
     ...(options?.personality_type ? { personality_type: options.personality_type } : {}),
     ...(options?.color_season ? { color_season: options.color_season } : {}),
+    ...(options?.tryon ? { tryon: options.tryon } : {}),
   });
 }
 
@@ -266,6 +282,10 @@ export interface ReportResult {
   locked: boolean;
   unlocked: boolean;
   lockStart: number;
+  /** 色彩分析是结构化报告：后端返回 JSON，页面自己渲染（没有 urls） */
+  report?: ColorReportData;
+  /** 用户上传的照片，封面裁脸用 */
+  sourceImageUrl?: string;
 }
 
 export const DEFAULT_LOCK_START = 0.5;
@@ -277,6 +297,8 @@ export async function pollTask(taskId: string) {
     result?: ReportLockInfo & {
       image_urls?: string[];
       source_image_url?: string;
+      kind?: "report";
+      report?: ColorReportData;
     };
     /** 被邀请人第一次分析成功后发放的奖励积分（只出现一次） */
     referral_bonus?: number;
@@ -332,6 +354,10 @@ export async function pollUntilDone(
     await waitForNextPoll(first ? Math.min(FIRST_POLL_DELAY_MS, intervalMs) : intervalMs);
     try {
       const res = await pollTask(taskId);
+      // 任务已经明确失败（比如照片里没有人脸）：不用再重试，直接把原因交给调用方
+      if (res.code === 500 && res.data?.status === "failed") {
+        throw new Error(res.message || "Generation failed");
+      }
       if (res.code === 500) {
         consecutiveErrors++;
         if (consecutiveErrors >= maxConsecutiveErrors) {
@@ -353,6 +379,9 @@ export async function pollUntilDone(
           locked: !!result?.locked,
           unlocked: !!result?.unlocked,
           lockStart: result?.lock_start ?? DEFAULT_LOCK_START,
+          ...(result?.kind === "report" && result.report
+            ? { report: result.report, sourceImageUrl: result.source_image_url }
+            : {}),
         };
       }
       if (res.data.status === "failed") {
@@ -380,6 +409,9 @@ export interface HistoryEntry extends ReportLockInfo {
   image_urls: string[];
   source_image_url?: string;
   created_at: number;
+  /** 结构化色彩报告：有 report 时按杂志版式渲染 */
+  kind?: "report";
+  report?: ColorReportData;
 }
 
 /** 用积分包积分解锁一份已生成的锁定报告（不用重新生成），成功后返回完整原图地址 */
@@ -391,6 +423,8 @@ export async function unlockReport(taskId: string) {
     unlocked: boolean;
     credit_cost: number;
     pack_credits: number;
+    kind?: "report";
+    report?: ColorReportData;
   }>({
     action: "unlock-report",
     task_id: taskId,
@@ -409,6 +443,66 @@ export async function emailUnlockReport(taskId: string, email: string, locale: s
     email,
     locale,
   });
+}
+
+/**
+ * 把结构化报告翻译成另一种语言（每种语言只翻一次，后端会存下来）。
+ * code：200 成功 | 404 任务不存在 | 502 翻译失败，可重试。
+ */
+export async function localizeReport(taskId: string, language: string) {
+  return belleApi<{
+    task_id: string;
+    kind: "report";
+    report: ColorReportData;
+    locked: boolean;
+    unlocked: boolean;
+  }>({
+    action: "report-localize",
+    task_id: taskId,
+    language,
+  });
+}
+
+export type ScanTier = "great" | "ok" | "avoid";
+
+export interface ScanQuota {
+  used: number;
+  limit: number;
+  remaining: number;
+}
+
+export interface ScanResult {
+  season: string;
+  score: number;
+  tier: ScanTier;
+  /** 理由代码（paletteClose / tooWarm …），由前端按语言翻译 */
+  reasons: string[];
+  /** 不合适时可换成的同季型色：index 对应季型 bestColors 的下标 */
+  alternatives: { group: "best"; index: number; hex: string }[];
+  item: {
+    category: string;
+    pattern: string;
+    finish: string;
+    lighting_unreliable: boolean;
+    colors: { hex: string; name: string; share: number }[];
+  };
+}
+
+/**
+ * 买前扫一扫：识别单品颜色并按季型评分。
+ * code：200 | 400 图片无效 | 422 图里没有可评估的单品 | 429 今日次数用完 | 502 识别失败（不扣次数）。
+ */
+export async function scanItem(imageBase64: string, season: string, language: string) {
+  return belleApi<{ result: ScanResult; quota: ScanQuota }>({
+    action: "scan",
+    image_base64: imageBase64,
+    season,
+    language,
+  });
+}
+
+export async function fetchScanQuota() {
+  return belleApi<{ quota: ScanQuota }>({ action: "scan-quota" });
 }
 
 export async function fetchHistory(page = 1, pageSize = 20) {

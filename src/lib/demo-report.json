@@ -1,0 +1,168 @@
+{
+ "version": 1,
+ "season": "soft-autumn",
+ "runner_up": "light-spring",
+ "undertone": "warm",
+ "hair_looks_dyed": true,
+ "scores": {
+  "warmth": 4,
+  "depth": 2,
+  "chroma": 2,
+  "contrast": 2
+ },
+ "photo_quality": {
+  "lighting": "acceptable",
+  "color_cast": "warm",
+  "makeup_or_filter": "heavy",
+  "issues": [
+   "heavy_makeup",
+   "retouched_or_filtered",
+   "warm_color_cast"
+  ]
+ },
+ "face_box": [
+  132,
+  291,
+  385,
+  669
+ ],
+ "primary_language": "en",
+ "prose": {
+  "en": {
+   "headline": "Sunlit honey warmth with velvety, muted elegance",
+   "explanation": "Her complexion radiates a delicate peach-gold warmth that blends seamlessly with her honey-toned hair and soft hazel-green eyes. Because her features share a gentle, low-contrast harmony with an overall velvety softness rather than high-wattage brightness, she sits firmly in the Soft Autumn palette.",
+   "traits": [
+    "Warm peach-golden skin undertone",
+    "Low contrast across features",
+    "Muted, velvety honey and hazel tones"
+   ],
+   "avoid_note": "Avoid stark, icy, or high-contrast jewel tones like electric blue and pure black, which will overpower her delicate warmth and make the skin appear washed out.",
+   "skin_tone": "Light ivory-beige with a warm, golden-peach undertone",
+   "hair": "Dark honey blonde with warm golden highlights",
+   "eyes": "Soft muted green-hazel with warm golden flecks"
+  },
+  "zh-Hans": {
+   "headline": "沐光蜜色的暖调与天鹅绒般的柔雅质感",
+   "explanation": "她的肤色透着细腻的蜜桃金暖意，与蜜色秀发及柔和的榛果绿眼眸自然交融。由于她的五官呈现出温婉的低对比度和谐感，整体散发着天鹅绒般的柔雾质感而非高饱和度的明艳光泽，因此她典型地属于柔秋型（Soft Autumn）色彩季型。",
+   "traits": [
+    "温暖的蜜桃金肤色底调",
+    "五官整体的低对比度和谐感",
+    "柔雾且富有天鹅绒质感的蜜色与榛果色调"
+   ],
+   "avoid_note": "避免冷峻、冰感或高对比度的宝石色调，如电光蓝与纯黑色；这些色彩会掩盖她细腻的暖调光彩，令肤色显得苍白暗淡。",
+   "skin_tone": "浅象牙米色，透着温暖的蜜桃金底调",
+   "hair": "深蜜金色，缀以温暖的金色挑染光泽",
+   "eyes": "柔和的低饱和绿榛果色，点缀着温暖的金色星斑"
+  },
+  "fr": {
+   "headline": "Une chaleur de miel ensoleillé à l'élégance feutrée et veloutée",
+   "explanation": "Son teint rayonne d'une délicate chaleur pêche dorée qui se fond harmonieusement avec sa chevelure aux reflets de miel et ses doux yeux vert noisette. Ses traits partageant une douce harmonie à faible contraste et une douceur veloutée globale plutôt qu'un éclat vif et intense, elle s'inscrit parfaitement dans la palette Automne Doux.",
+   "traits": [
+    "Sous-ton de peau chaud pêche doré",
+    "Faible contraste entre les traits",
+    "Tons miel et noisette feutrés et veloutés"
+   ],
+   "avoid_note": "Évitez les teintes franches, glacées ou les tons précieux à fort contraste comme le bleu électrique et le noir pur, qui écraseraient sa chaleur délicate et donneraient au teint un aspect terne.",
+   "skin_tone": "Beige ivoire clair avec un sous-ton chaud pêche doré",
+   "hair": "Blond miel foncé aux reflets dorés chauds",
+   "eyes": "Vert noisette doux et feutré aux éclats dorés chauds"
+  },
+  "ja": {
+   "headline": "陽だまりのハニーのような温もりと、ベルベットのようにくすみがかった気品",
+   "explanation": "彼女の肌は繊細なピーチゴールドの温もりを放ち、ハニートーンの髪や柔らかなヘーゼルグリーンの瞳とシームレスに調和しています。強い輝きよりも、ベルベットのような柔らかさと穏やかな低コントラストのハーモニーを特徴としているため、彼女は紛れもなく「ソフトオータム」のパレットに属します。",
+   "traits": [
+    "温かみのあるピーチゴールドのアンダートーン",
+    "顔立ち全体の穏やかな低コントラスト",
+    "くすみがかったベルベットのようなハニー＆ヘーゼルトーン"
+   ],
+   "avoid_note": "エレクトリックブルーやピュアブラックのような、冷たく強い色やコントラストの高いジュエルトーンは避けましょう。彼女の繊細な温もりを圧倒し、肌の色味を奪って顔色を悪く見せてしまいます。",
+   "skin_tone": "温かみのあるゴールデンピーチのアンダートーンを持つ、明るいアイボリーベージュ",
+   "hair": "温かみのあるゴールデンハイライトが入ったダークハニーブロンド",
+   "eyes": "温かなゴールドの輝きが散りばめられた、柔らかくくすんだグリーンヘーゼル"
+  },
+  "es": {
+   "headline": "Calidez de miel bañada por el sol con una elegancia aterciopelada y sutil",
+   "explanation": "Su tez irradia una delicada calidez en tonos melocotón dorado que se funde a la perfección con su cabello color miel y sus suaves ojos verde avellana. Debido a que sus rasgos comparten una armonía delicada de bajo contraste y una suavidad general aterciopelada en lugar de un brillo intenso, se sitúa firmemente en la paleta de Otoño Suave.",
+   "traits": [
+    "Subtono de piel cálido melocotón dorado",
+    "Bajo contraste entre los rasgos",
+    "Tonos miel y avellana suaves y aterciopelados"
+   ],
+   "avoid_note": "Evite los tonos joya puros, gélidos o de alto contraste, como el azul eléctrico y el negro puro, ya que eclipsarán su delicada calidez y harán que la piel luzca apagada.",
+   "skin_tone": "Beige marfil claro con un subtono cálido melocotón dorado",
+   "hair": "Rubio miel oscuro con reflejos dorados cálidos",
+   "eyes": "Verde avellana suave y matizado con destellos dorados cálidos"
+  },
+  "ko": {
+   "headline": "햇살을 머금은 허니빛 따스함과 벨벳처럼 차분한 우아함",
+   "explanation": "섬세한 피치 골드빛의 따스함이 감도는 피부 톤이 허니 브라운 헤어 및 부드러운 헤이즐 그린 눈동자와 자연스럽게 어우러집니다. 이목구비가 강렬한 화사함보다는 전체적으로 벨벳처럼 부드럽고 대비감이 낮은 온화한 조화를 이루고 있어, 전형적인 소프트 오텀(Soft Autumn) 팔레트에 완벽하게 부합합니다.",
+   "traits": [
+    "따스한 피치 골드빛 피부 언더톤",
+    "이목구비 전반의 낮은 대비감",
+    "차분하고 벨벳처럼 부드러운 허니 및 헤이즐 톤"
+   ],
+   "avoid_note": "일렉트릭 블루나 퓨어 블랙처럼 지나치게 차갑거나 대비감이 강한 쥬얼 톤은 그녀만의 섬세한 따스함을 압도하고 피부를 창백해 보이게 할 수 있으므로 피하는 것이 좋습니다.",
+   "skin_tone": "따스한 골든 피치 언더톤이 감도는 라이트 아이보리 베이지",
+   "hair": "따스한 골드 하이라이트가 더해진 다크 허니 블론드",
+   "eyes": "따스한 골드빛 잔점이 어우러진 차분하고 부드러운 그린 헤이즐"
+  },
+  "ru": {
+   "headline": "Залитая солнцем медовая теплота и бархатистая, приглушенная элегантность",
+   "explanation": "Ее кожа излучает нежное персиково-золотистое тепло, которое безупречно гармонирует с медовым оттенком волос и мягкими орехово-зелеными глазами. Поскольку ее черты объединены деликатной, низкоконтрастной гармонией и общей бархатистой мягкостью, а не ослепительной яркостью, она уверенно относится к палитре Мягкой Осени.",
+   "traits": [
+    "Теплый персиково-золотистый подтон кожи",
+    "Низкая контрастность черт лица",
+    "Приглушенные, бархатистые медовые и ореховые тона"
+   ],
+   "avoid_note": "Избегайте резких, ледяных или высококонтрастных драгоценных оттенков, таких как электрик и чисто черный, которые подавят ее утонченную теплоту и сделают кожу бледной и невыразительной.",
+   "skin_tone": "Светлый бежево-слоновый с теплым золотисто-персиковым подтоном",
+   "hair": "Темный медовый блонд с теплыми золотистыми бликами",
+   "eyes": "Мягкий приглушенный орехово-зеленый оттенок с теплыми золотистыми крапинками"
+  },
+  "de": {
+   "headline": "Sonnenverwöhnte Honigwärme mit samtiger, gedeckter Eleganz",
+   "explanation": "Ihr Teint strahlt eine zarte pfirsichgoldene Wärme aus, die nahtlos mit ihrem honigfarbenen Haar und den sanften haselnussgrünen Augen verschmilzt. Da ihre Gesichtszüge eine sanfte, kontrastarme Harmonie und eine durchgehend samtige Weichheit anstelle von greller Leuchtkraft aufweisen, gehört sie eindeutig zur Soft-Autumn-Palette.",
+   "traits": [
+    "Warmer, pfirsichgoldener Hautunterton",
+    "Geringer Kontrast zwischen den Gesichtszügen",
+    "Gedeckte, samtige Honig- und Haselnusstöne"
+   ],
+   "avoid_note": "Vermeiden Sie harte, eisige oder kontrastreiche Juwelentöne wie Elektrischblau und reines Schwarz, da diese ihre zarte Wärme überlagern und die Haut fahl wirken lassen.",
+   "skin_tone": "Helles Elfenbein-Beige mit einem warmen, gold-pfirsichfarbenen Unterton",
+   "hair": "Dunkles Honigblond mit warmen, goldenen Reflexen",
+   "eyes": "Sanftes, gedecktes Grünbraun mit warmen, goldenen Sprenkeln"
+  },
+  "tr": {
+   "headline": "Kadifemsi ve dingin bir zarafetle buluşan, güneşle yıkanmış bal sıcaklığı",
+   "explanation": "Cildi, bal tonlarındaki saçları ve yumuşak ela-yeşil gözleriyle kusursuz bir uyum içinde bütünleşen, zarif bir şeftali-altın sıcaklığı yayıyor. Yüz hatları, göz alıcı bir parlaklıktan ziyade genel bir kadifemsi yumuşaklığa sahip nazik ve düşük kontrastlı bir uyum paylaştığı için, kesinlikle Yumuşak Sonbahar paletinde yer alıyor.",
+   "traits": [
+    "Sıcak şeftali-altın cilt alt tonu",
+    "Yüz hatları genelinde düşük kontrast",
+    "Dingin, kadifemsi bal ve ela tonları"
+   ],
+   "avoid_note": "Zarif sıcaklığını bastırıp cildin solgun görünmesine neden olabilecek elektrik mavisi ve saf siyah gibi keskin, buzlu veya yüksek kontrastlı mücevher tonlarından kaçının.",
+   "skin_tone": "Sıcak, altın-şeftali alt tonlu açık fildişi-bej",
+   "hair": "Sıcak altın ışıltılı koyu bal sarısı",
+   "eyes": "Sıcak altın benekli, yumuşak ve dingin yeşil-ela"
+  }
+ },
+ "signature": {
+  "order": [
+   9,
+   3,
+   2,
+   0,
+   4,
+   1,
+   5,
+   8,
+   7,
+   6
+  ],
+  "echo": [
+   "warmth_high",
+   "depth_low",
+   "chroma_low"
+  ]
+ }
+}

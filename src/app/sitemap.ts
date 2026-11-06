@@ -65,6 +65,7 @@ const STATIC_PAGE_SOURCE: Record<string, string> = {
   "/style-personality": "src/app/[locale]/style-personality/page.tsx",
   "/celebrity-match": "src/app/[locale]/celebrity-match/page.tsx",
   "/try": "src/app/[locale]/try/page.tsx",
+  "/scan": "src/app/[locale]/scan/page.tsx",
   "/referral": "src/app/[locale]/referral/page.tsx",
   "/pricing": "src/app/[locale]/pricing/page.tsx",
   "/blog": "src/app/[locale]/blog/page.tsx",

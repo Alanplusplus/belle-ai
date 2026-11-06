@@ -6,6 +6,7 @@ import { SITE_URL } from "@/lib/constants";
 import { fetchSharedReport } from "@/lib/share";
 import { ogLocale } from "@/lib/seo";
 import { ShareCtaButton, ShareLandingTracker } from "./ShareLanding";
+import { SharedColorReport } from "./SharedColorReport";
 
 // 每次访问都要实时签名图片 URL，不能静态化 / 缓存
 export const dynamic = "force-dynamic";
@@ -72,17 +73,23 @@ export default async function SharePage({
       <h1 className="font-serif text-2xl font-bold text-foreground sm:text-3xl">{t("heading")}</h1>
       <p className="mt-2 text-sm text-muted-foreground sm:text-base">{t("subheading")}</p>
 
-      {/* 报告图是首屏主内容：高优先级加载，加载前先占一块浅色底，避免内容突然下推 */}
-      <div className="mt-6 min-h-[22rem] w-full overflow-hidden rounded-2xl border border-border bg-muted/40 shadow-lg">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={report.imageUrls[0]}
-          alt={t("imageAlt")}
-          className="h-auto w-full"
-          fetchPriority="high"
-          decoding="async"
-        />
-      </div>
+      {report.report ? (
+        <div className="mt-6 w-full">
+          <SharedColorReport report={report.report} sourceImageUrl={report.sourceImageUrl ?? null} locale={locale} />
+        </div>
+      ) : (
+        /* 报告图是首屏主内容：高优先级加载，加载前先占一块浅色底，避免内容突然下推 */
+        <div className="mt-6 min-h-[22rem] w-full overflow-hidden rounded-2xl border border-border bg-muted/40 shadow-lg">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={report.imageUrls[0]}
+            alt={t("imageAlt")}
+            className="h-auto w-full"
+            fetchPriority="high"
+            decoding="async"
+          />
+        </div>
+      )}
 
       <div className="mt-8 flex flex-col items-center gap-2">
         <ShareCtaButton referralCode={report.referralCode} type={report.type}>

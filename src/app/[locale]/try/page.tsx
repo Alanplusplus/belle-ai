@@ -6,6 +6,7 @@ import {
   TWITTER_IMAGES,
 } from "@/lib/seo";
 import type { Metadata } from "next";
+import { ExtraMessages } from "@/components/ExtraMessages";
 import { TryClient } from "./TryClient";
 
 export async function generateMetadata({
@@ -50,6 +51,11 @@ export default async function TryPage({
   const { locale } = await params;
   const { type } = await searchParams;
   setRequestLocale(locale);
+  const messages = (await import(`@/messages/${locale}.json`)).default;
 
-  return <TryClient locale={locale} initialType={type} />;
+  return (
+    <ExtraMessages messages={{ report: messages.report }}>
+      <TryClient locale={locale} initialType={type} />
+    </ExtraMessages>
+  );
 }

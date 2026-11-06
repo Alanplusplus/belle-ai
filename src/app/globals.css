@@ -253,3 +253,54 @@ html:lang(ko) h2 {
   margin: 1rem auto 0;
   background: linear-gradient(to right, transparent, var(--gold-deep), transparent);
 }
+
+/* ===== 杂志风色彩报告（ColorReport） =====
+   报告语言可以和页面语言不同，所以衬线字体的 CJK 回落写在 .report-root:lang() 上，而不是 html:lang()。 */
+.report-serif {
+  font-family: var(--font-serif), "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+}
+.report-root:lang(zh) .report-serif {
+  font-family: var(--font-serif), "Songti SC", "Noto Serif SC", "Noto Serif CJK SC", "Source Han Serif SC", "STSong", "SimSun", serif;
+}
+.report-root:lang(ja) .report-serif {
+  font-family: var(--font-serif), "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", "Noto Serif CJK JP", "Source Han Serif JP", "MS PMincho", serif;
+}
+.report-root:lang(ko) .report-serif {
+  font-family: var(--font-serif), "AppleMyungjo", "Apple Myungjo", "Noto Serif KR", "Noto Serif CJK KR", "Source Han Serif K", "Batang", serif;
+}
+.report-root:lang(ru) .report-serif,
+.report-root:lang(tr) .report-serif {
+  font-family: var(--font-serif), "Iowan Old Style", "Palatino Linotype", Georgia, "Times New Roman", serif;
+}
+.report-root h2,
+.report-root h3 {
+  font-weight: 600;
+}
+/* 小号大写标签：刊头、栏目名、色板分组名 */
+.rp-label {
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+.report-root:lang(zh) .rp-label,
+.report-root:lang(ja) .rp-label,
+.report-root:lang(ko) .rp-label {
+  letter-spacing: 0.12em;
+}
+/* 细金线 + 中间一点菱形，杂志页眉页脚常见的分隔 */
+.rp-rule {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold) 15%, var(--gold) 85%, transparent);
+}
+/* 首段首字下沉（仅拉丁字母语言启用） */
+.rp-dropcap::first-letter {
+  float: left;
+  font-size: 3.4em;
+  line-height: 0.82;
+  padding: 0.08em 0.1em 0 0;
+  color: var(--gold-deep);
+  font-weight: 600;
+}

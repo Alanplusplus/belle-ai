@@ -40,6 +40,11 @@ import { useSignIn } from "@/lib/useSignIn";
 import { useDialogA11y } from "@/lib/useDialogA11y";
 import { PricingModal } from "@/components/PricingModal";
 import { InAppBrowserNotice, InAppSignInSheet } from "@/components/InAppBrowserNotice";
+import { ReportPanel } from "@/components/ReportPanel";
+import { ReportThumb } from "@/components/ColorReport";
+import { DevUnlockToggle } from "@/components/DevUnlockToggle";
+import type { ColorReportData } from "@/lib/color-report";
+import DEMO_REPORT_JSON from "@/lib/demo-report.json";
 
 const MAX_PHOTO_BYTES = 25 * 1024 * 1024;
 
@@ -58,11 +63,19 @@ type Phase =
   | "error"
   | "no_quota";
 
-const ALL_VALID_TYPES: AnalysisType[] = [
+/** 可以直接在这个页面选择、上传一张自拍就能生成的类型 */
+const PICKABLE_TYPES: AnalysisType[] = [
   "makeup", "color_analysis", "face_shape", "hair_preview", "outfit_color",
   "glasses_match", "occasion_makeup", "jewelry_guide", "glow_up_report",
   "style_personality", "palette_scan", "celebrity_match",
 ];
+
+/**
+ * 所有会出现在这个页面上的类型（给结果页标题、历史记录取名用）。
+ * scan_tryon 是「买前扫一扫」里发起的真人试穿：需要本人照片 + 单品照片两张图，只能从扫一扫页面创建，
+ * 这里只负责展示它的进度 / 结果 / 解锁，不放进类型选择器。
+ */
+const ALL_VALID_TYPES: AnalysisType[] = [...PICKABLE_TYPES, "scan_tryon"];
 
 function IconPalette() { return <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" /></svg>; }
 function IconShirt() { return <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg>; }
@@ -186,6 +199,7 @@ const RECOMMENDED_TYPES: Record<AnalysisType, AnalysisType[]> = {
   style_personality: ["outfit_color", "celebrity_match", "glow_up_report"],
   palette_scan: ["color_analysis", "outfit_color", "makeup"],
   celebrity_match: ["style_personality", "makeup", "hair_preview"],
+  scan_tryon: ["outfit_color", "color_analysis", "hair_preview"],
 };
 
 const CARD_IMAGES: Record<AnalysisType, string> = {
@@ -201,6 +215,7 @@ const CARD_IMAGES: Record<AnalysisType, string> = {
   style_personality: "/images/card_style.webp",
   palette_scan: "/images/card_color_analysis.webp",
   celebrity_match: "/images/card_celebrity.webp",
+  scan_tryon: "/images/card_outfit.webp",
 };
 
 const EXAMPLE_IMAGES: Partial<Record<AnalysisType, string>> = {
@@ -233,6 +248,9 @@ interface BackgroundTask {
   unlocked?: boolean;
   lockStart?: number;
   errorMsg?: string;
+  /** 色彩分析是结构化报告：没有图片，页面按数据渲染 */
+  report?: ColorReportData;
+  sourceUrl?: string;
 }
 
 /** 积分分三类显示：免费（每日额度 + 签到/邀请，只能生成预览报告）、积分包（完整报告）、订阅额度 */
@@ -271,6 +289,37 @@ function lockStateOf(result: Pick<ReportResult, "locked" | "unlocked" | "lockSta
   return { locked: result.locked, unlocked: result.unlocked, lockStart: result.lockStart };
 }
 
+/** 当前结果页上的结构化报告（色彩分析）；图片类报告没有 */
+interface ResultReportState {
+  report: ColorReportData;
+  sourceUrl: string | null;
+  createdAt: number;
+}
+
+function reportStateOf(result: Pick<ReportResult, "report" | "sourceImageUrl">): ResultReportState | null {
+  return result.report ? { report: result.report, sourceUrl: result.sourceImageUrl ?? null, createdAt: Date.now() / 1000 } : null;
+}
+
+/** 轮询抛出的错误码（后端任务失败原因）→ 提示文案的 key */
+function generateErrorKey(message: string): "errorNoFace" | "errorGenerate" {
+  return message === "no_face" ? "errorNoFace" : "errorGenerate";
+}
+
+/** 创建任务时被生成前审核（Prompt Sift）拒绝：422 = 内容不合规，503 = 审核暂不可用；其它返回 null */
+function contentCheckErrorKey(code: number | undefined): "errorContentBlocked" | "errorContentUnavailable" | null {
+  if (code === 422) return "errorContentBlocked";
+  if (code === 503) return "errorContentUnavailable";
+  return null;
+}
+
+/** 色彩分析是结构化报告，十几秒就能出：轮询间隔缩短，让结果尽快出现（图片类仍是 10 秒一次） */
+function pollOptionsFor(type: string): [number, number] {
+  return type === "color_analysis" ? [45, 4000] : [60, 10000];
+}
+
+/** 示例报告：用示例照片预先生成好的完整报告（9 种语言的文案都带了），不请求后端 */
+const DEMO_REPORT = DEMO_REPORT_JSON as unknown as ColorReportData;
+
 interface ResultLock {
   locked: boolean;
   unlocked: boolean;
@@ -284,7 +333,7 @@ const DEMO_LOCK: ResultLock = { locked: false, unlocked: true, lockStart: DEFAUL
 export function TryClient({ locale, initialType }: { locale: string; initialType?: string }) {
   const t = useTranslations("tryPage");
 
-  const validInitialType = (ALL_VALID_TYPES.includes(initialType as AnalysisType) ? initialType : "color_analysis") as AnalysisType;
+  const validInitialType = (PICKABLE_TYPES.includes(initialType as AnalysisType) ? initialType : "color_analysis") as AnalysisType;
 
   const [phase, setPhase] = useState<Phase>("idle");
   const [analysisType, setAnalysisType] = useState<AnalysisType>(validInitialType);
@@ -304,9 +353,10 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [lightbox, setLightbox] = useState<LightboxState | null>(null);
   const [shareToast, setShareToast] = useState(false);
   const [correctionModal, setCorrectionModal] = useState<HistoryEntry | null>(null);
-  const [shareModal, setShareModal] = useState<{ imageUrl: string; link: string } | null>(null);
+  const [shareModal, setShareModal] = useState<{ imageUrl: string; link: string; report?: boolean } | null>(null);
   // 当前结果页对应的任务 ID：创建公开分享链接时需要
   const [resultTaskId, setResultTaskId] = useState<string | null>(null);
+  const [resultReport, setResultReport] = useState<ResultReportState | null>(null);
   const shareBusyRef = useRef(false);
   const [showPricingModal, setShowPricingModal] = useState(false);
   const [pricingSource, setPricingSource] = useState("unknown");
@@ -350,6 +400,8 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   const [demoMode, setDemoMode] = useState(false);
   const demoTimerRef = useRef<number | null>(null);
   const demoTypeRef = useRef<AnalysisType>(validInitialType);
+  /** 有结果可看：图片类是报告图，色彩分析是结构化报告 */
+  const hasResult = resultUrls.length > 0 || resultReport !== null;
 
   const fileRef = useRef<HTMLInputElement>(null);
   // 手机上有「拍一张自拍」和「从相册选择」两个入口（两个 input），所以不能再从某个 input 的 files 里取文件
@@ -445,13 +497,13 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   // 出结果后通知全局：匿名用户会在几秒后看到一次 Google One Tap（保存记录/订阅）
   useEffect(() => {
     // 演示报告不算真实结果：不触发「保存记录 / 订阅」的 One Tap
-    if (phase === "done" && resultUrls.length > 0 && !demoMode) {
+    if (phase === "done" && hasResult && !demoMode) {
       window.dispatchEvent(new Event(RESULT_READY_EVENT));
     }
-  }, [phase, resultUrls.length, demoMode]);
+  }, [phase, hasResult, demoMode]);
 
   useEffect(() => {
-    if (phase !== "done" || resultUrls.length === 0 || demoMode) return;
+    if (phase !== "done" || !hasResult || demoMode) return;
     // 报告还被锁着时用户的注意力在「解锁」上，邀请弹窗留到下一份完整报告再弹
     if (resultLock.locked) return;
     try {
@@ -467,7 +519,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     }, isMobileDevice() ? 10000 : 2000);
 
     return () => window.clearTimeout(timer);
-  }, [phase, resultUrls.length, resultLock.locked, demoMode]);
+  }, [phase, hasResult, resultLock.locked, demoMode]);
 
   useEffect(() => {
     if (resumedRef.current) return;
@@ -492,16 +544,17 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
             if (pendingTask) {
               setAnalysisType(pendingTask.type as AnalysisType);
               setPhase("generating");
-              pollUntilDone(pendingTask.task_id)
+              pollUntilDone(pendingTask.task_id, undefined, ...pollOptionsFor(pendingTask.type))
                 .then((result) => {
                   setResultUrls(result.urls);
+                  setResultReport(reportStateOf(result));
                   setResultLock(lockStateOf(result));
                   setResultTaskId(pendingTask.task_id);
                   setPhase("done");
                   reloadHistory();
                 })
                 .catch((err) => {
-                  setErrorMsg(err instanceof Error ? err.message : "Resume failed");
+                  setErrorMsg(err instanceof Error && err.message === "no_face" ? t("errorNoFace") : err instanceof Error ? err.message : "Resume failed");
                   setPhase("error");
                 });
             }
@@ -510,6 +563,15 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       }
     });
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // 试穿（scan_tryon）只能从扫一扫页面发起（要两张图）。看完结果 / 出错后回到上传表单时换回默认类型，
+  // 免得用户拿一张自拍去生成一个需要两张图的类型
+  useEffect(() => {
+    if (analysisType === "scan_tryon" && (phase === "idle" || phase === "error")) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setAnalysisType("color_analysis");
+    }
+  }, [phase, analysisType]);
 
   useEffect(() => {
     const isGenerating = phase === "uploading" || phase === "generating" || phase === "preparing";
@@ -569,17 +631,18 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
   }, []);
 
   /** 解锁成功后把新的（无打码）图片同步到当前结果、后台任务和已打开的大图 */
-  const applyUnlocked = useCallback((taskId: string, imageUrls: string[]) => {
+  const applyUnlocked = useCallback((taskId: string, imageUrls: string[], report?: ColorReportData) => {
     if (taskId === resultTaskId) {
       setResultUrls(imageUrls);
+      if (report) setResultReport((prev) => (prev ? { ...prev, report } : prev));
       setResultLock((prev) => ({ ...prev, locked: false, unlocked: true }));
     }
     setBackgroundTasks((prev) => prev.map((task) => (
-      task.taskId === taskId ? { ...task, resultUrls: imageUrls, locked: false, unlocked: true } : task
+      task.taskId === taskId ? { ...task, resultUrls: imageUrls, report: report ?? task.report, locked: false, unlocked: true } : task
     )));
     setLightbox((prev) => (
       prev && prev.entry.id === taskId
-        ? { ...prev, entry: { ...prev.entry, image_urls: imageUrls, locked: false, unlocked: true } }
+        ? { ...prev, entry: { ...prev.entry, image_urls: imageUrls, report: report ?? prev.entry.report, locked: false, unlocked: true } }
         : prev
     ));
     reloadHistory();
@@ -604,7 +667,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       const res = await unlockReport(taskId);
       if (res.code === 200 && res.data?.unlocked) {
         const packAfter = res.data.pack_credits;
-        applyUnlocked(taskId, res.data.image_urls);
+        applyUnlocked(taskId, res.data.image_urls, res.data.report);
         trackEvent("report_unlocked_with_credits", { type, cost: res.data.credit_cost ?? cost });
         // 先本地扣掉，界面立即变化；随后用服务端数据校准
         setUserCredits((prev) => {
@@ -717,6 +780,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     setPhase("generating");
     setErrorMsg("");
     setResultUrls([]);
+    setResultReport(null);
     setResultLock(NO_LOCK);
     setAnalysisType(type);
     scrollToResult();
@@ -732,10 +796,18 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
       const taskRes = await createTask(entry.source_image_url, type, reportLang, { corrections, resolution });
       if (taskRes.code === 429) { setPhase("no_quota"); return; }
+      const checkKey = contentCheckErrorKey(taskRes.code);
+      if (checkKey) {
+        trackEvent("content_check_rejected", { type, reason: taskRes.message, source: "correction" });
+        setErrorMsg(t(checkKey));
+        setPhase("error");
+        return;
+      }
       if (taskRes.code !== 200 || !taskRes.data?.task_id) throw new Error(taskRes.message);
 
-      const result = await pollUntilDone(taskRes.data.task_id);
+      const result = await pollUntilDone(taskRes.data.task_id, undefined, ...pollOptionsFor(type));
       setResultUrls(result.urls);
+      setResultReport(reportStateOf(result));
       setResultLock(lockStateOf(result));
       setResultTaskId(taskRes.data.task_id);
       setPhase("done");
@@ -745,7 +817,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       setErrorMsg(err instanceof Error ? err.message : "Correction failed");
       setPhase("error");
     }
-  }, [reportLang, resolution, reloadHistory, refreshCredits, scrollToResult]);
+  }, [reportLang, resolution, reloadHistory, refreshCredits, scrollToResult, t]);
 
   const handleDownload = useCallback(async (url: string) => {
     trackEvent("result_download", { type: analysisType });
@@ -806,7 +878,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     return fallback;
   }, [referralCode, locale]);
 
-  const handleShare = useCallback(async (url: string, taskId?: string | null) => {
+  const handleShare = useCallback(async (url: string, taskId?: string | null, report?: boolean) => {
     if (shareBusyRef.current) return;
     shareBusyRef.current = true;
     try {
@@ -821,7 +893,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         const nativeLink = tagShareLink(link, "native");
         // 分享页本身带有报告图和邀请码，所以只发文字 + 链接，让社交平台抓取 OG 卡片；
         // 退回邀请链接时才附带图片文件，保证好友至少能看到报告
-        if (!isSharePage) {
+        if (!isSharePage && url) {
           try {
             const res = await fetch(url);
             const blob = await res.blob();
@@ -839,10 +911,10 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         }
         const status = await nativeShare({ title: t("shareTitle"), text: t("shareText"), url: nativeLink });
         // 系统分享面板失败（部分内置浏览器声明支持但调用报错）：退回自带的分享面板，保证点了有反应
-        if (status === "failed") setShareModal({ imageUrl: url, link });
+        if (status === "failed") setShareModal({ imageUrl: url, link, report });
       } else {
         trackEvent("result_share", { method: "panel", type: analysisType });
-        setShareModal({ imageUrl: url, link });
+        setShareModal({ imageUrl: url, link, report });
       }
     } finally {
       shareBusyRef.current = false;
@@ -877,8 +949,17 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
   /** 直接展示某个类型预先生成好的示例报告；该类型没有示例时返回 false */
   const showDemoResult = useCallback((type: AnalysisType) => {
+    if (type === "color_analysis") {
+      setResultUrls([]);
+      setResultReport({ report: DEMO_REPORT, sourceUrl: SAMPLE_PHOTO_URL, createdAt: Date.now() / 1000 });
+      setResultLock(DEMO_LOCK);
+      setResultTaskId(null);
+      setPhase("done");
+      return true;
+    }
     const example = EXAMPLE_IMAGES[type];
     if (!example) return false;
+    setResultReport(null);
     setResultUrls([example]);
     setResultLock(DEMO_LOCK);
     setResultTaskId(null);
@@ -892,6 +973,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     setPreviewUrl(null);
     setSourceImageUrl(null);
     setResultUrls([]);
+    setResultReport(null);
     setResultLock(NO_LOCK);
     setResultTaskId(null);
     setErrorMsg("");
@@ -909,6 +991,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     setSourceImageUrl(null);
     setPreviewUrl(SAMPLE_PHOTO_URL);
     setResultUrls([]);
+    setResultReport(null);
     setResultLock(NO_LOCK);
     setResultTaskId(null);
     setErrorMsg("");
@@ -976,6 +1059,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       setPreviewUrl(url);
       setPhase("idle");
       setResultUrls([]);
+      setResultReport(null);
       setErrorMsg("");
     },
     [t, clearSelectedFile, demoMode, clearDemoTimer]
@@ -1096,7 +1180,12 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         return;
       }
       if (taskRes.code !== 200 || !taskRes.data?.task_id) {
-        fail("task_create_failed", taskRes.message || "Task creation failed", t("errorGenerate"));
+        const checkKey = contentCheckErrorKey(taskRes.code);
+        fail(
+          checkKey ? "content_check_rejected" : "task_create_failed",
+          taskRes.message || "Task creation failed",
+          t(checkKey ?? "errorGenerate"),
+        );
         return;
       }
 
@@ -1104,8 +1193,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         setQuota(taskRes.data.quota);
       }
 
-      const result = await pollUntilDone(taskRes.data.task_id);
+      const result = await pollUntilDone(taskRes.data.task_id, undefined, ...pollOptionsFor(analysisType));
       setResultUrls(result.urls);
+      setResultReport(reportStateOf(result));
       setResultLock(lockStateOf(result));
       setResultTaskId(taskRes.data.task_id);
       setPhase("done");
@@ -1128,18 +1218,18 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       reloadHistory();
     } catch (err) {
       const message = err instanceof Error ? err.message : "Unknown error";
-      fail("generate_failed", message, t("errorGenerate"));
+      fail("generate_failed", message, t(generateErrorKey(message)));
     }
   }, [previewUrl, sourceImageUrl, analysisType, reportLang, resolution, occasion, reloadHistory, refreshCredits, scrollToResult, t, demoMode, startDemo]);
 
-  const startRecommendedAnalysis = useCallback(async (type: AnalysisType) => {
+  const startRecommendedAnalysis = useCallback(async (type: AnalysisType, opts?: { photoUrl?: string; colorSeason?: string }) => {
     // 演示模式：直接切到该类型的示例报告，不开后台任务、不扣积分
     if (demoMode) {
       trackEvent("analysis_type_selected", { type, source: "demo_recommendation" });
       selectType(type);
       return;
     }
-    const photoUrl = sourceImageUrl || lastUploadedPhotoUrl;
+    const photoUrl = opts?.photoUrl || sourceImageUrl || lastUploadedPhotoUrl;
     if (!photoUrl) return;
 
     const taskId = `bg_${Date.now()}_${type}`;
@@ -1156,7 +1246,10 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         return;
       }
 
-      const taskRes = await createTask(photoUrl, type, reportLang, { resolution });
+      const taskRes = await createTask(photoUrl, type, reportLang, {
+        resolution,
+        ...(opts?.colorSeason ? { color_season: opts.colorSeason } : {}),
+      });
       if (taskRes.code === 429) {
         setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: "No credits" } : t));
         openPricing("no_quota_recommended");
@@ -1167,9 +1260,9 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       const backendTaskId = taskRes.data.task_id;
       setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, taskId: backendTaskId } : t));
 
-      const result = await pollUntilDone(backendTaskId);
+      const result = await pollUntilDone(backendTaskId, undefined, ...pollOptionsFor(type));
       setBackgroundTasks((prev) => prev.map((t) => t.id === taskId
-        ? { ...t, phase: "done", resultUrls: result.urls, locked: result.locked, unlocked: result.unlocked, lockStart: result.lockStart }
+        ? { ...t, phase: "done", resultUrls: result.urls, report: result.report, sourceUrl: result.sourceImageUrl ?? photoUrl, locked: result.locked, unlocked: result.unlocked, lockStart: result.lockStart }
         : t));
       trackEvent("recommended_analysis_completed", { type, image_count: result.urls.length, locked: result.locked });
       if (result.locked) trackEvent("locked_report_shown", { type, source: "recommendation" });
@@ -1180,6 +1273,19 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     }
   }, [sourceImageUrl, lastUploadedPhotoUrl, reportLang, resolution, reloadHistory, refreshCredits, openPricing, demoMode, selectType]);
 
+  /** 报告里的「在我身上试这些颜色」：用季型的色板做换装预览，作为后台任务生成 */
+  const handleTryOn = useCallback((season: string, photoUrl?: string | null) => {
+    const photo = photoUrl || sourceImageUrl || lastUploadedPhotoUrl;
+    if (!photo) {
+      showToast(t("tryOnNeedPhoto"));
+      return;
+    }
+    trackEvent("tryon_started", { season });
+    setLightbox(null);
+    showToast(t("tryOnStarted"));
+    void startRecommendedAnalysis("outfit_color", { photoUrl: photo, colorSeason: season });
+  }, [sourceImageUrl, lastUploadedPhotoUrl, showToast, startRecommendedAnalysis, t]);
+
   const handleUseLastPhoto = useCallback(async () => {
     if (!lastUploadedPhotoUrl) return;
     trackEvent("last_photo_reused");
@@ -1187,6 +1293,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     setPreviewUrl(lastUploadedPhotoUrl);
     setPhase("idle");
     setResultUrls([]);
+    setResultReport(null);
     setErrorMsg("");
   }, [lastUploadedPhotoUrl]);
 
@@ -1261,12 +1368,23 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
     status: "success",
     type: analysisType,
     image_urls: resultUrls,
-    source_image_url: sourceImageUrl ?? undefined,
+    source_image_url: resultReport?.sourceUrl ?? sourceImageUrl ?? undefined,
     created_at: Date.now() / 1000,
     locked: resultLock.locked,
     unlocked: resultLock.unlocked,
     lock_start: resultLock.lockStart,
+    ...(resultReport ? { kind: "report" as const, report: resultReport.report } : {}),
   });
+
+  /** 结构化报告上的解锁按钮文案：积分够就直接用积分，否则显示最低价 */
+  const reportUnlockLabel = (type: string) => {
+    const cost = creditCostOf(type);
+    if ((userCredits?.pack ?? 0) >= cost) return t("unlockWithCredits", { count: cost });
+    if (singleUnlockPrice && cost <= 1) return t("unlockPriceCta", { price: singleUnlockPrice });
+    return t("unlockFullReport");
+  };
+
+  const tryOnBusy = backgroundTasks.some((bt) => bt.type === "outfit_color" && (bt.phase === "generating" || bt.phase === "uploading"));
 
   // 免费预览只能 1K；有积分包积分（或订阅）才能选 2K / 4K，积分用完后自动退回 1K，避免界面选着 2K 实际出 1K
   const canUseHd = isPaid || (userCredits?.pack ?? 0) > 0;
@@ -1277,6 +1395,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:py-12">
+      <DevUnlockToggle />
       <div className="text-center">
         <h1 className="font-serif text-3xl font-bold sm:text-4xl">
           {t("title")}
@@ -1461,6 +1580,39 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
           const leftImage = isActive && previewUrl
             ? previewUrl
             : hasExample ? "/images/examples/before.webp" : null;
+
+          // 色彩分析的结果是结构化报告：直接渲染杂志版式，不再套「原图 / 报告图」两栏
+          if (phase === "done" && resultReport) {
+            return (
+              <div ref={resultSectionRef} className="flex scroll-mt-20 flex-col max-lg:order-2">
+                <p className="mb-3 text-center text-sm font-medium text-muted-foreground">{t("resultTitle")}</p>
+                <ReportPanel
+                  key={resultTaskId ?? "demo"}
+                  taskId={demoMode ? null : resultTaskId}
+                  report={resultReport.report}
+                  sourceImageUrl={resultReport.sourceUrl ?? sourceImageUrl}
+                  createdAt={resultReport.createdAt}
+                  demo={demoMode}
+                  preferredLang={reportLang}
+                  unlockLabel={reportUnlockLabel("color_analysis")}
+                  unlockBusy={unlockingId !== null && unlockingId === resultTaskId}
+                  onUnlock={() => handleUnlock(resultTaskId, "color_analysis", null)}
+                  onSavePoster={(url) => handleDownload(url)}
+                  onShare={(url, id) => handleShare(url, id, true)}
+                  onTryOn={(season) => handleTryOn(season, resultReport.sourceUrl)}
+                  tryOnBusy={tryOnBusy}
+                  onNotice={showToast}
+                  onReportUpdated={(report) => setResultReport((prev) => (prev ? { ...prev, report } : prev))}
+                >
+                  {demoMode ? (
+                    <p className="text-center text-xs text-muted-foreground">{t("demoNotice")}</p>
+                  ) : (
+                    <ResultFeedback key={resultTaskId ?? "current"} taskId={resultTaskId} type={analysisType} />
+                  )}
+                </ReportPanel>
+              </div>
+            );
+          }
 
           return (
             <div ref={resultSectionRef} className="flex scroll-mt-20 flex-col max-lg:order-2">
@@ -1666,14 +1818,17 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                       <ShareIcon />
                       {t("share")}
                     </button>
-                    <button
-                      onClick={() => handleCorrectionOpen(buildCurrentEntry())}
-                      disabled={!sourceImageUrl}
-                      className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-border bg-card px-4 text-xs font-medium text-foreground transition hover:border-primary/40 disabled:opacity-50 sm:min-h-0 sm:border-0 sm:bg-transparent sm:px-0 sm:font-normal sm:text-muted-foreground sm:hover:text-foreground"
-                    >
-                      <CorrectionIcon />
-                      {t("correction")}
-                    </button>
+                    {/* 试穿需要两张图，修正说明后重新生成只带得出一张：不提供 */}
+                    {analysisType !== "scan_tryon" && (
+                      <button
+                        onClick={() => handleCorrectionOpen(buildCurrentEntry())}
+                        disabled={!sourceImageUrl}
+                        className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-border bg-card px-4 text-xs font-medium text-foreground transition hover:border-primary/40 disabled:opacity-50 sm:min-h-0 sm:border-0 sm:bg-transparent sm:px-0 sm:font-normal sm:text-muted-foreground sm:hover:text-foreground"
+                      >
+                        <CorrectionIcon />
+                        {t("correction")}
+                      </button>
+                    )}
                   </div>
                   <ResultFeedback key={resultTaskId ?? "current"} taskId={resultTaskId} type={analysisType} />
                 </div>
@@ -1691,7 +1846,8 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         <div className="flex flex-col gap-5 max-lg:order-1">
           {/* Settings: Resolution + Report Language */}
           <div className="flex flex-wrap items-center justify-center gap-3">
-            {/* Resolution */}
+            {/* Resolution：色彩分析是结构化报告（页面渲染，没有图片分辨率），只在图片类报告里显示 */}
+            {analysisType !== "color_analysis" && (
             <div className="flex items-center rounded-full border border-border bg-card p-0.5">
               {(["1K", "2K", "4K"] as Resolution[]).map((r) => {
                 const needsPro = r !== "1K" && !canUseHd;
@@ -1719,6 +1875,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                 );
               })}
             </div>
+            )}
 
             {/* Report Language */}
             <div className="relative">
@@ -1877,6 +2034,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                     setPreviewUrl(null);
                     setSourceImageUrl(null);
                     setResultUrls([]);
+                    setResultReport(null);
                     setPhase("idle");
                     clearSelectedFile();
                   }}
@@ -2101,7 +2259,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                     {task.phase === "done" ? t("taskDone") : task.phase === "error" ? t("taskError") : task.phase === "uploading" ? t("taskUploading") : t("taskAnalyzing")}
                   </p>
                 </div>
-                {task.phase === "done" && task.resultUrls[0] && (
+                {task.phase === "done" && (task.resultUrls[0] || task.report) && (
                   <button
                     onClick={() => setLightbox({
                       entry: {
@@ -2109,11 +2267,12 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
                         status: "success",
                         type: task.type,
                         image_urls: task.resultUrls,
-                        source_image_url: sourceImageUrl ?? lastUploadedPhotoUrl ?? undefined,
+                        source_image_url: task.sourceUrl ?? sourceImageUrl ?? lastUploadedPhotoUrl ?? undefined,
                         created_at: Date.now() / 1000,
                         locked: task.locked,
                         unlocked: task.unlocked,
                         lock_start: task.lockStart,
+                        ...(task.report ? { kind: "report" as const, report: task.report } : {}),
                       },
                       imageIndex: 0,
                     })}
@@ -2133,7 +2292,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       )}
 
       {/* Post-result: Invite + Recommendations */}
-      {phase === "done" && resultUrls.length > 0 && (
+      {phase === "done" && hasResult && (
         <div className="mt-8">
           {/* AI 生成内容标注 */}
           <p className="mb-4 text-center text-xs text-muted-foreground">{t("aiGeneratedNote")}</p>
@@ -2218,16 +2377,28 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
             <Spinner /> {t("historyTitle")}
           </div>
         )}
-        {!historyLoading && history.length > 0 && (
+        {!historyLoading && history.some((entry) => entry.report || entry.image_urls[0]) && (
           <div className="mt-12">
             <h2 className="text-xl font-bold">{t("historyTitle")}</h2>
             <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {history.map((entry) => (
+              {/* 失败的任务没有图也没有报告，渲染出来只是一张空白卡片，点开也没有内容 */}
+              {history.filter((entry) => entry.report || entry.image_urls[0]).map((entry) => (
                 <div
                   key={entry.id}
                   className="cursor-pointer overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg"
                   onClick={() => { trackEvent("history_item_opened", { type: entry.type || "unknown" }); setLightbox({ entry, imageIndex: 0 }); }}
                 >
+                  {entry.report && (
+                    <div className="relative">
+                      <ReportThumb report={entry.report} sourceImageUrl={entry.source_image_url} lang={LOCALE_TO_REPORT_LANG[locale] ?? "en"} />
+                      {entry.locked && (
+                        <span className="absolute bottom-2 left-2 inline-flex items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur-sm">
+                          <LockIcon className="h-3 w-3" />
+                          {t("lockedBadge")}
+                        </span>
+                      )}
+                    </div>
+                  )}
                   {entry.image_urls[0] && (
                     <div className="relative">
                       <img
@@ -2266,7 +2437,23 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
       </div>
 
       {/* Lightbox */}
-      {lightbox && (
+      {lightbox && lightbox.entry.report && (
+        <ReportLightbox
+          entry={lightbox.entry}
+          preferredLang={reportLang}
+          unlockLabel={reportUnlockLabel(lightbox.entry.type || "color_analysis")}
+          unlocking={unlockingId !== null && unlockingId === lightbox.entry.id}
+          onClose={() => setLightbox(null)}
+          onUnlock={(entry) => handleUnlock(entry.id, entry.type || "color_analysis", null)}
+          onSavePoster={(url) => handleDownload(url)}
+          onShare={handleShare}
+          onTryOn={(season) => handleTryOn(season, lightbox.entry.source_image_url)}
+          tryOnBusy={tryOnBusy}
+          onNotice={showToast}
+          t={t}
+        />
+      )}
+      {lightbox && !lightbox.entry.report && (
         <ImageLightbox
           entry={lightbox.entry}
           initialIndex={lightbox.imageIndex}
@@ -2303,6 +2490,7 @@ export function TryClient({ locale, initialType }: { locale: string; initialType
         <SharePanel
           url={shareModal.imageUrl}
           shareLink={shareModal.link}
+          report={shareModal.report}
           locale={locale}
           onClose={() => setShareModal(null)}
           onCopied={() => { setShareToast(true); setTimeout(() => setShareToast(false), 2000); }}
@@ -3007,7 +3195,7 @@ function ImageLightbox({
             <ShareIcon />
             {t("share")}
           </button>
-          {entry.source_image_url && (
+          {entry.source_image_url && entry.type !== "scan_tryon" && (
             <button
               onClick={() => onCorrection(entry)}
               className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-primary/80 px-4 py-2 text-sm text-white hover:bg-primary"
@@ -3018,6 +3206,83 @@ function ImageLightbox({
           )}
         </div>
         )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/** 结构化报告（色彩分析）的弹窗查看：历史记录、后台任务、付款后自动解锁都从这里打开 */
+function ReportLightbox({
+  entry,
+  preferredLang,
+  unlockLabel,
+  unlocking,
+  onClose,
+  onUnlock,
+  onSavePoster,
+  onShare,
+  onTryOn,
+  tryOnBusy,
+  onNotice,
+  t,
+}: {
+  entry: HistoryEntry;
+  preferredLang: string;
+  unlockLabel: string;
+  unlocking: boolean;
+  onClose: () => void;
+  onUnlock: (entry: HistoryEntry) => void;
+  onSavePoster: (posterUrl: string) => void;
+  onShare: (posterUrl: string, taskId?: string | null, report?: boolean) => void;
+  onTryOn: (season: string) => void;
+  tryOnBusy: boolean;
+  onNotice: (message: string) => void;
+  t: (key: string, values?: Record<string, string | number>) => string;
+}) {
+  const dialogRef = useDialogA11y<HTMLDivElement>(onClose);
+  const [report, setReport] = useState(entry.report!);
+
+  // 解锁后 entry 里换成了完整数据（渲染期间同步，避免 effect 里 setState 多一次渲染）
+  const [prevEntryReport, setPrevEntryReport] = useState(entry.report);
+  if (entry.report !== prevEntryReport) {
+    setPrevEntryReport(entry.report);
+    if (entry.report) setReport(entry.report);
+  }
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = ""; };
+  }, []);
+
+  return (
+    <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={t("resultTitle")} tabIndex={-1} className="fixed inset-0 z-[100] overflow-y-auto overscroll-contain bg-black/80 outline-none backdrop-blur-sm" onClick={onClose}>
+      <button
+        onClick={onClose}
+        aria-label={t("close")}
+        className="fixed right-3 top-[max(0.75rem,env(safe-area-inset-top))] z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm hover:bg-white/25"
+      >
+        <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+      <div className="flex min-h-full justify-center px-3 pb-[max(1rem,env(safe-area-inset-bottom))] pt-16">
+        <div className="w-full max-w-xl" onClick={(e) => e.stopPropagation()}>
+          <ReportPanel
+            taskId={entry.id === "demo" ? null : entry.id}
+            report={report}
+            sourceImageUrl={entry.source_image_url}
+            createdAt={entry.created_at}
+            demo={entry.id === "demo"}
+            preferredLang={preferredLang}
+            unlockLabel={unlockLabel}
+            unlockBusy={unlocking}
+            onUnlock={() => onUnlock(entry)}
+            onSavePoster={onSavePoster}
+            onShare={(url, id) => onShare(url, id, true)}
+            onTryOn={entry.source_image_url ? onTryOn : undefined}
+            tryOnBusy={tryOnBusy}
+            onNotice={onNotice}
+            onReportUpdated={setReport}
+          />
         </div>
       </div>
     </div>
@@ -3088,6 +3353,7 @@ const LOCK_CONTENT_TYPES = new Set([
   "style_personality",
   "celebrity_match",
   "palette_scan",
+  "scan_tryon",
 ]);
 
 /**
@@ -3321,6 +3587,7 @@ function getSharePlatforms(locale: string): SharePlatform[] {
 function SharePanel({
   url,
   shareLink,
+  report,
   locale,
   onClose,
   onCopied,
@@ -3329,6 +3596,8 @@ function SharePanel({
 }: {
   url: string;
   shareLink: string;
+  /** 分享的是结构化报告：分享页封面会露出用户的照片，提示文案要如实说明 */
+  report?: boolean;
   locale: string;
   onClose: () => void;
   onCopied: () => void;
@@ -3383,7 +3652,7 @@ function SharePanel({
 
         {/* Preview */}
         <div className="mb-4 flex gap-3 rounded-xl border border-border p-3">
-          <img src={url} alt="" className="h-16 w-12 rounded-lg object-cover" />
+          {url && <img src={url} alt="" className="h-16 w-12 rounded-lg object-cover" />}
           <div className="flex-1 min-w-0">
             {/* 输入框字号至少 16px，否则 iOS 聚焦时会自动放大整页 */}
             <textarea
@@ -3417,7 +3686,7 @@ function SharePanel({
             </button>
           ))}
         </div>
-        <p className="mt-3 text-center text-xs text-muted-foreground">{t("shareLinkNotice")}</p>
+        <p className="mt-3 text-center text-xs text-muted-foreground">{t(report ? "shareLinkNoticeReport" : "shareLinkNotice")}</p>
 
         {referralCode && (
           <div className="mt-4 rounded-xl border border-primary/20 bg-primary/5 p-3 text-center">

@@ -33,7 +33,7 @@ export function GET() {
   );
   lines.push("");
   lines.push(
-    "Important limits: the analysis is performed by a general-purpose multimodal image model (OpenAI GPT Image) guided by our own prompts; we do not train a custom model. Results are an AI visual judgment, not a measurement, and are affected by lighting, camera and makeup, so they can differ from an in-person draping session.",
+    "Important limits: the analysis is performed by general-purpose third-party AI models (Google Gemini for analysis, OpenAI GPT Image for AI preview images) guided by our own prompts; we do not train a custom model. Results are an AI visual judgment, not a measurement, and are affected by lighting, camera and makeup, so they can differ from an in-person draping session.",
   );
   lines.push("");
 

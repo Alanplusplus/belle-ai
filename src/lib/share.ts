@@ -1,10 +1,15 @@
 // 仅限服务端使用：依赖 BELLE_API_TOKEN，不要在 "use client" 组件里导入
+import type { ColorReportData } from "./color-report";
+
 const API_BASE = process.env.BELLE_API_BASE || "https://api.chibistyle.app";
 
 export interface SharedReport {
   type: string;
   imageUrls: string[];
   referralCode: string | null;
+  /** 结构化色彩报告：没有图片，页面按数据渲染；个性化字段已按分享人的解锁状态在服务端剔除 */
+  report?: ColorReportData;
+  sourceImageUrl?: string | null;
 }
 
 const TOKEN_PATTERN = /^[A-Za-z0-9]{6,16}$/;
@@ -29,7 +34,18 @@ export async function fetchSharedReport(
       },
     );
     const json = await res.json();
-    if (json?.code !== 200 || !json.data?.image_urls?.length) return null;
+    if (json?.code !== 200 || !json.data) return null;
+
+    if (json.data.kind === "report" && json.data.report) {
+      return {
+        type: json.data.type ?? "color_analysis",
+        imageUrls: [],
+        referralCode: json.data.referral_code ?? null,
+        report: json.data.report as ColorReportData,
+        sourceImageUrl: json.data.source_image_url ?? null,
+      };
+    }
+    if (!json.data.image_urls?.length) return null;
     return {
       type: json.data.type ?? "makeup",
       imageUrls: json.data.image_urls,

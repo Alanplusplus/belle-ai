@@ -21,7 +21,7 @@ const CONTACT_EMAIL = "support@aicoloranalysis.io";
 const ASSETS = [
   { key: "assetLogo", href: "/logo-full.webp", width: 1024, height: 1024, square: true },
   { key: "assetIcon", href: "/icon-512.png", width: 512, height: 512, square: true },
-  { key: "assetReportColor", href: "/images/examples/report_color_analysis.webp", width: 597, height: 800, square: false },
+  { key: "assetReportColor", href: "/images/examples/report_color_analysis.webp", width: 600, height: 800, square: false },
   { key: "assetReportMakeup", href: "/images/examples/report_makeup.webp", width: 600, height: 800, square: false },
   { key: "assetReportFace", href: "/images/examples/report_face_shape.webp", width: 600, height: 800, square: false },
 ] as const;

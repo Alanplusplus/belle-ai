@@ -1,5 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { auth } from "@/lib/auth";
+import { DEV_UNLOCK_COOKIE } from "@/lib/dev-unlock";
+import { checkUserPrompt, collectUserPromptInput } from "@/lib/prompt-safety";
+
+// 买前扫一扫 / 报告翻译会等视觉模型返回（通常 10~20 秒，最长约 40 秒）
+export const maxDuration = 60;
 
 const API_BASE = process.env.BELLE_API_BASE || "https://api.chibistyle.app";
 const API_TOKEN = process.env.BELLE_API_TOKEN!;
@@ -21,17 +27,22 @@ async function getVerifiedEmail(): Promise<string | null> {
   return (session?.user as any)?.verifiedEmail ?? null;
 }
 
-function proxyHeaders(): Record<string, string> {
-  return {
+async function proxyHeaders(): Promise<Record<string, string>> {
+  const headers: Record<string, string> = {
     Authorization: `Bearer ${API_TOKEN}`,
     "Content-Type": "application/json",
   };
+  // 本地开发的「查看完整报告」开关：只有 next dev 里、页面上打开了开关才带；后端还要设 DEV_UNLOCK_REPORTS=1 才认
+  if (process.env.NODE_ENV === "development" && (await cookies()).get(DEV_UNLOCK_COOKIE)?.value === "1") {
+    headers["X-Dev-Unlock"] = "1";
+  }
+  return headers;
 }
 
 async function proxyPost(path: string, body: unknown) {
   const res = await fetch(`${API_BASE}${path}`, {
     method: "POST",
-    headers: proxyHeaders(),
+    headers: await proxyHeaders(),
     body: JSON.stringify(body),
   });
   return res.json();
@@ -40,7 +51,7 @@ async function proxyPost(path: string, body: unknown) {
 async function proxyGet(path: string) {
   const res = await fetch(`${API_BASE}${path}`, {
     method: "GET",
-    headers: proxyHeaders(),
+    headers: await proxyHeaders(),
   });
   return res.json();
 }
@@ -106,16 +117,33 @@ export async function POST(req: NextRequest) {
       }
 
       case "generate": {
+        // 用户文本进图像模型之前先过 Waffo Prompt Sift；没过就不往后端走，所以也不会扣积分
+        const input = collectUserPromptInput(params);
+        if (input.scanText) {
+          const check = await checkUserPrompt(input.scanText, {
+            language: params.language,
+            subject: googleId ?? String(fingerprint),
+          });
+          if (!check.ok) {
+            return NextResponse.json(
+              check.reason === "blocked"
+                ? { code: 422, message: "content_blocked" }
+                : { code: 503, message: "content_check_unavailable" },
+            );
+          }
+        }
+
         const data = await proxyPost("/common/v1/web/generate", {
           ...(googleId ? { google_user_id: googleId } : { fingerprint }),
           image_url_list: params.image_url_list,
           analysis_type: params.analysis_type,
           language: params.language,
-          ...(params.corrections ? { corrections: params.corrections } : {}),
+          ...(input.corrections ? { corrections: input.corrections } : {}),
           ...(params.resolution ? { resolution: params.resolution } : {}),
-          ...(params.occasion ? { occasion: params.occasion } : {}),
-          ...(params.personality_type ? { personality_type: params.personality_type } : {}),
-          ...(params.color_season ? { color_season: params.color_season } : {}),
+          ...(input.occasion ? { occasion: input.occasion } : {}),
+          ...(input.personalityType ? { personality_type: input.personalityType } : {}),
+          ...(input.colorSeason ? { color_season: input.colorSeason } : {}),
+          ...(params.tryon ? { tryon: params.tryon } : {}),
         });
         return NextResponse.json(data);
       }
@@ -202,6 +230,31 @@ export async function POST(req: NextRequest) {
           ...(googleId ? { google_user_id: googleId } : { fingerprint }),
           task_id: params.task_id,
         });
+        return NextResponse.json(data);
+      }
+
+      case "report-localize": {
+        const data = await proxyPost("/common/v1/web/report-localize", {
+          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
+          task_id: params.task_id,
+          language: params.language,
+        });
+        return NextResponse.json(data);
+      }
+
+      case "scan": {
+        const data = await proxyPost("/common/v1/web/scan", {
+          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
+          image_base64: params.image_base64,
+          season: params.season,
+          language: params.language,
+        });
+        return NextResponse.json(data);
+      }
+
+      case "scan-quota": {
+        const identity = googleId ? `google_user_id=${googleId}` : `fingerprint=${fingerprint}`;
+        const data = await proxyGet(`/common/v1/web/scan-quota?${identity}`);
         return NextResponse.json(data);
       }
 

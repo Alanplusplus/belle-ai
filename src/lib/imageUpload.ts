@@ -110,6 +110,22 @@ async function reencode(file: File): Promise<Blob | null> {
 }
 
 /**
+ * 买前扫一扫用：把照片缩到长边 maxEdge 以内再编码（后端识别只用 896px，传原图纯属浪费流量）。
+ * 解码失败（比如桌面浏览器读不了 HEIC）时抛错，由调用方提示换一张图。
+ */
+export async function prepareScanImage(file: File, maxEdge = 1024): Promise<string> {
+  const { source, width, height, release } = await decode(file);
+  try {
+    const scale = Math.min(1, maxEdge / Math.max(width, height));
+    const blob = await renderJpeg(source, width, height, scale, 0.85);
+    if (!blob) throw new Error("decode_failed");
+    return await readAsDataUrl(blob);
+  } finally {
+    release();
+  }
+}
+
+/**
  * 返回可直接上传的 data URL。重新编码失败时回退到原文件，
  * 但原文件编码后超过服务端上限就抛出 IMAGE_TOO_LARGE，而不是发一个注定 413 的请求。
  */
