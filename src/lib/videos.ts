@@ -84,12 +84,12 @@ export const VIDEOS: VideoEntry[] = [
   // LF05
   {
     id: "soft-autumn-vs-soft-summer",
-    youtubeId: null, // ← 发布后只填这里
+    youtubeId: "L87luJkOLFY", // ← 发布后只填这里
     title: "Soft Autumn vs Soft Summer: How to Tell the Difference (3 Tests)",
     description:
       "Soft Autumn and Soft Summer are two of the most commonly confused color seasons: both are muted and low contrast, so quizzes and photos often give mixed results. See what they share, how their skin, eyes, hair and palettes differ, and three simple tests (gold vs silver, olive vs lavender, warm beige vs cool gray) that settle it at home, plus what to do if you land in between.",
     durationSeconds: 297,
-    uploadDate: "2026-11-05",
+    uploadDate: "2026-11-06",
     thumbnail: "/images/videos/soft-autumn-vs-soft-summer.webp",
     blogSlugs: ["soft-autumn-vs-soft-summer"],
     toolPaths: [],
