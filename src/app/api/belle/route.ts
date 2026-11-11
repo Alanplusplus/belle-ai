@@ -153,17 +153,51 @@ export async function POST(req: NextRequest) {
         return NextResponse.json(data);
       }
 
+      case "lookbook": {
+        const data = await proxyGet(
+          `/common/v1/web/lookbook/${encodeURIComponent(String(params.task_id))}?language=${encodeURIComponent(String(params.language || "en"))}`
+        );
+        return NextResponse.json(data);
+      }
+
+      case "lookbook-retry": {
+        const data = await proxyPost("/common/v1/web/lookbook-retry", {
+          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
+          task_id: params.task_id,
+        });
+        return NextResponse.json(data);
+      }
+
+      case "lookbook-tryon": {
+        const data = await proxyPost("/common/v1/web/lookbook-tryon", {
+          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
+          task_id: params.task_id,
+          sheet: params.sheet,
+        });
+        return NextResponse.json(data);
+      }
+
+      case "lookbook-reroll": {
+        const data = await proxyPost("/common/v1/web/lookbook-reroll", {
+          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
+          task_id: params.task_id,
+          sheet: params.sheet,
+        });
+        return NextResponse.json(data);
+      }
+
       case "history": {
         const page = params.page || 1;
         const pageSize = params.page_size || 20;
+        const language = encodeURIComponent(String(params.language || "en"));
         if (googleId) {
           const data = await proxyGet(
-            `/common/v1/web/history?google_user_id=${googleId}&page=${page}&page_size=${pageSize}`
+            `/common/v1/web/history?google_user_id=${googleId}&page=${page}&page_size=${pageSize}&language=${language}`
           );
           return NextResponse.json(data);
         }
         const data = await proxyGet(
-          `/common/v1/web/history?fingerprint=${fingerprint}&page=${page}&page_size=${pageSize}`
+          `/common/v1/web/history?fingerprint=${fingerprint}&page=${page}&page_size=${pageSize}&language=${language}`
         );
         return NextResponse.json(data);
       }
@@ -178,42 +212,6 @@ export async function POST(req: NextRequest) {
         const data = await proxyGet(
           `/common/v1/web/processing?fingerprint=${fingerprint}`
         );
-        return NextResponse.json(data);
-      }
-
-      case "checkin": {
-        const data = await proxyPost("/common/v1/web/checkin", {
-          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
-        });
-        return NextResponse.json(data);
-      }
-
-      case "referral-code": {
-        if (googleId) {
-          const data = await proxyGet(`/common/v1/web/referral-code?google_user_id=${googleId}`);
-          return NextResponse.json(data);
-        }
-        const data = await proxyGet(`/common/v1/web/referral-code?fingerprint=${fingerprint}`);
-        return NextResponse.json(data);
-      }
-
-      case "referral-apply": {
-        const data = await proxyPost("/common/v1/web/referral-apply", {
-          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
-          referral_code: params.referral_code,
-          // 透传访客 IP / UA 给后端做同设备防刷（浏览器直连时后端只能看到代理服务器的 IP）
-          client_ip: req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || req.headers.get("x-real-ip") || undefined,
-          client_ua: req.headers.get("user-agent") || undefined,
-        });
-        return NextResponse.json(data);
-      }
-
-      case "referral-stats": {
-        if (googleId) {
-          const data = await proxyGet(`/common/v1/web/referral-stats?google_user_id=${googleId}`);
-          return NextResponse.json(data);
-        }
-        const data = await proxyGet(`/common/v1/web/referral-stats?fingerprint=${fingerprint}`);
         return NextResponse.json(data);
       }
 
@@ -255,18 +253,6 @@ export async function POST(req: NextRequest) {
       case "scan-quota": {
         const identity = googleId ? `google_user_id=${googleId}` : `fingerprint=${fingerprint}`;
         const data = await proxyGet(`/common/v1/web/scan-quota?${identity}`);
-        return NextResponse.json(data);
-      }
-
-      case "email-unlock": {
-        const data = await proxyPost("/common/v1/web/email-unlock", {
-          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
-          task_id: params.task_id,
-          email: params.email,
-          locale: params.locale,
-          // 访客 IP 由这里（服务端）填写，后端用它限制同一 IP 的领取次数，不能让浏览器自己声明
-          client_ip: req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || req.headers.get("x-real-ip") || undefined,
-        });
         return NextResponse.json(data);
       }
 

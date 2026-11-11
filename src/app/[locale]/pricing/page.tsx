@@ -7,18 +7,13 @@ import {
   OG_IMAGES,
   TWITTER_IMAGES,
 } from "@/lib/seo";
-import {
-  CREDIT_PACKS,
-  SUBSCRIPTION_PORTAL_PATH,
-  WEEKLY_INTRO_PRICE,
-  WEEKLY_PRICE,
-  YEARLY_PRICE,
-} from "@/lib/constants";
+import { ADDON_CREDITS, CREDIT_PACKS } from "@/lib/constants";
+import { KIT_PERKS, KIT_PERK_VALUES } from "@/lib/kit";
 import type { Metadata } from "next";
 import { PricingButtons, PricingViewTracker } from "./PricingButtons";
-import { PricingStickyBar } from "./PricingStickyBar";
+import { ExtraMessages } from "@/components/ExtraMessages";
 import { InAppBrowserNotice } from "@/components/InAppBrowserNotice";
-import { RestoreSubscriptionHint } from "@/components/RestoreSubscriptionHint";
+import { RestorePurchaseHint } from "@/components/RestorePurchaseHint";
 import { LocalPrice, PricedText } from "@/components/LocalPrice";
 import { PaymentTrust } from "@/components/PaymentTrust";
 
@@ -30,14 +25,16 @@ export async function generateMetadata({
   const { locale } = await params;
   const messages = (await import(`@/messages/${locale}.json`)).default;
   const alternates = buildAlternates(locale, "/pricing");
+  const title: string = messages.kit.metaTitle;
+  const description: string = messages.kit.metaDescription;
   return {
-    title: messages.meta.pricingTitle,
-    description: messages.meta.pricingDescription,
+    title,
+    description,
     alternates,
     openGraph: {
       images: OG_IMAGES,
-      title: messages.meta.pricingTitle,
-      description: messages.meta.pricingDescription,
+      title,
+      description,
       type: "website",
       locale: ogLocale(locale),
       url: alternates.canonical,
@@ -45,310 +42,253 @@ export async function generateMetadata({
     twitter: {
       images: TWITTER_IMAGES,
       card: "summary_large_image",
-      title: messages.meta.pricingTitle,
-      description: messages.meta.pricingDescription,
+      title,
+      description,
     },
   };
 }
 
+/** 套装里的功能（色彩报告的各个部分）和用积分生成效果图的功能：价格页底部按这两组列出，每个都能点进对应的功能介绍页 */
+const KIT_TOOLS = [
+  { href: "/color-analysis", key: "colorAnalysis" },
+  { href: "/celebrity-match", key: "celebrityMatch" },
+] as const;
+const CREDIT_TOOLS = [
+  { href: "/makeup-analysis", key: "makeupAnalysis" },
+  { href: "/face-shape-analysis", key: "faceAnalysis" },
+  { href: "/hair-color-analysis", key: "hairPreview" },
+  { href: "/outfit-color-analysis", key: "outfitColor" },
+  { href: "/glasses-analysis", key: "glassesMatch" },
+  { href: "/occasion-makeup", key: "occasionMakeup" },
+  { href: "/jewelry-analysis", key: "jewelryGuide" },
+  { href: "/glow-up-report", key: "glowUpReport" },
+  { href: "/style-personality", key: "stylePersonality" },
+] as const;
+type ToolHref = (typeof KIT_TOOLS)[number]["href"] | (typeof CREDIT_TOOLS)[number]["href"];
+
+/**
+ * 定价页：免费 + 色彩套装（主推）+ 积分包三列，没有订阅。
+ * 价格会随访客所在地换币种，所以带价格的文案都交给 LocalPrice / PricedText 这两个客户端组件渲染。
+ * 积分包不能解锁色彩报告（只能给其他分析生成效果图），卡片上写明，免得买错。
+ */
 export default async function PricingPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "pricing" });
+  const t = await getTranslations({ locale, namespace: "kit" });
+  const tPricing = await getTranslations({ locale, namespace: "pricing" });
+  const tNav = await getTranslations({ locale, namespace: "nav" });
+  // 页面里的客户端组件（PricedText、RestorePurchaseHint）要在客户端取 kit 文案，这里按页面注入
+  const kitMessages = (await import(`@/messages/${locale}.json`)).default.kit;
 
-  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
-    { name: "Pricing", path: "/pricing" },
-  ]);
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [{ name: "Pricing", path: "/pricing" }]);
 
+  const validUntil = new Date(new Date().getFullYear() + 1, 0, 1).toISOString().split("T")[0];
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: "Belle AI - Color Analysis",
-    description: "AI-powered personal color analysis with makeup, hair, outfit, and accessory recommendations.",
+    name: "Belle AI - Color Kit",
+    description:
+      "AI personal color analysis: your season, undertone, best colors, makeup, hair and jewelry picks, PDF report, try-on board and a free re-test. One-time payment, no subscription.",
     brand: { "@type": "Brand", name: "Belle AI" },
     offers: [
       {
         "@type": "Offer",
-        name: "Free",
+        name: "Free preview",
         price: "0",
         priceCurrency: "USD",
-        description: "3 free AI analysis previews",
+        description: "Free color report preview, a written result from every tool and your first result photo",
         availability: "https://schema.org/InStock",
-      },
-      ...(["pack", "pack30"] as const).map((key) => ({
-        "@type": "Offer",
-        name: `Credit Pack (${CREDIT_PACKS[key].credits} credits)`,
-        price: CREDIT_PACKS[key].price,
-        priceCurrency: "USD",
-        description: `${CREDIT_PACKS[key].credits} credits, one-time purchase. 1 credit = 1 full report without blur`,
-        availability: "https://schema.org/InStock",
-      })),
-      {
-        "@type": "Offer",
-        name: "Weekly",
-        price: WEEKLY_PRICE,
-        priceCurrency: "USD",
-        description: `50 analyses per week, 4K resolution. New subscribers: first week $${WEEKLY_INTRO_PRICE}, then $${WEEKLY_PRICE}/week`,
-        availability: "https://schema.org/InStock",
-        priceValidUntil: new Date(new Date().getFullYear() + 1, 0, 1).toISOString().split("T")[0],
       },
       {
         "@type": "Offer",
-        name: "Yearly",
-        price: YEARLY_PRICE,
+        name: `Credit Pack (${ADDON_CREDITS} credits)`,
+        price: CREDIT_PACKS.addon.price,
         priceCurrency: "USD",
-        description: "50 analyses per week, 4K resolution, billed yearly",
+        description: "Credits for result photos of any analysis: hair, makeup, glasses, jewelry and more. One-time purchase, credits never expire.",
         availability: "https://schema.org/InStock",
-        priceValidUntil: new Date(new Date().getFullYear() + 1, 0, 1).toISOString().split("T")[0],
+        priceValidUntil: validUntil,
+      },
+      {
+        "@type": "Offer",
+        name: "Color Kit",
+        price: CREDIT_PACKS.kit.price,
+        priceCurrency: "USD",
+        description: "Full color report, PDF and poster, try-on board, free re-test for 14 days and extra credits. One-time purchase.",
+        availability: "https://schema.org/InStock",
+        priceValidUntil: validUntil,
       },
     ],
   };
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
-      />
-    <section className="py-10 pb-24 sm:py-20 lg:pb-20">
-      <div className="mx-auto max-w-5xl px-4">
-        <div className="text-center">
-          <h1 className="font-serif text-3xl font-bold sm:text-4xl">{t("title")}</h1>
-          <p className="mt-3 text-base text-muted-foreground sm:text-lg">{t("subtitle")}</p>
-        </div>
+    <ExtraMessages messages={{ kit: kitMessages }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
+      <section className="py-10 sm:py-20">
+        <div className="mx-auto max-w-5xl px-4">
+          <div className="text-center">
+            <h1 className="font-serif text-3xl font-bold sm:text-4xl">{t("pageTitle")}</h1>
+            <p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">{t("pageSubtitle")}</p>
+          </div>
 
-        {/* 内置浏览器里订阅与记录不会跟随到系统浏览器：提前提示用系统浏览器打开再付款 */}
-        <InAppBrowserNotice className="mx-auto mt-6 max-w-xl" />
+          {/* 内置浏览器里购买记录不会跟随到系统浏览器：提前提示用系统浏览器打开再付款 */}
+          <InAppBrowserNotice className="mx-auto mt-6 max-w-xl" />
 
-        {/* 订阅是整页主推：周订阅（首周优惠）最醒目，年订阅是长期划算的选项，积分包放在下面给「不想订阅」的人 */}
-        <div className="mx-auto mt-10 grid max-w-5xl gap-6 pt-3 lg:grid-cols-3">
-          {/* Free（手机上排最后：主推的 Weekly 放最前，Free 不抢首屏） */}
-          <div className="rounded-2xl border border-border bg-card p-6 max-lg:order-3">
-            <h3 className="text-xl font-bold">{t("free")}</h3>
-            <p className="mt-1 text-sm text-muted-foreground">{t("freeDesc")}</p>
-            <div className="mt-4">
-              <span className="text-4xl font-bold"><LocalPrice spec="free" /></span>
+          <div className="mx-auto mt-10 grid gap-6 pt-3 md:grid-cols-3">
+            {/* 免费部分：手机上排在最后，不抢首屏；桌面在最左 */}
+            <div className="flex flex-col rounded-2xl border border-border bg-card p-6 max-md:order-3 md:order-1">
+              <h3 className="text-xl font-bold">{t("freeName")}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{t("freeDesc")}</p>
+              <div className="mt-4">
+                <span className="text-4xl font-bold"><LocalPrice spec="free" /></span>
+              </div>
+              <ul className="mt-6 flex-1 space-y-3">
+                <Feature text={t("freeItem1")} />
+                <Feature text={t("freeItem2")} />
+                <Feature text={t("freeItem3")} />
+              </ul>
+              <Link
+                href="/try"
+                className="mt-6 block w-full rounded-full border border-primary py-2.5 text-center text-sm font-semibold text-primary transition hover:bg-primary/5"
+              >
+                {t("freeCta")}
+              </Link>
             </div>
-            <ul className="mt-6 space-y-3">
-              <PricingFeature text={t("freeFeature1")} />
-              <PricingFeature text={t("freeFeature2")} />
-              <PricingFeature text={t("freeFeature3")} />
-            </ul>
-            <Link
-              href="/try"
-              className="mt-6 block w-full rounded-full border border-primary py-2.5 text-center text-sm font-semibold text-primary transition hover:bg-primary/5"
+
+            {/* 套装：整页主推，居中、描边加粗 */}
+            <div id="pricing-kit-card" className="relative flex scroll-mt-24 flex-col rounded-2xl border-2 border-primary bg-card p-6 shadow-lg max-md:order-1 md:order-2">
+              <span className="absolute -top-3 left-6 whitespace-nowrap rounded-full bg-primary px-3 py-0.5 text-xs font-semibold text-white">
+                {t("cardBadge")}
+              </span>
+              <h3 className="text-xl font-bold">{t("cardName")}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{t("cardNoSub")}</p>
+              <div className="mt-4">
+                <span className="text-4xl font-bold text-primary"><LocalPrice spec="kit" /></span>
+              </div>
+              <ul className="mt-5 flex-1 space-y-3">
+                {KIT_PERKS.map((key) => (
+                  <Feature key={key} text={t(key, KIT_PERK_VALUES)} />
+                ))}
+              </ul>
+              <PricingButtons product="kit" label={<PricedText k="cta" prices={{ price: "kit" }} />} />
+              <Link href="/color-analysis" className="mt-3 block text-center text-xs font-medium text-primary hover:underline">
+                {t("kitSeeExample")}
+              </Link>
+            </div>
+
+            {/* 积分包：给想看其他分析效果图的人（不含色彩报告），次要，描边按钮 */}
+            <div id="pricing-addon-card" className="flex scroll-mt-24 flex-col rounded-2xl border border-border bg-card p-6 max-md:order-2 md:order-3">
+              <h3 className="text-xl font-bold">{t("addonCardName")}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{t("addonCardSub")}</p>
+              <div className="mt-4">
+                <span className="text-4xl font-bold"><LocalPrice spec="addon" /></span>
+              </div>
+              <ul className="mt-5 flex-1 space-y-3">
+                <Feature text={t("addonItem1", { credits: ADDON_CREDITS })} />
+                <Feature text={t("addonItem2")} />
+                <Feature text={t("addonItem3")} />
+              </ul>
+              <p className="mt-5 rounded-lg bg-muted/50 px-3 py-2 text-xs leading-relaxed text-muted-foreground">{t("addonNote")}</p>
+              <PricingButtons
+                product="addon"
+                variant="outline"
+                label={<PricedText k="addonCta" prices={{ price: "addon" }} values={{ credits: ADDON_CREDITS }} />}
+              />
+              <a href="#pricing-tools" className="mt-3 block text-center text-xs font-medium text-primary hover:underline">
+                {t("addonSeeTools")}
+              </a>
+            </div>
+          </div>
+
+          {/* 想先看看某个功能做什么：按「套装里的」和「用积分生成效果图的」分两组，点进对应的功能介绍页 */}
+          <div id="pricing-tools" className="mt-14 scroll-mt-24">
+            <h2 className="text-center font-serif text-2xl font-bold">{t("toolsTitle")}</h2>
+            <p className="mx-auto mt-2 max-w-xl text-center text-sm text-muted-foreground">{t("toolsSubtitle")}</p>
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              <ToolGroup title={t("toolsKitGroup")} hint={t("toolsKitHint")} items={KIT_TOOLS.map((tool) => ({ href: tool.href, label: tNav(tool.key) }))} />
+              <ToolGroup
+                className="md:col-span-2"
+                columns
+                title={t("toolsCreditGroup")}
+                hint={t("toolsCreditHint")}
+                items={CREDIT_TOOLS.map((tool) => ({ href: tool.href, label: tNav(tool.key) }))}
+              />
+            </div>
+          </div>
+
+          {/* 怎么用：三步，让第一次来的人知道「先免费看、满意再买」 */}
+          <div className="mt-12 rounded-2xl border border-border bg-muted/30 p-6">
+            <h3 className="text-center text-sm font-semibold uppercase tracking-wider text-muted-foreground">{t("stepsTitle")}</h3>
+            <ol className="mt-5 grid gap-4 sm:grid-cols-3">
+              {(["step1", "step2", "step3"] as const).map((key, index) => (
+                <li key={key} className="flex items-start gap-3">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">{index + 1}</span>
+                  <div>
+                    <p className="text-sm font-semibold">{t(`${key}Title`)}</p>
+                    <p className="mt-0.5 text-xs text-muted-foreground">{t(`${key}Desc`)}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          {/* 支付信任信息：离购买按钮最近的地方说清「怎么付、安不安全」 */}
+          <PaymentTrust className="mt-8" />
+
+          <RestorePurchaseHint className="mx-auto mt-6 max-w-2xl" />
+
+          <p className="mt-4 text-center text-xs text-muted-foreground">{t("billingNote")}</p>
+          {/* 底层模型披露 + AI 生成内容标注（支付服务商的 AIGC 合规要求） */}
+          <p className="mt-2 text-center text-xs text-muted-foreground">{tPricing("aiDisclosure")}</p>
+
+          {/* Payment badge */}
+          <div className="mt-10 flex justify-center">
+            <a
+              href="https://waffo.ai/"
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-1.5 rounded-[10px] border border-border bg-muted/50 px-3.5 py-2 transition hover:bg-muted no-underline"
             >
-              {t("freeCta")}
-            </Link>
-          </div>
-
-          {/* Weekly：整页主推 —— 粗边框 + 阴影 + 实心按钮。价格区与 PricingModal 一致：
-              大号显示首周优惠价，原价放在下面的说明里，不抢首周价的位置 */}
-          <div id="pricing-weekly-card" className="relative scroll-mt-24 rounded-2xl border-2 border-primary bg-card p-6 shadow-lg max-lg:order-1">
-            <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-primary px-3 py-0.5 text-xs font-semibold text-white">
-              {t("weeklyRecommendedBadge")}
-            </span>
-            <h3 className="text-xl font-bold">{t("weekly")}</h3>
-            <p className="mt-1 text-sm text-muted-foreground">
-              {t("weeklyDesc")}
-            </p>
-            <div className="mt-4">
-              <span className="text-4xl font-bold text-primary"><LocalPrice spec="weeklyIntro" /></span>
-              <span className="text-muted-foreground"> / {t("weeklyIntroLabel")}</span>
-            </div>
-            <p className="mt-1 text-sm text-muted-foreground"><PricedText k="weeklyThen" prices={{ price: "weekly" }} /></p>
-            <ul className="mt-5 space-y-3">
-              <PricingFeature text={t("weeklyFeature1")} />
-              <PricingFeature text={t("weeklyFeature2")} />
-              <PricingFeature text={t("weeklyFeature3")} />
-              <PricingFeature text={t("weeklyFeature4")} />
-            </ul>
-            <PricingButtons product="weekly" variant="primary" label={<PricedText k="weeklyCta" prices={{ price: "weeklyIntro" }} />} />
-          </div>
-
-          {/* Yearly：折合每周只要几毛钱，和周订阅的正常价对比 */}
-          <div className="rounded-2xl border border-border bg-card p-6 max-lg:order-2">
-            <span className="inline-block rounded-full bg-green-500/15 px-2.5 py-0.5 text-xs font-semibold text-green-700 mb-2 dark:text-green-400">
-              {t("yearlyBadge")}
-            </span>
-            <h3 className="text-xl font-bold">{t("yearly")}</h3>
-            <div className="mt-4">
-              <span className="text-4xl font-bold"><LocalPrice spec="yearly" /></span>
-              <span className="text-muted-foreground"> {t("yearlyPer")}</span>
-            </div>
-            <p className="mt-1 text-sm font-medium text-primary"><PricedText k="yearlyPerWeek" prices={{ price: "yearlyPerWeek" }} /></p>
-            <ul className="mt-5 space-y-3">
-              <PricingFeature text={t("yearlyFeature1")} />
-              <PricingFeature text={t("yearlyFeature2")} />
-              <PricingFeature text={t("yearlyFeature3")} />
-              <PricingFeature text={t("yearlyFeature4")} />
-            </ul>
-            <PricingButtons product="yearly" variant="outline" label={<>{t("yearlyCta")} · <LocalPrice spec="yearly" /></>} />
+              <span className="text-[13px] font-semibold leading-none text-muted-foreground">Payments secured by</span>
+              <span className="text-[13px] font-bold leading-none text-foreground">Waffo</span>
+            </a>
           </div>
         </div>
-
-        {/* 积分包：一次性付费、不绑订阅，给不想订阅的人。30 积分更划算，折算每份报告的单价写在卡片上 */}
-        <p className="mt-12 text-center text-xs font-medium uppercase tracking-wide text-muted-foreground">{t("orPack")}</p>
-        <div className="mx-auto mt-5 grid max-w-3xl gap-6 sm:grid-cols-2">
-          {(["pack", "pack30"] as const).map((key) => {
-            const { credits } = CREDIT_PACKS[key];
-            return (
-              <div key={key} id={`pricing-${key}-card`} className="relative rounded-2xl border border-border bg-card p-6">
-                {key === "pack30" && (
-                  <span className="absolute -top-3 left-6 rounded-full bg-green-500 px-3 py-0.5 text-xs font-semibold text-white">
-                    <PricedText k="packSaveBadge" prices={{ percent: "pack30:savePercent" }} />
-                  </span>
-                )}
-                <div className="flex items-baseline justify-between gap-3">
-                  <h3 className="text-lg font-bold">{t("packTitle", { credits })}</h3>
-                  <p className="text-2xl font-bold"><LocalPrice spec={key} /></p>
-                </div>
-                <p className="mt-1 text-xs text-muted-foreground">
-                  <PricedText k="packPerReport" prices={{ price: `${key}:perReport` as "pack:perReport" | "pack30:perReport" }} />
-                </p>
-                <ul className="mt-4 space-y-2.5">
-                  <PricingFeature text={t("packFeature1", { credits })} />
-                  <PricingFeature text={t("packFeature2")} />
-                  <PricingFeature text={t("packFeature3")} />
-                </ul>
-                <PricingButtons product={key} variant="outline" label={<PricedText k="packCta" prices={{ price: key }} values={{ credits }} />} />
-              </div>
-            );
-          })}
-        </div>
-        <p className="mt-3 text-center text-xs text-muted-foreground">{t("packNote")}</p>
-
-        {/* 支付信任信息：离购买按钮最近的地方说清「怎么付、安不安全」 */}
-        <PaymentTrust className="mt-5" />
-
-        <RestoreSubscriptionHint className="mx-auto mt-6 max-w-2xl" />
-
-        <p className="mt-4 text-center text-xs text-muted-foreground">{t("billingNote")}</p>
-        {/* 取消入口放在购买前就能看到的地方；普通 <a>：点击时服务端才生成 Waffo 门户链接，next/link 的预取会白白生成 */}
-        <p className="mt-1 text-center text-xs text-muted-foreground">
-          <a href={SUBSCRIPTION_PORTAL_PATH} rel="nofollow" className="font-medium text-primary underline underline-offset-2 hover:text-primary-dark">
-            {t("manageCta")}
-          </a>
-        </p>
-        {/* 底层模型披露 + AI 生成内容标注（支付服务商的 AIGC 合规要求） */}
-        <p className="mt-2 text-center text-xs text-muted-foreground">{t("aiDisclosure")}</p>
-
-        {/* Analysis Types & Credit Cost */}
-        <div className="mt-12 rounded-2xl border border-border bg-card p-6">
-          <h3 className="text-xl font-bold">{t("analysisTypes")}</h3>
-          <p className="mt-1 text-sm text-muted-foreground">{t("analysisTypesDesc")}</p>
-          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {ANALYSIS_OPTIONS.map((a) => (
-              <div key={a.type} className="flex items-center gap-3 rounded-xl border border-border p-3">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10">{a.icon}</span>
-                <div className="flex-1">
-                  <p className="text-sm font-medium">{t(`at_${a.type}`)}</p>
-                </div>
-                <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${a.credits > 1 ? "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300" : "bg-muted text-muted-foreground"}`}>
-                  {a.credits}x
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Trust Guarantees */}
-        <div className="mt-12 rounded-2xl border border-border bg-muted/30 p-6">
-          <h3 className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-wider">{t("guaranteeTitle")}</h3>
-          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="flex items-start gap-3">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" /></svg>
-              </div>
-              <div>
-                <p className="text-sm font-semibold">{t("guaranteeFreeTitle")}</p>
-                <p className="mt-0.5 text-xs text-muted-foreground">{t("guaranteeFreeDesc")}</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
-              </div>
-              <div>
-                <p className="text-sm font-semibold">{t("guaranteeNoAccountTitle")}</p>
-                <p className="mt-0.5 text-xs text-muted-foreground">{t("guaranteeNoAccountDesc")}</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
-              </div>
-              <div>
-                <p className="text-sm font-semibold">{t("guaranteePrivacyTitle")}</p>
-                <p className="mt-0.5 text-xs text-muted-foreground">{t("guaranteePrivacyDesc")}</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
-              </div>
-              <div>
-                <p className="text-sm font-semibold">{t("guaranteeCancelTitle")}</p>
-                <p className="mt-0.5 text-xs text-muted-foreground">{t("guaranteeCancelDesc")}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Payment badge */}
-        <div className="mt-10 flex justify-center">
-          <a
-            href="https://waffo.ai/"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center gap-1.5 rounded-[10px] border border-border bg-muted/50 px-3.5 py-2 transition hover:bg-muted no-underline"
-          >
-            <span className="text-[13px] font-semibold leading-none text-muted-foreground">Payments secured by</span>
-            <span className="text-[13px] font-bold leading-none text-foreground">Waffo</span>
-          </a>
-        </div>
-
-      </div>
-    </section>
-    <PricingStickyBar targetId="pricing-weekly-card" />
-    <PricingViewTracker />
-    </>
+      </section>
+      <PricingViewTracker />
+    </ExtraMessages>
   );
 }
 
-function PricingSvg({ d }: { d: string }) {
-  return <svg className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d={d} /></svg>;
+function ToolGroup({ title, hint, items, className = "", columns = false }: { title: string; hint: string; items: { href: ToolHref; label: string }[]; className?: string; columns?: boolean }) {
+  return (
+    <div className={`rounded-2xl border border-border bg-card p-5 ${className}`}>
+      <h3 className="text-base font-bold">{title}</h3>
+      <p className="mt-0.5 text-xs text-muted-foreground">{hint}</p>
+      <ul className={`mt-4 grid gap-2 ${columns ? "sm:grid-cols-2 lg:grid-cols-3" : ""}`}>
+        {items.map((item) => (
+          <li key={item.href}>
+            <Link
+              href={item.href}
+              className="group flex min-h-11 items-center justify-between gap-2 rounded-lg border border-border px-3 py-2 text-sm font-medium transition hover:border-primary/50 hover:bg-primary/5"
+            >
+              <span>{item.label}</span>
+              <span aria-hidden="true" className="text-muted-foreground transition group-hover:translate-x-0.5 group-hover:text-primary">→</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-const ANALYSIS_OPTIONS: { type: string; icon: React.ReactNode; credits: number }[] = [
-  { type: "color_analysis", icon: <PricingSvg d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />, credits: 1 },
-  { type: "makeup", icon: <PricingSvg d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />, credits: 1 },
-  { type: "face_shape", icon: <PricingSvg d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />, credits: 1 },
-  { type: "hair_preview", icon: <PricingSvg d="M7.848 8.25l1.536.887M7.848 8.25a3 3 0 11-5.196-3 3 3 0 015.196 3zm9.304 0l-1.536.887M17.152 8.25a3 3 0 105.196-3 3 3 0 00-5.196 3zM12 18.75l-3.537-5.29m3.537 5.29l3.537-5.29M12 18.75l-7.5-10.5h15l-7.5 10.5z" />, credits: 1 },
-  { type: "outfit_color", icon: <PricingSvg d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z" />, credits: 1 },
-  { type: "glasses_match", icon: <PricingSvg d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />, credits: 1 },
-  { type: "occasion_makeup", icon: <PricingSvg d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />, credits: 1 },
-  { type: "jewelry_guide", icon: <PricingSvg d="M12 3l8 5v8l-8 5-8-5V8l8-5z" />, credits: 1 },
-  { type: "style_personality", icon: <PricingSvg d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />, credits: 1 },
-  { type: "celebrity_match", icon: <PricingSvg d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />, credits: 1 },
-  { type: "glow_up_report", icon: <PricingSvg d="M3 18l3-12 6 6 6-6 3 12H3z" />, credits: 3 },
-];
-
-function PricingFeature({ text }: { text: string }) {
+function Feature({ text }: { text: string }) {
   return (
-    <li className="flex items-center gap-2 text-sm">
-      <svg
-        className="h-4 w-4 shrink-0 text-primary"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
+    <li className="flex items-start gap-2 text-sm">
+      <svg className="mt-0.5 h-4 w-4 shrink-0 text-primary" fill="currentColor" viewBox="0 0 20 20">
         <path
           fillRule="evenodd"
           d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -359,4 +299,3 @@ function PricingFeature({ text }: { text: string }) {
     </li>
   );
 }
-

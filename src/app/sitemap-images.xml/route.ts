@@ -53,62 +53,61 @@ const REPORT_IMAGES: Record<string, { image: string; title: string; caption: str
   "/makeup-analysis": {
     image: "/images/examples/report_makeup.webp",
     title: "AI Makeup Analysis Report",
-    caption: "Personalized makeup report with lip color, eyeshadow, blush, and foundation recommendations based on your skin tone",
+    caption: "Makeup result with three complete looks, exact lip, cheek and eye shades, and each look shown on the sample selfie",
   },
   "/face-shape-analysis": {
     image: "/images/examples/report_face_shape.webp",
     title: "AI Face Shape Analysis Report",
-    caption: "Face shape analysis report with hairstyle, glasses, and makeup contouring recommendations",
+    caption: "Face shape result with haircuts that balance your face shape and suit your color season, shown on the sample selfie",
   },
   "/hair-color-analysis": {
     image: "/images/examples/report_hair_preview.webp",
     title: "AI Hair Color Preview Report",
-    caption: "Hair color preview showing recommended shades based on your skin undertone and color season",
+    caption: "Hair color preview: the same cut in four colors, from the best match to the one to skip, shown on the sample selfie",
   },
   "/outfit-color-analysis": {
     image: "/images/examples/report_outfit_color.webp",
     title: "AI Outfit Color Analysis Report",
-    caption: "Outfit color analysis showing which clothing colors complement your complexion and which to avoid",
+    caption: "Palette outfits built from your best colors, with the shades named for each look",
   },
   "/glasses-analysis": {
     image: "/images/examples/report_glasses_match.webp",
     title: "AI Glasses Recommendation Report",
-    caption: "Glasses frame recommendations based on face shape analysis with virtual try-on results",
+    caption: "Eyeglass frames chosen for your face shape and coloring, rated best, good or avoid and shown on the sample selfie",
   },
   "/occasion-makeup": {
     image: "/images/examples/report_occasion_makeup.webp",
     title: "AI Occasion Makeup Report",
-    caption: "Event-specific makeup look generated for your features — date night, wedding, interview, and more",
+    caption: "Occasion looks with makeup, hair and top styled for each event, such as work or date night, shown on the sample selfie",
   },
   "/jewelry-analysis": {
     image: "/images/examples/report_jewelry_guide.webp",
     title: "AI Jewelry Guide Report",
-    caption: "Jewelry and accessory recommendations based on your skin tone, face shape, and color season",
+    caption: "Jewelry match: the metals that flatter you and the earring shapes that suit your face, shown on the sample selfie",
   },
   "/glow-up-report": {
     image: "/images/examples/report_glow_up_report.webp",
     title: "AI Glow-Up Report",
-    caption: "Complete personal styling analysis covering color season, face shape, hair, makeup, glasses, jewelry, and wardrobe",
+    caption: "Glow-up result: your best version side by side with the original, with the changes explained step by step",
   },
   "/style-personality": {
     image: "/images/examples/report_style_personality.webp",
     title: "AI Style Personality Report",
-    caption: "Style personality archetype analysis with personalized fashion, aesthetic, and styling profile",
+    caption: "Style personality result: your style archetype, the thread that ties your looks together, and example outfits",
   },
   "/celebrity-match": {
-    image: "/images/examples/report_celebrity_match.webp",
-    title: "AI Celebrity Match Report",
-    caption: "Celebrity style twin match based on facial features, coloring, and style potential",
+    image: "/images/examples/report_celebrity_season.webp",
+    title: "Celebrities in your color season",
+    caption: "Sample color report chapter listing celebrities who share the same 12-season type, with their best colors and a makeup palette",
   },
 };
 
+// 首页「查看效果」里的三张成品：同一张自拍生成的色彩报告海报、彩妆结果页、脸型发型结果页
 const SHOWCASE_IMAGES = [
-  { url: "/images/showcase/before-color.webp", title: "Color Analysis — Before", caption: "Before personal color analysis: wearing colors that clash with natural skin undertone" },
-  { url: "/images/showcase/after-color.webp", title: "Color Analysis — After", caption: "After personal color analysis: wearing harmonious seasonal colors that brighten the complexion" },
-  { url: "/images/showcase/before-face.webp", title: "Face Shape Styling — Before", caption: "Before face shape analysis: hairstyle not optimized for face proportions" },
-  { url: "/images/showcase/after-face.webp", title: "Face Shape Styling — After", caption: "After face shape analysis: hairstyle tailored to complement face shape" },
-  { url: "/images/showcase/before-makeup.webp", title: "Makeup — Before", caption: "Before AI makeup analysis: generic makeup not matched to skin tone" },
-  { url: "/images/showcase/after-makeup.webp", title: "Makeup — After", caption: "After AI makeup analysis: personalized makeup colors enhancing natural features" },
+  { url: "/images/showcase/before-color.webp", title: "Sample selfie", caption: "The sample selfie used for the example results on this page" },
+  { url: "/images/examples/report_color_analysis.webp", title: "Color Analysis — Sample Report", caption: "Sample personal color analysis report: color season, best colors, neutrals and colors to avoid" },
+  { url: "/images/examples/report_makeup.webp", title: "Makeup — Sample Result", caption: "Sample makeup result: three complete looks with exact lip, cheek and eye shades shown on the sample selfie" },
+  { url: "/images/examples/report_face_shape.webp", title: "Face Shape & Hair — Sample Result", caption: "Sample face shape result: haircuts matched to the face shape, shown on the sample selfie" },
 ];
 
 export async function GET() {

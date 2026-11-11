@@ -35,8 +35,15 @@ export function embedSrc(locale: string, quiz: EmbedQuiz): string {
 }
 
 /** 从嵌入页链回主站时统一带的 UTM，在 GA 里能和站内自然流量分开 */
-export function embedOutboundUrl(locale: string, path: string, quiz: EmbedQuiz): string {
-  return `${canonicalUrl(locale, path)}?utm_source=embed&utm_medium=quiz_embed&utm_campaign=${quiz}`;
+export function embedOutboundUrl(
+  locale: string,
+  path: string,
+  quiz: EmbedQuiz,
+  /** 目标页自己的查询参数（例如 /try 的 type=face_shape），写在 UTM 前面 */
+  query?: Record<string, string>,
+): string {
+  const own = query ? new URLSearchParams(query).toString() : "";
+  return `${canonicalUrl(locale, path)}?${own ? `${own}&` : ""}utm_source=embed&utm_medium=quiz_embed&utm_campaign=${quiz}`;
 }
 
 /**

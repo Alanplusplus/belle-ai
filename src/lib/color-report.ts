@@ -78,6 +78,9 @@ export function signatureOrder(signature: ReportSignature | undefined, count: nu
   return order;
 }
 
+/** 未解锁时免费露出的推荐色个数（报告页和付费弹窗的预览共用） */
+export const FREE_SWATCHES = 3;
+
 /** 浏览器里记住用户的季型（报告页写入，买前扫一扫读取） */
 export const MY_SEASON_KEY = "belle_my_season";
 

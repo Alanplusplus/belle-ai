@@ -1,6 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { FeatureHero } from "@/components/FeatureHero";
+import { FunnelLink } from "@/components/FunnelLink";
+import { sampleHref } from "@/lib/blogTools";
 import { SITE_URL } from "@/lib/constants";
 import {
   buildAlternates,
@@ -201,9 +203,9 @@ export default async function ColorAnalysisPillarPage({
             <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
               {t("tryFreeAI")}
             </Link>
-            <Link href="/tools/color-quiz" className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted">
-              {t("takeFreeQuiz")}
-            </Link>
+            <FunnelLink href={sampleHref("color_analysis")} from="feature" tool="color_analysis" kind="sample" className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted">
+              {tp("trySample")}
+            </FunnelLink>
           </>
         }
       />
@@ -543,9 +545,9 @@ export default async function ColorAnalysisPillarPage({
             <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
               {t("startFreeAnalysis")}
             </Link>
-            <Link href="/tools/color-quiz" className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted">
-              {t("takeFreeQuizAlt")}
-            </Link>
+            <FunnelLink href={sampleHref("color_analysis")} from="feature" tool="color_analysis" kind="sample" className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted">
+              {tp("trySample")}
+            </FunnelLink>
           </div>
         </section>
       </div>

@@ -47,7 +47,7 @@ image: "/images/blog/deep-winter-color-palette.webp"
 - 딥 올리브(골든 올리브가 아닌 쿨 버전)
 - 파인 그린
 
-![딥 윈터 컬러 스와치](/images/blog/deep-winter-palette-swatches.webp)
+![딥 윈터 컬러 스와치](/palette-cards/deep-winter.png)
 
 ### 액센트 컬러
 

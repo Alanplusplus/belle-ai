@@ -46,7 +46,7 @@ Tonos versátiles que siempre favorecen:
 - Oliva profunda (la versión fría, no oliva dorada)
 - Verde pino
 
-![Muestras de la paleta Invierno Profundo](/images/blog/deep-winter-palette-swatches.webp)
+![Muestras de la paleta Invierno Profundo](/palette-cards/deep-winter.png)
 
 ### Colores de acento
 

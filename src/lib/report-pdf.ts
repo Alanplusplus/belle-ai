@@ -6,10 +6,19 @@
  *
  * - 不依赖 PDF 库：每页是一张 JPEG，自己写最小的 PDF 容器。
  * - 分页只在「内容块之间」断开：章节标题 / 小标题不会落在页底，带边框的卡片不会被切开。
- * - 用户照片经 /api/photo 转成同源地址再截，否则 OSS 没有 CORS 头会截不到。
+ * - 用户照片和 Lookbook 的小图经 /api/photo 转成同源地址再截，否则 OSS 没有 CORS 头会截不到。
+ * - Lookbook 单独截：报告本身一整张图再加上几十张图会超过手机浏览器的画布上限，
+ *   所以 Lookbook 按「章节」一块一块截，再按 A4 一页页排进去（章节不会被切开），页序和页面上一致（夹在同季名人和彩妆之间）。
+ *   横滑卡片展开成多行，前后对比的滑块改成左右并排；按钮、生成进度、占位这些交互元素不进 PDF。
  */
 
-const UPLOAD_HOST = "pic.chibistyle.app";
+import { isMobileDevice } from "./device";
+
+/** 经 /api/photo 代理的图片：主机 + 路径前缀，要和 api/photo/route.ts 的放行范围一致 */
+const PROXIED_PHOTOS: { host: string; prefix: string }[] = [
+  { host: "pic.chibistyle.app", prefix: "/image/upload/" },
+  { host: "static.picraft.ai", prefix: "/lookbook/" },
+];
 const PAPER = "#FFFCF8";
 
 // A4，单位 pt
@@ -33,7 +42,7 @@ async function fetchPhoto(url: string): Promise<string | false> {
   } catch {
     return false;
   }
-  if (parsed.hostname !== UPLOAD_HOST) return false;
+  if (!PROXIED_PHOTOS.some((rule) => rule.host === parsed.hostname && parsed.pathname.startsWith(rule.prefix))) return false;
   try {
     const res = await fetch(`/api/photo?u=${encodeURIComponent(parsed.toString())}`);
     if (!res.ok) return false;
@@ -94,10 +103,10 @@ function findBreakPoints(article: HTMLElement, base: number): number[] {
     .sort((a, b) => a - b);
 }
 
-/** 按页高把 [0, end] 切成若干段，只在断点处断开；找不到合适断点时才硬切 */
-function paginate(end: number, pageHeight: number, points: number[]): [number, number][] {
+/** 按页高把 [from, end] 切成若干段，只在断点处断开；找不到合适断点时才硬切 */
+function paginate(from: number, end: number, pageHeight: number, points: number[]): [number, number][] {
   const pages: [number, number][] = [];
-  let start = 0;
+  let start = from;
   while (end - start > 1) {
     const limit = start + pageHeight;
     if (limit >= end) {
@@ -248,27 +257,79 @@ export async function renderReportPdf(article: HTMLElement, title = "Belle AI Co
   if (document.fonts?.ready) await document.fonts.ready;
 
   const { host, clone } = await mountExportClone(article);
+  let lookbookHost: HTMLElement | null = null;
   try {
-    const rect = clone.getBoundingClientRect();
-    const points = findBreakPoints(clone, rect.top);
+    // Lookbook 先量好它在报告里的位置，再从主体里拿出来单独渲染；主体剩下的部分连成一整张
+    let lookbookAt = 0;
+    let lookbookBlocks: HTMLElement[] = [];
+    const lookbook = clone.querySelector<HTMLElement>("#report-lookbook");
+    const lensChapter = lookbook && clone.hasAttribute("data-lens-article") ? lookbook.querySelector<HTMLElement>("[data-lookbook-sheet]") : null;
+    if (lookbook && lensChapter) {
+      // 独立工具：文章里只有刊头（工具名 / 季型）+ 这一章。刊头放进章节最前面，和图片排在同一页（单独成块会独占一页）
+      const first = lensChapter.firstChild;
+      Array.from(clone.children)
+        .filter((child) => child !== lookbook && !!(child.compareDocumentPosition(lookbook) & Node.DOCUMENT_POSITION_FOLLOWING))
+        .forEach((child) => {
+          const el = child as HTMLElement;
+          el.style.marginLeft = "0";
+          el.style.marginRight = "0";
+          el.style.paddingLeft = "0";
+          el.style.paddingRight = "0";
+          lensChapter.insertBefore(el, first);
+        });
+    }
+    if (lookbook) {
+      lookbookAt = lookbook.getBoundingClientRect().top - clone.getBoundingClientRect().top;
+      lookbookHost = mountLookbookShell(article, lookbook);
+      lookbookBlocks = prepareLookbook(lookbook);
+      await nextFrame();
+      await nextFrame();
+    }
 
-    const scale = Math.min(2.5, Math.max(1.4, Math.sqrt(MAX_PIXELS / (rect.width * rect.height))));
-    const canvas = await domToCanvas(clone, {
-      scale,
-      backgroundColor: PAPER,
-      fetchFn: fetchPhoto,
-    });
-    return await paginateToPdf(canvas, rect.width, points, title);
+    const rect = clone.getBoundingClientRect();
+    // 独立工具：刊头已经并进章节，主体里什么都不剩，不用再截图（高度为 0 的元素也截不出图）
+    const bodyEmpty = !!lensChapter && rect.height < 48;
+    let before: PdfPage[] = [];
+    let after: PdfPage[] = [];
+    let lookbookPages: PdfPage[] = [];
+
+    if (bodyEmpty) {
+      lookbookPages = await renderLookbookPages(domToCanvas, lookbookBlocks, lookbookHost!);
+    } else {
+      const points = findBreakPoints(clone, rect.top);
+      const scale = Math.min(2.5, Math.max(1.4, Math.sqrt(MAX_PIXELS / (rect.width * rect.height))));
+      const canvas = await domToCanvas(clone, {
+        scale,
+        backgroundColor: PAPER,
+        fetchFn: fetchPhoto,
+      });
+      const total = canvas.height / (canvas.width / rect.width);
+      lookbookPages = lookbookBlocks.length ? await renderLookbookPages(domToCanvas, lookbookBlocks, lookbookHost!) : [];
+
+      // 页序：Lookbook 之前的报告 → Lookbook → 之后的报告
+      const split = lookbookPages.length ? Math.min(Math.max(lookbookAt, 0), total) : total;
+      before = await slicePages(canvas, rect.width, points, 0, split);
+      after = split < total - 1 ? await slicePages(canvas, rect.width, points, split, total) : [];
+      canvas.width = 0;
+      canvas.height = 0;
+    }
+
+    const pages = [...before, ...lookbookPages, ...after];
+    if (pages.length === 0) throw new Error("empty report");
+    return buildPdf(pages, title);
   } finally {
     host.remove();
+    lookbookHost?.remove();
   }
 }
 
-async function paginateToPdf(canvas: HTMLCanvasElement, widthCss: number, points: number[], title: string): Promise<Blob> {
+const pageHeightCssOf = (widthCss: number) => ((PAGE_H - MARGIN_TOP - MARGIN_BOTTOM) / (PAGE_W - MARGIN_X * 2)) * widthCss;
+
+/** 把整张截图的 [from, to]（CSS 像素）按 A4 切成页 */
+async function slicePages(canvas: HTMLCanvasElement, widthCss: number, points: number[], rangeFrom: number, rangeTo: number): Promise<PdfPage[]> {
   const pxPerCss = canvas.width / widthCss;
   const drawW = PAGE_W - MARGIN_X * 2;
-  const pageHeightCss = ((PAGE_H - MARGIN_TOP - MARGIN_BOTTOM) / drawW) * widthCss;
-  const slices = paginate(canvas.height / pxPerCss, pageHeightCss, points);
+  const slices = paginate(rangeFrom, Math.min(rangeTo, canvas.height / pxPerCss), pageHeightCssOf(widthCss), points);
 
   const pages: PdfPage[] = [];
   for (const [from, to] of slices) {
@@ -288,11 +349,183 @@ async function paginateToPdf(canvas: HTMLCanvasElement, widthCss: number, points
     slice.width = 0;
     slice.height = 0;
   }
-  canvas.width = 0;
-  canvas.height = 0;
-  if (pages.length === 0) throw new Error("empty report");
+  return pages;
+}
 
-  return buildPdf(pages, title);
+/** Lookbook 的渲染倍数：小图本身约 800 像素宽，1.6 倍足够清晰，PDF 体积也不会太大 */
+const LOOKBOOK_SCALE = 1.6;
+
+/** 给 Lookbook 一个屏外的壳：沿用报告外层的 class（字体、颜色变量、.rp-label 等样式都挂在上面），宽度和报告一致 */
+function mountLookbookShell(article: HTMLElement, lookbook: HTMLElement): HTMLElement {
+  const host = document.createElement("div");
+  host.setAttribute("aria-hidden", "true");
+  host.style.cssText = `position:fixed;left:-100000px;top:0;width:${EXPORT_WIDTH}px;pointer-events:none;`;
+  const shell = article.cloneNode(false) as HTMLElement;
+  shell.style.borderColor = "transparent";
+  shell.style.borderRadius = "0";
+  shell.style.boxShadow = "none";
+  shell.appendChild(lookbook);
+  host.appendChild(shell);
+  document.body.appendChild(host);
+  return host;
+}
+
+/**
+ * 把页面上的 Lookbook 整理成适合印在纸上的样子，返回要逐块截图的元素（顶部标题块 + 每个出了图的章节）。
+ * 没有一张图的章节（还在生成 / 失败）整个不放，免得留下只有标题的空章节。
+ */
+function prepareLookbook(lookbook: HTMLElement): HTMLElement[] {
+  // 正在重新生成的章节：旧图照常放，不要带淡出效果
+  lookbook.querySelectorAll<HTMLElement>("[aria-busy]").forEach((el) => {
+    el.style.opacity = "1";
+  });
+  lookbook.querySelectorAll("[data-lookbook-sheet]").forEach((el) => {
+    if (!el.querySelector("img")) el.remove();
+  });
+  const chapters = Array.from(lookbook.querySelectorAll<HTMLElement>("[data-lookbook-sheet]"));
+  if (chapters.length === 0) return [];
+
+  // 横滑卡片（彩妆 / 穿搭 / 场合）：纸上不能滑，改成一行三张、必要时多行
+  lookbook.querySelectorAll<HTMLElement>("[data-pdf-wrap]").forEach((rail) => {
+    rail.style.overflow = "visible";
+    rail.style.flexWrap = "wrap";
+    rail.style.marginLeft = "0";
+    rail.style.marginRight = "0";
+    rail.style.paddingLeft = "0";
+    rail.style.paddingRight = "0";
+    Array.from(rail.children).forEach((card) => {
+      (card as HTMLElement).style.cssText += ";width:calc(33.333% - 8px);flex:0 0 auto;";
+    });
+  });
+
+  // 前后对比：纸上没法拖，改成「之前 | 之后」左右并排
+  lookbook.querySelectorAll<HTMLElement>("[data-pdf-compare]").forEach((box) => {
+    const images = Array.from(box.querySelectorAll("img"));
+    if (images.length < 2) return;
+    const wrap = document.createElement("div");
+    wrap.style.cssText = "display:flex;gap:10px;";
+    images.forEach((img) => {
+      const figure = document.createElement("figure");
+      figure.style.cssText = `position:relative;flex:1 1 0;margin:0;overflow:hidden;border-radius:16px;aspect-ratio:${box.style.aspectRatio || "3 / 4"};`;
+      img.style.cssText = "position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;clip-path:none;";
+      figure.appendChild(img);
+      const tag = document.createElement("span");
+      tag.textContent = img.alt;
+      tag.style.cssText =
+        "position:absolute;left:10px;bottom:10px;border-radius:999px;background:rgba(0,0,0,.5);color:#fff;font-size:12px;font-weight:700;padding:2px 10px;";
+      figure.appendChild(tag);
+      wrap.appendChild(figure);
+    });
+    box.replaceWith(wrap);
+  });
+
+  chapters.forEach((chapter) => {
+    chapter.style.paddingTop = "24px";
+  });
+
+  // 标题块（分隔线 / 小标题 / 大标题 / 导语）：章节容器之前的所有内容，包成一块
+  const container = chapters[0].parentElement as HTMLElement;
+  const head = document.createElement("div");
+  Array.from(lookbook.children)
+    .filter((child) => child !== container && !!(child.compareDocumentPosition(container) & Node.DOCUMENT_POSITION_FOLLOWING))
+    .forEach((child) => head.appendChild(child));
+  lookbook.insertBefore(head, container);
+  return [head, ...chapters];
+}
+
+type DomToCanvas = typeof import("modern-screenshot").domToCanvas;
+
+/** 逐块截图，再按 A4 一页页排：一块放不下就换页，章节不会被切开；比一页还高的块等比缩小到刚好一页 */
+async function renderLookbookPages(domToCanvas: DomToCanvas, blocks: HTMLElement[], host: HTMLElement): Promise<PdfPage[]> {
+  const shell = host.firstElementChild as HTMLElement;
+  const shellRect = shell.getBoundingClientRect();
+  const widthCss = shellRect.width;
+  const pageHeightCss = pageHeightCssOf(widthCss);
+  const drawW = PAGE_W - MARGIN_X * 2;
+
+  const pages: PdfPage[] = [];
+  // 当前正在排的这一页：画布 + 已用高度（CSS 像素）
+  let sheet: { canvas: HTMLCanvasElement; ctx: CanvasRenderingContext2D; used: number } | null = null;
+
+  const newSheet = () => {
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.round(widthCss * LOOKBOOK_SCALE);
+    canvas.height = Math.round(pageHeightCss * LOOKBOOK_SCALE);
+    const ctx = canvas.getContext("2d");
+    if (!ctx) throw new Error("canvas unsupported");
+    ctx.fillStyle = PAPER;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    return { canvas, ctx, used: 0 };
+  };
+  const flush = async (done: { canvas: HTMLCanvasElement }) => {
+    const jpeg = await canvasToJpeg(done.canvas, 0.9);
+    pages.push({ jpeg, width: done.canvas.width, height: done.canvas.height, drawW, drawH: (done.canvas.height / done.canvas.width) * drawW });
+    done.canvas.width = 0;
+    done.canvas.height = 0;
+  };
+
+  for (const block of blocks) {
+    const rect = block.getBoundingClientRect();
+    if (rect.height < 1) continue;
+    const canvas = await domToCanvas(block, { scale: LOOKBOOK_SCALE, backgroundColor: PAPER, fetchFn: fetchPhoto });
+    const fit = rect.height > pageHeightCss ? pageHeightCss / rect.height : 1;
+    const h = rect.height * fit;
+    if (sheet && sheet.used > 0 && sheet.used + h > pageHeightCss) {
+      await flush(sheet);
+      sheet = null;
+    }
+    if (!sheet) sheet = newSheet();
+    const dx = (rect.left - shellRect.left + (rect.width * (1 - fit)) / 2) * LOOKBOOK_SCALE;
+    sheet.ctx.drawImage(canvas, dx, sheet.used * LOOKBOOK_SCALE, rect.width * fit * LOOKBOOK_SCALE, h * LOOKBOOK_SCALE);
+    sheet.used += h;
+    canvas.width = 0;
+    canvas.height = 0;
+  }
+  if (sheet) await flush(sheet);
+  return pages;
+}
+
+/** 取一张图的 Blob：先走同源代理（OSS 没有 CORS 头，直接 fetch 会失败），代理不认的地址再直接取 */
+async function fetchPhotoBlob(url: string): Promise<Blob | null> {
+  try {
+    const proxied = await fetchPhoto(url);
+    const res = await fetch(proxied || url);
+    return res.ok ? await res.blob() : null;
+  } catch {
+    return null;
+  }
+}
+
+const extOf = (type: string) => (type.includes("png") ? "png" : type.includes("webp") ? "webp" : "jpg");
+
+/**
+ * 保存照片：手机上走系统分享面板（可以一次把几张都「存储到相册」），桌面浏览器逐张下载。
+ * 返回 shared（用户走完或取消了分享面板）/ downloaded / failed（一张也没取到）。
+ */
+export async function savePhotos(urls: string[], baseName: string): Promise<"shared" | "downloaded" | "failed"> {
+  const files: File[] = [];
+  for (let i = 0; i < urls.length; i++) {
+    const blob = await fetchPhotoBlob(urls[i]);
+    if (!blob) continue;
+    const type = blob.type || "image/jpeg";
+    files.push(new File([blob], `${baseName}-${i + 1}.${extOf(type)}`, { type }));
+  }
+  if (files.length === 0) return "failed";
+
+  if (isMobileDevice() && typeof navigator.share === "function" && navigator.canShare?.({ files })) {
+    try {
+      await navigator.share({ files });
+      return "shared";
+    } catch (err) {
+      if (err instanceof DOMException && err.name === "AbortError") return "shared"; // 用户主动取消
+    }
+  }
+  for (const file of files) {
+    downloadBlob(file, file.name);
+    // 浏览器对连续下载有节流，隔一小会儿再触发下一张
+    if (files.length > 1) await new Promise((resolve) => window.setTimeout(resolve, 400));
+  }
+  return "downloaded";
 }
 
 /** 触发浏览器下载（桌面 / 手机浏览器都走 <a download>；iOS 13+ 也支持 blob 下载） */

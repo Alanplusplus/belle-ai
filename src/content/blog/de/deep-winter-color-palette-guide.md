@@ -46,7 +46,7 @@ Vielseitige Töne, die immer schmeichelhaft sind:
 - Tiefes Olivgrün (die kühle Version, nicht golden-oliv)
 - Tannengrün
 
-![Tiefer Winter Farbpaletten-Farbfelder](/images/blog/deep-winter-palette-swatches.webp)
+![Tiefer Winter Farbpaletten-Farbfelder](/palette-cards/deep-winter.png)
 
 ### Akzentfarben
 

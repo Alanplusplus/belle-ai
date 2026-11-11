@@ -5,6 +5,7 @@ import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
 import { SectionNav } from "@/components/SectionNav";
 import { Link } from "@/i18n/navigation";
+import { ResultCta } from "@/components/ResultCta";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import { GUIDE_TOPICS, GUIDE_SLUGS } from "@/lib/guide-data";
@@ -102,6 +103,8 @@ function GuideTopicContent({ slug }: { slug: string }) {
       <SectionNav />
 
       <div className="content-page mx-auto max-w-4xl px-4">
+        <ResultCta type="color_analysis" from="guide" className="mt-8" />
+
         {/* Sections */}
         {data.sections.map((section, idx) => (
           <section key={idx} className={`py-12 ${idx > 0 ? "border-t border-border" : ""}`}>

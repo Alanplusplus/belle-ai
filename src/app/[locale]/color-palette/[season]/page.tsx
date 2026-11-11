@@ -6,6 +6,9 @@ import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, canonicalUrl, ogLocale } from "@/lib/seo";
 import { PaletteCardDownload, PaletteCardImage, PaletteCardLarge } from "@/components/PaletteCardImage";
 import { PageHero } from "@/components/PageHero";
+import { FunnelLink } from "@/components/FunnelLink";
+import { ResultCta } from "@/components/ResultCta";
+import { sampleHref } from "@/lib/blogTools";
 import { SectionNav } from "@/components/SectionNav";
 import { ParentArchTrio, SeasonPhotoCollage } from "@/components/SeasonHeroVisuals";
 import { ColorTextList } from "@/components/ColorTextList";
@@ -154,7 +157,7 @@ export default async function SeasonPalettePage({
 function SeasonPaletteContent({ slug }: { slug: string }) {
   const t = useTranslations("seasonPalette");
   const sd = useTranslations(`sd.${slug}`);
-  const qt = useTranslations("quiz");
+  const tp = useTranslations("tryPage");
   const bt = useTranslations("blogTitles");
   const ph = useTranslations("paletteHub");
 
@@ -235,9 +238,9 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
             <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-7 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
               {t("getMyAnalysis")}
             </Link>
-            <Link href="/tools/color-quiz" className="rounded-full border-2 border-primary/70 bg-white/70 px-7 py-[10px] font-semibold text-primary-dark transition hover:border-primary hover:bg-primary/10">
-              {qt("startQuiz")}
-            </Link>
+            <FunnelLink href={sampleHref("color_analysis", slug)} from="palette" tool="color_analysis" kind="sample" className="rounded-full border-2 border-primary/70 bg-white/70 px-7 py-[10px] font-semibold text-primary-dark transition hover:border-primary hover:bg-primary/10">
+              {tp("trySample")}
+            </FunnelLink>
           </>
         }
         visual={<SeasonPhotoCollage slug={slug} faceAlt={ph("photoAlt", { season: displayName })} />}
@@ -285,6 +288,9 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
             </div>
           </div>
         </section>
+
+        {/* 看完通用色板后的转化点：这是「这个季型」的色板，你自己的那份报告长这样 */}
+        <ResultCta type="color_analysis" from="palette" className="my-2" />
 
         {/* Makeup */}
         <section className="border-t border-border py-12">
@@ -378,9 +384,9 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
             <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
               {t("getMyAnalysis")}
             </Link>
-            <Link href="/tools/color-quiz" className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted">
-              {qt("startQuiz")}
-            </Link>
+            <FunnelLink href={sampleHref("color_analysis", slug)} from="palette" tool="color_analysis" kind="sample" className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted">
+              {tp("trySample")}
+            </FunnelLink>
           </div>
         </section>
 
@@ -433,7 +439,7 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
 function ParentSeasonContent({ parent }: { parent: string }) {
   const t = useTranslations("seasonHub");
   const sh = useTranslations(`sh.${parent}`);
-  const qt = useTranslations("quiz");
+  const tp = useTranslations("tryPage");
   const bt = useTranslations("blogTitles");
   const ph = useTranslations("paletteHub");
   const st = useTranslations("seasonPalette");
@@ -482,9 +488,9 @@ function ParentSeasonContent({ parent }: { parent: string }) {
             <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-7 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
               {t("getAnalysis")}
             </Link>
-            <Link href="/tools/color-quiz" className="rounded-full border-2 border-primary/70 bg-white/70 px-7 py-[10px] font-semibold text-primary-dark transition hover:border-primary hover:bg-primary/10">
-              {qt("startQuiz")}
-            </Link>
+            <FunnelLink href={sampleHref("color_analysis", parent)} from="palette" tool="color_analysis" kind="sample" className="rounded-full border-2 border-primary/70 bg-white/70 px-7 py-[10px] font-semibold text-primary-dark transition hover:border-primary hover:bg-primary/10">
+              {tp("trySample")}
+            </FunnelLink>
           </>
         }
         visual={<ParentArchTrio slugs={subSeasons.map((x) => x.slug)} />}
@@ -518,6 +524,8 @@ function ParentSeasonContent({ parent }: { parent: string }) {
             </div>
           </div>
         </section>
+
+        <ResultCta type="color_analysis" from="palette" className="my-2" />
 
         {/* Sub-Seasons */}
         <section className="border-t border-border py-12">
@@ -570,9 +578,9 @@ function ParentSeasonContent({ parent }: { parent: string }) {
             <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
               {t("getAnalysis")}
             </Link>
-            <Link href="/tools/color-quiz" className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted">
-              {qt("startQuiz")}
-            </Link>
+            <FunnelLink href={sampleHref("color_analysis", parent)} from="palette" tool="color_analysis" kind="sample" className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted">
+              {tp("trySample")}
+            </FunnelLink>
           </div>
         </section>
 

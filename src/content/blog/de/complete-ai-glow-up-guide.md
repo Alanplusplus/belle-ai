@@ -56,7 +56,7 @@ Es geht nicht darum, zu ändern, wer Sie sind. Es geht darum zu verstehen, was b
 
 **Professionelle Farbanalyse:** 150-300 $ pro Session, deckt nur Farbe ab
 **Professioneller Personal Stylist:** 200-500 $/Stunde, mehrere Sessions nötig
-**KI-Glow-Up-Report:** Alle 8 Dimensionen in einem visuellen Report, in 60 Sekunden generiert
+**KI-Glow-Up-Report:** Ein Vorher-Nachher Ihrer besten Version mit vier Änderungen, gezeichnet auf Ihrem eigenen Foto
 
 KI ersetzt keine menschlichen Stylisten — sie demokratisiert den Zugang. Nicht jeder kann sich eine 2.000-$-Image-Beratung leisten. Aber jeder verdient zu wissen, was ihm schmeichelt.
 
@@ -80,9 +80,9 @@ KI hat keine solche Voreingenommenheit. Sie bewertet Ihre aktuellen Merkmale obj
 
 ---
 
-## Premium-Glow-Up-Report ausprobieren
+## Glow-Up-Report ausprobieren
 
-Unser Premium-Glow-Up-Report vereint alle 8 Styling-Dimensionen in einem umfassenden visuellen Report. Wie ein komplettes Personal-Styling-Team, das Ihr Foto analysiert — Farbberater, Friseur, Make-up-Artist, Brillen-Spezialist und Personal Shopper — alles in einer 60-Sekunden-KI-Beratung.
+Der Glow-Up-Report wählt anhand Ihres Farbtyps vier Änderungen aus (Haarfarbe, Make-up, Oberteil und Accessoire) und zeigt Ihre beste Version auf Ihrem eigenen Foto, mit Regler zum Vergleichen. Der schriftliche Plan ist kostenlos, das Vorher-Nachher-Foto kostet 1 Credit. Für Ihre komplette Palette enthält der [Farbbericht](/de/personal-color-analysis) alle besten Farben, Neutraltöne und zu meidenden Farben.
 
 ## Verwandte Artikel
 

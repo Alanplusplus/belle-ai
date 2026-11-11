@@ -1,5 +1,5 @@
 /**
- * 首次触点归因：把落地页上的 UTM / ref / 来源站点存到 localStorage，
+ * 首次触点归因：把落地页上的 UTM / 来源站点存到 localStorage，
  * 结算时随订单 metadata 一起传给 Waffo，webhook 里再用它给 GA4 补发服务端 purchase 事件。
  * 只保留「第一次」带来源的访问（first-touch），避免用户后面直接访问把来源覆盖掉。
  */
@@ -13,7 +13,6 @@ export interface Attribution {
   utm_campaign?: string;
   /** 广告 / Pin 素材编号（独立 Pin 池用它标记是哪一张图、哪个钩子） */
   utm_content?: string;
-  ref?: string;
   /** 外部来源站点的 host，例如 www.google.com / www.pinterest.com */
   referrer_host?: string;
   /** 首次落地页路径（不含 query） */
@@ -57,20 +56,14 @@ export function captureAttribution(): void {
       utm_medium: clean(params.get("utm_medium")),
       utm_campaign: clean(params.get("utm_campaign")),
       utm_content: clean(params.get("utm_content")),
-      ref: clean(params.get("ref")),
       referrer_host: externalReferrerHost(),
     };
     const hasSignal = Object.values(current).some(Boolean);
     if (!hasSignal) return;
 
+    // 已有 UTM / 外部来源的首次触点不覆盖
     const stored = readStored();
-    // 已有 UTM / 外部来源的首次触点不覆盖；但之后拿到邀请码时要补上 ref
-    if (stored && (stored.utm_source || stored.referrer_host || stored.ref)) {
-      if (current.ref && !stored.ref) {
-        localStorage.setItem(ATTR_KEY, JSON.stringify({ ...stored, ref: current.ref }));
-      }
-      return;
-    }
+    if (stored && (stored.utm_source || stored.referrer_host)) return;
 
     const next: Attribution = {
       ...current,

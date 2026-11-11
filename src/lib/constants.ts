@@ -1,92 +1,82 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.aicoloranalysis.io";
 
+/**
+ * 在售商品：色彩套装（一份完整色彩报告 + 积分）+ 任何人都能买的积分加购包。都是一次性付费，没有订阅。
+ * 商品 ID 取自环境变量 WAFFO_PRODUCT_KIT / WAFFO_PRODUCT_ADDON（先在 Waffo 后台建好商品，价格见 CREDIT_PACKS）。
+ */
 export const WAFFO_PRODUCTS = {
-  weekly: { id: process.env.WAFFO_PRODUCT_WEEKLY!, type: "subscription" as const },
-  yearly: { id: process.env.WAFFO_PRODUCT_YEARLY!, type: "subscription" as const },
-  /** 一次性积分包：用积分生成 / 解锁的报告才是完整无打码的（不是永久解锁） */
-  pack: { id: process.env.WAFFO_PRODUCT_PACK!, type: "onetime" as const },
-  /** 大号积分包（30 积分）：商品 ID 取自 WAFFO_PRODUCT_30CREDITS，价格要和 CREDIT_PACKS.pack30.price 一致 */
-  pack30: { id: process.env.WAFFO_PRODUCT_30CREDITS!, type: "onetime" as const },
-  /** 单份解锁（1 积分）：只想看眼前这份锁定报告的人，不订阅、不囤积分。商品 ID 取自 WAFFO_PRODUCT_SINGLE */
-  single: { id: process.env.WAFFO_PRODUCT_SINGLE!, type: "onetime" as const },
+  /** 色彩套装：一次性付费，含 1 份完整色彩报告（单独购买，不占积分）+ 试戴积分 */
+  kit: { id: process.env.WAFFO_PRODUCT_KIT!, type: "onetime" as const },
+  /** 积分加购包：给任何人，用来解锁各类分析的试戴图（每张章节 1 积分），不能用来解锁色彩报告 */
+  addon: { id: process.env.WAFFO_PRODUCT_ADDON!, type: "onetime" as const },
 } as const;
 
 export type ProductKey = keyof typeof WAFFO_PRODUCTS;
 
 /**
  * 「管理订阅」入口：服务端现生成 Waffo 客户门户链接后跳转（查看 / 取消 / 恢复订阅）。
+ * 订阅已经停售，但之前订阅的用户还在续费，要能找到取消入口。
  * 页面上必须用普通 <a> 指向它，不能用 next/link —— 预取会白白生成门户链接。
  */
 export const SUBSCRIPTION_PORTAL_PATH = "/api/waffo/portal";
 
 /**
- * 积分包内容与展示价（美元）。积分数由 webhook 按 metadata.product 发放，价格只用于展示 ——
+ * 在售商品的积分数与展示价（美元）。积分数由 webhook 按 metadata.product 发放，价格只用于展示 ——
  * 实际扣款金额由 Waffo 后台的一次性商品决定，改价时两边必须同步。
  */
 export const CREDIT_PACKS = {
   /**
-   * 单份解锁：1 积分，买完回到页面会自动用掉它解锁当前这份报告（同一套 add-credits / unlock-report 链路，后端无需改动）。
-   * 定价：$1.00，目的是让用户低门槛先体验一次完整报告，不追求这一单赚钱。
-   * 为什么是 1 而不是 0.99：Waffo 不支持低于 1（币种单位）的价格，所以 1 是能设的最低价。
-   * 对照：Waffo 每笔收 0.50 + 3.9%，到手 = 价格 × 0.961 − 0.50，$1.00 到手约 $0.46（手续费占 54%）。
-   * 同时低于周订阅首周价 $1.99 和 10 积分包 $2.99。
+   * 色彩套装：1 份完整色彩报告（单独购买，记成「报告额度」，不占积分、也不能拿去试戴）+ 10 积分（每次试戴 1 积分）。
+   * 后端 /add-credits 按 reportCreditsFor 发放报告额度，前端回到页面后自动用它解锁眼前这份报告。
+   * 定价 $19.99：Waffo 每笔收 0.50 + 3.9%，到手 = 价格 × 0.961 − 0.50，约 $18.71。
    */
-  single: { credits: 1, price: "1" },
-  pack: { credits: 10, price: "2.99" },
-  pack30: { credits: 30, price: "6.99" },
+  kit: { credits: 10, reports: 1, price: "19.99" },
+  /** 加购包：$4.99 / 10 积分，任何人都能买（没买过报告也可以，用来解锁试戴图） */
+  addon: { credits: 10, reports: 0, price: "4.99" },
 } as const;
 
-export type PackKey = keyof typeof CREDIT_PACKS;
-
-export function isPackProduct(product: string | null | undefined): product is PackKey {
-  return product === "single" || product === "pack" || product === "pack30";
-}
-
 /**
- * 单份解锁的开关。Waffo 后台建好 single 商品并配置 WAFFO_PRODUCT_SINGLE 之前保持关闭，
- * 避免用户点到一个创建不了结账会话的按钮。NEXT_PUBLIC_ 变量在构建时内联，改完需要重新部署。
+ * 一次性商品对应的积分包积分数；不是积分类商品返回 null。
+ * single / pack / pack30 已经停售，保留是为了让「停售前下单、之后才付款」的订单照常到账（single 是单份报告，只发报告额度）。
  */
-export const SINGLE_UNLOCK_ENABLED = process.env.NEXT_PUBLIC_SINGLE_UNLOCK === "1";
-
-/** 最小积分包（保留旧名字：额度用完卡片、JSON-LD 等处沿用） */
-export const PACK_CREDITS = CREDIT_PACKS.pack.credits;
-export const PACK_PRICE = CREDIT_PACKS.pack.price;
-
-/** 大包比 3 个小包便宜多少（取整百分比），用于「省 X%」徽章 */
-export const PACK30_SAVE_PERCENT = Math.round(
-  (1 - Number(CREDIT_PACKS.pack30.price) / (Number(CREDIT_PACKS.pack.price) * (CREDIT_PACKS.pack30.credits / CREDIT_PACKS.pack.credits))) * 100,
-);
-
-/** 积分包折合每份报告的价格（1 积分 = 1 份报告），例如 "0.30" */
-export function packPerReport(pack: PackKey): string {
-  return (Number(CREDIT_PACKS[pack].price) / CREDIT_PACKS[pack].credits).toFixed(2);
+export function packCreditsFor(product: string | null | undefined): number | null {
+  switch (product) {
+    case "kit":
+      return CREDIT_PACKS.kit.credits;
+    case "addon":
+      return CREDIT_PACKS.addon.credits;
+    case "single":
+      return 0;
+    case "pack":
+      return 10;
+    case "pack30":
+      return 30;
+    default:
+      return null;
+  }
 }
 
-/** 订阅的正常价（美元）。展示用，实际扣款以 Waffo 后台商品为准 */
-export const WEEKLY_PRICE = "3.99";
-export const YEARLY_PRICE = "29.99";
-/** 年订阅折合每周的价格，例如 "0.58"，用来和周订阅对比 */
-export const YEARLY_PER_WEEK = (Number(YEARLY_PRICE) / 52).toFixed(2);
+/** 一次性商品随单发放的报告额度（每份可以解锁 / 生成 1 份完整色彩报告）。 */
+export function reportCreditsFor(product: string | null | undefined): number {
+  switch (product) {
+    case "kit":
+      return CREDIT_PACKS.kit.reports;
+    case "single":
+      return 1;
+    default:
+      return 0;
+  }
+}
+
+export const KIT_CREDITS = CREDIT_PACKS.kit.credits;
+/** 套装里的积分全部可以自由使用：报告是单独的报告额度，不占积分 */
+export const KIT_SPARE_CREDITS = KIT_CREDITS;
+export const ADDON_CREDITS = CREDIT_PACKS.addon.credits;
+/** 解锁后多少天内可以免费重测色彩分析（后端 kit_mode.RETEST_DAYS 要保持一致） */
+export const KIT_RETEST_DAYS = 14;
 
 /** GA4 衡量 ID：layout 里的 gtag 和 webhook 里的服务端 purchase 共用 */
 export const GA_MEASUREMENT_ID = "G-H526RRVE9N";
-
-/**
- * 周订阅首周优惠价（美元）。仅用于展示文案 —— 实际扣款金额由 Waffo 后台商品配置
- * （metadata.trialDays=7 + prices.USD.trialAmount）决定，修改价格时两边必须同步。
- */
-export const WEEKLY_INTRO_PRICE = "1.99";
-
-export const SUBSCRIPTION_PRODUCT_IDS = new Set([
-  process.env.WAFFO_PRODUCT_WEEKLY!,
-  process.env.WAFFO_PRODUCT_YEARLY!,
-]);
-
-export function determinePlan(productId: string): string {
-  if (productId === process.env.WAFFO_PRODUCT_WEEKLY) return "weekly";
-  if (productId === process.env.WAFFO_PRODUCT_YEARLY) return "yearly";
-  return "unknown";
-}
 
 export const LOCALES = [
   "en", "zh", "ja", "ko",

@@ -1,8 +1,8 @@
 import { getCachedEmail, getCachedUserId, webInit } from "./api";
 import { trackEvent, trackCheckoutEvent } from "./analytics";
 import { getAttribution, getGaClientId, getGaSessionId } from "./attribution";
-import { GA_MEASUREMENT_ID, isPackProduct, type ProductKey } from "./constants";
-import { checkoutPriceKey, priceAmount } from "./currency";
+import { GA_MEASUREMENT_ID, type ProductKey } from "./constants";
+import { priceAmount } from "./currency";
 import { getCurrentCurrency } from "./usePrices";
 
 const CONTEXT_KEY = "belle_checkout_ctx";
@@ -34,13 +34,16 @@ export function saveCheckoutEmail(email: string) {
 }
 
 export interface CheckoutContext {
-  product: ProductKey;
+  /** 不一定是在售商品：下单后才升级网站的话，返回时读到的可能是已停售的 single / pack 等 */
+  product: string;
   source: string;
   ts: number;
   /** 下单前的积分包余额：支付返回后据此判断积分是否到账 */
   packBefore?: number;
-  /** 从哪份锁定报告进入的付费弹窗：积分包到账后自动解锁它 */
+  /** 从哪份锁定的色彩报告进入的付费弹窗：买完后自动用报告额度解锁它 */
   unlockTaskId?: string;
+  /** 从哪份「分析 + 试戴」结果进入的（买积分解锁试戴图）：到账后回到它，积分留给用户自己点试戴 */
+  openTaskId?: string;
 }
 
 function saveContext(ctx: CheckoutContext) {
@@ -78,23 +81,25 @@ export async function startCheckout(params: {
   source: string;
   locale: string;
   email?: string;
-  /** 下单前的积分包余额（购买积分包时传入） */
+  /** 下单前的积分包余额 */
   packBefore?: number;
-  /** 购买积分包时，从哪份锁定报告进入（到账后自动解锁） */
+  /** 从哪份锁定的色彩报告进入（买完后自动解锁它） */
   unlockTaskId?: string;
+  /** 从哪份独立工具的结果进入（积分到账后回到它） */
+  openTaskId?: string;
   onRestore?: () => void;
 }): Promise<void> {
-  const { product, source, locale, unlockTaskId, onRestore } = params;
+  const { product, source, locale, unlockTaskId, openTaskId, onRestore } = params;
   // 没手动填邮箱时，用已知的：Google 登录的账号邮箱，或上次填过的。预填付款页，也让后端能凭邮箱找回购买
   const email = params.email?.trim() || getCachedEmail() || getSavedCheckoutEmail() || undefined;
   let packBefore = params.packBefore;
   trackCheckoutEvent("checkout_started", { product, source });
   // GA4 推荐事件：付费漏斗 view_pricing → begin_checkout → purchase（purchase 由服务端 Measurement Protocol 发送）
-  // 金额与币种取访客当前看到的（周订阅按首周优惠价，与支付页首笔扣款一致）
+  // 金额与币种取访客当前看到的
   const displayCurrency = getCurrentCurrency();
   trackEvent("begin_checkout", {
     currency: displayCurrency,
-    value: priceAmount(displayCurrency, checkoutPriceKey(product)),
+    value: priceAmount(displayCurrency, product),
     item_id: product,
     item_name: product,
     source,
@@ -102,8 +107,8 @@ export async function startCheckout(params: {
 
   try {
     let userId = getCachedUserId();
-    // 买积分包而调用方没传下单前余额（比如 /pricing 页）：这里取一次，返回页面后据此判断积分是否到账
-    if (!userId || (isPackProduct(product) && packBefore == null)) {
+    // 调用方没传下单前余额（比如 /pricing 页）：这里取一次，返回页面后据此判断积分是否到账
+    if (!userId || packBefore == null) {
       const initRes = await webInit();
       if (initRes.code === 200 && initRes.data) {
         userId = userId ?? initRes.data.user_id;
@@ -137,6 +142,7 @@ export async function startCheckout(params: {
       ts: Date.now(),
       ...(packBefore != null ? { packBefore } : {}),
       ...(unlockTaskId ? { unlockTaskId } : {}),
+      ...(openTaskId ? { openTaskId } : {}),
     });
     trackEvent("checkout_opened", { product, source });
 

@@ -56,7 +56,7 @@ image: "/images/blog/complete-ai-glow-up-guide.webp"
 
 **Professional color analysis:** $150-300 за session, только цвет
 **Professional personal stylist:** $200-500/час, multiple sessions
-**ИИ Glow-Up Report:** Все 8 dimensions в одном visual report, 60 секунд
+**ИИ Glow-Up Report:** «До и после» вашей лучшей версии с четырьмя изменениями, нарисованный на вашем фото
 
 ИИ не replace human stylists — democratizing access. Не все могут afford $2,000 image consultation. Но everyone deserve знать, что flattering.
 
@@ -80,9 +80,9 @@ image: "/images/blog/complete-ai-glow-up-guide.webp"
 
 ---
 
-## Попробуйте Premium Glow-Up Report
+## Попробуйте Glow-Up Report
 
-Premium Glow-Up Report объединяет все 8 styling dimensions в single comprehensive visual report. Как full personal styling team анализирует photo — color consultant, hairstylist, makeup artist, eyewear specialist, personal shopper — всё в 60-second ИИ consultation.
+Glow-Up Report выбирает четыре изменения по вашему цветотипу (цвет волос, макияж, верх и аксессуар) и показывает вашу лучшую версию на вашем фото с ползунком для сравнения. Письменный план бесплатный, а фото «до и после» стоит 1 кредит. Полную палитру со всеми лучшими цветами, нейтральными и цветами, которых лучше избегать, вы найдёте в [цветовом отчёте](/ru/personal-color-analysis).
 
 ## Связанные статьи
 

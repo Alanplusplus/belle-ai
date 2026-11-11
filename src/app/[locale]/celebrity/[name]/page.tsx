@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { FunnelLink } from "@/components/FunnelLink";
+import { sampleHref } from "@/lib/blogTools";
+import { ResultCta } from "@/components/ResultCta";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, canonicalUrl, ogLocale } from "@/lib/seo";
 import { PaletteCardDownload, PaletteCardImage, PaletteCardLarge } from "@/components/PaletteCardImage";
@@ -113,6 +116,7 @@ function CelebrityContent({ slug }: { slug: string }) {
   const sd = useTranslations(`sd.${data.season}`);
   const sdAll = useTranslations("sd");
   const ph = useTranslations("paletteHub");
+  const tp = useTranslations("tryPage");
   const st = useTranslations("seasonPalette");
   const seasonName = sd.has("name") ? sd("name") : seasonData.name;
 
@@ -156,6 +160,7 @@ function CelebrityContent({ slug }: { slug: string }) {
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
             {data.description}
           </p>
+          <ResultCta type="celebrity_match" from="celebrity" className="mx-auto mt-8 max-w-3xl text-left" />
         </div>
       </section>
 
@@ -402,13 +407,22 @@ function CelebrityContent({ slug }: { slug: string }) {
         <section className="my-6 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
           <h2 className="text-xl font-bold">{t("ctaTitle")}</h2>
           <p className="mt-2 text-muted-foreground">{t("ctaDesc")}</p>
-          <div className="mt-6">
+          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
-              href="/try"
-              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+              href="/try?type=celebrity_match"
+              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
             >
               {t("getAnalysis")}
             </Link>
+            <FunnelLink
+              href={sampleHref("celebrity_match", data.season)}
+              from="celebrity"
+              tool="celebrity_match"
+              kind="sample"
+              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
+            >
+              {tp("trySample")}
+            </FunnelLink>
           </div>
         </section>
 

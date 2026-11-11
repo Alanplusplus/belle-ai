@@ -147,4 +147,4 @@ Pour le résultat le plus précis, téléchargez un selfie net et laissez l'IA d
 
 [Analyse de couleur IA gratuite →](/try)
 
-Sans inscription pour l'aperçu. Votre saison apparaît en 60 secondes environ ; la version gratuite floute certains détails et un pack de crédits ou Pro débloque la palette complète.
+Sans inscription pour l'aperçu. Votre saison apparaît en 60 secondes environ ; la version gratuite floute certains détails et un achat unique débloque la palette complète.

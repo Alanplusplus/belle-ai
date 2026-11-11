@@ -46,7 +46,7 @@ image: "/images/blog/deep-winter-color-palette.webp"
 - Глубокий оливковый (холодная версия, не золотисто-оливковый)
 - Сосновый зелёный
 
-![Образцы палитры Глубокой Зимы](/images/blog/deep-winter-palette-swatches.webp)
+![Образцы палитры Глубокой Зимы](/palette-cards/deep-winter.png)
 
 ### Акцентные цвета
 

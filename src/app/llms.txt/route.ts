@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/lib/blog";
-import { SITE_URL } from "@/lib/constants";
+import { CREDIT_PACKS, SITE_URL } from "@/lib/constants";
 import { SEASON_PALETTES, SEASON_SLUGS } from "@/lib/color-palette-data";
 import { VS_SLUGS } from "@/lib/vs";
 import { routing } from "@/i18n/routing";
@@ -46,7 +46,9 @@ export function GET() {
   lines.push(`- [About Belle AI](${SITE_URL}/about): who we are, how the technology works and its limits`);
   lines.push(`- [Press kit](${SITE_URL}/press): boilerplate, key facts, logos and contact`);
   lines.push(`- [How accurate is AI color analysis?](${SITE_URL}/ai-color-analysis-accuracy): how Belle AI works, why we publish no accuracy percentage, what changes the result and when to see a human analyst`);
-  lines.push(`- [Pricing](${SITE_URL}/pricing)`);
+  lines.push(
+    `- [Pricing](${SITE_URL}/pricing): the AI preview and the small tools are free; the full report, PDF/poster export, try-on board and a free 14-day re-test come in one Color Kit for a one-time $${CREDIT_PACKS.kit.price} (no subscription, no auto-renewal)`,
+  );
   lines.push("");
 
   lines.push("## Free tools");

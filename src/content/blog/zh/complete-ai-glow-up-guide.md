@@ -56,7 +56,7 @@ image: "/images/blog/complete-ai-glow-up-guide.webp"
 
 **专业色彩分析：** 一次 $150-300，仅涵盖色彩
 **专业个人造型师：** $200-500/小时，需多次 session
-**AI 焕新报告：** 8 个维度合一视觉报告，60 秒生成
+**Belle AI 焕新报告：** 把你的最佳版本画在你自己的照片上，附 4 处改变的前后对比
 
 AI 不是取代人类造型师——而是 democratizing  access。不是每个人都能负担 $2,000 形象咨询。但每个人都 deserve 知道什么 flattering。
 
@@ -80,9 +80,9 @@ AI 没有这种偏见。它客观评估你当前的特征，对照 established �
 
 ---
 
-## 试试 Premium 焕新报告
+## 试试焕新报告
 
-我们的 Premium 焕新报告将 8 个造型维度合并为一份 comprehensive 视觉报告。就像有一整个 personal styling team 分析你的照片——色彩顾问、发型师、化妆师、眼镜专家和 personal shopper——全部在一次 60 秒 AI 咨询中。
+焕新报告会根据你的色彩季型挑出 4 处改变——发色、妆容、上衣和配饰——并把最佳版本画在你自己的照片上，附可拖动对比的滑块。文字方案免费，前后对比照片需要 1 积分。想要完整色板，请看[色彩报告](/zh/personal-color-analysis)，里面有全部最佳色、中性色和避开色。
 
 ## 相关文章
 

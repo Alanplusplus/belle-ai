@@ -106,7 +106,6 @@ function buildMetadata(input: {
     utm_medium: safeValue(input.attribution?.utm_medium),
     utm_campaign: safeValue(input.attribution?.utm_campaign),
     utm_content: safeValue(input.attribution?.utm_content),
-    ref: safeValue(input.attribution?.ref),
     referrer_host: safeValue(input.attribution?.referrer_host),
     landing: safeValue(input.attribution?.landing),
     // GA4 client_id 形如 1234567890.1700000000
@@ -149,8 +148,7 @@ export async function POST(req: NextRequest) {
     // 只有环境变量 WAFFO_LOCAL_CURRENCIES 里列出的币种才会启用（Waffo 后台配好价格之前一律 USD）
     const currency = resolveBuyerCurrency(req.headers);
 
-    // 注意：不要传 withTrial —— 首周优惠(试用天数 + 试用价)完全由 Waffo 后台的商品配置决定。
-    // 必须保持 authenticated 结算(带 buyerIdentity)，平台的试用资格校验依赖买家身份。
+    // 必须保持 authenticated 结算(带 buyerIdentity)：订单靠它对应到买家账号。
     const baseParams = {
       productId: productDef.id,
       buyerIdentity: userId,

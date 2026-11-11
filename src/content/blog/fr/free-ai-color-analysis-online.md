@@ -63,7 +63,7 @@ Vous recevez :
 
 ## Belle AI : analyse de couleur gratuite en 60 secondes
 
-Notre [outil d'analyse de couleur IA](/) fournit tout ce qui précède. Votre première analyse est gratuite en aperçu, sans inscription, mais la version gratuite est un aperçu dont certains détails sont floutés. Un pack de crédits ou Pro débloque le rapport complet. Nous préférons le dire d'emblée plutôt que de promettre un rapport « entièrement gratuit ».
+Notre [outil d'analyse de couleur IA](/) fournit tout ce qui précède. Votre première analyse est gratuite en aperçu, sans inscription, mais la version gratuite est un aperçu dont certains détails sont floutés. Un achat unique débloque le rapport complet. Nous préférons le dire d'emblée plutôt que de promettre un rapport « entièrement gratuit ».
 
 ### Ce que vous obtenez
 
@@ -129,6 +129,6 @@ Prête à trouver vos meilleures couleurs ? Téléchargez un selfie et obtenez v
 
 [Obtenir mon analyse de couleur gratuite →](/try)
 
-Sans inscription ni carte bancaire pour l'aperçu. La version gratuite floute certains détails ; un pack de crédits ou Pro débloque le rapport complet.
+Sans inscription ni carte bancaire pour l'aperçu. La version gratuite floute certains détails ; un achat unique débloque le rapport complet.
 
 Vous préférez ne pas envoyer de photo ? [Faites notre quiz d'analyse de couleur gratuit →](/tools/color-quiz)

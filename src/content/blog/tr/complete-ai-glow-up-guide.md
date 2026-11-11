@@ -56,7 +56,7 @@ Bu kim olduğunuzu değiştirmek değil. Size zaten yakışan şeyi anlamak — 
 
 **Profesyonel renk analizi:** Oturum başına 150-300 $, sadece renk
 **Profesyonel kişisel stylist:** Saat başı 200-500 $, birden fazla oturum gerekir
-**Yapay zeka Glow-Up Raporu:** 8 boyut tek görsel raporda, 60 saniyede oluşturulur
+**Yapay zeka Glow-Up Raporu:** En iyi halinizin dört değişikliği olan öncesi-sonrası, kendi fotoğrafınıza çizilmiş
 
 Yapay zeka insan stylistleri değiştirmez — erişimi demokratikleştirir. Herkes 2.000 $'lık imaj danışmanlığını karşılayamaz. Ama herkes neyin flattering olduğunu bilmeyi hak eder.
 
@@ -80,9 +80,9 @@ Yapay zekanın böyle bir önyargısı yok. Mevcut özelliklerinizi objektif de�
 
 ---
 
-## Premium Glow-Up Raporunu deneyin
+## Glow-Up Raporunu deneyin
 
-Premium Glow-Up Raporumuz 8 stil boyutunu tek kapsamlı görsel raporda birleştirir. Fotoğrafınızı analiz eden tam bir kişisel stil ekibi gibi — renk danışmanı, kuaför, makyöz, gözlük uzmanı ve personal shopper — hepsi 60 saniyelik yapay zeka danışmanlığında.
+Glow-Up Raporu renk mevsiminize göre dört değişiklik seçer (saç rengi, makyaj, üst parça ve aksesuar) ve en iyi halinizi kendi fotoğrafınızda, karşılaştırmak için bir kaydırıcıyla gösterir. Yazılı plan ücretsizdir, öncesi-sonrası fotoğrafı 1 kredidir. Tam paletiniz için [Renk Raporu](/tr/personal-color-analysis) tüm en iyi renkleri, nötrleri ve kaçınılacak renkleri içerir.
 
 ## İlgili makaleler
 

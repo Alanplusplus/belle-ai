@@ -6,9 +6,11 @@ import { Link } from "@/i18n/navigation";
 import { ColorReport } from "./ColorReport";
 import { localizeReport } from "@/lib/api";
 import { trackEvent } from "@/lib/analytics";
+import { KIT_PERK_VALUES, formatRetestDate } from "@/lib/kit";
 import { loadReportMessages } from "@/lib/report-messages";
 import { renderReportPoster } from "@/lib/report-poster";
 import { MY_SEASON_KEY, isSeasonSlug, localeOfReportLang, type ColorReportData } from "@/lib/color-report";
+import { personaBase, personaForSeason, type DemoPersonaId } from "@/lib/demo-personas";
 
 export interface ReportPanelProps {
   /** 后端任务 ID；示例报告为 null（不能翻译 / 分享） */
@@ -18,6 +20,8 @@ export interface ReportPanelProps {
   createdAt?: number;
   /** 示例报告：不提供保存 / 分享 / 换装，只展示 */
   demo?: boolean;
+  /** 示例展示哪位人物的 Lookbook；只在 demo 时有用 */
+  demoPersona?: DemoPersonaId;
   /** 用户在生成前选的报告语言；报告里没有这种语言时退回报告原始语言 */
   preferredLang: string;
   unlockLabel: string;
@@ -30,6 +34,8 @@ export interface ReportPanelProps {
   /** 在自己身上试这些颜色（换装）；没有原始照片时不提供 */
   onTryOn?: (season: string) => void;
   tryOnBusy?: boolean;
+  /** 解锁后 N 天内免费重测（换一张新照片）。left = 还剩几次，expiresAt = 到期时间（unix 秒）；不传或 left 为 0 = 不展示入口 */
+  kitRetest?: { left: number; expiresAt: number | null; onRetest: () => void };
   /** 一次性提示（翻译失败、海报失败等） */
   onNotice: (message: string) => void;
   /** 翻译完成后把新的报告数据同步给页面（历史记录、解锁等用的是同一份） */
@@ -50,6 +56,7 @@ export function ReportPanel({
   sourceImageUrl,
   createdAt,
   demo = false,
+  demoPersona,
   preferredLang,
   unlockLabel,
   unlockBusy,
@@ -58,11 +65,13 @@ export function ReportPanel({
   onShare,
   onTryOn,
   tryOnBusy = false,
+  kitRetest,
   onNotice,
   onReportUpdated,
   children,
 }: ReportPanelProps) {
   const t = useTranslations("report");
+  const tKit = useTranslations("kit");
   const pageLocale = useLocale();
   const [data, setData] = useState(report);
   const [lang, setLang] = useState(() => initialLang(report, preferredLang));
@@ -163,11 +172,14 @@ export function ReportPanel({
     if (!article) return;
     setPdfBusy(true);
     trackEvent("report_pdf_clicked", { language: lang });
+    // Lookbook 还有章节在生成时，PDF 里只有已经出好的；下载完提醒一句
+    const lookbookPending = !!article.querySelector("[data-lookbook-pending]");
     try {
       const { renderReportPdf, downloadBlob } = await import("@/lib/report-pdf");
       const blob = await renderReportPdf(article);
       downloadBlob(blob, `belle-ai-color-report${isSeasonSlug(data.season) ? `-${data.season}` : ""}.pdf`);
       trackEvent("report_pdf_done", { language: lang, kb: Math.round(blob.size / 1024) });
+      if (lookbookPending) onNotice(t("pdfLookbookPartial"));
     } catch {
       trackEvent("report_pdf_failed", { language: lang });
       onNotice(t("pdfFailed"));
@@ -189,6 +201,50 @@ export function ReportPanel({
 
   const footer = demo ? null : (
     <div lang={pageLocale} className="space-y-3">
+      {/* 报告还锁着：点名「解锁后还有什么」，用现成的示例图展示试色板长什么样（不另外生成图片） */}
+      {locked && (
+        <div className="overflow-hidden rounded-xl border border-gold/50 bg-gradient-to-br from-white to-muted/60">
+          <div className="flex gap-3 p-3">
+            <div
+              role="img"
+              aria-label={tKit("teaserImageAlt")}
+              className="grid h-28 w-28 shrink-0 grid-cols-2 gap-0.5 overflow-hidden rounded-lg border border-gold/30 bg-gold/20"
+            >
+              {[0, 1, 2, 3].map((i) => (
+                <img
+                  key={i}
+                  src={`${personaBase(personaForSeason(data.season))}/tiles/drape_${i}.webp`}
+                  alt=""
+                  loading="lazy"
+                  className="h-full w-full object-cover object-top"
+                />
+              ))}
+            </div>
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-foreground">{tKit("teaserTitle")}</p>
+              <ul className="mt-1.5 space-y-1 text-xs leading-snug text-muted-foreground">
+                {(["teaser1", "teaser2", "teaser3", "teaser4"] as const).map((key) => (
+                  <li key={key} className="flex items-start gap-1.5">
+                    <svg className="mt-0.5 h-3 w-3 shrink-0 text-primary" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                    {tKit(key, KIT_PERK_VALUES)}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => {
+              trackEvent("kit_teaser_clicked");
+              onUnlock();
+            }}
+            disabled={unlockBusy}
+            className="flex min-h-11 w-full items-center justify-center border-t border-gold/40 bg-primary px-4 text-sm font-semibold text-white transition hover:bg-primary-dark disabled:opacity-60"
+          >
+            {unlockLabel}
+          </button>
+        </div>
+      )}
       <button
         type="button"
         onClick={handlePdf}
@@ -233,8 +289,29 @@ export function ReportPanel({
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z" /></svg>
           </span>
           <span className="min-w-0 flex-1">
-            <span className="block text-sm font-semibold text-foreground">{tryOnBusy ? t("actTryOnBusy") : t("actTryOn")}</span>
-            <span className="block text-xs text-muted-foreground">{t("actTryOnHint")}</span>
+            {/* 写清「这是套装里的内容」，解锁后用 1 个积分生成 */}
+            <span className="block text-sm font-semibold text-foreground">{tryOnBusy ? t("actTryOnBusy") : tKit("tryOnTitle")}</span>
+            <span className="block text-xs text-muted-foreground">{tKit(locked ? "tryOnHintLocked" : "tryOnHint")}</span>
+          </span>
+        </button>
+      )}
+
+      {/* 解锁后 N 天内免费换一张照片重测（不满意这次结果时给一个体面的重来机会，也让结果更可信） */}
+      {!locked && kitRetest && kitRetest.left > 0 && (
+        <button
+          type="button"
+          onClick={() => {
+            trackEvent("kit_retest_clicked", { left: kitRetest.left });
+            kitRetest.onRetest();
+          }}
+          className="flex w-full items-center gap-3 rounded-xl border border-gold/50 bg-gradient-to-r from-white to-muted/60 px-4 py-3 text-left transition hover:border-primary/40"
+        >
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary" aria-hidden="true">
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}><path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" /></svg>
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-sm font-semibold text-foreground">{tKit("retestTitle")}</span>
+            <span className="block text-xs text-muted-foreground">{tKit("retestHint", { date: formatRetestDate(pageLocale, kitRetest.expiresAt) })}</span>
           </span>
         </button>
       )}
@@ -268,6 +345,9 @@ export function ReportPanel({
         onUnlock={demo ? undefined : onUnlock}
         unlockLabel={unlockLabel}
         unlockBusy={unlockBusy}
+        lookbookTaskId={demo ? null : taskId}
+        lookbookDemo={demo}
+        lookbookDemoPersona={demoPersona}
         demoBadge={demo ? t("demoBadge") : undefined}
         createdAt={createdAt}
         footer={footer}

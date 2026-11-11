@@ -7,6 +7,13 @@ import { embedOutboundUrl, type EmbedQuiz } from "@/lib/embed";
 const BUTTON_CLASS =
   "mt-4 inline-block rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-dark";
 
+/** 测验做完直接带到对应的分析：脸型测验 → 脸型与发型，色彩测验 / 底调测试 → 色彩分析（不再落到默认页让人自己再选一次） */
+const TRY_TYPE: Record<EmbedQuiz, "color_analysis" | "face_shape"> = {
+  "color-quiz": "color_analysis",
+  "undertone-test": "color_analysis",
+  "face-shape-quiz": "face_shape",
+};
+
 /**
  * 测验结果页底部的「试试 AI 分析」卡片，三个测验共用。
  *
@@ -26,6 +33,7 @@ export function QuizCta({
   const t = useTranslations("quiz");
   const e = useTranslations("embed");
   const locale = useLocale();
+  const type = TRY_TYPE[quiz];
 
   return (
     <div className="mt-8 rounded-2xl border border-primary/30 bg-primary/5 p-6 text-center">
@@ -35,7 +43,7 @@ export function QuizCta({
       </p>
       {embedded ? (
         <a
-          href={embedOutboundUrl(locale, "/try", quiz)}
+          href={embedOutboundUrl(locale, "/try", quiz, { type })}
           target="_blank"
           rel="noopener"
           onClick={onClick}
@@ -44,7 +52,7 @@ export function QuizCta({
           {t("tryAiAnalysis")}
         </a>
       ) : (
-        <Link href="/try" onClick={onClick} className={BUTTON_CLASS}>
+        <Link href={`/try?type=${type}`} onClick={onClick} className={BUTTON_CLASS}>
           {t("tryAiAnalysis")}
         </Link>
       )}

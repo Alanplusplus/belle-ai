@@ -5,10 +5,14 @@ import { NextRequest } from "next/server";
  * 用户上传的照片放在 pic.chibistyle.app（OSS），没有 CORS 头，直接画进 canvas 会让画布被污染、导出失败；
  * 经过这里转成同源地址就可以安全导出。
  *
- * 只放行上传目录下的图片（和后端结构化报告接受的地址范围一致），不是通用代理。
+ * 只放行两处图片，不是通用代理：
+ * - 上传目录下的用户照片（和后端结构化报告接受的地址范围一致）；
+ * - Lookbook 的小图（私有 bucket 的签名地址，同样没有 CORS 头，「下载完整报告」要把它们画进 PDF；签名由 OSS 校验，这里原样转发）。
  */
-const ALLOWED_HOST = "pic.chibistyle.app";
-const ALLOWED_PREFIX = "/image/upload/";
+const ALLOWED: { host: string; prefix: string }[] = [
+  { host: "pic.chibistyle.app", prefix: "/image/upload/" },
+  { host: "static.picraft.ai", prefix: "/lookbook/" },
+];
 const MAX_BYTES = 12 * 1024 * 1024;
 const FETCH_TIMEOUT_MS = 12_000;
 
@@ -20,13 +24,14 @@ export async function GET(req: NextRequest) {
   } catch {
     return new Response("Bad request", { status: 400 });
   }
+  const rule = ALLOWED.find((item) => item.host === target.hostname);
   if (
     target.protocol !== "https:" ||
-    target.hostname !== ALLOWED_HOST ||
+    !rule ||
     target.port !== "" ||
     target.username !== "" ||
     target.password !== "" ||
-    !target.pathname.startsWith(ALLOWED_PREFIX) ||
+    !target.pathname.startsWith(rule.prefix) ||
     target.pathname.includes("..")
   ) {
     return new Response("Forbidden", { status: 403 });

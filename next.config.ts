@@ -25,6 +25,10 @@ const nextConfig: NextConfig = {
         destination: "/palette-cards/:season.png",
         permanent: true,
       },
+      // 邀请好友页已下线：旧链接（站内菜单、已分享出去的链接）统一回首页，不留 404
+      { source: "/referral", destination: "/", permanent: true },
+      { source: "/en/referral", destination: "/", permanent: true },
+      { source: "/:locale(zh|ja|ko|es|fr|de|ru|tr)/referral", destination: "/:locale", permanent: true },
     ];
   },
 };

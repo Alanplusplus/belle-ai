@@ -56,7 +56,7 @@ image: "/images/blog/complete-ai-glow-up-guide.webp"
 
 **전문 컬러 분석:** 1회 $150-300, 컬러만
 **전문 퍼스널 스타일리스트:** $200-500/시간, 여러 session 필요
-**AI 글로우업 리포트:** 8차원 1 visual report, 60초 생성
+**Belle AI 글로우업 리포트:** 내 사진에 그린, 4가지 변화가 담긴 베스트 버전의 전후 비교
 
 AI는 human stylist replace 아님 — democratizing access. $2,000 image consultation afford 못하는 사람 많음. 하지만 everyone deserve flattering 알 권리.
 
@@ -80,9 +80,9 @@ AI는 such bias 없음. current features objectively evaluate, established color
 
 ---
 
-## Premium 글로우업 리포트 체험
+## 글로우업 리포트 체험
 
-Premium 글로우업 리포트는 8 styling dimensions를 single comprehensive visual report로. full personal styling team이 photo analyze — color consultant, hairstylist, makeup artist, eyewear specialist, personal shopper — 모두 60초 AI consultation.
+글로우업 리포트는 퍼스널 컬러 시즌에서 헤어 컬러, 메이크업, 상의, 액세서리 4가지 변화를 골라 슬라이더로 비교할 수 있는 베스트 버전을 내 사진에 그려 줍니다. 글로 된 플랜은 무료이고 전후 비교 사진은 1크레딧입니다. 전체 팔레트는 [컬러 리포트](/ko/personal-color-analysis)에서 모든 베스트 컬러, 뉴트럴, 피할 색을 확인하세요.
 
 ## 관련 기사
 

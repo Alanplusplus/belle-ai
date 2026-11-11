@@ -12,7 +12,7 @@ import {
   OG_IMAGES,
   TWITTER_IMAGES,
 } from "@/lib/seo";
-import { LOCALE_NAMES, SITE_URL } from "@/lib/constants";
+import { CREDIT_PACKS, LOCALE_NAMES, SITE_URL } from "@/lib/constants";
 import { EXTERNAL_PAGES } from "@/lib/external-pages";
 
 const CONTACT_EMAIL = "support@aicoloranalysis.io";
@@ -85,7 +85,10 @@ export default async function PressPage({
     { label: t("factLanguages"), value: Object.values(LOCALE_NAMES).join(", ") },
     { label: t("factMethod"), value: t("valueMethod") },
     { label: t("factTechnology"), value: t("valueTechnology") },
-    { label: t("factPricing"), value: t("valuePricing") },
+    {
+      label: t("factPricing"),
+      value: t("valuePricing", { price: `$${CREDIT_PACKS.kit.price}` }),
+    },
     {
       label: t("factContact"),
       value: (

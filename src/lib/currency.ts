@@ -1,14 +1,12 @@
-import { CREDIT_PACKS, WEEKLY_INTRO_PRICE, WEEKLY_PRICE, YEARLY_PRICE } from "./constants";
+import { CREDIT_PACKS, type ProductKey } from "./constants";
 
 /**
  * 多币种展示价。
  *
  * - USD 价格取自 constants.ts（唯一来源）。
- * - 其他币种的数字必须和 Waffo 后台里同一个商品的对应币种价格一致（含首周优惠价 trialAmount）——
+ * - 其他币种的数字必须和 Waffo 后台里同一个商品的对应币种价格一致 ——
  *   这里只负责「展示」，实际扣款金额由 Waffo 商品配置决定。改价时两边同步。
  * - 价格是「含当地消费税」的最终价（Waffo 后台这几个币种请把 taxIncluded 设为 true）。
- * - 单份解锁 single 是特例：Waffo 不支持低于 1（币种单位）的价格，所以美元 / 欧元 / 英镑都定成 1，
- *   这三个币种的数字不是按汇率换算的（€1、£1 比 $1 略贵）；日元、港币的数值本身远大于 1，仍按汇率换算。
  *
  * 这个文件前后端通用，不读环境变量；哪些币种已启用由服务端 currency-server.ts 决定。
  */
@@ -19,34 +17,28 @@ export function isCurrencyCode(value: unknown): value is CurrencyCode {
   return typeof value === "string" && (CURRENCIES as readonly string[]).includes(value);
 }
 
-export type PriceKey = "weeklyIntro" | "weekly" | "yearly" | "single" | "pack" | "pack30";
+/** 标价的 key 就是商品 key：kit / addon */
+export type PriceKey = ProductKey;
 
 export const PRICE_TABLE: Record<CurrencyCode, Record<PriceKey, string>> = {
-  USD: {
-    weeklyIntro: WEEKLY_INTRO_PRICE,
-    weekly: WEEKLY_PRICE,
-    yearly: YEARLY_PRICE,
-    single: CREDIT_PACKS.single.price,
-    pack: CREDIT_PACKS.pack.price,
-    pack30: CREDIT_PACKS.pack30.price,
-  },
-  EUR: { weeklyIntro: "1.79", weekly: "3.55", yearly: "26.99", single: "1", pack: "2.66", pack30: "6.22" },
-  GBP: { weeklyIntro: "1.49", weekly: "2.99", yearly: "22.49", single: "1", pack: "2.24", pack30: "5.24" },
-  JPY: { weeklyIntro: "314", weekly: "629", yearly: "4799", single: "159", pack: "479", pack30: "1099" },
-  HKD: { weeklyIntro: "16", weekly: "32", yearly: "236", single: "8", pack: "23", pack30: "55" },
+  USD: { kit: CREDIT_PACKS.kit.price, addon: CREDIT_PACKS.addon.price },
+  EUR: { kit: "17.99", addon: "4.49" },
+  GBP: { kit: "14.99", addon: "3.79" },
+  JPY: { kit: "3180", addon: "790" },
+  HKD: { kit: "158", addon: "39" },
 };
 
 const SYMBOL: Record<CurrencyCode, string> = { USD: "$", EUR: "€", GBP: "£", JPY: "¥", HKD: "HK$" };
 /** 标价的小数位：日元、港币都是整数价 */
 const PRICE_DECIMALS: Record<CurrencyCode, number> = { USD: 2, EUR: 2, GBP: 2, JPY: 0, HKD: 0 };
-/** 折算值（每周 / 每份报告）的小数位：只有日元不要小数 */
+/** 折算值（每积分）的小数位：只有日元不要小数 */
 const UNIT_DECIMALS: Record<CurrencyCode, number> = { USD: 2, EUR: 2, GBP: 2, JPY: 0, HKD: 2 };
 
 function group(value: number, decimals: number): string {
   return value.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
 }
 
-/** 币种符号 + 金额，统一符号在前（"$3.99"、"€4.29"、"¥700"、"HK$32"） */
+/** 币种符号 + 金额，统一符号在前（"$19.99"、"€17.99"、"¥3,180"、"HK$158"） */
 export function formatMoney(currency: CurrencyCode, amount: number | string, decimals = PRICE_DECIMALS[currency]): string {
   return SYMBOL[currency] + group(Number(amount), decimals);
 }
@@ -55,46 +47,23 @@ export function priceAmount(currency: CurrencyCode, key: PriceKey): number {
   return Number(PRICE_TABLE[currency][key]);
 }
 
-/** 30 积分包比 3 个 10 积分包便宜多少（取整百分比） */
-export function pack30SavePercent(currency: CurrencyCode): number {
-  const small = priceAmount(currency, "pack");
-  const large = priceAmount(currency, "pack30");
-  const ratio = CREDIT_PACKS.pack30.credits / CREDIT_PACKS.pack.credits;
-  return Math.round((1 - large / (small * ratio)) * 100);
-}
-
 /**
- * 文案里可以引用的价格：标价、折算值，以及「省 X%」。
- * 值都已经是格式化好的字符串，直接塞进 next-intl 的 {price} / {percent} 占位符。
+ * 文案里可以引用的价格：标价，以及折算到每个积分的价格。
+ * 值都已经是格式化好的字符串，直接塞进 next-intl 的 {price} 占位符。
  */
-export type PriceSpec =
-  | PriceKey
-  | "free"
-  | "yearlyPerWeek"
-  | "pack:perReport"
-  | "pack30:perReport"
-  | "pack30:savePercent";
+export type PriceSpec = PriceKey | "free" | "kit:perCredit" | "addon:perCredit";
 
 export function resolvePrice(currency: CurrencyCode, spec: PriceSpec): string {
   switch (spec) {
     case "free":
       return formatMoney(currency, 0, 0);
-    case "yearlyPerWeek":
-      return formatMoney(currency, priceAmount(currency, "yearly") / 52, UNIT_DECIMALS[currency]);
-    case "pack:perReport":
-      return formatMoney(currency, priceAmount(currency, "pack") / CREDIT_PACKS.pack.credits, UNIT_DECIMALS[currency]);
-    case "pack30:perReport":
-      return formatMoney(currency, priceAmount(currency, "pack30") / CREDIT_PACKS.pack30.credits, UNIT_DECIMALS[currency]);
-    case "pack30:savePercent":
-      return String(pack30SavePercent(currency));
+    case "kit:perCredit":
+      return formatMoney(currency, priceAmount(currency, "kit") / CREDIT_PACKS.kit.credits, UNIT_DECIMALS[currency]);
+    case "addon:perCredit":
+      return formatMoney(currency, priceAmount(currency, "addon") / CREDIT_PACKS.addon.credits, UNIT_DECIMALS[currency]);
     default:
       return formatMoney(currency, priceAmount(currency, spec));
   }
-}
-
-/** 商品 → 展示价 key（周订阅按首周优惠价，与支付页首笔扣款一致） */
-export function checkoutPriceKey(product: "weekly" | "yearly" | "single" | "pack" | "pack30"): PriceKey {
-  return product === "weekly" ? "weeklyIntro" : product;
 }
 
 // ───────────── 国家 → 币种 ─────────────

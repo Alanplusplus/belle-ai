@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import localFont from "next/font/local";
 import { Header } from "@/components/Header";
-import { ReferralBanner } from "@/components/ReferralBanner";
 import { Footer } from "@/components/Footer";
 import { AuthProvider } from "@/components/AuthProvider";
 import { GoogleOneTap } from "@/components/GoogleOneTap";
@@ -51,7 +50,6 @@ const CLIENT_NAMESPACES = [
   "blog",
   "features",
   "pricing",
-  "referral",
   "tryPage",
   "quiz",
   "colorQuiz",
@@ -193,7 +191,6 @@ export default async function LocaleLayout({
           <GoogleOneTap />
           <PageViewTracker />
           <NextIntlClientProvider messages={clientMessages}>
-            <ReferralBanner />
             <PurchaseRestoredToast />
             <Header />
             <main className="flex-1">{children}</main>

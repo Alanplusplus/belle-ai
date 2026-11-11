@@ -1,6 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { FeatureHero } from "@/components/FeatureHero";
+import { FunnelLink } from "@/components/FunnelLink";
+import { sampleHref } from "@/lib/blogTools";
+import { FeatureIncludes } from "@/components/FeatureIncludes";
 import Image from "next/image";
 import {
   buildAlternates,
@@ -87,18 +90,32 @@ export default async function StylePersonalityPage({
         image="/images/examples/report_style_personality.webp"
         sampleLabel={tp("demoBadge")}
         actions={
-          <Link
-            href="/try?type=style_personality"
-            className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-          >
-            {ft("tryItFree")}
-          </Link>
+          <>
+            <Link
+              href="/try?type=style_personality"
+              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+            >
+              {ft("tryItFree")}
+            </Link>
+            <FunnelLink
+              href={sampleHref("style_personality")}
+              from="feature"
+              tool="style_personality"
+              kind="sample"
+              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
+            >
+              {tp("trySample")}
+            </FunnelLink>
+          </>
         }
       />
 
-      <section className="py-16">
+      <FeatureIncludes locale={locale} tool="persona" />
+
+      <section className="bg-muted/30 py-16">
         <div className="mx-auto max-w-5xl px-4">
           <h2 className="text-center text-2xl font-bold">{t("archetypes")}</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">{t("archetypesIntro")}</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {PERSONALITIES.map((p) => (
               <div key={p.key} className="group overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
@@ -118,26 +135,14 @@ export default async function StylePersonalityPage({
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="bg-muted/30 py-16">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <h2 className="text-2xl font-bold">{t("whatYouGet")}</h2>
-          <div className="mt-8 grid gap-4 text-left sm:grid-cols-2">
-            {INCLUDES.map((item) => (
-              <div key={item} className="flex items-start gap-3 rounded-xl border border-border bg-card p-4">
-                <span className="mt-0.5 text-primary">✓</span>
-                <p className="text-sm">{t(item)}</p>
-              </div>
-            ))}
+          <div className="mt-10 text-center">
+            <Link
+              href="/try?type=style_personality"
+              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+            >
+              {ft("tryItFree")}
+            </Link>
           </div>
-          <Link
-            href="/try?type=style_personality"
-            className="mt-10 inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-          >
-            {ft("tryItFree")}
-          </Link>
         </div>
       </section>
 
@@ -174,4 +179,3 @@ const PERSONALITIES = [
   { key: "Sensual", image: "/images/dim_style_sensual.webp" },
 ] as const;
 
-const INCLUDES = ["inc1", "inc2", "inc3", "inc4", "inc5", "inc6"];

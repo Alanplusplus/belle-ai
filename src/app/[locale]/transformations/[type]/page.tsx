@@ -5,7 +5,10 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
-import { TRANSFORMATION_TYPES, TRANSFORMATION_SLUGS } from "@/lib/transformation-data";
+import { TRANSFORMATION_TYPES, TRANSFORMATION_SLUGS, TRANSFORMATION_TOOL } from "@/lib/transformation-data";
+import { ResultCta } from "@/components/ResultCta";
+import { FunnelLink } from "@/components/FunnelLink";
+import { sampleHref } from "@/lib/blogTools";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -71,7 +74,9 @@ export default async function TransformationTypePage({
 
 function TransformationTypeContent({ slug }: { slug: string }) {
   const t = useTranslations("transformations");
+  const tp = useTranslations("tryPage");
   const data = TRANSFORMATION_TYPES.find((t) => t.slug === slug)!;
+  const tool = TRANSFORMATION_TOOL[slug] ?? "color_analysis";
   const otherTypes = TRANSFORMATION_TYPES.filter((t) => t.slug !== slug);
 
   return (
@@ -87,6 +92,8 @@ function TransformationTypeContent({ slug }: { slug: string }) {
           <h1 className="mt-3 font-serif text-3xl font-bold sm:text-5xl">{t(`type_${data.slug}_name`)}</h1>
           <p className="mt-2 text-lg text-primary">{t(`type_${data.slug}_tagline`)}</p>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{t(`type_${data.slug}_desc`)}</p>
+          {/* 先给「成品」：这个工具现在真实生成的示例报告 + 直接试 / 先看示例 */}
+          <ResultCta type={tool} from="transformations" className="mx-auto mt-8 max-w-3xl text-left" />
         </div>
       </section>
 
@@ -96,8 +103,8 @@ function TransformationTypeContent({ slug }: { slug: string }) {
           <div className="space-y-12">
             {data.examples.map((example, idx) => (
               <div key={idx} className="rounded-2xl border border-border bg-card overflow-hidden">
-                {/* Before → After → Report */}
-                <div className="grid grid-cols-1 sm:grid-cols-3">
+                {/* Before → After：故事照。成品（报告）统一放在页面顶部和底部的示例卡里，每个例子不再重复贴一张报告图 */}
+                <div className="grid grid-cols-1 sm:grid-cols-2">
                   <div className="relative bg-muted">
                     <div className="relative aspect-[3/4]">
                       <Image
@@ -105,7 +112,7 @@ function TransformationTypeContent({ slug }: { slug: string }) {
                         alt={`${data.name} · ${t("before")} — ${example.label}`}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 640px) 100vw, 33vw"
+                        sizes="(max-width: 640px) 100vw, 50vw"
                       />
                       <span className="absolute left-3 top-3 rounded-full bg-black/60 px-3 py-1 text-sm font-medium text-white">
                         {t("before")}
@@ -119,24 +126,10 @@ function TransformationTypeContent({ slug }: { slug: string }) {
                         alt={`${data.name} · ${t("after")} — ${example.label}`}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 640px) 100vw, 33vw"
+                        sizes="(max-width: 640px) 100vw, 50vw"
                       />
-                      <span className="absolute left-1/2 -translate-x-1/2 top-3 rounded-full bg-primary/80 px-3 py-1 text-sm font-medium text-white">
+                      <span className="absolute right-3 top-3 rounded-full bg-primary/80 px-3 py-1 text-sm font-medium text-white">
                         {t("after")}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="relative bg-muted">
-                    <div className="relative aspect-[3/4]">
-                      <Image
-                        src={example.report}
-                        alt={`${data.name} · ${t("aiReport")} — ${example.label}`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 640px) 100vw, 33vw"
-                      />
-                      <span className="absolute right-3 top-3 rounded-full bg-emerald-600/80 px-3 py-1 text-sm font-medium text-white">
-                        {t("aiReport")}
                       </span>
                     </div>
                   </div>
@@ -171,17 +164,20 @@ function TransformationTypeContent({ slug }: { slug: string }) {
           <p className="mt-2 text-muted-foreground">{t("ctaDesc")}</p>
           <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
-              href="/try?type=color_analysis"
+              href={`/try?type=${tool}`}
               className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
             >
               {t("startAnalysis")}
             </Link>
-            <Link
-              href="/pricing"
+            <FunnelLink
+              href={sampleHref(tool)}
+              from="transformations"
+              tool={tool}
+              kind="sample"
               className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
             >
-              {t("viewPricing")}
-            </Link>
+              {tp("trySample")}
+            </FunnelLink>
           </div>
         </section>
 

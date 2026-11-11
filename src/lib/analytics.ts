@@ -6,8 +6,31 @@ declare global {
   }
 }
 
+/**
+ * GA4 会把事件参数里的 source / medium / campaign / term / content 当成「流量来源」的覆盖项：
+ * 业务事件里随手带的 source（"report_lock"、"library"、"pricing_page"、"type_pill"…）因此混进了
+ * 会话来源报表（sessionSource 里出现了这些值），真实渠道被稀释。
+ * 统一在出口改名成 entry_*：在 GA 后台把 entry_source 等注册成事件级自定义维度，就能按入口拆分漏斗，而不影响归因。
+ * 只在 trackEvent 里改；飞书通知（notifyCheckout）和服务端购买事件仍用原来的字段名。
+ */
+const RESERVED_ATTRIBUTION_PARAMS = ["source", "medium", "campaign", "term", "content"] as const;
+
+function withoutReservedParams(params?: GtagParams): GtagParams | undefined {
+  if (!params) return params;
+  let renamed: GtagParams | undefined;
+  for (const key of RESERVED_ATTRIBUTION_PARAMS) {
+    if (!(key in params)) continue;
+    renamed ??= { ...params };
+    const value = renamed[key];
+    delete renamed[key];
+    // 调用方已经显式传了 entry_* 时以它为准，不覆盖
+    if (renamed[`entry_${key}`] === undefined) renamed[`entry_${key}`] = value;
+  }
+  return renamed ?? params;
+}
+
 export function trackEvent(name: string, params?: GtagParams) {
-  window.gtag?.("event", name, params);
+  window.gtag?.("event", name, withoutReservedParams(params));
 }
 
 /**

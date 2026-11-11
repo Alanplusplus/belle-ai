@@ -11,6 +11,8 @@ import { PARENT_SEASON_ORDER, getSeasonsByParent } from "@/lib/color-palette-dat
 import { PaletteCardImage } from "@/components/PaletteCardImage";
 import { VideoCard } from "@/components/VideoEmbed";
 import { getPublishedVideos } from "@/lib/videos";
+import { FunnelLink } from "@/components/FunnelLink";
+import { sampleHref } from "@/lib/blogTools";
 
 export async function generateMetadata({
   params,
@@ -50,6 +52,8 @@ function HomeContent() {
   const sd = useTranslations("sd");
   const ph = useTranslations("paletteHub");
   const vt = useTranslations("video");
+  const tp = useTranslations("tryPage");
+  const cp = useTranslations("colorPage");
   const videos = getPublishedVideos();
 
   const allSeasons = PARENT_SEASON_ORDER.flatMap((parent) => getSeasonsByParent(parent));
@@ -153,12 +157,16 @@ function HomeContent() {
               >
                 {ft("tryItFree")}
               </Link>
-              <Link
-                href="/tools/color-quiz"
+              {/* 次按钮不再是「免费测验」（会把人带去另一条路），而是「先看示例」：落地 /try 就是完整示例结果 */}
+              <FunnelLink
+                href={sampleHref("color_analysis")}
+                from="home_hero"
+                tool="color_analysis"
+                kind="sample"
                 className="rounded-full border-2 border-primary/70 bg-white/70 px-8 py-[10px] text-base font-semibold text-primary-dark transition hover:border-primary hover:bg-primary/10"
               >
-                {t("heroSecondaryCta")}
-              </Link>
+                {tp("trySample")}
+              </FunnelLink>
             </div>
             <p className="mt-3 text-sm text-muted-foreground">{t("heroNote")}</p>
 
@@ -194,48 +202,49 @@ function HomeContent() {
         </div>
       </section>
 
-      {/* Before / After Results */}
+      {/* 成品长什么样：真实报告里的四页（和 personal-color-analysis 页是同一批截图），让人在首屏之后马上看到「这就是我会拿到的」 */}
       <section className="py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <SectionHeading title={t("resultsTitle")} subtitle={t("resultsSubtitle")} />
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {BEFORE_AFTER.map((pair) => (
-              <div key={pair.type} className="group">
-                <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:shadow-lg">
-                  <div className="relative aspect-[3/4]">
-                    <Image
-                      src={pair.after}
-                      alt={`${t(pair.labelKey)} – ${t("resultsAfter")}`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                  </div>
-                  <div className="absolute bottom-4 left-4 overflow-hidden rounded-xl border-2 border-white shadow-lg" style={{ width: "30%", aspectRatio: "3/4" }}>
-                    <Image
-                      src={pair.before}
-                      alt={t(pair.labelKey)}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 30vw, 10vw"
-                    />
-                  </div>
-                  <div className="absolute right-3 top-3 rounded-full bg-primary/90 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-sm">
-                    {t("resultsAfter")}
-                  </div>
+          <SectionHeading title={cp("insideTitle")} subtitle={cp("insideSub")} />
+          <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
+            {HOME_REPORT_PAGES.map((page) => (
+              <FunnelLink
+                key={page.key}
+                href={sampleHref("color_analysis")}
+                from="home_report"
+                tool="color_analysis"
+                kind="sample"
+                className="group block"
+              >
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-border bg-card shadow-md shadow-black/5 transition group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-primary/15">
+                  <Image
+                    src={page.image}
+                    alt={cp(`${page.key}t`)}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
                 </div>
-                <p className="mt-3 text-center text-sm font-medium">{t(pair.labelKey)}</p>
-              </div>
+                <p className="mt-3 text-center text-sm font-semibold leading-snug">{cp(`${page.key}t`)}</p>
+              </FunnelLink>
             ))}
           </div>
-          <p className="mt-6 text-center text-xs text-muted-foreground">{t("resultsNote")}</p>
-          <div className="mt-6 text-center">
+          <div className="mt-8 flex flex-col items-center gap-3">
             <Link
-              href="/try"
-              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 text-base font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl hover:shadow-primary/40"
+              href="/try?type=color_analysis"
+              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 text-base font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl hover:shadow-primary/40"
             >
               {ft("tryItFree")}
             </Link>
+            <FunnelLink
+              href={sampleHref("color_analysis")}
+              from="home_report"
+              tool="color_analysis"
+              kind="sample"
+              className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+            >
+              {tp("trySample")}
+            </FunnelLink>
           </div>
         </div>
       </section>
@@ -357,12 +366,6 @@ function HomeContent() {
                       className="object-cover transition duration-300 group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />
-                    {/* 标签浮在图片右上角,不占文字区高度,保证所有卡片等高 */}
-                    {f.premium && (
-                      <span className="absolute right-2 top-2 rounded-full bg-amber-100/95 px-2.5 py-0.5 text-xs font-semibold text-amber-800 shadow-sm backdrop-blur-sm dark:bg-amber-900/70 dark:text-amber-200">
-                        {t("premiumBadge")}
-                      </span>
-                    )}
                   </div>
                   <div className="p-4">
                     <h3 className="text-sm font-semibold">{t(f.titleKey)}</h3>
@@ -698,13 +701,21 @@ function FaceIcon() {
   );
 }
 
+// 首页展示的四页真实报告截图（public/images/examples/color_*.webp），key 对应 messages.colorPage.r<N>t
+const HOME_REPORT_PAGES = [
+  { key: "r1", image: "/images/examples/color_season.webp" },
+  { key: "r3", image: "/images/examples/color_palette.webp" },
+  { key: "r5", image: "/images/examples/color_makeup.webp" },
+  { key: "r7", image: "/images/examples/color_lookbook.webp" },
+] as const;
+
 const MORE_FEATURES = [
   { titleKey: "hairTitle", descKey: "hairDesc", href: "/hair-color-analysis" as const, image: "/images/card_hair.webp" },
   { titleKey: "outfitTitle", descKey: "outfitDesc", href: "/outfit-color-analysis" as const, image: "/images/card_outfit.webp" },
   { titleKey: "glassesTitle", descKey: "glassesDesc", href: "/glasses-analysis" as const, image: "/images/card_glasses.webp" },
   { titleKey: "occasionTitle", descKey: "occasionDesc", href: "/occasion-makeup" as const, image: "/images/card_occasion.webp" },
   { titleKey: "jewelryTitle", descKey: "jewelryDesc", href: "/jewelry-analysis" as const, image: "/images/card_jewelry.webp" },
-  { titleKey: "glowUpTitle", descKey: "glowUpDesc", href: "/glow-up-report" as const, image: "/images/card_glow_up.webp", premium: true },
+  { titleKey: "glowUpTitle", descKey: "glowUpDesc", href: "/glow-up-report" as const, image: "/images/card_glow_up.webp" },
   { titleKey: "styleTitle", descKey: "styleDesc", href: "/style-personality" as const, image: "/images/card_style.webp" },
   { titleKey: "celebTitle", descKey: "celebDesc", href: "/celebrity-match" as const, image: "/images/card_celebrity.webp" },
 ];
@@ -716,10 +727,4 @@ const AI_DIMENSIONS = [
   { titleKey: "dimChromaTitle", descKey: "dimChromaDesc" },
   { titleKey: "dimContrastTitle", descKey: "dimContrastDesc" },
 ] as const;
-
-const BEFORE_AFTER = [
-  { before: "/images/showcase/before-color.webp", after: "/images/showcase/after-color.webp", type: "color", labelKey: "resultsColorLabel" },
-  { before: "/images/showcase/before-makeup.webp", after: "/images/showcase/after-makeup.webp", type: "makeup", labelKey: "resultsMakeupLabel" },
-  { before: "/images/showcase/before-face.webp", after: "/images/showcase/after-face.webp", type: "face", labelKey: "resultsFaceLabel" },
-];
 

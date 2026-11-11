@@ -1,6 +1,9 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { FeatureHero } from "@/components/FeatureHero";
+import { FeatureIncludes } from "@/components/FeatureIncludes";
+import { FunnelLink } from "@/components/FunnelLink";
+import { sampleHref } from "@/lib/blogTools";
 import {
   buildAlternates,
   buildBreadcrumbJsonLd,
@@ -52,8 +55,6 @@ export default async function FaceShapeAnalysisPage({
   const tp = await getTranslations({ locale, namespace: "tryPage" });
   const nt = await getTranslations({ locale, namespace: "nav" });
 
-  const items = [t("item1"), t("item2"), t("item3"), t("item4"), t("item5"), t("item6")];
-
   const faqCount = 4;
   const faqs = Array.from({ length: faqCount }, (_, i) => ({
     q: t(`faq${i + 1}Q`),
@@ -98,42 +99,20 @@ export default async function FaceShapeAnalysisPage({
             >
               {ft("tryItFree")}
             </Link>
-            <Link
-              href="/tools/face-shape-quiz"
+            <FunnelLink
+              href={sampleHref("face_shape")}
+              from="feature"
+              tool="face_shape"
+              kind="sample"
               className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
             >
-              {ft("freeQuiz")}
-            </Link>
+              {tp("trySample")}
+            </FunnelLink>
           </>
         }
       />
 
-      <section className="py-16">
-        <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-2xl font-bold text-center">{t("whatYouGet")}</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2">
-            {FACE_DIMENSIONS.map((dim, i) => (
-              <div
-                key={dim.image}
-                className="group overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg"
-              >
-                <div className="relative aspect-[4/3] w-full overflow-hidden">
-                  <Image
-                    src={dim.image}
-                    alt={items[i] || dim.image}
-                    fill
-                    className="object-cover transition duration-300 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="p-4">
-                  <p className="text-sm font-medium">{items[i]}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeatureIncludes locale={locale} tool="face" />
 
       {/* Face Shapes Grid */}
       <section className="bg-muted/30 py-16">
@@ -141,8 +120,11 @@ export default async function FaceShapeAnalysisPage({
           <h2 className="mb-4 text-center text-2xl font-bold">
             {t("shapesTitle")}
           </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-center text-muted-foreground">
+          <p className="mx-auto mb-2 max-w-2xl text-center text-muted-foreground">
             {t("description")}
+          </p>
+          <p className="mx-auto mb-8 max-w-2xl text-center text-sm text-muted-foreground">
+            {t("shapesNote")}
           </p>
           {/* 插画本身不带文字,七个名称用当前语言渲染在每张脸下方,避免图里烤死英文 */}
           <div className="mb-8 overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
@@ -242,13 +224,6 @@ export default async function FaceShapeAnalysisPage({
     </>
   );
 }
-
-const FACE_DIMENSIONS = [
-  { image: "/images/dim_face_shape.webp" },
-  { image: "/images/dim_face_hairstyle.webp" },
-  { image: "/images/dim_face_bangs.webp" },
-  { image: "/images/dim_face_tips.webp" },
-];
 
 function OvalIcon() {
   return (

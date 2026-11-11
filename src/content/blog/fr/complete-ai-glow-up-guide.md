@@ -56,7 +56,7 @@ Il ne s'agit pas de changer qui vous êtes. Il s'agit de comprendre ce qui vous 
 
 **Analyse de couleur professionnelle :** 150-300 $ par session, couvre uniquement la couleur
 **Styliste personnel professionnel :** 200-500 $/heure, nécessite plusieurs sessions
-**Rapport Glow-Up IA :** Les 8 dimensions en un rapport visuel, généré en 60 secondes
+**Rapport Glow-Up IA :** Un avant/après de votre meilleure version avec quatre changements, dessiné sur votre propre photo
 
 L'IA ne remplace pas les stylistes humains — elle démocratise l'accès. Tout le monde ne peut pas se permettre une consultation image à 2 000 $. Mais tout le monde mérite de savoir ce qui lui flatte.
 
@@ -80,9 +80,9 @@ L'IA n'a pas ce biais. Elle évalue objectivement vos traits actuels et les comp
 
 ---
 
-## Essayez le Rapport Glow-Up Premium
+## Essayez le Rapport Glow-Up
 
-Notre Rapport Glow-Up Premium combine les 8 dimensions de stylisme en un rapport visuel complet. C'est comme avoir une équipe de stylisme complète analyser votre photo — consultante couleur, coiffeur, maquilleur, spécialiste lunettes et personal shopper — le tout en une consultation IA de 60 secondes.
+Le Rapport Glow-Up choisit quatre changements selon votre saison de couleur (couleur de cheveux, maquillage, haut et accessoire) et montre votre meilleure version sur votre propre photo, avec un curseur pour comparer. Le plan écrit est gratuit et la photo avant/après coûte 1 crédit. Pour votre palette complète, le [Rapport couleur](/fr/personal-color-analysis) réunit toutes vos meilleures couleurs, neutres et couleurs à éviter.
 
 ## Articles connexes
 

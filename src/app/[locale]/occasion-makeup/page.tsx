@@ -1,7 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { FeatureHero } from "@/components/FeatureHero";
-import Image from "next/image";
+import { FunnelLink } from "@/components/FunnelLink";
+import { sampleHref } from "@/lib/blogTools";
+import { FeatureIncludes } from "@/components/FeatureIncludes";
 import {
   buildAlternates,
   buildBreadcrumbJsonLd,
@@ -87,40 +89,27 @@ export default async function OccasionMakeupPage({
         image="/images/examples/report_occasion_makeup.webp"
         sampleLabel={tp("demoBadge")}
         actions={
-          <Link
-            href="/try?type=occasion_makeup"
-            className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-          >
-            {ft("tryItFree")}
-          </Link>
+          <>
+            <Link
+              href="/try?type=occasion_makeup"
+              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+            >
+              {ft("tryItFree")}
+            </Link>
+            <FunnelLink
+              href={sampleHref("occasion_makeup")}
+              from="feature"
+              tool="occasion_makeup"
+              kind="sample"
+              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
+            >
+              {tp("trySample")}
+            </FunnelLink>
+          </>
         }
       />
 
-      <section className="py-16">
-        <div className="mx-auto max-w-5xl px-4">
-          <h2 className="text-center text-2xl font-bold">{t("occasions")}</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {OCCASIONS.map((o) => (
-              <Link
-                key={o.type}
-                href="/try?type=occasion_makeup"
-                className="group overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg"
-              >
-                <div className="relative aspect-square w-full overflow-hidden">
-                  <Image
-                    src={o.image}
-                    alt={t(o.labelKey)}
-                    fill
-                    className="object-cover transition duration-300 group-hover:scale-105"
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 25vw"
-                  />
-                </div>
-                <p className="p-3 text-center text-sm font-medium">{t(o.labelKey)}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeatureIncludes locale={locale} tool="occasion" />
 
       <section className="bg-muted/30 py-16">
         <div className="mx-auto max-w-4xl px-4 text-center">
@@ -169,13 +158,3 @@ function Step({ num, text }: { num: string; text: string }) {
   );
 }
 
-const OCCASIONS = [
-  { type: "date_night", image: "/images/dim_occasion_date.webp", labelKey: "dateNight" },
-  { type: "interview", image: "/images/dim_occasion_interview.webp", labelKey: "interview" },
-  { type: "wedding_guest", image: "/images/dim_occasion_wedding.webp", labelKey: "weddingGuest" },
-  { type: "festival", image: "/images/dim_occasion_festival.webp", labelKey: "festival" },
-  { type: "office", image: "/images/dim_occasion_office.webp", labelKey: "office" },
-  { type: "evening_gala", image: "/images/dim_occasion_gala.webp", labelKey: "eveningGala" },
-  { type: "brunch", image: "/images/dim_occasion_brunch.webp", labelKey: "brunch" },
-  { type: "vacation", image: "/images/dim_occasion_vacation.webp", labelKey: "vacation" },
-];

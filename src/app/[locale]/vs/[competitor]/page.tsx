@@ -2,8 +2,10 @@ import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { ResultCta } from "@/components/ResultCta";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import { CREDIT_PACKS } from "@/lib/constants";
 import { VS_SLUGS } from "@/lib/vs";
 import type { Metadata } from "next";
 
@@ -100,14 +102,18 @@ function VsContent({ slug }: { slug: string }) {
   const counts = VS_COUNTS[slug];
   const name = v("name");
 
+  // 提到 Belle 价格的几条文案里有 {price} 占位符，填套装价；没有占位符的文案会忽略这个值
+  const kitPrice = `$${CREDIT_PACKS.kit.price}`;
+  const pick = (key: string) => v(key, { price: kitPrice });
+
   const comparison = Array.from({ length: counts.features }, (_, i) => ({
     feature: v(`feat${i}`),
-    belle: v(`belle${i}`),
+    belle: pick(`belle${i}`),
     competitor: v(`comp${i}`),
   }));
 
   const belleAdvantages = Array.from({ length: counts.belleAdv }, (_, i) =>
-    v(`ba${i}`)
+    pick(`ba${i}`)
   );
 
   const competitorAdvantages = Array.from({ length: counts.compAdv }, (_, i) =>
@@ -115,9 +121,9 @@ function VsContent({ slug }: { slug: string }) {
   );
 
   const faqItems = [
-    { q: v("faq1Q"), a: v("faq1A") },
-    { q: v("faq2Q"), a: v("faq2A") },
-    { q: v("faq3Q"), a: v("faq3A") },
+    { q: v("faq1Q"), a: pick("faq1A") },
+    { q: v("faq2Q"), a: pick("faq2A") },
+    { q: v("faq3Q"), a: pick("faq3A") },
   ];
 
   const faqJsonLd = {
@@ -142,6 +148,8 @@ function VsContent({ slug }: { slug: string }) {
             {t("title", { competitor: name })}
           </h1>
           <p className="mt-3 text-muted-foreground">{v("desc")}</p>
+
+          <ResultCta type="color_analysis" from="vs" className="mt-8" />
 
           <div className="mt-10 overflow-x-auto">
             <h2 className="mb-4 text-xl font-semibold">{t("comparisonTitle")}</h2>

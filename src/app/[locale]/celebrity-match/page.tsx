@@ -1,6 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { FeatureHero } from "@/components/FeatureHero";
+import { FunnelLink } from "@/components/FunnelLink";
+import { sampleHref } from "@/lib/blogTools";
 import Image from "next/image";
 import {
   buildAlternates,
@@ -84,22 +86,33 @@ export default async function CelebrityMatchPage({
         title={t("title")}
         subtitle={t("subtitle")}
         description={t("description")}
-        image="/images/examples/report_celebrity_match.webp"
+        image="/images/examples/report_celebrity_season.webp"
         sampleLabel={tp("demoBadge")}
         actions={
-          <Link
-            href="/try?type=celebrity_match"
-            className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-          >
-            {ft("tryItFree")}
-          </Link>
+          <>
+            <Link
+              href="/try?type=celebrity_match"
+              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+            >
+              {ft("tryItFree")}
+            </Link>
+            <FunnelLink
+              href={sampleHref("celebrity_match")}
+              from="feature"
+              tool="celebrity_match"
+              kind="sample"
+              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
+            >
+              {tp("trySample")}
+            </FunnelLink>
+          </>
         }
       />
 
       <section className="py-16">
         <div className="mx-auto max-w-5xl px-4">
           <h2 className="text-center text-2xl font-bold">{t("whatYouGet")}</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {DIMENSIONS.map((dim) => (
               <div key={dim.image} className="group overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
                 <div className="relative aspect-square w-full overflow-hidden">
@@ -176,9 +189,10 @@ function Step({ num, text }: { num: string; text: string }) {
   );
 }
 
+// 四张图都是真实报告 / 名人色板卡的截图，和文案一一对应
 const DIMENSIONS = [
-  { image: "/images/dim_celeb_matches.webp", feat: 1 },
-  { image: "/images/dim_celeb_lessons.webp", feat: 3 },
-  { image: "/images/dim_celeb_steal.webp", feat: 4 },
-  { image: "/images/dim_celeb_dna.webp", feat: 5 },
+  { image: "/images/dim_celeb_season.webp", feat: 1 },
+  { image: "/images/dim_celeb_list.webp", feat: 2 },
+  { image: "/images/dim_celeb_card.webp", feat: 3 },
+  { image: "/images/dim_celeb_palette.webp", feat: 4 },
 ];

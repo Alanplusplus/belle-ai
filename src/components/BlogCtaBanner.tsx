@@ -16,6 +16,8 @@ const BOTTOM_CTA_ID = "blog-cta-bottom";
 
 interface CtaTarget {
   href: string;
+  /** 「先看示例」入口：落地 /try 就是该工具的完整示例（?sample=1） */
+  sampleHref: string;
   postSlug: string;
   toolType: string;
 }
@@ -30,6 +32,7 @@ export function TopCta({
   description,
   note,
   tryItFree,
+  sampleLabel,
   toolLabel,
   image,
   target,
@@ -38,12 +41,15 @@ export function TopCta({
   description: string;
   note: string;
   tryItFree: string;
+  sampleLabel: string;
   toolLabel: string;
   image: string;
   target: CtaTarget;
 }) {
   const track = () =>
     trackEvent("blog_cta_click", { cta_location: "top", post: target.postSlug, tool: target.toolType });
+  const trackSample = () =>
+    trackEvent("blog_cta_click", { cta_location: "top_sample", post: target.postSlug, tool: target.toolType });
 
   return (
     <div
@@ -74,6 +80,13 @@ export function TopCta({
         >
           {tryItFree} →
         </Link>
+        <Link
+          href={target.sampleHref}
+          onClick={trackSample}
+          className="text-xs font-medium text-primary underline-offset-4 hover:underline"
+        >
+          {sampleLabel}
+        </Link>
         <span className="text-[11px] text-muted-foreground">{note}</span>
       </div>
     </div>
@@ -84,12 +97,14 @@ export function BottomCta({
   title,
   description,
   tryItFree,
+  sampleLabel,
   toolLabel,
   target,
 }: {
   title: string;
   description: string;
   tryItFree: string;
+  sampleLabel: string;
   toolLabel: string;
   target: CtaTarget;
 }) {
@@ -109,6 +124,17 @@ export function BottomCta({
       >
         {tryItFree}
       </Link>
+      <div className="mt-3">
+        <Link
+          href={target.sampleHref}
+          className="text-sm font-medium text-primary underline-offset-4 hover:underline"
+          onClick={() =>
+            trackEvent("blog_cta_click", { cta_location: "bottom_sample", post: target.postSlug, tool: target.toolType })
+          }
+        >
+          {sampleLabel}
+        </Link>
+      </div>
     </div>
   );
 }

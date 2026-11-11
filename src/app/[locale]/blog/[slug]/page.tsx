@@ -7,7 +7,7 @@ import {
   getAvailableLocales,
   type BlogPost,
 } from "@/lib/blog";
-import { detectToolType, exampleReportImage, getComplementaryTools, toolHref } from "@/lib/blogTools";
+import { detectToolType, exampleReportImage, getComplementaryTools, sampleHref, toolHref } from "@/lib/blogTools";
 import { Link } from "@/i18n/navigation";
 import { SITE_URL } from "@/lib/constants";
 import {
@@ -26,6 +26,7 @@ import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 import remarkGfm from "remark-gfm";
 import { StickyBottomCta, TopCta, BottomCta } from "@/components/BlogCtaBanner";
+import { ResultCta } from "@/components/ResultCta";
 import { VideoSection } from "@/components/VideoEmbed";
 import { OliveHub } from "@/components/OliveHub";
 import { isOliveClusterPost } from "@/lib/oliveCluster";
@@ -183,14 +184,18 @@ function BlogPostContent({
 
   // CTA 按文章主题直达对应工具（/try?type=...），而不是一律落到默认工具
   const toolType = detectToolType(slug);
-  const target = { href: toolHref(toolType), postSlug: slug, toolType };
+  const target = { href: toolHref(toolType), sampleHref: sampleHref(toolType), postSlug: slug, toolType };
   const toolLabel = tt(`type_${toolType}`);
   const complementaryTools = getComplementaryTools(toolType);
   const headings = extractH2Headings(post.content);
   const video = getVideoForBlog(slug);
   // olive 主题簇：在第一节之后插入「底调测试 + 相关页面」模块，把读完开头的读者接到转化更高的页面
   const oliveHub = isOliveClusterPost(slug);
-  const [bodyBefore, bodyAfter] = oliveHub ? splitAfterFirstSection(post.content) : [post.content, ""];
+  // 非 olive 的长文：读完前两节（读者已经确认「这篇有用」）之后插一张「成品示例」卡，直接给出试一试 / 先看示例的入口。
+  // 二级标题少于 5 个的短文不插，免得卡片比正文还显眼
+  const midCta = !oliveHub && headings.length >= 5;
+  const splitAt = oliveHub ? 2 : midCta ? 3 : 0;
+  const [bodyBefore, bodyAfter] = splitAt ? splitBeforeNthH2(post.content, splitAt) : [post.content, ""];
 
   return (
     <article className="py-10 pb-28 sm:py-16 sm:pb-16">
@@ -223,6 +228,7 @@ function BlogPostContent({
             description={tt(`out_${toolType}`)}
             note={t("sidebarCtaFree")}
             tryItFree={ft("tryItFree")}
+            sampleLabel={tt("trySample")}
             toolLabel={toolLabel}
             image={exampleReportImage(toolType)}
             target={target}
@@ -293,9 +299,10 @@ function BlogPostContent({
         <div className="prose prose-neutral mt-10 max-w-none break-words prose-headings:font-bold prose-a:text-primary prose-img:h-auto prose-img:max-w-full">
           <MarkdownContent content={bodyBefore} toolType={toolType} locale={locale} />
           {oliveHub && <OliveHub slug={slug} />}
+          {midCta && bodyAfter && <ResultCta type={toolType} from="blog" className="not-prose my-10" />}
           {bodyAfter && (
-            // 第一节已经渲染过 1 个二级标题，后半部分的标题序号接着往下排，目录锚点才对得上
-            <MarkdownContent content={bodyAfter} toolType={toolType} locale={locale} startH2Index={1} />
+            // 前半部分已经渲染过 splitAt - 1 个二级标题，后半部分的标题序号接着往下排，目录锚点才对得上
+            <MarkdownContent content={bodyAfter} toolType={toolType} locale={locale} startH2Index={splitAt - 1} />
           )}
         </div>
 
@@ -304,6 +311,7 @@ function BlogPostContent({
           title={t("ctaTitle")}
           description={t("ctaDescription")}
           tryItFree={ft("tryItFree")}
+          sampleLabel={tt("trySample")}
           toolLabel={toolLabel}
           target={target}
         />
@@ -408,11 +416,11 @@ function extractH2Headings(content: string): string[] {
 }
 
 /**
- * 在「第一节」（第一个二级标题到第二个二级标题之间）之后把正文切成两段，供中间插入模块。
- * 只有一个（或没有）二级标题时不切，后半段为空字符串。
- * 第一节末尾如果是分隔线 `---`，一并去掉：模块本身就是分隔，不要出现「横线 + 卡片」叠在一起。
+ * 在第 nth 个二级标题之前把正文切成两段，供中间插入模块（nth=2 即「第一节」之后，nth=3 即前两节之后）。
+ * 二级标题不够 nth 个时不切，后半段为空字符串。
+ * 前半段末尾如果是分隔线 `---`，一并去掉：模块本身就是分隔，不要出现「横线 + 卡片」叠在一起。
  */
-function splitAfterFirstSection(content: string): [string, string] {
+function splitBeforeNthH2(content: string, nth: number): [string, string] {
   const lines = content.split("\n");
   let inFence = false;
   let h2Seen = 0;
@@ -424,7 +432,7 @@ function splitAfterFirstSection(content: string): [string, string] {
     }
     if (inFence || !/^##\s+\S/.test(line)) continue;
     h2Seen += 1;
-    if (h2Seen === 2) {
+    if (h2Seen === nth) {
       const before = lines.slice(0, i).join("\n").replace(/\n\s*---\s*$/, "\n");
       return [before, lines.slice(i).join("\n")];
     }
@@ -451,8 +459,15 @@ function MarkdownContent({
       components={{
         h2: ({ children }) => <h2 id={headingId(h2Count++)} className="scroll-mt-24">{children}</h2>,
         img: ({ src, alt }) => (
+          // 色板卡片是 3:4 竖图，铺满正文宽度会比整段文字还高，限制宽度并居中
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={src} alt={alt || ""} className="h-auto max-w-full rounded-lg" loading="lazy" decoding="async" />
+          <img
+            src={src}
+            alt={alt || ""}
+            className={`h-auto max-w-full rounded-lg ${typeof src === "string" && src.startsWith("/palette-cards/") ? "mx-auto w-80" : ""}`}
+            loading="lazy"
+            decoding="async"
+          />
         ),
         // 宽表格在手机上横向滚动，不撑破页面宽度
         table: ({ children }) => (

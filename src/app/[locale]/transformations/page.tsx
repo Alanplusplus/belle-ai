@@ -11,6 +11,8 @@ import {
   TWITTER_IMAGES,
 } from "@/lib/seo";
 import { TRANSFORMATION_TYPES } from "@/lib/transformation-data";
+import { FunnelLink } from "@/components/FunnelLink";
+import { sampleHref } from "@/lib/blogTools";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -63,6 +65,7 @@ export default async function TransformationsIndexPage({
 
 function TransformationsIndexContent() {
   const t = useTranslations("transformations");
+  const tp = useTranslations("tryPage");
 
   return (
     <>
@@ -85,42 +88,30 @@ function TransformationsIndexContent() {
                 href={`/transformations/${type.slug}`}
                 className="group overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg"
               >
-                {/* Before → After → Report Preview */}
-                <div className="relative flex h-48">
-                  <div className="relative w-1/3 overflow-hidden bg-muted">
+                {/* Before → After 预览（成品报告放在每个类型的详情页顶部，用现在真实的示例报告） */}
+                <div className="relative flex h-56">
+                  <div className="relative w-1/2 overflow-hidden bg-muted">
                     <Image
                       src={type.examples[0].before}
                       alt={`${type.name} · ${t("before")}`}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 640px) 33vw, 17vw"
+                      sizes="(max-width: 640px) 50vw, 17vw"
                     />
                     <span className="absolute bottom-2 left-2 rounded bg-black/60 px-2 py-0.5 text-xs font-medium text-white">
                       {t("before")}
                     </span>
                   </div>
-                  <div className="relative w-1/3 overflow-hidden bg-muted">
+                  <div className="relative w-1/2 overflow-hidden bg-muted">
                     <Image
                       src={type.examples[0].after}
                       alt={`${type.name} · ${t("after")}`}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 640px) 33vw, 17vw"
+                      sizes="(max-width: 640px) 50vw, 17vw"
                     />
-                    <span className="absolute bottom-2 left-1/2 -translate-x-1/2 rounded bg-primary/80 px-2 py-0.5 text-xs font-medium text-white">
+                    <span className="absolute bottom-2 right-2 rounded bg-primary/80 px-2 py-0.5 text-xs font-medium text-white">
                       {t("after")}
-                    </span>
-                  </div>
-                  <div className="relative w-1/3 overflow-hidden bg-muted">
-                    <Image
-                      src={type.examples[0].report}
-                      alt={`${type.name} · ${t("report")}`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 33vw, 17vw"
-                    />
-                    <span className="absolute bottom-2 right-2 rounded bg-emerald-600/80 px-2 py-0.5 text-xs font-medium text-white">
-                      {t("report")}
                     </span>
                   </div>
                 </div>
@@ -147,12 +138,15 @@ function TransformationsIndexContent() {
             >
               {t("startAnalysis")}
             </Link>
-            <Link
-              href="/pricing"
+            <FunnelLink
+              href={sampleHref("color_analysis")}
+              from="transformations"
+              tool="color_analysis"
+              kind="sample"
               className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
             >
-              {t("viewPricing")}
-            </Link>
+              {tp("trySample")}
+            </FunnelLink>
           </div>
         </section>
       </div>

@@ -47,7 +47,7 @@ image: "/images/blog/deep-winter-color-palette.webp"
 - 深橄榄绿（冷调版本，不是偏金橄榄）
 - 松绿
 
-![深冬型色彩色卡](/images/blog/deep-winter-palette-swatches.webp)
+![深冬型色彩色卡](/palette-cards/deep-winter.png)
 
 ### 点缀色彩
 

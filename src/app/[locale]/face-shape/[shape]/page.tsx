@@ -1,8 +1,11 @@
 import { SectionNav } from "@/components/SectionNav";
 import { notFound } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { FunnelLink } from "@/components/FunnelLink";
+import { sampleHref } from "@/lib/blogTools";
+import { ResultCta } from "@/components/ResultCta";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import {
@@ -10,6 +13,11 @@ import {
   FACE_SHAPE_SLUGS,
 } from "@/lib/face-shape-data";
 import type { Metadata } from "next";
+
+/** 句子中间引用脸型名：西 / 法 / 俄语的名称在标签里首字母大写，放进句子里要小写（ovalado、ovale、овальное） */
+function inlineShapeName(locale: string, name: string) {
+  return ["es", "fr", "ru"].includes(locale) ? name.toLocaleLowerCase(locale) : name;
+}
 
 export function generateStaticParams() {
   const params: { locale: string; shape: string }[] = [];
@@ -31,7 +39,7 @@ export async function generateMetadata({
   if (!data) return {};
 
   const messages = (await import(`@/messages/${locale}.json`)).default;
-  const shapeName = data.name;
+  const shapeName = inlineShapeName(locale, messages.face?.[`shape${data.name}`] ?? data.name);
 
   const title = messages.meta.faceShapeTitle.replace(/\{shape\}/g, shapeName);
   const description = messages.meta.faceShapeDescription.replace(
@@ -69,10 +77,8 @@ export default async function FaceShapePage({
   const data = FACE_SHAPES[shape];
   if (!data) notFound();
 
-  const shapeName = shape
-    .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
+  const messages = (await import(`@/messages/${locale}.json`)).default;
+  const shapeName = messages.face?.[`shape${data.name}`] ?? data.name;
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
     { name: "Face Shape", path: "/face-shape-analysis" },
     { name: shapeName, path: `/face-shape/${shape}` },
@@ -92,11 +98,20 @@ export default async function FaceShapePage({
 function FaceShapeContent({ slug }: { slug: string }) {
   const t = useTranslations("faceShapePage");
   const fs = useTranslations(`fs.${slug}`);
-  const qt = useTranslations("quiz");
+  const fsAll = useTranslations("fs");
+  const fc = useTranslations("face");
+  const tp = useTranslations("tryPage");
   const bt = useTranslations("blogTitles");
 
   const data = FACE_SHAPES[slug];
-  const displayName = data.name;
+  // 正文以英文数据为底，各语言译文放在 messages 的 fs.<slug> 下；缺哪条就退回英文，不会整页报错
+  const pick = (key: string, fallback: string) => (fs.has(key) ? fs(key) : fallback);
+  const shapeLabel = (s: string) => {
+    const key = `shape${FACE_SHAPES[s].name}`;
+    return fc.has(key) ? fc(key) : FACE_SHAPES[s].name;
+  };
+  const displayName = shapeLabel(slug);
+  const inlineName = inlineShapeName(useLocale(), displayName);
 
   const otherShapes = FACE_SHAPE_SLUGS.filter((s) => s !== slug);
 
@@ -137,8 +152,9 @@ function FaceShapeContent({ slug }: { slug: string }) {
             {displayName}
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            {data.description}
+            {pick("desc", data.description)}
           </p>
+          <ResultCta type="face_shape" from="face_shape_page" className="mx-auto mt-8 max-w-3xl text-left" />
         </div>
       </section>
 
@@ -166,7 +182,7 @@ function FaceShapeContent({ slug }: { slug: string }) {
                 <p className="text-xs font-semibold uppercase tracking-wide text-primary">
                   {t(key)}
                 </p>
-                <p className="mt-1 text-sm text-muted-foreground">{val}</p>
+                <p className="mt-1 text-sm text-muted-foreground">{pick(key, val)}</p>
               </div>
             ))}
           </div>
@@ -175,19 +191,19 @@ function FaceShapeContent({ slug }: { slug: string }) {
         {/* Best Hairstyles */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">
-            {t("bestHairstyles", { shape: displayName })}
+            {t("bestHairstyles", { shape: inlineName })}
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
             {t("bestHairstylesDesc")}
           </p>
           <ul className="mt-6 space-y-3">
-            {data.bestHairstyles.map((tip) => (
+            {data.bestHairstyles.map((tip, i) => (
               <li
-                key={tip}
+                key={i}
                 className="flex items-start gap-3 text-sm text-muted-foreground"
               >
                 <span className="mt-0.5 text-primary">✓</span>
-                <span>{tip}</span>
+                <span>{pick(`best${i}`, tip)}</span>
               </li>
             ))}
           </ul>
@@ -196,19 +212,19 @@ function FaceShapeContent({ slug }: { slug: string }) {
         {/* Avoid Hairstyles */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">
-            {t("avoidHairstyles", { shape: displayName })}
+            {t("avoidHairstyles", { shape: inlineName })}
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
             {t("avoidHairstylesDesc")}
           </p>
           <ul className="mt-6 space-y-3">
-            {data.avoidHairstyles.map((tip) => (
+            {data.avoidHairstyles.map((tip, i) => (
               <li
-                key={tip}
+                key={i}
                 className="flex items-start gap-3 text-sm text-muted-foreground"
               >
                 <span className="mt-0.5 text-red-400">✕</span>
-                <span>{tip}</span>
+                <span>{pick(`avoid${i}`, tip)}</span>
               </li>
             ))}
           </ul>
@@ -217,17 +233,17 @@ function FaceShapeContent({ slug }: { slug: string }) {
         {/* Bangs Guide */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">
-            {t("bangsGuide", { shape: displayName })}
+            {t("bangsGuide", { shape: inlineName })}
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            {data.bangsGuide}
+            {pick("bangs", data.bangsGuide)}
           </p>
         </section>
 
         {/* Glasses */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">
-            {t("glassesTitle", { shape: displayName })}
+            {t("glassesTitle", { shape: inlineName })}
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
             {t("glassesDesc")}
@@ -236,12 +252,12 @@ function FaceShapeContent({ slug }: { slug: string }) {
             <div className="card-soft p-5">
               <h3 className="font-semibold text-primary">{t("bestFrames")}</h3>
               <ul className="mt-3 space-y-1.5">
-                {data.glassesFrames.best.map((f) => (
+                {data.glassesFrames.best.map((f, i) => (
                   <li
-                    key={f}
+                    key={i}
                     className="flex items-center gap-2 text-sm text-muted-foreground"
                   >
-                    <span className="text-primary">✓</span> {f}
+                    <span className="text-primary">✓</span> {pick(`glassBest${i}`, f)}
                   </li>
                 ))}
               </ul>
@@ -249,12 +265,12 @@ function FaceShapeContent({ slug }: { slug: string }) {
             <div className="card-soft p-5">
               <h3 className="font-semibold">{t("avoidFrames")}</h3>
               <ul className="mt-3 space-y-1.5">
-                {data.glassesFrames.avoid.map((f) => (
+                {data.glassesFrames.avoid.map((f, i) => (
                   <li
-                    key={f}
+                    key={i}
                     className="flex items-center gap-2 text-sm text-muted-foreground"
                   >
-                    <span className="text-red-400">✕</span> {f}
+                    <span className="text-red-400">✕</span> {pick(`glassAvoid${i}`, f)}
                   </li>
                 ))}
               </ul>
@@ -265,16 +281,16 @@ function FaceShapeContent({ slug }: { slug: string }) {
         {/* Makeup Tips */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">
-            {t("makeupTitle", { shape: displayName })}
+            {t("makeupTitle", { shape: inlineName })}
           </h2>
           <ul className="mt-6 space-y-3">
-            {data.makeupTips.map((tip) => (
+            {data.makeupTips.map((tip, i) => (
               <li
-                key={tip}
+                key={i}
                 className="flex items-start gap-3 text-sm text-muted-foreground"
               >
                 <span className="mt-0.5 text-primary">→</span>
-                <span>{tip}</span>
+                <span>{pick(`makeup${i}`, tip)}</span>
               </li>
             ))}
           </ul>
@@ -283,7 +299,7 @@ function FaceShapeContent({ slug }: { slug: string }) {
         {/* Earring Tips */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">
-            {t("earringTitle", { shape: displayName })}
+            {t("earringTitle", { shape: inlineName })}
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
             {t("earringDesc")}
@@ -294,12 +310,12 @@ function FaceShapeContent({ slug }: { slug: string }) {
                 {t("bestEarrings")}
               </h3>
               <ul className="mt-3 space-y-1.5">
-                {data.earringTips.best.map((tip) => (
+                {data.earringTips.best.map((tip, i) => (
                   <li
-                    key={tip}
+                    key={i}
                     className="flex items-center gap-2 text-sm text-muted-foreground"
                   >
-                    <span className="text-primary">✓</span> {tip}
+                    <span className="text-primary">✓</span> {pick(`earBest${i}`, tip)}
                   </li>
                 ))}
               </ul>
@@ -307,12 +323,12 @@ function FaceShapeContent({ slug }: { slug: string }) {
             <div className="card-soft p-5">
               <h3 className="font-semibold">{t("avoidEarrings")}</h3>
               <ul className="mt-3 space-y-1.5">
-                {data.earringTips.avoid.map((tip) => (
+                {data.earringTips.avoid.map((tip, i) => (
                   <li
-                    key={tip}
+                    key={i}
                     className="flex items-center gap-2 text-sm text-muted-foreground"
                   >
-                    <span className="text-red-400">✕</span> {tip}
+                    <span className="text-red-400">✕</span> {pick(`earAvoid${i}`, tip)}
                   </li>
                 ))}
               </ul>
@@ -324,19 +340,19 @@ function FaceShapeContent({ slug }: { slug: string }) {
         {data.facialHairTips && data.facialHairTips.length > 0 && (
           <section className="border-t border-border py-12">
             <h2 className="text-2xl font-bold">
-              {t("facialHairTitle", { shape: displayName })}
+              {t("facialHairTitle", { shape: inlineName })}
             </h2>
             <p className="mt-2 text-sm text-muted-foreground">
               {t("facialHairDesc")}
             </p>
             <ul className="mt-6 space-y-3">
-              {data.facialHairTips.map((tip) => (
+              {data.facialHairTips.map((tip, i) => (
                 <li
-                  key={tip}
+                  key={i}
                   className="flex items-start gap-3 text-sm text-muted-foreground"
                 >
                   <span className="mt-0.5 text-primary">→</span>
-                  <span>{tip}</span>
+                  <span>{pick(`facial${i}`, tip)}</span>
                 </li>
               ))}
             </ul>
@@ -346,10 +362,10 @@ function FaceShapeContent({ slug }: { slug: string }) {
         {/* Celebrities */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">
-            {t("celebrityTitle", { shape: displayName })}
+            {t("celebrityTitle", { shape: inlineName })}
           </h2>
           <p className="mt-4 text-muted-foreground">
-            {t("celebrityDesc", { shape: displayName })}
+            {t("celebrityDesc", { shape: inlineName })}
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             {data.celebrities.map((c) => (
@@ -366,7 +382,7 @@ function FaceShapeContent({ slug }: { slug: string }) {
         {/* FAQ */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">
-            {t("faqTitle", { shape: displayName })}
+            {t("faqTitle", { shape: inlineName })}
           </h2>
           <div className="mt-6 space-y-6">
             {faqItems.map((item) => (
@@ -391,12 +407,15 @@ function FaceShapeContent({ slug }: { slug: string }) {
             >
               {t("getMyAnalysis")}
             </Link>
-            <Link
-              href="/tools/face-shape-quiz"
+            <FunnelLink
+              href={sampleHref("face_shape")}
+              from="face_shape_page"
+              tool="face_shape"
+              kind="sample"
               className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
             >
-              {qt("startQuiz")}
-            </Link>
+              {tp("trySample")}
+            </FunnelLink>
           </div>
         </section>
 
@@ -413,10 +432,10 @@ function FaceShapeContent({ slug }: { slug: string }) {
                   className="group card-soft p-5 transition hover:border-primary/40 hover:shadow-md"
                 >
                   <h3 className="font-semibold group-hover:text-primary">
-                    {shapeData.name}
+                    {shapeLabel(s)}
                   </h3>
                   <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">
-                    {shapeData.description}
+                    {fsAll.has(`${s}.desc`) ? fsAll(`${s}.desc`) : shapeData.description}
                   </p>
                 </Link>
               );

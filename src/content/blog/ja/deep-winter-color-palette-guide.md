@@ -47,7 +47,7 @@ image: "/images/blog/deep-winter-color-palette.webp"
 - ディープオリーブ（ゴールデンオリーブではなくクール版）
 - パイングリーン
 
-![ディープウィンター カラースウォッチ](/images/blog/deep-winter-palette-swatches.webp)
+![ディープウィンター カラースウォッチ](/palette-cards/deep-winter.png)
 
 ### アクセントカラー
 

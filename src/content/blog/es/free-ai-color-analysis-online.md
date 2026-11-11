@@ -63,7 +63,7 @@ Recibes:
 
 ## Belle AI: análisis de color gratis en 60 segundos
 
-Nuestra [herramienta de análisis de color con IA](/) ofrece todo lo anterior. Tu primer análisis es gratis como vista previa y sin registro, pero la versión gratuita es una vista previa con algunos detalles desenfocados. Un pack de créditos o Pro desbloquea el informe completo. Preferimos decirlo desde el principio antes que prometer un informe «completamente gratis».
+Nuestra [herramienta de análisis de color con IA](/) ofrece todo lo anterior. Tu primer análisis es gratis como vista previa y sin registro, pero la versión gratuita es una vista previa con algunos detalles desenfocados. Una compra única desbloquea el informe completo. Preferimos decirlo desde el principio antes que prometer un informe «completamente gratis».
 
 ### Qué obtienes
 
@@ -129,6 +129,6 @@ Ten tu paleta de colores en el móvil. Al comprar, compara los artículos con tu
 
 [Obtener mi análisis de color gratis →](/try)
 
-Sin registro ni tarjeta de crédito para la vista previa. La versión gratuita desenfoca algunos detalles; un pack de créditos o Pro desbloquea el informe completo.
+Sin registro ni tarjeta de crédito para la vista previa. La versión gratuita desenfoca algunos detalles; una compra única desbloquea el informe completo.
 
 ¿Prefieres no subir foto? [Haz nuestro test de análisis de color gratis →](/tools/color-quiz)

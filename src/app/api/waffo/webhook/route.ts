@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyWebhook } from "@waffo/pancake-ts";
-import { SUBSCRIPTION_PRODUCT_IDS, GA_MEASUREMENT_ID, CREDIT_PACKS, determinePlan, isPackProduct, type PackKey } from "@/lib/constants";
+import { GA_MEASUREMENT_ID, packCreditsFor, reportCreditsFor } from "@/lib/constants";
 
 const API_BASE = process.env.BELLE_API_BASE || "https://api.chibistyle.app";
 const API_TOKEN = process.env.BELLE_API_TOKEN!;
@@ -38,19 +38,6 @@ const EVENT_LABELS: Record<string, string> = {
   "refund.failed": "❗ 退款失败",
 };
 
-/** 需要同步到后端权益系统的事件；其余事件只做飞书通知 */
-const SYNCED_EVENTS = new Set([
-  "subscription.activated",
-  "subscription.payment_succeeded",
-  "subscription.renewed",
-  "subscription.recovered",
-  "subscription.canceling",
-  "subscription.uncanceled",
-  "subscription.canceled",
-  "subscription.past_due",
-  "refund.succeeded",
-]);
-
 function str(value: unknown): string {
   return typeof value === "string" ? value : value == null ? "" : String(value);
 }
@@ -58,24 +45,6 @@ function str(value: unknown): string {
 function toNumber(value: unknown): number {
   const n = parseFloat(str(value));
   return Number.isFinite(n) ? n : 0;
-}
-
-/**
- * Waffo 的 webhook 载荷里没有 productId，所以套餐只能从下面几处推断：
- * 结算时写入的 orderMetadata.product → 载荷里的 productId(若有) → billingPeriod。
- */
-function resolvePlan(data: Record<string, unknown>, metadata: Record<string, string>): string | null {
-  if (metadata.product === "weekly" || metadata.product === "yearly") return metadata.product;
-
-  const productId = str(data.productId);
-  if (productId && SUBSCRIPTION_PRODUCT_IDS.has(productId)) {
-    const plan = determinePlan(productId);
-    if (plan !== "unknown") return plan;
-  }
-
-  const billingPeriod = str(data.billingPeriod);
-  if (billingPeriod === "weekly" || billingPeriod === "yearly") return billingPeriod;
-  return null;
 }
 
 /**
@@ -90,7 +59,7 @@ function resolvePlan(data: Record<string, unknown>, metadata: Record<string, str
 async function sendGaPurchase(
   eventKey: string,
   userId: string,
-  plan: string | null,
+  product: string | null,
   data: Record<string, unknown>,
   metadata: Record<string, string>,
   mode: string,
@@ -135,20 +104,18 @@ async function sendGaPurchase(
                 currency,
                 items: [
                   {
-                    item_id: plan || "subscription",
-                    item_name: str(data.productName) || plan || "subscription",
+                    item_id: product || "unknown",
+                    item_name: str(data.productName) || product || "unknown",
                     price: value,
                     quantity: 1,
                   },
                 ],
-                period_number: typeof data.periodNumber === "number" ? data.periodNumber : undefined,
-                plan: plan || undefined,
+                plan: product || undefined,
                 entry_source: metadata.source,
                 campaign_source: metadata.utm_source,
                 campaign_medium: metadata.utm_medium,
                 campaign_name: metadata.utm_campaign,
                 campaign_content: metadata.utm_content,
-                referral_code: metadata.ref,
                 // 没带 UTM 的自然流量（Pinterest、搜索、社媒）靠来源域名和落地页归因；
                 // 需要在 GA4 里把这两个参数注册为事件级自定义维度才能在报表里按它们拆分
                 referrer_host: metadata.referrer_host,
@@ -216,21 +183,23 @@ async function notifyFeishu(
 }
 
 /**
- * 一次性积分包订单：结算时 metadata.product 记为 "pack" / "pack30"，到账后按对应档位给用户发放积分包积分。
+ * 一次性积分商品订单：结算时 metadata.product 记为 "kit" / "addon"（停售前下的单还可能是 single / pack / pack30），
+ * 到账后按商品给用户发放积分包积分（数量见 packCreditsFor）和报告额度（色彩报告单独购买，数量见 reportCreditsFor）。
  * 幂等由后端按 order_id 保证；后端异常返回 500 让 Waffo 重试，避免付了钱没到账。
- * metadata 是我们自己的结算接口写入的（客户端改不了），所以档位可以信任它。
+ * metadata 是我们自己的结算接口写入的（客户端改不了），所以商品可以信任它。
  */
 async function handlePackOrder(
   eventType: string,
   eventKey: string,
   userId: string | null,
   orderId: string,
-  packKey: PackKey,
+  product: string,
+  packCredits: number,
+  reportCredits: number,
   data: Record<string, unknown>,
   metadata: Record<string, string>,
   mode: string,
 ): Promise<Response> {
-  const packCredits = CREDIT_PACKS[packKey].credits;
   if (!userId || !orderId) {
     console.error("Waffo pack order missing userId/orderId:", orderId);
     await notifyFeishu(eventType, null, data, ["⚠️ 积分包订单缺少 userId 或 orderId,未发放积分,需人工核对"]);
@@ -240,6 +209,7 @@ async function handlePackOrder(
   const result = await callBackend("/common/v1/web/add-credits", {
     user_id: userId,
     credits: packCredits,
+    report_credits: reportCredits,
     order_id: orderId,
     // 付款邮箱：后端记下，用户之后在系统浏览器用同一邮箱登录 Google 时可以找回购买
     buyer_email: str(data.buyerEmail) || null,
@@ -265,10 +235,10 @@ async function handlePackOrder(
       .filter(Boolean)
       .join(" / ");
     await notifyFeishu(eventType, userId, data, [
-      `积分包: +${packCredits} 积分`,
+      `积分包: +${packCredits} 积分${reportCredits > 0 ? `, +${reportCredits} 份色彩报告` : ""}`,
       ...(attributionNote ? [`来源: ${attributionNote}`] : []),
     ]);
-    await sendGaPurchase(eventKey, userId, packKey, data, metadata, mode);
+    await sendGaPurchase(eventKey, userId, product, data, metadata, mode);
   }
   return new Response("OK");
 }
@@ -296,83 +266,20 @@ export async function POST(req: NextRequest) {
     const userId = metadata.userId || str(data.merchantProvidedBuyerIdentity) || null;
     const orderId = str(data.orderId);
 
-    // 一次性积分包：订阅链路之外单独处理（订阅首单也会触发 order.completed，所以必须看 metadata.product）
-    if (eventType === "order.completed" && isPackProduct(metadata.product)) {
-      return handlePackOrder(eventType, `${eventType}:${event.eventId || event.id}`, userId, orderId, metadata.product, data, metadata, event.mode);
+    // 一次性商品（套装 / 加购包，停售前的单份 / 积分包）：按 metadata.product 发放积分和报告额度
+    const packCredits = packCreditsFor(metadata.product);
+    if (eventType === "order.completed" && packCredits != null) {
+      return handlePackOrder(eventType, `${eventType}:${event.eventId || event.id}`, userId, orderId, metadata.product, packCredits, reportCreditsFor(metadata.product), data, metadata, event.mode);
     }
 
-    // 幂等由后端按 eventType:eventId 落库保证（多实例 / 重启都安全），这里不再用内存 Set
-    if (!SYNCED_EVENTS.has(eventType)) {
-      await notifyFeishu(eventType, userId, data);
-      return new Response("OK");
-    }
-
-    if (!userId || !orderId) {
-      console.error("Waffo webhook missing userId/orderId:", eventType, orderId);
-      await notifyFeishu(eventType, null, data, ["⚠️ 缺少 userId 或 orderId,未同步权益,需人工核对"]);
-      return NextResponse.json({ received: true, warning: "no user id" });
-    }
-
-    const refundedAmount = toNumber(data.refundedAmount);
-    const originalCharged = toNumber(data.originalChargedAmount);
-
-    const result = await callBackend("/common/v1/web/subscription-event", {
-      event_key: `${eventType}:${event.eventId || event.id}`,
-      event_type: eventType,
-      user_id: userId,
-      order_id: orderId,
-      plan: resolvePlan(data, metadata),
-      event_time: event.timestamp,
-      period_start: str(data.currentPeriodStart) || null,
-      period_end: str(data.currentPeriodEnd) || null,
-      period_number: typeof data.periodNumber === "number" ? data.periodNumber : null,
-      payment_id: str(data.paymentId) || null,
-      charged_amount: str(data.chargedAmount) || null,
-      refund_full: originalCharged > 0 && refundedAmount >= originalCharged,
-      // 付款邮箱：后端记下，用户之后在系统浏览器用同一邮箱登录 Google 时可以找回购买
-      buyer_email: str(data.buyerEmail) || null,
-      // 下单时的站点语种：后端据此选付款后邮件的语言
-      locale: metadata.locale || null,
-    });
-
-    const code = result.code ?? 500;
-
-    // 后端异常 / 鉴权失败：返回 500 让 Waffo 重试，避免权益丢失
-    if (code >= 500 || code === 403) {
-      console.error("Backend subscription-event failed:", eventType, orderId, result);
-      await notifyFeishu(eventType, userId, data, [`❗ 后端处理失败(将由 Waffo 重试): ${result.message || code}`]);
-      return new Response("Backend processing failed", { status: 500 });
-    }
-
-    if (code === 404) {
-      // 用户不存在：重试也不会成功，记录并通知人工处理
-      console.error("Backend subscription-event: user not found", eventType, userId, orderId);
-      await notifyFeishu(eventType, userId, data, ["⚠️ 后端找不到该用户,权益未同步,需人工核对"]);
-      return NextResponse.json({ received: true, warning: "user not found" });
-    }
-
-    // 重复投递不再重复通知 / 重复上报
-    if (result.message !== "Event already processed") {
-      const attributionNote = [metadata.utm_source, metadata.utm_medium, metadata.utm_campaign, metadata.utm_content, metadata.source, metadata.referrer_host]
-        .filter(Boolean)
-        .join(" / ");
-      await notifyFeishu(eventType, userId, data, [
-        ...(result.message ? [`处理结果: ${result.message}`] : []),
-        ...(attributionNote ? [`来源: ${attributionNote}`] : []),
-      ]);
-
-      if (eventType === "subscription.payment_succeeded") {
-        await sendGaPurchase(
-          `${eventType}:${event.eventId || event.id}`,
-          userId,
-          resolvePlan(data, metadata),
-          data,
-          metadata,
-          event.mode,
-        );
-      }
-    }
-
+    // 网站已经没有订阅，也不再按退款回收权益：其余事件只发飞书通知，回 200 让 Waffo 不再重试。
+    // Waffo 后台里如果还有没取消的老订阅，扣款事件会在这里露出来，需要人工去取消 / 退款
+    await notifyFeishu(
+      eventType,
+      userId,
+      data,
+      eventType.startsWith("subscription.") ? ["⚠️ 网站已下线订阅，这个订阅没有对应的权益，请到 Waffo 后台确认是否需要取消 / 退款"] : [],
+    );
     return new Response("OK");
   } catch (err) {
     console.error("Waffo webhook error:", err);

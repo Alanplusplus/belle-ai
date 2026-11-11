@@ -147,7 +147,7 @@ En doğru sonuç için net bir selfie yükleyin ve yapay zekânın tam 12 mevsim
 
 [Ücretsiz Yapay Zekâ Renk Analizi →](/tr/try)
 
-Önizleme için kayıt gerekmez. Mevsiminiz yaklaşık 60 saniyede görünür; ücretsiz sürüm bazı detayları bulanık gösterir, tam paletin kilidi kredi paketi veya Pro ile açılır.
+Önizleme için kayıt gerekmez. Mevsiminiz yaklaşık 60 saniyede görünür; ücretsiz sürüm bazı detayları bulanık gösterir, tam paletin kilidi tek seferlik satın alma ile açılır.
 
 ## İlgili Makaleler
 

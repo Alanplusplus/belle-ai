@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { FunnelLink } from "@/components/FunnelLink";
+import { sampleHref } from "@/lib/blogTools";
+import { ResultCta } from "@/components/ResultCta";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import { SEASON_PALETTES } from "@/lib/color-palette-data";
@@ -109,10 +112,14 @@ export default async function ComparePage({
 function CompareContent({ slug }: { slug: string }) {
   const t = useTranslations("comparePage");
   const cmp = useTranslations(`cmp.${slug}`);
+  const cmpAll = useTranslations("cmp");
   const sd = useTranslations("sd");
   const ph = useTranslations("paletteHub");
+  const tp = useTranslations("tryPage");
 
   const data = COMPARISON_DATA[slug];
+  // 正文以英文数据为底，各语言译文放在 messages 的 cmp.<slug> 下；缺哪条就退回英文，不会整页报错
+  const pick = (key: string, fallback: string) => (cmp.has(key) ? cmp(key) : fallback);
   const season1Name = sd(`${data.season1}.name`);
   const season2Name = sd(`${data.season2}.name`);
 
@@ -155,8 +162,9 @@ function CompareContent({ slug }: { slug: string }) {
             {season2Name}
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            {data.description}
+            {pick("desc", data.description)}
           </p>
+          <ResultCta type="color_analysis" from="compare" className="mx-auto mt-8 max-w-3xl text-left" />
         </div>
       </section>
 
@@ -182,17 +190,19 @@ function CompareContent({ slug }: { slug: string }) {
                 </tr>
               </thead>
               <tbody>
-                {data.keyDifferences.map((row) => (
+                {data.keyDifferences.map((row, i) => (
                   <tr
                     key={row.dimension}
                     className="border-b border-border last:border-0"
                   >
-                    <td className="px-4 py-3 font-medium">{row.dimension}</td>
-                    <td className="px-4 py-3 text-muted-foreground">
-                      {row.season1Value}
+                    <td className="px-4 py-3 font-medium">
+                      {t.has(`dim${row.dimension}`) ? t(`dim${row.dimension}`) : row.dimension}
                     </td>
                     <td className="px-4 py-3 text-muted-foreground">
-                      {row.season2Value}
+                      {pick(`v1_${i}`, row.season1Value)}
+                    </td>
+                    <td className="px-4 py-3 text-muted-foreground">
+                      {pick(`v2_${i}`, row.season2Value)}
                     </td>
                   </tr>
                 ))}
@@ -205,13 +215,13 @@ function CompareContent({ slug }: { slug: string }) {
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">{t("howToTell")}</h2>
           <ul className="mt-6 space-y-3">
-            {data.howToTell.map((tip) => (
+            {data.howToTell.map((tip, i) => (
               <li
-                key={tip}
+                key={i}
                 className="flex items-start gap-3 text-sm text-muted-foreground"
               >
                 <span className="mt-0.5 text-primary">→</span>
-                <span>{tip}</span>
+                <span>{pick(`tip${i}`, tip)}</span>
               </li>
             ))}
           </ul>
@@ -263,13 +273,13 @@ function CompareContent({ slug }: { slug: string }) {
               })}
             </p>
             <ul className="mt-6 space-y-3">
-              {data.commonMistakes.map((mistake) => (
+              {data.commonMistakes.map((mistake, i) => (
                 <li
-                  key={mistake}
+                  key={i}
                   className="flex items-start gap-3 text-sm text-muted-foreground"
                 >
                   <span className="mt-0.5 text-amber-500">⚠</span>
-                  <span>{mistake}</span>
+                  <span>{pick(`mistake${i}`, mistake)}</span>
                 </li>
               ))}
             </ul>
@@ -285,7 +295,7 @@ function CompareContent({ slug }: { slug: string }) {
             </p>
             <div className="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-6">
               <p className="text-sm leading-relaxed text-muted-foreground">
-                {data.drapingTest}
+                {pick("draping", data.drapingTest)}
               </p>
             </div>
           </section>
@@ -300,7 +310,7 @@ function CompareContent({ slug }: { slug: string }) {
             </p>
             <div className="mt-6 card-soft p-6">
               <p className="text-sm leading-relaxed text-muted-foreground">
-                {data.realWorldExample}
+                {pick("example", data.realWorldExample)}
               </p>
             </div>
           </section>
@@ -357,17 +367,20 @@ function CompareContent({ slug }: { slug: string }) {
           <p className="mt-2 text-muted-foreground">{t("ctaDesc")}</p>
           <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
-              href="/try?type=color"
+              href="/try?type=color_analysis"
               className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
             >
               {t("getAnalysis")}
             </Link>
-            <Link
-              href="/tools/color-quiz"
+            <FunnelLink
+              href={sampleHref("color_analysis", data.season1)}
+              from="compare"
+              tool="color_analysis"
+              kind="sample"
               className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
             >
-              {t("takeQuiz")}
-            </Link>
+              {tp("trySample")}
+            </FunnelLink>
           </div>
         </section>
 
@@ -389,7 +402,7 @@ function CompareContent({ slug }: { slug: string }) {
                     {s1} {t("vsLabel")} {s2}
                   </h3>
                   <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">
-                    {cmpData.description}
+                    {cmpAll.has(`${s}.desc`) ? cmpAll(`${s}.desc`) : cmpData.description}
                   </p>
                 </Link>
               );

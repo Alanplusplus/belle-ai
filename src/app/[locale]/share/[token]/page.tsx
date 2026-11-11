@@ -68,7 +68,7 @@ export default async function SharePage({
 
   return (
     <div className="mx-auto flex max-w-xl flex-col items-center px-4 py-10 text-center sm:py-14">
-      <ShareLandingTracker referralCode={report.referralCode} type={report.type} />
+      <ShareLandingTracker type={report.type} />
 
       <h1 className="font-serif text-2xl font-bold text-foreground sm:text-3xl">{t("heading")}</h1>
       <p className="mt-2 text-sm text-muted-foreground sm:text-base">{t("subheading")}</p>
@@ -92,7 +92,7 @@ export default async function SharePage({
       )}
 
       <div className="mt-8 flex flex-col items-center gap-2">
-        <ShareCtaButton referralCode={report.referralCode} type={report.type}>
+        <ShareCtaButton type={report.type}>
           {t("cta")}
         </ShareCtaButton>
         <p className="text-xs text-muted-foreground">{t("ctaNote")}</p>

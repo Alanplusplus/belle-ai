@@ -56,7 +56,7 @@ No se trata de cambiar quién eres. Se trata de entender lo que ya te favorece �
 
 **Análisis de color profesional:** $150-300 por sesión, solo cubre color
 **Estilista personal profesional:** $200-500/hora, requiere múltiples sesiones
-**Informe Glow-Up con IA:** Las 8 dimensiones en un informe visual, generado en 60 segundos
+**Informe Glow-Up con IA:** Un antes y después de tu mejor versión con cuatro cambios, dibujado en tu propia foto
 
 La IA no reemplaza a los estilistas humanos — democratiza el acceso. No todos pueden permitirse una consulta de imagen de $2,000. Pero todos merecen saber qué les favorece.
 
@@ -80,9 +80,9 @@ La IA no tiene ese sesgo. Evalúa objetivamente tus rasgos actuales y los compar
 
 ---
 
-## Prueba el Informe Glow-Up Premium
+## Prueba el Informe Glow-Up
 
-Nuestro Informe Glow-Up Premium combina las 8 dimensiones de estilismo en un informe visual completo. Es como tener un equipo completo de estilismo analizando tu foto — consultor de color, peluquero, maquillador, especialista en gafas y personal shopper — todo en una consulta de IA de 60 segundos.
+El Informe Glow-Up elige cuatro cambios según tu estación de color (color de pelo, maquillaje, prenda superior y accesorio) y muestra tu mejor versión en tu propia foto, con un control deslizante para comparar. El plan escrito es gratis y la foto de antes y después cuesta 1 crédito. Para tu paleta completa, el [Informe de color](/es/personal-color-analysis) incluye todos tus mejores colores, neutros y colores a evitar.
 
 ## Artículos relacionados
 

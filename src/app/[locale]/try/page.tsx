@@ -46,16 +46,18 @@ export default async function TryPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ type?: string }>;
+  searchParams: Promise<{ type?: string; sample?: string; persona?: string }>;
 }) {
   const { locale } = await params;
-  const { type } = await searchParams;
+  const { type, sample, persona } = await searchParams;
   setRequestLocale(locale);
   const messages = (await import(`@/messages/${locale}.json`)).default;
 
   return (
-    <ExtraMessages messages={{ report: messages.report }}>
-      <TryClient locale={locale} initialType={type} />
+    // kit：付费弹窗 / 报告页里套装相关的文案（TryClient、ReportPanel、PricingModal 都在客户端取）。
+    // 只在 /try 注入，不放进 layout 的 CLIENT_NAMESPACES（那个会被复制进全站每个静态页）
+    <ExtraMessages messages={{ report: messages.report, kit: messages.kit }}>
+      <TryClient locale={locale} initialType={type} initialPersona={persona} autoSample={sample === "1"} />
     </ExtraMessages>
   );
 }

@@ -56,7 +56,7 @@ This isn't about changing who you are. It's about understanding what already wor
 
 **Professional color analysis:** $150-300 for one session, covers only color
 **Professional personal stylist:** $200-500/hour, requires multiple sessions
-**AI Glow-Up Report:** All 8 dimensions in one visual report, generated in 60 seconds
+**Belle AI Glow-Up Report:** A before-and-after of your best version with four changes, drawn on your own photo
 
 AI isn't replacing human stylists — it's democratizing access. Not everyone can afford a $2,000 image consultation. But everyone deserves to know what flatters them.
 
@@ -80,9 +80,9 @@ AI has no such bias. It evaluates your current features objectively and matches 
 
 ---
 
-## Try the Premium Glow-Up Report
+## Try the Glow-Up Report
 
-Our Premium Glow-Up Report combines all 8 styling dimensions into a single comprehensive visual report. It's like having a full personal styling team analyze your photo — color consultant, hairstylist, makeup artist, eyewear specialist, and personal shopper — all in one 60-second AI consultation.
+The Glow-Up Report picks four changes from your color season (hair color, makeup, top and accessory) and shows your best version on your own photo, with a slider to compare. The written plan is free and the before-and-after photo costs 1 credit. For your full palette, the [Color Report](/personal-color-analysis) covers every best color, neutral and color to avoid.
 
 ## Related Articles
 

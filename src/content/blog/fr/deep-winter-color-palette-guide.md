@@ -46,7 +46,7 @@ Des teintes polyvalentes toujours flatteuses :
 - Olive profonde (la version froide, pas olive dorée)
 - Vert pin
 
-![Nuancier palette Hiver Profond](/images/blog/deep-winter-palette-swatches.webp)
+![Nuancier palette Hiver Profond](/palette-cards/deep-winter.png)
 
 ### Couleurs d'accent
 

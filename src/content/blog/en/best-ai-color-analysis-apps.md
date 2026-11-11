@@ -59,7 +59,7 @@ Competitor details come from each tool’s public pages and independent reviews 
 [Belle AI](/) reads your selfie and returns a 12-season result with a visual report: palette, colors to avoid, makeup and wardrobe guidance. The same account also covers face shape, hair color, glasses and other analysis types.
 
 - **Good:** 12-season output, reports you can save and share, no installation (it works in a phone or desktop browser), and a free quiz if you would rather not upload a photo.
-- **Less good:** the free tier is 3 previews with the details blurred, so a full report needs a credit pack or Pro ($3.99 per week or $29.99 per year). There is no expert-review option.
+- **Less good:** the free tier is 3 previews with the details blurred, so a full report needs a one-time purchase (no subscription is required; see the [pricing page](/pricing) for the current price). There is no expert-review option.
 - **Privacy:** photos are used only to create your report and are kept in your private history, which you can delete on request.
 
 See the full head-to-head pages: [Belle AI vs Dressika](/vs/dressika), [vs Colorwise](/vs/colorwise), [vs MyColorAnalysis](/vs/mycoloranalysis), [vs Palette Hunt](/vs/palettehunt) and [vs Color-Analysis.app](/vs/color-analysis-app).

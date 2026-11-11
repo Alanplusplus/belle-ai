@@ -1,6 +1,6 @@
 import { getFingerprint } from "./fingerprint";
-import { trackEvent } from "./analytics";
 import type { ColorReportData } from "./color-report";
+import type { LookbookData } from "./lookbook";
 
 interface ApiResponse<T> {
   code: number;
@@ -47,58 +47,29 @@ export interface WebInitData {
   email: string;
   nickname: string;
   avatar_url: string;
+  /** 主打产品（色彩分析等）的免费预览额度池 */
   web_quota: { total: number; used: number; remaining: number };
-  /** 沿用旧字段名：实际是签到 / 邀请获得的免费积分（只能生成预览报告），不是付费积分 */
-  paid_credits: number;
-  /** 积分包购买的积分：用它生成或解锁的报告是完整无模糊的 */
+  /** 套餐积分（购买的积分 + 老的签到 / 邀请赠送积分，后端已合并）：用来试戴、生成其他分析的完整结果 */
   pack_credits?: number;
-  subscription: {
-    plan: string | null;
-    /** "active" 表示当前享有 Pro 权益（已取消但仍在已付费周期内也算 active） */
-    status: string;
-    remaining: number;
-    period_end?: string | null;
-    cancel_at_period_end?: boolean;
-  };
+  /** 买色彩报告得到的报告额度：只用来解锁 / 生成色彩分析的完整报告，不是积分 */
+  report_credits?: number;
   total_remaining: number;
-  checkin_available: boolean;
-  checkin_streak?: number;
-  checkin_max_streak?: number;
   /** 本次登录时按付款邮箱找回的购买（账号）数：>0 表示在其他浏览器里付的款已经转到当前账号 */
   restored_purchases?: number;
-  /** 「留邮箱免费解锁一次」是否还可用：后端功能开着 + 邮件已配置 + 这个账号还没领过。false / 缺省时前端不展示入口 */
-  email_unlock_available?: boolean;
+  /** 免费小工具（除主打产品外的所有分析类型）的免费额度池 */
+  tools_quota?: { total: number; used: number; remaining: number };
+  /** 付费解锁后 14 天内可免费重测色彩分析：available 为 true 时 left 是还能重测几次 */
+  retest?: { available: boolean; expires_at?: number | null; left?: number };
+  /** 买过套装 / 积分包：用完积分后展示加购包，而不是再卖一次套装 */
+  has_purchased?: boolean;
 }
 
 export type WebSignInData = WebInitData;
-
-async function _tryApplyReferral() {
-  try {
-    const { getStoredReferralCode, clearStoredReferralCode } = await import("./referral");
-    const code = getStoredReferralCode();
-    if (code) {
-      const res = await belleApi<{ success: boolean }>({
-        action: "referral-apply",
-        referral_code: code,
-      });
-      // 200 = 绑定成功；400/404/429 = 邀请码无效 / 老用户 / 被防刷拦截，重试也不会成功，直接清掉避免每次初始化都重复请求。
-      // 只有服务端错误(5xx)才保留，等下次再试
-      if (res.code === 200) {
-        clearStoredReferralCode();
-        trackEvent("referral_applied");
-      } else if (res.code && res.code < 500) {
-        clearStoredReferralCode();
-        trackEvent("referral_apply_rejected", { code: res.code });
-      }
-    }
-  } catch {}
-}
 
 export async function webInit() {
   const res = await belleApi<WebInitData>({ action: "init" });
   if (res.code === 200 && res.data) {
     cacheAccount(res.data);
-    _tryApplyReferral();
   }
   return res;
 }
@@ -112,7 +83,6 @@ export async function webSignIn(email?: string, name?: string, avatarUrl?: strin
   });
   if (res.code === 200 && res.data) {
     cacheAccount(res.data);
-    _tryApplyReferral();
   }
   return res;
 }
@@ -245,11 +215,13 @@ export async function createTask(
     task_id: string;
     api_task_id: string;
     quota: { used: number; total: number; remaining: number };
-    /** 本次扣费后的总剩余次数（免费 + 签到/邀请积分 + 积分包 + 订阅额度） */
+    /** 本次扣费后的总剩余次数（免费 + 历史赠送积分 + 积分包 + 订阅额度） */
     total_remaining?: number;
     credit_cost?: number;
-    /** 这份报告是否直接解锁（订阅有效或用积分包生成） */
+    /** 这份报告是否直接解锁（订阅有效、用积分包生成，或免费小工具 / 免费重测） */
     unlocked?: boolean;
+    /** 这次是解锁后 14 天内的免费重测（不占额度、不扣积分） */
+    free_retest?: boolean;
   }>({
     action: "generate",
     image_url_list: options?.itemImageUrl ? [imageUrl, options.itemImageUrl] : [imageUrl],
@@ -263,9 +235,6 @@ export async function createTask(
     ...(options?.tryon ? { tryon: options.tryon } : {}),
   });
 }
-
-/** 轮询到任务成功且发放了邀请奖励时在 window 上广播，页面据此刷新积分并弹出提示 */
-export const REFERRAL_BONUS_EVENT = "belle:referral-bonus";
 
 /** 报告的锁定状态：免费用户拿到的是下半部分被模糊的预览图，付费解锁后换成完整原图 */
 export interface ReportLockInfo {
@@ -300,8 +269,6 @@ export async function pollTask(taskId: string) {
       kind?: "report";
       report?: ColorReportData;
     };
-    /** 被邀请人第一次分析成功后发放的奖励积分（只出现一次） */
-    referral_bonus?: number;
   }>({
     action: "poll",
     task_id: taskId,
@@ -370,9 +337,6 @@ export async function pollUntilDone(
       if (!res.data) continue;
 
       if (res.data.status === "done") {
-        if (res.data.referral_bonus && res.data.referral_bonus > 0 && typeof window !== "undefined") {
-          window.dispatchEvent(new CustomEvent(REFERRAL_BONUS_EVENT, { detail: res.data.referral_bonus }));
-        }
         const result = res.data.result;
         return {
           urls: result?.image_urls ?? [],
@@ -402,6 +366,23 @@ export async function pollUntilDone(
   throw new Error("Timed out");
 }
 
+/** 独立工具的文字分析（风格档案里这一章，免费内容）：历史卡片用它展示主要结论。每个工具只有自己那一章的字段 */
+export interface LensProfile {
+  face_shape?: string;
+  persona?: { name: string; tagline: string; keywords: string[] };
+  makeup?: { name: string; mood?: string; lip: LensShade; cheek: LensShade; eye: LensShade }[];
+  hair?: LensVerdictItem[];
+  cuts?: LensVerdictItem[];
+  glasses?: LensVerdictItem[];
+  jewelry_metals?: LensVerdictItem[];
+  earrings?: { name: string }[];
+  outfits?: { occasion: string; name: string; colors: LensShade[] }[];
+  occasions?: { occasion: string; name: string }[];
+  glow_up?: { changes: string[]; summary: string };
+}
+export interface LensShade { name: string; hex: string }
+export interface LensVerdictItem { name: string; verdict: "best" | "good" | "avoid" }
+
 export interface HistoryEntry extends ReportLockInfo {
   id: string;
   status: string;
@@ -412,9 +393,13 @@ export interface HistoryEntry extends ReportLockInfo {
   /** 结构化色彩报告：有 report 时按杂志版式渲染 */
   kind?: "report";
   report?: ColorReportData;
+  /** 独立工具的文字分析（档案还没生成好时没有） */
+  lens_profile?: LensProfile;
+  /** 独立工具已经出好、用户能看到的第 1 张效果图（签名地址）；没出图 / 没买的没有 */
+  cover_url?: string;
 }
 
-/** 用积分包积分解锁一份已生成的锁定报告（不用重新生成），成功后返回完整原图地址 */
+/** 解锁一份已生成的锁定报告（不用重新生成）：色彩报告花买报告得到的报告额度，没有时返回 429（needs_purchase）；成功后返回完整报告 */
 export async function unlockReport(taskId: string) {
   return belleApi<{
     task_id: string;
@@ -423,25 +408,14 @@ export async function unlockReport(taskId: string) {
     unlocked: boolean;
     credit_cost: number;
     pack_credits: number;
+    report_credits?: number;
+    /** 429 时：true 表示这份报告要先购买 */
+    needs_purchase?: boolean;
     kind?: "report";
     report?: ColorReportData;
   }>({
     action: "unlock-report",
     task_id: taskId,
-  });
-}
-
-/**
- * 留邮箱免费解锁一次：后端把这份报告的完整图片作为附件发到邮箱。每个账号 / 每个邮箱只能用一次。
- * 失败时 code 为：400 邮箱无效 | 409 已经领过（data.reason: account_used / email_used / in_progress）|
- * 429 太频繁 | 502 发送失败 | 503 功能不可用。
- */
-export async function emailUnlockReport(taskId: string, email: string, locale: string) {
-  return belleApi<{ sent?: boolean; already_unlocked?: boolean; reason?: string }>({
-    action: "email-unlock",
-    task_id: taskId,
-    email,
-    locale,
   });
 }
 
@@ -461,6 +435,32 @@ export async function localizeReport(taskId: string, language: string) {
     task_id: taskId,
     language,
   });
+}
+
+/** 读取这份色彩报告的 Lookbook（AI 整图小图 + 风格档案）。未解锁时只有预览整图的第 1 张是清晰的。 */
+export async function fetchLookbook(taskId: string, language: string) {
+  return belleApi<LookbookData>({ action: "lookbook", task_id: taskId, language });
+}
+
+/** 重试 Lookbook 里失败的整图（只有已解锁的报告可以） */
+export async function retryLookbook(taskId: string) {
+  return belleApi<unknown>({ action: "lookbook-retry", task_id: taskId });
+}
+
+/**
+ * 独立工具的「试戴 / 体验」：分析是免费的，把这一章的建议画在用户自己脸上花 1 个额度；一张都没出来会自动退回。
+ * code：200 已开始 | 429 额度不够 | 409 已经买过 / 分析还没好
+ */
+export async function tryOnLookbook(taskId: string, sheet: string) {
+  return belleApi<{ credit_cost: number; credits: number; reason?: string }>({ action: "lookbook-tryon", task_id: taskId, sheet });
+}
+
+/**
+ * 重新生成 Lookbook 里的一张整图（花 1 个额度，只有已解锁的报告可以；旧图保留到新图成功，失败自动退回）。
+ * code：200 已开始 | 429 额度不够 | 409 这张图正在重新生成 / 还没生成好 | 400 这张图次数用完 | 403 报告未解锁
+ */
+export async function rerollLookbook(taskId: string, sheet: string) {
+  return belleApi<{ credit_cost: number; credits: number; reason?: string }>({ action: "lookbook-reroll", task_id: taskId, sheet });
 }
 
 export type ScanTier = "great" | "ok" | "avoid";
@@ -505,11 +505,13 @@ export async function fetchScanQuota() {
   return belleApi<{ quota: ScanQuota }>({ action: "scan-quota" });
 }
 
-export async function fetchHistory(page = 1, pageSize = 20) {
+/** language：历史卡片上的文字分析用哪种语言（没有这种语言的译文时退回创建时的语言 / 英文） */
+export async function fetchHistory(page = 1, pageSize = 20, language = "en") {
   return belleApi<{ list: HistoryEntry[] }>({
     action: "history",
     page,
     page_size: pageSize,
+    language,
   });
 }
 
@@ -521,62 +523,10 @@ export async function fetchProcessingTask() {
   });
 }
 
-export interface ReferralCodeData {
-  referral_code: string;
-  referral_count: number;
-  referral_credits_earned: number;
-}
-
-export interface ReferralEvent {
-  event_type: string;
-  credits_awarded: number;
-  created_at: string;
-}
-
-export interface ReferralStatsData {
-  referral_code: string;
-  /** 有效好友数：好友成功完成第一次分析才计数 */
-  referral_count: number;
-  referral_credits_earned: number;
-  next_milestone?: { target: number; bonus: number } | null;
-  recent_events: ReferralEvent[];
-}
-
-export interface CheckinData {
-  checked_in: boolean;
-  credits_added: number;
-  checkin_available: boolean;
-  total_remaining?: number;
-  paid_credits?: number;
-  pack_credits?: number;
-  checkin_streak?: number;
-  checkin_max_streak?: number;
-  streak_bonus?: number;
-}
-
-export async function webCheckin() {
-  return belleApi<CheckinData>({ action: "checkin" });
-}
-
-export async function getReferralCode() {
-  return belleApi<ReferralCodeData>({ action: "referral-code" });
-}
-
-export async function applyReferralCode(referralCode: string) {
-  return belleApi<{ success: boolean }>({
-    action: "referral-apply",
-    referral_code: referralCode,
-  });
-}
-
 /** 为某次成功的分析创建公开分享链接（用户主动点击分享时才会调用）。 */
 export async function createShare(taskId: string) {
-  return belleApi<{ token: string; referral_code: string }>({
+  return belleApi<{ token: string }>({
     action: "share-create",
     task_id: taskId,
   });
-}
-
-export async function getReferralStats() {
-  return belleApi<ReferralStatsData>({ action: "referral-stats" });
 }

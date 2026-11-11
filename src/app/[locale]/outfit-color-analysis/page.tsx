@@ -1,7 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { FeatureHero } from "@/components/FeatureHero";
-import Image from "next/image";
+import { FunnelLink } from "@/components/FunnelLink";
+import { sampleHref } from "@/lib/blogTools";
+import { FeatureIncludes } from "@/components/FeatureIncludes";
 import {
   buildAlternates,
   buildBreadcrumbJsonLd,
@@ -87,39 +89,27 @@ export default async function OutfitColorAnalysisPage({
         image="/images/examples/report_outfit_color.webp"
         sampleLabel={tp("demoBadge")}
         actions={
-          <Link
-            href="/try?type=outfit_color"
-            className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-          >
-            {ft("tryItFree")}
-          </Link>
+          <>
+            <Link
+              href="/try?type=outfit_color"
+              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+            >
+              {ft("tryItFree")}
+            </Link>
+            <FunnelLink
+              href={sampleHref("outfit_color")}
+              from="feature"
+              tool="outfit_color"
+              kind="sample"
+              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
+            >
+              {tp("trySample")}
+            </FunnelLink>
+          </>
         }
       />
 
-      <section className="py-16">
-        <div className="mx-auto max-w-5xl px-4">
-          <h2 className="text-center text-2xl font-bold">{t("whatYouGet")}</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {DIMENSIONS.map((dim) => (
-              <div key={dim.image} className="group overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
-                <div className="relative aspect-square w-full overflow-hidden">
-                  <Image
-                    src={dim.image}
-                    alt={t(`feat${dim.feat}Title`)}
-                    fill
-                    className="object-cover transition duration-300 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-                <div className="p-4">
-                  <p className="text-sm font-medium">{t(`feat${dim.feat}Title`)}</p>
-                  <p className="mt-1 text-xs text-muted-foreground">{t(`feat${dim.feat}Desc`)}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeatureIncludes locale={locale} tool="outfit" kitLink />
 
       <section className="bg-muted/30 py-16">
         <div className="mx-auto max-w-4xl px-4 text-center">
@@ -168,9 +158,3 @@ function Step({ num, text }: { num: string; text: string }) {
   );
 }
 
-const DIMENSIONS = [
-  { image: "/images/dim_outfit_neutrals.webp", feat: 2 },
-  { image: "/images/dim_outfit_avoid.webp", feat: 3 },
-  { image: "/images/dim_outfit_season.webp", feat: 4 },
-  { image: "/images/dim_outfit_palette.webp", feat: 5 },
-];

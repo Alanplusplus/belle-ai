@@ -47,7 +47,7 @@ Versatile shades that are always flattering:
 - Deep olive (the cool version, not golden-olive)
 - Pine green
 
-![Deep Winter Color Palette Swatches](/images/blog/deep-winter-palette-swatches.webp)
+![Deep Winter Color Palette Swatches](/palette-cards/deep-winter.png)
 
 ### Accent Colors
 

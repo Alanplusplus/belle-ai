@@ -46,7 +46,7 @@ Her zaman yakışan çok yönlü tonlar:
 - Derin zeytin yeşili (altın-zeytin değil, soğuk versiyon)
 - Çam yeşili
 
-![Derin Kış Renk Paleti Numuneleri](/images/blog/deep-winter-palette-swatches.webp)
+![Derin Kış Renk Paleti Numuneleri](/palette-cards/deep-winter.png)
 
 ### Vurgu Renkleri
 

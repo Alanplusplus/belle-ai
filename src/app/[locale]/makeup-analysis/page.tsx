@@ -7,8 +7,10 @@ import {
   OG_IMAGES,
   TWITTER_IMAGES,
 } from "@/lib/seo";
-import Image from "next/image";
 import { FeatureHero } from "@/components/FeatureHero";
+import { FunnelLink } from "@/components/FunnelLink";
+import { sampleHref } from "@/lib/blogTools";
+import { FeatureIncludes } from "@/components/FeatureIncludes";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -50,8 +52,6 @@ export default async function MakeupAnalysisPage({
   const ft = await getTranslations({ locale, namespace: "features" });
   const tp = await getTranslations({ locale, namespace: "tryPage" });
 
-  const items = [t("item1"), t("item2"), t("item3"), t("item4"), t("item5"), t("item6")];
-
   const faqCount = 5;
   const faqs = Array.from({ length: faqCount }, (_, i) => ({
     q: t(`faq${i + 1}Q`),
@@ -89,41 +89,27 @@ export default async function MakeupAnalysisPage({
         image="/images/examples/report_makeup.webp"
         sampleLabel={tp("demoBadge")}
         actions={
-          <Link
-            href="/try?type=makeup"
-            className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-          >
-            {ft("tryItFree")}
-          </Link>
+          <>
+            <Link
+              href="/try?type=makeup"
+              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
+            >
+              {ft("tryItFree")}
+            </Link>
+            <FunnelLink
+              href={sampleHref("makeup")}
+              from="feature"
+              tool="makeup"
+              kind="sample"
+              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
+            >
+              {tp("trySample")}
+            </FunnelLink>
+          </>
         }
       />
 
-      <section className="py-16">
-        <div className="mx-auto max-w-5xl px-4">
-          <h2 className="text-2xl font-bold text-center">{t("whatYouGet")}</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {MAKEUP_DIMENSIONS.map((dim, i) => (
-              <div
-                key={dim.image}
-                className="group overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg"
-              >
-                <div className="relative aspect-square w-full overflow-hidden">
-                  <Image
-                    src={dim.image}
-                    alt={items[i] || dim.image}
-                    fill
-                    className="object-cover transition duration-300 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-                <div className="p-4">
-                  <p className="text-sm font-medium">{items[i]}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeatureIncludes locale={locale} tool="makeup" />
 
       <section className="bg-muted/30 py-16">
         <div className="mx-auto max-w-4xl px-4">
@@ -185,11 +171,3 @@ function WhyItem({ text }: { text: string }) {
   );
 }
 
-const MAKEUP_DIMENSIONS = [
-  { image: "/images/dim_skin.webp" },
-  { image: "/images/dim_eyes.webp" },
-  { image: "/images/dim_blush.webp" },
-  { image: "/images/dim_lips.webp" },
-  { image: "/images/dim_looks.webp" },
-  { image: "/images/dim_tools.webp" },
-];
