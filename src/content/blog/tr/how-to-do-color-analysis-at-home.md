@@ -175,7 +175,7 @@ Yapay zekâmız profesyonelin baktığı aynı renk sinyallerini — alt ton, de
 
 [Ücretsiz Yapay Zekâ Renk Analizine Başlayın →](/tr/try)
 
-Önizleme ücretsizdir ve hesap gerekmez. Ücretsiz sürüm bazı detayları bulanık gösterir; tam palet ve stil rehberinin kilidini tek seferlik satın alma ile açabilirsiniz.
+Önizleme ücretsizdir ve hesap gerekmez. Ücretsiz sürüm mevsiminizi ve tam paletinizi gösterir; makyaj, saç ve stil bölümlerinin, Lookbook fotoğraflarının ve PDF'in kilidini tek seferlik satın alma ile açabilirsiniz.
 
 ## İlgili Makaleler
 

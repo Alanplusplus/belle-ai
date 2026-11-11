@@ -7,7 +7,6 @@ import { startCheckout } from "@/lib/checkout";
 import { ADDON_CREDITS, type ProductKey } from "@/lib/constants";
 import { KIT_PERKS, KIT_PERK_VALUES } from "@/lib/kit";
 import {
-  FREE_SWATCHES,
   MY_SEASON_KEY,
   isSeasonSlug,
   proseFor,
@@ -159,8 +158,7 @@ export function PricingModal({
       ? {
           name: teaserName,
           headline: lockScene && unlockReport ? proseFor(unlockReport, reportLang)?.headline : undefined,
-          revealed: teaserPalette.bestColors.slice(0, FREE_SWATCHES).map((c) => c.hex),
-          lockedCount: Math.max(0, teaserPalette.bestColors.length - FREE_SWATCHES),
+          revealed: teaserPalette.bestColors.map((c) => c.hex),
         }
       : null;
   // 三句「用上之后的感觉」：解锁页已经有季型预览，手机上空间紧，就不再放
@@ -299,8 +297,7 @@ export function PricingModal({
             name={teaser.name}
             headline={teaser.headline}
             revealed={teaser.revealed}
-            lockedCount={teaser.lockedCount}
-            moreText={t("lockPaletteMore", { count: teaser.lockedCount })}
+            moreText={t("lockPaletteMore")}
           />
         )}
 
@@ -360,8 +357,7 @@ export function PricingModal({
 }
 
 /**
- * 「你的结果就差一步」预览卡：她的季型名（免费结论）+ 已经露出的几个颜色 + 一排还没打开的颜色。
- * 全部是真实数据——季型是她自己的，露出的颜色就是报告里免费显示的那几个，没打开的个数也是真实剩余数。
+ * 「你的结果就差一步」预览卡：她的季型名 + 她的推荐色（都是报告里免费显示的真实数据）+ 一句点明还没打开的内容。
  */
 function UnlockTeaser({
   lang,
@@ -369,7 +365,6 @@ function UnlockTeaser({
   name,
   headline,
   revealed,
-  lockedCount,
   moreText,
 }: {
   lang: string;
@@ -377,7 +372,6 @@ function UnlockTeaser({
   name: string;
   headline?: string;
   revealed: string[];
-  lockedCount: number;
   moreText: string;
 }) {
   return (
@@ -392,12 +386,6 @@ function UnlockTeaser({
       <div className="mt-3.5 flex items-center justify-center gap-1.5" aria-hidden>
         {revealed.map((hex, i) => (
           <span key={`${hex}-${i}`} className="h-6 w-6 rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.25),inset_0_0_0_1px_rgba(0,0,0,0.07)]" style={{ background: hex }} />
-        ))}
-        {Array.from({ length: lockedCount }, (_, i) => (
-          <span
-            key={`locked-${i}`}
-            className="h-6 w-6 rounded-full border border-dashed border-gold bg-gradient-to-br from-gold/55 to-primary/40"
-          />
         ))}
       </div>
       <p className="mt-2.5 flex items-center justify-center gap-1.5 text-xs text-muted-foreground">

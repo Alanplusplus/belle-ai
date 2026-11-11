@@ -175,4 +175,4 @@ Nuestra IA analiza las mismas señales cromáticas que mira un profesional — s
 
 [Empezar análisis de color IA gratis →](/try)
 
-Vista previa gratis y sin cuenta. La versión gratuita desenfoca algunos detalles; una compra única desbloquea tu paleta completa y la guía de estilo.
+Vista previa gratis y sin cuenta. La versión gratuita ya muestra tu estación y tu paleta completa; una compra única desbloquea los capítulos de maquillaje, cabello y estilo, las fotos del Lookbook y el PDF.

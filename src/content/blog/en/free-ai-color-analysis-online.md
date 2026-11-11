@@ -17,7 +17,7 @@ faq:
     a: "Yes. A quiz-based tool asks about your veins, jewelry preference and sun reaction instead. It is less specific than a photo analysis, but it is a good way to check an AI result or to start without uploading anything."
 ---
 
-**Short answer:** yes. You can upload a selfie to a free AI color analysis tool and see your 12-season result in about 60 seconds, with no appointment and no account. At most tools the preview is the free part and the full, unblurred report is paid. Our own tool, [Belle AI](/try), works that way: the preview is free, and the full report is a one-time purchase with no subscription.
+**Short answer:** yes. You can upload a selfie to a free AI color analysis tool and see your 12-season result in about 60 seconds, with no appointment and no account. At most tools the preview is the free part and the full report is paid. Our own tool, [Belle AI](/try), is similar but more generous: the free preview already shows your season, why it suits you and your full palette, and a one-time purchase (no subscription) adds the makeup, hair and styling chapters, your full Lookbook photos and the PDF.
 
 ## Why Professional Color Analysis Costs $200–$500
 
@@ -76,7 +76,7 @@ The full report includes:
 
 ## Belle AI: Free Color Analysis in 60 Seconds
 
-Our [AI color analysis tool](/) produces everything listed above. Your first analysis is free to preview with no signup, but the free version is a preview with some details blurred. A one-time purchase unlocks the full report, with no subscription needed. We would rather say that up front than promise a "completely free" report.
+Our [AI color analysis tool](/) produces everything listed above. Your first analysis is free to preview with no signup, and the free version already shows your season, why it suits you and your full palette. A one-time purchase unlocks the makeup, hair and styling chapters, your full Lookbook photos and the PDF report, with no subscription needed. We would rather say that up front than promise a "completely free" report.
 
 ### What the Full Report Includes
 
@@ -143,7 +143,7 @@ Ready to find your best colors? Upload a selfie and preview your color analysis 
 
 [Get My Free Color Analysis Preview →](/try)
 
-No signup or credit card needed to preview. The free version blurs some details; a one-time purchase unlocks the full report.
+No signup or credit card needed to preview. The free version already shows your season and full palette; a one-time purchase unlocks the makeup, hair and styling chapters, your Lookbook photos and the PDF.
 
 Prefer not to upload a photo? [Take our free color analysis quiz instead →](/tools/color-quiz)
 

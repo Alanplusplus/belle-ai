@@ -175,4 +175,4 @@ Unsere KI analysiert dieselben Farbsignale wie ein Profi — Unterton, Tiefe, Ko
 
 [Kostenlose KI-Farbanalyse starten →](/try)
 
-Die Vorschau ist kostenlos, ein Konto ist nicht nötig. Die kostenlose Version zeigt einige Details unscharf; die vollständige Palette und den Styling-Guide schaltest du mit einem Einmalkauf frei.
+Die Vorschau ist kostenlos, ein Konto ist nicht nötig. Die kostenlose Version zeigt schon deinen Farbtyp und deine komplette Palette; die Kapitel zu Make-up, Haaren und Styling, die Lookbook-Fotos und den PDF-Bericht schaltest du mit einem Einmalkauf frei.

@@ -63,7 +63,7 @@ Du erhältst:
 
 ## Belle AI: Kostenlose Farbanalyse in 60 Sekunden
 
-Unser [KI-Farbanalyse-Tool](/) liefert alles Obige. Deine erste Analyse kannst du ohne Anmeldung kostenlos als Vorschau ansehen, die kostenlose Version zeigt aber einige Details unscharf. Den vollständigen Bericht schaltest du mit einem Einmalkauf frei. Das sagen wir lieber offen, als einen „komplett kostenlosen“ Bericht zu versprechen.
+Unser [KI-Farbanalyse-Tool](/) liefert alles Obige. Deine erste Analyse kannst du ohne Anmeldung kostenlos als Vorschau ansehen, und die kostenlose Version zeigt dir schon deinen Farbtyp, warum er zu dir passt, und deine komplette Palette. Mit einem Einmalkauf schaltest du die Kapitel zu Make-up, Haaren und Styling, die Lookbook-Fotos und den PDF-Bericht frei. Das sagen wir lieber offen, als einen „komplett kostenlosen“ Bericht zu versprechen.
 
 ### Was du bekommst
 
@@ -129,6 +129,6 @@ Bereit, deine besten Farben zu finden? Lade ein Selfie hoch und erhalte deine vo
 
 [Meine kostenlose Farbanalyse holen →](/try)
 
-Für die Vorschau brauchst du weder Anmeldung noch Kreditkarte. Die kostenlose Version zeigt einige Details unscharf; den vollständigen Bericht schaltest du mit einem Einmalkauf frei.
+Für die Vorschau brauchst du weder Anmeldung noch Kreditkarte. Die kostenlose Version zeigt schon deinen Farbtyp und deine komplette Palette; die Kapitel zu Make-up, Haaren und Styling, die Lookbook-Fotos und den PDF-Bericht schaltest du mit einem Einmalkauf frei.
 
 Kein Foto? [Kostenloses Farbanalyse-Quiz machen →](/tools/color-quiz)

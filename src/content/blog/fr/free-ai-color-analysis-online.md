@@ -63,7 +63,7 @@ Vous recevez :
 
 ## Belle AI : analyse de couleur gratuite en 60 secondes
 
-Notre [outil d'analyse de couleur IA](/) fournit tout ce qui précède. Votre première analyse est gratuite en aperçu, sans inscription, mais la version gratuite est un aperçu dont certains détails sont floutés. Un achat unique débloque le rapport complet. Nous préférons le dire d'emblée plutôt que de promettre un rapport « entièrement gratuit ».
+Notre [outil d'analyse de couleur IA](/) fournit tout ce qui précède. Votre première analyse est gratuite en aperçu, sans inscription, et la version gratuite montre déjà votre saison, pourquoi elle vous va et votre palette complète. Un achat unique débloque les chapitres maquillage, cheveux et style, les photos du Lookbook complet et le rapport PDF. Nous préférons le dire d'emblée plutôt que de promettre un rapport « entièrement gratuit ».
 
 ### Ce que vous obtenez
 
@@ -129,6 +129,6 @@ Prête à trouver vos meilleures couleurs ? Téléchargez un selfie et obtenez v
 
 [Obtenir mon analyse de couleur gratuite →](/try)
 
-Sans inscription ni carte bancaire pour l'aperçu. La version gratuite floute certains détails ; un achat unique débloque le rapport complet.
+Sans inscription ni carte bancaire pour l'aperçu. La version gratuite montre déjà votre saison et votre palette complète ; un achat unique débloque les chapitres maquillage, cheveux et style, les photos du Lookbook et le PDF.
 
 Vous préférez ne pas envoyer de photo ? [Faites notre quiz d'analyse de couleur gratuit →](/tools/color-quiz)

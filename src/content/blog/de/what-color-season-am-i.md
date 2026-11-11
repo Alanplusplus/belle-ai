@@ -147,4 +147,4 @@ Für das genaueste Ergebnis: Lade ein klares Selfie hoch und lass die KI deinen 
 
 [Kostenlose KI-Farbanalyse →](/try)
 
-Für die Vorschau ist keine Anmeldung nötig. Deine Saison erscheint in etwa 60 Sekunden; die kostenlose Version zeigt einige Details unscharf, die vollständige Palette schaltest du mit einem Einmalkauf frei.
+Für die Vorschau ist keine Anmeldung nötig. Deine Saison erscheint in etwa 60 Sekunden; die kostenlose Version zeigt schon deine komplette Palette, die Kapitel zu Make-up, Haaren und Styling, die Lookbook-Fotos und den PDF-Bericht schaltest du mit einem Einmalkauf frei.

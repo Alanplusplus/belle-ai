@@ -154,7 +154,7 @@ For best results, use a clear photo in natural daylight, no makeup, and face the
 
 ## Get Your Free Color Analysis
 
-Ready to discover your seasonal color type? Our AI-powered tool analyzes your photo and previews your color profile in about 60 seconds — free to try with no signup. The free version blurs some details; a one-time purchase unlocks the full report.
+Ready to discover your seasonal color type? Our AI-powered tool analyzes your photo and previews your color profile in about 60 seconds — free to try with no signup. The free version already shows your season and full palette; a one-time purchase unlocks the makeup, hair and styling chapters, your Lookbook photos and the PDF.
 
 [Start Free AI Color Analysis Preview →](/try)
 

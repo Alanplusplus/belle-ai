@@ -186,7 +186,7 @@ Our AI analyzes the exact same color signals a professional looks at — underto
 
 [Start Free AI Color Analysis →](/try)
 
-Free to preview with no account needed. The free version blurs some details; a one-time purchase unlocks your full palette and styling guide.
+Free to preview with no account needed. The free version already shows your season and full palette; a one-time purchase unlocks the makeup, hair and styling chapters, your Lookbook photos and the PDF.
 
 ## Frequently Asked Questions
 

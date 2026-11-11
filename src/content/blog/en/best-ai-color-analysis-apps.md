@@ -7,7 +7,7 @@ tags: ["best AI color analysis", "AI color analysis app", "free color analysis",
 image: "/images/blog/best-ai-color-analysis-apps.webp"
 faq:
   - q: "What is the best free AI color analysis?"
-    a: "It depends on what you need. Palette Hunt, Color-Analysis.app and the free web tool from MyColorAnalysis give a quick result at no cost. Belle AI gives 3 free previews with the details blurred, and Dressika has a limited free tier. For a quick first answer, a free web tool is enough; for a full palette plus makeup and wardrobe guidance, expect to pay for at least one report."
+    a: "It depends on what you need. Palette Hunt, Color-Analysis.app and the free web tool from MyColorAnalysis give a quick result at no cost. Belle AI gives 3 free previews that already include your season and full palette, and Dressika has a limited free tier. For a quick first answer, a free web tool is enough; for makeup, hair and wardrobe guidance on top of that, expect to pay for at least one report."
   - q: "Are AI color analysis apps accurate?"
     a: "They are a good starting point, not a verdict. Results change with lighting, camera and makeup, and no independent test has measured how often AI matches a professional draping. Take two or three photos, compare two tools, and confirm borderline results with a simple draping test or a professional."
   - q: "Do I need to upload a photo for a color analysis?"
@@ -42,7 +42,7 @@ We make Belle AI, so treat our opinion accordingly. To keep this fair, every too
 
 | Tool | Method | Color system | Free tier | Best for |
 |------|--------|--------------|-----------|----------|
-| **Belle AI** | Photo AI + free quiz | 12-season | 3 free previews (details blurred) | Color + makeup + face shape reports |
+| **Belle AI** | Photo AI + free quiz | 12-season | 3 free previews (season + full palette) | Color + makeup + face shape reports |
 | Dressika | Photo AI or manual quiz | 12-season | Limited free tier, trial of premium | Wardrobe planning on iOS and Android |
 | Colorwise | Pick-your-own-colors virtual draping | 4-season | Free tier | Learning the basics hands-on |
 | MyColorAnalysis AI | Photo AI | 12-season | Free web tool, no account | A free 12-season starting point |
@@ -59,7 +59,7 @@ Competitor details come from each tool’s public pages and independent reviews 
 [Belle AI](/) reads your selfie and returns a 12-season result with a visual report: palette, colors to avoid, makeup and wardrobe guidance. The same account also covers face shape, hair color, glasses and other analysis types.
 
 - **Good:** 12-season output, reports you can save and share, no installation (it works in a phone or desktop browser), and a free quiz if you would rather not upload a photo.
-- **Less good:** the free tier is 3 previews with the details blurred, so a full report needs a one-time purchase (no subscription is required; see the [pricing page](/pricing) for the current price). There is no expert-review option.
+- **Less good:** the free tier is 3 previews that show your season and full palette, so the makeup, hair and styling chapters and the Lookbook need a one-time purchase (no subscription is required; see the [pricing page](/pricing) for the current price). There is no expert-review option.
 - **Privacy:** photos are used only to create your report and are kept in your private history, which you can delete on request.
 
 See the full head-to-head pages: [Belle AI vs Dressika](/vs/dressika), [vs Colorwise](/vs/colorwise), [vs MyColorAnalysis](/vs/mycoloranalysis), [vs Palette Hunt](/vs/palettehunt) and [vs Color-Analysis.app](/vs/color-analysis-app).
@@ -112,7 +112,7 @@ New to the topic? Our [complete color analysis guide](/color-analysis) explains 
 
 ### What is the best free AI color analysis?
 
-It depends on what you need. Palette Hunt, Color-Analysis.app and the free web tool from MyColorAnalysis give a quick result at no cost. Belle AI gives 3 free previews with the details blurred, and Dressika has a limited free tier. For a quick first answer a free web tool is enough; for a full palette plus makeup and wardrobe guidance, expect to pay for at least one report.
+It depends on what you need. Palette Hunt, Color-Analysis.app and the free web tool from MyColorAnalysis give a quick result at no cost. Belle AI gives 3 free previews that already include your season and full palette, and Dressika has a limited free tier. For a quick first answer a free web tool is enough; for makeup, hair and wardrobe guidance on top of that, expect to pay for at least one report.
 
 ### Are AI color analysis apps accurate?
 

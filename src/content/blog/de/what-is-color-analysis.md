@@ -152,7 +152,7 @@ Für beste Ergebnisse: klares Foto bei natürlichem Tageslicht, ohne Make-up, di
 
 ## Hol dir deine kostenlose Farbanalyse
 
-Bereit, deinen saisonalen Farbtyp zu entdecken? Unser KI-Tool analysiert dein Foto und zeigt dir in 60 Sekunden eine Vorschau deines Farbprofils – kostenlos testen, ohne Anmeldung. Die kostenlose Version zeigt einige Details unscharf; den vollständigen Bericht schaltest du mit einem Einmalkauf frei.
+Bereit, deinen saisonalen Farbtyp zu entdecken? Unser KI-Tool analysiert dein Foto und zeigt dir in 60 Sekunden eine Vorschau deines Farbprofils – kostenlos testen, ohne Anmeldung. Die kostenlose Version zeigt schon deinen Farbtyp und deine komplette Palette; die Kapitel zu Make-up, Haaren und Styling, die Lookbook-Fotos und den PDF-Bericht schaltest du mit einem Einmalkauf frei.
 
 [Kostenlose KI-Farbanalyse starten →](/try)
 

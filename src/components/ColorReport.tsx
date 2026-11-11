@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import {
-  FREE_SWATCHES,
   REPORT_LANGUAGES,
   faceCrop,
   isSeasonSlug,
@@ -95,8 +94,8 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
   const avoid = (palette?.avoidColors ?? []).map((c, i) => ({ hex: c.hex, label: sd[`ac${i}`] ?? c.name }));
   const tips = [0, 1, 2, 3, 4].map((i) => sd[`ft${i}`]).filter(Boolean);
   const runnerUp = report.runner_up && isSeasonSlug(report.runner_up) && report.runner_up !== slug ? report.runner_up : null;
-  // 专属代表色：解锁后按这个人的评分排好序；没有排序数据（老数据 / 锁定）就用色板原有顺序
-  const order = !report.locked ? signatureOrder(report.signature, best.length) : null;
+  // 专属代表色：按这个人的评分排好序（锁定与否都有）；没有排序数据（老数据）就用色板原有顺序
+  const order = signatureOrder(report.signature, best.length);
   const signature = order
     ? order.slice(0, 3).map((index, rank) => {
         const echo = report.signature?.echo?.[rank];
@@ -174,10 +173,11 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
         </section>
       )}
 
-      {/* 02 个性化章节（解锁后） */}
+      {/* 02 为什么适合你：文字本来就生成好了，锁定的报告也完整给；用户停在这里看不到下面唯一的一张试戴预览图，所以不能锁 */}
       <section className="px-5 pt-8">
         <SectionHead no="02" title={ui("whyTitle")} />
-        {locked ? (
+        {locked && !prose?.explanation ? (
+          // 兜底：拿到的是旧版后端剔掉了个性化字段的报告，才画占位
           <LockedChapter ui={ui} onUnlock={onUnlock} unlockLabel={unlockLabel} busy={unlockBusy} />
         ) : (
           <div className="mt-4 space-y-6">
@@ -220,7 +220,7 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
         )}
       </section>
 
-      {/* 03 色板：未解锁只露出前 3 个推荐色，其余是占位 */}
+      {/* 03 你的最佳颜色：10 个推荐色、基础色、避雷色，锁定的报告也完整给 */}
       <section className="px-5 pt-9">
         <SectionHead no="03" title={ui("bestTitle")} />
         <SeasonPlate slug={slug} caption={sd.tagline ? `${name} — ${sd.tagline}` : name} />
@@ -257,30 +257,24 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
           </>
         ) : (
           <div className="mt-5 grid grid-cols-5 gap-x-2 gap-y-4">
-            {best.map((c, i) =>
-              locked && i >= FREE_SWATCHES ? <SwatchPlaceholder key={i} /> : <Swatch key={i} hex={c.hex} label={c.label} />,
-            )}
+            {best.map((c, i) => (
+              <Swatch key={i} hex={c.hex} label={c.label} />
+            ))}
           </div>
         )}
-        {locked ? (
-          <UnlockStrip text={ui("lockedPaletteDesc")} onUnlock={onUnlock} unlockLabel={unlockLabel} busy={unlockBusy} />
-        ) : (
-          <>
-            <p className="rp-label mt-7">{ui("neutralsTitle")}</p>
-            <div className="mt-3 grid grid-cols-4 gap-x-2 gap-y-4">
-              {neutrals.map((c, i) => (
-                <Swatch key={i} hex={c.hex} label={c.label} />
-              ))}
-            </div>
-            <p className="rp-label mt-7">{ui("avoidTitle")}</p>
-            {prose?.avoid_note && <p className="report-serif mt-2 text-sm italic leading-relaxed text-muted-foreground">{prose.avoid_note}</p>}
-            <div className="mt-3 grid grid-cols-5 gap-x-2 gap-y-4">
-              {avoid.map((c, i) => (
-                <Swatch key={i} hex={c.hex} label={c.label} crossed />
-              ))}
-            </div>
-          </>
-        )}
+        <p className="rp-label mt-7">{ui("neutralsTitle")}</p>
+        <div className="mt-3 grid grid-cols-4 gap-x-2 gap-y-4">
+          {neutrals.map((c, i) => (
+            <Swatch key={i} hex={c.hex} label={c.label} />
+          ))}
+        </div>
+        <p className="rp-label mt-7">{ui("avoidTitle")}</p>
+        {prose?.avoid_note && <p className="report-serif mt-2 text-sm italic leading-relaxed text-muted-foreground">{prose.avoid_note}</p>}
+        <div className="mt-3 grid grid-cols-5 gap-x-2 gap-y-4">
+          {avoid.map((c, i) => (
+            <Swatch key={i} hex={c.hex} label={c.label} crossed />
+          ))}
+        </div>
       </section>
 
       {/* 04 同季名人：只有文字和色板，不生成名人形象（季型是免费预览就有的结论，所以锁定时也完整显示） */}
@@ -488,17 +482,6 @@ function SeasonPlate({ slug, caption }: { slug: SeasonSlug; caption: string }) {
       />
       <figcaption className="report-serif mt-1 text-center text-xs italic text-muted-foreground">{caption}</figcaption>
     </figure>
-  );
-}
-
-function SwatchPlaceholder() {
-  return (
-    <div className="flex flex-col items-center gap-1.5" aria-hidden="true">
-      <span className="flex h-12 w-12 items-center justify-center rounded-full border border-dashed border-gold/60 bg-muted/60 text-gold-deep sm:h-14 sm:w-14">
-        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
-      </span>
-      <span className="h-2 w-10 rounded-full bg-foreground/[0.07]" />
-    </div>
   );
 }
 
@@ -965,7 +948,7 @@ export function HistoryReportCard({
   const prose = proseFor(report, lang);
   const baseColors = (palette?.bestColors ?? []).map((c) => c.hex);
   // 解锁后的报告，色带按这个人的专属顺序
-  const order = !report.locked ? signatureOrder(report.signature, baseColors.length) : null;
+  const order = signatureOrder(report.signature, baseColors.length);
   const colors = order ? order.map((i) => baseColors[i]) : baseColors;
   const tint = TOOL_TINT[type] ?? TOOL_TINT.color_analysis;
   const isColor = type === "color_analysis";

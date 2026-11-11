@@ -147,4 +147,4 @@ Para el resultado más preciso, sube una selfie clara y deja que la IA determine
 
 [Análisis de color con IA gratis →](/try)
 
-Sin registro para la vista previa. Tu estación aparece en unos 60 segundos; la versión gratuita desenfoca algunos detalles y una compra única desbloquea la paleta completa.
+Sin registro para la vista previa. Tu estación aparece en unos 60 segundos; la versión gratuita ya muestra tu paleta completa y una compra única desbloquea los capítulos de maquillaje, cabello y estilo, las fotos del Lookbook y el PDF.

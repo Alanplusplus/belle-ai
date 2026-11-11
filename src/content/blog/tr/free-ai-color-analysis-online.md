@@ -63,7 +63,7 @@ Renk ölçümleriniz 12 mevsim renk çerçevesiyle karşılaştırılır. Yapay 
 
 ## Belle AI: 60 Saniyede Ücretsiz Renk Analizi
 
-[Yapay zekâ renk analizi aracımız](/) yukarıda listelenen her şeyi üretir. İlk analiziniz kayıt gerekmeden ücretsiz önizlenir; ancak ücretsiz sürüm bazı detayları bulanık gösteren bir önizlemedir. Tam raporun kilidini tek seferlik satın alma ile açabilirsiniz. "Tamamen ücretsiz" bir rapor vaat etmek yerine bunu baştan söylemeyi tercih ediyoruz.
+[Yapay zekâ renk analizi aracımız](/) yukarıda listelenen her şeyi üretir. İlk analiziniz kayıt gerekmeden ücretsiz önizlenir; ücretsiz sürüm mevsiminizi, size neden yakıştığını ve tam paletinizi zaten gösterir. Makyaj, saç ve stil bölümlerinin, Lookbook fotoğraflarının ve PDF raporunun kilidini tek seferlik satın alma ile açabilirsiniz. "Tamamen ücretsiz" bir rapor vaat etmek yerine bunu baştan söylemeyi tercih ediyoruz.
 
 ### Ne alırsınız
 
@@ -129,7 +129,7 @@ En iyi renklerinizi bulmaya hazır mısınız? Bir selfie yükleyin ve 60 saniye
 
 [Ücretsiz Renk Analizimi Al →](/tr/try)
 
-Önizleme için kayıt veya kredi kartı gerekmez. Ücretsiz sürüm bazı detayları bulanık gösterir; tam raporun kilidini tek seferlik satın alma ile açabilirsiniz.
+Önizleme için kayıt veya kredi kartı gerekmez. Ücretsiz sürüm mevsiminizi ve tam paletinizi gösterir; makyaj, saç ve stil bölümlerinin, Lookbook fotoğraflarının ve PDF'in kilidini tek seferlik satın alma ile açabilirsiniz.
 
 Fotoğraf yüklemek istemiyor musunuz? [Bunun yerine ücretsiz renk analizi quizimizi yapın →](/tr/tools/color-quiz)
 

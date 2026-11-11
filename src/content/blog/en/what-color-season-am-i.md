@@ -149,7 +149,7 @@ For a quick second opinion, upload a clear selfie and let AI suggest your 12-sea
 
 [Free AI Color Analysis →](/try)
 
-No signup needed to preview. Your season appears in about 60 seconds; the free version blurs some details, and a one-time purchase unlocks the full palette.
+No signup needed to preview. Your season appears in about 60 seconds; the free version already shows your full palette, and a one-time purchase unlocks the makeup, hair and styling chapters, your Lookbook photos and the PDF.
 
 ## Related Articles
 

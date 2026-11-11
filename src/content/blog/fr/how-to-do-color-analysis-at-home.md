@@ -175,4 +175,4 @@ Notre IA analyse les mêmes signaux chromatiques qu'un professionnel — sous-to
 
 [Lancer l'analyse de couleur IA gratuite →](/try)
 
-Aperçu gratuit, sans compte. La version gratuite floute certains détails ; un achat unique débloque votre palette complète et le guide de style.
+Aperçu gratuit, sans compte. La version gratuite montre déjà votre saison et votre palette complète ; un achat unique débloque les chapitres maquillage, cheveux et style, les photos du Lookbook et le PDF.
