@@ -24,6 +24,9 @@ import {
 import {
   buildFallbackShareUrl,
   buildSharePageUrl,
+  fetchShareImage,
+  sharePhotoPath,
+  SHARE_BUTTONS_ENABLED,
   tagShareLink,
 } from "@/lib/shareLink";
 import { SITE_URL, ADDON_CREDITS, packCreditsFor } from "@/lib/constants";
@@ -927,27 +930,31 @@ export function TryClient({
     return fallback;
   }, [locale]);
 
-  const handleShare = useCallback(async (url: string, taskId?: string | null, report?: boolean) => {
+  /**
+   * 分享：url 是要附带的图（报告海报 / 结果图），独立工具没有现成的图就传空——手机上会改用分享页的预览图。
+   * 手机的系统分享面板会把「图片 + 文字（含链接）」一起发出去，好友在聊天里直接看到图；
+   * 读不到图（或系统不支持带文件）时只发文字 + 链接，由社交平台抓取分享页的预览卡片。
+   */
+  const handleShare = useCallback(async (url: string | null, taskId?: string | null, report?: boolean) => {
     if (shareBusyRef.current) return;
     shareBusyRef.current = true;
     try {
       const isMobile = isMobileDevice();
+      // 要附带的图和创建分享页同时去取，不让用户多等一轮（系统分享面板必须在点击后很短时间内调起）
+      const ownImage = isMobile && url ? fetchShareImage([url]) : Promise.resolve(null);
 
       const link = await resolveShareLink(taskId ?? resultTaskId);
       const isSharePage = link.includes("/share/");
       trackEvent("share_link_created", { type: analysisType, kind: isSharePage ? "share_page" : "plain_link" });
 
       if (isMobile && navigator.share) {
-        trackEvent("result_share", { method: "native", type: analysisType });
         const nativeLink = tagShareLink(link, "native");
-        // 分享页本身带有报告图，所以只发文字 + 链接，让社交平台抓取 OG 卡片；
-        // 退回工具页链接时才附带图片文件，保证好友至少能看到报告
-        if (!isSharePage && url) {
+        const photoPath = isSharePage ? sharePhotoPath(link) : null;
+        const file = (await ownImage) ?? (photoPath ? await fetchShareImage([photoPath]) : null);
+        trackEvent("result_share", { method: "native", type: analysisType, with_image: file ? "yes" : "no" });
+        if (file) {
+          const shareWithFile = { title: t("shareTitle"), text: `${t("shareText")} ${nativeLink}`, files: [file] };
           try {
-            const res = await fetch(url);
-            const blob = await res.blob();
-            const file = new File([blob], `belle-ai-report.jpg`, { type: "image/jpeg" });
-            const shareWithFile = { title: t("shareTitle"), text: `${t("shareText")} ${nativeLink}`, files: [file] };
             if (navigator.canShare?.(shareWithFile)) {
               await navigator.share(shareWithFile);
               return;
@@ -960,10 +967,10 @@ export function TryClient({
         }
         const status = await nativeShare({ title: t("shareTitle"), text: t("shareText"), url: nativeLink });
         // 系统分享面板失败（部分内置浏览器声明支持但调用报错）：退回自带的分享面板，保证点了有反应
-        if (status === "failed") setShareModal({ imageUrl: url, link, report });
+        if (status === "failed") setShareModal({ imageUrl: url ?? "", link, report });
       } else {
         trackEvent("result_share", { method: "panel", type: analysisType });
-        setShareModal({ imageUrl: url, link, report });
+        setShareModal({ imageUrl: url ?? "", link, report });
       }
     } finally {
       shareBusyRef.current = false;
@@ -2216,6 +2223,7 @@ export function TryClient({
                 sourceImageUrl={resultReport.sourceUrl ?? sourceImageUrl}
                 onBuyCredits={() => openPricing("tryon_credits", null, null, { intent: "credits", openTaskId: resultTaskId })}
               >
+                <LensShareButton label={t("share")} onClick={() => handleShare(null, resultTaskId, lens === "glow")} />
                 <ResultFeedback key={resultTaskId} taskId={resultTaskId} type={analysisType} />
               </LensPanel>
             );
@@ -2307,13 +2315,15 @@ export function TryClient({
                     <DownloadIcon />
                     {resultLock.unlocked ? t("download") : t("upgradeToDownload")}
                   </button>
-                  <button
-                    onClick={() => handleShare(resultUrls[0])}
-                    className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-primary/40 bg-primary/5 px-4 text-xs font-semibold text-primary transition hover:bg-primary/10"
-                  >
-                    <ShareIcon />
-                    {t("share")}
-                  </button>
+                  {SHARE_BUTTONS_ENABLED && (
+                    <button
+                      onClick={() => handleShare(resultUrls[0])}
+                      className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-primary/40 bg-primary/5 px-4 text-xs font-semibold text-primary transition hover:bg-primary/10"
+                    >
+                      <ShareIcon />
+                      {t("share")}
+                    </button>
+                  )}
                   {analysisType !== "scan_tryon" && (
                     <button
                       onClick={() => handleCorrectionOpen(buildCurrentEntry())}
@@ -2638,6 +2648,7 @@ export function TryClient({
           lens={lensOf(lightbox.entry.type)!}
           preferredLang={reportLang}
           onBuyCredits={() => openPricing("tryon_credits", null, null, { intent: "credits", openTaskId: lightbox.entry.id })}
+          onShare={(taskId) => handleShare(null, taskId, lensOf(lightbox.entry.type) === "glow")}
           onClose={() => setLightbox(null)}
           t={t}
         />
@@ -2697,7 +2708,6 @@ export function TryClient({
           url={shareModal.imageUrl}
           shareLink={shareModal.link}
           report={shareModal.report}
-          locale={locale}
           onClose={() => setShareModal(null)}
           onCopied={() => { setShareToast(true); setTimeout(() => setShareToast(false), 2000); }}
           t={t}
@@ -3251,13 +3261,15 @@ function ImageLightbox({
             <DownloadIcon />
             {reportUnlocked ? t("download") : t("upgradeToDownload")}
           </button>
-          <button
-            onClick={() => onShare(currentUrl, entry.id)}
-            className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm hover:bg-white/20"
-          >
-            <ShareIcon />
-            {t("share")}
-          </button>
+          {SHARE_BUTTONS_ENABLED && (
+            <button
+              onClick={() => onShare(currentUrl, entry.id)}
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-sm hover:bg-white/20"
+            >
+              <ShareIcon />
+              {t("share")}
+            </button>
+          )}
           {entry.source_image_url && entry.type !== "scan_tryon" && (
             <button
               onClick={() => onCorrection(entry)}
@@ -3361,6 +3373,7 @@ function LensLightbox({
   lens,
   preferredLang,
   onBuyCredits,
+  onShare,
   onClose,
   t,
 }: {
@@ -3368,6 +3381,7 @@ function LensLightbox({
   lens: LookbookSheetKey;
   preferredLang: string;
   onBuyCredits: () => void;
+  onShare: (taskId: string) => void;
   onClose: () => void;
   t: (key: string, values?: Record<string, string | number>) => string;
 }) {
@@ -3397,7 +3411,9 @@ function LensLightbox({
             lang={preferredLang}
             sourceImageUrl={entry.source_image_url}
             onBuyCredits={onBuyCredits}
-          />
+          >
+            <LensShareButton label={t("share")} onClick={() => onShare(entry.id)} />
+          </LensPanel>
         </div>
       </div>
     </div>
@@ -3538,6 +3554,23 @@ function ShareIcon() {
   );
 }
 
+/** 独立工具结果卡片下面的「分享」：分享出去的是只含这一章的公开页（分析文字 + 试戴过的图） */
+function LensShareButton({ label, onClick }: { label: string; onClick: () => void }) {
+  if (!SHARE_BUTTONS_ENABLED) return null;
+  return (
+    <div className="flex justify-center">
+      <button
+        type="button"
+        onClick={onClick}
+        className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-primary/40 bg-primary/5 px-5 text-sm font-semibold text-primary transition hover:bg-primary/10"
+      >
+        <ShareIcon />
+        {label}
+      </button>
+    </div>
+  );
+}
+
 function CorrectionIcon() {
   return (
     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -3653,44 +3686,33 @@ const SHARE_PLATFORMS = [
     buildUrl: (url: string, text: string) => `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
   },
   {
-    id: "line",
-    name: "LINE",
-    icon: <span className="text-xs font-bold text-green-500">LINE</span>,
-    buildUrl: (url: string, text: string) => `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
+    id: "threads",
+    name: "Threads",
+    icon: <span className="text-sm font-bold text-foreground">@</span>,
+    buildUrl: (url: string, text: string) => `https://www.threads.net/intent/post?text=${encodeURIComponent(`${text} ${url}`)}`,
   },
   {
-    id: "vk",
-    name: "VK",
-    icon: <span className="text-xs font-bold text-blue-600">VK</span>,
-    buildUrl: (url: string, text: string) => `https://vk.com/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(text)}`,
+    id: "reddit",
+    name: "Reddit",
+    icon: <span className="text-xs font-bold text-orange-600">r/</span>,
+    buildUrl: (url: string, text: string) => `https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(text)}`,
   },
   {
-    id: "weibo",
-    name: "Weibo",
-    icon: <span className="text-xs font-bold text-red-500">微博</span>,
-    buildUrl: (url: string, text: string) => `https://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(text)}`,
+    id: "linkedin",
+    name: "LinkedIn",
+    icon: <span className="text-xs font-bold text-blue-700">in</span>,
+    buildUrl: (url: string) => `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
   },
 ] as const;
 
 type SharePlatform = typeof SHARE_PLATFORMS[number];
 
-// 按语种挑选当地人真正在用的 4 个分享渠道（每行 4 列）
-// 韩国（KakaoTalk）、中国大陆（微信）没有可用的网页分享链接，手机端靠系统分享面板，这里用 X / 微博 补位
-const PLATFORM_IDS_BY_LOCALE: Record<string, string[]> = {
-  en: ["x", "facebook", "whatsapp", "pinterest"],
-  zh: ["weibo", "x", "telegram", "whatsapp"],
-  ja: ["line", "x", "facebook", "pinterest"],
-  ko: ["x", "facebook", "telegram", "pinterest"],
-  es: ["whatsapp", "facebook", "x", "pinterest"],
-  fr: ["whatsapp", "facebook", "x", "pinterest"],
-  de: ["whatsapp", "telegram", "facebook", "x"],
-  ru: ["vk", "telegram", "whatsapp", "x"],
-  tr: ["whatsapp", "x", "telegram", "facebook"],
-};
+// 所有语种用同一组国际主流渠道，不按地区定制（每行 4 列）。
+// Instagram / YouTube 没有网页分享链接：手机上走系统分享面板（会带图片），这里放不了按钮
+const SHARE_PLATFORM_IDS = ["facebook", "x", "threads", "whatsapp", "pinterest", "telegram", "reddit", "linkedin"];
 
-function getSharePlatforms(locale: string): SharePlatform[] {
-  const ids = PLATFORM_IDS_BY_LOCALE[locale] ?? PLATFORM_IDS_BY_LOCALE.en;
-  return ids
+function getSharePlatforms(): SharePlatform[] {
+  return SHARE_PLATFORM_IDS
     .map((id) => SHARE_PLATFORMS.find((p) => p.id === id))
     .filter((p): p is SharePlatform => Boolean(p));
 }
@@ -3699,7 +3721,6 @@ function SharePanel({
   url,
   shareLink,
   report,
-  locale,
   onClose,
   onCopied,
   t,
@@ -3708,14 +3729,17 @@ function SharePanel({
   shareLink: string;
   /** 分享的是结构化报告：分享页封面会露出用户的照片，提示文案要如实说明 */
   report?: boolean;
-  locale: string;
   onClose: () => void;
   onCopied: () => void;
   t: (key: string) => string;
 }) {
   const [caption, setCaption] = useState(t("shareText"));
   const [tags, setTags] = useState("BelleAI,ColorAnalysis,Beauty");
-  const platforms = getSharePlatforms(locale);
+  const platforms = getSharePlatforms();
+  // 没有现成的图（没解锁的报告 / 独立工具）时，预览和 Pinterest 的配图用分享页的预览图；本地 blob / data 地址别人读不到，Pinterest 只收公开地址
+  const photoPath = sharePhotoPath(shareLink);
+  const preview = url || photoPath || "";
+  const pinMedia = /^https?:/.test(url) ? url : photoPath ? new URL(photoPath, shareLink).toString() : "";
 
   const dialogRef = useDialogA11y<HTMLDivElement>(onClose);
 
@@ -3729,7 +3753,7 @@ function SharePanel({
     // 每个渠道的链接带上 utm_content，之后可以在 GA 里比较各渠道的带来的访问与转化
     const link = tagShareLink(shareLink, platform.id);
     const target = platform.id === "pinterest"
-      ? (platform.buildUrl as (u: string, t: string, tg: string, m?: string) => string)(link, caption, tags, url)
+      ? (platform.buildUrl as (u: string, t: string, tg: string, m?: string) => string)(link, caption, tags, pinMedia)
       : platform.buildUrl(link, caption, tags);
     openShareWindow(target);
   };
@@ -3760,7 +3784,7 @@ function SharePanel({
 
         {/* Preview */}
         <div className="mb-4 flex gap-3 rounded-xl border border-border p-3">
-          {url && <img src={url} alt="" className="h-16 w-12 rounded-lg object-cover" />}
+          {preview && <img src={preview} alt="" className="h-16 w-12 rounded-lg object-cover" />}
           <div className="flex-1 min-w-0">
             {/* 输入框字号至少 16px，否则 iOS 聚焦时会自动放大整页 */}
             <textarea

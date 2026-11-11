@@ -23,9 +23,15 @@ export function getCachedEmail(): string | null {
 /** 登录后发现「在其他浏览器里付过款」的购买已被找回时在 window 上广播，页面据此刷新并提示 */
 export const PURCHASE_RESTORED_EVENT = "belle:purchase-restored";
 
+/** 每次从后端拿到最新账号数据（额度 / 积分）时在 window 上广播，detail 是 WebInitData；顶栏头像菜单里的额度据此实时刷新 */
+export const ACCOUNT_SYNCED_EVENT = "belle:account-synced";
+
 function cacheAccount(data: WebInitData) {
   cachedUserId = data.user_id;
   if (data.email) cachedEmail = data.email;
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new CustomEvent(ACCOUNT_SYNCED_EVENT, { detail: data }));
+  }
   if (data.restored_purchases && data.restored_purchases > 0 && typeof window !== "undefined") {
     window.dispatchEvent(new CustomEvent(PURCHASE_RESTORED_EVENT, { detail: data.restored_purchases }));
   }

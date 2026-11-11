@@ -14,6 +14,7 @@ import {
 } from "@/lib/color-report";
 import type { CelebrityData } from "@/lib/celebrity-data";
 import type { DemoPersonaId } from "@/lib/demo-personas";
+import type { LookbookData } from "@/lib/lookbook";
 import { Link } from "@/i18n/navigation";
 import type { LensProfile, LensVerdictItem } from "@/lib/api";
 import { SEASON_SWATCHES, type SwatchGroup } from "@/lib/season-swatches";
@@ -41,6 +42,8 @@ export interface ColorReportProps {
   lookbookDemo?: boolean;
   /** 示例报告展示哪位人物的 Lookbook；只在 lookbookDemo 时有用 */
   lookbookDemoPersona?: DemoPersonaId;
+  /** 分享页：服务端取好的 Lookbook 数据（只读展示分享人的造型图） */
+  lookbookShared?: LookbookData | null;
   /** 示例报告角标 */
   demoBadge?: string;
   /** 报告生成时间（秒级时间戳），用于刊头日期 */
@@ -71,7 +74,7 @@ export function ReportSkeleton() {
   );
 }
 
-function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceImageUrl, onUnlock, unlockLabel, unlockBusy, lookbookTaskId, lookbookDemo, lookbookDemoPersona, demoBadge, createdAt, footer, messages }: ColorReportProps & { messages: ReportMessages }) {
+function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceImageUrl, onUnlock, unlockLabel, unlockBusy, lookbookTaskId, lookbookDemo, lookbookDemoPersona, lookbookShared, demoBadge, createdAt, footer, messages }: ColorReportProps & { messages: ReportMessages }) {
   const slug: SeasonSlug = isSeasonSlug(report.season) ? report.season : "soft-summer";
   const palette = seasonPalette(slug);
   const sd = messages.seasons[slug] ?? {};
@@ -286,11 +289,12 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
       />
 
       {/* Lookbook：把推荐落在用户自己的脸上（AI 生成，异步出图）；未解锁只露出一张预览 */}
-      {(lookbookTaskId || lookbookDemo) && (
+      {(lookbookTaskId || lookbookDemo || lookbookShared) && (
         <LookbookBlock
           taskId={lookbookTaskId ?? "demo"}
           demo={lookbookDemo}
           demoPersona={lookbookDemoPersona}
+          shared={lookbookShared}
           lang={lang}
           ui={ui}
           seasonName={sd.name ?? slug}

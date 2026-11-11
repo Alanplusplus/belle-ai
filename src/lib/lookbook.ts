@@ -91,7 +91,8 @@ export interface LookbookPersona {
 }
 
 export interface LookbookData {
-  task_id: string;
+  /** 分享页的数据不带任务 ID（访客不该拿到它） */
+  task_id?: string;
   unlocked: boolean;
   total: number;
   /** preview：只有预览整图；full：全套；lens：独立工具（只有自己那一章，试戴付费）；skipped：免费预览名额已用完 / 照片不合适；disabled：功能关闭 */

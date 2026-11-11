@@ -47,6 +47,8 @@ export interface LookbookBlockProps {
   demo?: boolean;
   /** 示例展示哪位人物（默认第一位）；只在 demo 时有用 */
   demoPersona?: DemoPersonaId;
+  /** 分享页：服务端已经取好的 Lookbook 数据（只读：不请求后端、没有解锁 / 试戴 / 重新生成 / 保存入口，没出图的章节不展示） */
+  shared?: LookbookData | null;
 }
 
 /**
@@ -92,12 +94,15 @@ const LOCK_ICON = (
   </svg>
 );
 
-export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, sourceImageUrl, onUnlock, unlockLabel, unlockBusy, lens, onBuyCredits, demo = false, demoPersona = DEMO_PERSONAS[0].id }: LookbookBlockProps) {
-  const live = useLookbook(demo ? null : taskId, lang, !locked);
+export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, sourceImageUrl, onUnlock, unlockLabel, unlockBusy, lens, onBuyCredits, demo = false, demoPersona = DEMO_PERSONAS[0].id, shared }: LookbookBlockProps) {
+  const isShared = !!shared;
+  // 示例和分享页都是只读：数据是现成的，没有解锁 / 试戴 / 重新生成 / 保存
+  const readOnly = demo || isShared;
+  const live = useLookbook(readOnly ? null : taskId, lang, !locked);
   const sample = useDemoLookbook(demo ? lang : null, demoPersona, lens);
   const { retry, retrying, reroll, tryOn } = live;
-  const data = demo ? sample.data : live.data;
-  const loading = demo ? sample.loading : live.loading;
+  const data = isShared ? shared : demo ? sample.data : live.data;
+  const loading = isShared ? false : demo ? sample.loading : live.loading;
   const [viewer, setViewer] = useState<{ key: LookbookSheetKey; index: number } | null>(null);
   const [copied, setCopied] = useState<string | null>(null);
   // 独立工具：没付费的格子上写「试戴」而不是「未解锁」
@@ -129,7 +134,7 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
   const unlocked = !!data?.unlocked;
   const sheets = new Map<LookbookSheetKey, LookbookSheet>((data?.sheets ?? []).map((s) => [s.key, s]));
   const drape = sheets.get("drape");
-  const failedSomewhere = unlocked && data?.state === "failed";
+  const failedSomewhere = !isShared && unlocked && data?.state === "failed";
 
   const open = (key: LookbookSheetKey, index: number) => {
     trackEvent("lookbook_tile_opened", { sheet: key });
@@ -155,19 +160,20 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
   const body = (key: LookbookSheetKey): ReactNode => {
     const sheet = sheets.get(key);
     // 只有第一章（免费预览，用户正盯着等）显示完整骨架；其余还没出的章节只占一行，见 isPending
-    if (!sheet) return lens ? <SkeletonGrid cols={2} count={4} label={ui("lbStyling")} /> : key === "drape" ? <SkeletonGrid cols={3} count={6} label={ui("lbStyling")} /> : null;
+    if (!sheet) return isShared ? null : lens ? <SkeletonGrid cols={2} count={4} label={ui("lbStyling")} /> : key === "drape" ? <SkeletonGrid cols={3} count={6} label={ui("lbStyling")} /> : null;
     // 每张小图单独生成：已解锁时章节一出第一张就开始显示，没出的格子是骨架（见 LookTile）
     const inProgress = sheet.status === "processing" || sheet.status === "pending";
     if (inProgress && !hasImage(sheet)) {
-      return <SkeletonGrid cols={sheet.layout.cols} count={sheet.layout.cols * sheet.layout.rows} aspect={tileAspect(sheet.layout)} label={ui("lbStyling")} rail={isRail(key)} />;
+      return isShared ? null : <SkeletonGrid cols={sheet.layout.cols} count={sheet.layout.cols * sheet.layout.rows} aspect={tileAspect(sheet.layout)} label={ui("lbStyling")} rail={isRail(key)} />;
     }
     if (sheet.status === "failed") {
+      if (isShared) return null;
       return <p data-export-hide="" className="mt-4 rounded-xl border border-dashed border-gold/50 bg-white/60 px-4 py-6 text-center text-sm text-muted-foreground">{ui("lbTileFailed")}</p>;
     }
     // 独立工具：分析好了、试戴还没买（locked）也展示——文字分析是免费的，格子是占位块
     const analysisOnly = sheet.status === "locked" && sheet.tiles.length > 0;
     if (sheet.status !== "success" && !inProgress && !analysisOnly) return null;
-    const unlockTile = lens ? () => askTryOn(key) : onUnlock ? () => unlock(key) : undefined;
+    const unlockTile = isShared ? undefined : lens ? () => askTryOn(key) : onUnlock ? () => unlock(key) : undefined;
     const ctx: SheetCtx = { sheet, ui, locked: !unlocked, analysis: !!lens, open: (index) => open(key, index), onUnlock: unlockTile, copyColor };
     switch (key) {
       case "drape":
@@ -191,13 +197,20 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
   // 锁定态：预览整图（drape）完整展示，其余章节只列名字 + 锁；已解锁：按顺序展示全部
   // 免费预览整图：额度用完（skipped）或生成失败时，对没付费的人直接不展示这一节，不暴露失败，也没有重试入口
   const previewUnavailable = !unlocked && !!drape && (drape.status === "skipped" || drape.status === "failed");
-  const visible = lens ? SECTIONS.filter((s) => s.key === lens) : SECTIONS.filter((s) => (unlocked || s.key === "drape") && !(previewUnavailable && s.key === "drape"));
-  const lockedList = unlocked || lens ? [] : SECTIONS.filter((s) => s.key !== "drape");
+  const baseVisible = lens ? SECTIONS.filter((s) => s.key === lens) : SECTIONS.filter((s) => (unlocked || s.key === "drape") && !(previewUnavailable && s.key === "drape"));
+  // 分享页：访客看不到「生成中 / 失败」，只展示已经有图的章节（独立工具还要加上分析好了、试戴没买的那一章：文字分析本身是公开内容）
+  const visible = isShared
+    ? baseVisible.filter((s) => {
+        const sheet = sheets.get(s.key);
+        return !!sheet && (hasImage(sheet) || (!!lens && sheet.status === "locked" && sheet.tiles.length > 0));
+      })
+    : baseVisible;
+  const lockedList = unlocked || lens || isShared ? [] : SECTIONS.filter((s) => s.key !== "drape");
   // 进度条只在「还有章节没出」时显示；全部出齐后重新生成某一张，不再弹出总进度
-  const progress = !lens && data && unlocked && data.state === "processing" && (data.done ?? 0) < data.total ? { done: data.done ?? 0, total: data.total } : null;
+  const progress = !isShared && !lens && data && unlocked && data.state === "processing" && (data.done ?? 0) < data.total ? { done: data.done ?? 0, total: data.total } : null;
   // 还没出的章节（解锁后）：除第一章外只占一行，不再把整面墙铺满骨架
   const isPending = (key: LookbookSheetKey): boolean => {
-    if (!unlocked || key === "drape" || lens) return false;
+    if (isShared || !unlocked || key === "drape" || lens) return false;
     const sheet = sheets.get(key);
     const status = sheet?.status;
     if (sheet && hasImage(sheet)) return false; // 已经出了几张：直接展示这一章，没出的格子是骨架
@@ -221,6 +234,9 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
     }
   };
 
+  // 分享页：一张图都没有（分享人的 Lookbook 还没出 / 没有可公开的）就不显示这一块
+  if (isShared && visible.length === 0) return null;
+
   return (
     // 「下载完整报告」会把已经出好的图连同文字一起放进 PDF；按钮、进度、生成中的占位这些交互元素都标了 data-export-hide
     <section id="report-lookbook" className={`scroll-mt-20 px-5 ${lens ? "pt-3" : "pt-10"}`}>
@@ -242,7 +258,7 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
           <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{ui("lbProgressHint")}</p>
         </div>
       )}
-      {unlocked && data?.language_ready === false && <p data-export-hide="" data-lookbook-pending="" className="mt-3 text-center text-xs text-muted-foreground">{ui("lbTranslating")}</p>}
+      {!isShared && unlocked && data?.language_ready === false && <p data-export-hide="" data-lookbook-pending="" className="mt-3 text-center text-xs text-muted-foreground">{ui("lbTranslating")}</p>}
       {failedSomewhere && (
         <div data-export-hide="" className="mt-5 flex flex-col items-center gap-2 rounded-xl border border-amber-200/80 bg-amber-50/70 px-4 py-3 text-center">
           <p className="text-sm text-amber-900">{ui("lbFailed")}</p>
@@ -278,7 +294,7 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
                   </div>
                 )}
               </div>
-              {lens && sheet?.status === "locked" && sheet.tiles.length > 0 &&
+              {!isShared && lens && sheet?.status === "locked" && sheet.tiles.length > 0 &&
                 (sheet.free === "processing" ? (
                   // 第一次体验：免费那张还在出，先别让人付费（这时付费入口会被后端拒绝）；出好后这里换成付费卡片
                   <p data-export-hide="" role="status" className="report-serif mt-4 flex items-center justify-center gap-2 text-center text-[0.85rem] italic text-muted-foreground">
@@ -296,7 +312,7 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
                     onBuy={onBuyCredits}
                   />
                 ))}
-              {unlocked && !demo && sheet?.status === "success" && (
+              {unlocked && !readOnly && sheet?.status === "success" && (
                 <RerollBar
                   ui={ui}
                   cost={rerollCost}
@@ -309,7 +325,7 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
                 />
               )}
               {/* 独立工具：试戴图全部出齐（都已付费、没有在生成）才能导出 PDF / 保存照片；没出齐的不给入口 */}
-              {lens && !demo && sheet && isComplete(sheet) && !regenerating && data?.language_ready !== false && (
+              {lens && !readOnly && sheet && isComplete(sheet) && !regenerating && data?.language_ready !== false && (
                 <LensExport ui={ui} lens={s.key} urls={sheet.tiles.flatMap((tile) => (tile.url ? [tile.url] : []))} flash={flash} />
               )}
             </div>
@@ -317,7 +333,7 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
         })}
       </div>
 
-      {!lens && unlocked && data?.state !== "failed" && (
+      {!isShared && !lens && unlocked && data?.state !== "failed" && (
         <div data-export-hide="" className="mt-10 rounded-2xl border border-gold/40 bg-gradient-to-br from-white to-muted/60 px-5 py-5 text-center">
           <p className="rp-label">{ui("lbTryOnKicker")}</p>
           <p className="report-serif mt-1.5 text-lg font-semibold">{ui("lbTryOnTitle")}</p>
@@ -333,7 +349,7 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
         </div>
       )}
 
-      {!lens && !unlocked && (
+      {!isShared && !lens && !unlocked && (
         <div data-export-hide="" className="mt-8">
           {drape?.status === "skipped" && <p className="report-serif mb-4 rounded-xl bg-muted/60 px-4 py-3 text-center text-sm italic leading-relaxed">{ui("lbSkipped")}</p>}
           <ul className="grid grid-cols-2 gap-2">
@@ -369,7 +385,7 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
           onChange={setViewer}
           onClose={() => setViewer(null)}
           onSave={
-            !demo && isComplete(sheets.get(viewer.key))
+            !readOnly && isComplete(sheets.get(viewer.key))
               ? async (url) => {
                   trackEvent("lookbook_photo_saved", { sheet: viewer.key });
                   const { savePhotos } = await import("@/lib/report-pdf");

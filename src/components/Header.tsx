@@ -6,9 +6,9 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import { routing, type Locale } from "@/i18n/routing";
 import { LOCALE_NAMES } from "@/lib/constants";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useSession, signOut } from "next-auth/react";
-import { webSignIn, type WebSignInData } from "@/lib/api";
+import { ACCOUNT_SYNCED_EVENT, webInit, webSignIn, type WebInitData, type WebSignInData } from "@/lib/api";
 import { trackEvent } from "@/lib/analytics";
 import { useSignIn } from "@/lib/useSignIn";
 import { InAppSignInSheet } from "@/components/InAppBrowserNotice";
@@ -31,6 +31,8 @@ export function Header() {
   const langRef = useRef<HTMLDivElement>(null);
   const userMenuRef = useRef<HTMLDivElement>(null);
   const fetchedRef = useRef(false);
+  const syncingRef = useRef(false);
+  const lastSyncRef = useRef(0);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -79,6 +81,46 @@ export function Header() {
       }
     });
   }, [status, session]);
+
+  // 额度实时刷新：页面里任何地方（生成 / 解锁 / 试戴 / 购买）从后端取到最新账号数据时都会广播，这里直接用，头像菜单里的数字就不会停在登录那一刻
+  useEffect(() => {
+    if (status !== "authenticated") return;
+    const onSynced = (event: Event) => {
+      const data = (event as CustomEvent<WebInitData | undefined>).detail;
+      if (!data) return;
+      lastSyncRef.current = Date.now();
+      setUserInfo({ free: data.web_quota?.remaining ?? 0, pack: data.pack_credits ?? 0 });
+    };
+    window.addEventListener(ACCOUNT_SYNCED_EVENT, onSynced);
+    return () => window.removeEventListener(ACCOUNT_SYNCED_EVENT, onSynced);
+  }, [status]);
+
+  // 打开头像菜单 / 手机菜单、切回这个标签页时主动取一次最新额度（别的标签页或后台任务也会扣额度）；3 秒内不重复请求
+  const refreshCredits = useCallback(() => {
+    if (status !== "authenticated" || syncingRef.current || Date.now() - lastSyncRef.current < 3000) return;
+    syncingRef.current = true;
+    webInit()
+      .catch(() => {})
+      .finally(() => {
+        syncingRef.current = false;
+      });
+  }, [status]);
+
+  useEffect(() => {
+    if (userMenuOpen || mobileOpen) refreshCredits();
+  }, [userMenuOpen, mobileOpen, refreshCredits]);
+
+  useEffect(() => {
+    const onVisible = () => {
+      if (document.visibilityState === "visible") refreshCredits();
+    };
+    window.addEventListener("focus", onVisible);
+    document.addEventListener("visibilitychange", onVisible);
+    return () => {
+      window.removeEventListener("focus", onVisible);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
+  }, [refreshCredits]);
 
   const features = [
     { href: "/personal-color-analysis", label: t("colorAnalysis") },

@@ -3,16 +3,20 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/constants";
+import { LOCALE_TO_REPORT_LANG } from "@/lib/color-report";
 import { fetchSharedReport } from "@/lib/share";
 import { ogLocale } from "@/lib/seo";
 import { ShareCtaButton, ShareLandingTracker } from "./ShareLanding";
 import { SharedColorReport } from "./SharedColorReport";
+import { SharedLens } from "./SharedLens";
 
 // 每次访问都要实时签名图片 URL，不能静态化 / 缓存
 export const dynamic = "force-dynamic";
 
-// generateMetadata 与页面本体共用同一次后端读取，避免重复计数
-const getReport = cache((token: string) => fetchSharedReport(token));
+// generateMetadata 与页面本体共用同一次后端读取，避免重复计数；Lookbook 档案文字按页面语言取译文
+const getReport = cache((token: string, locale: string) =>
+  fetchSharedReport(token, { language: LOCALE_TO_REPORT_LANG[locale] ?? "en" }),
+);
 
 function imageUrlFor(locale: string, token: string): string {
   const prefix = locale === "en" ? "" : `/${locale}`;
@@ -25,7 +29,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; token: string }>;
 }): Promise<Metadata> {
   const { locale, token } = await params;
-  const report = await getReport(token);
+  const report = await getReport(token, locale);
   // 分享页含用户个人报告：任何情况下都不让搜索引擎收录
   const robots = { index: false, follow: false } as const;
   if (!report) return { robots };
@@ -61,10 +65,11 @@ export default async function SharePage({
   const { locale, token } = await params;
   setRequestLocale(locale);
 
-  const report = await getReport(token);
+  const report = await getReport(token, locale);
   if (!report) notFound();
 
   const t = await getTranslations({ locale, namespace: "sharePage" });
+  const tTry = report.lens ? await getTranslations({ locale, namespace: "tryPage" }) : null;
 
   return (
     <div className="mx-auto flex max-w-xl flex-col items-center px-4 py-10 text-center sm:py-14">
@@ -73,9 +78,25 @@ export default async function SharePage({
       <h1 className="font-serif text-2xl font-bold text-foreground sm:text-3xl">{t("heading")}</h1>
       <p className="mt-2 text-sm text-muted-foreground sm:text-base">{t("subheading")}</p>
 
-      {report.report ? (
+      {report.lens && report.lookbook && tTry ? (
         <div className="mt-6 w-full">
-          <SharedColorReport report={report.report} sourceImageUrl={report.sourceImageUrl ?? null} locale={locale} />
+          <SharedLens
+            lens={report.lens.key}
+            title={tTry(`type_${report.type}`)}
+            season={report.lens.season}
+            lookbook={report.lookbook}
+            sourceImageUrl={report.sourceImageUrl ?? null}
+            locale={locale}
+          />
+        </div>
+      ) : report.report ? (
+        <div className="mt-6 w-full">
+          <SharedColorReport
+            report={report.report}
+            sourceImageUrl={report.sourceImageUrl ?? null}
+            lookbook={report.lookbook}
+            locale={locale}
+          />
         </div>
       ) : (
         /* 报告图是首屏主内容：高优先级加载，加载前先占一块浅色底，避免内容突然下推 */
