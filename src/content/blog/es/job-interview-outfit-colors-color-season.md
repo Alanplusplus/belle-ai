@@ -1,6 +1,6 @@
 ---
 title: "Qué llevar a una entrevista de trabajo según tu estación de color"
-description: "El azul marino no es automáticamente la opción segura. Descubre los mejores colores de atuendo para entrevistas de las 12 estaciones de color — y qué tonos «profesionales» pueden ir en tu contra sin que te des cuenta."
+description: "El azul marino no siempre es seguro. Mejores colores de entrevista para las 12 estaciones y tonos que pueden ir en tu contra."
 date: "2026-10-21"
 updated: "2026-11-12"
 tags: ["atuendo para entrevista", "estación de color", "análisis de color", "estilo profesional", "estilo por ocasión"]
@@ -141,7 +141,7 @@ Ninguno está prohibido. Solo necesitan la ubicación correcta, el tono adecuado
 
 ## El enfoque moderno: prueba colores antes de comprar
 
-Encontrar tu estación solía significar una sesión profesional de armonización con pañuelos. Hoy la IA puede analizar una foto y decirte qué tonos favorecen tu subtono y cuáles te apagan. Cuando me preparaba para un cambio de carrera, pasé una foto por una herramienta de análisis de color con IA y tuve una lista de colores base, junto al rostro y de acento en menos de un minuto. Herramientas gratuitas como [aicoloranalysis.io](https://www.aicoloranalysis.io/outfit-color-analysis?utm_source=medium&utm_medium=article&utm_campaign=job-interview-outfit-colors-color-season) pueden mostrar qué colores de ropa iluminan tu tez antes de gastar dinero en una chaqueta de traje nueva.
+Encontrar tu estación solía significar una sesión profesional de armonización con pañuelos. Hoy la IA puede analizar una foto y decirte qué tonos favorecen tu subtono y cuáles te apagan. Cuando me preparaba para un cambio de carrera, pasé una foto por una herramienta de análisis de color con IA y tuve una lista de colores base, junto al rostro y de acento en menos de un minuto. Herramientas gratuitas como [aicoloranalysis.io](/outfit-color-analysis) pueden mostrar qué colores de ropa iluminan tu tez antes de gastar dinero en una chaqueta de traje nueva.
 
 No sustituye probarse la ropa, pero reduce el campo para no adivinar en el probador. Y si quieres una mirada más profunda a cómo se compara el consejo profesional, [la guía de The Muse sobre vestimenta para entrevistas](https://www.themuse.com/advice/what-to-wear-to-an-interview) cubre corte, tejido y códigos de vestimenta que complementan todo lo anterior.
 

@@ -1,6 +1,6 @@
 ---
 title: "Frühlings-Farbpaletten entschlüsselt: Bright Spring vs. True Spring vs. Light Spring"
-description: "Du kannst Bright Spring, True Spring und Light Spring nicht auseinanderhalten? Dieser Guide erklärt die besten Farben, Merkmale und Styling-Tipps jeder Unterkategorie — damit du endlich mit Selbstvertrauen anziehst."
+description: "Bright, True und Light Spring: Beste Farben, Merkmale und Styling-Tipps – damit du endlich mit Selbstvertrauen anziehst."
 date: "2026-07-27"
 tags: ["Farbanalyse", "Frühlings-Farbpalette", "Farbtyp", "Beauty", "Styling-Guide"]
 image: "/images/blog/spring-color-palettes-decoded.webp"
@@ -173,7 +173,7 @@ Halte ein paar Testfarben an dein Gesicht (bei natürlichem Licht, ohne Make-up)
 2. **Warmes Gold/Ringelblume:** Lässt deine Haut strahlen und deine Augen aufleuchten? → Wahrscheinlich **True Spring**
 3. **Sanfter Pfirsich/Blush-Rosa:** Lässt es dich frisch und leuchtend wirken? → Wahrscheinlich **Light Spring**
 
-Für eine präzisere Antwort können KI-Farbanalyse-Tools deine spezifische Unterkategorie identifizieren, indem sie die einzigartige Kombination aus Hautunterton, Augenfarbe und Haarfarbe im Detail analysieren. [Kostenlose Tools wie aicoloranalysis.io](https://aicoloranalysis.io/de) geben dir einen schnellen Ausgangspunkt — lade einfach ein klares Selfie bei natürlichem Licht hoch.
+Als Zweitmeinung können KI-Farbanalyse-Tools jetzt eine wahrscheinliche Sub-Saison vorschlagen, indem sie die Kombination aus Hautunterton, Augenfarbe und Haarfarbe betrachten. [Kostenlose Tools wie aicoloranalysis.io](/) geben dir einen schnellen Ausgangspunkt — lade einfach ein klares Selfie bei natürlichem Licht hoch.
 
 ---
 

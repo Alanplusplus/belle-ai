@@ -1,6 +1,6 @@
 ---
 title: "8 Stil-Persönlichkeitstypen: Welcher sind Sie?"
-description: "Entdecken Sie die 8 Schönheits- und Stil-Persönlichkeits-Archetypen — vom Romantischen zum Dramatischen zum Ätherischen. Erfahren Sie, welcher zu Ihren Gesichtszügen passt und wie Sie für Ihre natürliche Ästhetik kleiden."
+description: "8 Stil-Persönlichkeitstypen vom Romantischen bis Dramatischen: Welcher zu Ihren Gesichtszügen passt und wie Sie danach kleiden."
 date: "2026-07-29"
 tags: ["Stil-Persönlichkeit", "Stil-DNA", "Mode", "Schönheit", "persönlicher Stil"]
 image: "/images/blog/style-personality-types-guide.webp"

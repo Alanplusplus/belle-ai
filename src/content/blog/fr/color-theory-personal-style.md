@@ -1,6 +1,6 @@
 ---
 title: "Comment la Théorie des Couleurs des Cours d'Art S'applique à Votre Style Personnel"
-description: "Le cercle chromatique n'est pas réservé aux peintres. Découvrez comment les couleurs complémentaires, les harmonies analogues et les principes de contraste de l'école d'art peuvent transformer votre façon de vous habiller chaque matin."
+description: "Complémentaires, analogues, contraste : la théorie des couleurs d'art appliquée à votre style et à votre façon de vous habiller."
 date: "2026-09-11"
 tags: ["théorie des couleurs", "style personnel", "colorimétrie", "conseils mode", "guide de style"]
 image: "/images/blog/color-theory-personal-style.webp"
@@ -228,7 +228,7 @@ Exemple : Tenue tout gris (gris clair, charbon moyen, ardoise foncée) + un acce
 
 Voici la vérité : vous n'avez pas besoin de mémoriser les positions du cercle chromatique pour utiliser ces principes. Votre œil perçoit déjà la plupart de ces harmonies inconsciemment — c'est pourquoi certaines combinaisons de tenues « semblent juste ».
 
-Mais si vous voulez de la précision ? Les outils IA peuvent désormais analyser votre coloration personnelle et recommander des combinaisons spécifiques de votre palette optimale. Un outil comme [l'analyse colorimétrique IA](https://aicoloranalysis.io/personal-color-analysis) peut identifier votre saison, votre niveau de contraste et vos meilleures familles de couleurs en environ 60 secondes — ce qui vous indique exactement quelles harmonies et niveaux de saturation vous conviennent le mieux.
+Mais si vous voulez un point de départ ? Les outils IA peuvent désormais analyser votre coloration personnelle et suggérer des combinaisons issues d'une palette probable. Un outil comme [l'analyse colorimétrique IA](/) peut suggérer votre saison, votre niveau de contraste et vos meilleures familles de couleurs en environ 60 secondes — un bon moyen de voir quelles harmonies et niveaux de saturation tester en premier.
 
 C'est comme avoir un tuteur personnel en théorie des couleurs qui connaît aussi votre sous-ton de peau, la couleur de vos yeux et votre niveau de contraste naturel.
 

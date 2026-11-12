@@ -1,6 +1,6 @@
 ---
 title: "Comment trouver le rouge à lèvres parfait pour votre teint (Guide 2026)"
-description: "Arrêtez de deviner quel rouge à lèvres vous va. Apprenez à assortir les teintes de rouge à votre sous-ton — chaud, froid ou neutre — avec des recommandations précises pour chaque type de peau."
+description: "Quel rouge à lèvres pour vous ? Associez les rouges à votre sous-ton chaud, froid ou neutre, avec idées par type de peau."
 date: "2026-07-29"
 tags: ["rouge à lèvres", "sous-ton de peau", "conseils maquillage", "analyse des couleurs", "beauté"]
 image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
@@ -43,7 +43,7 @@ Tenez un bijou doré et un bijou argenté près de votre visage, l'un après l'a
 **Le test du papier blanc :**
 Tenez une feuille de papier blanc éclatant près de votre visage. Si votre peau paraît jaunâtre en comparaison, vous êtes chaude. Si elle paraît rosée, vous êtes froide. Si elle paraît grisâtre ou que vous ne pouvez pas trancher, vous êtes probablement neutre ou olivâtre.
 
-Aucun test isolé n'est définitif. Utilisez les trois ensemble pour un résultat plus précis. Et si vous voulez une réponse encore plus fiable, les [outils d'analyse des couleurs par IA](https://aicoloranalysis.io) peuvent analyser votre sous-ton à partir d'un selfie en quelques secondes — éliminant ainsi toute incertitude.
+Aucun test isolé n'est définitif. Utilisez les trois ensemble pour un résultat plus précis. Et si vous voulez un second avis, les [outils d'analyse des couleurs par IA](/) peuvent suggérer votre sous-ton à partir d'un selfie en quelques secondes — un point de départ utile, bien que la lumière puisse encore faire varier le résultat.
 
 ---
 
@@ -154,7 +154,7 @@ Les sous-tons olivâtres méritent une mention spéciale car ils sont souvent ma
 
 L'accord des couleurs exigeait autrefois une visite chez une conseillère formée ou des heures d'essais en comptoir beauté. Les outils d'IA modernes ont changé la donne.
 
-Des applications comme [Belle AI](https://aicoloranalysis.io) peuvent photographier votre visage et analyser votre sous-ton selon les mêmes principes scientifiques que les professionnels — en identifiant si vous êtes chaude, froide ou neutre, et même en déterminant votre saison colorimétrique. Une fois votre saison connue, trouver le bon rouge devient presque un jeu d'enfant.
+Des applications comme [Belle AI](/) peuvent observer une photo de votre visage et suggérer votre sous-ton selon les mêmes indices de couleur que ceux qu'examinent les professionnels — chaude, froide ou neutre, et une saison probable. Une fois votre saison connue, trouver le bon rouge devient presque un jeu d'enfant.
 
 J'ai fait analyser mon propre selfie avec un outil d'analyse des couleurs par IA et confirmé que j'étais un Soft Summer — ce qui expliquait pourquoi chaque corail que j'essayais paraissait faux, et pourquoi les rouges framboise atténués me mettaient en valeur.
 

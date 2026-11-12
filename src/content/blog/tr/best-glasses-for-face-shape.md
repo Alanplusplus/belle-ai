@@ -1,6 +1,6 @@
 ---
 title: "Yüz şeklinize en uygun gözlükler: eksiksiz rehber"
-description: "Hangi gözlük çerçevelerinin yüzünüze uyduğundan emin değil misiniz? Bu rehber oval, yuvarlak, kare, kalp, elmas ve uzun yüzler için en iyi gözlük stillerini — ve yapay zekanın mükemmel eşleşmeyi bulmanıza nasıl yardımcı olduğunu kapsar."
+description: "Oval, yuvarlak, kare, kalp, elmas ve uzun yüzler için en iyi gözlük stilleri. Yapay zekâ çerçeve önerilerinde ikinci görüş olarak yardımcı olur."
 date: "2026-07-31"
 tags: ["yüz şekli", "gözlük", "çerçeve", "stil rehberi", "yapay zeka güzellik"]
 image: "/images/blog/best-glasses-for-face-shape.webp"

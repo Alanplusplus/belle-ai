@@ -173,7 +173,7 @@ image: "/images/blog/celebrity-makeup-tutorials-what-works.webp"
 
 找到色彩季型和明星匹配，过去意味着预约专业色彩分析、花数小时研究红毯档案。今天，AI 工具可以从一张照片分析你的底调、对比度和季型——然后找出与你有着色特征相似的明星。
 
-如果你想要有数据依据的起点而不是靠猜，[Belle AI at aicoloranalysis.io](https://aicoloranalysis.io) 提供 [明星匹配](https://aicoloranalysis.io/celebrity-match) 和 [彩妆分析](https://aicoloranalysis.io/makeup-analysis)，将你的特征映射到适合季型的色号和参考面孔。当某个产品感觉不对时，我仍建议相信镜子——但对你的底调和季型有一个客观判断，能消除大部分让明星教程如此挫败的试错。
+如果你想要一个起点而不是靠猜，[Belle AI at aicoloranalysis.io](/) 提供 [明星匹配](/celebrity-match) 和 [彩妆分析](/makeup-analysis)，将你的特征映射到适合季型的色号和参考面孔。当某个产品感觉不对时，我仍建议相信镜子——但对底调和季型多一个第二意见，能减少不少让明星教程如此挫败的试错。
 
 目标不是把判断外包出去。而是更快抵达正确的色彩框架，让你跟着做的教程真正有机会成功。
 
@@ -187,7 +187,7 @@ image: "/images/blog/celebrity-makeup-tutorials-what-works.webp"
 - 色彩季型是完整框架，告诉你哪些色系、深度和饱和度与特征和谐
 - 找到与你同季型的明星，研究她们的色彩逻辑——不是具体产品清单
 - 用色彩翻译法改造任何教程：保留色彩角色，替换具体色号
-- AI 色彩分析可快速识别你的季型和明星匹配，在你再买一支错误口红之前给出可靠参考
+- AI 色彩分析可快速推断你可能的季型和明星匹配，在你再买一支错误口红之前提供可对照验证的起点
 
 ---
 

@@ -241,7 +241,7 @@ Foundation deserves special attention because it's the base everything else sits
 
 The most common mistake: matching foundation to your *face* instead of your *neck and chest*. Your face can be darker, redder, or more uneven than your body. Match to your jawline/neck junction for seamless blending.
 
-For undertone accuracy, I've found that AI-powered color analysis tools actually outperform my own eye when it comes to identifying the subtle difference between warm, cool, and neutral-cool foundations. Tools like the free analysis at [aicoloranalysis.io](https://aicoloranalysis.io/makeup-analysis) can identify your exact undertone category from a photo, which eliminates the guesswork at the beauty counter.
+For undertone, I've found that AI-powered color analysis tools can be a helpful second opinion when you're unsure whether you're warm, cool, or neutral-cool, and they sometimes catch a pattern my own eye misses, though lighting and camera settings can still shift the result. Tools like the free analysis at [aicoloranalysis.io](/makeup-analysis) can suggest an undertone category from a photo, which gives you a better starting point at the beauty counter.
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Guide des lèvres peau olive : meilleurs rouges à lèvres pour subton olive"
 seoTitle: "Meilleures couleurs de lèvres peau olive — pourquoi le rouge classique échoue (+ ce qui marche)"
-description: "Le rouge classique vous ternit, les nudes grisent, le corail est aléatoire sur peau olive ? Découvrez baie, mauve, brique et nude chaud qui flattent vraiment votre subton."
+description: "Rouge qui ternit, nude gris, corail capricieux sur peau olive ? Baie, mauve, brique et nude chaud pour votre subton."
 date: "2026-09-18"
 tags: ["subton olive", "maquillage", "couleur des lèvres", "conseils beauté", "analyse colorimétrique"]
 image: "/images/blog/olive-skin-lip-color-guide.webp"
@@ -230,7 +230,7 @@ Quand vous connaissez votre famille lèvres, les achats deviennent simples — e
 
 ## Trouvez vos meilleures couleurs de lèvres
 
-Entre baie chaude et prune froide, une analyse colorimétrique par IA peut identifier votre subtype olive et proposer des lèvres harmonieuses — pas des best-sellers génériques.
+Entre baie chaude et prune froide, une analyse colorimétrique par IA peut suggérer un subtype olive probable et proposer des lèvres harmonieuses — pas des best-sellers génériques.
 
 [Essayer l’analyse colorimétrique IA gratuite →](/try)
 

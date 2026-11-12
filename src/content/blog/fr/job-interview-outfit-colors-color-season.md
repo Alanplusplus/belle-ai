@@ -1,6 +1,6 @@
 ---
 title: "Quoi porter à un entretien d'embauche selon votre saison colorimétrique"
-description: "Le marine n'est pas automatiquement le choix sûr. Découvrez les meilleures couleurs de tenue d'entretien pour les 12 saisons colorimétriques — plus celles qui passent pour « professionnelles » et vous desservent en silence."
+description: "Le marine n'est pas toujours le choix sûr. Couleurs d'entretien pour les 12 saisons et celles qui passent pro mais vous desservent."
 date: "2026-10-21"
 tags: ["tenue d'entretien", "saison colorimétrique", "analyse colorimétrique", "style professionnel", "style par occasion"]
 image: "/images/blog/job-interview-outfit-colors-color-season.webp"
@@ -138,7 +138,7 @@ Aucune de ces couleurs n'est interdite. Il faut juste le bon emplacement, la bon
 
 ## L'approche moderne : tester les couleurs avant d'acheter
 
-Trouver sa saison signifiait autrefois une séance de drapage professionnelle. Aujourd'hui, l'IA peut analyser une photo et vous dire quelles nuances flattent votre sous-ton et lesquelles vous ternissent. Quand je me préparais à une reconversion, j'ai passé une photo dans un outil d'analyse colorimétrique par IA et j'ai obtenu une liste de couleurs de base, visage et accent en moins d'une minute. Des outils gratuits comme [aicoloranalysis.io](https://www.aicoloranalysis.io/outfit-color-analysis?utm_source=medium&utm_medium=article&utm_campaign=job-interview-outfit-colors-color-season) peuvent montrer quelles couleurs de vêtements illuminent votre teint avant de dépenser de l'argent dans un nouveau blazer.
+Trouver sa saison signifiait autrefois une séance de drapage professionnelle. Aujourd'hui, l'IA peut analyser une photo et vous dire quelles nuances flattent votre sous-ton et lesquelles vous ternissent. Quand je me préparais à une reconversion, j'ai passé une photo dans un outil d'analyse colorimétrique par IA et j'ai obtenu une liste de couleurs de base, visage et accent en moins d'une minute. Des outils gratuits comme [aicoloranalysis.io](/outfit-color-analysis) peuvent montrer quelles couleurs de vêtements illuminent votre teint avant de dépenser de l'argent dans un nouveau blazer.
 
 Cela ne remplace pas d'essayer les vêtements, mais cela réduit le champ pour ne pas deviner en cabine d'essayage. Et si vous voulez un regard plus approfondi sur la façon dont les conseils professionnels s'articulent, [le guide de The Muse sur la tenue d'entretien](https://www.themuse.com/advice/what-to-wear-to-an-interview) couvre la coupe, les tissus et les codes vestimentaires qui complètent tout ce qui précède.
 

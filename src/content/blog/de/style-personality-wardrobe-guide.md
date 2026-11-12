@@ -1,6 +1,6 @@
 ---
 title: "So nutzt du deine Style Personality für eine Garderobe, die wirklich funktioniert"
-description: "Lerne, eine Garderobe auf Basis deiner Style Personality statt Trends aufzubauen. Von Kernstücken bis Einkaufsfiltern – dieser Guide verwandelt deine Style DNA in einen Kleiderschrank, der sich endlich nach dir anfühlt."
+description: "Garderobe nach Style Personality statt Trends: Von Kernstücken bis Einkaufsfiltern – deine Style DNA wird zum passenden Kleiderschrank."
 date: "2026-09-19"
 tags: ["Style Personality", "Garderobe aufbauen", "persönlicher Stil", "Capsule Wardrobe", "Mode-Tipps"]
 image: "/images/blog/style-personality-wardrobe-guide.webp"
@@ -24,7 +24,7 @@ So kannst du es sehen: Farbtyp-Saison ist deine Palette. Style Personality ist d
 
 Zwei Soft-Summer-Frauen können völlig unterschiedlich aussehen. Eine strahlt in romantischen, drapierten Stoffen mit weichen Wellen und zartem Schmuck. Die andere sieht besser in strukturierten, minimalistischen Outfits mit glattem Haar und klaren Linien aus. Gleiche Farben. Unterschiedlicher Ausdruck.
 
-Wenn du deine Style Personality noch nicht identifiziert hast, starte mit unserem Guide zu den [8 Style Personality Types](https://aicoloranalysis.io/style-personality) oder mache eine schnelle Analyse, um deine Style DNA zu entdecken. Sobald du deinen Archetyp kennst (die meisten sind eine Mischung aus zwei Typen), wird alles Folgende umsetzbar.
+Wenn du deine Style Personality noch nicht identifiziert hast, starte mit unserem Guide zu den [8 Style Personality Types](/style-personality) oder mache eine schnelle Analyse, um deine Style DNA zu entdecken. Sobald du deinen Archetyp kennst (die meisten sind eine Mischung aus zwei Typen), wird alles Folgende umsetzbar.
 
 ---
 
@@ -185,7 +185,7 @@ Ergebnis? Garderobe, in der jedes Stück intentional ist, alles matcht, Anziehen
 
 Der traditionelle Weg zur Style Personality: Termine bei Image-Beratern – teuer, zeitaufwendig, oft subjektiv.
 
-Heute können [Style Personality Analysis Tools](https://aicoloranalysis.io/style-personality) aus einem Selfie Gesichtsgeometrie, Proportionen und Coloring bewerten und deinen Archetyp bestimmen. Dieselben Computer-Vision-Prinzipien wie bei Farbtyp-Analyse – ein datenbasiertes Startpunkt statt Pinterest-Raten.
+Heute können [Style Personality Analysis Tools](/style-personality) aus einem Selfie Gesichtsgeometrie, Proportionen und Coloring bewerten und deinen Archetyp bestimmen. Dieselben Computer-Vision-Prinzipien wie bei Farbtyp-Analyse – ein datenbasiertes Startpunkt statt Pinterest-Raten.
 
 Technologie ist ein Startpunkt, kein Ersatz für Intuition. Nutze Ergebnisse als Framework und verfeinere nach dem, was du wirklich greifst und confident trägst. Die beste Garderobe verbindet systematischen Insight mit persönlicher Wahrheit.
 

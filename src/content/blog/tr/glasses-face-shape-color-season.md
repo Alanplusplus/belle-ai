@@ -1,6 +1,6 @@
 ---
 title: "Yüz Şeklinize VE Renk Mevsiminize Uygun Gözlük Nasıl Seçilir"
-description: "Çoğu gözlük rehberi yalnızca yüz şeklini ele alır. Oysa renk mevsiminiz en iyi çerçeve renklerini ve malzemelerini de belirler. Hem şekil hem renk için mükemmel gözlüğü bulmanın eksiksiz rehberi."
+description: "Gözlük rehberleri çoğunlukla sadece yüz şeklini ele alır; renk mevsimi çerçeve rengini de belirler. Şekil ve renk için eksiksiz seçim rehberi."
 date: "2026-09-07"
 tags: ["gözlük", "yüz şekli", "renk analizi", "stil rehberi", "aksesuar"]
 image: "/images/blog/glasses-face-shape-color-season.webp"
@@ -192,7 +192,7 @@ Basit karar çerçevesi:
 
 Hem yüz şeklini hem renk mevsimini belirlemek eskiden iki ayrı danışmanlık gerektiriyordu — biri optisyen, biri renk analisti. Birlikte kolayca 300–500 dolar ve saatler alabiliyordu.
 
-Bugün yapay zeka destekli araçlar tek bir fotoğraftan [yüz şeklinizi](https://aicoloranalysis.io/face-shape-analysis) ve [renk mevsiminizi](https://aicoloranalysis.io/personal-color-analysis) yaklaşık 60 saniyede analiz edebilir. Bazıları benzersiz oranlarınıza göre [gözlük çerçevesi önerileri](https://aicoloranalysis.io/glasses-analysis) bile sunuyor.
+Bugün yapay zeka destekli araçlar tek bir fotoğraftan [yüz şeklinizi](/face-shape-analysis) ve [renk mevsiminizi](/personal-color-analysis) yaklaşık 60 saniyede analiz edebilir. Bazıları benzersiz oranlarınıza göre [gözlük çerçevesi önerileri](/glasses-analysis) bile sunuyor.
 
 Teknoloji fiziksel çerçeveleri denemeyi değiştirmez — burun ve kulaklarda nasıl hissettirdiğini yine kontrol etmelisiniz. Ama arayacağınız şekil ve renklerin kısa listesini verir, optik mağazada amaçsız gezinmekten saatler kazandırır.
 
@@ -225,7 +225,7 @@ Trendler gelir geçer. Kemik yapınız geçmez. Yuvarlak yüzünüz varken overs
 - Soğuk mevsimler → gümüş metaller, soğuk siyah, lacivert, kömür grisi, erik
 - Yukarıdaki tablo 12 alt mevsim için spesifik öneriler verir
 - Malzeme seçimi (metal/asetat/titanyum) mevsiminizle uyum için başka fırsat
-- Yapay zeka araçları artık tek fotoğraftan hem yüz şeklini hem renk mevsimini analiz ederek mağazaya girmeden önce hassas kısa liste sunuyor
+- Yapay zeka araçları artık tek fotoğraftan hem yüz şeklini hem renk mevsimini analiz ederek mağazaya girmeden önce başlangıç kısa listesi sunuyor
 
 Gözlükler sahip olduğunuz en görünür aksesuardır. Hem şekil hem renk doğru olduğunda «takmak zorunda olduğunuz» şey olmaktan çıkar, sizi inanılmaz gösteren şeye dönüşür.
 

@@ -1,6 +1,6 @@
 ---
 title: "Altın, Gümüş veya Rose Gold? Cilt Tonunuza Göre Takı Seçimi"
-description: "Hangi metalin cildinize uyduğundan emin değil misiniz? Undertone'unuzun altın, gümüş, rose gold veya platinin hangisini daha çok yakıştırdığını öğrenin — taş ve küpe önerileriyle birlikte."
+description: "Altın, gümüş, rose gold mu platin mi? Alt tonunuza en çok yakışan metali taş ve küpe önerileriyle birlikte öğrenin."
 date: "2026-07-27"
 tags: ["takı", "cilt tonu", "undertone", "aksesuar", "stil rehberi"]
 image: "/images/blog/jewelry-metals-skin-tone-guide.webp"

@@ -1,6 +1,6 @@
 ---
 title: "Les meilleures lunettes pour votre forme de visage : guide complet"
-description: "Vous ne savez pas quelles montures conviennent à votre visage ? Ce guide couvre les meilleurs styles de lunettes pour les visages ovales, ronds, carrés, en cœur, en diamant et allongés — plus comment l'IA peut vous aider à trouver la monture parfaite."
+description: "Quelles montures pour ovale, rond, carré, cœur, diamant ou allongé ? Styles par forme de visage, avec l'IA comme point de départ."
 date: "2026-07-31"
 tags: ["forme du visage", "lunettes", "montures", "guide de style", "beauté IA"]
 image: "/images/blog/best-glasses-for-face-shape.webp"

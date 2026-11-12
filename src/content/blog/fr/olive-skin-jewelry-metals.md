@@ -1,7 +1,7 @@
 ---
 title: "Guide bijoux peau olive : or, argent ou or rose ?"
 seoTitle: "Or ou argent pour peau olive ? La réponse surprenante"
-description: "Ni l’or ni l’argent ne vous conviennent sur peau olive ? Il y a une raison. Découvrez quels métaux harmonisent le sous-ton olive et pourquoi l’or rose est souvent le meilleur choix."
+description: "Sur peau olive, ni or ni argent ? Quels métaux harmonisent le sous-ton olive et pourquoi l'or rose convient souvent."
 date: "2026-09-18"
 tags: ["sous-ton olive", "bijoux", "accessoires", "analyse colorimétrique", "guide style"]
 image: "/images/blog/olive-skin-jewelry-metals.webp"
@@ -210,7 +210,7 @@ Arrêtez de traiter la peau olive comme un test chaud-froid raté. Commencez par
 
 ## Trouvez vos meilleurs métaux et couleurs
 
-Deviner entre or et argent m’a fait perdre temps et argent. Comprendre mon **sous-type olive** et ma **saison colorimétrique** a fait que les bijoux ne semblaient plus aléatoires — le même cadre que pour les vêtements et le maquillage s’applique ici. Une **analyse colorimétrique par intelligence artificielle** rapide sur [aicoloranalysis.io](https://aicoloranalysis.io) cartographie votre sous-ton et saison pour que métaux et pierres s’appuient sur votre palette, pas sur tâtonnements.
+Deviner entre or et argent m’a fait perdre temps et argent. Comprendre mon **sous-type olive** et ma **saison colorimétrique** a fait que les bijoux ne semblaient plus aléatoires — le même cadre que pour les vêtements et le maquillage s’applique ici. Une **analyse colorimétrique par intelligence artificielle** rapide sur [aicoloranalysis.io](/) cartographie votre sous-ton et saison pour que métaux et pierres s’appuient sur votre palette, pas sur tâtonnements.
 
 [Essayer l’analyse colorimétrique IA gratuite →](/try)
 

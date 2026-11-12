@@ -1,6 +1,6 @@
 ---
 title: "What Colors Look Best on Me? AI Outfit Color Matching Explained"
-description: "Ever wonder why some clothing colors make you glow while others drain your complexion? Learn how AI outfit color analysis works and how to find your most flattering wardrobe colors in seconds."
+description: "Some colors make you glow; others drain your complexion. Learn how AI outfit color analysis works and find flattering wardrobe colors fast."
 date: "2026-07-30"
 tags: ["personal color analysis", "outfit colors", "wardrobe", "AI beauty", "style guide"]
 image: "/images/blog/ai-outfit-color-matching.webp"

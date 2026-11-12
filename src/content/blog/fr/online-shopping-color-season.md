@@ -1,6 +1,6 @@
 ---
 title: "Comment Acheter en Ligne Selon Votre Saison de Couleurs (Sans Vous Tromper)"
-description: "Les achats en ligne sont délicats quand on ne peut pas voir les couleurs en vrai. Découvrez des stratégies pratiques pour acheter des vêtements dans votre palette — de la calibration d'écran à l'association des couleurs à l'épreuve des retours."
+description: "Acheter en ligne sans voir la couleur ? Stratégies pour rester dans votre palette : écran, associations et retours."
 date: "2026-08-23"
 tags: ["analyse colorimétrique", "shopping en ligne", "saison de couleurs", "conseils mode", "style personnel"]
 image: "/images/blog/online-shopping-color-season.webp"
@@ -140,7 +140,7 @@ Voici où ça devient intéressant. L'association colorimétrique traditionnelle
 
 Les outils modernes d'analyse colorimétrique par IA peuvent raccourcir ce processus. Au lieu de deviner si un « mauve poudré » conviendra à votre palette Été Doux, vous pouvez utiliser des outils qui analysent les valeurs colorimétriques réelles et les comparent aux caractéristiques de votre saison.
 
-Par exemple, [aicoloranalysis.io](https://aicoloranalysis.io/outfit-color-analysis) propose une analyse colorimétrique de tenue qui évalue si des couleurs de vêtements spécifiques s'harmonisent avec votre teint. Vous téléchargez une photo en portant l'article, et l'outil vous indique si la couleur met en valeur ou entre en conflit avec votre coloration naturelle. C'est essentiellement le « test de drapage » que vous feriez chez une styliste, mais accessible depuis votre salon.
+Par exemple, [aicoloranalysis.io](/outfit-color-analysis) propose une analyse colorimétrique de tenue qui évalue si des couleurs de vêtements spécifiques s'harmonisent avec votre teint. Vous téléchargez une photo en portant l'article, et l'outil vous indique si la couleur met en valeur ou entre en conflit avec votre coloration naturelle. C'est essentiellement le « test de drapage » que vous feriez chez une styliste, mais accessible depuis votre salon.
 
 Cela ne remplace pas l'apprentissage de la lecture des couleurs par vous-même — mais c'est un outil de vérification utile, surtout quand vous développez votre œil.
 

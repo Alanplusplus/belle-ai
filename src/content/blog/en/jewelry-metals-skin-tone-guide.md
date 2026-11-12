@@ -1,6 +1,6 @@
 ---
 title: "Gold, Silver, or Rose Gold? How to Choose Jewelry for Your Skin Tone"
-description: "Not sure which jewelry metal suits your skin? Learn how your undertone determines whether gold, silver, rose gold, or platinum flatters you most — plus gemstone and earring recommendations."
+description: "Which jewelry metal suits your skin? Your undertone shapes whether gold, silver, rose gold, or platinum flatters you most, plus gem and earring picks."
 date: "2026-07-27"
 tags: ["jewelry", "skin tone", "undertone", "accessories", "style guide"]
 image: "/images/blog/jewelry-metals-skin-tone-guide.webp"

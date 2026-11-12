@@ -1,6 +1,6 @@
 ---
 title: "Guía castaña: cómo elegir el castaño adecuado según el subtono de tu piel"
-description: "El castaño no es un solo color. Descubre cómo la profundidad, la temperatura y tu estación de color deciden si chocolate, castaño, mocha o castaño ceniza te hacen brillar — o te dejan apagada."
+description: "Chocolate, mocha o castaño ceniza: profundidad, temperatura y estación deciden si el castaño te hace brillar o te apaga."
 date: "2026-10-14"
 tags: ["color de cabello", "castaño", "subtono de piel", "análisis de color", "belleza"]
 image: "/images/blog/brunette-shades-skin-undertone-guide.webp"

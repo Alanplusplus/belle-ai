@@ -1,6 +1,6 @@
 ---
 title: "Palette Hiver Profond : votre guide de style complet pour 2026"
-description: "Tout ce qu'il faut savoir sur la saison Hiver Profond — des couleurs signature au maquillage, en passant par la constitution de garde-robe, les métaux de bijoux et comment distinguer Hiver Profond des saisons similaires."
+description: "Hiver Profond : couleurs signature, maquillage, garde-robe, bijoux et comment le distinguer des saisons proches."
 date: "2026-07-13"
 tags: ["hiver profond", "colorimétrie personnelle", "palette de couleurs", "guide de style", "couleurs saisonnières"]
 image: "/images/blog/deep-winter-color-palette.webp"
@@ -162,7 +162,7 @@ La colorimétrie peut sembler confuse car tant de variables entrent en jeu — l
 
 Si vous suspectez être Hiver Profond, commencez par tester le principe fondamental : **les couleurs profondes, froides et à fort contraste rendent-elles votre peau plus nette et vos yeux plus brillants ?** Si oui, vous êtes très probablement dans le territoire Hiver — et la profondeur de votre coloration naturelle vous indiquera si vous êtes Profond, Vrai ou Vif.
 
-Pour des résultats précis sans approximations, l'[analyse colorimétrique par IA](/fr/personal-color-analysis) utilise la vision par ordinateur pour mesurer les valeurs colorimétriques réelles de votre peau, cheveux et yeux — vous offrant un typage objectif parmi les 12 saisons basé sur votre coloration unique.
+Si vous préférez ne pas deviner, l'[analyse colorimétrique par IA](/) s'appuie sur un modèle d'image IA pour évaluer la coloration de votre peau, de vos cheveux et de vos yeux à partir d'une photo et suggérer un type parmi les 12 saisons. C'est un jugement visuel, pas une mesure : utilisez-le comme point de départ et vérifiez-le en regardant comment les couleurs vous vont.
 
 ## Articles connexes
 

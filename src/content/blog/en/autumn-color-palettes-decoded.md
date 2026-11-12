@@ -229,7 +229,7 @@ Silver is a struggle for all Autumn types. If you love silver jewelry, opt for w
 
 Traditionally, identifying your Autumn sub-season required a professional draping session — sitting in natural light while a color analyst holds dozens of warm-toned fabrics against your face. It works, but it's expensive (typically $150-300) and limited to major cities.
 
-Today, AI color analysis tools can look at your skin undertone, eye color, and hair shade and suggest a likely sub-season in under a minute. Platforms like [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) use an AI image model to judge the same warmth, depth, and saturation cues that professional analysts look at. The result is a visual judgment rather than a measurement, so treat it as a starting point. What it changes is access: anyone with a phone and a window can take the first step.
+Today, AI color analysis tools can look at your skin undertone, eye color, and hair shade and suggest a likely sub-season in under a minute. Platforms like [AI color analysis](/) use an AI image model to judge the same warmth, depth, and saturation cues that professional analysts look at. The result is a visual judgment rather than a measurement, so treat it as a starting point. What it changes is access: anyone with a phone and a window can take the first step.
 
 ---
 
@@ -243,9 +243,9 @@ Today, AI color analysis tools can look at your skin undertone, eye color, and h
 
 Understanding your specific Autumn sub-season transforms how you shop, how you get dressed in the morning, and how confident you feel walking out the door. You're not just "an Autumn" — you're a specific shade of warm, and knowing exactly which one unlocks a wardrobe that genuinely works for you.
 
-## Find Your Exact Autumn Sub-Season
+## Find Your Autumn Sub-Season
 
-Can't tell which Autumn you are from descriptions alone? Our [free AI color analysis](/color-analysis) can suggest your likely sub-season from your skin, hair, and eye coloring.
+Can't tell which Autumn you are from descriptions alone? Our [free AI color analysis](/) can suggest your likely sub-season from your skin, hair, and eye coloring.
 
 [Take the Free AI Color Analysis →](/try)
 

@@ -1,6 +1,6 @@
 ---
 title: "Mixed Metals: How to Wear Gold and Silver Together Without Looking Mismatched"
-description: "Can you really wear gold and silver together? Learn the 3 rules of mixing metals, which color seasons can do it best, and how to build a mixed-metal jewelry look that flatters your undertone."
+description: "Wear gold and silver together? Three rules for mixing metals, which color seasons pull it off best, and a mixed-metal look that flatters your undertone."
 date: "2026-10-27"
 tags: ["mixed metals", "jewelry", "color season", "undertone", "style guide"]
 image: "/images/blog/mixed-metals-jewelry-color-season.webp"
@@ -154,7 +154,7 @@ Mixing is a tool, not a requirement. The goal is to feel like the best version o
 
 Figuring out which metal flatters you, and how far you can push the second one, used to mean trying on a lot of jewelry under shop lighting. These days there's an easier way. I recently ran my photo through an AI jewelry analysis tool and was surprised by how clearly it explained my best metals, gemstones, and earring styles, and which combinations to avoid near my face.
 
-If you'd like to try it, a free tool like [aicoloranalysis.io](https://www.aicoloranalysis.io/jewelry-analysis?utm_source=medium&utm_medium=article&utm_campaign=mixed-metals-jewelry-color-season) can show you which metals suit your undertone before you buy anything. It won't replace the mirror test, but it gives you a strong starting point. For a broader look at how metals and undertone interact, [Wikipedia's overview of jewellery materials and alloys](https://en.wikipedia.org/wiki/Jewellery) explains why gold, silver, and platinum look the way they do.
+If you'd like to try it, a free tool like [aicoloranalysis.io](/jewelry-analysis) can show you which metals suit your undertone before you buy anything. It won't replace the mirror test, but it gives you a strong starting point. For a broader look at how metals and undertone interact, [Wikipedia's overview of jewellery materials and alloys](https://en.wikipedia.org/wiki/Jewellery) explains why gold, silver, and platinum look the way they do.
 
 ---
 

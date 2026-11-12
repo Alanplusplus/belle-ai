@@ -39,7 +39,7 @@ Qu'il s'agisse d'un outil d'IA ou d'un œil entraîné, une saison de couleur re
 
 Une photo capture les quatre, mais chacune peut être déformée. Une ampoule chaude ajoute du jaune, ce qui peut simuler un sous-ton chaud. Une retouche poussée augmente la saturation, ce qui peut simuler une intensité vive. Une lumière faible aplatit le contraste. Chacune des règles ci-dessous vise à préserver ces quatre caractéristiques entre votre visage et l'image finale.
 
-Pour voir comment ces caractéristiques se répartissent sur les 12 saisons, notre [guide des saisons de couleur](/blog/what-color-season-am-i) les passe toutes en revue.
+Pour voir comment ces caractéristiques se répartissent sur les 12 saisons, commencez par notre [guide de l'analyse colorimétrique en 12 saisons](/color-analysis) ; notre [guide des saisons de couleur](/blog/what-color-season-am-i) les passe ensuite toutes en revue.
 
 ---
 
@@ -97,7 +97,7 @@ Le bronzage mérite une mention particulière. Il fonce la couleur de surface pe
 ## Pas à pas : obtenir un résultat à partir de votre photo
 
 1. Suivez les sept règles ci-dessus et choisissez votre photo la plus naturelle.
-2. Importez-la dans un outil d'analyse de couleur par IA. Vous pouvez essayer le nôtre avec [un seul selfie en environ une minute](/try), gratuit pour commencer et sans inscription.
+2. Importez-la dans un outil d'[analyse colorimétrique IA](/). Vous pouvez essayer le nôtre avec [un seul selfie en environ une minute](/try), gratuit pour commencer et sans inscription.
 3. Lisez le résultat comme un profil, pas seulement comme une étiquette : quel sous-ton, quelle profondeur, quelle douceur ou vivacité.
 4. Enregistrez la palette, puis testez-la. À la lumière du jour, approchez de votre visage un haut dans l'une des couleurs suggérées et un haut dans une couleur qu'on vous a conseillé d'éviter, et observez ce qui arrive à votre peau.
 
@@ -158,8 +158,6 @@ Un bon selfie ne remplace pas le jugement, mais il vous donne une base propre et
 - [Comment faire son analyse de couleur à la maison](/blog/how-to-do-color-analysis-at-home) — Guide DIY pas à pas avec tests de drapage
 - [Quelle saison suis-je ? Trouvez votre saison de couleur](/blog/what-color-season-am-i) — Les quatre saisons et leurs 12 sous-saisons expliquées
 - [Analyse de couleur IA gratuite en ligne](/blog/free-ai-color-analysis-online) — Comment fonctionne l'analyse de couleur IA gratuite et à quoi s'attendre
-- [IA vs analyse de colorimétrie professionnelle](/blog/ai-vs-professional-color-analysis) — Quand choisir chaque méthode
-- [Automne Doux vs Été Doux](/blog/soft-autumn-vs-soft-summer) — Départager deux saisons souvent confondues
 - [Sous-ton chaud ou froid ? Le guide du sous-ton](/blog/how-to-determine-skin-undertone) — Des tests simples à la maison pour le chaud, le froid ou le neutre
 - [Quiz gratuit de saison de couleur](/tools/color-quiz) — Faites un court quiz si vous préférez ne pas importer de photo
-- [Analyse de couleur : le guide complet](/color-analysis) — Tout ce qu'il faut savoir pour trouver vos meilleures couleurs
+- [Analyse colorimétrique : trouvez votre saison](/color-analysis) — Tout ce qu'il faut savoir pour trouver vos meilleures couleurs

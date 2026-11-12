@@ -33,7 +33,7 @@ Before diving into ethnic variations, the core science is the same everywhere:
 
 Olive undertone is a **green-grey modifier** caused by higher concentrations of melanin interacting with both warm (carotene) and cool (hemoglobin) pigments. This creates a cast that makes skin appear neither purely warm nor purely cool.
 
-This modifier can sit on top of any base undertone — warm, cool, or neutral — at any depth from fair to deep. What changes across ethnicities is not whether olive exists, but how visible it is and how beauty culture recognizes it.
+This modifier can sit on top of any base undertone — warm, cool, or neutral — at any depth from fair to deep. What changes across ethnicities is not whether olive exists, but how visible it is and how beauty culture recognizes it. It is also why olive so often slips through a standard [12-season color analysis](/color-analysis), which was built around skin that reads clearly warm or clearly cool.
 
 ---
 
@@ -207,7 +207,7 @@ The vein test, jewelry test, and white paper test were developed primarily for l
 - **Gold vs. silver** is inconclusive for olive skin because neither metal is clearly better (rose gold often wins)
 - **White paper** makes warm and olive look similar, since both show warmth against a white background
 
-AI-powered color analysis offers a significant advantage here. By measuring actual pixel-level color values from a photo, it detects the green-grey modifier regardless of melanin depth, cultural context, or lighting conditions. For people who've been mistyped by every quiz and consultant, AI analysis often provides the first accurate result they've received.
+[AI color analysis](/) can help here. An AI image model looks at the whole photo rather than asking you to describe your coloring, so it can sometimes pick up the green-grey modifier that quizzes miss, whatever your melanin depth or cultural context, though lighting and camera settings can still shift the result. For people who've been mistyped by quizzes, it can be a useful second opinion to check against a drape test.
 
 ---
 
@@ -217,7 +217,7 @@ AI-powered color analysis offers a significant advantage here. By measuring actu
 - **Melanin depth affects visibility** — the green cast is most visible on fair olive, least visible on deep olive, but present at all depths
 - **Cultural beauty standards often miss olive** — defaulting to "warm" or "neutral" instead
 - **East Asian beauty communities lead in olive recognition** — with specific terminology and dedicated product lines
-- **AI analysis works across ethnicities** because it measures your individual skin rather than applying population-based assumptions
+- **AI analysis looks at your individual photo** rather than a population-based description, so it can be a useful second opinion across ethnicities, but confirm it with a drape test
 
 Your ethnicity influences how olive presents on your skin, but it doesn't determine whether you have olive undertones. If warm and cool products both fail you, if your skin has a greenish cast in daylight, if muted earthy colors make you glow — you're probably olive, regardless of your background.
 
@@ -229,7 +229,7 @@ Our AI color analysis works across all skin tones and ethnicities — detecting 
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [12-Season Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
 - [Olive Undertone Guide](/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
 - [Olive Skin Color Season Guide](/blog/olive-skin-color-season) — Which seasonal type olive skin typically falls into
 - [Olive vs Warm Undertone](/blog/olive-vs-warm-undertone) — Why olive skin isn't simply warm or cool

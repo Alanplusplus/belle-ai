@@ -1,6 +1,6 @@
 ---
 title: "Cómo usar tu personalidad de estilo para crear un armario que realmente funcione"
-description: "Aprende a construir un armario basado en tu personalidad de estilo, no en las tendencias. Desde piezas clave hasta filtros de compra, esta guía convierte tu Style DNA en un closet que por fin se siente como tú."
+description: "Armario según tu personalidad de estilo, no las tendencias: piezas clave y filtros de compra para un closet que se siente como tú."
 date: "2026-09-19"
 tags: ["personalidad de estilo", "construcción de armario", "estilo personal", "armario cápsula", "consejos de moda"]
 image: "/images/blog/style-personality-wardrobe-guide.webp"
@@ -24,7 +24,7 @@ Piénsalo así: la estación de color es tu paleta. La personalidad de estilo es
 
 Dos mujeres Soft Summer pueden verse completamente distintas. Una brilla con telas románticas y drapeadas, ondas suaves y joyería delicada. Otra luce mejor con looks estructurados y minimalistas, pelo lacio y líneas limpias. Mismos colores. Expresión distinta.
 
-Si aún no has identificado tu personalidad de estilo, empieza con nuestra guía de los [8 tipos de personalidad de estilo](https://aicoloranalysis.io/style-personality), o haz un análisis rápido para descubrir tu Style DNA. Una vez que conoces tu arquetipo (la mayoría somos una mezcla de dos), todo lo que sigue se vuelve accionable.
+Si aún no has identificado tu personalidad de estilo, empieza con nuestra guía de los [8 tipos de personalidad de estilo](/style-personality), o haz un análisis rápido para descubrir tu Style DNA. Una vez que conoces tu arquetipo (la mayoría somos una mezcla de dos), todo lo que sigue se vuelve accionable.
 
 ---
 
@@ -185,7 +185,7 @@ Mi cronograma recomendado:
 
 El enfoque tradicional para identificar tu personalidad de estilo implicaba reservar sesiones con consultores de imagen — caro, lento y a menudo basado en opinión subjetiva.
 
-Hoy, las [herramientas de análisis de personalidad de estilo](https://aicoloranalysis.io/style-personality) pueden evaluar tu geometría facial, proporciones y coloración para determinar tu arquetipo desde un selfie. Los mismos principios de visión por computadora que impulsan el análisis de estación de color ahora se extienden al Style DNA — un punto de partida informado por datos en lugar de adivinar con tableros de Pinterest.
+Hoy, las [herramientas de análisis de personalidad de estilo](/style-personality) pueden evaluar tu geometría facial, proporciones y coloración para determinar tu arquetipo desde un selfie. Los mismos principios de visión por computadora que impulsan el análisis de estación de color ahora se extienden al Style DNA — un punto de partida informado por datos en lugar de adivinar con tableros de Pinterest.
 
 Dicho esto, la tecnología es un punto de partida, no un sustituto de la intuición. Usa tus resultados como marco y refina según lo que realmente coges y te hace sentir segura. El mejor armario combina insight sistemático con verdad personal.
 

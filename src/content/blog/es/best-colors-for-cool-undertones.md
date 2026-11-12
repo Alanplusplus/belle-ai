@@ -133,7 +133,7 @@ Es una valoración subjetiva, y la luz cambia lo que ves. Si los resultados van 
 
 ## Dónde encaja un análisis con IA
 
-Belle AI estima tu estación de color a partir de un selfie. Es un juicio visual de la IA sobre una foto, no una medición, así que la luz, los ajustes de la cámara y el maquillaje pueden cambiar el resultado. Úsalo como punto de partida y confírmalo con la prueba de telas anterior. Explicamos qué puede y qué no en [¿Qué tan preciso es el análisis de color con IA?](/es/ai-color-analysis-accuracy). Para probarlo, empieza con [análisis de color con IA](/es/personal-color-analysis).
+Belle AI estima tu estación de color a partir de un selfie. Es un juicio visual de la IA sobre una foto, no una medición, así que la luz, los ajustes de la cámara y el maquillaje pueden cambiar el resultado. Úsalo como punto de partida y confírmalo con la prueba de telas anterior. Explicamos qué puede y qué no en [¿Qué tan preciso es el análisis de color con IA?](/es/ai-color-analysis-accuracy). Para probarlo, empieza con [análisis de color con IA](/).
 
 ## Preguntas frecuentes
 

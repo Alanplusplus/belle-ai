@@ -135,7 +135,7 @@ If you are unsure which subtype you are, compare how you react to muted gold ver
 
 ## Jewelry by Color Season (When Olive Meets Seasonal Analysis)
 
-Knowing your **color season** — Soft Autumn, Soft Summer, Deep Autumn, Deep Winter, and related types — helps you refine metal and stone choices beyond “try rose gold.”
+Your **color season** — Soft Autumn, Soft Summer, Deep Autumn, Deep Winter, and related types — comes from a [12-season color analysis](/color-analysis), and knowing it helps you refine metal and stone choices beyond “try rose gold.”
 
 ### Soft Autumn olive
 
@@ -213,7 +213,7 @@ Stop treating olive skin like a failed warm-or-cool test. Start with rose gold, 
 
 ## Find Your Best Metals and Colors
 
-Guessing between gold and silver used to waste my time and money. Once I understood my **olive subtype** and **color season**, jewelry stopped feeling random — the same framework that guides clothing and makeup applies here. A quick **AI color analysis** on [aicoloranalysis.io](https://aicoloranalysis.io) maps your undertone and season so metal and gemstone picks are grounded in your palette, not trial and error.
+Guessing between gold and silver used to waste my time and money. Once I understood my **olive subtype** and **color season**, jewelry stopped feeling random — the same framework that guides clothing and makeup applies here. A quick [**AI color analysis**](/) maps your undertone and season so metal and gemstone picks are grounded in your palette, not trial and error.
 
 [Try Free AI Color Analysis →](/try)
 
@@ -221,7 +221,7 @@ About 60 seconds, free to preview, no signup — personalized direction for meta
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [The Complete Color Analysis Guide](/color-analysis) — Everything you need to know about finding your best colors
 - [Olive Undertone Guide](/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
 - [Olive Skin Best Hair Colors](/blog/olive-skin-best-hair-colors) — Flattering hair shades for olive undertones
 - [Olive Skin Color Season Guide](/blog/olive-skin-color-season) — Which seasonal type olive skin typically falls into

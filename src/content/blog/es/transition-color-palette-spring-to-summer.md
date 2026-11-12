@@ -1,6 +1,6 @@
 ---
 title: "Cómo hacer la transición de tu paleta de colores de Primavera a Verano (sin empezar de cero)"
-description: "¿Te cuesta adaptar tu armario cuando cambia el clima? Esta guía práctica te enseña a pasar de los tonos cálidos de Primavera a los matices frescos de Verano — usando lo que ya tienes."
+description: "Pasa de tonos cálidos de Primavera a matices frescos de Verano sin empezar de cero, usando lo que ya tienes en el armario."
 date: "2026-08-31"
 tags: ["análisis de color", "estación de color", "estilo personal", "consejos de moda", "guía de estilo"]
 image: "/images/blog/transition-color-palette-spring-to-summer.webp"
@@ -121,7 +121,7 @@ Si eres Primavera Ligera, puedes llevar cómodamente la mayoría de los colores 
 
 El reto para los tipos fronterizos es encontrar tus *colores ancla* — los 2-3 tonos que te funcionan todo el año sin importar los cambios de luz. Para Primavera Ligera, suele ser melocotón suave y marfil cálido. Para Verano Ligero, suele ser rosa empolvado y gris azulado suave.
 
-Si no estás segura de en qué lado de la frontera caes, las herramientas de análisis de color con IA pueden ayudar a aclararlo. Las apps modernas analizan el subtono de tu piel, el nivel de contraste y la croma para determinar tu subestación exacta — y muchas ahora te muestran los colores específicos de tu paleta que se superponen con estaciones vecinas, que es exactamente la información que necesitas para transiciones fluidas.
+Si no estás segura de en qué lado de la frontera caes, las herramientas de análisis de color con IA pueden ayudar a aclararlo. Las apps modernas observan el subtono de tu piel, el nivel de contraste y la croma para sugerir una subestación probable — y muchas ahora te muestran los colores específicos de tu paleta que se superponen con estaciones vecinas, que es exactamente la información que necesitas para transiciones fluidas.
 
 ---
 
@@ -144,7 +144,7 @@ Cada transición sigue el mismo patrón: empieza apagando, luego cambia el subto
 - Haz la transición gradualmente durante 4-6 semanas: apaga primero, añade neutros frescos, luego introduce acentos de Verano
 - Tu maquillaje puede cambiar tu lectura estacional más rápido que tu armario
 - Si eres un tipo fronterizo (Primavera Ligera / Verano Ligero), tienes una ventaja natural — aprovéchala
-- El análisis de color con IA puede identificar tu subestación exacta y mostrar qué colores conectan con estaciones vecinas
+- El análisis de color con IA puede sugerir una subestación probable y mostrar qué colores conectan con estaciones vecinas
 
 Las personas mejor vestidas no luchan contra el cambio estacional — lo surfean. Y el secreto es que se necesitan muchas menos piezas nuevas de las que crees. La mayor parte de la transición ocurre a través de *cómo* combinas lo que ya tienes.
 

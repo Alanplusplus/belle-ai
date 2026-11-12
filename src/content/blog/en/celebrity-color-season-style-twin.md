@@ -1,6 +1,6 @@
 ---
 title: "Which Celebrity Has Your Color Season? Find Your Style Twin"
-description: "Discover which celebrities share your color season — from Taylor Swift's Light Summer to Lupita Nyong'o's Deep Winter. Learn how to study your style twin's fashion choices and apply their looks to your own wardrobe."
+description: "Find celebrities who share your color season. Study your style twin's fashion choices and apply their best looks to your own wardrobe."
 date: "2026-08-13"
 tags: ["personal color analysis", "celebrity style", "color season", "fashion", "personal style"]
 image: "/images/blog/celebrity-color-season-style-twin.webp"
@@ -153,7 +153,7 @@ If you haven't determined your season, working backward from celebrity compariso
 
 Once you narrow it down, look at what colors those celebrities consistently wear well. If their best shades are warm and muted, you're likely in the Autumn family. If they're cool and bright, you're probably a Winter.
 
-For a more definitive answer, AI-powered color analysis can identify your exact season from a photo. Tools like [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) analyze your skin's undertone, contrast level, and coloring depth to place you in one of the 12 seasons — giving you a precise starting point for finding your celebrity match.
+For a second opinion, AI-powered color analysis can suggest a likely season from a photo. Tools like [aicoloranalysis.io](/personal-color-analysis) judge your skin's undertone, contrast level, and coloring depth to place you in one of the 12 seasons — giving you a useful starting point for finding your celebrity match.
 
 ---
 

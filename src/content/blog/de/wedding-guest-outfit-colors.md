@@ -1,6 +1,6 @@
 ---
 title: "Die Besten Hochzeitsgast-Outfit-Farben für Jeden Farbtyp"
-description: "Unsicher, was Sie zu einer Hochzeit anziehen sollen? Ihr Farbtyp hat die Antwort. Ein kompletter Leitfaden zu den schmeichelhaftesten Hochzeitsgast-Farben für alle 12 saisonalen Typen — von Frühling bis Winter."
+description: "Hochzeitsgast-Outfits nach Farbtyp: Schmeichelhafteste Farben für alle 12 saisonalen Typen – von Frühling bis Winter."
 date: "2026-08-26"
 tags: ["Farbanalyse", "Hochzeitsoutfit", "Farbtyp", "Mode-Tipps", "Anlass-Styling"]
 image: "/images/blog/wedding-guest-outfit-colors.webp"
@@ -45,7 +45,7 @@ Die vier Hauptsaisons gliedern sich jeweils in drei Sub-Saisons:
 | **Herbst** | Weicher Herbst, Warmer Herbst, Tiefer Herbst | Warm, reich, erdig |
 | **Winter** | Tiefer Winter, Kühler Winter, Leuchtender Winter | Kühl, kontrastreich, dramatisch |
 
-Nicht sicher, welcher Typ Sie sind? Eine schnelle [KI-Farbanalyse](https://aicoloranalysis.io/personal-color-analysis) kann Ihre Sub-Saison in unter einer Minute aus einem Foto bestimmen.
+Nicht sicher, welcher Typ Sie sind? Eine schnelle [KI-Farbanalyse](/) kann aus einem Foto in unter einer Minute eine wahrscheinliche Sub-Saison vorschlagen.
 
 ---
 
@@ -147,7 +147,7 @@ Hier ist mein Drei-Schritte-System, um Farb-Reue zu vermeiden:
 
 **Schritt 2: Machen Sie ein Foto.** Ihre Handykamera ist weniger gnädig als der Spiegel. Wenn die Farbe auf einem schnellen Selfie falsch wirkt, wird sie auf Hochzeitsfotos von drüben noch schlimmer aussehen.
 
-**Schritt 3: Probieren Sie eine KI-Farbanalyse.** Tools wie [KI-gestützte Farbanalyse](https://aicoloranalysis.io/outfit-color-analysis) können jetzt vorab zeigen, wie bestimmte Outfit-Farben mit Ihrer natürlichen Färbung interagieren — ohne Rätselraten. Besonders hilfreich, wenn Sie zwischen zwei ähnlichen Nuancen schwanken.
+**Schritt 3: Probieren Sie eine KI-Farbanalyse.** Tools wie [KI-gestützte Farbanalyse](/outfit-color-analysis) können jetzt vorab zeigen, wie bestimmte Outfit-Farben mit Ihrer natürlichen Färbung interagieren — ein nützlicher Weg, das Raten zu reduzieren. Besonders hilfreich, wenn Sie zwischen zwei ähnlichen Nuancen schwanken.
 
 ---
 

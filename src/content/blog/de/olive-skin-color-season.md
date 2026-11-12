@@ -11,7 +11,7 @@ faq:
   - q: "Kann Olivhaut eine Frühlings- oder Bright-Saison sein?"
     a: "Selten. Der grau-grüne Schleier dämpft die Klarheit, die Frühling und lebendige Bright-Saisons brauchen. Wenn du Oliv bist und Frühling bekommst, bist du vielleicht warm-oliv und hell — Weicher Herbst passt oft besser."
   - q: "Warum liegen Online-Farbquiz bei Olivhaut daneben?"
-    a: "Die meisten kennen nur warm, kühl oder neutral. Oliv ist ein grau-grüner Modifikator auf dem Basiston; Signale heben sich auf. KI-Farbanalyse per Foto kann dieses Grün direkt messen."
+    a: "Die meisten kennen nur warm, kühl oder neutral. Oliv ist ein grau-grüner Modifikator auf dem Basiston; Signale heben sich auf. KI-Farbanalyse per Foto kann gezielt nach diesem Grünstich suchen — als visuelle Einschätzung eines Fotos, am besten mit Drapierung prüfen."
 ---
 
 ## „Welche Saison bin ich?“ — das Olivhaut-Dilemma
@@ -220,9 +220,9 @@ Die gewinnende Gruppe lässt Augenringe heller, Haut klarer und Lippen natürlic
 
 Am selben Tag je ein Lippenstift und Blush jeder Kandidaten-Saison testen. Kleidung lügt im Ladenlicht; Make-up im echten Gesicht entscheidet oft.
 
-### Schritt 6: Mit objektiver Analyse bestätigen (optional)
+### Schritt 6: Zweitmeinung per KI-Analyse einholen (optional)
 
-Heimtests helfen, aber bei Oliv rutschen menschliche Augen am meisten. [KI-Farbanalyse](/de/color-analysis) liest den grau-grünen Modifikator vom Foto und mappt deine Werte auf Saisonpaletten — nützlich zwischen Weicher Herbst und Weicher Sommer oder zwischen Tiefer Herbst und Tiefer Winter.
+Heimtests helfen, aber bei Oliv rutschen menschliche Augen am meisten. [KI-Farbanalyse](/) sucht im Foto nach dem grau-grünen Modifikator und schlägt eine Saisonpalette vor — als Zweitmeinung nutzen; nützlich zwischen Weicher Herbst und Weicher Sommer oder zwischen Tiefer Herbst und Tiefer Winter.
 
 ---
 
@@ -255,7 +255,7 @@ Die richtige Saison verkleinert deinen Stil nicht. Sie gibt dir eine kürzere Li
 
 ## Finde deine Farbsaison
 
-Unsicher, in welcher Schublade du landest? Belle AI erkennt Oliv-Unterton und ordnet dir aus einem Foto eine Saisonpalette zu.
+Unsicher, in welcher Schublade du landest? Belle AI sucht Oliv-Unterton in einem Foto und schlägt eine Saisonpalette vor — als Ausgangspunkt, den du mit Drapierung prüfen kannst.
 
 [Kostenlose KI-Farbanalyse testen →](/try)
 

@@ -1,6 +1,6 @@
 ---
 title: "I Wore Only My 'Season Colors' for 30 Days — Here's What Happened"
-description: "A personal experiment in dressing exclusively in my color season palette for a full month. The compliments, the surprises, and the unexpected lessons about personal style."
+description: "I dressed only in my color season palette for 30 days. Compliments, surprises, and unexpected lessons about personal style."
 date: "2026-07-26"
 tags: ["personal color analysis", "color season", "personal style", "fashion tips", "self improvement"]
 image: "/images/blog/wearing-season-colors-30-days.webp"
@@ -118,7 +118,7 @@ The numbers tell the story, but they don't capture the *feeling*. For the first 
 
 If I were starting this experiment again, here's what I'd change:
 
-**Start with a professional or AI-based analysis.** I initially guessed my season from online quizzes and got it wrong (I thought I was Warm Autumn for two years). A proper analysis — whether through a trained consultant or an [AI color analysis tool](https://aicoloranalysis.io) — saves you from building a wardrobe around the wrong palette. Getting accurate results upfront is worth the small investment.
+**Start with a professional or AI-based analysis.** I initially guessed my season from online quizzes and got it wrong (I thought I was Warm Autumn for two years). A proper analysis — whether through a trained consultant or an [AI color analysis tool](/) — saves you from building a wardrobe around the wrong palette. Getting accurate results upfront is worth the small investment.
 
 **Don't purge immediately.** I was too aggressive with removing off-palette clothes. Some pieces in "wrong" colors still work as bottoms or outerwear where they're far from your face. Keep them for a rotation period.
 

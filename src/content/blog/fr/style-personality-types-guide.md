@@ -1,6 +1,6 @@
 ---
 title: "8 types de personnalité de style : lequel êtes-vous ?"
-description: "Découvrez les 8 archétypes de personnalité beauté et style — du Romantique au Dramatique à l'Éthéré. Apprenez lequel correspond à vos traits et comment vous habiller selon votre esthétique naturelle."
+description: "8 archétypes beauté et style, du Romantique au Dramatique : lequel vous ressemble et comment vous habiller selon votre esthétique."
 date: "2026-07-29"
 tags: ["personnalité de style", "ADN de style", "mode", "beauté", "style personnel"]
 image: "/images/blog/style-personality-types-guide.webp"

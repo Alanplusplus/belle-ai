@@ -1,6 +1,6 @@
 ---
 title: "Kış Renk Paletleri: Deep Winter vs True Winter vs Bright Winter"
-description: "Kış alt tipiniz konusunda kararsız mısınız? Deep Winter, True Winter ve Bright Winter arasındaki temel farkları — en iyi renkler, stil ipuçları ve hangisine ait olduğunuzu nasıl belirleyeceğinizi öğrenin."
+description: "Deep, True ve Bright Winter arasındaki temel farklar: en iyi renkler, stil ipuçları ve hangi Kış alt tipine ait olduğunuzu nasıl belirlersiniz."
 date: "2026-08-06"
 tags: ["kişisel renk analizi", "kış renk paleti", "renk mevsimi", "güzellik", "stil rehberi"]
 image: "/images/blog/winter-color-palettes-decoded.webp"
@@ -225,7 +225,7 @@ Altın genel olarak tüm Kış tipleri için zordur. Altın takı seviyorsanız 
 
 Kış alt tipinizi belirlemek geleneksel olarak profesyonel bir renk draping seansı gerektirirdi — kontrollü aydınlatmada oturup analistin farklı derinlik ve parlaklıktaki soğuk tonlu kumaşları sistematik biçimde yüzünüze tutması. Etkili ama şehre göre genellikle 150–400 dolar.
 
-Yapay zeka destekli renk analizi araçları bunu çok daha erişilebilir kıldı. [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) gibi platformlar cilt alt tonunuzu, kontrast seviyenizi, göz renginizi ve saç tonunuzu analiz ederek bir dakikadan kısa sürede tam alt tipinizi belirler — profesyonel analistlerin değerlendirdiği aynı görsel ipuçlarını, tüm fotoğrafınızı okuyan bir yapay zekâ görüntü modeliyle.
+Yapay zeka destekli renk analizi araçları bunu çok daha erişilebilir kıldı. [yapay zekâ renk analizi](/) gibi platformlar cilt alt tonunuzu, kontrast seviyenizi, göz renginizi ve saç tonunuzu analiz ederek bir dakikadan kısa sürede olası alt tipinizi önerir — profesyonel analistlerin değerlendirdiği aynı görsel ipuçlarını, tüm fotoğrafınızı okuyan bir yapay zekâ görüntü modeliyle.
 
 ---
 

@@ -219,9 +219,9 @@ L'or peut convenir aux Soft Summers dans sa forme la plus atténuée et rosée, 
 
 ## Le Raccourci Technologique
 
-Identifier votre sous-saison exigeait autrefois une séance de draping professionnelle de deux heures avec des dizaines de tissus colorés contre le visage. Aujourd'hui, les outils d'analyse par IA peuvent analyser teint, yeux et cheveux pour déterminer votre sous-saison exacte en moins d'une minute.
+Identifier votre sous-saison exigeait autrefois une séance de draping professionnelle de deux heures avec des dizaines de tissus colorés contre le visage. Aujourd'hui, les outils d'analyse colorimétrique par IA peuvent examiner votre teint, la couleur de vos yeux et celle de vos cheveux et suggérer une sous-saison probable en moins d'une minute.
 
-Des outils comme [AI color analysis](https://aicoloranalysis.io) utilisent la vision par ordinateur pour mesurer les mêmes signaux de sous-ton et de contraste que les coloristes professionnels — accessibles à toute personne avec un smartphone et de la lumière naturelle.
+Des outils comme [AI color analysis](/) s'appuient sur un modèle d'image IA pour juger les mêmes indices de sous-ton et de contraste que les coloristes professionnels. Le résultat est un jugement visuel, pas une mesure : considérez-le comme un point de départ. Ce qui change, c'est l'accès : quiconque dispose d'un smartphone et d'une lumière naturelle peut faire le premier pas.
 
 ---
 
@@ -233,9 +233,9 @@ Des outils comme [AI color analysis](https://aicoloranalysis.io) utilisent la vi
 - Tous les Étés partagent des sous-tons froids et une qualité atténuée — la différence est le degré.
 - En cas de doute, essayez le test de saturation : votre sous-saison se révèle par l'intensité chromatique que votre peau supporte.
 
-## Trouvez Votre Sous-Saison Été Exacte
+## Trouvez Votre Sous-Saison Été
 
-Toujours hésitante ? Notre [analyse de couleurs IA gratuite](/fr/color-analysis) identifie votre sous-saison exacte à partir d'un selfie — 60 secondes, sans inscription.
+Toujours hésitante ? Notre [analyse de couleurs IA gratuite](/) peut suggérer votre sous-saison probable à partir d'un selfie — environ 60 secondes, sans inscription pour l'aperçu.
 
 [Essayer l'analyse de couleurs IA gratuite →](/fr/try)
 

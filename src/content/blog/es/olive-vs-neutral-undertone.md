@@ -98,7 +98,7 @@ Mira tu piel junto a alguien claramente cálido o frío.
 
 ### Paso 4: confirmación con análisis por IA
 
-Los drapeados estándar pueden seguir siendo ambiguos en casos límite. [El análisis de color con IA](/es/personal-color-analysis) mide los valores reales de color en tu piel — incluido el matiz verde grisáceo invisible a la observación casual pero detectable por visión por computadora. Es la forma más fiable de distinguir oliva de neutro.
+Los drapeados estándar pueden seguir siendo ambiguos en casos límite. Un [análisis de color con IA](/) puede darte una segunda opinión útil, porque un modelo de imagen con IA observa toda la foto y puede detectar un matiz verde grisáceo que pasa fácil por alto a simple vista. Sigue siendo un juicio visual que la luz y los ajustes de la cámara pueden alterar, así que úsalo junto con las pruebas anteriores, no en lugar de ellas.
 
 ---
 
@@ -157,17 +157,17 @@ Puede que seas oliva muy sutil o neutra con tendencia oliva. Prueba una base esp
 - **El matiz verde es el diferenciador clave** — visible frente al blanco, en mandíbula/cuello, a luz natural
 - **Cálido y frío se ven «mal» en oliva por razones distintas** a la piel neutra
 - **Los colores apagados revelan oliva** — si rosa polvo y topo cálido te favorecen y el cálido/frío puro no, eres oliva
-- **El análisis por IA es el distintor más fiable** en casos límite
+- **El análisis por IA puede ser una segunda opinión útil** en casos límite
 
 Deja de aceptar «neutro» si la etiqueta nunca encajó del todo. Puede que seas oliva — y eso lo cambia todo.
 
 ## Encuentra tu subtono real
 
-¿No sabes si eres oliva o neutra? Nuestro análisis de color con IA detecta el matiz verde grisáceo que las pruebas estándar pasan por alto.
+¿No sabes si eres oliva o neutra? Nuestro análisis de color con IA puede ofrecer una segunda opinión sobre el matiz verde grisáceo que las pruebas estándar suelen pasar por alto.
 
 [Prueba gratis el análisis de color con IA →](/es/try)
 
-60 segundos, vista previa gratis, sin registro. Lectura precisa del subtono, con detección de oliva.
+60 segundos, vista previa gratis, sin registro. Lectura orientativa del subtono, con señales de oliva.
 
 ## Artículos relacionados
 

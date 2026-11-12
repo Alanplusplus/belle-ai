@@ -1,7 +1,7 @@
 ---
 title: "Zeytin Teni Takı Rehberi: Altın mı, Gümüş mü, Rose Altın mı?"
 seoTitle: "Zeytin Teninde Altın mı Gümüş mü? Şaşırtıcı Cevap"
-description: "Zeytin teninizde ne altın ne gümüş tam oturuyor mu? Bunun bir nedeni var. Zeytin alt tonunu tamamlayan metalleri ve rose altının neden sıkça en iyi seçenek olduğunu öğrenin."
+description: "Zeytin tende altın da gümüş de tam oturmuyor mu? Alt tonunuzu tamamlayan metalleri ve rose altının neden sıkça en iyi seçenek olduğunu öğrenin."
 date: "2026-09-18"
 tags: ["zeytin alt ton", "takı", "aksesuar", "kişisel renk analizi", "stil rehberi"]
 image: "/images/blog/olive-skin-jewelry-metals.webp"
@@ -210,7 +210,7 @@ Zeytin tenini başarısız sıcak-soğuk testi gibi görmeyi bırakın. Rose alt
 
 ## En İyi Metallerinizi ve Renklerinizi Bulun
 
-Altın ile gümüş arasında tahmin etmek zaman ve paramı boşa harcadı. **Zeytin alt tipimi** ve **renk mevsimimi** anlayınca takı rastgele hissettirmedi — kıyafet ve makyajı yönlendiren aynı çerçeve burada da geçerli. [aicoloranalysis.io](https://aicoloranalysis.io) üzerinde hızlı bir **yapay zekâ renk analizi**, alt tonunuzu ve mevsiminizi haritalayarak metal ve taş seçimlerini paletinize dayandırır, deneme yanılmaya değil.
+Altın ile gümüş arasında tahmin etmek zaman ve paramı boşa harcadı. **Zeytin alt tipimi** ve **renk mevsimimi** anlayınca takı rastgele hissettirmedi — kıyafet ve makyajı yönlendiren aynı çerçeve burada da geçerli. [aicoloranalysis.io](/) üzerinde hızlı bir **yapay zekâ renk analizi**, alt tonunuzu ve mevsiminizi haritalayarak metal ve taş seçimlerini paletinize dayandırır, deneme yanılmaya değil.
 
 [Ücretsiz Yapay Zekâ Renk Analizi Deneyin →](/try)
 

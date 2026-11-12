@@ -71,7 +71,7 @@ image: "/images/blog/going-blonde-best-shade-skin-tone.webp"
 
 **暖调金发**携带金色、铜色或蜜糖色素，呼应皮肤中的暖色。它们营造出阳光亲吻、健康光泽的效果，看起来自然而非刻意加工。以我的经验，暖调金发是沙龙里需求最多的色调——也是最常用在错误底调上的色调。当冷调的人染蜜糖金时，头发中的金色会放大皮肤中的任何粉红，造成无意中的红润效果。
 
-**中性金发**居中——既不明显暖也不明显冷。如果你不确定底调，它们是最安全的起点，但如果你的五官对比强烈，也可能显得" flat"。沙金色和小麦金在中性底调上，以及在[个人色彩分析](/zh/color-analysis)中被归入混合或柔和季型的人身上，效果很美。
+**中性金发**居中——既不明显暖也不明显冷。如果你不确定底调，它们是最安全的起点，但如果你的五官对比强烈，也可能显得" flat"。沙金色和小麦金在中性底调上，以及在[12 季型色彩分析](/zh/color-analysis)中被归入混合或柔和季型的人身上，效果很美。
 
 ### 橄榄底调的特殊情况
 
@@ -144,7 +144,7 @@ image: "/images/blog/going-blonde-best-shade-skin-tone.webp"
 | 真冬型 | 铂金、冰金、蓝调灰金 | 蜜糖、金色、铜色 |
 | 亮冬型 | 明亮铂金、冷香槟 | 柔和暖调、草莓金 |
 
-如果你不确定自己属于哪个季型，[个人色彩分析](https://aicoloranalysis.io/personal-color-analysis)可以识别你的精确子季型——当柔夏型和真夏型之间的差别就是一整类金发色调时，这一点至关重要。
+如果你不确定自己属于哪个季型，[个人色彩分析](/personal-color-analysis)可以推断你可能的子季型——当柔夏型和真夏型之间的差别就是一整类金发色调时，这一点至关重要。
 
 ### 如果你介于两个季型之间？
 
@@ -209,7 +209,7 @@ For most of history，choosing blonde shade meant guessing。You'd stare at swat
 
 AI-powered tools 现在可以 preview different blonde shades on your actual photo——rendering dimension、undertone interaction 和 realistic light reflection，而非 flat color overlay。Instead of imagining ash blonde against cool-toned skin，you can see it。Instead of wondering honey or champagne suits Light Spring coloring，you can compare side by side。
 
-Free online tools like [aicoloranalysis.io](https://aicoloranalysis.io/hair-color-analysis) let you preview hair color changes before committing to bleach、toner 和 three hours in salon chair。Technology analyzes skin undertone，factors in natural hair level，shows how specific blonde shades interact with facial features——same variables skilled colorist evaluates，but visible before spend a dollar。
+Free online tools like [aicoloranalysis.io](/hair-color-analysis) let you preview hair color changes before committing to bleach、toner 和 three hours in salon chair。Technology analyzes skin undertone，factors in natural hair level，shows how specific blonde shades interact with facial features——same variables skilled colorist evaluates，but visible before spend a dollar。
 
 以我的经验，arrive at salon with previewed reference——"I want this exact ash beige blonde, level 9, with this kind of dimension"——get better results faster。Conversation shifts from vague（"make me blonde"）to precise（"this shade, this technique, this level of warmth"）。That precision 是 blonde you love 和 blonde you tolerate until roots grow in 之间的 difference。
 

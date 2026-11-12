@@ -198,7 +198,7 @@ Il est rare que les personnes à teint olive soient typées Printemps ou Hiver, 
 
 Si vous avez fait un test de colorimétrie et que les résultats ne vous semblaient pas justes, votre sous-ton olive pourrait en être la raison. Les quiz standards ne tiennent pas compte du modificateur vert, ils peuvent donc vous typer dans une saison qui correspond techniquement à votre base chaude/froide mais ignore la qualité sourde que l'olive ajoute.
 
-Pour des résultats plus précis, l'[analyse colorimétrique par IA](/fr/personal-color-analysis) peut détecter les sous-tons olive en mesurant les valeurs colorimétriques réelles de votre peau — y compris cette nuance vert-grisâtre invisible pour la plupart des tests basiques mais clairement visible pour les algorithmes de vision par ordinateur.
+Si vous hésitez encore, l'[analyse colorimétrique par IA](/) peut vous donner un second avis. Un modèle d'image IA examine l'ensemble de votre photo et peut repérer le reflet vert-gris que les tests basiques manquent souvent. C'est un jugement visuel, pas une mesure ; la lumière et les réglages de l'appareil photo peuvent le faire varier. Considérez-le comme un point de départ.
 
 ---
 

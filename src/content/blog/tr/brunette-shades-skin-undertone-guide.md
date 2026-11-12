@@ -1,6 +1,6 @@
 ---
 title: "Kahverengi Saç Rehberi: Cilt Alt Tonunuza Hangi Kahverengi Saç Rengi Yakışır"
-description: "Kahverengi tek bir renk değil. Derinlik, sıcaklık ve renk mevsiminizin çikolata, kestane, mocha veya kül kahverenginin sizi parlatıp parlatmayacağını — yoksa düz mü göstereceğini — nasıl belirlediğini öğrenin."
+description: "Çikolata, kestane, mocha veya kül kahverengi sizi parlatır mı? Derinlik, sıcaklık ve renk mevsimi doğru kahverengi tonunu seçmenize rehberlik eder."
 date: "2026-10-14"
 tags: ["saç rengi", "kahverengi", "cilt alt tonu", "renk analizi", "güzellik"]
 image: "/images/blog/brunette-shades-skin-undertone-guide.webp"

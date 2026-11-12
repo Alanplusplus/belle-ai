@@ -1,6 +1,6 @@
 ---
 title: "Comment Créer une Garde-robe Capsule Selon Votre Saison de Couleurs (Guide Étape par Étape)"
-description: "Apprenez à créer une garde-robe capsule polyvalente basée sur votre saison de couleurs. Du choix des neutres aux pièces d'accent, ce guide transforme l'analyse colorimétrique en stratégie shopping pratique."
+description: "Garde-robe capsule selon votre saison : neutres, pièces d'accent et stratégie shopping à partir de l'analyse colorimétrique."
 date: "2026-07-25"
 tags: ["garde-robe capsule", "analyse colorimétrique", "saison de couleurs", "conseils mode", "guide de style"]
 image: "/images/blog/capsule-wardrobe-color-season.webp"
@@ -178,11 +178,11 @@ Après plus d'un an avec ma propre garde-robe capsule, voici les pièges que j'a
 
 La partie la plus difficile pour construire une garde-robe capsule par saison était autrefois de déterminer votre saison en premier lieu. Les séances de drapage traditionnelles avec un coloriste coûtent 200-500 $ et exigent une réservation des semaines à l'avance.
 
-Aujourd'hui, les outils d'analyse colorimétrique par IA peuvent déterminer votre saison à partir d'un selfie en quelques secondes. Ils analysent le sous-ton de votre peau, le contraste entre vos traits, et la chaleur ou froideur de votre coloration naturelle — les mêmes facteurs qu'un analyste humain évaluerait, mais via un modèle d'image IA qui lit l'ensemble de votre photo.
+Aujourd'hui, les outils d'analyse colorimétrique par IA peuvent suggérer une saison probable à partir d'un selfie en quelques secondes. Ils analysent le sous-ton de votre peau, le contraste entre vos traits, et la chaleur ou froideur de votre coloration naturelle — les mêmes facteurs qu'un analyste humain évaluerait, mais via un modèle d'image IA qui lit l'ensemble de votre photo.
 
 Une fois votre saison connue, vous pouvez utiliser des outils de palette numériques pour comparer les articles en shopping en ligne. Certaines apps permettent même d'« essayer » virtuellement les couleurs avant d'acheter — moins de retours et de déceptions.
 
-Des outils gratuits comme [aicoloranalysis.io](https://aicoloranalysis.io) offrent une analyse colorimétrique IA instantanée qui identifie votre saison et fournit une palette personnalisée — un excellent point de départ pour planifier votre garde-robe capsule.
+Des outils gratuits comme [aicoloranalysis.io](/) offrent une analyse colorimétrique IA instantanée qui suggère une saison probable et fournit une palette personnalisée — un excellent point de départ pour planifier votre garde-robe capsule.
 
 ---
 
@@ -193,7 +193,7 @@ Des outils gratuits comme [aicoloranalysis.io](https://aicoloranalysis.io) offre
 - Ajoutez 3-5 couleurs d'accent qui illuminent votre peau (30 % de la garde-robe)
 - Chaque motif doit contenir des couleurs de votre palette
 - Construisez graduellement sur 6 mois et plus plutôt que de tout refaire d'un coup
-- Utilisez l'analyse colorimétrique IA pour identifier rapidement votre saison et démarrer en confiance
+- Utilisez l'analyse colorimétrique IA pour obtenir une première lecture rapide de votre saison, puis confirmez-la avec un test de drapage
 
 ## Articles Connexes
 

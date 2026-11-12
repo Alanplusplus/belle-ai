@@ -22,7 +22,7 @@ Here's what we learned, and why some of the results genuinely shocked us.
 
 ## The Setup: Five Friends, One Saturday, One App
 
-We picked a Saturday afternoon, gathered at Jordan's apartment with coffee and pastries, and each took an AI color analysis on our phones. The process itself was simple: upload a selfie in natural lighting, and the AI analyzes your skin undertone, contrast level, and overall coloring to determine your seasonal color type out of the 12-season system.
+We picked a Saturday afternoon, gathered at Jordan's apartment with coffee and pastries, and each took an AI color analysis on our phones. The process itself was simple: upload a selfie in natural lighting, and the AI looks at your skin undertone, contrast level, and overall coloring to suggest a seasonal color type out of the 12-season system.
 
 Within minutes, each of us had our results:
 
@@ -132,7 +132,7 @@ Not everything went smoothly. A few things surprised us or tripped us up along t
 
 **Not everyone loved their palette at first.** Mei was initially disappointed with her Cool Winter result because she wanted to be a Soft Autumn (she loved earthy, boho aesthetics). But when she saw how stunning she looked in her actual cool, clear colors — fuchsia, royal blue, emerald — she came around fast. Style preference and color flattery aren't always the same thing, and that's okay.
 
-**The AI got it right.** This was the verdict from all five of us. We later compared our AI results to online quizzes (which gave us wildly different answers) and to draping videos on YouTube (which were helpful but hard to self-assess). The AI analysis was the most consistent, the fastest, and — based on our fabric test — the most accurate.
+**The AI held up.** This was the verdict from all five of us. We later compared our AI results to online quizzes (which gave us wildly different answers) and to draping videos on YouTube (which were helpful but hard to self-assess). The AI analysis was the most consistent, the fastest, and — in our fabric test — the one that matched best. That is five people and one afternoon, not a controlled study.
 
 ---
 
@@ -162,7 +162,7 @@ It's been about three months since our experiment. Here's what's changed:
 
 If you've been curious about color analysis but haven't tried it yet, grab a friend — or better yet, a whole group. It's one of those rare beauty discoveries that's genuinely useful, immediately actionable, and way more fun than you'd expect.
 
-Curious about your color season? Try a free [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) and see for yourself — it takes 60 seconds and one selfie.
+Curious about your color season? Try a free [AI color analysis](/) and see for yourself — it takes 60 seconds and one selfie.
 
 ## Related Articles
 

@@ -1,6 +1,6 @@
 ---
 title: "Cómo elegir gafas de sol según tu forma de rostro y tono de piel: guía 2026"
-description: "Olvídate de los consejos genéricos. Esta guía combina el análisis de forma facial con la ciencia del subtono de piel y la colorimetría personal para ayudarte a encontrar gafas de sol que realmente te favorezcan."
+description: "Forma facial, subtono y colorimetría: guía para gafas de sol que te favorecen de verdad, más allá de consejos genéricos."
 date: "2026-10-05"
 tags: ["gafas", "forma de rostro", "análisis de color", "accesorios", "guía de estilo"]
 image: "/images/blog/sunglasses-face-shape-skin-tone.webp"
@@ -44,7 +44,7 @@ Antes de hablar de monturas, necesitas conocer tu forma de rostro. Aquí va el m
 
 **Diamante** — Frente y mandíbula estrechas con pómulos anchos y prominentes. Menos común pero muy distintivo.
 
-> **Atajo:** Si alguna vez usaste una herramienta de análisis facial con inteligencia artificial, ya conoces tu forma. Herramientas como [aicoloranalysis.io/face-shape-analysis](https://aicoloranalysis.io/face-shape-analysis) pueden identificar tu forma de rostro a partir de una sola foto en segundos.
+> **Atajo:** Si alguna vez usaste una herramienta de análisis facial con inteligencia artificial, ya conoces tu forma. Herramientas como [aicoloranalysis.io/face-shape-analysis](/face-shape-analysis) pueden sugerir tu forma de rostro probable a partir de una sola foto en segundos.
 
 ---
 
@@ -251,13 +251,13 @@ Tu cabello enmarca tu rostro igual que las gafas de sol. Necesitan funcionar jun
 
 Esto es lo que me emociona: ya no tienes que resolver todo esto por ensayo y error.
 
-Las herramientas de análisis facial con inteligencia artificial pueden ahora identificar tu forma de rostro exacta y sugerir estilos de montura — en segundos, a partir de una sola foto. Algunas van más allá, analizando tu tono de piel y estación de color para recomendar colores de montura también.
+Las herramientas de análisis facial con inteligencia artificial pueden ahora sugerir tu forma de rostro probable y estilos de montura — en segundos, a partir de una sola foto. Algunas van más allá, analizando tu tono de piel y estación de color para recomendar colores de montura también.
 
 Probé una de estas herramientas recientemente y me sorprendió genuinamente. Identificó mi forma de rostro como "ovalado con pómulos ligeramente altos" (que mi óptico me había dicho hace años) y sugirió estilos de montura específicos con recomendaciones de color basadas en mi subtono.
 
-Herramientas gratuitas como [aicoloranalysis.io](https://aicoloranalysis.io/glasses-analysis) combinan la detección de forma facial con análisis de color para darte una recomendación integral de gafas — cubriendo tanto forma como color en un solo análisis.
+Herramientas gratuitas como [aicoloranalysis.io](/glasses-analysis) combinan la detección de forma facial con análisis de color para darte una recomendación integral de gafas — cubriendo tanto forma como color en un solo análisis.
 
-La tecnología aún no es perfecta. Deberías seguir probándote las monturas físicamente antes de comprar. Pero tener un punto de partida respaldado por la ciencia es mucho mejor que deambular por una tienda probándote cincuenta pares al azar.
+La tecnología aún no es perfecta. Deberías seguir probándote las monturas físicamente antes de comprar. Pero tener un punto de partida antes de ir de compras es mucho mejor que deambular por una tienda probándote cincuenta pares al azar.
 
 ---
 
@@ -268,7 +268,7 @@ La tecnología aún no es perfecta. Deberías seguir probándote las monturas f�
 - **Tu estación de color añade precisión** — conocer tu subestación te ayuda a elegir el tono exacto de marrón o acabado metálico
 - **No elijas negro por defecto** — no siempre es tu mejor opción, especialmente para tonos cálidos y complexiones claras
 - **El tinte de los lentes importa** — combínalo con tu familia de subtono para un look coherente
-- **La tecnología ayuda** — las herramientas de análisis facial y de color con IA te dan un punto de partida basado en datos antes de ir de compras
+- **La tecnología ayuda** — las herramientas de análisis facial y de color con IA te dan un punto de partida antes de ir de compras
 
 Encontrar las gafas de sol perfectas no es seguir una tendencia ni agarrar lo primero del exhibidor. Es entender dos cosas: la geometría de tu rostro y la temperatura de tu piel. Acierta en ambas, y no solo lucirás bien con tus gafas — parecerá que fueron diseñadas específicamente para ti.
 

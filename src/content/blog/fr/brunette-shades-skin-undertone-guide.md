@@ -1,6 +1,6 @@
 ---
 title: "Guide brune : comment choisir le bon brun selon le sous-ton de votre peau"
-description: "Le brun n'est pas une seule couleur. Découvrez comment la profondeur, la température et votre saison colorimétrique déterminent si chocolat, châtain, moka ou brun cendré vous fait rayonner — ou paraître terne."
+description: "Chocolat, châtain, moka ou brun cendré ? Profondeur, température et saison pour le brun qui vous fait rayonner ou paraître terne."
 date: "2026-10-14"
 tags: ["couleur de cheveux", "brune", "sous-ton", "analyse colorimétrique", "beauté"]
 image: "/images/blog/brunette-shades-skin-undertone-guide.webp"

@@ -98,7 +98,7 @@ Vergleichen Sie Ihre Haut mit jemandem, der klar warm oder kühl ist.
 
 ### Schritt 4: Bestätigung per KI-Analyse
 
-Standard-Draping bleibt bei Grenzfällen mehrdeutig. [Die KI-Farbanalyse](/de/personal-color-analysis) misst die tatsächlichen Farbwerte Ihrer Haut — einschließlich des grün-grauen Stichs, der dem bloßen Auge entgeht, für computergestützte Bildanalyse aber klar ist. Das ist der zuverlässigste Weg, Oliv von neutral zu trennen.
+Standard-Draping-Tests können bei Grenzfällen weiterhin uneindeutig sein. Eine [KI-Farbanalyse](/) kann eine nützliche Zweitmeinung liefern, weil ein KI-Bildmodell Ihr ganzes Foto betrachtet und einen grün-grauen Stich ansprechen kann, den das bloße Auge leicht übersieht. Es bleibt eine visuelle Einschätzung, die Licht und Kameraeinstellungen verschieben können — nutzen Sie sie ergänzend zu den Tests oben, nicht als Ersatz.
 
 ---
 
@@ -157,17 +157,17 @@ Vielleicht sehr dezentes Oliv oder neutral mit Oliv-Tendenz. Testen Sie oliv-spe
 - **Der Grünstich ist der Schlüssel** — sichtbar gegen Weiß, an Kiefer/Hals, bei Tageslicht
 - **Warm und kühl wirken auf Oliv aus anderen Gründen „falsch“** als auf neutraler Haut
 - **Gedämpfte Farben zeigen Oliv** — wenn staubiges Rosa und warmes Taupe stehen, reines Warm/Kühl nicht, sind Sie oliv
-- **KI-Analyse ist bei Grenzfällen am zuverlässigsten**
+- **KI-Analyse kann bei Grenzfällen eine hilfreiche Zweitmeinung sein**
 
 Hören Sie auf, „neutral“ zu akzeptieren, wenn das Etikett nie passte. Sie sind vielleicht oliv — und das ändert alles.
 
 ## Finden Sie Ihren echten Unterton
 
-Oliv oder neutral unsicher? Unsere KI-Farbanalyse erkennt den grün-grauen Stich, den Standardtests verpassen.
+Oliv oder neutral unsicher? Unsere KI-Farbanalyse kann Ihnen eine Zweitmeinung zum grün-grauen Stich geben, den Standardtests oft übersehen.
 
 [Kostenlose KI-Farbanalyse testen →](/de/try)
 
-60 Sekunden, kostenlose Vorschau, ohne Anmeldung. Genaue Unterton-Analyse inklusive Oliv-Erkennung.
+60 Sekunden, kostenlose Vorschau, ohne Anmeldung. Eine visuelle Unterton-Einschätzung mit Hinweis auf mögliches Oliv.
 
 ## Verwandte Artikel
 

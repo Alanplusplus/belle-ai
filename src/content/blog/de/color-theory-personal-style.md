@@ -1,6 +1,6 @@
 ---
 title: "Wie Farbtheorie aus dem Kunstunterricht auf Ihren persönlichen Stil angewendet werden kann"
-description: "Der Farbkreis ist nicht nur für Maler. Erfahren Sie, wie Komplementärfarben, analoge Harmonien und Kontrastprinzipien aus der Kunstschule Ihre tägliche Kleiderwahl transformieren können."
+description: "Farbtheorie für Ihren Stil: Komplementär-, Analog- und Kontrastprinzipien aus der Kunstschule für bessere Kleiderwahl im Alltag."
 date: "2026-09-11"
 tags: ["Farbtheorie", "persönlicher Stil", "Farbanalyse", "Mode-Tipps", "Stil-Guide"]
 image: "/images/blog/color-theory-personal-style.webp"
@@ -228,7 +228,7 @@ Beispiel: All-Grau-Outfit (hellgrau, mittleres Anthrazit, dunkler Schiefer) + ei
 
 Hier ist die ehrliche Wahrheit: Sie müssen Farbkreis-Positionen nicht auswendig lernen, um diese Prinzipien anzuwenden. Ihr Auge nimmt die meisten dieser Harmonien bereits unbewusst wahr — deshalb fühlen sich manche Outfit-Kombinationen einfach „richtig" an.
 
-Aber wenn Sie Präzision wollen? KI-Tools können jetzt Ihre persönliche Färbung analysieren und spezifische Farbkombinationen aus Ihrer optimalen Palette empfehlen. Ein Tool wie [KI-Farbanalyse](https://aicoloranalysis.io/personal-color-analysis) kann Ihre Saison, Ihr Kontrastniveau und Ihre besten Farbfamilien in etwa 60 Sekunden identifizieren — was Ihnen genau sagt, welche Harmonien und Sättigungsstufen bei Ihnen am besten funktionieren.
+Aber wenn Sie einen Ausgangspunkt wollen? KI-Tools können jetzt Ihre persönliche Färbung analysieren und Farbkombinationen aus einer wahrscheinlichen Palette vorschlagen. Ein Tool wie [KI-Farbanalyse](/) kann in etwa 60 Sekunden Ihre Saison, Ihr Kontrastniveau und Ihre besten Farbfamilien vorschlagen — ein guter Weg herauszufinden, welche Harmonien und Sättigungsstufen Sie zuerst testen sollten.
 
 Es ist, als hätten Sie einen persönlichen Farbtheorie-Tutor, der auch Ihren spezifischen Hautunterton, Ihre Augenfarbe und Ihr natürliches Kontrastniveau kennt.
 

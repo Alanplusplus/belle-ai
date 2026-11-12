@@ -1,6 +1,6 @@
 ---
 title: "Cómo elegir gafas que favorezcan tu forma de cara Y tu estación de color"
-description: "La mayoría de las guías de gafas solo hablan de la forma del rostro. Pero tu estación de color también determina los mejores colores y materiales de montura. Aquí tienes la guía completa para encontrar tus gafas perfectas — forma Y color."
+description: "Tu estación de color también elige monturas: guía para combinar forma de rostro y colores de gafas que favorecen tu paleta."
 date: "2026-09-07"
 tags: ["gafas", "forma de cara", "análisis de color", "guía de estilo", "accesorios"]
 image: "/images/blog/glasses-face-shape-color-season.webp"
@@ -192,7 +192,7 @@ Aquí tienes el marco de decisión sencillo:
 
 Determinar tu forma de cara y tu estación de color solía requerir dos consultas separadas — una con el óptico, otra con la analista de color. Juntas, podían costar fácilmente 300-500 € y llevar horas.
 
-Hoy, herramientas con IA pueden analizar tu [forma de cara](https://aicoloranalysis.io/face-shape-analysis) y tu [estación de color](https://aicoloranalysis.io/personal-color-analysis) a partir de una sola foto en unos 60 segundos. Algunas incluso ofrecen [recomendaciones específicas de monturas](https://aicoloranalysis.io/glasses-analysis) según tus proporciones únicas.
+Hoy, herramientas con IA pueden analizar tu [forma de cara](/face-shape-analysis) y tu [estación de color](/personal-color-analysis) a partir de una sola foto en unos 60 segundos. Algunas incluso ofrecen [recomendaciones específicas de monturas](/glasses-analysis) según tus proporciones únicas.
 
 La tecnología no sustituye probarte monturas físicas — aún necesitas comprobar cómo se sienten en la nariz y las orejas. Pero te da una lista corta de formas y colores a buscar, lo que ahorra horas de mirar sin rumbo en la óptica.
 
@@ -225,7 +225,7 @@ Tus monturas y tu maquillaje trabajan juntos. Si llevas gafas a diario, la sombr
 - Estaciones frías → metales plateados, negro frío, azul marino, carbón, ciruela
 - La tabla anterior ofrece recomendaciones específicas para las 12 sub-estaciones
 - La elección de material (metal vs. acetato vs. titanio) es otra oportunidad de alinearte con tu estación
-- Las herramientas de IA pueden analizar forma de cara y estación de color desde una foto, dándote una lista precisa antes de entrar en la tienda
+- Las herramientas de IA pueden analizar forma de cara y estación de color desde una foto, dándote una lista corta de partida antes de entrar en la tienda
 
 Tus gafas son el accesorio más visible que tienes. Acertar en forma y color significa que dejan de ser algo que «tienes que llevar» y empiezan a ser algo que te hace lucir increíble.
 

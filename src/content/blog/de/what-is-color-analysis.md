@@ -1,6 +1,6 @@
 ---
 title: "Was ist Farbanalyse? Der komplette Anfänger-Guide (2026)"
-description: "Erfahre, was Farbanalyse ist, wie sie funktioniert und warum sie wichtig ist. Verstehe die 4- und 12-Saisons-Systeme, finde deinen Unterton und entdecke deine besten Farben mit unserem kostenlosen KI-Tool."
+description: "Was ist Farbanalyse? 4- und 12-Saisons-Systeme, Unterton und beste Farben – plus kostenloses KI-Tool als Ausgangspunkt."
 date: "2026-07-24"
 tags: ["Farbanalyse", "was ist Farbanalyse", "saisonale Farbanalyse", "Anfänger-Guide", "Farbtheorie"]
 image: "/images/blog/what-is-color-analysis.webp"
@@ -96,7 +96,7 @@ Ein ausgebildeter Colorist hält Stoffmuster an dein Gesicht und beobachtet, wie
 
 ### Methode 2: KI-Fotoanalyse
 
-Lade ein klares Selfie bei natürlichem Licht hoch – die KI analysiert Unterton, Kontrast und Tiefe und bestimmt deine Saison. Schnell (60 Sekunden), kostenlos oder günstig und zunehmend präzise. [Kostenlose KI-Farbanalyse testen →](/try)
+Lade ein klares Selfie bei natürlichem Licht hoch – die KI analysiert Unterton, Kontrast und Tiefe und schlägt deine Saison vor. Schnell (etwa 60 Sekunden), kostengünstig und zunehmend treffsicher, bleibt aber ein Ausgangspunkt und kein endgültiges Urteil. [Kostenlose KI-Farbanalyse testen →](/try)
 
 ### Methode 3: Selbsttest-Quiz
 

@@ -1,6 +1,6 @@
 ---
 title: "8 Stil Kişiliği Tipi: Hangisisiniz?"
-description: "8 güzellik ve stil kişiliği arketipini keşfedin — Romantik'ten Dramatik'e Ethereal'e. Hangisinin özelliklerinize uyduğunu ve doğal estetiğinize göre nasıl giyineceğinizi öğrenin."
+description: "8 stil kişiliği arketipi: Romantikten Dramatiğe Ethereal'e. Özelliklerinize uyan tipi ve doğal estetiğinize göre giyinmeyi öğrenin."
 date: "2026-07-29"
 tags: ["stil kişiliği", "stil DNA", "moda", "güzellik", "kişisel stil"]
 image: "/images/blog/style-personality-types-guide.webp"

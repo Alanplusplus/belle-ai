@@ -1,6 +1,6 @@
 ---
 title: "Bin ich warm oder kühl getönt? Der definitive Unterton-Ratgeber (2026)"
-description: "Unsicher, ob Sie warm oder kühl getönt sind? Nutzen Sie unseren kompletten Leitfaden mit 7 bewährten Methoden zur genauen Bestimmung Ihres Hautuntertons zu Hause. Mit Foto-Beispielen und Expertentipps."
+description: "Warm oder kühl getönt? Leitfaden mit 7 Methoden zur Bestimmung Ihres Hautuntertons zu Hause – mit Foto-Beispielen und Expertentipps."
 date: "2026-07-08"
 tags: ["Unterton", "warm oder kühl", "Hautton", "Farbanalyse", "Beauty-Tipps"]
 image: "/images/blog/how-to-determine-skin-undertone.webp"
@@ -92,11 +92,11 @@ Viele Menschen entdecken ihren Unterton durch jahrelanges Ausprobieren von Found
 
 ### Methode 7: KI-Farbanalyse
 
-Die objektivste Methode. KI-Tools wie Belle AI analysieren Ihr Foto mittels Computer Vision, um Ihren exakten Unterton ohne subjektive Verzerrung oder Lichtverwirrung zu erkennen.
+Eine schnelle Zweitmeinung. KI-Tools wie Belle AI nutzen ein KI-Bildmodell, um Ihren Unterton anhand eines Fotos zu beurteilen. Es ist eine visuelle Einschätzung und keine Messung — Licht, Kameraeinstellungen und Make-up können das Ergebnis daher verschieben.
 
-- Kein natürliches Licht oder spezielle Bedingungen nötig
-- Analysiert tatsächliche Farbwerte in Ihrer Haut
-- Liefert eine spezifische saisonale Klassifizierung (12-Typen-System)
+- Am besten bei natürlichem Licht und ohne Make-up
+- Betrachtet Haut, Augen und Haare zusammen
+- Schlägt einen saisonalen Typ vor (12-Typen-System)
 - Dauert 60 Sekunden
 
 ## Warm vs. kühl getönt: Vollständiger Vergleich

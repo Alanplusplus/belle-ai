@@ -1,6 +1,6 @@
 ---
 title: "Derin Kış Renk Paleti: 2026 İçin Kapsamlı Stil Rehberiniz"
-description: "Derin Kış mevsimi hakkında bilmeniz gereken her şey — imza renklerden makyaj ve gardırop oluşturmaya, takı metallerine ve Derin Kış'ı benzer mevsimlerden ayırt etmeye kadar."
+description: "Derin Kış mevsimi: imza renkler, makyaj, gardırop, takı metalleri ve benzer mevsimlerden ayırt etmek için bilmeniz gereken her şey."
 date: "2026-07-13"
 tags: ["derin kış", "kişisel renk analizi", "renk paleti", "stil rehberi", "mevsimsel renk"]
 image: "/images/blog/deep-winter-color-palette.webp"
@@ -162,7 +162,7 @@ Renk analizi kafa karıştırıcı olabilir çünkü birçok değişken devreye 
 
 Derin Kış olduğunuzu düşünüyorsanız, temel ilkeyi test ederek başlayın: **derin, soğuk, yüksek kontrastlı renkler cildinizi daha berrak ve gözlerinizi daha parlak gösteriyor mu?** Evet ise, büyük olasılıkla Kış bölgesindesiniz — ve doğal renklendirmenizin derinliği Derin, Gerçek veya Parlak olduğunuzu söyler.
 
-Tahmin oyunu olmadan kesin sonuçlar için [yapay zekâ renk analizi](/tr/personal-color-analysis), bilgisayarlı görü kullanarak gerçek cilt, saç ve göz renk değerlerinizi ölçer — benzersiz renklendirmenize dayalı nesnel 12 mevsim tiplendirmesi sunar.
+Tahmin etmek istemiyorsanız, [yapay zekâ renk analizi](/) bir fotoğraftan cilt, saç ve göz renklendirmenizi değerlendirmek için bir yapay zeka görüntü modeli kullanır ve 12 mevsimlik bir tip önerebilir. Bu bir ölçüm değil, görsel bir değerlendirmedir; bunu bir başlangıç noktası olarak kullanın ve renklerin üzerinizde nasıl göründüğüne göre kontrol edin.
 
 ## İlgili Makaleler
 

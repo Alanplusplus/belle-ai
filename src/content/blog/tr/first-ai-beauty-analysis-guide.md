@@ -1,6 +1,6 @@
 ---
 title: "İlk Yapay Zeka Güzellik Analiziniz: Neler Beklemeli ve Sonuçları Nasıl Kullanmalısınız"
-description: "Yapay zeka destekli güzellik analizini ilk kez denemeyi mi düşünüyorsunuz? Süreçte tam olarak neler olduğu, sonuçları nasıl yorumlayacağınız ve günlük stilinize pratik uygulamalar."
+description: "Yapay zeka güzellik analizini ilk kez mi deneyeceksiniz? Süreçte neler olur, sonuçları nasıl yorumlarsınız ve günlük stile nasıl uygularsınız."
 date: "2026-08-17"
 tags: ["renk analizi", "yapay zeka güzellik", "kişisel stil", "güzellik teknolojisi", "kişisel gelişim"]
 image: "/images/blog/first-ai-beauty-analysis-guide.webp"
@@ -149,7 +149,7 @@ Reddetmeden önce önerilen renkleri deneyin. "İyi göründüğümüz" algımı
 
 **"Sonuçlar zamanla değişir mi?"**
 
-Temel alt tonunuz değişmez ama derinlik ve netliğiniz yaş, güneş maruziyeti veya büyük saç rengi değişiklikleriyle kayabilir. Her 2–3 yılda bir veya görünümünüzde önemli değişiklikten sonra yeniden analiz etmeye değer. [aicoloranalysis.io](https://aicoloranalysis.io/try) gibi birçok yapay zeka aracı yeni fotoğraf çekerek bunu kolaylaştırır.
+Temel alt tonunuz değişmez ama derinlik ve netliğiniz yaş, güneş maruziyeti veya büyük saç rengi değişiklikleriyle kayabilir. Her 2–3 yılda bir veya görünümünüzde önemli değişiklikten sonra yeniden analiz etmeye değer. [aicoloranalysis.io](/try) gibi birçok yapay zeka aracı yeni fotoğraf çekerek bunu kolaylaştırır.
 
 **"Bu sadece kadınlar için mi?"**
 

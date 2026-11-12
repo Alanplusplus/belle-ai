@@ -1,6 +1,6 @@
 ---
 title: "8 Style Personality Types: Which One Are You?"
-description: "Discover the 8 beauty and style personality archetypes — from Romantic to Dramatic to Ethereal. Learn which one matches your features and how to dress for your natural aesthetic."
+description: "Eight beauty and style personality types, from Romantic to Dramatic to Ethereal. Which matches your features and how to dress for your aesthetic."
 date: "2026-07-29"
 tags: ["style personality", "style DNA", "fashion", "beauty", "personal style"]
 image: "/images/blog/style-personality-types-guide.webp"

@@ -1,6 +1,6 @@
 ---
 title: "Occasion Makeup Guide: The Right Look for Every Event"
-description: "From date night to job interviews to weddings — learn how to adapt your makeup for any occasion based on your skin tone and features. Plus, how AI can generate personalized looks instantly."
+description: "Date night, interviews, weddings: makeup for any occasion by skin tone and features. AI can suggest personalized looks as a quick starting point."
 date: "2026-07-28"
 tags: ["makeup", "occasion makeup", "beauty", "style guide", "AI beauty"]
 image: "/images/blog/occasion-makeup-guide-by-event.webp"

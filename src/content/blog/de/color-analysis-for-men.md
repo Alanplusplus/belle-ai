@@ -1,6 +1,6 @@
 ---
 title: "Farbanalyse für Männer: Finde deine besten Farben"
-description: "Persönliche Farbanalyse ist nicht nur für Frauen. Erfahre, wie Männer ihren saisonalen Farbtyp finden und für Anzüge, Casual-Wear, Grooming und Business-Kleidung nutzen."
+description: "Farbanalyse für Männer: Finde deinen saisonalen Farbtyp für Anzüge, Casual-Wear, Grooming und Business-Kleidung."
 date: "2026-07-19"
 tags: ["Farbanalyse Männer", "Farbanalyse für Herren", "saisonale Farben Männer", "Herrenstil", "Herrenmode"]
 image: "/images/blog/color-analysis-for-men.webp"
@@ -133,7 +133,7 @@ Schwarz ist ideal nur für Winter-Männer. Bei Frühling überwältigend. Bei So
 
 ## Hol dir deine Farbanalyse
 
-Hör auf zu raten und finde deinen exakten Saison-Typ. Unsere KI funktioniert für Männer und Frauen gleich gut — sie analysiert dieselben Unterton- und Kontrast-Signale unabhängig vom Geschlecht.
+Hör auf zu raten und finde deinen Saison-Typ. Unsere KI betrachtet dieselben Unterton- und Kontrast-Signale bei Männern und Frauen — das Ergebnis ist ein Ausgangspunkt, den du mit einem Drapier-Test bestätigen kannst.
 
 [Kostenlose Farbanalyse starten →](/try)
 

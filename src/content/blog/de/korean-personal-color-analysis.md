@@ -1,6 +1,6 @@
 ---
 title: "Koreanische Farbanalyse: Warum sie die Welt erobert"
-description: "Alles über koreanische persönliche Farbanalyse. Erfahre mehr über das koreanische 4-Saisons-System, wie K-Beauty Farb-Typisierung nutzt und wo du dich analysieren lassen kannst."
+description: "Koreanische Farbanalyse: Das 4-Saisons-System, K-Beauty-Typisierung und wo du dich analysieren lassen kannst."
 date: "2026-07-18"
 tags: ["koreanische Farbanalyse", "Personal Color", "K-Beauty", "koreanische Schönheit", "Farb-Typisierung Korea"]
 image: "/images/blog/korean-personal-color-analysis.webp"
@@ -123,7 +123,7 @@ Der Trend hat sich ausgebreitet nach:
 ### Online / KI-Optionen
 
 Für alle ohne koreanischen Salon-Besuch:
-- KI-Farbanalyse-Tools können präzise koreanische Typisierung liefern
+- KI-Farbanalyse-Tools können einen koreanischen Ausgangspunkt liefern
 - Video-Beratungen mit koreanischen Coloristen verfügbar (80.000–150.000 ₩)
 - Selbsttest-Guides auf Koreanisch weit verbreitet auf Naver
 
@@ -138,7 +138,7 @@ Personal-Color-Analysen von K-Pop-Idolen sind extrem beliebt:
 
 Diese Promi-Typisierungen treiben Fan-Engagement und helfen, die eigene Saison durch Vergleich zu finden.
 
-## KI-Farbanalyse testen (koreanische Präzision)
+## KI-Farbanalyse testen (koreanische 12-Saison-Typisierung)
 
 Unsere KI nutzt dasselbe 12-Saisons-System wie die koreanische Salon-Analyse und liefert dir einen Ausgangspunkt. Hol dir deinen 12-Saisons-Typ, beste Farben und Make-up-Empfehlungen sofort.
 

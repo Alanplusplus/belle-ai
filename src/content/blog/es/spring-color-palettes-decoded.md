@@ -1,6 +1,6 @@
 ---
 title: "Paleta de colores Primavera descifrada: Primavera Brillante vs Primavera Verdadera vs Primavera Ligera"
-description: "¿No sabes distinguir Primavera Brillante, Primavera Verdadera y Primavera Ligera? Esta guía desglosa los mejores colores, las características y los consejos de estilo de cada subtipo para que, por fin, vistas con confianza."
+description: "Primavera Brillante, Verdadera o Ligera: mejores colores, rasgos y consejos de cada subtipo para vestir con confianza."
 date: "2026-07-27"
 tags: ["análisis de color personal", "paleta de colores primavera", "estación de color", "belleza", "guía de estilo"]
 image: "/images/blog/spring-color-palettes-decoded.webp"
@@ -173,7 +173,7 @@ Sujeta unos colores de prueba junto al rostro (con luz natural, sin maquillaje):
 2. **Sujeta un oro cálido/caléndula:** ¿Tu piel brilla y tus ojos se iluminan? → Probablemente **Primavera Verdadera**
 3. **Sujeta un melocotón suave/rosa rubor:** ¿Te hace lucir fresca y luminosa? → Probablemente **Primavera Ligera**
 
-Si quieres una respuesta más precisa, las herramientas de análisis de color con IA pueden identificar ahora tu subtipo concreto analizando en detalle la combinación única de subtono de piel, color de ojos y color de cabello. [Herramientas gratuitas como aicoloranalysis.io](https://aicoloranalysis.io/es/) pueden darte un buen punto de partida — solo sube una selfie nítida con luz natural.
+Si quieres una segunda opinión, las herramientas de análisis de color con IA pueden sugerir ahora un subtipo probable observando la combinación de subtono de piel, color de ojos y color de cabello. [Herramientas gratuitas como aicoloranalysis.io](/) pueden darte un buen punto de partida — solo sube una selfie nítida con luz natural.
 
 ---
 

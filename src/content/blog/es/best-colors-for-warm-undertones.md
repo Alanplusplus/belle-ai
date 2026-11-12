@@ -1,6 +1,6 @@
 ---
 title: "Los mejores colores para subtonos cálidos: tu guía de estilo completa (2026)"
-description: "Los 15 mejores tonos para subtonos cálidos: ropa, maquillaje y cabello. Selección para pieles doradas, melocotón y oliva. Prueba nuestra herramienta de color con IA gratis."
+description: "Los 15 mejores tonos para subtonos cálidos: ropa, maquillaje y cabello. Pieles doradas y oliva. Herramienta de color con IA gratis."
 date: "2026-07-28"
 tags: ["subtono cálido", "piel cálida", "paleta de colores", "guía de estilo", "moda"]
 image: "/images/blog/best-colors-for-warm-undertones.webp"
@@ -317,7 +317,7 @@ Entender tu sub-estación reduce tu paleta de "generalmente cálida" a "específ
 
 La línea entre cálido y frío no siempre es obvia — especialmente si eres neutro-cálida o tienes piel oliva con subtonos cálidos. Adivinar puede llevarte a un armario lleno de piezas "casi correctas".
 
-El [análisis de color con IA](/es/personal-color-analysis) elimina la subjetividad de la ecuación. Al analizar tu foto con visión por computadora, identifica no solo si eres cálida o fría, sino tu tipo de color estacional de 12 temporadas exacto — dándote una paleta calibrada a tu combinación precisa de piel, cabello y ojos.
+Un [análisis de color con IA](/) puede darte una segunda opinión más allá de las pruebas caseras. Un modelo de imagen con IA observa tu foto y sugiere no solo si eres cálida o fría, sino un tipo de color estacional probable de las 12 estaciones, lo que te da una paleta inicial para tu combinación de piel, cabello y ojos. Es un juicio visual; compruébalo con lo que ves en el espejo.
 
 ---
 

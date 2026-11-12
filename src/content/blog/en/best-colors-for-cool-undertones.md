@@ -133,7 +133,7 @@ This is a judgment call, and lighting changes what you see. If your results keep
 
 ## Where an AI analysis fits
 
-Belle AI estimates your color season from one selfie. It is an AI's visual judgment of one photo, not a measurement, so lighting, camera settings and makeup can change the result. Use it as a starting point, then confirm it with the fabric test above. We explain what it can and cannot do in [How accurate is AI color analysis?](/ai-color-analysis-accuracy). To try it, start with [AI color analysis](/personal-color-analysis).
+Belle AI estimates your color season from one selfie. It is an AI's visual judgment of one photo, not a measurement, so lighting, camera settings and makeup can change the result. Use it as a starting point, then confirm it with the fabric test above. We explain what it can and cannot do in [How accurate is AI color analysis?](/ai-color-analysis-accuracy). To try it, start with [AI color analysis](/).
 
 ## Frequently Asked Questions
 

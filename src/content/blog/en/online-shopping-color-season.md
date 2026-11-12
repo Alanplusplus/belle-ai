@@ -1,6 +1,6 @@
 ---
 title: "How to Shop Online for Your Color Season (Without Getting It Wrong)"
-description: "Online shopping is tricky when you can't see colors in person. Learn practical strategies for buying clothes in your color season palette — from screen calibration to return-proof color matching."
+description: "Can't see colors in person online? Practical ways to shop your color season palette, from screen calibration to safer color matching."
 date: "2026-08-23"
 tags: ["personal color analysis", "online shopping", "color season", "fashion tips", "personal style"]
 image: "/images/blog/online-shopping-color-season.webp"
@@ -140,7 +140,7 @@ Here's where things get interesting. Traditional color matching required you to 
 
 Modern AI color analysis tools can shortcut this process. Instead of guessing whether a "dusty mauve" will work for your Soft Summer palette, you can use tools that look at your photo and judge how the color sits against your season's characteristics. It is a visual judgment, not a measurement, so treat it as a quick check rather than a verdict.
 
-For example, [aicoloranalysis.io](https://aicoloranalysis.io/outfit-color-analysis) offers outfit color analysis that evaluates whether specific clothing colors harmonize with your skin tone. You upload a photo wearing the item, and it tells you whether the color is enhancing or clashing with your natural coloring. It's essentially the "draping test" you'd do in a stylist's office, but accessible from your living room.
+For example, [aicoloranalysis.io](/outfit-color-analysis) offers outfit color analysis that evaluates whether specific clothing colors harmonize with your skin tone. You upload a photo wearing the item, and it tells you whether the color is enhancing or clashing with your natural coloring. It's essentially the "draping test" you'd do in a stylist's office, but accessible from your living room.
 
 This doesn't replace learning to read colors yourself — but it's a useful verification tool, especially when you're developing your eye.
 

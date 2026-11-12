@@ -11,7 +11,7 @@ faq:
   - q: "¿Puede la piel oliva ser Primavera o una estación brillante?"
     a: "Es poco frecuente. La oliva añade un velo gris verdoso que choca con la claridad que exigen las paletas de Primavera y Brillante. Si eres oliva y te salió Primavera, quizá seas oliva cálida con coloración más clara — Otoño Suave encaja mejor a menudo."
   - q: "¿Por qué los cuestionarios online fallan con la piel oliva?"
-    a: "La mayoría trata el subtono solo como cálido, frío o neutro. La oliva es un modificador verde gris aparte sobre tu base, así que las respuestas se anulan y obtienes Neutro, Invierno Verdadero o Primavera al azar. El análisis de color con IA basado en foto puede medir ese velo verde directamente."
+    a: "La mayoría trata el subtono solo como cálido, frío o neutro. La oliva es un modificador verde gris aparte sobre tu base, así que las respuestas se anulan y obtienes Neutro, Invierno Verdadero o Primavera al azar. El análisis de color con IA basado en foto puede buscar ese velo verde directamente, aunque es un juicio visual de una sola foto; confírmalo con un draping."
 ---
 
 ## «¿Qué estación soy?» — el dilema de la piel oliva
@@ -220,9 +220,9 @@ El grupo ganador aclara ojeras, deja la piel más clara y los labios más rosado
 
 Prueba un labial y un colorete de cada estación candidata el mismo día. La ropa miente bajo la luz de tienda; el maquillaje en tu rostro suele desempatar.
 
-### Paso 6: Confirma con análisis objetivo (opcional)
+### Paso 6: Pide una segunda opinión con análisis con IA (opcional)
 
-Las pruebas caseras ayudan, pero la oliva es donde más fallan los ojos humanos. El [análisis de color con IA](/es/color-analysis) lee el modificador verde gris desde una foto y mapea tus valores a paletas estacionales — útil entre Otoño Suave y Verano Suave o entre Otoño Profundo e Invierno Profundo.
+Las pruebas caseras ayudan, pero la oliva es donde más fallan los ojos humanos. El [análisis de color con IA](/) busca el modificador verde gris en una foto y sugiere una paleta estacional — trátalo como segunda opinión; es útil entre Otoño Suave y Verano Suave o entre Otoño Profundo e Invierno Profundo.
 
 ---
 

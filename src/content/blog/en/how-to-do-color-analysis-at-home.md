@@ -184,7 +184,7 @@ If they differ — consider which of your tests might have been affected by ligh
 
 ## Still Unsure? Get Your Answer in 60 Seconds
 
-Our AI analyzes the exact same color signals a professional looks at — undertone, depth, contrast, and chroma — from a single selfie.
+Our AI judges the same color signals a professional looks at — undertone, depth, contrast, and chroma — from a single selfie, as a visual estimate you can confirm with a drape test.
 
 [Start Free AI Color Analysis →](/try)
 

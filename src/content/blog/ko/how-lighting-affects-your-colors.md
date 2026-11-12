@@ -164,7 +164,7 @@ image: "/images/blog/lighting-affects-colors.webp"
 
 ### 5. AI 도구로 빠른 기준선
 
-색이 확실하지 않고 통제된 조명 드레이핑이 어렵다면, AI 컬러 분석이 **출발점**을 줍니다. 좋은 도구는 제출 사진의 조명 변동을 고려하면서도 **기저 언더톤·대비**를 잡습니다. [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) 같은 도구는 한 장 사진 조명과 무관하게 피부 특성을 분석 — 집 드레이핑보다 어려운 부분을 보완합니다.
+색이 확실하지 않고 통제된 조명 드레이핑이 어렵다면, AI 컬러 분석이 **출발점**을 줍니다. 더 나은 도구는 사진의 일부 조명 변동을 완화하면서 **기저 언더톤·대비**를 시각적으로 판단하지만, 조명이 나쁘면 결과가 달라질 수 있습니다. [aicoloranalysis.io](/personal-color-analysis) 같은 도구는 한 장 사진에서 두 번째 의견을 줄 수 있어 — 집 드레이핑만으로는 어려운 부분을 보완합니다.
 
 ---
 

@@ -138,7 +138,7 @@ image: "/images/blog/job-interview-outfit-colors-color-season.webp"
 
 ## 현대적 접근: 사기 전에 색을 먼저 확인하기
 
-시즌을 찾는 일은 예전엔 전문가의 드레이핑 세션을 뜻했습니다. 오늘날 AI는 사진을 분석해 어떤 쉐이드가 언더톤을 살리고 어떤 색이 기운을 빼는지 알려 줄 수 있습니다. 커리어 전환을 준비할 때 저는 사진을 AI 컬러 분석 도구에 넣었고, 1분도 채 되지 않아 베이스·얼굴 주변·포인트 색 목록을 받았습니다. [aicoloranalysis.io](https://www.aicoloranalysis.io/outfit-color-analysis?utm_source=medium&utm_medium=article&utm_campaign=job-interview-outfit-colors-color-season) 같은 무료 도구는 새 블레이저에 돈을 쓰기 전에 어떤 의상 색이 피부톤을 밝혀 주는지 보여 줄 수 있습니다.
+시즌을 찾는 일은 예전엔 전문가의 드레이핑 세션을 뜻했습니다. 오늘날 AI는 사진을 분석해 어떤 쉐이드가 언더톤을 살리고 어떤 색이 기운을 빼는지 알려 줄 수 있습니다. 커리어 전환을 준비할 때 저는 사진을 AI 컬러 분석 도구에 넣었고, 1분도 채 되지 않아 베이스·얼굴 주변·포인트 색 목록을 받았습니다. [aicoloranalysis.io](/outfit-color-analysis) 같은 무료 도구는 새 블레이저에 돈을 쓰기 전에 어떤 의상 색이 피부톤을 밝혀 주는지 보여 줄 수 있습니다.
 
 입어 보는 것을 대체하진 않지만, 피팅룸에서 추측하지 않도록 후보를 좁혀 줍니다. 전문가 조언과 어떻게 맞물리는지 더 깊이 보고 싶다면 [The Muse의 면접 복장 가이드](https://www.themuse.com/advice/what-to-wear-to-an-interview)에서 핏, 소재, 드레스 코드를 다루며 위 내용을 보완합니다.
 

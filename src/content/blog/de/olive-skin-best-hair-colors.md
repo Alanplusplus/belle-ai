@@ -181,7 +181,7 @@ Ihre Farbgebung ist tief und kontrastreich. Kühne, kühl tendierende Farben fun
 
 ## Eine moderne Abkürzung: KI-gestützte Farbanalyse
 
-Wenn Sie unsicher sind, ob Sie warm-oliv oder kühl-oliv sind — oder welchem Jahreszeitentyp Sie angehören — können KI-gestützte Farbanalyse-Tools heute Ihren Unterton anhand eines einzigen Fotos bestimmen. Das eliminiert das Rätselraten und gibt Ihnen einen datenbasierten Ausgangspunkt für Ihre Haarfarbentscheidung. Ich finde es besonders hilfreich für olivfarbene Haut, weil der grün-graue Stich im Spiegel schwer zu erkennen ist, aber für einen Algorithmus, der Farbdaten auf Pixelebene analysiert, klar sichtbar wird.
+Wenn Sie unsicher sind, ob Sie warm-oliv oder kühl-oliv sind — oder welchem Jahreszeitentyp Sie angehören — können KI-gestützte Farbanalyse-Tools heute Ihren Unterton aus einem einzigen Foto vorschlagen. Das gibt Ihnen einen Ausgangspunkt für die Saisonwahl und für Haarfarbentscheidungen. Ich finde es besonders hilfreich für olivfarbene Haut, weil der grün-graue Stich im Spiegel schwer zu erkennen ist und ein KI-Bildmodell, das das ganze Foto betrachtet, ihn manchmal erfasst — obwohl Licht und Kameraeinstellungen das Ergebnis noch beeinflussen.
 
 ---
 
@@ -197,7 +197,7 @@ Die richtige Haarfarbe kann das Erscheinungsbild Ihrer olivfarbenen Haut unter j
 
 ## Finden Sie Ihre beste Haarfarbe
 
-Unsicher, ob Sie warm-oliv oder kühl-oliv sind? Unsere kostenlose KI-Farbanalyse identifiziert Ihren genauen Unterton und Jahreszeitentyp — der erste Schritt zu Haarfarben, die wirklich schmeicheln.
+Unsicher, ob Sie warm-oliv oder kühl-oliv sind? Unsere kostenlose KI-Farbanalyse schlägt Ihren Unterton und Jahreszeitentyp vor — ein guter erster Schritt zu Haarfarben, die wirklich schmeicheln.
 
 [Kostenlose Farbanalyse testen →](/try)
 

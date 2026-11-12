@@ -1,6 +1,6 @@
 ---
 title: "Seasonal Color Analysis for Makeup Beginners: A No-Overwhelm Guide"
-description: "New to makeup? Learn how your color season turns a chaotic makeup bag into a simple 5-product starter kit. A beginner-friendly guide to foundation, blush, lip, eye, and brow shades that actually suit you."
+description: "New to makeup? Your color season can slim a chaotic bag to a 5-product starter kit. Foundation, blush, lip, eye, and brow shades that suit you."
 date: "2026-11-03"
 tags: ["makeup for beginners", "color analysis", "color season", "makeup", "beauty"]
 image: "/images/blog/color-analysis-makeup-beginners.webp"
@@ -141,7 +141,7 @@ These are the traps I fell into, so you don't have to.
 
 The hardest part of this system is the first step: knowing your season. Draping cloths over your shoulders in front of a mirror works, but it's easy to misjudge, especially under bad lighting.
 
-This is where AI tools have become genuinely useful. Upload a bare-face selfie in natural light, and a good analysis tool reads your undertone, depth, and chroma, then translates them into makeup shades. I tried a free tool like [aicoloranalysis.io](https://www.aicoloranalysis.io/makeup-analysis?utm_source=medium&utm_medium=article&utm_campaign=color-analysis-makeup-beginners) before a big makeup shopping trip, and it gave me a clear list of foundation, lip, and blush families. It didn't replace the mirror test, but it saved me from several wrong turns.
+This is where AI tools have become genuinely useful. Upload a bare-face selfie in natural light, and a good analysis tool reads your undertone, depth, and chroma, then translates them into makeup shades. I tried a free tool like [aicoloranalysis.io](/makeup-analysis) before a big makeup shopping trip, and it gave me a clear list of foundation, lip, and blush families. It didn't replace the mirror test, but it saved me from several wrong turns.
 
 If you want a wider, jargon-free introduction to all of this, there's a beginner-focused [color analysis starter guide](/color-analysis-for/beginners) that covers the basics step by step.
 

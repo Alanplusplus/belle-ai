@@ -1,6 +1,6 @@
 ---
 title: "Yumuşak Sonbahar vs Yumuşak Yaz: En Sık Karıştırılan Renk Mevsimleri"
-description: "Yumuşak Sonbahar ile Yumuşak Yaz'ı ayırt etmekte zorlanıyor musunuz? Alt ton, en iyi renkler, makyaj seçimleri arasındaki temel farkları ve hangi soluk mevsime gerçekten ait olduğunuzu nasıl anlayacağınızı öğrenin."
+description: "Yumuşak Sonbahar mı Yumuşak Yaz mı? Alt ton, en iyi renkler ve makyaj farkları; hangi soluk mevsime gerçekten ait olduğunuzu nasıl anlarsınız."
 date: "2026-08-10"
 tags: ["kişisel renk analizi", "yumuşak sonbahar", "yumuşak yaz", "renk mevsimi", "güzellik"]
 image: "/images/blog/soft-autumn-vs-soft-summer.webp"
@@ -177,7 +177,7 @@ Her iki palet de size makul derecede iyi gidiyorsa, işte önerim: iki mevsim ar
 
 Alt tonunuzu belirlemek gerçekten zor olabilir — özellikle sıcaklık veya soğukluğun ince olduğu soluk mevsimlerde. Bu, yapay zeka destekli renk analizinin şaşırtıcı derecede faydalı olduğu alanlardan biridir.
 
-Modern araçlar, insan gözünü yanıltabilecek aydınlatma koşulları ve kontrast seviyeleri gibi faktörleri hesaba katarak fotoğraf verilerini kullanarak cildinizin tam alt tonunu analiz edebilir. Yumuşak Sonbahar ile Yumuşak Yaz arasında kaldıysanız, bir [AI renk analizi aracı](https://aicoloranalysis.io/personal-color-analysis) nesnel bir başlangıç noktası sunabilir. Hangi yöne eğildiğini gerçekten anlayamayan nötr alt tonlu kişiler için özellikle faydalı buldum.
+Modern araçlar, insan gözünü yanıltabilecek kontrast seviyeleri ve diğer ipuçlarına bakarak fotoğraftan cildinizin alt tonunu değerlendirebilir; yine de ışık ve kamera ayarları sonucu kaydırabilir. Yumuşak Sonbahar ile Yumuşak Yaz arasında kaldıysanız, bir [AI renk analizi aracı](/) ikinci bir görüş sunabilir. Hangi yöne eğildiğini gerçekten anlayamayan nötr alt tonlu kişiler için özellikle faydalı buldum.
 
 ---
 

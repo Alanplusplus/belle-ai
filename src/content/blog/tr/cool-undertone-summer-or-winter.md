@@ -112,7 +112,7 @@ Soğuk-sıcak sınırında:
 
 ## Yapay zeka analizini ikinci bir görüş olarak kullanmak
 
-Belle AI, tek bir selfieden mevsiminizi tahmin eder. Bu yapay zekânın görsel yargısıdır; ölçüm değildir ve yüz yüze draping seansından farklı olabilir. İki fotoğraf farklı mevsim veriyorsa yapay zeka sonucunu tek bir girdi olarak alın ve yukarıdaki gün ışığı kumaş testine güvenin. Neleri yapıp yapamayacağını [Yapay zeka renk analizi ne kadar doğru?](/tr/ai-color-analysis-accuracy) yazısında açıklıyoruz. Denemek için [yapay zeka renk analizi](/tr/personal-color-analysis) ile başlayın.
+Belle AI, tek bir selfieden mevsiminizi tahmin eder. Bu yapay zekânın görsel yargısıdır; ölçüm değildir ve yüz yüze draping seansından farklı olabilir. İki fotoğraf farklı mevsim veriyorsa yapay zeka sonucunu tek bir girdi olarak alın ve yukarıdaki gün ışığı kumaş testine güvenin. Neleri yapıp yapamayacağını [Yapay zeka renk analizi ne kadar doğru?](/tr/ai-color-analysis-accuracy) yazısında açıklıyoruz. Denemek için [yapay zeka renk analizi](/) ile başlayın.
 
 ## Sık Sorulan Sorular
 

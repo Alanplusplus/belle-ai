@@ -39,7 +39,7 @@ Ya sea una herramienta de IA o un ojo entrenado, una estación de color se reduc
 
 Una foto captura los cuatro, pero cada uno puede distorsionarse. Una bombilla cálida añade amarillo, lo que puede simular un subtono cálido. Una edición fuerte sube la saturación, lo que puede simular una intensidad alta. La luz tenue aplana el contraste. El objetivo de cada regla de abajo es mantener intactos esos cuatro rasgos entre tu cara y la imagen final.
 
-Si quieres la visión de conjunto de cómo esos rasgos se corresponden con las 12 estaciones, nuestra [guía de estaciones de color](/blog/what-color-season-am-i) repasa cada una.
+Si quieres la visión de conjunto de cómo esos rasgos se corresponden con las 12 estaciones, empieza por nuestra [guía de análisis de color de 12 estaciones](/color-analysis); después, nuestra [guía de estaciones de color](/blog/what-color-season-am-i) repasa cada una.
 
 ---
 
@@ -97,7 +97,7 @@ El bronceado merece una mención especial. Oscurece el color de tu superficie du
 ## Paso a paso: cómo obtener un resultado con tu foto
 
 1. Sigue las siete reglas de arriba y elige tu foto más natural.
-2. Súbela a una herramienta de análisis de color con IA. Puedes probar la nuestra con [un solo selfie en alrededor de un minuto](/try), gratis para empezar y sin registro.
+2. Súbela a una herramienta de [análisis de color con IA](/). Puedes probar la nuestra con [un solo selfie en alrededor de un minuto](/try), gratis para empezar y sin registro.
 3. Lee el resultado como un perfil, no solo como una etiqueta: qué subtono, qué profundidad, cuán suave o vívida es tu coloración.
 4. Guarda la paleta y pruébala. Con luz natural, acércate a la cara una prenda en uno de los colores sugeridos y otra en un color que te dijeron que evitaras, y observa qué le pasa a tu piel.
 
@@ -158,8 +158,6 @@ Un buen selfie no sustituye al criterio, pero te da una base limpia y repetible.
 - [Cómo hacer análisis de color en casa](/blog/how-to-do-color-analysis-at-home) — Guía DIY paso a paso con pruebas de draping
 - [¿Qué estación soy? Encuentra tu estación de color](/blog/what-color-season-am-i) — Las cuatro estaciones y sus 12 subestaciones explicadas
 - [Análisis de color con IA gratis online](/blog/free-ai-color-analysis-online) — Cómo funciona el análisis de color con IA gratuito y qué esperar
-- [IA vs análisis de color profesional](/blog/ai-vs-professional-color-analysis) — Cuándo conviene cada método
-- [Otoño Suave vs Verano Suave](/blog/soft-autumn-vs-soft-summer) — Separa dos estaciones que se confunden con frecuencia
 - [¿Tengo tono cálido o frío? Guía del subtono](/blog/how-to-determine-skin-undertone) — Pruebas sencillas en casa para cálido, frío o neutro
 - [Test gratuito de estación de color](/tools/color-quiz) — Haz un test breve si prefieres no subir una foto
-- [Análisis de color: la guía completa](/color-analysis) — Todo lo que necesitas saber para encontrar tus mejores colores
+- [Análisis de color: guía para hallar tu estación](/color-analysis) — Todo lo que necesitas saber para encontrar tus mejores colores

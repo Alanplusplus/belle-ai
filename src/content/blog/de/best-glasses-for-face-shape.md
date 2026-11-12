@@ -1,6 +1,6 @@
 ---
 title: "Die besten Brillen für Ihre Gesichtsform: Der vollständige Guide"
-description: "Unsicher, welche Brillenfassungen zu Ihrem Gesicht passen? Dieser Guide deckt die besten Brillenstile für ovale, runde, eckige, herzförmige, diamantförmige und längliche Gesichter ab — plus wie KI Ihnen hilft, die perfekte Passform zu finden."
+description: "Brillen für Ihre Gesichtsform: Beste Fassungen für Oval, Rund, Eckig, Herz und Lang – plus wie KI als Ausgangspunkt für die Passform hilft."
 date: "2026-07-31"
 tags: ["Gesichtsform", "Brille", "Brillenfassung", "Stilguide", "KI-Beauty"]
 image: "/images/blog/best-glasses-for-face-shape.webp"

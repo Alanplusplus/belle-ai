@@ -1,6 +1,6 @@
 ---
 title: "Or, argent ou or rose ? Comment choisir vos bijoux selon votre teint"
-description: "Vous ne savez pas quel métal vous va ? Découvrez comment votre sous-ton détermine si l'or, l'argent, l'or rose ou le platine vous met le plus en valeur — plus des recommandations de pierres et boucles d'oreilles."
+description: "Or, argent, or rose ou platine ? Votre sous-ton indique le métal qui vous met en valeur, plus pierres et boucles assorties."
 date: "2026-07-27"
 tags: ["bijoux", "teint", "sous-ton", "accessoires", "guide de style"]
 image: "/images/blog/jewelry-metals-skin-tone-guide.webp"

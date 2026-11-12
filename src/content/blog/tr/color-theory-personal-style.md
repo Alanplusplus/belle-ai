@@ -1,6 +1,6 @@
 ---
 title: "Sanat Dersindeki Renk Teorisi Kişisel Stilinize Nasıl Uygulanır"
-description: "Renk çarkı sadece ressamlar için değil. Sanat okulundan tamamlayıcı renkler, analog uyumlar ve kontrast ilkelerinin her sabah giyinme şeklinizi nasıl dönüştürebileceğini öğrenin."
+description: "Renk çarkı sadece ressamlar için değil. Tamamlayıcı renkler, analog uyum ve kontrast ilkeleri her sabah giyinme şeklinizi nasıl dönüştürür?"
 date: "2026-09-11"
 tags: ["renk teorisi", "kişisel stil", "renk analizi", "moda ipuçları", "stil rehberi"]
 image: "/images/blog/color-theory-personal-style.webp"
@@ -228,7 +228,7 @@ Tek cesur renk nötrlerle sabitlendiğinde görsel denge her zaman sağlanır.
 
 Dürüst gerçek: Bu ilkeleri kullanmak için renk çarkı konumlarını ezberlemenize gerek yok. Gözünüz bu uyumların çoğunu bilinçsizce zaten sezer — bazı kombinasyonların neden "doğru hissettirdiğinin" sebebi bu.
 
-Ama hassasiyet istiyorsanız? AI araçları artık kişisel renklendirmenizi analiz edip optimal paletinizden belirli renk kombinasyonları önerebiliyor. [AI renk analizi](https://aicoloranalysis.io/personal-color-analysis) gibi bir araç mevsiminizi, kontrast seviyenizi ve en iyi renk ailelerinizi yaklaşık 60 saniyede belirleyebilir — hangi uyumların ve doygunluk seviyelerinin size en iyi yakışacağını tam olarak söyler.
+Ama bir başlangıç noktası mı istiyorsunuz? Yapay zeka araçları artık kişisel renklendirmenizi analiz edip olası bir paletten renk kombinasyonları önerebiliyor. [AI renk analizi](/) gibi bir araç mevsiminizi, kontrast seviyenizi ve en iyi renk ailelerinizi yaklaşık 60 saniyede önerebilir — önce hangi uyumları ve doygunluk seviyelerini denemeniz gerektiğini bulmanın iyi bir yolu.
 
 Cilt alt tonunuzu, göz renginizi ve doğal kontrast seviyenizi de bilen kişisel bir renk teorisi öğretmeniniz varmış gibi.
 
@@ -256,7 +256,7 @@ Neon yeşil + hot pink trend olabilir. Ama düşük kontrastlı Soft Summer isen
 - **Value contrast** (açık vs koyu) belirli renklerden daha önemli — kombininizin value contrast'ını doğal kişisel kontrast seviyenize eşleştirin
 - **Saturation tutarlılığı** birçok kombinin "tutmamasının" göz ardı edilen sebebidir — canlı ve soluk parçaları dikkatsizce karıştırmayın
 - Dört kombin formülünü (Safe Bold, Artistic, Statement, Power) başlangıç noktası olarak kullanın ve renk mevsiminize göre ayarlayın
-- Çarkı ezberlemenize gerek yok — AI renk analizi araçları gerçek özelliklerinize göre optimal uyumlarınızı belirleyebilir
+- Çarkı ezberlemenize gerek yok — yapay zeka renk analizi araçları gerçek özelliklerinize göre önce denemeniz gereken uyumları önerebilir
 
 Renk teorisi bir kez gördüğünüzde artık görmemenin imkansız olduğu şeylerdendir. Belirli vitrinlerin neden gözünüze çarptığını, bazı Instagram akışlarının neden zahmetsizce uyumlu hissettirdiğini ve bazı insanların neden her zaman "derli toplu" göründüğünü fark etmeye başlayacaksınız.
 

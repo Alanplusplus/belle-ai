@@ -101,7 +101,7 @@ La référence absolue. Un analyste colorimétrique formé place des étoffes de
 
 ### Méthode 2 : Analyse colorimétrique par IA
 
-Les applications alimentées par l'IA, comme Belle AI, analysent votre photo grâce à la vision par ordinateur pour détecter votre sous-ton, votre niveau de contraste et vos caractéristiques de coloration.
+Les applications alimentées par l'IA, comme Belle AI, s'appuient sur un modèle d'image IA pour juger votre sous-ton, votre niveau de contraste et vos caractéristiques de coloration à partir de votre photo.
 
 - **Coût :** gratuit à 5 €
 - **Durée :** 60 secondes

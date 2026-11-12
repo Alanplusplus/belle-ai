@@ -1,6 +1,6 @@
 ---
 title: "Farbanalyse zu Hause machen: DIY-Anleitung (ohne Stylist)"
-description: "Lerne, wie du deine Farbanalyse zu Hause mit einfachen Tests selbst machst. Finde deinen Unterton, bestimme deine Saison und entdecke deine besten Farben ohne Profi-Termin."
+description: "Farbanalyse zu Hause: Unterton finden, Saison einschätzen und beste Farben entdecken – DIY ohne Stylist-Termin."
 date: "2026-07-21"
 tags: ["Farbanalyse zu Hause", "DIY Farbanalyse", "Selbst-Farbanalyse", "Farben finden", "Unterton-Test"]
 image: "/images/blog/color-analysis-at-home.webp"
@@ -8,7 +8,7 @@ image: "/images/blog/color-analysis-at-home.webp"
 
 ## Kann man Farbanalyse zu Hause machen?
 
-Ja. Professionelles Draping vor Ort bleibt der Goldstandard, aber du kannst zu Hause bemerkenswert präzise Ergebnisse erzielen – durch Selbsttests und KI-Technologie. Diese Anleitung führt dich Schritt für Schritt durch den gesamten Prozess.
+Ja. Ein paar einfache Tests (Handgelenksvenen, Gold vs. Silber, Weiß vs. Creme, Sonnenreaktion) grenzen deinen Unterton ein, und wenn du Farben bei Tageslicht am Gesicht vergleichst, findest du Tiefe und Saison heraus. Für eine schnelle Zweitmeinung kannst du ein Selfie in eine KI-Analyse hochladen. Grenzfälle solltest du mit einer Profi-Beratung bestätigen. Diese Anleitung führt dich Schritt für Schritt durch den gesamten Prozess.
 
 ## Was du brauchst
 
@@ -171,7 +171,7 @@ Unterschiedlich — überlege, welcher Test von Licht oder Bias beeinflusst wurd
 
 ## Noch unsicher? Antwort in 60 Sekunden
 
-Unsere KI analysiert dieselben Farbsignale wie ein Profi — Unterton, Tiefe, Kontrast und Chroma — aus einem einzigen Selfie.
+Unsere KI beurteilt dieselben Farbsignale wie ein Profi — Unterton, Tiefe, Kontrast und Chroma — aus einem einzigen Selfie, als visuelle Einschätzung, die du mit einem Drapier-Test bestätigen kannst.
 
 [Kostenlose KI-Farbanalyse starten →](/try)
 

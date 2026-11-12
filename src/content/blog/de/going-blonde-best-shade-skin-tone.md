@@ -1,6 +1,6 @@
 ---
 title: "Der komplette Leitfaden zum Blondwerden: Welcher Blondton zu Ihrem Hautton passt"
-description: "Nicht alle Blondtöne sind gleich. Erfahren Sie, welcher Blondton — Platin, Honig, Erdbeerblond oder Aschblond — WIRKLICH zu Ihrem Hautton, Unterton und Ihrer Farbsaison passt."
+description: "Blondton-Leitfaden: Platin, Honig, Erdbeer- oder Aschblond – welcher Ton zu Hautton, Unterton und Farbsaison wirklich passt."
 date: "2026-09-16"
 tags: ["Haarfarbe", "Blond", "Hautton", "Farbanalyse", "Schönheit"]
 image: "/images/blog/going-blonde-best-shade-skin-tone.webp"
@@ -71,7 +71,7 @@ Die Vergleichstabelle, die ich vor meinem ersten Salon-Desaster gebraucht hätte
 
 **Warme Blonds** tragen Gold-, Kupfer- oder Honig-Pigmente, die Hautwärme widerspiegeln. Sonnen-Kuss-Glow, mühelos statt verarbeitet. Warme Blonds sind am meisten gefragt — und am häufigsten auf falschen Untertönen. Kühle Person + Honigblond: Gold im Haar verstärkt Rötung in der Haut.
 
-**Neutrale Blonds** in der Mitte — weder deutlich warm noch kühl. Sicherster Start bei Unsicherheit, können bei starkem Kontrast „flach“ wirken. Sand und Weizen auf neutralen Untertönen und bei [Persönlicher Farbanalyse](/de/color-analysis) in gemischten oder soft Saisons wunderschön.
+**Neutrale Blonds** in der Mitte — weder deutlich warm noch kühl. Sicherster Start bei Unsicherheit, können bei starkem Kontrast „flach“ wirken. Sand und Weizen auf neutralen Untertönen und bei [12-Saisonen-Farbanalyse](/de/color-analysis) in gemischten oder soft Saisons wunderschön.
 
 ### Die Oliv-Unterton-Ausnahme
 
@@ -144,7 +144,7 @@ Ihre Farbsaison — aus Unterton, Wert (hell/dunkel) und Chroma (gedämpft/klar)
 | True Winter | Platin, Eis, Blau-Asch | Honig, golden, Kupfer |
 | Bright Winter | Bright Platin, kühler Champagner | Gedämpft warm, Erdbeer |
 
-Unsicher welche Saison? [Persönliche Farbanalyse](https://aicoloranalysis.io/personal-color-analysis) identifiziert Ihre Sub-Saison — enorm wichtig, wenn Soft Summer und True Summer eine ganze Blond-Kategorie trennen.
+Unsicher welche Saison? [Persönliche Farbanalyse](/personal-color-analysis) schlägt Ihre wahrscheinliche Sub-Saison vor — enorm wichtig, wenn Soft Summer und True Summer eine ganze Blond-Kategorie trennen.
 
 ### Zwischen Saisons?
 
@@ -207,7 +207,7 @@ Lange war Blond-Wahl Raten. Swatch-Buch, Armhaare (≠ Kopfhaar), Hoffnung auf m
 
 KI-Tools previewen Blondtöne auf Ihrem Foto — Dimension, Unterton-Interaktion, realistische Lichtreflexion statt flat Overlay. Statt Asch auf kühler Haut zu imaginieren — sehen. Honig oder Champagner für Light Spring? Side by Side.
 
-Kostenlose Tools wie [aicoloranalysis.io](https://aicoloranalysis.io/hair-color-analysis) previewen vor Bleach, Toner und drei Stunden Salonstuhl. Analysiert Unterton, natürliche Stufe, Interaktion mit Gesichtszügen — dieselben Variablen wie erfahrener Colorist, sichtbar vor dem ersten Euro.
+Kostenlose Tools wie [aicoloranalysis.io](/hair-color-analysis) previewen vor Bleach, Toner und drei Stunden Salonstuhl. Analysiert Unterton, natürliche Stufe, Interaktion mit Gesichtszügen — dieselben Variablen wie erfahrener Colorist, sichtbar vor dem ersten Euro.
 
 Mit previewed Reference im Salon — „Genau dieses Asch-Beige Stufe 9, diese Dimension“ — schneller bessere Ergebnisse. Vage („mach mich blond“) zu präzise („dieser Ton, diese Technik, dieses Wärme-Level“). Präzision = geliebtes vs. toleriertes Blond bis Wurzeln nachwachsen.
 

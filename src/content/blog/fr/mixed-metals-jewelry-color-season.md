@@ -1,6 +1,6 @@
 ---
 title: "Métaux mixtes : comment porter or et argent ensemble sans paraître incohérente"
-description: "Peut-on vraiment porter or et argent ensemble ? Découvrez les 3 règles du mélange des métaux, quelles saisons colorimétriques s'en sortent le mieux, et comment construire une parure bijoux aux métaux mixtes qui flatte votre sous-ton."
+description: "Or et argent ensemble ? 3 règles de mélange, saisons qui s'en sortent le mieux et parure mixte qui flatte votre sous-ton."
 date: "2026-10-27"
 tags: ["métaux mixtes", "bijoux", "saison colorimétrique", "sous-ton", "guide de style"]
 image: "/images/blog/mixed-metals-jewelry-color-season.webp"
@@ -154,7 +154,7 @@ Le mélange est un outil, pas une obligation. Le but est de vous sentir la meill
 
 Savoir quel métal vous flatte, et jusqu'où pousser le second, signifiait autrefois essayer beaucoup de bijoux sous l'éclairage des boutiques. Aujourd'hui, c'est plus simple. J'ai récemment fait analyser ma photo par un outil d'analyse bijoux par IA et j'ai été surprise par la clarté avec laquelle il expliquait mes meilleurs métaux, pierres et styles de boucles d'oreilles, et les combinaisons à éviter près du visage.
 
-Si vous voulez essayer, un outil gratuit comme [aicoloranalysis.io](https://www.aicoloranalysis.io/jewelry-analysis?utm_source=medium&utm_medium=article&utm_campaign=mixed-metals-jewelry-color-season) peut vous indiquer quels métaux conviennent à votre sous-ton avant tout achat. Il ne remplace pas le test miroir, mais il donne un excellent point de départ. Pour une vue plus large sur l'interaction métaux et sous-ton, [l'article de Wikipédia sur les matériaux et alliages de bijouterie](https://en.wikipedia.org/wiki/Jewellery) explique pourquoi l'or, l'argent et le platine ont l'aspect qu'ils ont.
+Si vous voulez essayer, un outil gratuit comme [aicoloranalysis.io](/jewelry-analysis) peut vous indiquer quels métaux conviennent à votre sous-ton avant tout achat. Il ne remplace pas le test miroir, mais il donne un excellent point de départ. Pour une vue plus large sur l'interaction métaux et sous-ton, [l'article de Wikipédia sur les matériaux et alliages de bijouterie](https://en.wikipedia.org/wiki/Jewellery) explique pourquoi l'or, l'argent et le platine ont l'aspect qu'ils ont.
 
 ---
 

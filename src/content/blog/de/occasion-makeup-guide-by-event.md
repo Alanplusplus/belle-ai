@@ -1,6 +1,6 @@
 ---
 title: "Anlass-Make-up-Guide: Der richtige Look für jedes Event"
-description: "Vom Date-Abend über Vorstellungsgespräche bis zu Hochzeiten — lernen Sie, Ihr Make-up für jeden Anlass an Hautton und Gesichtszüge anzupassen. Plus: Wie KI personalisierte Looks sofort erstellt."
+description: "Anlass-Make-up von Date bis Hochzeit: Look an Hautton und Gesichtszüge anpassen – plus wie KI personalisierte Ideen vorschlägt."
 date: "2026-07-28"
 tags: ["Make-up", "Anlass-Make-up", "Schönheit", "Stilguide", "KI-Schönheit"]
 image: "/images/blog/occasion-makeup-guide-by-event.webp"

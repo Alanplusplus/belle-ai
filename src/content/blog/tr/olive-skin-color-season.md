@@ -11,7 +11,7 @@ faq:
   - q: "Zeytin teni İlkbahar veya parlak sezon olabilir mi?"
     a: "Nadir. Zeytin, İlkbahar ve parlak paletlerin istediği netliğe karşı duran soluk gri-yeşil bir tabaka ekler. Zeytin olup İlkbahar çıktıysanız, sıcak zeytin ve daha açık ton olabilirsiniz — Yumuşak Sonbahar çoğu zaman daha iyi oturur."
   - q: "Online renk testleri zeytin tenini neden yanlış bulur?"
-    a: "Çoğu araç alt tonu yalnızca sıcak, soğuk veya nötr sanır. Zeytin, taban tonun üstünde ayrı bir gri-yeşil modifikatördür; cevaplar birbirini iptal eder — Nötr, Gerçek Kış veya rastgele İlkbahar. Fotoğraflı yapay zeka renk analizi o yeşil tabakayı doğrudan ölçebilir."
+    a: "Çoğu araç alt tonu yalnızca sıcak, soğuk veya nötr sanır. Zeytin, taban tonun üstünde ayrı bir gri-yeşil modifikatördür; cevaplar birbirini iptal eder — Nötr, Gerçek Kış veya rastgele İlkbahar. Fotoğraflı yapay zeka renk analizi o yeşil tabakayı arayabilir; tek bir fotoğrafın görsel değerlendirmesidir, kumaş denemesiyle doğrulayın."
 ---
 
 ## «Hangi sezonum?» — zeytin teni ikilemi
@@ -220,9 +220,9 @@ Kazanan grup göz altını açar, teni berraklaştırır, dudakları doğal pemb
 
 Aynı gün aday sezonlardan birer ruj ve allık deneyin. Kıyafet mağaza ışığında yalan söyler; yüzdeki makyaj çoğu zaman beraberlik bozar.
 
-### Adım 6: Objektif analizle doğrulama (isteğe bağlı)
+### Adım 6: Yapay zeka analiziyle ikinci görüş (isteğe bağlı)
 
-Ev testleri yardımcı olur ama zeytin insan gözünün en çok kaydığı yerdir. [Yapay zeka renk analizi](/tr/color-analysis) fotoğraftan gri-yeşil modifikatörü okur ve değerlerinizi sezon paletlerine eşler — Yumuşak Sonbahar ile Yumuşak Yaz veya Derin Sonbahar ile Derin Kış arasında kaldığınızda faydalıdır.
+Ev testleri yardımcı olur ama zeytin insan gözünün en çok kaydığı yerdir. [Yapay zeka renk analizi](/) fotoğrafta gri-yeşil modifikatörü arar ve bir sezon paleti önerir — ikinci görüş olarak düşünün; Yumuşak Sonbahar ile Yumuşak Yaz veya Derin Sonbahar ile Derin Kış arasında kaldığınızda faydalıdır.
 
 ---
 
@@ -255,7 +255,7 @@ Doğru sezon stilinizi küçültmez. Zeytin tenini solgun veya gri yerine canlı
 
 ## Renk sezonunuzu bulun
 
-Hangi grupta olduğunuzdan emin değil misiniz? Belle AI zeytin alt tonunu algılar ve tek fotoğraftan sezon paleti önerir.
+Hangi grupta olduğunuzdan emin değil misiniz? Belle AI renk analizi zeytin alt tonundaki gri-yeşil ipucunu arar ve tek fotoğraftan olası bir sezon paleti önerir — ikinci görüş olarak düşünün, kumaş denemesiyle doğrulayın.
 
 [Ücretsiz yapay zeka renk analizini deneyin →](/try)
 

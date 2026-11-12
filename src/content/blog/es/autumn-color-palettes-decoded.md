@@ -229,7 +229,7 @@ La plata cuesta a todos los tipos Otoño. Si adoras la joyería plateada, opta p
 
 Tradicionalmente, identificar tu subestación Otoño requería una sesión profesional de draping — sentarte a luz natural mientras un analista de color sostiene docenas de telas cálidas contra tu rostro. Funciona, pero es caro (normalmente 150-300 $) y limitado a grandes ciudades.
 
-Hoy, las herramientas de análisis de color con IA pueden examinar el subtono de tu piel, el color de tus ojos y el tono de tu cabello para determinar tu subestación exacta en menos de un minuto. Plataformas como [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) usan visión por computadora para medir las mismas señales de calidez, profundidad y saturación que evalúan los analistas profesionales — accesible para cualquiera con un teléfono y una ventana.
+Hoy, las herramientas de análisis de color con IA pueden observar el subtono de tu piel, el color de tus ojos y el tono de tu cabello y sugerir una subestación probable en menos de un minuto. Plataformas como [análisis de color con IA](/) usan un modelo de imagen con IA para valorar las mismas señales de calidez, profundidad y saturación que miran los analistas profesionales. El resultado es un juicio visual, no una medición; tómalo como punto de partida. Lo que cambia es el acceso: cualquiera con un teléfono y una ventana puede dar el primer paso.
 
 ---
 
@@ -243,9 +243,9 @@ Hoy, las herramientas de análisis de color con IA pueden examinar el subtono de
 
 Entender tu subestación Otoño concreta transforma cómo compras, cómo te vistes por la mañana y la confianza con la que sales por la puerta. No eres solo «un Otoño» — eres un matiz concreto de calidez, y saber exactamente cuál desbloquea un guardarropa que de verdad funciona para ti.
 
-## Encuentra Tu Subestación Otoño Exacta
+## Encuentra Tu Subestación Otoño
 
-¿No puedes distinguir qué Otoño eres solo con las descripciones? Nuestro [análisis de color con IA gratuito](/es/color-analysis) identifica tu subestación exacta analizando tu piel, cabello y coloración ocular.
+¿No puedes distinguir qué Otoño eres solo con las descripciones? Nuestro [análisis de color con IA gratuito](/) puede sugerir tu subestación probable a partir de tu piel, cabello y coloración ocular.
 
 [Prueba el análisis de color con IA gratis →](/es/try)
 

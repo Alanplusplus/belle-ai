@@ -1,6 +1,6 @@
 ---
 title: "Balayage, Strähnen oder Vollfarbe? Wie du die beste Färbetechnik für deinen Farbtyp wählst"
-description: "Nicht jede Färbetechnik funktioniert für jeden Farbtyp gleich gut. Erfahre, welche Methode — Balayage, Foliensträhnen oder Vollfarbe — deine natürlichen Merkmale und deine saisonale Palette am besten ergänzt."
+description: "Balayage, Foliensträhnen oder Vollfarbe? Welche Färbetechnik deinen Farbtyp und deine saisonale Palette am besten ergänzt."
 date: "2026-09-02"
 tags: ["Haarfarbe", "Farbanalyse", "persönlicher Stil", "Schönheit", "Style-Guide"]
 image: "/images/blog/hair-coloring-technique-color-season.webp"
@@ -172,7 +172,7 @@ Der Unterschied zwischen einem bewussten Regelbruch und einem versehentlichen Fe
 
 Hier ist der Teil, der mir mehrere hundert Dollar und viel Frustration erspart hätte: Du kannst jetzt verschiedene Färbetechniken auf deinem eigenen Foto vorab ansehen, bevor du in den Salon gehst.
 
-KI-gestützte Haarfarben-Vorschau-Tools können dir zeigen, wie Balayage, Strähnen oder Vollfarbe auf deinem spezifischen Hautton, deiner Augenfarbe und deinen Gesichtszügen aussehen würden. Manche berücksichtigen sogar deine [Farbtyp-Analyse](https://aicoloranalysis.io/hair-color-analysis), um zu empfehlen, welche Farbtöne und Techniken am besten harmonieren.
+KI-gestützte Haarfarben-Vorschau-Tools können dir zeigen, wie Balayage, Strähnen oder Vollfarbe auf deinem spezifischen Hautton, deiner Augenfarbe und deinen Gesichtszügen aussehen würden. Manche berücksichtigen sogar deine [Farbtyp-Analyse](/hair-color-analysis), um zu empfehlen, welche Farbtöne und Techniken am besten harmonieren.
 
 Es geht nicht darum, das Fachwissen deiner Stylistin zu ersetzen — es geht darum, mit einem klareren Bild dessen zur Beratung zu kommen, was für deine Färbung funktioniert, damit das Gespräch von einem viel besseren Ausgangspunkt startet.
 

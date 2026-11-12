@@ -1,6 +1,6 @@
 ---
 title: "¿Qué estación soy? Encuentra tu estación de color"
-description: "¿Te preguntas «qué estación soy»? Aprende a determinar si eres Primavera, Verano, Otoño o Invierno en el análisis de color personal. Incluye test gratis y análisis con IA."
+description: "¿Qué estación soy? Determina Primavera, Verano, Otoño o Invierno con test gratis y análisis con IA como punto de partida."
 date: "2026-07-20"
 tags: ["qué estación soy", "estación de color", "primavera verano otoño invierno", "tipo de color estacional", "test de análisis de color"]
 image: "/images/blog/what-color-season-am-i.webp"
@@ -143,7 +143,7 @@ Si estás entre estaciones, a menudo puedes llevar colores de ambas paletas. Cé
 
 ## Obtén resultados instantáneos con IA
 
-Para el resultado más preciso, sube una selfie clara y deja que la IA determine tu tipo exacto de las 12 estaciones:
+Para una segunda opinión rápida, sube una selfie clara y deja que la IA sugiera tu tipo de las 12 estaciones:
 
 [Análisis de color con IA gratis →](/try)
 

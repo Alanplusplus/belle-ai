@@ -1,6 +1,6 @@
 ---
 title: "Koyu Ten İçin Renk Analizi: Kapsamlı Rehber"
-description: "Renk analizi melanin açısından zengin ciltlerde de mükemmel çalışır. Mevsim tipinizi, en iyi paletinizi ve koyu tenler için stil ipuçlarını bulun — ücretsiz yapay zeka aracı dahil."
+description: "Koyu ten için renk analizi işe yarar: mevsim tipinizi, en iyi paletinizi ve stil ipuçlarını keşfedin. Ücretsiz yapay zeka aracı dahil."
 date: "2026-07-22"
 tags: ["renk analizi", "koyu ten", "derin ten tonu", "melanin", "mevsimsel renk"]
 image: "/images/blog/color-analysis-dark-skin.webp"
@@ -108,7 +108,7 @@ Spesifik mevsiminiz ne olursa olsun, melanin açısından zengin ciltlerde evren
 - **Soluk zeytin yeşili** (soğuk alt tonlar için) — sarımsı görünüm yaratır
 - **Soluk tozlu tonlar** (yüksek kontrastlı kişiler için) — doğal canlılığı bastırır
 
-## Koyu Tenle Doğru Yapay Zeka Renk Analizi
+## Koyu Tenle Yapay Zeka Renk Analizinden Daha İyi Sonuç Almak
 
 Yapay zeka renk analizi araçları eğitim verisi önyargısı nedeniyle tarihsel olarak koyu ten tonlarında zorlanmıştır. En iyi sonuçlar için:
 
@@ -147,7 +147,7 @@ Yapay zeka renk analizi sonucu doğru gelmiyorsa:
 
 ## Renklerinizi Bugün Keşfedin
 
-Tam mevsimsel renk tipinizi keşfetmeye hazır mısınız? Yapay zekamız her ten rengi için bir başlangıç noktası sunar; yine de sonucu kendi değerlendirmenizle kontrol edin, çünkü AI araçları koyu ten tonlarında daha az güvenilir olabilir.
+Mevsimsel renk tipinizi bulmaya hazır mısınız? Yapay zekamız her ten rengi için bir başlangıç noktası sunar; yine de sonucu kendi değerlendirmenizle kontrol edin, çünkü AI araçları koyu ten tonlarında daha az güvenilir olabilir.
 
 [Ücretsiz Renk Analizine Başlayın →](/tr/try)
 

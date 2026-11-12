@@ -1,6 +1,6 @@
 ---
 title: "Her Renk Mevsimi İçin En İyi Düğün Konuğu Kıyafet Renkleri"
-description: "Düğüne ne giyeceğinizden emin değil misiniz? Renk mevsiminiz cevabı veriyor. İlkbahardan Kışa kadar 12 mevsimsel tipin tamamı için en flattering düğün konuğu kıyafet renklerine dair eksiksiz bir rehber."
+description: "Düğüne ne giyeceğinizden emin değil misiniz? 12 renk mevsimi için en flattering düğün konuğu kıyafet renkleri bu eksiksiz rehberde."
 date: "2026-08-26"
 tags: ["renk analizi", "düğün kıyafeti", "renk mevsimi", "moda ipuçları", "özel gün stili"]
 image: "/images/blog/wedding-guest-outfit-colors.webp"
@@ -45,7 +45,7 @@ Dört ana mevsim, her biri üç alt mevsime ayrılır:
 | **Sonbahar** | Soft Autumn, True Autumn, Deep Autumn | Sıcak, zengin, toprak tonları |
 | **Kış** | Deep Winter, True Winter, Bright Winter | Soğuk, yüksek kontrast, dramatik |
 
-Hangisi olduğunuzdan emin değil misiniz? Hızlı bir [AI renk analizi](https://aicoloranalysis.io/personal-color-analysis), bir fotoğraftan alt mevsiminizi bir dakikadan kısa sürede belirleyebilir.
+Hangisi olduğunuzdan emin değil misiniz? Hızlı bir [AI renk analizi](/), bir fotoğraftan olası alt mevsiminizi bir dakikadan kısa sürede önerebilir.
 
 ---
 
@@ -147,7 +147,7 @@ Renk pişmanlığından kaçınmak için üç adımlı sistemim:
 
 **Adım 2: Fotoğraf çekin.** Telefon kameranız aynadan daha acımasızdır. Renk hızlı bir selfiede ters görünüyorsa, odanın karşısından çekilen düğün fotoğraflarında daha kötü görünür.
 
-**Adım 3: AI renk analizi deneyin.** [AI destekli renk analizi](https://aicoloranalysis.io/outfit-color-analysis) gibi araçlar artık belirli kıyafet renklerinin doğal renklerinizle nasıl etkileşime girdiğini önizleyebilir — tahmin gerekmez. İki benzer ton arasında kaldığınızda özellikle faydalıdır.
+**Adım 3: AI renk analizi deneyin.** [AI destekli renk analizi](/outfit-color-analysis) gibi araçlar artık belirli kıyafet renklerinin doğal renklerinizle nasıl etkileşime girdiğini önizleyebilir — tahmini azaltmaya yarar. İki benzer ton arasında kaldığınızda özellikle faydalıdır.
 
 ---
 

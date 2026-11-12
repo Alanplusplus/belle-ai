@@ -1,7 +1,7 @@
 ---
 title: "Lippenfarben-Guide für Olivhaut: Die besten Lippenstifte für Oliv-Untertöne"
 seoTitle: "Beste Lippenfarben für Olivhaut — Warum die meisten Rottöne falsch wirken (+ was funktioniert)"
-description: "Klassisches Rot lässt Sie blass wirken, Nude wird grau, Koralle ist ein Glücksspiel auf Olivhaut. Entdecken Sie Beeren-, Mauve-, Ziegel- und warme Nude-Töne, die Oliv-Untertöne wirklich schmeicheln."
+description: "Lippenfarben für Olivhaut: Beeren, Mauve, Ziegel und warme Nude statt Rot, das blass wirkt, und Nude, das grau wirkt."
 date: "2026-09-18"
 tags: ["Oliv-Unterton", "Make-up", "Lippenfarbe", "Beauty-Tipps", "Persönliche Farbanalyse"]
 image: "/images/blog/olive-skin-lip-color-guide.webp"
@@ -234,7 +234,7 @@ Sobald Sie Ihre Lippen-Familie kennen, wird das Einkaufen deutlich leichter — 
 
 ## Finden Sie Ihre besten Lippenfarben
 
-Wenn Sie noch zwischen warmer Beere und kühler Pflaume raten, kann eine schnelle KI-Farbanalyse Ihren Oliv-Subtyp eingrenzen und Lippenfarben vorschlagen, die mit Ihrer Haut harmonieren — nicht generische Einheits-Töne.
+Wenn Sie noch zwischen warmer Beere und kühler Pflaume raten, kann eine schnelle KI-Farbanalyse einen wahrscheinlichen Oliv-Subtyp und passende Lippenfarben vorschlagen — nicht generische Einheits-Töne.
 
 [Kostenlose KI-Farbanalyse testen →](/try)
 

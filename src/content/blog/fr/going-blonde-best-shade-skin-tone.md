@@ -1,6 +1,6 @@
 ---
 title: "Guide complet pour devenir blonde : quelle nuance de blond convient à votre teint"
-description: "Toutes les blondes ne se valent pas. Découvrez quelle nuance de blond — platine, miel, fraise ou cendré — flatte vraiment VOTRE teint, sous-ton et saison colorimétrique."
+description: "Platine, miel, fraise ou cendré : quelle nuance de blond flatte votre teint, sous-ton et saison colorimétrique ?"
 date: "2026-09-16"
 tags: ["couleur de cheveux", "blond", "teint", "analyse colorimétrique", "beauté"]
 image: "/images/blog/going-blonde-best-shade-skin-tone.webp"
@@ -71,7 +71,7 @@ Le tableau que j'aurais voulu voir avant mon premier désastre au salon :
 
 **Les blonds chauds** portent des pigments dorés, cuivrés ou miel qui font écho à la chaleur de votre peau. Ce glow ensoleillé et sain qui paraît naturel, pas artificiel. En expérience, les blonds chauds sont les plus demandés — et les plus souvent appliqués aux mauvais sous-tons. Une personne froide en miel voit l'or des cheveux amplifier le rose de la peau, effet rubicond involontaire.
 
-**Les blonds neutres** sont au milieu — ni clairement chauds ni froids. Point de départ le plus sûr si vous hésitez, mais peuvent paraître « plats » avec des traits très contrastés. Sable et blé fonctionnent magnifiquement sur sous-tons neutres et sur celles dont l'[analyse colorimétrique](/fr/color-analysis) les place en saisons mélangées ou douces.
+**Les blonds neutres** sont au milieu — ni clairement chauds ni froids. Point de départ le plus sûr si vous hésitez, mais peuvent paraître « plats » avec des traits très contrastés. Sable et blé fonctionnent magnifiquement sur sous-tons neutres et sur celles dont l'[analyse colorimétrique en 12 saisons](/fr/color-analysis) les place en saisons mélangées ou douces.
 
 ### L'exception du sous-ton olivâtre
 
@@ -144,7 +144,7 @@ Votre saison — déterminée par l'interaction sous-ton, valeur (clair/foncé) 
 | True Winter | Platine, glace, cendré bleu | Miel, doré, cuivre |
 | Bright Winter | Platine vif, champagne froid | Chauds muted, fraise |
 
-Saison incertaine ? Une [analyse colorimétrique](https://aicoloranalysis.io/personal-color-analysis) identifie votre sous-saison — crucial quand Soft Summer et True Summer diffèrent d'une catégorie entière de blonds.
+Saison incertaine ? Une [analyse colorimétrique](/personal-color-analysis) suggère votre sous-saison probable — crucial quand Soft Summer et True Summer diffèrent d'une catégorie entière de blonds.
 
 ### Entre deux saisons ?
 
@@ -207,7 +207,7 @@ Longtemps, choisir un blond signifiait deviner. Nuancier, poils du bras (≠ che
 
 Les outils IA prévisualisent les blonds sur votre photo — dimension, interaction sous-ton, reflets réalistes, pas overlay plat. Au lieu d'imaginer le cendré sur peau froide, vous voyez. Miel ou champagne pour Light Spring ? Comparez côte à côte.
 
-Des outils gratuits comme [aicoloranalysis.io](https://aicoloranalysis.io/hair-color-analysis) prévisualisent avant décoloration, toner et trois heures au fauteuil. Analyse sous-ton, niveau naturel, interaction avec vos traits — mêmes variables qu'un coloriste expert, visibles avant de dépenser.
+Des outils gratuits comme [aicoloranalysis.io](/hair-color-analysis) prévisualisent avant décoloration, toner et trois heures au fauteuil. Analyse sous-ton, niveau naturel, interaction avec vos traits — mêmes variables qu'un coloriste expert, visibles avant de dépenser.
 
 Avec référence prévisualisée au salon — « Ce beige cendré exact niveau 9, cette dimension » — meilleurs résultats plus vite. Conversation vague (« fais-moi blonde ») → précise (« cette nuance, cette technique, ce niveau de chaleur »). Cette précision = blond aimé vs toléré jusqu'aux racines.
 

@@ -1,6 +1,6 @@
 ---
 title: "Comment choisir des lunettes qui flattent votre forme de visage ET votre saison de couleurs"
-description: "La plupart des guides sur les lunettes ne parlent que de la forme du visage. Pourtant, votre saison de couleurs détermine aussi les meilleures couleurs et matériaux de monture. Voici le guide complet pour trouver vos lunettes idéales — forme ET couleur."
+description: "Lunettes : forme de visage et saison de couleurs pour montures et matériaux. Le guide complet forme plus couleur."
 date: "2026-09-07"
 tags: ["lunettes", "forme de visage", "analyse de couleur", "guide de style", "accessoires"]
 image: "/images/blog/glasses-face-shape-color-season.webp"
@@ -192,7 +192,7 @@ Voici le cadre de décision simple :
 
 Déterminer à la fois votre forme de visage et votre saison de couleurs exigeait autrefois deux consultations distinctes — une chez l'opticien, une chez la coloriste. Ensemble, cela pouvait facilement coûter 300 à 500 € et prendre des heures.
 
-Aujourd'hui, des outils alimentés par l'IA peuvent analyser votre [forme de visage](https://aicoloranalysis.io/face-shape-analysis) et votre [saison de couleurs](https://aicoloranalysis.io/personal-color-analysis) à partir d'une seule photo en environ 60 secondes. Certains proposent même des [recommandations de montures](https://aicoloranalysis.io/glasses-analysis) adaptées à vos proportions uniques.
+Aujourd'hui, des outils alimentés par l'IA peuvent analyser votre [forme de visage](/face-shape-analysis) et votre [saison de couleurs](/personal-color-analysis) à partir d'une seule photo en environ 60 secondes. Certains proposent même des [recommandations de montures](/glasses-analysis) adaptées à vos proportions uniques.
 
 La technologie ne remplace pas l'essayage en magasin — vous devez toujours vérifier le confort sur le nez et les oreilles. Mais elle vous donne une liste restreinte de formes et couleurs à rechercher, ce qui évite des heures de flânerie sans but chez l'opticien.
 
@@ -225,7 +225,7 @@ Vos montures et votre maquillage travaillent ensemble. Si vous portez des lunett
 - Saisons froides → métaux argentés, noir froid, marine, charbon, prune
 - Le tableau ci-dessus donne des recommandations spécifiques pour les 12 sous-saisons
 - Le choix du matériau (métal vs. acétate vs. titane) est une autre occasion de s'aligner sur votre saison
-- Les outils IA peuvent analyser forme de visage et saison de couleurs à partir d'une photo, vous offrant une liste précise avant même d'entrer en boutique
+- Les outils IA peuvent analyser forme de visage et saison de couleurs à partir d'une photo, vous offrant une liste de départ avant même d'entrer en boutique
 
 Vos lunettes sont l'accessoire le plus visible que vous possédez. Réussir forme et couleur, c'est les transformer : elles ne sont plus quelque chose que vous « devez porter », mais quelque chose qui vous fait paraître incroyable.
 

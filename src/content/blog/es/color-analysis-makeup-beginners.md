@@ -1,6 +1,6 @@
 ---
 title: "Análisis de Color Personal para Principiantes en Maquillaje: Una Guía Sin Agobios"
-description: "¿Empiezas en el maquillaje? Descubre cómo tu estación de color convierte un neceser caótico en un kit básico de 5 productos. Una guía para principiantes sobre base, rubor, labios, ojos y cejas en tonos que de verdad te favorecen."
+description: "¿Empiezas en maquillaje? Tu estación convierte un neceser caótico en cinco básicos en tonos que de verdad te favorecen."
 date: "2026-11-03"
 tags: ["maquillaje para principiantes", "análisis de color personal", "estación de color", "maquillaje", "belleza"]
 image: "/images/blog/color-analysis-makeup-beginners.webp"
@@ -141,7 +141,7 @@ Son las trampas en las que caí yo, para que tú no tengas que hacerlo.
 
 La parte más difícil de este sistema es el primer paso: conocer tu estación. Colocarte telas sobre los hombros frente al espejo funciona, pero es fácil equivocarse, sobre todo con mala iluminación.
 
-Aquí es donde las herramientas de IA se han vuelto realmente útiles. Sube un selfi sin maquillaje con luz natural y una buena herramienta de análisis lee tu subtono, profundidad y croma, y los traduce en tonos de maquillaje. Probé una herramienta gratuita como [aicoloranalysis.io](https://www.aicoloranalysis.io/makeup-analysis?utm_source=medium&utm_medium=article&utm_campaign=color-analysis-makeup-beginners) antes de un gran viaje de compras de maquillaje, y me dio una lista clara de familias de base, labial y rubor. No sustituyó a la prueba del espejo, pero me ahorró varios malos pasos.
+Aquí es donde las herramientas de IA se han vuelto realmente útiles. Sube un selfi sin maquillaje con luz natural y una buena herramienta de análisis lee tu subtono, profundidad y croma, y los traduce en tonos de maquillaje. Probé una herramienta gratuita como [aicoloranalysis.io](/makeup-analysis) antes de un gran viaje de compras de maquillaje, y me dio una lista clara de familias de base, labial y rubor. No sustituyó a la prueba del espejo, pero me ahorró varios malos pasos.
 
 Si quieres una introducción más amplia y sin jerga a todo esto, hay una [guía de análisis de color para principiantes](/es/color-analysis-for/beginners) que explica lo básico paso a paso.
 

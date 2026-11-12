@@ -1,6 +1,6 @@
 ---
 title: "Cómo la Teoría del Color de Clases de Arte Aplica a Tu Estilo Personal"
-description: "El círculo cromático no es solo para pintores. Descubre cómo los colores complementarios, las armonías análogas y los principios de contraste de la escuela de arte pueden transformar la forma en que te vistes cada mañana."
+description: "Complementarios, análogos y contraste: aplica el círculo cromático de la escuela de arte a cómo te vistes cada mañana."
 date: "2026-09-11"
 tags: ["teoría del color", "estilo personal", "análisis de color", "tips de moda", "guía de estilo"]
 image: "/images/blog/color-theory-personal-style.webp"
@@ -228,7 +228,7 @@ Ejemplo: Outfit todo gris (gris claro, carbón medio, pizarra oscura) + un acces
 
 La verdad honesta: no necesitas memorizar las posiciones del círculo cromático para usar estos principios. Tu ojo ya percibe la mayoría de estas armonías de forma subconsciente — por eso algunas combinaciones de outfit simplemente «se sienten bien».
 
-¿Pero si quieres precisión? Las herramientas de IA ahora pueden analizar tu coloración personal y recomendar combinaciones específicas de tu paleta óptima. Una herramienta como [análisis de color con IA](https://aicoloranalysis.io/personal-color-analysis) puede identificar tu estación, nivel de contraste y mejores familias de color en unos 60 segundos — lo que te dice exactamente qué armonías y niveles de saturación te favorecen más.
+¿Pero si quieres un punto de partida? Las herramientas de IA ahora pueden analizar tu coloración personal y sugerir combinaciones de una paleta probable. Una herramienta como [análisis de color con IA](/) puede sugerir tu estación, nivel de contraste y mejores familias de color en unos 60 segundos — una buena forma de descubrir qué armonías y niveles de saturación probar primero.
 
 Es como tener un tutor personal de teoría del color que también conoce tu subtono de piel, color de ojos y nivel de contraste natural.
 
@@ -256,7 +256,7 @@ Verde neón + rosa fucsia puede estar de moda. Pero si eres Verano Suave con baj
 - **El contraste de valor** (claro vs. oscuro) importa más que colores específicos — haz coincidir el contraste de valor de tu outfit con tu nivel de contraste personal natural
 - **La coherencia de saturación** es la razón olvidada por la que muchos outfits se sienten «raro» — no mezcles piezas vívidas y apagadas sin criterio
 - Usa las cuatro fórmulas de outfit (Atrevido Seguro, Artística, Declaración, Poder) como punto de partida y ajústalas a tu estación de color
-- No necesitas memorizar el círculo — las herramientas de análisis de color con IA pueden identificar tus armonías óptimas según tus rasgos reales
+- No necesitas memorizar el círculo — las herramientas de análisis de color con IA pueden sugerir armonías para probar según tus rasgos
 
 La teoría del color es una de esas cosas que, una vez que la ves, no puedes dejar de verla. Empezarás a notar por qué ciertos escaparates captan tu atención, por qué algunos feeds de Instagram se sienten naturalmente cohesionados, y por qué ciertas personas siempre se ven «arregladas».
 

@@ -1,6 +1,6 @@
 ---
 title: "Warum Promi-Make-up-Tutorials bei dir nie funktionieren (und was stattdessen hilft)"
-description: "Hast du schon mal ein Promi-Make-up-Tutorial perfekt nachgemacht — und es sah trotzdem völlig falsch aus? Das Problem ist nicht deine Technik, sondern deine Färbung. Erfahre, warum Promi-Looks scheitern und wie du Make-up-Stile findest, die DEINE Gesichtszüge wirklich betonen."
+description: "Promi-Make-up-Tutorials sehen bei dir falsch aus? Das Problem ist deine Färbung, nicht die Technik. Finde Looks, die dich wirklich betonen."
 date: "2026-09-24"
 tags: ["Promi-Stil", "Make-up", "persönliche Farbanalyse", "Schönheit", "Farbsaison"]
 image: "/images/blog/celebrity-makeup-tutorials-what-works.webp"
@@ -173,7 +173,7 @@ Ich habe diese Methode genutzt, um unzählige Tutorials anzupassen, die nicht f�
 
 Deine Farbsaison und deinen Promi-Match zu finden, bedeutete früher eine professionelle Farbanalyse zu buchen und stundenlang Red-Carpet-Archive zu studieren. Heute können KI-Tools deinen Unterton, dein Kontrastniveau und deine Saison aus einem einzigen Foto analysieren — und Promis finden, die dein Färbungsprofil teilen.
 
-Wenn du einen datenbasierten Ausgangspunkt statt Rätselraten willst, bietet [Belle AI auf aicoloranalysis.io](https://aicoloranalysis.io) [Promi-Matching](https://aicoloranalysis.io/celebrity-match) und [Make-up-Analyse](https://aicoloranalysis.io/makeup-analysis), die deine Gesichtszüge saisongerechten Nuancen und Referenzgesichtern zuordnen. Ich empfehle trotzdem, deinem Spiegel zu vertrauen, wenn sich ein Produkt falsch anfühlt — aber eine objektive Einschätzung deines Untertons und deiner Saison beseitigt den Großteil des Trial-and-Error, der Promi-Tutorials so frustrierend macht.
+Wenn du einen Ausgangspunkt statt Rätselraten willst, bietet [Belle AI auf aicoloranalysis.io](/) [Promi-Matching](/celebrity-match) und [Make-up-Analyse](/makeup-analysis), die deine Gesichtszüge saisongerechten Nuancen und Referenzgesichtern zuordnen. Ich empfehle trotzdem, deinem Spiegel zu vertrauen, wenn sich ein Produkt falsch anfühlt — aber eine Zweitmeinung zu deinem Unterton und deiner Saison kann den Trial-and-Error reduzieren, der Promi-Tutorials so frustrierend macht.
 
 Das Ziel ist nicht, dein Urteilsvermögen auszulagern. Es geht darum, schneller zum richtigen Farbrahmen zu kommen, damit die Tutorials, denen du folgst, tatsächlich eine Chance haben zu funktionieren.
 

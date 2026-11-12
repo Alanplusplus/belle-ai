@@ -1,6 +1,6 @@
 ---
 title: "Why Online Color Analysis Quizzes Get It Wrong (And What to Do Instead)"
-description: "Frustrated by conflicting quiz results? Learn the 5 scientific reasons why color analysis quizzes are unreliable, and discover more accurate alternatives for finding your color season."
+description: "Conflicting quiz results? Five reasons color analysis quizzes fall short, and better starting points for finding your color season."
 date: "2026-07-12"
 tags: ["color analysis quiz", "personal color analysis", "seasonal color", "beauty", "AI color analysis"]
 image: "/images/blog/why-color-analysis-quizzes-are-wrong.webp"

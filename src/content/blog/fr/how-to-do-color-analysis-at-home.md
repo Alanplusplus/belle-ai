@@ -1,6 +1,6 @@
 ---
 title: "Comment faire son analyse de couleur à la maison : Guide DIY"
-description: "Apprenez à faire votre propre analyse de couleur à la maison avec des tests simples. Trouvez votre sous-ton, déterminez votre saison et découvrez vos meilleures couleurs sans rendez-vous professionnel."
+description: "Analyse de couleur à la maison : tests simples pour sous-ton, saison et meilleures couleurs, sans rendez-vous pro."
 date: "2026-07-21"
 tags: ["analyse de couleur à la maison", "analyse de couleur DIY", "auto-analyse de couleur", "trouver vos couleurs", "test de sous-ton"]
 image: "/images/blog/color-analysis-at-home.webp"
@@ -8,7 +8,7 @@ image: "/images/blog/color-analysis-at-home.webp"
 
 ## Peut-on faire une analyse de couleur à la maison ?
 
-Oui. Bien que le drapage professionnel en personne reste la référence absolue, vous pouvez obtenir des résultats remarquablement précis chez vous en combinant des tests d'auto-évaluation et la technologie IA. Ce guide vous accompagne pas à pas dans tout le processus.
+Oui. Bien que le drapage professionnel en personne reste la référence absolue, vous pouvez obtenir un bon point de départ chez vous en combinant des tests d'auto-évaluation et la technologie IA. Ce guide vous accompagne pas à pas dans tout le processus.
 
 ## Ce dont vous avez besoin
 
@@ -171,7 +171,7 @@ Si elles diffèrent — considérez quel test a pu être affecté par la lumièr
 
 ## Encore incertaine ? Réponse en 60 secondes
 
-Notre IA analyse les mêmes signaux chromatiques qu'un professionnel — sous-ton, profondeur, contraste et chroma — à partir d'un seul selfie.
+Notre IA juge les mêmes signaux chromatiques qu'un professionnel — sous-ton, profondeur, contraste et chroma — à partir d'un seul selfie, comme une estimation visuelle que vous pouvez confirmer avec un test au drapé.
 
 [Lancer l'analyse de couleur IA gratuite →](/try)
 

@@ -229,7 +229,7 @@ Silber ist für alle Herbsttypen schwierig. Wenn du Silberschmuck liebst, wähle
 
 Früher brauchte man für den Herbst-Subtyp eine professionelle Draping-Sitzung — bei Tageslicht sitzen, während eine Farbberaterin Dutzende warme Stoffe an dein Gesicht hält. Es funktioniert, ist aber teuer (typischerweise 150–300 $) und auf größere Städte beschränkt.
 
-Heute können KI-Farbanalyse-Tools Hautunterton, Augenfarbe und Haarton analysieren und deinen exakten Subtyp in unter einer Minute bestimmen. Plattformen wie [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) nutzen Computer Vision, um dieselben Signale für Wärme, Tiefe und Sättigung zu messen, die professionelle Analysten bewerten — zugänglich für jeden mit Handy und Fenster.
+Heute können KI-Farbanalyse-Tools Hautunterton, Augenfarbe und Haarton betrachten und in unter einer Minute einen wahrscheinlichen Subtyp vorschlagen. Plattformen wie [KI-Farbanalyse](/) nutzen ein KI-Bildmodell, um dieselben Hinweise auf Wärme, Tiefe und Sättigung zu beurteilen, die professionelle Analysten prüfen. Das Ergebnis ist eine visuelle Einschätzung und keine Messung — nutze es als Ausgangspunkt. Was sich ändert, ist der Zugang: Jeder mit Handy und Fenster kann den ersten Schritt gehen.
 
 ---
 
@@ -243,9 +243,9 @@ Heute können KI-Farbanalyse-Tools Hautunterton, Augenfarbe und Haarton analysie
 
 Deinen konkreten Herbst-Subtyp zu kennen, verändert, wie du einkaufst, dich morgens anziehst und wie selbstbewusst du zur Tür hinausgehst. Du bist nicht nur „ein Herbsttyp“ — du bist eine bestimmte Nuance von Warm, und genau zu wissen welche, öffnet eine Garderobe, die wirklich zu dir passt.
 
-## Finde Deinen Exakten Herbst-Subtyp
+## Finde Deinen Herbst-Subtyp
 
-Aus Beschreibungen allein nicht sicher? Unsere [kostenlose KI-Farbanalyse](/de/color-analysis) bestimmt deinen exakten Subtyp anhand von Haut, Haar und Augenfarbe.
+Aus Beschreibungen allein nicht sicher? Unsere [kostenlose KI-Farbanalyse](/) kann anhand von Haut, Haar und Augenfärbung einen wahrscheinlichen Herbst-Subtyp vorschlagen.
 
 [Kostenlose KI-Farbanalyse starten →](/de/try)
 

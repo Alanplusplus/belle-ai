@@ -190,7 +190,7 @@ Hier machen Olivtypen am häufigsten Fehler. So geht es besser:
 
 ## Oliv-Untertöne und die saisonale Farbanalyse
 
-Im 12-Typen-System der Farbanalyse tauchen Oliv-Untertöne am häufigsten hier auf:
+Im [12-Typen-System der Farbanalyse](/de/color-analysis) tauchen Oliv-Untertöne am häufigsten hier auf:
 
 - **Sanfter Herbst** — die klassischste Einordnung für Oliv: gedämpft, warm, mitteltief
 - **Warmer Herbst** — wärmere Olivtöne mit goldener Basis
@@ -201,13 +201,13 @@ Selten werden Olivtypen als Frühling oder Winter eingeordnet, weil diese Palett
 
 Wenn Sie ein Farbanalyse-Quiz gemacht haben und das Ergebnis sich falsch anfühlte, könnte Ihr Oliv-Unterton der Grund sein. Standard-Quizze berücksichtigen den grünen Modifikator nicht und ordnen Sie einem Typ zu, der zwar zu Ihrer warmen oder kühlen Basis passt, die zusätzliche Gedämpftheit von Oliv aber ignoriert.
 
-Genauer wird es mit einer [KI-gestützten Farbanalyse](/de/personal-color-analysis): Sie misst die tatsächlichen Farbwerte Ihrer Haut — einschließlich des grün-grauen Stichs, der für die meisten einfachen Tests unsichtbar ist, für Bildanalyse-Algorithmen aber klar erkennbar.
+Wenn Sie noch unsicher sind, kann eine [KI-gestützte Farbanalyse](/de) eine Zweitmeinung liefern. Ein KI-Bildmodell betrachtet Ihr ganzes Foto und kann den grün-grauen Stich bemerken, den einfache Tests oft übersehen. Es ist eine visuelle Einschätzung, keine Messung — Licht und Kameraeinstellungen können das Ergebnis verschieben. Nutzen Sie es als Ausgangspunkt.
 
 ---
 
 ## Bestätigen Sie Ihren Unterton mit KI
 
-Unsicher, ob Sie Oliv sind? Unsere [kostenlose KI-Farbanalyse](/de/try?type=color_analysis) erkennt Oliv-Untertöne, indem sie das tatsächliche grün-graue Pigment Ihrer Haut misst — etwas, das Standard-Warm-Kühl-Tests komplett übersehen.
+Unsicher, ob Sie Oliv sind? Unsere [kostenlose KI-Farbanalyse](/de) kann eine Zweitmeinung dazu geben, ob Ihre Färbung nach Oliv aussieht — etwas, das Standard-Warm-Kühl-Tests oft übersehen.
 
 [Kostenlose KI-Farbanalyse testen →](/de/try?type=color_analysis)
 
@@ -227,7 +227,7 @@ Den eigenen Oliv-Unterton zu verstehen, ist wirklich befreiend. Sobald Sie aufh�
 
 ## Verwandte Artikel
 
-- [Farbanalyse: Der komplette Leitfaden](/de/color-analysis) — Alles, um Ihre besten Farben zu finden
+- [Farbanalyse-Leitfaden: Den eigenen Farbtyp finden](/de/color-analysis) — Alles, um Ihre besten Farben zu finden
 - [Oliv vs Warm-Unterton](/de/blog/olive-vs-warm-undertone) — Warum Olivhaut nicht einfach warm ist
 - [Oliv vs neutraler Unterton](/de/blog/olive-vs-neutral-undertone) — So unterscheiden Sie die beiden sicher
 - [Foundation für Olivhaut](/de/blog/olive-skin-foundation-guide) — Den passenden Farbton finden

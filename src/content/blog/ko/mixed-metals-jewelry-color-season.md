@@ -154,7 +154,7 @@ image: "/images/blog/mixed-metals-jewelry-color-season.webp"
 
 어떤 금속이 나를 살려 주는지, 두 번째 금속을 얼마나 과감히 쓸 수 있는지 알아내려면 예전에는 매장 조명 아래 주얼리를 많이 착용해 봐야 했습니다. 요즘은 더 쉬운 방법이 있습니다. 최근 사진으로 인공지능 주얼리 분석 도구를 돌려 봤는데, 내게 맞는 금속·보석·귀걸이 스타일과 얼굴 가까이 피해야 할 조합을 얼마나 또렷하게 설명해 주는지 놀랐습니다.
 
-직접 해 보고 싶다면 [aicoloranalysis.io](https://www.aicoloranalysis.io/jewelry-analysis?utm_source=medium&utm_medium=article&utm_campaign=mixed-metals-jewelry-color-season) 같은 무료 도구로 구매 전에 언더톤에 맞는 금속을 확인할 수 있습니다. 거울 테스트를 대체하진 않지만, 강한 출발점을 줍니다. 금속과 언더톤이 어떻게 맞물리는지 더 넓게 보려면 [위키백과의 주얼리 재료·합금 개요](https://en.wikipedia.org/wiki/Jewellery)에서 골드, 실버, 플래티넘이 왜 그렇게 보이는지 설명합니다.
+직접 해 보고 싶다면 [aicoloranalysis.io](/jewelry-analysis) 같은 무료 도구로 구매 전에 언더톤에 맞는 금속을 확인할 수 있습니다. 거울 테스트를 대체하진 않지만, 강한 출발점을 줍니다. 금속과 언더톤이 어떻게 맞물리는지 더 넓게 보려면 [위키백과의 주얼리 재료·합금 개요](https://en.wikipedia.org/wiki/Jewellery)에서 골드, 실버, 플래티넘이 왜 그렇게 보이는지 설명합니다.
 
 ---
 

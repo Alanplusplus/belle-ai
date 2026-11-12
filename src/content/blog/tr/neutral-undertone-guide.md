@@ -1,6 +1,6 @@
 ---
 title: "Nötr Alt Ton: Teşhis Edilmesi En Zor Cilt Tonu (İşte Nasıl Belirlenir)"
-description: "Nötr alt ton en sık yanlış teşhis edilen cilt tonudur. Standart testlerin neden başarısız olduğunu, 5 güvenilir yöntemle nasıl belirleneceğini ve makyaj, saç rengi ve gardıropta nasıl kullanılacağını öğrenin."
+description: "Nötr alt ton en sık yanlış teşhis edilir. Standart testlerin neden yetersiz kaldığı, 5 yöntemle belirleme ve makyaj ile gardıropta kullanımı."
 date: "2026-08-18"
 tags: ["cilt alt tonu", "nötr alt ton", "renk analizi", "güzellik", "stil rehberi"]
 image: "/images/blog/neutral-undertone-guide.webp"
@@ -115,11 +115,11 @@ Bir gün boyunca güçlü sıcak bir renk (turuncu, hardal, sıcak kırmızı) g
 
 ### 5. Yapay Zeka Analizi Yöntemi
 
-İşte teknolojinin gerçekten yardımcı olduğu nokta. Yapay zeka destekli renk analizi araçları, öznel görsel karşılaştırmaya güvenmek yerine cildinizin gerçek spektral özelliklerini — sıcak ve soğuk pigmentlerin kesin dengesini — ölçmek için bilgisayarlı görü kullanır.
+Burada teknoloji ikinci görüş olarak yardımcı olabilir. Yapay zeka destekli renk analizi araçları, yalnızca kendi görsel karşılaştırmanıza dayanmak yerine fotoğrafınızdaki sıcak-soğuk dengesini bir yapay zekâ görüntü modeliyle değerlendirir. Bu bir ölçüm değil, görsel bir yargıdır; ışık ve kamera ayarları sonucu yine değiştirebilir.
 
-Modern yapay zeka analizi, özellikle zor ışıklandırmada insan gözünün zorlandığı ince sıcak-soğuk dengesini tespit edebilir. [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) gibi araçlar fotoğrafınızı standart koşullarda analiz eder ve nötr alt tonları özellikle belirleyebilir; çoğu zaman manuel testlerin yapamadığı şekilde sıcak-soğuk oranını ayrıştırır.
+[aicoloranalysis.io](/personal-color-analysis) gibi araçlar tüm fotoğrafınıza bakar ve nötr alt tonu işaret edebilir; bu faydalıdır çünkü manuel testler çoğu zaman ikili sıcak veya soğuk cevabı zorlar.
 
-Yapay zeka analizini nötr tonlu insanlar için özellikle faydalı buldum — çünkü ikili seçim dayatmaz; "hafif sıcak eğilimli nötr" veya "nötr-soğuk" gibi raporlayabilir; nötrlerin ihtiyaç duyduğu nüanslı cevap tam da budur.
+Yapay zeka analizi nötr tonlu insanlar için kullanışlıdır — ikili seçimle sınırlı değildir. İyi bir sonuç renklendirmenizi hafif sıcak veya hafif soğuk eğilimli olarak tanımlayabilir; nötrlerin ihtiyaç duyduğu nüans tam olarak budur. Bu rehberdeki diğer yöntemlerle karşılaştırın.
 
 ---
 

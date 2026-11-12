@@ -11,7 +11,7 @@ faq:
   - q: "Une peau olive peut-elle être Printemps ou une saison vive ?"
     a: "C’est rare. L’olive ajoute un voile gris-vert qui contredit la clarté exigée par les palettes Printemps et Vives. Si vous êtes olive et typée Printemps, vous êtes peut-être olive chaude plus claire — Automne Doux convient souvent mieux."
   - q: "Pourquoi les quiz en ligne se trompent-ils sur la peau olive ?"
-    a: "La plupart ne voient que chaud, froid ou neutre. L’olive est un modificateur vert-gris au-dessus du sous-ton de base ; les réponses s’annulent et vous obtenez Neutre, Hiver Vrai ou Printemps au hasard. L’analyse colorimétrique par IA sur photo peut mesurer ce voile vert directement."
+    a: "La plupart ne voient que chaud, froid ou neutre. L’olive est un modificateur vert-gris au-dessus du sous-ton de base ; les réponses s’annulent et vous obtenez Neutre, Hiver Vrai ou Printemps au hasard. L’analyse colorimétrique par IA sur photo peut rechercher ce voile vert directement ; il s'agit d'un jugement visuel sur une seule photo, confirmez-le donc avec un drapé."
 ---
 
 ## « Quelle saison suis-je ? » — le dilemme de la peau olive
@@ -220,9 +220,9 @@ Le groupe gagnant éclaircit les cernes, clarifie la peau et rosit les lèvres n
 
 Testez un rouge à lèvres et un blush de chaque saison candidate le même jour. Les vêtements mentent sous la lumière magasin ; le maquillage sur votre visage tranche souvent.
 
-### Étape 6 : Confirmer par analyse objective (optionnel)
+### Étape 6 : Obtenir un second avis avec une analyse IA (optionnel)
 
-Les tests maison aident, mais l’olive est là où l’œil humain glisse le plus. L’[analyse colorimétrique par IA](/fr/color-analysis) lit le modificateur vert-gris sur photo et mappe vos valeurs aux palettes saisonnières — utile entre Automne Doux et Été Doux ou entre Automne Profond et Hiver Profond.
+Les tests maison aident, mais l’olive est là où l’œil humain glisse le plus. L’[analyse colorimétrique par IA](/) recherche le modificateur vert-gris sur photo et suggère une palette saisonnière — à traiter comme un second avis, utile entre Automne Doux et Été Doux ou entre Automne Profond et Hiver Profond.
 
 ---
 

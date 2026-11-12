@@ -1,6 +1,6 @@
 ---
 title: "J'ai Porté Uniquement Mes « Couleurs de Saison » Pendant 30 Jours — Voici Ce Qui S'est Passé"
-description: "Une expérience personnelle : s'habiller exclusivement avec les couleurs de ma saison pendant un mois entier. Les compliments, les surprises et les leçons inattendues sur le style personnel."
+description: "Un mois habillée uniquement avec les couleurs de ma saison : compliments, surprises et leçons inattendues, récit personnel."
 date: "2026-07-26"
 tags: ["analyse colorimétrique", "saison de couleurs", "style personnel", "conseils mode", "développement personnel"]
 image: "/images/blog/wearing-season-colors-30-days.webp"
@@ -118,7 +118,7 @@ Les chiffres racontent l'histoire, mais ils ne capturent pas le *ressenti*. Pour
 
 Si je recommençais cette expérience, voici ce que je changerais :
 
-**Commencer par une analyse professionnelle ou basée sur l'IA.** Au départ, j'avais deviné ma saison avec des quiz en ligne et je m'étais trompée (j'ai pensé être une Automne Chaud pendant deux ans). Une analyse sérieuse — via une consultante formée ou un [outil d'analyse colorimétrique par IA](https://aicoloranalysis.io) — vous évite de construire une garde-robe autour de la mauvaise palette. Obtenir des résultats précis dès le départ vaut le petit investissement.
+**Commencer par une analyse professionnelle ou basée sur l'IA.** Au départ, j'avais deviné ma saison avec des quiz en ligne et je m'étais trompée (j'ai pensé être une Automne Chaud pendant deux ans). Une analyse sérieuse — via une consultante formée ou un [outil d'analyse colorimétrique par IA](/) — vous évite de construire une garde-robe autour de la mauvaise palette. Obtenir des résultats précis dès le départ vaut le petit investissement.
 
 **Ne pas trier immédiatement.** J'ai été trop agressive en retirant les vêtements hors palette. Certaines pièces dans de « mauvaises » couleurs fonctionnent encore en bas ou en manteau, loin du visage. Gardez-les pour une période de transition.
 

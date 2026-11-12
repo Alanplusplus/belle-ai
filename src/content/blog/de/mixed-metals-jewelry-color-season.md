@@ -1,6 +1,6 @@
 ---
 title: "Gemischte Metalle: Gold und Silber zusammen tragen, ohne dass es zusammengewürfelt wirkt"
-description: "Darf man Gold und Silber wirklich kombinieren? Lernen Sie die 3 Regeln für die Metallmischung, welche Farbsaisons am leichtesten mischen können und wie Sie einen Schmuck-Auftritt mit gemischten Metallen aufbauen, der Ihren Unterton schmeichelt."
+description: "Gold und Silber kombinieren: 3 Regeln für gemischte Metalle, passende Farbsaisons und Looks, die Ihrem Unterton schmeicheln."
 date: "2026-10-27"
 tags: ["Gemischte Metalle", "Schmuck", "Farbsaison", "Unterton", "Stilguide"]
 image: "/images/blog/mixed-metals-jewelry-color-season.webp"
@@ -154,7 +154,7 @@ Mischen ist ein Werkzeug, keine Pflicht. Ziel ist, sich wie die beste Version Ih
 
 Herauszufinden, welches Metall Ihnen steht und wie weit Sie das zweite treiben können, bedeutete früher viel Schmuck unter Ladenbeleuchtung anprobieren. Heute geht es einfacher. Kürzlich habe ich mein Foto durch ein KI-Schmuck-Analyse-Werkzeug laufen lassen und war überrascht, wie klar es meine besten Metalle, Edelsteine und Ohrring-Stile erklärte — und welche Kombinationen ich in Gesichtsnähe meiden sollte.
 
-Wenn Sie es ausprobieren möchten, kann ein kostenloses Werkzeug wie [aicoloranalysis.io](https://www.aicoloranalysis.io/jewelry-analysis?utm_source=medium&utm_medium=article&utm_campaign=mixed-metals-jewelry-color-season) zeigen, welche Metalle zu Ihrem Unterton passen, bevor Sie etwas kaufen. Es ersetzt nicht den Spiegeltest — gibt Ihnen aber einen starken Ausgangspunkt. Für einen breiteren Blick, wie Metalle und Unterton zusammenspielen, erklärt [Wikipedias Überblick über Schmuckmaterialien und Legierungen](https://en.wikipedia.org/wiki/Jewellery), warum Gold, Silber und Platin so aussehen, wie sie aussehen.
+Wenn Sie es ausprobieren möchten, kann ein kostenloses Werkzeug wie [aicoloranalysis.io](/jewelry-analysis) zeigen, welche Metalle zu Ihrem Unterton passen, bevor Sie etwas kaufen. Es ersetzt nicht den Spiegeltest — gibt Ihnen aber einen starken Ausgangspunkt. Für einen breiteren Blick, wie Metalle und Unterton zusammenspielen, erklärt [Wikipedias Überblick über Schmuckmaterialien und Legierungen](https://en.wikipedia.org/wiki/Jewellery), warum Gold, Silber und Platin so aussehen, wie sie aussehen.
 
 ---
 

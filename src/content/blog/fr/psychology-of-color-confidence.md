@@ -1,6 +1,6 @@
 ---
 title: "La Psychologie des Couleurs : Pourquoi Porter Vos Meilleures Couleurs Booste la Confiance"
-description: "La science montre que porter des couleurs alignées avec votre coloration naturelle déclenche des gains de confiance mesurables. Voici ce que la recherche révèle sur la connexion couleur-confiance — et comment l'exploiter."
+description: "Porter vos meilleures couleurs booste la confiance : ce que la recherche dit sur le lien couleur-confiance et comment en profiter."
 date: "2026-08-09"
 tags: ["analyse colorimétrique", "psychologie des couleurs", "style personnel", "confiance en soi", "beauté"]
 image: "/images/blog/psychology-of-color-confidence.webp"
@@ -155,7 +155,7 @@ En portant vos meilleures couleurs régulièrement, notez :
 
 L'analyse colorimétrique professionnelle traditionnelle implique des séances de drapage en personne — précieuses mais coûteuses (150-400€+) et pas disponibles partout.
 
-Des outils d'analyse colorimétrique par IA comme [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) ont changé la donne. En utilisant la vision par ordinateur pour analyser le sous-ton, le niveau de contraste et les caractéristiques chromatiques depuis une photo, ces outils identifient votre saison en secondes — depuis n'importe où dans le monde.
+Des outils d'analyse colorimétrique par IA comme [aicoloranalysis.io](/personal-color-analysis) ont changé la donne. En utilisant la vision par ordinateur pour analyser le sous-ton, le niveau de contraste et les caractéristiques chromatiques depuis une photo, ces outils identifient votre saison en secondes — depuis n'importe où dans le monde.
 
 ---
 

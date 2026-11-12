@@ -89,9 +89,9 @@ image: "/images/blog/foundation-undertone-guide.webp"
 
 ### 5. AI 底调分析
 
-技术在这件事上已经相当成熟。AI 色彩分析工具可以在标准化条件下拍摄皮肤，从表面色、晒色、泛红和光线偏差中分离出底调。我测过几款，始终比专柜匹配更准——尤其对橄榄底调或让人眼困惑的中性偏色皮肤。
+技术可以在这里充当第二意见。AI 色彩分析工具会根据自拍判断底调，尽量把它与表面色、晒色、泛红区分开——但光线和相机设置仍可能改变结果。我测过几款，在橄榄底调或让人眼困惑的中性偏色皮肤上，作为交叉核对最有帮助。
 
-像 [aicoloranalysis.io](https://aicoloranalysis.io/makeup-analysis) 这样的工具，可以用自拍分析底调，并根据你的具体着色生成粉底色号推荐。
+像 [aicoloranalysis.io](/makeup-analysis) 这样的工具，可以用自拍分析底调，并根据你的着色建议粉底色号。
 
 ---
 
@@ -120,7 +120,7 @@ image: "/images/blog/foundation-undertone-guide.webp"
 
 ## 按色彩季型选粉底
 
-你的[个人色彩季型](https://aicoloranalysis.io/personal-color-analysis)对粉底底调有重要提示：
+你的[个人色彩季型](/personal-color-analysis)对粉底底调有重要提示：
 
 **春季型（浅春、真春、亮春）：**
 粉底底调：暖。选偏金、偏桃配方。春季型常氧化偏暖，专柜看起来合适时可以略选浅一号。

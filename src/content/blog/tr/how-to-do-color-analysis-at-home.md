@@ -1,6 +1,6 @@
 ---
 title: "Evde Renk Analizi Nasıl Yapılır: DIY Rehber (Stilist Gerekmez)"
-description: "Basit testlerle evde kendi renk analizinizi yapmayı öğrenin. Alt tonunuzu bulun, mevsiminizi belirleyin; profesyonel randevu olmadan en iyi renklerinizi keşfedin."
+description: "Basit testlerle evde renk analizi yapın. Alt tonunuzu bulun, mevsiminizi belirleyin; randevu olmadan en iyi renklerinizi keşfedin."
 date: "2026-07-21"
 tags: ["evde renk analizi", "DIY renk analizi", "kendi kendine renk analizi", "renklerinizi bulun", "alt ton testi"]
 image: "/images/blog/color-analysis-at-home.webp"
@@ -171,7 +171,7 @@ Farklıysa — hangi testlerinizin aydınlatma veya önyargıdan etkilenmiş ola
 
 ## Hâlâ Emin Değil misiniz? 60 Saniyede Cevabınızı Alın
 
-Yapay zekâmız profesyonelin baktığı aynı renk sinyallerini — alt ton, derinlik, kontrast ve kroma — tek bir selfieden analiz eder.
+Yapay zekâmız profesyonelin baktığı aynı renk sinyallerini — alt ton, derinlik, kontrast ve kroma — tek bir selfieden değerlendirir; kumaş denemesiyle doğrulayabileceğiniz görsel bir tahmindir.
 
 [Ücretsiz Yapay Zekâ Renk Analizine Başlayın →](/tr/try)
 

@@ -152,7 +152,7 @@ image: "/images/blog/celebrity-color-season-style-twin.webp"
 
 一旦缩小范围，看看这些明星持续穿什么颜色好看。如果她们最好的色调是温暖柔和的，你很可能属于秋季型。如果是冷调明亮的，你可能是冬季型。
 
-要得到更准确的答案，AI色彩分析可以从照片中识别你的确切季型。像[aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis)这样的工具可以分析你皮肤的底色、对比度和色彩深度，将你归入12个季型之一——为你找到明星匹配提供精确的起点。
+若想多一个第二意见，AI 色彩分析可以根据照片推断你可能的季型。像 [aicoloranalysis.io](/personal-color-analysis) 这样的工具会判断你皮肤的底色、对比度和色彩深度，将你归入 12 个季型之一——为你找明星匹配提供实用起点。
 
 ---
 

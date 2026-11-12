@@ -1,7 +1,7 @@
 ---
 title: "Guía de joyas para piel oliva: ¿oro, plata u oro rosa?"
 seoTitle: "¿Oro o plata para piel oliva? La respuesta sorprendente"
-description: "¿Ni el oro ni la plata te convencen con piel oliva? Hay una razón. Descubre qué metales armonizan con el subtono oliva y por qué el oro rosa suele ser la mejor opción."
+description: "¿Ni el oro ni la plata convencen con piel oliva? Metales que armonizan con subtono oliva y por qué el oro rosa suele ganar."
 date: "2026-09-18"
 tags: ["subtono oliva", "joyería", "accesorios", "análisis de color personal", "guía de estilo"]
 image: "/images/blog/olive-skin-jewelry-metals.webp"
@@ -210,7 +210,7 @@ Deja de tratar la piel oliva como un examen cálido-frío suspendido. Empieza co
 
 ## Encuentra tus mejores metales y colores
 
-Adivinar entre oro y plata me hizo perder tiempo y dinero. Entender mi **subtipo oliva** y mi **estación cromática** hizo que la joyería dejara de sentirse aleatoria — el mismo marco que guía ropa y maquillaje aplica aquí. Un **análisis de color con inteligencia artificial** rápido en [aicoloranalysis.io](https://aicoloranalysis.io) mapea tu subtono y estación para que metales y gemas se apoyen en tu paleta, no en prueba y error.
+Adivinar entre oro y plata me hizo perder tiempo y dinero. Entender mi **subtipo oliva** y mi **estación cromática** hizo que la joyería dejara de sentirse aleatoria — el mismo marco que guía ropa y maquillaje aplica aquí. Un **análisis de color con inteligencia artificial** rápido en [aicoloranalysis.io](/) mapea tu subtono y estación para que metales y gemas se apoyen en tu paleta, no en prueba y error.
 
 [Prueba gratis el análisis de color con IA →](/try)
 

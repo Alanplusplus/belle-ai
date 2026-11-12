@@ -1,6 +1,6 @@
 ---
 title: "How to Find the Perfect Red Lipstick for Your Skin Tone (2026 Guide)"
-description: "Stop guessing which red lipstick suits you. Learn how to match red shades to your undertone — warm, cool, or neutral — with specific shade recommendations for every skin tone."
+description: "Stop guessing your red lipstick. Match red shades to warm, cool, or neutral undertones, with specific picks for every skin tone."
 date: "2026-07-29"
 tags: ["red lipstick", "skin undertone", "makeup tips", "color analysis", "beauty"]
 image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
@@ -43,7 +43,7 @@ Hold a piece of gold and a piece of silver jewelry next to your face, one at a t
 **The White Paper Test:**
 Hold a sheet of bright white paper next to your face. If your skin looks yellowish by comparison, you're warm. If it looks pinkish or rosy, you're cool. If it looks grayish or you can't tell, you're likely neutral or olive.
 
-No single test is definitive. Use all three together for the most accurate read. And if you want a more precise answer, [AI-based color analysis tools](https://aicoloranalysis.io) can analyze your undertone from a selfie in seconds — removing the guesswork entirely.
+No single test is definitive. Use all three together for the most accurate read. And if you want a second opinion, [AI-based color analysis tools](/) can suggest your undertone from a selfie in seconds — a useful starting point, though lighting can still shift the result.
 
 ---
 
@@ -154,7 +154,7 @@ Olive undertones deserve their own mention because they're frequently misidentif
 
 Color matching used to require a trip to a trained consultant or hours of trial and error at a beauty counter. Modern AI tools have changed that equation.
 
-Apps like [Belle AI](https://aicoloranalysis.io) can photograph your face and analyze your undertone using the same color science principles professionals use — identifying whether you're warm, cool, or neutral, and even pinpointing your specific color season. Once you know your season, narrowing down the right red becomes almost effortless.
+Apps like [Belle AI](/) can look at a photo of your face and suggest your undertone using the same color cues professionals look at — whether you're warm, cool, or neutral, and a likely color season. Once you know your season, narrowing down the right red becomes almost effortless.
 
 I ran my own selfie through an AI color analysis tool and confirmed I was a Soft Summer — which explained why every coral I tried looked wrong, and why muted berry reds made me light up.
 

@@ -22,7 +22,7 @@ O sıradan laf, hayatımda yaptığım en göz açıcı grup deneyimlerinden bir
 
 ## Kurulum: Beş Arkadaş, Bir Cumartesi, Bir Uygulama
 
-Bir Cumartesi öğleden sonrasını seçtik, Jordan'ın dairesinde kahve ve hamur işleriyle toplandık ve her birimiz telefonumuzdan yapay zekâ renk analizi yaptırdık. Süreç basitti: doğal ışıkta bir selfie yükleyin, yapay zekâ ten alt tonunuzu, kontrast seviyenizi ve genel renklendirmenizi analiz ederek 12 mevsimlik sistemde mevsiminizi belirlesin.
+Bir Cumartesi öğleden sonrasını seçtik, Jordan'ın dairesinde kahve ve hamur işleriyle toplandık ve her birimiz telefonumuzdan yapay zekâ renk analizi yaptırdık. Süreç basitti: doğal ışıkta bir selfie yükleyin, yapay zekâ ten alt tonunuza, kontrast seviyenize ve genel renklendirmenize bakarak 12 mevsimlik sistemde olası bir mevsimsel renk tipi önersin.
 
 Dakikalar içinde hepimizin sonucu hazırdı:
 
@@ -132,7 +132,7 @@ Her şey yolunda gitmedi. Yolda bizi şaşırtan veya tökezleten birkaç şey o
 
 **Herkes paletini hemen sevmedi.** Mei başta Cool Winter sonucundan hayal kırıklığına uğradı çünkü Soft Autumn olmak istiyordu (toprak tonlu, boho estetiği seviyordu). Ama gerçek soğuk, berrak renklerinde — fuşya, kraliyet mavisi, zümrüt — ne kadar çarpıcı göründüğünü görünce hızla fikrini değiştirdi. Stil tercihi ile renk yakıştırması her zaman aynı değildir ve bu sorun değil.
 
-**Yapay zekâ doğruydu.** Beşimizin de kararı buydu. Sonra yapay zekâ sonuçlarımızı çevrimiçi testlerle (tamamen farklı cevaplar verdiler) ve YouTube'daki draping videolarıyla (faydalı ama kendi kendine değerlendirmek zor) karşılaştırdık. Yapay zekâ analizi en tutarlı, en hızlı ve — kumaş testimize göre — en doğru olanıydı.
+**Yapay zekâ tuttu.** Beşimizin de kararı buydu. Sonra yapay zekâ sonuçlarımızı çevrimiçi testlerle (tamamen farklı cevaplar verdiler) ve YouTube'daki draping videolarıyla (faydalı ama kendi kendine değerlendirmek zor) karşılaştırdık. Yapay zekâ analizi en tutarlı, en hızlı ve — kumaş testimize göre — en iyi eşleşen seçenekti. Bu beş kişi ve bir öğleden sonra; kontrollü bir çalışma değil.
 
 ---
 
@@ -162,7 +162,7 @@ Deneyimizden bu yana yaklaşık üç ay geçti. İşte değişenler:
 
 Renk analizine meraklıysanız ama henüz denemediyseniz bir arkadaşınızı — daha iyisi, tüm grubunuzu — yanınıza alın. Gerçekten faydalı, hemen uygulanabilir ve beklediğinizden çok daha eğlenceli nadir güzellik keşiflerinden biri.
 
-Renk mevsiminizi merak ediyor musunuz? Ücretsiz [yapay zekâ renk analizi](https://aicoloranalysis.io/personal-color-analysis) deneyin — 60 saniye ve bir selfie yeterli.
+Renk mevsiminizi merak ediyor musunuz? Ücretsiz [yapay zekâ renk analizi](/) deneyin — 60 saniye ve bir selfie yeterli.
 
 ## İlgili Makaleler
 

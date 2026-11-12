@@ -1,6 +1,6 @@
 ---
 title: "La Science Derrière l'Analyse des Couleurs Personnelles : Comment Ça Marche Vraiment"
-description: "Vous vous demandez pourquoi certaines couleurs vous mettent en valeur tandis que d'autres vous ternissent ? Découvrez la vraie science — de la physique de la lumière à la chimie de la mélanine — qui rend l'analyse colorimétrique possible."
+description: "Pourquoi certaines couleurs vous mettent en valeur ? Lumière, mélanine et ce qui rend l'analyse colorimétrique crédible."
 date: "2026-07-23"
 tags: ["analyse colorimétrique", "science des couleurs", "théorie des couleurs", "beauté", "sous-ton de peau"]
 image: "/images/blog/science-of-color-analysis.webp"
@@ -119,9 +119,9 @@ L'analyse colorimétrique traditionnelle — où une consultante tient des étof
 
 **Les trois dimensions interagissent.** Une personne peut clairement être à sous-ton froid (teinte), mais est-elle claire ou profonde ? Vive ou sourde ? Chaque dimension suivante affine le résultat parmi les 12 saisons, et se tromper sur l'une d'elles se propage à toute l'analyse.
 
-C'est là que les approches computationnelles offrent un avantage réel. Un capteur de caméra, contrairement à l'œil humain, mesure les longueurs d'onde de lumière réelles de manière constante. [L'analyse colorimétrique par IA](/fr/personal-color-analysis) peut extraire des valeurs de couleur précises des pixels de peau, cheveux et yeux, les cartographier dans l'espace tridimensionnel des couleurs et déterminer quelle saison montre l'harmonie mathématique la plus forte — sans la variabilité de la perception humaine ni la compensation de l'éclairage ambiant.
+C'est là que les approches computationnelles peuvent aider. Un capteur de caméra, contrairement à l'œil humain, ne s'adapte pas aux couleurs environnantes, mais il enregistre la couleur via la balance des blancs et le traitement, donc une photo n'est jamais une mesure pure non plus. [L'analyse colorimétrique par IA](/) utilise un modèle d'image IA pour juger la coloration de la peau, des cheveux et des yeux sur l'ensemble de la photo et suggérer la saison qui convient le mieux — un second avis reproductible, moins influencé par les couleurs que vous tenez sous le visage.
 
-Cela ne veut pas dire que la technologie est parfaite. La qualité de la photo, l'éclairage du selfie et la balance des blancs de l'appareil introduisent des variables. Mais l'avantage central — **la mesure objective et reproductible des valeurs de couleur** — corrige la plus grande faiblesse du drapage traditionnel.
+Cela ne veut pas dire que la technologie est parfaite. La qualité de la photo, l'éclairage du selfie et la balance des blancs de l'appareil introduisent des variables, et le résultat est un jugement visuel plutôt qu'une mesure de laboratoire. Mais l'avantage central — **un second avis reproductible que vous pouvez relancer sur une nouvelle photo** — aide contre la plus grande faiblesse du drapage traditionnel : à quel point le résultat dépend d'un instant, d'une pièce et d'une paire d'yeux.
 
 ## L'Enseignement Pratique : Pourquoi Cette Science Compte pour Votre Garde-Robe
 

@@ -190,7 +190,7 @@ Aquí es donde las personas con tono oliva suelen equivocarse. La solución:
 
 ## Subtonos oliva y análisis de color estacional
 
-En el sistema de análisis de color de 12 estaciones, los subtonos oliva aparecen con mayor frecuencia en:
+En el [sistema de análisis de color de 12 estaciones](/es/color-analysis), los subtonos oliva aparecen con mayor frecuencia en:
 
 - **Otoño Suave** — la colocación oliva más clásica; apagado, cálido, profundidad media
 - **Otoño Cálido** — olivas más cálidas con tonos base dorados
@@ -201,13 +201,13 @@ Es raro que las personas con tono oliva se clasifiquen en estaciones Primavera o
 
 Si has hecho un test de análisis de color y los resultados no encajaban, tu subtono oliva podría ser la razón. Los tests estándar no tienen en cuenta el modificador verde, por lo que pueden clasificarte en una estación que técnicamente coincide con tu base cálida/fría pero ignora la cualidad apagada que añade el oliva.
 
-Para resultados más precisos, el [análisis de color con IA](/es/personal-color-analysis) puede detectar subtonos oliva midiendo los valores de color reales de tu piel, incluido ese matiz gris-verde invisible para la mayoría de pruebas básicas pero claramente visible para los algoritmos de visión por computadora.
+Si aún tienes dudas, el [análisis de color con IA](/es) puede darte una segunda opinión. Un modelo de imagen con IA observa toda la foto y a veces nota el matiz gris-verde que muchas pruebas básicas pasan por alto. Es un juicio visual, no una medición, así que la luz y los ajustes de la cámara pueden cambiarlo. Tómalo como punto de partida.
 
 ---
 
 ## Confirma tu subtono con IA
 
-¿No estás segura de si eres oliva? Nuestro [análisis de color con IA gratuito](/es/color-analysis) detecta subtonos oliva midiendo el pigmento verde-gris real de tu piel — algo que los tests estándar de cálido/frío no captan.
+¿No estás segura de si eres oliva? Nuestro [análisis de color con IA gratuito](/es) puede darte una segunda opinión sobre si tu coloración se inclina al oliva, algo que los tests estándar de cálido/frío a menudo no captan.
 
 [Prueba el análisis de color con IA gratis →](/es/try)
 

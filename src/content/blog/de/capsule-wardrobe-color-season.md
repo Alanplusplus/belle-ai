@@ -178,11 +178,11 @@ Nach über einem Jahr mit meiner eigenen Capsule Wardrobe — Fallstricke, die i
 
 Der schwierigste Teil beim Aufbau einer Farbtyp-Capsule war früher, den Typ überhaupt zu finden. Traditionelles Draping mit Farbberaterin kostet 200–500 $ und erfordert Termine Wochen im Voraus.
 
-Heute bestimmen KI-Farbanalyse-Tools deinen Typ in Sekunden aus einem Selfie. Sie analysieren Hautunterton, Kontrast zwischen deinen Merkmalen und Wärme oder Kühle deiner natürlichen Färbung — dieselben Faktoren wie ein menschlicher Analyst, aber mit einem KI-Bildmodell, das dein ganzes Foto auswertet.
+Heute können KI-Farbanalyse-Tools aus einem Selfie in Sekunden eine wahrscheinliche Saison vorschlagen. Sie beurteilen Hautunterton, Kontrast zwischen deinen Merkmalen und Wärme oder Kühle deiner natürlichen Färbung — dieselben Faktoren wie ein menschlicher Analyst, aber über ein KI-Bildmodell, das dein ganzes Foto betrachtet.
 
 Hast du deinen Typ, kannst du digitale Paletten-Tools beim Online-Shopping nutzen. Manche Apps lassen dich Farben virtuell „anprobieren“ — weniger Retouren und Enttäuschung.
 
-Kostenlose Tools wie [aicoloranalysis.io](https://aicoloranalysis.io) bieten sofortige KI-Farbanalyse mit Typ und personalisierter Palette — ein starker Startpunkt für deine Capsule-Planung.
+Kostenlose Tools wie [aicoloranalysis.io](/) bieten eine sofortige KI-Farbanalyse, die eine wahrscheinliche Saison und eine personalisierte Palette vorschlägt — ein guter Ausgangspunkt für die Planung deiner Capsule Wardrobe.
 
 ---
 
@@ -193,7 +193,7 @@ Kostenlose Tools wie [aicoloranalysis.io](https://aicoloranalysis.io) bieten sof
 - Ergänze 3–5 Akzentfarben, die deine Haut strahlen lassen (30 %)
 - Jedes Muster sollte Farben aus deiner Palette enthalten
 - Baue schrittweise über 6+ Monate auf statt alles auf einmal umzukrempeln
-- Nutze KI-Farbanalyse, um deinen Typ schnell zu identifizieren und mit Zuversicht zu starten
+- Nutze KI-Farbanalyse für einen schnellen ersten Eindruck zu deiner Saison und bestätige ihn mit einem Draping-Test
 
 Eine Capsule Wardrobe nach Farbtyp ist kein starres Regelwerk, sondern ein lebendiger Rahmen: Du lernst mit der Zeit, welche Kombinationen dich am lebendigsten wirken lassen — und welche Teile du getrost ersetzen kannst, ohne an Kohärenz zu verlieren.
 

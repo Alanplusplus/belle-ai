@@ -1,6 +1,6 @@
 ---
 title: "İlkbahar Renk Paletleri Çözümlendi: Parlak İlkbahar vs Gerçek İlkbahar vs Açık İlkbahar"
-description: "Parlak İlkbahar, Gerçek İlkbahar ve Açık İlkbahar arasındaki farkı ayırt edemiyor musunuz? Bu rehber, her alt mevsimin en iyi renklerini, özelliklerini ve stil ipuçlarını detaylandırarak güvenle giyinmenize yardımcı olur."
+description: "Parlak, Gerçek ve Açık İlkbahar alt tiplerini ayırt edemiyor musunuz? Her birinin en iyi renkleri, özellikleri ve stil ipuçlarıyla güvenle giyinin."
 date: "2026-07-27"
 tags: ["kişisel renk analizi", "ilkbahar renk paleti", "renk mevsimi", "güzellik", "stil rehberi"]
 image: "/images/blog/spring-color-palettes-decoded.webp"
@@ -173,7 +173,7 @@ Yüzünüze birkaç test rengi tutun (doğal ışıkta, makyajsız):
 2. **Sıcak altın/kadife çiçeği sarısı tutun:** Cildiniz parlıyor ve gözleriniz aydınlanıyor mu? → Muhtemelen **Gerçek İlkbahar**
 3. **Yumuşak şeftali/allık pembesi tutun:** Taze ve ışıltılı mı görünüyorsunuz? → Muhtemelen **Açık İlkbahar**
 
-Daha kesin bir cevap istiyorsanız, yapay zeka renk analizi araçları artık cilt alt tonunuz, göz renginiz ve saç renginizin benzersiz kombinasyonunu detaylı analiz ederek spesifik alt mevsiminizi belirleyebilir. [aicoloranalysis.io](https://aicoloranalysis.io/tr) gibi ücretsiz araçlar hızlı bir başlangıç noktası sunabilir — doğal ışıkta net bir selfie yüklemeniz yeterli.
+İkinci bir görüş istiyorsanız, yapay zeka renk analizi araçları artık cilt alt tonunuz, göz renginiz ve saç renginizin kombinasyonuna bakarak olası alt mevsiminizi önerebilir. [aicoloranalysis.io](/) gibi ücretsiz araçlar hızlı bir başlangıç noktası sunabilir — doğal ışıkta net bir selfie yüklemeniz yeterli.
 
 ---
 

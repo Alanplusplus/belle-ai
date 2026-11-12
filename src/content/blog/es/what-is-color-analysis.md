@@ -1,6 +1,6 @@
 ---
 title: "¿Qué es el análisis de color? Guía completa para principiantes (2026)"
-description: "Descubre qué es el análisis de color, cómo funciona y por qué importa. Conoce los sistemas de 4 y 12 estaciones, encuentra tu subtono y descubre tus mejores colores con nuestra herramienta AI gratuita."
+description: "Qué es el análisis de color, cómo funciona y por qué importa: 4 y 12 estaciones, subtono y herramienta IA gratuita."
 date: "2026-07-24"
 tags: ["análisis de color", "qué es el análisis de color", "análisis de color estacional", "guía para principiantes", "teoría del color"]
 image: "/images/blog/what-is-color-analysis.webp"
@@ -96,7 +96,7 @@ Un colorista entrenado coloca telas de colores junto a tu rostro y observa cómo
 
 ### Método 2: Análisis fotográfico con IA
 
-Sube una selfie clara con luz natural y la inteligencia artificial analiza tu subtono, contraste y profundidad para determinar tu estación. Es rápido (60 segundos), gratuito o de bajo coste, y cada vez más preciso. [Prueba nuestro análisis de color con IA gratis →](/try)
+Sube una selfie clara con luz natural y la IA analiza tu subtono, contraste y profundidad para sugerir tu estación. Es rápido (unos 60 segundos) y de bajo coste, aunque sigue siendo un punto de partida, no un veredicto definitivo. [Prueba nuestro análisis de color con IA gratis →](/try)
 
 ### Método 3: Cuestionario de autoevaluación
 

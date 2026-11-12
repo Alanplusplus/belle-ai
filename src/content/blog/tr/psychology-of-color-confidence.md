@@ -1,6 +1,6 @@
 ---
 title: "Renk Psikolojisi: En İyi Renklerinizi Giymek Neden Özgüveni Artırır"
-description: "Bilim, doğal renk tonunuza uygun renkleri giymenin ölçülebilir özgüven artışı sağladığını gösteriyor. Araştırmaların renk-özgüven bağlantısı hakkında ortaya koydukları — ve bunu nasıl kullanacağınız."
+description: "Doğal renk tonunuza uygun renkler giymenin özgüveni artırdığını araştırmalar gösteriyor. Renk-özgüven bağlantısı ve bunu nasıl kullanacağınız."
 date: "2026-08-09"
 tags: ["renk analizi", "renk psikolojisi", "kişisel stil", "kendini geliştirme", "güzellik"]
 image: "/images/blog/psychology-of-color-confidence.webp"
@@ -159,7 +159,7 @@ Bu sinyaller alışkanlığı pekiştirir. Özgüven artışı kendi kendini sü
 
 Geleneksel profesyonel renk analizi, kumaş örnekleriyle yüz yüze draping seanslarını içerir — değerli, ama pahalı (150-400 $+) ve her yerde yok. Birçok kişi erişim engelleri yüzünden hiç düzgün analiz yaptıramaz.
 
-[aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) gibi yapay zekâ destekli renk analizi araçları bu denklemi değiştirdi. Bir fotoğraftan cilt alt tonu, kontrast seviyesi ve renk özelliklerini analiz etmek için bilgisayarlı görme kullanan bu araçlar, renk mevsiminizi saatler yerine saniyeler içinde — dünyanın her yerinden — belirleyebilir.
+[aicoloranalysis.io](/personal-color-analysis) gibi yapay zekâ destekli renk analizi araçları bu denklemi değiştirdi. Bir fotoğraftan cilt alt tonu, kontrast seviyesi ve renk özelliklerini analiz etmek için bilgisayarlı görme kullanan bu araçlar, renk mevsiminizi saatler yerine saniyeler içinde — dünyanın her yerinden — belirleyebilir.
 
 Demokratikleşme özgüven söylemi için önemlidir çünkü daha fazla kişi bu bilgiye erişebilir. Konum veya bütçeden bağımsız herkes en iyi renklerini keşfedebildiğinde, psikolojik faydalar da herkese açık olur.
 

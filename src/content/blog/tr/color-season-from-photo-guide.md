@@ -39,7 +39,7 @@ Yani cevabınızın kalitesi, herhangi bir analiz başlamadan önce büyük öl�
 
 Fotoğraf dördünü de yakalar, ancak her biri bozulabilir. Sıcak bir ampul sarı ekler ve sıcak bir alt ton gibi gösterebilir. Ağır düzenleme doygunluğu artırır ve canlı bir doygunluk gibi gösterebilir. Loş ışık kontrastı düzleştirir. Aşağıdaki her kuralın amacı, bu dört özelliği yüzünüzle son görüntü arasında bozulmadan korumaktır.
 
-Bu özelliklerin 12 mevsime nasıl karşılık geldiğini görmek isterseniz [renk mevsimi rehberimiz](/blog/what-color-season-am-i) hepsini tek tek anlatıyor.
+Bu özelliklerin 12 mevsime nasıl karşılık geldiğini görmek isterseniz önce [12 mevsim renk analizi rehberimize](/color-analysis) göz atın; ardından [renk mevsimi rehberimiz](/blog/what-color-season-am-i) hepsini tek tek anlatıyor.
 
 ---
 
@@ -97,7 +97,7 @@ Bronzlaşma ayrıca anılmaya değer. Yüzey renginizi bir süre koyulaştırır
 ## Adım Adım: Fotoğrafınızdan Sonuç Almak
 
 1. Yukarıdaki yedi kuralı uygulayın ve en doğal fotoğrafınızı seçin.
-2. Bir yapay zekâ renk analizi aracına yükleyin. Bizimkini [tek bir selfie ile yaklaşık bir dakikada](/try) deneyebilirsiniz; başlamak ücretsiz ve kayıt gerektirmiyor.
+2. Bir [yapay zekâ renk analizi](/) aracına yükleyin. Bizimkini [tek bir selfie ile yaklaşık bir dakikada](/try) deneyebilirsiniz; başlamak ücretsiz ve kayıt gerektirmiyor.
 3. Sonucu yalnızca bir etiket olarak değil, bir profil olarak okuyun: hangi alt ton, ne kadar derin, ne kadar yumuşak ya da canlı.
 4. Paleti kaydedin ve test edin. Gün ışığında, önerilen renklerden birindeki bir üstü ve kaçınmanız söylenen bir renkteki bir üstü yüzünüze tutun ve cildinize ne olduğunu izleyin.
 
@@ -158,8 +158,6 @@ Fotoğraf hızlı, ücretsiz ya da ucuz ve tekrarlanabilir olduğu için birkaç
 - [Evde Renk Analizi Nasıl Yapılır](/blog/how-to-do-color-analysis-at-home) — Draping testleriyle adım adım DIY rehber
 - [Ben Hangi Mevsimim? Renk Mevsiminizi Bulun](/blog/what-color-season-am-i) — Dört mevsim ve 12 alt mevsim anlatımı
 - [Ücretsiz Yapay Zekâ Renk Analizi Online](/blog/free-ai-color-analysis-online) — Ücretsiz yapay zekâ renk analizi nasıl çalışır, ne beklemeli
-- [Yapay Zeka vs Profesyonel Renk Analizi](/blog/ai-vs-professional-color-analysis) — Hangi yöntem ne zaman mantıklı
-- [Yumuşak Sonbahar vs Yumuşak Yaz](/blog/soft-autumn-vs-soft-summer) — Sık karıştırılan iki mevsimi ayırın
 - [Sıcak mı Soğuk mu Tonluyum? Alt Ton Rehberi](/blog/how-to-determine-skin-undertone) — Sıcak, soğuk ya da nötr için evde basit testler
 - [Ücretsiz Renk Mevsimi Testi](/tools/color-quiz) — Fotoğraf yüklemek istemiyorsanız kısa bir test çözün
-- [Renk Analizi: Eksiksiz Rehber](/color-analysis) — En iyi renklerinizi bulmak için bilmeniz gereken her şey
+- [Renk Analizi Rehberi: Mevsiminizi ve Renklerinizi Bulun](/color-analysis) — En iyi renklerinizi bulmak için bilmeniz gereken her şey

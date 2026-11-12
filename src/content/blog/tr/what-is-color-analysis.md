@@ -1,6 +1,6 @@
 ---
 title: "Renk Analizi Nedir? Eksiksiz Başlangıç Rehberi (2026)"
-description: "Renk analizinin ne olduğunu, nasıl çalıştığını ve neden önemli olduğunu öğrenin. 4 ve 12 mevsim sistemlerini anlayın, alt tonunuzu bulun ve ücretsiz yapay zekâ aracımızla en iyi renklerinizi keşfedin."
+description: "Renk analizi ne işe yarar, nasıl çalışır? 4 ve 12 mevsim sistemleri, alt tonunuz ve ücretsiz yapay zekâ aracıyla en iyi renklerinizi keşfedin."
 date: "2026-07-24"
 tags: ["renk analizi", "renk analizi nedir", "mevsimsel renk analizi", "başlangıç rehberi", "renk teorisi"]
 image: "/images/blog/what-is-color-analysis.webp"

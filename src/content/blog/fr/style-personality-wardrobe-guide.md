@@ -1,6 +1,6 @@
 ---
 title: "Comment utiliser votre personnalité de style pour créer une garde-robe qui fonctionne vraiment"
-description: "Apprenez à construire une garde-robe basée sur votre personnalité de style, pas sur les tendances. Des pièces essentielles aux filtres d'achat, ce guide transforme votre Style DNA en dressing qui vous ressemble enfin."
+description: "Garde-robe selon votre personnalité de style, pas les tendances : essentiels, filtres d'achat et dressing qui vous ressemble."
 date: "2026-09-19"
 tags: ["personnalité de style", "construction de garde-robe", "style personnel", "garde-robe capsule", "conseils mode"]
 image: "/images/blog/style-personality-wardrobe-guide.webp"
@@ -24,7 +24,7 @@ Voyez les choses ainsi : la saison de couleur est votre palette. La personnalit�
 
 Deux femmes Soft Summer peuvent paraître totalement différentes. L'une brille dans des tissus romantiques et drapés, des ondulations douces et des bijoux délicats. L'autre est plus à l'aise dans des tenues structurées et minimalistes, cheveux lisses et lignes épurées. Mêmes couleurs. Expression différente.
 
-Si vous n'avez pas encore identifié votre personnalité de style, commencez par notre guide des [8 types de personnalité de style](https://aicoloranalysis.io/style-personality), ou faites une analyse rapide pour découvrir votre Style DNA. Une fois votre archétype connu (la plupart d'entre nous sont un mélange de deux types), tout ce qui suit devient actionnable.
+Si vous n'avez pas encore identifié votre personnalité de style, commencez par notre guide des [8 types de personnalité de style](/style-personality), ou faites une analyse rapide pour découvrir votre Style DNA. Une fois votre archétype connu (la plupart d'entre nous sont un mélange de deux types), tout ce qui suit devient actionnable.
 
 ---
 
@@ -185,7 +185,7 @@ Le résultat ? Une garde-robe où chaque pièce est intentionnelle, tout s'assoc
 
 L'approche traditionnelle pour identifier sa personnalité de style impliquait de réserver des séances avec des consultants en image — coûteux, chronophages, et souvent basés sur l'opinion subjective.
 
-Aujourd'hui, les [outils d'analyse de personnalité de style](https://aicoloranalysis.io/style-personality) peuvent évaluer votre géométrie faciale, proportions et coloration pour déterminer votre archétype à partir d'un selfie. Les mêmes principes de vision par ordinateur qui alimentent l'analyse de saison de couleur s'étendent désormais au Style DNA — un point de départ informé par les données plutôt que des suppositions basées sur Pinterest.
+Aujourd'hui, les [outils d'analyse de personnalité de style](/style-personality) peuvent évaluer votre géométrie faciale, proportions et coloration pour déterminer votre archétype à partir d'un selfie. Les mêmes principes de vision par ordinateur qui alimentent l'analyse de saison de couleur s'étendent désormais au Style DNA — un point de départ informé par les données plutôt que des suppositions basées sur Pinterest.
 
 Cela dit, la technologie est un point de départ, pas un remplacement de l'intuition. Utilisez vos résultats comme cadre, puis affinez selon ce que vous attrapez réellement et portez avec confiance. La meilleure garde-robe combine insight systématique et vérité personnelle.
 

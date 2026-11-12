@@ -1,6 +1,6 @@
 ---
 title: "Warum Ihre Foundation nie passt: Ein Unterton-Tiefeneinstieg"
-description: "Müde von Foundation, die einfach nicht stimmt? Das Problem ist nicht die Farbtiefe — sondern der Unterton. Erfahren Sie, wie warme, kühle, neutrale und olivfarbene Untertöne das Matching beeinflussen, plus 5 Tests im Handel, die wirklich funktionieren."
+description: "Foundation passt nicht? Oft liegt es am Unterton. Warm, kühl, neutral, oliv – plus fünf Handelstests, die beim Matching helfen."
 date: "2026-08-25"
 tags: ["Hautunterton", "Foundation", "Make-up", "Schönheit", "Farbanalyse"]
 image: "/images/blog/foundation-undertone-guide.webp"
@@ -89,9 +89,9 @@ Betrachten Sie den Gesamthautton Ihres inneren Handgelenks in natürlichem Licht
 
 ### 5. KI-gestützte Unterton-Analyse
 
-Die Technologie ist bemerkenswert gut geworden. KI-Farbanalyse-Tools können Ihre Haut unter standardisierten Bedingungen fotografieren und den Unterton von Oberflächenfarbe, Bräune, Rötung und Beleuchtungsverzerrung isolieren. Ich habe mehrere getestet, und sie übertreffen das Matching im Handel konstant — besonders bei schwierigen Fällen wie olivfarbenen Untertönen oder neutral tendierender Haut, die menschliche Augen verwirrt.
+Technologie kann hier als Zweitmeinung helfen. KI-Farbanalyse-Tools beurteilen den Unterton aus einem Selfie und versuchen, ihn von Oberflächenfarbe, Bräune und Rötung zu trennen — obwohl Licht und Kameraeinstellungen das Ergebnis noch beeinflussen können. Ich habe mehrere getestet, und sie waren vor allem als Gegenprobe bei schwierigen Fällen wie olivfarbenen Untertönen oder neutral tendierender Haut hilfreich, die menschliche Augen verwirrt.
 
-Tools wie [aicoloranalysis.io](https://aicoloranalysis.io/makeup-analysis) können Ihren Unterton aus einem Selfie analysieren und Foundation-Farbtiefen-Empfehlungen generieren, die auf Ihre spezifische Färbung abgestimmt sind.
+Tools wie [aicoloranalysis.io](/makeup-analysis) können Ihren Unterton aus einem Selfie analysieren und Foundation-Farbtiefen auf Basis Ihrer Färbung vorschlagen.
 
 ---
 
@@ -120,7 +120,7 @@ Olivfarbene Untertöne betreffen etwa 20–25 % der Weltbevölkerung, doch die m
 
 ## Foundation-Matching nach Farbtyp
 
-Ihre [persönliche Farbsaison](https://aicoloranalysis.io/personal-color-analysis) gibt starke Hinweise auf Ihren Foundation-Unterton:
+Ihre [persönliche Farbsaison](/personal-color-analysis) gibt starke Hinweise auf Ihren Foundation-Unterton:
 
 **Frühlings-Farbtypen (Heller Frühling, Frühlings-Farbtyp, Klarer Frühling):**
 Foundation-Unterton: Warm. Suchen Sie nach goldenen, pfirsichfarbenen Formeln. Frühlings-Typen oxidieren oft warm, wählen Sie daher eine etwas hellere Farbtiefe als der Match im Laden vermuten lässt.

@@ -317,7 +317,7 @@ Ihren Sub-Saison-Typ zu kennen, verfeinert Ihre Palette von „generell warm“ 
 
 Die Grenze zwischen warm und kühl ist nicht immer offensichtlich — besonders wenn Sie neutral-warm sind oder Olivhaut mit warmen Untertönen haben. Raten kann zu einem Kleiderschrank voller „fast richtig“-Stücke führen.
 
-Die [KI-Farbanalyse](/de/personal-color-analysis) nimmt die Subjektivität aus der Gleichung. Durch die Analyse Ihres Fotos mit Computer Vision identifiziert sie nicht nur, ob Sie warm oder kühl sind, sondern auch Ihren präzisen 12-Saisonen-Farbtyp — und liefert eine Palette, die auf Ihre exakte Haut-, Haar- und Augenfärbung abgestimmt ist.
+Eine [KI-Farbanalyse](/) kann über die Heimtests hinaus eine Zweitmeinung liefern. Ein KI-Bildmodell betrachtet Ihr Foto und schlägt nicht nur vor, ob Sie warm oder kühl sind, sondern auch einen wahrscheinlichen 12-Saisonen-Farbtyp — als Ausgangspalette für Ihre Kombination aus Haut, Haar und Augen. Es ist eine visuelle Einschätzung; prüfen Sie sie am Spiegel.
 
 ---
 

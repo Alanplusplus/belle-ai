@@ -240,7 +240,7 @@ La base merece atención especial porque es la base sobre la que descansa todo l
 
 El error más común: combinar la base con el *rostro* en lugar del *cuello y el pecho*. El rostro puede ser más oscuro, más rojizo o más irregular que el cuerpo. Combina con la unión mandíbula/cuello para un difuminado impecable.
 
-Para precisión en el subtono, he descubierto que las herramientas de análisis de color con IA superan a mi propio ojo a la hora de identificar la diferencia sutil entre bases cálidas, frías y neutro-frías. Herramientas como el análisis gratuito en [aicoloranalysis.io](https://aicoloranalysis.io/makeup-analysis) pueden identificar tu categoría exacta de subtono a partir de una foto, eliminando las conjeturas en el mostrador de belleza.
+Para el subtono, he descubierto que las herramientas de análisis de color con IA pueden ser una segunda opinión útil cuando dudas si eres cálida, fría o neutro-fría, y a veces detectan un patrón que mi propio ojo pasa por alto, aunque la luz y la cámara pueden cambiar el resultado. Herramientas como el análisis gratuito en [aicoloranalysis.io](/makeup-analysis) pueden sugerir una categoría de subtono a partir de una foto, lo que te da un mejor punto de partida en el mostrador de belleza.
 
 ---
 

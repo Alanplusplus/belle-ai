@@ -1,6 +1,6 @@
 ---
 title: "Bana Hangi Renkler Yakışır? Yapay Zeka Kıyafet Renk Eşleştirmesi"
-description: "Bazı kıyafet renklerinin sizi parlatırken diğerlerinin teninizi soldurmasının nedenini merak ettiniz mi? Yapay zeka kıyafet renk analizinin nasıl çalıştığını öğrenin ve en flattering gardırop renklerinizi saniyeler içinde bulun."
+description: "Bazı renkler sizi parlatır, diğerleri soldurur. Yapay zeka kıyafet renk analizi size en yakışan tonları bulmada başlangıç noktası sunar."
 date: "2026-07-30"
 tags: ["kişisel renk analizi", "kıyafet renkleri", "gardırop", "yapay zeka güzellik", "stil rehberi"]
 image: "/images/blog/ai-outfit-color-matching.webp"

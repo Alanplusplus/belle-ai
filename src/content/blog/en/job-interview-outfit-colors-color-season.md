@@ -1,6 +1,6 @@
 ---
 title: "What to Wear to a Job Interview Based on Your Color Season"
-description: "Navy isn't automatically the safe choice. Discover the best job interview outfit colors for all 12 color seasons — plus which 'professional' shades quietly work against you."
+description: "Navy isn't always the safe interview pick. Best outfit colors for all 12 color seasons, plus professional shades that quietly work against you."
 date: "2026-10-21"
 tags: ["job interview outfit", "color season", "color analysis", "career style", "occasion styling"]
 image: "/images/blog/job-interview-outfit-colors-color-season.webp"
@@ -138,7 +138,7 @@ None of these are banned. They just need the right placement, the right shade, o
 
 ## The Modern Approach: Test Colors Before You Buy
 
-Finding your season used to mean a professional draping session. Today, AI can analyze a photo and tell you which shades flatter your undertone and which wash you out. When I was preparing for a career change, I ran a photo through an AI color analysis tool and had a list of base, face, and accent colors in under a minute. Free tools like [aicoloranalysis.io](https://www.aicoloranalysis.io/outfit-color-analysis?utm_source=medium&utm_medium=article&utm_campaign=job-interview-outfit-colors-color-season) can show which clothing colors brighten your complexion before you spend money on a new blazer.
+Finding your season used to mean a professional draping session. Today, AI can analyze a photo and tell you which shades flatter your undertone and which wash you out. When I was preparing for a career change, I ran a photo through an AI color analysis tool and had a list of base, face, and accent colors in under a minute. Free tools like [aicoloranalysis.io](/outfit-color-analysis) can show which clothing colors brighten your complexion before you spend money on a new blazer.
 
 It doesn't replace trying clothes on, but it narrows the field so you're not guessing in a fitting room. And if you want a deeper look at how professional advice compares, [The Muse's guide to interview attire](https://www.themuse.com/advice/what-to-wear-to-an-interview) covers fit, fabric, and dress codes that complement everything above.
 

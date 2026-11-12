@@ -141,7 +141,7 @@ image: "/images/blog/color-analysis-makeup-beginners.webp"
 
 这套方法最难的一步是第一步：知道自己的季型。把布料披在肩上，对着镜子比对确实可行，但很容易判断失误，尤其是在光线不好的情况下。
 
-这正是 AI 工具真正派上用场的地方。在自然光下上传一张素颜自拍，一款好的分析工具就能读取你的底调、深浅和饱和度，再把它们转化为彩妆色号。我在一次大型彩妆采购前试过像 [aicoloranalysis.io](https://www.aicoloranalysis.io/makeup-analysis?utm_source=medium&utm_medium=article&utm_campaign=color-analysis-makeup-beginners) 这样的免费工具，它给了我一份清晰的粉底、唇色和腮红色系清单。它不能取代对着镜子的实际测试，但让我少走了好几次弯路。
+这正是 AI 工具真正派上用场的地方。在自然光下上传一张素颜自拍，一款好的分析工具就能读取你的底调、深浅和饱和度，再把它们转化为彩妆色号。我在一次大型彩妆采购前试过像 [aicoloranalysis.io](/makeup-analysis) 这样的免费工具，它给了我一份清晰的粉底、唇色和腮红色系清单。它不能取代对着镜子的实际测试，但让我少走了好几次弯路。
 
 如果你想更全面地了解这一切，又不想被术语绕晕，这里有一份面向新手的[新手色彩分析入门指南](/zh/color-analysis-for/beginners)，一步一步讲解基础知识。
 

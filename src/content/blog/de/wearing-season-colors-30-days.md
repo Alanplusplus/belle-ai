@@ -1,6 +1,6 @@
 ---
 title: "30 Tage Nur Meine Farbtyp-Farben Getragen — Das Ist Passiert"
-description: "Ein persönliches Experiment: einen ganzen Monat lang ausschließlich in der Farbpalette meines Farbtyps angezogen. Die Komplimente, die Überraschungen und unerwartete Erkenntnisse über persönlichen Stil."
+description: "30 Tage nur Farbtyp-Farben getragen: Komplimente, Überraschungen und Erkenntnisse aus einem Monat Experiment mit meiner Palette."
 date: "2026-07-26"
 tags: ["Farbanalyse", "Farbtyp", "persönlicher Stil", "Mode-Tipps", "Selbstverbesserung"]
 image: "/images/blog/wearing-season-colors-30-days.webp"
@@ -118,7 +118,7 @@ Die Zahlen erzählen die Geschichte, aber sie erfassen nicht das *Gefühl*. Zum 
 
 Wenn ich das Experiment nochmal starten würde, würde ich Folgendes ändern:
 
-**Mit einer professionellen oder KI-basierten Analyse beginnen.** Anfangs habe ich meinen Farbtyp mit Online-Quizzen erraten und lag falsch (zwei Jahre lang dachte ich, ich sei Warm Autumn). Eine richtige Analyse — ob durch eine ausgebildete Beraterin oder ein [KI-Farbanalyse-Tool](https://aicoloranalysis.io) — erspart dir, eine Garderobe um die falsche Palette herum aufzubauen. Genaue Ergebnisse von Anfang an sind die kleine Investition wert.
+**Mit einer professionellen oder KI-basierten Analyse beginnen.** Anfangs habe ich meinen Farbtyp mit Online-Quizzen erraten und lag falsch (zwei Jahre lang dachte ich, ich sei Warm Autumn). Eine richtige Analyse — ob durch eine ausgebildete Beraterin oder ein [KI-Farbanalyse-Tool](/) — erspart dir, eine Garderobe um die falsche Palette herum aufzubauen. Genaue Ergebnisse von Anfang an sind die kleine Investition wert.
 
 **Nicht sofort aussortieren.** Ich war zu aggressiv beim Entfernen von Off-Palette-Kleidung. Manche Stücke in „falschen" Farben funktionieren noch als Hosen oder Oberbekleidung, wenn sie weit vom Gesicht entfernt sind. Behalte sie für eine Übergangszeit.
 

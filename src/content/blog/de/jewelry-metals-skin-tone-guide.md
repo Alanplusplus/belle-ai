@@ -1,6 +1,6 @@
 ---
 title: "Gold, Silber oder Roségold? Schmuck passend zu Ihrem Hautton wählen"
-description: "Unsicher, welches Metall zu Ihrer Haut passt? Erfahren Sie, wie Ihr Unterton bestimmt, ob Gold, Silber, Roségold oder Platin Ihnen am besten steht — plus Edelstein- und Ohrring-Empfehlungen."
+description: "Gold, Silber oder Roségold? Wie Ihr Unterton entscheidet, welches Metall steht – plus Edelstein- und Ohrring-Empfehlungen."
 date: "2026-07-27"
 tags: ["Schmuck", "Hautton", "Unterton", "Accessoires", "Stilguide"]
 image: "/images/blog/jewelry-metals-skin-tone-guide.webp"

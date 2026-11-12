@@ -1,6 +1,6 @@
 ---
 title: "Soft Autumn vs Soft Summer: Die am häufigsten verwechselten Farbsaisons"
-description: "Schwer zu unterscheiden zwischen Soft Autumn und Soft Summer? Erfahre die wichtigsten Unterschiede bei Unterton, besten Farben und Make-up — und wie du endlich herausfindest, welcher gedämpfte Typ du wirklich bist."
+description: "Soft Autumn vs. Soft Summer: Unterschiede bei Unterton, Farben und Make-up – so findest du heraus, welcher gedämpfte Typ du bist."
 date: "2026-08-10"
 tags: ["Farbanalyse", "Soft Autumn", "Soft Summer", "Farbsaison", "Beauty"]
 image: "/images/blog/soft-autumn-vs-soft-summer.webp"
@@ -177,7 +177,7 @@ Wenn beide Paletten für dich einigermaßen funktionieren, mein Tipp: Konzentrie
 
 Den eigenen Unterton zu bestimmen kann wirklich schwer sein — besonders bei gedämpften Saisons, wo Wärme oder Kühle subtil sind. Hier ist KI-gestützte Farbanalyse überraschend hilfreich geworden.
 
-Moderne Tools analysieren den genauen Unterton deiner Haut anhand von Fotodaten — und berücksichtigen Faktoren wie Lichtverhältnisse und Kontrastlevel, die das menschliche Auge täuschen können. Wenn du zwischen Soft Autumn und Soft Summer feststeckst, kann ein [KI-Farbanalyse-Tool](https://aicoloranalysis.io/personal-color-analysis) einen objektiven Ausgangspunkt liefern. Besonders hilfreich finde ich es für Menschen mit neutralem Unterton, die wirklich nicht erkennen können, in welche Richtung sie tendieren.
+Moderne Tools können den Unterton deiner Haut an einem Foto beurteilen — unter anderem anhand von Kontrastniveau und anderen Hinweisen, die das menschliche Auge täuschen können, obwohl Licht und Kameraeinstellungen das Ergebnis noch beeinflussen können. Wenn du zwischen Soft Autumn und Soft Summer feststeckst, kann ein [KI-Farbanalyse-Tool](/) eine Zweitmeinung liefern. Besonders hilfreich finde ich es für Menschen mit neutralem Unterton, die wirklich nicht erkennen können, in welche Richtung sie tendieren.
 
 ---
 

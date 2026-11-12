@@ -1,6 +1,6 @@
 ---
 title: "Pourquoi votre fond de teint ne correspond jamais : plongée dans les sous-tons"
-description: "Fatiguée d'un fond de teint qui ne va pas ? Le problème n'est pas la teinte — c'est le sous-ton. Découvrez comment les sous-tons chaud, froid, neutre et olive influencent la correspondance, plus 5 tests en magasin qui fonctionnent vraiment."
+description: "Fond de teint qui ne va pas ? Souvent c'est le sous-ton. Chaud, froid, neutre, olive : correspondance et 5 tests en magasin."
 date: "2026-08-25"
 tags: ["sous-ton de peau", "fond de teint", "maquillage", "beauté", "analyse de couleur"]
 image: "/images/blog/foundation-undertone-guide.webp"
@@ -89,9 +89,9 @@ Observez le ton général de la peau de votre poignet intérieur en lumière nat
 
 ### 5. Analyse du sous-ton par IA
 
-La technologie s'est considérablement améliorée. Les outils d'analyse colorimétrique par IA peuvent photographier votre peau dans des conditions standardisées et isoler le sous-ton de la couleur de surface, du bronzage, des rougeurs et des biais d'éclairage. J'en ai testé plusieurs, et ils surpassent systématiquement le matching en magasin — particulièrement pour les cas délicats comme les sous-tons olive ou les peaux neutres qui trompent l'œil humain.
+La technologie peut aider ici comme second avis. Les outils d'analyse colorimétrique par IA jugent votre sous-ton à partir d'un selfie, en essayant de le distinguer de la couleur de surface, du bronzage et des rougeurs, bien que la lumière et les réglages de l'appareil puissent encore faire varier le résultat. J'en ai testé plusieurs, et ils m'ont surtout été utiles pour recouper les cas délicats comme les sous-tons olive ou les peaux neutres qui trompent l'œil humain.
 
-Des outils comme [aicoloranalysis.io](https://aicoloranalysis.io/makeup-analysis) peuvent analyser votre sous-ton à partir d'un selfie et générer des recommandations de teintes de fond de teint calibrées à votre coloration.
+Des outils comme [aicoloranalysis.io](/makeup-analysis) peuvent analyser votre sous-ton à partir d'un selfie et suggérer des teintes de fond de teint adaptées à votre coloration.
 
 ---
 
@@ -120,7 +120,7 @@ Le sous-ton olive touche environ 20 à 25 % de la population mondiale, pourtant 
 
 ## Correspondance de fond de teint par type saisonnier
 
-Votre [saison colorimétrique personnelle](https://aicoloranalysis.io/personal-color-analysis) donne de fortes indications sur le sous-ton de votre fond de teint :
+Votre [saison colorimétrique personnelle](/personal-color-analysis) donne de fortes indications sur le sous-ton de votre fond de teint :
 
 **Saisons Printemps (Printemps Clair, Printemps Vrai, Printemps Vif) :**
 Sous-ton de fond de teint : Chaud. Privilégiez les formules dorées et pêche. Les Printemps s'oxydent souvent vers le chaud, choisissez donc une teinte légèrement plus claire que ce que le match en magasin laisse paraître.

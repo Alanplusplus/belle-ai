@@ -184,7 +184,7 @@ Your coloring is deep and high-contrast. Bold, cool-leaning colors work:
 
 ## A Modern Shortcut: AI Color Analysis
 
-If you're not sure whether you're warm olive or cool olive — or which season you fall into — AI-powered color analysis tools can now identify your undertone from a single photo. This takes the guesswork out of choosing a season and gives you a data-backed starting point for hair color decisions. I've found it especially helpful for olive skin, where the green cast is easy to miss in a mirror but clearly visible to an algorithm analyzing pixel-level color data.
+If you're not sure whether you're warm olive or cool olive — or which season you fall into — AI-powered color analysis tools can now suggest your undertone from a single photo. This gives you a starting point for choosing a season and for hair color decisions. I've found it especially helpful for olive skin, where the green cast is easy to miss in a mirror, and an AI image model looking at the whole photo can sometimes pick it up, though lighting and camera settings still affect the result.
 
 ---
 
@@ -200,7 +200,7 @@ The right hair color can transform how your olive skin looks in every lighting c
 
 ## Find Your Best Hair Color
 
-Not sure whether you're warm olive or cool olive? Our free AI color analysis identifies your exact undertone and seasonal type — the first step to choosing hair colors that truly flatter.
+Not sure whether you're warm olive or cool olive? Our free AI color analysis suggests your undertone and seasonal type — a good first step toward choosing hair colors that truly flatter.
 
 [Try Free Color Analysis →](/try)
 

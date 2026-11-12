@@ -219,9 +219,9 @@ El oro puede funcionar para Soft Summer en su forma más apagada y rosada, pero 
 
 ## El Atajo Tecnológico
 
-Identificar tu subestación solía requerir una sesión profesional de draping de dos horas con docenas de telas de colores contra tu rostro. Hoy, las herramientas de análisis de color con IA pueden analizar tu tono de piel, color de ojos y cabello para determinar tu subestación exacta en menos de un minuto.
+Identificar tu subestación solía requerir una sesión profesional de draping de dos horas con docenas de telas de colores contra tu rostro. Hoy, las herramientas de análisis de color con IA pueden observar tu tono de piel, color de ojos y cabello y sugerir una subestación probable en menos de un minuto.
 
-Herramientas como [AI color analysis](https://aicoloranalysis.io) usan visión artificial para medir las mismas señales de subtono y contraste que evalúan los coloristas profesionales — accesible para cualquiera con un smartphone y luz natural.
+Herramientas como [AI color analysis](/) usan un modelo de imagen con IA para valorar las mismas señales de subtono y contraste que miran los coloristas profesionales. El resultado es un juicio visual, no una medición, así que tómalo como punto de partida. Lo que cambia es el acceso: cualquiera con un smartphone y luz natural puede dar el primer paso.
 
 ---
 
@@ -233,9 +233,9 @@ Herramientas como [AI color analysis](https://aicoloranalysis.io) usan visión a
 - Todos los Veranos comparten subtonos fríos y cualidades apagadas — la diferencia es el grado.
 - En caso de duda, prueba el test de saturación: tu subestación se revela por cuánta intensidad de color puede soportar tu piel.
 
-## Encuentra Tu Subestación Verano Exacta
+## Encuentra Tu Subestación Verano
 
-¿Sigues sin saber cuál eres? Nuestro [análisis de color con IA gratuito](/es/color-analysis) identifica tu subestación exacta desde un selfie — 60 segundos, sin registro.
+¿Sigues sin saber cuál eres? Nuestro [análisis de color con IA gratuito](/) puede sugerir tu subestación probable desde un selfie — unos 60 segundos, sin registro para la vista previa.
 
 [Prueba el análisis de color con IA gratis →](/es/try)
 

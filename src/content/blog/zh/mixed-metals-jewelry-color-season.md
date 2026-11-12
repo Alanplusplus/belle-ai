@@ -154,7 +154,7 @@ image: "/images/blog/mixed-metals-jewelry-color-season.webp"
 
 弄清哪种金属最衬你、第二种能推多远，过去要在店灯下一试再试。现在有更省事的路。我最近把照片丢进一款人工智能珠宝分析工具，惊讶于它多清楚地说明了我最适合的金属、宝石和耳环款式，以及脸旁应避开的组合。
 
-若你也想试，像 [aicoloranalysis.io](https://www.aicoloranalysis.io/jewelry-analysis?utm_source=medium&utm_medium=article&utm_campaign=mixed-metals-jewelry-color-season) 这样的免费工具，可以在购买前展示哪些金属贴合你的底色。它替代不了镜子测试，但能给你一个扎实的起点。若想更全面地了解金属与底色的关系，[维基百科关于珠宝材料与合金的概述](https://en.wikipedia.org/wiki/Jewellery)解释了黄金、白银和铂金为何呈现各自观感。
+若你也想试，像 [aicoloranalysis.io](/jewelry-analysis) 这样的免费工具，可以在购买前展示哪些金属贴合你的底色。它替代不了镜子测试，但能给你一个扎实的起点。若想更全面地了解金属与底色的关系，[维基百科关于珠宝材料与合金的概述](https://en.wikipedia.org/wiki/Jewellery)解释了黄金、白银和铂金为何呈现各自观感。
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "La Psicología del Color: Por Qué Vestir Tus Mejores Colores Aumenta la Confianza"
-description: "La ciencia demuestra que vestir colores alineados con tu coloración natural genera ganancias medibles de confianza. Esto es lo que la investigación revela sobre la conexión color-confianza — y cómo aprovecharla."
+description: "Vestir colores alineados con tu coloración puede aumentar la confianza. Lo que la investigación dice sobre color y autoestima."
 date: "2026-08-09"
 tags: ["análisis de color", "psicología del color", "estilo personal", "autoestima", "belleza"]
 image: "/images/blog/psychology-of-color-confidence.webp"
@@ -159,7 +159,7 @@ Estas señales refuerzan el hábito. El impulso de confianza se vuelve autosuste
 
 El análisis de color profesional tradicional implica sesiones de drapeado presenciales con muestras de tela — valioso, pero costoso ($150-400+) y no disponible en todas partes. Muchas personas nunca se analizan correctamente simplemente por barreras de acceso.
 
-Herramientas de análisis de color impulsadas por IA como [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) han cambiado esta ecuación. Usando visión por computadora para analizar el subtono de piel, nivel de contraste y características de color desde una foto, estas herramientas pueden identificar tu estación de color en segundos en lugar de horas — y desde cualquier lugar del mundo.
+Herramientas de análisis de color impulsadas por IA como [aicoloranalysis.io](/personal-color-analysis) han cambiado esta ecuación. Usando visión por computadora para analizar el subtono de piel, nivel de contraste y características de color desde una foto, estas herramientas pueden identificar tu estación de color en segundos en lugar de horas — y desde cualquier lugar del mundo.
 
 La democratización importa para la conversación de confianza porque significa que más personas pueden acceder a esta información. Cuando todos pueden descubrir sus mejores colores sin importar ubicación o presupuesto, los beneficios psicológicos también están disponibles para todos.
 

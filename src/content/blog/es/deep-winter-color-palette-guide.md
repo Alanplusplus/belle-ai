@@ -1,6 +1,6 @@
 ---
 title: "Paleta de colores Invierno Profundo: tu guía de estilo completa para 2026"
-description: "Todo lo que necesitas saber sobre la estación Invierno Profundo: desde los colores característicos hasta maquillaje, construcción del armario, metales para joyas y cómo distinguir Invierno Profundo de estaciones similares."
+description: "Invierno Profundo: colores clave, maquillaje, armario y metales, y cómo distinguirla de estaciones parecidas."
 date: "2026-07-13"
 tags: ["invierno profundo", "análisis de color personal", "paleta de colores", "guía de estilo", "color estacional"]
 image: "/images/blog/deep-winter-color-palette.webp"
@@ -162,7 +162,7 @@ El análisis de color puede resultar confuso porque intervienen muchas variables
 
 Si sospechas que eres Invierno Profundo, empieza probando el principio central: **¿los colores profundos, fríos y de alto contraste hacen que tu piel se vea más clara y tus ojos más brillantes?** Si la respuesta es sí, es muy probable que estés en territorio Invierno, y la profundidad de tu coloración natural te dirá si eres Profundo, Verdadero o Brillante.
 
-Para resultados precisos sin adivinar, el [análisis de color con IA](/es/personal-color-analysis) utiliza visión por computadora para medir los valores reales de color de tu piel, pelo y ojos, ofreciéndote una clasificación objetiva de 12 estaciones basada en tu coloración única.
+Si prefieres no adivinar, el [análisis de color con IA](/) usa un modelo de imagen con IA para valorar la coloración de tu piel, cabello y ojos en una foto y sugerir un tipo de las 12 estaciones. Es un juicio visual, no una medición; úsalo como punto de partida y compruébalo con cómo se ven los colores sobre ti.
 
 ## Artículos relacionados
 

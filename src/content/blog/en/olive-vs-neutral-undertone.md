@@ -1,7 +1,7 @@
 ---
 title: "Olive vs Neutral Undertone: How to Tell the Difference"
 seoTitle: "Olive vs Neutral Undertone: 3 Differences + 4-Step Test"
-description: "Every quiz says neutral but nothing looks right? You may be olive. Compare the green cast, foundation and jewelry behavior, then confirm it with a 4-step drape test."
+description: "Quizzes say neutral but nothing looks right? You may be olive. Compare green cast, foundation and jewelry behavior, then confirm with a 4-step drape test."
 date: "2026-09-18"
 updated: "2026-11-12"
 tags: ["olive undertone", "neutral undertone", "skin undertone", "color analysis", "beauty"]
@@ -101,13 +101,13 @@ Look at your skin next to someone you know is clearly warm or clearly cool.
 
 ### Step 4: AI Analysis Confirmation
 
-Standard draping tests can still be ambiguous for borderline cases. An [AI color analysis](/personal-color-analysis) can give you a useful second opinion, because an AI image model looks at your whole photo and may pick up a green-grey cast that is easy to miss by eye. It is still a visual judgment that lighting and camera settings can shift, so use it alongside the tests above rather than instead of them.
+Standard draping tests can still be ambiguous for borderline cases. An [AI color analysis](/) can give you a useful second opinion, because an AI image model looks at your whole photo and may pick up a green-grey cast that is easy to miss by eye. It is still a visual judgment that lighting and camera settings can shift, so use it alongside the tests above rather than instead of them.
 
 ---
 
 ## Season Implications
 
-Getting your undertone right affects your seasonal color analysis placement:
+Getting your undertone right affects where you land in a [12-season color analysis](/color-analysis):
 
 ### If You're Olive (Not Neutral)
 
@@ -174,7 +174,7 @@ Not sure if you're olive or neutral? Our AI color analysis can give you a second
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Color Analysis: Find Your Season](/color-analysis) — Everything you need to know about finding your best colors
 - [Olive Undertone Guide](/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
 - [Olive vs Warm Undertone](/blog/olive-vs-warm-undertone) — Why olive skin isn't simply warm or cool
 - [How to Determine Your Skin Undertone](/blog/how-to-determine-skin-undertone) — Seven testing methods for undertone identification

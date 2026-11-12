@@ -1,6 +1,6 @@
 ---
 title: "Renk Paletinizi İlkbahardan Yaza Nasıl Geçirirsiniz (Sıfırdan Başlamadan)"
-description: "Hava değişince gardırobunuzu uyarlamakta zorlanıyor musunuz? İşte renk paletinizi sıcak İlkbahar tonlarından serin Yaz renklerine geçirmek için pratik bir rehber — elinizde olanlarla."
+description: "Hava değişince gardırop zor. Sıcak İlkbahar tonlarından serin Yaz renklerine elinizdeki parçalarla paletinizi geçirmek için pratik rehber."
 date: "2026-08-31"
 tags: ["kişisel renk analizi", "renk mevsimi", "kişisel stil", "moda ipuçları", "stil rehberi"]
 image: "/images/blog/transition-color-palette-spring-to-summer.webp"
@@ -121,7 +121,7 @@ Açık İlkbahar iseniz, sıcak aylarda çoğu Açık Yaz rengini rahatlıkla gi
 
 Sınır tipleri için zorluk *anchor renklerinizi* bulmaktır — ışık değişse de yıl boyunca size uyan 2–3 ton. Açık İlkbahar için genelde yumuşak şeftali ve sıcak fildişi. Açık Yaz için genelde toz gülü ve yumuşak mavi-gri.
 
-Sınırın hangi tarafında olduğunuzdan emin değilseniz, yapay zeka renk analizi araçları netleştirmeye yardımcı olabilir. Modern uygulamalar cildinizin alt tonunu, kontrast seviyesini ve chroma'sını analiz ederek tam alt mevsiminizi belirler — ve birçoğu paletinizde komşu mevsimlerle örtüşen belirli renkleri gösterir; sorunsuz geçiş için tam ihtiyacınız olan bilgi budur.
+Sınırın hangi tarafında olduğunuzdan emin değilseniz, yapay zeka renk analizi araçları netleştirmeye yardımcı olabilir. Modern uygulamalar cildinizin alt tonuna, kontrast seviyesine ve chroma'sına bakarak olası alt mevsiminizi önerir — ve birçoğu paletinizde komşu mevsimlerle örtüşen belirli renkleri gösterir; sorunsuz geçiş için tam ihtiyacınız olan bilgi budur.
 
 ---
 
@@ -144,7 +144,7 @@ Her geçiş aynı kalıbı izler: önce soluklaştır, sonra alt tonu kaydır, s
 - 4–6 hafta boyunca kademeli geçiş: önce soluklaştır, serin nötrler ekle, sonra Yaz vurguları tanıt
 - Makyajınız mevsimsel okumayı gardıroptan daha hızlı kaydırabilir
 - Sınır tipiyseniz (Açık İlkbahar / Açık Yaz), doğal bir avantajınız var — bunu kullanın
-- Yapay zeka renk analizi tam alt mevsiminizi belirleyebilir ve komşu mevsimlere köprüleyen renkleri gösterebilir
+- Yapay zeka renk analizi olası alt mevsiminizi önerebilir ve komşu mevsimlere köprüleyen renkleri gösterebilir
 
 En iyi giyinen insanlar mevsimsel geçişle savaşmaz — onunla birlikte gider. Ve sır şu: düşündüğünüzden çok daha az yeni parça gerekiyor. Geçişin büyük kısmı elinizde olanları *nasıl* birleştirdiğinizle olur.
 

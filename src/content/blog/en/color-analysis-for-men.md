@@ -1,6 +1,6 @@
 ---
 title: "Color Analysis for Men: Find Your Best Colors (Complete Guide)"
-description: "Personal color analysis isn't just for women. Learn how men can find their seasonal color type and use it for suits, casual wear, grooming, and professional attire."
+description: "Color analysis isn't just for women. How men find their seasonal type and use it for suits, casual wear, grooming, and professional attire."
 date: "2026-07-19"
 tags: ["color analysis for men", "men's color analysis", "men's seasonal color", "men's style", "men's fashion"]
 image: "/images/blog/color-analysis-for-men.webp"
@@ -133,7 +133,7 @@ Black is actually only ideal for Winter men. On Springs, it's overwhelming. On S
 
 ## Get Your Color Analysis
 
-Stop guessing and find your exact seasonal type. Our AI works equally well for men and women — it analyzes the same undertone and contrast signals regardless of gender.
+Stop guessing and find your seasonal type. Our AI looks at the same undertone and contrast signals for men and women, and the result is a starting point you can confirm with a drape test.
 
 [Start Free Color Analysis →](/try)
 

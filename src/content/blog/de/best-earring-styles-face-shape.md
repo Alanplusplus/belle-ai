@@ -1,6 +1,6 @@
 ---
 title: "Die besten Ohrring-Stile für jede Gesichtsform — Ein visueller Ratgeber"
-description: "Nicht jeder Ohrring passt zu jedem Gesicht. Erfahren Sie, welche Ohrring-Stile — Stecker, Creolen, Hänger, Chandelier-Ohrringe — für ovale, runde, eckige, herzförmige und längliche Gesichter am besten wirken, mit praktischen Shopping-Tipps und Styling-Tricks."
+description: "Ohrring-Stile für jede Gesichtsform: Stecker, Creolen und Hänger für oval, rund, eckig, Herz und länglich – mit Shopping-Tipps."
 date: "2026-08-14"
 tags: ["Gesichtsform", "Ohrringe", "Schmuck", "Accessoires", "Stilratgeber"]
 image: "/images/blog/best-earring-styles-face-shape.webp"
@@ -39,7 +39,7 @@ Bevor wir zu den Empfehlungen kommen, stellen wir sicher, dass Sie Ihre Gesichts
 - **Lang (Rechteck):** Gesicht ist deutlich länger als breit, Stirn/Wangenknochen/Kiefer sind ungefähr gleich breit
 - **Diamant:** Schmale Stirn und Kieferlinie, Wangenknochen sind der breiteste Punkt, Gesicht hat kantige Konturen
 
-Bei Unsicherheit zeichnen Sie die Kontur Ihres Gesichts mit einem abwaschbaren Stift auf einen Spiegel — die Form wird sofort offensichtlich. Oder nutzen Sie ein [KI-Gesichtsform-Analyse-Tool](https://aicoloranalysis.io/face-shape-analysis), das Ihre Form anhand eines Fotos erkennt und personalisierte Empfehlungen liefert.
+Bei Unsicherheit zeichnen Sie die Kontur Ihres Gesichts mit einem abwaschbaren Stift auf einen Spiegel — die Form wird sofort offensichtlich. Oder nutzen Sie ein [KI-Gesichtsform-Analyse-Tool](/face-shape-analysis), das Ihre Form anhand eines Fotos erkennt und personalisierte Empfehlungen liefert.
 
 ---
 

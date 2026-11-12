@@ -1,6 +1,6 @@
 ---
 title: "Online nach Ihrem Farbtyp Einkaufen (Ohne Fehlkäufe)"
-description: "Online-Shopping ist schwierig, wenn man Farben nicht live sehen kann. Lernen Sie praktische Strategien, um Kleidung in Ihrer Farbpalette zu kaufen — von Bildschirmkalibrierung bis zum retourensicheren Farbabgleich."
+description: "Online nach Farbtyp einkaufen: Strategien von Bildschirmkalibrierung bis retourensicherem Farbabgleich – weniger Fehlkäufe."
 date: "2026-08-23"
 tags: ["Farbanalyse", "Online-Shopping", "Farbsaison", "Mode-Tipps", "persönlicher Stil"]
 image: "/images/blog/online-shopping-color-season.webp"
@@ -140,7 +140,7 @@ Hier wird es interessant. Traditionelles Farbabgleichen erforderte, ein menschli
 
 Moderne KI-Farbanalyse-Tools können diesen Prozess abkürzen. Statt zu raten, ob ein „staubiges Mauve" zu Ihrer Soft-Summer-Palette passt, können Sie Tools nutzen, die tatsächliche Farbwerte analysieren und mit den Eigenschaften Ihres Typs vergleichen.
 
-Zum Beispiel bietet [aicoloranalysis.io](https://aicoloranalysis.io/outfit-color-analysis) eine Outfit-Farbanalyse, die bewertet, ob bestimmte Kleidungsfarben mit Ihrem Hautton harmonieren. Sie laden ein Foto hoch, auf dem Sie das Stück tragen, und es sagt Ihnen, ob die Farbe Ihre natürliche Färbung betont oder dagegen arbeitet. Es ist im Grunde der „Draping-Test", den Sie im Stylist-Büro machen würden — nur vom Wohnzimmer aus zugänglich.
+Zum Beispiel bietet [aicoloranalysis.io](/outfit-color-analysis) eine Outfit-Farbanalyse, die bewertet, ob bestimmte Kleidungsfarben mit Ihrem Hautton harmonieren. Sie laden ein Foto hoch, auf dem Sie das Stück tragen, und es sagt Ihnen, ob die Farbe Ihre natürliche Färbung betont oder dagegen arbeitet. Es ist im Grunde der „Draping-Test", den Sie im Stylist-Büro machen würden — nur vom Wohnzimmer aus zugänglich.
 
 Das ersetzt nicht, selbst Farben lesen zu lernen — aber es ist ein nützliches Verifikationstool, besonders während Sie Ihr Auge entwickeln.
 

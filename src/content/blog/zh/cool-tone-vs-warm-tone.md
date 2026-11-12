@@ -116,7 +116,7 @@ image: "/images/blog/cool-tone-vs-warm-tone.webp"
 
 若五种方法都试过仍不确定，你很可能是中性底调 — 这其实是好消息。中性底调在颜色选择上最灵活。
 
-若要更确定的答案，可以考虑 [AI 驱动的色彩分析](/zh/personal-color-analysis)。Belle AI 等应用会用计算机视觉分析皮肤中的实际色值，给出不受主观感受或光线影响的客观结果。也可以试试我们的 [免费色彩测验](/zh/tools/color-quiz) 快速估算。
+如果家庭小测试仍让你拿不准，可以试试 [AI 色彩分析](/) 当作第二意见。Belle AI 等工具会用 AI 图像模型根据照片判断你的底色。这是视觉判断，不是测量，光线、相机设置和妆容仍可能改变结果（详见[AI 色彩分析到底有多准](/ai-color-analysis-accuracy)）。也可以试试我们的 [免费色彩测验](/zh/tools/color-quiz) 快速估算。
 
 ## 常见问题
 

@@ -1,7 +1,7 @@
 ---
 title: "Palettes de Couleurs d'Automne Décodées : Automne Profond vs Automne Vrai vs Automne Doux"
 seoTitle: "Automne Profond vs Automne Vrai vs Automne Doux — Quel Automne êtes-vous ? (Comparatif)"
-description: "Vous savez que vous êtes Automne mais pas laquelle ? Comparez Automne Profond, Automne Vrai (Chaud) et Automne Doux côte à côte — différences clés, meilleures couleurs et quiz IA gratuit."
+description: "Vous êtes Automne mais laquelle ? Profond, Vrai (Chaud) et Doux comparés : différences, couleurs clés et quiz IA gratuit."
 date: "2026-08-03"
 tags: ["analyse de couleurs personnelle", "palette automne", "saison de couleurs", "beauté", "guide de style"]
 image: "/images/blog/autumn-color-palettes-decoded.webp"
@@ -229,7 +229,7 @@ L'argent est difficile pour tous les types Automne. Si vous aimez les bijoux arg
 
 Traditionnellement, identifier votre sous-saison Automne exigeait une séance de drapage professionnelle — assise en lumière naturelle pendant qu'un coloriste tient des dizaines de tissus chauds contre votre visage. Ça fonctionne, mais c'est coûteux (généralement 150-300 $) et limité aux grandes villes.
 
-Aujourd'hui, les outils d'analyse colorimétrique par IA peuvent examiner votre sous-ton, la couleur de vos yeux et la nuance de vos cheveux pour déterminer votre sous-saison exacte en moins d'une minute. Des plateformes comme [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) utilisent la vision par ordinateur pour mesurer les mêmes signaux de chaleur, profondeur et saturation qu'évaluent les analystes professionnels — rendant l'approche accessible à toute personne avec un téléphone et une fenêtre.
+Aujourd'hui, les outils d'analyse colorimétrique par IA peuvent examiner votre sous-ton, la couleur de vos yeux et la nuance de vos cheveux et suggérer une sous-saison probable en moins d'une minute. Des plateformes comme [analyse de couleurs par IA](/) s'appuient sur un modèle d'image IA pour évaluer les mêmes indices de chaleur, de profondeur et de saturation que les analystes professionnels. Il s'agit d'un jugement visuel plutôt que d'une mesure : considérez-le comme un point de départ. Ce qui change, c'est l'accès : toute personne avec un téléphone et une fenêtre peut faire le premier pas.
 
 ---
 
@@ -243,9 +243,9 @@ Aujourd'hui, les outils d'analyse colorimétrique par IA peuvent examiner votre 
 
 Comprendre votre sous-saison Automne précise transforme votre façon de shopper, de vous habiller le matin et de vous sentir en sortant. Vous n'êtes pas « juste un Automne » — vous êtes une nuance précise de chaleur, et savoir laquelle débloque une garde-robe qui vous va vraiment.
 
-## Trouvez Votre Sous-saison Automne Exacte
+## Trouvez Votre Sous-saison Automne
 
-Impossible de trancher entre les Automnes rien qu'avec les descriptions ? Notre [analyse colorimétrique IA gratuite](/fr/color-analysis) identifie votre sous-saison exacte en analysant votre peau, vos cheveux et la coloration de vos yeux.
+Impossible de trancher entre les Automnes rien qu'avec les descriptions ? Notre [analyse colorimétrique IA gratuite](/) peut suggérer votre sous-saison probable à partir de la coloration de votre peau, de vos cheveux et de vos yeux.
 
 [Essayer l'analyse colorimétrique IA gratuite →](/fr/try)
 

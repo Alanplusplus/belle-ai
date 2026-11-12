@@ -1,6 +1,6 @@
 ---
 title: "Ünlü Makyaj Eğitimleri Neden Size Asla Uymuyor (Ve Neyin Uyacağı)"
-description: "Bir ünlü makyaj eğitimini mükemmel takip ettiniz ama sonuç tamamen yanlış mı göründü? Cevap tekniğiniz değil — renk tonunuz. Ünlü görünümlerinin neden başarısız olduğunu ve SİZİN özelliklerinizi gerçekten öne çıkaran makyaj stillerini nasıl bulacağınızı öğrenin."
+description: "Ünlü makyaj eğitimini mükemmel uyguladınız ama sonuç yanlış mı? Sorun teknik değil, renk tonunuz. Size gerçekten yakışan makyajı bulmayı öğrenin."
 date: "2026-09-24"
 tags: ["ünlü stili", "makyaj", "kişisel renk analizi", "güzellik", "renk sezonu"]
 image: "/images/blog/celebrity-makeup-tutorials-what-works.webp"
@@ -173,7 +173,7 @@ Bu yöntemi Soft Autumn renk tonum için tasarlanmamış sayısız eğitimi uyar
 
 Renk sezonunuzu ve ünlü eşleşmenizi bulmak eskiden profesyonel renk analizi randevusu almak ve red carpet arşivlerini saatlerce incelemek demekti. Bugün AI araçları tek bir fotoğraftan alt ton, kontrast seviyesi ve sezonu analiz edebilir — ardından renk tonu profilinizi paylaşan ünlüleri gösterebilir.
 
-Tahmin yerine veriye dayalı bir başlangıç noktası isterseniz, [aicoloranalysis.io'daki Belle AI](https://aicoloranalysis.io) özelliklerinizi sezona uygun tonlara ve referans yüzlere eşleyen [ünlü eşleştirme](https://aicoloranalysis.io/celebrity-match) ve [makyaj analizi](https://aicoloranalysis.io/makeup-analysis) sunar. Bir ürün yanlış hissettirdiğinde aynaya güvenmenizi hâlâ öneririm — ama alt ton ve sezonunuz hakkında objektif bir okuma, ünlü eğitimlerini bu kadar sinir bozucu yapan deneme-yanılmanın çoğunu ortadan kaldırır.
+Tahmin yerine bir başlangıç noktası isterseniz, [aicoloranalysis.io'daki Belle AI](/) özelliklerinizi sezona uygun tonlara ve referans yüzlere eşleyen [ünlü eşleştirme](/celebrity-match) ve [makyaj analizi](/makeup-analysis) sunar. Bir ürün yanlış hissettirdiğinde aynaya güvenmenizi hâlâ öneririm — ama alt ton ve sezonunuz hakkında ikinci bir görüş, ünlü eğitimlerini bu kadar sinir bozucu yapan deneme-yanılmanın bir kısmını azaltabilir.
 
 Amaç yargınızı dışarıya devretmek değil. Doğru renk çerçevesine daha hızlı ulaşmak, böylece takip ettiğiniz eğitimlerin gerçekten işe yarama şansı olsun.
 
@@ -187,7 +187,7 @@ Amaç yargınızı dışarıya devretmek değil. Doğru renk çerçevesine daha 
 - Renk sezonunuz hangi renk ailelerinin, derinliklerin ve doygunlukların özelliklerinizle uyum sağladığını söyleyen tam çerçevedir
 - Sezonunuzu paylaşan ünlüleri bulun ve renk mantıklarını inceleyin — tam ürün listelerini değil
 - Renk rollerini koruyup belirli tonları değiştirerek herhangi bir eğitimi uyarlamak için renk çeviri yöntemini kullanın
-- AI renk analizi sezonunuzu ve ünlü eşleşmelerinizi hızla belirleyebilir, yanlış bir ruj daha almadan önce güvenilir bir referans noktası verir
+- Yapay zeka renk analizi sezonunuzu ve ünlü eşleşmelerinizi hızla önerebilir — yanlış bir ruj daha almadan önce aynada kontrol edebileceğiniz bir başlangıç noktası
 
 ---
 

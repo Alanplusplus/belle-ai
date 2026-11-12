@@ -219,9 +219,9 @@ Altın, en soluk gül tonlu haliyle Yumuşak Yazlar için işe yarayabilir, ama 
 
 ## Teknoloji Kısayolu
 
-Alt mevsiminizi bulmak eskiden yüzünüze tutulan düzinelerce renkli kumaşla iki saatlik profesyonel draping seansı gerektirirdi. Bugün yapay zekâ destekli renk analizi araçları cilt tonunuzu, göz renginizi ve saç tonunuzu analiz ederek tam alt mevsiminizi bir dakikadan kısa sürede belirleyebilir.
+Alt mevsiminizi bulmak eskiden yüzünüze tutulan düzinelerce renkli kumaşla iki saatlik profesyonel draping seansı gerektirirdi. Bugün yapay zekâ destekli renk analizi araçları cilt tonunuza, göz renginize ve saç tonunuza bakarak bir dakikadan kısa sürede olası bir alt mevsim önerebilir.
 
-[Yapay zekâ renk analizi](https://aicoloranalysis.io) gibi araçlar, profesyonel renk uzmanlarının değerlendirdiği aynı alt ton ve kontrast sinyallerini ölçmek için bilgisayarlı görme kullanır — akıllı telefonu ve doğal ışığı olan herkes için erişilebilir kılar.
+[Yapay zekâ renk analizi](/) gibi araçlar, profesyonel renk uzmanlarının baktığı alt ton ve kontrast ipuçlarını bir yapay zekâ görüntü modeliyle değerlendirir; sonuç ölçüm değil görsel bir yargıdır — başlangıç noktası olarak düşünün; akıllı telefonu ve doğal ışığı olan herkes ilk adımı atabilir.
 
 ---
 
@@ -233,9 +233,9 @@ Alt mevsiminizi bulmak eskiden yüzünüze tutulan düzinelerce renkli kumaşla 
 - Tüm Yazlar soğuk alt ton ve soluk nitelikleri paylaşır — fark derecededir.
 - Emin değilseniz doygunluk testini deneyin: alt mevsiminiz cildinizin taşıyabildiği renk yoğunluğuyla ortaya çıkar.
 
-## Tam Yaz Alt Mevsiminizi Bulun
+## Yaz Alt Mevsiminizi Bulun
 
-Hangi Yaz olduğunuzdan hâlâ emin değil misiniz? [Ücretsiz yapay zekâ renk analizimiz](/tr/color-analysis) bir selfieden tam alt mevsiminizi belirler — 60 saniye, kayıt yok.
+Hangi Yaz olduğunuzdan hâlâ emin değil misiniz? [Ücretsiz yapay zekâ renk analizimiz](/) bir selfieden olası alt mevsiminizi önerebilir — yaklaşık 60 saniye, önizleme için kayıt yok.
 
 [Ücretsiz Yapay Zekâ Renk Analizini Yapın →](/tr/try)
 

@@ -39,7 +39,7 @@ Ob KI-Tool oder geschultes Auge: Eine Farbsaison hängt an vier Merkmalen:
 
 Ein Foto erfasst alle vier, aber jedes kann verfälscht werden. Eine warme Glühbirne fügt Gelb hinzu und kann einen warmen Unterton vortäuschen. Starke Bearbeitung erhöht die Sättigung und kann eine leuchtende Intensität vortäuschen. Dämmriges Licht flacht den Kontrast ab. Das Ziel jeder Regel unten ist, diese vier Merkmale zwischen deinem Gesicht und dem fertigen Bild unverfälscht zu halten.
 
-Wie diese Merkmale den 12 Saisons zugeordnet werden, erklärt unser [Leitfaden zur Farbsaison](/blog/what-color-season-am-i) Schritt für Schritt.
+Wie diese Merkmale den 12 Saisons zugeordnet werden, erklärt zuerst unser [Leitfaden zur Farbanalyse mit 12 Saisons](/color-analysis); danach geht unser [Leitfaden zur Farbsaison](/blog/what-color-season-am-i) Schritt für Schritt auf jede einzelne ein.
 
 ---
 
@@ -97,7 +97,7 @@ Bräune verdient eine besondere Erwähnung. Sie dunkelt deine Oberflächenfarbe 
 ## Schritt für Schritt: So kommst du mit deinem Foto zu einem Ergebnis
 
 1. Befolge die sieben Regeln oben und such dir dein natürlichstes Foto aus.
-2. Lade es in ein KI-Tool zur Farbanalyse hoch. Unseres kannst du mit [einem einzigen Selfie in etwa einer Minute](/try) ausprobieren, kostenlos zum Start und ohne Anmeldung.
+2. Lade es in ein Tool zur [KI-Farbanalyse](/) hoch. Unseres kannst du mit [einem einzigen Selfie in etwa einer Minute](/try) ausprobieren, kostenlos zum Start und ohne Anmeldung.
 3. Lies das Ergebnis als Profil, nicht nur als Etikett: welcher Unterton, wie tief, wie gedämpft oder leuchtend.
 4. Speichere die Palette und teste sie. Halte bei Tageslicht ein Oberteil in einer der empfohlenen Farben und eins in einer Farbe, die du meiden solltest, ans Gesicht und beobachte, was mit deiner Haut passiert.
 
@@ -158,8 +158,6 @@ Ein gutes Selfie ersetzt kein Urteilsvermögen, aber es gibt dir eine saubere, w
 - [Farbanalyse zu Hause machen](/blog/how-to-do-color-analysis-at-home) — DIY-Anleitung Schritt für Schritt mit Draping-Tests
 - [Welcher Farbtyp bin ich? Finde deine Farbsaison](/blog/what-color-season-am-i) — Die vier Jahreszeiten und ihre 12 Untertypen erklärt
 - [Kostenlose KI-Farbanalyse online](/blog/free-ai-color-analysis-online) — Wie kostenlose KI-Farbanalyse funktioniert und was du erwarten kannst
-- [KI vs. professionelle Farbberatung](/blog/ai-vs-professional-color-analysis) — Wann welche Methode sinnvoll ist
-- [Soft Autumn vs Soft Summer](/blog/soft-autumn-vs-soft-summer) — Zwei häufig verwechselte Saisons auseinanderhalten
 - [Bin ich warm oder kühl getönt? Der Unterton-Ratgeber](/blog/how-to-determine-skin-undertone) — Einfache Tests für zu Hause: warm, kühl oder neutral
 - [Kostenloses Farbsaison-Quiz](/tools/color-quiz) — Mach ein kurzes Quiz, wenn du kein Foto hochladen möchtest
-- [Farbanalyse: Der komplette Leitfaden](/color-analysis) — Alles, was du wissen musst, um deine besten Farben zu finden
+- [Farbanalyse: So findest du deinen Farbtyp](/color-analysis) — Alles, was du wissen musst, um deine besten Farben zu finden

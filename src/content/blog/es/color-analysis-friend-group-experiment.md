@@ -1,6 +1,6 @@
 ---
 title: "Probé el Análisis de Color con Todo mi Grupo de Amigas — 5 Mujeres, 5 Estaciones, 5 Lecciones Sorprendentes"
-description: "¿Qué pasa cuando cinco amigas descubren juntas su estación de color? Una historia personal sobre las sorpresas, las discusiones y la locura de compras que siguió."
+description: "Cinco amigas descubren juntas su estación de color: sorpresas, debates y la locura de compras que siguió."
 date: "2026-09-20"
 tags: ["análisis de color personal", "estación de color", "estilo personal", "superación personal", "belleza"]
 image: "/images/blog/color-analysis-friend-group-experiment.webp"
@@ -22,7 +22,7 @@ Esto es lo que aprendimos, y por qué algunos resultados nos dejaron genuinament
 
 ## El Plan: Cinco Amigas, un Sábado, una App
 
-Elegimos un sábado por la tarde, nos reunimos en el apartamento de Jordan con café y pasteles, y cada una hizo un análisis de color con IA en el móvil. El proceso era sencillo: subes un selfie con luz natural, y la IA analiza tu subtono de piel, nivel de contraste y coloración general para determinar tu tipo de color estacional dentro del sistema de 12 estaciones.
+Elegimos un sábado por la tarde, nos reunimos en el apartamento de Jordan con café y pasteles, y cada una hizo un análisis de color con IA en el móvil. El proceso era sencillo: subes un selfie con luz natural, y la IA observa tu subtono de piel, nivel de contraste y coloración general para sugerir un tipo de color estacional dentro del sistema de 12 estaciones.
 
 En minutos, cada una tenía su resultado:
 
@@ -132,7 +132,7 @@ No todo fue perfecto. Algunas cosas nos sorprendieron o nos tropezaron en el cam
 
 **No a todas les encantó su paleta al principio.** Mei se decepcionó inicialmente con su resultado de Invierno Frío porque quería ser Otoño Suave (le encantaba la estética bohemia y terrosa). Pero cuando vio lo impresionante que se veía con sus colores fríos y nítidos reales — fucsia, azul real, esmeralda — cambió de opinión rápido. La preferencia de estilo y el color que favorece no siempre coinciden, y está bien.
 
-**La IA acertó.** Este fue el veredicto de las cinco. Más tarde comparamos nuestros resultados de IA con cuestionarios online (que nos dieron respuestas totalmente distintas) y con vídeos de draping en YouTube (útiles pero difíciles de autoevaluar). El análisis con IA fue el más consistente, el más rápido y — según nuestra prueba con telas — el más preciso.
+**La IA dio la talla.** Este fue el veredicto de las cinco. Más tarde comparamos nuestros resultados de IA con cuestionarios online (que nos dieron respuestas totalmente distintas) y con vídeos de draping en YouTube (útiles pero difíciles de autoevaluar). El análisis con IA fue el más consistente, el más rápido y — en nuestra prueba con telas — el que mejor encajó. Son cinco personas y una tarde, no un estudio controlado.
 
 ---
 
@@ -162,7 +162,7 @@ Han pasado unos tres meses desde nuestro experimento. Esto es lo que ha cambiado
 
 Si tenías curiosidad por el análisis de color pero aún no lo has probado, llama a una amiga — o mejor aún, a todo un grupo. Es uno de esos raros descubrimientos de belleza que son genuinamente útiles, aplicables al instante y mucho más divertidos de lo que esperas.
 
-¿Curiosa por tu estación de color? Prueba un [análisis de color con IA](https://aicoloranalysis.io/personal-color-analysis) gratis y compruébalo tú misma — 60 segundos y un selfie.
+¿Curiosa por tu estación de color? Prueba un [análisis de color con IA](/) gratis y compruébalo tú misma — 60 segundos y un selfie.
 
 ## Artículos Relacionados
 

@@ -1,6 +1,6 @@
 ---
 title: "¿Qué colores me quedan mejor? Análisis de color con IA explicado"
-description: "¿Te preguntas por qué algunos colores de ropa te hacen brillar y otros apagan tu tez? Descubre cómo funciona el análisis de color de outfits con IA y encuentra los colores más favorecedores para tu armario en segundos."
+description: "¿Algunos colores te hacen brillar y otros apagan tu tez? Análisis de outfits con IA como punto de partida para tus tonos más favorecedores."
 date: "2026-07-30"
 tags: ["análisis de color personal", "colores de outfit", "armario", "belleza con IA", "guía de estilo"]
 image: "/images/blog/ai-outfit-color-matching.webp"

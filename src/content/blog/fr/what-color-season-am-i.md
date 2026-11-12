@@ -1,6 +1,6 @@
 ---
 title: "Quelle saison suis-je ? Trouvez votre saison de couleur"
-description: "Vous vous demandez « quelle saison suis-je » ? Apprenez à déterminer si vous êtes Printemps, Été, Automne ou Hiver en analyse de couleur personnelle. Quiz gratuit et analyse IA inclus."
+description: "Quelle saison suis-je ? Repérez Printemps, Été, Automne ou Hiver, avec quiz gratuit et analyse IA comme point de départ."
 date: "2026-07-20"
 tags: ["quelle saison suis-je", "saison de couleur", "printemps été automne hiver", "type de couleur saisonnier", "quiz analyse de couleur"]
 image: "/images/blog/what-color-season-am-i.webp"
@@ -143,7 +143,7 @@ Pas sûre ? Notre quiz pose des questions ciblées sur votre coloration et vous 
 
 ## Obtenez des résultats IA instantanés
 
-Pour le résultat le plus précis, téléchargez un selfie net et laissez l'IA déterminer votre type exact parmi les 12 saisons :
+Pour un second avis rapide, téléchargez un selfie net et laissez l'IA suggérer votre type parmi les 12 saisons :
 
 [Analyse de couleur IA gratuite →](/try)
 

@@ -1,6 +1,6 @@
 ---
 title: "Makyaja Yeni Başlayanlar İçin Kişisel Renk Analizi: Bunaltmayan Bir Rehber"
-description: "Makyaja yeni mi başlıyorsunuz? Renk mevsiminizin dağınık makyaj çantanızı 5 ürünlük sade bir başlangıç setine nasıl dönüştürdüğünü keşfedin. Fondöten, allık, dudak, göz ve kaş tonlarını size gerçekten yakışan renklerle seçmenizi sağlayan yeni başlayanlar rehberi."
+description: "Makyaja yeni başlıyorsanız renk mevsiminiz 5 ürünlük sade bir sete yol gösterir. Fondöten, allık, dudak ve göz tonlarını size yakışan renklerle seçin."
 date: "2026-11-03"
 tags: ["yeni başlayanlar için makyaj", "kişisel renk analizi", "renk mevsimi", "makyaj", "güzellik"]
 image: "/images/blog/color-analysis-makeup-beginners.webp"
@@ -141,7 +141,7 @@ Bunlar benim düştüğüm tuzaklar; siz düşmeyin diye yazıyorum.
 
 Bu sistemin en zor kısmı ilk adımdır: mevsiminizi bilmek. Aynanın önünde omuzlarınıza kumaş tutmak işe yarar, ama özellikle kötü ışıkta yanılmak kolaydır.
 
-Yapay zekâ araçlarının gerçekten faydalı hâle geldiği yer burası. Doğal ışıkta çekilmiş makyajsız bir özçekim yükleyin; iyi bir analiz aracı alt tonunuzu, derinliğinizi ve doygunluğunuzu okuyup bunları makyaj tonlarına çevirir. Büyük bir makyaj alışverişinden önce [aicoloranalysis.io](https://www.aicoloranalysis.io/makeup-analysis?utm_source=medium&utm_medium=article&utm_campaign=color-analysis-makeup-beginners) gibi ücretsiz bir aracı denedim ve bana fondöten, ruj ve allık ailelerinin net bir listesini verdi. Ayna testinin yerini tutmadı, ama beni birkaç yanlış adımdan kurtardı.
+Yapay zekâ araçlarının gerçekten faydalı hâle geldiği yer burası. Doğal ışıkta çekilmiş makyajsız bir özçekim yükleyin; iyi bir analiz aracı alt tonunuzu, derinliğinizi ve doygunluğunuzu okuyup bunları makyaj tonlarına çevirir. Büyük bir makyaj alışverişinden önce [aicoloranalysis.io](/makeup-analysis) gibi ücretsiz bir aracı denedim ve bana fondöten, ruj ve allık ailelerinin net bir listesini verdi. Ayna testinin yerini tutmadı, ama beni birkaç yanlış adımdan kurtardı.
 
 Tüm bunlara daha geniş ve jargonsuz bir giriş istiyorsanız, temelleri adım adım anlatan, yeni başlayanlara yönelik bir [renk analizi başlangıç rehberi](/tr/color-analysis-for/beginners) var.
 

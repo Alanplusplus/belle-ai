@@ -1,6 +1,6 @@
 ---
 title: "Paletas de Color de Invierno Decodificadas: Invierno Profundo vs Invierno Verdadero vs Invierno Brillante"
-description: "¿Confundida sobre tu subtipo de invierno? Descubre las diferencias clave entre Deep Winter, True Winter y Bright Winter — mejores colores, consejos de estilo y cómo identificar cuál eres."
+description: "¿Confundida con tu invierno? Invierno Profundo, Verdadero y Brillante: colores, estilo y cómo saber cuál eres."
 date: "2026-08-06"
 tags: ["análisis de color personal", "paleta de invierno", "estación de color", "belleza", "guía de estilo"]
 image: "/images/blog/winter-color-palettes-decoded.webp"
@@ -225,7 +225,7 @@ El oro es generalmente un desafío para todos los tipos de Invierno. Si amas la 
 
 Tradicionalmente, identificar tu subtipo de Invierno requería una sesión profesional de draping de color — sentarse bajo iluminación controlada mientras un analista sostiene sistemáticamente telas de tonos fríos de distinta profundidad y brillo contra tu rostro. Es efectivo pero típicamente cuesta $150-400 según tu ciudad.
 
-Las herramientas de análisis de color con IA han hecho esto mucho más accesible. Plataformas como [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) analizan tu subtono de piel, nivel de contraste, color de ojos y tono de cabello para identificar tu subtipo exacto en menos de un minuto — usando las mismas señales visuales que evalúan los analistas profesionales, pero a través de un modelo de imagen con IA que interpreta toda tu foto.
+Las herramientas de análisis de color con IA han hecho esto mucho más accesible. Plataformas como [análisis de color con IA](/) analizan tu subtono de piel, nivel de contraste, color de ojos y tono de cabello para sugerir un subtipo probable en menos de un minuto — usando las mismas señales visuales que evalúan los analistas profesionales, pero a través de un modelo de imagen con IA que interpreta toda tu foto.
 
 ---
 

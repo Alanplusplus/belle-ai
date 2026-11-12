@@ -1,7 +1,7 @@
 ---
 title: "Zeytin Teni Dudak Rengi Rehberi: Zeytin Alt Tonu İçin En İyi Rujlar"
 seoTitle: "Zeytin Teni İçin En İyi Dudak Renkleri — Klasik Kırmızılar Neden Tutmaz (+ Ne İşe Yarar)"
-description: "Klasik kırmızılar soluk gösterir, ten tonları gri durur, mercan renkleri zeytin teninde tutarsız. Zeytin alt tonuna gerçekten yakışan böğürtlen, mor-pembe, tuğla kırmızısı ve sıcak ten tonlarını keşfedin."
+description: "Zeytin tende klasik kırmızılar soluk, ten tonları gri kalır. Böğürtlen, mor-pembe, tuğla kırmızısı ve sıcak ten tonlarına yakışan rujlar."
 date: "2026-09-18"
 tags: ["zeytin alt tonu", "makyaj", "dudak rengi", "güzellik ipuçları", "kişisel renk analizi"]
 image: "/images/blog/olive-skin-lip-color-guide.webp"
@@ -234,7 +234,7 @@ Dudak rengi ailenizi bilince alışveriş çok kolaylaşır — ve o «evrensel 
 
 ## En İyi Dudak Renklerinizi Bulun
 
-Hâlâ sıcak böğürtlen ile soğuk erik arasında kalıyorsanız, hızlı bir yapay zekâ renk analizi zeytin alt tipinizi netleştirip cildinizle uyumlu dudak renkleri önerebilir — herkese uyan jenerik tonlar değil.
+Hâlâ sıcak böğürtlen ile soğuk erik arasında kalıyorsanız, hızlı bir yapay zekâ renk analizi olası zeytin alt tipinizi ve cildinizle uyumlu dudak renkleri önerebilir — herkese uyan jenerik tonlar değil.
 
 [Ücretsiz Yapay Zekâ Renk Analizini Deneyin →](/try)
 

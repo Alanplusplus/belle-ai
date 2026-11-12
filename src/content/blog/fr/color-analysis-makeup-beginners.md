@@ -1,6 +1,6 @@
 ---
 title: "Analyse Colorimétrique pour Débutantes en Maquillage : Un Guide Sans Prise de Tête"
-description: "Vous débutez en maquillage ? Découvrez comment votre saison de couleurs transforme une trousse chaotique en une routine de 5 produits. Un guide pour débutantes sur le fond de teint, le blush, les lèvres, les yeux et les sourcils dans des teintes qui vous vont vraiment."
+description: "Débutante en maquillage ? Votre saison transforme une trousse chaotique en routine 5 produits : teint, blush, lèvres, yeux et sourcils."
 date: "2026-11-03"
 tags: ["maquillage pour débutantes", "colorimétrie personnelle", "saison de couleurs", "maquillage", "beauté"]
 image: "/images/blog/color-analysis-makeup-beginners.webp"
@@ -141,7 +141,7 @@ Ce sont les pièges dans lesquels je suis tombée, pour que vous n'ayez pas à l
 
 La partie la plus difficile de ce système est la première étape : connaître votre saison. Draper des tissus sur vos épaules devant le miroir fonctionne, mais il est facile de se tromper, surtout sous une mauvaise lumière.
 
-C'est là que les outils d'IA sont devenus vraiment utiles. Téléversez un selfie sans maquillage à la lumière naturelle, et un bon outil d'analyse lit votre sous-ton, votre profondeur et votre chroma, puis les traduit en teintes de maquillage. J'ai essayé un outil gratuit comme [aicoloranalysis.io](https://www.aicoloranalysis.io/makeup-analysis?utm_source=medium&utm_medium=article&utm_campaign=color-analysis-makeup-beginners) avant une grande séance d'achats de maquillage, et il m'a donné une liste claire de familles de fond de teint, de rouge à lèvres et de blush. Il n'a pas remplacé le test du miroir, mais il m'a évité plusieurs faux pas.
+C'est là que les outils d'IA sont devenus vraiment utiles. Téléversez un selfie sans maquillage à la lumière naturelle, et un bon outil d'analyse lit votre sous-ton, votre profondeur et votre chroma, puis les traduit en teintes de maquillage. J'ai essayé un outil gratuit comme [aicoloranalysis.io](/makeup-analysis) avant une grande séance d'achats de maquillage, et il m'a donné une liste claire de familles de fond de teint, de rouge à lèvres et de blush. Il n'a pas remplacé le test du miroir, mais il m'a évité plusieurs faux pas.
 
 Si vous souhaitez une introduction plus large et sans jargon à tout cela, il existe un [guide de colorimétrie pour débutantes](/fr/color-analysis-for/beginners) qui explique les bases pas à pas.
 

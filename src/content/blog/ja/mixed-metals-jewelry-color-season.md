@@ -154,7 +154,7 @@ image: "/images/blog/mixed-metals-jewelry-color-season.webp"
 
 どの金属が似合うか、第二金属をどこまで入れられるかは、以前は店の照明の下でたくさん試着する必要がありました。今はもっと簡単な方法があります。最近、自分の写真をAIジュエリー分析ツールにかけたら、似合う金属、宝石、ピアス形状、顔周りで避けた方がよい組み合わせが、驚くほどはっきり説明されました。
 
-試してみたい方は、[aicoloranalysis.io](https://www.aicoloranalysis.io/jewelry-analysis?utm_source=medium&utm_medium=article&utm_campaign=mixed-metals-jewelry-color-season)のような無料ツールで、購入前に肌の色味に合う金属の目安が分かります。鏡テストの代わりにはなりませんが、強い出発点になります。金属と色味の関係を広く知りたい方は、[ウィキペディアのジュエリー材料と合金の解説](https://en.wikipedia.org/wiki/Jewellery)で、ゴールド、シルバー、プラチナがなぜその見え方をするのかを読めます。
+試してみたい方は、[aicoloranalysis.io](/jewelry-analysis)のような無料ツールで、購入前に肌の色味に合う金属の目安が分かります。鏡テストの代わりにはなりませんが、強い出発点になります。金属と色味の関係を広く知りたい方は、[ウィキペディアのジュエリー材料と合金の解説](https://en.wikipedia.org/wiki/Jewellery)で、ゴールド、シルバー、プラチナがなぜその見え方をするのかを読めます。
 
 ---
 

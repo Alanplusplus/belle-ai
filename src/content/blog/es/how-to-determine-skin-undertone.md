@@ -1,6 +1,6 @@
 ---
 title: "¿Tengo tono cálido o frío? La guía definitiva del subtono (2026)"
-description: "¿No sabes si tienes tono cálido o frío? Usa nuestra guía completa con 7 métodos probados para determinar con precisión el subtono de tu piel en casa. Incluye ejemplos con fotos y consejos de expertos."
+description: "¿Tono cálido o frío? Siete métodos para determinar tu subtono en casa, con fotos de ejemplo y consejos de expertos."
 date: "2026-07-08"
 tags: ["subtono", "cálido o frío", "tono de piel", "análisis de color", "consejos de belleza"]
 image: "/images/blog/how-to-determine-skin-undertone.webp"
@@ -92,11 +92,11 @@ Muchas personas descubren su subtono tras años de prueba y error con bases de m
 
 ### Método 7: Análisis de color con IA
 
-El método más objetivo. Herramientas de IA como Belle AI analizan tu foto mediante visión por computadora para detectar tu subtono exacto sin sesgos subjetivos ni confusión por la iluminación.
+Una segunda opinión rápida. Herramientas de IA como Belle AI usan un modelo de imagen con IA para valorar tu subtono a partir de una foto. Es un juicio visual, no una medición, así que la luz, los ajustes de la cámara y el maquillaje aún pueden cambiar el resultado.
 
-- No necesitas luz natural ni condiciones específicas
-- Analiza los valores de color reales de tu piel
-- Proporciona una clasificación estacional específica (sistema de 12 tipos)
+- Funciona mejor con luz natural y sin maquillaje
+- Observa piel, ojos y cabello a la vez
+- Sugiere un tipo estacional (sistema de 12 tipos)
 - Tarda 60 segundos
 
 ## Tono cálido vs. tono frío: comparación completa

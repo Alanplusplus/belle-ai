@@ -61,7 +61,7 @@ The 4-season model also fails people with neutral undertones entirely. If you're
 
 **What works better:** Professional color analysis uses *controlled conditions* — neutral lighting (5000-6500K daylight or calibrated D65 lamps), bare skin without makeup, white or grey draping backdrop, and physical fabric swatches held against the face. The analyst watches for live skin reactions: does the skin look clearer or muddier? Do under-eye circles amplify or diminish? Does the face gain dimension or flatten?
 
-If you can't see a professional, AI tools that analyze your photo using color science algorithms offer a far more reliable result than eyeballing a selfie against palette images. Tools like [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) compensate for common photo artifacts and analyze actual pixel-level skin tone data rather than relying on visual impression alone.
+If you can't see a professional, AI tools that analyze your photo can give you a more consistent starting point than eyeballing a selfie against palette images. Tools like [aicoloranalysis.io](/personal-color-analysis) use an AI image model to judge your coloring from the whole photo, though lighting and camera settings can still shift the result.
 
 ---
 
@@ -156,7 +156,7 @@ If you've been getting your color analysis education exclusively from TikTok, he
 - Your season palette is your "best" range — not the only colors you're allowed to wear
 - Eye color alone doesn't determine your season; the relationship between all features matters
 - Color analysis works for every skin depth and ethnicity — poor representation doesn't mean the system fails
-- Modern AI tools use genuine color science and are far more reliable than social media self-typing
+- Modern AI tools judge your photo against the 12-season framework and can be a more consistent starting point than social media self-typing
 
 The best thing TikTok did for color analysis was make people curious. The worst thing it did was convince people that complex color science can be reduced to a 30-second trick. The truth, as always, is somewhere in the middle — and understanding these myths helps you find it.
 

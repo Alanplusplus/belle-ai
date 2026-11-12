@@ -116,7 +116,7 @@ Die Farbtemperatur, die Ihre Haut heller und gleichmäßiger wirken lässt, zeig
 
 Wenn Sie alle fünf Tests ausprobiert haben und immer noch unsicher sind, haben Sie wahrscheinlich einen neutralen Unterton – und das ist eigentlich eine gute Nachricht. Neutrale Untertöne bieten die größte Flexibilität bei der Farbwahl.
 
-Für eine definitive Antwort können Sie eine [KI-gestützte Farbanalyse](/de/personal-color-analysis) in Betracht ziehen. Apps wie Belle AI nutzen Computer Vision, um die tatsächlichen Farbwerte Ihrer Haut zu analysieren und liefern objektive Ergebnisse, die nicht von subjektiver Wahrnehmung oder Lichtverhältnissen beeinflusst werden. Probieren Sie auch unser [kostenloses Farbquiz](/de/tools/color-quiz) für eine schnelle Einschätzung.
+Wenn die Heimtests Sie im Unklaren lassen, kann eine [KI-Farbanalyse](/) eine Zweitmeinung geben. Belle AI nutzt ein KI-Bildmodell, um Ihren Unterton anhand eines Fotos zu beurteilen. Es ist eine visuelle Einschätzung, keine Messung — Licht, Kameraeinstellungen und Make-up können das Ergebnis daher verschieben (siehe [wie genau KI-Farbanalyse wirklich ist](/ai-color-analysis-accuracy)). Probieren Sie auch unser [kostenloses Farbquiz](/de/tools/color-quiz) für eine schnelle Einschätzung.
 
 ## Häufig gestellte Fragen
 

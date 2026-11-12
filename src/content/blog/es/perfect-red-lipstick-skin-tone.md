@@ -1,6 +1,6 @@
 ---
 title: "Cómo encontrar el lápiz labial rojo perfecto para tu tono de piel (Guía 2026)"
-description: "Deja de adivinar qué rojo te favorece. Aprende a combinar tonos de rojo con tu subtono — cálido, frío o neutro — con recomendaciones específicas para cada tono de piel."
+description: "Deja de adivinar qué rojo te favorece. Combínalo con subtono cálido, frío o neutro y recomendaciones por tono de piel."
 date: "2026-07-29"
 tags: ["lápiz labial rojo", "subtono de piel", "consejos de maquillaje", "análisis de color", "belleza"]
 image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
@@ -43,7 +43,7 @@ Coloca una pieza de oro y otra de plata junto a tu rostro, una a la vez. Si el o
 **La prueba del papel blanco:**
 Sostén una hoja de papel blanco brillante junto a tu rostro. Si tu piel se ve amarillenta en comparación, eres cálida. Si se ve rosada, eres fría. Si se ve grisácea o no lo tienes claro, probablemente eres neutra u oliva.
 
-Ninguna prueba por sí sola es definitiva. Usa las tres juntas para un resultado más preciso. Y si quieres una respuesta más exacta, las [herramientas de análisis de color con IA](https://aicoloranalysis.io) pueden analizar tu subtono a partir de un selfie en segundos — eliminando por completo las conjeturas.
+Ninguna prueba por sí sola es definitiva. Usa las tres juntas para un resultado más preciso. Y si quieres una segunda opinión, las [herramientas de análisis de color con IA](/) pueden sugerir tu subtono a partir de un selfie en segundos — un punto de partida útil, aunque la luz puede cambiar el resultado.
 
 ---
 
@@ -154,7 +154,7 @@ Los subtonos oliva merecen una mención aparte porque se identifican mal con fre
 
 Antes, encontrar el color perfecto requería una visita a un consultor profesional o horas de prueba y error en el mostrador de belleza. Las herramientas de IA modernas han cambiado esa ecuación.
 
-Apps como [Belle AI](https://aicoloranalysis.io) pueden fotografiar tu rostro y analizar tu subtono usando los mismos principios de ciencia del color que usan los profesionales — identificando si eres cálida, fría o neutra, e incluso determinando tu estación de color específica. Una vez que conoces tu estación, acotar el rojo correcto se vuelve casi sin esfuerzo.
+Apps como [Belle AI](/) pueden mirar una foto de tu rostro y sugerir tu subtono usando las mismas señales cromáticas que observan los profesionales — si eres cálida, fría o neutra, y una estación de color probable. Una vez que conoces tu estación, acotar el rojo correcto se vuelve casi sin esfuerzo.
 
 Pasé mi propio selfie por una herramienta de análisis de color con IA y confirmé que soy Soft Summer — lo que explicaba por qué cada coral que probaba me quedaba mal, y por qué los rojos frutales apagados me hacían brillar.
 

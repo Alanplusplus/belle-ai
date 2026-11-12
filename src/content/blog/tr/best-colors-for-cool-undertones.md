@@ -133,7 +133,7 @@ Bu bir görsel yargıdır; aydınlatma gördüklerinizi değiştirir. Sonuçlar 
 
 ## Yapay zeka analizi nereye oturur?
 
-Belle AI, tek bir selfieden renk mevsiminizi tahmin eder. Bu, bir fotoğrafa dair yapay zekânın görsel yargısıdır; ölçüm değildir; aydınlatma, kamera ayarları ve makyaj sonucu değiştirebilir. Başlangıç noktası olarak kullanın, ardından yukarıdaki kumaş testiyle doğrulayın. Neleri yapıp yapamayacağını [Yapay zeka renk analizi ne kadar doğru?](/tr/ai-color-analysis-accuracy) yazısında açıklıyoruz. Denemek için [yapay zeka renk analizi](/tr/personal-color-analysis) ile başlayın.
+Belle AI, tek bir selfieden renk mevsiminizi tahmin eder. Bu, bir fotoğrafa dair yapay zekânın görsel yargısıdır; ölçüm değildir; aydınlatma, kamera ayarları ve makyaj sonucu değiştirebilir. Başlangıç noktası olarak kullanın, ardından yukarıdaki kumaş testiyle doğrulayın. Neleri yapıp yapamayacağını [Yapay zeka renk analizi ne kadar doğru?](/tr/ai-color-analysis-accuracy) yazısında açıklıyoruz. Denemek için [yapay zeka renk analizi](/) ile başlayın.
 
 ## Sık Sorulan Sorular
 

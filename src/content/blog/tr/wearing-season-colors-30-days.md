@@ -118,7 +118,7 @@ Rakamlar hikayeyi anlatır ama *duyguyu* yakalayamaz. Yetişkin hayatımda ilk k
 
 Bu deneyi yeniden başlasaydım şunları değiştirirdim:
 
-**Profesyonel veya yapay zeka tabanlı analizle başlayın.** Başlangıçta mevsimimi online testlerden tahmin ettim ve yanıldım (iki yıl Warm Autumn olduğumu sandım). Doğru analiz — eğitimli bir danışman veya bir [yapay zeka renk analizi aracı](https://aicoloranalysis.io) aracılığıyla — yanlış palet etrafında gardırop kurmaktan kurtarır. Baştan doğru sonuç almak küçük yatırıma değer.
+**Profesyonel veya yapay zeka tabanlı analizle başlayın.** Başlangıçta mevsimimi online testlerden tahmin ettim ve yanıldım (iki yıl Warm Autumn olduğumu sandım). Doğru analiz — eğitimli bir danışman veya bir [yapay zeka renk analizi aracı](/) aracılığıyla — yanlış palet etrafında gardırop kurmaktan kurtarır. Baştan doğru sonuç almak küçük yatırıma değer.
 
 **Hemen temizlik yapmayın.** Palet dışı kıyafetleri çıkarmada fazla agresiftim. "Yanlış" renkteki bazı parçalar alt giyim veya yüzden uzak dış giyim olarak hâlâ işe yarar. Bir süre rotasyonda tutun.
 

@@ -1,6 +1,6 @@
 ---
 title: "Palettes Hiver Décryptées : Hiver Profond vs Hiver Vrai vs Hiver Vif"
-description: "Vous ne savez pas quel sous-type d'Hiver vous êtes ? Découvrez les différences clés entre Hiver Profond, Hiver Vrai et Hiver Vif — leurs meilleures couleurs, conseils de style et comment identifier le vôtre."
+description: "Hiver Profond, Vrai ou Vif : différences, meilleures couleurs, conseils style et indices pour repérer votre sous-type Hiver."
 date: "2026-08-06"
 tags: ["analyse de couleurs personnelle", "palette hiver", "saison de couleurs", "beauté", "guide de style"]
 image: "/images/blog/winter-color-palettes-decoded.webp"
@@ -225,7 +225,7 @@ L'or est généralement difficile pour tous les types Hiver. Si vous aimez les b
 
 Identifier votre sous-saison Hiver exigeait traditionnellement une séance professionnelle de drapage colorimétrique — ce qui signifiait s'asseoir sous un éclairage contrôlé pendant qu'une conseillère plaçait systématiquement des étoffes aux tons froids de profondeurs et luminosités variées contre votre visage. C'est efficace, mais cela coûte généralement entre 150 et 400 € selon votre ville.
 
-Les outils d'analyse de couleurs par IA ont rendu tout cela bien plus accessible. Des plateformes comme [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) analysent votre sous-ton de peau, votre niveau de contraste, la couleur de vos yeux et la nuance de vos cheveux pour déterminer votre sous-saison exacte en moins d'une minute — en utilisant les mêmes indices visuels que les analystes professionnels, mais via un modèle d'image IA qui lit l'ensemble de votre photo.
+Les outils d'analyse de couleurs par IA ont rendu tout cela bien plus accessible. Des plateformes comme [analyse de couleurs par IA](/) analysent votre sous-ton de peau, votre niveau de contraste, la couleur de vos yeux et la nuance de vos cheveux pour suggérer une sous-saison probable en moins d'une minute — en utilisant les mêmes indices visuels que les analystes professionnels, mais via un modèle d'image IA qui lit l'ensemble de votre photo.
 
 ---
 

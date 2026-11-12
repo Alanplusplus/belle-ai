@@ -317,7 +317,7 @@ Alt mevsiminizi anlamak paletinizi "genel olarak sıcak"tan "tam olarak mükemme
 
 Sıcak ve soğuk arasındaki çizgi her zaman belirgin değildir — özellikle nötr-sıcaksanız veya sıcak alt tonlu zeytin cildiniz varsa. Tahmin etmek "neredeyse doğru" parçalarla dolu bir dolaba yol açabilir.
 
-[Yapay zekâ renk analizi](/tr/personal-color-analysis) denklemden öznel değerlendirmeyi çıkarır. Fotoğrafınızı bilgisayarlı görü ile analiz ederek sadece sıcak mı soğuk mu olduğunuzu değil, tam 12 mevsim renk tipinizi belirler — cildiniz, saçınız ve gözlerinizin tam kombinasyonuna kalibre edilmiş bir palet sunar.
+[Yapay zekâ renk analizi](/) ev testlerinin ötesinde ikinci bir görüş sunabilir. Bir yapay zekâ görüntü modeli fotoğrafınıza bakarak yalnızca sıcak mı soğuk mu olduğunuzu değil, olası bir 12 mevsim renk tipini de önerir; cildiniz, saçınız ve göz kombinasyonunuz için bir başlangıç paleti verir. Görsel bir değerlendirmedir; aynadaki izleniminizle karşılaştırın.
 
 ---
 

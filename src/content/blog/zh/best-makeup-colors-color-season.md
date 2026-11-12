@@ -240,7 +240,7 @@ image: "/images/blog/best-makeup-colors-color-season.webp"
 
 最常见错误：按*脸*选粉底，而非*脖子和胸口*。脸可能比身体更深、更红、更不均匀。在下颌线与脖子交界处匹配，才能无缝衔接。
 
-底调精准度方面，我发现 AI 色彩分析工具在区分暖、冷、中性偏冷粉底时，往往比肉眼更准。[aicoloranalysis.io](https://aicoloranalysis.io/makeup-analysis) 的免费分析能从照片识别你的准确底调类别，省去专柜猜测。
+在底调方面，当你不确定偏暖、偏冷还是中性偏冷时，我发现 AI 色彩分析工具可以当作有用的第二意见——有时能发现肉眼容易漏掉的规律，但光线和相机设置仍可能改变结果。[aicoloranalysis.io](/makeup-analysis) 的免费分析能根据照片推断你的底调类别，帮你在专柜更有方向地试色。
 
 ---
 

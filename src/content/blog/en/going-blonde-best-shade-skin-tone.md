@@ -71,7 +71,7 @@ Here's the comparison table I wish someone had shown me before my first salon di
 
 **Warm blondes** carry golden, copper, or honey pigments that echo the warmth in your skin. They create that sun-kissed, healthy glow that reads as effortless rather than processed. In my experience, warm blondes are the most requested shade in salons — and the most commonly applied to the wrong undertones. When a cool-toned person gets honey blonde, the gold in the hair amplifies any pinkness in the skin, creating an unintentionally ruddy effect.
 
-**Neutral blondes** sit in the middle — neither distinctly warm nor cool. They're the safest starting point if you're unsure of your undertone, but they can also read as "flat" if your features have strong contrast. Sandy and wheat blondes work beautifully on neutral undertones and on people whose [personal color analysis](/color-analysis) places them in blended or soft seasons.
+**Neutral blondes** sit in the middle — neither distinctly warm nor cool. They're the safest starting point if you're unsure of your undertone, but they can also read as "flat" if your features have strong contrast. Sandy and wheat blondes work beautifully on neutral undertones and on people whose [12-season color analysis](/color-analysis) places them in blended or soft seasons.
 
 ### The Olive Undertone Exception
 
@@ -144,7 +144,7 @@ Your color season — determined by the interplay of your undertone, value (ligh
 | True Winter | Platinum, ice, blue-ash | Honey, golden, copper |
 | Bright Winter | Bright platinum, cool champagne | Muted warm, strawberry |
 
-If you're not sure which season you fall into, a [personal color analysis](https://aicoloranalysis.io/personal-color-analysis) can identify your exact sub-season — which matters enormously when the difference between Soft Summer and True Summer is an entire category of blonde shades.
+If you're not sure which season you fall into, a [personal color analysis](/personal-color-analysis) can suggest your likely sub-season — which matters enormously when the difference between Soft Summer and True Summer is an entire category of blonde shades.
 
 ### What If You're Between Seasons?
 
@@ -209,7 +209,7 @@ For most of history, choosing a blonde shade meant guessing. You'd stare at a sw
 
 AI-powered tools can now preview different blonde shades on your actual photo — rendering dimension, undertone interaction, and realistic light reflection rather than a flat color overlay. Instead of imagining how ash blonde might look against your cool-toned skin, you can see it. Instead of wondering whether honey or champagne suits your Light Spring coloring, you can compare them side by side.
 
-Free online tools like [aicoloranalysis.io](https://aicoloranalysis.io/hair-color-analysis) let you preview hair color changes before committing to bleach, toner, and three hours in the salon chair. The technology analyzes your skin undertone, factors in your natural hair level, and shows how specific blonde shades interact with your facial features — the same variables a skilled colorist evaluates, but visible before you spend a dollar.
+Free online tools like [aicoloranalysis.io](/hair-color-analysis) let you preview hair color changes before committing to bleach, toner, and three hours in the salon chair. The technology analyzes your skin undertone, factors in your natural hair level, and shows how specific blonde shades interact with your facial features — the same variables a skilled colorist evaluates, but visible before you spend a dollar.
 
 In my experience, clients who arrive at the salon with a previewed reference — "I want this exact ash beige blonde, level 9, with this kind of dimension" — get better results faster. The conversation shifts from vague ("make me blonde") to precise ("this shade, this technique, this level of warmth"). That precision is the difference between a blonde you love and a blonde you tolerate until your roots grow in.
 

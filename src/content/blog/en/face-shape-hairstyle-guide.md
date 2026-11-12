@@ -1,6 +1,6 @@
 ---
 title: "Best Hairstyle for Your Face Shape: 7 Types with Visual Examples (2026)"
-description: "Find your perfect hairstyle based on your face shape. Expert recommendations for oval, round, square, heart, oblong, diamond & triangle faces — including bangs and partings."
+description: "Find hairstyles for your face shape. Expert picks for oval, round, square, heart, oblong, diamond, and triangle faces, including bangs and partings."
 date: "2026-07-03"
 tags: ["face shape", "hairstyle", "beauty guide", "hair", "face shape hairstyle"]
 image: "/images/blog/face-shape-hairstyle-guide.webp"

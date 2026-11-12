@@ -133,7 +133,7 @@ Das ist eine subjektive Einschätzung — Licht verändert, was Sie sehen. Wenn 
 
 ## Wo die KI-Analyse einordnen ist
 
-Belle AI schätzt Ihre Farbsaison anhand eines Selfies ein. Es handelt sich um eine visuelle KI-Einschätzung eines einzelnen Fotos, nicht um eine Messung — Licht, Kameraeinstellungen und Make-up können das Ergebnis beeinflussen. Nutzen Sie es als Ausgangspunkt und bestätigen Sie es mit dem Stofftest oben. Was möglich ist und was nicht, erklären wir in [Wie genau ist KI-Farbanalyse?](/de/ai-color-analysis-accuracy). Zum Ausprobieren starten Sie mit [KI-Farbanalyse](/de/personal-color-analysis).
+Belle AI schätzt Ihre Farbsaison anhand eines Selfies ein. Es handelt sich um eine visuelle KI-Einschätzung eines einzelnen Fotos, nicht um eine Messung — Licht, Kameraeinstellungen und Make-up können das Ergebnis beeinflussen. Nutzen Sie es als Ausgangspunkt und bestätigen Sie es mit dem Stofftest oben. Was möglich ist und was nicht, erklären wir in [Wie genau ist KI-Farbanalyse?](/de/ai-color-analysis-accuracy). Zum Ausprobieren starten Sie mit [KI-Farbanalyse](/).
 
 ## Häufig gestellte Fragen
 

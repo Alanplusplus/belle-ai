@@ -240,7 +240,7 @@ Fondöten özel dikkat hak eder çünkü her şeyin üzerine oturduğu tabandır
 
 En yaygın hata: fondöteni *yüze* değil *boyun ve göğse* göre eşleştirmek. Yüzünüz vücudunuzdan daha koyu, kırmızı veya düzensiz olabilir. Sorunsuz karışım için çene/boyun birleşim noktasına göre eşleştirin.
 
-Alt ton doğruluğu için, AI destekli renk analizi araçlarının sıcak, soğuk ve nötr-soğuk fondötenler arasındaki ince farkı belirlemede kendi gözümden daha iyi performans gösterdiğini gördüm. [aicoloranalysis.io](https://aicoloranalysis.io/makeup-analysis) adresindeki ücretsiz analiz gibi araçlar, fotoğraftan tam alt ton kategorinizi belirleyerek güzellik reyonundaki tahminleri ortadan kaldırabilir.
+Alt ton için, sıcak, soğuk veya nötr-soğuk olduğunuzdan emin değilseniz AI destekli renk analizi araçlarının faydalı bir ikinci görüş olabildiğini gördüm; bazen kendi gözümün kaçırdığı bir ipucunu yakalıyorlar, yine de ışık ve kamera ayarları sonucu kaydırabilir. [aicoloranalysis.io](/makeup-analysis) adresindeki ücretsiz analiz gibi araçlar, fotoğraftan bir alt ton kategorisi önererek güzellik reyonunda daha iyi bir başlangıç noktası sunar.
 
 ---
 

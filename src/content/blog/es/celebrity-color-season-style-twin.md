@@ -1,6 +1,6 @@
 ---
 title: "¿Qué celebridad tiene tu estación de color? Encuentra tu gemelo de estilo"
-description: "Descubre qué celebridades comparten tu estación de color — desde el Verano Claro de Taylor Swift hasta el Invierno Profundo de Lupita Nyong'o. Aprende a estudiar las elecciones de moda de tu gemelo de estilo y aplícalas a tu guardarropa."
+description: "Qué celebridades comparten tu estación, del Verano Claro de Taylor Swift al Invierno Profundo de Lupita. Aplícalo a tu guardarropa."
 date: "2026-08-13"
 tags: ["análisis de color personal", "estilo de celebridades", "estación de color", "moda", "estilo personal"]
 image: "/images/blog/celebrity-color-season-style-twin.webp"
@@ -153,7 +153,7 @@ Si aún no has determinado tu estación, trabajar a la inversa desde la comparac
 
 Una vez que lo acotes, mira qué colores esas celebridades llevan bien de forma constante. Si sus mejores tonos son cálidos y apagados, probablemente estés en la familia Otoño. Si son fríos y brillantes, probablemente seas Invierno.
 
-Para una respuesta más definitiva, el análisis de color con IA puede identificar tu estación exacta a partir de una foto. Herramientas como [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) analizan el subtono de tu piel, el nivel de contraste y la profundidad de tu coloración para ubicarte en una de las 12 estaciones — dándote un punto de partida preciso para encontrar a tu gemelo entre celebridades.
+Para una segunda opinión, el análisis de color con IA puede sugerir una estación probable a partir de una foto. Herramientas como [aicoloranalysis.io](/personal-color-analysis) valoran el subtono de tu piel, el nivel de contraste y la profundidad de tu coloración para ubicarte en una de las 12 estaciones — dándote un punto de partida útil para encontrar a tu gemelo entre celebridades.
 
 ---
 

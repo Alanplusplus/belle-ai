@@ -1,6 +1,6 @@
 ---
 title: "Kişisel Renk Analizinin Arkasındaki Bilim: Gerçekte Nasıl Çalışır"
-description: "Bazı renklerin sizi parlatırken diğerlerinin neden solgun gösterdiğini hiç merak ettiniz mi? Kişisel renk analizini mümkün kılan gerçek bilimi keşfedin — ışık fiziğinden melanin kimyasına kadar."
+description: "Bazı renkler sizi parlatırken diğerleri neden solgun gösterir? Işık fiziğinden melanin kimyasına kişisel renk analizinin ardındaki bilimi keşfedin."
 date: "2026-07-23"
 tags: ["kişisel renk analizi", "renk bilimi", "renk teorisi", "güzellik", "cilt alt tonu"]
 image: "/images/blog/science-of-color-analysis.webp"
@@ -119,9 +119,9 @@ Geleneksel renk analizi — danışmanın kumaş panolarını yüzünüzün yan�
 
 **Üç boyut etkileşir.** Bir kişi açıkça soğuk tonlu (hue) olabilir, ama açık mı derin mi? Parlak mı mat mı? Her sonraki boyut 12 mevsim sonucunu daraltır ve birini yanlış almak tüm analizi etkiler.
 
-İşte hesaplamalı yaklaşımlar gerçek bir avantaj sunar. Kamera sensörü, insan gözünün aksine, gerçek ışık dalga boylarını tutarlı şekilde ölçer. [AI destekli renk analizi](/tr/personal-color-analysis) cilt, saç ve göz piksellerinden hassas renk değerleri çıkarabilir, bunları üç boyutlu renk uzayına eşleyebilir ve hangi mevsimin en güçlü matematiksel uyumu gösterdiğini belirleyebilir — insan algısının veya ortam aydınlatması telafisinin değişkenliği olmadan.
+İşte hesaplamalı yaklaşımlar yardımcı olabilir. Kamera sensörü, insan gözünün aksine, etrafındaki renklere uyum sağlamaz; ama beyaz dengesi ve işlemle kaydeder, yani fotoğraf da saf bir ölçüm değildir. [AI destekli renk analizi](/) yapay zeka görüntü modeliyle tüm fotoğraftaki cilt, saç ve göz renklendirmesini değerlendirir ve hangi mevsimin en iyi oturduğunu önerir — elinizde tuttuğunuz renklerden etkilenmeyen, tekrarlanabilir bir ikinci görüş.
 
-Bu teknolojinin mükemmel olduğu anlamına gelmez. Fotoğraf kalitesi, selfie aydınlatması ve kamera beyaz dengesi değişkenler getirir. Ancak temel avantaj — **renk değerlerinin objektif, tekrarlanabilir ölçümü** — geleneksel draping'in en büyük zayıflığını giderir.
+Fotoğraf kalitesi, selfie aydınlatması ve kamera beyaz dengesi değişkenler getirir; sonuç laboratuvar ölçümü değil, görsel bir yargıdır. Ama temel avantaj — **yeni bir selfieyle yeniden çalıştırabileceğiniz tekrarlanabilir bir ikinci görüş** — geleneksel draping'in en büyük zayıflığına yardımcı olur: sonucun tek bir ana, tek bir oda ve tek bir çift göze ne kadar bağlı olduğu.
 
 ## Pratik Sonuç: Bu Bilim Gardırobunuz İçin Neden Önemli
 

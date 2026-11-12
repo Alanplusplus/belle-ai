@@ -1,6 +1,6 @@
 ---
 title: "The Brunette Guide: How to Choose the Right Brown Hair Color for Your Skin Undertone"
-description: "Brown isn't one color. Learn how depth, temperature, and your color season decide whether chocolate, chestnut, mocha, or ash brown makes you glow — or look flat."
+description: "Brown isn't one color. Depth, temperature, and color season decide whether chocolate, chestnut, mocha, or ash brown makes you glow or look flat."
 date: "2026-10-14"
 tags: ["hair color", "brunette", "skin undertone", "color analysis", "beauty"]
 image: "/images/blog/brunette-shades-skin-undertone-guide.webp"
@@ -163,7 +163,7 @@ For a broader look at how undertone and season steer every hair choice, read our
 
 For years, choosing a brown meant flipping through a swatch book and hoping the tone would work on you. Swatches don't show how a shade interacts with your skin, eyes, and contrast level.
 
-AI-powered tools can now render different brown shades on your actual photo, so you can compare chestnut with mocha, or ash with warm chocolate, side by side. I tried one before my last color appointment, and seeing a neutral mocha on my own face made the decision in about thirty seconds. Free tools like [aicoloranalysis.io](https://www.aicoloranalysis.io/hair-color-analysis?utm_source=medium&utm_medium=article&utm_campaign=brunette-shades-skin-undertone-guide) analyze your undertone and show best and worst hair color options for your coloring before you spend money on dye.
+AI-powered tools can now render different brown shades on your actual photo, so you can compare chestnut with mocha, or ash with warm chocolate, side by side. I tried one before my last color appointment, and seeing a neutral mocha on my own face made the decision in about thirty seconds. Free tools like [aicoloranalysis.io](/hair-color-analysis) analyze your undertone and show best and worst hair color options for your coloring before you spend money on dye.
 
 It doesn't replace a skilled colorist, who still handles the chemistry and technique. But it removes the biggest variable, whether the shade suits you at all, before you're in the chair.
 

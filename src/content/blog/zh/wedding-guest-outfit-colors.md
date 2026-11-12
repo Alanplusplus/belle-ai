@@ -45,7 +45,7 @@ image: "/images/blog/wedding-guest-outfit-colors.webp"
 | **秋季型** | 柔秋、正秋、深秋 | 暖调、浓郁、大地色 |
 | **冬季型** | 深冬、正冬、亮冬 | 冷调、高对比、戏剧感 |
 
-不确定自己是哪一种？[AI 色彩分析](https://aicoloranalysis.io/personal-color-analysis) 只需一张照片，一分钟内就能判定你的子季型。
+不确定自己是哪一种？[AI 色彩分析](/) 只需一张照片，一分钟内就能根据照片建议你可能所属的子季型。
 
 ---
 
@@ -147,7 +147,7 @@ image: "/images/blog/wedding-guest-outfit-colors.webp"
 
 **第二步：拍张照。** 手机镜头比镜子更挑剔。自拍里颜色就不对，婚礼远景照片里只会更糟。
 
-**第三步：试试 AI 色彩分析。** 像 [AI 配色分析](https://aicoloranalysis.io/outfit-color-analysis) 这类工具，可以预览特定穿搭颜色与天然肤色的互动——不用靠猜。在两个相近色号之间纠结时尤其有用。
+**第三步：试试 AI 色彩分析。** 像 [AI 配色分析](/outfit-color-analysis) 这类工具，可以预览特定穿搭颜色与天然肤色的互动——帮你少猜一点。在两个相近色号之间纠结时尤其有用。
 
 ---
 

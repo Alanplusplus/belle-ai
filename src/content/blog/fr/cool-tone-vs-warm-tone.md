@@ -116,7 +116,7 @@ La température de couleur qui rend votre peau plus lumineuse et plus uniforme i
 
 Si vous avez essayé les cinq tests et que vous hésitez encore, vous avez probablement un sous-ton neutre — ce qui est en fait une excellente nouvelle. Les sous-tons neutres offrent le plus de flexibilité dans le choix des couleurs.
 
-Pour une réponse définitive, envisagez une [analyse colorimétrique par IA](/fr/personal-color-analysis). Des applications comme Belle AI utilisent la vision par ordinateur pour analyser les valeurs colorimétriques réelles de votre peau, offrant des résultats objectifs qui ne sont pas affectés par la perception subjective ou les conditions d'éclairage. Vous pouvez aussi essayer notre [test colorimétrique gratuit](/fr/tools/color-quiz) pour une estimation rapide.
+Si les tests à domicile ne suffisent pas à vous trancher, une [analyse colorimétrique par IA](/) peut vous donner un second avis. Belle AI s'appuie sur un modèle d'image IA pour évaluer votre sous-ton à partir d'une photo. C'est un jugement visuel, pas une mesure ; la lumière, les réglages de l'appareil photo et le maquillage peuvent encore modifier le résultat. Vous pouvez aussi essayer notre [test colorimétrique gratuit](/fr/tools/color-quiz) pour une estimation rapide.
 
 ## Questions fréquentes
 

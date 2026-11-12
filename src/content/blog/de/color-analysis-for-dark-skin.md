@@ -108,7 +108,7 @@ Unabhängig von deiner Saison sind diese Farben oft universell schmeichelhaft au
 - **Olivgrün matt** (bei kühlem Unterton) – Erzeugt fahlen Teint
 - **Gedämpfte Staubtöne** (bei hohem Kontrast) – Dämpfen natürliche Lebendigkeit
 
-## Präzise KI-Farbanalyse bei dunkler Haut
+## Bessere Ergebnisse mit der KI-Farbanalyse bei dunkler Haut
 
 KI-Farbanalyse-Tools hatten historisch Schwierigkeiten mit dunkleren Hauttönen wegen Trainingsdaten-Bias. So erzielst du die besten Ergebnisse:
 
@@ -147,7 +147,7 @@ Wenn dein KI-Ergebnis nicht stimmig wirkt:
 
 ## Finde deine Farben heute
 
-Bereit, deinen exakten saisonalen Farbtyp zu entdecken? Unsere KI liefert dir für jeden Teint einen Ausgangspunkt — prüfe das Ergebnis aber zusätzlich mit deinem eigenen Urteil, denn KI-Tools können bei dunkleren Hauttönen weniger zuverlässig sein.
+Bereit, deinen saisonalen Farbtyp zu finden? Unsere KI liefert dir für jeden Teint einen Ausgangspunkt — prüfe das Ergebnis aber zusätzlich mit deinem eigenen Urteil, denn KI-Tools können bei dunkleren Hauttönen weniger zuverlässig sein.
 
 [Kostenlose Farbanalyse starten →](/try)
 

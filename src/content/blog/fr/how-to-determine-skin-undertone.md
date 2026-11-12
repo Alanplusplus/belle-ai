@@ -1,6 +1,6 @@
 ---
 title: "Suis-je à sous-ton chaud ou froid ? Le guide définitif du sous-ton (2026)"
-description: "Vous ne savez pas si vous êtes à sous-ton chaud ou froid ? Utilisez notre guide complet avec 7 méthodes éprouvées pour déterminer précisément votre sous-ton à domicile. Inclut des exemples photo et des conseils d'experts."
+description: "Sous-ton chaud ou froid ? Guide avec 7 méthodes pour mieux cerner votre sous-ton à domicile, exemples photo et conseils."
 date: "2026-07-08"
 tags: ["sous-ton", "chaud ou froid", "teint", "colorimétrie", "conseils beauté"]
 image: "/images/blog/how-to-determine-skin-undertone.webp"
@@ -92,11 +92,11 @@ Beaucoup de personnes découvrent leur sous-ton après des années d'essais et d
 
 ### Méthode 7 : Analyse colorimétrique par IA
 
-La méthode la plus objective. Les outils IA comme Belle AI analysent votre photo grâce à la vision par ordinateur pour détecter votre sous-ton exact sans biais subjectif ni confusion liée à l'éclairage.
+Un second avis rapide. Les outils IA comme Belle AI s'appuient sur un modèle d'image IA pour évaluer votre sous-ton à partir d'une photo. C'est un jugement visuel plutôt qu'une mesure ; la lumière, les réglages de l'appareil photo et le maquillage peuvent encore modifier le résultat.
 
-- Pas besoin de lumière naturelle ni de conditions spécifiques
-- Analyse les valeurs colorimétriques réelles de votre peau
-- Fournit une classification saisonnière précise (système des 12 types)
+- Fonctionne mieux en lumière naturelle et sans maquillage
+- Regarde votre peau, vos yeux et vos cheveux ensemble
+- Suggère un type saisonnier (système des 12 types)
 - Prend 60 secondes
 
 ## Sous-ton chaud vs froid : comparaison complète

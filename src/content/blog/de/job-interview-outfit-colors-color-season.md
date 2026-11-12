@@ -1,6 +1,6 @@
 ---
 title: "Was Sie zum Vorstellungsgespräch anziehen sollten – nach Ihrer Farbsaison"
-description: "Marineblau ist nicht automatisch die sichere Wahl. Entdecken Sie die besten Outfit-Farben fürs Vorstellungsgespräch für alle 12 Farbsaisons – plus welche „professionellen“ Töne leise gegen Sie arbeiten."
+description: "Outfit-Farben fürs Vorstellungsgespräch nach Farbsaison: Warum Marineblau nicht immer sicher ist und welche Töne gegen Sie wirken."
 date: "2026-10-21"
 tags: ["Vorstellungsgespräch-Outfit", "Farbsaison", "Farbanalyse", "Karriere-Stil", "Anlass-Styling"]
 image: "/images/blog/job-interview-outfit-colors-color-season.webp"
@@ -138,7 +138,7 @@ Keine dieser Farben ist verboten. Sie brauchen nur die richtige Platzierung, den
 
 ## Der moderne Ansatz: Farben testen, bevor Sie kaufen
 
-Früher bedeutete die Saison finden eine professionelle Draping-Sitzung. Heute kann KI ein Foto analysieren und sagen, welche Töne Ihren Unterton schmeicheln und welche Sie austrocknen lassen. Als ich mich auf einen Berufswechsel vorbereitete, habe ich ein Foto durch ein KI-Farbanalyse-Tool laufen lassen – und in unter einer Minute eine Liste aus Basis-, Gesichts- und Akzentfarben gehabt. Kostenlose Tools wie [aicoloranalysis.io](https://www.aicoloranalysis.io/outfit-color-analysis?utm_source=medium&utm_medium=article&utm_campaign=job-interview-outfit-colors-color-season) zeigen, welche Kleidungsfarben Ihren Teint aufhellen, bevor Sie Geld für einen neuen Blazer ausgeben.
+Früher bedeutete die Saison finden eine professionelle Draping-Sitzung. Heute kann KI ein Foto analysieren und sagen, welche Töne Ihren Unterton schmeicheln und welche Sie austrocknen lassen. Als ich mich auf einen Berufswechsel vorbereitete, habe ich ein Foto durch ein KI-Farbanalyse-Tool laufen lassen – und in unter einer Minute eine Liste aus Basis-, Gesichts- und Akzentfarben gehabt. Kostenlose Tools wie [aicoloranalysis.io](/outfit-color-analysis) zeigen, welche Kleidungsfarben Ihren Teint aufhellen, bevor Sie Geld für einen neuen Blazer ausgeben.
 
 Das ersetzt nicht das Anprobieren – aber es verengt das Feld, sodass Sie in der Umkleidekabine nicht raten müssen. Und wenn Sie genauer vergleichen möchten, wie sich professionelle Ratschläge einordnen lassen, deckt [der Leitfaden von The Muse zum Bewerbungs-Outfit](https://www.themuse.com/advice/what-to-wear-to-an-interview) Passform, Stoff und Dresscodes ab, die alles oben Erwähnte ergänzen.
 

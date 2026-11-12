@@ -112,7 +112,7 @@ Sitting between two types is normal. Navy and cool gray appear in both the Cool 
 
 ## Using an AI analysis as a second opinion
 
-Belle AI estimates your season from one selfie. It is an AI's visual judgment, not a measurement, and it can differ from an in-person draping session. If two photos give you different seasons, treat the AI result as one input and rely on the daylight fabric test above. We explain what it can and cannot do in [How accurate is AI color analysis?](/ai-color-analysis-accuracy). To try it, start with [AI color analysis](/personal-color-analysis).
+Belle AI estimates your season from one selfie. It is an AI's visual judgment, not a measurement, and it can differ from an in-person draping session. If two photos give you different seasons, treat the AI result as one input and rely on the daylight fabric test above. We explain what it can and cannot do in [How accurate is AI color analysis?](/ai-color-analysis-accuracy). To try it, start with [AI color analysis](/).
 
 ## Frequently Asked Questions
 

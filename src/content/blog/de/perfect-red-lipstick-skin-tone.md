@@ -1,6 +1,6 @@
 ---
 title: "So finden Sie den perfekten roten Lippenstift für Ihren Hautton (Ratgeber 2026)"
-description: "Schluss mit dem Raten, welcher rote Lippenstift zu Ihnen passt. Erfahren Sie, wie Sie Rottöne an Ihren Unterton anpassen — warm, kühl oder neutral — mit konkreten Farbempfehlungen für jeden Hautton."
+description: "Perfekter roter Lippenstift: Rottöne an warmen, kühlen oder neutralen Unterton anpassen – mit Empfehlungen für jeden Hautton."
 date: "2026-07-29"
 tags: ["roter Lippenstift", "Hautunterton", "Make-up-Tipps", "Farbanalyse", "Schönheit"]
 image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
@@ -43,7 +43,7 @@ Halten Sie ein Stück Gold- und ein Stück Silberschmuck nacheinander neben Ihr 
 **Der Weißpapier-Test:**
 Halten Sie ein Blatt knallweißes Papier neben Ihr Gesicht. Wirkt Ihre Haut im Vergleich gelblich, sind Sie warm. Wirkt sie rötlich oder rosig, kühl. Wirkt sie gräulich oder können Sie es nicht erkennen, sind Sie wahrscheinlich neutral oder oliv.
 
-Kein einzelner Test ist endgültig. Nutzen Sie alle drei zusammen für das genaueste Ergebnis. Und wenn Sie eine präzisere Antwort wünschen, können [KI-gestützte Farbanalyse-Tools](https://aicoloranalysis.io) Ihren Unterton in Sekunden aus einem Selfie analysieren — und das Raten völlig überflüssig machen.
+Kein einzelner Test ist endgültig. Nutzen Sie alle drei zusammen für das genaueste Ergebnis. Und wenn Sie eine Zweitmeinung wünschen, können [KI-gestützte Farbanalyse-Tools](/) aus einem Selfie in Sekunden einen Unterton vorschlagen — ein nützlicher Ausgangspunkt, obwohl das Licht das Ergebnis noch beeinflussen kann.
 
 ---
 
@@ -154,7 +154,7 @@ Olivfarbene Untertöne verdienen eine eigene Erwähnung, weil sie häufig falsch
 
 Farbabstimmung erforderte früher einen Besuch bei einer geschulten Beraterin oder stundenlanges Ausprobieren an der Beauty-Theke. Moderne KI-Tools haben diese Gleichung verändert.
 
-Apps wie [Belle AI](https://aicoloranalysis.io) können Ihr Gesicht fotografieren und Ihren Unterton anhand derselben Farbwissenschaft analysieren, die Profis nutzen — und feststellen, ob Sie warm, kühl oder neutral sind, sogar Ihre spezifische Farbsaison. Sobald Sie Ihre Saison kennen, wird die Suche nach dem richtigen Rot fast mühelos.
+Apps wie [Belle AI](/) können ein Foto Ihres Gesichts betrachten und Ihren Unterton anhand derselben Farbhinweise vorschlagen, auf die Profis achten — ob Sie warm, kühl oder neutral sind, und einen wahrscheinlichen Farbtyp. Sobald Sie Ihre Saison kennen, wird die Suche nach dem richtigen Rot fast mühelos.
 
 Ich habe mein eigenes Selfie durch ein KI-Farbanalyse-Tool laufen lassen und bestätigt bekommen, dass ich ein Soft Summer bin — was erklärte, warum jede Koralle falsch wirkte und warum gedämpfte Beeren-Rottöne mich zum Strahlen brachten.
 

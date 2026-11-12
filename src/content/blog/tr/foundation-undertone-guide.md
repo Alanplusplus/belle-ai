@@ -1,6 +1,6 @@
 ---
 title: "Fondöteniniz Neden Asla Uymuyor: Alt Ton Derinlemesine İnceleme"
-description: "Uyumsuz görünen fondötenlerden bıktınız mı? Sorun ton derinliğinde değil — alt tonda. Sıcak, soğuk, nötr ve zeytin alt tonlarının fondöten eşleştirmesini nasıl etkilediğini öğrenin; ayrıca gerçekten işe yarayan 5 mağaza içi test."
+description: "Uyumsuz fondötenlerden bıktınız mı? Sorun alt tonda. Sıcak, soğuk, nötr ve zeytin alt tonlar, eşleştirme ve 5 mağaza içi test rehberi."
 date: "2026-08-25"
 tags: ["cilt alt tonu", "fondöten", "makyaj", "güzellik", "renk analizi"]
 image: "/images/blog/foundation-undertone-guide.webp"
@@ -89,9 +89,9 @@ Doğal ışıkta iç bileğinizin genel cilt tonuna bakın (damarları yok sayı
 
 ### 5. Yapay Zekâ Destekli Alt Ton Analizi
 
-Teknoloji bu konuda dikkat çekici biçimde gelişti. Yapay zeka renk analizi araçları cildinizi standart koşullarda fotoğraflayabilir ve alt tonu yüzey rengi, bronzluk, kızarıklık ve aydınlatma önyargısından ayırabilir. Birkaçını test ettim ve mağaza içi eşleştirmeyi tutarlı biçimde geride bıraktılar — özellikle zeytin alt tonları veya insan gözünü şaşırtan nötr eğilimli cilt gibi zor vakalar için.
+Teknoloji burada ikinci bir görüş olarak yardımcı olabilir. Yapay zeka renk analizi araçları selfie'den alt tonunuzu değerlendirir; yüzey rengi, bronzluk ve kızarıklıktan ayırmaya çalışır, yine de ışık ve kamera ayarları sonucu kaydırabilir. Birkaçını test ettim ve özellikle zeytin alt tonları veya insan gözünü şaşırtan nötr eğilimli cilt gibi zor vakalarda çapraz kontrol için en faydalı olduklarını gördüm.
 
-[aicoloranalysis.io](https://aicoloranalysis.io/makeup-analysis) gibi araçlar selfie'den alt tonunuzu analiz edebilir ve renklendirmenize göre kalibre edilmiş fondöten tonu önerileri üretebilir.
+[aicoloranalysis.io](/makeup-analysis) gibi araçlar selfie'den alt tonunuzu analiz edebilir ve renklendirmenize göre fondöten tonları önerebilir.
 
 ---
 
@@ -120,7 +120,7 @@ Zeytin alt tonu dünya nüfusunun yaklaşık %20-25'ini etkiler, ama çoğu fond
 
 ## Renk Sezonuna Göre Fondöten Eşleştirme
 
-[Kişisel renk sezonunuz](https://aicoloranalysis.io/personal-color-analysis) fondöten alt tonunuz hakkında güçlü ipuçları verir:
+[Kişisel renk sezonunuz](/personal-color-analysis) fondöten alt tonunuz hakkında güçlü ipuçları verir:
 
 **İlkbahar sezonları (Light Spring, True Spring, Bright Spring):**
 Fondöten alt tonu: Sıcak. Altın, şeftali formüller arayın. İlkbaharlar genelde sıcak okside olur, mağazada göründüğünden biraz daha açık seçin.

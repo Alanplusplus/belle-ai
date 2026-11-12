@@ -1,6 +1,6 @@
 ---
 title: "Der Brünett-Leitfaden: So wählen Sie die richtige Braunnuance für Ihren Hautunterton"
-description: "Braun ist nicht nur eine Farbe. Erfahren Sie, wie Tiefe, Temperatur und Ihre Farbsaison entscheiden, ob Schokoladenbraun, Kastanie, Mokka oder Aschbraun Sie strahlen lassen — oder flach wirken."
+description: "Brünett-Leitfaden: Tiefe, Temperatur und Farbsaison entscheiden, ob Schokolade, Kastanie, Mokka oder Aschbraun Sie strahlen lassen."
 date: "2026-10-14"
 tags: ["Haarfarbe", "Brünett", "Hautunterton", "Farbanalyse", "Schönheit"]
 image: "/images/blog/brunette-shades-skin-undertone-guide.webp"

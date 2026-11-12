@@ -8,9 +8,9 @@ image: "/images/blog/complete-ai-glow-up-guide.webp"
 
 ## AI 글로우업이란?
 
-"글로우업"은 전통적으로 시간이 지나면서 외모가 크게 개선되는 것을 의미합니다. 하지만 시행착오의 몇 달을 데이터 기반 단일 상담으로 압축할 수 있다면?
+"글로우업"은 전통적으로 시간이 지나면서 외모가 크게 개선되는 것을 의미합니다. 하지만 시행착오의 몇 달을 AI가 돕는 단일 상담으로 압축할 수 있다면?
 
-그것이 바로 AI 퍼스널 스타일링이 제공하는 것입니다. 수년(그리고 수천 달러)을 고통스러운 실험으로 최적의 색, 헤어스타일, 안경, 메이크업, 주얼리를 찾는 대신, AI가 특징을 분석하고 몇 분 만에 완전한 로드맵을 제공합니다.
+그것이 바로 AI 퍼스널 스타일링이 제공하는 것입니다. 수년(그리고 수천 달러)을 고통스러운 실험으로 최적의 색, 헤어스타일, 안경, 메이크업, 주얼리를 찾는 대신, AI가 사진을 분석하고 몇 분 만에 시작 로드맵을 제공합니다.
 
 이것은 당신을 바꾸는 것이 아닙니다. 이미 당신에게 맞는 것을 이해하고 — 그것을 활용하는 것입니다.
 
@@ -62,11 +62,11 @@ AI는 human stylist replace 아님 — democratizing access. $2,000 image consul
 
 ---
 
-## AI 장점: 객관성
+## AI 장점: 새로운 시선
 
 대부분 고려 안 하는 것: 자신의 face를 years 봐옴. unconscious bias — 10년 전 compliment, 엄마 말, formative years trend 기반.
 
-AI는 such bias 없음. current features objectively evaluate, established color science, proportion, harmony principles 대조. 결과 surprise — 그 surprise에 biggest improvement 숨어 있음.
+AI는 그 개인적 색 이력을 가지고 있지 않음. current features를 established color science, proportion, harmony principles와 비교해 보지만, 한계가 있고 조명이나 사진 품질에 흔들릴 수 있음. 결과 surprise — 그 surprise에 biggest improvement 숨어 있음.
 
 ---
 

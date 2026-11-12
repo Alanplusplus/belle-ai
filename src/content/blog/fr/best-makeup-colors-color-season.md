@@ -1,6 +1,6 @@
 ---
 title: "Les Meilleures Couleurs de Maquillage pour Chaque Saison : Guide Complet avec Tableau"
-description: "Tableau de maquillage complet pour les 12 saisons de couleurs. Trouvez les meilleurs fonds de teint, rouges à lèvres, fards et blushs — par saison avec tableaux comparatifs."
+description: "Maquillage pour les 12 saisons : fonds de teint, rouges à lèvres, fards et blushs par saison, avec tableaux comparatifs."
 date: "2026-08-07"
 tags: ["maquillage", "colorimétrie personnelle", "saison de couleurs", "beauté", "guide de style"]
 image: "/images/blog/best-makeup-colors-color-season.webp"
@@ -240,7 +240,7 @@ Le fond de teint mérite une attention particulière car c'est la base sur laque
 
 L'erreur la plus courante : assortir le fond de teint au *visage* plutôt qu'au *cou et à la poitrine*. Le visage peut être plus foncé, plus rouge ou plus irrégulier que le corps. Assortissez à la jonction mâchoire/cou pour un fondu impeccable.
 
-Pour la précision du sous-ton, j'ai constaté que les outils de colorimétrie par IA surpassent mon propre œil pour identifier la différence subtile entre fonds de teint chauds, froids et neutre-froids. Des outils comme l'analyse gratuite sur [aicoloranalysis.io](https://aicoloranalysis.io/makeup-analysis) peuvent identifier votre catégorie exacte de sous-ton à partir d'une photo, éliminant les approximations au comptoir beauté.
+Pour le sous-ton, j'ai constaté que les outils de colorimétrie par IA peuvent constituer un second avis utile quand on hésite entre chaud, froid ou neutre-froid, et qu'ils repèrent parfois un schéma que mon œil manque, bien que la lumière et les réglages de l'appareil puissent encore faire varier le résultat. Des outils comme l'analyse gratuite sur [aicoloranalysis.io](/makeup-analysis) peuvent suggérer une catégorie de sous-ton à partir d'une photo, ce qui vous donne un meilleur point de départ au comptoir beauté.
 
 ---
 

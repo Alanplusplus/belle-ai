@@ -1,7 +1,7 @@
 ---
 title: "Schmuckguide für olivfarbenen Teint: Gold, Silber oder Roségold?"
 seoTitle: "Gold oder Silber bei olivfarbenem Teint? Die überraschende Antwort"
-description: "Weder Gold noch Silber wirken auf Ihrer olivfarbenen Haut stimmig? Es gibt einen Grund. Erfahren Sie, welche Metalle olivfarbene Untertöne harmonisch ergänzen und warum Roségold oft die beste Wahl ist."
+description: "Schmuck bei olivfarbenem Teint: Welche Metalle harmonieren, warum Gold und Silber oft nicht stimmig wirken – Roségold als Option."
 date: "2026-09-18"
 tags: ["olivfarbener Unterton", "Schmuck", "Accessoires", "Persönliche Farbanalyse", "Stilguide"]
 image: "/images/blog/olive-skin-jewelry-metals.webp"
@@ -210,7 +210,7 @@ Behandeln Sie olivfarbenen Teint nicht wie einen durchgefallenen Warm-Kühl-Test
 
 ## Finden Sie Ihre besten Metalle und Farben
 
-Zwischen Gold und Silber zu raten kostete mich Zeit und Geld. Als ich meinen **Oliv-Subtyp** und **Farbtyp** verstand, wirkte Schmuck nicht mehr zufällig — derselbe Rahmen wie bei Kleidung und Make-up gilt hier. Eine schnelle **KI-Farbanalyse** auf [aicoloranalysis.io](https://aicoloranalysis.io) kartiert Unterton und Saison, damit Metall- und Edelsteinwahl in Ihrer Palette wurzelt, nicht in blindem Ausprobieren.
+Zwischen Gold und Silber zu raten kostete mich Zeit und Geld. Als ich meinen **Oliv-Subtyp** und **Farbtyp** verstand, wirkte Schmuck nicht mehr zufällig — derselbe Rahmen wie bei Kleidung und Make-up gilt hier. Eine schnelle **KI-Farbanalyse** auf [aicoloranalysis.io](/) kartiert Unterton und Saison, damit Metall- und Edelsteinwahl in Ihrer Palette wurzelt, nicht in blindem Ausprobieren.
 
 [Kostenlose KI-Farbanalyse testen →](/try)
 

@@ -1,6 +1,6 @@
 ---
 title: "How to Accessorize Based on Your Color Season: Jewelry, Scarves & More"
-description: "Your color season doesn't just dictate clothing — it transforms how you choose jewelry metals, scarf colors, handbags, and belts. Learn the accessory rules for all 12 seasons and build a collection that elevates every outfit."
+description: "Color season guides jewelry metals, scarves, handbags, and belts. Accessory rules for all 12 seasons to elevate every outfit."
 date: "2026-08-12"
 tags: ["personal color analysis", "jewelry", "accessories", "color season", "style guide"]
 image: "/images/blog/accessorize-by-color-season.webp"
@@ -183,7 +183,7 @@ This gives you dozens of combinations while maintaining perfect color harmony.
 
 If you're unsure about your color season — and therefore your accessory direction — the old method was to hold gold and silver jewelry up to your face and squint in a mirror. It works, but it's subjective.
 
-Modern AI color analysis tools can now determine your exact season from a photo, which takes the guesswork out of metal selection entirely. I used [an AI-powered color analysis tool](https://aicoloranalysis.io/personal-color-analysis) to confirm my season, and it gave me a complete palette including recommended metals and accessory tones — something that would typically require an in-person consultation costing $200+.
+Modern AI color analysis tools can now suggest a likely season from a photo, which gives you a useful starting point for choosing metals. I used [an AI-powered color analysis tool](/) to check my season, and it gave me a complete palette including recommended metals and accessory tones — something that would typically require an in-person consultation costing $200+.
 
 ---
 

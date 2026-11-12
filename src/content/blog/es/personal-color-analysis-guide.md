@@ -101,7 +101,7 @@ El estándar de oro. Un analista de color entrenado coloca telas de distintos co
 
 ### Método 2: Análisis de color con IA
 
-Las aplicaciones con IA como Belle AI analizan tu foto mediante visión por computadora para detectar tu subtono, nivel de contraste y características de coloración.
+Las aplicaciones con IA como Belle AI usan un modelo de imagen con IA para valorar tu subtono, nivel de contraste y características de coloración a partir de tu foto.
 
 - **Coste:** gratuito a 5 €
 - **Tiempo:** 60 segundos

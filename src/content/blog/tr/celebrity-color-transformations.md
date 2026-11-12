@@ -1,6 +1,6 @@
 ---
 title: "Ünlü Renk Dönüşümleri: Red Carpet Öncesi-Sonrası Görseller Bize Renk Sezonu Hakkında Ne Öğretiyor?"
-description: "En dramatik ünlü saç ve stil dönüşümlerini renk analizi perspektifinden inceliyoruz. Bazı değişimlerin neden çarpıcı göründüğünü, diğerlerinin neden düz kaldığını öğrenin — ve bu dersleri kendi renk seçimlerinize nasıl uygulayacağınızı keşfedin."
+description: "Dramatik ünlü saç ve stil dönüşümlerini renk analizi açısından inceliyoruz. Hangi değişimler çarpıcı, hangileri düz kaldı ve kendi stilinize dersler."
 date: "2026-08-20"
 tags: ["ünlü stili", "renk analizi", "saç rengi", "kişisel renk analizi", "stil rehberi"]
 image: "/images/blog/celebrity-color-transformations.webp"
@@ -120,9 +120,9 @@ Yüzünüzün yanına beyaz kağıt tutun. En açık (genellikle cilt) ile en ko
 
 Yaklaşık ten rengi, göz rengi ve doğal saç tonunu paylaşan 3–5 ünlü bulun. En iyi ve en kötü görünümlerine bakın. Kalıplar hızla ortaya çıkar — doğrudan size uygulanır.
 
-**Adım 4: Hassasiyet için AI kullanın**
+**Adım 4: İkinci görüş için yapay zekâyı kullanın**
 
-Manuel karşılaştırmanın sınırı vardır — kendi alt tonunuzu yanlış değerlendirebilir veya eşleşmediğini düşündüğünüz bir ünlü seçebilirsiniz. Modern AI renk analizi araçları alt sezonunuzu objektif belirler, tahmini kaldırır. [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) gibi bir araç fotoğrafınızı analiz eder ve 12 sezondan hangisine ait olduğunuzu söyler — kesin ünlü referans listesi ve palet verir.
+Manuel karşılaştırmanın sınırı vardır — kendi alt tonunuzu yanlış değerlendirebilir veya eşleşmediğini düşündüğünüz bir ünlü seçebilirsiniz. Modern yapay zeka renk analizi araçları fotoğrafınızdan olası alt mevsiminizi önerebilir; tahmini azaltmaya yardımcı olur. [aicoloranalysis.io](/personal-color-analysis) gibi bir araç fotoğrafınızı analiz eder ve 12 sezondan hangisinin size en çok uyduğunu önerir — ünlü referans listesi ve başlangıç paleti verir.
 
 ---
 
@@ -145,7 +145,7 @@ Büyük bir renk değişimi yapmadan önce kendinize sorun:
 - Aynı saç rengi sıcak ve soğuk alt tonlarda tamamen farklı görünür — sıcaklık eşleşmesi spesifik tondan daha önemli
 - Kontrast seviyeniz ne kadar dramatik gidebileceğinizi belirler — yüksek kontrastlı tipler düşük kontrastlılardan cesur değişimleri daha iyi taşır
 - Sıcak tipler için "açılmak" altın/bal tonları demektir, kül veya platin değil — soğuk tipler için tersi
-- AI renk analizi sezonunuzu objektif belirler; büyük değişimden önce net bir yol haritası verir
+- Yapay zeka renk analizi olası mevsiminizi önerebilir; büyük değişimden önce net bir başlangıç noktası verir
 
 Ünlü dönüşümlerinin bize öğrettiği en değerli şey hangi tonu seçeceğimiz değil — rengin bir *sistem* olarak çalıştığı. Tüm unsurlar doğal uyumunuzla hizalandığında zahmetsizce çarpıcı görünürsünüz. Hizalanmadığında ne kadar pahalı renk düzeltmesi olursa olsun "vay" etkisi oluşmaz. Sezonunuzu bilin, ünlü renk ikizlerinizi inceleyin; her dönüşümünüz insanların "harika görünüyorsun" demesini sağlasın, "bu... farklı" değil.
 

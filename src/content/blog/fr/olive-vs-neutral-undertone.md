@@ -98,7 +98,7 @@ Comparez votre peau à celle de quelqu’un clairement chaud ou froid.
 
 ### Étape 4 : confirmation par analyse IA
 
-Le drapé standard reste ambigu dans les cas limites. [L’analyse colorimétrique par IA](/fr/personal-color-analysis) mesure les valeurs réelles de couleur de votre peau — y compris le reflet vert-gris invisible à l’œil nu mais détectable par vision par ordinateur. C’est le moyen le plus fiable de distinguer olive et neutre.
+Le drapé standard reste ambigu dans les cas limites. Une [analyse colorimétrique par IA](/) peut constituer un second avis utile, car un modèle d'image IA examine l'ensemble de votre photo et peut repérer un reflet vert-gris facile à manquer à l'œil nu. C'est toujours un jugement visuel que la lumière et les réglages de l'appareil peuvent modifier : utilisez-le avec les tests ci-dessus, pas à leur place.
 
 ---
 
@@ -157,17 +157,17 @@ Vous êtes peut-être olive très légère ou neutre avec tendance olive. Essaye
 - **Le reflet vert est le différenciateur clé** — visible sur blanc, mâchoire/cou, lumière du jour
 - **Chaud et froid semblent décalés sur olive pour des raisons différentes** de la peau neutre
 - **Les couleurs atténuées révèlent l’olive** — si rose poussiéreux et taupe chaud vous vont alors que chaud et froid purs non, vous êtes olive
-- **L’analyse IA est le discriminateur le plus fiable** pour les cas limites
+- **L'analyse IA peut constituer un second avis utile** pour les cas limites
 
 Cessez d’accepter « neutre » si l’étiquette n’a jamais vraiment collé. Vous êtes peut-être olive — et cela change tout.
 
 ## Trouvez votre vrai sous-ton
 
-Olive ou neutre ? Notre analyse colorimétrique par IA détecte le reflet vert-gris que les tests classiques manquent.
+Olive ou neutre ? Notre analyse colorimétrique par IA peut vous donner un second avis sur le reflet vert-gris que les tests classiques manquent souvent.
 
 [Essayer l’analyse colorimétrique IA gratuite →](/fr/try)
 
-60 secondes, aperçu gratuit, sans inscription. Lecture précise du sous-ton, avec détection olive.
+60 secondes, aperçu gratuit, sans inscription. Lecture du sous-ton, avec détection olive.
 
 ## Articles connexes
 

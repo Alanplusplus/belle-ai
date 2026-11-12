@@ -153,7 +153,7 @@ image: "/images/blog/celebrity-color-season-style-twin.webp"
 
 후보를 좁힌 뒤, 그들이 꾸준히 잘 소화하는 색을 보세요. 베스트 shade가 웜하고 뮤트하면 오텀 계열, 쿨하고 밝으면 윈터일 가능성이 큽니다.
 
-더 확실한 답을 원하면 AI 컬러 분석이 사진으로 정확한 시즌을 식별합니다. [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) 같은 도구는 언더톤, 대비, 깊이를 분석해 12시즌 중 하나로 배치 — 셀럽 매칭의 **정확한 출발점**을 줍니다.
+두 번째 의견이 필요하면 AI 컬러 분석이 사진으로 가능성이 높은 시즌을 제안합니다. [aicoloranalysis.io](/personal-color-analysis) 같은 도구는 언더톤, 대비, 깊이를 시각적으로 판단해 12시즌 중 하나로 배치 — 셀럽 매칭의 **유용한 출발점**을 줍니다.
 
 ---
 

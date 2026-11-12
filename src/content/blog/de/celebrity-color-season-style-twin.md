@@ -1,6 +1,6 @@
 ---
 title: "Welcher Promi hat deine Farbsaison? Finde deinen Style-Zwilling"
-description: "Entdecke, welche Prominenten deine Farbsaison teilen — von Taylor Swifts Light Summer bis Lupita Nyong'os Deep Winter. Lerne, die Modewahl deines Style-Zwillings zu studieren und auf deine Garderobe anzuwenden."
+description: "Welcher Promi teilt deine Farbsaison? Von Light Summer bis Deep Winter – lerne Style-Zwillinge zu studieren und auf deine Garderobe anzuwenden."
 date: "2026-08-13"
 tags: ["persönliche Farbanalyse", "Promi-Stil", "Farbsaison", "Mode", "persönlicher Stil"]
 image: "/images/blog/celebrity-color-season-style-twin.webp"
@@ -153,7 +153,7 @@ Wenn du deine Saison noch nicht kennst, kann der Rückweg über Promi-Vergleiche
 
 Wenn du eingegrenzt hast, schau, welche Farben diese Promis durchgehend gut tragen. Sind ihre besten Nuancen warm und gedämpft, liegst du wahrscheinlich in der Herbst-Familie. Sind sie kühl und leuchtend, bist du vermutlich Winter.
 
-Für eine definitive Antwort kann KI-Farbanalyse deine exakte Saison aus einem Foto bestimmen. Tools wie [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) analysieren Unterton, Kontrastniveau und Farbtiefe deiner Haut und ordnen dich einer der 12 Saisons zu — ein präziser Startpunkt für deinen Promi-Match.
+Als Zweitmeinung kann KI-Farbanalyse einen wahrscheinlichen Farbtyp aus einem Foto vorschlagen. Tools wie [aicoloranalysis.io](/personal-color-analysis) bewerten Unterton, Kontrastniveau und Farbtiefe deiner Haut und ordnen dich einer der 12 Saisons zu — ein nützlicher Ausgangspunkt für deinen Promi-Match.
 
 ---
 

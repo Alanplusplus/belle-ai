@@ -207,7 +207,7 @@ Venen-, Schmuck- und Weißpapier-Tests wurden vor allem für helle Haut entwicke
 - **Gold vs. Silber** bei Oliv nicht eindeutig — oft gewinnt Roségold
 - **Weißpapier** lässt warm und oliv ähnlich wirken, beide wirken warm auf Weiß
 
-KI-gestützte Farbanalyse misst echte Pixel-Farbwerte aus einem Foto und erkennt den grau-grünen Modifikator unabhängig von Melanintiefe, Kultur und Licht. Wer von jedem Quiz und jeder Beraterin falsch typisiert wurde, erhält hier oft zum ersten Mal ein zutreffendes Ergebnis.
+KI-gestützte Farbanalyse kann hier helfen. Ein KI-Bildmodell betrachtet das ganze Foto, statt Sie Ihre Färbung beschreiben zu lassen, und kann manchmal den grau-grünen Modifikator erfassen, den Quiz übersehen — unabhängig von Melanintiefe oder kulturellem Hintergrund, obwohl Licht und Kameraeinstellungen das Ergebnis noch beeinflussen können. Wer von Quiz falsch typisiert wurde, erhält eine nützliche Zweitmeinung zum Abgleich mit einem Drapier-Test.
 
 ---
 
@@ -217,7 +217,7 @@ KI-gestützte Farbanalyse misst echte Pixel-Farbwerte aus einem Foto und erkennt
 - **Melanintiefe beeinflusst die Sichtbarkeit** — Grünstich am deutlichsten bei hellem Oliv, am wenigsten bei tiefem Oliv, aber in jeder Tiefe vorhanden
 - **Kulturelle Beauty-Standards übersehen Oliv oft** — und defaulten auf „warm“ oder „neutral“
 - **Ostasiatische Beauty-Communities führen bei Oliv-Erkennung** — mit eigener Terminologie und Produktlinien
-- **KI-Analyse funktioniert über Ethnien hinweg**, weil sie Ihre individuelle Haut misst statt Populationen anzunehmen
+- **KI-Analyse betrachtet Ihr individuelles Foto** statt einer bevölkerungsbasierten Beschreibung und kann über Ethnien hinweg eine nützliche Zweitmeinung sein — aber mit einem Drapier-Test bestätigen
 
 Ihre Herkunft beeinflusst, wie Oliv auf Ihrer Haut wirkt, bestimmt aber nicht, ob Sie Oliv-Unterton haben. Wenn warm und kühl scheitern, Ihre Haut bei Tageslicht grünlich wirkt, gedämpfte Erdtöne Sie strahlen lassen — Sie sind wahrscheinlich oliv, unabhängig vom Hintergrund.
 

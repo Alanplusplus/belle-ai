@@ -143,7 +143,7 @@ Unsicher? Unser Quiz stellt gezielte Fragen zu deiner Färbung und grenzt deine 
 
 ## Sofortige KI-Ergebnisse
 
-Für das genaueste Ergebnis: Lade ein klares Selfie hoch und lass die KI deinen exakten 12-Saisons-Typ bestimmen:
+Für eine schnelle Zweitmeinung: Lade ein klares Selfie hoch und lass die KI einen 12-Saisonen-Typ vorschlagen:
 
 [Kostenlose KI-Farbanalyse →](/try)
 

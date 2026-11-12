@@ -1,6 +1,6 @@
 ---
 title: "Ücretsiz Yapay Zekâ Renk Analizi Online: 300 $ Ödemeden Renklerinizi Bulun"
-description: "60 saniyede ücretsiz yapay zekâ renk analizi alın. Kayıt veya randevu gerekmez. Mevsimsel renk tipinizi, en iyi paletinizi ve AI ile stil önerilerinizi keşfedin."
+description: "60 saniyede ücretsiz yapay zekâ renk analizi: kayıt veya randevu yok. Mevsimsel tipiniz, paletiniz ve stil önerileri için bir başlangıç noktası."
 date: "2026-07-23"
 tags: ["ücretsiz renk analizi", "AI renk analizi", "online renk analizi", "renk analizi aracı", "ücretsiz"]
 image: "/images/blog/free-ai-color-analysis-online.webp"

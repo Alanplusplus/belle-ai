@@ -24,7 +24,7 @@ image: "/images/blog/style-personality-wardrobe-guide.webp"
 
 两个柔夏型女性可以看起来完全不同。一个可能在浪漫垂坠面料、柔卷发型和精致珠宝中光彩照人；另一个可能更适合结构化、极简的穿搭和利落发型。同样的颜色，不同的表达。
 
-如果你还没确定自己的风格人格，可以先阅读我们的[8 种风格人格类型指南](https://aicoloranalysis.io/style-personality)，或做一次快速分析来发现你的 Style DNA。一旦知道自己的原型（大多数人是一种主类型加一种副类型的混合），下面所有内容就都能落地执行了。
+如果你还没确定自己的风格人格，可以先阅读我们的[8 种风格人格类型指南](/style-personality)，或做一次快速分析来发现你的 Style DNA。一旦知道自己的原型（大多数人是一种主类型加一种副类型的混合），下面所有内容就都能落地执行了。
 
 ---
 
@@ -200,7 +200,7 @@ Oversized 西装趋势？戏剧型和经典型穿上惊艳。精灵型和空灵�
 
 传统识别风格人格的方式是预约形象顾问——昂贵、耗时，且 often 基于主观意见而非系统分析。
 
-如今，[风格人格分析工具](https://aicoloranalysis.io/style-personality) 可通过自拍评估面部几何、比例和 coloring，确定你的原型。驱动色彩季型分析的计算机视觉原理，现已延伸至 Style DNA——给你 data-informed 的起点，而非靠 Pinterest 板猜测。
+如今，[风格人格分析工具](/style-personality) 可通过自拍评估面部几何、比例和 coloring，确定你的原型。驱动色彩季型分析的计算机视觉原理，现已延伸至 Style DNA——给你 data-informed 的起点，而非靠 Pinterest 板猜测。
 
 不过，科技是起点，不能替代直觉。把分析结果当框架，再根据实际常穿、感到 confident 的单品 refine。最好的衣橱，是系统洞察与个人 truth 的结合。
 

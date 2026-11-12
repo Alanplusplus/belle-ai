@@ -1,6 +1,6 @@
 ---
 title: "Los mejores pendientes para cada forma de rostro: guía visual"
-description: "No todos los pendientes favorecen a todos los rostros. Descubre qué estilos — studs, aros, colgantes, chandeliers — funcionan mejor para rostros ovalados, redondos, cuadrados, en corazón y alargados, con consejos prácticos de compra y trucos de estilo."
+description: "No todos los pendientes favorecen a todos los rostros. Botones, aros, colgantes y chandeliers según forma ovalada, redonda, cuadrada y más."
 date: "2026-08-14"
 tags: ["forma del rostro", "pendientes", "joyería", "accesorios", "guía de estilo"]
 image: "/images/blog/best-earring-styles-face-shape.webp"
@@ -39,7 +39,7 @@ Antes de entrar en las recomendaciones, asegurémonos de que conoces tu forma de
 - **Alargado (rectangular):** El rostro es notablemente más largo que ancho, frente/pómulos/mandíbula de anchura similar
 - **Diamante:** Frente y mandíbula estrechas, los pómulos son el punto más ancho, contornos angulares
 
-Si tienes dudas, prueba a trazar el contorno de tu rostro en el espejo con un rotulador lavable — la forma se vuelve evidente al instante. También puedes usar una [herramienta de análisis de forma de rostro con IA](https://aicoloranalysis.io/face-shape-analysis) que identifica tu forma a partir de una foto y ofrece recomendaciones personalizadas.
+Si tienes dudas, prueba a trazar el contorno de tu rostro en el espejo con un rotulador lavable — la forma se vuelve evidente al instante. También puedes usar una [herramienta de análisis de forma de rostro con IA](/face-shape-analysis) que identifica tu forma a partir de una foto y ofrece recomendaciones personalizadas.
 
 ---
 

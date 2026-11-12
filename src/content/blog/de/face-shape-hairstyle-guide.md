@@ -1,6 +1,6 @@
 ---
 title: "Die beste Frisur für Ihre Gesichtsform: 7 Typen mit visuellen Beispielen (2026)"
-description: "Finden Sie Ihre perfekte Frisur basierend auf Ihrer Gesichtsform. Expertenempfehlungen für Oval, Rund, Eckig, Herz, Lang, Diamant & Dreieck — inklusive Pony und Scheitel."
+description: "Frisur nach Gesichtsform: Empfehlungen für Oval, Rund, Eckig, Herz, Lang, Diamant und Dreieck – inklusive Pony und Scheitel."
 date: "2026-07-03"
 tags: ["Gesichtsform", "Frisur", "Beauty-Ratgeber", "Haare", "Gesichtsform Frisur"]
 image: "/images/blog/face-shape-hairstyle-guide.webp"

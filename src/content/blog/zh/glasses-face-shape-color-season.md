@@ -192,7 +192,7 @@ image: "/images/blog/glasses-face-shape-color-season.webp"
 
 以前，要同时搞清楚脸型和色彩季型，通常需要两次咨询——一次找验光师，一次找色彩分析师。加起来可能要花 300–500 美元，还要占用数小时。
 
-现在，AI 工具可以从一张照片里，在约 60 秒内同时分析你的[脸型](https://aicoloranalysis.io/face-shape-analysis)和[色彩季型](https://aicoloranalysis.io/personal-color-analysis)。有些还能根据你的独特比例，给出专门的[眼镜镜框推荐](https://aicoloranalysis.io/glasses-analysis)。
+现在，AI 工具可以从一张照片里，在约 60 秒内同时分析你的[脸型](/face-shape-analysis)和[色彩季型](/personal-color-analysis)。有些还能根据你的独特比例，给出专门的[眼镜镜框推荐](/glasses-analysis)。
 
 技术不能替代试戴实物——你仍然需要确认鼻托和镜腿的舒适度。但它能给你一份形状和颜色的候选清单，省去在眼镜店里漫无目的逛上几小时的时间。
 
@@ -225,7 +225,7 @@ image: "/images/blog/glasses-face-shape-color-season.webp"
 - 冷色调季型 → 银色金属、冷黑、藏青、炭灰、梅紫
 - 上方对照表为全部 12 个子季型提供了具体建议
 - 材质选择（金属 vs 板材 vs 钛）也是与季型对齐的机会
-- AI 工具现在可以从一张照片同时分析脸型和色彩季型，让你在进店前就有精准候选清单
+- AI 工具现在可以从一张照片同时分析脸型和色彩季型，让你在进店前就有一份起步候选清单
 
 眼镜是你身上最显眼的配饰。形状和颜色都选对，它们就不再是"不得不戴的东西"，而是真正让你看起来更好的加分项。
 

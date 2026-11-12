@@ -1,6 +1,6 @@
 ---
 title: "Korean Personal Color Analysis (퍼스널 컬러): Why It's Taking Over the World"
-description: "Everything you need to know about Korean personal color analysis. Learn about the Korean 4-season system, how K-beauty uses color typing, and where to get analyzed."
+description: "Korean personal color analysis explained: the 4-season system, how K-beauty uses color typing, and where to get analyzed."
 date: "2026-07-18"
 tags: ["Korean color analysis", "personal color", "K-beauty", "Korean beauty", "color typing Korea"]
 image: "/images/blog/korean-personal-color-analysis.webp"
@@ -123,7 +123,7 @@ The trend has spread to:
 ### Online / AI Options
 
 For those who can't visit a Korean salon:
-- AI color analysis tools can provide accurate Korean-style typing
+- AI color analysis tools can give you a Korean-style starting point
 - Video consultations with Korean colorists are available (₩80,000–₩150,000)
 - Self-assessment guides in Korean are widely available on Naver
 
@@ -138,7 +138,7 @@ Personal color analysis of K-pop idols is hugely popular content:
 
 These celebrity typings drive fan engagement and help people identify their own seasons by comparison.
 
-## Try AI Color Analysis (Korean-Style Accuracy)
+## Try AI Color Analysis (Korean-Style 12-Season Typing)
 
 Our AI uses the same 12-season framework as Korean salon-style analysis to give you a starting point. Get your 12-season type, best colors, and makeup recommendations instantly.
 

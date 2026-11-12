@@ -1,6 +1,6 @@
 ---
 title: "Quelle célébrité a votre saison de couleur ? Trouvez votre jumeau de style"
-description: "Découvrez quelles célébrités partagent votre saison de couleur — de l'Été Clair de Taylor Swift à l'Hiver Profond de Lupita Nyong'o. Étudiez leurs choix mode et appliquez-les à votre garde-robe."
+description: "Quelles célébrités partagent votre saison ? De Taylor Swift à Lupita Nyong'o : leurs choix mode à appliquer à votre garde-robe."
 date: "2026-08-13"
 tags: ["analyse de couleur personnelle", "style célébrités", "saison de couleur", "mode", "style personnel"]
 image: "/images/blog/celebrity-color-season-style-twin.webp"
@@ -153,7 +153,7 @@ Si vous n'avez pas encore déterminé votre saison, partir des célébrités peu
 
 Une fois ciblé, regardez quelles couleurs ces célébrités portent bien de façon constante. Si leurs meilleures teintes sont chaudes et atténuées, vous êtes probablement dans la famille Automne. Si elles sont froides et vives, vous êtes sans doute Hiver.
 
-Pour une réponse définitive, l'analyse par IA peut identifier votre saison exacte à partir d'une photo. Des outils comme [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) analysent le sous-ton, le contraste et la profondeur de votre peau pour vous placer dans l'une des 12 saisons — un point de départ précis pour trouver votre match célébrité.
+Pour un second avis, l'analyse par IA peut suggérer une saison probable à partir d'une photo. Des outils comme [aicoloranalysis.io](/personal-color-analysis) jugent le sous-ton, le contraste et la profondeur de votre peau pour vous placer dans l'une des 12 saisons — un point de départ utile pour trouver votre match célébrité.
 
 ---
 

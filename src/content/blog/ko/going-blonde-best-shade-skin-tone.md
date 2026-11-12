@@ -71,7 +71,7 @@ image: "/images/blog/going-blonde-best-shade-skin-tone.webp"
 
 **웜 블론드**는 골드, copper, 허니 pigment로 피부 웜톤 반영. sun-kissed 건강한 glow——processed가 아닌 effortless. 경험상 웜 블론드는 가장 많이 요청되고, 가장 잘못된 언더톤에 적용됨. 쿨톤이 허니 블론드 하면, 머리 골드가 피부 핑크를 증폭해 의도치 않은 붉은기.
 
-**뉴트럴 블론드**는 중간——뚜렷히 웜도 쿨도 아님. 언더톤 불확실 시 가장 안전한 출발점, 이목구비 대비 강하면 "flat"할 수 있음. 샌디·wheat는 뉴트럴 언더톤, [퍼스널 컬러 분석](/ko/color-analysis)에서 blended·soft 시즌인 사람에게 아름답게.
+**뉴트럴 블론드**는 중간——뚜렷히 웜도 쿨도 아님. 언더톤 불확실 시 가장 안전한 출발점, 이목구비 대비 강하면 "flat"할 수 있음. 샌디·wheat는 뉴트럴 언더톤, [12시즌 컬러 분석](/ko/color-analysis)에서 blended·soft 시즌인 사람에게 아름답게.
 
 ### 올리브 언더톤 예외
 
@@ -144,7 +144,7 @@ image: "/images/blog/going-blonde-best-shade-skin-tone.webp"
 | 트루 윈터 | 플래티넘, ice, blue-ash | 허니, golden, copper |
 | 브라이트 윈터 | bright 플래티넘, cool 샴페인 | muted warm, 스트로베리 |
 
-시즌 불확실하면 [퍼스널 컬러 분석](https://aicoloranalysis.io/personal-color-analysis)으로 정확한 서브시즌 확인——소프트 서머와 트루 서머 차이가 블론드 entire category일 만큼 중요.
+시즌 불확실하면 [퍼스널 컬러 분석](/personal-color-analysis)으로 가능성이 높은 서브시즌을 점검——소프트 서머와 트루 서머 차이가 블론드 entire category일 만큼 중요.
 
 ### 시즌 사이에 있다면?
 
@@ -207,7 +207,7 @@ For most of history blonde shade guessing. swatch book, arm hair(head≠head hai
 
 AI tools actual photo different blonde preview—— dimension, undertone interaction, realistic light reflection, flat overlay 아님. ash cool skin imagine 대신 see. honey/champagne Light Spring wonder 대신 side by side.
 
-[aicoloranalysis.io](https://aicoloranalysis.io/hair-color-analysis) free tools bleach·toner·3시간 salon commit 전 preview. skin undertone, natural hair level, specific blonde facial features interact—— skilled colorist evaluate same variables, dollar 전 visible.
+[aicoloranalysis.io](/hair-color-analysis) free tools bleach·toner·3시간 salon commit 전 preview. skin undertone, natural hair level, specific blonde facial features interact—— skilled colorist evaluate same variables, dollar 전 visible.
 
 previewed reference salon arrive——"exact ash beige blonde level 9, this dimension"—— faster better. vague("make me blonde")→precise("this shade, technique, warmth"). precision love blonde vs tolerate until roots difference.
 

@@ -1,6 +1,6 @@
 ---
 title: "Quelles couleurs me vont le mieux ? L'analyse de couleur de tenue par IA expliquée"
-description: "Vous vous demandez pourquoi certaines couleurs de vêtements vous font rayonner tandis que d'autres ternissent votre teint ? Découvrez comment fonctionne l'analyse de couleur de tenue par IA et trouvez vos couleurs de garde-robe les plus flatteuses en quelques secondes."
+description: "Certaines couleurs vous font rayonner, d'autres ternissent votre teint. L'analyse de tenue par IA peut suggérer vos plus belles couleurs de garde-robe."
 date: "2026-07-30"
 tags: ["analyse de couleur personnelle", "couleurs de tenue", "garde-robe", "beauté IA", "guide de style"]
 image: "/images/blog/ai-outfit-color-matching.webp"

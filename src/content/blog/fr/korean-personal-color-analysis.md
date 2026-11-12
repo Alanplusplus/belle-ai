@@ -1,6 +1,6 @@
 ---
 title: "Analyse de couleur personnelle coréenne : Pourquoi elle conquiert le monde"
-description: "Tout ce qu'il faut savoir sur l'analyse de couleur personnelle coréenne. Découvrez le système coréen à 4 saisons, comment la K-beauty utilise le typage chromatique et où se faire analyser."
+description: "Analyse de couleur personnelle coréenne : système à 4 saisons, lien K-beauty et où se faire analyser."
 date: "2026-07-18"
 tags: ["analyse de couleur coréenne", "couleur personnelle", "K-beauty", "beauté coréenne", "typage couleur Corée"]
 image: "/images/blog/korean-personal-color-analysis.webp"
@@ -123,7 +123,7 @@ La tendance s'est étendue à :
 ### Options en ligne / IA
 
 Pour ceux qui ne peuvent pas visiter un salon coréen :
-- Les outils d'analyse IA peuvent fournir un typage précis de style coréen
+- Les outils d'analyse IA peuvent vous donner un point de départ de style coréen
 - Consultations vidéo avec des coloristes coréens disponibles (80 000–150 000 ₩)
 - Guides d'auto-évaluation en coréen largement disponibles sur Naver
 
@@ -138,7 +138,7 @@ L'analyse de couleur personnelle des idoles K-pop est un contenu très populaire
 
 Ces typages de célébrités stimulent l'engagement des fans et aident à identifier sa propre saison par comparaison.
 
-## Essayez l'analyse de couleur IA (précision style coréen)
+## Essayez l'analyse de couleur IA (typage 12 saisons style coréen)
 
 Notre IA utilise le même système de 12 saisons que l'analyse en salon coréen pour vous offrir un point de départ. Obtenez votre type 12 saisons, meilleures couleurs et recommandations maquillage instantanément.
 

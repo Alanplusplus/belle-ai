@@ -149,7 +149,7 @@ Probiere die empfohlenen Farben, bevor du sie abwinkst. Unsere Wahrnehmung von �
 
 **„Ändern sich Ergebnisse mit der Zeit?“**
 
-Dein Kernunterton bleibt, aber Tiefe und Klarheit können mit Alter, Sonne oder großen Haarfarben-Änderungen shiftieren. Alle 2–3 Jahre oder nach großen Appearance-Changes neu analysieren lohnt sich. Viele KI-Tools, z. B. bei [aicoloranalysis.io](https://aicoloranalysis.io/try), machen das einfach — neues Foto, fertig.
+Dein Kernunterton bleibt, aber Tiefe und Klarheit können mit Alter, Sonne oder großen Haarfarben-Änderungen shiftieren. Alle 2–3 Jahre oder nach großen Appearance-Changes neu analysieren lohnt sich. Viele KI-Tools, z. B. bei [aicoloranalysis.io](/try), machen das einfach — neues Foto, fertig.
 
 **„Ist das nur für Frauen?“**
 

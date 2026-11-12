@@ -1,6 +1,6 @@
 ---
 title: "Best Earring Styles for Every Face Shape — A Visual Guide"
-description: "Not all earrings flatter every face. Learn which earring styles — studs, hoops, drops, chandeliers — work best for oval, round, square, heart, and oblong face shapes, with practical shopping tips and styling tricks."
+description: "Not all earrings flatter every face. Studs, hoops, drops, and chandeliers for oval, round, square, heart, and oblong shapes, plus shopping tips."
 date: "2026-08-14"
 tags: ["face shape", "earrings", "jewelry", "accessories", "style guide"]
 image: "/images/blog/best-earring-styles-face-shape.webp"
@@ -39,7 +39,7 @@ Before diving into recommendations, let's make sure you know your face shape. Pu
 - **Oblong (rectangle):** Face is noticeably longer than wide, forehead/cheekbones/jaw are roughly similar in width
 - **Diamond:** Narrow forehead and jawline, cheekbones are the widest point, face has angular contours
 
-If you're unsure, try tracing your face outline on a mirror with a washable marker — the shape becomes immediately obvious. Or you can use an [AI face shape analysis tool](https://aicoloranalysis.io/face-shape-analysis) that identifies your shape from a photo and provides personalized recommendations.
+If you're unsure, try tracing your face outline on a mirror with a washable marker — the shape becomes immediately obvious. Or you can use an [AI face shape analysis tool](/face-shape-analysis) that identifies your shape from a photo and provides personalized recommendations.
 
 ---
 

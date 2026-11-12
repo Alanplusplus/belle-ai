@@ -1,6 +1,6 @@
 ---
 title: "Les meilleures boucles d'oreilles pour chaque forme de visage — guide visuel"
-description: "Toutes les boucles d'oreilles ne flattent pas tous les visages. Découvrez quels styles — puces, créoles, pendants, chandeliers — conviennent le mieux aux visages ovales, ronds, carrés, en cœur et allongés, avec des conseils d'achat pratiques et des astuces de style."
+description: "Boucles d'oreilles et forme de visage : puces, créoles, pendants ou chandeliers pour ovale, rond, carré, cœur et allongé."
 date: "2026-08-14"
 tags: ["forme du visage", "boucles d'oreilles", "bijoux", "accessoires", "guide de style"]
 image: "/images/blog/best-earring-styles-face-shape.webp"
@@ -39,7 +39,7 @@ Avant d'entrer dans les recommandations, assurons-nous que vous connaissez votre
 - **Allongé (rectangulaire) :** Le visage est nettement plus long que large, front/pommettes/mâchoire de largeur à peu près similaire
 - **Diamant :** Front et mâchoire étroits, les pommettes sont le point le plus large, contours anguleux
 
-En cas de doute, tracez le contour de votre visage sur un miroir avec un feutre effaçable — la forme devient immédiatement évidente. Vous pouvez aussi utiliser un [outil d'analyse de forme de visage par IA](https://aicoloranalysis.io/face-shape-analysis) qui identifie votre forme à partir d'une photo et fournit des recommandations personnalisées.
+En cas de doute, tracez le contour de votre visage sur un miroir avec un feutre effaçable — la forme devient immédiatement évidente. Vous pouvez aussi utiliser un [outil d'analyse de forme de visage par IA](/face-shape-analysis) qui identifie votre forme à partir d'une photo et fournit des recommandations personnalisées.
 
 ---
 

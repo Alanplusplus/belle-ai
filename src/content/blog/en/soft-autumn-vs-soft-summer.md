@@ -1,7 +1,7 @@
 ---
 title: "Soft Autumn vs Soft Summer: The Most Commonly Confused Color Seasons"
 seoTitle: "Soft Autumn vs Soft Summer — How to Finally Tell Which One You Are"
-description: "Both are muted and low-contrast, so tests give mixed results? See the 3 key differences between Soft Autumn and Soft Summer — plus a free AI analysis to settle it."
+description: "Muted and low-contrast Soft Autumn vs Soft Summer? Three key differences, plus a free AI analysis as a starting point to settle it."
 date: "2026-08-10"
 tags: ["personal color analysis", "soft autumn", "soft summer", "color season", "beauty"]
 image: "/images/blog/soft-autumn-vs-soft-summer.webp"
@@ -178,7 +178,7 @@ If you find that both palettes work reasonably well for you, here's my suggestio
 
 Determining your undertone can be genuinely difficult, especially for muted seasons where the warmth or coolness is subtle. This is one area where AI-powered color analysis has become surprisingly useful.
 
-Modern tools can analyze the exact undertone of your skin using photo data — accounting for things like lighting conditions and contrast levels that might trick the human eye. If you're stuck between Soft Autumn and Soft Summer, an [AI color analysis tool](https://aicoloranalysis.io/personal-color-analysis) can provide an objective starting point. I've found it particularly helpful for people with neutral undertones who genuinely can't tell which way they lean.
+Modern tools can judge your skin's undertone from a photo, looking at contrast levels and other cues that might trick the human eye, though lighting and camera settings can still shift the result. If you're stuck between Soft Autumn and Soft Summer, an [AI color analysis tool](/) can provide a second opinion. I've found it particularly helpful for people with neutral undertones who genuinely can't tell which way they lean.
 
 ---
 
@@ -196,7 +196,7 @@ And that's worth figuring out.
 
 ## Still Not Sure? Let AI Settle It
 
-If you're still torn between Soft Autumn and Soft Summer, our [free AI color analysis](/color-analysis) can detect the subtle undertone differences that quizzes miss.
+If you're still torn between Soft Autumn and Soft Summer, our [free AI color analysis](/) can detect the subtle undertone differences that quizzes miss.
 
 [Take the Free AI Color Analysis →](/try)
 

@@ -1,6 +1,6 @@
 ---
 title: "Por qué tu base nunca encaja: una inmersión profunda en el subtono"
-description: "¿Tu base se ve rara? El problema no es el tono, sino el subtono. Aprende cómo los subtonos cálidos, fríos, neutros y oliva afectan la elección de base, más 5 pruebas en tienda que realmente funcionan."
+description: "¿Tu base se ve rara? El problema es el subtono. Cálido, frío, neutro u oliva, más cinco pruebas en tienda que funcionan."
 date: "2026-08-25"
 tags: ["subtono de piel", "base de maquillaje", "maquillaje", "belleza", "análisis de color"]
 image: "/images/blog/foundation-undertone-guide.webp"
@@ -89,9 +89,9 @@ Observa el tono general de la piel de la muñeca interna a luz natural (ignora l
 
 ### 5. Análisis de subtono con IA
 
-La tecnología ha avanzado notablemente en esto. Las herramientas de análisis de color con IA pueden fotografiar tu piel en condiciones estandarizadas y aislar el subtono del color superficial, el bronceado, el enrojecimiento y el sesgo de la iluminación. He probado varias, y superan de forma consistente la correspondencia en tienda — especialmente en casos difíciles como subtonos oliva o piel de subtono neutro que confunde al ojo humano.
+La tecnología puede ayudar aquí como segunda opinión. Las herramientas de análisis de color con IA valoran tu subtono a partir de un selfie, intentando separarlo del color superficial, el bronceado y el enrojecimiento, aunque la luz y la cámara pueden cambiar el resultado. He probado varias, y fueron más útiles como contraste en casos difíciles como subtonos oliva o piel de subtono neutro que confunde al ojo humano.
 
-Herramientas como [aicoloranalysis.io](https://aicoloranalysis.io/makeup-analysis) pueden analizar tu subtono desde un selfie y generar recomendaciones de tono de base calibradas a tu coloración específica.
+Herramientas como [aicoloranalysis.io](/makeup-analysis) pueden analizar tu subtono desde un selfie y sugerir tonos de base según tu coloración.
 
 ---
 
@@ -120,7 +120,7 @@ El subtono oliva afecta aproximadamente al 20-25% de la población mundial, pero
 
 ## Matching de base por estación de color
 
-Tu [estación de color personal](https://aicoloranalysis.io/personal-color-analysis) da pistas claras sobre el subtono de tu base:
+Tu [estación de color personal](/personal-color-analysis) da pistas claras sobre el subtono de tu base:
 
 **Estaciones de primavera (Light Spring, True Spring, Bright Spring):**
 Subtono de base: Cálido. Busca fórmulas doradas y melocotón. Las primaveras suelen oxidar hacia lo cálido, así que elige ligeramente más claro de lo que parece en tienda.

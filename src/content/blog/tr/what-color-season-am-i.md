@@ -1,6 +1,6 @@
 ---
 title: "Ben Hangi Mevsimim? Renk Mevsiminizi Bulun (İlkbahar, Yaz, Sonbahar, Kış)"
-description: "«Ben hangi mevsimim?» diye mi merak ediyorsunuz? Kişisel renk analizinde İlkbahar, Yaz, Sonbahar veya Kış olup olmadığınızı öğrenin. Ücretsiz quiz ve AI analizi dahil."
+description: "«Ben hangi mevsimim?» Kişisel renk analiziyle İlkbahar, Yaz, Sonbahar veya Kış olup olmadığınızı öğrenin. Ücretsiz quiz ve AI analizi dahil."
 date: "2026-07-20"
 tags: ["ben hangi mevsimim", "renk mevsimi", "ilkbahar yaz sonbahar kış", "mevsimsel renk tipi", "renk analizi quizi"]
 image: "/images/blog/what-color-season-am-i.webp"
@@ -143,7 +143,7 @@ Nerede olduğunuzdan emin değil misiniz? Quizimiz renklendirmeniz hakkında hed
 
 ## Anında Yapay Zekâ Sonuçları
 
-En doğru sonuç için net bir selfie yükleyin ve yapay zekânın tam 12 mevsim tipinizi belirlemesine izin verin:
+Hızlı bir ikinci görüş için net bir selfie yükleyin ve yapay zekânın 12 mevsim tipinizi önermesine izin verin:
 
 [Ücretsiz Yapay Zekâ Renk Analizi →](/tr/try)
 

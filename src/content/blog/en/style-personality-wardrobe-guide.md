@@ -1,6 +1,6 @@
 ---
 title: "How to Use Your Style Personality to Build a Wardrobe That Actually Works"
-description: "Learn how to build a wardrobe based on your style personality — not trends. From core pieces to shopping filters, this guide turns your Style DNA into a closet that finally feels like you."
+description: "Build a wardrobe from your style personality, not trends. Core pieces and shopping filters turn your Style DNA into a closet that feels like you."
 date: "2026-09-19"
 tags: ["style personality", "wardrobe building", "personal style", "capsule wardrobe", "fashion tips"]
 image: "/images/blog/style-personality-wardrobe-guide.webp"
@@ -24,7 +24,7 @@ Think of it this way: color season is your palette. Style personality is your br
 
 Two Soft Summer women can look completely different. One might shine in romantic, draped fabrics with soft waves and delicate jewelry. The other might look best in structured, minimal outfits with sleek hair and clean lines. Same colors. Different expression.
 
-If you haven't identified your style personality yet, start with our guide to the [8 style personality types](https://aicoloranalysis.io/style-personality) — or take a quick analysis to discover your Style DNA. Once you know your archetype (most people are a blend of two), everything below becomes actionable.
+If you haven't identified your style personality yet, start with our guide to the [8 style personality types](/style-personality) — or take a quick analysis to discover your Style DNA. Once you know your archetype (most people are a blend of two), everything below becomes actionable.
 
 ---
 
@@ -200,7 +200,7 @@ The result? A wardrobe where every piece feels intentional, everything mixes and
 
 The traditional approach to identifying your style personality involved booking sessions with image consultants — expensive, time-consuming, and often based on subjective opinion rather than systematic analysis.
 
-Today, [style personality analysis tools](https://aicoloranalysis.io/style-personality) can look at your facial features, proportions, and coloring and suggest an archetype from a selfie. The same kind of AI image analysis used for color seasons now extends to style DNA, giving you a visual starting point rather than guessing based on Pinterest boards.
+Today, [style personality analysis tools](/style-personality) can look at your facial features, proportions, and coloring and suggest an archetype from a selfie. The same kind of AI image analysis used for color seasons now extends to style DNA, giving you a visual starting point rather than guessing based on Pinterest boards.
 
 That said, technology is a starting point, not a replacement for intuition. Use your analysis results as a framework, then refine based on what you actually reach for and feel confident wearing. The best wardrobe is one that combines systematic insight with personal truth.
 

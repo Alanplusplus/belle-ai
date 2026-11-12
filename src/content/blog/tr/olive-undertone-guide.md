@@ -198,7 +198,7 @@ Zeytin tonlu kişilerin İlkbahar veya Kış mevsimlerine tiplenmesi nadirdir ç
 
 Renk analizi testine girdiyseniz ve sonuçlar doğru hissettirmediyse, zeytin alt tonunuz nedeni olabilir. Standart testler yeşil değiştiriciyi hesaba katmaz; bu yüzden teknik olarak sıcak/soğuk temelinize uyan ama zeytinin eklediği soluk kaliteyi görmezden gelen bir mevsime tiplendirebilirler.
 
-Daha doğru sonuçlar için [yapay zekâ tabanlı renk analizi](/tr/personal-color-analysis), cildinizdeki gerçek renk değerlerini — çoğu temel teste görünmez ama bilgisayarlı görü algoritmalarına açıkça görünen o yeşil-gri tonu dahil — ölçerek zeytin alt tonlarını tespit edebilir.
+Hâlâ emin değilseniz, [yapay zekâ tabanlı renk analizi](/) size ikinci bir görüş sunabilir. Bir yapay zeka görüntü modeli tüm fotoğrafınıza bakar ve temel testlerin sıkça kaçırdığı yeşil-gri tonu fark edebilir. Bu bir ölçüm değil, görsel bir değerlendirmedir; ışık ve kamera ayarları sonucu değiştirebilir. Bunu bir başlangıç noktası olarak ele alın.
 
 ---
 

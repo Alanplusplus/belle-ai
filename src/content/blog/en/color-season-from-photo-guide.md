@@ -39,7 +39,7 @@ Whether it's an AI tool or a trained eye, a color season comes down to four trai
 
 A photo captures all four, but each one can be distorted. A warm bulb adds yellow, which can fake a warm undertone. Heavy editing raises saturation, which can fake a bright chroma. Dim light flattens contrast. The goal of every rule below is to keep those four traits intact between your face and the final image.
 
-If you want the bigger picture of how those traits map onto the 12 seasons, our [color season guide](/blog/what-color-season-am-i) walks through each one.
+If you want the bigger picture of how those traits map onto the 12 seasons, start with our [12-season color analysis guide](/color-analysis); our [color season guide](/blog/what-color-season-am-i) then walks through each one.
 
 ---
 
@@ -97,7 +97,7 @@ A tan is worth a special mention. It darkens your surface color for a while, but
 ## Step by Step: Getting a Result From Your Photo
 
 1. Follow the seven rules above and pick your best, most natural photo.
-2. Upload it to an AI color analysis tool. You can try ours with [one selfie in about a minute](/try), free to start and no signup needed.
+2. Upload it to an [AI color analysis](/) tool. You can try ours with [one selfie in about a minute](/try), free to start and no signup needed.
 3. Read the result as a profile, not just a label: which undertone, how deep, how muted or vivid.
 4. Save the palette, then test it. Hold a top in one of your suggested colors and one in a color you were told to avoid near your face in daylight, and watch what happens to your skin.
 
@@ -158,8 +158,6 @@ A good selfie won't replace judgment, but it gives you a clean, repeatable basel
 - [How to Do Color Analysis at Home](/blog/how-to-do-color-analysis-at-home) — A step-by-step DIY guide with drape tests
 - [What Season Am I? Find Your Color Season](/blog/what-color-season-am-i) — The four seasons and their 12 sub-seasons explained
 - [Free AI Color Analysis Online](/blog/free-ai-color-analysis-online) — How free AI color analysis works and what to expect
-- [AI vs Professional Color Analysis](/blog/ai-vs-professional-color-analysis) — When each method makes sense
-- [Soft Autumn vs Soft Summer](/blog/soft-autumn-vs-soft-summer) — Separate two commonly confused seasons
 - [How to Determine Your Skin Undertone](/blog/how-to-determine-skin-undertone) — Simple at-home tests for warm, cool or neutral
 - [Free Color Season Quiz](/tools/color-quiz) — Take a short quiz if you prefer not to upload a photo
-- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Color Analysis Guide: Find Your Season & Best Colors](/color-analysis) — Everything you need to know about finding your best colors

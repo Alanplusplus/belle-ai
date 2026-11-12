@@ -1,6 +1,6 @@
 ---
 title: "Renk Mevsimize Göre Kapsül Gardırop Nasıl Oluşturulur (Adım Adım Rehber)"
-description: "Renk mevsiminize dayalı çok yönlü bir kapsül gardırop oluşturmayı öğrenin. Nötr seçiminden aksan parçalara kadar bu rehber, renk analizini pratik bir alışveriş stratejisine dönüştürür."
+description: "Renk mevsiminize dayalı çok yönlü kapsül gardırop kurun. Nötrlerden aksan parçalara renk analizini pratik alışveriş stratejisine dönüştürün."
 date: "2026-07-25"
 tags: ["kapsül gardırop", "kişisel renk analizi", "renk mevsimi", "moda ipuçları", "stil rehberi"]
 image: "/images/blog/capsule-wardrobe-color-season.webp"
@@ -178,11 +178,11 @@ Kendi kapsül gardırobumla bir yıldan fazla çalıştıktan sonra öğrendiği
 
 Renk mevsimi kapsül gardırop kurmanın en zor kısmı eskiden önce mevsimini bulmaktı. Renk danışmanıyla geleneksel draping seansları 200–500 dolar tutar ve haftalar öncesinden randevu gerektirir.
 
-Bugün yapay zeka destekli renk analizi araçları bir selfie'den saniyeler içinde mevsimini belirleyebilir. Cildinin alt tonunu, özellikler arası kontrastı ve doğal renklendirmenin sıcaklık/soğukluğunu analiz eder — insan analistin değerlendirdiği faktörler; ancak tüm fotoğrafı okuyan bir yapay zekâ görüntü modeliyle.
+Bugün yapay zeka destekli renk analizi araçları bir selfie'den saniyeler içinde olası bir mevsim önerebilir. Cildinin alt tonunu, özellikler arası kontrastı ve doğal renklendirmenin sıcaklık/soğukluğunu değerlendirir — insan analistin baktığı faktörler; ancak tüm fotoğrafı okuyan bir yapay zekâ görüntü modeliyle.
 
 Mevsimini bildikten sonra çevrimiçi alışverişte ürünleri dijital palet araçlarıyla karşılaştırabilirsin. Bazı uygulamalar satın almadan renkleri sanal "denemenizi" sağlar — iade ve hayal kırıklığını azaltır.
 
-[aicoloranalysis.io](https://aicoloranalysis.io) gibi ücretsiz araçlar mevsimini belirleyen ve kişiselleştirilmiş palet sunan anında yapay zeka renk analizi verir — kapsül gardırop planlaması için harika başlangıç.
+[aicoloranalysis.io](/) gibi ücretsiz araçlar olası bir mevsim ve kişiselleştirilmiş palet öneren anında yapay zeka renk analizi sunar — kapsül gardırop planlaması için harika başlangıç noktası.
 
 ---
 
@@ -193,7 +193,7 @@ Mevsimini bildikten sonra çevrimiçi alışverişte ürünleri dijital palet ar
 - Cildini parlatacak 3–5 aksan renk ekle (gardırobun %30'u)
 - Her desen paletindeki renkleri içermeli
 - Her şeyi bir anda değiştirmek yerine 6+ ay boyunca kademeli inşa et
-- Mevsimini hızla belirlemek ve güvenle başlamak için yapay zeka renk analizini kullan
+- Mevsiminize dair hızlı bir ilk okuma için yapay zeka renk analizini kullanın, ardından kumaş testiyle doğrulayın
 
 ## İlgili Makaleler
 

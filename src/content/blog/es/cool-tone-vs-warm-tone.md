@@ -116,7 +116,7 @@ La temperatura de color que hace que tu piel se vea más luminosa y uniforme ind
 
 Si has probado las cinco pruebas y aún no lo tienes claro, probablemente tengas un subtono neutro, lo cual es una excelente noticia. Los subtonos neutros ofrecen la mayor flexibilidad a la hora de elegir colores.
 
-Para una respuesta definitiva, considera el [análisis de color con IA](/es/personal-color-analysis). Aplicaciones como Belle AI utilizan visión por computadora para analizar los valores de color reales de tu piel, ofreciendo resultados objetivos que no se ven afectados por la percepción subjetiva ni por las condiciones de iluminación. También puedes probar nuestro [test de color gratuito](/es/tools/color-quiz) para una estimación rápida.
+Si las pruebas caseras no te dejan clara la respuesta, un [análisis de color con IA](/) puede darte una segunda opinión. Belle AI usa un modelo de imagen con IA para valorar tu subtono a partir de una foto. Es un juicio visual, no una medición, así que la luz, los ajustes de la cámara y el maquillaje aún pueden cambiar el resultado (consulta [qué tan fiable es realmente el análisis de color con IA](/ai-color-analysis-accuracy)). También puedes probar nuestro [test de color gratuito](/es/tools/color-quiz) para una estimación rápida.
 
 ## Preguntas frecuentes
 

@@ -12,7 +12,7 @@ image: "/images/blog/deep-winter-color-palette.webp"
 
 **Quick answer:** Deep Winter is the darkest of the three Winter sub-seasons: depth comes first and cool comes second, with deep hair and eyes, medium-to-deep skin and a cool or neutral-cool undertone. Its best colors include black, navy, emerald, royal purple and blue-red, while beige, camel, orange-red and yellow gold are the ones to avoid.
 
-Deep Winter sits between True Winter and Dark Autumn on the color wheel. It's the darkest of the three Winter sub-seasons, with the defining characteristic being **depth** — deep hair, deep eyes, and medium-to-deep skin with cool or neutral-cool undertones.
+Deep Winter is one of the 12 types in the [12-season color analysis](/color-analysis) system, and it sits between True Winter and Dark Autumn on the color wheel. It's the darkest of the three Winter sub-seasons, with the defining characteristic being **depth** — deep hair, deep eyes, and medium-to-deep skin with cool or neutral-cool undertones.
 
 **Typical Deep Winter characteristics:**
 
@@ -166,11 +166,11 @@ Color analysis can feel confusing because so many variables are at play — ligh
 
 If you suspect you're a Deep Winter, start by testing the core principle: **do deep, cool, high-contrast colors make your skin look clearer and your eyes brighter?** If yes, you're very likely in Winter territory — and the depth of your natural coloring will tell you whether you're Deep, True, or Bright.
 
-If you would rather not guess, [AI color analysis](/personal-color-analysis) uses an AI image model to judge your skin, hair, and eye coloring from a photo and suggest a 12-season type. It is a visual judgment, not a measurement, so use it as a starting point and check it against how the colors look on you.
+If you would rather not guess, [AI color analysis](/) uses an AI image model to judge your skin, hair, and eye coloring from a photo and suggest a 12-season type. It is a visual judgment, not a measurement, so use it as a starting point and check it against how the colors look on you.
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [The Complete Color Analysis Guide](/color-analysis) — Everything you need to know about finding your best colors
 - [Personal Color Analysis: All 12 Types Explained](/blog/personal-color-analysis-guide) — Understand where Deep Winter fits in the full system
 - [Best Colors for Cool Undertones](/blog/best-colors-for-cool-undertones) — Broader cool-toned color guide
 - [Cool Tone vs Warm Tone: 5 Easy Tests](/blog/cool-tone-vs-warm-tone) — Confirm your undertone first

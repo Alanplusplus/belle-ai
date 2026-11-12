@@ -1,6 +1,6 @@
 ---
 title: "Analyse de couleur pour hommes : Trouvez vos meilleures couleurs"
-description: "L'analyse de couleur personnelle n'est pas réservée aux femmes. Découvrez comment les hommes peuvent trouver leur type de couleur saisonnier et l'utiliser pour les costumes, la tenue décontractée, le grooming et la tenue professionnelle."
+description: "Analyse de couleur pour hommes : trouver sa saison pour costumes, tenue décontractée, grooming et look professionnel."
 date: "2026-07-19"
 tags: ["analyse de couleur hommes", "analyse de couleur masculine", "couleur saisonnière hommes", "style masculin", "mode masculine"]
 image: "/images/blog/color-analysis-for-men.webp"
@@ -133,7 +133,7 @@ Le noir n'est idéal que pour les hommes Hiver. Sur les Printemps, il écrase. S
 
 ## Obtenez votre analyse de couleur
 
-Arrêtez de deviner et trouvez votre type saisonnier exact. Notre IA fonctionne aussi bien pour les hommes que pour les femmes — elle analyse les mêmes signaux de sous-ton et de contraste quel que soit le genre.
+Arrêtez de deviner et trouvez votre type saisonnier. Notre IA examine les mêmes signaux de sous-ton et de contraste pour les hommes comme pour les femmes, et le résultat constitue un point de départ que vous pouvez confirmer avec un test au drapé.
 
 [Lancer l'analyse de couleur gratuite →](/try)
 

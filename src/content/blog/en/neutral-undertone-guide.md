@@ -1,6 +1,6 @@
 ---
 title: "Neutral Undertone: The Hardest Skin Tone to Diagnose (Here's How)"
-description: "Neutral undertone is the most frequently misdiagnosed skin tone. Learn why standard tests fail, how to identify true neutral undertone with 5 reliable methods, and how to use it to your advantage in makeup, hair color, and wardrobe choices."
+description: "Neutral undertone is often misdiagnosed. Why standard tests fail, five ways to spot true neutral, and how to use it in makeup, hair, and wardrobe."
 date: "2026-08-18"
 tags: ["skin undertone", "neutral undertone", "color analysis", "beauty", "style guide"]
 image: "/images/blog/neutral-undertone-guide.webp"
@@ -117,7 +117,7 @@ Wear a strongly warm color (orange, mustard, warm red) for a full day. The next 
 
 This is where technology can help as a second opinion. AI-powered color analysis tools use an AI image model to judge the balance of warm and cool in your photo, rather than relying only on your own visual comparison. It is a visual judgment, not a measurement, so lighting and camera settings can still shift the result.
 
-Tools like [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) look at your whole photo and can flag a neutral undertone, which is useful because manual tests often force a binary warm-or-cool answer.
+Tools like [aicoloranalysis.io](/personal-color-analysis) look at your whole photo and can flag a neutral undertone, which is useful because manual tests often force a binary warm-or-cool answer.
 
 AI analysis can be handy for neutral-toned people because it is not limited to a binary choice. A good result can describe your coloring as leaning slightly warm or slightly cool, which is the nuance neutrals usually need. Check it against the other methods in this guide.
 

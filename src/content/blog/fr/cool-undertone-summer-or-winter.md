@@ -112,7 +112,7 @@ Parmi les saisons froides :
 
 ## Utiliser une analyse IA comme second avis
 
-Belle AI estime votre saison à partir d'un selfie. Il s'agit d'un jugement visuel de l'IA, pas d'une mesure, et le résultat peut différer d'une séance de drapage en personne. Si deux photos vous donnent des saisons différentes, considérez le résultat IA comme un élément parmi d'autres et fiez-vous au test d'étoffes en lumière du jour ci-dessus. Nous expliquons ce que cela peut et ne peut pas faire dans [Quelle est la fiabilité de l'analyse colorimétrique par IA ?](/fr/ai-color-analysis-accuracy). Pour l'essayer, commencez par [l'analyse colorimétrique par IA](/fr/personal-color-analysis).
+Belle AI estime votre saison à partir d'un selfie. Il s'agit d'un jugement visuel de l'IA, pas d'une mesure, et le résultat peut différer d'une séance de drapage en personne. Si deux photos vous donnent des saisons différentes, considérez le résultat IA comme un élément parmi d'autres et fiez-vous au test d'étoffes en lumière du jour ci-dessus. Nous expliquons ce que cela peut et ne peut pas faire dans [Quelle est la fiabilité de l'analyse colorimétrique par IA ?](/fr/ai-color-analysis-accuracy). Pour l'essayer, commencez par [l'analyse colorimétrique par IA](/).
 
 ## Questions fréquentes
 

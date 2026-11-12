@@ -1,7 +1,7 @@
 ---
 title: "Cómo la Iluminación Afecta Tus Colores (Arréglalo Ya)"
 seoTitle: "Por qué tus colores se ven mal según la luz (y cómo solucionarlo)"
-description: "¿Te ves apagada bajo la luz de oficina pero radiante a la hora dorada? Descubre por qué la iluminación cambia cómo se ven tu piel y tu ropa, y cómo encontrar tus colores reales en cualquier luz."
+description: "¿Apagada en la oficina y radiante a la hora dorada? Por qué la luz cambia tu piel y ropa y cómo ver tus colores reales."
 date: "2026-08-08"
 tags: ["análisis de color", "iluminación", "color personal", "belleza", "guía de estilo"]
 image: "/images/blog/lighting-affects-colors.webp"
@@ -156,7 +156,7 @@ Este es el movimiento avanzado. Si pasas 8+ horas diarias bajo fluorescentes de 
 
 ### 5. Usa Herramientas de IA para una Línea Base Rápida
 
-Si no estás segura de tus colores y no tienes acceso a draping profesional bajo luz controlada, las herramientas de análisis de color con IA pueden darte un buen punto de partida. Las mejores usan algoritmos que tienen en cuenta variaciones de luz en tus fotos y aun así identifican tu subtono y nivel de contraste subyacentes. Una herramienta como [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) analiza las propiedades de tu piel independientemente de la iluminación de una sola foto — algo más difícil con métodos caseros tradicionales de draping.
+Si no estás segura de tus colores y no tienes acceso a draping profesional bajo luz controlada, las herramientas de análisis de color con IA pueden darte un buen punto de partida. Las mejores usan modelos de imagen con IA que pueden compensar parte de la variación de luz en tu foto y aun así valorar tu subtono y nivel de contraste subyacentes, aunque una foto mal iluminada puede alterar el resultado. Una herramienta como [aicoloranalysis.io](/personal-color-analysis) puede darte una segunda opinión a partir de una sola foto — algo más difícil con métodos caseros tradicionales de draping.
 
 ---
 

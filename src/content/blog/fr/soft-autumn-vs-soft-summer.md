@@ -1,6 +1,6 @@
 ---
 title: "Automne Doux vs Été Doux : Les Saisons de Couleurs les Plus Souvent Confondues"
-description: "Vous avez du mal à distinguer l'Automne Doux de l'Été Doux ? Découvrez les différences clés en termes de sous-ton, meilleures couleurs, choix de maquillage, et comment déterminer enfin quelle saison atténuée vous correspond vraiment."
+description: "Automne Doux ou Été Doux ? Sous-ton, meilleures couleurs, maquillage et comment trancher quelle saison atténuée vous correspond."
 date: "2026-08-10"
 tags: ["analyse de couleurs personnelle", "automne doux", "été doux", "saison de couleurs", "beauté"]
 image: "/images/blog/soft-autumn-vs-soft-summer.webp"
@@ -177,7 +177,7 @@ Si vous constatez que les deux palettes vous conviennent raisonnablement bien, v
 
 Déterminer son sous-ton peut s'avérer véritablement difficile, surtout pour les saisons atténuées où la chaleur ou la froideur est subtile. C'est un domaine où l'analyse colorimétrique par IA s'est révélée étonnamment utile.
 
-Les outils modernes peuvent analyser le sous-ton exact de votre peau à partir de données photo — en tenant compte de facteurs comme les conditions d'éclairage et les niveaux de contraste qui peuvent tromper l'œil humain. Si vous hésitez entre Automne Doux et Été Doux, un [outil d'analyse colorimétrique par IA](https://aicoloranalysis.io/personal-color-analysis) peut fournir un point de départ objectif. Je l'ai trouvé particulièrement utile pour les personnes aux sous-tons neutres qui ne parviennent vraiment pas à déterminer de quel côté elles penchent.
+Les outils modernes peuvent juger le sous-ton de votre peau à partir d'une photo, en examinant le contraste et d'autres indices qui peuvent tromper l'œil humain, bien que la lumière et les réglages de l'appareil puissent encore fausser le résultat. Si vous hésitez entre Automne Doux et Été Doux, un [outil d'analyse colorimétrique par IA](/) peut fournir un second avis. Je l'ai trouvé particulièrement utile pour les personnes aux sous-tons neutres qui ne parviennent vraiment pas à déterminer de quel côté elles penchent.
 
 ---
 

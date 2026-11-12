@@ -1,6 +1,6 @@
 ---
 title: "Renk Mevsiminize Göre Aksesuar Seçimi: Takı, Eşarp ve Dahası"
-description: "Renk mevsiminiz yalnızca kıyafetleri belirlemez — takı metalleri, eşarp renkleri, çantalar ve kemerler seçiminizi de dönüştürür. 12 mevsim için aksesuar kurallarını öğrenin ve her kombini yükselten bir koleksiyon kurun."
+description: "Renk mevsiminiz takı, eşarp, çanta ve kemer seçimini de belirler. 12 mevsim için aksesuar kurallarıyla her kombini yükselten bir koleksiyon kurun."
 date: "2026-08-12"
 tags: ["renk analizi", "takı", "aksesuar", "renk mevsimi", "stil rehberi"]
 image: "/images/blog/accessorize-by-color-season.webp"
@@ -183,7 +183,7 @@ Bu onlarca kombinasyon verirken mükemmel renk uyumunu korur.
 
 Renk mevsiminizden — dolayısıyla aksesuar yönünüzden — emin değilseniz eski yöntem altın ve gümüş takıyı yüzünüze tutup aynada kısarak bakmaktı. İşe yarar ama özneldir.
 
-Modern yapay zekâ renk analizi araçları artık bir fotoğraftan tam mevsiminizi belirleyebilir; metal seçimindeki tahmini tamamen ortadan kaldırır. Mevsimimi doğrulamak için [yapay zekâ destekli bir renk analizi aracı](https://aicoloranalysis.io/personal-color-analysis) kullandım; önerilen metaller ve aksesuar tonları dahil eksiksiz bir palet verdi — normalde 200$+ tutan yüz yüze danışmanlık gerektiren bir şey.
+Modern yapay zekâ renk analizi araçları artık bir fotoğraftan olası mevsiminizi önerebilir; metal seçiminde işe yarar bir başlangıç noktası sunar. Mevsimimi kontrol etmek için [yapay zekâ destekli bir renk analizi aracı](/) kullandım; önerilen metaller ve aksesuar tonları dahil eksiksiz bir palet verdi — normalde 200$+ tutan yüz yüze danışmanlık gerektiren bir şey.
 
 ---
 

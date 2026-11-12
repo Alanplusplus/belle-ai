@@ -101,7 +101,7 @@ Der Goldstandard. Eine geschulte Farbberaterin hält unter kontrolliertem Licht 
 
 ### Methode 2: KI-Farbanalyse
 
-KI-gestützte Apps wie Belle AI analysieren Ihr Foto mittels Computer Vision, um Unterton, Kontrastniveau und Färbungsmerkmale zu erkennen.
+KI-gestützte Apps wie Belle AI nutzen ein KI-Bildmodell, um Unterton, Kontrastniveau und Färbungsmerkmale anhand Ihres Fotos zu beurteilen.
 
 - **Kosten:** Kostenlos bis 5 €
 - **Dauer:** 60 Sekunden

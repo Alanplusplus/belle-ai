@@ -1,6 +1,6 @@
 ---
 title: "Oser le clash de couleurs : comment enfreindre les 'règles' de l'analyse colorimétrique avec élégance"
-description: "Vous pensez devoir rester fidèle à votre palette saisonnière pour toujours ? Voici comment clasher volontairement les couleurs tout en restant chic — en utilisant des principes de théorie des couleurs qui fonctionnent vraiment."
+description: "Rester fidèle à sa palette pour toujours ? Clasher les couleurs avec élégance grâce à des principes de théorie des couleurs utiles."
 date: "2026-09-29"
 tags: ["analyse colorimétrique", "théorie des couleurs", "style personnel", "conseils mode", "guide de style"]
 image: "/images/blog/color-clashing-rules.webp"
@@ -169,7 +169,7 @@ Pas sûre que votre clash sera réussi ? Trois tests rapides :
 
 2. **Le test photo.** Prenez un rapide selfie miroir. Les clashs réussis sont souvent encore plus beaux en photo. Si c'est beau en photo, ça marche.
 
-3. **Le test d'analyse intelligente.** Les [outils modernes d'analyse colorimétrique](https://aicoloranalysis.io/outfit-color-analysis) peuvent analyser quelles couleurs illuminent votre teint et lesquelles le ternissent. Utilisez cela comme base, puis expérimentez avec des ajouts hors palette, une pièce à la fois.
+3. **Le test d'analyse intelligente.** Les [outils modernes d'analyse colorimétrique](/outfit-color-analysis) peuvent analyser quelles couleurs illuminent votre teint et lesquelles le ternissent. Utilisez cela comme base, puis expérimentez avec des ajouts hors palette, une pièce à la fois.
 
 ---
 

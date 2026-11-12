@@ -1,6 +1,6 @@
 ---
 title: "So gelingt der Übergang deiner Farbpalette vom Frühling zum Sommer (ohne neu anzufangen)"
-description: "Schwer, deine Garderobe anzupassen, wenn das Wetter umschlägt? Hier ist ein praktischer Leitfaden, wie du deine Farbpalette von warmen Frühlings- zu kühlen Sommertönen überführst — mit dem, was du bereits besitzt."
+description: "Farbpalette Frühling zu Sommer: Garderobe umschalten, wenn das Wetter kippt – warme zu kühlen Tönen mit dem, was du hast."
 date: "2026-08-31"
 tags: ["Farbanalyse", "Farbtyp", "persönlicher Stil", "Mode-Tipps", "Stil-Guide"]
 image: "/images/blog/transition-color-palette-spring-to-summer.webp"
@@ -121,7 +121,7 @@ Wenn du ein Light Spring bist, kannst du in den warmen Monaten die meisten Light
 
 Die Herausforderung für Grenztypen ist, deine *Ankerfarben* zu finden — die 2–3 Nuancen, die das ganze Jahr über funktionieren, unabhängig von Lichtveränderungen. Für Light Spring sind das meist weicher Pfirsich und warmes Elfenbein. Für Light Summer ist es meist staubiges Rosa und weiches Blaugrau.
 
-Wenn du nicht sicher bist, auf welcher Seite der Grenze du liegst, können KI-Farbanalyse-Tools helfen. Moderne Apps analysieren den Unterton deiner Haut, die Kontraststufe und Chroma, um deinen genauen Untertyp zu bestimmen — und viele zeigen dir jetzt die spezifischen Farben in deiner Palette, die sich mit benachbarten Saisons überschneiden, genau die Information, die du für nahtlose Übergänge brauchst.
+Wenn du nicht sicher bist, auf welcher Seite der Grenze du liegst, können KI-Farbanalyse-Tools helfen. Moderne Apps betrachten den Unterton deiner Haut, die Kontraststufe und Chroma, um einen wahrscheinlichen Untertyp vorzuschlagen — und viele zeigen dir jetzt die spezifischen Farben in deiner Palette, die sich mit benachbarten Saisons überschneiden, genau die Information, die du für nahtlose Übergänge brauchst.
 
 ---
 
@@ -144,7 +144,7 @@ Jeder Übergang folgt demselben Muster: zuerst dämpfen, dann Unterton verschieb
 - Übergang schrittweise über 4–6 Wochen: zuerst dämpfen, kühle Neutraltöne hinzufügen, dann Sommer-Akzente einführen
 - Dein Make-up kann deine saisonale Wirkung schneller verschieben als deine Garderobe
 - Wenn du ein Grenztyp bist (Light Spring / Light Summer), hast du einen natürlichen Vorteil — nutze ihn
-- KI-Farbanalyse kann deinen genauen Untertyp identifizieren und zeigen, welche Farben in benachbarte Saisons übergehen
+- KI-Farbanalyse kann einen wahrscheinlichen Untertyp vorschlagen und zeigen, welche Farben in benachbarte Saisons übergehen
 
 Die best gekleideten Menschen kämpfen nicht gegen den saisonalen Wechsel an — sie reiten mit. Und das Geheimnis ist, dass es weit weniger neue Stücke braucht, als du denkst. Der Großteil des Übergangs passiert durch *wie* du kombinierst, was du bereits besitzt.
 

@@ -1,6 +1,6 @@
 ---
 title: "Solo Usé los Colores de Mi Estación Durante 30 Días — Esto Es Lo Que Pasó"
-description: "Un experimento personal de vestir exclusivamente con la paleta de mi estación de color durante un mes entero. Los cumplidos, las sorpresas y las lecciones inesperadas sobre el estilo personal."
+description: "Un mes vestida solo con la paleta de mi estación: cumplidos, sorpresas y lecciones inesperadas sobre estilo personal."
 date: "2026-07-26"
 tags: ["análisis de color personal", "estación de color", "estilo personal", "tips de moda", "superación personal"]
 image: "/images/blog/wearing-season-colors-30-days.webp"
@@ -118,7 +118,7 @@ Las cifras cuentan la historia, pero no capturan la *sensación*. Por primera ve
 
 Si volviera a empezar este experimento, cambiaría esto:
 
-**Empezar con un análisis profesional o basado en IA.** Al principio adiviné mi estación con tests online y me equivoqué (durante dos años creí ser Otoño Cálido). Un análisis adecuado — ya sea con una consultora formada o una [herramienta de análisis de color con IA](https://aicoloranalysis.io) — te evita construir un armario alrededor de la paleta equivocada. Obtener resultados precisos desde el principio vale la pequeña inversión.
+**Empezar con un análisis profesional o basado en IA.** Al principio adiviné mi estación con tests online y me equivoqué (durante dos años creí ser Otoño Cálido). Un análisis adecuado — ya sea con una consultora formada o una [herramienta de análisis de color con IA](/) — te evita construir un armario alrededor de la paleta equivocada. Obtener resultados precisos desde el principio vale la pequeña inversión.
 
 **No purgar de inmediato.** Fui demasiado agresiva eliminando ropa fuera de paleta. Algunas prendas en colores "incorrectos" siguen funcionando como pantalones o abrigos cuando están lejos del rostro. Consérvalas un tiempo para rotación.
 

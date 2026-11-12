@@ -1,6 +1,6 @@
 ---
 title: "How Color Theory From Art Class Applies to Your Personal Style"
-description: "The color wheel isn't just for painters. Learn how complementary colors, analogous harmonies, and contrast principles from art school can transform how you get dressed every morning."
+description: "The color wheel isn't just for painters. Complementary colors, analogous harmonies, and contrast from art school can transform how you dress."
 date: "2026-09-11"
 tags: ["color theory", "personal style", "color analysis", "fashion tips", "style guide"]
 image: "/images/blog/color-theory-personal-style.webp"
@@ -228,7 +228,7 @@ Example: All-gray outfit (light gray, medium charcoal, dark slate) + one cobalt 
 
 Here's the honest truth: you don't need to memorize color wheel positions to use these principles. Your eye already senses most of these harmonies subconsciously — that's why some outfit combinations just "feel right."
 
-But if you want precision? AI tools can now analyze your personal coloring and recommend specific color combinations from your optimal palette. A tool like [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) can identify your season, contrast level, and best color families in about 60 seconds — which tells you exactly which harmonies and saturation levels will work best on you.
+But if you want a starting point? AI tools can now analyze your personal coloring and suggest color combinations from a likely palette. A tool like [AI color analysis](/) can suggest your season, contrast level, and best color families in about 60 seconds — a good way to find which harmonies and saturation levels to test first.
 
 It's like having a personal color theory tutor that also knows your specific skin undertone, eye color, and natural contrast level.
 

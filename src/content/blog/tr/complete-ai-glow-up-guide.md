@@ -1,6 +1,6 @@
 ---
 title: "Eksiksiz yapay zeka glow-up: teknolojiyle stilinizi dönüştürün"
-description: "Renk analizinden saç modeline, gözlükten mücevhere — yapay zekanın dakikalar içinde eksiksiz kişisel stil danışmanlığı sunmasını öğrenin. Tam bir imaj yenilemesi için ihtiyacınız olan her şey."
+description: "Renk analizinden saç ve gözlüğe: yapay zekânın dakikalar içinde kişisel stil önerileri sunmasını öğrenin. Tam imaj yenilemesi için rehber."
 date: "2026-07-26"
 tags: ["yapay zeka güzellik", "glow up", "kişisel stil", "renk analizi", "güzellik teknolojisi"]
 image: "/images/blog/complete-ai-glow-up-guide.webp"
@@ -8,9 +8,9 @@ image: "/images/blog/complete-ai-glow-up-guide.webp"
 
 ## Yapay zeka glow-up nedir?
 
-"Glow-up" geleneksel olarak görünümünüzde zamanla önemli bir iyileşme anlamına gelir. Peki deneme yanılmanın aylarını tek bir veri odaklı danışmanlığa sıkıştırabilseydiniz?
+"Glow-up" geleneksel olarak görünümünüzde zamanla önemli bir iyileşme anlamına gelir. Peki deneme yanılmanın aylarını tek bir yapay zeka destekli danışmanlığa sıkıştırabilseydiniz?
 
-Tam olarak bunu yapay zeka kişisel stil danışmanlığı sunar. En iyi renklerinizi, saç modelinizi, gözlüğünüzü, makyajınızı ve mücevherinizi acı verici deneylerle bulmak için yıllar (ve binlerce dolar) harcamak yerine, yapay zeka özelliklerinizi analiz eder ve dakikalar içinde eksiksiz bir yol haritası verir.
+Tam olarak bunu yapay zeka kişisel stil danışmanlığı sunar. En iyi renklerinizi, saç modelinizi, gözlüğünüzü, makyajınızı ve mücevherinizi acı verici deneylerle bulmak için yıllar (ve binlerce dolar) harcamak yerine, yapay zeka fotoğrafınızı analiz eder ve dakikalar içinde bir başlangıç yol haritası verir.
 
 Bu kim olduğunuzu değiştirmek değil. Size zaten yakışan şeyi anlamak — ve ona yönelmek.
 
@@ -62,11 +62,11 @@ Yapay zeka insan stylistleri değiştirmez — erişimi demokratikleştirir. Her
 
 ---
 
-## Yapay zeka avantajı: objektiflik
+## Yapay zeka avantajı: taze bir bakış
 
 Çoğu kişinin düşünmediği bir şey: yıllardır kendi yüzünüze bakıyorsunuz. Size ne yakıştığına dair bilinçsiz önyargılarınız var — genellikle 10 yıl önce aldığınız iltihatlara, annenizin söylediklerine veya gençlik yıllarınızın trendlerine dayalı.
 
-Yapay zekanın böyle bir önyargısı yok. Mevcut özelliklerinizi objektif değerlendirir ve renk bilimi, oran ve uyum ilkeleriyle eşleştirir. Sonuçlar bazen şaşırtır — ve o sürpriz genellikle en büyük iyileşmeyi gizler.
+Yapay zeka bir renkle olan kişisel geçmişinizi taşımaz. Mevcut özelliklerinize bakar ve bunları renk bilimi, oran ve uyum ilkeleriyle karşılaştırır; kendi sınırları vardır ve ışık ya da fotoğraf kalitesi sonucu kaydırabilir. Sonuçlar bazen şaşırtır — ve o sürpriz genellikle en büyük iyileşmeyi gizler.
 
 ---
 

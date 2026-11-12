@@ -1,6 +1,6 @@
 ---
 title: "So wählst du Brillen, die deiner Gesichtsform UND deinem Farbtyp schmeicheln"
-description: "Die meisten Brillen-Guides behandeln nur die Gesichtsform. Doch dein Farbtyp bestimmt auch die besten Rahmenfarben und Materialien. Hier ist der komplette Guide für deine perfekte Brille — Form UND Farbe."
+description: "Brillen für Gesichtsform und Farbtyp: Welche Rahmenfarben und Materialien zu dir passen – Form und Farbe in einem Guide."
 date: "2026-09-07"
 tags: ["Brillen", "Gesichtsform", "Farbanalyse", "Stilratgeber", "Accessoires"]
 image: "/images/blog/glasses-face-shape-color-season.webp"
@@ -192,7 +192,7 @@ Hier ist der einfache Entscheidungsrahmen:
 
 Gesichtsform und Farbtyp zu bestimmen erforderte früher zwei separate Beratungen — eine beim Optiker, eine bei der Farbberaterin. Zusammen konnte das leicht 300–500 € kosten und Stunden dauern.
 
-Heute können KI-Tools deine [Gesichtsform](https://aicoloranalysis.io/face-shape-analysis) und deinen [Farbtyp](https://aicoloranalysis.io/personal-color-analysis) aus einem einzigen Foto in etwa 60 Sekunden analysieren. Manche bieten sogar spezifische [Brillen-Empfehlungen](https://aicoloranalysis.io/glasses-analysis) basierend auf deinen individuellen Proportionen.
+Heute können KI-Tools deine [Gesichtsform](/face-shape-analysis) und deinen [Farbtyp](/personal-color-analysis) aus einem einzigen Foto in etwa 60 Sekunden analysieren. Manche bieten sogar spezifische [Brillen-Empfehlungen](/glasses-analysis) basierend auf deinen individuellen Proportionen.
 
 Die Technologie ersetzt nicht das Anprobieren — du musst weiterhin prüfen, wie die Brille auf Nase und Ohren sitzt. Aber sie liefert dir eine Shortlist aus Formen und Farben, die du suchen kannst, und spart Stunden zielloses Stöbern im Optikgeschäft.
 
@@ -225,7 +225,7 @@ Fassung und Make-up arbeiten zusammen. Wenn du täglich Brille trägst, sollten 
 - Kühle Typen → Silbermetalle, kühles Schwarz, Marine, Anthrazit, Pflaume
 - Die Tabelle oben gibt spezifische Empfehlungen für alle 12 Untertypen
 - Materialwahl (Metall vs. Acetat vs. Titan) ist eine weitere Chance, zum Typ zu passen
-- KI-Tools können Gesichtsform und Farbtyp aus einem Foto analysieren und dir eine präzise Shortlist geben, bevor du ins Geschäft gehst
+- KI-Tools können Gesichtsform und Farbtyp aus einem Foto analysieren und dir eine Ausgangs-Shortlist geben, bevor du ins Geschäft gehst
 
 Deine Brille ist das sichtbarste Accessoire, das du besitzt. Form und Farbe richtig zu treffen bedeutet: Sie hört auf, etwas zu sein, das du «tragen musst», und wird zu etwas, das dich unglaublich aussehen lässt.
 

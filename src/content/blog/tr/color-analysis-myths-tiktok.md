@@ -1,6 +1,6 @@
 ---
 title: "TikTok'un Yanlış Anlattığı 7 Renk Analizi Efsanesi"
-description: "TikTok renk analizini viral yaptı — ama büyük yanlış anlamalar da yaydı. Eğitimli bir göz, sosyal medyada dolaşan 7 en yaygın renk analizi efsanesinde gerçeği kurgudan ayırır."
+description: "TikTok renk analizini viral yaptı ama yanlış anlamalar da yaydı. 7 yaygın efsanede gerçeği kurgudan ayıran eğitimli bir bakış."
 date: "2026-08-21"
 tags: ["renk analizi", "renk teorisi", "güzellik", "kişisel stil", "kişisel gelişim"]
 image: "/images/blog/color-analysis-myths-tiktok.webp"
@@ -61,7 +61,7 @@ Pratikte neden önemli: ikisi de "Summer" olan iki kişiyi düşünün. Biri ço
 
 **Daha iyi olan:** Profesyonel renk analizi *kontrollü koşullar* kullanır — nötr aydınlatma (5000-6500K gün ışığı veya kalibre D65 lambalar), makyajsız çıplak cilt, beyaz veya gri draping arka planı ve yüze tutulan fiziksel kumaş numuneleri. Analist canlı cilt tepkilerini izler: cilt daha net mi bulanık mı? Göz altı halkaları artıyor mu azalıyor mu? Yüz boyut kazanıyor mu düzleşiyor mu?
 
-Profesyonele gidemiyorsanız, renk bilimi algoritmalarıyla fotoğrafınızı analiz eden AI araçları, selfie'yi palet görsellerine göz kararı karşılaştırmaktan çok daha güvenilir sonuç verir. [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) gibi araçlar yaygın fotoğraf sorunlarını telafi eder ve yalnızca görsel izlenime değil, gerçek piksel düzeyinde cilt tonu verisine dayanır.
+Profesyonele gidemiyorsanız, fotoğrafınızı analiz eden yapay zeka araçları, selfie'yi palet görsellerine göz kararı karşılaştırmaktan daha tutarlı bir başlangıç noktası sunabilir. [aicoloranalysis.io](/personal-color-analysis) gibi araçlar, fotoğrafın tamamından renklendirmenizi değerlendirmek için bir yapay zeka görüntü modeli kullanır; yine de ışık ve kamera ayarları sonucu kaydırabilir.
 
 ---
 
@@ -156,7 +156,7 @@ Renk analizi eğitiminizi yalnızca TikTok'tan aldıysanız, işte daha iyi bir 
 - Mevsim paletiniz "en iyi" aralığınızdır — giyebileceğiniz tek renkler değil
 - Göz rengi tek başına mevsiminizi belirlemez; tüm özellikler arası ilişki önemlidir
 - Renk analizi her ten derinliği ve etnisite için çalışır — zayıf temsil sistemin başarısız olduğu anlamına gelmez
-- Modern AI araçları gerçek renk bilimi kullanır ve sosyal medya öz tiplemesinden çok daha güvenilirdir
+- Modern yapay zeka araçları fotoğrafınızı 12 mevsim çerçevesine göre değerlendirir ve sosyal medya öz tiplemesinden daha tutarlı bir başlangıç noktası olabilir
 
 TikTok'un renk analizi için yaptığı en iyi şey insanları meraklandırmaktı. En kötüsü ise karmaşık renk biliminin 30 saniyelik bir numaraya indirilebileceğine insanları ikna etmekti. Gerçek, her zaman olduğu gibi, ortada bir yerdedir — ve bu efsaneleri anlamak onu bulmanıza yardımcı olur.
 

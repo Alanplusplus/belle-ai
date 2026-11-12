@@ -1,7 +1,7 @@
 ---
 title: "Sonbahar Renk Paletleri Çözümlendi: Derin Sonbahar vs Gerçek Sonbahar vs Yumuşak Sonbahar"
 seoTitle: "Derin vs Gerçek vs Yumuşak Sonbahar — Hangi Sonbaharsınız? (Yan Yana)"
-description: "Sonbahar olduğunuzu biliyor ama hangi alt tip olduğunuzu ayırt edemiyor musunuz? Derin, Gerçek (Sıcak) ve Yumuşak Sonbahar'ı yan yana karşılaştırın — farklar, en iyi renkler ve ücretsiz yapay zeka testi."
+description: "Derin, Gerçek ve Yumuşak Sonbahar alt tiplerini yan yana karşılaştırın: farklar, en iyi renkler ve ücretsiz yapay zeka testi dahil."
 date: "2026-08-03"
 tags: ["kişisel renk analizi", "sonbahar paleti", "renk mevsimi", "güzellik", "stil rehberi"]
 image: "/images/blog/autumn-color-palettes-decoded.webp"
@@ -229,7 +229,7 @@ Gümüş tüm Sonbahar tipleri için zorlayıcıdır. Gümüş takı seviyorsan�
 
 Geleneksel olarak Sonbahar alt mevsiminizi belirlemek profesyonel draping seansı gerektirirdi — doğal ışıkta renk analistinin yüzünüze onlarca sıcak tonlu kumaş tutması. İşe yarar ama pahalıdır (genelde 150–300 dolar) ve büyük şehirlerle sınırlıdır.
 
-Bugün yapay zeka destekli renk analizi araçları cilt alt tonunuzu, göz renginizi ve saç tonunuzu inceleyerek bir dakikadan kısa sürede tam alt mevsiminizi belirleyebilir. [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) gibi platformlar, profesyonel analistlerin değerlendirdiği aynı sıcaklık, derinlik ve doygunluk sinyallerini ölçmek için bilgisayarla görü kullanır — telefonu ve penceresi olan herkese erişilebilir kılar.
+Bugün yapay zeka destekli renk analizi araçları cilt alt tonunuzu, göz renginizi ve saç tonunuzu inceleyerek bir dakikadan kısa sürede olası bir alt mevsim önerebilir. [yapay zekâ renk analizi](/) gibi platformlar, profesyonel analistlerin baktığı aynı sıcaklık, derinlik ve doygunluk ipuçlarını değerlendirmek için bir yapay zeka görüntü modeli kullanır. Sonuç bir ölçüm değil, görsel bir değerlendirmedir; bu yüzden bunu bir başlangıç noktası olarak ele alın. Değiştirdiği şey erişimdir: telefonu ve penceresi olan herkes ilk adımı atabilir.
 
 ---
 
@@ -243,9 +243,9 @@ Bugün yapay zeka destekli renk analizi araçları cilt alt tonunuzu, göz rengi
 
 Spesifik Sonbahar alt mevsiminizi anlamak alışverişi, sabah giyinmeyi ve kapıdan çıkarken hissettiğiniz güveni dönüştürür. Sadece "bir Sonbahar" değilsiniz — belirli bir sıcaklık tonusunuz ve tam olarak hangisi olduğunuzu bilmek gerçekten işe yarayan bir gardırop açar.
 
-## Tam Sonbahar Alt Mevsiminizi Bulun
+## Sonbahar Alt Mevsiminizi Bulun
 
-Sadece açıklamalardan hangi Sonbahar olduğunuzu ayırt edemiyor musunuz? [Ücretsiz yapay zeka renk analizimiz](/tr/color-analysis) cilt, saç ve göz renklendirmenizi analiz ederek tam alt mevsiminizi belirler.
+Sadece açıklamalardan hangi Sonbahar olduğunuzu ayırt edemiyor musunuz? [Ücretsiz yapay zeka renk analizimiz](/) cilt, saç ve göz renklendirmenize bakarak olası alt mevsiminizi önerebilir.
 
 [Ücretsiz Yapay Zeka Renk Analizini Yapın →](/tr/try)
 

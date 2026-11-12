@@ -1,6 +1,6 @@
 ---
 title: "Karışık Metaller: Altın ve Gümüşü Uyumsuz Görünmeden Birlikte Nasıl Takılır"
-description: "Altın ve gümüşü gerçekten birlikte takabilir misiniz? Metalleri karıştırmanın 3 kuralını, hangi renk mevsimlerinin bunu en iyi yapabildiğini ve alt tonunuza yakıştıran karışık metal takı görünümünü nasıl kuracağınızı öğrenin."
+description: "Altın ve gümüşü birlikte takabilir misiniz? 3 kural, hangi mevsimlerin bunu en iyi yaptığı ve alt tonunuza uygun karışık metal görünümü."
 date: "2026-10-27"
 tags: ["karışık metaller", "takı", "renk mevsimi", "alt ton", "stil rehberi"]
 image: "/images/blog/mixed-metals-jewelry-color-season.webp"
@@ -154,7 +154,7 @@ Karıştırma bir araçtır, zorunluluk değil. Amaç trendi takip etmek değil,
 
 Hangi metalin sizi yakıştırdığını ve ikinciyi ne kadar itebileceğinizi bulmak eskiden dükkân ışığında çok takı denemek demekti. Bugün daha kolay bir yol var. Yakın zamanda fotoğrafımı yapay zeka takı analizi aracından geçirdim; en iyi metallerimi, taşlarımı ve küpe modellerimi ve yüzüme yakın kaçınılması gereken birleşimleri ne kadar net açıkladığına şaşırdım.
 
-Denemek isterseniz [aicoloranalysis.io](https://www.aicoloranalysis.io/jewelry-analysis?utm_source=medium&utm_medium=article&utm_campaign=mixed-metals-jewelry-color-season) gibi ücretsiz bir araç, satın almadan önce hangi metallerin alt tonunuza uyduğunu gösterebilir. Ayna testinin yerini tutmaz ama güçlü bir başlangıç noktası verir. Metallerin alt tonla nasıl etkileştiğine daha geniş bakmak isterseniz [Wikipedia'nın mücevher malzemeleri ve alaşımları özeti](https://en.wikipedia.org/wiki/Jewellery) altın, gümüş ve platinin neden öyle göründüğünü açıklar.
+Denemek isterseniz [aicoloranalysis.io](/jewelry-analysis) gibi ücretsiz bir araç, satın almadan önce hangi metallerin alt tonunuza uyduğunu gösterebilir. Ayna testinin yerini tutmaz ama güçlü bir başlangıç noktası verir. Metallerin alt tonla nasıl etkileştiğine daha geniş bakmak isterseniz [Wikipedia'nın mücevher malzemeleri ve alaşımları özeti](https://en.wikipedia.org/wiki/Jewellery) altın, gümüş ve platinin neden öyle göründüğünü açıklar.
 
 ---
 

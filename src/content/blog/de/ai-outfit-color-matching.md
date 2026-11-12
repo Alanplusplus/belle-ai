@@ -1,6 +1,6 @@
 ---
 title: "Welche Farben stehen mir? KI-Outfit-Farbanalyse erklärt"
-description: "Fragen Sie sich, warum manche Kleidungsfarben Sie strahlen lassen und andere Ihren Teint abschwächen? Erfahren Sie, wie die KI-Outfit-Farbanalyse funktioniert und finden Sie in Sekunden Ihre schmeichelhaftesten Garderobenfarben."
+description: "KI-Outfit-Farbanalyse: Erfahren Sie, warum manche Kleidungsfarben Sie strahlen lassen – und finden Sie schmeichelhafte Garderobenfarben in Sekunden."
 date: "2026-07-30"
 tags: ["Persönliche Farbanalyse", "Outfit-Farben", "Garderobe", "KI-Beauty", "Stilguide"]
 image: "/images/blog/ai-outfit-color-matching.webp"

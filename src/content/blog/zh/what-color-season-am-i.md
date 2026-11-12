@@ -143,7 +143,7 @@ image: "/images/blog/what-color-season-am-i.webp"
 
 ## 获取即时 AI 结果
 
-要最准确的结果，上传清晰自拍，让 AI 判定你确切的 12 季类型：
+若想快速听个第二意见，上传一张清晰自拍，让 AI 给出你的 12 季型建议：
 
 [免费 AI 色彩分析 →](/zh/try)
 

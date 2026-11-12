@@ -1,6 +1,6 @@
 ---
 title: "Sıcak mı Soğuk mu Tonluyum? Kesin Alt Ton Rehberi (2026)"
-description: "Sıcak mı soğuk mu tonlu olduğunuzdan emin değil misiniz? Evde cilt alt tonunuzu doğru belirlemek için 7 kanıtlanmış yöntem içeren kapsamlı rehberimizi kullanın. Fotoğraf örnekleri ve uzman ipuçları dahil."
+description: "Sıcak mı soğuk mu tonlusunuz? Evde alt tonunuzu belirlemek için 7 kanıtlanmış yöntem, fotoğraf örnekleri ve uzman ipuçlarıyla kapsamlı rehber."
 date: "2026-07-08"
 tags: ["alt ton", "sıcak veya soğuk", "cilt tonu", "renk analizi", "güzellik ipuçları"]
 image: "/images/blog/how-to-determine-skin-undertone.webp"
@@ -92,11 +92,11 @@ Birçok kişi alt tonunu yıllarca fondöten deneme yanılmasıyla keşfeder.
 
 ### Yöntem 7: Yapay Zekâ Renk Analizi
 
-En nesnel yöntem. Belle AI gibi yapay zekâ araçları, bilgisayarlı görü kullanarak fotoğrafınızı analiz eder; öznel önyargı veya aydınlatma karışıklığı olmadan tam alt tonunuzu tespit eder.
+Hızlı bir ikinci görüş. Belle AI gibi yapay zekâ araçları, alt tonunuzu bir fotoğraftan değerlendirmek için bir yapay zeka görüntü modeli kullanır. Sonuç bir ölçüm değil, görsel bir değerlendirmedir; ışık, kamera ayarları ve makyaj sonucu yine de değiştirebilir.
 
-- Doğal ışık veya özel koşullar gerekmez
-- Cildinizdeki gerçek renk değerlerini analiz eder
-- Belirli bir mevsimsel sınıflandırma sunar (12 tip sistemi)
+- En iyi doğal ışık ve makyajsız çalışır
+- Cildinize, gözlerinize ve saçınıza birlikte bakar
+- Olası bir mevsimsel tip önerir (12 tip sistemi)
 - 60 saniye sürer
 
 ## Sıcak ve Soğuk Tonlu: Tam Karşılaştırma

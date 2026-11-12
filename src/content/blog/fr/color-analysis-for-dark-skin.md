@@ -108,7 +108,7 @@ Quelle que soit votre saison, ces couleurs tendent à être universellement flat
 - **Vert olive terne** (pour les sous-tons froids) — Crée un aspect jaunâtre
 - **Tons poussiéreux atténués** (pour les personnes à fort contraste) — Ternissent la vitalité naturelle
 
-## Obtenir une analyse de couleur IA précise sur peau foncée
+## Tirer le meilleur de l'analyse de couleur IA sur peau foncée
 
 Les outils d'analyse de couleur par IA ont historiquement eu des difficultés avec les teints plus foncés en raison du biais des données d'entraînement. Voici comment obtenir les meilleurs résultats :
 
@@ -147,7 +147,7 @@ Si votre résultat d'analyse IA ne vous semble pas juste :
 
 ## Trouvez vos couleurs aujourd'hui
 
-Prête à découvrir votre type de couleur saisonnier exact ? Notre IA vous donne un point de départ pour tous les types de peau ; vérifiez toutefois le résultat avec votre propre jugement, car les outils IA peuvent être moins fiables sur les peaux plus foncées.
+Prête à trouver votre type de couleur saisonnier ? Notre IA vous donne un point de départ pour tous les types de peau ; vérifiez toutefois le résultat avec votre propre jugement, car les outils IA peuvent être moins fiables sur les peaux plus foncées.
 
 [Lancer l'analyse de couleur gratuite →](/try)
 

@@ -108,7 +108,7 @@ Regardless of your specific season, these colors tend to be universally flatteri
 - **Olive drab** (for cool undertones) — Creates a sallow look
 - **Muted dusty tones** (for high-contrast individuals) — Dampen natural vibrancy
 
-## Getting Accurate AI Color Analysis with Dark Skin
+## Getting Better Results From AI Color Analysis on Dark Skin
 
 AI color analysis tools have historically struggled with darker skin tones due to training data bias. Here's how to get the best results:
 
@@ -147,7 +147,7 @@ If your AI color analysis result doesn't feel right:
 
 ## Find Your Colors Today
 
-Ready to discover your exact seasonal color type? Our AI gives you a starting point for any complexion — and we recommend double-checking the result against your own judgment, since AI tools can be less reliable on deeper skin tones.
+Ready to find your seasonal color type? Our AI gives you a starting point for any complexion — and we recommend double-checking the result against your own judgment, since AI tools can be less reliable on deeper skin tones.
 
 [Start Free Color Analysis →](/try)
 

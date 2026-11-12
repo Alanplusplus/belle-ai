@@ -1,6 +1,6 @@
 ---
 title: "Las mejores gafas para tu forma de cara: guía completa"
-description: "¿No sabes qué monturas te favorecen? Esta guía cubre los mejores estilos de gafas para rostros ovalados, redondos, cuadrados, en corazón, diamante y alargados — además de cómo la IA puede ayudarte a encontrar tu match perfecto."
+description: "¿Qué monturas te favorecen? Mejores gafas para rostros ovalados, redondos, cuadrados, en corazón, diamante y alargados, más ayuda con IA."
 date: "2026-07-31"
 tags: ["forma de cara", "gafas", "monturas", "guía de estilo", "belleza con IA"]
 image: "/images/blog/best-glasses-for-face-shape.webp"

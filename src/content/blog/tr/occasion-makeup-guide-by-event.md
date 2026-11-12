@@ -1,6 +1,6 @@
 ---
 title: "Etkinliğe Göre Makyaj Rehberi: Her Etkinlik İçin Doğru Look"
-description: "Randevu gecesinden iş görüşmesine ve düğünlere — cilt tonu ve özelliklerinize göre makyajı her etkinliğe uyarlamayı öğrenin. Yapay zekânın anında kişiselleştirilmiş look'lar oluşturması dahil."
+description: "Randevudan iş görüşmesine ve düğüne: makyajı etkinliğe göre uyarlayın. Yapay zekânın kişiselleştirilmiş look önerileri sunması da dahil."
 date: "2026-07-28"
 tags: ["makyaj", "etkinlik makyajı", "güzellik", "stil rehberi", "AI güzellik"]
 image: "/images/blog/occasion-makeup-guide-by-event.webp"

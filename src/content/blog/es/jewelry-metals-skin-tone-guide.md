@@ -1,6 +1,6 @@
 ---
 title: "¿Oro, plata u oro rosa? Cómo elegir joyas según tu tono de piel"
-description: "¿No sabes qué metal te favorece? Descubre cómo tu subtono determina si el oro, la plata, el oro rosa o el platino te quedan mejor, con recomendaciones de gemas y pendientes."
+description: "¿Oro, plata u oro rosa? Tu subtono decide qué metal te favorece, con gemas y pendientes recomendados."
 date: "2026-07-27"
 tags: ["joyas", "tono de piel", "subtono", "accesorios", "guía de estilo"]
 image: "/images/blog/jewelry-metals-skin-tone-guide.webp"

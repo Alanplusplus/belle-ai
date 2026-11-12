@@ -156,7 +156,7 @@ Bu ileri seviye hamledir. Günde 8+ saat floresan ofis ışığı altındaysanı
 
 ### 5. Hızlı Temel İçin Yapay Zekâ Araçlarını Kullanın
 
-Renklerinizden emin değilseniz ve kontrollü aydınlatmada profesyonel draping erişiminiz yoksa, yapay zekâ destekli renk analizi araçları sağlam bir başlangıç noktası sunabilir. En iyileri gönderdiğiniz fotoğraflardaki aydınlatma farklarını hesaba katan algoritmalar kullanır ve yine de alt alt tonunuzu ve kontrast seviyenizi belirler. [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) gibi bir araç, tek bir fotoğrafın ışık koşullarından bağımsız olarak cildinizin özelliklerini analiz eder — geleneksel ev draping yöntemleriyle yapması daha zor bir şey.
+Renklerinizden emin değilseniz ve kontrollü aydınlatmada profesyonel draping erişiminiz yoksa, yapay zekâ destekli renk analizi araçları sağlam bir başlangıç noktası sunabilir. Daha iyi olanlar, fotoğrafınızdaki aydınlatma farklarının bir kısmıyla başa çıkabilen yapay zeka görüntü modelleri kullanır ve yine de alt tonunuz ile kontrast seviyenizi değerlendirir; kötü ışıklı bir fotoğraf yine de sonucu kaydırabilir. [aicoloranalysis.io](/personal-color-analysis) gibi bir araç tek bir fotoğraftan ikinci bir görüş verebilir — geleneksel ev draping yöntemleriyle almak daha zor bir şey.
 
 ---
 

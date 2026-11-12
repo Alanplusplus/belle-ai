@@ -1,6 +1,6 @@
 ---
 title: "The Psychology of Color: Why Wearing Your Best Colors Boosts Confidence"
-description: "Science shows that wearing colors aligned with your natural coloring triggers measurable confidence gains. Here's what research reveals about the color-confidence connection — and how to harness it."
+description: "Wearing colors aligned with your natural coloring may boost confidence. What research says about the color-confidence link and how to use it."
 date: "2026-08-09"
 tags: ["color analysis", "color psychology", "personal style", "self improvement", "beauty"]
 image: "/images/blog/psychology-of-color-confidence.webp"
@@ -159,7 +159,7 @@ These signals reinforce the habit. The confidence boost becomes self-sustaining.
 
 Traditional professional color analysis involves in-person draping sessions with fabric swatches — valuable, but expensive ($150-400+) and not available everywhere. Many people never get properly analyzed simply because of access barriers.
 
-AI-powered color analysis tools like [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) have changed this equation. Using an AI image model to judge skin undertone, contrast level, and color characteristics from a photo, these tools can suggest your color season in seconds rather than hours, and from anywhere in the world.
+AI-powered color analysis tools like [aicoloranalysis.io](/personal-color-analysis) have changed this equation. Using an AI image model to judge skin undertone, contrast level, and color characteristics from a photo, these tools can suggest your color season in seconds rather than hours, and from anywhere in the world.
 
 The democratization matters for the confidence conversation because it means more people can access this information. When everyone can discover their best colors regardless of location or budget, the psychological benefits become available to everyone too.
 

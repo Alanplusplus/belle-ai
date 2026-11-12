@@ -1,6 +1,6 @@
 ---
 title: "Renk Mevsiminize Göre Online Alışveriş Nasıl Yapılır (Yanlış Seçmeden)"
-description: "Renkleri yüz yüze göremediğinizde online alışveriş zordur. Ekran kalibrasyonundan iade gerektirmeyen renk eşleştirmeye kadar, renk mevsimi paletinize uygun kıyafet almanın pratik stratejilerini öğrenin."
+description: "Online alışverişte renkleri görememek zor. Ekran kalibrasyonundan iade gerektirmeyen eşleştirmeye paletinize uygun kıyafet alma stratejileri."
 date: "2026-08-23"
 tags: ["kişisel renk analizi", "online alışveriş", "renk mevsimi", "moda ipuçları", "kişisel stil"]
 image: "/images/blog/online-shopping-color-season.webp"
@@ -140,7 +140,7 @@ Yaygın online renk isimleri ve her mevsim türü için *gerçekte* ne anlama ge
 
 Modern AI renk analizi araçları bu süreci kısaltabilir. "Tozlu mor"un Soft Summer paletinize uyup uymayacağını tahmin etmek yerine, gerçek renk değerlerini analiz edip mevsiminizin özellikleriyle karşılaştıran araçlar kullanabilirsiniz.
 
-Örneğin [aicoloranalysis.io](https://aicoloranalysis.io/outfit-color-analysis), belirli kıyafet renklerinin ten renginizle uyumlu olup olmadığını değerlendiren kıyafet renk analizi sunar. Ürünü giydiğiniz bir fotoğraf yüklersiniz; renk doğal renginizi güçlendiriyor mu yoksa çatışıyor mu söyler. Stilist ofisindeki draping testinin özü, oturma odanızdan erişilebilir.
+Örneğin [aicoloranalysis.io](/outfit-color-analysis), belirli kıyafet renklerinin ten renginizle uyumlu olup olmadığını değerlendiren kıyafet renk analizi sunar. Ürünü giydiğiniz bir fotoğraf yüklersiniz; renk doğal renginizi güçlendiriyor mu yoksa çatışıyor mu söyler. Stilist ofisindeki draping testinin özü, oturma odanızdan erişilebilir.
 
 Bu renkleri kendiniz okumayı öğrenmenin yerini almaz — ama özellikle gözünüzü geliştirirken faydalı bir doğrulama aracıdır.
 

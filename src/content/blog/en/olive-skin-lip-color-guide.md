@@ -1,7 +1,7 @@
 ---
 title: "Olive Skin Lip Color Guide: Best Lipsticks for Olive Undertones"
 seoTitle: "Best Lip Colors for Olive Skin — Why Most Reds Look Wrong (+ What Works)"
-description: "Classic reds wash you out, nudes look gray, and corals are hit-or-miss on olive skin. Discover berry, mauve, brick, and warm nude shades that actually flatter olive undertones."
+description: "On olive skin, classic reds wash you out and nudes look gray. Berry, mauve, brick, and warm nude shades that actually flatter olive undertones."
 date: "2026-09-18"
 tags: ["olive undertone", "makeup", "lip color", "beauty tips", "personal color analysis"]
 image: "/images/blog/olive-skin-lip-color-guide.webp"
@@ -234,7 +234,7 @@ Once you know your lip color family, shopping gets dramatically easier — and y
 
 ## Find Your Best Lip Colors
 
-If you are still guessing between warm berry and cool plum, a quick AI color analysis can pinpoint your olive undertone subtype and suggest lip colors that harmonize with your skin — not generic one-size-fits-all shades.
+If you are still guessing between warm berry and cool plum, a quick AI color analysis can suggest a likely olive undertone subtype and lip colors that harmonize with your skin — not generic one-size-fits-all shades.
 
 [Try Free AI Color Analysis →](/try)
 

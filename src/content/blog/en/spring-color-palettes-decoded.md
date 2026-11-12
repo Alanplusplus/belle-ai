@@ -174,7 +174,7 @@ Hold up a few test colors to your face (in natural light, no makeup):
 2. **Hold up warm gold/marigold:** Does your skin glow and your eyes light up? → Likely **True Spring**
 3. **Hold up soft peach/blush pink:** Does it make you look fresh and luminous? → Likely **Light Spring**
 
-If you want a more precise answer, AI color analysis tools can now identify your specific sub-season by analyzing the unique combination of your skin undertone, eye color, and hair color in detail. [Free tools like aicoloranalysis.io](https://aicoloranalysis.io) can give you a quick starting point — just upload a clear selfie in natural light.
+If you want a second opinion, AI color analysis tools can now suggest a likely sub-season by looking at the combination of your skin undertone, eye color, and hair color. [Free tools like aicoloranalysis.io](/) can give you a quick starting point — just upload a clear selfie in natural light.
 
 ---
 
@@ -202,9 +202,9 @@ Regardless of which Spring sub-season you are, these principles apply:
 - All three Spring types share warmth as their foundation — the key differentiator is how much contrast and saturation your coloring can handle.
 - When in doubt, test colors against your face in natural daylight. Your skin's reaction (glowing vs. washed out) tells you everything.
 
-## Find Your Exact Spring Sub-Season
+## Find Your Spring Sub-Season
 
-Want a definitive answer? Our [free AI color analysis](/color-analysis) identifies your exact Spring sub-season from a selfie — 60 seconds, no signup.
+Want a second opinion? Our [free AI color analysis](/) suggests your likely Spring sub-season from a selfie — 60 seconds, no signup.
 
 [Take the Free AI Color Analysis →](/try)
 

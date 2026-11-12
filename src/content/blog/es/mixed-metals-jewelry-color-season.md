@@ -1,6 +1,6 @@
 ---
 title: "Metales mixtos: cómo llevar oro y plata juntos sin que parezca un desajuste"
-description: "¿De verdad puedes llevar oro y plata juntos? Descubre las 3 reglas para mezclar metales, qué estaciones de color lo llevan mejor y cómo crear un conjunto de joyería mixta que favorezca tu subtono."
+description: "¿Oro y plata juntos? Tres reglas para mezclar metales, qué estaciones lo llevan mejor y joyería mixta según tu subtono."
 date: "2026-10-27"
 tags: ["metales mixtos", "joyería", "estación de color", "subtono", "guía de estilo"]
 image: "/images/blog/mixed-metals-jewelry-color-season.webp"
@@ -154,7 +154,7 @@ Mezclar es una herramienta, no una obligación. El objetivo es sentirte como la 
 
 Averiguar qué metal te favorece, y hasta dónde puedes llevar el segundo, solía significar probarse mucha joyería bajo la luz de la tienda. Hoy hay una forma más fácil. Hace poco pasé mi foto por una herramienta de análisis de joyería con IA y me sorprendió lo claramente que explicaba mis mejores metales, gemas y estilos de pendientes, y qué combinaciones evitar cerca del rostro.
 
-Si quieres probarlo, una herramienta gratuita como [aicoloranalysis.io](https://www.aicoloranalysis.io/jewelry-analysis?utm_source=medium&utm_medium=article&utm_campaign=mixed-metals-jewelry-color-season) puede mostrarte qué metales encajan con tu subtono antes de comprar nada. No sustituye la prueba del espejo, pero te da un punto de partida sólido. Para una visión más amplia de cómo interactúan metales y subtono, la [visión general de Wikipedia sobre materiales y aleaciones de joyería](https://en.wikipedia.org/wiki/Jewellery) explica por qué el oro, la plata y el platino se ven como se ven.
+Si quieres probarlo, una herramienta gratuita como [aicoloranalysis.io](/jewelry-analysis) puede mostrarte qué metales encajan con tu subtono antes de comprar nada. No sustituye la prueba del espejo, pero te da un punto de partida sólido. Para una visión más amplia de cómo interactúan metales y subtono, la [visión general de Wikipedia sobre materiales y aleaciones de joyería](https://en.wikipedia.org/wiki/Jewellery) explica por qué el oro, la plata y el platino se ven como se ven.
 
 ---
 

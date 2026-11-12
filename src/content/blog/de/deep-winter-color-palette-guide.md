@@ -1,6 +1,6 @@
 ---
 title: "Tiefer Winter Farbpalette: Ihr kompletter Styling-Ratgeber für 2026"
-description: "Alles, was Sie über die Saison Tiefer Winter wissen müssen — von Signaturfarben über Make-up und Garderobe bis zu Schmuckmetallen und wie Sie Tiefer Winter von ähnlichen Saisons unterscheiden."
+description: "Tiefer Winter: Signaturfarben, Make-up, Garderobe und Schmuckmetalle – und wie Sie die Saison von ähnlichen Typen unterscheiden."
 date: "2026-07-13"
 tags: ["Tiefer Winter", "persönliche Farbanalyse", "Farbpalette", "Styling-Ratgeber", "Saisonfarben"]
 image: "/images/blog/deep-winter-color-palette.webp"
@@ -162,7 +162,7 @@ Farbanalyse kann verwirrend sein, weil so viele Variablen im Spiel sind — Lich
 
 Wenn Sie vermuten, dass Sie ein Tiefer Winter sind, testen Sie zuerst das Kernprinzip: **Lassen tiefe, kühle, kontrastreiche Farben Ihre Haut klarer und Ihre Augen heller wirken?** Wenn ja, sind Sie sehr wahrscheinlich im Winter-Territorium — und die Tiefe Ihrer natürlichen Färbung sagt Ihnen, ob Sie Tiefer, Echter oder Leuchtender Winter sind.
 
-Für präzise Ergebnisse ohne Rätselraten nutzt die [KI-Farbanalyse](/de/personal-color-analysis) Computer Vision, um Ihre tatsächlichen Haut-, Haar- und Augenfarbwerte zu messen — und liefert eine objektive 12-Saisonen-Typisierung basierend auf Ihrer einzigartigen Färbung.
+Wenn Sie lieber nicht raten möchten, nutzt die [KI-Farbanalyse](/) ein KI-Bildmodell, um Haut-, Haar- und Augenfärbung anhand eines Fotos zu beurteilen und einen 12-Saisonen-Typ vorzuschlagen. Es ist eine visuelle Einschätzung, keine Messung — nutzen Sie sie als Ausgangspunkt und prüfen Sie, wie die Farben an Ihnen wirken.
 
 ## Verwandte Artikel
 

@@ -1,6 +1,6 @@
 ---
 title: "Hangi Ünlü Senin Renk Mevsiminde? Stil İkizini Bul"
-description: "Taylor Swift'in Light Summer'ından Lupita Nyong'o'nun Deep Winter'ına kadar hangi ünlülerin renk mevsimini paylaştığını keşfedin. Stil ikizinin moda tercihlerini inceleyin ve kendi gardırobunuza uygulayın."
+description: "Taylor Swift'ten Lupita Nyong'o'ya: hangi ünlüler sizinle aynı renk mevsiminde? Stil ikizinizin moda tercihlerini kendi gardırobunuza uyarlayın."
 date: "2026-08-13"
 tags: ["kişisel renk analizi", "ünlü stili", "renk mevsimi", "moda", "kişisel stil"]
 image: "/images/blog/celebrity-color-season-style-twin.webp"
@@ -153,7 +153,7 @@ Mevsiminizi belirlemediyseniz ünlü karşılaştırmasından geriye gitmek yard
 
 Daralttıktan sonra o ünlülerin sürekli iyi taşıdığı renklere bakın. En iyi tonları sıcak ve soluksa muhtemelen Sonbahar ailesindesiniz. Soğuk ve parlaksa muhtemelen Kış'sınız.
 
-Daha kesin cevap için yapay zeka destekli renk analizi fotoğraftan tam mevsiminizi belirleyebilir. [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) gibi araçlar cildinizin alt tonunu, kontrast seviyesini ve renk derinliğini analiz ederek sizi 12 mevsimden birine yerleştirir — ünlü eşleşmenizi bulmak için net bir başlangıç verir.
+İkinci bir görüş için yapay zeka destekli renk analizi fotoğraftan olası mevsiminizi önerebilir. [aicoloranalysis.io](/personal-color-analysis) gibi araçlar cildinizin alt tonunu, kontrast seviyesini ve renk derinliğini değerlendirerek sizi 12 mevsimden birine yerleştirir — ünlü eşleşmenizi bulmak için işe yarar bir başlangıç verir.
 
 ---
 

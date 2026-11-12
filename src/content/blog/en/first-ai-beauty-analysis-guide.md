@@ -1,6 +1,6 @@
 ---
 title: "Your First AI Beauty Analysis: What to Expect and How to Use the Results"
-description: "Thinking about trying AI-powered beauty analysis for the first time? Here's what happens during the process, how to interpret your results, and practical ways to apply them to your everyday style."
+description: "First AI beauty analysis? What happens in the process, how to read your results, and practical ways to apply them to everyday style."
 date: "2026-08-17"
 tags: ["color analysis", "AI beauty", "personal style", "beauty tech", "self improvement"]
 image: "/images/blog/first-ai-beauty-analysis-guide.webp"
@@ -149,7 +149,7 @@ Try the recommended colors before dismissing them. Our perception of what "looks
 
 **"Do results change over time?"**
 
-Your core undertone doesn't change, but your depth and clarity can shift with age, sun exposure, or major hair color changes. It's worth re-analyzing every 2-3 years or after significant changes to your appearance. Many AI tools, like those at [aicoloranalysis.io](https://aicoloranalysis.io/try), make this easy since you can just snap a new photo.
+Your core undertone doesn't change, but your depth and clarity can shift with age, sun exposure, or major hair color changes. It's worth re-analyzing every 2-3 years or after significant changes to your appearance. Many AI tools, like those at [aicoloranalysis.io](/try), make this easy since you can just snap a new photo.
 
 **"Is this just for women?"**
 

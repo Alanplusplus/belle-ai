@@ -1,6 +1,6 @@
 ---
 title: "Chocar colores a propósito: cómo romper las 'reglas' del análisis de color con estilo"
-description: "¿Crees que debes ceñirte a tu paleta estacional para siempre? Aquí te enseñamos cómo chocar colores intencionalmente sin perder la elegancia — usando principios de teoría del color que realmente funcionan."
+description: "¿Ceñirte a tu paleta para siempre? Choca colores con intención sin perder elegancia, con principios de teoría del color."
 date: "2026-09-29"
 tags: ["análisis de color", "teoría del color", "estilo personal", "consejos de moda", "guía de estilo"]
 image: "/images/blog/color-clashing-rules.webp"
@@ -169,7 +169,7 @@ Por eso una Invierno Frío puede usar pantalones camel cálidos sin problemas �
 
 2. **La prueba fotográfica.** Tómate una foto rápida en el espejo. Los choques que funcionan en persona suelen verse aún mejor en foto. Si se ve bien en cámara, funciona.
 
-3. **La prueba de análisis inteligente.** Las [herramientas modernas de análisis de color](https://aicoloranalysis.io/outfit-color-analysis) pueden analizar qué colores iluminan tu tez y cuáles la apagan. Usa esto como línea base, luego experimenta con adiciones fuera de paleta, una pieza a la vez.
+3. **La prueba de análisis inteligente.** Las [herramientas modernas de análisis de color](/outfit-color-analysis) pueden analizar qué colores iluminan tu tez y cuáles la apagan. Usa esto como línea base, luego experimenta con adiciones fuera de paleta, una pieza a la vez.
 
 ---
 

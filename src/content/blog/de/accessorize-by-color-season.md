@@ -183,7 +183,7 @@ Das ergibt Dutzende Kombinationen bei perfekter Farbharmonie.
 
 Bist du unsicher bei deinem Farbtyp — und damit bei der Accessoire-Richtung — war die klassische Methode, Gold- und Silberschmuck ans Gesicht zu halten und im Spiegel zu squinten. Funktioniert, ist aber subjektiv.
 
-Moderne KI-Farbanalyse-Tools können deinen exakten Typ aus einem Foto bestimmen und nehmen dem Rätselraten bei der Metallwahl völlig den Wind aus den Segeln. Ich habe [ein KI-gestütztes Farbanalyse-Tool](https://aicoloranalysis.io/personal-color-analysis) genutzt, um meinen Typ zu bestätigen — mit kompletter Palette inklusive empfohlener Metalle und Accessoire-Töne, was sonst oft eine persönliche Beratung für über 200 $ bedeutet.
+Moderne KI-Farbanalyse-Tools können aus einem Foto einen wahrscheinlichen Farbtyp vorschlagen und liefern einen nützlichen Ausgangspunkt für die Metallwahl. Ich habe [ein KI-gestütztes Farbanalyse-Tool](/) genutzt, um meinen Typ zu überprüfen — mit kompletter Palette inklusive empfohlener Metalle und Accessoire-Töne, was sonst oft eine persönliche Beratung für über 200 $ bedeutet.
 
 ---
 

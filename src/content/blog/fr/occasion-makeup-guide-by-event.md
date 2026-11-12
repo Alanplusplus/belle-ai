@@ -1,6 +1,6 @@
 ---
 title: "Guide maquillage par occasion : le bon look pour chaque événement"
-description: "De la soirée en amoureux à l'entretien d'embauche en passant par les mariages — apprenez à adapter votre maquillage à toute occasion selon votre teint et vos traits. Plus comment l'IA peut générer des looks personnalisés instantanément."
+description: "Maquillage par occasion : rendez-vous, entretien, mariage, selon teint et traits. L'IA peut inspirer des looks personnalisés."
 date: "2026-07-28"
 tags: ["maquillage", "maquillage occasion", "beauté", "guide de style", "beauté IA"]
 image: "/images/blog/occasion-makeup-guide-by-event.webp"

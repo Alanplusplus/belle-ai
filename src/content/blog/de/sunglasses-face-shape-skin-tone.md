@@ -1,6 +1,6 @@
 ---
 title: "So wählst du die perfekte Sonnenbrille für deine Gesichtsform und deinen Hautton: Der Guide für 2026"
-description: "Vergiss generische Sonnenbrillen-Tipps. Dieser Guide kombiniert Gesichtsform-Analyse mit der Wissenschaft von Hautunterton und Farbtyp, damit du eine Sonnenbrille findest, die wirklich zu dir passt."
+description: "Sonnenbrille nach Gesichtsform und Hautunterton: Form und Farbtyp verbinden, damit du ein Modell findest, das wirklich zu dir passt."
 date: "2026-10-05"
 tags: ["Brille", "Gesichtsform", "Farbanalyse", "Accessoires", "Style-Guide"]
 image: "/images/blog/sunglasses-face-shape-skin-tone.webp"
@@ -44,7 +44,7 @@ Bevor wir über Fassungen sprechen, musst du deine Gesichtsform kennen. So geht 
 
 **Diamant** — Schmale Stirn und schmaler Kiefer mit breiten, prominenten Wangenknochen. Seltener, aber sehr markant.
 
-> **Abkürzung:** Wenn du schon einmal ein KI-gestütztes Gesichtsanalyse-Tool verwendet hast, kennst du deine Form bereits. Tools wie [aicoloranalysis.io/face-shape-analysis](https://aicoloranalysis.io/face-shape-analysis) können deine Gesichtsform anhand eines einzigen Fotos in Sekunden bestimmen.
+> **Abkürzung:** Wenn du schon einmal ein KI-gestütztes Gesichtsanalyse-Tool verwendet hast, kennst du deine Form bereits. Tools wie [aicoloranalysis.io/face-shape-analysis](/face-shape-analysis) können anhand eines einzigen Fotos in Sekunden eine wahrscheinliche Gesichtsform vorschlagen.
 
 ---
 
@@ -251,13 +251,13 @@ Deine Haare rahmen dein Gesicht genauso wie die Sonnenbrille. Sie müssen zusamm
 
 Was mich begeistert: Du musst nicht mehr alles durch Ausprobieren herausfinden.
 
-KI-gestützte Gesichtsanalyse-Tools können jetzt deine exakte Gesichtsform erkennen und Rahmentypen vorschlagen — in Sekunden, anhand eines einzigen Fotos. Manche gehen noch weiter und analysieren deinen Hautton und Farbtyp, um auch Rahmenfarben zu empfehlen.
+KI-gestützte Gesichtsanalyse-Tools können jetzt eine wahrscheinliche Gesichtsform und Rahmentypen vorschlagen — in Sekunden, anhand eines einzigen Fotos. Manche gehen noch weiter und analysieren deinen Hautton und Farbtyp, um auch Rahmenfarben zu empfehlen.
 
 Ich habe kürzlich eines dieser Tools getestet und war wirklich überrascht. Es erkannte meine Gesichtsform als „oval mit leicht hohen Wangenknochen" (genau das, was mir mein Optiker vor Jahren gesagt hatte) und schlug spezifische Rahmentypen mit Farbempfehlungen basierend auf meinem Unterton vor.
 
-Kostenlose Tools wie [aicoloranalysis.io](https://aicoloranalysis.io/glasses-analysis) kombinieren Gesichtsformerkennung mit Farbanalyse, um dir eine umfassende Brillenempfehlung zu geben — Form und Farbe in einer Analyse.
+Kostenlose Tools wie [aicoloranalysis.io](/glasses-analysis) kombinieren Gesichtsformerkennung mit Farbanalyse, um dir eine umfassende Brillenempfehlung zu geben — Form und Farbe in einer Analyse.
 
-Die Technologie ist noch nicht perfekt. Du solltest Fassungen immer noch persönlich anprobieren. Aber einen wissenschaftlich fundierten Ausgangspunkt zu haben, ist besser als ziellos fünfzig Paare durchzuprobieren.
+Die Technologie ist noch nicht perfekt. Du solltest Fassungen immer noch persönlich anprobieren. Aber einen Ausgangspunkt zu haben, ist besser als ziellos fünfzig Paare durchzuprobieren.
 
 ---
 
@@ -268,7 +268,7 @@ Die Technologie ist noch nicht perfekt. Du solltest Fassungen immer noch persön
 - **Dein Farbtyp bringt Präzision** — dein Untertyp hilft dir, den exakten Braunton oder die ideale Metallausführung zu wählen
 - **Wähle nicht automatisch Schwarz** — es ist nicht immer die beste Option, besonders bei warmen und hellen Hauttypen
 - **Glastönung zählt auch** — passe sie an deine Unterton-Familie an
-- **Technologie hilft** — KI-Gesichts- und Farbanalyse-Tools geben dir einen datenbasierten Ausgangspunkt
+- **Technologie hilft** — KI-Gesichts- und Farbanalyse-Tools geben dir einen Ausgangspunkt
 
 Die perfekte Sonnenbrille zu finden, heißt nicht einem Trend zu folgen oder irgendeine aus dem Regal zu nehmen. Es geht darum, zwei Dinge zu verstehen: die Geometrie deines Gesichts und die Temperatur deiner Haut. Stimmst du beides aufeinander ab, sieht deine Sonnenbrille nicht nur gut aus — sie wirkt wie maßgefertigt.
 

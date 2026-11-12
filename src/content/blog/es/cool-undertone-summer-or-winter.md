@@ -112,7 +112,7 @@ Estar entre dos tipos es normal. Azul marino y gris frío aparecen en las paleta
 
 ## Usar un análisis con IA como segunda opinión
 
-Belle AI estima tu estación a partir de un selfie. Es un juicio visual de la IA, no una medición, y puede diferir de una sesión de drapeado presencial. Si dos fotos te dan estaciones distintas, trata el resultado de la IA como una pista y apóyate en la prueba de telas a luz del día anterior. Explicamos qué puede y qué no en [¿Qué tan preciso es el análisis de color con IA?](/es/ai-color-analysis-accuracy). Para probarlo, empieza con [análisis de color con IA](/es/personal-color-analysis).
+Belle AI estima tu estación a partir de un selfie. Es un juicio visual de la IA, no una medición, y puede diferir de una sesión de drapeado presencial. Si dos fotos te dan estaciones distintas, trata el resultado de la IA como una pista y apóyate en la prueba de telas a luz del día anterior. Explicamos qué puede y qué no en [¿Qué tan preciso es el análisis de color con IA?](/es/ai-color-analysis-accuracy). Para probarlo, empieza con [análisis de color con IA](/).
 
 ## Preguntas frecuentes
 

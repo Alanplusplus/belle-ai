@@ -1,6 +1,6 @@
 ---
 title: "Style Personality ile Gerçekten İşe Yarayan Bir Gardırop Nasıl Kurulur?"
-description: "Trendlere değil Style Personality'nize dayalı gardırop kurmayı öğrenin. Temel parçalardan alışveriş filtrelerine — bu rehber Style DNA'nızı sonunda size ait hissettiren bir dolaba dönüştürür."
+description: "Trendlere değil Style Personality'nize dayalı gardırop kurun. Temel parçalar ve alışveriş filtreleriyle dolabınızı size ait hissettirin."
 date: "2026-09-19"
 tags: ["Style Personality", "gardırop kurma", "kişisel stil", "kapsül gardırop", "moda ipuçları"]
 image: "/images/blog/style-personality-wardrobe-guide.webp"
@@ -24,7 +24,7 @@ Kişisel renk analizi *hangi renklerin* cildinizi parlatacağını söyler. Styl
 
 İki Soft Summer kadını tamamen farklı görünebilir. Biri romantik, dökümlü kumaşlarda, yumuşak dalgalarda, narin takılarda parlar. Diğeri yapılı, minimal kıyafetlerde, düz saçta, temiz çizgilerde en iyi durur. Aynı renkler. Farklı ifade.
 
-Style Personality'nizi henüz belirlemediyseniz [8 Style Personality tipi](https://aicoloranalysis.io/style-personality) rehberimizle başlayın — veya Style DNA'nızı keşfetmek için hızlı bir analiz yapın. Arketipinizi (çoğu kişi iki tipin karışımıdır) öğrenince aşağıdaki her şey uygulanabilir olur.
+Style Personality'nizi henüz belirlemediyseniz [8 Style Personality tipi](/style-personality) rehberimizle başlayın — veya Style DNA'nızı keşfetmek için hızlı bir analiz yapın. Arketipinizi (çoğu kişi iki tipin karışımıdır) öğrenince aşağıdaki her şey uygulanabilir olur.
 
 ---
 
@@ -200,7 +200,7 @@ Sonuç? Her parçanın kasıtlı hissettiği, her şeyin uyumlu karıştığı v
 
 Style personality'nizi belirlemenin geleneksel yolu image consultant randevusu almaktı — pahalı, zaman alıcı ve sıklıkla sistematik analiz yerine öznel görüşe dayalı.
 
-Bugün [style personality analiz araçları](https://aicoloranalysis.io/style-personality) bir selfieden yüz geometrinizi, oranlarınızı ve renklendirmenizi değerlendirerek arketipinizi belirleyebilir. Renk mevsimi analizini güçlendiren aynı bilgisayarlı görü ilkeleri artık Style DNA'ya uzanıyor — Pinterest panolarına göre tahmin etmek yerine veriyle bilgilendirilmiş bir başlangıç noktası veriyor.
+Bugün [style personality analiz araçları](/style-personality) bir selfieden yüz geometrinizi, oranlarınızı ve renklendirmenizi değerlendirerek arketipinizi belirleyebilir. Renk mevsimi analizini güçlendiren aynı bilgisayarlı görü ilkeleri artık Style DNA'ya uzanıyor — Pinterest panolarına göre tahmin etmek yerine veriyle bilgilendirilmiş bir başlangıç noktası veriyor.
 
 Yine de teknoloji başlangıç noktasıdır, içgüdünün yerine geçmez. Analiz sonuçlarınızı çerçeve olarak kullanın, sonra gerçekten uzandığınız ve güvenle hissettiğiniz parçalara göre ince ayar yapın. En iyi gardırop sistematik içgörü ile kişisel gerçeği birleştirir.
 

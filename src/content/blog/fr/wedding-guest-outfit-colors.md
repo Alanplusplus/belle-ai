@@ -1,6 +1,6 @@
 ---
 title: "Les Meilleures Couleurs de Tenue d'Invitée de Mariage pour Chaque Saison Colorimétrique"
-description: "Vous ne savez pas quoi porter à un mariage ? Votre saison colorimétrique a la réponse. Guide complet des couleurs les plus flatteuses pour invitée de mariage, pour les 12 types saisonniers — du Printemps à l'Hiver."
+description: "Invitée de mariage : votre saison guide les couleurs flatteuses pour les 12 types saisonniers, du Printemps à l'Hiver."
 date: "2026-08-26"
 tags: ["analyse colorimétrique", "tenue de mariage", "saison colorimétrique", "conseils mode", "style de cérémonie"]
 image: "/images/blog/wedding-guest-outfit-colors.webp"
@@ -45,7 +45,7 @@ Les quatre saisons principales se déclinent en trois sous-saisons chacune :
 | **Automne** | Automne Doux, Automne Vrai, Automne Profond | Chaud, riche, terreux |
 | **Hiver** | Hiver Profond, Hiver Vrai, Hiver Vif | Froid, contrasté, dramatique |
 
-Vous ne savez pas laquelle vous êtes ? Une [analyse colorimétrique par IA](https://aicoloranalysis.io/personal-color-analysis) peut déterminer votre sous-saison à partir d'une photo en moins d'une minute.
+Vous ne savez pas laquelle vous êtes ? Une [analyse colorimétrique par IA](/) peut suggérer une sous-saison probable à partir d'une photo en moins d'une minute.
 
 ---
 
@@ -147,7 +147,7 @@ Voici mon système en trois étapes pour éviter les regrets colorimétriques :
 
 **Étape 2 : Prenez une photo.** L'appareil de votre téléphone est moins indulgent que le miroir. Si la couleur semble fausse sur un selfie rapide, ce sera pire sur les photos de mariage prises de l'autre bout de la salle.
 
-**Étape 3 : Essayez une analyse colorimétrique par IA.** Des outils comme [l'analyse colorimétrique par IA](https://aicoloranalysis.io/outfit-color-analysis) peuvent désormais prévisualiser comment des couleurs de tenue spécifiques interagissent avec votre coloration naturelle — sans deviner. C'est particulièrement utile quand vous hésitez entre deux teintes proches.
+**Étape 3 : Essayez une analyse colorimétrique par IA.** Des outils comme [l'analyse colorimétrique par IA](/outfit-color-analysis) peuvent désormais prévisualiser comment des couleurs de tenue spécifiques interagissent avec votre coloration naturelle — un moyen utile de réduire les approximations. C'est particulièrement utile quand vous hésitez entre deux teintes proches.
 
 ---
 

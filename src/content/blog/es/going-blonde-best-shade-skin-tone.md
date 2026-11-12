@@ -71,7 +71,7 @@ Esta es la tabla que ojalá alguien me hubiera mostrado antes de mi primer desas
 
 **Los rubios cálidos** llevan pigmentos dorados, cobrizos o miel que reflejan la calidez de tu piel. Crean ese brillo saludable y bronceado que parece natural, no procesado. En mi experiencia, los rubios cálidos son los más pedidos en salones — y los más aplicados a subtonos equivocados. Cuando alguien de subtono frío se tiñe de miel, el oro del cabello amplifica cualquier rojizo de la piel, creando un efecto sonrojado no deseado.
 
-**Los rubios neutros** están en el medio — ni claramente cálidos ni fríos. Son el punto de partida más seguro si dudas de tu subtono, pero pueden verse "planos" si tus rasgos tienen mucho contraste. Los rubios arena y trigo funcionan maravillosamente en subtonos neutros y en personas cuyo [análisis de color personal](/es/color-analysis) las sitúa en estaciones mezcladas o suaves.
+**Los rubios neutros** están en el medio — ni claramente cálidos ni fríos. Son el punto de partida más seguro si dudas de tu subtono, pero pueden verse "planos" si tus rasgos tienen mucho contraste. Los rubios arena y trigo funcionan maravillosamente en subtonos neutros y en personas cuyo [análisis de color de 12 estaciones](/es/color-analysis) las sitúa en estaciones mezcladas o suaves.
 
 ### La excepción del subtono oliva
 
@@ -144,7 +144,7 @@ Tu estación de color — determinada por la interacción de subtono, valor (cla
 | True Winter | Platino, hielo, ceniza azul | Miel, dorado, cobre |
 | Bright Winter | Platino brillante, champán frío | Cálidos apagados, fresa |
 
-Si no estás segura de tu estación, un [análisis de color personal](https://aicoloranalysis.io/personal-color-analysis) puede identificar tu sub-estación exacta — crucial cuando la diferencia entre Soft Summer y True Summer es toda una categoría de tonos rubios.
+Si no estás segura de tu estación, un [análisis de color personal](/personal-color-analysis) puede sugerir tu subestación probable — crucial cuando la diferencia entre Soft Summer y True Summer es toda una categoría de tonos rubios.
 
 ### ¿Y si estás entre estaciones?
 
@@ -209,7 +209,7 @@ Durante la mayor parte de la historia, elegir un rubio significaba adivinar. Mir
 
 Las herramientas con IA pueden previsualizar distintos tonos rubios en tu foto real — renderizando dimensión, interacción de subtono y reflexión de luz realista en lugar de una superposición plana. En lugar de imaginar cómo se vería un ceniza sobre piel fría, puedes verlo. En lugar de preguntarte si miel o champán favorece tu coloración Light Spring, puedes compararlos lado a lado.
 
-Herramientas gratuitas como [aicoloranalysis.io](https://aicoloranalysis.io/hair-color-analysis) te permiten previsualizar cambios de color antes de comprometerte con decoloración, tóner y tres horas en la silla del salón. La tecnología analiza tu subtono, considera tu nivel natural y muestra cómo tonos rubios específicos interactúan con tus rasgos — las mismas variables que evalúa un colorista experto, pero visibles antes de gastar un euro.
+Herramientas gratuitas como [aicoloranalysis.io](/hair-color-analysis) te permiten previsualizar cambios de color antes de comprometerte con decoloración, tóner y tres horas en la silla del salón. La tecnología analiza tu subtono, considera tu nivel natural y muestra cómo tonos rubios específicos interactúan con tus rasgos — las mismas variables que evalúa un colorista experto, pero visibles antes de gastar un euro.
 
 En mi experiencia, las clientas que llegan al salón con una referencia previsualizada — "Quiero exactamente este beige ceniza nivel 9, con este tipo de dimensión" — obtienen mejores resultados más rápido. La conversación pasa de vaga ("hazme rubia") a precisa ("este tono, esta técnica, este nivel de calidez"). Esa precisión es la diferencia entre un rubio que amas y uno que toleras hasta que crezcan las raíces.
 

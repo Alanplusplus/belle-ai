@@ -1,6 +1,6 @@
 ---
 title: "The Best Wedding Guest Outfit Colors for Every Color Season"
-description: "Not sure what to wear to a wedding? Your color season holds the answer. Here's a complete guide to the most flattering wedding guest outfit colors for all 12 seasonal types — from Spring to Winter."
+description: "Wedding guest outfit stuck? Your color season helps. Flattering guest colors for all 12 seasonal types, from Spring to Winter."
 date: "2026-08-26"
 tags: ["color analysis", "wedding outfit", "color season", "fashion tips", "occasion styling"]
 image: "/images/blog/wedding-guest-outfit-colors.webp"
@@ -45,7 +45,7 @@ The four main seasons break down into three sub-seasons each:
 | **Autumn** | Soft Autumn, True Autumn, Deep Autumn | Warm, rich, earthy |
 | **Winter** | Deep Winter, True Winter, Bright Winter | Cool, high-contrast, dramatic |
 
-Not sure which one you are? A quick [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) can determine your sub-season from a photo in under a minute.
+Not sure which one you are? A quick [AI color analysis](/) can suggest a likely sub-season from a photo in under a minute.
 
 ---
 
@@ -147,7 +147,7 @@ Here's my three-step system for avoiding color regret:
 
 **Step 2: Take a photo.** Your phone camera is less forgiving than the mirror. If the color looks off in a quick selfie, it'll look worse in wedding photos taken from across the room.
 
-**Step 3: Try an AI color analysis.** Tools like [AI-powered color analysis](https://aicoloranalysis.io/outfit-color-analysis) can now preview how specific outfit colors interact with your natural coloring — no guesswork required. It's especially helpful when you're torn between two similar shades.
+**Step 3: Try an AI color analysis.** Tools like [AI-powered color analysis](/outfit-color-analysis) can now preview how specific outfit colors interact with your natural coloring — a useful way to cut down the guesswork. It's especially helpful when you're torn between two similar shades.
 
 ---
 

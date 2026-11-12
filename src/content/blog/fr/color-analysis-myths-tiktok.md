@@ -1,6 +1,6 @@
 ---
 title: "Mythes de la colorimétrie démystifiés : 7 erreurs que TikTok propage"
-description: "TikTok a rendu la colorimétrie virale — mais a aussi diffusé de grosses idées reçues. Un œil entraîné sépare le vrai du faux sur les 7 mythes les plus répandus sur les réseaux sociaux en ce moment."
+description: "TikTok a viralisé la colorimétrie — et 7 grosses idées reçues. Le vrai et le faux sur les mythes les plus répandus."
 date: "2026-08-21"
 tags: ["colorimétrie", "théorie des couleurs", "beauté", "style personnel", "développement personnel"]
 image: "/images/blog/color-analysis-myths-tiktok.webp"
@@ -61,7 +61,7 @@ Le modèle à 4 saisons échoue aussi totalement pour les personnes à sous-ton 
 
 **Ce qui fonctionne mieux :** La colorimétrie professionnelle utilise des *conditions contrôlées* — éclairage neutre (lumière du jour 5000-6500K ou lampes D65 calibrées), peau sans maquillage, fond de drapage blanc ou gris, et échantillons de tissu physiques contre le visage. L'analyste observe les réactions en direct de la peau : paraît-elle plus claire ou plus terne ? Les cernes s'amplifient-ils ou diminuent-ils ? Le visage gagne-t-il en dimension ou s'aplatit-il ?
 
-Si vous ne pouvez pas voir un professionnel, les outils IA qui analysent votre photo avec des algorithmes de science des couleurs offrent un résultat bien plus fiable que comparer un selfie à l'œil nu avec des images de palettes. Des outils comme [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) compensent les artefacts photo courants et analysent les données réelles de teint au niveau des pixels plutôt que de se fier à l'impression visuelle seule.
+Si vous ne pouvez pas voir un professionnel, les outils IA qui analysent votre photo peuvent vous donner un point de départ plus cohérent que comparer un selfie à l'œil nu avec des images de palettes. Des outils comme [aicoloranalysis.io](/personal-color-analysis) utilisent un modèle d'image IA pour juger votre coloration sur l'ensemble de la photo, bien que la lumière et les réglages de l'appareil puissent encore faire varier le résultat.
 
 ---
 
@@ -130,7 +130,7 @@ Est-ce parfait ? Non. Est-ce significativement mieux qu'un créateur TikTok jeta
 
 La comparaison honnête : le drapage professionnel en personne avec un analyste certifié reste la référence. Les outils IA viennent ensuite, comme point de départ rapide et peu coûteux dont les résultats varient selon la qualité de la photo. L'auto-diagnostic TikTok arrive en dernier, car il est facile de se tromper de type devant un écran.
 
-**La réalité pratique :** Une analyse professionnelle coûte 150 à 400 € et nécessite de réserver des semaines à l'avance. L'IA vous donne un point de départ immédiat et raisonnablement précis gratuitement ou à faible coût — et vous pouvez toujours vérifier avec un professionnel plus tard si vous le souhaitez.
+**La réalité pratique :** Une analyse professionnelle coûte 150 à 400 € et nécessite de réserver des semaines à l'avance. L'IA vous donne un point de départ immédiat et cohérent gratuitement ou à faible coût — et vous pouvez toujours vérifier avec un professionnel plus tard si vous le souhaitez.
 
 ---
 
@@ -156,7 +156,7 @@ Si vous vous êtes formée à la colorimétrie exclusivement sur TikTok, voici u
 - Votre palette saisonnière est votre gamme « optimale » — pas les seules couleurs que vous êtes autorisée à porter
 - La couleur des yeux seule ne détermine pas votre saison ; la relation entre tous les traits compte
 - La colorimétrie fonctionne pour toutes les profondeurs de peau et ethnies — une mauvaise représentation ne signifie pas que le système échoue
-- Les outils IA modernes utilisent une vraie science des couleurs et sont bien plus fiables que l'auto-typage sur les réseaux sociaux
+- Les outils IA modernes jugent votre photo selon le cadre des 12 saisons et peuvent constituer un point de départ plus cohérent que l'auto-typage sur les réseaux sociaux
 
 Le meilleur que TikTok ait fait pour la colorimétrie, c'est rendre les gens curieux. Le pire, c'est de convaincre les gens qu'une science complexe des couleurs peut se réduire à un truc de 30 secondes. La vérité, comme toujours, se situe quelque part entre les deux — et comprendre ces mythes vous aide à la trouver.
 

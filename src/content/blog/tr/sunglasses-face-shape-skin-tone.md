@@ -1,6 +1,6 @@
 ---
 title: "Yüz Şeklinize ve Cilt Tonunuza Göre Güneş Gözlüğü Nasıl Seçilir: 2026 Rehberi"
-description: "Genel geçer güneş gözlüğü tavsiyelerini unutun. Bu rehber, yüz şekli analizini cilt alt tonu ve kişisel renk analizi bilimiyle birleştirerek size gerçekten yakışan güneş gözlüğünü bulmanıza yardımcı olur."
+description: "Genel güneş gözlüğü tavsiyelerini bırakın. Yüz şekli, alt ton ve kişisel renk analizini birleştirerek size yakışan güneş gözlüğünü bulun."
 date: "2026-10-05"
 tags: ["gözlük", "yüz şekli", "renk analizi", "aksesuar", "stil rehberi"]
 image: "/images/blog/sunglasses-face-shape-skin-tone.webp"
@@ -44,7 +44,7 @@ Bu rehberde her iki yönü de ele alacağım: **yüzünüz için çerçeve şekl
 
 **Elmas** — Dar alın ve çene, geniş ve belirgin elmacık kemikleri. Daha nadir ama çok ayırt edici.
 
-> **Kısayol:** Daha önce yapay zeka destekli bir yüz şekli analiz aracı kullandıysanız, şeklinizi zaten biliyorsunuzdur. [aicoloranalysis.io/face-shape-analysis](https://aicoloranalysis.io/face-shape-analysis) gibi araçlar tek bir fotoğraftan saniyeler içinde yüz şeklinizi belirleyebilir.
+> **Kısayol:** Daha önce yapay zeka destekli bir yüz şekli analiz aracı kullandıysanız, şeklinizi zaten biliyorsunuzdur. [aicoloranalysis.io/face-shape-analysis](/face-shape-analysis) gibi araçlar tek bir fotoğraftan saniyeler içinde olası yüz şeklinizi önerebilir.
 
 ---
 
@@ -251,13 +251,13 @@ Saçlarınız da güneş gözlüğü gibi yüzünüzü çerçeveler. Birlikte ç
 
 Beni heyecanlandıran şu: Artık her şeyi deneme yanılmayla çözmek zorunda değilsiniz.
 
-Yapay zeka destekli yüz analizi araçları artık tek bir fotoğraftan tam yüz şeklinizi belirleyip çerçeve stilleri önerebiliyor — saniyeler içinde. Bazıları daha da ileri giderek cilt tonunuzu ve renk mevsimsinizi analiz edip çerçeve renkleri de öneriyor.
+Yapay zeka destekli yüz analizi araçları artık tek bir fotoğraftan olası yüz şeklinizi ve çerçeve stillerini önerebiliyor — saniyeler içinde. Bazıları daha da ileri giderek cilt tonunuzu ve renk mevsimsinizi analiz edip çerçeve renkleri de öneriyor.
 
 Bu araçlardan birini yakın zamanda test ettim ve gerçekten şaşırdım. Yüz şeklimi "hafif yüksek elmacık kemikli oval" olarak belirledi (yıllar önce gözlükçümün söylediğiyle aynı) ve alt tonuma dayalı spesifik çerçeve stilleri ve renk önerileri sundu.
 
-[aicoloranalysis.io](https://aicoloranalysis.io/glasses-analysis) gibi ücretsiz araçlar, yüz şekli tespitini renk analiziyle birleştirerek hem şekil hem rengi kapsayan kapsamlı bir gözlük önerisi sunar.
+[aicoloranalysis.io](/glasses-analysis) gibi ücretsiz araçlar, yüz şekli tespitini renk analiziyle birleştirerek hem şekil hem rengi kapsayan kapsamlı bir gözlük önerisi sunar.
 
-Teknoloji henüz mükemmel değil. Satın almadan önce çerçeveleri fiziksel olarak denemelisiniz. Ama bilime dayalı bir başlangıç noktasına sahip olmak, mağazada elli çift denemekten çok daha iyidir.
+Teknoloji henüz mükemmel değil. Satın almadan önce çerçeveleri fiziksel olarak denemelisiniz. Ama net bir başlangıç noktasına sahip olmak, mağazada elli çift denemekten çok daha iyidir.
 
 ---
 
@@ -268,7 +268,7 @@ Teknoloji henüz mükemmel değil. Satın almadan önce çerçeveleri fiziksel o
 - **Renk mevsimsiniz hassasiyet ekler** — alt mevsimsinizi bilmek kahverenginin tam tonunu veya metal yüzey işlemini seçmenize yardımcı olur
 - **Varsayılan olarak siyah seçmeyin** — sıcak tonlu ve açık tenli kişiler için her zaman en iyi seçenek değildir
 - **Cam tonu da önemlidir** — bütünlük için alt ton ailenize eşleştirin
-- **Teknolojiden yararlanın** — yapay zeka yüz ve renk analizi araçları alışveriş öncesi veriye dayalı bir başlangıç noktası sunar
+- **Teknolojiden yararlanın** — yapay zeka yüz ve renk analizi araçları alışveriş öncesi bir başlangıç noktası sunar
 
 Mükemmel güneş gözlüğünü bulmak trendi takip etmek ya da sergileme rafından rastgele bir çift almak değildir. İki şeyi anlamaktır: yüzünüzün geometrisi ve cildinizin sıcaklığı. İkisini de doğru tutturduğunuzda, güneş gözlüğünüz sadece iyi görünmeyecek — sizin için özel tasarlanmış gibi görünecek.
 

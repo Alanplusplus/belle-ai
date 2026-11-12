@@ -1,6 +1,6 @@
 ---
 title: "Cilt Tonunuza Uygun Mükemmel Kırmızı Ruju Nasıl Bulursunuz (2026 Rehberi)"
-description: "Hangi kırmızı rujun size yakıştığını tahmin etmeyi bırakın. Sıcak, soğuk veya nötr alt tonunuza göre kırmızı tonları nasıl eşleştireceğinizi ve her cilt tonu için özel renk önerilerini öğrenin."
+description: "Tahmin etmeyi bırakın: sıcak, soğuk veya nötr alt tona göre kırmızı ruj eşleştirmesi ve her cilt tonu için özel renk önerileri."
 date: "2026-07-29"
 tags: ["kırmızı ruj", "cilt alt tonu", "makyaj ipuçları", "renk analizi", "güzellik"]
 image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
@@ -43,7 +43,7 @@ Altın ve gümüş takı parçalarını yüzünüzün yanına, birer birer tutun
 **Beyaz Kağıt Testi:**
 Parlak beyaz bir kağıdı yüzünüzün yanına tutun. Cildiniz karşılaştırıldığında sarımsı görünüyorsa sıcaksınız. Pembemsi veya gül kurusu gibi görünüyorsa soğuksunuz. Griye kayıyorsa veya ayırt edemiyorsanız büyük olasılıkla nötr veya zeytin alt tonlusunuz.
 
-Tek bir test kesin sonuç vermez. En doğru sonuç için üçünü birlikte kullanın. Daha kesin bir cevap istiyorsanız [yapay zeka tabanlı renk analizi araçları](https://aicoloranalysis.io) alt tonunuzu bir selfie'den saniyeler içinde analiz edebilir — tahmin oyununu tamamen ortadan kaldırır.
+Tek bir test kesin sonuç vermez. En doğru sonuç için üçünü birlikte kullanın. İkinci bir görüş istiyorsanız [yapay zeka tabanlı renk analizi araçları](/) alt tonunuzu bir selfie'den saniyeler içinde önerebilir — faydalı bir başlangıç noktası; ışık yine sonucu kaydırabilir.
 
 ---
 
@@ -154,7 +154,7 @@ Zeytin alt tonlar sık yanlış tanımlandığı için ayrı bir başlığı hak
 
 Renk eşleştirme eskiden eğitimli bir danışmana gitmeyi veya güzellik reyonunda saatlerce deneme yanılmayı gerektiriyordu. Modern yapay zeka araçları bu denklemi değiştirdi.
 
-[Belle AI](https://aicoloranalysis.io) gibi uygulamalar yüzünüzün fotoğrafını çekip profesyonellerin kullandığı aynı renk bilimi ilkeleriyle alt tonunuzu analiz edebilir — sıcak, soğuk veya nötr olup olmadığınızı belirler ve hatta spesifik renk mevsiminizi tespit eder. Mevsiminizi öğrendiğinizde doğru kırmızıyı daraltmak neredeyse zahmetsiz hale gelir.
+[Belle AI](/) gibi uygulamalar yüzünüzün fotoğrafına bakıp profesyonellerin baktığı aynı renk ipuçlarıyla alt tonunuzu önerebilir — sıcak, soğuk veya nötr olup olmadığınızı ve olası renk mevsiminizi. Mevsiminizi öğrendiğinizde doğru kırmızıyı daraltmak neredeyse zahmetsiz hale gelir.
 
 Kendi selfie'mi bir yapay zeka renk analizi aracından geçirdim ve Yumuşak Yaz mevsiminde olduğumu doğruladım — bu, denediğim her mercanın neden yanlış göründüğünü ve mat bordo kırmızılarının neden yüzümü aydınlattığını açıkladı.
 

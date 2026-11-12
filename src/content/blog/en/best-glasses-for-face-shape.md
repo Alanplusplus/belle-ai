@@ -1,6 +1,6 @@
 ---
 title: "Best Glasses for Your Face Shape: The Complete Guide"
-description: "Not sure which glasses frames suit your face? This guide covers the best eyewear styles for oval, round, square, heart, diamond, and oblong face shapes — plus how AI can help you find your perfect match."
+description: "Unsure which frames suit you? Eyewear for oval, round, square, heart, diamond, and oblong faces, plus AI as a starting point for frame ideas."
 date: "2026-07-31"
 updated: "2026-11-12"
 tags: ["face shape", "glasses", "eyewear", "style guide", "AI beauty"]

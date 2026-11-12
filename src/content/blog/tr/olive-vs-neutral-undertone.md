@@ -1,7 +1,7 @@
 ---
 title: "Zeytin vs nötr alt ton: farkı nasıl anlarsınız"
 seoTitle: "Zeytin vs nötr alt ton: hangisine sahipsiniz?"
-description: "Testler nötr diyor ama fondöten yine oturmuyor mu? Zeytin alt tonlu olabilirsiniz. Yeşil yansıma, fondöten davranışı ve kumaş deneme sonuçlarındaki 3 temel fark."
+description: "Testler nötr diyor ama fondöten oturmuyor mu? Zeytin alt tonlu olabilirsiniz. Yeşil yansıma, fondöten ve kumaş denemesindeki 3 temel fark."
 date: "2026-09-18"
 tags: ["zeytin alt tonu", "nötr alt ton", "cilt alt tonu", "renk analizi", "güzellik"]
 image: "/images/blog/olive-vs-neutral-undertone.webp"
@@ -98,7 +98,7 @@ Teninizi açıkça sıcak veya soğuk birinin yanında inceleyin.
 
 ### Adım 4: yapay zekâ analizi ile doğrulama
 
-Standart kumaş denemesi sınır vakalarda belirsiz kalabilir. [Yapay zekâ renk analizi](/tr/personal-color-analysis) cildinizdeki gerçek renk değerlerini — günlük gözle zor fark edilen ama bilgisayarlı görüşle net olan yeşil-gri yansıma dahil — ölçer. Zeytin ile nötrü ayırmanın en güvenilir yolu budur.
+Standart kumaş denemesi sınır vakalarda belirsiz kalabilir. [Yapay zekâ renk analizi](/) faydalı bir ikinci görüş verebilir; bir yapay zekâ görüntü modeli tüm fotoğrafınıza bakarak gözle kaçırılması kolay yeşil-gri yansımayı fark edebilir. Yine görsel bir değerlendirmedir; ışık ve kamera ayarları sonucu değiştirebilir — yukarıdaki testlere ek olarak kullanın, yerine değil.
 
 ---
 
@@ -157,17 +157,17 @@ Klasik zeytin imzası. Gerçek nötrlerin genelde daha net tercihi vardır. Gül
 - **Yeşil yansıma ana ayırt edicidir** — beyazda, çene/boyunda, gün ışığında görülür
 - **Zeytin tende sıcak ve soğukun «yanlış» görünmesinin nedeni** nötr tenden farklıdır
 - **Soluk renkler zeytini ortaya çıkarır** — pudra gülü ve sıcak vizon kahve yakışıyorsa saf sıcak/soğuk yakışmıyorsa zeytinsiniz
-- **Sınır vakalarda en güvenilir ayırıcı yapay zekâ analizidir**
+- **Sınır vakalarda yapay zekâ analizi faydalı bir ikinci görüş olabilir**
 
 Etiket hiç oturmadıysa «nötr»ü kabul etmeyi bırakın. Zeytin olabilirsiniz — bu her şeyi değiştirir.
 
 ## Gerçek alt tonunuzu bulun
 
-Zeytin mi nötr mü emin değil misiniz? Yapay zekâ renk analizimiz standart testlerin kaçırdığı yeşil-gri yansımayı tespit eder.
+Zeytin mi nötr mü emin değil misiniz? Yapay zekâ renk analizimiz standart testlerin sık kaçırdığı yeşil-gri yansıma konusunda ikinci bir görüş sunabilir.
 
 [Ücretsiz yapay zekâ renk analizini deneyin →](/tr/try)
 
-60 saniye, ücretsiz önizleme, kayıt yok. Zeytin tespiti dahil doğru alt ton okuması.
+60 saniye, ücretsiz önizleme, kayıt yok. Zeytin tespiti dahil alt ton değerlendirmesi.
 
 ## İlgili yazılar
 

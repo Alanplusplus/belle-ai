@@ -1,6 +1,6 @@
 ---
 title: "Her Yüz Şekli İçin En İyi Küpe Modelleri — Görsel Rehber"
-description: "Her küpe her yüze yakışmaz. Oval, yuvarlak, kare, kalp ve uzun yüz şekilleri için stud, halka, sallantılı ve şamdan küpelerden hangilerinin en iyi sonucu verdiğini pratik alışveriş ipuçları ve stil önerileriyle öğrenin."
+description: "Oval, yuvarlak, kare, kalp ve uzun yüzler için hangi küpe modelleri en iyi sonucu verir? Stil önerileri ve pratik alışveriş ipuçlarıyla öğrenin."
 date: "2026-08-14"
 tags: ["yüz şekli", "küpe", "mücevher", "aksesuar", "stil rehberi"]
 image: "/images/blog/best-earring-styles-face-shape.webp"
@@ -39,7 +39,7 @@ Temel ilke basittir: **küpeler denge yaratmalıdır.** Yüzünüz genişse uzun
 - **Uzun (dikdörtgen):** Yüz belirgin şekilde genişlikten uzun, alın/elmacık kemikleri/çene kabaca aynı genişlikte
 - **Elmas:** Dar alın ve çene hattı, elmacık kemikleri en geniş nokta, köşeli yüz konturları
 
-Emin değilseniz, aynadaki yüz hatlarınızı silinebilir bir kalemle çizin — şekil hemen belirginleşir. Ya da fotoğrafınızdan şeklinizi belirleyen ve kişiselleştirilmiş öneriler sunan bir [yapay zeka yüz şekli analiz aracı](https://aicoloranalysis.io/face-shape-analysis) kullanabilirsiniz.
+Emin değilseniz, aynadaki yüz hatlarınızı silinebilir bir kalemle çizin — şekil hemen belirginleşir. Ya da fotoğrafınızdan şeklinizi belirleyen ve kişiselleştirilmiş öneriler sunan bir [yapay zeka yüz şekli analiz aracı](/face-shape-analysis) kullanabilirsiniz.
 
 ---
 

@@ -141,7 +141,7 @@ image: "/images/blog/color-analysis-makeup-beginners.webp"
 
 이 방법에서 가장 어려운 부분은 첫 단계, 즉 내 시즌을 아는 것입니다. 어깨에 천을 대고 거울을 보는 드레이핑도 효과가 있지만, 특히 조명이 나쁠 때는 쉽게 오판하게 됩니다.
 
-여기서 AI 도구가 진짜 도움이 됩니다. 자연광에서 찍은 민낯 셀카를 올리면, 좋은 분석 도구가 언더톤, 명도, 채도를 읽어 메이크업 컬러로 바꿔 줍니다. 저는 큰 화장품 쇼핑을 앞두고 [aicoloranalysis.io](https://www.aicoloranalysis.io/makeup-analysis?utm_source=medium&utm_medium=article&utm_campaign=color-analysis-makeup-beginners) 같은 무료 도구를 써 봤는데, 파운데이션, 립, 블러셔 계열을 명확한 목록으로 알려 줬습니다. 거울 테스트를 대체하지는 못하지만, 몇 번의 잘못된 길을 피하게 해 줬습니다.
+여기서 AI 도구가 진짜 도움이 됩니다. 자연광에서 찍은 민낯 셀카를 올리면, 좋은 분석 도구가 언더톤, 명도, 채도를 읽어 메이크업 컬러로 바꿔 줍니다. 저는 큰 화장품 쇼핑을 앞두고 [aicoloranalysis.io](/makeup-analysis) 같은 무료 도구를 써 봤는데, 파운데이션, 립, 블러셔 계열을 명확한 목록으로 알려 줬습니다. 거울 테스트를 대체하지는 못하지만, 몇 번의 잘못된 길을 피하게 해 줬습니다.
 
 이 모든 것을 용어에 시달리지 않고 더 넓게 이해하고 싶다면, 기초를 단계별로 설명하는 초보자용 [퍼스널 컬러 입문 가이드](/ko/color-analysis-for/beginners)도 있습니다.
 

@@ -1,6 +1,6 @@
 ---
 title: "Kore Kişisel Renk Analizi (퍼스널 컬러): Dünyayı Neden Kasıp Kavuruyor?"
-description: "Kore kişisel renk analizi hakkında bilmeniz gereken her şey. Kore 4 mevsim sistemi, K-beauty'nin renk tipini nasıl kullandığı ve analiz yaptırabileceğiniz yerler."
+description: "Kore kişisel renk analizi: 4 mevsim sistemi, K-beauty'nin renk tipi kullanımı ve analiz yaptırabileceğiniz yerler hakkında rehber."
 date: "2026-07-18"
 tags: ["Kore renk analizi", "kişisel renk", "K-beauty", "Kore güzelliği", "Kore renk tipi"]
 image: "/images/blog/korean-personal-color-analysis.webp"
@@ -123,7 +123,7 @@ Trend şu bölgelere yayıldı:
 ### Online / Yapay Zekâ Seçenekleri
 
 Kore salonuna gidemeyenler için:
-- Yapay zekâ renk analizi araçları doğru Kore tarzı tip verebilir
+- Yapay zekâ renk analizi araçları Kore tarzı bir başlangıç noktası sunabilir
 - Kore renk uzmanlarıyla video danışmanlık mevcut (80.000–150.000 won)
 - Korece öz değerlendirme rehberleri Naver'da yaygın
 
@@ -138,7 +138,7 @@ K-pop idollerinin kişisel renk analizi çok popüler içeriktir:
 
 Bu ünlü tiplemeler hayran etkileşimini artırır ve insanların kendi mevsimlerini karşılaştırarak bulmasına yardım eder.
 
-## Yapay Zekâ Renk Analizini Deneyin (Kore Tarzı Hassasiyet)
+## Yapay Zekâ Renk Analizini Deneyin (Kore Tarzı 12 Mevsim Tipi)
 
 Yapay zekâmız, Kore salon tarzı analizle aynı 12 mevsim sistemini kullanarak size bir başlangıç noktası sunar. 12 mevsim tipinizi, en iyi renklerinizi ve makyaj önerilerinizi anında alın.
 

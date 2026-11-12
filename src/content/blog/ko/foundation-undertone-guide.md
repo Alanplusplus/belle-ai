@@ -89,9 +89,9 @@ image: "/images/blog/foundation-undertone-guide.webp"
 
 ### 5. AI 언더톤 분석
 
-이 분야 기술은 놀랄 만큼 발전했습니다. AI 컬러 분석 도구는 표준화 조건에서 피부를 촬영하고, 표면색·탠·홍조·조명 편향에서 언더톤을 분리. 여러 개 테스트해 봤는데, 매장 매칭을 일관되게 outperform——특히 올리브나 눈을 헷갈리게 하는 뉴트럴 편향 피부.
+기술은 여기서 두 번째 의견으로 도움이 될 수 있습니다. AI 컬러 분석 도구는 셀카에서 언더톤을 시각적으로 판단하며, 표면색·탠·홍조와 분리하려 하지만, 조명과 카메라 설정에 따라 결과가 달라질 수 있습니다. 여러 개 테스트해 봤는데, 올리브나 눈을 헷갈리게 하는 뉴트럴 편향 피부처럼 까다로운 경우 교차 확인용으로 가장 유용했습니다.
 
-[aicoloranalysis.io](https://aicoloranalysis.io/makeup-analysis) 같은 도구는 셀카로 언더톤을 분석하고, 당신의 컬러링에 맞춘 파운데이션 추천을 생성합니다.
+[aicoloranalysis.io](/makeup-analysis) 같은 도구는 셀카로 언더톤을 분석하고, 당신의 컬러링을 바탕으로 파운데이션 색조를 제안합니다.
 
 ---
 
@@ -120,7 +120,7 @@ image: "/images/blog/foundation-undertone-guide.webp"
 
 ## 시즌별 파운데이션 매칭
 
-[퍼스널 컬러 시즌](https://aicoloranalysis.io/personal-color-analysis)은 파운데이션 언더톤에 강한 힌트를 줍니다:
+[퍼스널 컬러 시즌](/personal-color-analysis)은 파운데이션 언더톤에 강한 힌트를 줍니다:
 
 **봄 시즌(라이트 스프링, 트루 스프링, 브라이트 스프링):**
 언더톤: 웜. 골드, 피치 포뮬러. 봄 타입은 산화 시 웜해지므로, 매장보다 약간 밝게.

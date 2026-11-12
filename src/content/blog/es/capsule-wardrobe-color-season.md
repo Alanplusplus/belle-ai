@@ -1,6 +1,6 @@
 ---
 title: "Cómo Crear un Armario Cápsula Según tu Estación de Color (Paso a Paso)"
-description: "Aprende a crear un armario cápsula versátil basado en tu estación de color personal. Desde elegir neutros hasta piezas de acento, esta guía convierte el análisis de color en una estrategia práctica de compras."
+description: "Armario cápsula según tu estación de color: neutros, acentos y una estrategia práctica de compras desde tu análisis personal."
 date: "2026-07-25"
 tags: ["armario cápsula", "análisis de color personal", "estación de color", "tips de moda", "guía de estilo"]
 image: "/images/blog/capsule-wardrobe-color-season.webp"
@@ -178,9 +178,9 @@ Después de trabajar con mi propio armario cápsula por más de un año:
 
 La parte más difícil solía ser determinar tu estación. Las sesiones de draping tradicionales cuestan $200-500 y requieren reservar semanas antes.
 
-Hoy, las herramientas de análisis de color con IA pueden determinar tu estación desde un selfie en segundos. Analizan el subtono de tu piel, el contraste entre tus rasgos y la calidez o frialdad de tu coloración natural.
+Hoy, las herramientas de análisis de color con IA pueden sugerir una estación probable desde un selfie en segundos. Valoran el subtono de tu piel, el contraste entre tus rasgos y la calidez o frialdad de tu coloración natural — los mismos factores que revisaría un analista humano, pero mediante un modelo de imagen con IA que lee toda la foto.
 
-Herramientas gratuitas como [aicoloranalysis.io](https://aicoloranalysis.io/es) ofrecen un análisis de color con IA instantáneo que identifica tu estación y proporciona una paleta personalizada — un excelente punto de partida para planificar tu armario cápsula.
+Herramientas gratuitas como [aicoloranalysis.io](/) ofrecen un análisis de color con IA instantáneo que sugiere una estación probable y una paleta personalizada — un excelente punto de partida para planificar tu armario cápsula.
 
 ---
 
@@ -191,5 +191,5 @@ Herramientas gratuitas como [aicoloranalysis.io](https://aicoloranalysis.io/es) 
 - Agrega 3-5 colores de acento que hagan brillar tu piel (30% del armario)
 - Cada estampado debe contener colores de tu paleta
 - Construye gradualmente en 6+ meses en lugar de renovar todo de una vez
-- Usa análisis de color con IA para identificar rápidamente tu estación y comenzar con confianza
+- Usa análisis de color con IA para obtener una primera lectura orientativa de tu estación y confirmarla con un test de draping
 

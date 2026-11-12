@@ -1,6 +1,6 @@
 ---
 title: "Ich Habe Farbanalyse an Meiner Ganzen Freundesgruppe Getestet — 5 Frauen, 5 Farbtypen, 5 Überraschende Erkenntnisse"
-description: "Was passiert, wenn fünf Freundinnen gemeinsam ihre Farbtypen entdecken? Eine persönliche Geschichte über Überraschungen, Diskussionen und den Shopping-Trip, der folgte."
+description: "Farbanalyse in der Freundesgruppe: Fünf Frauen, fünf Farbtypen – Überraschungen, Diskussionen und der Shopping-Trip danach."
 date: "2026-09-20"
 tags: ["Farbanalyse", "Farbtyp", "persönlicher Stil", "Selbstverbesserung", "Schönheit"]
 image: "/images/blog/color-analysis-friend-group-experiment.webp"
@@ -22,7 +22,7 @@ Das haben wir gelernt, und warum einige Ergebnisse uns wirklich schockiert haben
 
 ## Der Ablauf: Fünf Freundinnen, Ein Samstag, Eine App
 
-Wir wählten einen Samstagnachmittag, trafen uns bei Jordan mit Kaffee und Gebäck, und jede machte eine KI-Farbanalyse auf ihrem Handy. Der Prozess war einfach: ein Selfie bei natürlichem Licht hochladen, und die KI analysiert Hautunterton, Kontrastniveau und Gesamtfärbung, um deinen saisonalen Farbtyp aus dem 12-Saisonen-System zu bestimmen.
+Wir wählten einen Samstagnachmittag, trafen uns bei Jordan mit Kaffee und Gebäck, und jede machte eine KI-Farbanalyse auf ihrem Handy. Der Prozess war einfach: ein Selfie bei natürlichem Licht hochladen, und die KI betrachtet Hautunterton, Kontrastniveau und Gesamtfärbung, um einen saisonalen Farbtyp aus dem 12-Saisonen-System vorzuschlagen.
 
 Innerhalb weniger Minuten hatten wir alle unsere Ergebnisse:
 
@@ -132,7 +132,7 @@ Nicht alles lief reibungslos. Ein paar Dinge überraschten uns oder brachten uns
 
 **Nicht jeder mochte seine Palette sofort.** Mei war anfangs enttäuscht von ihrem Cool-Winter-Ergebnis, weil sie Soft Autumn sein wollte (sie liebte erdige, Boho-Ästhetik). Aber als sie sah, wie atemberaubend sie in ihren echten kühlen, klaren Farben aussah — Fuchsia, Königsblau, Smaragd — kam sie schnell um. Stilpräferenz und schmeichelhafte Farben sind nicht immer dasselbe, und das ist in Ordnung.
 
-**Die KI lag richtig.** Das war das Urteil von uns allen fünf. Später verglichen wir unsere KI-Ergebnisse mit Online-Quizzen (die uns völlig verschiedene Antworten gaben) und Draping-Videos auf YouTube (hilfreich, aber schwer selbst einzuschätzen). Die KI-Analyse war am konsistentesten, am schnellsten und — basierend auf unserem Stofftest — am genauesten.
+**Die KI hat standgehalten.** Das war das Urteil von uns allen fünf. Später verglichen wir unsere KI-Ergebnisse mit Online-Quizzen (die uns völlig verschiedene Antworten gaben) und Draping-Videos auf YouTube (hilfreich, aber schwer selbst einzuschätzen). Die KI-Analyse war am konsistentesten, am schnellsten und — in unserem Stofftest — die Variante, die am besten passte. Das sind fünf Personen und ein Nachmittag, kein kontrolliertes Studien-Setting.
 
 ---
 
@@ -162,7 +162,7 @@ Es sind etwa drei Monate seit unserem Experiment vergangen. Das hat sich geände
 
 Wenn du neugierig auf Farbanalyse bist, es aber noch nicht probiert hast — schnapp dir eine Freundin, oder besser noch, eine ganze Gruppe. Es ist eine jener seltenen Beauty-Entdeckungen, die wirklich nützlich, sofort umsetzbar und viel spaßiger sind, als man erwartet.
 
-Neugierig auf deinen Farbtyp? Probiere eine kostenlose [KI-Farbanalyse](https://aicoloranalysis.io/personal-color-analysis) und überzeuge dich selbst — 60 Sekunden und ein Selfie genügen.
+Neugierig auf deinen Farbtyp? Probiere eine kostenlose [KI-Farbanalyse](/) und überzeuge dich selbst — 60 Sekunden und ein Selfie genügen.
 
 ## Verwandte Artikel
 

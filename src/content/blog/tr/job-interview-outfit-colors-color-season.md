@@ -1,6 +1,6 @@
 ---
 title: "Renk Mevsiminize Göre İş Görüşmesinde Ne Giymelisiniz"
-description: "Lacivert otomatik olarak güvenli seçenek değildir. 12 renk mevsiminin tamamı için en iyi iş görüşmesi kıyafet renklerini keşfedin — ayrıca hangi «profesyonel» tonların sessizce size karşı çalıştığını."
+description: "Lacivert her zaman güvenli değil. 12 renk mevsimi için en iyi iş görüşmesi renkleri ve sessizce size karşı çalışan «profesyonel» tonlar."
 date: "2026-10-21"
 tags: ["iş görüşmesi kıyafeti", "renk mevsimi", "renk analizi", "kariyer stili", "özel gün stili"]
 image: "/images/blog/job-interview-outfit-colors-color-season.webp"
@@ -138,7 +138,7 @@ Bunların hiçbiri yasak değildir. Doğru yerleşim, doğru ton veya yüzünüz
 
 ## Modern Yaklaşım: Satın Almadan Önce Renkleri Test Edin
 
-Mevsiminizi bulmak eskiden profesyonel bir kumaş deneme seansı demekti. Bugün yapay zeka bir fotoğrafı analiz edip hangi tonların alt tonunuzu yakıştırdığını, hangilerinin sizi soldurduğunu söyleyebilir. Kariyer değişikliğine hazırlanırken bir fotoğrafı yapay zeka renk analizi aracından geçirdim ve bir dakikadan kısa sürede temel, yüz ve aksan renklerinin listesini aldım. [aicoloranalysis.io](https://www.aicoloranalysis.io/outfit-color-analysis?utm_source=medium&utm_medium=article&utm_campaign=job-interview-outfit-colors-color-season) gibi ücretsiz araçlar yeni bir takım ceketi için para harcamadan önce hangi kıyafet renklerinin teninizi aydınlattığını gösterebilir.
+Mevsiminizi bulmak eskiden profesyonel bir kumaş deneme seansı demekti. Bugün yapay zeka bir fotoğrafı analiz edip hangi tonların alt tonunuzu yakıştırdığını, hangilerinin sizi soldurduğunu söyleyebilir. Kariyer değişikliğine hazırlanırken bir fotoğrafı yapay zeka renk analizi aracından geçirdim ve bir dakikadan kısa sürede temel, yüz ve aksan renklerinin listesini aldım. [aicoloranalysis.io](/outfit-color-analysis) gibi ücretsiz araçlar yeni bir takım ceketi için para harcamadan önce hangi kıyafet renklerinin teninizi aydınlattığını gösterebilir.
 
 Giysiyi denemenin yerini tutmaz ama alanı daraltır; deneme kabininde tahmin yürütmezsiniz. Profesyonel tavsiyenin nasıl karşılaştırıldığına daha derin bakmak isterseniz [The Muse'un görüşme kıyafeti rehberi](https://www.themuse.com/advice/what-to-wear-to-an-interview) yukarıdakileri tamamlayan kalıp, kumaş ve giyim kuralları konularını ele alır.
 

@@ -71,7 +71,7 @@ Alt tonunuzdan emin değilseniz temellerle başlayın: doğal gün ışığında
 
 **Sıcak sarılar** cildinizdeki sıcaklığı yankılayan altın, bakır veya bal pigmentleri taşır. İşlenmiş değil zahmetsiz okunan o güneş öpmüş, sağlıklı parıltıyı yaratır. Deneyimime göre sıcak sarılar salonda en çok istenen ama en sık yanlış alt tona uygulanan tonlardır. Soğuk tonlu biri bal sarı aldığında saçtaki altın ciltteki pembeliği güçlendirir ve istenmeyen kızarık bir etki yaratır.
 
-**Nötr sarılar** ortada durur — belirgin sıcak veya soğuk değildir. Alt tonunuzdan emin değilseniz en güvenli başlangıç noktasıdır, ama özellikleriniz güçlü kontrasta sahipse «düz» okunabilir. Kum ve buğday sarıları nötr alt tonlarda ve [kişisel renk analizi](/tr/color-analysis) ile harman veya yumuşak mevsimlere düşenlerde güzel durur.
+**Nötr sarılar** ortada durur — belirgin sıcak veya soğuk değildir. Alt tonunuzdan emin değilseniz en güvenli başlangıç noktasıdır, ama özellikleriniz güçlü kontrasta sahipse «düz» okunabilir. Kum ve buğday sarıları nötr alt tonlarda ve [12 mevsim renk analizi](/tr/color-analysis) ile harman veya yumuşak mevsimlere düşenlerde güzel durur.
 
 ### Zeytin Alt Tonu İstisnası
 
@@ -144,7 +144,7 @@ Renk mevsiminiz — alt ton, değer (açık/koyu) ve kroma (soluk/net) etkileşi
 | Gerçek Kış | Platin, buz, mavi-kül | Bal, altın, bakır |
 | Parlak Kış | Parlak platin, soğuk şampanya | Soluk sıcak, çilek |
 
-Hangi mevsimde olduğunuzdan emin değilseniz [kişisel renk analizi](https://aicoloranalysis.io/personal-color-analysis) tam alt mevsiminizi belirleyebilir — Yumuşak Yaz ile Gerçek Yaz arasındaki fark tüm bir sarı kategorisi demektir.
+Hangi mevsimde olduğunuzdan emin değilseniz [kişisel renk analizi](/personal-color-analysis) olası alt mevsiminizi önerebilir — Yumuşak Yaz ile Gerçek Yaz arasındaki fark tüm bir sarı kategorisi demektir.
 
 ### İki Mevsim Arasındaysanız Ne Olur?
 
@@ -209,7 +209,7 @@ Tarihin çoğu boyunca sarı ton seçmek tahmin demekti. Örnek kitabına bakar,
 
 Yapay zekâ destekli araçlar artık gerçek fotoğrafınızda farklı sarı tonları önizleyebilir — düz renk kaplaması yerine boyut, alt ton etkileşimi ve gerçekçi ışık yansıması. Kül sarısının soğuk cildinize nasıl duracağını hayal etmek yerine görebilirsiniz. Bal mı şampanya mı Açık İlkbahar renklendirmenize uyuyor merak etmek yerine yan yana karşılaştırabilirsiniz.
 
-[aicoloranalysis.io](https://aicoloranalysis.io/hair-color-analysis) gibi ücretsiz online araçlar ağartma, toner ve üç saatlik salon koltuğuna bağlanmadan önce saç rengi değişikliklerini önizlemenizi sağlar. Teknoloji cilt alt tonunuzu analiz eder, doğal saç seviyenizi hesaba katar ve belirli sarı tonlarının yüz hatlarınızla nasıl etkileştiğini gösterir — yetkin colorist'in değerlendirdiği değişkenler, ama bir kuruş harcamadan önce görünür.
+[aicoloranalysis.io](/hair-color-analysis) gibi ücretsiz online araçlar ağartma, toner ve üç saatlik salon koltuğuna bağlanmadan önce saç rengi değişikliklerini önizlemenizi sağlar. Teknoloji cilt alt tonunuzu analiz eder, doğal saç seviyenizi hesaba katar ve belirli sarı tonlarının yüz hatlarınızla nasıl etkileştiğini gösterir — yetkin colorist'in değerlendirdiği değişkenler, ama bir kuruş harcamadan önce görünür.
 
 Deneyimime göre salonu önizlenmiş referansla gelen müşteriler — «Tam bu kül bej sarı, 9. seviye, bu boyutta boyut istiyorum» — daha hızlı daha iyi sonuç alır. Konuşma belirsizden («beni sarışın yap») kesine («bu ton, bu teknik, bu sıcaklık seviyesi») kayar. Bu netlik sevdiğiniz sarı ile kökleriniz uzayana kadar tolere ettiğiniz sarı arasındaki farktır.
 

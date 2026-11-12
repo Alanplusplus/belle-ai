@@ -1,6 +1,6 @@
 ---
 title: "J'ai Testé l'Analyse Colorimétrique sur Tout Mon Groupe d'Amies — 5 Femmes, 5 Saisons, 5 Leçons Surprenantes"
-description: "Que se passe-t-il quand cinq amies découvrent leur saison de couleurs ensemble ? Une histoire personnelle sur les surprises, les débats et la virée shopping qui a suivi."
+description: "Cinq amies, cinq saisons : surprises, débats et virée shopping après avoir découvert leur saison de couleurs ensemble."
 date: "2026-09-20"
 tags: ["analyse colorimétrique", "saison de couleurs", "style personnel", "développement personnel", "beauté"]
 image: "/images/blog/color-analysis-friend-group-experiment.webp"
@@ -22,7 +22,7 @@ Voici ce que nous avons appris, et pourquoi certains résultats nous ont sincèr
 
 ## Le Protocole : Cinq Amies, Un Samedi, Une Appli
 
-Nous avons choisi un samedi après-midi, nous sommes retrouvées chez Jordan avec café et viennoiseries, et chacune a fait son analyse colorimétrique par IA sur son téléphone. Le processus était simple : télécharger un selfie en lumière naturelle, et l'IA analyse votre sous-ton de peau, votre niveau de contraste et votre coloration globale pour déterminer votre type saisonnier parmi les 12 saisons.
+Nous avons choisi un samedi après-midi, nous sommes retrouvées chez Jordan avec café et viennoiseries, et chacune a fait son analyse colorimétrique par IA sur son téléphone. Le processus était simple : télécharger un selfie en lumière naturelle, et l'IA examine votre sous-ton de peau, votre niveau de contraste et votre coloration globale pour suggérer un type de couleur saisonnier parmi les 12 saisons du système.
 
 En quelques minutes, nous avions toutes nos résultats :
 
@@ -132,7 +132,7 @@ Tout ne s'est pas passé sans accroc. Quelques choses nous ont surprise ou nous 
 
 **Tout le monde n'a pas aimé sa palette au début.** Mei a été d'abord déçue de son résultat Hiver Froid parce qu'elle voulait être Automne Doux (elle adorait l'esthétique bohème terreuse). Mais quand elle a vu à quel point elle était éblouissante dans ses vraies couleurs froides et nettes — fuchsia, bleu roi, émeraude — elle a rapidement changé d'avis. Préférence de style et couleurs flatteuses ne sont pas toujours la même chose, et c'est normal.
 
-**L'IA avait raison.** C'était le verdict des cinq. Nous avons ensuite comparé nos résultats IA à des quiz en ligne (qui nous donnaient des réponses très différentes) et à des vidéos de drapage sur YouTube (utiles mais difficiles à auto-évaluer). L'analyse IA était la plus cohérente, la plus rapide et — d'après notre test avec les tissus — la plus précise.
+**L'IA a tenu le coup.** C'était le verdict des cinq. Nous avons ensuite comparé nos résultats IA à des quiz en ligne (qui nous donnaient des réponses très différentes) et à des vidéos de drapage sur YouTube (utiles mais difficiles à auto-évaluer). L'analyse IA était la plus cohérente, la plus rapide et — dans notre test avec les tissus — celle qui correspondait le mieux. Cinq personnes et un après-midi, pas une étude contrôlée.
 
 ---
 
@@ -162,7 +162,7 @@ Cela fait environ trois mois depuis notre expérience. Voici ce qui a changé :
 
 Si l'analyse colorimétrique vous intrigue mais que vous ne l'avez pas encore essayée, prenez une amie — ou mieux encore, tout un groupe. C'est l'une de ces rares découvertes beauté vraiment utiles, immédiatement actionnables, et bien plus amusantes que prévu.
 
-Curieuse de connaître votre saison de couleurs ? Essayez une [analyse colorimétrique par IA](https://aicoloranalysis.io/personal-color-analysis) gratuite et voyez par vous-même — 60 secondes et un selfie suffisent.
+Curieuse de connaître votre saison de couleurs ? Essayez une [analyse colorimétrique par IA](/) gratuite et voyez par vous-même — 60 secondes et un selfie suffisent.
 
 ## Articles connexes
 

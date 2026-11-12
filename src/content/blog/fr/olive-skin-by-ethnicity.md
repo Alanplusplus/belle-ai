@@ -207,7 +207,7 @@ Le test des veines, des bijoux et du papier blanc visent surtout les peaux clair
 - **Or vs argent** est inconclusif sur olive car aucun métal n'est clairement meilleur (l'or rose gagne souvent)
 - **Le papier blanc** rapproche chaud et olive, tous deux paraissant chauds sur blanc
 
-L'analyse colorimétrique par intelligence artificielle apporte un avantage net : en mesurant les valeurs couleur au niveau du pixel sur une photo, elle détecte le modificateur vert-gris quelle que soit la profondeur de mélanine, le contexte culturel ou la lumière. Pour ceux mal typés par chaque quiz et consultante, l'analyse IA est souvent la première réponse précise.
+L'analyse colorimétrique par IA peut aider ici. Un modèle d'image observe l'ensemble de la photo plutôt que de vous demander de décrire votre coloration, ce qui lui permet parfois de repérer le modificateur vert-gris que les quiz manquent, quelle que soit votre profondeur de mélanine ou votre contexte culturel, bien que la lumière et les réglages de l'appareil puissent encore fausser le résultat. Pour ceux mal typés par les quiz, cela peut constituer un second avis utile à confronter à un test au drapé.
 
 ---
 
@@ -217,7 +217,7 @@ L'analyse colorimétrique par intelligence artificielle apporte un avantage net 
 - **La profondeur de mélanine affecte la visibilité** — la nuance verte est la plus visible sur olive claire, la moins sur olive profonde, mais présente à toutes les profondeurs
 - **Les standards beauté culturels manquent souvent l'olive** — en retombant sur « chaud » ou « neutre »
 - **Les communautés beauté d'Asie de l'Est mènent la reconnaissance de l'olive** — terminologie dédiée et gammes produits
-- **L'analyse IA fonctionne entre origines** car elle mesure votre peau individuelle plutôt que des suppositions populationnelles
+- **L'analyse IA examine votre photo individuelle** plutôt qu'une description populationnelle, ce qui peut constituer un second avis utile quelle que soit votre origine, mais confirmez-le avec un test au drapé
 
 Votre origine influence comment l'olive se présente sur votre peau, mais ne détermine pas si vous avez un sous-ton olive. Si chaud et froid vous déçoivent, si votre peau a une nuance verdâtre à la lumière du jour, si les tons terre atténués vous illuminent — vous êtes probablement olive, quelle que soit votre origine.
 

@@ -207,7 +207,7 @@ Damar, takı ve beyaz kağıt testleri çoğunlukla açık ten için geliştiril
 - **Altın ve gümüş** zeytin ten için sonuçsuzdur; ne metal açık üstünlük sağlar (genelde gül altını kazanır)
 - **Beyaz kağıt** sıcak ve zeytini benzer gösterir; ikisi de beyaz zemin üzerinde sıcak görünür
 
-Yapay zekâ destekli renk analizi burada belirgin avantaj sunar. Fotoğraftan gerçek piksel düzeyinde renk değerlerini ölçerek melanin derinliği, kültürel bağlam veya ışıktan bağımsız gri-yeşil modifikatörü algılar. Her anket ve danışman tarafından yanlış sınıflandırılanlar için yapay zekâ analizi çoğu zaman aldıkları ilk doğru sonuç olur.
+Yapay zekâ destekli renk analizi burada yardımcı olabilir. Renklendirmenizi anlatmanızı istemek yerine tüm fotoğrafa bakan bir yapay zeka görüntü modeli, anketlerin kaçırdığı gri-yeşil modifikatörü bazen fark edebilir; melanin derinliği veya kültürel bağlam ne olursa olsun ışık ve kamera ayarları yine sonucu kaydırabilir. Anketlerle yanlış sınıflandırılanlar için kumaş denemesiyle kontrol edilebilecek faydalı bir ikinci görüş olabilir.
 
 ---
 
@@ -217,7 +217,7 @@ Yapay zekâ destekli renk analizi burada belirgin avantaj sunar. Fotoğraftan ge
 - **Melanin derinliği görünürlüğü etkiler** — yeşil yansıma açık zeytinde en belirgin, derin zeytinde en az, ama her derinlikte vardır
 - **Kültürel güzellik standartları zeytini sık kaçırır** — «sıcak» veya «nötr» varsayımına düşer
 - **Doğu Asya güzellik toplulukları zeytin tanımada öncüdür** — özel terminoloji ve ürün hatlarıyla
-- **Yapay zekâ analizi etnik gruplar arasında işler** çünkü nüfus varsayımları yerine bireysel teninizi ölçer
+- **Yapay zekâ analizi bireysel fotoğrafınıza bakar**, nüfus tabanlı bir tanıma değil; etnik gruplar arasında faydalı bir ikinci görüş olabilir, ancak kumaş denemesiyle doğrulayın
 
 Etnik kökeniniz zeytinin teninizde nasıl göründüğünü etkiler, zeytin alt tonuna sahip olup olmadığınızı belirlemez. Sıcak ve soğuk ürünler ikisi de tutmuyorsa, gün ışığında teniniz yeşilimsi görünüyorsa, mat toprak tonları sizi aydınlatıyorsa — geçmişiniz ne olursa olsun muhtemelen zeytinsiniz.
 

@@ -1,6 +1,6 @@
 ---
 title: "Farbanalyse für Make-up-Einsteigerinnen: Ein Ratgeber ohne Überforderung"
-description: "Neu im Make-up? Erfahren Sie, wie Ihre Farbsaison eine chaotische Kosmetiktasche in ein einfaches Basis-Set aus 5 Produkten verwandelt. Ein Einsteiger-Ratgeber zu Foundation, Rouge, Lippen, Augen und Brauen in Tönen, die Ihnen wirklich stehen."
+description: "Farbanalyse für Make-up-Einsteigerinnen: Wie Ihre Farbsaison die Kosmetiktasche in ein Basis-Set aus fünf passenden Produkten verwandelt."
 date: "2026-11-03"
 tags: ["Make-up für Anfängerinnen", "Farbanalyse", "Farbsaison", "Make-up", "Beauty"]
 image: "/images/blog/color-analysis-makeup-beginners.webp"
@@ -141,7 +141,7 @@ Das sind die Fallen, in die ich selbst getappt bin, damit Sie es nicht müssen.
 
 Der schwierigste Teil dieses Systems ist der erste Schritt: Ihre Saison zu kennen. Stoffe vor dem Spiegel über die Schultern zu legen funktioniert, aber man verschätzt sich leicht, besonders bei schlechtem Licht.
 
-Hier sind KI-Werkzeuge wirklich nützlich geworden. Laden Sie ein ungeschminktes Selfie bei natürlichem Licht hoch, und ein gutes Analyse-Werkzeug liest Ihren Unterton, Ihre Tiefe und Ihr Chroma aus und übersetzt sie in Make-up-Töne. Ich habe ein kostenloses Werkzeug wie [aicoloranalysis.io](https://www.aicoloranalysis.io/makeup-analysis?utm_source=medium&utm_medium=article&utm_campaign=color-analysis-makeup-beginners) vor einer großen Make-up-Einkaufstour ausprobiert, und es lieferte mir eine klare Liste von Foundation-, Lippen- und Rouge-Familien. Es ersetzte nicht den Spiegeltest, bewahrte mich aber vor mehreren Fehlgriffen.
+Hier sind KI-Werkzeuge wirklich nützlich geworden. Laden Sie ein ungeschminktes Selfie bei natürlichem Licht hoch, und ein gutes Analyse-Werkzeug liest Ihren Unterton, Ihre Tiefe und Ihr Chroma aus und übersetzt sie in Make-up-Töne. Ich habe ein kostenloses Werkzeug wie [aicoloranalysis.io](/makeup-analysis) vor einer großen Make-up-Einkaufstour ausprobiert, und es lieferte mir eine klare Liste von Foundation-, Lippen- und Rouge-Familien. Es ersetzte nicht den Spiegeltest, bewahrte mich aber vor mehreren Fehlgriffen.
 
 Wenn Sie sich einen breiteren Einstieg ohne Fachjargon wünschen, gibt es einen [Farbanalyse-Einstiegsratgeber für Anfängerinnen](/de/color-analysis-for/beginners), der die Grundlagen Schritt für Schritt erklärt.
 

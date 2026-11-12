@@ -1,6 +1,6 @@
 ---
 title: "Mitos del análisis de color desmontados: 7 cosas que TikTok se equivoca"
-description: "TikTok ha hecho viral el análisis de color, pero también ha difundido grandes equivocaciones. Un ojo entrenado separa la realidad de la ficción en los 7 mitos más comunes que circulan ahora mismo en las redes sociales."
+description: "TikTok viralizó el análisis de color y también 7 grandes mitos. Separar realidad de ficción en lo que circula en redes."
 date: "2026-08-21"
 tags: ["análisis de color", "teoría del color", "belleza", "estilo personal", "superación personal"]
 image: "/images/blog/color-analysis-myths-tiktok.webp"
@@ -61,7 +61,7 @@ El modelo de 4 estaciones también falla por completo con las personas de subton
 
 **Lo que funciona mejor:** El análisis de color profesional usa *condiciones controladas* — iluminación neutra (luz diurna de 5000-6500K o lámparas D65 calibradas), piel sin maquillaje, fondo de drapeado blanco o gris y muestras de tela físicas junto al rostro. El analista observa las reacciones en vivo de la piel: ¿se ve más clara o más opaca? ¿Se acentúan o disminuyen las ojeras? ¿El rostro gana dimensión o se aplana?
 
-Si no puedes acudir a un profesional, las herramientas de IA que analizan tu foto con algoritmos de ciencia del color ofrecen un resultado mucho más fiable que comparar a ojo un selfie con imágenes de paletas. Herramientas como [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) compensan los artefactos habituales de las fotos y analizan datos reales de tono de piel a nivel de píxel, en lugar de basarse solo en la impresión visual.
+Si no puedes acudir a un profesional, las herramientas de IA que analizan tu foto pueden darte un punto de partida más coherente que comparar a ojo un selfie con imágenes de paletas. Herramientas como [aicoloranalysis.io](/personal-color-analysis) usan un modelo de imagen con IA para valorar tu coloración en la foto completa, aunque la luz y la cámara pueden cambiar el resultado.
 
 ---
 
@@ -130,7 +130,7 @@ El análisis de color con IA moderno se apoya en modelos de imagen multimodales 
 
 La comparación honesta: el drapeado profesional presencial con un analista certificado sigue siendo el estándar de referencia. Las herramientas de IA vienen después, como punto de partida rápido y económico cuyos resultados varían según la calidad de la foto. El autodiagnóstico en TikTok queda último, porque es fácil tipificarse mal desde una pantalla.
 
-**La realidad práctica:** Un análisis profesional cuesta 150-400 € y requiere reservar con semanas de antelación. La IA te da un punto de partida inmediato y razonablemente preciso gratis o a bajo coste — y siempre puedes verificarlo con un profesional después si lo deseas.
+**La realidad práctica:** Un análisis profesional cuesta 150-400 € y requiere reservar con semanas de antelación. La IA te da un punto de partida inmediato y útil gratis o a bajo coste — y siempre puedes verificarlo con un profesional después si lo deseas.
 
 ---
 
@@ -156,7 +156,7 @@ Si has estado aprendiendo análisis de color exclusivamente en TikTok, aquí tie
 - La paleta de tu estación es tu rango «óptimo» — no los únicos colores que puedes llevar
 - El color de ojos por sí solo no determina tu estación; importa la relación entre todos los rasgos
 - El análisis de color funciona para toda profundidad de piel y etnia — la mala representación no significa que el sistema falle
-- Las herramientas de IA modernas usan ciencia del color genuina y son mucho más fiables que la autotipificación en redes sociales
+- Las herramientas de IA modernas valoran tu foto según el marco de 12 estaciones y pueden ser un punto de partida más coherente que la autotipificación en redes sociales
 
 Lo mejor que TikTok hizo por el análisis de color fue despertar curiosidad. Lo peor fue convencer a la gente de que la ciencia compleja del color puede reducirse a un truco de 30 segundos. La verdad, como siempre, está en un punto intermedio — y entender estos mitos te ayuda a encontrarla.
 

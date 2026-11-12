@@ -1,6 +1,6 @@
 ---
 title: "Color Clashing on Purpose: How to Break the 'Rules' of Color Analysis Stylishly"
-description: "Think you must stick to your seasonal palette forever? Here's how to intentionally clash colors while still looking polished — using color theory principles that actually work."
+description: "Must you stick to your seasonal palette forever? How to clash colors on purpose and stay polished, with color theory that actually works."
 date: "2026-09-29"
 tags: ["color analysis", "color theory", "personal style", "fashion tips", "style guide"]
 image: "/images/blog/color-clashing-rules.webp"
@@ -169,7 +169,7 @@ Not sure if your planned clash will work? Here are three quick tests:
 
 2. **The Instagram Test.** Take a quick mirror photo. Color clashes that work in person often photograph even better. If it looks good on camera, it works.
 
-3. **The AI Test.** Modern [color analysis tools](https://aicoloranalysis.io/outfit-color-analysis) can analyze which colors brighten your complexion versus which drain it. Use this as your baseline, then experiment with off-palette additions one piece at a time.
+3. **The AI Test.** Modern [color analysis tools](/outfit-color-analysis) can analyze which colors brighten your complexion versus which drain it. Use this as your baseline, then experiment with off-palette additions one piece at a time.
 
 ---
 

@@ -190,7 +190,7 @@ This is where olive-toned people often go wrong. The fix:
 
 ## Olive Undertones and Seasonal Color Analysis
 
-In the 12-season color analysis system, olive undertones show up most frequently in:
+In the [12-season color analysis](/color-analysis) system, olive undertones show up most frequently in:
 
 - **Soft Autumn** — the most classic olive placement; muted, warm, medium depth
 - **Warm Autumn** — warmer olives with golden base tones
@@ -201,13 +201,13 @@ It's rare for olive-toned people to type into Spring or Winter seasons because t
 
 If you've taken a color analysis quiz and the results didn't feel right, your olive undertone might be the reason. Standard quizzes don't account for the green modifier, so they may type you into a season that technically matches your warm/cool base but ignores the muted quality that olive adds.
 
-If you are still unsure, [AI-based color analysis](/personal-color-analysis) can give you a second opinion. An AI image model looks at your whole photo and may notice the green-grey cast that basic tests often miss. It is a visual judgment, not a measurement, so lighting and camera settings can shift it. Treat it as a starting point.
+If you are still unsure, [AI-based color analysis](/) can give you a second opinion. An AI image model looks at your whole photo and may notice the green-grey cast that basic tests often miss. It is a visual judgment, not a measurement, so lighting and camera settings can shift it. Treat it as a starting point.
 
 ---
 
 ## Confirm Your Undertone with AI
 
-Not sure if you're olive? Our [free AI color analysis](/color-analysis) can give you a second opinion on whether your coloring leans olive, something standard warm/cool tests often miss.
+Not sure if you're olive? Our [free AI color analysis](/) can give you a second opinion on whether your coloring leans olive, something standard warm/cool tests often miss.
 
 [Try Free AI Color Analysis →](/try)
 
@@ -227,7 +227,7 @@ Understanding your olive undertone is genuinely liberating. Once you stop trying
 
 ## Related Articles
 
-- [Color Analysis: The Complete Guide](/color-analysis) — Everything you need to know about finding your best colors
+- [Color Analysis Guide: Find Your Season & Best Colors](/color-analysis) — Everything you need to know about finding your best colors
 - [How to Determine Your Skin Undertone](/blog/how-to-determine-skin-undertone) — The full undertone guide with 7 testing methods
 - [Cool Tone vs Warm Tone: 5 Easy Tests](/blog/cool-tone-vs-warm-tone) — Compare cool and warm basics
 - [Best Colors for Cool Undertones](/blog/best-colors-for-cool-undertones) — Specifically for cool-toned skin

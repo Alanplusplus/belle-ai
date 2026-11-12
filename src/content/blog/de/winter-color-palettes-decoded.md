@@ -1,6 +1,6 @@
 ---
 title: "Winter-Farbpaletten Entschlüsselt: Tiefer Winter vs Echter Winter vs Klarer Winter"
-description: "Nicht sicher, welcher Winter-Subtyp du bist? Lerne die wichtigsten Unterschiede zwischen Tiefer Winter, Echter Winter und Klarer Winter — inklusive bester Farben, Styling-Tipps und wie du deinen Typ erkennst."
+description: "Tiefer, Echter und Klarer Winter: Unterschiede, beste Farben, Styling-Tipps und wie du deinen Winter-Subtyp erkennst."
 date: "2026-08-06"
 tags: ["Farbanalyse", "Winter-Farbpalette", "Farbsaison", "Beauty", "Stilratgeber"]
 image: "/images/blog/winter-color-palettes-decoded.webp"
@@ -225,7 +225,7 @@ Gold ist für alle Wintertypen generell schwierig. Wenn du Goldschmuck liebst, w
 
 Die Bestimmung deines Winter-Subtyps erforderte traditionell eine professionelle Farbdraping-Sitzung — das hieß, bei kontrollierter Beleuchtung zu sitzen, während eine Beraterin systematisch kühle Stoffe unterschiedlicher Tiefe und Helligkeit an dein Gesicht hält. Es ist effektiv, kostet aber typischerweise 150–400 €, je nach Stadt.
 
-KI-gestützte Farbanalyse-Tools haben das deutlich zugänglicher gemacht. Plattformen wie [AI color analysis](https://aicoloranalysis.io/personal-color-analysis) analysieren deinen Hautunterton, Kontrastlevel, Augenfarbe und Haarnuance, um deinen exakten Subtyp in unter einer Minute zu bestimmen — mit denselben visuellen Hinweisen, die professionelle Analysten bewerten, aber durch ein KI-Bildmodell, das dein gesamtes Foto auswertet.
+KI-gestützte Farbanalyse-Tools haben das deutlich zugänglicher gemacht. Plattformen wie [KI-Farbanalyse](/) analysieren deinen Hautunterton, Kontrastlevel, Augenfarbe und Haarnuance, um in unter einer Minute einen wahrscheinlichen Subtyp vorzuschlagen — mit denselben visuellen Hinweisen, die professionelle Analysten bewerten, aber durch ein KI-Bildmodell, das dein gesamtes Foto auswertet.
 
 ---
 

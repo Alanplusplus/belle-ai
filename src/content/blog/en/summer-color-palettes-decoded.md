@@ -221,7 +221,7 @@ Gold can work for Soft Summers in its most muted, rose-toned form, but yellow go
 
 Figuring out your sub-season used to require a two-hour professional draping session with dozens of colored fabrics held against your face. Today, AI color analysis tools can look at your skin tone, eye color, and hair shade and suggest a likely sub-season in under a minute.
 
-Tools like [AI color analysis](https://aicoloranalysis.io) use an AI image model to judge the same undertone and contrast cues that professional colorists look at. The result is a visual judgment rather than a measurement, so treat it as a starting point. What it changes is access: anyone with a smartphone and natural lighting can take the first step.
+Tools like [AI color analysis](/) use an AI image model to judge the same undertone and contrast cues that professional colorists look at. The result is a visual judgment rather than a measurement, so treat it as a starting point. What it changes is access: anyone with a smartphone and natural lighting can take the first step.
 
 ---
 
@@ -233,9 +233,9 @@ Tools like [AI color analysis](https://aicoloranalysis.io) use an AI image model
 - All Summers share cool undertones and muted qualities — the difference is degree.
 - When in doubt, try the saturation test: your sub-season is revealed by how much color intensity your skin can handle.
 
-## Find Your Exact Summer Sub-Season
+## Find Your Summer Sub-Season
 
-Still unsure which Summer you are? Our [free AI color analysis](/color-analysis) can suggest your likely sub-season from a selfie — about 60 seconds, no signup to preview.
+Still unsure which Summer you are? Our [free AI color analysis](/) can suggest your likely sub-season from a selfie — about 60 seconds, no signup to preview.
 
 [Take the Free AI Color Analysis →](/try)
 

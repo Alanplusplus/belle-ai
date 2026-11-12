@@ -1,6 +1,6 @@
 ---
 title: "Why Your Foundation Never Matches: An Undertone Deep Dive"
-description: "Tired of foundation that looks off? The problem isn't the shade — it's the undertone. Learn how warm, cool, neutral, and olive undertones affect foundation matching, plus 5 in-store tests that actually work."
+description: "Foundation looks off? The problem is undertone, not shade. How warm, cool, neutral, and olive undertones affect matching, plus 5 in-store tests that work."
 date: "2026-08-25"
 tags: ["skin undertone", "foundation", "makeup", "beauty", "color analysis"]
 image: "/images/blog/foundation-undertone-guide.webp"
@@ -89,9 +89,9 @@ Look at the overall skin tone of your inner wrist in natural light (ignore the v
 
 ### 5. AI-Powered Undertone Analysis
 
-Technology has gotten remarkably good at this. AI color analysis tools can photograph your skin in standardized conditions and isolate undertone from surface color, tan, redness, and lighting bias. I've tested several, and they consistently outperform in-store matching — particularly for tricky cases like olive undertones or neutral-leaning skin that confuses human eyes.
+Technology can help here as a second opinion. AI color analysis tools judge your undertone from a selfie, trying to separate it from surface color, tan, and redness, though lighting and camera settings can still shift the result. I've tested several, and they were most helpful as a cross-check for tricky cases like olive undertones or neutral-leaning skin that confuses human eyes.
 
-Tools like [aicoloranalysis.io](https://aicoloranalysis.io/makeup-analysis) can analyze your undertone from a selfie and generate foundation shade recommendations calibrated to your specific coloring.
+Tools like [aicoloranalysis.io](/makeup-analysis) can analyze your undertone from a selfie and suggest foundation shades based on your coloring.
 
 ---
 
@@ -120,7 +120,7 @@ Olive undertone affects roughly 20-25% of the global population, yet most founda
 
 ## Foundation Matching by Season Type
 
-Your [personal color season](https://aicoloranalysis.io/personal-color-analysis) gives strong clues about your foundation undertone:
+Your [personal color season](/personal-color-analysis) gives strong clues about your foundation undertone:
 
 **Spring seasons (Light Spring, True Spring, Bright Spring):**
 Foundation undertone: Warm. Look for golden, peachy formulas. Springs often oxidize warm, so go slightly lighter than your match looks in-store.

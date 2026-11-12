@@ -156,7 +156,7 @@ This is the advanced move. If you spend 8+ hours daily under fluorescent office 
 
 ### 5. Use AI Tools for a Quick Baseline
 
-If you're unsure about your colors and don't have access to professional draping in controlled lighting, AI-powered color analysis tools can provide a solid starting point. The best ones use algorithms that account for lighting variations in your submitted photos and still identify your underlying undertone and contrast level. A tool like [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) analyzes your skin's properties regardless of the single photo's lighting conditions — something that's harder to do with traditional at-home draping methods.
+If you're unsure about your colors and don't have access to professional draping in controlled lighting, AI-powered color analysis tools can provide a solid starting point. The better ones use AI image models that can cope with some lighting variation in your photo and still judge your underlying undertone and contrast level, though a badly lit photo can still shift the result. A tool like [aicoloranalysis.io](/personal-color-analysis) can give you a second opinion from a single photo — something that's harder to get from traditional at-home draping methods.
 
 ---
 

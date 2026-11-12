@@ -1,7 +1,7 @@
 ---
 title: "Análisis de color para piel oscura: Guía completa"
 seoTitle: "Análisis de color para piel oscura: guía + test IA gratis"
-description: "El análisis de color funciona perfectamente para pieles ricas en melanina. Encuentra tu estación, mejor paleta y consejos de estilo — herramienta IA gratuita incluida."
+description: "Análisis de color para pieles con melanina: estación, paleta y consejos de estilo, con herramienta IA gratuita incluida."
 date: "2026-07-22"
 tags: ["análisis de color", "piel oscura", "tono de piel profundo", "melanina", "color estacional"]
 image: "/images/blog/color-analysis-dark-skin.webp"
@@ -109,7 +109,7 @@ Independientemente de tu estación específica, estos colores suelen ser univers
 - **Verde oliva apagado** (para subtonos fríos) — Crea un aspecto amarillento
 - **Tonos polvo apagados** (para personas de alto contraste) — Apagan la vitalidad natural
 
-## Obtener un análisis de color con IA preciso en piel oscura
+## Obtener mejores resultados del análisis de color con IA en piel oscura
 
 Las herramientas de análisis de color con IA han tenido dificultades históricas con tonos de piel más oscuros debido al sesgo en los datos de entrenamiento. Así puedes obtener mejores resultados:
 
@@ -148,7 +148,7 @@ Si tu resultado de análisis con IA no te convence:
 
 ## Encuentra tus colores hoy
 
-¿Lista para descubrir tu tipo de color estacional exacto? Nuestra IA te da un punto de partida para cualquier tipo de tez; contrasta el resultado con tu propio criterio, ya que las herramientas de IA pueden ser menos fiables con tonos de piel más oscuros.
+¿Lista para descubrir tu tipo de color estacional? Nuestra IA te da un punto de partida para cualquier tipo de tez; contrasta el resultado con tu propio criterio, ya que las herramientas de IA pueden ser menos fiables con tonos de piel más oscuros.
 
 [Empezar análisis de color gratis →](/try)
 

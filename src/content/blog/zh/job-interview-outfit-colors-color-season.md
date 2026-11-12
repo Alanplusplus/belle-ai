@@ -138,7 +138,7 @@ image: "/images/blog/job-interview-outfit-colors-color-season.webp"
 
 ## 更现代的做法：买之前先测颜色
 
-找季型过去意味着专业的试色布环节。如今人工智能可以分析照片，告诉你哪些色度衬底调、哪些让你没气色。我准备职业转型时，把照片丢进一款人工智能色彩分析工具，不到一分钟就拿到基础色、贴脸色和点缀色清单。像 [aicoloranalysis.io](https://www.aicoloranalysis.io/outfit-color-analysis?utm_source=medium&utm_medium=article&utm_campaign=job-interview-outfit-colors-color-season) 这样的免费工具，可以在你花钱买新西装外套之前，展示哪些服装色能提亮肤色。
+找季型过去意味着专业的试色布环节。如今人工智能可以分析照片，告诉你哪些色度衬底调、哪些让你没气色。我准备职业转型时，把照片丢进一款人工智能色彩分析工具，不到一分钟就拿到基础色、贴脸色和点缀色清单。像 [aicoloranalysis.io](/outfit-color-analysis) 这样的免费工具，可以在你花钱买新西装外套之前，展示哪些服装色能提亮肤色。
 
 它替代不了试衣，但能把范围收窄，让你不在试衣间里瞎猜。若想更深入看专业建议如何对照，[The Muse 的面试着装指南](https://www.themuse.com/advice/what-to-wear-to-an-interview)涵盖版型、面料与着装规范，与上文相辅相成。
 

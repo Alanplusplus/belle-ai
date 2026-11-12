@@ -192,7 +192,7 @@ image: "/images/blog/glasses-face-shape-color-season.webp"
 
 얼굴형과 퍼스널컬러를 모두 파악하려면, 예전에는 두 번의 별도 상담이 필요했습니다 — 안경점과 컬러 분석가. 합치면 300–500달러, 몇 시간이 걸리기도 했습니다.
 
-오늘날 AI 도구는 한 장의 사진으로 약 60초 만에 [얼굴형](https://aicoloranalysis.io/face-shape-analysis)과 [퍼스널컬러](https://aicoloranalysis.io/personal-color-analysis)를 동시에 분석합니다. 일부는 고유한 비율에 기반한 [안경 테 추천](https://aicoloranalysis.io/glasses-analysis)까지 제공합니다.
+오늘날 AI 도구는 한 장의 사진으로 약 60초 만에 [얼굴형](/face-shape-analysis)과 [퍼스널컬러](/personal-color-analysis)를 동시에 분석합니다. 일부는 고유한 비율에 기반한 [안경 테 추천](/glasses-analysis)까지 제공합니다.
 
 기술이 실물 착용을 대체하지는 않습니다 — 코와 귀에 맞는지 확인은 여전히 필요합니다. 하지만 모양과 색상의 후보 목록을 제공해, 안경점에서 무작정 둘러보는 시간을 크게 줄여줍니다.
 
@@ -225,7 +225,7 @@ image: "/images/blog/glasses-face-shape-color-season.webp"
 - 쿨톤 → 실버 금속, 쿨 블랙, 네이비, 차콜, 플럼
 - 위 표가 12개 서브 시즌 모두에 대한 구체적 추천 제공
 - 소재 선택(메탈 vs 아세테이트 vs 티타늄)도 시즌에 맞출 기회
-- AI 도구로 한 장의 사진에서 얼굴형과 퍼스널컬러를 동시 분석, 매장 방문 전 정밀한 후보 목록 확보 가능
+- AI 도구로 한 장의 사진에서 얼굴형과 퍼스널컬러를 동시 분석, 매장 방문 전 시작용 후보 목록 확보 가능
 
 안경은 가장 눈에 띄는 액세서리입니다. 모양과 색상을 모두 맞추면, '꼭 써야 하는 것'에서 '정말 멋지게 보이게 해주는 것'으로 바뀝니다.
 

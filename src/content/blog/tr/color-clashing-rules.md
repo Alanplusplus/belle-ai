@@ -1,6 +1,6 @@
 ---
 title: "Bilerek Renk Çarpıştırma: Renk Analizi 'Kurallarını' Şık Bir Şekilde Nasıl Kırarsınız"
-description: "Mevsimsel paletinize sonsuza dek bağlı kalmak zorunda olduğunuzu mu düşünüyorsunuz? Gerçekten işe yarayan renk teorisi ilkelerini kullanarak bilinçli renk çarpıştırması yapmanın ve yine de zarif görünmenin yollarını öğrenin."
+description: "Mevsimsel palete sonsuza dek bağlı değilsiniz. Renk teorisiyle bilinçli renk çarpıştırması yapıp yine de zarif görünmenin yollarını öğrenin."
 date: "2026-09-29"
 tags: ["renk analizi", "renk teorisi", "kişisel stil", "moda ipuçları", "stil rehberi"]
 image: "/images/blog/color-clashing-rules.webp"
@@ -169,7 +169,7 @@ Planladığınız çarpıştırmanın işe yarayıp yaramayacağından emin değ
 
 2. **Fotoğraf testi.** Aynada hızlı bir fotoğraf çekin. İşe yarayan çarpıştırmalar fotoğrafta genellikle daha iyi görünür. Kamerada iyi görünüyorsa başarılıdır.
 
-3. **Akıllı analiz testi.** Modern [renk analizi araçları](https://aicoloranalysis.io/outfit-color-analysis) hangi renklerin teninizi aydınlattığını ve hangilerinin solgunlaştırdığını analiz edebilir. Bunu temel olarak kullanın, sonra palet dışı eklemeleri birer birer deneyin.
+3. **Akıllı analiz testi.** Modern [renk analizi araçları](/outfit-color-analysis) hangi renklerin teninizi aydınlattığını ve hangilerinin solgunlaştırdığını analiz edebilir. Bunu temel olarak kullanın, sonra palet dışı eklemeleri birer birer deneyin.
 
 ---
 

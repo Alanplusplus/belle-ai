@@ -116,7 +116,7 @@ Cildinizi daha parlak ve daha eşit gösteren renk sıcaklığı, alt ton yönü
 
 Beş testi de denediyseniz ve hâlâ emin değilseniz, muhtemelen nötr alt tona sahipsiniz — bu aslında harika bir haber. Nötr alt tonlar renk seçimlerinde en fazla esnekliğe sahiptir.
 
-Kesin bir cevap için [yapay zekâ destekli renk analizini](/tr/personal-color-analysis) düşünün. Belle AI gibi uygulamalar, bilgisayarlı görü kullanarak cildinizdeki gerçek renk değerlerini analiz eder; öznel algı veya aydınlatma koşullarından etkilenmeyen nesnel sonuçlar sunar. Hızlı bir tahmin için [ücretsiz renk testimizi](/tr/tools/color-quiz) de deneyebilirsiniz.
+Ev testleri sizi hâlâ emin olmaktan alıkoyuyorsa, [yapay zekâ renk analizi](/) size ikinci bir görüş sunabilir. Belle AI, alt tonunuzu bir fotoğraftan değerlendirmek için bir yapay zeka görüntü modeli kullanır. Bu bir ölçüm değil, görsel bir değerlendirmedir; ışık, kamera ayarları ve makyaj sonucu yine de değiştirebilir ([yapay zekâ renk analizi ne kadar doğrudur](/ai-color-analysis-accuracy) bölümüne bakın). Hızlı bir tahmin için [ücretsiz renk testimizi](/tr/tools/color-quiz) de deneyebilirsiniz.
 
 ## Sık Sorulan Sorular
 

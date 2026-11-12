@@ -156,7 +156,7 @@ Fortgeschritten: Verbringst du 8+ Stunden täglich unter Büro-Leuchtstoff:
 
 ### 5. Nutze KI-Tools für eine schnelle Basislinie
 
-Bist du unsicher bei deinen Farben und hast kein professionelles Draping unter kontrolliertem Licht, liefern KI-Farbanalyse-Tools einen soliden Start. Die besten berücksichtigen Lichtvariationen im Foto und identifizieren trotzdem Unterton und Kontrast. Ein Tool wie [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) analysiert Hauteigenschaften unabhängig von den Lichtbedingungen eines einzelnen Fotos — schwerer mit traditionellem Draping zuhause.
+Bist du unsicher bei deinen Farben und hast kein professionelles Draping unter kontrolliertem Licht, liefern KI-Farbanalyse-Tools einen soliden Start. Die besseren nutzen KI-Bildmodelle, die mit etwas Lichtvariation im Foto umgehen und trotzdem Unterton und Kontrast beurteilen können — ein schlecht belichtetes Foto kann das Ergebnis aber noch verzerren. Ein Tool wie [aicoloranalysis.io](/personal-color-analysis) kann aus einem einzigen Foto eine Zweitmeinung geben — schwerer mit traditionellem Draping zuhause.
 
 ---
 

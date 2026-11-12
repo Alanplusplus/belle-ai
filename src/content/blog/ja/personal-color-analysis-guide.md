@@ -94,7 +94,7 @@ image: "/images/blog/personal-color-analysis-guide.webp"
 
 ### 方法2：AI診断
 
-Belle AIなどのAIアプリが写真を分析し、アンダートーン・コントラスト・色素の特徴を検出します。
+Belle AIなどのAIアプリは、AI画像モデルが写真からアンダートーン・コントラスト・色素の特徴を視覚的に判断します。
 
 - **費用：** 無料〜500円程度
 - **所要時間：** 60秒

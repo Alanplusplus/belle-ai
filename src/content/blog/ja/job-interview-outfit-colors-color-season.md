@@ -138,7 +138,7 @@ image: "/images/blog/job-interview-outfit-colors-color-season.webp"
 
 ## いまどきの方法：買う前に色を試す
 
-シーズンを知るには、かつてはプロのドレーピングが必要でした。今日はAIが写真を分析し、どの色がアンダートーンを引き立て、どれが色を抜かすかを示してくれます。キャリアチェンジの準備をしていたとき、AIカラー分析ツールに写真を通したら、1分もかからずベース、フェイス、アクセントのリストが手に入りました。[aicoloranalysis.io](https://www.aicoloranalysis.io/outfit-color-analysis?utm_source=medium&utm_medium=article&utm_campaign=job-interview-outfit-colors-color-season)のような無料ツールなら、新しいブレザーに金をかける前に、肌を明るく見せる服の色が分かります。
+シーズンを知るには、かつてはプロのドレーピングが必要でした。今日はAIが写真を分析し、どの色がアンダートーンを引き立て、どれが色を抜かすかを示してくれます。キャリアチェンジの準備をしていたとき、AIカラー分析ツールに写真を通したら、1分もかからずベース、フェイス、アクセントのリストが手に入りました。[aicoloranalysis.io](/outfit-color-analysis)のような無料ツールなら、新しいブレザーに金をかける前に、肌を明るく見せる服の色が分かります。
 
 試着の代わりにはなりませんが、試着室で当てずっぽうしないよう、候補を絞ってくれます。プロ向けアドバイスとの比較を深く知りたい方は、[The Museの面接服装ガイド](https://www.themuse.com/advice/what-to-wear-to-an-interview)が、フィット感、生地、ドレスコードなど、ここまでの内容を補うポイントをカバーしています。
 

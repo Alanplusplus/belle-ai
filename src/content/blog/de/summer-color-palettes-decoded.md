@@ -219,9 +219,9 @@ Gold kann für Soft Summers in seiner gedämpftesten, rosigsten Form funktionier
 
 ## Die Technologie-Abkürzung
 
-Früher brauchte man eine zweistündige professionelle Draping-Sitzung mit Dutzenden farbiger Stoffe am Gesicht. Heute analysieren KI-Farbanalyse-Tools Hautton, Augen- und Haarfarbe und bestimmen deinen exakten Subtyp in unter einer Minute.
+Früher brauchte man eine zweistündige professionelle Draping-Sitzung mit Dutzenden farbiger Stoffe am Gesicht. Heute können KI-Farbanalyse-Tools Hautton, Augen- und Haarfarbe betrachten und in unter einer Minute einen wahrscheinlichen Subtyp vorschlagen.
 
-Tools wie [AI color analysis](https://aicoloranalysis.io) nutzen Computer Vision, um dieselben Unterton- und Kontrastsignale zu messen, die professionelle Coloristen bewerten — zugänglich für jeden mit Smartphone und Tageslicht.
+Tools wie [AI color analysis](/) nutzen ein KI-Bildmodell, um dieselben Unterton- und Kontrastsignale zu beurteilen, die professionelle Coloristen prüfen. Das Ergebnis ist eine visuelle Einschätzung und keine Messung — nutze es als Ausgangspunkt. Was sich ändert, ist der Zugang: Jeder mit Smartphone und Tageslicht kann den ersten Schritt gehen.
 
 ---
 
@@ -233,9 +233,9 @@ Tools wie [AI color analysis](https://aicoloranalysis.io) nutzen Computer Vision
 - Alle Sommertypen teilen kühle Untertöne und gedämpfte Qualität — der Unterschied ist der Grad.
 - Im Zweifel: Sättigungstest — dein Subtyp zeigt sich daran, wie viel Farbintensität deine Haut verträgt.
 
-## Finde deinen exakten Sommer-Subtyp
+## Finde deinen Sommer-Subtyp
 
-Immer noch unsicher? Unsere [kostenlose KI-Farbanalyse](/de/color-analysis) bestimmt deinen exakten Subtyp per Selfie — 60 Sekunden, ohne Anmeldung.
+Immer noch unsicher? Unsere [kostenlose KI-Farbanalyse](/) kann anhand eines Selfies einen wahrscheinlichen Sommer-Subtyp vorschlagen — etwa 60 Sekunden, Vorschau ohne Anmeldung.
 
 [Kostenlose KI-Farbanalyse starten →](/de/try)
 

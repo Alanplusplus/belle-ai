@@ -1,7 +1,7 @@
 ---
 title: "Comment l'éclairage affecte vos couleurs : Pourquoi vous paraissez différente en photo et dans la réalité"
 seoTitle: "Pourquoi vos couleurs semblent fausses selon l'éclairage (et comment corriger)"
-description: "Terne sous les néons, éclatante à l'heure dorée ? Découvrez pourquoi la lumière change l'apparence de votre peau et de vos vêtements, et comment trouver vos vraies couleurs."
+description: "Terne sous néons, éclatante à l'heure dorée ? Pourquoi la lumière change peau et vêtements, et comment repérer vos vraies couleurs."
 date: "2026-08-08"
 tags: ["analyse couleur", "éclairage", "couleur personnelle", "beauté", "guide style"]
 image: "/images/blog/lighting-affects-colors.webp"
@@ -156,7 +156,7 @@ C'est le move avancé. Si vous passez 8 heures et plus par jour sous des fluores
 
 ### 5. Utilisez des outils IA pour une base rapide
 
-Si vous n'êtes pas sûre de vos couleurs et n'avez pas accès au drapage professionnel sous éclairage contrôlé, des outils d'analyse colorimétrique IA peuvent fournir un solide point de départ. Les meilleurs utilisent des algorithmes qui tiennent compte des variations d'éclairage sur vos photos soumises tout en identifiant votre sous-ton et niveau de contraste sous-jacents. Un outil comme [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) analyse les propriétés de votre peau indépendamment des conditions d'éclairage d'une seule photo — plus difficile à faire avec le drapage maison traditionnel.
+Si vous n'êtes pas sûre de vos couleurs et n'avez pas accès au drapage professionnel sous éclairage contrôlé, des outils d'analyse colorimétrique IA peuvent fournir un solide point de départ. Les meilleurs utilisent des modèles d'image IA qui supportent une partie des variations d'éclairage sur votre photo et jugent quand même votre sous-ton et votre niveau de contraste sous-jacents, bien qu'une photo mal éclairée puisse encore fausser le résultat. Un outil comme [aicoloranalysis.io](/personal-color-analysis) peut vous donner un second avis à partir d'une seule photo — plus difficile à obtenir avec le drapage maison traditionnel.
 
 ---
 

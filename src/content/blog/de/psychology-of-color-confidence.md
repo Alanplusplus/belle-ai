@@ -1,6 +1,6 @@
 ---
 title: "Die Psychologie der Farben: Warum deine besten Farben Selbstvertrauen stärken"
-description: "Forschung zeigt: Farben, die zu deiner natürlichen Färbung passen, steigern messbar das Selbstvertrauen. Was Studien zur Farb-Vertrauens-Verbindung sagen — und wie du sie nutzt."
+description: "Warum passende Farben Selbstvertrauen stärken: Was Studien zur Farb-Vertrauens-Verbindung sagen und wie du sie nutzt."
 date: "2026-08-09"
 tags: ["Farbanalyse", "Farbpsychologie", "persönlicher Stil", "Selbstvertrauen", "Schönheit"]
 image: "/images/blog/psychology-of-color-confidence.webp"
@@ -159,7 +159,7 @@ Diese Signale verstärken die Gewohnheit. Der Selbstvertrauens-Boost wird selbst
 
 Traditionelle professionelle Farbanalyse bedeutet persönliches Draping mit Stoffmustern — wertvoll, aber teuer (150–400 $+) und nicht überall verfügbar. Viele werden nie richtig analysiert wegen Zugangsbarrieren.
 
-KI-Farbanalyse-Tools wie [aicoloranalysis.io](https://aicoloranalysis.io/personal-color-analysis) haben die Gleichung verändert. Computer Vision analysiert Hautunterton, Kontrastniveau und Farbcharakteristiken aus einem Foto und identifiziert deinen Farbtyp in Sekunden statt Stunden — von überall auf der Welt.
+KI-Farbanalyse-Tools wie [aicoloranalysis.io](/personal-color-analysis) haben die Gleichung verändert. Computer Vision analysiert Hautunterton, Kontrastniveau und Farbcharakteristiken aus einem Foto und identifiziert deinen Farbtyp in Sekunden statt Stunden — von überall auf der Welt.
 
 Die Demokratisierung zählt für das Selbstvertrauen-Thema: Mehr Menschen können diese Info nutzen. Wenn jeder seine besten Farben unabhängig von Ort und Budget finden kann, werden die psychologischen Vorteile für alle verfügbar.
 

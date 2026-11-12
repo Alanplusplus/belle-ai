@@ -24,7 +24,7 @@ image: "/images/blog/style-personality-wardrobe-guide.webp"
 
 같은 소프트 서머 여성도 완전히 다르게 보일 수 있어요. 로맨틱한 드레이프 소재와 부드러운 웨이브가 어울리는 사람도, 구조적·미니멀 코디와 깔끔한 헤어가 잘 맞는 사람도 있죠. 같은 색, 다른 표현.
 
-아직 스타일 퍼스널리티를 모르신다면, [8가지 스타일 퍼스널리티 유형](https://aicoloranalysis.io/style-personality) 가이드부터 시작하거나 Style DNA를 찾는 빠른 분석을 해보세요. 아키타입(대부분 두 유형의 블렌드)을 알면 아래 내용이 모두 실행 가능해집니다.
+아직 스타일 퍼스널리티를 모르신다면, [8가지 스타일 퍼스널리티 유형](/style-personality) 가이드부터 시작하거나 Style DNA를 찾는 빠른 분석을 해보세요. 아키타입(대부분 두 유형의 블렌드)을 알면 아래 내용이 모두 실행 가능해집니다.
 
 ---
 
@@ -185,7 +185,7 @@ image: "/images/blog/style-personality-wardrobe-guide.webp"
 
 전통적 스타일 퍼스널리티 확인은 이미지 컨설턴트 예약——비싸고, 시간 많이 걸리고, 주관적 의견에 기반하는 경우가 많았습니다.
 
-오늘 [스타일 퍼스널리티 분석 도구](https://aicoloranalysis.io/style-personality)는 셀카로 얼굴 기하·비율·coloring을 평가해 아키타입을 알려줍니다. Pinterest 보드 추측이 아닌 data-informed 출발점.
+오늘 [스타일 퍼스널리티 분석 도구](/style-personality)는 셀카로 얼굴 기하·비율·coloring을 평가해 아키타입을 알려줍니다. Pinterest 보드 추측이 아닌 data-informed 출발점.
 
 다만 기술은 출발점이지 직감 대체가 아닙니다. 분석 결과를 프레임으로 쓰고, 실제로 자주 입고 confident한 옷으로 refine하세요. 최고의 옷장은 체계적 insight + 개인적 truth의 결합입니다.
 

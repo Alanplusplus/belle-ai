@@ -1,6 +1,6 @@
 ---
 title: "Guía de maquillaje por ocasión: el look adecuado para cada evento"
-description: "Desde una cita nocturna hasta entrevistas de trabajo y bodas — aprende a adaptar tu maquillaje a cualquier ocasión según tu tono de piel y rasgos. Además, cómo la IA puede generar looks personalizados al instante."
+description: "Maquillaje para citas, entrevistas y bodas según tu tono y rasgos. La IA puede sugerirte looks personalizados como inspiración."
 date: "2026-07-28"
 tags: ["maquillaje", "maquillaje por ocasión", "belleza", "guía de estilo", "belleza con IA"]
 image: "/images/blog/occasion-makeup-guide-by-event.webp"

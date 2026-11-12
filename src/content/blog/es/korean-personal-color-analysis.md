@@ -1,6 +1,6 @@
 ---
 title: "Análisis de color personal coreano: Por qué conquista el mundo"
-description: "Todo lo que necesitas saber sobre el análisis de color personal coreano. Conoce el sistema coreano de 4 estaciones, cómo la K-beauty usa la tipificación cromática y dónde hacerte el análisis."
+description: "Análisis de color personal coreano: sistema de 4 estaciones, cómo la K-beauty usa la tipificación y dónde hacértelo."
 date: "2026-07-18"
 tags: ["análisis de color coreano", "color personal", "K-beauty", "belleza coreana", "tipificación de color Corea"]
 image: "/images/blog/korean-personal-color-analysis.webp"
@@ -123,7 +123,7 @@ La tendencia se ha extendido a:
 ### Opciones online / IA
 
 Para quienes no pueden visitar un salón coreano:
-- Las herramientas de análisis con IA pueden ofrecer tipificación precisa al estilo coreano
+- Las herramientas de análisis con IA pueden darte un punto de partida al estilo coreano
 - Consultas por vídeo con coloristas coreanos disponibles (80.000–150.000 ₩)
 - Guías de autoevaluación en coreano ampliamente disponibles en Naver
 
@@ -138,7 +138,7 @@ El análisis de color personal de ídolos de K-pop es contenido muy popular:
 
 Estas tipificaciones de famosos impulsan el engagement de los fans y ayudan a identificar la propia estación por comparación.
 
-## Prueba el análisis de color con IA (precisión al estilo coreano)
+## Prueba el análisis de color con IA (tipificación de 12 estaciones al estilo coreano)
 
 Nuestra IA usa el mismo sistema de 12 estaciones que el análisis de salón coreano para ofrecerte un punto de partida. Obtén tu tipo de 12 estaciones, mejores colores y recomendaciones de maquillaje al instante.
 

@@ -207,7 +207,7 @@ La prueba de venas, la de joyas y la del papel blanco se desarrollaron sobre tod
 - **Oro frente a plata** es inconcluso en piel oliva porque ningún metal queda claramente mejor (a menudo gana el oro rosa)
 - **El papel blanco** hace que cálido y oliva se parezcan, ya que ambos muestran calidez sobre fondo blanco
 
-El análisis de color con inteligencia artificial ofrece aquí una ventaja clara. Al medir valores de color reales a nivel de píxel en una foto, detecta el modificador verde grisáceo con independencia de la profundidad del melanina, el contexto cultural o la iluminación. Para quienes han sido mal tipadas por cada cuestionario y consultora, el análisis con IA suele ser el primer resultado preciso que reciben.
+El análisis de color con inteligencia artificial puede ayudar aquí. Un modelo de imagen con IA mira la foto completa en lugar de pedirte que describas tu coloración, así que a veces capta el modificador verde grisáceo que los cuestionarios pasan por alto, sea cual sea tu profundidad de melanina o contexto cultural, aunque la luz y la cámara pueden cambiar el resultado. Para quienes han sido mal tipadas por cuestionarios, puede ser una segunda opinión útil para contrastar con un draping.
 
 ---
 
@@ -217,13 +217,13 @@ El análisis de color con inteligencia artificial ofrece aquí una ventaja clara
 - **La profundidad del melanina afecta la visibilidad** — el matiz verde se ve más en oliva clara, menos en oliva profunda, pero está presente a todas las profundidades
 - **Los estándares de belleza culturales suelen pasar por alto el oliva** — y recurren a «cálido» o «neutro»
 - **Las comunidades de belleza de Asia Oriental lideran el reconocimiento del oliva** — con terminología específica y líneas de producto dedicadas
-- **El análisis con IA funciona entre etnias** porque mide tu piel individual en lugar de aplicar suposiciones basadas en la población
+- **El análisis con IA observa tu foto individual** en lugar de una descripción basada en la población, así que puede ser una segunda opinión útil entre etnias, pero confírmalo con un draping
 
 Tu etnia influye en cómo se presenta el oliva en tu piel, pero no determina si tienes subtono oliva. Si los productos cálidos y fríos te fallan, si tu piel tiene un matiz verdoso a la luz del día, si los tonos tierra apagados te iluminan — probablemente eres oliva, sea cual sea tu origen.
 
 ## Descubre tu subtono oliva
 
-Nuestro análisis de color con IA funciona en todos los tonos de piel y etnias — detecta subtonos oliva que las pruebas estándar pasan por alto.
+Nuestro análisis de color con IA funciona en todos los tonos de piel y etnias — puede ayudar a señalar subtonos oliva que las pruebas estándar pasan por alto; confírmalo con un draping.
 
 [Prueba el análisis de color gratis →](/try)
 

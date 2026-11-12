@@ -112,7 +112,7 @@ Zwischen zwei Typen zu liegen ist normal. Marine und kühles Grau stehen in den 
 
 ## KI-Analyse als zweite Meinung
 
-Belle AI schätzt Ihre Saison anhand eines Selfies ein. Es ist eine visuelle KI-Einschätzung, keine Messung, und kann von einer persönlichen Draping-Beratung abweichen. Geben zwei Fotos unterschiedliche Saisons, behandeln Sie das KI-Ergebnis als einen Hinweis und verlassen Sie sich auf den Stofftest bei Tageslicht oben. Was möglich ist und was nicht, erklären wir in [Wie genau ist KI-Farbanalyse?](/de/ai-color-analysis-accuracy). Zum Ausprobieren starten Sie mit [KI-Farbanalyse](/de/personal-color-analysis).
+Belle AI schätzt Ihre Saison anhand eines Selfies ein. Es ist eine visuelle KI-Einschätzung, keine Messung, und kann von einer persönlichen Draping-Beratung abweichen. Geben zwei Fotos unterschiedliche Saisons, behandeln Sie das KI-Ergebnis als einen Hinweis und verlassen Sie sich auf den Stofftest bei Tageslicht oben. Was möglich ist und was nicht, erklären wir in [Wie genau ist KI-Farbanalyse?](/de/ai-color-analysis-accuracy). Zum Ausprobieren starten Sie mit [KI-Farbanalyse](/).
 
 ## Häufig gestellte Fragen
 

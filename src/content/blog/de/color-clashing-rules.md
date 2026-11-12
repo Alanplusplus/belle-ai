@@ -1,6 +1,6 @@
 ---
 title: "Absichtlich Farben crashen: Wie Sie die 'Regeln' der Farbanalyse stilvoll brechen"
-description: "Denken Sie, Sie müssen für immer bei Ihrer saisonalen Palette bleiben? So können Sie Farben absichtlich kombinieren und trotzdem elegant aussehen — mit Farbtheorie-Prinzipien, die wirklich funktionieren."
+description: "Farben absichtlich kombinieren und trotzdem elegant: So brechen Sie Farbanalyse-Regeln stilvoll – mit Theorie, die funktioniert."
 date: "2026-09-29"
 tags: ["Farbanalyse", "Farbtheorie", "persönlicher Stil", "Mode-Tipps", "Stil-Guide"]
 image: "/images/blog/color-clashing-rules.webp"
@@ -169,7 +169,7 @@ Unsicher, ob Ihr geplanter Crash funktioniert? Drei schnelle Tests:
 
 2. **Der Foto-Test.** Machen Sie ein schnelles Spiegelfoto. Gelungene Farbcrashs sehen auf Fotos oft noch besser aus. Wenn es auf dem Foto gut aussieht, funktioniert es.
 
-3. **Der smarte Analyse-Test.** Moderne [Farbanalyse-Tools](https://aicoloranalysis.io/outfit-color-analysis) können analysieren, welche Farben Ihren Teint aufhellen und welche ihn matt wirken lassen. Nutzen Sie das als Ausgangspunkt und experimentieren Sie dann Stück für Stück mit palettefremden Ergänzungen.
+3. **Der smarte Analyse-Test.** Moderne [Farbanalyse-Tools](/outfit-color-analysis) können analysieren, welche Farben Ihren Teint aufhellen und welche ihn matt wirken lassen. Nutzen Sie das als Ausgangspunkt und experimentieren Sie dann Stück für Stück mit palettefremden Ergänzungen.
 
 ---
 

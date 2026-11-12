@@ -317,7 +317,7 @@ Comprendre votre sous-saison affine votre palette de « généralement chaud » 
 
 La frontière entre chaud et froid n'est pas toujours évidente — surtout si vous êtes neutre-chaud ou avez une peau olivâtre avec des sous-tons chauds. Deviner peut mener à un placard plein de pièces « presque justes ».
 
-[L'analyse de couleur par IA](/fr/personal-color-analysis) élimine la subjectivité de l'équation. En analysant votre photo avec la vision par ordinateur, elle identifie non seulement si vous êtes chaud ou froid, mais votre type de couleur saisonnier 12 saisons précis — vous offrant une palette calibrée à votre combinaison exacte de peau, cheveux et yeux.
+Une [analyse de couleur par IA](/) peut vous apporter un second avis au-delà des tests à domicile. Un modèle d'image IA examine votre photo et indique non seulement si vous êtes plutôt chaud ou froid, mais un type parmi les 12 saisons probable, ce qui vous donne une palette de départ pour votre combinaison peau, cheveux et yeux. C'est un jugement visuel : confrontez-le à ce que vous voyez dans le miroir.
 
 ---
 

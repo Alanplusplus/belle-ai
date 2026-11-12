@@ -1,6 +1,6 @@
 ---
 title: "8 tipos de personalidad de estilo: ¿cuál eres tú?"
-description: "Descubre los 8 arquetipos de personalidad de belleza y estilo — del Romántico al Dramático al Etéreo. Aprende cuál coincide con tus rasgos y cómo vestir según tu estética natural."
+description: "Ocho arquetipos de estilo, del Romántico al Etéreo. Cuál encaja con tus rasgos y cómo vestir según tu estética natural."
 date: "2026-07-29"
 tags: ["personalidad de estilo", "ADN de estilo", "moda", "belleza", "estilo personal"]
 image: "/images/blog/style-personality-types-guide.webp"

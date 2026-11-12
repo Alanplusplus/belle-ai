@@ -133,7 +133,7 @@ C'est un jugement subjectif, et la lumière change ce que vous voyez. Si vos ré
 
 ## Où se situe une analyse IA
 
-Belle AI estime votre saison colorimétrique à partir d'un selfie. Il s'agit du jugement visuel de l'IA sur une photo, pas d'une mesure : l'éclairage, les réglages de l'appareil et le maquillage peuvent modifier le résultat. Utilisez-le comme point de départ, puis confirmez avec le test d'étoffes ci-dessus. Nous expliquons ce que cela peut et ne peut pas faire dans [Quelle est la fiabilité de l'analyse colorimétrique par IA ?](/fr/ai-color-analysis-accuracy). Pour l'essayer, commencez par [l'analyse colorimétrique par IA](/fr/personal-color-analysis).
+Belle AI estime votre saison colorimétrique à partir d'un selfie. Il s'agit du jugement visuel de l'IA sur une photo, pas d'une mesure : l'éclairage, les réglages de l'appareil et le maquillage peuvent modifier le résultat. Utilisez-le comme point de départ, puis confirmez avec le test d'étoffes ci-dessus. Nous expliquons ce que cela peut et ne peut pas faire dans [Quelle est la fiabilité de l'analyse colorimétrique par IA ?](/fr/ai-color-analysis-accuracy). Pour l'essayer, commencez par [l'analyse colorimétrique par IA](/).
 
 ## Questions fréquentes
 

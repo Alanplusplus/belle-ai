@@ -241,7 +241,7 @@ Vertiefe das Thema in unserem Guide [Wie du deinen Hautunterton bestimmst](/de/b
 - Natürlich tiefe Merkmale → Tiefer Herbst oder Tiefer Winter
 - Mittlere Merkmale → Echte Typen oder Weiche Typen
 
-Für eine präzisere Bestimmung können KI-Farbanalyse-Tools deinen exakten Farbtyp anhand eines Fotos identifizieren — unter Berücksichtigung der subtilen Wechselwirkungen zwischen Haut, Augen und natürlicher Haarfarbe, die allein schwer einzuschätzen sind.
+Als Zweitmeinung können KI-Farbanalyse-Tools einen wahrscheinlichen Farbtyp anhand eines Fotos vorschlagen — unter Berücksichtigung der Wechselwirkungen zwischen Haut, Augen und natürlicher Haarfarbe, die allein schwer einzuschätzen sind. Betrachte das Ergebnis als Ausgangspunkt und prüfe es daran, wie die Farben an dir wirken.
 
 ---
 
@@ -274,7 +274,7 @@ Wenn du leuchtende, unnatürliche Haarfarben liebst — Rose Gold, Lavendel, Sma
 
 Früher war die Haarfarbenwahl reines Trial-and-Error. Du zeigtest deinem Stylisten ein Foto, hofftest auf das Beste und lebtest monatelang mit dem Ergebnis. Heute gibt es bessere Wege.
 
-KI-Farbanalyse-Tools wie [aicoloranalysis.io](https://aicoloranalysis.io) können deinen exakten Farbtyp in unter einer Minute bestimmen und dir einen klaren Ausgangspunkt für jede Haarfarben-Entscheidung geben. Statt zu raten, ob du Warmer Herbst oder Weicher Herbst bist (was zu sehr unterschiedlichen Kupfer-Empfehlungen führt), erhältst du eine präzise Antwort, bevor du dich in den Salonstuhl setzt.
+KI-Farbanalyse-Tools wie [aicoloranalysis.io](/) können einen wahrscheinlichen Farbtyp in unter einer Minute vorschlagen und dir einen klaren Ausgangspunkt für jede Haarfarben-Entscheidung geben. Statt zu raten, ob du Warmer Herbst oder Weicher Herbst bist (was zu sehr unterschiedlichen Kupfer-Empfehlungen führt), erhältst du eine erste Einschätzung, bevor du dich in den Salonstuhl setzt — und prüfst sie mit einem Tuch oder deinem Coloristen.
 
 Der beste Ansatz: Kenne deinen Farbtyp, recherchiere Nuancen innerhalb deiner Palette, bringe konkrete Referenzen zu deinem Coloristen mit und kommuniziere in Begriffen des Untertons (warm vs. kühl), statt nur ein Promi-Foto zu zeigen und zu sagen: „Das will ich."
 
@@ -286,7 +286,7 @@ Der beste Ansatz: Kenne deinen Farbtyp, recherchiere Nuancen innerhalb deiner Pa
 - **Warme Typen (Frühling/Herbst) stehen am besten in goldenen, kupfernen und warmen Brauntönen**, während kühle Typen (Sommer/Winter) in Asch, kühlem Braun und bläulichen Nuancen strahlen
 - **Der häufigste Fehler ist, eine Haarfarbe nach Trends zu wählen** statt nach dem eigenen Unterton — deshalb lieben manche ihre neue Farbe und andere wollen sie sofort wieder ändern
 - **Tiefe und Kontrast sind genauso wichtig wie der Unterton** — ein Heller Sommer braucht einen völlig anderen Ansatz als ein Tiefer Winter, obwohl beide kühl sind
-- **KI-Farbanalyse-Tools helfen dir, deinen Farbtyp präzise zu bestimmen**, bevor du dich für eine teure Coloration entscheidest — das spart Zeit, Geld und mögliches Bedauern
+- **KI-Farbanalyse-Tools liefern eine nützliche erste Einschätzung deines Farbtyps**, bevor du dich für eine teure Coloration entscheidest — das spart Zeit, Geld und mögliches Bedauern
 
 Dein Haar ist der größte Farbblock in deinem Gesicht. Triffst du die richtige Wahl, wird alles andere — Make-up, Kleidung, sogar Schmuck — exponentiell einfacher. Triffst du die falsche, kämpfst du täglich gegen deine natürliche Harmonie.
 

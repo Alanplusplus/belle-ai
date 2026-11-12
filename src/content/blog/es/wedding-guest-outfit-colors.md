@@ -1,6 +1,6 @@
 ---
 title: "Los Mejores Colores de Outfit para Invitadas a Bodas Según tu Estación de Color"
-description: "¿No sabes qué ponerte en una boda? Tu estación de color tiene la respuesta. Guía completa de los colores más favorecedores para invitadas en las 12 estaciones — de Primavera a Invierno."
+description: "¿Qué ponerte en una boda? Tu estación de color define los tonos más favorecedores para invitadas en las 12 estaciones."
 date: "2026-08-26"
 tags: ["análisis de color", "outfit de boda", "estación de color", "consejos de moda", "estilo para ocasiones"]
 image: "/images/blog/wedding-guest-outfit-colors.webp"
@@ -45,7 +45,7 @@ Las cuatro estaciones principales se dividen en tres subestaciones cada una:
 | **Otoño** | Otoño Suave, Otoño Verdadero, Otoño Profundo | Cálida, rica, terrosa |
 | **Invierno** | Invierno Profundo, Invierno Verdadero, Invierno Brillante | Fría, alto contraste, dramática |
 
-¿No sabes cuál eres? Un [análisis de color con IA](https://aicoloranalysis.io/personal-color-analysis) puede determinar tu subestación desde una foto en menos de un minuto.
+¿No sabes cuál eres? Un [análisis de color con IA](/) puede sugerir una subestación probable desde una foto en menos de un minuto.
 
 ---
 
@@ -147,7 +147,7 @@ Mi sistema de tres pasos para evitar arrepentimientos de color:
 
 **Paso 2: Hazte una foto.** La cámara del móvil es menos indulgente que el espejo. Si el color se ve mal en un selfie rápido, se verá peor en las fotos de boda tomadas desde el otro lado de la sala.
 
-**Paso 3: Prueba un análisis de color con IA.** Herramientas como [análisis de color con IA](https://aicoloranalysis.io/outfit-color-analysis) pueden previsualizar cómo colores específicos de outfit interactúan con tu coloración natural — sin adivinar. Especialmente útil cuando dudas entre dos tonos similares.
+**Paso 3: Prueba un análisis de color con IA.** Herramientas como [análisis de color de outfits con IA](/outfit-color-analysis) pueden previsualizar cómo colores específicos de outfit interactúan con tu coloración natural — una forma útil de reducir las conjeturas. Especialmente útil cuando dudas entre dos tonos similares.
 
 ---
 
