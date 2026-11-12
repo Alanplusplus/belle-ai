@@ -1749,11 +1749,13 @@ export function TryClient({
             {OCCASIONS.map((o) => (
               <button
                 key={o.value}
+                type="button"
                 onClick={() => { setOccasion(o.value); trackEvent("occasion_selected", { occasion: o.value }); }}
-                className={`rounded-full px-3.5 py-1.5 text-xs font-medium transition ${
+                aria-pressed={occasion === o.value}
+                className={`min-h-9 rounded-full border px-3.5 py-1.5 text-xs font-medium transition ${
                   occasion === o.value
-                    ? "bg-secondary text-secondary-foreground shadow-sm"
-                    : "border border-border text-muted-foreground hover:text-foreground"
+                    ? "border-primary bg-primary text-white shadow-md shadow-primary/30"
+                    : "border-border bg-white text-muted-foreground hover:border-primary/40 hover:text-foreground"
                 }`}
               >
                 {t(`occasion_${o.value}`)}
@@ -1806,7 +1808,7 @@ export function TryClient({
 
         /** 示例：同一份完整示例，开始之前直接展示，用示例照片体验后也是这一份 */
         const demoBody = !demoData ? null : lens ? (
-          <LensPanel key={`demo-${demoData.id}-${analysisType}`} taskId="demo" demo demoPersona={demoData.id} lens={lens} title={typeName} season={demoData.report.season} lang={reportLang} sourceImageUrl={samplePhoto} />
+          <LensPanel key={`demo-${demoData.id}-${analysisType}`} taskId="demo" demo demoPersona={demoData.id} demoOccasion={analysisType === "occasion_makeup" ? occasion : undefined} lens={lens} title={typeName} season={demoData.report.season} lang={reportLang} sourceImageUrl={samplePhoto} />
         ) : analysisType === "color_analysis" ? (
           <ReportPanel
             key={`demo-color-${demoData.id}`}

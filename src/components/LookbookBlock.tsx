@@ -17,7 +17,7 @@ import {
 } from "@/lib/lookbook";
 import { Link } from "@/i18n/navigation";
 import { trackEvent } from "@/lib/analytics";
-import { useDemoLookbook } from "@/lib/demo-lookbook";
+import { useDemoLookbook, withOccasionExample } from "@/lib/demo-lookbook";
 import { DEMO_PERSONAS, type DemoPersonaId } from "@/lib/demo-personas";
 import { useDialogA11y } from "@/lib/useDialogA11y";
 
@@ -47,6 +47,8 @@ export interface LookbookBlockProps {
   demo?: boolean;
   /** 示例展示哪位人物（默认第一位）；只在 demo 时有用 */
   demoPersona?: DemoPersonaId;
+  /** 示例（场景妆容）：用户选的场合，示例里第 1 套就展示它；只在 demo 且 lens 是 occasion 时有用 */
+  demoOccasion?: string;
   /** 分享页：服务端已经取好的 Lookbook 数据（只读：不请求后端、没有解锁 / 试戴 / 重新生成 / 保存入口，没出图的章节不展示） */
   shared?: LookbookData | null;
 }
@@ -94,14 +96,19 @@ const LOCK_ICON = (
   </svg>
 );
 
-export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, sourceImageUrl, onUnlock, unlockLabel, unlockBusy, lens, onBuyCredits, demo = false, demoPersona = DEMO_PERSONAS[0].id, shared }: LookbookBlockProps) {
+export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, sourceImageUrl, onUnlock, unlockLabel, unlockBusy, lens, onBuyCredits, demo = false, demoPersona = DEMO_PERSONAS[0].id, demoOccasion, shared }: LookbookBlockProps) {
   const isShared = !!shared;
   // 示例和分享页都是只读：数据是现成的，没有解锁 / 试戴 / 重新生成 / 保存
   const readOnly = demo || isShared;
   const live = useLookbook(readOnly ? null : taskId, lang, !locked);
   const sample = useDemoLookbook(demo ? lang : null, demoPersona, lens);
+  // 场景妆容的示例：每个场合一个例子，选了哪个场合第 1 套就展示它
+  const sampleData = useMemo(
+    () => (sample.data && lens === "occasion" && demoOccasion ? withOccasionExample(sample.data, demoPersona, demoOccasion, baseUi) : sample.data),
+    [sample.data, lens, demoOccasion, demoPersona, baseUi],
+  );
   const { retry, retrying, reroll, tryOn } = live;
-  const data = isShared ? shared : demo ? sample.data : live.data;
+  const data = isShared ? shared : demo ? sampleData : live.data;
   const loading = isShared ? false : demo ? sample.loading : live.loading;
   const [viewer, setViewer] = useState<{ key: LookbookSheetKey; index: number } | null>(null);
   const [copied, setCopied] = useState<string | null>(null);

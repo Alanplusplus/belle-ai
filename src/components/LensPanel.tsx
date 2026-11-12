@@ -27,6 +27,8 @@ export interface LensPanelProps {
   demo?: boolean;
   /** 示例展示哪位人物；只在 demo 时有用 */
   demoPersona?: DemoPersonaId;
+  /** 示例（场景妆容）：用户选的场合，示例里第 1 套就展示它 */
+  demoOccasion?: string;
   /** 分享页：服务端取好的数据（只读展示分享人的这一章，不请求后端、没有试戴入口） */
   shared?: LookbookData | null;
 }
@@ -36,7 +38,7 @@ export interface LensPanelProps {
  * 第一步免费：风格档案里这一章的文字分析（标题 / 结论 / 色块）；第二步付费：把推荐画在用户自己的脸上。
  * 版式沿用杂志版色彩报告，只是只有这一章，没有整份色彩报告的其它内容。
  */
-export function LensPanel({ taskId, lens, title, season, lang, sourceImageUrl, children, onBuyCredits, demo = false, demoPersona, shared }: LensPanelProps) {
+export function LensPanel({ taskId, lens, title, season, lang, sourceImageUrl, children, onBuyCredits, demo = false, demoPersona, demoOccasion, shared }: LensPanelProps) {
   const messages = useReportMessages(lang);
   const ui = useMemo(() => (key: string, vars?: Record<string, string | number>) => fmt(messages?.ui[key], vars), [messages]);
   if (!messages) return <ReportSkeleton />;
@@ -52,7 +54,7 @@ export function LensPanel({ taskId, lens, title, season, lang, sourceImageUrl, c
           {seasonName && <p className="report-serif mt-1 text-sm italic text-muted-foreground">{ui("yourSeason")} · {seasonName}</p>}
         </header>
         <div className="rp-rule mx-5 mt-3" />
-        <LookbookBlock taskId={taskId} lang={lang} ui={ui} seasonName={seasonName} locked={false} sourceImageUrl={sourceImageUrl} lens={lens} onBuyCredits={onBuyCredits} demo={demo} demoPersona={demoPersona} shared={shared} />
+        <LookbookBlock taskId={taskId} lang={lang} ui={ui} seasonName={seasonName} locked={false} sourceImageUrl={sourceImageUrl} lens={lens} onBuyCredits={onBuyCredits} demo={demo} demoPersona={demoPersona} demoOccasion={demoOccasion} shared={shared} />
       </article>
       {children}
     </div>

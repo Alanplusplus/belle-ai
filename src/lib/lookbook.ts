@@ -35,6 +35,14 @@ export function lensOf(analysisType: string | null | undefined): LookbookSheetKe
   return (analysisType && LENS_SHEETS[analysisType]) || null;
 }
 
+/**
+ * 「场景妆容」页面上可选的场合（和后端 lookbook_profile.SELECTABLE_OCCASIONS 保持一致）。
+ * 选了其中一个，结果的 3 套造型都是这个场合的不同风格；没选（整套 Lookbook）是 work / date / evening 各一套。
+ */
+export const SELECTABLE_OCCASIONS = ["date_night", "interview", "wedding_guest", "festival", "office", "evening_gala", "brunch", "vacation"] as const;
+/** 选了场合后，每个场合的结果有几套造型（后端 COUNTS["occasions"]） */
+export const OCCASION_LOOKS = 3;
+
 export type LookbookVerdict = "best" | "good" | "avoid";
 
 export interface LookbookChip {
