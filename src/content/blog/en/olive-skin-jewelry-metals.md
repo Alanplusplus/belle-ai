@@ -1,13 +1,16 @@
 ---
 title: "Olive Skin Jewelry Guide: Gold, Silver, or Rose Gold?"
-seoTitle: "Gold or Silver for Olive Skin? The Answer (+ Rose Gold)"
-description: "Neither gold nor silver looks right on your olive skin? There's a reason. Learn which metals flatter olive undertones and why rose gold may be your best bet."
+seoTitle: "Gold or Silver for Olive Skin? Chart by Subtype + Gems"
+description: "Neither gold nor silver looks right on olive skin? Here's why, plus a one-glance metal chart for warm, cool and neutral olive and the gemstones that flatter."
 date: "2026-09-18"
+updated: "2026-11-12"
 tags: ["olive undertone", "jewelry", "accessories", "personal color analysis", "style guide"]
 image: "/images/blog/olive-skin-jewelry-metals.webp"
 ---
 
 ## I Wore the Wrong Metal for Years — Because Olive Skin Ignores the Rules
+
+**Quick answer:** Rose gold is the most reliable metal for olive skin, because it bridges warm and cool without clashing with a green-grey undertone. Gold and silver both look “okay” on many olive faces, so gemstone color matters as much as the metal: teal, burgundy, amethyst, garnet and smoky quartz are strong starting points.
 
 I used to think undertone advice was simple: warm people glow in gold, cool people shine in silver. I held both metals to my neck in department-store mirrors and waited for that obvious “yes, this is mine” moment.
 

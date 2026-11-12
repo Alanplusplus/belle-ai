@@ -3,11 +3,14 @@ title: "Guía de base para piel oliva: cómo encontrar tu tono perfecto"
 seoTitle: "Base para piel oliva: por qué el cálido y el frío fallan"
 description: "¿La base cálida sale naranja y la fría rosada? El subtono oliva necesita bases amarillo-verdosas. Marcas con tonos oliva y cómo elegir por profundidad."
 date: "2026-09-18"
+updated: "2026-11-12"
 tags: ["subtono oliva", "base de maquillaje", "maquillaje", "subtono de piel", "consejos de belleza"]
 image: "/images/blog/olive-skin-foundation-guide.webp"
 ---
 
 ## Por qué comprar base se complica con piel oliva
+
+**Respuesta rápida:** En piel oliva fallan las bases solo cálidas o solo frías, porque ignoran la capa verde-gris del subtono. Busca bases amarillo-verdosas o dorado-verdosas: un tono que parece «apagado» en el bote suele ser el correcto en la cara. Elige por separado la profundidad (clara, media o profunda) y el subtono.
 
 Si tienes subtono oliva, ya imagino cómo fue tu última visita al mostrador. Probaste diez tonos. Los cálidos se veían naranjas en la mandíbula. Los fríos, rosados o grises. El neutro hacía las dos cosas. Bajo la luz de la tienda elegiste un bote «casi» — y en casa la cara y el cuello contaban historias distintas.
 

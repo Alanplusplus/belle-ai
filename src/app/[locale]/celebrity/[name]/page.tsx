@@ -7,7 +7,8 @@ import { FunnelLink } from "@/components/FunnelLink";
 import { sampleHref } from "@/lib/blogTools";
 import { ResultCta } from "@/components/ResultCta";
 import { routing } from "@/i18n/routing";
-import { buildAlternates, buildBreadcrumbJsonLd, canonicalUrl, ogLocale } from "@/lib/seo";
+import { buildBreadcrumbJsonLd, canonicalUrl, ogLocale } from "@/lib/seo";
+import { localizedPageSeo } from "@/lib/untranslated";
 import { PaletteCardDownload, PaletteCardImage, PaletteCardLarge } from "@/components/PaletteCardImage";
 import { ColorTextList } from "@/components/ColorTextList";
 import { celebrityCardKey, paletteImageJsonLd } from "@/lib/palette-card";
@@ -48,12 +49,13 @@ export async function generateMetadata({
   const description = messages.meta.celebrityPseoDescription
     .replace(/\{name\}/g, data.name)
     .replace(/\{season\}/g, seasonName);
-  const alternates = buildAlternates(locale, `/celebrity/${name}`);
+  const { alternates, robots } = localizedPageSeo(locale, "celeb", name, `/celebrity/${name}`);
 
   return {
     title,
     description,
     alternates,
+    robots,
     openGraph: {
       title,
       description,

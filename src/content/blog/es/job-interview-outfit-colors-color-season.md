@@ -2,11 +2,14 @@
 title: "Qué llevar a una entrevista de trabajo según tu estación de color"
 description: "El azul marino no es automáticamente la opción segura. Descubre los mejores colores de atuendo para entrevistas de las 12 estaciones de color — y qué tonos «profesionales» pueden ir en tu contra sin que te des cuenta."
 date: "2026-10-21"
+updated: "2026-11-12"
 tags: ["atuendo para entrevista", "estación de color", "análisis de color", "estilo profesional", "estilo por ocasión"]
 image: "/images/blog/job-interview-outfit-colors-color-season.webp"
 ---
 
 ## El traje azul marino que me hizo parecer agotada
+
+**Respuesta rápida:** Para una entrevista, usa la fórmula 60-30-10: una base neutra que te favorezca, un color junto al rostro que ilumine tu piel y un pequeño acento. La prenda junto a tu cara es la que más importa, y los colores «seguros» (azul marino, negro, blanco, gris, beige) solo funcionan si su tono favorece tu coloración.
 
 Antes de mi primera entrevista importante, hice lo que decían todos los artículos de carrera: compré un traje azul marino. El azul marino transmite confianza, el azul marino transmite competencia, el azul marino es el color «seguro». Lo llevé con camisa blanca, practiqué mis respuestas frente al espejo y me sentí completamente preparada.
 

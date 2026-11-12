@@ -3,11 +3,14 @@ title: "Deep Winter Color Palette: Your Complete Style Guide for 2026"
 seoTitle: "Deep Winter Color Palette — Best Colors, Makeup & What to Avoid"
 description: "A Deep Winter? Here are your 40+ best colors, ideal makeup shades, wardrobe staples, and metals — plus how to tell Deep Winter from Deep Autumn."
 date: "2026-07-13"
+updated: "2026-11-12"
 tags: ["deep winter", "personal color analysis", "color palette", "style guide", "seasonal color"]
 image: "/images/blog/deep-winter-color-palette.webp"
 ---
 
 ## What Makes Someone a Deep Winter?
+
+**Quick answer:** Deep Winter is the darkest of the three Winter sub-seasons: depth comes first and cool comes second, with deep hair and eyes, medium-to-deep skin and a cool or neutral-cool undertone. Its best colors include black, navy, emerald, royal purple and blue-red, while beige, camel, orange-red and yellow gold are the ones to avoid.
 
 Deep Winter sits between True Winter and Dark Autumn on the color wheel. It's the darkest of the three Winter sub-seasons, with the defining characteristic being **depth** — deep hair, deep eyes, and medium-to-deep skin with cool or neutral-cool undertones.
 

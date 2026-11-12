@@ -2,12 +2,15 @@
 title: "The Best Eyebrow Shapes for Every Face Shape: A Complete Guide"
 description: "Discover which eyebrow shapes flatter oval, round, square, heart, and oblong faces. Learn how face shape determines your most flattering brows."
 date: "2026-09-17"
+updated: "2026-11-12"
 category: face_shape
 tags: ["Face Shape", "Eyebrow", "Beauty", "Style Guide", "Makeup"]
 image: "/images/blog/best-eyebrow-shapes-face-shape.webp"
 ---
 
 ## Why Your Brows Deserve More Attention Than You Think
+
+**Quick answer:** The best eyebrow shape follows a balance principle: add length where your face is round, width where it is long and softness where it is angular. Oval faces suit soft angled brows, round faces high arches, square faces curves, heart faces low rounded arches, oblong faces flat horizontal brows and diamond faces gentle curved arches.
 
 If you've ever looked at a photo and thought something was slightly off — but couldn't pinpoint what — there's a good chance it was the eyebrows. Brows sit at the upper third of your face, the zone where the eye naturally lands first. They frame your eyes, define your expression, and quietly set the tone for every other feature around them.
 

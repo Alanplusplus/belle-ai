@@ -1,13 +1,16 @@
 ---
 title: "Olive vs Neutral Undertone: How to Tell the Difference"
-seoTitle: "Olive vs Neutral Undertone: 3 Differences + Quick Test"
-description: "Neutral undertone but foundation still looks off? You may be olive. Learn 3 key differences: green cast, foundation behavior and draping."
+seoTitle: "Olive vs Neutral Undertone: 3 Differences + 4-Step Test"
+description: "Every quiz says neutral but nothing looks right? You may be olive. Compare the green cast, foundation and jewelry behavior, then confirm it with a 4-step drape test."
 date: "2026-09-18"
+updated: "2026-11-12"
 tags: ["olive undertone", "neutral undertone", "skin undertone", "color analysis", "beauty"]
 image: "/images/blog/olive-vs-neutral-undertone.webp"
 ---
 
 ## The Most Common Undertone Misidentification
+
+**Quick answer:** Olive and neutral are not the same thing. Neutral is a balance of warm and cool, while olive is a green-grey modifier that masks warm and cool signals, which is why olive skin so often gets typed as neutral. The giveaway is a green cast, visible against white and on the jawline and neck in natural daylight.
 
 Walk into any beauty forum and you'll find the same story repeated hundreds of times: "Every quiz says I'm neutral, but nothing looks right on me." Warm foundations turn orange. Cool foundations look pink. Gold and silver jewelry both look okay but neither looks perfect. Veins appear blue-green in a way that doesn't match any chart.
 

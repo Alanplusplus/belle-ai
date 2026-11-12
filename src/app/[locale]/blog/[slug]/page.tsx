@@ -189,13 +189,20 @@ function BlogPostContent({
   const complementaryTools = getComplementaryTools(toolType);
   const headings = extractH2Headings(post.content);
   const video = getVideoForBlog(slug);
-  // olive 主题簇：在第一节之后插入「底调测试 + 相关页面」模块，把读完开头的读者接到转化更高的页面
+  // olive 主题簇：插入「底调测试 + 相关页面」模块，把读完开头的读者接到转化更高的页面。
+  // 这类读者多半是带着一个具体问题来的（"亚洲人算不算橄榄肤色"），拿到答案就走：GA4 里 olive-skin-by-ethnicity
+  // 只有 14% 的人滚动过页面。所以文章有「Quick answer」时，模块直接放在它后面（答案刚给完、还没离开的时候）；
+  // 没有 Quick answer 的文章仍然放在第一节之后。
   const oliveHub = isOliveClusterPost(slug);
+  const quickAnswerSplit = oliveHub ? splitAfterQuickAnswer(post.content) : null;
   // 非 olive 的长文：读完前两节（读者已经确认「这篇有用」）之后插一张「成品示例」卡，直接给出试一试 / 先看示例的入口。
   // 二级标题少于 5 个的短文不插，免得卡片比正文还显眼
   const midCta = !oliveHub && headings.length >= 5;
   const splitAt = oliveHub ? 2 : midCta ? 3 : 0;
-  const [bodyBefore, bodyAfter] = splitAt ? splitBeforeNthH2(post.content, splitAt) : [post.content, ""];
+  const [bodyBefore, bodyAfter] =
+    quickAnswerSplit ?? (splitAt ? splitBeforeNthH2(post.content, splitAt) : [post.content, ""]);
+  // 前半段已经渲染过的二级标题数：Quick answer 切法只含第一个 H2，按节切法含 splitAt - 1 个
+  const bodyAfterStartH2 = quickAnswerSplit ? 1 : splitAt - 1;
 
   return (
     <article className="py-10 pb-28 sm:py-16 sm:pb-16">
@@ -298,11 +305,11 @@ function BlogPostContent({
 
         <div className="prose prose-neutral mt-10 max-w-none break-words prose-headings:font-bold prose-a:text-primary prose-img:h-auto prose-img:max-w-full">
           <MarkdownContent content={bodyBefore} toolType={toolType} locale={locale} />
-          {oliveHub && <OliveHub slug={slug} />}
+          {oliveHub && <OliveHub slug={slug} placement={quickAnswerSplit ? "after_quick_answer" : "after_first_section"} />}
           {midCta && bodyAfter && <ResultCta type={toolType} from="blog" className="not-prose my-10" />}
           {bodyAfter && (
-            // 前半部分已经渲染过 splitAt - 1 个二级标题，后半部分的标题序号接着往下排，目录锚点才对得上
-            <MarkdownContent content={bodyAfter} toolType={toolType} locale={locale} startH2Index={splitAt - 1} />
+            // 前半部分已经渲染过的二级标题数（bodyAfterStartH2），后半部分的标题序号接着往下排，目录锚点才对得上
+            <MarkdownContent content={bodyAfter} toolType={toolType} locale={locale} startH2Index={bodyAfterStartH2} />
           )}
         </div>
 
@@ -438,6 +445,38 @@ function splitBeforeNthH2(content: string, nth: number): [string, string] {
     }
   }
   return [content, ""];
+}
+
+/** 「Quick answer」段落的加粗标签：`**Quick answer:**`、`**Réponse rapide :**`、`**结论：**` 等各语种写法 */
+const QUICK_ANSWER_LABEL = /^\*\*[^*\n]{2,30}[:：]\s*\*\*/;
+
+/**
+ * 文章第一个二级标题下的第一段如果是 Quick answer，就在这一段之后把正文切成两段；不是则返回 null。
+ * 前半段只包含第一个二级标题（startH2Index 应传 1）。
+ */
+function splitAfterQuickAnswer(content: string): [string, string] | null {
+  const lines = content.split("\n");
+  let inFence = false;
+  let h2Line = -1;
+  for (let i = 0; i < lines.length; i++) {
+    if (/^\s*(```|~~~)/.test(lines[i])) {
+      inFence = !inFence;
+      continue;
+    }
+    if (!inFence && /^##\s+\S/.test(lines[i])) {
+      h2Line = i;
+      break;
+    }
+  }
+  if (h2Line < 0) return null;
+
+  let start = h2Line + 1;
+  while (start < lines.length && lines[start].trim() === "") start++;
+  if (start >= lines.length || !QUICK_ANSWER_LABEL.test(lines[start])) return null;
+
+  let end = start;
+  while (end < lines.length && lines[end].trim() !== "") end++;
+  return [lines.slice(0, end).join("\n"), lines.slice(end).join("\n")];
 }
 
 function MarkdownContent({

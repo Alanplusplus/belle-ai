@@ -3,13 +3,16 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { buildAlternates, buildBreadcrumbJsonLd, canonicalUrl, ogLocale } from "@/lib/seo";
+import { buildBreadcrumbJsonLd, canonicalUrl, ogLocale } from "@/lib/seo";
+import { localizedPageSeo } from "@/lib/untranslated";
 import { PaletteCardDownload, PaletteCardImage, PaletteCardLarge } from "@/components/PaletteCardImage";
 import { PageHero } from "@/components/PageHero";
 import { SectionNav } from "@/components/SectionNav";
 import { ColorTextList } from "@/components/ColorTextList";
+import { SkinToneChart } from "@/components/SkinToneChart";
 import { attributeCardKey, isColorNote, paletteImageJsonLd } from "@/lib/palette-card";
 import { ATTRIBUTES, ATTRIBUTE_SLUGS } from "@/lib/color-analysis-for-data";
+import { SKIN_TONE_CHARTS, type SkinUndertone } from "@/lib/skin-tone-chart-data";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -35,14 +38,18 @@ export async function generateMetadata({
 
   const localName = messages.ad?.[attribute]?.name ?? data.name;
 
-  const title = messages.meta.colorForTitle.replace(/\{audience\}/g, localName);
-  const description = messages.meta.colorForDescription.replace(/\{audience\}/g, localName);
-  const alternates = buildAlternates(locale, `/color-analysis-for/${attribute}`);
+  // 个别页面（如 asian-skin）按真实搜索意图单独写了标题和描述：ad.<slug>.metaTitle / metaDescription，没有就用通用模板
+  const title: string =
+    messages.ad?.[attribute]?.metaTitle ?? messages.meta.colorForTitle.replace(/\{audience\}/g, localName);
+  const description: string =
+    messages.ad?.[attribute]?.metaDescription ?? messages.meta.colorForDescription.replace(/\{audience\}/g, localName);
+  const { alternates, robots } = localizedPageSeo(locale, "ad", attribute, `/color-analysis-for/${attribute}`);
 
   return {
     title,
     description,
     alternates,
+    robots,
     openGraph: {
       title,
       description,
@@ -105,6 +112,7 @@ function ColorAnalysisForContent({ slug }: { slug: string }) {
   const bt = useTranslations("blogTitles");
   const ph = useTranslations("paletteHub");
   const st = useTranslations("seasonPalette");
+  const sd = useTranslations("sd");
 
   const data = ATTRIBUTES[slug];
   const displayName = ad("name");
@@ -116,6 +124,21 @@ function ColorAnalysisForContent({ slug }: { slug: string }) {
   const makeupTips = data.makeupTips.map((_, i) => ad(`mt${i}`));
   const wardrobeTips = data.wardrobeTips.map((_, i) => ad(`wt${i}`));
   const faqs = data.faq.map((_, i) => ({ q: ad(`faq${i}Q`), a: ad(`faq${i}A`) }));
+
+  // 肤色色卡表：数据与语言无关，名称/表头文案只在写了 ad.<slug>.chart* 的语言里有，没有就不渲染
+  const chartShades = SKIN_TONE_CHARTS[slug];
+  const showChart = Boolean(chartShades) && ad.has("chartTitle");
+  const undertoneLabel: Record<SkinUndertone, string> = showChart
+    ? { cool: ad("chartUtCool"), neutral: ad("chartUtNeutral"), warm: ad("chartUtWarm"), olive: ad("chartUtOlive") }
+    : { cool: "", neutral: "", warm: "", olive: "" };
+  const chartRows = showChart
+    ? chartShades.map((shade, i) => ({
+        name: ad(`st${i}`),
+        hex: shade.hex,
+        undertone: undertoneLabel[shade.undertone],
+        seasons: shade.seasons.map((s) => ({ slug: s, name: sd.has(`${s}.name`) ? sd(`${s}.name`) : s })),
+      }))
+    : [];
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -164,8 +187,27 @@ function ColorAnalysisForContent({ slug }: { slug: string }) {
       <SectionNav />
 
       <div className="content-page mx-auto max-w-4xl px-4">
+        {/* 肤色色卡表：放在最前面，搜「肤色表 / 色值」的人一进页面就能看到 */}
+        {showChart && (
+          <section className="py-12">
+            <h2 className="text-2xl font-bold">{ad("chartTitle")}</h2>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{ad("chartIntro")}</p>
+            <SkinToneChart
+              caption={ad("chartCaption")}
+              headers={{
+                shade: ad("chartHeadShade"),
+                hex: ad("chartHeadHex"),
+                undertone: ad("chartHeadUndertone"),
+                seasons: ad("chartHeadSeasons"),
+              }}
+              rows={chartRows}
+            />
+            <p className="mt-4 text-xs italic text-muted-foreground">{ad("chartNote")}</p>
+          </section>
+        )}
+
         {/* Challenges */}
-        <section className="py-12">
+        <section className={showChart ? "border-t border-border py-12" : "py-12"}>
           <h2 className="text-2xl font-bold">{t("challenges", { audience: displayName })}</h2>
           <ul className="mt-6 space-y-3">
             {challenges.map((ch) => (

@@ -11,6 +11,7 @@ import { LOOKBOOK_DATA, LOOKBOOK_SLUGS } from "@/lib/lookbook-data";
 import { TRANSFORMATION_TYPES } from "@/lib/transformation-data";
 import { GUIDE_TOPICS } from "@/lib/guide-data";
 import { attributeCardKey, celebrityCardKey, paletteCardUrl } from "@/lib/palette-card";
+import { isUntranslated } from "@/lib/untranslated";
 
 function localePath(locale: string, path: string): string {
   const isDefault = locale === routing.defaultLocale;
@@ -134,6 +135,8 @@ export async function GET() {
     }
 
     for (const slug of [...SEASON_SLUGS, ...PARENT_SEASONS]) {
+      // 四大类季型页在没有译文的语种下是 noindex，不放进图片 sitemap（lib/untranslated.ts）
+      if ((PARENT_SEASONS as readonly string[]).includes(slug) && isUntranslated(locale, "sh", slug)) continue;
       const season = SEASON_PALETTES[slug];
       const seasonName = season
         ? season.name.split(" (")[0]
@@ -171,6 +174,7 @@ export async function GET() {
     }
 
     for (const slug of CELEBRITY_SLUGS) {
+      if (isUntranslated(locale, "celeb", slug)) continue;
       const celebName = slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
       entries.push({
         loc: localePath(locale, `/celebrity/${slug}`),
@@ -199,6 +203,7 @@ export async function GET() {
     }
 
     for (const slug of ATTRIBUTE_SLUGS) {
+      if (isUntranslated(locale, "ad", slug)) continue;
       const audience = slug.split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
       entries.push({
         loc: localePath(locale, `/color-analysis-for/${slug}`),

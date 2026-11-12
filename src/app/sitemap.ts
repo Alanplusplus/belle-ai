@@ -16,6 +16,7 @@ import { COMPARISON_SLUGS } from "@/lib/season-compare-data";
 import { LOOKBOOK_SLUGS } from "@/lib/lookbook-data";
 import { TRANSFORMATION_SLUGS } from "@/lib/transformation-data";
 import { GUIDE_SLUGS } from "@/lib/guide-data";
+import { translatedLocales, type UntranslatedFamily } from "@/lib/untranslated";
 
 const COMPETITOR_SLUGS = [
   "dressika",
@@ -142,6 +143,36 @@ function localePath(locale: string, path: string): string {
     : `${SITE_URL}/${locale}${path}`;
 }
 
+/**
+ * 文案按语种存放、部分 slug 还没翻译的页面族（人群页、竞品对比、明星页、四大类季型）。
+ * 没有译文的语种页是 noindex（见 lib/untranslated.ts），不能进 sitemap；hreflang 也只列有译文的语种。
+ */
+function pushTranslatedFamilyEntries(
+  entries: MetadataRoute.Sitemap,
+  family: UntranslatedFamily,
+  slug: string,
+  pagePath: string,
+  lastModified: Date,
+  priority: number,
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]
+) {
+  const available = translatedLocales(family, slug);
+  const alternates: Record<string, string> = {};
+  for (const l of available) {
+    alternates[l] = localePath(l, pagePath);
+  }
+  if (available.includes("en")) alternates["x-default"] = localePath("en", pagePath);
+
+  for (const locale of available) {
+    entries.push({
+      url: localePath(locale, pagePath),
+      lastModified,
+      ...localeSitemapMeta(priority, changeFrequency),
+      alternates: { languages: alternates },
+    });
+  }
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = routing.locales;
   const staticPages = Object.keys(STATIC_PAGE_SOURCE);
@@ -171,20 +202,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   for (const slug of COMPETITOR_SLUGS) {
-    for (const locale of locales) {
-      const alternates: Record<string, string> = {};
-      for (const l of locales) {
-        alternates[l] = localePath(l, `/vs/${slug}`);
-      }
-      alternates["x-default"] = localePath("en", `/vs/${slug}`);
-
-      entries.push({
-        url: localePath(locale, `/vs/${slug}`),
-        lastModified: vsLastModified,
-        ...localeSitemapMeta(0.7, "monthly"),
-        alternates: { languages: alternates },
-      });
-    }
+    pushTranslatedFamilyEntries(entries, "vs", slug, `/vs/${slug}`, vsLastModified, 0.7, "monthly");
   }
 
   for (const slug of SEASON_SLUGS) {
@@ -205,37 +223,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   for (const slug of PARENT_SEASONS) {
-    for (const locale of locales) {
-      const alternates: Record<string, string> = {};
-      for (const l of locales) {
-        alternates[l] = localePath(l, `/color-palette/${slug}`);
-      }
-      alternates["x-default"] = localePath("en", `/color-palette/${slug}`);
-
-      entries.push({
-        url: localePath(locale, `/color-palette/${slug}`),
-        lastModified: seasonLastModified,
-        ...localeSitemapMeta(0.8, "monthly"),
-        alternates: { languages: alternates },
-      });
-    }
+    pushTranslatedFamilyEntries(entries, "sh", slug, `/color-palette/${slug}`, seasonLastModified, 0.8, "monthly");
   }
 
   for (const slug of ATTRIBUTE_SLUGS) {
-    for (const locale of locales) {
-      const alternates: Record<string, string> = {};
-      for (const l of locales) {
-        alternates[l] = localePath(l, `/color-analysis-for/${slug}`);
-      }
-      alternates["x-default"] = localePath("en", `/color-analysis-for/${slug}`);
-
-      entries.push({
-        url: localePath(locale, `/color-analysis-for/${slug}`),
-        lastModified: attributeLastModified,
-        ...localeSitemapMeta(0.7, "monthly"),
-        alternates: { languages: alternates },
-      });
-    }
+    pushTranslatedFamilyEntries(entries, "ad", slug, `/color-analysis-for/${slug}`, attributeLastModified, 0.7, "monthly");
   }
 
   for (const slug of FACE_SHAPE_SLUGS) {
@@ -256,20 +248,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   for (const slug of CELEBRITY_SLUGS) {
-    for (const locale of locales) {
-      const alternates: Record<string, string> = {};
-      for (const l of locales) {
-        alternates[l] = localePath(l, `/celebrity/${slug}`);
-      }
-      alternates["x-default"] = localePath("en", `/celebrity/${slug}`);
-
-      entries.push({
-        url: localePath(locale, `/celebrity/${slug}`),
-        lastModified: celebrityLastModified,
-        ...localeSitemapMeta(0.7, "monthly"),
-        alternates: { languages: alternates },
-      });
-    }
+    pushTranslatedFamilyEntries(entries, "celeb", slug, `/celebrity/${slug}`, celebrityLastModified, 0.7, "monthly");
   }
 
   for (const slug of COMPARISON_SLUGS) {

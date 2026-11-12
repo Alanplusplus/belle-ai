@@ -3,6 +3,7 @@ title: "Personal Color Analysis Guide: All 12 Seasonal Types Explained (Free Qui
 seoTitle: "Personal Color Analysis: All 12 Seasons Explained (Free Quiz)"
 description: "The complete guide to personal color analysis with the 12-season system. Learn your color type, best makeup shades, and wardrobe colors. Includes free AI color quiz."
 date: "2026-07-04"
+updated: "2026-11-12"
 tags: ["personal color analysis", "seasonal color", "color theory", "beauty guide", "12 season color analysis"]
 image: "/images/blog/personal-color-analysis-guide.webp"
 faq:
@@ -15,6 +16,8 @@ faq:
 ---
 
 ## What Is Personal Color Analysis?
+
+**Quick answer:** Personal color analysis is a method of finding the colors that look most harmonious on you, based on your skin tone, undertone, hair color and eye color. It sorts people into four seasons (Spring, Summer, Autumn, Winter) or, more precisely, 12 sub-seasons, which is the most widely used professional standard today.
 
 Personal color analysis (also known as seasonal color analysis or color typing) is a method of determining which colors look most harmonious and flattering on you based on your natural coloring — your skin tone, undertone, hair color, and eye color.
 

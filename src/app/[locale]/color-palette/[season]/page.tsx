@@ -4,6 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, canonicalUrl, ogLocale } from "@/lib/seo";
+import { localizedPageSeo } from "@/lib/untranslated";
 import { PaletteCardDownload, PaletteCardImage, PaletteCardLarge } from "@/components/PaletteCardImage";
 import { PageHero } from "@/components/PageHero";
 import { FunnelLink } from "@/components/FunnelLink";
@@ -56,10 +57,13 @@ export async function generateMetadata({
     const label = season.charAt(0).toUpperCase() + season.slice(1);
     const title = messages.meta.seasonHubTitle.replace(/\{season\}/g, label);
     const description = messages.meta.seasonHubDescription.replace(/\{season\}/g, label);
+    // 四大类（spring/summer/autumn/winter）的正文文案目前只有英文，其他语种页 noindex 且不进 hreflang
+    const parentSeo = localizedPageSeo(locale, "sh", season, `/color-palette/${season}`);
     return {
       title,
       description,
-      alternates,
+      alternates: parentSeo.alternates,
+      robots: parentSeo.robots,
       openGraph: { title, description, type: "website", locale: ogLocale(locale), url: alternates.canonical },
       twitter: { card: "summary_large_image", title, description },
     };

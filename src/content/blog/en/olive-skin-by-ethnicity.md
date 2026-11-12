@@ -1,9 +1,9 @@
 ---
 title: "Olive Skin by Ethnicity: How Olive Undertones Appear Across Cultures"
-seoTitle: "Olive Skin Tone by Ethnicity: Asian, Latina, Mediterranean"
-description: "Is olive skin only Mediterranean? No. See how olive undertones look on Asian, South Asian, Latina and Mediterranean skin, and why undertone tests miss it."
+seoTitle: "Olive Skin by Ethnicity: 5 Groups × 3 Depths (Guide)"
+description: "Is olive skin only Mediterranean? No. See how olive undertones look across 5 ethnic groups and 3 depths (Fitzpatrick I-VI), plus a free 1-minute undertone test."
 date: "2026-09-18"
-updated: "2026-11-05"
+updated: "2026-11-12"
 tags: ["olive undertone", "skin tone", "personal color analysis", "beauty", "diversity"]
 image: "/images/blog/olive-skin-by-ethnicity.webp"
 faq:

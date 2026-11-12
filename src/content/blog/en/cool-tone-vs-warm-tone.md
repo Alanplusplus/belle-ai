@@ -3,11 +3,14 @@ title: "Cool Tone vs Warm Tone: 5 Easy Tests to Find Your Undertone (With Photos
 seoTitle: "Cool vs Warm Undertone: 5 Easy Tests (With Photos)"
 description: "5 easy at-home tests to find your undertone in under 2 minutes — with photo examples. Works for ALL skin tones. The vein test is 70% accurate."
 date: "2026-07-02"
+updated: "2026-11-12"
 tags: ["undertone", "cool tone", "warm tone", "skin tone", "color analysis"]
 image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
 
 ## What Is an Undertone?
+
+**Quick answer:** Cool undertones are pink, red or bluish, warm undertones are yellow, golden or peachy, and neutral is a mix of both. Unlike your surface skin tone, your undertone stays constant for life, and five simple at-home tests (vein, jewelry, white paper and more) can show you which one you have in under two minutes.
 
 Your undertone is the subtle color beneath the surface of your skin. Unlike your surface skin tone (which can change with sun exposure, redness, etc.), your undertone stays constant throughout your life.
 

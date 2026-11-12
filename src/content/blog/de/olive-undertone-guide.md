@@ -1,8 +1,9 @@
 ---
 title: "Oliv-Unterton: Der am häufigsten missverstandene Hautton einfach erklärt"
-seoTitle: "Oliv-Unterton: 5 Anzeichen bei olivfarbener Haut (+ Gratis-Test)"
-description: "Weder Gold noch Silber steht dir? Make-up wirkt orange oder rosa? So erkennst du den Oliv-Unterton: 5 Anzeichen und ein kostenloser KI-Test."
+seoTitle: "Oliv-Unterton erkennen: 5 Anzeichen, Farben + KI-Test"
+description: "Weder Gold noch Silber steht dir? Make-up wirkt orange oder rosa? 5 Anzeichen für den Oliv-Unterton, passende Farben und ein kostenloser KI-Test."
 date: "2026-09-18"
+updated: "2026-11-12"
 tags: ["Oliv-Unterton", "olivfarbene Haut", "Hautunterton", "Farbanalyse", "Make-up"]
 image: "/images/blog/olive-undertone-guide.webp"
 faq:
@@ -15,6 +16,8 @@ faq:
 ---
 
 ## Warum kaum jemand über den Oliv-Unterton spricht
+
+**Kurze Antwort:** Der Oliv-Unterton ist ein grünlicher oder grün-grauer Schimmer, der sich über Ihren Basis-Unterton legt – er ist also weder warm noch kühl. Typische Anzeichen: Die Venen wirken zugleich blau und grün, weder Gold noch Silber steht perfekt, warme Foundations werden orange und kühle rosa, die Haut schimmert bei Tageslicht grünlich oder gräulich, und Sie bräunen eher oliv- oder khakifarben.
 
 Fast jeder Beauty-Artikel teilt Hautuntertöne in drei saubere Schubladen ein: warm, kühl oder neutral. Man macht den Venentest, probiert Gold- und Silberschmuck an, und fertig.
 

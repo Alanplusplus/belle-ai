@@ -4,7 +4,8 @@ import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { ResultCta } from "@/components/ResultCta";
 import { routing } from "@/i18n/routing";
-import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import { buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
+import { localizedPageSeo } from "@/lib/untranslated";
 import { CREDIT_PACKS } from "@/lib/constants";
 import { VS_SLUGS } from "@/lib/vs";
 import type { Metadata } from "next";
@@ -46,12 +47,13 @@ export async function generateMetadata({
     /\{competitor\}/g,
     name
   );
-  const alternates = buildAlternates(locale, `/vs/${competitor}`);
+  const { alternates, robots } = localizedPageSeo(locale, "vs", competitor, `/vs/${competitor}`);
 
   return {
     title,
     description,
     alternates,
+    robots,
     openGraph: {
       title,
       description,

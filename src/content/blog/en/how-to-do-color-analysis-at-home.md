@@ -3,7 +3,7 @@ title: "How to Do Color Analysis at Home: DIY Guide (No Stylist Needed)"
 seoTitle: "How to Do Color Analysis at Home (DIY Guide, No Stylist)"
 description: "Learn how to do your own color analysis at home with simple tests. Find your undertone, work out your season and your best colors without a stylist."
 date: "2026-07-21"
-updated: "2026-10-17"
+updated: "2026-11-12"
 tags: ["color analysis at home", "DIY color analysis", "self color analysis", "find your colors", "undertone test"]
 image: "/images/blog/color-analysis-at-home.webp"
 faq:
@@ -18,6 +18,8 @@ faq:
 ---
 
 ## Can You Do Color Analysis at Home?
+
+**Quick answer:** Yes. In five steps you can get useful, surprisingly close results at home: find your undertone, depth and chroma, run a draping test, then narrow down to your sub-season. In-person professional draping remains the gold standard, so it helps to double-check your result with a free AI preview from a selfie.
 
 Yes. While in-person professional draping remains the gold standard, you can get useful, surprisingly close results at home by combining self-assessment tests with an AI check. This guide walks you through the entire process step by step. If you would rather skip the DIY tests, you can [upload a selfie for a free AI preview](/try) in about 60 seconds.
 

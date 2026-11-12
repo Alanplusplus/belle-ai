@@ -3,11 +3,14 @@ title: "Guía de labios para piel oliva: los mejores labiales para subtono oliva
 seoTitle: "Mejores colores de labios para piel oliva — por qué el rojo clásico falla (+ qué sí funciona)"
 description: "El rojo clásico te apaga, los nude se ven grises y el coral es impredecible en piel oliva. Descubre tonos baya, malva, ladrillo y nude cálido que de verdad favorecen tu subtono."
 date: "2026-09-18"
+updated: "2026-11-12"
 tags: ["subtono oliva", "maquillaje", "color de labios", "consejos de belleza", "análisis de color personal"]
 image: "/images/blog/olive-skin-lip-color-guide.webp"
 ---
 
 ## Por qué el labial es la categoría más difícil para la piel oliva
+
+**Respuesta rápida:** En piel oliva los rojos clásicos azulados o anaranjados suelen fallar; tus pilares son baya, malva, ladrillo y nude cálido. El coral funciona sobre todo en oliva cálida apagada, y cinco labiales (nude, baya, rojo, uno profundo y un comodín) bastan. El mejor matiz dentro de cada familia depende de tu subtipo oliva.
 
 En las conversaciones sobre piel oliva, la base se lleva casi todo el protagonismo, pero la decepción de verdad, para mí, está en el labial.
 

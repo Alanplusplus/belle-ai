@@ -1,8 +1,9 @@
 ---
 title: "Subtono Oliva Piel: Guía para Identificarlo"
-seoTitle: "Subtono oliva: 5 señales para reconocerlo (+ test gratis)"
-description: "¿Ni el oro ni la plata te favorecen y la base sale naranja o rosa? Puede ser subtono oliva. Descubre las 5 señales y haz el test con IA gratis."
+seoTitle: "¿Tengo subtono oliva? 5 señales, paleta y test con IA gratis"
+description: "¿Ni el oro ni la plata te favorecen y la base sale naranja o rosa? Descubre las 5 señales del subtono oliva, tus mejores colores y haz el test con IA gratis."
 date: "2026-07-14"
+updated: "2026-11-12"
 tags: ["subtono oliva", "subtono oliva piel", "tono oliva", "análisis de color personal", "belleza"]
 image: "/images/blog/olive-undertone-guide.webp"
 faq:
@@ -15,6 +16,8 @@ faq:
 ---
 
 ## Por qué nadie habla de los subtonos oliva
+
+**Respuesta rápida:** El subtono oliva es un matiz verde o verde-grisáceo que se superpone a tu subtono base, así que no es ni cálido ni frío. Lo delatan cinco señales: venas que parecen azules y verdes a la vez, ni el oro ni la plata te quedan perfectos, las bases cálidas salen naranjas y las frías rosadas, la piel tiene un matiz verdoso o grisáceo con luz natural y te bronceas en tono oliva o caqui.
 
 Todos los artículos de belleza en internet dividen los subtonos de piel en tres categorías ordenadas: cálido, frío o neutro. Haces la prueba de las venas, compruebas si el oro o la plata te queda mejor, y listo.
 

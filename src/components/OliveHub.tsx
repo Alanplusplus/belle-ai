@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { trackEvent } from "@/lib/analytics";
 
 /**
- * olive 主题簇文章（见 src/lib/oliveCluster.ts）第一节之后的"下一步"模块：
+ * olive 主题簇文章（见 src/lib/oliveCluster.ts）里的"下一步"模块（Quick answer 之后，没有则在第一节之后）：
  * 1. 免费的底调测试（网页工具，不用上传照片，门槛最低）
  * 2. 转化更好的人群页（/color-analysis-for/…）和簇内核心文章
  * 它是次要入口（描边按钮），不抢文章顶部 CTA 和底部吸附条的"唯一主入口"。
@@ -31,7 +31,8 @@ const HUB_LINKS: HubLink[] = [
 const MAX_LINKS = 3;
 const UNDERTONE_TEST_HREF = "/tools/undertone-test";
 
-export function OliveHub({ slug }: { slug: string }) {
+/** placement：模块插在文章里的位置，随点击事件上报，用来对比「Quick answer 之后」和「第一节之后」哪个点击更多 */
+export function OliveHub({ slug, placement }: { slug: string; placement: "after_quick_answer" | "after_first_section" }) {
   const t = useTranslations("blog.oliveHub");
   const links = HUB_LINKS.filter((link) => link.postSlug !== slug).slice(0, MAX_LINKS);
 
@@ -41,7 +42,7 @@ export function OliveHub({ slug }: { slug: string }) {
       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t("desc")}</p>
       <Link
         href={UNDERTONE_TEST_HREF}
-        onClick={() => trackEvent("olive_hub_click", { post: slug, target: "undertone_test" })}
+        onClick={() => trackEvent("olive_hub_click", { post: slug, target: "undertone_test", placement })}
         className="mt-4 inline-flex min-h-11 items-center justify-center rounded-full border border-primary bg-white px-6 py-2.5 text-sm font-semibold text-primary transition hover:bg-primary/5"
       >
         {t("cta")} →
@@ -53,7 +54,7 @@ export function OliveHub({ slug }: { slug: string }) {
           <li key={link.href}>
             <Link
               href={link.href}
-              onClick={() => trackEvent("olive_hub_click", { post: slug, target: link.href })}
+              onClick={() => trackEvent("olive_hub_click", { post: slug, target: link.href, placement })}
               className="font-medium text-primary hover:underline"
             >
               {t(link.labelKey)} →
