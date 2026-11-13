@@ -211,7 +211,8 @@
     "aiDeepIntro": "Un análisis de color con IA lee cuatro señales de color de tu selfie y las ajusta al sistema de 12 estaciones, el mismo marco que usa un asesor profesional. ¿Primera vez? Empieza por nuestra <guide>guía completa de análisis de color</guide>.",
     "aiSeasonsTitle": "Explora las 12 estaciones de color",
     "aiSeasonsDesc": "¿Ya conoces tu estación? Abre la paleta completa y la guía de maquillaje y estilo de cada una.",
-    "aiDeepOutro": "¿Prefieres no subir una foto? Haz el <quiz>test gratuito de análisis de color</quiz>. ¿Quieres los detalles primero? Lee cómo funciona el <personal>análisis de color personal</personal> o nuestra guía sobre el <free>análisis de color con IA gratis online</free>."
+    "aiDeepOutro": "¿Prefieres no subir una foto? Haz el <quiz>test gratuito de análisis de color</quiz>. ¿Quieres los detalles primero? Lee cómo funciona el <personal>análisis de color personal</personal> o nuestra guía sobre el <free>análisis de color con IA gratis online</free>.",
+    "answerLead": "Belle AI es una herramienta de análisis de color personal con IA. A partir de un selfie estima tu subtono de piel y cuál de las 12 estaciones de color eres, y en unos 60 segundos te da una paleta personal con recomendaciones de maquillaje, pelo, joyería y gafas."
   },
   "features": {
     "learnMore": "Saber más",
@@ -1001,7 +1002,8 @@
     "faq4A": "Tu informe incluye una sección dedicada a colores a evitar — tonos que chocan con tu subtono o crean un contraste poco favorecedor. Te ayuda a evitar errores habituales como elegir un rubio ceniza sobre piel cálida o un tono dorado anaranjado sobre subtonos fríos.",
     "faq5Q": "¿El análisis de color de cabello es gratis?",
     "faq5A": "Sí. El análisis escrito es gratis. Ver las fotos del resultado en tu propia cara cuesta 1 crédito por todo el conjunto, y tu primera foto es gratis. Puedes conseguir créditos con un Pack de créditos o con el Kit de Color; consulta Precios para más detalles.",
-    "seoIntro": "Encontrar el color de cabello adecuado es una de las decisiones de belleza de mayor impacto — y una de las más caras si te equivocas. Una corrección de color en el salón puede costar entre 200 y 500 $ o más. El análisis de color de cabello con IA elimina las conjeturas al evaluar tu subtono de piel, nivel de contraste natural y color de ojos para predecir qué tonos de cabello armonizarán con tu coloración y cuáles chocarán. La diferencia entre un caramelo cálido favorecedor y un rubio ceniza poco favorecedor suele depender de la alineación de subtonos, invisible para ojos no entrenados pero evidente en fotos. Nuestra IA previsualiza varios colores de cabello en tu rostro real, para que veas el resultado antes de decidirte en el salón."
+    "seoIntro": "Encontrar el color de cabello adecuado es una de las decisiones de belleza de mayor impacto — y una de las más caras si te equivocas. Una corrección de color en el salón puede costar entre 200 y 500 $ o más. El análisis de color de cabello con IA elimina las conjeturas al evaluar tu subtono de piel, nivel de contraste natural y color de ojos para predecir qué tonos de cabello armonizarán con tu coloración y cuáles chocarán. La diferencia entre un caramelo cálido favorecedor y un rubio ceniza poco favorecedor suele depender de la alineación de subtonos, invisible para ojos no entrenados pero evidente en fotos. Nuestra IA previsualiza varios colores de cabello en tu rostro real, para que veas el resultado antes de decidirte en el salón.",
+    "answerLead": "El análisis de color de pelo de Belle AI lee tu subtono, profundidad y contraste a partir de un selfie y muestra cuatro colores de pelo con un breve motivo cada uno, incluido uno que conviene evitar."
   },
   "outfitPage": {
     "title": "Vista previa de color de atuendo con IA",
@@ -1040,7 +1042,8 @@
     "faq3Q": "¿También puedo obtener recomendaciones de gafas de sol?",
     "faq3A": "No como sección aparte. Tu resultado incluye seis monturas, cada una con su forma y color, de las cuales cuatro te favorecen y dos conviene evitar. Usa las mismas formas y colores al elegir gafas de sol.",
     "faq4Q": "¿El análisis de gafas es gratis?",
-    "faq4A": "Sí. El análisis escrito es gratis. Ver las fotos del resultado en tu propia cara cuesta 1 crédito por todo el conjunto, y tu primera foto es gratis. Puedes conseguir créditos con un Pack de créditos o con el Kit de Color; consulta Precios para más detalles."
+    "faq4A": "Sí. El análisis escrito es gratis. Ver las fotos del resultado en tu propia cara cuesta 1 crédito por todo el conjunto, y tu primera foto es gratis. Puedes conseguir créditos con un Pack de créditos o con el Kit de Color; consulta Precios para más detalles.",
+    "answerLead": "La recomendación de gafas de Belle AI lee la forma y las proporciones de tu rostro a partir de un selfie y nombra seis monturas por forma y color: cuatro que te favorecen y dos que conviene evitar."
   },
   "occasionPage": {
     "title": "Generador de maquillaje por ocasión con IA",
@@ -4782,5 +4785,43 @@
     "t4t": "Honesta sobre sus límites",
     "t4d": "Es el juicio visual de una IA. Si dudas de un resultado, repite una vez con otra foto, gratis durante {days} días tras desbloquear el informe.",
     "seasonsSub": "Cada tipo tiene su propia paleta, maquillaje y joyería. Toca una tarjeta para abrir su guía de paleta completa."
+  },
+  "quickFacts": {
+    "title": "De un vistazo",
+    "costLabel": "Coste",
+    "costTool": "El resultado escrito es gratis. Las imágenes de resultado en ti cuestan 1 crédito por análisis, y la primera imagen es gratis. Los créditos se venden en un pack de {credits} por {addon} o vienen con el Kit de Color de {kit}. Pagos únicos, sin suscripción.",
+    "costHome": "Gratis para probar y sin registro: ves tu estación y tu paleta sin coste. El informe completo, el PDF y el póster vienen con el Kit de Color de {kit} (pago único, sin suscripción, una repetición gratis en {days} días). Las imágenes de resultado de otros análisis usan créditos: {credits} por {addon}.",
+    "limitsLabel": "Límites",
+    "limits": "Es el juicio visual de una IA, no una medición. La luz, la cámara y el maquillaje cambian el resultado, y puede diferir de una consulta presencial.",
+    "methodLabel": "Cómo funciona",
+    "method": "Google Gemini hace el análisis y OpenAI GPT Image crea las imágenes de resultado, ambos guiados por los prompts propios de Belle AI. No hay ningún modelo entrenado a medida.",
+    "photoLabel": "Tu foto",
+    "photo": "Se usa solo para crear tu informe (lo procesan los proveedores de IA indicados) y se guarda en tu historial privado. Puedes pedirnos que la eliminemos en cualquier momento."
+  },
+  "pricingGuide": {
+    "fitTitle": "¿Es el Kit de Color para ti?",
+    "goodTitle": "Te encaja si quieres",
+    "good1": "Tu informe de color completo en un solo sitio, con todos los capítulos y recomendaciones de maquillaje, pelo y joyería según tu estación.",
+    "good2": "Un informe en PDF y un póster para compartir, además de imágenes de resultado de ti con tus mejores colores.",
+    "good3": "Una segunda oportunidad: una repetición gratis con una foto nueva durante {days} días tras el desbloqueo, si el primer resultado no te convence.",
+    "badTitle": "Probablemente no es para ti si",
+    "bad1": "Solo quieres saber tu estación y tu paleta principal. La vista previa gratuita ya muestra ambas.",
+    "bad2": "Quieres el veredicto de una experta o un experto. Belle AI ofrece el juicio visual de una IA, así que confirma los resultados dudosos con un drapeado profesional.",
+    "bad3": "Quieres analizar a muchas personas o muchas fotos. El Kit incluye {credits} créditos y no hay modo por lotes.",
+    "limitsTitle": "Precios y límites",
+    "limit1": "Kit de Color: {kit}, pago único, sin suscripción ni renovación automática. Incluye un informe de color completo, un PDF y un póster, {credits} créditos y hasta 20 escaneos de prendas al día.",
+    "limit2": "Pack de créditos: {addon} por {credits} créditos que no caducan. 1 crédito crea las imágenes de resultado de un análisis (pelo, maquillaje, gafas, joyería y más). Los créditos no desbloquean un informe de color.",
+    "limit3": "Gratis: una vista previa de tu informe de color, un resultado escrito de cada herramienta, tu primera imagen de resultado y 3 escaneos de prendas al día.",
+    "faqTitle": "Preguntas sobre precios",
+    "faq1Q": "¿Cuánto cuesta Belle AI?",
+    "faq1A": "Probarlo es gratis. El Kit de Color cuesta {kit} una sola vez y el Pack de créditos, {addon} por {credits} créditos.",
+    "faq2Q": "¿Hay suscripción?",
+    "faq2A": "No. Ambas compras son pagos únicos sin renovación automática, y los créditos no caducan.",
+    "faq3Q": "¿Qué obtengo gratis?",
+    "faq3A": "Una vista previa de tu informe de color con tu estación y tu paleta, un resultado escrito de cada otra herramienta, tu primera imagen de resultado y 3 escaneos de prendas al día. Para probarlo no hace falta registrarse.",
+    "faq4Q": "¿Qué diferencia hay entre el Kit de Color y los créditos?",
+    "faq4A": "El Kit de Color desbloquea un informe de color completo e incluye {credits} créditos. Los créditos solo pagan las imágenes de resultado de otros análisis y no pueden desbloquear un informe de color.",
+    "faq5Q": "¿Y si el resultado no me parece correcto?",
+    "faq5A": "El resultado de la IA depende de la luz, la cámara y el maquillaje. Usa luz natural y sin maquillaje, y aprovecha tu repetición gratis con una foto nueva durante {days} días tras el desbloqueo. No gasta créditos."
   }
 }

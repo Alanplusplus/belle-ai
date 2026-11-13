@@ -211,7 +211,8 @@
     "aiDeepIntro": "An AI color analysis reads four color signals from your selfie and matches them to the 12-season system – the same framework a professional uses in an in-person color analysis (spelled colour analysis in the UK and Australia). New to the idea? Start with our <guide>complete color analysis guide</guide>.",
     "aiSeasonsTitle": "Browse all 12 color seasons",
     "aiSeasonsDesc": "Already know your season? Open the full palette, makeup and styling guide for each one.",
-    "aiDeepOutro": "Prefer not to upload a photo? Take the <quiz>free color analysis quiz</quiz>. Want the details first? Read how <personal>personal color analysis</personal> works, or our guide to <free>free AI color analysis online</free> and what it can and can't tell you."
+    "aiDeepOutro": "Prefer not to upload a photo? Take the <quiz>free color analysis quiz</quiz>. Want the details first? Read how <personal>personal color analysis</personal> works, or our guide to <free>free AI color analysis online</free> and what it can and can't tell you.",
+    "answerLead": "Belle AI is an AI personal color analysis tool. From one selfie it estimates your skin undertone and which of the 12 color seasons you are, then gives you a personal palette with makeup, hair, jewelry and glasses picks in about 60 seconds."
   },
   "features": {
     "learnMore": "Learn More",
@@ -1001,7 +1002,8 @@
     "faq4A": "Your report includes a dedicated section on colors to avoid — shades that clash with your undertone or create unflattering contrast. This helps you steer clear of common mistakes like choosing an ashy blonde on warm skin or a brassy tone on cool undertones.",
     "faq5Q": "Is hair color analysis free?",
     "faq5A": "Yes. The written analysis is free. Seeing the result photos on your own face costs 1 credit for the whole set, and your very first photo is free. You can get credits in a Credit Pack or with the Color Kit; see Pricing for details.",
-    "seoIntro": "Finding the right hair color is one of the highest-impact beauty decisions you can make — and one of the most expensive to get wrong. A salon color correction can cost $200-500+. AI hair color analysis removes the guesswork by evaluating your skin undertone, natural contrast level, and eye color to predict which hair shades will harmonize with your coloring and which will clash. The difference between a flattering warm caramel and an unflattering ashy blonde often comes down to undertone alignment that is invisible to the untrained eye but obvious in photos. Our AI previews multiple hair colors on your actual face, so you can see the result before committing at the salon."
+    "seoIntro": "Finding the right hair color is one of the highest-impact beauty decisions you can make — and one of the most expensive to get wrong. A salon color correction can cost $200-500+. AI hair color analysis removes the guesswork by evaluating your skin undertone, natural contrast level, and eye color to predict which hair shades will harmonize with your coloring and which will clash. The difference between a flattering warm caramel and an unflattering ashy blonde often comes down to undertone alignment that is invisible to the untrained eye but obvious in photos. Our AI previews multiple hair colors on your actual face, so you can see the result before committing at the salon.",
+    "answerLead": "Belle AI's hair color analysis reads your skin undertone, depth and contrast from one selfie and shows four hair colors with a short reason for each, including one to skip."
   },
   "outfitPage": {
     "title": "AI Outfit Color Preview",
@@ -1040,7 +1042,8 @@
     "faq3Q": "Can I get sunglasses recommendations too?",
     "faq3A": "Not as a separate section. Your result covers six frames, each named by shape and color, with four that suit you and two to avoid. Use the same shapes and colors when you pick sunglasses.",
     "faq4Q": "Is the glasses analysis free?",
-    "faq4A": "Yes. The written analysis is free. Seeing the result photos on your own face costs 1 credit for the whole set, and your very first photo is free. You can get credits in a Credit Pack or with the Color Kit; see Pricing for details."
+    "faq4A": "Yes. The written analysis is free. Seeing the result photos on your own face costs 1 credit for the whole set, and your very first photo is free. You can get credits in a Credit Pack or with the Color Kit; see Pricing for details.",
+    "answerLead": "Belle AI's glasses recommendation reads your face shape and proportions from one selfie and names six frames by shape and color: four that suit you and two to avoid."
   },
   "occasionPage": {
     "title": "AI Occasion Makeup Generator",
@@ -4285,5 +4288,43 @@
     "t4t": "Honest about its limits",
     "t4d": "It is an AI's visual judgment. If you doubt a result, re-test once with a different photo — free within {days} days after you unlock the report.",
     "seasonsSub": "Each type has its own palette, makeup and jewelry. Tap a card to open its full palette guide."
+  },
+  "quickFacts": {
+    "title": "At a glance",
+    "costLabel": "Cost",
+    "costTool": "The written result is free. The result photos of you cost 1 credit per analysis, and your first photo is free. Credits come in a pack of {credits} for {addon}, or with the {kit} Color Kit. One-time payments, no subscription.",
+    "costHome": "Free to try, no signup: you see your season and palette at no cost. The full report, PDF and poster come with the {kit} Color Kit (one-time payment, no subscription, one free re-test within {days} days). Result photos for other analyses use credits: {credits} for {addon}.",
+    "limitsLabel": "Limits",
+    "limits": "An AI's visual judgment, not a measurement. Lighting, camera and makeup change the result, and it can differ from an in-person consultation.",
+    "methodLabel": "How it works",
+    "method": "Google Gemini does the analysis and OpenAI GPT Image makes the result photos, both guided by Belle AI's own prompts. There is no custom-trained model.",
+    "photoLabel": "Your photo",
+    "photo": "Used only to create your report (the AI providers above process it) and kept in your private history. You can ask us to delete it at any time."
+  },
+  "pricingGuide": {
+    "fitTitle": "Is the Color Kit right for you?",
+    "goodTitle": "A good fit if you want",
+    "good1": "Your full color report in one place, with every chapter and makeup, hair and jewelry picks matched to your season.",
+    "good2": "A PDF report and share poster to keep, plus result photos of yourself in your best colors.",
+    "good3": "A second try: one free re-test with a new photo within {days} days of unlocking if the first result looks off.",
+    "badTitle": "Probably not for you if",
+    "bad1": "You only want to know your season and main palette. The free preview already shows both.",
+    "bad2": "You want a human expert's verdict. Belle AI gives an AI's visual judgment, so confirm borderline results with a professional draping.",
+    "bad3": "You want to run many people or many photos through it. The Kit has {credits} credits, and there is no batch mode.",
+    "limitsTitle": "Prices and limits",
+    "limit1": "Color Kit: {kit}, one-time payment, no subscription and no auto-renewal. It includes one full color report, a PDF and poster, {credits} credits and up to 20 item scans a day.",
+    "limit2": "Credit Pack: {addon} for {credits} credits that never expire. 1 credit makes the result photos for one analysis (hair, makeup, glasses, jewelry and more). Credits cannot unlock a color report.",
+    "limit3": "Free: a preview of your color report, a written result from every tool, your first result photo and 3 item scans a day.",
+    "faqTitle": "Pricing questions",
+    "faq1Q": "How much does Belle AI cost?",
+    "faq1A": "Trying it is free. The Color Kit is {kit} once, and the Credit Pack is {addon} for {credits} credits.",
+    "faq2Q": "Is there a subscription?",
+    "faq2A": "No. Both purchases are one-time payments with no auto-renewal, and credits never expire.",
+    "faq3Q": "What do I get for free?",
+    "faq3A": "A preview of your color report with your season and palette, a written result from every other tool, your first result photo and 3 item scans a day. No signup is needed to try it.",
+    "faq4Q": "What is the difference between the Color Kit and credits?",
+    "faq4A": "The Color Kit unlocks one full color report and includes {credits} credits. Credits only pay for result photos in other analyses and cannot unlock a color report.",
+    "faq5Q": "What if my result looks wrong?",
+    "faq5A": "AI results depend on lighting, camera and makeup. Use natural daylight with no makeup, and use your one free re-test with a new photo within {days} days of unlocking. It uses no credits."
   }
 }

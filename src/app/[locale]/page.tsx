@@ -1,4 +1,4 @@
-import { hasLocale, useTranslations } from "next-intl";
+import { hasLocale, useLocale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
@@ -13,6 +13,7 @@ import { VideoCard } from "@/components/VideoEmbed";
 import { getPublishedVideos } from "@/lib/videos";
 import { FunnelLink } from "@/components/FunnelLink";
 import { sampleHref } from "@/lib/blogTools";
+import { QuickAnswerSection } from "@/components/QuickAnswer";
 
 export async function generateMetadata({
   params,
@@ -46,6 +47,7 @@ export default async function HomePage({
 }
 
 function HomeContent() {
+  const locale = useLocale();
   const t = useTranslations("home");
   const ft = useTranslations("features");
   const cg = useTranslations("colorGuide");
@@ -201,6 +203,9 @@ function HomeContent() {
           />
         </div>
       </section>
+
+      {/* 一句话答案 + 关键事实（费用、限制、怎么做的、照片去向）：给 AI 搜索和只看首屏的访客直接摘取，不放进首屏英雄区里挤按钮 */}
+      <QuickAnswerSection locale={locale} lead={t("answerLead")} variant="home" />
 
       {/* 成品长什么样：真实报告里的四页（和 personal-color-analysis 页是同一批截图），让人在首屏之后马上看到「这就是我会拿到的」 */}
       <section className="py-12">

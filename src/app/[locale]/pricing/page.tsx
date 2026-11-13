@@ -7,14 +7,18 @@ import {
   OG_IMAGES,
   TWITTER_IMAGES,
 } from "@/lib/seo";
-import { ADDON_CREDITS, CREDIT_PACKS } from "@/lib/constants";
+import { ADDON_CREDITS, CREDIT_PACKS, KIT_CREDITS, KIT_RETEST_DAYS } from "@/lib/constants";
+import { fillTemplate } from "@/lib/fill-template";
+import { resolvePrice } from "@/lib/currency";
 import { KIT_PERKS, KIT_PERK_VALUES } from "@/lib/kit";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { PricingButtons, PricingViewTracker } from "./PricingButtons";
 import { ExtraMessages } from "@/components/ExtraMessages";
 import { InAppBrowserNotice } from "@/components/InAppBrowserNotice";
 import { RestorePurchaseHint } from "@/components/RestorePurchaseHint";
 import { LocalPrice, PricedText } from "@/components/LocalPrice";
+import { PricedFill } from "@/components/PricedFill";
 import { PaymentTrust } from "@/components/PaymentTrust";
 
 export async function generateMetadata({
@@ -85,6 +89,30 @@ export default async function PricingPage({
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [{ name: "Pricing", path: "/pricing" }]);
 
+  // 「适合谁 / 不适合谁 / 价格与限制」和价格问答。文案放在只在服务端用的 pricingGuide 命名空间里，
+  // 价格、天数、积分数一律取自 constants / currency，不在文案里写死。
+  // 页面上的价格交给 PricedFill 按访客币种渲染；JSON-LD 和静态 HTML 里是 USD（搜索引擎看到的也是它）。
+  const tg = await getTranslations({ locale, namespace: "pricingGuide" });
+  // 这几条说的是色彩套装里的积分，其余说的是积分包里的积分（现在都是 10，但是两个独立的常量）
+  const KIT_CREDIT_KEYS = new Set(["bad3", "limit1", "faq4A"]);
+  const guideValues = (key: string) => ({ days: KIT_RETEST_DAYS, credits: KIT_CREDIT_KEYS.has(key) ? KIT_CREDITS : ADDON_CREDITS });
+  const usdPrices = { kit: resolvePrice("USD", "kit"), addon: resolvePrice("USD", "addon") };
+  const guideRaw = (key: string) => tg.raw(key) as string;
+  const guidePlain = (key: string) => fillTemplate(guideRaw(key), { ...guideValues(key), ...usdPrices });
+  const guidePriced = (key: string) => (
+    <PricedFill template={guideRaw(key)} prices={{ kit: "kit", addon: "addon" }} values={guideValues(key)} />
+  );
+  const guideFaqs = [1, 2, 3, 4, 5].map((n) => ({ q: tg(`faq${n}Q`), aKey: `faq${n}A` }));
+  const guideFaqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: guideFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: guidePlain(f.aKey) },
+    })),
+  };
+
   const validUntil = new Date(new Date().getFullYear() + 1, 0, 1).toISOString().split("T")[0];
   const productJsonLd = {
     "@context": "https://schema.org",
@@ -127,6 +155,7 @@ export default async function PricingPage({
     <ExtraMessages messages={{ kit: kitMessages }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(guideFaqJsonLd).replace(/</g, "\\u003c") }} />
       <section className="py-10 sm:py-20">
         <div className="mx-auto max-w-5xl px-4">
           <div className="text-center">
@@ -235,6 +264,25 @@ export default async function PricingPage({
             </ol>
           </div>
 
+          {/* 适合谁 / 不适合谁 / 价格与限制，以及价格问答：连续的文字，访客和 AI 搜索都能直接摘取；不吹，也写明不适合的情况 */}
+          <div id="pricing-guide" className="mt-12 scroll-mt-24">
+            <h2 className="text-center font-serif text-2xl font-bold">{tg("fitTitle")}</h2>
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              <GuideCard title={tg("goodTitle")} className="border-primary/30 bg-primary/5" items={["good1", "good2", "good3"].map(guidePriced)} />
+              <GuideCard title={tg("badTitle")} items={["bad1", "bad2", "bad3"].map(guidePriced)} />
+              <GuideCard title={tg("limitsTitle")} items={["limit1", "limit2", "limit3"].map(guidePriced)} />
+            </div>
+            <h2 className="mt-10 text-center font-serif text-2xl font-bold">{tg("faqTitle")}</h2>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              {guideFaqs.map((faq) => (
+                <div key={faq.aKey} className="rounded-2xl border border-border bg-card p-5">
+                  <h3 className="text-base font-semibold">{faq.q}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{guidePriced(faq.aKey)}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* 支付信任信息：离购买按钮最近的地方说清「怎么付、安不安全」 */}
           <PaymentTrust className="mt-8" />
 
@@ -260,6 +308,19 @@ export default async function PricingPage({
       </section>
       <PricingViewTracker />
     </ExtraMessages>
+  );
+}
+
+function GuideCard({ title, items, className = "" }: { title: string; items: ReactNode[]; className?: string }) {
+  return (
+    <div className={`rounded-2xl border border-border bg-card p-5 ${className}`}>
+      <h3 className="text-base font-bold">{title}</h3>
+      <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed marker:text-primary">
+        {items.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

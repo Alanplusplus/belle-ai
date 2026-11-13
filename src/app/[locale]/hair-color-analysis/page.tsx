@@ -4,6 +4,7 @@ import { FeatureHero } from "@/components/FeatureHero";
 import { FunnelLink } from "@/components/FunnelLink";
 import { sampleHref } from "@/lib/blogTools";
 import { FeatureIncludes } from "@/components/FeatureIncludes";
+import { QuickAnswerSection } from "@/components/QuickAnswer";
 import {
   buildAlternates,
   buildBreadcrumbJsonLd,
@@ -108,6 +109,9 @@ export default async function HairColorAnalysisPage({
           </>
         }
       />
+
+      {/* 一句话答案 + 关键事实：开头就能被整段摘取（这个页面本来就被 ChatGPT 引用） */}
+      <QuickAnswerSection locale={locale} lead={t("answerLead")} variant="tool" />
 
       <FeatureIncludes locale={locale} tool="hair" kitLink />
 

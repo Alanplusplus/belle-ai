@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/lib/blog";
-import { CREDIT_PACKS, SITE_URL } from "@/lib/constants";
+import { ADDON_CREDITS, CREDIT_PACKS, KIT_RETEST_DAYS, SITE_URL } from "@/lib/constants";
 import { SEASON_PALETTES, SEASON_SLUGS } from "@/lib/color-palette-data";
 import { VS_SLUGS } from "@/lib/vs";
 import { routing } from "@/i18n/routing";
@@ -47,7 +47,7 @@ export function GET() {
   lines.push(`- [Press kit](${SITE_URL}/press): boilerplate, key facts, logos and contact`);
   lines.push(`- [How accurate is AI color analysis?](${SITE_URL}/ai-color-analysis-accuracy): how Belle AI works, why we publish no accuracy percentage, what changes the result and when to see a human analyst`);
   lines.push(
-    `- [Pricing](${SITE_URL}/pricing): the AI preview and the small tools are free; the full report, PDF/poster export, try-on board and a free 14-day re-test come in one Color Kit for a one-time $${CREDIT_PACKS.kit.price} (no subscription, no auto-renewal)`,
+    `- [Pricing](${SITE_URL}/pricing): the AI preview and the small tools are free; the full report, PDF/poster export, try-on board and a free ${KIT_RETEST_DAYS}-day re-test come in one Color Kit for a one-time $${CREDIT_PACKS.kit.price} (no subscription, no auto-renewal). A $${CREDIT_PACKS.addon.price} credit pack (${ADDON_CREDITS} credits) pays for result photos of the other analyses and cannot unlock a color report. The page also says who the Kit is and is not for, lists the limits and answers common pricing questions`,
   );
   lines.push("");
 

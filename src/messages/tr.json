@@ -211,7 +211,8 @@
     "aiDeepIntro": "Yapay zeka renk analizi, selfie'nizden dört renk sinyalini okur ve 12 mevsim sistemiyle eşleştirir. Profesyonel bir renk analizinde kullanılan çerçeve de aynıdır. Konuya yeniyseniz önce <guide>renk analizi rehberimizi</guide> okuyun.",
     "aiSeasonsTitle": "12 renk mevsiminin tümüne göz atın",
     "aiSeasonsDesc": "Mevsiminizi zaten biliyorsanız, her biri için tam renk paletini, makyaj ve stil rehberini açın.",
-    "aiDeepOutro": "Fotoğraf yüklemek istemiyor musunuz? <quiz>Ücretsiz renk analizi testini</quiz> çözün. Önce ayrıntıları mı öğrenmek istersiniz? <personal>Kişisel renk analizinin</personal> nasıl çalıştığını veya <free>ücretsiz online renk analizi</free> rehberimizi okuyun."
+    "aiDeepOutro": "Fotoğraf yüklemek istemiyor musunuz? <quiz>Ücretsiz renk analizi testini</quiz> çözün. Önce ayrıntıları mı öğrenmek istersiniz? <personal>Kişisel renk analizinin</personal> nasıl çalıştığını veya <free>ücretsiz online renk analizi</free> rehberimizi okuyun.",
+    "answerLead": "Belle AI, yapay zekâ destekli bir kişisel renk analizi aracıdır. Tek bir selfie'den cilt alt tonunuzu ve 12 renk mevsiminden hangisi olduğunuzu tahmin eder, yaklaşık 60 saniyede makyaj, saç, takı ve gözlük önerileriyle kişisel bir palet sunar."
   },
   "features": {
     "learnMore": "Daha Fazla Bilgi",
@@ -1001,7 +1002,8 @@
     "faq4A": "Raporunuzda kaçınılması gereken renklere özel bir bölüm vardır — alt tonunuzla çelişen veya yakışmayan kontrast yaratan tonlar. Sıcak cilde kül sarısı seçmek veya soğuk alt tona sarımsı tonlar yakıştırmak gibi yaygın hatalardan kaçınmanıza yardımcı olur.",
     "faq5Q": "Saç rengi analizi ücretsiz mi?",
     "faq5A": "Evet. Yazılı analiz ücretsizdir. Sonuç fotoğraflarını kendi yüzünüzde görmek tüm set için 1 kredidir ve ilk fotoğrafınız ücretsizdir. Kredileri Kredi Paketi ile veya Renk Seti ile alabilirsiniz; ayrıntılar için Fiyatlandırma sayfasına bakın.",
-    "seoIntro": "Doğru saç rengini bulmak verebileceğiniz en etkili güzellik kararlarından biridir — ve yanlış yapıldığında düzeltmesi de en pahalı olanlardan. Kuaförde renk düzeltmesi $200–500+ tutabilir. Yapay zeka saç rengi analizi, cilt alt tonunuzu, doğal kontrast seviyenizi ve göz renginizi değerlendirerek hangi saç tonlarının renklendirmenizle uyum sağlayacağını ve hangilerinin çelişeceğini tahmin eder; tahmin yürütmeyi ortadan kaldırır. Yakışkan sıcak karamel ile yakışmayan kül sarısı arasındaki fark çoğu zaman eğitimsiz gözle görünmeyen ama fotoğraflarda belirgin olan alt ton uyumuna dayanır. Yapay zekâmız birden fazla saç rengini gerçek yüzünüzde önizler; kuaförde karar vermeden önce sonucu görebilirsiniz."
+    "seoIntro": "Doğru saç rengini bulmak verebileceğiniz en etkili güzellik kararlarından biridir — ve yanlış yapıldığında düzeltmesi de en pahalı olanlardan. Kuaförde renk düzeltmesi $200–500+ tutabilir. Yapay zeka saç rengi analizi, cilt alt tonunuzu, doğal kontrast seviyenizi ve göz renginizi değerlendirerek hangi saç tonlarının renklendirmenizle uyum sağlayacağını ve hangilerinin çelişeceğini tahmin eder; tahmin yürütmeyi ortadan kaldırır. Yakışkan sıcak karamel ile yakışmayan kül sarısı arasındaki fark çoğu zaman eğitimsiz gözle görünmeyen ama fotoğraflarda belirgin olan alt ton uyumuna dayanır. Yapay zekâmız birden fazla saç rengini gerçek yüzünüzde önizler; kuaförde karar vermeden önce sonucu görebilirsiniz.",
+    "answerLead": "Belle AI'ın saç rengi analizi, tek bir selfie'den cilt alt tonunuzu, derinliğinizi ve kontrastınızı okur ve her biri için kısa bir nedenle dört saç rengi gösterir; bunların biri atlamanız gereken renktir."
   },
   "outfitPage": {
     "title": "Yapay Zeka Kıyafet Rengi Önizleme",
@@ -1040,7 +1042,8 @@
     "faq3Q": "Güneş gözlüğü önerisi de alabilir miyim?",
     "faq3A": "Ayrı bir bölüm olarak değil. Sonucunuzda her biri şekil ve renkle adlandırılmış altı çerçeve yer alır; dördü size yakışır, ikisinden kaçınmalısınız. Güneş gözlüğü seçerken aynı şekilleri ve renkleri kullanın.",
     "faq4Q": "Gözlük analizi ücretsiz mi?",
-    "faq4A": "Evet. Yazılı analiz ücretsizdir. Sonuç fotoğraflarını kendi yüzünüzde görmek tüm set için 1 kredidir ve ilk fotoğrafınız ücretsizdir. Kredileri Kredi Paketi ile veya Renk Seti ile alabilirsiniz; ayrıntılar için Fiyatlandırma sayfasına bakın."
+    "faq4A": "Evet. Yazılı analiz ücretsizdir. Sonuç fotoğraflarını kendi yüzünüzde görmek tüm set için 1 kredidir ve ilk fotoğrafınız ücretsizdir. Kredileri Kredi Paketi ile veya Renk Seti ile alabilirsiniz; ayrıntılar için Fiyatlandırma sayfasına bakın.",
+    "answerLead": "Belle AI'ın gözlük önerisi, tek bir selfie'den yüz şeklinizi ve oranlarınızı okur ve şekil ile renkle adlandırılmış altı çerçeve sunar: dördü size yakışır, ikisinden kaçınmalısınız."
   },
   "occasionPage": {
     "title": "Yapay Zeka Etkinlik Makyajı Oluşturucu",
@@ -4782,5 +4785,43 @@
     "t4t": "Sınırlarını dürüstçe söyler",
     "t4d": "Bu bir yapay zekânın görsel yargısıdır. Bir sonuçtan şüphe ederseniz farklı bir fotoğrafla bir kez yeniden test edin; raporu açtıktan sonra {days} gün içinde ücretsizdir.",
     "seasonsSub": "Her tipin kendi paleti, makyajı ve takısı vardır. Tam palet rehberini açmak için bir karta dokunun."
+  },
+  "quickFacts": {
+    "title": "Kısaca",
+    "costLabel": "Maliyet",
+    "costTool": "Yazılı sonuç ücretsizdir. Sizin üzerinizdeki sonuç görselleri analiz başına 1 kredi tutar, ilk görsel ücretsizdir. Krediler {credits} adetlik {addon} paketle ya da {kit} değerindeki Renk Seti ile gelir. Ödemeler tek seferliktir, abonelik yoktur.",
+    "costHome": "Ücretsiz ve kayıtsız denenir: mevsiminizi ve paletinizi ücretsiz görürsünüz. Tam rapor, PDF ve poster {kit} değerindeki Renk Seti ile gelir (tek seferlik ödeme, abonelik yok, {days} gün içinde bir ücretsiz yeniden test). Diğer analizlerin sonuç görselleri kredi harcar: {credits} kredi {addon}.",
+    "limitsLabel": "Sınırlar",
+    "limits": "Bir yapay zekânın görsel yargısıdır, ölçüm değildir. Işık, kamera ve makyaj sonucu değiştirir; yüz yüze danışmanlıktan farklı çıkabilir.",
+    "methodLabel": "Nasıl çalışır",
+    "method": "Analizi Google Gemini yapar, sonuç görsellerini OpenAI GPT Image üretir; ikisi de Belle AI'ın kendi istemleriyle çalışır. Özel eğitilmiş bir model yoktur.",
+    "photoLabel": "Fotoğrafınız",
+    "photo": "Yalnızca raporunuzu oluşturmak için kullanılır (yukarıdaki yapay zekâ sağlayıcıları işler) ve özel geçmişinizde saklanır. İstediğiniz zaman silinmesini isteyebilirsiniz."
+  },
+  "pricingGuide": {
+    "fitTitle": "Renk Seti size uygun mu?",
+    "goodTitle": "Şunları istiyorsanız uygundur",
+    "good1": "Tam renk raporunuzu tek yerde görmek: tüm bölümler ile mevsiminize göre makyaj, saç ve takı önerileri.",
+    "good2": "Saklayabileceğiniz bir PDF raporu ve paylaşım posteri, ayrıca en iyi renklerinizle sizin sonuç görselleriniz.",
+    "good3": "İkinci bir deneme: ilk sonuç tutmadıysa, kilidi açtıktan sonra {days} gün içinde yeni bir fotoğrafla bir kez ücretsiz yeniden test.",
+    "badTitle": "Şu durumlarda size uygun olmayabilir",
+    "bad1": "Yalnızca mevsiminizi ve ana paletinizi öğrenmek istiyorsanız. Ücretsiz önizleme ikisini de zaten gösterir.",
+    "bad2": "Bir insan uzmanın kararını istiyorsanız. Belle AI bir yapay zekânın görsel yargısını verir; kararsız sonuçları profesyonel bir draping ile doğrulayın.",
+    "bad3": "Çok sayıda kişiyi ya da fotoğrafı toplu işlemek istiyorsanız. Sette {credits} kredi var ve toplu işlem modu yok.",
+    "limitsTitle": "Fiyatlar ve sınırlar",
+    "limit1": "Renk Seti: {kit}, tek seferlik ödeme, abonelik ve otomatik yenileme yok. Bir tam renk raporu, PDF ve poster, {credits} kredi ve günde en fazla 20 ürün taraması içerir.",
+    "limit2": "Kredi Paketi: {credits} kredi için {addon}, süresi dolmaz. 1 kredi bir analizin sonuç görsellerini oluşturur (saç, makyaj, gözlük, takı ve daha fazlası). Krediler bir renk raporunun kilidini açamaz.",
+    "limit3": "Ücretsiz: renk raporunuzun önizlemesi, her araç için yazılı sonuç, ilk sonuç görseliniz ve günde 3 ürün taraması.",
+    "faqTitle": "Fiyat soruları",
+    "faq1Q": "Belle AI ne kadar?",
+    "faq1A": "Denemek ücretsizdir. Renk Seti tek seferlik {kit}, Kredi Paketi {credits} kredi için {addon}.",
+    "faq2Q": "Abonelik var mı?",
+    "faq2A": "Hayır. İki satın alma da otomatik yenilemesiz tek seferlik ödemedir ve kredilerin süresi dolmaz.",
+    "faq3Q": "Ücretsiz olarak ne alırım?",
+    "faq3A": "Mevsiminizi ve paletinizi gösteren renk raporu önizlemesi, diğer her araç için yazılı sonuç, ilk sonuç görseliniz ve günde 3 ürün taraması. Denemek için kayıt gerekmez.",
+    "faq4Q": "Renk Seti ile krediler arasındaki fark nedir?",
+    "faq4A": "Renk Seti bir tam renk raporunun kilidini açar ve {credits} kredi içerir. Krediler yalnızca diğer analizlerin sonuç görselleri için kullanılır ve bir renk raporunun kilidini açamaz.",
+    "faq5Q": "Sonuç yanlış görünüyorsa ne olur?",
+    "faq5A": "Yapay zekâ sonuçları ışığa, kameraya ve makyaja bağlıdır. Doğal gün ışığında makyajsız çekim yapın ve kilidi açtıktan sonra {days} gün içinde yeni bir fotoğrafla bir kez ücretsiz yeniden testinizi kullanın. Kredi harcamaz."
   }
 }

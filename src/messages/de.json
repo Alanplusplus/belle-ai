@@ -211,7 +211,8 @@
     "aiDeepIntro": "Eine KI-Farbanalyse liest vier Farbsignale aus deinem Selfie und ordnet sie dem 12-Season-System zu – demselben Rahmen, den auch Profis bei einer Farbberatung nutzen. Neu im Thema? Starte mit unserem <guide>kompletten Farbanalyse-Leitfaden</guide>.",
     "aiSeasonsTitle": "Alle 12 Farbtypen entdecken",
     "aiSeasonsDesc": "Du kennst deinen Farbtyp schon? Öffne die vollständige Palette samt Make-up- und Styling-Guide.",
-    "aiDeepOutro": "Kein Foto hochladen? Mach das <quiz>kostenlose Farbanalyse-Quiz</quiz>. Erst die Details? Lies, wie die <personal>persönliche Farbanalyse</personal> funktioniert, oder unseren Ratgeber zur <free>kostenlosen KI-Farbanalyse online</free>."
+    "aiDeepOutro": "Kein Foto hochladen? Mach das <quiz>kostenlose Farbanalyse-Quiz</quiz>. Erst die Details? Lies, wie die <personal>persönliche Farbanalyse</personal> funktioniert, oder unseren Ratgeber zur <free>kostenlosen KI-Farbanalyse online</free>.",
+    "answerLead": "Belle AI ist ein KI-Tool für die persönliche Farbanalyse. Aus einem Selfie schätzt es deinen Hautunterton und welcher der 12 Farbtypen du bist, und liefert dir in etwa 60 Sekunden eine persönliche Palette mit Empfehlungen für Make-up, Haare, Schmuck und Brillen."
   },
   "features": {
     "learnMore": "Mehr erfahren",
@@ -1001,7 +1002,8 @@
     "faq4A": "Dein Bericht enthält einen eigenen Abschnitt zu Farben, die du vermeiden solltest — Nuancen, die mit deinem Unterton kollidieren oder unvorteilhaften Kontrast erzeugen. So vermeidest du typische Fehler wie aschblond auf warmer Haut oder einen gelbstichigen Ton bei kühlem Unterton.",
     "faq5Q": "Ist die Haarfarbanalyse kostenlos?",
     "faq5A": "Ja. Die schriftliche Analyse ist kostenlos. Die Ergebnisfotos auf deinem eigenen Gesicht kosten 1 Credit für das ganze Set, und dein allererstes Foto ist gratis. Credits bekommst du im Credit-Paket oder mit dem Farb-Set; Details findest du unter Preise.",
-    "seoIntro": "Die richtige Haarfarbe zu finden ist eine der wirkungsvollsten Beauty-Entscheidungen — und eine der teuersten, wenn sie schiefgeht. Eine Farbkorrektur im Salon kann 200–500 $+ kosten. Die KI-Haarfarbanalyse nimmt dir das Rätselraten ab: Sie bewertet Hautunterton, natürliche Kontraststufe und Augenfarbe und sagt voraus, welche Haarnuancen mit deiner Färbung harmonieren und welche kollidieren. Der Unterschied zwischen schmeichelhaftem warmem Karamell und unvorteilhaftem Aschblond liegt oft in der Unterton-Passung — für untrainierte Augen unsichtbar, auf Fotos sofort erkennbar. Unsere KI zeigt dir mehrere Haarfarben direkt auf deinem Gesicht in der Vorschau, bevor du dich im Salon festlegst."
+    "seoIntro": "Die richtige Haarfarbe zu finden ist eine der wirkungsvollsten Beauty-Entscheidungen — und eine der teuersten, wenn sie schiefgeht. Eine Farbkorrektur im Salon kann 200–500 $+ kosten. Die KI-Haarfarbanalyse nimmt dir das Rätselraten ab: Sie bewertet Hautunterton, natürliche Kontraststufe und Augenfarbe und sagt voraus, welche Haarnuancen mit deiner Färbung harmonieren und welche kollidieren. Der Unterschied zwischen schmeichelhaftem warmem Karamell und unvorteilhaftem Aschblond liegt oft in der Unterton-Passung — für untrainierte Augen unsichtbar, auf Fotos sofort erkennbar. Unsere KI zeigt dir mehrere Haarfarben direkt auf deinem Gesicht in der Vorschau, bevor du dich im Salon festlegst.",
+    "answerLead": "Die Haarfarbenanalyse von Belle AI liest aus einem Selfie deinen Hautunterton, deine Tiefe und deinen Kontrast und zeigt vier Haarfarben mit kurzer Begründung, darunter eine zum Auslassen."
   },
   "outfitPage": {
     "title": "KI-Outfit-Farbvorschau",
@@ -1040,7 +1042,8 @@
     "faq3Q": "Gibt es auch Sonnenbrillen-Empfehlungen?",
     "faq3A": "Nicht als eigener Abschnitt. Dein Ergebnis umfasst sechs Fassungen, jeweils mit Form und Farbe benannt, vier davon passen zu dir und zwei solltest du meiden. Nimm für Sonnenbrillen dieselben Formen und Farben.",
     "faq4Q": "Ist die Brillenanalyse kostenlos?",
-    "faq4A": "Ja. Die schriftliche Analyse ist kostenlos. Die Ergebnisfotos auf deinem eigenen Gesicht kosten 1 Credit für das ganze Set, und dein allererstes Foto ist gratis. Credits bekommst du im Credit-Paket oder mit dem Farb-Set; Details findest du unter Preise."
+    "faq4A": "Ja. Die schriftliche Analyse ist kostenlos. Die Ergebnisfotos auf deinem eigenen Gesicht kosten 1 Credit für das ganze Set, und dein allererstes Foto ist gratis. Credits bekommst du im Credit-Paket oder mit dem Farb-Set; Details findest du unter Preise.",
+    "answerLead": "Die Brillenempfehlung von Belle AI liest aus einem Selfie deine Gesichtsform und Proportionen und nennt sechs Fassungen nach Form und Farbe: vier passen zu dir, zwei solltest du meiden."
   },
   "occasionPage": {
     "title": "KI-Anlass-Make-up-Generator",
@@ -4782,5 +4785,43 @@
     "t4t": "Ehrlich bei den Grenzen",
     "t4d": "Es ist das visuelle Urteil einer KI. Wenn du an einem Ergebnis zweifelst, teste einmal mit einem anderen Foto neu – nach dem Freischalten des Berichts {days} Tage lang kostenlos.",
     "seasonsSub": "Jeder Typ hat seine eigene Palette, sein eigenes Make-up und seinen eigenen Schmuck. Tippe auf eine Karte, um den vollständigen Paletten-Guide zu öffnen."
+  },
+  "quickFacts": {
+    "title": "Auf einen Blick",
+    "costLabel": "Kosten",
+    "costTool": "Das schriftliche Ergebnis ist gratis. Die Ergebnisbilder von dir kosten 1 Credit pro Analyse, dein erstes Bild ist gratis. Credits gibt es im Paket mit {credits} für {addon} oder mit dem Farb-Set für {kit}. Einmalzahlungen, kein Abo.",
+    "costHome": "Kostenlos testen, ohne Anmeldung: Deinen Typ und deine Palette siehst du gratis. Der vollständige Bericht, das PDF und das Poster gehören zum Farb-Set für {kit} (Einmalzahlung, kein Abo, ein kostenloser Neutest innerhalb von {days} Tagen). Ergebnisbilder anderer Analysen kosten Credits: {credits} für {addon}.",
+    "limitsLabel": "Grenzen",
+    "limits": "Das Urteil einer KI nach Augenschein, keine Messung. Licht, Kamera und Make-up verändern das Ergebnis, und es kann von einer Beratung vor Ort abweichen.",
+    "methodLabel": "So funktioniert es",
+    "method": "Google Gemini übernimmt die Analyse, OpenAI GPT Image erstellt die Ergebnisbilder, beide mit den eigenen Prompts von Belle AI. Ein eigens trainiertes Modell gibt es nicht.",
+    "photoLabel": "Dein Foto",
+    "photo": "Wird nur für deinen Bericht verwendet (die oben genannten KI-Anbieter verarbeiten es) und in deinem privaten Verlauf gespeichert. Du kannst jederzeit die Löschung verlangen."
+  },
+  "pricingGuide": {
+    "fitTitle": "Ist das Farb-Set das Richtige für dich?",
+    "goodTitle": "Passt gut, wenn du willst",
+    "good1": "Deinen vollständigen Farbbericht an einem Ort, mit allen Kapiteln und Empfehlungen für Make-up, Haare und Schmuck passend zu deinem Typ.",
+    "good2": "Einen PDF-Bericht und ein Share-Poster zum Behalten, dazu Ergebnisbilder von dir in deinen besten Farben.",
+    "good3": "Einen zweiten Versuch: einen kostenlosen Neutest mit neuem Foto innerhalb von {days} Tagen nach dem Freischalten, falls das erste Ergebnis nicht passt.",
+    "badTitle": "Eher nichts für dich, wenn",
+    "bad1": "du nur deinen Typ und deine Hauptpalette wissen willst. Die kostenlose Vorschau zeigt beides schon.",
+    "bad2": "du das Urteil einer menschlichen Expertin oder eines Experten willst. Belle AI liefert das Urteil einer KI nach Augenschein; lass Grenzfälle von Profis per Draping bestätigen.",
+    "bad3": "du viele Personen oder viele Fotos durchlaufen lassen willst. Das Set enthält {credits} Credits, und einen Stapelmodus gibt es nicht.",
+    "limitsTitle": "Preise und Grenzen",
+    "limit1": "Farb-Set: {kit}, Einmalzahlung, kein Abo und keine automatische Verlängerung. Enthalten sind ein vollständiger Farbbericht, ein PDF und ein Poster, {credits} Credits und bis zu 20 Artikel-Scans pro Tag.",
+    "limit2": "Credit-Paket: {addon} für {credits} Credits, die nicht verfallen. 1 Credit erstellt die Ergebnisbilder einer Analyse (Haare, Make-up, Brille, Schmuck und mehr). Credits schalten keinen Farbbericht frei.",
+    "limit3": "Gratis: eine Vorschau deines Farbberichts, ein schriftliches Ergebnis für jedes Tool, dein erstes Ergebnisbild und 3 Artikel-Scans pro Tag.",
+    "faqTitle": "Fragen zu den Preisen",
+    "faq1Q": "Was kostet Belle AI?",
+    "faq1A": "Ausprobieren ist gratis. Das Farb-Set kostet einmalig {kit}, das Credit-Paket {addon} für {credits} Credits.",
+    "faq2Q": "Gibt es ein Abo?",
+    "faq2A": "Nein. Beide Käufe sind Einmalzahlungen ohne automatische Verlängerung, und Credits verfallen nicht.",
+    "faq3Q": "Was bekomme ich gratis?",
+    "faq3A": "Eine Vorschau deines Farbberichts mit Typ und Palette, ein schriftliches Ergebnis für jedes andere Tool, dein erstes Ergebnisbild und 3 Artikel-Scans pro Tag. Zum Ausprobieren brauchst du keine Anmeldung.",
+    "faq4Q": "Was ist der Unterschied zwischen Farb-Set und Credits?",
+    "faq4A": "Das Farb-Set schaltet einen vollständigen Farbbericht frei und enthält {credits} Credits. Credits bezahlen nur Ergebnisbilder anderer Analysen und schalten keinen Farbbericht frei.",
+    "faq5Q": "Was, wenn mein Ergebnis falsch aussieht?",
+    "faq5A": "KI-Ergebnisse hängen von Licht, Kamera und Make-up ab. Nimm das Foto bei Tageslicht ohne Make-up auf und nutze deinen einen kostenlosen Neutest mit neuem Foto innerhalb von {days} Tagen nach dem Freischalten. Er kostet keine Credits."
   }
 }
