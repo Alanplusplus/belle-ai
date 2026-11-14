@@ -4,12 +4,14 @@ import { useCallback, useEffect, useRef, useState, type ReactNode } from "react"
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ColorReport } from "./ColorReport";
+import { ReportEmailCapture } from "./ReportEmailCapture";
 import { localizeReport } from "@/lib/api";
 import { trackEvent } from "@/lib/analytics";
 import { KIT_PERK_VALUES, formatRetestDate } from "@/lib/kit";
 import { loadReportMessages } from "@/lib/report-messages";
 import { renderReportPoster } from "@/lib/report-poster";
 import { SHARE_BUTTONS_ENABLED } from "@/lib/shareLink";
+import { REPORT_EMAIL_ENABLED, SINGLE_UNLOCK_ENABLED } from "@/lib/constants";
 import { MY_SEASON_KEY, isSeasonSlug, localeOfReportLang, type ColorReportData } from "@/lib/color-report";
 import { personaBase, personaForSeason, type DemoPersonaId } from "@/lib/demo-personas";
 
@@ -28,6 +30,9 @@ export interface ReportPanelProps {
   unlockLabel: string;
   unlockBusy: boolean;
   onUnlock: () => void;
+  /** 单份报告：升级成完整 Lookbook（买套装）的入口和按钮文案；不传 = 没有这个入口 */
+  onUpgrade?: () => void;
+  upgradeLabel?: string;
   /** 保存海报：把海报图片地址交给页面统一的下载流程（手机走系统分享面板 / 长按保存） */
   onSavePoster: (posterUrl: string) => void;
   /** 分享：把海报图片地址和任务 ID 交给页面统一的分享流程 */
@@ -62,6 +67,8 @@ export function ReportPanel({
   unlockLabel,
   unlockBusy,
   onUnlock,
+  onUpgrade,
+  upgradeLabel,
   onSavePoster,
   onShare,
   onTryOn,
@@ -79,6 +86,8 @@ export function ReportPanel({
   const [langBusy, setLangBusy] = useState(false);
   const [posterBusy, setPosterBusy] = useState<"save" | "share" | null>(null);
   const [pdfBusy, setPdfBusy] = useState(false);
+  // 用户自己的免费预览图（Lookbook 里色彩试穿的第 1 张）：锁定报告底部的预览卡用它，没有再退回示例图
+  const [ownTile, setOwnTile] = useState<string | null>(null);
   const posterUrlRef = useRef<string | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -208,23 +217,36 @@ export function ReportPanel({
           <div className="flex gap-3 p-3">
             <div
               role="img"
-              aria-label={tKit("teaserImageAlt")}
+              aria-label={tKit(ownTile ? "teaserOwnAlt" : "teaserImageAlt")}
               className="grid h-28 w-28 shrink-0 grid-cols-2 gap-0.5 overflow-hidden rounded-lg border border-gold/30 bg-gold/20"
             >
-              {[0, 1, 2, 3].map((i) => (
-                <img
-                  key={i}
-                  src={`${personaBase(personaForSeason(data.season))}/tiles/drape_${i}.webp`}
-                  alt=""
-                  loading="lazy"
-                  className="h-full w-full object-cover object-top"
-                />
-              ))}
+              {ownTile ? (
+                <>
+                  {/* 第 1 张是她自己的免费预览，其余 3 张是还没打开的：看见自己穿上之后，才会想看剩下的 */}
+                  <img src={ownTile} alt="" className="h-full w-full object-cover object-top" />
+                  {[1, 2, 3].map((i) => (
+                    <span key={i} className="flex h-full w-full items-center justify-center bg-foreground/10 text-gold-deep" aria-hidden="true">
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+                    </span>
+                  ))}
+                </>
+              ) : (
+                [0, 1, 2, 3].map((i) => (
+                  <img
+                    key={i}
+                    src={`${personaBase(personaForSeason(data.season))}/tiles/drape_${i}.webp`}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-cover object-top"
+                  />
+                ))
+              )}
             </div>
             <div className="min-w-0">
-              <p className="text-sm font-semibold text-foreground">{tKit("teaserTitle")}</p>
+              <p className="text-sm font-semibold text-foreground">{tKit(SINGLE_UNLOCK_ENABLED ? "teaserTitleSingle" : "teaserTitle")}</p>
               <ul className="mt-1.5 space-y-1 text-xs leading-snug text-muted-foreground">
-                {(["teaser1", "teaser2", "teaser3", "teaser4"] as const).map((key) => (
+                {/* 积分和免费重测是套装才有的：有单份入口时，这里只列解锁这份报告就有的内容 */}
+                {(SINGLE_UNLOCK_ENABLED ? (["teaser1", "teaser2", "teaser3"] as const) : (["teaser1", "teaser2", "teaser3", "teaser4"] as const)).map((key) => (
                   <li key={key} className="flex items-start gap-1.5">
                     <svg className="mt-0.5 h-3 w-3 shrink-0 text-primary" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
                     {tKit(key, KIT_PERK_VALUES)}
@@ -348,6 +370,10 @@ export function ReportPanel({
         onUnlock={demo ? undefined : onUnlock}
         unlockLabel={unlockLabel}
         unlockBusy={unlockBusy}
+        onUpgrade={demo ? undefined : onUpgrade}
+        upgradeLabel={upgradeLabel}
+        onLookbookPreview={demo ? undefined : setOwnTile}
+        lockedExtra={!demo && taskId && REPORT_EMAIL_ENABLED ? <ReportEmailCapture taskId={taskId} lang={lang} /> : undefined}
         lookbookTaskId={demo ? null : taskId}
         lookbookDemo={demo}
         lookbookDemoPersona={demoPersona}

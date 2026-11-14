@@ -57,6 +57,28 @@ async function resolveEmailSource(email: string): Promise<"signed_in" | "user_su
 }
 
 /**
+ * 补差价升级包比套装便宜，只能卖给「买过单份报告、没买过套装」的账号：向后端确认。
+ * 查询失败 / 没配 token 一律当作没资格（宁可让用户去买套装，也不能让升级包变成套装的折扣入口）。
+ */
+async function isUpgradeEligible(userId: string): Promise<boolean> {
+  if (!API_TOKEN) return false;
+  try {
+    const res = await fetch(`${API_BASE}/common/v1/web/upgrade-eligible`, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${API_TOKEN}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ user_id: userId }),
+      signal: AbortSignal.timeout(5000),
+    });
+    if (!res.ok) return false;
+    const json = (await res.json()) as { code?: number; data?: { eligible?: boolean } };
+    return json.code === 200 && json.data?.eligible === true;
+  } catch (err) {
+    console.warn("upgrade eligibility check error:", err);
+    return false;
+  }
+}
+
+/**
  * 把「发起了一次结账」记到后端，供弃单提醒邮件使用（后端只对「发起后一段时间仍没付款」的记录发信）。
  * 在响应之后执行，不拖慢用户跳转到支付页；失败只记日志，绝不影响结账。
  */
@@ -138,6 +160,9 @@ export async function POST(req: NextRequest) {
     const productDef = WAFFO_PRODUCTS[product];
     if (!productDef?.id) {
       return NextResponse.json({ error: "Invalid product" }, { status: 400 });
+    }
+    if (product === "upgrade" && !(await isUpgradeEligible(userId))) {
+      return NextResponse.json({ error: "Upgrade not available for this account" }, { status: 409 });
     }
 
     const client = getWaffoClient();

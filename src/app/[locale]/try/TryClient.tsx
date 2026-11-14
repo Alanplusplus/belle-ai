@@ -29,22 +29,23 @@ import {
   SHARE_BUTTONS_ENABLED,
   tagShareLink,
 } from "@/lib/shareLink";
-import { SITE_URL, ADDON_CREDITS, packCreditsFor } from "@/lib/constants";
+import { SITE_URL, ADDON_CREDITS, SINGLE_UNLOCK_ENABLED, UPGRADE_TOPUP_ENABLED, packCreditsFor } from "@/lib/constants";
 import { formatRetestDate, isCreditsOnlyType, isKitHeroType, remainingFor } from "@/lib/kit";
 import { usePrices } from "@/lib/usePrices";
 import { trackEvent, trackCheckoutEvent, trackFeedbackSubmitted, saveReportFeedback } from "@/lib/analytics";
 import { consumeCheckoutContext } from "@/lib/checkout";
-import { prepareImageForUpload, IMAGE_TOO_LARGE } from "@/lib/imageUpload";
+import { prepareImageForUpload, snapshotFile, IMAGE_TOO_LARGE, IMAGE_UNREADABLE } from "@/lib/imageUpload";
 import { isMobileDevice, copyText, nativeShare, openShareWindow } from "@/lib/device";
 import { RESULT_READY_EVENT } from "@/lib/google-signin";
 import { useSignIn } from "@/lib/useSignIn";
 import { useDialogA11y } from "@/lib/useDialogA11y";
 import { PricingModal } from "@/components/PricingModal";
+import { PaywallExitSurvey } from "@/components/PaywallExitSurvey";
 import { InAppBrowserNotice, InAppSignInSheet } from "@/components/InAppBrowserNotice";
 import { ReportPanel } from "@/components/ReportPanel";
 import { HistoryReportCard } from "@/components/ColorReport";
 import { LensPanel } from "@/components/LensPanel";
-import { lensOf, waitForLensText, type LookbookSheetKey } from "@/lib/lookbook";
+import { lensOf, refreshLookbook, waitForLensText, type LookbookSheetKey } from "@/lib/lookbook";
 import { DevUnlockToggle } from "@/components/DevUnlockToggle";
 import { isSeasonSlug, type ColorReportData } from "@/lib/color-report";
 import { useReportMessages } from "@/lib/report-messages";
@@ -273,6 +274,8 @@ interface UserCredits {
   toolsFree: number;
   /** 买过套装 / 积分包：积分用完后展示加购包而不是再卖一次套装 */
   hasPurchased: boolean;
+  /** 只买过单份报告：升级完整 Lookbook 卖补差价升级包（套装 − 单份），而不是套装全价 */
+  upgradeTopup: boolean;
   /** 解锁后 14 天内还能免费重测（色彩分析）几次，0 = 不可用 */
   retestLeft: number;
   /** 免费重测的到期时间（unix 秒）；没有重测资格时为 null */
@@ -287,6 +290,7 @@ function toUserCredits(data: WebInitData): UserCredits {
     totalRemaining: data.total_remaining ?? data.web_quota.remaining,
     toolsFree: data.tools_quota?.remaining ?? 0,
     hasPurchased: data.has_purchased ?? false,
+    upgradeTopup: data.upgrade_topup ?? false,
     retestLeft: data.retest?.available ? (data.retest.left ?? 0) : 0,
     retestExpiresAt: data.retest?.available ? (data.retest.expires_at ?? null) : null,
   };
@@ -329,8 +333,27 @@ function reportStateOf(result: Pick<ReportResult, "report" | "sourceImageUrl">):
 }
 
 /** 轮询抛出的错误码（后端任务失败原因）→ 提示文案的 key */
-function generateErrorKey(message: string): "errorNoFace" | "errorGenerate" {
-  return message === "no_face" ? "errorNoFace" : "errorGenerate";
+function generateErrorKey(message: string): "errorNoFace" | "errorTimeout" | "errorGenerate" {
+  if (message === "no_face") return "errorNoFace";
+  // 客户端等够了还没出结果：任务多半还在服务端跑，告诉用户稍后去记录里看，而不是让人当成彻底失败、重传一遍
+  if (message === "Timed out") return "errorTimeout";
+  return "errorGenerate";
+}
+
+/** 额度用完时自动弹出付费窗口的冷却：用户点一次「开始」被挡下弹一次，关掉之后短时间内不再重复弹（页面上的额度卡片一直有入口） */
+const QUOTA_POPUP_KEY = "belle_quota_popup_at";
+const QUOTA_POPUP_COOLDOWN_MS = 10 * 60 * 1000;
+
+/** 这次可以弹吗：距上次弹出不到冷却时间就不弹；可以弹时顺手记下时间 */
+function claimQuotaPopup(): boolean {
+  try {
+    const last = Number(sessionStorage.getItem(QUOTA_POPUP_KEY) ?? 0);
+    if (last && Date.now() - last < QUOTA_POPUP_COOLDOWN_MS) return false;
+    sessionStorage.setItem(QUOTA_POPUP_KEY, String(Date.now()));
+  } catch {
+    /* sessionStorage 不可用就每次都弹，和以前一样 */
+  }
+  return true;
 }
 
 /** 创建任务时被生成前审核（Prompt Sift）拒绝：422 = 内容不合规，503 = 审核暂不可用；其它返回 null */
@@ -340,10 +363,14 @@ function contentCheckErrorKey(code: number | undefined): "errorContentBlocked" |
   return null;
 }
 
-/** 色彩分析和独立工具的分析都是结构化文字，十几秒就能出：轮询间隔缩短，让结果尽快出现（图片类仍是 10 秒一次） */
+/**
+ * 色彩分析和独立工具的分析都是结构化文字，平均十几秒就能出：轮询间隔缩短，让结果尽快出现（图片类仍是 10 秒一次）。
+ * 总时长上限 = 次数 × 间隔：色彩分析 4 分钟（以前 3 分钟，高峰排队时偶尔不够），独立工具 3 分钟。
+ * 超时不是失败——任务还在服务端跑，页面提示去记录里看（见 errorTimeout），刷新后也会接着等。
+ */
 function pollOptionsFor(type: string): [number, number] {
   if (lensOf(type)) return [60, 3000];
-  return type === "color_analysis" ? [45, 4000] : [60, 10000];
+  return type === "color_analysis" ? [60, 4000] : [60, 10000];
 }
 
 /**
@@ -431,8 +458,8 @@ export function TryClient({
   // 锁定报告上的按钮直接标套装价（解锁报告 + 10 个积分）：用户点开弹窗前就知道多少钱，不会在弹窗里被价格吓退
   const kitPrice = money("kit");
   const [checkoutStatus, setCheckoutStatus] = useState<"idle" | "confirming" | "success" | "delayed">("idle");
-  // 到账后的提示：kit / addon 说明到账了多少积分（停售前下单的单份 / 积分包按 addon 提示）
-  const [checkoutBought, setCheckoutBought] = useState<{ kind: "kit" | "addon"; unlocked: boolean; credits: number }>({
+  // 到账后的提示：kit / addon 说明到账了多少积分（停售前下单的积分包按 addon 提示）；single = 单份报告（没有积分）；upgrade = 单份报告升级成整套
+  const [checkoutBought, setCheckoutBought] = useState<{ kind: "kit" | "addon" | "single" | "upgrade"; unlocked: boolean; credits: number }>({
     kind: "kit",
     unlocked: false,
     credits: 0,
@@ -583,7 +610,7 @@ export function TryClient({
                   reloadHistory();
                 })
                 .catch((err) => {
-                  setErrorMsg(err instanceof Error && err.message === "no_face" ? t("errorNoFace") : err instanceof Error ? err.message : "Resume failed");
+                  setErrorMsg(t(generateErrorKey(err instanceof Error ? err.message : "")));
                   setPhase("error");
                 });
             }
@@ -654,6 +681,22 @@ export function TryClient({
     setPricingOpenTaskId(opts?.openTaskId ?? null);
     setShowPricingModal(true);
   }, []);
+
+  /**
+   * 额度用完时自动弹付费窗口（用户点「开始分析」被挡下）：带冷却，刚弹过就只把页面上的额度卡片滚到视野里，
+   * 不再每点一次弹一次——以前用户关掉窗口再点一下又弹出来，更像是被拦住而不是被邀请。用户自己点卡片上的按钮不受冷却限制。
+   */
+  const openQuotaPricing = useCallback((source: string, intent?: "report" | "credits") => {
+    if (!claimQuotaPopup()) {
+      trackEvent("quota_popup_suppressed", { source });
+      const card = noQuotaRef.current;
+      scrollToElement(card);
+      // 桌面端卡片就在按钮下面不用滚动：轻轻跳一下，告诉用户「点击有响应，入口在这里」
+      card?.animate?.([{ transform: "scale(1)" }, { transform: "scale(1.025)" }, { transform: "scale(1)" }], { duration: 450, easing: "ease-out" });
+      return;
+    }
+    openPricing(source, null, null, { intent });
+  }, [openPricing, scrollToElement]);
 
   /** 生成 / 解锁之后，从服务端同步最新的三类积分 */
   const refreshCredits = useCallback(async () => {
@@ -726,6 +769,39 @@ export function TryClient({
     }
   }, [userCredits, unlockingId, openPricing, applyUnlocked, refreshCredits, showToast, t]);
 
+  /**
+   * 单份报告 → 完整 Lookbook：文字报告已经解锁，只差其余 Lookbook 章节。
+   * - 账号里有报告额度（买过套装）：直接用它升级，Lookbook 随即开始生成
+   * - 没有（只买过单份）：打开付费弹窗卖套装，买完回到页面后自动升级
+   */
+  const handleUpgrade = useCallback(async (taskId: string | null | undefined) => {
+    const hasCredit = (userCredits?.report ?? 0) > 0;
+    trackEvent("lookbook_upgrade_started", { has_report_credit: hasCredit });
+    if (!taskId) return;
+    if (!hasCredit) {
+      openPricing("lookbook_upgrade", null, taskId, { intent: "report" });
+      return;
+    }
+    if (unlockingId) return;
+    setUnlockingId(taskId);
+    try {
+      const res = await unlockReport(taskId);
+      if (res.code === 200 && res.data?.unlocked) {
+        trackEvent("lookbook_upgraded_with_credit");
+        refreshLookbook(); // 报告早就是已解锁，Lookbook 的轮询要主动重开，才看得到整套开始生成
+        refreshCredits();
+      } else if (res.code === 429) {
+        openPricing("lookbook_upgrade", null, taskId, { intent: "report" });
+      } else {
+        showToast(t("unlockFailed"));
+      }
+    } catch {
+      showToast(t("unlockFailed"));
+    } finally {
+      setUnlockingId(null);
+    }
+  }, [userCredits, unlockingId, openPricing, refreshCredits, showToast, t]);
+
   // 从 Waffo 支付页返回（successUrl 带 ?checkout=success）：
   // 积分由 webhook 异步写入，这里轮询状态，看 pack_credits 是否比下单前增加；
   // 到账后刷新额度与历史记录
@@ -751,10 +827,12 @@ export function TryClient({
         try {
           const res = await webInit();
           const data = res.data;
-          // 套装 / 加购包（以及停售前下单的单份 / 积分包）都按积分到账判断
-          const packArrived = (data?.pack_credits ?? 0) > (ctx?.packBefore ?? 0);
+          // 单份报告只发报告额度（没有积分），按报告额度到账判断；套装 / 加购包（以及停售前下单的积分包）按积分到账判断
+          const arrived = ctx?.product === "single"
+            ? (data?.report_credits ?? 0) > (ctx?.reportBefore ?? 0)
+            : (data?.pack_credits ?? 0) > (ctx?.packBefore ?? 0);
           const addedCredits = packCreditsFor(ctx?.product);
-          if (res.code === 200 && data && packArrived) {
+          if (res.code === 200 && data && arrived) {
             setQuota(data.web_quota);
             setUserCredits(toUserCredits(data));
             reloadHistory();
@@ -797,11 +875,14 @@ export function TryClient({
               }
             }
 
-            if (ctx?.product !== "kit" && addedCredits != null) {
+            if (ctx?.product === "single") {
+              setCheckoutBought({ kind: "single", unlocked: unlockedAfterPurchase, credits: 0 });
+            } else if (ctx?.product !== "kit" && ctx?.product !== "upgrade" && addedCredits != null) {
               setCheckoutBought({ kind: "addon", unlocked: unlockedAfterPurchase, credits: addedCredits });
             } else {
-              // 没读到下单信息（换了浏览器 / 标签页）时，积分到账了就按套装提示
-              setCheckoutBought({ kind: "kit", unlocked: unlockedAfterPurchase, credits: creditsNow });
+              // 没读到下单信息（换了浏览器 / 标签页）时，积分到账了就按套装提示；从「升级完整 Lookbook」进来的，提示整套已经开始生成
+              const upgraded = unlockedAfterPurchase && !!ctx?.source?.includes("lookbook_upgrade");
+              setCheckoutBought({ kind: upgraded ? "upgrade" : "kit", unlocked: unlockedAfterPurchase, credits: creditsNow });
             }
             setCheckoutStatus("success");
             window.setTimeout(() => setCheckoutStatus("idle"), 6000);
@@ -866,7 +947,7 @@ export function TryClient({
       reloadHistory();
       refreshCredits();
     } catch (err) {
-      setErrorMsg(err instanceof Error ? err.message : "Correction failed");
+      setErrorMsg(t(generateErrorKey(err instanceof Error ? err.message : "")));
       setPhase("error");
     }
   }, [reportLang, resolution, reloadHistory, refreshCredits, scrollToResult, t]);
@@ -1129,7 +1210,7 @@ export function TryClient({
   }, [analysisType, exitDemo]);
 
   const handleFileSelect = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
+    async (e: React.ChangeEvent<HTMLInputElement>) => {
       const file = e.target.files?.[0];
       if (!file) return;
       // 换成自己的照片：退出演示模式，之后走真实的生成流程
@@ -1152,12 +1233,27 @@ export function TryClient({
         return;
       }
       trackEvent("photo_selected", { size_kb: Math.round(file.size / 1024), type: file.type, source: fromCamera ? "camera" : "library" });
-      selectedFileRef.current = file;
       // 清空 input：之后再选同一张照片也会触发 change；File 对象本身不受影响
       e.target.value = "";
+      // 选中的当下就把照片读进内存，之后预览 / 压缩 / 上传都用这份副本：File 只是磁盘文件的引用，
+      // 等用户点「开始」时可能已经失效（「file could not be read」是上传失败的头号原因），那时才报错用户已经等过一轮
+      let stable: File;
+      try {
+        stable = await snapshotFile(file);
+      } catch {
+        trackEvent("photo_rejected", { reason: "unreadable", source: fromCamera ? "camera" : "library", type: file.type });
+        setPreviewUrl(null);
+        setSourceImageUrl(null);
+        clearSelectedFile();
+        setErrorMsg(t("errorUploadUnreadable"));
+        autoScrollRef.current = true;
+        setPhase("error");
+        return;
+      }
+      selectedFileRef.current = stable;
       // 选了新照片就必须丢掉上一张已上传的地址，否则「再来一张」会继续用上一次上传的照片生成
       setSourceImageUrl(null);
-      const url = URL.createObjectURL(file);
+      const url = URL.createObjectURL(stable);
       setPreviewUrl(url);
       setPhase("idle");
       setResultUrls([]);
@@ -1174,15 +1270,24 @@ export function TryClient({
 
   /** 试穿的单品照片：换了照片就丢掉上一张已上传的地址 */
   const handleItemSelect = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      const file = e.target.files?.[0];
+    async (e: React.ChangeEvent<HTMLInputElement>) => {
+      const picked = e.target.files?.[0];
       e.target.value = "";
-      if (!file) return;
-      if (file.size > MAX_PHOTO_BYTES) {
+      if (!picked) return;
+      if (picked.size > MAX_PHOTO_BYTES) {
         showToast(t("fileTooLarge"));
         return;
       }
-      trackEvent("tryon_item_selected", { size_kb: Math.round(file.size / 1024), type: file.type });
+      trackEvent("tryon_item_selected", { size_kb: Math.round(picked.size / 1024), type: picked.type });
+      // 同自拍：选中当下读进内存，避免点「开始」时文件引用已经失效
+      let file: File;
+      try {
+        file = await snapshotFile(picked);
+      } catch {
+        trackEvent("photo_rejected", { reason: "unreadable", source: "tryon_item", type: picked.type });
+        showToast(t("errorUploadUnreadable"));
+        return;
+      }
       itemFileRef.current = file;
       itemUrlRef.current = null;
       setItemPreviewUrl((prev) => {
@@ -1258,8 +1363,8 @@ export function TryClient({
       if (remainingFor(data, analysisType) <= 0) {
         trackEvent("quota_exhausted", { type: analysisType });
         setPhase("no_quota");
-        // 用户点了「开始分析」却被额度挡住：直接弹出购买窗口，别只在页面上摆一张卡片（桌面端卡片不在视口里，看起来像没反应）
-        openPricing("no_quota_generate", null, null, { intent: analysisType === "color_analysis" ? "report" : "credits" });
+        // 用户点了「开始分析」却被额度挡住：弹出购买窗口，别只在页面上摆一张卡片（桌面端卡片不在视口里，看起来像没反应）；带冷却，不重复弹
+        openQuotaPricing("no_quota_generate", analysisType === "color_analysis" ? "report" : "credits");
         return;
       }
 
@@ -1304,7 +1409,7 @@ export function TryClient({
           fail(
             "upload_failed",
             message,
-            message === IMAGE_TOO_LARGE ? t("errorUploadTooLarge") : t("errorUpload"),
+            message === IMAGE_TOO_LARGE ? t("errorUploadTooLarge") : message === IMAGE_UNREADABLE ? t("errorUploadUnreadable") : t("errorUpload"),
             uploadDiag(),
           );
           return;
@@ -1338,7 +1443,7 @@ export function TryClient({
             itemUrlRef.current = itemRes.data.url;
           } catch (err) {
             const message = err instanceof Error ? err.message : "Item upload error";
-            fail("upload_failed", message, message === IMAGE_TOO_LARGE ? t("errorUploadTooLarge") : t("errorUpload"), { item: 1 });
+            fail("upload_failed", message, message === IMAGE_TOO_LARGE ? t("errorUploadTooLarge") : message === IMAGE_UNREADABLE ? t("errorUploadUnreadable") : t("errorUpload"), { item: 1 });
             return;
           }
         }
@@ -1368,7 +1473,7 @@ export function TryClient({
         trackEvent("quota_exhausted", { type: analysisType });
         setQuota(taskRes.data?.quota ?? { total: 3, used: 3, remaining: 0 });
         setPhase("no_quota");
-        openPricing("no_quota_generate", null, null, { intent: analysisType === "color_analysis" ? "report" : "credits" });
+        openQuotaPricing("no_quota_generate", analysisType === "color_analysis" ? "report" : "credits");
         return;
       }
       if (taskRes.code !== 200 || !taskRes.data?.task_id) {
@@ -1412,7 +1517,7 @@ export function TryClient({
       const message = err instanceof Error ? err.message : "Unknown error";
       fail("generate_failed", message, t(generateErrorKey(message)));
     }
-  }, [previewUrl, sourceImageUrl, analysisType, itemCategory, reportLang, resolution, occasion, reloadHistory, refreshCredits, scrollToResult, openPricing, t, demoMode, startDemo]);
+  }, [previewUrl, sourceImageUrl, analysisType, itemCategory, reportLang, resolution, occasion, reloadHistory, refreshCredits, scrollToResult, openQuotaPricing, t, demoMode, startDemo]);
 
   const startRecommendedAnalysis = useCallback(async (type: AnalysisType, opts?: { photoUrl?: string; colorSeason?: string }) => {
     // 演示模式：直接切到该类型的示例报告，不开后台任务、不扣积分
@@ -1434,7 +1539,7 @@ export function TryClient({
       if (signInRes.code !== 200 || !signInRes.data) throw new Error(signInRes.message);
       if (remainingFor(signInRes.data, type) <= 0) {
         setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: "No credits" } : t));
-        openPricing("no_quota_recommended");
+        openQuotaPricing("no_quota_recommended");
         return;
       }
 
@@ -1444,7 +1549,7 @@ export function TryClient({
       });
       if (taskRes.code === 429) {
         setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: "No credits" } : t));
-        openPricing("no_quota_recommended");
+        openQuotaPricing("no_quota_recommended");
         return;
       }
       if (taskRes.code !== 200 || !taskRes.data?.task_id) throw new Error(taskRes.message);
@@ -1463,7 +1568,7 @@ export function TryClient({
     } catch (err) {
       setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: err instanceof Error ? err.message : "Failed" } : t));
     }
-  }, [sourceImageUrl, lastUploadedPhotoUrl, reportLang, resolution, reloadHistory, refreshCredits, openPricing, demoMode, selectType]);
+  }, [sourceImageUrl, lastUploadedPhotoUrl, reportLang, resolution, reloadHistory, refreshCredits, openQuotaPricing, demoMode, selectType]);
 
   /** 报告里的「在我身上试这些颜色」：用季型的色板做换装预览，作为后台任务生成 */
   const handleTryOn = useCallback((season: string, photoUrl?: string | null) => {
@@ -1574,8 +1679,18 @@ export function TryClient({
   /** 色彩报告上的解锁按钮文案：有报告额度就直接用，否则标报告（套装）的价格——色彩报告不花积分 */
   const reportUnlockLabel = (type: string) => {
     if (type === "color_analysis" && (userCredits?.report ?? 0) > 0) return t("unlockWithReport");
+    // 还没付过费的人直接标低价单份的价格（弹窗里套装作为升级项排在下面）；买过的人只有套装
+    if (type === "color_analysis" && SINGLE_UNLOCK_ENABLED && !userCredits?.hasPurchased) return t("unlockSinglePriceCta", { price: money("single") });
     return t("unlockPriceCta", { price: kitPrice });
   };
+
+  /** 补差价：只买过单份报告的人升级卖升级包（套装 − 单份），其余人仍是套装全价 */
+  const upgradeTopup = UPGRADE_TOPUP_ENABLED && (userCredits?.upgradeTopup ?? false);
+
+  /** 单份报告上「升级完整 Lookbook」的按钮文案：有报告额度（买过套装）直接用它，否则标升级价（只买过单份）或套装价 */
+  const upgradeLabel = (userCredits?.report ?? 0) > 0
+    ? tKit("upgradeWithCredit")
+    : tKit("upgradeCta", { price: upgradeTopup ? money("upgrade") : kitPrice });
 
   /** 解锁后免费重测——回到上传表单，选一张新照片重新做色彩分析（后端自动识别为免费重测，不占额度） */
   const handleRetest = useCallback(() => {
@@ -2242,6 +2357,8 @@ export function TryClient({
                 unlockLabel={reportUnlockLabel("color_analysis")}
                 unlockBusy={unlockingId !== null && unlockingId === resultTaskId}
                 onUnlock={() => handleUnlock(resultTaskId, "color_analysis", null)}
+                onUpgrade={() => handleUpgrade(resultTaskId)}
+                upgradeLabel={upgradeLabel}
                 onSavePoster={(url) => handleDownload(url)}
                 onShare={(url, id) => handleShare(url, id, true)}
                 onTryOn={(season) => handleTryOn(season, resultReport.sourceUrl)}
@@ -2663,6 +2780,8 @@ export function TryClient({
           unlocking={unlockingId !== null && unlockingId === lightbox.entry.id}
           onClose={() => setLightbox(null)}
           onUnlock={(entry) => handleUnlock(entry.id, entry.type || "color_analysis", null)}
+          upgradeLabel={upgradeLabel}
+          onUpgrade={(entry) => handleUpgrade(entry.id)}
           onSavePoster={(url) => handleDownload(url)}
           onShare={handleShare}
           onTryOn={(season) => handleTryOn(season, lightbox.entry.source_image_url)}
@@ -2758,8 +2877,11 @@ export function TryClient({
         openTaskId={pricingOpenTaskId}
         intent={pricingIntent}
         packCredits={userCredits?.pack ?? 0}
+        reportCredits={userCredits?.report ?? 0}
         hasPurchased={userCredits?.hasPurchased ?? false}
+        upgradeTopup={upgradeTopup}
       />
+      <PaywallExitSurvey />
 
       {/* 解锁失败等一次性提示 */}
       {toastMsg && (
@@ -2791,9 +2913,13 @@ export function TryClient({
                 : checkoutStatus === "success"
                   // 套装 / 加购包：到账提示里告诉用户有多少积分、报告是不是已经解锁
                   ? tKit(
-                      checkoutBought.kind === "kit"
-                        ? checkoutBought.unlocked ? "checkoutKitUnlocked" : "checkoutKit"
-                        : checkoutBought.unlocked ? "checkoutAddonUnlocked" : "checkoutAddon",
+                      checkoutBought.kind === "single"
+                        ? checkoutBought.unlocked ? "checkoutSingleUnlocked" : "checkoutSingle"
+                        : checkoutBought.kind === "upgrade"
+                          ? "checkoutUpgrade"
+                          : checkoutBought.kind === "kit"
+                            ? checkoutBought.unlocked ? "checkoutKitUnlocked" : "checkoutKit"
+                            : checkoutBought.unlocked ? "checkoutAddonUnlocked" : "checkoutAddon",
                       { credits: checkoutBought.credits },
                     )
                   : t("checkoutDelayed")}
@@ -3049,6 +3175,8 @@ function NoQuotaCard({
   const buyerNeedsCredits = hasPurchased && !buyerNeedsKit;
   // 虚拟试穿从来没有免费次数：没买过的人看到的不是「额度用完了」，而是「试穿要用积分」
   const tryOnNeedsKit = !hasPurchased && type === "scan_tryon";
+  // 还没付过费、要继续做色彩分析：主按钮标低价的单份报告，套装只在下面提一句（点开弹窗两个都能选）
+  const singleOffer = SINGLE_UNLOCK_ENABLED && !hasPurchased && type === "color_analysis";
 
   return (
     <div className="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50 to-orange-50 p-6 text-center">
@@ -3056,7 +3184,15 @@ function NoQuotaCard({
         {buyerNeedsKit ? tKit("noQuotaReportTitle") : buyerNeedsCredits ? tKit("noQuotaBuyerTitle") : tryOnNeedsKit ? tKit("noQuotaTryOnTitle") : t("noQuotaTitle")}
       </p>
       <p className="mt-1 text-sm text-amber-700">
-        {buyerNeedsKit ? tKit("noQuotaReportDesc") : buyerNeedsCredits ? tKit("noQuotaBuyerDesc") : tryOnNeedsKit ? tKit("noQuotaTryOnDesc") : tKit("noQuotaDesc")}
+        {buyerNeedsKit
+          ? tKit("noQuotaReportDesc")
+          : buyerNeedsCredits
+            ? tKit("noQuotaBuyerDesc")
+            : tryOnNeedsKit
+              ? tKit("noQuotaTryOnDesc")
+              : singleOffer
+                ? tKit("noQuotaSingleDesc", { price: money("single") })
+                : tKit("noQuotaDesc")}
       </p>
       <div className="mx-auto mt-4 flex max-w-sm flex-col gap-2.5">
         <button
@@ -3068,8 +3204,11 @@ function NoQuotaCard({
         >
           {buyerNeedsCredits
             ? tKit("addonCta", { credits: ADDON_CREDITS, price: money("addon") })
-            : tKit("cta", { price: money("kit") })}
+            : singleOffer
+              ? tKit("singleCta", { price: money("single") })
+              : tKit("cta", { price: money("kit") })}
         </button>
+        {singleOffer && <p className="text-xs text-amber-700">{tKit("noQuotaKitHint", { price: money("kit") })}</p>}
       </div>
     </div>
   );
@@ -3297,6 +3436,8 @@ function ReportLightbox({
   unlocking,
   onClose,
   onUnlock,
+  upgradeLabel,
+  onUpgrade,
   onSavePoster,
   onShare,
   onTryOn,
@@ -3311,6 +3452,8 @@ function ReportLightbox({
   unlocking: boolean;
   onClose: () => void;
   onUnlock: (entry: HistoryEntry) => void;
+  upgradeLabel: string;
+  onUpgrade: (entry: HistoryEntry) => void;
   onSavePoster: (posterUrl: string) => void;
   onShare: (posterUrl: string, taskId?: string | null, report?: boolean) => void;
   onTryOn: (season: string) => void;
@@ -3355,6 +3498,8 @@ function ReportLightbox({
             unlockLabel={unlockLabel}
             unlockBusy={unlocking}
             onUnlock={() => onUnlock(entry)}
+            onUpgrade={() => onUpgrade(entry)}
+            upgradeLabel={upgradeLabel}
             onSavePoster={onSavePoster}
             onShare={(url, id) => onShare(url, id, true)}
             onTryOn={entry.source_image_url ? onTryOn : undefined}

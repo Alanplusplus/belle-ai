@@ -26,13 +26,53 @@ const MAX_UPLOAD_PAYLOAD_CHARS = 9.5 * 1024 * 1024;
 /** 图片太大（或格式浏览器读不出来）且无法压缩时抛出的错误消息，调用方据此展示专门的提示 */
 export const IMAGE_TOO_LARGE = "image_too_large";
 
-function readAsDataUrl(blob: Blob): Promise<string> {
+/**
+ * 浏览器读不了这个文件（NotReadableError）：选中之后文件被移动 / 删除 / 还在从云端下载、系统收回了读取权限，
+ * 手机相册里选的云端照片、微信等内置浏览器里选的照片最常见。调用方据此提示「请重新选一张照片」。
+ */
+export const IMAGE_UNREADABLE = "image_unreadable";
+
+const sleep = (ms: number) => new Promise((resolve) => window.setTimeout(resolve, ms));
+
+/**
+ * 选中照片的当下就把内容读进内存，之后的预览 / 压缩 / 上传都用这份内存副本。
+ * 浏览器给的 File 只是指向磁盘文件的引用，用户选完照片、等了一会儿再点「开始」时，引用可能已经失效，
+ * 这时才报「读不了」，用户已经等过一轮。读失败就重试一次（云端照片可能刚好下载完），还不行就在选择当下报错，
+ * 让用户立刻换一张，而不是在点完开始、传到一半时才失败。
+ */
+export async function snapshotFile(file: File): Promise<File> {
+  for (let attempt = 0; ; attempt++) {
+    try {
+      const buffer = await file.arrayBuffer();
+      return new File([buffer], file.name, { type: file.type, lastModified: file.lastModified });
+    } catch {
+      if (attempt >= 1) throw new Error(IMAGE_UNREADABLE);
+      await sleep(400);
+    }
+  }
+}
+
+function readOnce(blob: Blob): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = () => resolve(reader.result as string);
     reader.onerror = () => reject(reader.error ?? new Error("read_failed"));
     reader.readAsDataURL(blob);
   });
+}
+
+/** 读成 data URL；读失败重试一次，仍失败按「文件读不了」抛出（见 IMAGE_UNREADABLE） */
+async function readAsDataUrl(blob: Blob): Promise<string> {
+  try {
+    return await readOnce(blob);
+  } catch {
+    await sleep(300);
+    try {
+      return await readOnce(blob);
+    } catch {
+      throw new Error(IMAGE_UNREADABLE);
+    }
+  }
 }
 
 async function decode(file: File): Promise<{ source: CanvasImageSource; width: number; height: number; release: () => void }> {

@@ -17,15 +17,16 @@ export function isCurrencyCode(value: unknown): value is CurrencyCode {
   return typeof value === "string" && (CURRENCIES as readonly string[]).includes(value);
 }
 
-/** 标价的 key 就是商品 key：kit / addon */
+/** 标价的 key 就是商品 key：kit / addon / single */
 export type PriceKey = ProductKey;
 
 export const PRICE_TABLE: Record<CurrencyCode, Record<PriceKey, string>> = {
-  USD: { kit: CREDIT_PACKS.kit.price, addon: CREDIT_PACKS.addon.price },
-  EUR: { kit: "17.99", addon: "4.49" },
-  GBP: { kit: "14.99", addon: "3.79" },
-  JPY: { kit: "3180", addon: "790" },
-  HKD: { kit: "158", addon: "39" },
+  USD: { kit: CREDIT_PACKS.kit.price, addon: CREDIT_PACKS.addon.price, single: CREDIT_PACKS.single.price, upgrade: CREDIT_PACKS.upgrade.price },
+  // upgrade = kit − single（单份 + 升级包的总价和直接买套装一致）
+  EUR: { kit: "17.99", addon: "4.49", single: "2.69", upgrade: "15.30" },
+  GBP: { kit: "14.99", addon: "3.79", single: "2.29", upgrade: "12.70" },
+  JPY: { kit: "3180", addon: "790", single: "480", upgrade: "2700" },
+  HKD: { kit: "158", addon: "39", single: "24", upgrade: "134" },
 };
 
 const SYMBOL: Record<CurrencyCode, string> = { USD: "$", EUR: "€", GBP: "£", JPY: "¥", HKD: "HK$" };

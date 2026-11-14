@@ -36,6 +36,11 @@ export interface LookbookBlockProps {
   onUnlock?: () => void;
   unlockLabel?: string;
   unlockBusy?: boolean;
+  /** 单份报告（只开放了色彩试穿）：升级成完整 Lookbook 的入口和按钮文案 */
+  onUpgrade?: () => void;
+  upgradeLabel?: string;
+  /** 用户自己的免费预览图（色彩试穿的第 1 张）出来或消失时通知页面，页面用它做「解锁后还有什么」的预览 */
+  onPreviewTile?: (url: string | null) => void;
   /**
    * 独立工具（脸型 / 发型 / 眼镜 …）的结果页：只展示这一章。文字分析（标题 / 结论 / 色块）免费，
    * 试戴图按章节付费：没付费的格子是占位块，点格子或下面的按钮花额度生成。
@@ -96,7 +101,7 @@ const LOCK_ICON = (
   </svg>
 );
 
-export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, sourceImageUrl, onUnlock, unlockLabel, unlockBusy, lens, onBuyCredits, demo = false, demoPersona = DEMO_PERSONAS[0].id, demoOccasion, shared }: LookbookBlockProps) {
+export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, sourceImageUrl, onUnlock, unlockLabel, unlockBusy, onUpgrade, upgradeLabel, onPreviewTile, lens, onBuyCredits, demo = false, demoPersona = DEMO_PERSONAS[0].id, demoOccasion, shared }: LookbookBlockProps) {
   const isShared = !!shared;
   // 示例和分享页都是只读：数据是现成的，没有解锁 / 试戴 / 重新生成 / 保存
   const readOnly = demo || isShared;
@@ -119,6 +124,12 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
 
   useEffect(() => () => window.clearTimeout(copyTimer.current), []);
 
+  // 把用户自己的免费预览图交给页面（锁定报告底部的预览卡用它，而不是别人的示例图）
+  const previewTile = data?.sheets.find((sheet) => sheet.key === "drape")?.tiles.find((tile) => !!tile.url && !tile.locked)?.url ?? null;
+  useEffect(() => {
+    if (!readOnly && !lens) onPreviewTile?.(previewTile);
+  }, [readOnly, lens, onPreviewTile, previewTile]);
+
   /** 底部的一行小提示（复制色号、保存失败等） */
   const flash = useCallback((message: string) => {
     setCopied(message);
@@ -139,9 +150,11 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
   if (!loading && (!data || data.state === "disabled")) return null;
 
   const unlocked = !!data?.unlocked;
+  // 单份报告：文字报告已经全开，Lookbook 只有色彩试穿这一章，其余章节要升级套装
+  const lite = !isShared && data?.mode === "lite";
   const sheets = new Map<LookbookSheetKey, LookbookSheet>((data?.sheets ?? []).map((s) => [s.key, s]));
   const drape = sheets.get("drape");
-  const failedSomewhere = !isShared && unlocked && data?.state === "failed";
+  const failedSomewhere = !isShared && (unlocked || lite) && data?.state === "failed";
 
   const open = (key: LookbookSheetKey, index: number) => {
     trackEvent("lookbook_tile_opened", { sheet: key });
@@ -203,7 +216,8 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
 
   // 锁定态：预览整图（drape）完整展示，其余章节只列名字 + 锁；已解锁：按顺序展示全部
   // 免费预览整图：额度用完（skipped）或生成失败时，对没付费的人直接不展示这一节，不暴露失败，也没有重试入口
-  const previewUnavailable = !unlocked && !!drape && (drape.status === "skipped" || drape.status === "failed");
+  // 单份报告买了就该有这一章：失败要让她看到并能重试，不能像免费预览那样悄悄藏起来
+  const previewUnavailable = !unlocked && !lite && !!drape && (drape.status === "skipped" || drape.status === "failed");
   const baseVisible = lens ? SECTIONS.filter((s) => s.key === lens) : SECTIONS.filter((s) => (unlocked || s.key === "drape") && !(previewUnavailable && s.key === "drape"));
   // 分享页：访客看不到「生成中 / 失败」，只展示已经有图的章节（独立工具还要加上分析好了、试戴没买的那一章：文字分析本身是公开内容）
   const visible = isShared
@@ -367,8 +381,27 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
               </li>
             ))}
           </ul>
-          {onUnlock && unlockLabel && (
-            <div className="mt-5 flex flex-col items-center gap-3 rounded-xl border border-gold/40 bg-gradient-to-br from-white to-muted/60 px-4 py-5 text-center">
+          {lite ? (
+            onUpgrade && upgradeLabel && (
+              <div data-unlock-anchor="" className="mt-5 flex flex-col items-center gap-3 rounded-xl border border-gold/40 bg-gradient-to-br from-white to-muted/60 px-4 py-5 text-center">
+                <p className="report-serif text-base font-semibold">{ui("lbUpgradeTitle")}</p>
+                <p className="report-serif max-w-sm text-sm leading-relaxed text-foreground/80">{ui("lbUpgradeDesc")}</p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    trackEvent("lookbook_upgrade_clicked", { where: "footer" });
+                    onUpgrade();
+                  }}
+                  disabled={unlockBusy}
+                  className="inline-flex min-h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-white shadow-md shadow-primary/25 transition hover:bg-primary-dark disabled:opacity-60"
+                >
+                  {upgradeLabel}
+                </button>
+              </div>
+            )
+          ) : (
+            onUnlock && unlockLabel && (
+            <div data-unlock-anchor="" className="mt-5 flex flex-col items-center gap-3 rounded-xl border border-gold/40 bg-gradient-to-br from-white to-muted/60 px-4 py-5 text-center">
               <p className="report-serif text-base font-semibold">{ui("lbLockedTitle")}</p>
               <p className="report-serif max-w-sm text-sm leading-relaxed text-foreground/80">{ui("lbLockedDesc")}</p>
               <button
@@ -380,6 +413,7 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
                 {unlockLabel}
               </button>
             </div>
+            )
           )}
         </div>
       )}

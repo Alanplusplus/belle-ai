@@ -14,6 +14,8 @@ const ALLOWED_EVENTS: Record<string, { title: string; template: "green" | "orang
   checkout_cancelled: { title: "🚫 Checkout Cancelled", template: "orange" },
   // 结果页用户主动提交的评分与留言（不含照片）
   feedback_submitted: { title: "💬 Result Feedback", template: "green" },
+  // 关闭付费弹窗后的一问式调查（只有四个固定选项，没有自由文本）
+  paywall_exit_survey: { title: "🤔 Paywall Exit Survey", template: "orange" },
 };
 
 const MAX_PARAMS = 12;

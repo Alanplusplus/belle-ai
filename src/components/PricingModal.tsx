@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { trackEvent } from "@/lib/analytics";
 import { startCheckout } from "@/lib/checkout";
-import { ADDON_CREDITS, type ProductKey } from "@/lib/constants";
+import { ADDON_CREDITS, SINGLE_UNLOCK_ENABLED, UPGRADE_TOPUP_ENABLED, type ProductKey } from "@/lib/constants";
 import { KIT_PERKS, KIT_PERK_VALUES } from "@/lib/kit";
 import {
+  FREE_COLOR_COUNT,
   MY_SEASON_KEY,
   isSeasonSlug,
   proseFor,
@@ -17,6 +18,7 @@ import {
 import { useReportMessages } from "@/lib/report-messages";
 import { usePrices } from "@/lib/usePrices";
 import { PaymentTrust } from "@/components/PaymentTrust";
+import { PAYWALL_EXIT_EVENT, PAYWALL_OPEN_EVENT } from "@/components/PaywallExitSurvey";
 import { InAppBrowserNotice, InAppCheckoutEmailStep } from "@/components/InAppBrowserNotice";
 import { detectInAppBrowser } from "@/lib/inAppBrowser";
 import { useDialogA11y } from "@/lib/useDialogA11y";
@@ -41,8 +43,12 @@ interface Props {
   intent?: "report" | "credits";
   /** 当前积分余额：支付返回后据此判断积分是否到账 */
   packCredits?: number;
+  /** 当前报告额度：单份报告只发报告额度（没有积分），支付返回后据此判断是否到账 */
+  reportCredits?: number;
   /** 买过套装 / 积分包：把「加购包」放在最前面，而不是再卖一次套装 */
   hasPurchased?: boolean;
+  /** 只买过单份报告（没买过套装）：升级场景卖补差价升级包（套装 − 单份），而不是套装全价；后端 web-init 的 upgrade_topup */
+  upgradeTopup?: boolean;
 }
 
 /** 浏览器里记着的季型：额度用完时，用「你上次的结果」把用户和那份还没打开的完整报告连起来 */
@@ -56,8 +62,11 @@ function readStoredSeason(): SeasonSlug | null {
 }
 
 /**
- * 付费弹窗：只有一个主打商品 Color Kit，一次性付费、没有订阅。
+ * 付费弹窗：主打商品 Color Kit，一次性付费、没有订阅；打开 NEXT_PUBLIC_SINGLE_UNLOCK 后，要买色彩报告的人
+ * 还会先看到一个低价的「只解锁这一份报告」入口，套装作为升级项排在它下面。
  * 老顾客（买过套装 / 积分包）看到的是加购包，套装退到下面一行。
+ * source = lookbook_upgrade：已经用单份报告解锁过，只卖套装（升级成完整 Lookbook），不再出现单份；
+ * 只买过单份的人（upgradeTopup）看到的是补差价升级包——内容和套装一样，价格是套装减去已付的单份。
  *
  * 弹窗出现在转化的最后一步，按用户此刻的心情分三种说法：
  *  - lock：报告已经生成、就差打开——「你的结果在这儿，看一眼」，带上她的季型和已露出的颜色；
@@ -74,7 +83,9 @@ export function PricingModal({
   openTaskId,
   intent,
   packCredits = 0,
+  reportCredits = 0,
   hasPurchased = false,
+  upgradeTopup = false,
 }: Props) {
   const t = useTranslations("kit");
   const tCommon = useTranslations("tryPage");
@@ -102,12 +113,24 @@ export function PricingModal({
   // 付费漏斗第一步：每次打开付费弹层记一次 view_pricing（/pricing 页在页面里单独记）
   useEffect(() => {
     if (!open) return;
-    trackEvent("view_pricing", { source, surface: "modal", offer: "kit" });
-  }, [open, source]);
+    const offer =
+      source === "lookbook_upgrade"
+        ? UPGRADE_TOPUP_ENABLED && upgradeTopup ? "upgrade" : "kit"
+        : SINGLE_UNLOCK_ENABLED ? "single+kit" : "kit";
+    trackEvent("view_pricing", { source, surface: "modal", offer });
+    // 退出调查条还挂在屏幕上时，弹窗又被打开：让它先收起
+    window.dispatchEvent(new Event(PAYWALL_OPEN_EVENT));
+  }, [open, source, upgradeTopup]);
 
   const handleClose = () => {
     trackEvent("pricing_modal_closed", { source, had_preview: !!previewUrl });
     setInAppWarnProduct(null);
+    // 没去付款就关掉：交给退出调查（只问没买过的人；升级场景的人已经付过费，不问「为什么没买」）
+    if (!hasPurchased && source !== "lookbook_upgrade") {
+      window.dispatchEvent(
+        new CustomEvent(PAYWALL_EXIT_EVENT, { detail: { source, offer: SINGLE_UNLOCK_ENABLED ? "single+kit" : "kit" } }),
+      );
+    }
     onClose();
   };
 
@@ -118,30 +141,42 @@ export function PricingModal({
 
   const isLockSource = source === "report_lock";
   // 积分排在最前面：明确要买积分（试戴），或没说要买什么的老顾客；要买色彩报告时永远先看套装
-  const buyerFirst = intent ? intent === "credits" : hasPurchased;
+  // 升级场景的人刚买过单份报告（hasPurchased），但这里要卖的是套装，不能被当成老顾客先推加购包
+  const upgradeScene = source === "lookbook_upgrade";
+  const buyerFirst = !upgradeScene && (intent ? intent === "credits" : hasPurchased);
   const creditsScene = intent === "credits";
   const buyerScene = buyerFirst && !creditsScene;
   // 报告已经出来、就差解锁（卖套装）/ 免费次数用完想再看（卖套装）
   const lockScene = isLockSource && !buyerFirst;
   const moreScene = !buyerFirst && !isLockSource && source.startsWith("no_quota");
-  const title = creditsScene
-    ? t("creditsTitle")
-    : buyerScene
-      ? t("buyerTitle")
-      : lockScene
-        ? t("lockTitle")
-        : moreScene
-          ? t("moreTitle")
-          : t("modalTitle");
-  const subtitle = creditsScene
-    ? t("creditsSubtitle")
-    : buyerScene
-      ? t("buyerSubtitle")
-      : lockScene
-        ? t("lockSubtitle")
-        : moreScene
-          ? t("moreSubtitle", KIT_PERK_VALUES)
-          : t("modalSubtitle");
+  // 低价单份只是「第一次付费」的入口：要买色彩报告、还没买过任何东西的人才看到；
+  // 买过的人（单份 / 套装）再来买报告只卖套装——套装才有积分和完整 Lookbook，也避免套装买家再用 $2.99 反复换完整 Lookbook
+  const singleOffer = SINGLE_UNLOCK_ENABLED && !upgradeScene && !buyerFirst && !hasPurchased;
+  // 要买色彩报告的人（不是买积分的老顾客，也不是升级）：把锁在后面的东西逐项说清楚，再放价格锚点
+  const showInside = !buyerFirst && !upgradeScene;
+  const insideKeys = ["inside1", "inside2", "inside3", singleOffer ? "insideLookSingle" : "insideLook", "inside5"] as const;
+  const title = upgradeScene
+    ? t("upgradeTitle")
+    : creditsScene
+      ? t("creditsTitle")
+      : buyerScene
+        ? t("buyerTitle")
+        : lockScene
+          ? t("lockTitle")
+          : moreScene
+            ? t("moreTitle")
+            : t("modalTitle");
+  const subtitle = upgradeScene
+    ? t("upgradeSubtitle")
+    : creditsScene
+      ? t("creditsSubtitle")
+      : buyerScene
+        ? t("buyerSubtitle")
+        : lockScene
+          ? t("lockSubtitle")
+          : moreScene
+            ? t("moreSubtitle", KIT_PERK_VALUES)
+            : t("modalSubtitle");
 
   // 「你的季型 + 已经露出的颜色 + 还有几个在等你」：解锁时用这份报告，额度用完时用浏览器里记着的上次结果（买过的人不用再劝）
   const teaserSlug: SeasonSlug | null = lockScene
@@ -158,13 +193,14 @@ export function PricingModal({
       ? {
           name: teaserName,
           headline: lockScene && unlockReport ? proseFor(unlockReport, reportLang)?.headline : undefined,
-          revealed: teaserPalette.bestColors.map((c) => c.hex),
+          // 锁定的报告只免费露出前 3 个推荐色（和后端 LOCKED_FREE_COLORS 一致）；额度用完那一档展示的是上次结果，沿用同样的 3 个
+          revealed: teaserPalette.bestColors.slice(0, FREE_COLOR_COUNT).map((c) => c.hex),
         }
       : null;
   // 三句「用上之后的感觉」：解锁页已经有季型预览，手机上空间紧，就不再放
   const emoKeys = creditsScene
     ? (["creditsEmo1", "creditsEmo2", "creditsEmo3"] as const)
-    : buyerScene
+    : buyerScene || upgradeScene
       ? null
       : (["kitEmo1", "kitEmo2", "kitEmo3"] as const);
 
@@ -187,6 +223,7 @@ export function PricingModal({
         locale,
         ...(email ? { email } : {}),
         packBefore: packCredits,
+        reportBefore: reportCredits,
         ...(unlockTaskId ? { unlockTaskId } : {}),
         ...(openTaskId ? { openTaskId } : {}),
         onRestore: () => setLoading(null),
@@ -200,19 +237,50 @@ export function PricingModal({
 
   const kitPrice = money("kit");
   const addonPrice = money("addon");
+  const singlePrice = money("single");
+  // 补差价：升级场景里只买过单份的人买升级包（内容和套装一样，价格是套装减去已付的单份），其余人仍买套装全价
+  const topupOffer = upgradeScene && UPGRADE_TOPUP_ENABLED && upgradeTopup;
+  const kitProduct: ProductKey = topupOffer ? "upgrade" : "kit";
+  const kitCardPrice = topupOffer ? money("upgrade") : kitPrice;
+
+  // 低价入口：只解锁这一份报告的文字内容和色彩试穿，完整 Lookbook 留给套装
+  const singleCard = (
+    <div className="rounded-xl border border-primary/40 bg-card p-4 shadow-sm">
+      <div className="flex items-baseline justify-between gap-3">
+        <h3 className="text-base font-bold">{t("singleName")}</h3>
+        <p className="text-2xl font-bold text-primary">{singlePrice}</p>
+      </div>
+      <ul className="mt-2 space-y-1">
+        {(["singleItem1", "singleItem2", "singleItem3"] as const).map((key) => (
+          <ModalFeature key={key} text={t(key)} />
+        ))}
+      </ul>
+      <button
+        onClick={() => handleCheckout("single")}
+        disabled={loading !== null}
+        className="mt-3 min-h-12 w-full rounded-full bg-primary py-2.5 text-sm font-semibold text-white shadow-md shadow-primary/25 transition hover:bg-primary-dark disabled:opacity-50"
+      >
+        {loading === "single" ? <LoadingDots /> : t("singleCta", { price: singlePrice })}
+      </button>
+    </div>
+  );
 
   const kitCard = (
-    <div className="relative rounded-xl border-2 border-primary bg-card p-5 shadow-md">
+    <div className={`relative rounded-xl border-2 border-primary bg-card p-5 shadow-md ${singleOffer ? "mt-5" : ""}`}>
       <span className="absolute -top-3 left-5 whitespace-nowrap rounded-full bg-primary px-3 py-0.5 text-xs font-bold text-white">
-        {t("cardBadge")}
+        {singleOffer ? t("cardBadgeBest") : upgradeScene ? t("upgradeBadge") : t("cardBadge")}
       </span>
       <div className="flex items-baseline justify-between gap-3">
         <h3 className="text-lg font-bold">{t("cardName")}</h3>
-        <p className="text-3xl font-bold text-primary">{kitPrice}</p>
+        <p className="text-3xl font-bold text-primary">{kitCardPrice}</p>
       </div>
-      {/* 价格锚点：线下一次专业色彩咨询的行情，让这个价格显得是「划算的那一档」 */}
+      {/* 价格锚点：线下一次专业色彩咨询的行情，让这个价格显得是「划算的那一档」；补差价时改成说清「已付的钱算进去了」 */}
       <div className="mt-1 flex flex-col gap-0.5 text-xs text-muted-foreground sm:flex-row sm:items-start sm:justify-between sm:gap-3">
-        <p className="italic">{t("priceAnchor")}</p>
+        {(topupOffer || !showInside) && (
+          <p className={topupOffer ? "font-medium text-primary" : "italic"}>
+            {topupOffer ? t("upgradeDiffNote", { paid: singlePrice, kit: kitPrice }) : t("priceAnchor")}
+          </p>
+        )}
         <p className="sm:shrink-0 sm:text-right">{t("cardNoSub")}</p>
       </div>
       <ul className="mt-3 space-y-1.5">
@@ -223,11 +291,19 @@ export function PricingModal({
         ))}
       </ul>
       <button
-        onClick={() => handleCheckout("kit")}
+        onClick={() => handleCheckout(kitProduct)}
         disabled={loading !== null}
         className="mt-4 min-h-12 w-full rounded-full bg-primary py-2.5 text-sm font-semibold text-white shadow-md shadow-primary/25 transition hover:bg-primary-dark disabled:opacity-50"
       >
-        {loading === "kit" ? <LoadingDots /> : lockScene ? t("ctaLock", { price: kitPrice }) : t("cta", { price: kitPrice })}
+        {loading === kitProduct ? (
+          <LoadingDots />
+        ) : upgradeScene ? (
+          t("upgradeCta", { price: kitCardPrice })
+        ) : lockScene ? (
+          t("ctaLock", { price: kitPrice })
+        ) : (
+          t("cta", { price: kitPrice })
+        )}
       </button>
       {/* 按钮正下方打消最后一点犹豫：不订阅，对结果没把握还能免费重测 */}
       <p className="mt-2 text-center text-xs leading-snug text-muted-foreground">{t("ctaAssure", KIT_PERK_VALUES)}</p>
@@ -302,7 +378,7 @@ export function PricingModal({
         )}
 
         {emoKeys && (
-          <ul className={`mt-5 space-y-2 ${teaser && lockScene ? "max-sm:hidden" : ""}`}>
+          <ul className={`mt-5 space-y-2 ${showInside || (teaser && lockScene) ? "max-sm:hidden" : ""}`}>
             {emoKeys.map((key) => (
               <li key={key} className="flex items-start gap-2.5 text-sm leading-snug text-foreground/85">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-primary" fill="currentColor" viewBox="0 0 20 20" aria-hidden>
@@ -314,10 +390,36 @@ export function PricingModal({
           </ul>
         )}
 
+        {showInside && (
+          <div className="mt-5 rounded-xl border border-border bg-card/60 px-3.5 py-3">
+            <p className="text-xs font-semibold leading-snug text-foreground">{t("insideTitle")}</p>
+            <ul className="mt-2 flex flex-wrap gap-1.5">
+              {insideKeys.map((key) => (
+                <li key={key} className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-2.5 py-1 text-xs leading-snug text-foreground/90">
+                  <svg className="h-3 w-3 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                    <rect x="5" y="11" width="14" height="9" rx="2" />
+                    <path strokeLinecap="round" d="M8 11V8a4 4 0 018 0v3" />
+                  </svg>
+                  {t(key)}
+                </li>
+              ))}
+            </ul>
+            {/* 价格锚点：线下一次专业色彩咨询的行情，和首页的说法一致 */}
+            <p className="mt-2 text-xs italic leading-snug text-muted-foreground">{t("priceAnchor")}</p>
+          </div>
+        )}
+
         <InAppBrowserNotice className="mt-3" />
 
         <div className="mt-6">
-          {buyerFirst ? addonCard : kitCard}
+          {buyerFirst ? addonCard : singleOffer ? (
+            <>
+              {singleCard}
+              {kitCard}
+            </>
+          ) : (
+            kitCard
+          )}
           {/* 老顾客：套装退到下面一行 */}
           {buyerFirst && (
             <div className="mt-3 flex items-center justify-between gap-3 rounded-xl border border-border bg-card p-4">

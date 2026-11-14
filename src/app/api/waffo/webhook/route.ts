@@ -211,6 +211,8 @@ async function handlePackOrder(
     credits: packCredits,
     report_credits: reportCredits,
     order_id: orderId,
+    // 买的是哪个商品：后端记在订单上，解锁报告时据此判断只买过单份报告还是买过套装
+    product,
     // 付款邮箱：后端记下，用户之后在系统浏览器用同一邮箱登录 Google 时可以找回购买
     buyer_email: str(data.buyerEmail) || null,
     // 下单时的站点语种：后端据此选付款后邮件的语言

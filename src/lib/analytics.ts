@@ -72,6 +72,36 @@ export function trackFeedbackSubmitted(params: {
   });
 }
 
+export type PaywallSurveyReason = "price" | "enough" | "accuracy" | "looking";
+
+/**
+ * 付费弹窗退出调查的回答：进 GA（只有选项，没有自由文本）和飞书（样本小，团队实时看每一条），
+ * 另外存进后端 web_paywall_survey 供事后统计。后端失败只会静默，不影响用户看到「谢谢」。
+ */
+export function submitPaywallSurvey(params: {
+  userId: string | null;
+  reason: PaywallSurveyReason;
+  source: string;
+  offer: string;
+  locale: string;
+}) {
+  trackEvent("paywall_exit_survey", { reason: params.reason, source: params.source, offer: params.offer });
+  notifyCheckout("paywall_exit_survey", { reason: params.reason, source: params.source, offer: params.offer, locale: params.locale });
+  if (!params.userId) return;
+  fetch("/api/paywall-survey", {
+    method: "POST",
+    keepalive: true,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      userId: params.userId,
+      reason: params.reason,
+      source: params.source,
+      offer: params.offer,
+      locale: params.locale,
+    }),
+  }).catch(() => {});
+}
+
 /** 把评分和留言存到后端（经服务端代理）。失败只会静默，不影响用户看到「感谢反馈」 */
 export function saveReportFeedback(params: {
   userId: string | null;

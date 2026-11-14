@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 import {
+  FREE_COLOR_COUNT,
   REPORT_LANGUAGES,
   faceCrop,
   isSeasonSlug,
@@ -19,6 +21,7 @@ import { Link } from "@/i18n/navigation";
 import type { LensProfile, LensVerdictItem } from "@/lib/api";
 import { SEASON_SWATCHES, type SwatchGroup } from "@/lib/season-swatches";
 import { fmt, splitItems, useReportMessages, type ReportMessages } from "@/lib/report-messages";
+import { trackEvent } from "@/lib/analytics";
 import { LookbookBlock } from "./LookbookBlock";
 
 export interface ColorReportProps {
@@ -44,6 +47,13 @@ export interface ColorReportProps {
   lookbookDemoPersona?: DemoPersonaId;
   /** 分享页：服务端取好的 Lookbook 数据（只读展示分享人的造型图） */
   lookbookShared?: LookbookData | null;
+  /** 单份报告（Lookbook 只开放了色彩试穿）：升级成完整 Lookbook 的入口和按钮文案 */
+  onUpgrade?: () => void;
+  upgradeLabel?: string;
+  /** Lookbook 里用户自己的免费预览图出来（或消失）时通知页面：锁定报告底部的「解锁后还有什么」用它做预览 */
+  onLookbookPreview?: (url: string | null) => void;
+  /** 锁定报告底部「解锁」按钮下面的内容（把结果发到邮箱）；只有拥有者（有 onUnlock）才展示 */
+  lockedExtra?: ReactNode;
   /** 示例报告角标 */
   demoBadge?: string;
   /** 报告生成时间（秒级时间戳），用于刊头日期 */
@@ -74,7 +84,7 @@ export function ReportSkeleton() {
   );
 }
 
-function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceImageUrl, onUnlock, unlockLabel, unlockBusy, lookbookTaskId, lookbookDemo, lookbookDemoPersona, lookbookShared, demoBadge, createdAt, footer, messages }: ColorReportProps & { messages: ReportMessages }) {
+function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceImageUrl, onUnlock, unlockLabel, unlockBusy, onUpgrade, upgradeLabel, onLookbookPreview, lockedExtra, lookbookTaskId, lookbookDemo, lookbookDemoPersona, lookbookShared, demoBadge, createdAt, footer, messages }: ColorReportProps & { messages: ReportMessages }) {
   const slug: SeasonSlug = isSeasonSlug(report.season) ? report.season : "soft-summer";
   const palette = seasonPalette(slug);
   const sd = messages.seasons[slug] ?? {};
@@ -129,8 +139,11 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
   if (report.hair_looks_dyed) photoNotes.push(ui("noteDyed"));
 
   const dropCap = DROP_CAP_LANGS.has(locale);
+  // 锁定时只免费露出前 FREE_COLOR_COUNT 个推荐色；其余推荐色、基础色和避雷色在解锁后才出现
+  const lockedColorCount = Math.max(0, best.length - FREE_COLOR_COUNT);
 
   return (
+    <>
     <article data-report-article="" lang={locale} className="report-root overflow-hidden rounded-2xl border border-gold/40 bg-[#FFFCF8] text-foreground shadow-sm">
       {/* 刊头 */}
       <header className="flex items-center justify-between gap-3 px-5 pt-4">
@@ -223,11 +236,20 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
         )}
       </section>
 
-      {/* 03 你的最佳颜色：10 个推荐色、基础色、避雷色，锁定的报告也完整给 */}
+      {/* 03 你的最佳颜色：解锁后是 10 个推荐色、基础色、避雷色；锁定时只露前 3 个，剩下的只画占位 */}
       <section className="px-5 pt-9">
         <SectionHead no="03" title={ui("bestTitle")} />
         <SeasonPlate slug={slug} caption={sd.tagline ? `${name} — ${sd.tagline}` : name} />
-        {signature && otherBest ? (
+        {locked ? (
+          <LockedPalette
+            first={best.slice(0, FREE_COLOR_COUNT)}
+            lockedCount={lockedColorCount}
+            text={ui("lockedPaletteMore", { count: lockedColorCount })}
+            onUnlock={onUnlock}
+            unlockLabel={unlockLabel}
+            busy={unlockBusy}
+          />
+        ) : signature && otherBest ? (
           <>
             <div className="mt-5 rounded-xl border border-gold/40 bg-white/70 px-3 pb-4 pt-4">
               <p className="rp-label text-center">{ui("signatureTitle")}</p>
@@ -265,19 +287,23 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
             ))}
           </div>
         )}
-        <p className="rp-label mt-7">{ui("neutralsTitle")}</p>
-        <div className="mt-3 grid grid-cols-4 gap-x-2 gap-y-4">
-          {neutrals.map((c, i) => (
-            <Swatch key={i} hex={c.hex} label={c.label} />
-          ))}
-        </div>
-        <p className="rp-label mt-7">{ui("avoidTitle")}</p>
-        {prose?.avoid_note && <p className="report-serif mt-2 text-sm italic leading-relaxed text-muted-foreground">{prose.avoid_note}</p>}
-        <div className="mt-3 grid grid-cols-5 gap-x-2 gap-y-4">
-          {avoid.map((c, i) => (
-            <Swatch key={i} hex={c.hex} label={c.label} crossed />
-          ))}
-        </div>
+        {!locked && (
+          <>
+            <p className="rp-label mt-7">{ui("neutralsTitle")}</p>
+            <div className="mt-3 grid grid-cols-4 gap-x-2 gap-y-4">
+              {neutrals.map((c, i) => (
+                <Swatch key={i} hex={c.hex} label={c.label} />
+              ))}
+            </div>
+            <p className="rp-label mt-7">{ui("avoidTitle")}</p>
+            {prose?.avoid_note && <p className="report-serif mt-2 text-sm italic leading-relaxed text-muted-foreground">{prose.avoid_note}</p>}
+            <div className="mt-3 grid grid-cols-5 gap-x-2 gap-y-4">
+              {avoid.map((c, i) => (
+                <Swatch key={i} hex={c.hex} label={c.label} crossed />
+              ))}
+            </div>
+          </>
+        )}
       </section>
 
       {/* 04 同季名人：只有文字和色板，不生成名人形象（季型是免费预览就有的结论，所以锁定时也完整显示） */}
@@ -303,6 +329,9 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
           onUnlock={onUnlock}
           unlockLabel={unlockLabel}
           unlockBusy={unlockBusy}
+          onUpgrade={onUpgrade}
+          upgradeLabel={upgradeLabel}
+          onPreviewTile={onLookbookPreview}
         />
       )}
 
@@ -316,6 +345,7 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
           ))}
           <div className="px-5 pt-2">
             <UnlockStrip text={ui("lockedClosingDesc")} onUnlock={onUnlock} unlockLabel={unlockLabel} busy={unlockBusy} />
+            {onUnlock && lockedExtra}
           </div>
         </>
       ) : (
@@ -368,6 +398,8 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
 
       {footer && <div data-report-footer="" className="border-t border-gold/30 bg-white/60 px-4 py-4">{footer}</div>}
     </article>
+    {locked && onUnlock && unlockLabel && <StickyUnlockBar label={unlockLabel} onUnlock={onUnlock} busy={unlockBusy} />}
+    </>
   );
 }
 
@@ -503,11 +535,135 @@ function LockedSkeleton() {
   );
 }
 
+/**
+ * 锁定时的推荐色：前几个照常展示，剩下的画成灰色占位 + 一句话说明还有什么，拥有者再给一个解锁按钮。
+ * 分享页的访客（没有 onUnlock）只看到占位和说明，不会被推销。
+ */
+function LockedPalette({ first, lockedCount, text, onUnlock, unlockLabel, busy }: { first: { hex: string; label: string }[]; lockedCount: number; text: string; onUnlock?: () => void; unlockLabel?: string; busy?: boolean }) {
+  return (
+    <>
+      <ol className="mt-5 grid grid-cols-3 gap-2 rounded-xl border border-gold/40 bg-white/70 px-3 pb-4 pt-4">
+        {first.map((c, rank) => (
+          <li key={rank} className="flex flex-col items-center text-center">
+            <span
+              className="block h-[4.5rem] w-[4.5rem] rounded-full shadow-[0_2px_6px_rgba(0,0,0,0.25),inset_0_0_0_1px_rgba(0,0,0,0.07)] sm:h-24 sm:w-24"
+              style={{ background: c.hex }}
+              title={c.hex}
+            />
+            <span className="report-serif mt-2 text-sm font-semibold leading-tight">{c.label}</span>
+          </li>
+        ))}
+      </ol>
+      {lockedCount > 0 && (
+        <div data-export-hide="" className="mt-3 rounded-xl border border-dashed border-gold/50 bg-white/50 px-3 py-4">
+          <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2" aria-hidden="true">
+            {Array.from({ length: lockedCount }, (_, i) => (
+              <span key={i} className="flex h-8 w-8 items-center justify-center rounded-full bg-foreground/[0.07] text-gold-deep sm:h-9 sm:w-9">
+                <LockGlyph />
+              </span>
+            ))}
+          </div>
+          <p className="report-serif mx-auto mt-3 max-w-sm text-center text-sm leading-relaxed text-foreground/80">{text}</p>
+          {onUnlock && unlockLabel && (
+            <div className="mt-3 flex justify-center">
+              <button
+                type="button"
+                data-unlock-anchor=""
+                onClick={onUnlock}
+                disabled={busy}
+                className="inline-flex min-h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-white shadow-md shadow-primary/25 transition hover:bg-primary-dark disabled:opacity-60"
+              >
+                {unlockLabel}
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+    </>
+  );
+}
+
+/**
+ * 手机上的吸底解锁条：锁定的报告很长，解锁入口分散在几处；滚动时只要屏幕上没有任何一个解锁入口，
+ * 底部就吸一条，保证拇指随时够得到。桌面端不显示（页面够宽，入口都在视野里）。
+ */
+function StickyUnlockBar({ label, onUnlock, busy }: { label: string; onUnlock: () => void; busy?: boolean }) {
+  // 屏幕上有解锁入口（章节里的按钮 / 底部解锁条）的数量；为 0 且已经滚过封面才显示
+  const [visibleAnchors, setVisibleAnchors] = useState(0);
+  const [pastCover, setPastCover] = useState(false);
+
+  useEffect(() => {
+    if (typeof IntersectionObserver === "undefined") return;
+    const inView = new Set<Element>();
+    const anchorObserver = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) inView.add(entry.target);
+        else inView.delete(entry.target);
+      }
+      setVisibleAnchors(inView.size);
+    });
+    const coverObserver = new IntersectionObserver((entries) => {
+      for (const entry of entries) setPastCover(!entry.isIntersecting && entry.boundingClientRect.top < 0);
+    });
+    const watched = new Set<Element>();
+    const scan = () => {
+      for (const el of document.querySelectorAll("[data-unlock-anchor]")) {
+        if (!watched.has(el)) {
+          watched.add(el);
+          anchorObserver.observe(el);
+        }
+      }
+      const cover = document.querySelector("[data-report-cover]");
+      if (cover && !watched.has(cover)) {
+        watched.add(cover);
+        coverObserver.observe(cover);
+      }
+    };
+    scan();
+    // 报告里的章节（Lookbook 的锁定页脚等）是异步出来的：DOM 变了就重新找一遍（每帧最多一次，页面上别处的动画不拖慢它）
+    let frame = 0;
+    const mutation = new MutationObserver(() => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        scan();
+      });
+    });
+    mutation.observe(document.body, { childList: true, subtree: true });
+    return () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      mutation.disconnect();
+      anchorObserver.disconnect();
+      coverObserver.disconnect();
+    };
+  }, []);
+
+  if (!pastCover || visibleAnchors > 0) return null;
+  // 挂到 body 上：报告常在弹窗（历史记录里打开）里，弹窗自带 backdrop-filter，会让里面的 fixed 元素跟着内容一起滚走；
+  // z-index 要盖过弹窗（100）、低于付费弹窗（200）
+  return createPortal(
+    <div data-export-hide="" className="fixed inset-x-0 bottom-0 z-[150] border-t border-primary/20 bg-background/95 px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] backdrop-blur-md sm:hidden">
+      <button
+        type="button"
+        onClick={() => {
+          trackEvent("report_sticky_unlock_clicked");
+          onUnlock();
+        }}
+        disabled={busy}
+        className="flex min-h-12 w-full items-center justify-center rounded-full bg-primary px-6 text-sm font-semibold text-white shadow-md shadow-primary/25 transition hover:bg-primary-dark disabled:opacity-60"
+      >
+        {label}
+      </button>
+    </div>,
+    document.body,
+  );
+}
+
 /** 解锁条：只有拥有者（有 onUnlock）才显示；别人分享出来的报告不会向访客推销 */
 function UnlockStrip({ text, onUnlock, unlockLabel, busy }: { text: string; onUnlock?: () => void; unlockLabel?: string; busy?: boolean }) {
   if (!onUnlock || !unlockLabel) return null;
   return (
-    <div className="mt-6 flex flex-col items-center gap-3 rounded-xl border border-gold/40 bg-gradient-to-br from-white to-muted/60 px-4 py-4 text-center">
+    <div data-unlock-anchor="" className="mt-6 flex flex-col items-center gap-3 rounded-xl border border-gold/40 bg-gradient-to-br from-white to-muted/60 px-4 py-4 text-center">
       <p className="report-serif text-sm leading-relaxed text-foreground/80">{text}</p>
       <button
         type="button"
@@ -592,7 +748,7 @@ function LockedChapter({ ui, onUnlock, unlockLabel, busy }: { ui: (k: string) =>
   // 没有解锁入口 = 别人分享出来的报告：访客看到的是「这部分只有报告主人能看」，而不是让他付费
   const shared = !onUnlock;
   return (
-    <div className="mt-4 overflow-hidden rounded-xl border border-gold/40 bg-white/70">
+    <div data-unlock-anchor="" className="mt-4 overflow-hidden rounded-xl border border-gold/40 bg-white/70">
       <div className="space-y-2.5 px-4 pt-4" aria-hidden="true">
         {["w-full", "w-11/12", "w-4/5", "w-full", "w-2/3"].map((w, i) => (
           <div key={i} className={`h-3 rounded-full bg-foreground/[0.07] ${w}`} />

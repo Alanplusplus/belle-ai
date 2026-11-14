@@ -103,8 +103,11 @@ export interface LookbookData {
   task_id?: string;
   unlocked: boolean;
   total: number;
-  /** preview：只有预览整图；full：全套；lens：独立工具（只有自己那一章，试戴付费）；skipped：免费预览名额已用完 / 照片不合适；disabled：功能关闭 */
-  mode: "preview" | "full" | "lens" | "skipped" | "none" | "disabled";
+  /**
+   * preview：只有预览整图；full：全套；lite：单份报告（文字报告全开，Lookbook 只有色彩试穿，其余章节升级套装后才有，此时 unlocked 为 false）；
+   * lens：独立工具（只有自己那一章，试戴付费）；skipped：免费预览名额已用完 / 照片不合适；disabled：功能关闭
+   */
+  mode: "preview" | "full" | "lite" | "lens" | "skipped" | "none" | "disabled";
   /** 独立工具任务对应的章节 */
   lens?: LookbookSheetKey;
   state: "processing" | "ready" | "failed" | "disabled";
@@ -129,6 +132,16 @@ export type RerollOutcome = "ok" | "no_credits" | "busy" | "limit" | "error";
 
 /** 试戴的结果：ok 已开始；其余是失败原因（额度不够 / 已经买过或分析还没好 / 其他） */
 export type TryOnOutcome = "ok" | "no_credits" | "busy" | "error";
+
+/**
+ * 页面外的事件让 Lookbook 立刻重取一次：单份报告升级成整套之后，报告本身早就是「已解锁」，
+ * useLookbook 的 unlocked 参数不会变，所以靠这个事件通知它重新开始轮询（整套才刚开始生成）。
+ */
+const REFRESH_EVENT = "belle:lookbook-refresh";
+
+export function refreshLookbook(): void {
+  if (typeof window !== "undefined") window.dispatchEvent(new Event(REFRESH_EVENT));
+}
 
 const POLL_MS = 5000;
 /** 独立工具的文字档案几秒到几十秒就好：取得勤一点，好了立刻显示 */
@@ -171,6 +184,12 @@ export function useLookbook(taskId: string | null, lang: string, unlocked: boole
   const [failed, setFailed] = useState(false);
   const [round, setRound] = useState(0);
   const [retrying, setRetrying] = useState(false);
+
+  useEffect(() => {
+    const onRefresh = () => setRound((value) => value + 1);
+    window.addEventListener(REFRESH_EVENT, onRefresh);
+    return () => window.removeEventListener(REFRESH_EVENT, onRefresh);
+  }, []);
 
   useEffect(() => {
     if (!taskId) return;

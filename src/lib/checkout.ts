@@ -40,6 +40,8 @@ export interface CheckoutContext {
   ts: number;
   /** 下单前的积分包余额：支付返回后据此判断积分是否到账 */
   packBefore?: number;
+  /** 下单前的报告额度：单份报告只发报告额度（没有积分），支付返回后据此判断是否到账 */
+  reportBefore?: number;
   /** 从哪份锁定的色彩报告进入的付费弹窗：买完后自动用报告额度解锁它 */
   unlockTaskId?: string;
   /** 从哪份「分析 + 试戴」结果进入的（买积分解锁试戴图）：到账后回到它，积分留给用户自己点试戴 */
@@ -83,6 +85,8 @@ export async function startCheckout(params: {
   email?: string;
   /** 下单前的积分包余额 */
   packBefore?: number;
+  /** 下单前的报告额度 */
+  reportBefore?: number;
   /** 从哪份锁定的色彩报告进入（买完后自动解锁它） */
   unlockTaskId?: string;
   /** 从哪份独立工具的结果进入（积分到账后回到它） */
@@ -93,6 +97,7 @@ export async function startCheckout(params: {
   // 没手动填邮箱时，用已知的：Google 登录的账号邮箱，或上次填过的。预填付款页，也让后端能凭邮箱找回购买
   const email = params.email?.trim() || getCachedEmail() || getSavedCheckoutEmail() || undefined;
   let packBefore = params.packBefore;
+  let reportBefore = params.reportBefore;
   trackCheckoutEvent("checkout_started", { product, source });
   // GA4 推荐事件：付费漏斗 view_pricing → begin_checkout → purchase（purchase 由服务端 Measurement Protocol 发送）
   // 金额与币种取访客当前看到的
@@ -108,11 +113,12 @@ export async function startCheckout(params: {
   try {
     let userId = getCachedUserId();
     // 调用方没传下单前余额（比如 /pricing 页）：这里取一次，返回页面后据此判断积分是否到账
-    if (!userId || packBefore == null) {
+    if (!userId || packBefore == null || reportBefore == null) {
       const initRes = await webInit();
       if (initRes.code === 200 && initRes.data) {
         userId = userId ?? initRes.data.user_id;
         if (packBefore == null) packBefore = initRes.data.pack_credits ?? 0;
+        if (reportBefore == null) reportBefore = initRes.data.report_credits ?? 0;
       }
     }
     if (!userId) throw new Error("no_user_id");
@@ -141,6 +147,7 @@ export async function startCheckout(params: {
       source,
       ts: Date.now(),
       ...(packBefore != null ? { packBefore } : {}),
+      ...(reportBefore != null ? { reportBefore } : {}),
       ...(unlockTaskId ? { unlockTaskId } : {}),
       ...(openTaskId ? { openTaskId } : {}),
     });

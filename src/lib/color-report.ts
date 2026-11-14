@@ -78,6 +78,12 @@ export function signatureOrder(signature: ReportSignature | undefined, count: nu
   return order;
 }
 
+/**
+ * 锁定的报告免费露出前几个推荐色（和后端 color_report.LOCKED_FREE_COLORS 一致）。
+ * 本季型色板是公开数据，所以「只露 3 个」是页面层面的悬念；真正被后端剔除的是个性化字段。
+ */
+export const FREE_COLOR_COUNT = 3;
+
 /** 浏览器里记住用户的季型（报告页写入，买前扫一扫读取） */
 export const MY_SEASON_KEY = "belle_my_season";
 

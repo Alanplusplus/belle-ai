@@ -68,6 +68,8 @@ export interface WebInitData {
   retest?: { available: boolean; expires_at?: number | null; left?: number };
   /** 买过套装 / 积分包：用完积分后展示加购包，而不是再卖一次套装 */
   has_purchased?: boolean;
+  /** 只买过单份报告、没买过套装：升级完整 Lookbook 可以买补差价升级包（套装 − 单份） */
+  upgrade_topup?: boolean;
 }
 
 export type WebSignInData = WebInitData;
