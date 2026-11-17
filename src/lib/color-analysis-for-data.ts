@@ -231,6 +231,7 @@ export const ATTRIBUTES: Record<string, AttributeData> = {
       },
     ],
     relatedSlugs: [
+      "asian-skin-tone-chart",
       "korean-personal-color-analysis",
       "how-to-determine-skin-undertone",
       "cool-tone-vs-warm-tone",
