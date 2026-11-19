@@ -18,7 +18,7 @@ image: "/images/blog/style-personality-types-guide.webp"
 
 ### 1. 로맨틱
 **본질:** 부드럽고, 여성스럽고, 관능적이며, 따뜻함
-**특징:** 둥근 얼굴형, 도톰한 입술, 부드러운 � cheekbone, 사슴 같은 눈, 흐르는 머릿결
+**특징:** 둥근 얼굴형, 도톰한 입술, 부드러운 광대뼈, 사슴 같은 눈, 흐르는 머릿결
 **잘 어울리는:** 드레이프 원단, 부드러운 질감(실크, 캐시미어, 레이스), 둥근 넥라인, body-conscious 실루엣, warm color, 플로럴
 **피할 것:** sharp tailoring, 기하학 패턴, stiff 원단, 과도한 미니멀
 

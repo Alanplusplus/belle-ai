@@ -14,7 +14,7 @@ Luego te sientas en la silla del salón, le enseñas la captura a tu estilista y
 
 Lo que nadie te cuenta: **la técnica de coloración importa tanto como el tono en sí.** Balayage, mechas con papel y color global no solo difieren en la aplicación — crean patrones completamente distintos de luz, contraste y dimensión en el cabello. Y esos patrones interactúan con el subtono de tu piel, el color de tus ojos y tu nivel de contraste natural de maneras muy diferentes.
 
-Lo aprendí a las malas tras años de elegir siempre la técnica más de moda. Cuando empecé a combinar la técnica con mi estación de color, todo encajó.
+Muchas personas lo aprenden a las malas al elegir siempre la técnica más de moda. Cuando combinas la técnica con tu estación de color, suele encajar todo.
 
 ---
 
@@ -170,7 +170,7 @@ La diferencia entre romper la regla a propósito y un desajuste accidental es la
 
 ## Usar la tecnología para previsualizar antes de decidirte
 
-Aquí va la parte que me habría ahorrado varios cientos de dólares y mucha frustración: ahora puedes previsualizar distintas técnicas de coloración en tu propia foto antes de entrar al salón.
+Aquí va la parte que puede ahorrarte varios cientos de dólares y mucha frustración: ahora puedes previsualizar distintas técnicas de coloración en tu propia foto antes de entrar al salón.
 
 Las herramientas de vista previa de color de cabello con IA pueden mostrarte cómo quedarían el balayage, las mechas o el color global sobre tu tono de piel, color de ojos y rasgos faciales concretos. Algunas incluso tienen en cuenta tu [análisis de estación de color](/hair-color-analysis) para recomendar qué tonos y técnicas armonizarán mejor.
 

@@ -8,7 +8,7 @@ image: "/images/blog/celebrity-color-season-style-twin.webp"
 
 ## Zaten Bir Ünlü Stil İkizin Var
 
-Yıllarca renk analizi inceledikten sonra fark ettiğim bir şey: doğal olarak çekildiğimiz ünlüler sıklıkla bizim renk mevsimimizi paylaşıyor. Vücut tipimizi değil, yaşam tarzımızı değil — *renklendirmemizi*. Bu tesadüf değil.
+Renk analizinde sık sık karşılaşılan bir örüntü var: doğal olarak çekildiğimiz ünlüler sıklıkla bizim renk mevsimimizi paylaşıyor. Vücut tipimizi değil, yaşam tarzımızı değil — *renklendirmemizi*. Bu tesadüf değil.
 
 Sizinle aynı alt ton, kontrast seviyesi ve mevsim tipine sahip biri belirli bir ton giydiğinde beyniniz bunu "güzel" olarak kaydeder; kendi özelliklerinize neyin uyduğunu içgüdüsel tanırsınız. O tozlu gül elbise belirli bir oyuncuyu ışıltılı gösterdi mi? Gözünüze çarpmasının bir nedeni var.
 
@@ -26,7 +26,7 @@ Bu, ünlülerin esasen kendi renk paletleri için yürüyen lookbook'lar olduğu
 
 Anahtar içgörü: **Bir ünlü üzerinde inanılmaz görünen bir renk giydiğinde ve sizinle aynı mevsimdeyse, aynı renk sizde de inanılmaz görünecektir.** Ten tonu, göz rengi ve saç tonu kıyafeti kim giyerse giysin aynı optik etkileri yaratır.
 
-Renk psikolojisi araştırmaları bunu destekler. [Color Research & Application dergisinde yayımlanan bir çalışma](https://onlinelibrary.wiley.com/journal/15206378), insanların doğal renklendirmeleriyle uyumlu renklerle çerçevelenen yüzleri daha çekici bulduğunu gösterdi. Stil ikizinizin en iyi giyinen anları hangi uyumların işe yaradığını kanıtlayan küratörlü bir deney gibidir.
+Fikir basit: doğal renklendirmenizle uyumlu renkler genelde sizde daha iyi durur. Stil ikizinizin en iyi giyinen anları, hangi uyumların işe yaradığını gösteren küratörlü bir örnek seti gibidir.
 
 ---
 
@@ -163,7 +163,7 @@ Daralttıktan sonra o ünlülerin sürekli iyi taşıdığı renklere bakın. En
 - Stil ikiziniz **renklendirme benzerliğine** (alt ton, kontrast, derinlik) dayanır — vücut tipine veya yaşam tarzına değil
 - İkizinizin en iyi görünümlerini alışveriş referansı olarak kaydedin — giydikleri **spesifik tonlar** sizde de işe yarar
 - Makyaj tercihlerini, özellikle ruj ve allık alt tonlarını inceleyin
-- 80/20 kuralını unutmayın: **değerin %80'i doğru rengi seçmekten gelir**, birebir aynı kıyafetten değil
+- Unutmayın: **doğru rengi yakalamak en önemlisi**, birebir aynı kıyafetten daha çok
 
 Bir sonraki "en iyi giyinen" listesinde bir ünlü görüp "vay, o renk muhteşem" dediğinizde — sizinle aynı mevsimde mi diye bakın. Öyleyse bir sonraki alışveriş listenizi buldunuz demektir.
 

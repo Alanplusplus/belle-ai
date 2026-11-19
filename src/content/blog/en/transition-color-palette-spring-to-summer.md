@@ -8,7 +8,7 @@ image: "/images/blog/transition-color-palette-spring-to-summer.webp"
 
 ## The Closet Crisis That Happens Every June
 
-Every year around late May, I hit the same wall. My closet is full of the warm peach, coral, and golden yellow pieces that made me glow all spring — but suddenly they feel too heavy, too warm, too *much*. The light has changed. The air feels different. And the colors that made me radiant in April now make me look slightly flushed by June.
+Late May has a way of breaking your spring wardrobe momentum. Pieces in warm peach, coral, and golden yellow that looked radiant in April suddenly feel too heavy, too warm, too *much*. The light has changed. The air feels different — and those same colors can start to read as slightly flushed on your skin by June.
 
 If you've ever felt like your wardrobe just stops working when the weather shifts, you're not imagining it. The transition from spring to summer isn't just a temperature change — it's a light change. And that shift in natural light genuinely affects how colors interact with your skin.
 
@@ -48,7 +48,7 @@ These are your **bridge colors** — the pieces that earn their closet space by 
 
 ## A Practical Transition Strategy (Week by Week)
 
-You don't need to overhaul your wardrobe on June 1st. Here's how I handle the shift:
+You don't need to overhaul your wardrobe on June 1st. Here's a practical way to handle the shift:
 
 ### Weeks 1–2: Start Muting
 

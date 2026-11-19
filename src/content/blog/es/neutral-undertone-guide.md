@@ -6,15 +6,15 @@ tags: ["subtono de piel", "subtono neutro", "análisis de color", "belleza", "gu
 image: "/images/blog/neutral-undertone-guide.webp"
 ---
 
-## El test de subtono que me hizo cuestionarlo todo
+## ¿Atrapada entre cálido y frío?
 
-He hecho la prueba de las venas al menos una docena de veces. ¿Venaz azules? Frío. ¿Venaz verdes? Cálido. Sencillo, ¿no?
+Puede que hayas hecho la prueba de las venas más de una vez. ¿Venaz azules? Frío. ¿Venaz verdes? Cálido. Sencillo, ¿no?
 
-Excepto que las mías parecían verde azulado. Ni verdes ni azules, sino obstinadamente en un punto intermedio. La prueba del oro frente a la plata no aclaraba nada: el oro me quedaba bien, la plata me quedaba bien, el oro rosa también... me quedaba bien. Cada quiz en línea que probaba me daba un resultado distinto, y para cuando había consultado tres guías distintas de subtono, me habían clasificado como fría, cálida Y oliva, todo en la misma tarde.
+Excepto que las tuyas parecen verde azulado. Oro y plata pueden quedarte igual de bien. Los quizzes en línea dan resultados distintos; tres guías pueden etiquetarte cálida, fría y oliva la misma tarde.
 
-Si esto te suena dolorosamente familiar, hay una buena posibilidad de que tengas subtono neutro. Y aquí va lo que la mayoría de las guías no te cuentan: el neutro es genuinamente el subtono más difícil de definir, porque los tests estándar fueron diseñados para personas que se sitúan claramente en un extremo del espectro. Si estás equilibrada en el centro, esos tests básicamente dejan de funcionar.
+Si esto te suena dolorosamente familiar, hay una buena posibilidad de que tengas subtono neutro. El neutro es el más difícil de definir porque los tests estándar fueron diseñados para extremos claros del espectro; en el centro, dejan de funcionar.
 
-Este artículo es para todas las que han estado atrapadas en el limbo del subtono. Explicaré qué significa realmente el subtono neutro, por qué los tests convencionales te fallan y, lo más importante, cinco métodos que sí funcionan para identificarlo.
+Este artículo es para quienes han estado atrapadas en el limbo del subtono. Explicamos qué significa el subtono neutro, por qué fallan los tests convencionales y cinco métodos que sí funcionan.
 
 ---
 
@@ -72,7 +72,7 @@ Los subtonos cálidos se broncean con facilidad; los fríos se queman primero.
 
 ## 5 tests que sí funcionan para el subtono neutro
 
-Tras años de frustración e investigación, he encontrado cinco métodos que identifican el subtono neutro de forma fiable. Úsalos juntos para obtener el resultado más preciso: si tres o más apuntan a «neutro», puedes estar segura.
+Estos cinco métodos, usados juntos, identifican el subtono neutro de forma fiable. Si tres o más apuntan a «neutro», puedes estar segura.
 
 ### 1. La prueba de comparación por drapeado
 

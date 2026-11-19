@@ -9,7 +9,7 @@ image: "/images/blog/lighting-affects-colors.webp"
 
 ## Hayal Görmüyorsunuz — Farklı Işıklar Altında Gerçekten Farklı Görünüyorsunuz
 
-Kesinlikle yaşadığınız bir senaryo: Sabah giyinirsiniz, aynaya bakarsınız ve *evet, bu kombin iyi* dersiniz. Sonra ofis tuvaletinin aynasında yansımanızı görürsünüz ve bir şeyler... ters. Evde zengin bordo görünen bluz şimdi donuk kahverengi okunuyor. Cildiniz sıcak yerine sarımsı görünüyor.
+Tanıdık gelebilecek bir senaryo: Sabah giyinirsiniz, aynaya bakarsınız ve *evet, bu kombin iyi* dersiniz. Sonra ofis tuvaletinin aynasında yansımanızı görürsünüz ve bir şeyler... ters. Evde zengin bordo görünen bluz şimdi donuk kahverengi okunuyor. Cildiniz sıcak yerine sarımsı görünüyor.
 
 Aklınızı kaçırmıyorsunuz. Kişisel stilde en çok göz ardı edilen faktörlerden birini yaşıyorsunuz — aydınlatmanın renklerin vücudunuzda nasıl göründüğünü temelden değiştirmesi.
 
@@ -190,4 +190,4 @@ Aydınlatmayı anlamak renk mevsiminizi değiştirmez — ama gerçek dünyada n
 
 - [Kişisel Renk Analizinin Arkasındaki Bilim: Gerçekte Nasıl İşler](/tr/blog/science-behind-personal-color-analysis) — Mevsimsel renk tipolojisinin optiği ve biyolojisi
 - [Evde Renk Analizi Nasıl Yapılır](/tr/blog/how-to-do-color-analysis-at-home) — Aydınlatma kurulum ipuçları dahil adım adım rehber
-- [Yapay Zekâ vs Profesyonel Renk Analizi: İkisini de Denedim](/tr/blog/ai-vs-professional-color-analysis) — Teknoloji aydınlatma değişkenini nasıl farklı ele alır
+- [Yapay zeka vs profesyonel renk analizi: nasıl karşılaştırılır](/tr/blog/ai-vs-professional-color-analysis) — Teknoloji aydınlatma değişkenini nasıl farklı ele alır

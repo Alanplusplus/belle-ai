@@ -9,11 +9,11 @@ image: "/images/blog/olive-skin-lip-color-guide.webp"
 
 ## Neden Ruj Zeytin Teni İçin En Zor Makyaj Kategorisi
 
-Zeytin teni konuşmalarında fondöten genelde öne çıkar. Bence asıl hayal kırıklığı rujda birikir.
+Zeytin teni konuşmalarında fondöten genelde öne çıkar. Asıl hayal kırıklığı çoğu zaman rujda birikir.
 
-Sıcak alt tonlu bir arkadaşta ışıl ışıl duran bir kırmızıyı zeytin tenli bir müşterinin denemesini sayamam — kendi dudaklarında turuncuya, bulanık bir tona kayar veya dişleri sararmış görünür. Soğuk pembeyi dener; renk cildin yanında düz ve gri kalır. «Evrensel ten tonu» alır — ya kaybolur ya da dudaklara kapatıcı sürülmüş gibi durur.
+Sıcak alt tonlu bir arkadaşta ışıl ışıl duran bir kırmızıyı denediğinizde — kendi dudaklarında turuncuya, bulanık bir tona kayar veya dişleri sararmış görünür. Soğuk pembeyi dener; renk cildin yanında düz ve gri kalır. «Evrensel ten tonu» alır — ya kaybolur ya da dudaklara kapatıcı sürülmüş gibi durur.
 
-Zeytin alt tonu, ciltteki yeşil-gri modifikatör üzerinden dudak pigmentini okur. Standart sıcak veya soğuk tenler için dengelenmiş tonlar bu renk yansıması ile buluşunca, renk kartının vaat etmediği yönlere kayar. Bu rehberde gerçekten uyum sağlayan aileler, atlamanızı önerdiğim tonlar ve yıl boyu iş gören beş rujluk gardırop var.
+Zeytin alt tonu, ciltteki yeşil-gri modifikatör üzerinden dudak pigmentini okur. Standart sıcak veya soğuk tenler için dengelenmiş tonlar bu renk yansıması ile buluşunca, renk kartının vaat etmediği yönlere kayar. Bu rehberde gerçekten uyum sağlayan aileler, atlanması iyi olan tonlar ve yıl boyu iş gören beş rujluk gardırop var.
 
 ---
 
@@ -35,7 +35,7 @@ Sıcak kırmızılar da güvenli liman değil. Turuncu-kırmızı ve domates ton
 
 ## Zeytin Teni İçin En İyi Dudak Rengi Aileleri
 
-Bu dört aile günlük hayatın çoğunu karşılar. Zeytin alt tonlu görünümler kurarken sürekli bunlara dönerim.
+Bu dört aile günlük hayatın çoğunu karşılar. Zeytin alt tonları için en güvenilir başlangıç noktalarıdır.
 
 ### Böğürtlen
 
@@ -63,7 +63,7 @@ Mor-pembe, zeytin teninde gerçekten işe yarayan «ten tonu»dur. Şeftali ten 
 - Gri-kahve mor-pembe
 - Gül ağacı tonu
 
-Günlük tanım için favorim — doğal bitiş istiyorsanız «ruj var!» diye bağırmayan dudak rengi.
+Günlük tanım için güçlü bir seçenek — doğal bitiş istiyorsanız «ruj var!» diye bağırmayan dudak rengi.
 
 ### Tuğla
 
@@ -104,7 +104,7 @@ Zeytin teninde ten tonu için derinlik ve sıcaklık gerekir; yoksa kaybolur. So
 
 ## Mercan Tartışması: Ne Zaman Olur, Ne Zaman Olmaz
 
-Mercan, zeytin müşterileri arasında en bölücü ailedir. Kimi güneş öpmüş görünür; kimi soluk ve yorgun. Yıllarca alt tiplerde test ettikten sonra hangi grupta olduğunuzu böyle ayırırım.
+Mercan, zeytin tenler arasında en bölücü ailedir. Kimi güneş öpmüş görünür; kimi soluk ve yorgun. Hangi grupta olduğunuzu böyle ayırt edebilirsiniz.
 
 ### Mercan Ne Zaman İşe Yarar
 

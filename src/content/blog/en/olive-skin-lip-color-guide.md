@@ -11,9 +11,9 @@ image: "/images/blog/olive-skin-lip-color-guide.webp"
 
 Foundation steals the spotlight in most olive-skin threads. Lipstick is where the real heartbreak happens.
 
-I have lost count of how many times an olive client swatched a red that looked electric on a warm-toned friend — and on their own mouth it turned orange, muddy, or made their teeth look yellow. They tried a cool pink and the color went flat and grey next to their skin. They bought a “universal nude” and it either disappeared or looked like concealer painted on the lips.
+You may have swatched a red that looked electric on a warm-toned friend — and on your own mouth it turned orange, muddy, or made your teeth look yellow. You may have tried a cool pink and watched the color go flat and grey next to your skin. A “universal nude” might disappear or look like concealer painted on the lips.
 
-Olive undertones read lip pigment through a green-grey modifier. Shades balanced for plain warm or cool skin hit that cast and shift in ways the swatch card never promised. This guide walks through the families that actually harmonize, the shades I tell clients to skip, and how to build a five-lip wardrobe that works year-round.
+Olive undertones read lip pigment through a green-grey modifier. Shades balanced for plain warm or cool skin hit that cast and shift in ways the swatch card never promised. This guide walks through the families that actually harmonize, the shades to skip, and how to build a five-lip wardrobe that works year-round.
 
 ---
 
@@ -35,7 +35,7 @@ Warm reds are not a reliable backup. Orange-red and tomato lipsticks can look go
 
 ## Best Lip Color Families for Olive Skin
 
-These four families cover most of what you will wear daily. When I build looks for olive undertones, I reach for them constantly.
+These four families cover most of what you will wear daily. For olive undertones, they are the most reliable starting points.
 
 ### Berry
 
@@ -63,7 +63,7 @@ Mauve is the olive-skin “nude” that actually works. Peachy nudes run too war
 - Taupe-mauve
 - Rosewood
 
-Mauve is my go-to for everyday definition — color on the lip without shouting “lipstick” if you prefer a natural finish.
+Mauve is a strong everyday choice — color on the lip without shouting “lipstick” if you prefer a natural finish.
 
 ### Brick
 
@@ -104,7 +104,7 @@ Your ideal nude is often one to two shades deeper than you assume. A color that 
 
 ## The Coral Controversy: When It Works, When It Doesn’t
 
-Coral divides olive clients more than any other lip family. Some olives look sun-kissed in coral; others look sallow and tired. After years of testing shades across subtypes, here is how I sort who belongs in which camp.
+Coral divides olive skin more than any other lip family. Some olives look sun-kissed in coral; others look sallow and tired. Here is how to tell which camp you likely fall into.
 
 ### When Coral Works
 

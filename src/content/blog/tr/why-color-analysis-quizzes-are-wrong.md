@@ -31,7 +31,7 @@ Renk algısı araştırmaları, insanların kendi vücutlarındaki renkleri nesn
 - **Kromatik adaptasyon** — gözleriniz görmeye alıştığınız şeye otomatik olarak "uyum sağlar"
 - **Kültürel önyargı** — renklendirmeniz hakkında söylenenler doğru olmayabilir
 
-*Journal of Perceptual Imaging*'de 2019'da yayımlanan bir çalışma, eğitimsiz gözlemcilerin kontrollü aydınlatma altında bile cilt alt tonunu %40'tan fazla yanlış tanımladığını buldu.
+Kontrollü aydınlatmada bile eğitimsiz gözlemciler cilt alt tonunu sıklıkla yanlış değerlendirir.
 
 ## Neden #2: İkili Sorular Bir Spektrumu Yakalayamaz
 
@@ -42,7 +42,7 @@ Renk algısı araştırmaları, insanların kendi vücutlarındaki renkleri nesn
 
 Ancak renk ikili değildir. Sıcak ile soğuk arasında *sürekli bir spektrumda* yer alırsınız. Açıkça sıcak, açıkça soğuk ve aradaki herkes vardır — nötr-sıcak, nötr-soğuk, zeytin alt tonlu gerçek nötr vb.
 
-Her adımda "sıcak" veya "soğuk" seçmeye zorlayan bir test, ortada kalan herkesi her zaman yanlış tiplendirir. Ve yaklaşık **insanların %30-40'ı nötr veya karışık alt tona sahiptir**; bu da onları yanlış tiplenen çoğunluk yapar.
+Her adımda "sıcak" veya "soğuk" seçmeye zorlayan bir test, ortada kalan herkesi her zaman yanlış tiplendirir. Ve **birçok kişi nötr veya karışık alt tona sahiptir**; en sık yanlış tiplenenler de tam olarak budur.
 
 Aynı durum diğer özellikler için de geçerlidir:
 - Açık mı koyu mu? Peki ya orta?
@@ -53,9 +53,9 @@ Aynı durum diğer özellikler için de geçerlidir:
 
 Bazı "daha akıllı" testler fotoğraf karşılaştırması ister — altın ve gümüş kumaş tutmak veya kendinizi ünlü örneklerle karşılaştırmak gibi.
 
-Ancak monitörünüzü kalibre etmediyseniz, ekranda gördüğünüz renkler bozuktur. Çalışmalar şunu gösterir:
+Ancak monitörünüzü kalibre etmediyseniz, ekranda gördüğünüz renkler bozuktur. Yaygın sorunlar şunlardır:
 
-- Çoğu tüketici monitörünün renk sıcaklığı 6500K–7500K'dır (doğal gün ışığından çok daha mavimsi)
+- Birçok tüketici monitörü renk kalibrasyonu yapılmamıştır ve doğal gün ışığından daha soğuk veya daha sıcak görünebilir
 - Ekran parlaklığı, kontrast ayarları ve ortam oda aydınlatması algılanan rengi kaydırır
 - Akıllı telefonlarla çekilen fotoğraflar beyaz dengesini otomatik ayarlar; cilt tonlarını gerçeklikten daha sıcak veya soğuk kaydırır
 - Instagram/sosyal medya filtreleri referans fotoğrafları daha da bozar
@@ -152,7 +152,7 @@ Herhangi bir sonuca — test, yapay zekâ veya başka — güvenmeden önce şu 
 ## Önemli Çıkarımlar
 
 - Renk analizi testleri, kendiniz hakkında nesnel olarak değerlendiremeyeceğiniz şeyleri öz bildirime dayandırdığı için başarısız olur
-- İkili sorular, nötr veya karışık alt tona sahip insanların %30–40'ını kaçırır
+- İkili sorular, nötr veya karışık alt tona sahip insanları kaçırır
 - Ekran renk bozulması fotoğraf karşılaştırmalı testleri güvenilmez kılar
 - Gerçek renk analizi, renklerin cildinizle nasıl etkileşime girdiğini gözlemlemeyi gerektirir — çoktan seçmeli soruları yanıtlamayı değil
 - En iyi seçenekleriniz profesyonel draping (pahalı ama kapsamlı) veya yapay zekâ analizi (uygun fiyatlı ve hızlı; görsel değerlendirme olduğunu unutmayın)

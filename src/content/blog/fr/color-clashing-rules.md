@@ -202,4 +202,4 @@ L'analyse colorimétrique vous donne la science. Le style vous donne l'art. La m
 - [Analyse colorimétrique : le guide complet](/fr/color-analysis) — Tout ce que vous devez savoir pour trouver vos meilleures couleurs
 - [Comment la théorie des couleurs des cours d'art s'applique à votre style personnel](/fr/blog/color-theory-personal-style) — La science derrière les combinaisons de couleurs qui fonctionnent
 - [Comment construire une garde-robe capsule pour votre saison colorimétrique](/fr/blog/capsule-wardrobe-color-season) — Construisez d'abord une garde-robe de base dans vos meilleures couleurs
-- [J'ai porté uniquement mes « couleurs de saison » pendant 30 jours — voici ce qui s'est passé](/fr/blog/wearing-season-colors-30-days) — Ce que le respect strict de la palette a enseigné sur la flexibilité
+- [Défi 30 jours : ne porter que les couleurs de sa saison — un plan à suivre](/fr/blog/wearing-season-colors-30-days) — Un plan semaine par semaine pour ne porter que les couleurs de sa saison pendant 30 jours

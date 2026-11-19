@@ -864,7 +864,7 @@ export const ATTRIBUTES: Record<string, AttributeData> = {
       },
       {
         q: "Can teens do color analysis for free?",
-        a: "Yes! Belle offers free AI color analysis — just upload a clear selfie in natural light. You'll receive your seasonal color type and a full palette of your most flattering colors.",
+        a: "Yes! Belle offers a free AI color analysis preview — just upload a clear selfie in natural light to see your seasonal color type and your first 3 colors. Your full palette, the makeup, hair and styling chapters and your full Lookbook are a one-time purchase.",
       },
       {
         q: "How does knowing my colors help with shopping on a budget?",

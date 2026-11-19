@@ -8,13 +8,13 @@ image: "/images/blog/online-shopping-color-season.webp"
 
 ## Online Alışverişte Kimse Konuşmayan Renk Sorunu
 
-Renk mevsimimi sonunda öğrendiğimde çok heyecanlandım. Soft Summer — soluk, soğuk tonlu, orta derinlikte renkler. Tozlu gül, adaçayı yeşili, arduvaz mavisi, soğuk taupe. Hemen laptopumu açtım, favori mağazalarıma girdim ve sepete eklemeye başladım.
+Renk mevsiminizi biliyorsunuz — örneğin Soft Summer: soluk, soğuk tonlu, orta derinlikte tozlu gül, adaçayı yeşili, arduvaz mavisi, soğuk taupe. Laptopu açar, favori mağazalara girip sepete eklersiniz.
 
-Üç gün ve bir teslimat sonra, sipariş ettiğimle *hiç alakası olmayan* bir kıyafet yığınına bakıyordum. "Tozlu mor" üst pembe pembe çıkmıştı. "Adaçayı yeşili" pantolon neon zeytin rengindeydi. "Soğuk gri" blazer ise belirgin sıcak, sarımsı bir ton taşıyordu; bir haftadır uyumamış gibi görünmeme neden oluyordu.
+Teslimattan sonra yığın, sipariş edilenle *hiç alakası olmayan* görünebilir. "Tozlu mor" üst pembe çıkabilir; "adaçayı yeşili" pantolon neon zeytin; "soğuk gri" blazer ise sıcak sarımsı tonla yüzü soluk gösterebilir.
 
 Tanıdık geldi mi? Renk mevsiminize göre online alışveriş yapmaya çalıştıysanız acıyı bilirsiniz. Ekrandaki renkler askıdaki renkler değil — ve her monitör farklı yalan söylüyorsa mevsiminizi bilmek de işe yaramaz.
 
-İki yılımı gerçekten işe yarayan bir online renk alışverişi sistemi geliştirmeye adadım. İşte kumaşa dokunmadan doğru renkleri almak hakkında öğrendiğim her şey.
+Aşağıdaki 7 adımlık sistem, kumaşa dokunmadan doğru renkleri seçmek ve iadeleri azaltmak içindir.
 
 ---
 
@@ -38,7 +38,7 @@ Neredeyse tüm online mağazaların kullandığı JPEG sıkıştırması, dosya 
 
 **4. Arka Plan Müdahalesi**
 
-Arka plan rengi, modelin ten rengi ve hatta fotoğraf stilizasyonu algınızı etkiler. Bej fon üzerinde sıcak tonlu modelde tozlu gül bluz, beyaz fonda soğuk tonlu modeldeki aynı bluzdan daha sıcak görünür. Beyniniz rengi çevre bağlamına göre ayarlar — [eşzamanlı kontrast](https://www.colormatters.com/color-and-vision/color-and-simultaneous-contrast) adlı iyi belgelenmiş bir fenomen.
+Arka plan rengi, modelin ten rengi ve hatta fotoğraf stilizasyonu algınızı etkiler. Bej fon üzerinde sıcak tonlu modelde tozlu gül bluz, beyaz fonda soğuk tonlu modeldeki aynı bluzdan daha sıcak görünür. Beyniniz rengi çevre bağlamına göre ayarlar — eşzamanlı kontrast adlı iyi belgelenmiş bir fenomen.
 
 **5. İsim-Renk Uyuşmazlığı**
 
@@ -48,7 +48,7 @@ Moda markaları renkleri doğruluk için değil, pazarlama için adlandırır. Z
 
 ## Paletinize Göre Online Alışveriş için 7 Adımlı Sistem
 
-Online alışveriş yaptığım her seferde kullandığım pratik çerçeve. Özel ekipman gerektirmez — sadece iade yığınını dramatik biçimde azaltan birkaç alışkanlık.
+Online alışveriş yaptığınız her seferde kullanabileceğiniz pratik bir çerçevedir. Özel ekipman gerektirmez — sadece iade yığınını dramatik biçimde azaltan birkaç alışkanlık.
 
 ### Adım 1: Fiziksel Renk Referansı Oluşturun
 
@@ -148,7 +148,7 @@ Bu renkleri kendiniz okumayı öğrenmenin yerini almaz — ama özellikle göz�
 
 ## Online Renkte Doğru Yapan Üç Marka (Ve Diğerlerini Nasıl Tanırsınız)
 
-Yıllarca online alışverişte bazı markaların renk temsilinde tutarlı şekilde daha iyi olduğunu fark ettim. Farklı yaptıkları şeyler:
+Bazı markalar çevrim içi renk temsilinde tutarlı şekilde daha iyidir. Farklı yaptıkları şeyler:
 
 **Doğru markaların yaptıkları:**
 - Kalibre aydınlatmayla düz beyaz veya açık gri fonda fotoğraflama
@@ -168,14 +168,14 @@ Yıllarca online alışverişte bazı markaların renk temsilinde tutarlı şeki
 
 ## Önemli Çıkarımlar
 
-- Online renkler aydınlatma, monitör kalibrasyonu, sıkıştırma, arka plan ve yaratıcı renk adlandırmasıyla bozulur — ekrandan gerçeğe %20–30 renk farkı bekleyin
+- Online renkler aydınlatma, monitör kalibrasyonu, sıkıştırma, arka plan ve yaratıcı renk adlandırmasıyla bozulur — ekran ile gerçek arasında bir miktar renk farkı bekleyin
 - Ekranınızın yanındaki fiziksel renk numuneleri online alışveriş doğruluğu için en iyi yatırımdır
 - Gerçek rengi değerlendirmek için müşteri yorum fotoğrafları profesyonel ürün çekimlerinden daha güvenilirdir
 - Kumaş bileşimi renk görünümünü değiştirir — pamuk en güvenilir, ipek sıcaklık ekler, polyester parlaklık ekler
 - Satın almadan önce "en kötü senaryo"ları değerlendirmek için mevsiminizin *sınırlarını* (en önemli nitelik) anlayın
 - Ücretsiz iadeler bir kolaylık değil, renk alışverişi stratejisidir — stratejik sipariş verin ve suçluluk duymadan iade edin
 
-Tanıdığım en iyi online alışveriş yapanların mükemmel renk görüşü yok. Sistemleri var. Kendinizinkini kurun; teslimat kutusu geldiğinde endişelenmeyi bırakırsınız.
+En tutarlı online alışveriş yapanların mükemmel renk görüşüne güvenmezler. Sistemlere güvenirler. Kendinizinkini kurun; teslimat kutusu geldiğinde endişelenmeyi bırakırsınız.
 
 ## İlgili Makaleler
 

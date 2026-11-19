@@ -8,7 +8,7 @@ image: "/images/blog/celebrity-color-season-style-twin.webp"
 
 ## You Already Have a Celebrity Style Twin
 
-Here's something I've noticed over years of studying color analysis: the celebrities we're naturally drawn to often share our color season. Not our body type, not our lifestyle — our *coloring*. And that's not a coincidence.
+In color analysis, one pattern shows up again and again: the celebrities we're naturally drawn to often share our color season. Not our body type, not our lifestyle — our *coloring*. And that's not a coincidence.
 
 When someone with your same undertone, contrast level, and season type wears a particular shade, your brain registers it as "beautiful" because you instinctively recognize what works for your own features. That dusty rose dress that made a certain actress look luminous? There's a reason it caught your eye.
 
@@ -26,7 +26,7 @@ This means celebrities are essentially walking lookbooks for their color palette
 
 Here's the key insight: **when a celebrity wears a color that looks incredible on them, and they share your season, that same color will look incredible on you.** Skin tone, eye color, and hair shade create the same optical effects regardless of who's wearing the outfit.
 
-Research in color psychology backs this up. A [study published in the journal Color Research & Application](https://onlinelibrary.wiley.com/journal/15206378) found that people rate faces as more attractive when framed by colors that harmonize with their natural coloring. Your style twin's best-dressed moments are essentially a curated experiment proving which harmonies work.
+The idea is simple: colors that harmonize with your natural coloring tend to look better on you. Your style twin's best-dressed moments are essentially a curated set of examples showing which harmonies work.
 
 ---
 
@@ -163,7 +163,7 @@ For a second opinion, AI-powered color analysis can suggest a likely season from
 - Your style twin is based on **coloring similarity** (undertone, contrast, depth) — not body type or lifestyle
 - Save your twin's best looks as a shopping reference — the specific **shades** they wear are the ones that work for you too
 - Study their makeup choices, especially lip and blush undertones
-- Remember the 80/20 rule: **80% of the value comes from getting the color right**, not the exact outfit
+- Remember: **getting the color right matters most**, more than the exact outfit
 
 The next time you see a celebrity on a "best dressed" list and think "wow, that color is stunning" — check if they share your season. If they do, you've just found your next shopping list.
 

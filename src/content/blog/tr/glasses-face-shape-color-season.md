@@ -16,7 +16,7 @@ Peki ikinci adım? Neredeyse hiç kimse bundan bahsetmiyor.
 
 **Renk mevsiminiz, hangi çerçeve renklerinin ve malzemelerinin cildinizi gerçekten güzelleştirdiğini belirler.** Yanlış renkte bir çerçeve, günde 16 saat yüzünüzde durduğunda sizi soluk, yorgun veya «tuhaf» gösterebilir — şekil mükemmel olsa bile.
 
-İnsanların çerçeve şeklini doğru seçip yine de gözlüklerinde «yanlış» göründüğünü gördüm. Neredeyse her seferinde sebep renk uyumsuzluğuydu. Sıcak altın yerine soğuk gümüş. Mat kaplumbağa kabuğu cildi parlatacakken parlak siyah.
+Çerçeve şekli doğru seçilip yine de gözlüklerde «yanlış» görünmek sık görülür. Neredeyse her seferinde sebep renk uyumsuzluğudur — sıcak altın yerine soğuk gümüş veya mat kaplumbağa kabuğu cildi parlatacakken parlak siyah.
 
 Bu rehberde ikisini de nasıl doğru yapacağınızı göstereceğim — gözlükleriniz sadece yüzünüze uymakla kalmayıp tüm görünümünüzü güçlendirsin.
 

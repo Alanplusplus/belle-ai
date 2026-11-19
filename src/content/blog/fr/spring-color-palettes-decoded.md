@@ -12,7 +12,7 @@ Vous avez passé une analyse colorimétrique et le verdict est tombé : vous êt
 
 Mais voici ce que personne ne vous prévient — il existe en réalité **trois types différents de Printemps** dans le système d'analyse des 12 saisons, et les différences entre eux sont suffisamment importantes pour changer complètement votre stratégie vestimentaire.
 
-J'ai vu des personnes faire leurs achats avec confiance en cherchant des « couleurs Printemps chaudes », pour finir avec un dressing plein de pièces qui semblent presque justes, mais pas tout à fait. Le problème ? Elles achetaient des couleurs Printemps Chaud alors qu'elles étaient en réalité Printemps Clair, ou l'inverse.
+Beaucoup de personnes font leurs achats avec confiance en cherchant des « couleurs Printemps chaudes », pour finir avec un dressing plein de pièces qui semblent presque justes, mais pas tout à fait. Le problème ? Elles achetaient des couleurs Printemps Chaud alors qu'elles étaient en réalité Printemps Clair, ou l'inverse.
 
 Dans ce guide, je détaille les trois sous-saisons Printemps — **Printemps Vif**, **Printemps Chaud** et **Printemps Clair** — pour que vous identifiiez précisément laquelle vous correspond et commenciez à choisir des couleurs qui vous font vraiment rayonner.
 

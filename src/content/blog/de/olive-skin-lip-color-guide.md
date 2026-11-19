@@ -9,11 +9,11 @@ image: "/images/blog/olive-skin-lip-color-guide.webp"
 
 ## Warum Lippenstift die schwierigste Make-up-Kategorie für Olivhaut ist
 
-Bei Olivhaut steht die Foundation meist im Rampenlicht. Die echte Enttäuschung erlebe ich bei Lippenstift.
+Bei Olivhaut steht die Foundation meist im Rampenlicht. Die echte Enttäuschung betrifft oft den Lippenstift.
 
-Ich habe unzählige Male erlebt, wie Kundinnen mit Oliv-Unterton ein Rot ausprobieren, das bei einer warmtonigen Freundin strahlt — und auf den eigenen Lippen orange, schlammig wirkt oder die Zähne gelb erscheinen lässt. Ein kühles Pink wirkt flach und grau neben der Haut. Ein „universelles Nude“ verschwindet oder sieht aus wie Concealer auf dem Mund.
+Vielleicht hast du ein Rot ausprobiert, das bei einer warmtonigen Freundin strahlt — und auf den eigenen Lippen orange, schlammig wirkt oder die Zähne gelb erscheinen lässtt. Ein kühles Pink wirkt flach und grau neben der Haut. Ein „universelles Nude“ verschwindet oder sieht aus wie Concealer auf dem Mund.
 
-Oliv-Untertöne lesen Lippenpigment durch einen grün-grauen Modifikator. Für reines Warm oder Kühl ausbalancierte Farben treffen diesen Stich und verschieben sich anders, als die Farbkarte verspricht. Dieser Guide zeigt Familien, die wirklich harmonieren, Töne, die ich überspringen lasse, und wie Sie eine Fünf-Lippen-Garderobe für das ganze Jahr aufbauen.
+Oliv-Untertöne lesen Lippenpigment durch einen grün-grauen Modifikator. Für reines Warm oder Kühl ausbalancierte Farben treffen diesen Stich und verschieben sich anders, als die Farbkarte verspricht. Dieser Guide zeigt Familien, die wirklich harmonieren, Töne, die Sie überspringen sollten, und wie Sie eine Fünf-Lippen-Garderobe für das ganze Jahr aufbauen.
 
 ---
 
@@ -35,7 +35,7 @@ Warme Rottöne sind keine sichere Alternative. Orange-Rot und Tomatenrot können
 
 ## Beste Lippenfarben-Familien für Olivhaut
 
-Diese vier Familien decken den Alltag ab. Wenn ich Looks für Oliv-Untertöne baue, greife ich ständig dazu.
+Diese vier Familien decken den Alltag ab. Für Oliv-Untertöne sind sie die zuverlässigsten Startpunkte.
 
 ### Beeren
 
@@ -63,7 +63,7 @@ Mauve ist das Olivhaut-„Nude“, das wirklich funktioniert. Pfirsich-Nude ist 
 - Taupe-Mauve
 - Rosenholz
 
-Mauve ist mein Alltags-Favorit für Definition — Farbe auf den Lippen, ohne „Lippenstift!“ zu schreien, wenn Sie natürlich bleiben wollen.
+Mauve eignet sich gut für Definition im Alltag — Farbe auf den Lippen, ohne „Lippenstift!“ zu schreien, wenn Sie natürlich bleiben wollen.
 
 ### Ziegel
 
@@ -104,7 +104,7 @@ Ihr ideales Nude ist oft ein bis zwei Töne tiefer als angenommen. Eine Farbe, d
 
 ## Die Korallen-Kontroverse: Wann ja, wann nein
 
-Koralle spaltet Oliv-Kundinnen mehr als jede andere Familie. Manche wirken sonnenverwöhnt, andere fahl und müde. Nach Jahren Tests über Subtypen sortiere ich so, in welches Lager Sie gehören.
+Koralle spaltet Olivhaut mehr als jede andere Familie. Manche wirken sonnenverwöhnt, andere fahl und müde. So können Sie einschätzen, in welches Lager Sie gehören.
 
 ### Wann Koralle funktioniert
 

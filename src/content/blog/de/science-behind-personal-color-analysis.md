@@ -12,7 +12,7 @@ Das kennen Sie sicher. Sie probieren ein Korallen-Oberteil an und Ihre Haut wirk
 
 Das steckt nicht in Ihrem Kopf. Dahinter steckt echte Wissenschaft, und sobald Sie die Mechanismen verstehen, hört die Welt der Frage „Welche Farben stehen mir?" auf, Rätselraten zu sein, und beginnt, Sinn zu ergeben.
 
-Ich habe Monate damit verbracht, die Physik, Biologie und Wahrnehmungswissenschaft hinter der Farbanalyse zu erforschen. Das habe ich herausgefunden — und warum diese jahrhundertealte Praxis von mehr harter Wissenschaft getragen wird, als die meisten Menschen ahnen.
+Dieser Artikel führt durch die Physik, Biologie und Wahrnehmungswissenschaft hinter der Farbanalyse — und warum diese jahrhundertealte Praxis von mehr harter Wissenschaft getragen wird, als die meisten Menschen ahnen.
 
 ---
 
@@ -107,7 +107,7 @@ Simultankontrast wurde erstmals 1839 vom französischen Chemiker Michel Eugène 
 - **Harmonische Farben** (die Ihren Unterton teilen) lassen Ihre Haut glatt, ebenmäßig und leuchtend erscheinen. Das reflektierte Licht verstärkt Ihre natürliche Färbung.
 - **Disharmonische Farben** (die Ihrem Unterton entgegenwirken) erzeugen visuelle Spannung. Ihre Haut kann fahl, grau, gerötet oder ungleichmäßig wirken, weil das reflektierte Licht mit Ihren natürlichen Pigmenten kollidiert.
 
-Das ist kein subtiler Effekt. Forschung in der Farbwissenschaft hat gezeigt, dass Simultankontrast die wahrgenommene Farbe auf Wahrnehmungsskalen um bis zu 20-30 % verschieben kann. Das ist der Unterschied zwischen „Du siehst fantastisch aus" und „Geht es dir gut?"
+Das ist kein subtiler Effekt. Simultankontrast kann die Farbwahrnehmung spürbar verschieben. Das ist der Unterschied zwischen „Du siehst fantastisch aus" und „Geht es dir gut?"
 
 ## Warum Traditionelle Farbanalyse Schwierig Ist (Und Wo KI Hineinkommt)
 

@@ -16,7 +16,7 @@ faq:
 
 ## « Quelle saison suis-je ? » — le dilemme de la peau olive
 
-Presque à chaque consultation sous-ton olive, j’entends la même histoire. Quelqu’un finit un quiz de saison chromatique — parfois même un draping payant — et repart avec trois réponses différentes et zéro confiance.
+Beaucoup de personnes au sous-ton olive finissent un quiz de saison chromatique — parfois même un draping payant — et repartent avec trois réponses différentes et zéro confiance.
 
 Automne Doux semble juste jusqu’à ce que le terracotta près du visage donne l’air fatigué. L’algorithme propose Hiver Vrai, mais un rouge à lèvres rose glacé grise la peau. Pire : « Neutre » sans palette, comme si la peau olive n’avait aucune couleur.
 
@@ -50,7 +50,7 @@ Acceptez l’olive comme **modificateur** sur peau chaude ou froide, pas comme �
 
 ## Les quatre saisons où la peau olive tombe le plus souvent
 
-Dans ma pratique, la plupart des clientes au ton olive entrent dans l’une de ces quatre. Chacune combine une **chroma atténuée** avec un sous-ton chaud ou froid et une valeur moyenne ou profonde.
+La plupart des peaux au ton olive entrent dans l’une de ces quatre. Chacune combine une **chroma atténuée** avec un sous-ton chaud ou froid et une valeur moyenne ou profonde.
 
 | Saison | Sous-ton | Profondeur et contraste | Ambiance en une phrase |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@ Ci-dessous : signes sur peau olive, plus vêtements, maquillage et cheveux.
 
 ### Automne Doux — la saison olive classique
 
-**Profil :** Atténué, chaud, profondeur moyenne. C’est la saison que je vois le plus sur olive chaude.
+**Profil :** Atténué, chaud, profondeur moyenne. C’est la saison la plus fréquente sur olive chaude.
 
 **Signes sur peau olive :**
 
@@ -163,7 +163,7 @@ Savoir ce que vous **n’êtes pas** économise temps, argent et frustration maq
 
 ### Famille Printemps (Printemps Clair, Printemps Chaud, Printemps Vif)
 
-Printemps exige des couleurs claires, chaudes, souvent claires ou vives. La couche vert-gris de l’olive ajoute de l’atténuation. Quand une cliente olive sort Printemps Vif, je reteste presque toujours : c’est souvent Automne Doux ou un Été Doux clair olive chaude.
+Printemps exige des couleurs claires, chaudes, souvent claires ou vives. La couche vert-gris de l’olive ajoute de l’atténuation. Si vous êtes olive et sortez Printemps Vif, refaites un draping : Automne Doux ou un Été Doux clair olive chaude convient souvent mieux.
 
 ### Été et Automne vrais / primaires
 
@@ -185,7 +185,7 @@ Suivez ce flux chez vous avant d’acheter toute une garde-robe.
 
 ### Étape 1 : Confirmer le sous-ton olive
 
-La typisation ne marche que si le sous-ton est juste. Vérifiez le voile vert, le décalage de fond de teint et le blanc au cou. Mon [guide sous-ton olive](/fr/blog/olive-undertone-guide) détaille des tests fiables.
+La typisation ne marche que si le sous-ton est juste. Vérifiez le voile vert, le décalage de fond de teint et le blanc au cou. Notre [guide sous-ton olive](/fr/blog/olive-undertone-guide) détaille des tests fiables.
 
 ### Étape 2 : Séparer olive chaude et olive froide
 

@@ -22,7 +22,7 @@ Peki ya ne altın ne gümüş tam doğru görünüyorsa? Damarlarınız hem mavi
 
 Bu tanıdık geliyorsa, büyük olasılıkla zeytin alt tonunuz vardır. Ve yalnız değilsiniz — zeytin dünya çapında en yaygın alt tonlardan biridir; ancak standart güzellik tavsiyelerinde neredeyse hiç bahsedilmez.
 
-Yıllardır alt ton teorisini araştırıyorum ve zeytin alt tonları güzellik dünyasındaki en yanlış tanımlanan cilt özelliğidir. Nedenini açıklayayım.
+Alt ton teorisinde zeytin alt tonları, güzellik dünyasındaki en yanlış tanımlanan cilt özelliklerinden biridir. Nedenini açıklayayım.
 
 ---
 

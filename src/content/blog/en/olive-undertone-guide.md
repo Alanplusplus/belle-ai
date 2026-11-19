@@ -25,7 +25,7 @@ Except — what if neither gold nor silver looks quite right? What if your veins
 
 If this sounds familiar, there's a good chance you have olive undertones. And you're not alone — olive is one of the most common undertones globally, yet it's barely mentioned in standard beauty advice.
 
-I've spent years researching undertone theory, and olive undertones are hands-down the most misidentified skin characteristic in the beauty world. Let me explain why.
+In undertone theory, olive undertones are hands-down the most misidentified skin characteristic in the beauty world. Let me explain why.
 
 ---
 

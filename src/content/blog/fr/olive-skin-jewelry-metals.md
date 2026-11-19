@@ -7,17 +7,13 @@ tags: ["sous-ton olive", "bijoux", "accessoires", "analyse colorimétrique", "gu
 image: "/images/blog/olive-skin-jewelry-metals.webp"
 ---
 
-## J’ai porté le mauvais métal pendant des années — la peau olive ignore les règles
+## Pourquoi la peau olive casse la règle or contre argent
 
-Je croyais autrefois que les conseils sur les sous-tons étaient simples : les peaux chaudes rayonnent en or, les peaux froides en argent. Devant les miroirs des grands magasins, je collais les deux métaux à mon cou et j’attendais ce moment évident : « oui, c’est le mien ».
+Si vous avez déjà approché or et argent du cou dans un miroir de grand magasin sans trouver de gagnant évident, vous n’êtes pas seule. Le conseil habituel est simple : peaux chaudes en or, peaux froides en argent. Sur beaucoup de peaux olive, les deux passent « correctement » sans choix net.
 
-Il n’est jamais venu.
+L’or jaune peut rendre la peau légèrement fatiguée — pas affreuse, juste terne. L’argent sterling donne souvent la même impression. *Équilibrée* peut vouloir dire *plate*.
 
-L’or jaune rendait ma peau un peu fatiguée — pas orange, pas affreuse, juste légèrement terne. L’argent sterling me faisait la même impression : correct, mais sans vie. Mes amies chaudes paraissaient ensoleillées en or. Mes amies froides, nettes en argent. Moi, j’avais l’air équilibrée dans les deux, ce qui sonne bien jusqu’à ce que l’on comprenne qu’équilibrée signifie souvent *plate*.
-
-Ce terrain intermédiaire, c’est le territoire classique du sous-ton olive. L’olive n’est pas une quatrième catégorie à côté du chaud et du froid ; c’est un modificateur vert-gris posé sur votre pigment de base. Il apparaît dans de nombreuses ethnies et profondeurs de peau, pourtant la plupart des tableaux bijoux prétendent encore que vous êtes soit « équipe or », soit « équipe argent ».
-
-Ce guide est ce que j’aurais voulu quand ma boîte à bijoux était pleine de pièces « correctes » mais jamais magiques : pourquoi les règles métal standard échouent sur peau olive, pourquoi l’or rose gagne encore et encore dans la vraie vie, comment la couleur des pierres change tout, et comment votre sous-type olive et votre saison colorimétrique réduisent le choix.
+L’olive n’est pas une quatrième catégorie ; c’est un modificateur vert-gris sur le pigment de base. Ce guide explique pourquoi les règles standard échouent, pourquoi l’or rose gagne en pratique, le rôle de la couleur des pierres et comment sous-type olive et saison réduisent le choix.
 
 ---
 
@@ -60,21 +56,21 @@ L’or rose se situe entre l’or jaune et le cuivre, avec une douce teinte ros�
 
 ### Quand l’or jaune fonctionne encore
 
-L’or jaune n’est pas interdit sur peau olive. Je le choisis quand :
+L’or jaune n’est pas interdit sur peau olive. Il convient le mieux quand :
 
-- Je suis **olive chaude** avec une base dorée visible sous le vert
+- Vous êtes **olive chaude** avec une base dorée visible sous le vert
 - La finition est **antique, brossée, martelée ou mate** — pas jaune boutique très brillant
-- Je le porte en **accent** (montre, chevalière, une chaîne) plutôt qu’en look or total
-- Ma saison colorimétrique est **Automne Doux ou Automne Profond**
+- Vous le portez en **accent** (montre, chevalière, une chaîne) plutôt qu’en look or total
+- Votre saison colorimétrique est **Automne Doux ou Automne Profond**
 
 ### Quand l’argent fonctionne encore
 
 L’argent peut paraître net et intentionnel quand :
 
-- Je suis **olive froide** avec une tendance rose ou bleue sous le vert
-- Je choisis l’argent **brossé, mat ou oxydé** plutôt que poli miroir
-- Je l’associe à des **pierres froides** — améthyste, saphir, grenat
-- Ma saison colorimétrique est **Été Doux ou Hiver Profond**
+- Vous êtes **olive froide** avec une tendance rose ou bleue sous le vert
+- Vous choisissez l’argent **brossé, mat ou oxydé** plutôt que poli miroir
+- Vous l’associez à des **pierres froides** — améthyste, saphir, grenat
+- Votre saison colorimétrique est **Été Doux ou Hiver Profond**
 
 ---
 
@@ -93,14 +89,14 @@ Le métal cadre ; la couleur de la pierre repose sur votre sous-ton toute la jou
 | Péridot et verts atténués | Le vert terreux reflète l’olive quand la pierre n’est pas néon |
 | Corail et pêche atténués | Amis de l’olive chaude si la saturation reste douce |
 
-### Pierres que je traite avec prudence sur peau olive
+### Pierres à traiter avec prudence sur peau olive
 
 - **Citrine vive ou topaze jaune** — peut amplifier le jaunâtre
 - **Saphir rose vif ou pierres fuchsia** — peuvent combattre la teinte verte
 - **Émeraude néon ou très vive** — trop proche du sous-ton dans le mauvais sens ; peut paraître plate
 - **Diamants blanc glace en argent brillant** — le combo froid peut accentuer le gris sur certaines olives
 
-En cas de doute, je tiens la pierre près de la mâchoire à la lumière du jour. Si la peau paraît plus claire et les yeux plus vifs, je garde. Si le visage semble fatigué ou gris, je repose.
+En cas de doute, tenez la pierre près de la mâchoire à la lumière du jour. Si la peau paraît plus claire et les yeux plus vifs, gardez-la. Si le visage semble fatigué ou gris, reposez-la.
 
 ---
 
@@ -170,7 +166,7 @@ La peau olive tombe souvent en Automne Doux, Été Doux, Automne Profond ou Hive
 
 ---
 
-## Conseils d’achat pratiques que j’utilise pour peau olive
+## Conseils d’achat pratiques pour peau olive
 
 1. **Tester à la lumière naturelle** — l’éclairage magasin ment. Tenir la pièce près de la mâchoire et de la joue, pas seulement la main.
 2. **Commencer par une pièce phare en or rose** — un collier ou des boucles portés chaque semaine créent une référence avant d’investir dans des sets or ou argent.
@@ -179,7 +175,7 @@ La peau olive tombe souvent en Automne Doux, Été Doux, Automne Profond ou Hive
 5. **Aligner l’énergie des bijoux sur la garde-robe** — si vous vivez en tons terreux atténués, les pierres doivent suivre ; les pierres néon combattent les palettes olive typiques.
 6. **Porter ce que vous aimez** — la confiance parle plus fort que les règles strictes. Si l’argent vous rend heureuse et que vous l’avez testé, gardez-le.
 
-Je photographie aussi les essais en lumière du jour avec le téléphone. Un album comparatif rapide vaut mieux que de se souvenir d’une vitrine sous LED chaudes.
+Photographiez aussi les essais en lumière du jour avec le téléphone. Un album comparatif rapide vaut mieux que de se souvenir d’une vitrine sous LED chaudes.
 
 ---
 
@@ -210,7 +206,7 @@ Arrêtez de traiter la peau olive comme un test chaud-froid raté. Commencez par
 
 ## Trouvez vos meilleurs métaux et couleurs
 
-Deviner entre or et argent m’a fait perdre temps et argent. Comprendre mon **sous-type olive** et ma **saison colorimétrique** a fait que les bijoux ne semblaient plus aléatoires — le même cadre que pour les vêtements et le maquillage s’applique ici. Une **analyse colorimétrique par intelligence artificielle** rapide sur [aicoloranalysis.io](/) cartographie votre sous-ton et saison pour que métaux et pierres s’appuient sur votre palette, pas sur tâtonnements.
+Deviner entre or et argent fait perdre temps et argent lorsque **sous-type olive** et **saison colorimétrique** restent flous. Le même cadre que pour les vêtements et le maquillage s’applique ici — le même cadre que pour les vêtements et le maquillage s’applique ici. Une **analyse colorimétrique par intelligence artificielle** rapide sur [aicoloranalysis.io](/) cartographie votre sous-ton et saison pour que métaux et pierres s’appuient sur votre palette, pas sur tâtonnements.
 
 [Essayer l’analyse colorimétrique IA gratuite →](/try)
 

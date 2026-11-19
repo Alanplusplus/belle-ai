@@ -16,7 +16,7 @@ Aber Stufe zwei? Darüber spricht fast niemand.
 
 **Dein Farbtyp bestimmt, welche Rahmenfarben und Materialien deiner Haut wirklich schmeicheln.** Die falsche Rahmenfarbe, die 16 Stunden am Tag auf deinem Gesicht sitzt, kann dich blass, müde oder «falsch» wirken lassen — selbst wenn die Form perfekt ist.
 
-Ich habe Menschen gesehen, die die Fassungsform perfekt treffen und trotzdem «falsch» in ihrer Brille aussehen. Fast immer ist es ein Farb-Mismatch. Sie tragen kühles Silber, obwohl sie warmes Gold brauchen. Oder glänzendes Schwarz, obwohl mattes Schildpatt ihre Haut zum Strahlen bringen würde.
+Es kommt oft vor, dass die Fassungsform perfekt ist und man trotzdem «falsch» in der Brille aussieht. Fast immer ist es ein Farb-Mismatch. Du trägst vielleicht kühles Silber, obwohl du warmes Gold brauchst — oder glänzendes Schwarz, obwohl mattes Schildpatt deine Haut zum Strahlen bringen würde.
 
 In diesem Guide zeige ich dir, wie du beides richtig machst — damit deine Brille nicht nur zu deinem Gesicht passt, sondern deinen gesamten Look aufwertet.
 

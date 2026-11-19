@@ -12,7 +12,7 @@ Renk mevsiminizi buldunuz. Dolabınızı size yakışan tonlarla doldurdunuz. Yi
 
 On vakadan dokuzunda sorun kıyafetleriniz değil. Aksesuarlarınızdır.
 
-Bunu zor yoldan öğrendim. Aylarca özenle Soft Summer gardırop kurduktan sonra hâlâ parlak altın takılar, sıcak tonlu deri çantalar ve doygun turuncu eşarplar takıyordum; kurmaya çalıştığım yumuşak uyumu tamamen bozuyorlardı. Gül altını ve gümüşe, soluk ve soğuk tonlu aksesuarlara geçtiğim anda her şey yerine oturdu.
+Kolay tuzak: Soft Summer gardırobunu soğuk ve soluk kıyafetlerle kurup parlak altın, sıcak deri çanta ve doygun turuncu eşarpla uyumu bozmak. Gül altını, gümüş ve soluk soğuk aksesuarlara geçince genelde her şey oturur.
 
 Aksesuarlar, renk hikayenizi ya yücelten ya da sabote eden son dokunuştur. Kurallar kıyafetten farklıdır — genelde daha basit, ama aynı derecede önemli. Her renk mevsimi için aksesuar seçimini adım adım anlatalım.
 
@@ -106,7 +106,7 @@ Mevsiminizin enerji seviyesi kumaş seçimini de belirler:
 
 ## Çantalar ve Deri Ürünler
 
-Çantalar yatırımdır; rengi doğru seçmek mali açıdan da önemlidir. Yaklaşımım şöyle:
+Çantalar yatırımdır; rengi doğru seçmek mali açıdan da önemlidir. Pratik yaklaşım şöyle:
 
 ### Üç Çanta Stratejiniz
 
@@ -152,7 +152,7 @@ Mevsiminizin enerji seviyesi kumaş seçimini de belirler:
 
 ## Mevcut Aksesuarlarınızı Nasıl Denetlersiniz
 
-Tüm okuyucularıma önerdiğim hızlı bir egzersiz:
+Hızlı bir envanter egzersizi:
 
 1. **Tüm takılarınızı** beyaz bir yüzeye yayın
 2. **Sıcak ve soğuk diye ayırın:** Altın/pirinç/bakır bir yığın, gümüş/platin/gunmetal diğer yığın
@@ -183,7 +183,7 @@ Bu onlarca kombinasyon verirken mükemmel renk uyumunu korur.
 
 Renk mevsiminizden — dolayısıyla aksesuar yönünüzden — emin değilseniz eski yöntem altın ve gümüş takıyı yüzünüze tutup aynada kısarak bakmaktı. İşe yarar ama özneldir.
 
-Modern yapay zekâ renk analizi araçları artık bir fotoğraftan olası mevsiminizi önerebilir; metal seçiminde işe yarar bir başlangıç noktası sunar. Mevsimimi kontrol etmek için [yapay zekâ destekli bir renk analizi aracı](/) kullandım; önerilen metaller ve aksesuar tonları dahil eksiksiz bir palet verdi — normalde 200$+ tutan yüz yüze danışmanlık gerektiren bir şey.
+Modern [yapay zekâ renk analizi](/) araçları bir fotoğraftan olası mevsiminizi önerebilir ve metal seçiminde başlangıç noktası sunar; çoğu önerilen metaller ve aksesuar tonlarını tek seferde verir — yüz yüze danışmanlığa yakın bilgi.
 
 ---
 

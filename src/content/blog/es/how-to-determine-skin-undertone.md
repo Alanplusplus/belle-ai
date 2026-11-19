@@ -36,7 +36,7 @@ Mira las venas del interior de tu muñeca bajo luz natural del día:
 | Verde | Cálido |
 | Mezcla azul-verde | Neutro |
 
-**Precisión:** ~70 %. Funciona mejor en tonos de piel claros. En pieles más profundas, las venas pueden ser más difíciles de ver.
+**Precisión:** Moderada. Funciona mejor en tonos de piel claros. En pieles más profundas, las venas pueden ser más difíciles de ver.
 
 ### Método 2: La prueba del oro vs. la plata
 
@@ -113,7 +113,7 @@ Una segunda opinión rápida. Herramientas de IA como Belle AI usan un modelo de
 
 ## El caso especial: subtono neutro
 
-Aproximadamente el 20-30 % de las personas tienen subtonos neutros. Señales de que eres neutra:
+Muchas personas tienen subtonos neutros. Señales de que eres neutra:
 
 - Las pruebas dan resultados mixtos (algunas dicen cálido, otras frío)
 - Tanto el oro como la plata te quedan bien

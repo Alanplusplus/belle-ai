@@ -12,7 +12,7 @@ So you've figured out you're a Soft Autumn or a Bright Spring. Maybe you used an
 
 But here's the problem nobody talks about: knowing your season doesn't automatically fix your closet.
 
-I remember staring at my "Soft Summer" palette — those dusty roses, muted lavenders, and soft blue-grays — and thinking, "Great. Now how do I turn this into actual outfits I can wear to work on Monday?"
+You might be staring at your Soft Summer palette — dusty roses, muted lavenders, and soft blue-grays — and thinking, "Great. Now how do I turn this into actual outfits I can wear to work on Monday?"
 
 If that's where you are right now, this guide is for you. I'm going to walk you through building a capsule wardrobe that's completely based on your color season — piece by piece, no overwhelm.
 
@@ -160,7 +160,7 @@ You don't need to buy 30 pieces tomorrow. Here's a realistic timeline:
 
 ## Common Mistakes to Avoid
 
-After working with my own capsule wardrobe for over a year, here are the pitfalls I've learned to dodge:
+When building a color-season capsule wardrobe, these are the pitfalls worth dodging:
 
 **1. Going all-neutral.** Your wardrobe will feel boring if it's 100% basics. You need those accent pieces for joy and self-expression.
 

@@ -8,7 +8,7 @@ image: "/images/blog/lighting-affects-colors.webp"
 
 ## 你没有看错——在不同光线下，你确实看起来不一样
 
-你一定有过这样的经历：早上穿好衣服，照照镜子，觉得*很好，今天的搭配不错*。然后到了办公室的洗手间，看到镜子里的自己——感觉哪里不对。在家里看起来是浓郁酒红色的上衣，现在变成了暗沉的棕色。你的肤色看起来蜡黄，而不是温暖。
+你可能也遇到过这样的场景：早上穿好衣服，照照镜子，觉得*很好，今天的搭配不错*。然后到了办公室的洗手间，看到镜子里的自己——感觉哪里不对。在家里看起来是浓郁酒红色的上衣，现在变成了暗沉的棕色。你的肤色看起来蜡黄，而不是温暖。
 
 你没有产生幻觉。你正在经历个人穿搭中最容易被忽视的因素之一——光线从根本上改变了颜色在你身上的呈现方式。
 
@@ -189,4 +189,4 @@ image: "/images/blog/lighting-affects-colors.webp"
 
 - [色彩分析背后的科学：它到底是如何运作的](/zh/blog/science-behind-personal-color-analysis) — 深入了解季节色彩分类的光学和生物学原理
 - [如何在家做色彩分析](/zh/blog/how-to-do-color-analysis-at-home) — 包含光线设置技巧的分步指南
-- [AI vs 专业色彩分析：我都试了——诚实对比](/zh/blog/ai-vs-professional-color-analysis) — 技术如何不同地处理光线变量
+- [AI vs 专业色彩分析：两种方式如何对比](/zh/blog/ai-vs-professional-color-analysis) — 技术如何不同地处理光线变量

@@ -9,7 +9,7 @@ image: "/images/blog/lighting-affects-colors.webp"
 
 ## You're Not Imagining It — You Really Do Look Different Under Different Lights
 
-Here's a scenario I'm sure you've experienced: You get dressed in the morning, check the mirror, and think *yes, this outfit works*. Then you catch your reflection in the office bathroom and something's... off. The blouse that looked rich burgundy at home now reads muddy brown. Your skin looks sallow instead of warm.
+You may know this scenario: You get dressed in the morning, check the mirror, and think *yes, this outfit works*. Then you catch your reflection in the office bathroom and something's... off. The blouse that looked rich burgundy at home now reads muddy brown. Your skin looks sallow instead of warm.
 
 You're not losing your mind. You're experiencing one of the most overlooked factors in personal styling — the way lighting fundamentally alters how colors appear on your body.
 
@@ -190,4 +190,4 @@ Understanding lighting won't change your color season — but it will change how
 
 - [The Science Behind Personal Color Analysis: How It Actually Works](/blog/science-behind-personal-color-analysis) — Deep dive into the optics and biology of seasonal color typing
 - [How to Do Color Analysis at Home](/blog/how-to-do-color-analysis-at-home) — Step-by-step guide including lighting setup tips
-- [AI vs Professional Color Analysis: I Tried Both](/blog/ai-vs-professional-color-analysis) — How technology handles the lighting variable differently
+- [AI vs Professional Color Analysis: How They Compare](/blog/ai-vs-professional-color-analysis) — How technology handles the lighting variable differently

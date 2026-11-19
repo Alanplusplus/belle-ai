@@ -6,13 +6,11 @@ tags: ["análisis de color", "outfit de boda", "estación de color", "consejos d
 image: "/images/blog/wedding-guest-outfit-colors.webp"
 ---
 
-## El Vestido Que Casi Me Pongo en la Boda de Mi Mejor Amiga
+## Cuando el «vestido perfecto» pelea con tu tez
 
-La primavera pasada encontré lo que creía el vestido perfecto de invitada: un midi coral brillante, con corpiño ajustado y falda fluida. En internet se veía increíble. En la percha, decent. Pero en cuanto me lo probé frente al espejo, algo no encajaba.
+Es habitual: un midi coral brillante luce increíble online y en la percha, pero al probarte la piel se apaga, las ojeras se marcan más y el color compite con el rostro en lugar de enmarcarlo. Cambiar a un malva empolvado u otro tono de tu paleta estacional puede hacer que el mismo corte fotografíe mucho mejor.
 
-Mi piel se veía apagada. Las ojeras parecían más marcadas. El color peleaba con mi rostro en lugar de enmarcarlo. Devolví el vestido dos días antes de la boda y, en pánico, compré una alternativa malva empolvado de la que no estaba segura — y acabé recibiendo más cumplidos que con cualquier cosa que hubiera llevado en meses.
-
-Ahí lo entendí: el color de tu outfit importa más que el corte, la marca o el precio. Y si conoces tu estación de color, elegir el outfit de invitada se vuelve casi sin esfuerzo.
+La lección es directa: como invitada, el color suele importar más que el corte, la marca o el precio. Si conoces tu estación de color, elegir outfit es mucho más sencillo.
 
 ---
 
@@ -141,7 +139,7 @@ El mismo "verde esmeralda" se ve completamente distinto en crepe mate, satén o 
 
 ## Cómo Probar Antes de Comprar
 
-Mi sistema de tres pasos para evitar arrepentimientos de color:
+Un sistema de tres pasos ayuda a evitar arrepentimientos de color:
 
 **Paso 1: Sostenlo junto a tu rostro con luz natural.** No la del probador — luz de día real junto a una ventana. ¿Tu piel se ve uniforme y luminosa, o gris/amarilla/roja? Confía en la primera impresión.
 

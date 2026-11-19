@@ -12,11 +12,11 @@ image: "/images/blog/olive-skin-lip-color-guide.webp"
 
 **Respuesta rápida:** En piel oliva los rojos clásicos azulados o anaranjados suelen fallar; tus pilares son baya, malva, ladrillo y nude cálido. El coral funciona sobre todo en oliva cálida apagada, y cinco labiales (nude, baya, rojo, uno profundo y un comodín) bastan. El mejor matiz dentro de cada familia depende de tu subtipo oliva.
 
-En las conversaciones sobre piel oliva, la base se lleva casi todo el protagonismo, pero la decepción de verdad, para mí, está en el labial.
+En las conversaciones sobre piel oliva, la base se lleva casi todo el protagonismo, pero la decepción de verdad suele estar en el labial.
 
-He perdido la cuenta de clientas con subtono oliva que prueban un rojo que en una amiga cálida brilla — y en sus propios labios se vuelve naranja, turbio o hace que los dientes se vean amarillos. Prueban un rosa frío y el color queda plano y gris junto a la piel. Compran un «nude universal» y desaparece, o peor: parece corrector en la boca.
+Puede que hayas probado un rojo que en una amiga cálida brilla — y en tus propios labios se vuelve naranja, turbio o hace que los dientes se vean amarillos. Un rosa frío puede quedar plano y gris junto a la piel. Un «nude universal» puede desaparecer o parecer corrector en la boca.
 
-El subtono oliva lee el pigmento labial a través del modificador verde-gris. Los tonos equilibrados para cálido o frío «puro» chocan con ese matiz y se desplazan de formas que la carta de tonos nunca prometió. Esta guía recorre las familias que de verdad armonizan, los tonos que suelo recomendar saltar y cómo montar un guardarropa de cinco labiales para todo el año.
+El subtono oliva lee el pigmento labial a través del modificador verde-gris. Los tonos equilibrados para cálido o frío «puro» chocan con ese matiz y se desplazan de formas que la carta de tonos nunca prometió. Esta guía recorre las familias que de verdad armonizan, los tonos que conviene saltar y cómo montar un guardarropa de cinco labiales para todo el año.
 
 ---
 
@@ -38,7 +38,7 @@ Los rojos cálidos tampoco son refugio seguro. Los naranja-rojo y tomate pueden 
 
 ## Mejores familias de color para labios en piel oliva
 
-Estas cuatro familias cubren la mayor parte del día a día. Cuando maquillo subtonos oliva, empiezo aquí.
+Estas cuatro familias cubren la mayor parte del día a día. Son el punto de partida más fiable para subtonos oliva.
 
 ### Baya
 
@@ -107,7 +107,7 @@ Tu nude ideal suele ser uno o dos tonos más profundo de lo que crees: en el tub
 
 ## La polémica del coral: cuándo sí y cuándo no
 
-El coral divide opiniones en piel oliva. A algunas les queda espectacular; a otras, amarillento y apagado. Tras años probando en distintos subtipos oliva, así distingo en qué bando estás.
+El coral divide opiniones en piel oliva. A algunas les queda espectacular; a otras, amarillento y apagado. Así puedes orientarte en qué bando encajas mejor.
 
 ### Cuándo funciona el coral
 

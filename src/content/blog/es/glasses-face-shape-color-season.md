@@ -16,7 +16,7 @@ El primer paso es el que todo el mundo conoce: combinar la forma de la montura c
 
 **Tu estación de color determina qué colores y materiales de montura realmente favorecen tu piel.** Una montura del color equivocado sobre tu rostro durante 16 horas al día puede hacerte lucir apagada, cansada o «fuera de sitio» — aunque la forma sea perfecta.
 
-He visto a personas acertar con la forma de la montura y aun así verse «mal» con sus gafas. Casi siempre, se trata de un desajuste de color. Llevan monturas plateadas frías cuando necesitan oro cálido. O negro brillante cuando un carey mate haría brillar su piel.
+Es habitual acertar con la forma de la montura y aun así verse «mal» con las gafas. Casi siempre, se trata de un desajuste de color. Puedes llevar monturas plateadas frías cuando necesitas oro cálido, o negro brillante cuando un carey mate haría brillar tu piel.
 
 En esta guía te enseño cómo acertar en ambos aspectos — para que tus gafas no solo encajen con tu rostro, sino que realcen todo tu look.
 

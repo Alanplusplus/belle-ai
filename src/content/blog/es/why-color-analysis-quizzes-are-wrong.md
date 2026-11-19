@@ -31,7 +31,7 @@ La investigación sobre percepción del color demuestra que los humanos son nota
 - **La adaptación cromática** — nuestros ojos se "ajustan" automáticamente a lo que estamos acostumbrados a ver
 - **El sesgo cultural** — lo que te han dicho sobre tu coloración puede no ser exacto
 
-Un estudio de 2019 en el *Journal of Perceptual Imaging* encontró que observadores sin entrenamiento identificaban incorrectamente el subtono de la piel más del 40 % de las veces, incluso bajo condiciones de iluminación controladas.
+Incluso bajo iluminación controlada, los observadores sin entrenamiento a menudo juzgan mal el subtono de la piel.
 
 ## Razón #2: Las preguntas binarias no capturan un espectro
 
@@ -42,7 +42,7 @@ La mayoría de tests usan formatos de opción múltiple:
 
 Pero el color no es binario. Existes en un *espectro continuo* entre cálido y frío. Hay personas claramente cálidas, claramente frías, y todo lo intermedio: neutro-cálido, neutro-frío, neutro verdadero con subtonos oliva, etc.
 
-Un test que te obliga a elegir "cálido" o "frío" en cada paso siempre clasificará mal a quien esté en el medio. Y aproximadamente el **30-40 % de las personas tienen subtonos neutros o mixtos**, lo que las convierte en la mayoría que recibe una clasificación incorrecta.
+Un test que te obliga a elegir "cálido" o "frío" en cada paso siempre clasificará mal a quien esté en el medio. Y **muchas personas tienen subtonos neutros o mixtos**, lo que las convierte en las que más a menudo reciben una clasificación incorrecta.
 
 Lo mismo aplica a otros atributos:
 - ¿Claro u oscuro? ¿Y los tonos medios?
@@ -53,9 +53,9 @@ Lo mismo aplica a otros atributos:
 
 Algunos tests "más inteligentes" te piden comparar fotos: sostener telas doradas vs. plateadas, o compararte con ejemplos de famosos.
 
-Pero a menos que hayas calibrado tu monitor, los colores que ves en pantalla están distorsionados. Los estudios demuestran que:
+Pero a menos que hayas calibrado tu monitor, los colores que ves en pantalla están distorsionados. Los problemas habituales incluyen:
 
-- La mayoría de monitores de consumo tienen una temperatura de color de 6500K–7500K (mucho más azulada que la luz natural del día)
+- Muchos monitores de consumo no están calibrados en color y pueden verse más fríos o más cálidos que la luz natural del día
 - El brillo de la pantalla, los ajustes de contraste y la iluminación ambiental de la habitación desplazan la percepción del color
 - Las fotos tomadas con smartphones ajustan automáticamente el balance de blancos, a menudo desplazando los tonos de piel hacia cálido o frío respecto a la realidad
 - Los filtros de Instagram/redes sociales distorsionan aún más cualquier foto de referencia
@@ -152,7 +152,7 @@ Antes de confiar en cualquier resultado — test, IA u otro — comprueba estos 
 ## Conclusiones clave
 
 - Los tests de análisis de color fallan porque dependen de autoevaluar cosas que no puedes valorar objetivamente sobre ti misma
-- Las preguntas binarias pasan por alto al 30–40 % de personas con subtonos neutros o mixtos
+- Las preguntas binarias pasan por alto a las personas con subtonos neutros o mixtos
 - La distorsión del color en pantalla hace poco fiables los tests de comparación fotográfica
 - El análisis de color real requiere observar cómo interactúan los colores con tu piel, no responder preguntas de opción múltiple
 - Tus mejores opciones son el drapeado profesional (caro pero exhaustivo) o el análisis con IA (asequible y rápido, con la salvedad de que es un juicio visual)

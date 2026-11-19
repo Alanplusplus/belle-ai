@@ -14,7 +14,7 @@ Meğer o basit dairesel şema var olan en güçlü stil araçlarından biriymiş
 
 Profesyonel stilistler, iç mimarlar ve marka danışmanları her gün renk teorisini kullanır. Bir tabloyu uyumlu veya bir logoyu güvenilir gösteren aynı ilkeler, bazı kombinasyonların neden zahmetsizce şık göründüğünü, diğerlerinin ise parçalar ne kadar pahalı olursa olsun neden "tutmuyor" hissettirdiğini de belirler.
 
-Yıllarca renk uyumunun sezgisel olduğunu — ya "hissiniz" vardır ya da yoktur — sandım. Sonra arkasındaki teoriyi gerçekten inceledim ve her şey oturdu. Kurallar var. Öğrenilebilir. Ve işe yarıyor.
+Renk uyumunun tamamen sezgisel olduğunu — ya «hissiniz» vardır ya da yoktur — sanmak kolaydır. Ama arkasında gerçek bir teori vardır; temelleri öğrenince her şey oturur. Kurallar var. Öğrenilebilir. Ve işe yarıyor.
 
 Bu yazıda kişisel stil için önemli temel renk teorisi kavramlarını anlatacağım — sanat diploması gerekmez.
 

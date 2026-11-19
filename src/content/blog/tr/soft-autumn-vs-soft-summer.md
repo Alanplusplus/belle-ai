@@ -14,7 +14,7 @@ Hem Yumuşak Sonbahar hem de Yumuşak Yaz aynı baskın özelliği paylaşır: *
 
 Peki gerçekten nasıl ayırt edersiniz?
 
-Yıllarca renk analizi üzerine çalıştıktan — ve kendim de yanlış tiplendirildikten — sonra farkın tek bir temel soruya indirgendiğini gördüm: cildinizde sıcak altın bir ışıltı mı var, yoksa soğuk pembe bir yumuşaklık mı? Gelin, bunu gerçekten anlaşılır bir şekilde açıklayayım.
+Fark çoğu zaman tek bir temel soruya indirgenir: cildinizde sıcak altın bir ışıltı mı var, yoksa soğuk pembe bir yumuşaklık mı? Gelin, bunu gerçekten anlaşılır bir şekilde açıklayayım.
 
 ---
 
@@ -177,7 +177,7 @@ Her iki palet de size makul derecede iyi gidiyorsa, işte önerim: iki mevsim ar
 
 Alt tonunuzu belirlemek gerçekten zor olabilir — özellikle sıcaklık veya soğukluğun ince olduğu soluk mevsimlerde. Bu, yapay zeka destekli renk analizinin şaşırtıcı derecede faydalı olduğu alanlardan biridir.
 
-Modern araçlar, insan gözünü yanıltabilecek kontrast seviyeleri ve diğer ipuçlarına bakarak fotoğraftan cildinizin alt tonunu değerlendirebilir; yine de ışık ve kamera ayarları sonucu kaydırabilir. Yumuşak Sonbahar ile Yumuşak Yaz arasında kaldıysanız, bir [AI renk analizi aracı](/) ikinci bir görüş sunabilir. Hangi yöne eğildiğini gerçekten anlayamayan nötr alt tonlu kişiler için özellikle faydalı buldum.
+Modern araçlar, insan gözünü yanıltabilecek kontrast seviyeleri ve diğer ipuçlarına bakarak fotoğraftan cildinizin alt tonunu değerlendirebilir; yine de ışık ve kamera ayarları sonucu kaydırabilir. Yumuşak Sonbahar ile Yumuşak Yaz arasında kaldıysanız, bir [AI renk analizi aracı](/) ikinci bir görüş sunabilir — nötr alt tonunuz varsa ve hangi yöne eğildiğinizi gerçekten anlayamıyorsanız özellikle faydalıdır.
 
 ---
 

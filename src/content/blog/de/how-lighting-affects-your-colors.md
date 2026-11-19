@@ -9,7 +9,7 @@ image: "/images/blog/lighting-affects-colors.webp"
 
 ## Du bildest es dir nicht ein — du siehst wirklich anders aus unter verschiedenem Licht
 
-Bestimmt kennst du das: Du ziehst dich morgens an, schaust in den Spiegel und denkst *ja, dieses Outfit passt*. Dann siehst du dein Spiegelbild in der Büro-Toilette und etwas stimmt nicht. Die Bluse, die zuhause wie ein sattes Burgund aussah, wirkt jetzt wie mattes Braun. Deine Haut sieht fahl aus statt warm.
+Dieses Szenario dürfte dir bekannt vorkommen: Du ziehst dich morgens an, schaust in den Spiegel und denkst *ja, dieses Outfit passt*. Dann siehst du dein Spiegelbild in der Büro-Toilette und etwas stimmt nicht. Die Bluse, die zuhause wie ein sattes Burgund aussah, wirkt jetzt wie mattes Braun. Deine Haut sieht fahl aus statt warm.
 
 Du wirst nicht verrückt. Du erlebst einen der am meisten übersehenen Faktoren beim persönlichen Styling — wie Beleuchtung grundlegend verändert, wie Farben an deinem Körper wirken.
 
@@ -190,4 +190,4 @@ Beleuchtung zu verstehen ändert nicht deinen Farbtyp — aber wie erfolgreich d
 
 - [Die Wissenschaft hinter der Farbanalyse: Wie sie wirklich funktioniert](/de/blog/science-behind-personal-color-analysis) — Tiefer Einblick in Optik und Biologie der saisonalen Farbtypisierung
 - [Farbanalyse zuhause durchführen](/de/blog/how-to-do-color-analysis-at-home) — Schritt-für-Schritt inklusive Beleuchtungstipps
-- [KI vs professionelle Farbanalyse: Ich habe beides getestet](/de/blog/ai-vs-professional-color-analysis) — Wie Technologie die Lichtvariable anders handhabt
+- [KI vs professionelle Farbberatung: So vergleichen sie sich](/de/blog/ai-vs-professional-color-analysis) — Wie Technologie die Lichtvariable anders handhabt

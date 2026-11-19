@@ -6,13 +6,9 @@ tags: ["sous-ton de peau", "fond de teint", "maquillage", "beauté", "analyse de
 image: "/images/blog/foundation-undertone-guide.webp"
 ---
 
-## Le cimetière de fonds de teint dans mon tiroir de salle de bain
+## Pourquoi la « teinte parfaite » échoue chez vous
 
-J'ai un tiroir rempli de fonds de teint abandonnés. Dix-sept flacons lors de mon dernier comptage — certains à peine utilisés, quelques-uns encore scellés — chacun acheté avec la certitude que *cette fois*, j'avais enfin trouvé ma teinte.
-
-La vendeuse l'appliquait sur ma mâchoire, hochait la tête avec approbation sous les lumières flatteuses du magasin, et me renvoyait chez moi le moral au beau fixe. Puis je me voyais en lumière naturelle et je le voyais : cette teinte jaunâtre indéniable, ou ce sous-ton gris cendré qui se détachait de ma peau, ou encore ce masque rosâtre qui donnait l'impression que je portais du fond de teint plutôt que d'avoir simplement l'air mieux que d'habitude.
-
-Si cela vous parle, j'ai une bonne et une mauvaise nouvelle. La mauvaise : vous avez probablement mal choisi votre teinte toute votre vie. La bonne : la solution est plus simple que vous ne le pensez, et elle n'a rien à voir avec la profondeur de la teinte.
+Les fonds qui collaient en magasin et jaunissent ou grisent au naturel s'accumulent dans bien des tiroirs. Le problème est souvent le sous-ton, pas la profondeur.
 
 ---
 
@@ -39,7 +35,7 @@ Les sous-tons de fond de teint se répartissent en quatre catégories :
 
 Appliquer du fond de teint sur la mâchoire renseigne sur la profondeur de teinte, mais c'est terrible pour évaluer le sous-ton. La mâchoire reçoit moins de soleil que les joues, le front a une couleur totalement différente, et l'éclairage en magasin (souvent LED chaude ou fluorescent) déforme la perception du sous-ton.
 
-Une étude de 2019 publiée dans le *Journal of Cosmetic Dermatology* a révélé que 67 % des consommatrices portaient le mauvais sous-ton de fond de teint tout en croyant que leur teinte était correcte. Le principal coupable : les tests sous lumière artificielle.
+Beaucoup de personnes portent le mauvais sous-ton de fond de teint même quand elles croient avoir trouvé la bonne teinte. Un coupable fréquent : les tests sous lumière artificielle.
 
 ### Le mythe du « match avec le cou »
 
@@ -77,7 +73,7 @@ Portez un t-shirt blanc pur (pas crème, pas ivoire) en lumière naturelle. Comm
 
 Allez à un comptoir maquillage et demandez deux échantillons de la MÊME profondeur de teinte — l'un dans une formule chaude, l'autre dans une formule froide. Portez chacun sur une moitié du visage pendant une journée entière en lumière naturelle. Le mauvais sous-ton devient flagrant après plusieurs heures, même si les deux semblaient « corrects » lors d'un essai rapide.
 
-C'est le test grand public le plus fiable que j'aie trouvé. Il demande de la patience, mais il élimine complètement les approximations.
+C'est l'un des tests grand public les plus fiables pour le sous-ton. Il demande de la patience et réduit les approximations.
 
 ### 4. La méthode du poignet intérieur (améliorée)
 
@@ -89,7 +85,7 @@ Observez le ton général de la peau de votre poignet intérieur en lumière nat
 
 ### 5. Analyse du sous-ton par IA
 
-La technologie peut aider ici comme second avis. Les outils d'analyse colorimétrique par IA jugent votre sous-ton à partir d'un selfie, en essayant de le distinguer de la couleur de surface, du bronzage et des rougeurs, bien que la lumière et les réglages de l'appareil puissent encore faire varier le résultat. J'en ai testé plusieurs, et ils m'ont surtout été utiles pour recouper les cas délicats comme les sous-tons olive ou les peaux neutres qui trompent l'œil humain.
+La technologie peut aider ici comme second avis. Les outils d'analyse colorimétrique par IA jugent votre sous-ton à partir d'un selfie, en essayant de le distinguer de la couleur de surface, du bronzage et des rougeurs, bien que la lumière et les réglages de l'appareil puissent encore faire varier le résultat. Ils sont utiles pour recouper les sous-tons olive ou neutres qui trompent l'œil humain.
 
 Des outils comme [aicoloranalysis.io](/makeup-analysis) peuvent analyser votre sous-ton à partir d'un selfie et suggérer des teintes de fond de teint adaptées à votre coloration.
 
@@ -99,7 +95,7 @@ Des outils comme [aicoloranalysis.io](/makeup-analysis) peuvent analyser votre s
 
 Si vous avez toujours eu du mal à trouver un fond de teint — si les teintes chaudes paraissent trop jaunes, les froides trop roses et les neutres bizarrement grises — vous êtes peut-être olive.
 
-Le sous-ton olive touche environ 20 à 25 % de la population mondiale, pourtant la plupart des gammes de fond de teint n'offrent aucune teinte spécifiquement olive. Les personnes à teint olive sont donc contraintes de choisir « la moins mauvaise option » parmi les catégories chaud, froid ou neutre.
+Les sous-tons olive sont courants, pourtant la plupart des gammes de fond de teint offrent peu ou pas de teintes spécifiquement olive. Les personnes à teint olive sont donc contraintes de choisir « la moins mauvaise option » parmi les catégories chaud, froid ou neutre.
 
 **Ce qui rend l'olive différent :** L'olive n'est ni chaud ni froid — c'est un modificateur vert-jaune qui se superpose à votre sous-ton chaud ou froid. Vous pouvez être olive chaude (vert doré) ou olive froide (vert grisâtre). Cette dimension supplémentaire explique pourquoi le matching standard sur deux axes (chaud vs froid × clair vs foncé) semble toujours légèrement décalé.
 
@@ -178,13 +174,13 @@ La prochaine fois que vous achetez un fond de teint, utilisez cette checklist :
 
 ## Points clés à retenir
 
-- **La profondeur de teinte est facile ; le matching de sous-ton est là où 67 % des gens se trompent.** Un fond de teint peut avoir la clarté/obscurité parfaite et paraître terrible si le sous-ton entre en conflit avec votre peau.
+- **La profondeur de teinte est facile ; le matching de sous-ton est là où la plupart des gens se trompent.** Un fond de teint peut avoir la clarté/obscurité parfaite et paraître terrible si le sous-ton entre en conflit avec votre peau.
 - **Les quatre catégories de sous-ton** — chaud, froid, neutre et olive — nécessitent chacune des formules de fond de teint différentes. Le « neutre » standard n'est pas une solution universelle.
 - **Testez en lumière naturelle, sur la joue, sur plusieurs heures.** Les essais rapides en magasin sous lumière artificielle sont la raison n°1 des mismatches de fond de teint.
 - **Le sous-ton olive est réel, courant et chroniquement sous-desservi** par la plupart des gammes. Si le chaud paraît trop jaune et le froid trop rose, explorez les marques olive ou le mélange sur mesure.
 - **L'oxydation décale toujours vers le chaud.** Compensez en choisissant une teinte légèrement plus froide que ce que votre match initial suggère.
 
-Trouver son fond de teint idéal ne consiste pas à essayer plus de teintes — c'est comprendre la dimension que vous avez probablement ignorée. Une fois le code du sous-ton craqué, ce tiroir de flacons abandonnés appartient au passé.
+Trouver son fond de teint idéal ne consiste pas à essayer plus de teintes — c'est comprendre la dimension que vous avez probablement ignorée. Une fois le sous-ton maîtrisé, les flacons inadaptés cessent de s'accumuler.
 
 ## Articles connexes
 

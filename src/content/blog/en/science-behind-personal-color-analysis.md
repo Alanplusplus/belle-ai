@@ -12,7 +12,7 @@ You've probably experienced it. You try on a coral top and your skin looks radia
 
 This isn't in your head. There's actual science behind it, and once you understand the mechanics, the whole world of "what colors suit me" stops being guesswork and starts making sense.
 
-I spent months digging into the physics, biology, and perceptual science behind personal color analysis. Here's what I found — and why this century-old practice is backed by more hard science than most people realize.
+This article walks through the physics, biology, and perceptual science behind personal color analysis — and why this century-old practice is backed by more hard science than most people realize.
 
 ---
 
@@ -107,7 +107,7 @@ Simultaneous contrast was first described by French chemist Michel Eugène Chevr
 - **Harmonious colors** (those sharing your undertone) make your skin appear smooth, even, and luminous. The reflected light reinforces your natural coloring.
 - **Disharmonious colors** (those opposing your undertone) create a visual tension. Your skin can appear sallow, grey, ruddy, or uneven because the reflected light clashes with your natural pigments.
 
-This isn't a subtle effect. Research in color science has shown that simultaneous contrast can shift perceived color by as much as 20-30% on perceptual color scales. That's the difference between "you look amazing" and "are you feeling okay?"
+This isn't a subtle effect. Simultaneous contrast can noticeably shift how a color is perceived. That's the difference between "you look amazing" and "are you feeling okay?"
 
 ## Why Traditional Color Analysis Is Hard (And Where AI Comes In)
 

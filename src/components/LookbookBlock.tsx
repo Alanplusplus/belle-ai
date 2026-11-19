@@ -17,6 +17,8 @@ import {
 } from "@/lib/lookbook";
 import { Link } from "@/i18n/navigation";
 import { trackEvent } from "@/lib/analytics";
+import { REPORT_EMAIL_ENABLED } from "@/lib/constants";
+import { ReportEmailCapture } from "./ReportEmailCapture";
 import { useDemoLookbook, withOccasionExample } from "@/lib/demo-lookbook";
 import { DEMO_PERSONAS, type DemoPersonaId } from "@/lib/demo-personas";
 import { useDialogA11y } from "@/lib/useDialogA11y";
@@ -333,6 +335,12 @@ export function LookbookBlock({ taskId, lang, ui: baseUi, seasonName, locked, so
                     onBuy={onBuyCredits}
                   />
                 ))}
+              {/* 分析是免费的，但没有下载：想带走这份结果就发到邮箱（我们由此拿到邮箱；邮件只含这里本来就免费显示的文字分析） */}
+              {REPORT_EMAIL_ENABLED && !readOnly && lens && sheet?.status === "locked" && sheet.tiles.length > 0 && sheet.free !== "processing" && (
+                <div data-export-hide="">
+                  <ReportEmailCapture taskId={taskId} lang={lang} className="mt-3" placement="lens" variant="lens" />
+                </div>
+              )}
               {unlocked && !readOnly && sheet?.status === "success" && (
                 <RerollBar
                   ui={ui}

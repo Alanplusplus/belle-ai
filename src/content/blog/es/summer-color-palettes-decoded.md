@@ -13,7 +13,7 @@ Te hicieron un análisis de color y el resultado confirmó lo que sospechabas: e
 
 Pero hay un problema — en el sistema de 12 estaciones hay **tres subtipos de Verano distintos**, y confundirlos puede ser la diferencia entre verte radiante o apagada.
 
-He trabajado con mujeres que durante años compraron «pasteles fríos» porque sabían que eran Verano, solo para darse cuenta de que elegían tonos Cool Summer cuando en realidad eran Soft Summer. El subtono era correcto, pero la intensidad estaba completamente equivocada.
+Muchas personas pasan años comprando «pasteles fríos» porque saben que son Verano, solo para darse cuenta de que eligieron tonos Cool Summer cuando en realidad son Soft Summer. El subtono era correcto, pero la intensidad estaba completamente equivocada.
 
 En esta guía, desgloso **Cool Summer**, **True Summer** y **Soft Summer** — sus rasgos definitorios, sus mejores y peores colores, y exactamente cómo saber cuál eres.
 

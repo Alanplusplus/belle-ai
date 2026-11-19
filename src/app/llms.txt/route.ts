@@ -44,6 +44,7 @@ export function GET() {
   lines.push(`- [Makeup analysis](${SITE_URL}/makeup-analysis): lip, blush, eyeshadow and foundation recommendations`);
   lines.push(`- [Face shape analysis](${SITE_URL}/face-shape-analysis): face shape with hairstyle and glasses guidance`);
   lines.push(`- [About Belle AI](${SITE_URL}/about): who we are, how the technology works and its limits`);
+  lines.push(`- [Lydia He, Co-Founder of Belle AI](${SITE_URL}/author/lydia-he): author of the guides on this site; background and how to reach her`);
   lines.push(`- [Press kit](${SITE_URL}/press): boilerplate, key facts, logos and contact`);
   lines.push(`- [How accurate is AI color analysis?](${SITE_URL}/ai-color-analysis-accuracy): how Belle AI works, why we publish no accuracy percentage, what changes the result and when to see a human analyst`);
   lines.push(

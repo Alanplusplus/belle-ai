@@ -12,7 +12,7 @@ Du hast eine Farbanalyse gemacht und das Ergebnis steht fest: Du bist ein **Frü
 
 Aber genau das warnt einen niemand vor: Im 12-Farbtypen-System gibt es tatsächlich **drei verschiedene Arten von Frühling** — und die Unterschiede sind groß genug, um deine gesamte Garderoben-Strategie zu verändern.
 
-Ich habe Menschen erlebt, die selbstbewusst „warme Frühlingsfarben" einkauften — und am Ende einen Schrank voller Teile hatten, die fast richtig, aber nicht ganz stimmten. Das Problem? Sie kauften True-Spring-Farben, obwohl sie eigentlich ein Light Spring waren — oder umgekehrt.
+Viele Menschen kaufen selbstbewusst „warme Frühlingsfarben" — und am Ende haben sie einen Schrank voller Teile, die fast richtig, aber nicht ganz stimmten. Das Problem? Sie kauften True-Spring-Farben, obwohl sie eigentlich ein Light Spring waren — oder umgekehrt.
 
 In diesem Guide erkläre ich alle drei Frühlings-Unterkategorien — **Bright Spring**, **True Spring** und **Light Spring** — damit du genau herausfindest, welcher Typ du bist, und Farben wählst, die dich wirklich strahlen lassen.
 

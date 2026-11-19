@@ -6,13 +6,13 @@ tags: ["yeni başlayanlar için makyaj", "kişisel renk analizi", "renk mevsimi"
 image: "/images/blog/color-analysis-makeup-beginners.webp"
 ---
 
-## Hiç Kullanmadığım Makyaj Malzemeleriyle Dolu Çekmece
+## Makyaj çekmecesi sizinle uyuşmadığında
 
-Birkaç yıl önce banyodaki çekmecemi açıp saydım. Otuz bir ürün. Yedi ruj, dört allık, üç far paleti ve bir videoda "herkese yakışır" dendiği için aldığım bir fondöten. Bunların düzenli olarak kullandığım tam dört tanesiydi.
+Çekmecede onlarca ruj, allık, palet ve "herkese yakışır" fondöten birikebilir; her gün elinize aldıklarınız ise birkaç ürün olabilir.
 
-Gerisini iyimserlik anlarında almıştım: bir indirim, bir makyaj videosu, bir arkadaşın önerisi. Hiçbiri kötü ürün değildi. Sadece *benim* ürünlerim değildi. Her birini denediğimde aynaya bakıp içimde belirsiz bir tuhaflık hissediyor, ama nedenini açıklayamıyordum. Sorunun becerimde olduğunu düşündüm ve daha fazlasını aldım.
+Gerisi genelde indirim, video veya tavsiye anında alınır. Kötü ürün değillerdir; *sizin* renginize uymayabilirler. Aynada tuhaf hissedip nedeni bulamayınca beceri eksikliği sanılıp yenisi alınır.
 
-Sorun beceri değildi. Seçim yapmak için bir sistemim yoktu. Renk mevsimimi bir filtre olarak kullanmayı öğrendiğimde çekmecem dokuz ürüne indi ve ilk kez aynada gördüğümü gerçekten sevdim.
+Sorun çoğu zaman beceri değil, seçim sisteminin olmamasıdır. Renk mevsimini filtre olarak kullanmak stokları küçük, tutarlı bir sete indirir.
 
 Makyaja yeni başlıyorsanız ve her şey gözünüzü korkutuyorsa, bu rehber tam size göre.
 
@@ -32,7 +32,7 @@ Herhangi bir güzellik mağazasına girin; yüzlerce fondöten tonu, binlerce ru
 
 Yeni başlayanlara verilen tavsiyelerin çoğu durumu daha da kötüleştirir. "Sadece denemeye devam et!" sınırsız zamanınız ve paranız varsa harika bir öneridir. Diğer herkes için bu, deneme başına yüzlerce lira harcayarak deneme yanılma yapmak demektir.
 
-Yeni başlayanın gerçekten ihtiyacı olan şey daha fazla seçenek değil, **daha az ama daha isabetli seçenek**tir. Renk analizinin size verdiği tam olarak budur: hiçbir şeye elinizi sürmeden önce raftaki ürünlerin yaklaşık yüzde 70'ini eleme yolu.
+Yeni başlayanın gerçekten ihtiyacı olan şey daha fazla seçenek değil, **daha az ama daha isabetli seçenek**tir. Renk analizinin size verdiği tam olarak budur: hiçbir şeye elinizi sürmeden önce raftaki ürünlerin büyük kısmını eleme yolu.
 
 ---
 
@@ -44,7 +44,7 @@ Renk analizi teknik gibi görünse de makyaj için yalnızca üç fikre ihtiyac�
 
 Alt tonunuz, yüzeydeki ten renginizin altındaki ince renk tonudur. **Sıcak** alt tonlar altın, şeftali veya sarımsı yöne eğilir. **Soğuk** alt tonlar pembe, gül rengi veya mavimsi yöne eğilir. **Nötr** alt tonlar ikisinin dengesidir.
 
-Bu, makyaj için tek başına en önemli etkendir. Koyuluğunuzla uyuşan ama alt tonunuzla uyuşmayan bir fondöten, ne kadar iyi yayarsanız yayın gri, turuncu veya küllü görünür. Kendi alt tonunuzdan emin değilseniz, [Sıcak mı Soğuk mu Tonluyum? Kesin Alt Ton Rehberi (2026)](/tr/blog/how-to-determine-skin-undertone) yazım evde yapabileceğiniz basit kontrolleri anlatıyor.
+Bu, makyaj için tek başına en önemli etkendir. Koyuluğunuzla uyuşan ama alt tonunuzla uyuşmayan bir fondöten, ne kadar iyi yayarsanız yayın gri, turuncu veya küllü görünür. Kendi alt tonunuzdan emin değilseniz, [Sıcak mı Soğuk mu Tonluyum? Kesin Alt Ton Rehberi (2026)](/tr/blog/how-to-determine-skin-undertone) rehberimiz evde yapabileceğiniz basit kontrolleri anlatıyor.
 
 ### 2. Derinlik: açık, orta veya koyu
 
@@ -60,7 +60,7 @@ Bu üç boyut birleşerek 12 renk mevsimini oluşturur. On ikisini de ezberlemen
 
 ## 4 Aile, Makyaja Çevrilmiş Hâliyle
 
-İlk gün elimde olmasını istediğim kopya kâğıdı bu. Size en yakın aileyi bulun ve aşağıdaki tonları "evet" listeniz sayın.
+İlk gün için başvurabileceğiniz bir kopya kâğıdı. Size en yakın aileyi bulun ve aşağıdaki tonları "evet" listeniz sayın.
 
 | Mevsim ailesi | Alt ton | Allık | Dudak | Göz |
 | --- | --- | --- | --- | --- |
@@ -75,7 +75,7 @@ Bunun bir kural kitabına dönüşmemesi için birkaç not:
 - **Yumuşak mevsimler** (Yumuşak Yaz, Yumuşak Sonbahar) harmanlanabilir dokularla en güzel görünür: krem allık, dağıtılmış eyeliner, saten ruj.
 - **Parlak mevsimler** (Parlak İlkbahar, Parlak Kış) net hatları taşıyabilir: temiz bir dudak konturu, canlı bir allık, grafik bir eyeliner.
 
-12 mevsimin tamamını görmek isterseniz, [her renk mevsimi için eksiksiz makyaj renk tablom](/tr/blog/best-makeup-colors-color-season) her alt mevsimi ayrıntılı olarak ele alıyor.
+12 mevsimin tamamını görmek isterseniz, [her renk mevsimi için eksiksiz makyaj renk tablomuz](/tr/blog/best-makeup-colors-color-season) her alt mevsimi ayrıntılı olarak ele alıyor.
 
 ---
 
@@ -87,7 +87,7 @@ Sistemin karşılığını verdiği yer burası. Bütün bir koleksiyonu almak y
 
 Önce alt tona, sonra derinliğe göre seçin. Çene hattı boyunca üç tonu şerit şerit sürün ve doğal ışıkta kontrol edin. Doğru olan boynunuzda kaybolur; yanlış olan görünür bir çizgi bırakır. Yeni başlayan biri için hafif bir renkli nemlendirici, tam kapatıcı bir fondötenden daha bağışlayıcıdır. Baz ürünlerin nasıl formüle edildiğine dair biraz bilgi isterseniz, [Vikipedi'nin fondöten (kozmetik) maddesi](https://en.wikipedia.org/wiki/Foundation_(cosmetics)) şaşırtıcı derecede anlaşılır bir giriş.
 
-Alt ton hataları en çok fondötende belli olur; bu yüzden fondöteniniz bir türlü tam oturmuyorsa [Fondöteniniz Neden Asla Uymuyor: Alt Ton Derinlemesine İnceleme](/tr/blog/foundation-undertone-guide) yazımı okuyun.
+Alt ton hataları en çok fondötende belli olur; bu yüzden fondöteniniz bir türlü tam oturmuyorsa [Fondöteniniz Neden Asla Uymuyor: Alt Ton Derinlemesine İnceleme](/tr/blog/foundation-undertone-guide) rehberimizi okuyun.
 
 ### 2. Krem allık
 
@@ -111,7 +111,7 @@ Kaşlar diğer her şeyi çerçeveler. Doğal kaş tüylerinize yakın bir ton s
 
 ## Yeni Başlayanlar İçin 10 Dakikalık Rutin
 
-Beş ürününüz olduktan sonra, soran her arkadaşıma verdiğim rutin şu:
+Beş ürününüz olduktan sonra izleyebileceğiniz basit bir rutin:
 
 1. **Baz (2 dakika):** Renkli nemlendiricinizi veya fondötenizi parmaklarınızla ya da nemli bir süngerle, yüzün ortasından başlayarak sürün, sonra dışa doğru harmanlayın.
 2. **Allık (1 dakika):** Krem allığı yanak elmalarına dokunarak sürün ve şakaklara doğru harmanlayın.
@@ -120,13 +120,13 @@ Beş ürününüz olduktan sonra, soran her arkadaşıma verdiğim rutin şu:
 5. **Dudaklar (1 dakika):** İmza dudak renginizi sürün ve bir kez mendille bastırın.
 6. **Kontrol (2 dakika):** Bir adım geri çekilin ve doğal ışıkta bakın. Ağır görünen bir yer varsa temiz bir parmak ucuyla harmanlayın.
 
-Her adımı her gün yapmanız gerekmez. Birçok gün yalnızca allık, kaş ve dudak sürüyorum ve makyajsız yüze göre fark çarpıcı oluyor.
+Her adımı her gün yapmanız gerekmez. Birçok gün yalnızca allık, kaş ve dudak yeter; makyajsız yüze göre fark belirgin olur.
 
 ---
 
 ## En Çok Para Kaybettiren 6 Acemi Hatası
 
-Bunlar benim düştüğüm tuzaklar; siz düşmeyin diye yazıyorum.
+Yeni başlayanların en sık düştüğü tuzaklar — ve nasıl kaçınılır.
 
 - **Elinizin üstündeki denemeye bakarak almak.** El derisinin alt tonu çoğu zaman yüzünkinden farklıdır. Bunun yerine çenenizde veya yanağınızda deneyin.
 - **Mağaza ışığında boynunuza göre fondöten seçmek.** Çıkmadan önce gün ışığında kontrol edin veya numune isteyin.
@@ -141,7 +141,7 @@ Bunlar benim düştüğüm tuzaklar; siz düşmeyin diye yazıyorum.
 
 Bu sistemin en zor kısmı ilk adımdır: mevsiminizi bilmek. Aynanın önünde omuzlarınıza kumaş tutmak işe yarar, ama özellikle kötü ışıkta yanılmak kolaydır.
 
-Yapay zekâ araçlarının gerçekten faydalı hâle geldiği yer burası. Doğal ışıkta çekilmiş makyajsız bir özçekim yükleyin; iyi bir analiz aracı alt tonunuzu, derinliğinizi ve doygunluğunuzu okuyup bunları makyaj tonlarına çevirir. Büyük bir makyaj alışverişinden önce [aicoloranalysis.io](/makeup-analysis) gibi ücretsiz bir aracı denedim ve bana fondöten, ruj ve allık ailelerinin net bir listesini verdi. Ayna testinin yerini tutmadı, ama beni birkaç yanlış adımdan kurtardı.
+Yapay zekâ araçlarının gerçekten faydalı hâle geldiği yer burası. Doğal ışıkta çekilmiş makyajsız bir özçekim yükleyin; iyi bir analiz aracı alt tonunuzu, derinliğinizi ve doygunluğunuzu okuyup bunları makyaj tonlarına çevirir. [aicoloranalysis.io](/makeup-analysis) gibi ücretsiz araçlar alışveriş öncesi fondöten, ruj ve allık ailelerini önerebilir. Ayna testinin yerini tutmazlar ama bariz uyumsuzlukları azaltır.
 
 Tüm bunlara daha geniş ve jargonsuz bir giriş istiyorsanız, temelleri adım adım anlatan, yeni başlayanlara yönelik bir [renk analizi başlangıç rehberi](/tr/color-analysis-for/beginners) var.
 

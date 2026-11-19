@@ -10,7 +10,7 @@ image: "/images/blog/going-blonde-best-shade-skin-tone.webp"
 
 Sie kennen die Fotos. Eine Prominente läuft mit leuchtendem Platinblond über den roten Teppich, und Sie denken: *Das will ich auch.* Sie zeigen das Bild Ihrem Coloristen, verbringen drei Stunden im Stuhl und verlassen den Salon... müde. Fahl. Vielleicht sogar leicht orange.
 
-Mir ging es genauso. Nach Jahren der Erforschung, wie Haarfarbe mit Haut interagiert, habe ich festgestellt: Das Problem ist fast nie „Blond steht Ihnen nicht.“ Es ist die Wahl des *falschen Blonds für Ihren Unterton und Ihre Farbsaison.* Der Unterschied zwischen Honig und Asch ist keine Geschmacksfrage — er ist der Unterschied zwischen Strahlen und Auswaschen.
+Wenn Ihnen das bekannt vorkommt: Das Problem ist fast nie „Blond steht Ihnen nicht.“ Es ist die Wahl des *falschen Blonds für Ihren Unterton und Ihre Farbsaison.* Der Unterschied zwischen Honig und Asch ist keine Geschmacksfrage — er ist der Unterschied zwischen Strahlen und Auswaschen.
 
 In diesem Leitfaden erkläre ich, wie Sie einen Blondton exakt auf Hautton, Unterton und Farbsaison abstimmen — damit Sie mit Zuversicht statt Pinterest-Hoffnung in den Salon (oder Ihr Badezimmer) gehen.
 
@@ -34,7 +34,7 @@ Dazu kommt der Lift-Faktor. Blond werden erfordert fast immer Blondierung, die n
 
 Blond ist zudem unerbittlicher als dunkle Farben. Leicht zu kühles Braun kann „edel“ wirken. Leicht zu kühles Blond wirkt „stumpf“ oder „grau“. Zu warmes Blond wirkt „geldig“ oder „billig“. Der Spielraum ist minimal — deshalb zählt Unterton-Matching hier mehr als bei fast jeder anderen Farbe.
 
-Ein weiterer Faktor: **Ihre natürliche Haarfarbe.** Von Dunkelbraun (Stufe 3) oder Hellbraun (Stufe 6) kann man beide „blond“ werden — aber Aufwand und auftretende Wärme beim Liften unterscheiden sich völlig. Zwei Freundinnen mit demselben „Honigblond“-Referenzfoto, drei Stufen Unterschied beim Start — völlig verschiedene Ergebnisse.
+Ein weiterer Faktor: **Ihre natürliche Haarfarbe.** Von Dunkelbraun (Stufe 3) oder Hellbraun (Stufe 6) kann man beide „blond“ werden — aber Aufwand und auftretende Wärme beim Liften unterscheiden sich völlig. Zwei Menschen mit demselben „Honigblond“-Referenzfoto und drei Stufen Unterschied beim Start — völlig verschiedene Ergebnisse.
 
 ### Die beliebtesten Blondtöne erklärt
 
@@ -59,7 +59,7 @@ Unsicher? Grundlagen: Handgelenkvenen bei Tageslicht (blau/lila = kühl, grün =
 
 ### Kühles vs. warmes vs. neutrales Blond
 
-Die Vergleichstabelle, die ich vor meinem ersten Salon-Desaster gebraucht hätte:
+Eine praktische Vergleichstabelle für Ihren Salonbesuch:
 
 | Kategorie | Unterton | Beispiele | Ideal für | Vermeiden wenn |
 |---|---|---|---|---|
@@ -67,7 +67,7 @@ Die Vergleichstabelle, die ich vor meinem ersten Salon-Desaster gebraucht hätte
 | **Warmes Blond** | Warm (gelb, golden, pfirsich) | Honig, Gold, Butter, Champagner, Karamell | Warme und neutral-warme Untertöne; sonnenverwöhnte Teint | Kühle Untertöne — geldig, orange, „billig“ |
 | **Neutrales Blond** | Neutral (Warm/Kalt ausgeglichen) | Sand, Weizen, weiches Beige, helles Bronde | Neutrale Untertöne; Gold und Silber passen | Extreme — weder eisiges Platin noch tiefes Kupfer-Gold |
 
-**Kühle Blonds** enthalten Blau-, Violett- oder Asch-Pigmente gegen Gelb und Wärme. Auf kühler Haut: polierter Editorial-Look — skandinavisches Platin oder sophisticated Asch-Balayage. Auf warmer Haut kollidieren sie mit goldener Basis — grau oder fahl. [Vogues Leitfaden zum perfekten Blond](https://www.vogue.com/article/how-to-find-the-perfect-blonde-for-your-skin-tone) betont Temperatur-Matching als Basis jeder erfolgreichen Blond-Transformation.
+**Kühle Blonds** enthalten Blau-, Violett- oder Asch-Pigmente gegen Gelb und Wärme. Auf kühler Haut: polierter Editorial-Look — skandinavisches Platin oder sophisticated Asch-Balayage. Auf warmer Haut kollidieren sie mit goldener Basis — grau oder fahl. Passende Temperatur ist die Grundlage jeder erfolgreichen Blond-Transformation.
 
 **Warme Blonds** tragen Gold-, Kupfer- oder Honig-Pigmente, die Hautwärme widerspiegeln. Sonnen-Kuss-Glow, mühelos statt verarbeitet. Warme Blonds sind am meisten gefragt — und am häufigsten auf falschen Untertönen. Kühle Person + Honigblond: Gold im Haar verstärkt Rötung in der Haut.
 
@@ -160,7 +160,7 @@ Idealton zu kennen ist halber Sieg. Die andere Hälfte: Ausführung — perfekte
 
 **Strähnentest.** Immer. Salon oder Box-Kit — Haar unter dem Scheitel zeigt Lift und unterliegendes Pigment. Verhindert mehr Desaster als jeder andere Schritt.
 
-**Ehrlich über Startstufe.** Von fast Schwarz (1–3) zu Platin nicht in einem Termin — wer anderes sagt, bereitet Breakage vor. Realistisch: 2–4 Sessions, Wochen Abstand. [*Journal of Cosmetic Dermatology*](https://onlinelibrary.wiley.com/journal/14732165): wiederholte Blondierung in kurzen Intervallen erhöht Cuticula-Schaden und Porosität deutlich.
+**Ehrlich über Startstufe.** Von fast Schwarz (1–3) zu Platin nicht in einem Termin — wer anderes sagt, bereitet Breakage vor. Realistisch: 2–4 Sessions, Wochen Abstand. Wiederholte Blondierung in kurzen Intervallen erhöht Cuticula-Schaden und Porosität.
 
 **Unterton-Sprache, nicht nur Fotos.** Statt Celebrity-Foto: „Kühler Unterton, Light Summer — Aschblond Stufe 9 mit subtiler Dimension.“ Präzision näher am Ziel als Pinterest.
 
@@ -172,7 +172,7 @@ Idealton zu kennen ist halber Sieg. Die andere Hälfte: Ausführung — perfekte
 
 **Gloss oder Toner direkt nach Blondierung.** Rohes gebleichtes Haar gelb/orange — normal. Toner erzeugt echtes Blond. Überspringen = geldig raus.
 
-**Ergebnis bei mehreren Lichtquellen prüfen.** Salonlicht schmeichelhaft und oft warm. Draußen oder am Fenster vor Verlassen. Unter Salonlicht OK, Tageslicht völlig anders — mein Fehler.
+**Ergebnis bei mehreren Lichtquellen prüfen.** Salonlicht schmeichelhaft und oft warm. Draußen oder am Fenster vor Verlassen. Unter Salonlicht genehmigt, in Tageslicht völlig anders — das passiert oft.
 
 ### Zu Hause
 

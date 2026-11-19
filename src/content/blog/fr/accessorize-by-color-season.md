@@ -12,7 +12,7 @@ Vous avez trouvé votre saison de couleurs. Vous avez constitué une garde-robe 
 
 Neuf fois sur dix, le problème n'est pas vos vêtements. Ce sont vos accessoires.
 
-J'ai appris cela à mes dépens. Après des mois à construire patiemment une garde-robe Été Doux, je me suis rendu compte que je portais encore des bijoux en or jaune brillant, des sacs en cuir aux tons chauds et des foulards orange saturés qui sabotaient complètement l'harmonie douce que j'avais eu tant de mal à créer. Le jour où j'ai opté pour l'or rose et l'argent avec des accessoires atténués et aux tons froids, tout s'est enfin harmonisé.
+Piège classique : vous composez une garde-robe Été Doux dans des tons froids et atténués, puis vous ajoutez bijoux or jaune brillant, sacs cuir chauds et foulards orange saturés qui annulent l'harmonie. Passer à or rose, argent et accessoires froids atténués fait souvent tout s'aligner.
 
 Les accessoires sont la touche finale qui amplifie ou sabote votre histoire colorimétrique. Et les règles diffèrent de celles des vêtements — souvent plus simples, mais tout aussi importantes. Laissez-moi vous guider pas à pas pour accessoiriser selon chaque saison de couleurs.
 
@@ -106,7 +106,7 @@ Le niveau d'énergie de votre saison dicte aussi le choix des tissus :
 
 ## Sacs et Articles en Cuir
 
-Les sacs sont un investissement, donc la bonne couleur compte aussi financièrement. Voici mon approche :
+Les sacs sont un investissement, donc la bonne couleur compte aussi financièrement. Voici une approche pratique :
 
 ### Votre Stratégie des Trois Sacs
 
@@ -152,7 +152,7 @@ Ils peuvent sembler insignifiants, mais ils contribuent à la cohérence colorim
 
 ## Comment Auditer Vos Accessoires Actuels
 
-Voici un exercice rapide que je recommande à toutes mes lectrices :
+Exercice rapide de bilan :
 
 1. **Étalez tous vos bijoux** sur une surface blanche
 2. **Triez chaud et froid :** Or/laiton/cuivre dans un tas, argent/platine/gunmetal dans l'autre
@@ -183,7 +183,7 @@ Cela vous donne des dizaines de combinaisons tout en maintenant une harmonie col
 
 Si vous n'êtes pas sûre de votre saison de couleurs — et donc de votre direction accessoires — l'ancienne méthode consistait à tenir des bijoux or et argent devant le visage et à plisser les yeux devant un miroir. Ça fonctionne, mais c'est subjectif.
 
-Les outils modernes d'analyse colorimétrique par IA peuvent désormais suggérer une saison probable à partir d'une photo, ce qui vous donne un point de départ utile pour choisir les métaux. J'ai utilisé [un outil d'analyse colorimétrique alimenté par l'IA](/) pour vérifier ma saison, et il m'a fourni une palette complète incluant les métaux recommandés et les tons d'accessoires — ce qui exigerait en général une consultation en personne à plus de 200 $.
+Les outils modernes d'[analyse colorimétrique par IA](/) peuvent suggérer une saison probable à partir d'une photo et servir de point de départ pour les métaux, souvent avec métaux recommandés et tons d'accessoires en un seul passage, proche de ce qu'une consultation en personne couvre.
 
 ---
 

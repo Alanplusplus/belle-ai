@@ -12,7 +12,7 @@ Renk analizi yaptınız ve sonuç net: bir İlkbaharsınız. Alt tonunuz sıcak,
 
 Ama kimsenin sizi uyarmadığı bir gerçek var — 12 mevsimlik renk analizi sisteminde aslında **üç farklı İlkbahar tipi** bulunuyor ve aralarındaki farklar gardırop stratejinizi tamamen değiştirecek kadar önemli.
 
-"Sıcak İlkbahar renkleri" alışverişi yaparken kendine güvenen insanlar gördüm; neredeyse doğru ama tam olmayan parçalarla dolu bir dolapla geri kaldılar. Sorun ne mi? Gerçekte Açık İlkbahar oldukları halde Gerçek İlkbahar renkleri alıyorlardı — ya da tam tersi.
+"Sıcak İlkbahar renkleri" alışverişi yaparken kendine güvenen pek çok kişi, neredeyse doğru ama tam olmayan parçalarla dolu bir dolapla geri kalıyor. Sorun ne mi? Gerçekte Açık İlkbahar oldukları halde Gerçek İlkbahar renkleri alıyorlardı — ya da tam tersi.
 
 Bu rehberde üç İlkbahar alt mevsimini — **Parlak İlkbahar**, **Gerçek İlkbahar** ve **Açık İlkbahar** — tek tek ele alacağım; böylece hangisi olduğunuzu kesin olarak belirleyebilir ve sizi gerçekten parlatacak renkleri seçmeye başlayabilirsiniz.
 

@@ -36,7 +36,7 @@ image: "/images/blog/how-to-determine-skin-undertone.webp"
 | 绿色 | 暖皮 |
 | 蓝绿混合 | 中性 |
 
-**准确度：** 约70%。浅肤色效果最好。深肤色可能不太容易观察。
+**准确度：** 中等。浅肤色效果最好。深肤色上血管可能较难观察。
 
 ### 方法2：金银饰品测试
 
@@ -101,7 +101,7 @@ image: "/images/blog/how-to-determine-skin-undertone.webp"
 
 ## 特殊情况：中性色调
 
-约20-30%的人是中性色调。判断标准：
+许多人是中性色调。判断标准：
 
 - 各种测试结果矛盾
 - 金银饰品都好看

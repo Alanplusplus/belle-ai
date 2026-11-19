@@ -8,11 +8,9 @@ image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
 
 ## La regla de maquillaje que casi todo el mundo aplica mal
 
-He perdido la cuenta de cuántos labiales rojos he comprado, usado una sola vez y empujado al fondo de un cajón. ¿Rojo clásico? Demasiado intenso. ¿Coral? Me apagaba la piel. ¿Berries? Me hacía los dientes amarillos. Durante años pensé que simplemente «no me favorecía el rojo».
+Puede que tengas un cajón lleno de rojos que en tienda parecían perfectos y en el rostro no: el clásico resulta demasiado duro, el coral apaga la piel y el frutal amarillea los dientes. Eso no suele significar que no puedas llevar rojo, sino que el subtono del labial y el de tu piel no encajan.
 
-Resulta que no era mala llevando rojo. Era mala eligiendo el rojo *correcto*.
-
-El secreto no está en la audacia ni la confianza (aunque ayudan). Está en entender cómo el subtono de tu piel interactúa con los pigmentos del labial. Cuando lo descubrí, encontré mi rojo perfecto en menos de cinco minutos — y tú también puedes.
+El secreto no está en la audacia ni la confianza (aunque ayudan). Está en entender cómo el subtono de tu piel interactúa con los pigmentos del labial. Una vez conoces tu subtono, acotar un rojo favorecedor puede llevar minutos, no meses de prueba y error.
 
 Esta guía desglosa la ciencia, te da recomendaciones concretas de tonos e incluye una prueba sencilla para que no vuelvas a gastar dinero en el rojo equivocado.
 
@@ -156,7 +154,7 @@ Antes, encontrar el color perfecto requería una visita a un consultor profesion
 
 Apps como [Belle AI](/) pueden mirar una foto de tu rostro y sugerir tu subtono usando las mismas señales cromáticas que observan los profesionales — si eres cálida, fría o neutra, y una estación de color probable. Una vez que conoces tu estación, acotar el rojo correcto se vuelve casi sin esfuerzo.
 
-Pasé mi propio selfie por una herramienta de análisis de color con IA y confirmé que soy Soft Summer — lo que explicaba por qué cada coral que probaba me quedaba mal, y por qué los rojos frutales apagados me hacían brillar.
+Pasar un selfie por una herramienta de análisis de color con IA puede señalar tu subtono y una posible estación con las mismas pistas que miran los profesionales: útil cuando los corales siempre chocan y los rojos frutales apagados sí funcionan.
 
 ---
 

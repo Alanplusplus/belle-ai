@@ -12,11 +12,11 @@ image: "/images/blog/olive-skin-foundation-guide.webp"
 
 **Respuesta rápida:** En piel oliva fallan las bases solo cálidas o solo frías, porque ignoran la capa verde-gris del subtono. Busca bases amarillo-verdosas o dorado-verdosas: un tono que parece «apagado» en el bote suele ser el correcto en la cara. Elige por separado la profundidad (clara, media o profunda) y el subtono.
 
-Si tienes subtono oliva, ya imagino cómo fue tu última visita al mostrador. Probaste diez tonos. Los cálidos se veían naranjas en la mandíbula. Los fríos, rosados o grises. El neutro hacía las dos cosas. Bajo la luz de la tienda elegiste un bote «casi» — y en casa la cara y el cuello contaban historias distintas.
+Si tienes subtono oliva, tu última visita al mostrador puede sonar familiar. Probaste diez tonos. Los cálidos se veían naranjas en la mandíbula. Los fríos, rosados o grises. El neutro hacía las dos cosas. Bajo la luz de la tienda elegiste un bote «casi» — y en casa la cara y el cuello contaban historias distintas.
 
 No es falta de habilidad. La mayoría de las líneas asumen que la piel es **cálida (amarillo-dorada)** o **fría (rosa-azulada)**. La piel oliva añade un **modificador verde-gris** sobre tu subtono base. Las fórmulas sin ese «canal verde» rara vez se funden, por mucho que acertes la profundidad.
 
-En esta guía explico por qué falla el consejo clásico cálido/frío, qué ocurre a nivel de pigmento, qué marcas formulan o etiquetan tonos oliva y cómo elijo según **clara, media y profunda** oliva y la estación.
+En esta guía explicamos por qué falla el consejo clásico cálido/frío, qué ocurre a nivel de pigmento, qué marcas formulan o etiquetan tonos oliva y cómo elegir según **clara, media y profunda** oliva y la estación.
 
 ---
 
@@ -26,7 +26,7 @@ En esta guía explico por qué falla el consejo clásico cálido/frío, qué ocu
 
 Las bases cálidas apoyan pigmentos amarillos y dorados. En subtonos dorados claros eso es brillo saludable. En piel oliva, esos pigmentos **quedan encima** del verde en lugar de mezclarse.
 
-Lo que veo más a menudo:
+Desajustes habituales en el mostrador:
 
 - Un dorado «perfecto» en el bote pero **naranja en la línea del cabello**
 - Mandíbulas **más amarillas que el resto del rostro** tras unas horas
@@ -70,9 +70,9 @@ Al probar, tonos **apagados, topo o verde-gris en el bote** a menudo ganan a dor
 
 ---
 
-## Cómo hago las muestras (antes de otro bote equivocado)
+## Cómo hacer muestras (antes de otro bote equivocado)
 
-La luz del mostrador miente. Mi rutina:
+La luz del mostrador miente. Una rutina sencilla que funciona:
 
 1. **Tres subtonos a la misma profundidad** en la mandíbula — dorado cálido, rosa frío, apagado u oliva.
 2. **Esperar quince minutos** — la oxidación cambia más de lo que crees en oliva.
@@ -85,7 +85,7 @@ Si todos los tonos de tu profundidad fallan, probablemente compras la familia de
 
 ## Marcas que vale la pena probar (líneas oliva)
 
-Las grandes marcas mejoraron, pero oliva exige leer notas de subtono — no solo «medio cálido». Empiezo aquí:
+Las grandes marcas mejoraron, pero oliva exige leer notas de subtono — no solo «medio cálido». Buen punto de partida:
 
 ### NARS
 
@@ -127,13 +127,13 @@ Las reglas de subtono iguales; **la profundidad cambia el bote**. Mapa inicial; 
 
 ### Clara a clara oliva
 
-A menudo se lee «neutra» o «fría» porque el verde es sutil. Busco **clara-media** con base **verde-gris o topo** — no melocotón ni rosa. Las manos broncean distinto; **mandíbula y cuello**, no el dorso.
+A menudo se lee «neutra» o «fría» porque el verde es sutil. Busca tonos **clara-media** con base **verde-gris o topo** — no melocotón ni rosa. Las manos broncean distinto; **mandíbula y cuello**, no el dorso.
 
 Si la profundidad es perfecta y el subtono a medias, **una gota de corrector verde por pulsación** puede «olivarizar» un casi match.
 
 ### Oliva media
 
-La profundidad que más oigo — y la que más marcas cubren. Prueba **«neutro cálido»** o **«dorado oliva»**. Suele **oxidarse medio tono más cálido**; espera diez a quince minutos.
+La oliva media es la profundidad con la mayor variedad de marcas. Prueba **«neutro cálido»** o **«dorado oliva»**. Suele **oxidarse medio tono más cálido**; espera diez a quince minutos.
 
 ### Bronceada a profunda
 
@@ -149,7 +149,7 @@ La piel oliva rara vez es un solo color todo el año. El plan debe moverse.
 
 **Invierno:** La piel puede aclarar; el **verde-gris se lee más fuerte**. La profundidad de verano puede verse naranja o apagada en el cuello.
 
-**Meses de transición:** Guardo **dos bases** — verano e invierno — y las mezclo. Es normal, no «demasiado maquillaje».
+**Meses de transición:** Muchas personas guardan **dos bases** — verano e invierno — y las mezclan según haga falta. Es normal, no «demasiado maquillaje».
 
 **Corrector estacional:** Verde mezclado con la base (con moderación) cubre semanas entre tonos o cuando solo hay «casi».
 

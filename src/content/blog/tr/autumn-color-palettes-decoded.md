@@ -13,7 +13,7 @@ Renk analiziniz sonuç verdi: Sonbahar. Cildinizde sıcaklık, renklendirmenizde
 
 Ama işte ilginç kısım — 12 mevsim renk analizi sisteminde **üç farklı Sonbahar alt mevsimi** var ve çoğu insanın düşündüğünden daha farklılar. Bir Sonbahar tipini ışıltılı gösteren renk, bir diğerinde mat veya soluk gösterebilir.
 
-Bu hatayı çok gördüm: biri Sonbahar olduğunu öğrenir, dolabını bulabildiği her turuncu ve kahverengi tonla doldurur; sonra bazı parçaların onu parlatırken diğerlerinin yorgun gösterdiğini merak eder. Cevap neredeyse her zaman alt mevsim uyumsuzluğudur.
+Sık görülen bir hata: biri Sonbahar olduğunu öğrenir, dolabını bulabildiği her turuncu ve kahverengi tonla doldurur; sonra bazı parçaların onu parlatırken diğerlerinin yorgun gösterdiğini merak eder. Cevap neredeyse her zaman alt mevsim uyumsuzluğudur.
 
 Bu rehberde **Derin Sonbahar**, **Gerçek Sonbahar** ve **Yumuşak Sonbahar**'ı — her birini neyin benzersiz kıldığını, en iyi ve en kötü renklerinizi, hangi Sonbahar olduğunuzu nasıl anlayacağınızı — adım adım anlatacağım.
 

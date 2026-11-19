@@ -8,6 +8,8 @@ import {
   TWITTER_IMAGES,
 } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
+import { AUTHOR_PATH, authorFounderJsonLd } from "@/lib/author";
+import { AuthorAvatar } from "@/components/AuthorAvatar";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -46,6 +48,7 @@ export default async function AboutPage({
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "about" });
+  const at = await getTranslations({ locale, namespace: "author" });
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
     { name: "About", path: "/about" },
@@ -99,6 +102,20 @@ export default async function AboutPage({
           </div>
 
           <div>
+            <h2 className="text-lg font-semibold">{at("aboutTitle")}</h2>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              {at("aboutContent")}
+            </p>
+            <Link
+              href={AUTHOR_PATH}
+              className="mt-3 inline-flex items-center gap-3 rounded-lg border border-primary/30 bg-primary/5 py-2 pl-2 pr-4 text-sm font-medium text-primary transition hover:bg-primary/10"
+            >
+              <AuthorAvatar size={32} alt={at("avatarAlt")} />
+              {at("aboutCta")}
+            </Link>
+          </div>
+
+          <div>
             <h2 className="text-lg font-semibold">{t("pressTitle")}</h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               {t("pressContent")}
@@ -142,6 +159,7 @@ export default async function AboutPage({
                 url: SITE_URL,
                 email: "support@aicoloranalysis.io",
                 logo: `${SITE_URL}/logo-full.webp`,
+                founder: authorFounderJsonLd(),
               },
             }),
           }}

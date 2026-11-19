@@ -31,7 +31,7 @@ Research in color perception shows that humans are remarkably bad at objectively
 - **Chromatic adaptation** — your eyes automatically "adjust" to what you're used to seeing
 - **Cultural bias** — what you've been told about your coloring may not be accurate
 
-A 2019 study in the *Journal of Perceptual Imaging* found that untrained observers misidentified skin undertone more than 40% of the time, even under controlled lighting conditions.
+Even under controlled lighting, untrained observers often misjudge skin undertone.
 
 ## Reason #2: Binary Questions Can't Capture a Spectrum
 
@@ -42,7 +42,7 @@ Most quizzes use multiple-choice formats:
 
 But color isn't binary. You exist on a *continuous spectrum* between warm and cool. There are people who are clearly warm, clearly cool, and everything in between — neutral-warm, neutral-cool, true neutral with olive overtones, etc.
 
-A quiz that forces you to pick "warm" or "cool" at each step will always mistype anyone who falls in the middle. And roughly **30-40% of people have neutral or mixed undertones**, making them the majority who get mistyped.
+A quiz that forces you to pick "warm" or "cool" at each step will always mistype anyone who falls in the middle. And **many people have neutral or mixed undertones**, making them the ones most often mistyped.
 
 The same applies to other attributes:
 - Light vs. dark? What about medium?
@@ -53,9 +53,9 @@ The same applies to other attributes:
 
 Some "smarter" quizzes ask you to compare photos — holding gold vs. silver fabric, or comparing yourself to celebrity examples.
 
-But unless you've calibrated your monitor, the colors you see on screen are distorted. Studies show that:
+But unless you've calibrated your monitor, the colors you see on screen are distorted. Common problems include:
 
-- Most consumer monitors have a color temperature of 6500K–7500K (much bluer than natural daylight)
+- Many consumer monitors are not color-calibrated and can run cooler or warmer than natural daylight
 - Screen brightness, contrast settings, and ambient room lighting all shift perceived color
 - Photos taken on smartphones auto-adjust white balance, often shifting skin tones warmer or cooler than reality
 - Instagram/social media filters further distort any reference photos
@@ -152,7 +152,7 @@ Before trusting any result — quiz, AI, or otherwise — check these criteria:
 ## Key Takeaways
 
 - Color analysis quizzes fail because they rely on self-reporting things you can't objectively assess about yourself
-- Binary questions miss the 30–40% of people with neutral or mixed undertones
+- Binary questions miss people with neutral or mixed undertones
 - Screen color distortion makes photo-comparison quizzes unreliable
 - True color analysis requires observing how colors interact with your skin — not answering multiple choice questions
 - Your best options are professional draping (expensive but thorough) or AI analysis (affordable and quick, with the caveat that it is a visual judgment)

@@ -11,7 +11,7 @@ image: "/images/blog/best-eyebrow-shapes-face-shape.webp"
 
 Bir fotoğrafa bakıp bir şeyin tam oturmadığını hissettiyseniz — ama ne olduğunu söyleyemediyseniz — büyük olasılıkla kaşlardır. Kaşlar yüzün üst üçte birini kaplar; bakışın ilk indiği bölgedir. Gözleri çerçeveler, ifadeyi belirler ve çevredeki tüm hatların tonunu sessizce belirler.
 
-Saatlerce fondöten ve ruj mükemmelleştirirken kaşları olduğu gibi bırakan veya kemik yapılarına uymayan bir trende göre aşırı alan müşteriler gördüm. Doğru kaş şekli seçildiğinde fark anında ve belirgindir. Mesele sosyal medyayı takip etmek değil; kaşların yüz geometrisiyle nasıl etkileştiğini anlamaktır.
+Saatlerce fondöten ve ruj mükemmelleştirirken kaşları olduğu gibi bırakan veya kemik yapılarına uymayan bir trende göre aşırı alan insanlar sıkça. Doğru kaş şekli seçildiğinde fark anında ve belirgindir. Mesele sosyal medyayı takip etmek değil; kaşların yüz geometrisiyle nasıl etkileştiğini anlamaktır.
 
 ---
 
@@ -21,7 +21,7 @@ Yüz şekli, esasen orantılarınızın haritasıdır — alnın çene genişli�
 
 Makyaj sanatçıları ve kaş uzmanlarının onlarca yıldır kullandığı ilke aynıdır: **kaşlar uyum yaratmalı, rekabet etmemeli.** Yuvarlak ve yumuşak bir yüzde çok köşeli keskin kaşlar sert görünebilir. Uzun ve dar bir yüzde yüksek dramatik kemer daha da uzatabilir. Amaç görsel orantıları dengeye yaklaştırmaktır.
 
-Yüz çekiciliği araştırmaları tutarlı biçimde dengeli orantıların önemli olduğunu gösterir. Kaşlar kemik yapınızı yeniden yazmaz, ancak başkalarının orantılarınızı nasıl okuduğunu ince biçimde değiştirebilir. [Allure kaş rehberi](https://www.allure.com/story/eyebrow-shapes) yıllardır kemer konumu ile yüz şekli arasındaki bağı vurgular; deneyimime göre bu öneri her kaş trendinden çok daha güvenilirdir.
+Dengeli orantılar, yüzün nasıl okunduğunu etkiler. Kaşlar kemik yapınızı yeniden yazmaz, ancak başkalarının orantılarınızı nasıl okuduğunu ince biçimde değiştirebilir. Editörler ve kaş uzmanları yıllardır kemer konumu ile yüz şekli arasındaki bağı vurgular — çoğu trendden daha güvenilirdir.
 
 Kaşları yüzün üst kısmını yatay kesen çizgiler olarak düşünün. Açıları, yükseklikleri ve kalınlıkları genişlik, uzunluk ve yapı hakkında sinyaller gönderir. Bu yüzden her yüz şekli için en iyi kaş şekli evrensel bir cevap değil — orantılarınızın ihtiyaç duyduğu kişiselleştirilmiş bir öneridir.
 
@@ -87,7 +87,7 @@ Derine inmeden önce bunların kılavuz olduğunu, katı kurallar olmadığını
 
 **En iyi şekil:** Minimum kemerli düz yatay kaşlar. Kaş hattı uçtan uca nispeten düz, yalnızca kuyrukta hafif kalkış. Daha dolgun kalınlık üst yüze görsel genişlik katar.
 
-**Kaçının:** Yüksek kemerler — uzun yüzlerde gördüğüm en büyük hata. Dramatik kemer dikey uzunluğu en az ihtiyaç duyduğunuz yere ekler.
+**Kaçının:** Yüksek kemerler — uzun yüzlerde en sık yapılan hatalardan biri. Dramatik kemer dikey uzunluğu en az ihtiyaç duyduğunuz yere ekler.
 
 **İpucu:** Kuyruğu çok aşağı uzatma isteğine direnin. Hafif uzatılmış, düşmeden seviyede tutulan kuyruk genişliği korur, uzunluk eklemez.
 
@@ -122,7 +122,7 @@ Salonda veya evde kaş bakımında bu tabloyu kısa rehber olarak kullanın.
 
 ## Yüz Şekline Göre Yaygın Kaş Hataları
 
-Neyden kaçınacağını bilmek ne seçeceğini bilmek kadar değerlidir. En sık gördüğüm hatalar — birçoğunu ben de yaptım.
+Neyden kaçınacağını bilmek ne seçeceğini bilmek kadar değerlidir. İşte yüz şekillerine göre en sık görülen hatalar.
 
 **Oval yüz:** İnce kaş trendine uyarak aşırı alma. Oval yüzler zaten dengeli; kaşları fazla inceltmek lehinize olan doğal çerçeveyi kaldırır.
 
@@ -142,7 +142,7 @@ Evrensel bir hata: kuyruk uzunluğunu yok saymak. Kuyruk dış burun deliğinden
 
 ## Evde Yüz Şeklinizi Nasıl Belirlersiniz
 
-Hangi kategoride olduğunuzdan emin değilseniz, müşterilerle ve kendi ayna denemelerimde kullandığım hızlı yöntem:
+Hangi kategoride olduğunuzdan emin değilseniz, evde kullandığım hızlı yöntem:
 
 Saçı sıkıca geriye toplayın — saç bandı veya tok yeterli. Gündüz doğal ışıkta aynanın karşısında durun. Silinebilir kalem veya rujla aynada yüz konturunuzu çizin. Geri çekilin ve çizilen şekli gözlemleyin.
 
@@ -169,8 +169,6 @@ Fotoğrafı tam karşıdan çekin — yukarı veya aşağıdan açı orantılar�
 Teknoloji orantı analizini beş yıl öncesine göre çok daha erişilebilir kıldı. [AI yüz şekli analiz araçları](/face-shape-analysis) saniyeler içinde yüz şeklinizi ve orantılarınızı önererek kaş şeklinden saç modeline kadar seçimler için bir başlangıç noktası sunar. Aynaya ve sezgiye güvenmenizi hâlâ öneririm — ama ikinci bir görüş, özellikle yuvarlak mı oval mi yoksa arada mı emin değilseniz yardımcı olabilir.
 
 Profesyonel kaş hizmetleri de gelişti. Uzmanların kullandığı mapping teknikleri — yüz referans noktalarına göre kaş başlangıcı, kemer ve kuyruk ölçümü — bu rehberin orantı mantığıyla aynı çizgidedir. Brow bar'a gitseniz de evde çalışsanız da ilke aynı: yüzünüzle birlikte tasarlayın, ona karşı değil.
-
-[Vogue'un yüz çerçeveleyici özellikler özeti](https://www.vogue.com/article/face-shape-beauty-guide) kaşları, saçı, makyajı ve aksesuarları aynı « önce denge » felsefesiyle birleştirir.
 
 ---
 

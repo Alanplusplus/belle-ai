@@ -9,7 +9,7 @@ image: "/images/blog/lighting-affects-colors.webp"
 
 ## No Te Lo Estás Imaginando — Realmente Te Ves Diferente Bajo Distintas Luces
 
-Seguro has vivido esto: te vistes por la mañana, te miras al espejo y piensas *sí, este outfit funciona*. Luego te ves en el baño de la oficina y algo está... mal. La blusa que en casa parecía burdeos intenso ahora se lee marrón turbio. Tu piel se ve cetrina en lugar de cálida.
+Puede que conozcas este escenario: te vistes por la mañana, te miras al espejo y piensas *sí, este outfit funciona*. Luego te ves en el baño de la oficina y algo está... mal. La blusa que en casa parecía burdeos intenso ahora se lee marrón turbio. Tu piel se ve cetrina en lugar de cálida.
 
 No te estás volviendo loca. Estás experimentando uno de los factores más pasados por alto en el estilo personal — la forma en que la iluminación altera fundamentalmente cómo los colores se ven en tu cuerpo.
 
@@ -190,4 +190,4 @@ Entender la iluminación no cambia tu estación de color — pero sí cambia lo 
 
 - [La ciencia detrás del análisis de color personal](/es/blog/science-behind-personal-color-analysis) — Inmersión profunda en la óptica y biología del tipado estacional
 - [Cómo hacer análisis de color en casa](/es/blog/how-to-do-color-analysis-at-home) — Guía paso a paso con consejos de configuración de iluminación
-- [IA vs análisis de color profesional: Probé ambos](/es/blog/ai-vs-professional-color-analysis) — Cómo la tecnología maneja la variable de iluminación de forma diferente
+- [IA vs análisis de color profesional: cómo se comparan](/es/blog/ai-vs-professional-color-analysis) — Cómo la tecnología maneja la variable de iluminación de forma diferente

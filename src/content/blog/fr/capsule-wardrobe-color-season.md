@@ -12,7 +12,7 @@ Vous avez découvert que vous êtes Automne Doux ou Printemps Vif. Peut-être av
 
 Mais voici le problème dont personne ne parle : connaître votre saison ne répare pas automatiquement votre garde-robe.
 
-Je me souviens avoir fixé ma palette « Été Doux » — ces roses poussiéreux, lavandes atténuées et gris-bleus doux — en pensant : « Super. Et maintenant, comment je transforme ça en vraies tenues pour aller travailler lundi ? »
+Vous fixez peut-être votre palette « Été Doux » — roses poussiéreux, lavandes atténuées et gris-bleus doux — en vous disant : « Super. Et maintenant, comment je transforme ça en vraies tenues pour aller travailler lundi ? »
 
 Si c'est là où vous en êtes, ce guide est pour vous. Je vais vous accompagner pour construire une garde-robe capsule entièrement basée sur votre saison de couleurs — pièce par pièce, sans vous submerger.
 
@@ -160,7 +160,7 @@ Vous n'avez pas besoin d'acheter 30 pièces demain. Voici un calendrier réalist
 
 ## Erreurs Courantes à Éviter
 
-Après plus d'un an avec ma propre garde-robe capsule, voici les pièges que j'ai appris à éviter :
+Pour construire une garde-robe capsule selon votre saison, voici les pièges à éviter :
 
 **1. Tout neutre.** Votre garde-robe paraîtra ennuyeuse si elle est 100 % basiques. Vous avez besoin d'accents pour la joie et l'expression personnelle.
 

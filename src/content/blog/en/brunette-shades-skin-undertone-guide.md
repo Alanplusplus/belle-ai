@@ -8,11 +8,11 @@ image: "/images/blog/brunette-shades-skin-undertone-guide.webp"
 
 ## "Just Go Brown" Is the Most Misleading Advice in Hair Color
 
-Brown is supposed to be the safe choice. No bleach, no toner schedule, no dramatic regrowth line. So when I decided to go darker a few years ago, I told my colorist, "Just a nice brown."
+Brown is supposed to be the safe choice. No bleach, no toner schedule, no dramatic regrowth line. Plenty of people still walk into the salon with the same request: "Just a nice brown."
 
-Three weeks later I was staring at my reflection under office lights, convinced I looked tired. The brown was ashy, and my warm skin turned flat and a little gray next to it. A friend with the exact same "nice brown" looked radiant. Same word, completely different result.
+A few weeks later, the story often repeats under office lights: the brown reads ashy, warm skin can look flat and a little gray next to it, while someone else with the exact same "nice brown" looks radiant. Same word, completely different result.
 
-That's when I learned what colorists already know: **brown is not one color. It's a spectrum with three separate dials** — depth, temperature, and intensity — and "safe" only happens when all three match your coloring.
+That's the lesson colorists already know: **brown is not one color. It's a spectrum with three separate dials** — depth, temperature, and intensity — and "safe" only happens when all three match your coloring.
 
 In this guide, I'll break down how to read those dials, match them to your undertone and color season, and walk into the salon with language that actually gets you the brown you picture in your head.
 
@@ -38,7 +38,7 @@ Most "wrong brown" stories come from getting depth right and temperature wrong. 
 
 ### The Brunette Vocabulary, Decoded
 
-Here are the shades I hear requested most often, and what they actually mean:
+Here are the shades people request most often, and what they actually mean:
 
 | Shade | Depth | Temperature | Looks Like |
 |---|---|---|---|
@@ -79,7 +79,7 @@ If gold and silver both look fine on you, you're probably neutral. **Mocha, choc
 
 ### The Olive Exception
 
-Olive skin carries a greenish cast under the surface, so it breaks the simple warm-versus-cool rule. In my experience, olive tones usually look best in **neutral-to-cool browns with a slightly muted finish**, like mocha or soft mushroom brown. Strongly golden or red browns can pull out the green. If this is you, our guide to the [best hair colors for olive skin](/blog/olive-skin-best-hair-colors) goes much deeper.
+Olive skin carries a greenish cast under the surface, so it breaks the simple warm-versus-cool rule. Olive undertones usually look best in **neutral-to-cool browns with a slightly muted finish**, like mocha or soft mushroom brown. Strongly golden or red browns can pull out the green. If this is you, our guide to the [best hair colors for olive skin](/blog/olive-skin-best-hair-colors) goes much deeper.
 
 ---
 
@@ -89,13 +89,13 @@ Undertone tells you which direction to go. **Contrast tells you how far.**
 
 Contrast is the difference between your skin, eyes, and natural hair. High-contrast people, such as fair skin with dark eyes or deep skin with bright eyes, can carry deeper, more dramatic browns like espresso without looking harsh. Low-contrast people, with softly blended coloring, usually look more harmonious in medium, slightly softer browns.
 
-A simple rule I rely on: **stay within about two levels of your natural color** for a believable result, and ask for a touch of lightness around the face if you want your skin to look brighter. Going three or more levels darker than your natural shade can read heavy, and it's the fastest route to constant root maintenance.
+A simple rule to follow: **stay within about two levels of your natural color** for a believable result, and ask for a touch of lightness around the face if you want your skin to look brighter. Going three or more levels darker than your natural shade can read heavy, and it's the fastest route to constant root maintenance.
 
 ---
 
 ## The Best Brown Shades for Every Color Season
 
-Your color season combines undertone, depth, and clarity, so it refines the choice beyond warm versus cool. Here is what I've seen work across the 12-season system.
+Your color season combines undertone, depth, and clarity, so it refines the choice beyond warm versus cool. Here is what tends to work across the 12-season system.
 
 | Season | Best Brown Picks | Browns to Skip |
 |---|---|---|
@@ -132,7 +132,7 @@ Lean toward the option that's closer to your natural hair color and one step mor
 
 **Ask about a gloss.** A clear or tinted gloss is what gives brunette hair its mirror-like shine. It also lets your colorist fine-tune temperature without changing depth.
 
-**Check the shade in daylight.** Salon lighting is warm and flattering. Step near a window before you pay. I've approved shades under salon lights that looked completely different outside.
+**Check the shade in daylight.** Salon lighting is warm and flattering. Step near a window before you pay. Shades that look perfect under salon lights often look completely different outside.
 
 ### At Home
 
@@ -163,7 +163,7 @@ For a broader look at how undertone and season steer every hair choice, read our
 
 For years, choosing a brown meant flipping through a swatch book and hoping the tone would work on you. Swatches don't show how a shade interacts with your skin, eyes, and contrast level.
 
-AI-powered tools can now render different brown shades on your actual photo, so you can compare chestnut with mocha, or ash with warm chocolate, side by side. I tried one before my last color appointment, and seeing a neutral mocha on my own face made the decision in about thirty seconds. Free tools like [aicoloranalysis.io](/hair-color-analysis) analyze your undertone and show best and worst hair color options for your coloring before you spend money on dye.
+AI-powered tools can now render different brown shades on your actual photo, so you can compare chestnut with mocha, or ash with warm chocolate, side by side — often narrowing the choice in minutes before you book. Free tools like [aicoloranalysis.io](/hair-color-analysis) analyze your undertone and show best and worst hair color options for your coloring before you spend money on dye.
 
 It doesn't replace a skilled colorist, who still handles the chemistry and technique. But it removes the biggest variable, whether the shade suits you at all, before you're in the chair.
 

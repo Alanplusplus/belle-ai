@@ -14,7 +14,7 @@ Es stellt sich heraus, dass dieses einfache Kreisdiagramm eines der mächtigsten
 
 Professionelle Stylisten, Innenarchitekten und Markenberater nutzen Farbtheorie jeden Tag. Die gleichen Prinzipien, die ein Gemälde harmonisch wirken lassen oder einem Logo Vertrauenswürdigkeit verleihen, erklären auch, warum manche Outfits mühelos gepflegt aussehen, während andere sich „falsch" anfühlen, egal wie teuer die Teile sind.
 
-Ich habe jahrelang gedacht, Farbkoordination sei intuitiv — etwas, das man entweder hatte oder nicht. Dann habe ich die Theorie dahinter studiert, und alles ergab Sinn. Es gibt Regeln. Sie sind erlernbar. Und sie funktionieren.
+Viele halten Farbkoordination für rein intuitiv — etwas, das man entweder hat oder nicht. Dahinter steckt aber echte Theorie, und sobald du die Grundlagen lernst, fügt sich alles. Es gibt Regeln. Sie sind erlernbar. Und sie funktionieren.
 
 In diesem Artikel erkläre ich die zentralen Farbtheorie-Konzepte, die für den persönlichen Stil wichtig sind — ohne Kunststudium.
 

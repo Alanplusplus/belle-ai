@@ -14,7 +14,7 @@ Then you sit in the salon chair, show your stylist the screenshot, and walk out 
 
 Here's what nobody tells you: **the coloring technique matters just as much as the color itself.** Balayage, foil highlights, and all-over color don't just differ in application — they create fundamentally different patterns of light, contrast, and dimension in your hair. And those patterns interact with your skin undertone, eye color, and natural contrast level in very different ways.
 
-I learned this the hard way after years of defaulting to whatever technique was trendiest. Once I started matching the technique to my color season, everything clicked.
+Many people learn this the hard way after defaulting to whatever technique is trendiest. Once you match the technique to your color season, the picture usually clicks into place.
 
 ---
 
@@ -170,7 +170,7 @@ The difference between an intentional rule-break and an accidental mismatch is *
 
 ## Using Technology to Preview Before You Commit
 
-Here's the part that would have saved me several hundred dollars and a lot of frustration: you can now preview different hair color techniques on your actual photo before stepping into the salon.
+Here's the part that can save you several hundred dollars and a lot of frustration: you can now preview different hair color techniques on your actual photo before stepping into the salon.
 
 AI-powered hair color preview tools can show you how balayage, highlights, or all-over color would look against your specific skin tone, eye color, and facial features. Some tools even factor in your [color season analysis](/hair-color-analysis) to recommend which shades and techniques will harmonize best.
 

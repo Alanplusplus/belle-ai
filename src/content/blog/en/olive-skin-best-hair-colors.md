@@ -12,9 +12,9 @@ image: "/images/blog/olive-skin-best-hair-colors.webp"
 
 **Quick answer:** Olive skin looks best with muted hair colors, not brassy warmth or stark coolness. Warm olive suits rich browns, caramel and soft auburn; cool olive suits espresso, mushroom brown and muted burgundy. Rich chocolate brown is the safest universal choice if you're unsure where to start.
 
-I spent two years trying to find a hair color that didn't make me look tired. Every shade I picked — whether golden blonde or cool ash brown — left my skin looking slightly off. It wasn't until I understood that olive undertones create a unique optical challenge that everything clicked.
+If you have olive undertones, you may have tried golden blonde and cool ash brown and still felt your skin looked slightly off — not because the salon got it wrong, but because olive skin creates a distinct optical challenge.
 
-The green-grey cast in olive skin means hair colors that look gorgeous on purely warm or cool complexions can turn olive skin sallow, ashy, or flat. The right shade, though, makes olive skin absolutely radiant. This guide covers everything I've learned about matching hair color to olive undertones — from warm-olive vs cool-olive rules to specific shade picks by season.
+The green-grey cast in olive skin means hair colors that look gorgeous on purely warm or cool complexions can turn olive skin sallow, ashy, or flat. The right shade, though, makes olive skin absolutely radiant. This guide walks through matching hair color to olive undertones — from warm-olive vs cool-olive rules to specific shade picks by season.
 
 ---
 
@@ -89,7 +89,7 @@ Chocolate, espresso, and chestnut browns are the universal winners for olive ski
 
 ### Muted Reds and Burgundies
 
-Unlike bright copper, muted burgundy and wine tones add richness to olive skin without brassiness. Think deep cherry, dark auburn, or muted wine — not fire-engine red. I've found these shades particularly striking on medium-depth olives.
+Unlike bright copper, muted burgundy and wine tones add richness to olive skin without brassiness. Think deep cherry, dark auburn, or muted wine — not fire-engine red. These shades are especially striking on medium-depth olives.
 
 ### Soft Bronde and Dark Blonde
 
@@ -184,7 +184,7 @@ Your coloring is deep and high-contrast. Bold, cool-leaning colors work:
 
 ## A Modern Shortcut: AI Color Analysis
 
-If you're not sure whether you're warm olive or cool olive — or which season you fall into — AI-powered color analysis tools can now suggest your undertone from a single photo. This gives you a starting point for choosing a season and for hair color decisions. I've found it especially helpful for olive skin, where the green cast is easy to miss in a mirror, and an AI image model looking at the whole photo can sometimes pick it up, though lighting and camera settings still affect the result.
+If you're not sure whether you're warm olive or cool olive — or which season you fall into — AI-powered color analysis tools can now suggest your undertone from a single photo. This gives you a starting point for choosing a season and for hair color decisions. That can be especially useful for olive skin, where the green cast is easy to miss in a mirror, and an AI image model looking at the whole photo can sometimes pick it up, though lighting and camera settings still affect the result.
 
 ---
 

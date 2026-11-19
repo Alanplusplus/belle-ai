@@ -10,6 +10,7 @@ import { GoogleOneTap } from "@/components/GoogleOneTap";
 import { PageViewTracker } from "@/components/PageViewTracker";
 import { PurchaseRestoredToast } from "@/components/PurchaseRestoredToast";
 import { buildAlternates, ogLocale } from "@/lib/seo";
+import { authorFounderJsonLd } from "@/lib/author";
 import { SITE_URL, GA_MEASUREMENT_ID } from "@/lib/constants";
 import Script from "next/script";
 import type { Metadata, Viewport } from "next";
@@ -154,6 +155,7 @@ export default async function LocaleLayout({
       "https://medium.com/@belleai",
     ],
     description: meta?.homeDescription ?? "AI-powered personal color analysis app.",
+    founder: authorFounderJsonLd(),
   };
 
   return (

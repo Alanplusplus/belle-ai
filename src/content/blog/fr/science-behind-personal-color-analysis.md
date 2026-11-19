@@ -12,7 +12,7 @@ Vous l'avez probablement déjà vécu. Vous enfilez un haut corail et votre peau
 
 Ce n'est pas dans votre tête. Il y a une vraie science derrière tout ça, et une fois que vous comprenez les mécanismes, tout l'univers des « couleurs qui me vont » cesse d'être une question de hasard et commence à avoir du sens.
 
-J'ai passé des mois à creuser la physique, la biologie et la science de la perception qui sous-tendent l'analyse colorimétrique. Voici ce que j'ai découvert — et pourquoi cette pratique centenaire repose sur bien plus de science que la plupart des gens ne l'imaginent.
+Cet article présente la physique, la biologie et la science de la perception qui sous-tendent l'analyse colorimétrique — et pourquoi cette pratique centenaire repose sur bien plus de science que la plupart des gens ne l'imaginent.
 
 ---
 
@@ -107,7 +107,7 @@ Le contraste simultané a été décrit pour la première fois par le chimiste f
 - **Les couleurs harmonieuses** (celles qui partagent votre sous-ton) font paraître votre peau lisse, unie et lumineuse. La lumière réfléchie renforce votre coloration naturelle.
 - **Les couleurs dissonantes** (celles qui s'opposent à votre sous-ton) créent une tension visuelle. Votre peau peut paraître terne, grise, rougeâtre ou irrégulière parce que la lumière réfléchie entre en conflit avec vos pigments naturels.
 
-Ce n'est pas un effet subtil. La recherche en science des couleurs a montré que le contraste simultané peut décaler la couleur perçue de 20 à 30 % sur les échelles perceptuelles. C'est la différence entre « tu es magnifique » et « tu vas bien ? ».
+Ce n'est pas un effet subtil. Le contraste simultané peut modifier de façon notable la perception d'une couleur. C'est la différence entre « tu es magnifique » et « tu vas bien ? ».
 
 ## Pourquoi l'Analyse Colorimétrique Traditionnelle Est Difficile (Et Où l'IA Intervient)
 

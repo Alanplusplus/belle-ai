@@ -8,11 +8,11 @@ image: "/images/blog/color-analysis-myths-tiktok.webp"
 
 ## TikTok Renk Analizini Viral Yaptı — Ama Çok Şeyi de Yanlış Anlattı
 
-Kabul ediyorum: TikTok, iki yılda renk analizi farkındalığına, profesyonel stil endüstrisinin iki on yılda ulaştığından daha fazlasını kattı. Aniden herkes "renk mevsimi"nin ne olduğunu biliyor ve alt tonları umursamayan arkadaşlarım "Soft Summer mıyım?" diye reel gönderiyor.
+TikTok, iki yılda renk analizi farkındalığına, profesyonel stil endüstrisinin iki on yılda ulaştığından daha fazlasını kattı. Aniden herkes "renk mevsimi"nin ne olduğunu biliyor ve alt tonları umursamayan insanlar "Soft Summer mıyım?" diye reel paylaşıyor.
 
 Bu iyi haber. Kötü haber? Viral olmakla birlikte yanlış bilgi de geldi. TikTok'ta en çok paylaşılan renk analizi içeriklerinin bir kısmı ya işe yaramayacak kadar basitleştirilmiş ya da tamamen yanlış.
 
-Yüzlerce saat renk teorisi çalıştım, profesyonel draping sonuçlarını sosyal medya tavsiyeleriyle karşılaştırdım ve bu iddiaları gerçek insanlarda test ettim. İşte TikTok'un sürekli yaydığı 7 büyük efsane — ve bilim ile pratiğin söyledikleri.
+Profesyonel draping sonuçlarını sosyal medyada dolaşan tavsiyelerle karşılaştırdığınızda farklar çabuk ortaya çıkar. İşte TikTok'un sürekli yaydığı 7 büyük efsane — ve bilim ile pratiğin söyledikleri.
 
 ---
 
@@ -29,7 +29,7 @@ Yüzlerce saat renk teorisi çalıştım, profesyonel draping sonuçlarını sos
 
 **Gerçekten işe yarayan:** Damar testi uçları eleyebilir (damarlarınız canlı yeşilse muhtemelen Cool Winter değilsiniz). Ama doğru okuma için birden fazla göstergeye birlikte bakmak gerekir: cildiniz farklı metallere nasıl tepki veriyor, altın mı pembe mi bronzlaşıyorsunuz, gümüş vs. altın kumaşlar yüzünüze nasıl yansıyor ve — en güvenilir olanı — belirli test renkleriyle draping yapıldığında cildiniz nasıl görünüyor.
 
-[Color Research & Application](https://onlinelibrary.wiley.com/journal/15206378)'da yayımlanan araştırma, cilt rengi algısının bitişik renklere göre dramatik değiştiğini doğruluyor; bu yüzden draping (kumaşları yüze tutmak) altın standart olmaya devam ediyor — bileğe hızlı bakmak değil.
+Cilt rengi algısı bitişik renklere göre değişir (eşzamanlı kontrast); bu yüzden draping (kumaşları yüze tutmak) altın standart olmaya devam ediyor — bileğe hızlı bakmak değil.
 
 ---
 

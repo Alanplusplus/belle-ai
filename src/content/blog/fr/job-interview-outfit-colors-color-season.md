@@ -6,13 +6,11 @@ tags: ["tenue d'entretien", "saison colorimétrique", "analyse colorimétrique",
 image: "/images/blog/job-interview-outfit-colors-color-season.webp"
 ---
 
-## Le costume marine qui me faisait paraître épuisée
+## Quand la tenue d'entretien « sûre » se retourne contre vous
 
-Avant mon premier grand entretien, j'ai fait ce que tous les articles carrière me conseillaient : j'ai acheté un costume marine. Le marine évoque la confiance, le marine évoque la compétence, le marine est la couleur « sans risque ». Je l'ai porté avec une chemise blanche, j'ai répété mes réponses devant le miroir, et je me sentais totalement prête.
+Vous avez sans doute suivi le conseil classique : veste marine, chemise blanche, soignée et professionnelle. Dans le miroir avant l'appel, tout semble juste. Sur une capture vidéo, la peau paraît terne, les cernes dominent et le blanc pur près du visage ternit le reste. Ce n'est pas un sous-vêtement inadéquat : ce sont des couleurs « correctes » qui se battent avec votre coloration.
 
-Puis j'ai vu une photo de l'appel vidéo que mon recruteur avait enregistré. Ma peau paraissait jaunâtre, les cernes sous mes yeux étaient soudain l'élément central de mon visage, et la chemise blanche immaculée faisait paraître tout ce qui l'entourait terne. Je n'étais pas sous-habillée. Je portais les « bonnes » couleurs, mais de la mauvaise façon.
-
-Des mois plus tard, quand j'ai découvert ma saison colorimétrique, l'explication était simple. Le marine n'est pas une erreur pour tout le monde, mais un marine *froid, foncé et à fort contraste* n'est pas ce qu'une personne au teint chaud et aux couleurs douces a besoin près du visage. Le même costume qui rend un candidat net peut en faire paraître un autre fatigué.
+Le marine n'est pas une erreur pour tout le monde, mais un marine *froid, foncé et à fort contraste* ne convient pas à toutes les saisons près du visage. Le même costume peut paraître net pour une candidate et fatigante pour une autre.
 
 En entretien, vous avez quelques minutes pour paraître crédible, alerte et préparée. La couleur est l'un des signaux les plus rapides que vous pouvez maîtriser. Dans ce guide, je vous montre comment l'utiliser.
 
@@ -30,7 +28,7 @@ En entretien, vous avez quelques minutes pour paraître crédible, alerte et pr�
 
 Les recruteurs se forgent une impression rapidement, et la tenue fait partie de cette première lecture. Les chercheurs décrivent un effet apparenté appelé *cognition vestimentaire* : les vêtements que nous portons influencent notre façon de penser et de nous sentir, pas seulement la façon dont les autres nous voient. Une étude de 2012 menée par Hajo Adam et Adam Galinsky a montré que les personnes performaient mieux à des tâches d'attention lorsqu'elles portaient un vêtement qu'elles associaient à la rigueur et à la concentration. S'habiller pour le rôle n'est pas superficiel. Cela change votre propre état d'esprit.
 
-La couleur ajoute une couche supplémentaire. La [psychologie des couleurs](https://en.wikipedia.org/wiki/Color_psychology) associe grosso modo le bleu à la confiance, le vert profond à la stabilité et le bordeaux à l'assurance. Ces associations restent floues et varient selon les cultures, alors je les considère comme un coup de pouce, pas comme une règle. Ce qui compte davantage, c'est quelque chose de bien plus mesurable : **l'effet de la couleur sur votre visage.**
+La couleur ajoute une couche supplémentaire. La [psychologie des couleurs](https://en.wikipedia.org/wiki/Color_psychology) associe grosso modo le bleu à la confiance, le vert profond à la stabilité et le bordeaux à l'assurance. Ces associations restent floues et varient selon les cultures ; mieux vaut les voir comme un simple coup de pouce, pas comme une règle. Ce qui compte davantage, c'est quelque chose de bien plus mesurable : **l'effet de la couleur sur votre visage.**
 
 Les recruteurs ne regardent pas votre blazer. Ils regardent votre visage, et la couleur à côté soutient soit votre teint, soit entre en compétition avec lui. Une nuance qui s'accorde à votre coloration rend la peau uniforme et les yeux lumineux, ce qui se lit comme sain, alerte et énergique. Une nuance qui se bat contre votre coloration fait l'inverse, aussi « professionnelle » qu'elle paraisse sur le papier.
 
@@ -59,7 +57,7 @@ Si vous n'êtes pas encore sûre de votre saison, commencez par notre guide [com
 
 ## La formule entretien en trois couleurs
 
-Avant le détail saison par saison, voici la structure que j'utilise pour chaque tenue d'entretien. Elle fonctionne quelle que soit votre saison :
+Avant le détail saison par saison, voici une structure en trois parties qui fonctionne pour toutes les saisons :
 
 1. **La base (60 %) :** votre blazer, veste ou robe. C'est votre plus grand bloc de couleur et ce doit être un *neutre* flatteur de votre palette.
 2. **La couleur visage (30 %) :** le haut, la chemise ou l'écharpe le plus près de votre visage. C'est la pièce la plus importante, car elle encadre votre peau. Choisissez une nuance de votre palette qui illumine votre teint.
@@ -138,9 +136,9 @@ Aucune de ces couleurs n'est interdite. Il faut juste le bon emplacement, la bon
 
 ## L'approche moderne : tester les couleurs avant d'acheter
 
-Trouver sa saison signifiait autrefois une séance de drapage professionnelle. Aujourd'hui, l'IA peut analyser une photo et vous dire quelles nuances flattent votre sous-ton et lesquelles vous ternissent. Quand je me préparais à une reconversion, j'ai passé une photo dans un outil d'analyse colorimétrique par IA et j'ai obtenu une liste de couleurs de base, visage et accent en moins d'une minute. Des outils gratuits comme [aicoloranalysis.io](/outfit-color-analysis) peuvent montrer quelles couleurs de vêtements illuminent votre teint avant de dépenser de l'argent dans un nouveau blazer.
+Trouver sa saison signifiait autrefois une séance de drapage professionnelle. Aujourd'hui, l'IA peut analyser une photo et vous dire quelles nuances flattent votre sous-ton et lesquelles vous ternissent — souvent avec une liste base, visage et accent en moins d'une minute. Des outils gratuits comme [aicoloranalysis.io](/outfit-color-analysis) peuvent montrer quelles couleurs de vêtements illuminent votre teint avant de dépenser de l'argent dans un nouveau blazer.
 
-Cela ne remplace pas d'essayer les vêtements, mais cela réduit le champ pour ne pas deviner en cabine d'essayage. Et si vous voulez un regard plus approfondi sur la façon dont les conseils professionnels s'articulent, [le guide de The Muse sur la tenue d'entretien](https://www.themuse.com/advice/what-to-wear-to-an-interview) couvre la coupe, les tissus et les codes vestimentaires qui complètent tout ce qui précède.
+Cela ne remplace pas d'essayer les vêtements, mais cela réduit le champ pour ne pas deviner en cabine d'essayage.
 
 ---
 

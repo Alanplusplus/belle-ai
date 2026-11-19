@@ -14,7 +14,7 @@ L'Automne Doux et l'Été Doux partagent la même caractéristique dominante : *
 
 Alors, comment les distinguer concrètement ?
 
-Après des années à étudier l'analyse colorimétrique — et avoir moi-même été mal typée — j'ai constaté que la distinction repose sur une question fondamentale : votre peau a-t-elle une lueur dorée et chaude, ou une douceur rosée et froide ? Laissez-moi vous l'expliquer de façon claire.
+La distinction repose souvent sur une question fondamentale : votre peau a-t-elle une lueur dorée et chaude, ou une douceur rosée et froide ? Laissez-moi vous l'expliquer de façon claire.
 
 ---
 
@@ -177,7 +177,7 @@ Si vous constatez que les deux palettes vous conviennent raisonnablement bien, v
 
 Déterminer son sous-ton peut s'avérer véritablement difficile, surtout pour les saisons atténuées où la chaleur ou la froideur est subtile. C'est un domaine où l'analyse colorimétrique par IA s'est révélée étonnamment utile.
 
-Les outils modernes peuvent juger le sous-ton de votre peau à partir d'une photo, en examinant le contraste et d'autres indices qui peuvent tromper l'œil humain, bien que la lumière et les réglages de l'appareil puissent encore fausser le résultat. Si vous hésitez entre Automne Doux et Été Doux, un [outil d'analyse colorimétrique par IA](/) peut fournir un second avis. Je l'ai trouvé particulièrement utile pour les personnes aux sous-tons neutres qui ne parviennent vraiment pas à déterminer de quel côté elles penchent.
+Les outils modernes peuvent juger le sous-ton de votre peau à partir d'une photo, en examinant le contraste et d'autres indices qui peuvent tromper l'œil humain, bien que la lumière et les réglages de l'appareil puissent encore fausser le résultat. Si vous hésitez entre Automne Doux et Été Doux, un [outil d'analyse colorimétrique par IA](/) peut fournir un second avis — particulièrement utile lorsque vous avez un sous-ton neutre et ne parvenez vraiment pas à déterminer de quel côté vous penchez.
 
 ---
 

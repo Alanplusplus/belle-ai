@@ -8,9 +8,9 @@ image: "/images/blog/best-earring-styles-face-shape.webp"
 
 ## El error con los pendientes que casi todos cometemos
 
-Voy a ser sincera: pasé años comprando pendientes según lo bonito que se veían en el expositor. Studs delicados, chandeliers dramáticos, aros de moda — si me llamaban la atención, se venían conmigo a casa. Y la mitad me hacían ver… rara. Algunos ensanchaban mi rostro. Otros lo alargaban de formas extrañas. Unos simplemente desaparecían entre mis rasgos.
+Seguro que alguna vez te has probado pendientes nuevos y has pensado: en el expositor se veían perfectos, pero en el espejo algo falla. Los studs delicados pueden ensanchar un rostro redondo; los colgantes largos, alargar un rostro oblongo; los studs diminutos pueden desaparecer entre los rasgos. El problema suele ser la relación geométrica entre la forma del pendiente y la del rostro.
 
-Me llevó una eternidad — para mi vergüenza — darme cuenta de que el problema no eran los pendientes en sí. Era la relación entre la forma del pendiente y la forma de mi rostro. Una vez entendí esa geometría — cómo las líneas verticales y horizontales interactúan con los contornos del rostro — todo cambió. Dejé de comprar por impulso. Empecé a elegir piezas que realmente realzaban mis rasgos. Y de repente, incluso pendientes baratos parecían hechos para mí.
+Cuando entiendes cómo las líneas verticales y horizontales interactúan con tus contornos, comprar es más fácil: menos compras por impulso, más piezas que realzan tus proporciones; incluso pendientes baratos pueden verse intencionados.
 
 Esta guía desglosa exactamente qué estilos de pendientes complementan cada forma de rostro y, lo más importante, *por qué* funcionan. Porque una vez que entiendes la lógica, nunca volverás a dudar al comprar pendientes.
 
@@ -22,7 +22,7 @@ Los pendientes se sitúan en el punto más ancho y visible del rostro — justo 
 
 El principio central es simple: **los pendientes deben crear equilibrio.** Si tu rostro es ancho, quieres pendientes que añadan longitud. Si tu rostro es largo, quieres pendientes que añadan anchura. Si tu rostro ya está equilibrado (como el ovalado), tienes la mayor variedad de opciones.
 
-Según investigaciones publicadas en la [revista Perception](https://journals.sagepub.com/home/pec), las personas perciben los rostros como más atractivos cuando sus proporciones se acercan a una relación ovalada equilibrada — aproximadamente 1,6:1 (longitud respecto al ancho). Los pendientes son una de las herramientas más fáciles para empujar tus proporciones visuales en esa dirección.
+El objetivo habitual del estilismo es una silueta equilibrada, con tendencia ovalada, y los pendientes son una de las herramientas más fáciles para empujar tus proporciones visuales en esa dirección.
 
 Hay algo más que la mayoría de las guías no te cuentan: **la escala importa tanto como la forma.** Un rostro pequeño abrumado por unos chandeliers enormes no se verá equilibrado, independientemente de la forma del rostro. También cubriré recomendaciones de tamaño para cada forma.
 
@@ -60,7 +60,7 @@ Si tienes dudas, prueba a trazar el contorno de tu rostro en el espejo con un ro
 
 **Guía de tamaño:** Puedes optar con confianza por tamaños medianos a grandes. Tus proporciones pueden soportar piezas statement que otras formas quizá no logren llevar.
 
-**Mi elección favorita para rostros ovalados:** Un pendiente lágrima de longitud media. Sigue el estrechamiento natural de tu rostro y añade justo el movimiento necesario para captar la luz. Si eliges oro o plata depende de tu [subtono de piel](/es/blog/jewelry-metals-skin-tone-guide) — no de la forma del rostro.
+**Una opción sólida para rostros ovalados:** Un pendiente lágrima de longitud media. Sigue el estrechamiento natural de tu rostro y añade justo el movimiento necesario para captar la luz. Si eliges oro o plata depende de tu [subtono de piel](/es/blog/jewelry-metals-skin-tone-guide) — no de la forma del rostro.
 
 ---
 
@@ -151,7 +151,7 @@ Si tienes dudas, prueba a trazar el contorno de tu rostro en el espejo con un ro
 
 **Guía de tamaño:** Piensa en ancho, no en largo. Un aro de 2,5 cm de diámetro es mejor que un colgante lineal de 5 cm. Si llevas colgantes, que sean cortos y elige estilos que se extiendan hacia los lados.
 
-**Mi truco favorito para rostros alargados:** Piercings en capas. Si tienes varios piercings, apilar pequeños studs y huggies a lo largo de la oreja crea interés horizontal que contrarresta bellamente la longitud.
+**Un truco útil para rostros alargados:** Piercings en capas. Si tienes varios piercings, apilar pequeños studs y huggies a lo largo de la oreja crea interés horizontal que contrarresta bellamente la longitud.
 
 ---
 
@@ -189,13 +189,13 @@ La forma recibe la mayor atención, pero el material y el acabado también impor
 - Subtonos fríos → plata, platino, oro blanco, metales de tono frío
 - Subtonos neutros → puedes llevar cualquiera
 
-Para profundizar en la selección de metales, consulta mi [guía completa sobre metales de joyería y tono de piel](/es/blog/jewelry-metals-skin-tone-guide).
+Para profundizar en la selección de metales, consulta la [guía completa sobre metales de joyería y tono de piel](/es/blog/jewelry-metals-skin-tone-guide).
 
 ---
 
 ## Consejos prácticos de compra
 
-Tras años de prueba y error con pendientes, estos son los atajos que ojalá alguien me hubiera contado:
+Estos atajos de compra ahorran muchas pruebas y errores:
 
 1. **Hazte un selfie, no te mires al espejo.** Los espejos invierten tu imagen. Una foto de frente muestra lo que los demás ven realmente, y es más fácil evaluar las proporciones.
 
@@ -205,7 +205,7 @@ Tras años de prueba y error con pendientes, estos son los atajos que ojalá alg
 
 4. **Ten en cuenta tu peinado.** ¿Pelo recogido? Tus pendientes se convierten en el marco principal de tu rostro — la coincidencia de formas importa más. ¿Pelo suelto? Los pendientes interactúan con el cabello tanto como con el rostro, y puedes ser más flexible.
 
-5. **No olvides las gafas.** Si las llevas a diario, tus pendientes deben armonizar también con las monturas. Escribí una guía completa sobre [cómo elegir gafas según la forma del rostro](/es/blog/best-glasses-for-face-shape) que cubre esta interacción.
+5. **No olvides las gafas.** Si las llevas a diario, tus pendientes deben armonizar también con las monturas. La guía sobre [cómo elegir gafas según la forma del rostro](/es/blog/best-glasses-for-face-shape) cubre esta interacción.
 
 ---
 

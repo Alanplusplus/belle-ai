@@ -9,11 +9,11 @@ image: "/images/blog/olive-skin-lip-color-guide.webp"
 
 ## Pourquoi le rouge à lèvres est la catégorie la plus difficile pour la peau olive
 
-Dans les discussions sur la peau olive, le fond de teint monopolise l’attention, mais la déception la plus vive, pour moi, c’est le rouge à lèvres.
+Dans les discussions sur la peau olive, le fond de teint monopolise l’attention, mais la déception la plus vive concerne souvent le rouge à lèvres.
 
-J’ai perdu le compte des clientes olive qui essaient un rouge éclatant sur une amie chaude — et sur leurs propres lèvres il devient orange, boueux, ou jaunit les dents. Un rose froid paraît plat et gris sur la peau. Un « nude universel » disparaît, ou pire, ressemble à du correcteur sur la bouche.
+Vous avez peut-être essayé un rouge éclatant sur une amie chaude — et sur vos lèvres il devient orange, boueux, ou jaunit les dents. Un rose froid paraît plat et gris sur la peau. Un « nude universel » disparaît, ou ressemble à du correcteur sur la bouche.
 
-Le subton olive lit le pigment des lèvres à travers le modificateur vert-gris. Les teintes équilibrées pour chaud ou froid « pur » rencontrent cette dominante et dérivent d’une façon que la nuancier ne promettait pas. Ce guide parcourt les familles qui harmonisent vraiment, les teintes que je fais sauter, et comment monter une garde-robe de cinq rouges pour toute l’année.
+Le subton olive lit le pigment des lèvres à travers le modificateur vert-gris. Les teintes équilibrées pour chaud ou froid « pur » rencontrent cette dominante et dérivent d’une façon que la nuancier ne promettait pas. Ce guide parcourt les familles qui harmonisent vraiment, les teintes à éviter, et comment monter une garde-robe de cinq rouges pour toute l’année.
 
 ---
 
@@ -35,7 +35,7 @@ Les rouges chauds ne sont pas un refuge sûr non plus. Orange-rouge et tomate pe
 
 ## Meilleures familles de couleurs pour lèvres olive
 
-Ces quatre familles couvrent l’essentiel du quotidien. Quand je maquille des subtons olive, je commence ici.
+Ces quatre familles couvrent l’essentiel du quotidien. Ce sont les points de départ les plus fiables pour les subtons olive.
 
 ### Baie
 
@@ -104,7 +104,7 @@ Votre nude idéal est souvent un ou deux tons plus foncé que prévu — « un p
 
 ## La polémique corail : quand oui, quand non
 
-Le corail divise sur peau olive. Magnifique sur certaines, jaune et malade sur d’autres. Voici comment je repère votre profil après des années de tests par sous-types.
+Le corail divise sur peau olive. Magnifique sur certaines, jaune et malade sur d’autres. Voici comment orienter votre profil.
 
 ### Quand le corail fonctionne
 

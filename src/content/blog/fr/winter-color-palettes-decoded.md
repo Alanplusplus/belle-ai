@@ -12,7 +12,7 @@ Se faire typer en Hiver, c'est enthousiasmant. Vous appartenez à la famille la 
 
 Mais voilà le hic — il existe **trois sous-types d'Hiver distincts**, et les regrouper tous revient à dire que « toutes les glaces sont pareilles ». Un Hiver Profond dans des pastels glacés paraîtra éteint. Un Hiver Vif dans des teintes sombres et atténuées paraîtra lourd. Et un Hiver Vrai dans des tons bijoux légèrement chauds aura simplement l'air… décalé.
 
-J'ai vu d'innombrables personnes commettre exactement cette erreur. Elles entendent « Hiver » et se jettent immédiatement sur le noir, le marine et rien d'autre. Ou elles achètent tous les tons bijoux possibles sans se demander si leur sous-type d'Hiver peut porter la profondeur, la froideur ou la luminosité de chaque teinte.
+D'innombrables personnes commettent exactement cette erreur. Elles entendent « Hiver » et se jettent immédiatement sur le noir, le marine et rien d'autre. Ou elles achètent tous les tons bijoux possibles sans se demander si leur sous-type d'Hiver peut porter la profondeur, la froideur ou la luminosité de chaque teinte.
 
 Dans ce guide, je détaille **l'Hiver Profond**, **l'Hiver Vrai** et **l'Hiver Vif** — leurs traits distinctifs, leurs meilleures et pires couleurs, et comment déterminer exactement lequel correspond à votre coloration naturelle.
 

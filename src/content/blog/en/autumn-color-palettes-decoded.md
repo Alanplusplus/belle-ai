@@ -13,7 +13,7 @@ So your color analysis came back Autumn. You've got warmth in your veins, richne
 
 But here's where it gets interesting — there are **three distinct Autumn sub-seasons** in the 12-season color analysis system, and they're more different than most people realize. A color that makes one Autumn type look radiant can make another look muddy or washed out.
 
-I've seen this mistake so many times: someone discovers they're an Autumn, fills their closet with every shade of orange and brown they can find, and then wonders why some pieces make them glow while others make them look tired. The answer is almost always a sub-season mismatch.
+A common mistake: someone discovers they're an Autumn, fills their closet with every shade of orange and brown they can find, and then wonders why some pieces make them glow while others make them look tired. The answer is almost always a sub-season mismatch.
 
 In this guide, I'll walk you through **Deep Autumn**, **True Autumn**, and **Soft Autumn** — what makes each one unique, which colors are your best and worst, and exactly how to figure out which Autumn you actually are.
 

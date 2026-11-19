@@ -8,9 +8,9 @@ image: "/images/blog/celebrity-color-transformations.webp"
 
 ## Neden Bazı Ünlü Dönüşümleri Çarpıcı Görünür — Diğerleri Görünmez
 
-Yıllardır ünlü dönüşümlerine hayranım, ama alışılmış nedenlerden değil. Çoğu insan birinin sarı mı kumral mı daha iyi göründüğünü tartışırken, ben daha derine bakıyorum: yeni görünüm doğal renkleriyle *uyumlu mu*?
+Ünlü dönüşümleri çoğu zaman sarı–kumral tartışmasına sıkışır; asıl soru yeni görünümün doğal renkleriyle *uyumlu* olup olmadığıdır.
 
-Yüzlerce ünlü saç ve stil değişimini analiz ettikten sonra öğrendiğim şey bu: herkesin nefesini kesen ("on yıl gençleşmiş!") dönüşümler neredeyse her zaman ünlüyü ideal renk sezonu paletine *yaklaştırır*. "Garip" duranlar — teknik olarak iyi uygulanmış olsalar bile — onları uzaklaştırır.
+Birçok red carpet ve basın görünümünde tekrarlayan kalıp: herkesin «on yıl gençleşmiş!» dediği dönüşümler ünlüyü renk analizindeki ideal sezon paletine *yaklaştırır*; teknik olarak iyi olsa bile «garip» duranlar uzaklaştırır.
 
 Bu sadece ilginç bir gözlem değil. Bir sonraki kuaför randevunuzdan yarın sabah giyeceğiniz kıyafete kadar her renk kararına uygulayabileceğiniz pratik bir ders.
 
@@ -22,7 +22,7 @@ Somut örneklere geçmeden önce, birinin saç rengini veya stil paletini deği�
 
 Doğal renkleriniz — cilt alt tonu, göz rengi ve orijinal saç tonu — renk uzmanlarının "harmony field" dediği şeyi oluşturur. Yüzünüze değen renkler (saç, kıyafet, makyaj) doğal renklerinizle aynı sıcaklık ve derinliği paylaştığında cilt berrak, gözler belirgin ve kusurlar soluk görünür.
 
-Bu renkler doğal uyumunuzla *çarpıştığında* tersi olur. Cilt soluk veya kızarmış görünür. Göz altı halkaları belirginleşir. Yüz hatları düzleşir. [International Colour Association](https://www.aic-color.org/) araştırmaları, cilt yanındaki renklerin cilt kalitesi algısını dramatik biçimde etkilediğini doğruluyor — bu öznel görüş değil, optik.
+Bu renkler doğal uyumunuzla *çarpıştığında* tersi olur. Cilt soluk veya kızarmış görünür. Göz altı halkaları belirginleşir. Yüz hatları düzleşir. Cilt yanındaki renklerin komşuluğu, cilt kalitesini nasıl algıladığımızı etkiler — bu öznel görüş değil, optik.
 
 Bu yüzden bir ünlü basit bir saç rengi değişimiyle tamamen farklı görünebilir. Kilo vermemiş, ameliyat olmamış veya geriye yaşlanmamıştır. Kişisel renk ortamını doğal uyumuna daha yakına (veya uzağına) kaydırmıştır.
 
@@ -32,7 +32,7 @@ Bu yüzden bir ünlü basit bir saç rengi değişimiyle tamamen farklı görün
 
 ### İşe Yaradığında: Zendaya'nın Çok Yönlü Paleti
 
-Zendaya renk analizi açısından büyüleyici çünkü yüksek esneklikte bir Deep Autumn paletine sahip. Zengin sıcak alt tonu ve yüksek kontrastı, *derinlik* tutarlı kaldığı sürece hem sıcak auburn hem de derin soğuk tonlu kumral saçı taşıyabilmesini sağlıyor.
+Zendaya renk analizi açısından büyüleyici çünkü renk analistleri onu sık sık Deep Autumn olarak tip eder — bu okumada bile paleti olağanüstü esnek görünür. Zengin sıcak alt tonu ve yüksek kontrastı, *derinlik* tutarlı kaldığı sürece hem sıcak auburn hem de derin soğuk tonlu kumral saçı taşıyabilmesini sağlıyor.
 
 Çok açık veya çok kül rengine gittiğinde ne olduğuna dikkat edin: tenindeki sıcaklık kaybolur. Ama o imza zengin bakır-kırmızı rengiyle? Cildi parlar, gözleri derinleşir ve zahmetsizce ışıldar.
 
@@ -106,7 +106,7 @@ Sarı spektrumu, spesifik alt sezonunuzu bilmenin neden önemli olduğunu mükem
 
 ## Ünlü Renk Derslerini Kendi Seçimlerinize Nasıl Uygularsınız
 
-Yüzlerce dönüşümü inceledikten sonra kullanabileceğiniz bir çerçeve:
+Bir sonraki kuaför randevusu veya gardırop değişimi öncesi kullanabileceğiniz bir çerçeve:
 
 **Adım 1: Renk sıcaklığınızı belirleyin**
 
@@ -135,7 +135,7 @@ Büyük bir renk değişimi yapmadan önce kendinize sorun:
 | Hedef ton alt ton sıcaklığıma uyuyor mu? | Ciltle aynı sıcak/soğuk | Doğal renkle zıt sıcaklık |
 | Kontrast seviyesi uygun mu? | Doğalınızdaki özellik farkına benzer | Doğaldan çok daha yüksek/düşük kontrast |
 | Benimle aynı renklere sahip bir ünlü bunda iyi görünür mü? | Aynı sezon tipinden çok örnek | Tüm örnekler farklı sezon tipinden |
-| Bana uyduğu için mi çekildim, başkasında iyi göründüğü için mi? | Benzer tonlar yüzüme yakın harika göründü | Farklı renklere sahip birini kopyalıyorum |
+| Bana uyduğu için mi çekildim, başkasında iyi göründüğü için mi? | Benzer tonlar yüzünüze yakın harika göründü | Farklı renklere sahip birini kopyalıyorsunuz |
 
 ---
 
@@ -154,4 +154,4 @@ Büyük bir renk değişimi yapmadan önce kendinize sorun:
 - [Hangi Ünlünün Renk Sezonu Sizinkiyle Aynı? Stil İkizinizi Bulun](/tr/blog/celebrity-color-season-style-twin) — Tam renk sezonunuzu paylaşan ünlüleri keşfedin
 - [Renk Sezonunuza Göre En İyi Saç Rengini Nasıl Bulursunuz](/tr/blog/best-hair-color-for-color-season) — Sezona göre saç rengi seçiminin kapsamlı rehberi
 - [Renk Analizi: Kapsamlı Rehber](/tr/color-analysis) — En iyi renklerinizi bulmak için bilmeniz gereken her şey
-- [AI vs Profesyonel Renk Analizi: İkisini de Denedim](/tr/blog/ai-vs-professional-color-analysis) — Her iki yaklaşımın dürüst karşılaştırması
+- [Yapay zeka vs profesyonel renk analizi: nasıl karşılaştırılır](/tr/blog/ai-vs-professional-color-analysis) — Her iki yaklaşımın dürüst karşılaştırması

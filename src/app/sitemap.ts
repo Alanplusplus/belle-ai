@@ -77,6 +77,7 @@ const STATIC_PAGE_SOURCE: Record<string, string> = {
   "/ai-color-analysis-accuracy":
     "src/app/[locale]/ai-color-analysis-accuracy/page.tsx",
   "/about": "src/app/[locale]/about/page.tsx",
+  "/author/lydia-he": "src/app/[locale]/author/lydia-he/page.tsx",
   "/press": "src/app/[locale]/press/page.tsx",
   "/privacy": "src/app/[locale]/privacy/page.tsx",
   "/terms": "src/app/[locale]/terms/page.tsx",

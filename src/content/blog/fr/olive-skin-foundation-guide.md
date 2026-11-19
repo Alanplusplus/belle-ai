@@ -9,11 +9,11 @@ image: "/images/blog/olive-skin-foundation-guide.webp"
 
 ## Pourquoi acheter un fond de teint se complique sur peau olive
 
-Si vous avez un sous-ton olive, j’imagine votre dernière visite au comptoir. Dix teintes essuyées. Les chaudes orange sur la mâchoire. Les froides roses ou grises. Le neutre faisait les deux. Sous la lumière du magasin, vous avez pris un flacon « presque » — rentré chez vous, le visage et le cou racontaient deux histoires.
+Si vous avez un sous-ton olive, votre dernière visite au comptoir est peut-être familière. Dix teintes essuyées. Les chaudes orange sur la mâchoire. Les froides roses ou grises. Le neutre faisait les deux. Sous la lumière du magasin, vous avez pris un flacon « presque » — rentré chez vous, le visage et le cou racontaient deux histoires.
 
 Ce n’est pas un manque de technique. La plupart des gammes supposent une peau **chaude (jaune-doré)** ou **froide (rose-bleu)**. La peau olive ajoute un **modificateur vert-gris** par-dessus votre sous-ton de base. Sans ce « canal vert », les formules fondent rarement, même avec la bonne profondeur.
 
-Dans ce guide : pourquoi les conseils chaud/froid échouent, ce qui se passe au niveau des pigments, quelles marques formulent ou étiquettent l’olive, et comment je choisis selon **claire, moyenne et foncée** olive et la saison.
+Dans ce guide : pourquoi les conseils chaud/froid échouent, ce qui se passe au niveau des pigments, quelles marques formulent ou étiquettent l’olive, et comment choisir selon **claire, moyenne et foncée** olive et la saison.
 
 ---
 
@@ -23,7 +23,7 @@ Dans ce guide : pourquoi les conseils chaud/froid échouent, ce qui se passe au 
 
 Les bases chaudes s’appuient sur des pigments jaunes et dorés. Sur un sous-ton doré net, c’est un éclat sain. Sur peau olive, ces pigments **restent au-dessus** du vert au lieu de se mélanger.
 
-Ce que je vois le plus :
+Désajustements fréquents au comptoir :
 
 - Un doré « parfait » dans le flacon mais **orange à la racine des cheveux**
 - Une mâchoire **plus jaune que le reste du visage** après quelques heures
@@ -63,13 +63,13 @@ Pensez en couches : la **profondeur** vient de la mélanine ; le **sous-ton de b
 - Le jaune empêche le **rose froid** de vous griser.
 - **Profondeur** et sous-ton sont séparés : olive claire, moyenne ou foncée — chacune sa famille.
 
-Au test, les teintes mates, taupe ou vert-gris dans le flacon battent souvent les dorés « propres ». Contre-intuitif, mais fiable.
+Lors d’un test en boutique, les teintes mates, taupe ou vert-gris dans le flacon battent souvent les dorés « propres ». Contre-intuitif, mais fiable.
 
 ---
 
-## Ma routine de swatch (avant un troisième flacon faux)
+## Comment faire un swatch (avant un troisième flacon faux)
 
-La lumière du comptoir ment. Ma méthode :
+La lumière du comptoir ment. Une méthode simple qui fonctionne :
 
 1. **Trois sous-tons à la même profondeur** sur la mâchoire — doré chaud, rose froid, mat ou olive.
 2. **Attendre quinze minutes** — l’oxydation change plus qu’on ne croit sur olive.
@@ -82,7 +82,7 @@ Si toutes les teintes à votre profondeur échouent, c’est probablement la **f
 
 ## Marques à essayer (lignes olive)
 
-Les grandes marques progressent, mais l’olive exige de lire les notes — pas seulement « medium warm ». Je commence ici :
+Les grandes marques progressent, mais l’olive exige de lire les notes — pas seulement « medium warm ». Bon point de départ :
 
 ### NARS
 
@@ -124,13 +124,13 @@ Mêmes règles de sous-ton ; **la profondeur change le flacon**. Carte de dépar
 
 ### Claire à light olive
 
-Souvent lue « neutre » ou « froide » car le vert est subtil. Je cherche **clair-moyen** base **vert-gris ou taupe** — pas pêche ni rose. Les mains bronzent différemment ; **mâchoire et cou**, pas le dos de la main.
+Souvent lue « neutre » ou « froide » car le vert est subtil. Privilégiez **clair-moyen** base **vert-gris ou taupe** — pas pêche ni rose. Les mains bronzent différemment ; **mâchoire et cou**, pas le dos de la main.
 
 Profondeur parfaite, sous-ton à moitié : **une goutte de correcteur vert par pump** peut « oliviser » un quasi-match.
 
 ### Olive moyenne
 
-La profondeur la plus fréquente — et la mieux couverte. Essayez **« warm neutral »** ou **« golden olive »**. **Oxydation d’un demi-ton plus chaud** fréquente ; attendez dix à quinze minutes.
+L’olive moyenne est la profondeur avec le plus large choix de marques. Essayez **« warm neutral »** ou **« golden olive »**. **Oxydation d’un demi-ton plus chaud** fréquente ; attendez dix à quinze minutes.
 
 ### Hâlée à foncée
 
@@ -146,7 +146,7 @@ La peau olive reste rarement un seul ton toute l’année. Le plan doit bouger.
 
 **Hiver :** Peau un peu plus claire ; **vert-gris plus marqué**. La profondeur d’été peut paraître orange ou mate sur le cou.
 
-**Entre-saisons :** Je garde **deux fonds** — été et hiver — et les mélange. Normal, pas « trop de maquillage ».
+**Entre-saisons :** Beaucoup gardent **deux fonds** — été et hiver — et les mélangent. Normal, pas « trop de maquillage ».
 
 **Correcteur saisonnier :** Vert mélangé à la base (avec parcimonie) pour les semaines entre teintes ou quand seuls des « presque » existent.
 

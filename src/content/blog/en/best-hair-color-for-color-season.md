@@ -12,7 +12,7 @@ Here's something most people don't realize until after a bad dye job: your natur
 
 This is exactly what personal color analysis was designed to solve. Your color season isn't just about clothing. It's a complete guide to the tones that harmonize with your natural features, and that absolutely includes hair color.
 
-I've seen people go from looking tired and flat to absolutely glowing — not because of skincare or makeup, but because they finally chose a hair color that matched their season. The difference is real, and it's dramatic.
+Many people go from looking tired and flat to absolutely glowing — not because of skincare or makeup, but because they finally chose a hair color that matched their season. The difference is real, and it's dramatic.
 
 ---
 
@@ -239,7 +239,7 @@ For a second opinion, AI color analysis tools can suggest a likely season from a
 
 ## Common Hair Color Mistakes by Season
 
-Understanding your season also means understanding what to avoid. Here are the most common mistakes I see:
+Understanding your season also means understanding what to avoid. Here are the most common mistakes to watch for:
 
 **Cool seasons going warm:** This is the number one mistake. Summer and Winter types get golden highlights or caramel balayage because it's trendy, and then wonder why they suddenly look tired. Cool undertones need cool-toned hair — period.
 

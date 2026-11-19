@@ -8,7 +8,7 @@ image: "/images/blog/celebrity-color-season-style-twin.webp"
 
 ## Ya Tienes un Gemelo de Estilo Entre las Celebridades
 
-Esto es algo que he notado tras años de estudiar el análisis de color: las celebridades que nos atraen de forma natural a menudo comparten nuestra estación de color. No nuestro tipo de cuerpo, no nuestro estilo de vida — nuestra *coloración*. Y no es casualidad.
+En el análisis de color, un patrón se repite una y otra vez: las celebridades que nos atraen de forma natural a menudo comparten nuestra estación de color. No nuestro tipo de cuerpo, no nuestro estilo de vida — nuestra *coloración*. Y no es casualidad.
 
 Cuando alguien con tu mismo subtono, nivel de contraste y tipo de estación lleva un tono concreto, tu cerebro lo registra como «hermoso» porque reconoces instintivamente lo que funciona para tus propios rasgos. Ese vestido rosa polvoriento que hizo luminosa a cierta actriz? Hay una razón por la que te llamó la atención.
 
@@ -26,7 +26,7 @@ Eso significa que las celebridades son, en esencia, catálogos de moda vivientes
 
 La clave: **cuando una celebridad lleva un color que se ve increíble en ella, y compartís estación, ese mismo color se verá increíble en ti.** El tono de piel, el color de ojos y el tono de cabello crean los mismos efectos ópticos independientemente de quién lleve el outfit.
 
-La investigación en psicología del color lo respalda. Un [estudio publicado en la revista Color Research & Application](https://onlinelibrary.wiley.com/journal/15206378) encontró que la gente valora los rostros como más atractivos cuando están enmarcados por colores que armonizan con su coloración natural. Los mejores momentos «mejor vestida» de tu gemelo de estilo son, en esencia, un experimento curado que demuestra qué armonías funcionan.
+La idea es simple: los colores que armonizan con tu coloración natural suelen verse mejor en ti. Los mejores momentos «mejor vestida» de tu gemelo de estilo son, en esencia, un conjunto de ejemplos seleccionados que muestran qué armonías funcionan.
 
 ---
 
@@ -163,7 +163,7 @@ Para una segunda opinión, el análisis de color con IA puede sugerir una estaci
 - Tu gemelo de estilo se basa en la **similitud cromática** (subtono, contraste, profundidad) — no en tipo de cuerpo ni estilo de vida
 - Guarda los mejores looks de tu gemelo como referencia de compras — los **matices** concretos que lleva son los que también te funcionan
 - Estudia sus elecciones de maquillaje, especialmente labios y rubor
-- Recuerda la regla 80/20: **el 80 % del valor viene de acertar el color**, no el outfit exacto
+- Recuerda: **lo más importante es acertar el color**, más que el outfit exacto
 
 La próxima vez que veas a una celebridad en una lista «mejor vestida» y pienses «vaya, qué color tan impresionante» — comprueba si compartís estación. Si es así, acabas de encontrar tu próxima lista de compras.
 

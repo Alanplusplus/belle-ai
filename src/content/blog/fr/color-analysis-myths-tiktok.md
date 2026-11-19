@@ -8,11 +8,11 @@ image: "/images/blog/color-analysis-myths-tiktok.webp"
 
 ## TikTok a rendu la colorimétrie virale — mais s'est aussi trompé sur beaucoup de choses
 
-Je l'admets : TikTok a fait plus pour la sensibilisation à la colorimétrie en deux ans que l'industrie professionnelle du styling en deux décennies. Soudain, tout le monde sait ce qu'est une « saison colorimétrique », et mes amies qui ne se souciaient jamais des sous-tons m'envoient des reels en demandant « je suis Été Doux ? »
+TikTok a fait plus pour la sensibilisation à la colorimétrie en deux ans que l'industrie professionnelle du styling en deux décennies. Soudain, tout le monde sait ce qu'est une « saison colorimétrique », et des personnes qui ne se souciaient jamais des sous-tons partagent des reels en demandant « je suis Été Doux ? »
 
 C'est la bonne nouvelle. La mauvaise ? Avec la viralité vient la désinformation. Et une partie du contenu colorimétrique le plus partagé sur TikTok est soit simplifié au point d'être inutile, soit carrément faux.
 
-J'ai passé des centaines d'heures à étudier la théorie des couleurs, à comparer les résultats de drapage professionnel avec les conseils des réseaux sociaux, et à tester ces affirmations sur de vraies personnes. Voici les 7 plus grands mythes que TikTok continue de propager — et ce que disent réellement la science et la pratique.
+Lorsque vous comparez les résultats de drapage professionnel aux conseils qui circulent sur les réseaux sociaux, les écarts apparaissent vite. Voici les 7 plus grands mythes que TikTok continue de propager — et ce que disent réellement la science et la pratique.
 
 ---
 
@@ -29,7 +29,7 @@ J'ai passé des centaines d'heures à étudier la théorie des couleurs, à comp
 
 **Ce qui fonctionne vraiment :** Le test des veines peut écarter les extrêmes (si vos veines sont vivement vertes, vous n'êtes probablement pas Hiver Froid). Mais pour une lecture précise, il faut examiner plusieurs indicateurs ensemble : comment votre peau réagit à différents métaux, si vous bronzez doré ou rosé, comment l'argent et l'or se reflètent sur votre visage, et — le plus fiable — comment votre peau apparaît drapée de couleurs test spécifiques.
 
-Des recherches publiées dans [Color Research & Application](https://onlinelibrary.wiley.com/journal/15206378) confirment que la perception de la couleur de peau change radicalement selon les couleurs adjacentes, c'est pourquoi le drapage (tenir des tissus près du visage) reste la référence — pas un coup d'œil rapide à votre poignet.
+La perception de la couleur de peau change selon les couleurs adjacentes (contraste simultané), c'est pourquoi le drapage (tenir des tissus près du visage) reste la référence — pas un coup d'œil rapide à votre poignet.
 
 ---
 

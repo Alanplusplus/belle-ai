@@ -8,11 +8,9 @@ image: "/images/blog/best-makeup-colors-color-season.webp"
 
 ## Renk Sezonunuz, Kimsenin Konuşmadığı Makyaj Hilesi
 
-Eskiden "doğru makyaj tonunu bulmak" Sephora'da çeneme elli fondöten sürmek demek sanıyordum. Yıllarımı — ve neredeyse hiç kullanılmamış bir ruj mezarlığını — gerçek sorunun ton aralığı olmadığını anlamak için harcadım. Sorun, yüzüme gerçekten uyacak *renk ailesini* anlamak için bir çerçevem olmamasıydı.
+Çoğu kişi "doğru makyaj tonunu bulmak"ın tezgahta sonsuz fondöten denemek olduğunu sanır. Asıl zorluk ton aralığı değil, yüzünüzle uyumlu *renk ailesini* anlamak için bir çerçevenin olmamasıdır.
 
-Sonra mevsimsel renk analizini keşfettim. Ve her şey yerine oturdu.
-
-Renk sezonunuz — insan rengini alt ton, kontrast ve derinliğe göre 12 alt tipe ayıran sistem — sadece hangi kazağı alacağınızı söylemez. Makyaj için eksiksiz bir yol haritasıdır. Fondöten, ruj, allık, far, hatta bronzer — her ürünün kendi sezonunuz için bir "doğru" sıcaklığı ve yoğunluğu vardır.
+Mevsimsel renk analizi bu çerçeveyi sağlar. Renk sezonunuz — insan rengini alt ton, kontrast ve derinliğe göre 12 alt tipe ayıran sistem — sadece hangi kazağı alacağınızı söylemez. Makyaj için eksiksiz bir yol haritasıdır. Fondöten, ruj, allık, far, hatta bronzer — her ürünün kendi sezonunuz için bir "doğru" sıcaklığı ve yoğunluğu vardır.
 
 Bu rehberde her sezon için en iyi makyaj renklerini sıralıyorum. "Sıcak tonları deneyin" gibi belirsiz tavsiyeler değil. Ekran görüntüsü alıp mağazaya götürebileceğiniz spesifik öneriler.
 
@@ -206,7 +204,7 @@ Parlak Kış, Parlak İlkbahar'a komşudur ve ikisi de *canlı, doygun renkleri*
 
 ## Sezon Tipine Göre En Büyük 3 Makyaj Hatası
 
-Yüzlerce renk analizi inceledikten sonra aynı üç hatanın tekrar tekrar ortaya çıktığını fark ettim.
+Mevsimsel tiplemede aynı üç hata tekrar tekrar ortaya çıkar:
 
 **Hata #1: Makyajı cilde değil kıyafete göre eşleştirmek.** Favori lacivert elbiseniz lacivert far gerektirmez. Makyajı *renklendirmenize* göre eşleştirin, kıyafetlere değil. Kıyafetleriniz de sezon paletinizle uyumludur; uyum doğal olarak oluşur.
 
@@ -218,7 +216,7 @@ Yüzlerce renk analizi inceledikten sonra aynı üç hatanın tekrar tekrar orta
 
 ## Bu Tabloyu Gerçek Hayatta Nasıl Kullanırsınız?
 
-Sezonunuzun en iyi makyaj renklerini bilmek, satın almalara ve rutinlere çevirebildiğinizde işe yarar. İşte pratik yaklaşımım:
+Sezonunuzun en iyi makyaj renklerini bilmek, satın almalara ve rutinlere çevirebildiğinizde işe yarar. İşte pratik bir yaklaşım:
 
 **Eczane veya güzellik reyonunda:**
 - Sezonunuzun tablo satırının ekran görüntüsünü alın
@@ -240,7 +238,7 @@ Fondöten özel dikkat hak eder çünkü her şeyin üzerine oturduğu tabandır
 
 En yaygın hata: fondöteni *yüze* değil *boyun ve göğse* göre eşleştirmek. Yüzünüz vücudunuzdan daha koyu, kırmızı veya düzensiz olabilir. Sorunsuz karışım için çene/boyun birleşim noktasına göre eşleştirin.
 
-Alt ton için, sıcak, soğuk veya nötr-soğuk olduğunuzdan emin değilseniz AI destekli renk analizi araçlarının faydalı bir ikinci görüş olabildiğini gördüm; bazen kendi gözümün kaçırdığı bir ipucunu yakalıyorlar, yine de ışık ve kamera ayarları sonucu kaydırabilir. [aicoloranalysis.io](/makeup-analysis) adresindeki ücretsiz analiz gibi araçlar, fotoğraftan bir alt ton kategorisi önererek güzellik reyonunda daha iyi bir başlangıç noktası sunar.
+Alt ton için, sıcak, soğuk veya nötr-soğuk olduğunuzdan emin değilseniz AI destekli renk analizi araçları faydalı bir ikinci görüş olabilir; yine de ışık ve kamera ayarları sonucu kaydırabilir. [aicoloranalysis.io](/makeup-analysis) adresindeki ücretsiz analiz gibi araçlar, fotoğraftan bir alt ton kategorisi önererek güzellik reyonunda daha iyi bir başlangıç noktası sunar.
 
 ---
 

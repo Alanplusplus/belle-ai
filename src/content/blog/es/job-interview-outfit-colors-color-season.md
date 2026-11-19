@@ -7,15 +7,13 @@ tags: ["atuendo para entrevista", "estación de color", "análisis de color", "e
 image: "/images/blog/job-interview-outfit-colors-color-season.webp"
 ---
 
-## El traje azul marino que me hizo parecer agotada
+## Cuando el atuendo de entrevista «seguro» se vuelve en contra
 
 **Respuesta rápida:** Para una entrevista, usa la fórmula 60-30-10: una base neutra que te favorezca, un color junto al rostro que ilumine tu piel y un pequeño acento. La prenda junto a tu cara es la que más importa, y los colores «seguros» (azul marino, negro, blanco, gris, beige) solo funcionan si su tono favorece tu coloración.
 
-Antes de mi primera entrevista importante, hice lo que decían todos los artículos de carrera: compré un traje azul marino. El azul marino transmite confianza, el azul marino transmite competencia, el azul marino es el color «seguro». Lo llevé con camisa blanca, practiqué mis respuestas frente al espejo y me sentí completamente preparada.
+Seguramente has seguido el consejo estándar: chaqueta azul marino, camisa blanca, pulcro y profesional. En el espejo antes de la llamada parece acertado. En una captura del vídeo, la piel se ve amarillenta, las ojeras dominan y el blanco puro junto al rostro apaga todo lo demás. No es ropa inadecuada: son colores «correctos» que luchan con tu coloración.
 
-Luego vi una foto de la videollamada que mi reclutadora había grabado. Mi piel se veía amarillenta, las ojeras eran de repente el protagonista de mi rostro y la camisa blanca impecable hacía que todo a su alrededor pareciera apagado. No iba infravestida. Llevaba los colores «correctos» de la forma equivocada.
-
-Meses después, cuando aprendí mi estación de color, la explicación fue sencilla. El azul marino no está mal para todo el mundo, pero un azul marino *frío, oscuro y de alto contraste* no es lo que una persona cálida y de coloración suave necesita cerca del rostro. El mismo traje que hace ver nítida a una candidata puede hacer que otra parezca cansada.
+El azul marino no está mal para todo el mundo, pero un azul *frío, oscuro y de alto contraste* no encaja con todas las estaciones cerca del rostro. El mismo traje puede hacer brillar a una candidata y cansar a otra.
 
 En una entrevista tienes unos minutos para parecer creíble, alerta y preparada. El color es una de las señales más rápidas que puedes controlar. En esta guía te muestro cómo usarlo.
 
@@ -33,7 +31,7 @@ En una entrevista tienes unos minutos para parecer creíble, alerta y preparada.
 
 Los entrevistadores forman impresiones rápido, y la ropa forma parte de esa primera lectura. Los investigadores describen un efecto relacionado llamado *cognición vestimentaria*: la ropa que llevamos influye en cómo pensamos y nos sentimos, no solo en cómo nos ven los demás. Un estudio de 2012 de Hajo Adam y Adam Galinsky encontró que las personas rendían mejor en tareas de atención cuando llevaban una prenda que asociaban con cuidado y concentración. Vestir el papel no es superficial. Cambia tu propio estado mental.
 
-El color añade otra capa. La [psicología del color](https://en.wikipedia.org/wiki/Color_psychology) básica asocia los azules con la confianza, los verdes profundos con la estabilidad y el burdeos con la seguridad. Estas asociaciones son flexibles y varían según la cultura, así que las trato como un empujón, no como una regla. Lo que importa más es algo mucho más medible: **cómo afecta el color a tu rostro.**
+El color añade otra capa. La [psicología del color](https://en.wikipedia.org/wiki/Color_psychology) básica asocia los azules con la confianza, los verdes profundos con la estabilidad y el burdeos con la seguridad. Estas asociaciones son flexibles y varían según la cultura; conviene tomarlas como una sugerencia ligera, no como una regla. Lo que importa más es algo mucho más medible: **cómo afecta el color a tu rostro.**
 
 Los entrevistadores no miran tu chaqueta de traje. Miran tu cara, y el color junto a ella o apoya tu tez o compite con ella. Un tono que encaja con tu coloración hace que la piel se vea uniforme y los ojos brillantes, lo que se lee como salud, alerta y energía. Un tono que pelea con tu coloración hace lo contrario, por muy profesional que sea sobre el papel.
 
@@ -62,7 +60,7 @@ Si aún no tienes clara tu estación, empieza por nuestra guía sobre [cómo enc
 
 ## La fórmula de tres colores para entrevistas
 
-Antes del desglose estación por estación, aquí está la estructura que uso para cada atuendo de entrevista. Funciona sea cual sea tu estación:
+Antes del desglose estación por estación, aquí hay una estructura en tres partes que funciona para todas las estaciones:
 
 1. **La base (60 %):** tu chaqueta de traje, chaqueta o vestido. Es el bloque de color más grande y debe ser un *neutro* favorecedor de tu paleta.
 2. **El color junto al rostro (30 %):** la prenda superior, camisa o pañuelo más cerca de la cara. Es la pieza más importante, porque enmarca tu piel. Elige un tono de tu paleta que ilumine tu tez.
@@ -141,9 +139,9 @@ Ninguno está prohibido. Solo necesitan la ubicación correcta, el tono adecuado
 
 ## El enfoque moderno: prueba colores antes de comprar
 
-Encontrar tu estación solía significar una sesión profesional de armonización con pañuelos. Hoy la IA puede analizar una foto y decirte qué tonos favorecen tu subtono y cuáles te apagan. Cuando me preparaba para un cambio de carrera, pasé una foto por una herramienta de análisis de color con IA y tuve una lista de colores base, junto al rostro y de acento en menos de un minuto. Herramientas gratuitas como [aicoloranalysis.io](/outfit-color-analysis) pueden mostrar qué colores de ropa iluminan tu tez antes de gastar dinero en una chaqueta de traje nueva.
+Encontrar tu estación solía significar una sesión profesional de armonización con pañuelos. Hoy la IA puede analizar una foto y decirte qué tonos favorecen tu subtono y cuáles te apagan, a menudo con una lista de base, color junto al rostro y acento en menos de un minuto. Herramientas gratuitas como [aicoloranalysis.io](/outfit-color-analysis) pueden mostrar qué colores de ropa iluminan tu tez antes de gastar dinero en una chaqueta de traje nueva.
 
-No sustituye probarse la ropa, pero reduce el campo para no adivinar en el probador. Y si quieres una mirada más profunda a cómo se compara el consejo profesional, [la guía de The Muse sobre vestimenta para entrevistas](https://www.themuse.com/advice/what-to-wear-to-an-interview) cubre corte, tejido y códigos de vestimenta que complementan todo lo anterior.
+No sustituye probarse la ropa, pero reduce el campo para no adivinar en el probador.
 
 ---
 

@@ -6,7 +6,7 @@ import { routing } from "@/i18n/routing";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { buildAlternates } from "@/lib/seo";
-import { SITE_URL } from "@/lib/constants";
+import { SINGLE_UNLOCK_ENABLED, SITE_URL } from "@/lib/constants";
 import { PARENT_SEASON_ORDER, getSeasonsByParent } from "@/lib/color-palette-data";
 import { PaletteCardImage } from "@/components/PaletteCardImage";
 import { VideoCard } from "@/components/VideoEmbed";
@@ -14,6 +14,7 @@ import { getPublishedVideos } from "@/lib/videos";
 import { FunnelLink } from "@/components/FunnelLink";
 import { sampleHref } from "@/lib/blogTools";
 import { QuickAnswerSection } from "@/components/QuickAnswer";
+import { PricedFill } from "@/components/PricedFill";
 
 export async function generateMetadata({
   params,
@@ -57,6 +58,8 @@ function HomeContent() {
   const tp = useTranslations("tryPage");
   const cp = useTranslations("colorPage");
   const videos = getPublishedVideos();
+  // 首屏的「免费范围 + 价格」一行：只有打开了单份报告入口、且这个语言写了 heroPriceNote 才显示（价格按访客币种渲染）
+  const showHeroPrice = SINGLE_UNLOCK_ENABLED && t.has("heroPriceNote");
 
   const allSeasons = PARENT_SEASON_ORDER.flatMap((parent) => getSeasonsByParent(parent));
   // 首页正文向下链接的站内页面：专题页（color analysis）、落地页（personal color analysis）、测验、免费在线分析指南
@@ -171,6 +174,11 @@ function HomeContent() {
               </FunnelLink>
             </div>
             <p className="mt-3 text-sm text-muted-foreground">{t("heroNote")}</p>
+            {showHeroPrice && (
+              <p className="mt-1.5 text-sm font-medium text-foreground/80">
+                <PricedFill template={t.raw("heroPriceNote") as string} prices={{ price: "single" }} />
+              </p>
+            )}
 
             {/* Product Stats Bar */}
             <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground lg:justify-start">

@@ -8,11 +8,11 @@ image: "/images/blog/brunette-shades-skin-undertone-guide.webp"
 
 ## « Mets-toi juste en brun » : le conseil capillaire le plus trompeur
 
-Le brun est censé être le choix sans risque. Pas de décoloration, pas de planning de toner, pas de démarcation racines spectaculaire. Alors, il y a quelques années, quand j'ai décidé d'assombrir, j'ai dit à ma coloriste : « Un joli brun, voilà tout. »
+Le brun est censé être le choix sans risque. Pas de décoloration, pas de planning de toner, pas de démarcation racines spectaculaire. Beaucoup entrent au salon en disant à leur coloriste : « Un joli brun, voilà tout. »
 
-Trois semaines plus tard, sous les néons du bureau, je me regardais dans le miroir, persuadée d'avoir l'air fatiguée. Le brun tirait sur le cendré, et ma peau chaude paraissait plate, presque grisâtre à côté. Une amie avec exactement le même « joli brun » rayonnait. Même mot, résultat totalement différent.
+Quelques semaines plus tard, sous la lumière du bureau, le scénario se répète souvent : un brun cendré et une peau chaude paraissent plates, presque grisâtre à côté. Une amie avec exactement le même « joli brun » rayonnait. Même mot, résultat totalement différent.
 
-C'est là que j'ai compris ce que les coloristes savent déjà : **le brun n'est pas une couleur. C'est un spectre avec trois réglages distincts** — profondeur, température et intensité — et « sans risque » n'arrive que lorsque les trois correspondent à votre coloration.
+C'est la leçon que ce que les coloristes savent déjà : **le brun n'est pas une couleur. C'est un spectre avec trois réglages distincts** — profondeur, température et intensité — et « sans risque » n'arrive que lorsque les trois correspondent à votre coloration.
 
 Dans ce guide, je détaille comment lire ces réglages, les aligner sur votre sous-ton et votre saison colorimétrique, et entrer au salon avec un vocabulaire qui vous rapporte vraiment le brun que vous imaginez.
 
@@ -38,7 +38,7 @@ La plupart des histoires de « mauvais brun » viennent d'une profondeur juste e
 
 ### Le vocabulaire brune, décrypté
 
-Voici les nuances que j'entends le plus souvent demander, et ce qu'elles signifient vraiment :
+Voici les nuances les plus souvent demandées, et ce qu'elles signifient vraiment :
 
 | Nuance | Profondeur | Température | Rendu |
 |---|---|---|---|
@@ -79,7 +79,7 @@ Si l'or et l'argent vous vont tous les deux, vous êtes probablement neutre. **M
 
 ### L'exception olivâtre
 
-La peau olivâtre porte une nuance verdâtre sous la surface, ce qui casse la règle simple chaud contre froid. D'expérience, les teints olivâtres sont en général plus beaux dans **des bruns neutre à froid avec une finition légèrement atténuée**, comme le moka ou un brun champignon doux. Les bruns très dorés ou rouges peuvent faire ressortir le vert. Si c'est votre cas, notre guide sur les [meilleures couleurs de cheveux pour la peau olive](/fr/blog/olive-skin-best-hair-colors) va beaucoup plus loin.
+La peau olivâtre porte une nuance verdâtre sous la surface, ce qui casse la règle simple chaud contre froid. Les teints olivâtres sont en général plus beaux dans **des bruns neutre à froid avec une finition légèrement atténuée**, comme le moka ou un brun champignon doux. Les bruns très dorés ou rouges peuvent faire ressortir le vert. Si c'est votre cas, notre guide sur les [meilleures couleurs de cheveux pour la peau olive](/fr/blog/olive-skin-best-hair-colors) va beaucoup plus loin.
 
 ---
 
@@ -89,13 +89,13 @@ Le sous-ton indique la direction. **Le contraste indique l'amplitude.**
 
 Le contraste, c'est l'écart entre votre peau, vos yeux et votre chevelure naturelle. Les personnes à contraste élevé — peau claire aux yeux foncés, ou peau profonde aux yeux vifs — peuvent porter des bruns plus profonds et dramatiques comme l'espresso sans paraître dures. Les personnes à faible contraste, avec une coloration fondue, sont en général plus harmonieuses en bruns moyens, un peu plus doux.
 
-Une règle simple à laquelle je me fie : **restez à environ deux niveaux de votre couleur naturelle** pour un résultat crédible, et demandez un peu de clarté autour du visage si vous voulez que votre peau paraisse plus lumineuse. Descendre de trois niveaux ou plus sous votre teinte naturelle peut paraître lourd, et c'est la voie la plus rapide vers un entretien des racines constant.
+Une règle simple à suivre : **restez à environ deux niveaux de votre couleur naturelle** pour un résultat crédible, et demandez un peu de clarté autour du visage si vous voulez que votre peau paraisse plus lumineuse. Descendre de trois niveaux ou plus sous votre teinte naturelle peut paraître lourd, et c'est la voie la plus rapide vers un entretien des racines constant.
 
 ---
 
 ## Les meilleurs bruns pour chaque saison colorimétrique
 
-Votre saison colorimétrique combine sous-ton, profondeur et clarté ; elle affine le choix au-delà du seul chaud versus froid. Voici ce qui fonctionne, d'après mon expérience, dans le système des 12 saisons.
+Votre saison colorimétrique combine sous-ton, profondeur et clarté ; elle affine le choix au-delà du seul chaud versus froid. Voici ce qui fonctionne, dans le système des 12 saisons.
 
 | Saison | Meilleurs bruns | Bruns à éviter |
 |---|---|---|
@@ -132,7 +132,7 @@ Penchez-vous vers l'option la plus proche de votre couleur naturelle et un cran 
 
 **Demandez un gloss.** Un gloss transparent ou teinté, c'est ce qui donne aux cheveux bruns cette brillance miroir. Il permet aussi à votre coloriste d'affiner la température sans changer la profondeur.
 
-**Vérifiez la nuance à la lumière du jour.** L'éclairage du salon est chaud et flatteur. Approchez-vous d'une fenêtre avant de payer. J'ai validé des nuances sous les lumières du salon qui paraissaient totalement différentes dehors.
+**Vérifiez la nuance à la lumière du jour.** L'éclairage du salon est chaud et flatteur. Approchez-vous d'une fenêtre avant de payer. Les nuances qui semblent parfaites sous les lumières du salon ont souvent un aspect tout à fait différent à l'extérieur.
 
 ### À la maison
 
@@ -163,7 +163,7 @@ Pour une vue d'ensemble de la façon dont sous-ton et saison orientent chaque ch
 
 Pendant des années, choisir un brun signifiait feuilleter un nuancier en espérant que le ton vous irait. Les échantillons ne montrent pas comment une nuance interagit avec votre peau, vos yeux et votre contraste.
 
-Les outils IA peuvent désormais rendre différents bruns sur votre vraie photo, pour comparer châtain et moka, ou cendré et chocolat chaud, côte à côte. J'en ai testé un avant mon dernier rendez-vous couleur, et voir un moka neutre sur mon propre visage a tranché en une trentaine de secondes. Des outils gratuits comme [aicoloranalysis.io](/fr/hair-color-analysis) analysent votre sous-ton et affichent les meilleures et les pires options capillaires pour votre coloration avant de dépenser de l'argent en coloration.
+Les outils IA peuvent désormais rendre différents bruns sur votre vraie photo, pour comparer châtain et moka, ou cendré et chocolat chaud, côte à côte — ce qui permet souvent de réduire le choix en quelques minutes avant de réserver. Des outils gratuits comme [aicoloranalysis.io](/fr/hair-color-analysis) analysent votre sous-ton et affichent les meilleures et les pires options capillaires pour votre coloration avant de dépenser de l'argent en coloration.
 
 Cela ne remplace pas une coloriste compétente, qui gère toujours la chimie et la technique. Mais cela retire la plus grande variable — est-ce que la nuance vous va du tout — avant d'être au fauteuil.
 

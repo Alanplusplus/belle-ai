@@ -13,7 +13,7 @@ Tu análisis de color dio Otoño como resultado. Tienes calidez en la sangre, ri
 
 Pero aquí es donde se pone interesante — en el sistema de análisis de color de 12 estaciones hay **tres subestaciones de Otoño distintas**, y son más diferentes de lo que la mayoría imagina. Un color que hace radiante a un tipo de Otoño puede hacer que otro se vea turbio o apagado.
 
-He visto este error tantas veces: alguien descubre que es Otoño, llena el armario de todos los naranjas y marrones que encuentra, y luego se pregunta por qué algunas prendas la hacen brillar y otras la hacen lucir cansada. La respuesta casi siempre es un desajuste de subestación.
+Un error frecuente: alguien descubre que es Otoño, llena el armario de todos los naranjas y marrones que encuentra, y luego se pregunta por qué algunas prendas la hacen brillar y otras la hacen lucir cansada. La respuesta casi siempre es un desajuste de subestación.
 
 En esta guía te explico **Deep Autumn (Otoño Profundo)**, **True Autumn (Otoño Verdadero)** y **Soft Autumn (Otoño Suave)** — qué hace única a cada una, cuáles son tus mejores y peores colores, y exactamente cómo averiguar qué Otoño eres en realidad.
 

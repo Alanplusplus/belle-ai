@@ -14,7 +14,7 @@ Sonra kuaför koltuğuna oturuyorsunuz, ekran görüntüsünü gösteriyorsunuz 
 
 Kimsenin söylemediği şey: **boyama tekniği, rengin kendisi kadar önemli.** Balayage, folyo röfle ve tek renk boyama sadece uygulama açısından farklı değil — saçta temelde farklı ışık, kontrast ve boyut desenleri oluşturur. Bu desenler ten alt tonunuz, göz renginiz ve doğal kontrast seviyenizle çok farklı şekillerde etkileşir.
 
-Ben bunu yıllarca en trend tekniği seçerek öğrendim. Tekniği renk sezonumla eşleştirmeye başlayınca her şey yerine oturdu.
+Birçok kişi en trend tekniği seçerek bunu zor yoldan öğrenir. Tekniği renk sezonunuzla eşleştirmeye başladığınızda her şey genelde yerine oturur.
 
 ---
 
@@ -170,7 +170,7 @@ Kasıtlı kural bozma ile kazara uyumsuzluk arasındaki fark *farkındalıktır*
 
 ## Karar Vermeden Önce Teknolojiyle Önizleme
 
-Saatler ve yüzlerce lira ile hayal kırıklığından kurtaracak kısım: artık salona girmeden kendi fotoğrafınızda farklı saç boyama tekniklerini önizleyebilirsiniz.
+Yüzlerce lira ve hayal kırıklığından sizi kurtarabilecek kısım: artık salona girmeden kendi fotoğrafınızda farklı saç boyama tekniklerini önizleyebilirsiniz.
 
 AI destekli saç rengi önizleme araçları, balayage, röfle veya tek renk boyamanın ten alt tonunuz, göz renginiz ve yüz özelliklerinize karşı nasıl görüneceğini gösterebilir. Bazıları [renk sezonu analizi](/hair-color-analysis) ile en uyumlu ton ve teknikleri önerir.
 

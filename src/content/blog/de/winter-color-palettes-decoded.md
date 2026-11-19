@@ -12,7 +12,7 @@ Als Wintertyp eingeteilt zu werden, ist aufregend. Du gehörst zur dramatischste
 
 Aber hier wird es spannend — es gibt **drei verschiedene Winter-Subtypen**, und sie alle in einen Topf zu werfen ist, als würde man sagen: „Alle Eissorten schmecken gleich." Ein Tiefer Winter in eisigen Pastelltönen wirkt ausgewaschen. Ein Klarer Winter in dunklen, gedämpften Schattierungen wirkt schwer. Und ein Echter Winter in warm angehauchten Juwelentönen wirkt einfach… falsch.
 
-Ich habe unzählige Menschen genau diesen Fehler machen sehen. Sie hören „Winter" und greifen sofort zu Schwarz, Marine und sonst nichts. Oder sie kaufen jeden Juwelenton, den sie finden, ohne zu prüfen, ob ihr spezifischer Wintertyp die Tiefe, Kühle oder Helligkeit jeder Nuance tragen kann.
+Unzählige Menschen machen genau diesen Fehler. Sie hören „Winter" und greifen sofort zu Schwarz, Marine und sonst nichts. Oder sie kaufen jeden Juwelenton, den sie finden, ohne zu prüfen, ob ihr spezifischer Wintertyp die Tiefe, Kühle oder Helligkeit jeder Nuance tragen kann.
 
 In diesem Guide erkläre ich **Tiefer Winter**, **Echter Winter** und **Klarer Winter** — ihre prägenden Merkmale, ihre besten und schlechtesten Farben und wie du genau herausfindest, welcher zu deiner natürlichen Färbung passt.
 

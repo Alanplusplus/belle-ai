@@ -8,11 +8,9 @@ image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
 
 ## Herkesin Yanlış Yaptığı Makyaj Kuralı
 
-Kaç kırmızı ruj aldığımı, bir kez sürdüğümü ve çekmeceye ittiğimi sayamam. Klasik kırmızı mı? Çok sert. Mercan mı? Yüzümü soluk gösterdi. Bordo mu? Dişlerimi sarı gösterdi. Yıllarca kırmızı ruju taşıyamadığımı düşündüm.
+Çekmecede mağazada harika görünüp yüzünüzde yanlış duran kırmızı rujlar birikmiş olabilir: klasik çok sert, mercan cildi soluk gösterir, bordo dişleri sarartır. Bu çoğu zaman kırmızı taşıyamadığınız anlamına gelmez; rujun alt tonu ile cildinizin alt tonu uyumsuzdur.
 
-Meğer kırmızı ruj taşımakta kötü değilmişim. Doğru kırmızıyı seçmekte kötüymüşüm.
-
-Sır gizemli bir cesarette veya özgüvende değil (ikisi de yardımcı olsa da). Cildinizin alt tonunun rujdaki pigmentlerle nasıl etkileşime girdiğini anlamakta. Bunu çözdüğümde mükemmel kırmızımı beş dakikadan kısa sürede buldum — siz de yapabilirsiniz.
+Sır gizemli bir cesarette veya özgüvende değil (ikisi de yardımcı olsa da). Cildinizin alt tonunun rujdaki pigmentlerle nasıl etkileşime girdiğini anlamaktadır. Alt tonunuzu bildiğinizde, yakışan bir kırmızıya dakikalar içinde inebilirsiniz; aylarca deneme yanılma gerekmez.
 
 Bu rehber bilimi açıklıyor, size özel renk önerileri sunuyor ve yanlış kırmızıya bir daha para harcamamanız için basit bir kendi kendinize test içeriyor.
 
@@ -156,7 +154,7 @@ Renk eşleştirme eskiden eğitimli bir danışmana gitmeyi veya güzellik reyon
 
 [Belle AI](/) gibi uygulamalar yüzünüzün fotoğrafına bakıp profesyonellerin baktığı aynı renk ipuçlarıyla alt tonunuzu önerebilir — sıcak, soğuk veya nötr olup olmadığınızı ve olası renk mevsiminizi. Mevsiminizi öğrendiğinizde doğru kırmızıyı daraltmak neredeyse zahmetsiz hale gelir.
 
-Kendi selfie'mi bir yapay zeka renk analizi aracından geçirdim ve Yumuşak Yaz mevsiminde olduğumu doğruladım — bu, denediğim her mercanın neden yanlış göründüğünü ve mat bordo kırmızılarının neden yüzümü aydınlattığını açıkladı.
+Bir selfie'yi yapay zeka renk analizi aracından geçirmek, profesyonellerin baktığı ipuçlarıyla alt ton ve olası mevsimi gösterebilir — mercan hep yanlışken mat bordo kırmızılar işe yarıyorsa özellikle faydalıdır.
 
 ---
 

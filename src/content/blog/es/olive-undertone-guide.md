@@ -25,7 +25,7 @@ Excepto... ¿y si ni el oro ni la plata te quedan del todo bien? ¿Y si tus vena
 
 Si esto te suena, hay una buena posibilidad de que tengas subtono oliva. Y no estás sola: el oliva es uno de los subtonos más comunes a nivel mundial, pero apenas se menciona en los consejos de belleza estándar.
 
-He pasado años investigando la teoría del subtono, y el oliva es, sin duda, la característica de piel más mal identificada en el mundo de la belleza. Te explico por qué.
+En la teoría del subtono, el oliva es, sin duda, la característica de piel más mal identificada en el mundo de la belleza. Te explico por qué.
 
 ---
 

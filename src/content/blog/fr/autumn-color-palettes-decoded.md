@@ -13,7 +13,7 @@ Votre analyse colorimétrique a révélé que vous êtes Automne. Vous avez de l
 
 Mais voilà où ça devient intéressant — il existe **trois sous-saisons Automne distinctes** dans le système d'analyse en 12 saisons, et elles sont plus différentes que la plupart des gens ne l'imaginent. Une couleur qui rend un type Automne radieux peut en faire un autre terne ou éteint.
 
-J'ai vu cette erreur tant de fois : quelqu'un découvre qu'il est Automne, remplit son placard de toutes les nuances d'orange et de brun possibles, puis se demande pourquoi certaines pièces le font briller et d'autres paraître fatigué. La réponse est presque toujours un décalage de sous-saison.
+Une erreur fréquente : quelqu'un découvre qu'il est Automne, remplit son placard de toutes les nuances d'orange et de brun possibles, puis se demande pourquoi certaines pièces le font briller et d'autres paraître fatigué. La réponse est presque toujours un décalage de sous-saison.
 
 Dans ce guide, je vous présente **l'Automne Profond**, **l'Automne Vrai** et **l'Automne Doux** — ce qui rend chacun unique, quelles sont vos meilleures et pires couleurs, et comment déterminer exactement quel Automne vous êtes.
 

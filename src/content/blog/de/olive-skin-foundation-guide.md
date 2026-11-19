@@ -9,11 +9,11 @@ image: "/images/blog/olive-skin-foundation-guide.webp"
 
 ## Warum Foundation-Shopping bei Olivhaut scheitert
 
-Wenn Sie Oliv-Untertöne haben, kenne ich Ihren letzten Counter-Besuch. Zehn Swatches. Warm wirkte an der Kinnlinie orange. Kalt rosa oder grau. Neutral beides. Unter Shop-Licht wählten Sie „fast passend“ — zu Hause erzählten Gesicht und Hals verschiedene Geschichten.
+Wenn Sie Oliv-Untertöne haben, ist Ihr letzter Counter-Besuch vielleicht vertraut. Zehn Swatches. Warm wirkte an der Kinnlinie orange. Kalt rosa oder grau. Neutral beides. Unter Shop-Licht wählten Sie „fast passend“ — zu Hause erzählten Gesicht und Hals verschiedene Geschichten.
 
 Das ist kein Können-Problem. Die meisten Linien gehen von **warm (gelb-gold)** oder **kalt (rosa-blau)** aus. Olivhaut hat einen **grün-grauen Modifikator** über dem Basis-Unterton. Formeln ohne diesen „Grün-Kanal“ verschmelzen selten, egal wie genau die Tiefe passt.
 
-In diesem Guide: warum Warm/Kalt-Ratschläge scheitern, was auf Pigmentebene passiert, welche Marken Oliv formuliert oder benennt, und wie ich **helle, mittlere und tiefe** Olivhaut saisonal wähle.
+In diesem Guide: warum Warm/Kalt-Ratschläge scheitern, was auf Pigmentebene passiert, welche Marken Oliv formuliert oder benennt, und wie Sie **helle, mittlere und tiefe** Olivhaut saisonal wählen.
 
 ---
 
@@ -23,7 +23,7 @@ In diesem Guide: warum Warm/Kalt-Ratschläge scheitern, was auf Pigmentebene pas
 
 Warme Basen setzen auf gelbe und goldene Pigmente. Auf klarem Gold wirkt das gesund. Bei Olivhaut liegen dieselben Pigmente **auf** dem Grün statt sich zu mischen.
 
-Was ich am häufigsten sehe:
+Häufige Fehlanpassungen am Counter:
 
 - Gold „perfekt“ im Flakon, aber **orange am Haaransatz**
 - Kinn **gelber als der Rest** nach Stunden
@@ -63,13 +63,13 @@ Schichten denken: **Tiefe** aus Melanin; **Basis-Unterton** (warm vs kalt) aus G
 - Gelb verhindert **kaltes Rosa**, das grau wirkt.
 - **Tiefe** und Unterton getrennt: hell, mittel, tief oliv — je eigene Familie.
 
-Im Swatch schlagen **matte, taupe oder grün-graue** Flakon-Töne oft „sauberes“ Gold. Kontraintuitiv, aber zuverlässig.
+Beim Testen schlagen **matte, taupe oder grün-graue** Flakon-Töne oft „sauberes“ Gold. Kontraintuitiv, aber zuverlässig.
 
 ---
 
-## Meine Swatch-Routine (vor der dritten falschen Flasche)
+## So swatchen (vor der dritten falschen Flasche)
 
-Counter-Licht lügt. Mein Ablauf:
+Counter-Licht lügt. Ein einfacher Ablauf:
 
 1. **Drei Untertöne gleicher Tiefe** am Kinn — gold-warm, rosa-kalt, gedämpft/oliv.
 2. **Fünfzehn Minuten warten** — Oxidation verschiebt Oliv-Matches mehr als erwartet.
@@ -82,7 +82,7 @@ Scheitern alle Töne Ihrer Tiefe, ist vermutlich die **Unterton-Familie** falsch
 
 ## Marken zum Ausprobieren (Oliv-freundlich)
 
-Große Marken wurden besser, aber Oliv verlangt Unterton-Notizen — nicht nur „medium warm“. Hier starte ich:
+Große Marken wurden besser, aber Oliv verlangt Unterton-Notizen — nicht nur „medium warm“. Gute Startpunkte:
 
 ### NARS
 
@@ -124,13 +124,13 @@ Unterton-Regeln gleich; **Tiefe ändert die Flasche**. Startkarte, dann Saison a
 
 ### Hell bis light oliv
 
-Oft als „neutral“ oder „kalt“ missread, weil Grün subtil ist. Ich suche **hell-mittel** mit **grün-grau oder taupe** — kein Pfirsich, kein Rosa. Hände bräunen anders; **Kinn und Hals**, nicht Handrücken.
+Oft als „neutral“ oder „kalt“ missread, weil Grün subtil ist. Suchen Sie **hell-mittel** mit **grün-grau oder taupe** — kein Pfirsich, kein Rosa. Hände bräunen anders; **Kinn und Hals**, nicht Handrücken.
 
 Tiefe perfekt, Unterton halb daneben: **ein Tropfen Grün-Korrektor pro Pump** „olivisiert“ fast-Matches.
 
 ### Mittel oliv
 
-Häufigste Tiefe — reichste Markenauswahl. **„Warm neutral“** oder **„golden olive“** probieren. **Halber Ton wärmer oxidieren** oft; zehn bis fünfzehn Minuten warten.
+Mittlere Olive ist die Tiefe mit der größten Markenauswahl. **„Warm neutral“** oder **„golden olive“** probieren. **Halber Ton wärmer oxidieren** oft; zehn bis fünfzehn Minuten warten.
 
 ### Gebräunt bis tief
 
@@ -146,7 +146,7 @@ Olivhaut bleibt selten ein flacher Ton das ganze Jahr. Der Plan muss mitgehen.
 
 **Winter:** Haut etwas heller; **grün-grau stärker**. Sommer-Tiefe am Hals orange oder mattsch.
 
-**Übergang:** Ich halte **zwei Foundations** — Sommer- und Winter-Tiefe — und mische. Normal, kein „zu viel Make-up“.
+**Übergang:** Viele halten **zwei Foundations** — Sommer- und Winter-Tiefe — und mische. Normal, kein „zu viel Make-up“.
 
 **Korrektor saisonal:** Grün sparsam in die Basis für Wochen zwischen Tönen oder nur „fast“ verfügbar.
 

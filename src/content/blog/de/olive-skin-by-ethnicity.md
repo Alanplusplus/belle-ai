@@ -21,7 +21,7 @@ faq:
 
 Sucht man online nach „olivfarbene Haut“, findet man vor allem Ratschläge für mediterrane Typen — hell bis mittel mit europäischem Grünstich. Sucht man auf Koreanisch, dreht sich das Gespräch ganz anders um Oliv-Töne bei ostasiatischer Haut mit grau-grünem Schimmer. Keines der beiden Bilder erfasst vollständig, wie Oliv-Untertöne in der Weltbevölkerung auftreten.
 
-Ich habe jahrelang untersucht, wie Oliv-Untertöne je nach ethnischem Hintergrund aussehen — und das Wichtigste ist: **Oliv ist keine Ethnie. Es ist ein Pigmentmuster, das bei jedem und überall vorkommen kann.**
+Je nach ethnischem Hintergrund gilt immer wieder: **Oliv ist keine Ethnie. Es ist ein Pigmentmuster, das bei jedem und überall vorkommen kann.**
 
 Dieser Leitfaden beleuchtet olivfarbene Haut bei mediterranen, ostasiatischen, südasiatischen, nahöstlichen und lateinamerikanischen Bevölkerungen — wie Tiefe und Oliv-Modifikator zusammenspielen, welche Identifikationsprobleme jede Gruppe hat und wie Sie unabhängig vom Hintergrund eine genaue Unterton-Analyse erhalten.
 

@@ -7,17 +7,11 @@ tags: ["zeytin alt ton", "takı", "aksesuar", "kişisel renk analizi", "stil reh
 image: "/images/blog/olive-skin-jewelry-metals.webp"
 ---
 
-## Yıllarca Yanlış Metali Taktım — Çünkü Zeytin Teni Kuralları Dinlemiyor
+## Zeytin teni neden «sıcak altın, soğuk gümüş» kuralını bozar
 
-Eskiden alt ton tavsiyesinin basit olduğuna inanırdım: sıcak tipler altında parlar, soğuk tipler gümüşte netleşir. Mağaza aynalarında her iki metali boynuma tutar, o bariz «evet, bu benimki» anını beklerdim.
+Mağaza aynasında altın ve gümüşü boynunuza tutup net bir kazanan bulamamak — yaygın bir deneyim. Her iki metal de «idare eder»; *dengeli* çoğu zaman *düz* demektir.
 
-Hiç gelmedi.
-
-Sarı altın tenimi biraz yorgun gösterirdi — turuncu değil, felaket değil, sadece hafif mat. Sterling gümüş de aynı hissi verirdi: idare eder ama canlı değil. Sıcak arkadaşlarım altında güneş öpmüş gibi, soğuk arkadaşlarım gümüşte keskin görünürdü. Ben ikisinde de dengeli görünürdüm — kulağa iyi gelir ta ki dengeli çoğu zaman *düz* demek olduğunu anlayana kadar.
-
-Bu ara bölge, zeytin alt tonunun klasik alanıdır. Zeytin, sıcak ve soğuğun yanında dördüncü bir kategori değil; baz pigmentin üzerindeki yeşil-gri bir modifikatördür. Birçok etnik köken ve ten derinliğinde görülür, ama çoğu takı tablosu hâlâ sadece Altın Takımı veya Gümüş Takımı olduğunuzu varsayar.
-
-Bu rehber, takı kutum «idare eder» ama asla büyülü parçalarla doluyken istediğim şey: standart metal kurallarının zeytin teninde neden çöktüğü, rose altının gerçek hayatta neden tekrar tekrar kazandığı, taş renginin her şeyi nasıl değiştirdiği ve zeytin alt tipiniz ile renk mevsiminizin seçimi nasıl daralttığı.
+Zeytin, baz pigment üzerinde yeşil-gri modifikatördür. Bu rehber standart kuralların neden çöktüğünü, rose altının neden öne çıktığını, taş renginin rolünü ve alt tip ile renk mevsiminin seçimi nasıl daralttığını anlatır.
 
 ---
 
@@ -93,14 +87,14 @@ Metal çerçevedir; taş rengi gün boyu alt tonunuzun üstünde durur. Çoğu z
 | Peridot ve kısılmış yeşiller | Taş neon değilse toprak yeşili zeytini yansıtır |
 | Kısılmış mercan ve şeftali | doygunluk yumuşaksa sıcak zeytin dostu |
 
-### Zeytin teninde dikkatli olduğum taşlar
+### Zeytin teninde dikkatli olunması gereken taşlar
 
 - **Parlak sitrin veya sarı topaz** — sapsarıyı artırabilir
 - **Canlı pembe safir veya fuşya taşlar** — yeşil ton ile çarpışabilir
 - **Neon veya çok canlı zümrüt** — alt tona yanlış yönde çok yakın; düz görünebilir
 - **Parlak gümüşte buz beyazı elmaslar** — soğuk ikili bazı zeytinlerde griyi vurgular
 
-Emin değilsem taşı gün ışığında çeneme tutarım. Ten daha berrak, gözler daha canlıysa kalır. Yüz yorgun veya griyse geri koyarım.
+Emin değilseniz taşı gün ışığında çenenize tutun. Ten daha berrak, gözler daha canlıysa takın. Yüz yorgun veya griyse geri koyun.
 
 ---
 
@@ -170,7 +164,7 @@ Zeytin, derinlik ve kontrasta göre sıkça yumuşak sonbahar, yumuşak yaz, der
 
 ---
 
-## Zeytin Teni İçin Kullandığım Pratik Alışveriş İpuçları
+## Zeytin Teni İçin Pratik Alışveriş İpuçları
 
 1. **Doğal ışıkta deneyin** — mağaza aydınlatması yalan söyler. Parçayı ele değil çene ve yanak yakınında tutun.
 2. **Bir rose altın ana parçayla başlayın** — haftalık taktığınız kolye veya küpe, altın/gümüş setlere yatırım öncesi referans oluşturur.
@@ -210,7 +204,7 @@ Zeytin tenini başarısız sıcak-soğuk testi gibi görmeyi bırakın. Rose alt
 
 ## En İyi Metallerinizi ve Renklerinizi Bulun
 
-Altın ile gümüş arasında tahmin etmek zaman ve paramı boşa harcadı. **Zeytin alt tipimi** ve **renk mevsimimi** anlayınca takı rastgele hissettirmedi — kıyafet ve makyajı yönlendiren aynı çerçeve burada da geçerli. [aicoloranalysis.io](/) üzerinde hızlı bir **yapay zekâ renk analizi**, alt tonunuzu ve mevsiminizi haritalayarak metal ve taş seçimlerini paletinize dayandırır, deneme yanılmaya değil.
+Altın ile gümüş arasında tahmin etmek, **zeytin alt tipi** ve **renk mevsimi** belirsizken zaman ve para kaybettirir. Kıyafet ve makyajı yönlendiren aynı çerçeve takıda da geçerli. [aicoloranalysis.io](/) üzerinde hızlı bir **yapay zekâ renk analizi**, alt tonunuzu ve mevsiminizi haritalayarak metal ve taş seçimlerini paletinize dayandırır, deneme yanılmaya değil.
 
 [Ücretsiz Yapay Zekâ Renk Analizi Deneyin →](/try)
 

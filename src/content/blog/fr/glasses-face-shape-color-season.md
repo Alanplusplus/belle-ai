@@ -16,7 +16,7 @@ Mais la deuxième étape ? Presque personne n'en parle.
 
 **Votre saison de couleurs détermine quelles couleurs et matériaux de monture flattent réellement votre peau.** Une monture de la mauvaise couleur posée sur votre visage 16 heures par jour peut vous faire paraître terne, fatiguée ou « décalée » — même si la forme est parfaite.
 
-J'ai vu des personnes réussir la forme de monture et paraître quand même « mal » avec leurs lunettes. Presque à chaque fois, c'est un décalage de couleur. Elles portent de l'argent froid alors qu'elles ont besoin d'or chaud. Ou du noir brillant alors qu'une écaille mate ferait rayonner leur teint.
+Il est fréquent de réussir la forme de monture et de paraître quand même « mal » avec ses lunettes. Presque à chaque fois, c'est un décalage de couleur. Vous pouvez porter de l'argent froid alors que vous avez besoin d'or chaud, ou du noir brillant alors qu'une écaille mate ferait rayonner votre teint.
 
 Dans ce guide, je vous montre comment réussir les deux — pour que vos lunettes ne s'adaptent pas seulement à votre visage, mais subliment l'ensemble de votre look.
 

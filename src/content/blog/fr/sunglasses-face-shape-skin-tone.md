@@ -12,7 +12,7 @@ Pratiquement tous les guides de lunettes de soleil sur internet disent la même 
 
 Ce conseil n'est pas faux — il est simplement incomplet.
 
-J'ai vu des amies trouver la forme de monture parfaite et avoir quand même l'air… bizarre. Les lunettes s'adaptaient parfaitement à la structure de leur visage, mais quelque chose dans la couleur rendait leur peau terne, pâle ou sans éclat.
+On trouve souvent la monture idéale et on a quand même l'air… bizarre : la forme épouse la structure, mais la couleur rend la peau terne, pâle ou sans éclat.
 
 **L'ingrédient manquant ? Votre sous-ton de peau et votre saison de couleur.**
 
@@ -104,7 +104,7 @@ Vos pommettes sont votre atout. Choisissez des montures qui les complètent plut
 
 ## Étape 3 : Ce que tout le monde oublie — Couleur de monture et teint de peau
 
-C'est là que la plupart des guides s'arrêtent. Mais pour moi, c'est ici que la vraie magie opère.
+C'est là que la plupart des guides s'arrêtent — et que le sous-ton fait la plus grande différence.
 
 Votre sous-ton de peau se classe en trois catégories, et chacune a des couleurs de monture qui illuminent — et des couleurs qui fatiguent.
 
@@ -249,11 +249,9 @@ Vos cheveux encadrent votre visage tout comme vos lunettes. Ils doivent fonction
 
 ## Comment la technologie facilite les choses
 
-Ce qui me passionne : vous n'avez plus besoin de tout résoudre par tâtonnements.
+Vous n'avez plus besoin de tout résoudre uniquement par tâtonnements.
 
-Les outils d'analyse faciale par intelligence artificielle peuvent désormais suggérer une forme de visage probable et des styles de monture — en quelques secondes, à partir d'une seule photo. Certains vont même plus loin, analysant votre teint et votre saison de couleur pour recommander des couleurs de monture.
-
-J'ai testé l'un de ces outils récemment et j'ai été véritablement surprise. Il a identifié ma forme de visage comme « ovale avec des pommettes légèrement hautes » (ce que mon opticien m'avait dit il y a des années) et a suggéré des styles de monture spécifiques avec des recommandations de couleur basées sur mon sous-ton.
+Les outils d'analyse faciale par IA suggèrent en quelques secondes une forme de visage probable et des styles de monture à partir d'une photo. Certains analysent aussi le teint et la saison de couleur pour recommander les couleurs de monture ; les résultats peuvent être très précis (par ex. ovale avec pommettes légèrement hautes et styles alignés sur le sous-ton).
 
 Des outils gratuits comme [aicoloranalysis.io](/glasses-analysis) combinent la détection de forme faciale et l'analyse de couleur pour vous donner une recommandation complète — couvrant forme et couleur en une seule analyse.
 

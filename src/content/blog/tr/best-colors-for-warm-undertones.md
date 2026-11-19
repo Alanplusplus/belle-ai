@@ -8,7 +8,7 @@ image: "/images/blog/best-colors-for-warm-undertones.webp"
 
 ## Sıcak Alt Tonunuz Bir Süper Güç — Nasıl Kullanacağınızı Bilirseniz
 
-Yıllarca buz gibi pastel tonlar ve soğuk griler giydim çünkü bir mağaza testi bana "nötr renklerde harika görünüyorsun" demişti. Sıcak alt tonumu gerçekten anladığımda, bazı kombinlerin beni güneşten yeni çıkmış ve canlı gösterirken diğerlerinin öğleden önce yorgun göstermesinin nedenini anladım.
+Birçok kişi mağaza testindeki "nötr renklerde harika görünüyorsun" cümlesine güvenerek buz gibi pastel ve soğuk gri seçer. Sıcak alt tonunuzu bildiğinizde tablo netleşir: bazı kombinler canlı gösterir, soğuk nötrler öğleden önce yorgun gösterebilir.
 
 Sıcak alt tonlara sahipseniz — cildinizin altında altın, şeftali veya sarımsı tonlar — belirli renkler bu doğal sıcaklığı güçlendirir ve içten parlamanızı sağlar. Yanlış renkler ise sizi soluk gösterebilir veya teninizi matlaştırabilir.
 
@@ -79,7 +79,7 @@ Toprak tonları sıcak alt tonların ev sahasıdır. Sizi tutarlı şekilde en i
 - Karamel
 - Kehribar
 
-Her zaman rotasyonda en az bir terracotta veya pas renkli üst bulundururum — sıcak cilt için anında filtre etkisi yaratır.
+Yüze yakın bir terracotta veya pas renkli üst, sıcak ciltte anında filtre etkisi yaratır — rotasyonda en az bir tane bulundurmak işe yarar.
 
 ### Yeşiller
 
@@ -226,7 +226,7 @@ Mor genellikle sıcak alt tonlar için baştan ayağa statement yerine aksan ola
 - Mavi-siyah
 - Violet bazlı renkler
 
-Birkaç yıl önce küllü kahverengiden sıcak kestaneye geçtim ve aldığım "çok sağlıklı görünüyorsun" yorumlarının sayısı gerçekten şaşırtıcıydı. Aynı yüz, saçta farklı alt ton — büyük etki.
+Küllü kahverengiden sıcak kestaneye geçmek sık yapılan bir yükseltmedir: saç altın ciltte daha sıcak okunur, yüz genelde daha sağlıklı görünür. Aynı yüz, saçta farklı alt ton — büyük etki.
 
 ---
 
@@ -299,7 +299,7 @@ Alt mevsiminizi anlamak paletinizi "genel olarak sıcak"tan "tam olarak mükemme
 
 **Adım 1:** Sıcak nötrlerle sabitleyin (deve tüyü, krem, çikolata kahverengisi, sıcak lacivert)
 
-**Adım 2:** Tutarlı iltifat alan 2-3 vurgu rengi ekleyin (çoğu sıcak tonlu kişinin bir "imza" rengi vardır — benimki terracotta)
+**Adım 2:** Tutarlı iltifat alan 2-3 vurgu rengi ekleyin (çoğu sıcak tonlu kişi terracotta veya zeytin gibi bir imza renge yönelir)
 
 **Adım 3:** Üstler, atkılar ve yüzünüze yakın her şeyi en iyi renklerinizde tutun. Alt giyimde daha esnek olabilirsiniz.
 

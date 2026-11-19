@@ -13,7 +13,7 @@ You've gotten your color analysis result and it confirms what you suspected: you
 
 But here's the catch — there are **three distinct Summer sub-seasons** in the 12-season color analysis system, and mixing them up can mean the difference between looking luminous and looking washed out.
 
-I've worked with women who spent years buying "cool pastels" because they knew they were Summers, only to realize they were reaching for Cool Summer shades when they were actually Soft Summers. The undertone was right, but the intensity was completely wrong.
+Many people spend years buying "cool pastels" because they know they're Summers, only to realize they've been reaching for Cool Summer shades when they're actually Soft Summers. The undertone was right, but the intensity was completely wrong.
 
 In this guide, I'll break down **Cool Summer**, **True Summer**, and **Soft Summer** — their defining traits, their best and worst colors, and exactly how to tell which one you are.
 

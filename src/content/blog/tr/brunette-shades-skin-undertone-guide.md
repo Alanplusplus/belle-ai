@@ -8,11 +8,11 @@ image: "/images/blog/brunette-shades-skin-undertone-guide.webp"
 
 ## «Kahverengi Yap» Saç Rengindeki En Yanıltıcı Tavsiye
 
-Kahverengi güvenli seçenek sanılır. Ağartma yok, toner takvimi yok, dramatik dip çizgisi yok. Birkaç yıl önce koyulaşmaya karar verdiğimde colorist'ime «Güzel bir kahverengi olsun yeter» dedim.
+Kahverengi güvenli seçenek sanılır. Ağartma yok, toner takvimi yok, dramatik dip çizgisi yok. Birçok kişi colorist'ine hâlâ «Güzel bir kahverengi olsun yeter» diyor.
 
-Üç hafta sonra ofis ışıkları altında aynaya bakıp yorgun göründüğümden emindim. Kahve kül tonluydu ve sıcak tenim yanında düzleşmiş, biraz griye dönmüştü. Tam aynı «güzel kahverengi»yi isteyen bir arkadaş ışıl ışıl görünüyordu. Aynı kelime, bambaşka sonuç.
+Birkaç hafta sonra ofis ışığında benzer örnek sık görülür: kahve kül tonluysa sıcak ten yanında düzleşmiş, biraz griye dönmüş görünebilir; Tam aynı «güzel kahverengi»yi isteyen bir arkadaş ışıl ışıl görünüyordu. Aynı kelime, bambaşka sonuç.
 
-O zaman colorist'lerin zaten bildiği şeyi öğrendim: **kahverengi tek bir renk değil. Üç ayrı ayarı olan bir spektrumdur** — derinlik, sıcaklık ve yoğunluk — ve «güvenli» yalnızca üçünün de renklendirmenize uyduğunda mümkündür.
+Colorist'lerin zaten bildiği şey budur: **kahverengi tek bir renk değil. Üç ayrı ayarı olan bir spektrumdur** — derinlik, sıcaklık ve yoğunluk — ve «güvenli» yalnızca üçünün de renklendirmenize uyduğunda mümkündür.
 
 Bu rehberde o ayarları nasıl okuyacağınızı, alt ton ve renk mevsiminize nasıl eşleştireceğinizi ve salona kafanızdaki kahverengiyi gerçekten almanızı sağlayan bir dille nasıl gireceğinizi anlatıyorum.
 
@@ -38,7 +38,7 @@ Bu rehberde o ayarları nasıl okuyacağınızı, alt ton ve renk mevsiminize na
 
 ### Kumral Ton Sözlüğü, Açıklanıyor
 
-En sık duyduğum istekler ve gerçekte ne anlama geldikleri:
+En sık duyulan istekler ve gerçekte ne anlama geldikleri:
 
 | Ton | Derinlik | Sıcaklık | Görünüm |
 |---|---|---|---|
@@ -79,7 +79,7 @@ Altın ve gümüş ikisi de size yakışıyorsa muhtemelen nötrsünüzdür. **M
 
 ### Zeytin İstisnası
 
-Zeytin cilt yüzey altında yeşilimsi bir tabaka taşır; basit sıcak-soğuk kuralını bozar. Deneyimime göre zeytin tonları genelde **hafif soluk bitişli nötr-soğuk kahvelerde**, mocha veya yumuşak mantar kahve gibi, en iyi görünür. Güçlü altın veya kırmızı kahveler yeşili öne çıkarabilir. Bu sizseniz [zeytin ten için en iyi saç renkleri](/tr/blog/olive-skin-best-hair-colors) rehberimiz çok daha derine iniyor.
+Zeytin cilt yüzey altında yeşilimsi bir tabaka taşır; basit sıcak-soğuk kuralını bozar. Zeytin tonları genelde **hafif soluk bitişli nötr-soğuk kahvelerde**, mocha veya yumuşak mantar kahve gibi, en iyi görünür. Güçlü altın veya kırmızı kahveler yeşili öne çıkarabilir. Bu sizseniz [zeytin ten için en iyi saç renkleri](/tr/blog/olive-skin-best-hair-colors) rehberimiz çok daha derine iniyor.
 
 ---
 
@@ -89,13 +89,13 @@ Alt ton hangi yöne gideceğinizi söyler. **Kontrast ne kadar uzağa gideceğin
 
 Kontrast, cildiniz, gözleriniz ve doğal saçınız arasındaki farktır. Yüksek kontrastlı kişiler — açık ten koyu gözler veya koyu ten parlak gözler — espresso gibi daha derin, daha dramatik kahveleri sert görünmeden taşıyabilir. Düşük kontrastlı, yumuşak harman renklendirmeye sahip kişiler genelde orta, biraz daha yumuşak kahvelerde daha uyumlu görünür.
 
-Güvendiğim basit kural: inandırıcı bir sonuç için **doğal renginize yaklaşık iki seviye içinde kalın**; cildinizi daha parlak göstermek istiyorsanız yüz çevresine biraz açıklık isteyin. Doğal tonunuzdan üç veya daha fazla seviye koyulaşmak ağır okunabilir ve sürekli dip bakımının en hızlı yoludur.
+Uygulanması kolay basit kural: inandırıcı bir sonuç için **doğal renginize yaklaşık iki seviye içinde kalın**; cildinizi daha parlak göstermek istiyorsanız yüz çevresine biraz açıklık isteyin. Doğal tonunuzdan üç veya daha fazla seviye koyulaşmak ağır okunabilir ve sürekli dip bakımının en hızlı yoludur.
 
 ---
 
 ## Her Renk Mevsimi İçin En İyi Kahverengi Tonlar
 
-Renk mevsiminiz alt ton, derinlik ve netliği birleştirir; seçimi sıcak-soğuk ayrımının ötesine taşır. 12 mevsim sisteminde işe yarayanları gördüklerim:
+Renk mevsiminiz alt ton, derinlik ve netliği birleştirir; seçimi sıcak-soğuk ayrımının ötesine taşır. 12 mevsim sisteminde genelde işe yarayan kombinasyonlar:
 
 | Mevsim | En iyi kahve seçimleri | Kaçınılacak kahveler |
 |---|---|---|
@@ -132,7 +132,7 @@ Doğal saç renginize daha yakın ve bir adım daha soluk olan seçeneğe eğili
 
 **Gloss sorun.** Şeffaf veya renkli gloss kumral saça ayna gibi parlaklığı veren şeydir. Colorist'inizin derinliği değiştirmeden sıcaklığı ince ayarlamasını da sağlar.
 
-**Tonu gün ışığında kontrol edin.** Salon ışığı sıcak ve cildi yumuşatan türden olur. Ödemeden önce bir pencereye yaklaşın. Salon ışığında onayladığım tonlar dışarıda bambaşka görünmüştür.
+**Tonu gün ışığında kontrol edin.** Salon ışığı sıcak ve cildi yumuşatan türden olur. Ödemeden önce bir pencereye yaklaşın. Salon ışığında kusursuz görünen tonlar dışarıda bambaşka görünebilir.
 
 ### Evde
 
@@ -163,7 +163,7 @@ Alt ton ve mevsimin her saç seçimini nasıl yönlendirdiğine daha geniş bir 
 
 Yıllarca kahve seçmek örnek kitabına bakıp tonun size uyup uymayacağını ummak demekti. Örnekler bir tonun cildiniz, gözleriniz ve kontrast seviyenizle nasıl etkileştiğini göstermez.
 
-Yapay zekâ destekli araçlar artık gerçek fotoğrafınızda farklı kahve tonlarını gösterebilir; kestane ile mocha veya kül ile sıcak çikolatayı yan yana karşılaştırabilirsiniz. Son renk randevumdan önce birini denedim; nötr mocha'yı kendi yüzümde görmek kararı yaklaşık otuz saniyede vermemi sağladı. [aicoloranalysis.io](/tr/hair-color-analysis) gibi ücretsiz araçlar alt tonunuzu analiz eder ve boyaya para harcamadan önce renklendirmeniz için en iyi ve en kötü saç rengi seçeneklerini gösterir.
+Yapay zekâ destekli araçlar artık gerçek fotoğrafınızda farklı kahve tonlarını gösterebilir; kestane ile mocha veya kül ile sıcak çikolatayı yan yana karşılaştırabilirsiniz — randevudan önce fotoğrafta tonları karşılaştırmak çoğu zaman seçimi dakikalar içinde daraltır. [aicoloranalysis.io](/tr/hair-color-analysis) gibi ücretsiz araçlar alt tonunuzu analiz eder ve boyaya para harcamadan önce renklendirmeniz için en iyi ve en kötü saç rengi seçeneklerini gösterir.
 
 Yetkin colorist'in yerini tutmaz; kimya ve teknik hâlâ ona aittir. Ama en büyük değişkeni — tonun size hiç yakışıp yakışmadığını — koltuğa oturmadan önce ortadan kaldırır.
 

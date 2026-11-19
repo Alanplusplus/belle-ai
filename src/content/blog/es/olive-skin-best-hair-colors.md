@@ -12,9 +12,9 @@ image: "/images/blog/olive-skin-best-hair-colors.webp"
 
 **Respuesta rápida:** La piel oliva pide colores de cabello atenuados, sin extremos de calidez cobriza ni de frialdad ceniza. La oliva cálida combina con castaños intensos, caramelo y cobrizo suave; la oliva fría, con espresso, castaño champiñón y burdeos atenuado. Si dudas, el castaño chocolate intenso es la opción universal más segura.
 
-Pasé dos años buscando un color de cabello que no me hiciera lucir cansada. Cada tono que elegía — ya fuera rubio dorado o castaño cenizo frío — dejaba mi piel con un aspecto ligeramente apagado. No fue hasta que entendí que los subtonos oliva crean un desafío óptico único que todo encajó.
+Si tienes subtono oliva, puede que hayas probado rubio dorado y castaño cenizo frío y aun así la piel se vea ligeramente apagada: no siempre es culpa del salón, sino del reto óptico propio de la piel oliva.
 
-El matiz verde grisáceo en la piel oliva significa que colores que lucen maravillosos en pieles puramente cálidas o frías pueden hacer que la piel oliva se vea amarillenta, ceniza o sin vida. Sin embargo, el tono correcto hace que la piel oliva luzca absolutamente radiante. Esta guía cubre todo lo que he aprendido sobre combinar el color de cabello con subtonos oliva — desde las reglas para oliva cálido vs frío hasta recomendaciones específicas por temporada.
+El matiz verde grisáceo en la piel oliva significa que colores que lucen maravillosos en pieles puramente cálidas o frías pueden hacer que la piel oliva se vea amarillenta, ceniza o sin vida. Sin embargo, el tono correcto hace que la piel oliva luzca absolutamente radiante. Esta guía explica cómo combinar el color de cabello con subtonos oliva — desde las reglas para oliva cálido vs frío hasta recomendaciones específicas por temporada.
 
 ---
 
@@ -89,7 +89,7 @@ Chocolate, espresso y castaño son los colores universales para piel oliva. Prop
 
 ### Rojos y burdeos atenuados
 
-A diferencia del cobrizo brillante, los tonos burdeos y vino atenuados añaden riqueza a la piel oliva sin acobramiento. Piensa en cereza oscura, caoba oscuro o vino atenuado — no en rojo fuego. He descubierto que estos tonos resultan particularmente impactantes en pieles oliva de profundidad media.
+A diferencia del cobrizo brillante, los tonos burdeos y vino atenuados añaden riqueza a la piel oliva sin acobramiento. Piensa en cereza oscura, caoba oscuro o vino atenuado — no en rojo fuego. Estos tonos resultan especialmente impactantes en pieles oliva de profundidad media.
 
 ### Bronde suave y rubio oscuro
 
@@ -184,7 +184,7 @@ Tu coloración es profunda y de alto contraste. Colores audaces con inclinación
 
 ## Un atajo moderno: análisis de color con inteligencia artificial
 
-Si no estás segura de si eres oliva cálida o fría — o a qué estación perteneces — las herramientas de análisis de color con inteligencia artificial ahora pueden sugerir tu subtono a partir de una sola foto. Esto te da un punto de partida para elegir estación y color de cabello. He descubierto que es especialmente útil para la piel oliva, donde el matiz verde grisáceo es difícil de detectar en un espejo, y un modelo de imagen con IA que mira la foto completa a veces lo capta, aunque la luz y la cámara siguen influyendo en el resultado.
+Si no estás segura de si eres oliva cálida o fría — o a qué estación perteneces — las herramientas de análisis de color con inteligencia artificial ahora pueden sugerir tu subtono a partir de una sola foto. Esto te da un punto de partida para elegir estación y color de cabello. Es especialmente útil para la piel oliva, donde el matiz verde grisáceo es difícil de detectar en un espejo, y un modelo de imagen con IA que mira la foto completa a veces lo capta, aunque la luz y la cámara siguen influyendo en el resultado.
 
 ---
 

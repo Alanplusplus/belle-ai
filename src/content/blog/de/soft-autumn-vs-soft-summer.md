@@ -14,7 +14,7 @@ Soft Autumn und Soft Summer teilen dieselbe dominierende Eigenschaft: **Gedämpf
 
 Wie unterscheidest du sie also wirklich?
 
-Nach Jahren der Beschäftigung mit Farbanalyse — und nachdem ich selbst falsch typisiert wurde — habe ich festgestellt, dass die Unterscheidung auf einer grundlegenden Frage beruht: Hat deine Haut einen warmen goldenen Glow oder eine kühle rosige Sanftheit? Lass mich das so aufschlüsseln, dass es wirklich Sinn ergibt.
+Die Unterscheidung beruht oft auf einer grundlegenden Frage: Hat deine Haut einen warmen goldenen Glow oder eine kühle rosige Sanftheit? Lass mich das so aufschlüsseln, dass es wirklich Sinn ergibt.
 
 ---
 
@@ -177,7 +177,7 @@ Wenn beide Paletten für dich einigermaßen funktionieren, mein Tipp: Konzentrie
 
 Den eigenen Unterton zu bestimmen kann wirklich schwer sein — besonders bei gedämpften Saisons, wo Wärme oder Kühle subtil sind. Hier ist KI-gestützte Farbanalyse überraschend hilfreich geworden.
 
-Moderne Tools können den Unterton deiner Haut an einem Foto beurteilen — unter anderem anhand von Kontrastniveau und anderen Hinweisen, die das menschliche Auge täuschen können, obwohl Licht und Kameraeinstellungen das Ergebnis noch beeinflussen können. Wenn du zwischen Soft Autumn und Soft Summer feststeckst, kann ein [KI-Farbanalyse-Tool](/) eine Zweitmeinung liefern. Besonders hilfreich finde ich es für Menschen mit neutralem Unterton, die wirklich nicht erkennen können, in welche Richtung sie tendieren.
+Moderne Tools können den Unterton deiner Haut an einem Foto beurteilen — unter anderem anhand von Kontrastniveau und anderen Hinweisen, die das menschliche Auge täuschen können, obwohl Licht und Kameraeinstellungen das Ergebnis noch beeinflussen können. Wenn du zwischen Soft Autumn und Soft Summer feststeckst, kann ein [KI-Farbanalyse-Tool](/) eine Zweitmeinung liefern — besonders nützlich, wenn du einen neutralen Unterton hast und wirklich nicht erkennen kannst, in welche Richtung du tendierst.
 
 ---
 

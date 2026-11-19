@@ -9,7 +9,7 @@ image: "/images/blog/lighting-affects-colors.webp"
 
 ## Vous ne rêvez pas — Vous avez vraiment l'air différente selon l'éclairage
 
-Voici un scénario que vous avez certainement vécu : vous vous habillez le matin, vous vous regardez dans le miroir et pensez *oui, cette tenue fonctionne*. Puis vous apercevez votre reflet dans les toilettes du bureau et quelque chose cloche. Le chemisier qui semblait être un riche bordeaux chez vous se lit maintenant comme un brun terne. Votre peau paraît jaunâtre au lieu de chaude.
+Vous connaissez peut-être ce scénario : vous vous habillez le matin, vous vous regardez dans le miroir et pensez *oui, cette tenue fonctionne*. Puis vous apercevez votre reflet dans les toilettes du bureau et quelque chose cloche. Le chemisier qui semblait être un riche bordeaux chez vous se lit maintenant comme un brun terne. Votre peau paraît jaunâtre au lieu de chaude.
 
 Vous ne devenez pas folle. Vous faites l'expérience de l'un des facteurs les plus négligés du style personnel — la façon dont l'éclairage altère fondamentalement l'apparence des couleurs sur votre corps.
 
@@ -190,4 +190,4 @@ Comprendre l'éclairage ne changera pas votre saison de couleurs — mais cela c
 
 - [La science derrière l'analyse des couleurs personnelles : comment ça fonctionne vraiment](/fr/blog/science-behind-personal-color-analysis) — Plongée dans l'optique et la biologie du typage colorimétrique saisonnier
 - [Comment faire une analyse de couleurs chez soi](/fr/blog/how-to-do-color-analysis-at-home) — Guide étape par étape incluant des conseils d'éclairage
-- [IA vs analyse de couleurs professionnelle : j'ai essayé les deux](/fr/blog/ai-vs-professional-color-analysis) — Comment la technologie gère différemment la variable éclairage
+- [IA vs analyse colorimétrique professionnelle : comment les comparer](/fr/blog/ai-vs-professional-color-analysis) — Comment la technologie gère différemment la variable éclairage

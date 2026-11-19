@@ -12,7 +12,7 @@ Kış tipi olarak belirlenmek heyecan verici. 12 mevsim renk sisteminin en drama
 
 Ama mesele şu — **üç farklı Kış alt tipi** var ve hepsini bir arada görmek "tüm dondurmalar aynıdır" demek gibi. Buz gibi pastel giyen bir Deep Winter soluk görünür. Koyu mat tonlar giyen bir Bright Winter ağır görünür. Sıcak eğilimli mücevher tonları giyen bir True Winter ise... tuhaf durur.
 
-Sayısız kişinin tam bu hatayı yaptığını gördüm. "Kış" duyunca hemen siyah, lacivert ve başka hiçbir şeye uzanıyorlar. Ya da her mücevher tonunu alıyorlar ama kendi Kış tipinin her tonun derinliğini, soğukluğunu veya parlaklığını taşıyıp taşıyamayacağını düşünmüyorlar.
+Sayısız kişi tam bu hatayı yapıyor. "Kış" duyunca hemen siyah, lacivert ve başka hiçbir şeye uzanıyorlar. Ya da her mücevher tonunu alıyorlar ama kendi Kış tipinin her tonun derinliğini, soğukluğunu veya parlaklığını taşıyıp taşıyamayacağını düşünmüyorlar.
 
 Bu rehberde **Deep Winter**, **True Winter** ve **Bright Winter**'ı — belirleyici özelliklerini, en iyi ve en kötü renklerini ve doğal renklendirmenize hangisinin uyduğunu tam olarak nasıl anlayacağınızı ele alacağım.
 

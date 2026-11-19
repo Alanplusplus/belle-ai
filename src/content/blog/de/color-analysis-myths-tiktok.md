@@ -8,11 +8,11 @@ image: "/images/blog/color-analysis-myths-tiktok.webp"
 
 ## TikTok hat Farbanalyse viral gemacht — aber auch vieles falsch dargestellt
 
-Ich gebe es zu: TikTok hat in zwei Jahren mehr für das Bewusstsein rund um Farbanalyse getan als die professionelle Styling-Branche in zwei Jahrzehnten. Plötzlich weiß jeder, was eine „Farbsaison" ist, und meine Freundinnen, denen Untertöne früher egal waren, schicken mir Reels mit der Frage: „Bin ich ein Soft Summer?"
+TikTok hat in zwei Jahren mehr für das Bewusstsein rund um Farbanalyse getan als die professionelle Styling-Branche in zwei Jahrzehnten. Plötzlich weiß jeder, was eine „Farbsaison" ist, und Menschen, denen Untertöne früher egal waren, teilen Reels mit der Frage: „Bin ich ein Soft Summer?"
 
 Das ist die gute Nachricht. Die schlechte? Mit Viralität kommt Fehlinformation. Und ein Teil der am meisten geteilten Farbanalyse-Inhalte auf TikTok ist entweder so stark vereinfacht, dass er nutzlos ist, oder schlicht falsch.
 
-Ich habe Hunderte Stunden damit verbracht, Farbtheorie zu studieren, professionelle Draping-Ergebnisse mit Ratschlägen aus sozialen Medien zu vergleichen und diese Behauptungen an echten Menschen zu testen. Hier sind die 7 größten Mythen, die TikTok weiter verbreitet — und was Wissenschaft und Praxis tatsächlich sagen.
+Wenn man professionelle Draping-Ergebnisse mit Ratschlägen aus sozialen Medien vergleicht, werden die Lücken schnell sichtbar. Hier sind die 7 größten Mythen, die TikTok weiter verbreitet — und was Wissenschaft und Praxis tatsächlich sagen.
 
 ---
 
@@ -29,7 +29,7 @@ Ich habe Hunderte Stunden damit verbracht, Farbtheorie zu studieren, professione
 
 **Was wirklich funktioniert:** Der Venentest kann Extreme ausschließen (wenn Ihre Venen lebhaft grün sind, sind Sie wahrscheinlich kein Cool Winter). Für eine genaue Einschätzung müssen Sie mehrere Indikatoren zusammen betrachten: wie Ihre Haut auf verschiedene Metalle reagiert, ob Sie golden oder rosa bräunen, wie Silber vs. Gold auf Ihrem Gesicht wirkt und — am zuverlässigsten — wie Ihre Haut aussieht, wenn spezifische Testfarben ans Gesicht gehalten werden.
 
-Forschung in [Color Research & Application](https://onlinelibrary.wiley.com/journal/15206378) bestätigt, dass die Wahrnehmung der Hautfarbe sich dramatisch je nach angrenzenden Farben verändert — deshalb bleibt Draping (Stoffe ans Gesicht halten) der Goldstandard, nicht ein schneller Blick aufs Handgelenk.
+Die Wahrnehmung der Hautfarbe verändert sich je nach angrenzenden Farben (simultane Kontraste) — deshalb bleibt Draping (Stoffe ans Gesicht halten) der Goldstandard, nicht ein schneller Blick aufs Handgelenk.
 
 ---
 

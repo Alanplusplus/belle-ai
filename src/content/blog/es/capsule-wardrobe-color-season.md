@@ -12,7 +12,7 @@ Así que descubriste que eres Otoño Suave o Primavera Brillante. Quizás usaste
 
 Pero hay un problema del que nadie habla: conocer tu estación no arregla automáticamente tu armario.
 
-Recuerdo mirar mi paleta de "Verano Suave" — esos rosas polvorientos, lavandas suaves y grises azulados — y pensar: "Genial. ¿Y ahora cómo convierto esto en outfits reales para ir a trabajar el lunes?"
+Puede que estés mirando tu paleta de Verano Suave — rosas polvorientos, lavandas suaves y grises azulados — y pensando: "Genial. ¿Y ahora cómo convierto esto en outfits reales para ir a trabajar el lunes?"
 
 Si estás ahí ahora mismo, esta guía es para ti. Voy a guiarte paso a paso para construir un armario cápsula completamente basado en tu estación de color — pieza por pieza, sin agobio.
 
@@ -160,7 +160,7 @@ No necesitas comprar 30 piezas mañana. Un cronograma realista:
 
 ## Errores Comunes
 
-Después de trabajar con mi propio armario cápsula por más de un año:
+Al crear un armario cápsula basado en tu estación de color, estos son los errores que conviene evitar:
 
 **1. Todo neutro.** Tu armario se sentirá aburrido si es 100% básicos. Necesitas acentos para alegría y expresión personal.
 

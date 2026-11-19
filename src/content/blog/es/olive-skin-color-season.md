@@ -16,7 +16,7 @@ faq:
 
 ## «¿Qué estación soy?» — el dilema de la piel oliva
 
-En casi toda consulta de subtono oliva escucho la misma historia. Alguien termina un cuestionario de estación cromática — a veces incluso reserva un draping profesional — y se va con tres respuestas distintas y cero confianza.
+Muchas personas con subtono oliva terminan un cuestionario de estación cromática — a veces incluso reservan un draping profesional — y se van con tres respuestas distintas y cero confianza.
 
 Otoño Suave parece encajar hasta que el terracota junto al rostro la hace ver apagada. El algoritmo sugiere Invierno Verdadero, pero un labial rosa helado vuelve la piel ceniza. Lo peor es «Neutro» sin paleta, como si la piel oliva no tuviera colores.
 
@@ -50,7 +50,7 @@ Acepta la oliva como modificador sobre piel cálida o fría, no como «solo neut
 
 ## Las cuatro estaciones donde más encaja la piel oliva
 
-En mi práctica, la mayoría de clientes con tono oliva caen en una de estas cuatro. Cada una combina **croma apagada** con subtono cálido o frío y valor medio o profundo.
+La mayoría de las pieles con tono oliva caen en una de estas cuatro. Cada una combina **croma apagada** con subtono cálido o frío y valor medio o profundo.
 
 | Estación | Subtono | Profundidad y contraste | Ambiente en una frase |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@ Abajo desgloso cómo reconocer cada una en piel oliva, más ropa, maquillaje y c
 
 ### Otoño Suave — la estación oliva clásica
 
-**Perfil:** Apagado, cálido, profundidad media. Es la estación que veo más en oliva cálida.
+**Perfil:** Apagado, cálido, profundidad media. Es la estación más habitual en oliva cálida.
 
 **Cómo reconocerla en piel oliva:**
 
@@ -163,7 +163,7 @@ Saber lo que **no** eres ahorra tiempo, dinero y frustración con el maquillaje.
 
 ### Familia Primavera (Primavera Clara, Primavera Cálida, Primavera Brillante)
 
-Primavera necesita color claro, cálido, a menudo claro o brillante. La capa verde gris de la oliva añade apagado. Cuando una clienta oliva sale Primavera Brillante, casi siempre reevalúo: suele ser Otoño Suave o un Verano Suave claro con oliva cálida.
+Primavera necesita color claro, cálido, a menudo claro o brillante. La capa verde gris de la oliva añade apagado. Si eres oliva y saliste Primavera Brillante, repite con draping: suele encajar mejor Otoño Suave o un Verano Suave claro con oliva cálida.
 
 ### Verano y Otoño verdaderos / primarios
 
@@ -185,7 +185,7 @@ Usa este flujo en casa antes de comprar un armario entero.
 
 ### Paso 1: Confirma el subtono oliva
 
-La tipificación solo funciona si el subtono es correcto. Revisa el velo verde, el desajuste de base y cómo se ve el tejido blanco en el cuello. Mi [guía de subtono oliva](/es/blog/olive-undertone-guide) detalla pruebas fiables.
+La tipificación solo funciona si el subtono es correcto. Revisa el velo verde, el desajuste de base y cómo se ve el tejido blanco en el cuello. Nuestra [guía de subtono oliva](/es/blog/olive-undertone-guide) detalla pruebas fiables.
 
 ### Paso 2: Separa oliva cálida vs oliva fría
 

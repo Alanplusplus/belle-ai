@@ -12,7 +12,7 @@ Que te clasifiquen como Invierno es emocionante. Estás en la familia más dram�
 
 Pero aquí está el detalle: hay **tres subtipos de Invierno distintos**, y agruparlos es como decir "todos los helados son iguales". Una Deep Winter en pasteles helados se verá apagada. Una Bright Winter en tonos oscuros y apagados se verá pesada. Y una True Winter en tonos joya con inclinación cálida simplemente se verá… rara.
 
-He visto a innumerables personas cometer este error exacto. Escuchan "Invierno" y de inmediato eligen negro, azul marino y nada más. O compran todos los tonos joya sin considerar si su tipo específico de Invierno puede llevar la profundidad, frialdad o brillo de cada tono.
+Innumerables personas cometen este error exacto. Escuchan "Invierno" y de inmediato eligen negro, azul marino y nada más. O compran todos los tonos joya sin considerar si su tipo específico de Invierno puede llevar la profundidad, frialdad o brillo de cada tono.
 
 En esta guía, desglosaré **Deep Winter**, **True Winter** y **Bright Winter** — sus rasgos definitorios, sus mejores y peores colores, y exactamente cómo averiguar cuál coincide con tu coloración natural.
 

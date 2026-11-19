@@ -12,7 +12,7 @@ So ziemlich jeder Sonnenbrillen-Guide im Internet sagt dasselbe: Wähle die Rahm
 
 Dieser Rat ist nicht falsch — er ist nur unvollständig.
 
-Ich habe Freundinnen beobachtet, die die perfekte Rahmenform gewählt haben und trotzdem irgendwie… komisch aussahen. Die Sonnenbrille passte wunderbar zur Gesichtsstruktur, aber irgendetwas an der Farbe ließ die Haut fahl, blass oder müde wirken.
+Oft stimmt die Rahmenform, und trotzdem wirkt alles komisch: Die Form passt zur Knochenstruktur, aber die Rahmenfarbe lässt die Haut fahl, blass oder müde wirken.
 
 **Die fehlende Zutat? Dein Hautunterton und dein Farbtyp.**
 
@@ -104,7 +104,7 @@ Deine Wangenknochen sind dein Star-Feature. Wähle Fassungen, die sie ergänzen,
 
 ## Schritt 3: Was alle vergessen — Rahmenfarbe und Hautton
 
-Hier hören die meisten Guides auf. Aber für mich beginnt hier die wahre Magie.
+Hier hören die meisten Guides auf — und hier macht der Unterton den größten Unterschied.
 
 Dein Hautunterton fällt in eine von drei Kategorien, und jede hat Rahmenfarben, die ihn zum Strahlen bringen — und Farben, die ihn müde wirken lassen.
 
@@ -249,11 +249,9 @@ Deine Haare rahmen dein Gesicht genauso wie die Sonnenbrille. Sie müssen zusamm
 
 ## Wie Technologie die Auswahl erleichtert
 
-Was mich begeistert: Du musst nicht mehr alles durch Ausprobieren herausfinden.
+Du musst nicht mehr alles nur durch Ausprobieren klären.
 
-KI-gestützte Gesichtsanalyse-Tools können jetzt eine wahrscheinliche Gesichtsform und Rahmentypen vorschlagen — in Sekunden, anhand eines einzigen Fotos. Manche gehen noch weiter und analysieren deinen Hautton und Farbtyp, um auch Rahmenfarben zu empfehlen.
-
-Ich habe kürzlich eines dieser Tools getestet und war wirklich überrascht. Es erkannte meine Gesichtsform als „oval mit leicht hohen Wangenknochen" (genau das, was mir mein Optiker vor Jahren gesagt hatte) und schlug spezifische Rahmentypen mit Farbempfehlungen basierend auf meinem Unterton vor.
+KI-Gesichtsanalyse-Tools schlagen in Sekunden aus einem Foto eine wahrscheinliche Gesichtsform und Rahmentypen vor. Manche analysieren zusätzlich Hautton und Farbtyp für Rahmenfarben — z. B. „oval mit leicht hohen Wangenknochen“ plus passende Stile zum Unterton.
 
 Kostenlose Tools wie [aicoloranalysis.io](/glasses-analysis) kombinieren Gesichtsformerkennung mit Farbanalyse, um dir eine umfassende Brillenempfehlung zu geben — Form und Farbe in einer Analyse.
 

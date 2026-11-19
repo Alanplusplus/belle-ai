@@ -8,7 +8,7 @@ image: "/images/blog/celebrity-color-season-style-twin.webp"
 
 ## Vous avez déjà un jumeau de style parmi les célébrités
 
-Après des années d'étude de l'analyse colorimétrique, j'ai remarqué quelque chose de fascinant : les célébrités vers lesquelles nous sommes naturellement attirés partagent souvent notre saison de couleur. Pas le type de corps, pas le mode de vie — notre *coloration*. Et ce n'est pas une coïncidence.
+En analyse colorimétrique, un schéma revient souvent : les célébrités vers lesquelles nous sommes naturellement attirés partagent souvent notre saison de couleur. Pas le type de corps, pas le mode de vie — notre *coloration*. Et ce n'est pas une coïncidence.
 
 Quand quelqu'un avec le même sous-ton, le même niveau de contraste et le même type de saison porte une teinte particulière, votre cerveau l'enregistre comme « beau » parce que vous reconnaissez instinctivement ce qui fonctionne pour vos propres traits. Cette robe rose poudré qui a rendu une actrice lumineuse ? Il y a une raison pour laquelle elle a attiré votre regard.
 
@@ -26,7 +26,7 @@ Les célébrités sont en somme des lookbooks ambulants pour leur palette. Chaqu
 
 L'essentiel : **quand une célébrité porte une couleur qui lui va à merveille, et qu'elle partage votre saison, cette même couleur vous ira aussi à merveille.** Teint, couleur des yeux et des cheveux créent les mêmes effets optiques, peu importe qui porte la tenue.
 
-La recherche en psychologie des couleurs le confirme. Une [étude publiée dans Color Research & Application](https://onlinelibrary.wiley.com/journal/15206378) montre que les visages sont jugés plus attirants lorsqu'ils sont encadrés par des couleurs qui harmonisent avec la coloration naturelle. Les meilleurs moments « best dressed » de votre jumeau sont en pratique une expérience curatée prouvant quelles harmonies fonctionnent.
+L'idée est simple : les couleurs qui s'harmonisent avec votre coloration naturelle ont tendance à mieux vous aller. Les meilleurs moments « best dressed » de votre jumeau sont en pratique une série d'exemples sélectionnés montrant quelles harmonies fonctionnent.
 
 ---
 
@@ -163,7 +163,7 @@ Pour un second avis, l'analyse par IA peut suggérer une saison probable à part
 - Votre jumeau repose sur la **similitude de coloration** (sous-ton, contraste, profondeur) — pas le morphotype ni le mode de vie
 - Sauvegardez leurs meilleurs looks comme référence shopping — les **teintes** qu'elles portent vous iront aussi
 - Étudiez leurs choix maquillage, surtout lèvres et blush
-- Règle 80/20 : **80 % de la valeur vient de la bonne couleur**, pas de la tenue exacte
+- Rappelez-vous : **le plus important, c'est d'être juste en couleur**, plus que la tenue exacte
 
 La prochaine fois qu'une célébrité figure sur une liste « best dressed » et que vous pensez « wow, cette couleur est magnifique » — vérifiez si elle partage votre saison. Si oui, vous venez de trouver votre prochaine liste de courses mode.
 

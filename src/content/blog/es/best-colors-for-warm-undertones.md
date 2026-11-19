@@ -8,7 +8,7 @@ image: "/images/blog/best-colors-for-warm-undertones.webp"
 
 ## Tu subtono cálido es un superpoder — si sabes cómo usarlo
 
-Pasé años vistiendo pasteles helados y grises fríos porque un test de una tienda me dijo que me quedaba "genial con todo lo neutro". No fue hasta que entendí mi subtono cálido que me di cuenta de por qué algunos conjuntos me hacían ver bronceada y llena de vida, mientras que otros me hacían parecer cansada antes del mediodía.
+Muchas personas optan por pasteles helados y grises fríos porque un test rápido en tienda dice que «queda genial con todo lo neutro». Al saber que tu subtono es cálido, encaja el patrón: algunos conjuntos te hacen ver bronceada y llena de vida, y los neutros fríos pueden hacerte parecer cansada antes del mediodía.
 
 Si tienes subtonos cálidos — matices dorados, melocotón o amarillentos bajo la superficie de tu piel — ciertos colores amplificarán esa calidez natural y te harán brillar desde dentro. Los colores equivocados, en cambio, pueden apagarte o darle a tu tez un aspecto apagado.
 
@@ -79,7 +79,7 @@ Los tonos tierra son el territorio natural de los subtonos cálidos. Son los mat
 - Caramelo
 - Ámbar
 
-Siempre tengo al menos una prenda terracota u óxido en rotación — es el equivalente a un filtro instantáneo para la piel cálida.
+Una prenda terracota u óxido cerca del rostro actúa como un filtro instantáneo en piel cálida; conviene tener al menos una en rotación.
 
 ### Verdes
 
@@ -226,7 +226,7 @@ El morado generalmente funciona mejor como acento que como conjunto de pies a ca
 - Azul-negro
 - Colores con base violeta
 
-Cambié de castaño ceniza a castaño cálido hace unos años, y la cantidad de comentarios de "te ves tan saludable" que empecé a recibir fue genuinamente sorprendente. Misma cara, diferente subtono en el cabello — un impacto enorme.
+Pasar del castaño ceniza al castaño cálido es una mejora frecuente: el pelo se lee más cálido sobre piel dorada y el rostro suele parecer más saludable. Misma cara, distinto subtono en el cabello — un impacto enorme.
 
 ---
 
@@ -299,7 +299,7 @@ Entender tu sub-estación reduce tu paleta de "generalmente cálida" a "específ
 
 **Paso 1:** Ancla con neutros cálidos (camel, crema, marrón chocolate, azul marino cálido)
 
-**Paso 2:** Añade 2-3 colores de acento que consistentemente te generen cumplidos (la mayoría de personas de tono cálido tienen un "signature" — el mío es terracota)
+**Paso 2:** Añade 2-3 colores de acento que consistentemente te generen cumplidos (muchas personas de tono cálido se inclinan por un color firma como terracota u oliva)
 
 **Paso 3:** Mantén tops, bufandas y cualquier cosa cerca del rostro en tus mejores colores. Los pantalones pueden ser más flexibles.
 

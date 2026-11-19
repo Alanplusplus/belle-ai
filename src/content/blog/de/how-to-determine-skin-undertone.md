@@ -36,7 +36,7 @@ Schauen Sie bei natürlichem Tageslicht auf die Venen an Ihrem inneren Handgelen
 | Grün | Warm |
 | Blau-grüne Mischung | Neutral |
 
-**Genauigkeit:** ~70 %. Funktioniert am besten bei hellerer Haut. Bei tieferem Hautton sind Venen möglicherweise schwerer zu erkennen.
+**Genauigkeit:** Mäßig. Funktioniert am besten bei hellerer Haut. Bei tieferem Hautton sind Venen möglicherweise schwerer zu erkennen.
 
 ### Methode 2: Der Gold-vs.-Silber-Test
 
@@ -113,7 +113,7 @@ Eine schnelle Zweitmeinung. KI-Tools wie Belle AI nutzen ein KI-Bildmodell, um I
 
 ## Der Sonderfall: Neutraler Unterton
 
-Etwa 20–30 % der Menschen haben neutrale Untertöne. Anzeichen dafür, dass Sie neutral sind:
+Viele Menschen haben neutrale Untertöne. Anzeichen dafür, dass Sie neutral sind:
 
 - Tests liefern gemischte Ergebnisse (manche sagen warm, manche kühl)
 - Sowohl Gold als auch Silber sehen gut aus

@@ -8,9 +8,9 @@ image: "/images/blog/best-earring-styles-face-shape.webp"
 
 ## L'erreur avec les boucles d'oreilles que presque tout le monde commet
 
-Je vais être honnête : pendant des années, j'achetais des boucles d'oreilles selon ce qui me semblait joli sur le présentoir. Puces délicates, chandeliers dramatiques, créoles tendance — si elles attiraient mon regard, elles rentraient chez moi. Et la moitié me faisaient paraître… bizarre. Certaines élargissaient mon visage. D'autres l'allongeaient de façon étrange. Quelques-unes disparaissaient carrément au milieu de mes traits.
+Vous avez sans doute déjà essayé de nouvelles boucles d'oreilles en pensant qu'elles étaient parfaites au présentoir, mais qu'elles « clochent » au miroir. Les puces délicates élargissent un visage rond, les longues pendantes allongent un visage oblong, les toutes petites puces disparaissent entre les traits. Le souci vient souvent de la géométrie entre la forme du bijou et celle du visage.
 
-Il m'a fallu un temps embarrassant pour comprendre que le problème ne venait pas des boucles d'oreilles elles-mêmes. C'était la relation entre la forme du bijou et la forme de mon visage. Une fois que j'ai saisi cette géométrie — comment les lignes verticales et horizontales interagissent avec les contours du visage — tout a changé. J'ai arrêté les achats impulsifs. J'ai commencé à choisir des pièces qui mettaient vraiment mes traits en valeur. Et soudain, même des boucles d'oreilles bon marché semblaient faites pour moi.
+Une fois que vous voyez comment les lignes verticales et horizontales interagissent avec vos contours, les achats deviennent plus simples : moins d'achats impulsifs, plus de pièces qui mettent vos proportions en valeur — même des boucles peu chères paraissent intentionnelles.
 
 Ce guide détaille exactement quels styles de boucles d'oreilles complètent chaque forme de visage et, surtout, *pourquoi* ils fonctionnent. Car une fois la logique comprise, vous ne remettrez plus jamais en question un achat de boucles d'oreilles.
 
@@ -22,9 +22,9 @@ Les boucles d'oreilles se situent au point le plus large et le plus visible du v
 
 Le principe central est simple : **les boucles d'oreilles doivent créer l'équilibre.** Si votre visage est large, vous voulez des boucles d'oreilles qui ajoutent de la longueur. S'il est long, vous voulez celles qui ajoutent de la largeur. Si votre visage est déjà équilibré (comme un visage ovale), vous avez le plus grand choix.
 
-Selon des recherches publiées dans la [revue Perception](https://journals.sagepub.com/home/pec), les visages sont perçus comme plus attirants lorsque leurs proportions approchent un ratio ovale équilibré — environ 1,6:1 (longueur sur largeur). Les boucles d'oreilles sont l'un des moyens les plus simples de pousser vos proportions visuelles dans cette direction.
+L'objectif habituel en styling est une silhouette équilibrée, plutôt ovale, et les boucles d'oreilles sont l'un des moyens les plus simples de pousser vos proportions visuelles dans cette direction.
 
-Voici ce que la plupart des guides ne vous disent pas : **l'échelle compte autant que la forme.** Un petit visage submergé par d'énormes chandeliers ne paraîtra pas équilibré, quelle que soit la forme du visage. Je couvrirai aussi les recommandations de taille pour chaque forme.
+Voici ce que la plupart des guides ne vous disent pas : **l'échelle compte autant que la forme.** Un petit visage submergé par d'énormes chandeliers ne paraîtra pas équilibré, quelle que soit la forme du visage. Ce guide détaille aussi les tailles recommandées pour chaque forme.
 
 ---
 
@@ -60,7 +60,7 @@ En cas de doute, tracez le contour de votre visage sur un miroir avec un feutre 
 
 **Guide des tailles :** Vous pouvez opter en confiance pour des tailles moyennes à grandes. Vos proportions peuvent porter des pièces statement que d'autres formes ne parviendraient peut-être pas à assumer.
 
-**Mon choix favori pour les visages ovales :** Une boucle d'oreille goutte de longueur moyenne. Elle suit le rétrécissement naturel de votre visage et ajoute juste assez de mouvement pour capter la lumière. Choisir l'or ou l'argent dépend de votre [sous-ton de peau](/fr/blog/jewelry-metals-skin-tone-guide) — pas de la forme du visage.
+**Un excellent choix pour les visages ovales :** Une boucle d'oreille goutte de longueur moyenne. Elle suit le rétrécissement naturel de votre visage et ajoute juste assez de mouvement pour capter la lumière. Choisir l'or ou l'argent dépend de votre [sous-ton de peau](/fr/blog/jewelry-metals-skin-tone-guide) — pas de la forme du visage.
 
 ---
 
@@ -151,7 +151,7 @@ En cas de doute, tracez le contour de votre visage sur un miroir avec un feutre 
 
 **Guide des tailles :** Pensez large, pas long. Une créole de 2,5 cm de diamètre vaut mieux qu'un pendant linéaire de 5 cm. Si vous portez des pendants, gardez-les courts et choisissez des styles qui s'étendent sur les côtés.
 
-**Mon astuce favorite pour les visages allongés :** Les piercings superposés. Si vous avez plusieurs piercings, empiler de petites puces et des huggies le long de l'oreille crée un intérêt horizontal qui contrebalance magnifiquement la longueur.
+**Une astuce utile pour les visages allongés :** Les piercings superposés. Si vous avez plusieurs piercings, empiler de petites puces et des huggies le long de l'oreille crée un intérêt horizontal qui contrebalance magnifiquement la longueur.
 
 ---
 
@@ -189,13 +189,13 @@ La forme reçoit le plus d'attention, mais la matière et la finition comptent a
 - Sous-tons froids → argent, platine, or blanc, métaux aux tons froids
 - Sous-tons neutres → vous pouvez porter l'un ou l'autre
 
-Pour approfondir le choix des métaux, consultez mon [guide complet sur les métaux de bijoux et le teint](/fr/blog/jewelry-metals-skin-tone-guide).
+Pour approfondir le choix des métaux, consultez le [guide complet sur les métaux de bijoux et le teint](/fr/blog/jewelry-metals-skin-tone-guide).
 
 ---
 
 ## Conseils pratiques d'achat
 
-Après des années d'essais et d'erreurs avec les boucles d'oreilles, voici les raccourcis que j'aurais aimé qu'on me dise :
+Ces raccourcis d'achat évitent beaucoup d'essais et d'erreurs :
 
 1. **Prenez un selfie, pas un coup d'œil au miroir.** Les miroirs inversent votre image. Une photo de face montre ce que les autres voient vraiment, et il est plus facile d'évaluer les proportions.
 
@@ -205,7 +205,7 @@ Après des années d'essais et d'erreurs avec les boucles d'oreilles, voici les 
 
 4. **Tenez compte de votre coiffure.** Cheveux attachés ? Vos boucles d'oreilles deviennent le cadre principal de votre visage — la correspondance des formes compte le plus. Cheveux détachés ? Les boucles d'oreilles interagissent autant avec les cheveux qu'avec le visage, et vous pouvez être plus flexible.
 
-5. **N'oubliez pas vos lunettes.** Si vous les portez au quotidien, vos boucles d'oreilles doivent aussi s'harmoniser avec vos montures. J'ai écrit un guide complet sur [comment choisir des lunettes selon la forme du visage](/fr/blog/best-glasses-for-face-shape) qui couvre cette interaction.
+5. **N'oubliez pas vos lunettes.** Si vous les portez au quotidien, vos boucles d'oreilles doivent aussi s'harmoniser avec vos montures. Le guide sur [comment choisir des lunettes selon la forme du visage](/fr/blog/best-glasses-for-face-shape) détaille cette interaction.
 
 ---
 

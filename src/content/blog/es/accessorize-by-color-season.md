@@ -12,7 +12,7 @@ Ya descubriste tu estación de color. Has curado un armario lleno de tonos favor
 
 Nueve de cada diez veces, el problema no es la ropa. Son los accesorios.
 
-Lo aprendí por las malas. Tras meses construyendo cuidadosamente un guardarropa Soft Summer, me di cuenta de que seguía usando joyería dorada brillante, bolsos de cuero de tono cálido y bufandas en naranjas saturados que socavaban por completo la armonía suave que tanto me había costado lograr. En el momento en que cambié a oro rosa y plata con accesorios apagados y de tono frío, todo encajó.
+Es una trampa fácil: montas un guardarropa Soft Summer en tonos fríos y apagados y luego sumas joyería dorada brillante, bolsos de cuero cálido y bufandas naranja saturadas que rompen la armonía. Al pasar a oro rosa, plata y accesorios fríos y apagados, el conjunto suele encajar al instante.
 
 Los accesorios son el toque final que amplifica o sabotea tu historia de color. Y las reglas son distintas a las de la ropa — a menudo más simples, pero igual de importantes. Te guío paso a paso sobre cómo elegir accesorios para cada estación de color.
 
@@ -106,7 +106,7 @@ El nivel de energía de tu estación también dicta la elección de tejido:
 
 ## Bolsos y Artículos de Cuero
 
-Los bolsos son una inversión, así que acertar el color también importa a nivel económico. Este es mi enfoque:
+Los bolsos son una inversión, así que acertar el color también importa a nivel económico. Este es un enfoque práctico:
 
 ### Tu Estrategia de Tres Bolsos
 
@@ -152,7 +152,7 @@ Pueden parecer insignificantes, pero contribuyen a la coherencia cromática gene
 
 ## Cómo Auditar Tus Accesorios Actuales
 
-Este es un ejercicio rápido que recomiendo a todas mis lectoras:
+Ejercicio rápido de revisión:
 
 1. **Extiende toda tu joyería** sobre una superficie blanca
 2. **Separa en cálido y frío:** Oro/latón/cobre en un montón, plata/platino/gunmetal en el otro
@@ -183,7 +183,7 @@ Así obtienes docenas de combinaciones manteniendo una armonía cromática perfe
 
 Si no estás segura de tu estación de color — y por tanto de tu dirección en accesorios — el método antiguo era sostener joyas de oro y plata frente al rostro y entrecerrar los ojos ante el espejo. Funciona, pero es subjetivo.
 
-Las herramientas modernas de análisis de color con IA pueden sugerir una estación probable a partir de una foto, lo que te da un punto de partida útil para elegir metal. Usé [una herramienta de análisis de color con IA](/) para comprobar mi estación, y me devolvió una paleta completa con metales recomendados y tonos de accesorios — algo que normalmente requeriría una consulta presencial de más de 200 $.
+Las herramientas modernas de [análisis de color con IA](/) pueden sugerir una estación probable a partir de una foto y darte un punto de partida para elegir metal, a menudo con metales recomendados y tonos de accesorios en un solo resultado, similar a lo que cubre una consulta presencial.
 
 ---
 

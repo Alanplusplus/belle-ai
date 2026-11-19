@@ -21,7 +21,7 @@ faq:
 
 Cherchez « peau olive » en ligne et vous trouverez surtout des conseils pensés pour les carnations méditerranéennes — peau claire à moyenne avec une nuance verte européenne. Cherchez en coréen et la conversation change entièrement : on parle du sous-ton olive sur peau d'Asie de l'Est avec une teinte vert-gris. Aucune des deux ne rend compte à elle seule de la diversité des populations.
 
-J'étudie depuis des années le sous-ton olive selon les origines, et le plus important est ceci : **olive n'est pas une ethnie. C'est un schéma de pigment qui peut apparaître chez n'importe qui, n'importe où.**
+Selon les origines, un point revient sans cesse : **olive n'est pas une ethnie. C'est un schéma de pigment qui peut apparaître chez n'importe qui, n'importe où.**
 
 Ce guide explore la peau olive en Méditerranée, en Asie de l'Est, en Asie du Sud, au Moyen-Orient et chez les Latino-américains — comment la profondeur interagit avec le modificateur olive, pourquoi chaque groupe rencontre des défis d'identification uniques, et comment obtenir une analyse de sous-ton précise quelle que soit votre origine.
 

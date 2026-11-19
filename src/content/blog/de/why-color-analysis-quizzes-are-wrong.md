@@ -31,7 +31,7 @@ Forschung zur Farbwahrnehmung zeigt, dass Menschen bemerkenswert schlecht darin 
 - **Chromatischer Adaption** — Ihre Augen „passen sich automatisch an", was Sie gewohnt sind zu sehen
 - **Kultureller Voreingenommenheit** — was Ihnen über Ihre Färbung gesagt wurde, ist möglicherweise nicht korrekt
 
-Eine Studie aus dem Jahr 2019 im *Journal of Perceptual Imaging* fand, dass ungeschulte Beobachter den Hautunterton in mehr als 40 % der Fälle falsch identifizierten — selbst unter kontrollierten Lichtverhältnissen.
+Selbst unter kontrollierten Lichtverhältnissen schätzen ungeschulte Beobachter den Hautunterton oft falsch ein.
 
 ## Grund #2: Binäre Fragen können kein Spektrum erfassen
 
@@ -42,7 +42,7 @@ Die meisten Quizs nutzen Multiple-Choice-Formate:
 
 Aber Farbe ist nicht binär. Sie existieren auf einem *kontinuierlichen Spektrum* zwischen warm und kühl. Es gibt Menschen, die eindeutig warm, eindeutig kühl und alles dazwischen sind — neutral-warm, neutral-kühl, wahrhaft neutral mit olivfarbenen Oberflächentönen usw.
 
-Ein Quiz, das Sie bei jedem Schritt zu „warm" oder „kühl" zwingt, wird jeden in der Mitte falsch typisieren. Und etwa **30–40 % der Menschen haben neutrale oder gemischte Untertöne** — sie sind damit die Mehrheit, die falsch getypt wird.
+Ein Quiz, das Sie bei jedem Schritt zu „warm" oder „kühl" zwingt, wird jeden in der Mitte falsch typisieren. Und **viele Menschen haben neutrale oder gemischte Untertöne** — sie gehören damit zu denen, die am häufigsten falsch getypt werden.
 
 Dasselbe gilt für andere Attribute:
 - Hell vs. dunkel? Was ist mit mittel?
@@ -53,9 +53,9 @@ Dasselbe gilt für andere Attribute:
 
 Einige „intelligentere" Quizs bitten Sie, Fotos zu vergleichen — Gold- vs. Silberstoff halten oder sich mit Prominenten-Beispielen vergleichen.
 
-Aber sofern Sie Ihren Monitor nicht kalibriert haben, sind die Farben auf dem Bildschirm verzerrt. Studien zeigen, dass:
+Aber sofern Sie Ihren Monitor nicht kalibriert haben, sind die Farben auf dem Bildschirm verzerrt. Häufige Probleme sind:
 
-- Die meisten Consumer-Monitore eine Farbtemperatur von 6500K–7500K haben (viel bläulicher als natürliches Tageslicht)
+- Viele Consumer-Monitore sind nicht farbkalibriert und können kühler oder wärmer wirken als natürliches Tageslicht
 - Bildschirmhelligkeit, Kontrasteinstellungen und Umgebungslicht alle die wahrgenommene Farbe verschieben
 - Auf Smartphones aufgenommene Fotos passen den Weißabgleich automatisch an und verschieben Hauttöne oft wärmer oder kühler als die Realität
 - Instagram-/Social-Media-Filter verzerren Referenzfotos weiter
@@ -152,7 +152,7 @@ Bevor Sie einem Ergebnis vertrauen — Quiz, KI oder sonstiges — prüfen Sie d
 ## Wichtigste Erkenntnisse
 
 - Farbanalyse-Quizs scheitern, weil sie sich auf Selbstauskunft über Dinge verlassen, die Sie nicht objektiv über sich selbst einschätzen können
-- Binäre Fragen verpassen die 30–40 % der Menschen mit neutralen oder gemischten Untertönen
+- Binäre Fragen verpassen Menschen mit neutralen oder gemischten Untertönen
 - Bildschirmfarbverzerrung macht Foto-Vergleichs-Quizs unzuverlässig
 - Echte Farbanalyse erfordert die Beobachtung, wie Farben mit Ihrer Haut interagieren — nicht das Beantworten von Multiple-Choice-Fragen
 - Ihre besten Optionen sind professionelle Drapierung (teuer, aber gründlich) oder KI-Analyse (erschwinglich und schnell — mit dem Vorbehalt, dass es eine visuelle Einschätzung ist)

@@ -202,4 +202,4 @@ Renk analizi size bilimi verir. Stil size sanatı verir. İkisini birlikte kulla
 - [Renk analizi: eksiksiz rehber](/tr/color-analysis) — En iyi renklerinizi bulmak için bilmeniz gereken her şey
 - [Resim dersindeki renk teorisi kişisel stilinize nasıl uygulanır](/tr/blog/color-theory-personal-style) — Bazı renk kombinasyonlarının neden işe yaradığının arkasındaki bilim
 - [Renk mevsiminiz için kapsül gardırop nasıl oluşturulur](/tr/blog/capsule-wardrobe-color-season) — Önce en iyi renklerinizle temel bir gardırop oluşturun
-- [30 gün boyunca sadece "mevsim renklerimi" giydim — olan şuydu](/tr/blog/wearing-season-colors-30-days) — Sıkı palet uyumunun esneklik hakkında öğrettikleri
+- [30 günlük mevsim rengi challenge: Uygulanabilir bir plan](/tr/blog/wearing-season-colors-30-days) — 30 gün boyunca yalnızca mevsim renklerini giymek için haftalık plan

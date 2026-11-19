@@ -8,11 +8,9 @@ image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
 
 ## La règle de maquillage que tout le monde se trompe
 
-J'ai perdu le compte du nombre de rouges à lèvres que j'ai achetés, portés une fois, puis relégués au fond d'un tiroir. Rouge classique ? Trop agressif. Corail ? Me faisait paraître terne. Framboise ? Donnait un aspect jaune à mes dents. Pendant des années, j'ai cru que je n'étais tout simplement « pas faite pour le rouge à lèvres ».
+Vous avez peut-être un tiroir plein de rouges magnifiques en rayon et faux sur le visage : le classique paraît trop dur, le corail vous éteint, le framboise jaunit les dents. Ce n'est en général pas que vous ne pouvez pas porter le rouge, c'est que le sous-ton du rouge et celui de votre peau ne sont pas synchronisés.
 
-Il s'avère que je ne savais pas porter le rouge. Je ne savais pas choisir le *bon* rouge.
-
-Le secret ne réside pas dans l'audace ou la confiance (même si ça aide). Il s'agit de comprendre comment le sous-ton de votre peau interagit avec les pigments d'un rouge à lèvres. Une fois que j'ai compris cela, j'ai trouvé mon rouge parfait en moins de cinq minutes — et vous pouvez en faire autant.
+Le secret ne réside pas dans l'audace ou la confiance (même si ça aide). Il s'agit de comprendre comment le sous-ton de votre peau interagit avec les pigments d'un rouge à lèvres. Une fois le sous-ton identifié, affiner un rouge flatteur peut prendre quelques minutes, pas des mois d'essais.
 
 Ce guide décrypte la science, vous propose des recommandations de teintes précises et inclut un test simple pour ne plus jamais gaspiller d'argent dans le mauvais rouge.
 
@@ -156,7 +154,7 @@ L'accord des couleurs exigeait autrefois une visite chez une conseillère formé
 
 Des applications comme [Belle AI](/) peuvent observer une photo de votre visage et suggérer votre sous-ton selon les mêmes indices de couleur que ceux qu'examinent les professionnels — chaude, froide ou neutre, et une saison probable. Une fois votre saison connue, trouver le bon rouge devient presque un jeu d'enfant.
 
-J'ai fait analyser mon propre selfie avec un outil d'analyse des couleurs par IA et confirmé que j'étais un Soft Summer — ce qui expliquait pourquoi chaque corail que j'essayais paraissait faux, et pourquoi les rouges framboise atténués me mettaient en valeur.
+Faire analyser un selfie avec un outil d'analyse des couleurs par IA peut indiquer votre sous-ton et une saison probable avec les mêmes indices que les professionnels — utile quand les corails ratent toujours et que les rouges framboise atténués fonctionnent enfin.
 
 ---
 

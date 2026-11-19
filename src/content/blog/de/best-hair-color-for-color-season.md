@@ -12,7 +12,7 @@ Etwas, das die meisten Menschen erst nach einer missglückten Färbung begreifen
 
 Genau dafür gibt es die [persönliche Farbanalyse](/de/blog/personal-color-analysis-guide). Dein Farbtyp betrifft nicht nur Kleidung oder Make-up: Er ist ein umfassender Leitfaden für Töne, die mit deinen natürlichen Merkmalen harmonieren — und das schließt die Haarfarbe ausdrücklich ein.
 
-Ich habe erlebt, wie Menschen von müde und blass zu absolut strahlend wechselten — nicht wegen einer neuen Skincare-Routine, sondern weil sie endlich eine Haarfarbe wählten, die zu ihrem Farbtyp passt. Der Unterschied ist real und oft dramatisch.
+Viele Menschen wechseln von müde und blass zu absolut strahlend — nicht wegen einer neuen Skincare-Routine, sondern weil sie endlich eine Haarfarbe wählten, die zu ihrem Farbtyp passt. Der Unterschied ist real und oft dramatisch.
 
 Dein Haar ist der größte Farbblock, der dein Gesicht einrahmt. Stimmt die Farbe, passen Make-up, Kleidung und sogar Schmuck viel leichter zusammen. Stimmt sie nicht, kämpfst du täglich gegen deine natürliche Harmonie.
 
@@ -247,7 +247,7 @@ Als Zweitmeinung können KI-Farbanalyse-Tools einen wahrscheinlichen Farbtyp anh
 
 ## Häufige Haarfarben-Fehler nach Farbtyp
 
-Deinen Farbtyp zu kennen bedeutet auch zu wissen, was du vermeiden solltest. Diese Fehler sehe ich am häufigsten:
+Deinen Farbtyp zu kennen bedeutet auch zu wissen, was du vermeiden solltest. Darauf solltest du besonders achten:
 
 **Kühle Typen wählen warme Töne:** Der Fehler Nummer eins. Sommer- und Winter-Typen lassen sich goldene Strähnchen oder Karamell-Balayage machen, weil es im Trend liegt — und wundern sich dann, warum sie plötzlich müde wirken. Kühle Untertöne brauchen kühle Haarfarben — Punkt.
 

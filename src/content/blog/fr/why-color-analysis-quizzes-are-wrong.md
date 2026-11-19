@@ -31,7 +31,7 @@ La recherche sur la perception des couleurs montre que les humains sont remarqua
 - **L'adaptation chromatique** — vos yeux « s'ajustent » automatiquement à ce que vous êtes habituée à voir
 - **Les biais culturels** — ce qu'on vous a dit sur votre coloration n'est pas forcément exact
 
-Une étude de 2019 dans le *Journal of Perceptual Imaging* a révélé que des observateurs non formés identifiaient incorrectement le sous-ton de la peau dans plus de 40 % des cas, même sous un éclairage contrôlé.
+Même sous un éclairage contrôlé, des observateurs non formés jugent souvent mal le sous-ton de la peau.
 
 ## Raison n° 2 : Les questions binaires ne peuvent pas capturer un spectre
 
@@ -42,7 +42,7 @@ La plupart des tests utilisent un format à choix multiples :
 
 Mais la couleur n'est pas binaire. Vous existez sur un *spectre continu* entre chaud et froid. Il y a des personnes clairement chaudes, clairement froides, et tout ce qu'il y a entre les deux — neutre-chaud, neutre-froid, neutre pur avec des nuances olive, etc.
 
-Un test qui vous oblige à choisir « chaud » ou « froid » à chaque étape se trompera toujours sur les personnes qui se situent au milieu. Et environ **30 à 40 % des personnes ont des sous-tons neutres ou mixtes**, ce qui en fait la majorité mal typée.
+Un test qui vous oblige à choisir « chaud » ou « froid » à chaque étape se trompera toujours sur les personnes qui se situent au milieu. Et **beaucoup de personnes ont des sous-tons neutres ou mixtes**, ce qui en fait celles qui sont le plus souvent mal typées.
 
 Il en va de même pour les autres attributs :
 - Clair vs. foncé ? Et le moyen ?
@@ -53,9 +53,9 @@ Il en va de même pour les autres attributs :
 
 Certains tests « plus intelligents » vous demandent de comparer des photos — tenir des étoffes dorées vs argentées, ou vous comparer à des célébrités.
 
-Mais à moins d'avoir calibré votre écran, les couleurs que vous voyez sont déformées. Les études montrent que :
+Mais à moins d'avoir calibré votre écran, les couleurs que vous voyez sont déformées. Les problèmes courants incluent :
 
-- La plupart des écrans grand public ont une température de couleur de 6500K–7500K (beaucoup plus bleutée que la lumière naturelle)
+- De nombreux écrans grand public ne sont pas étalonnés en couleur et peuvent paraître plus froids ou plus chauds que la lumière naturelle du jour
 - La luminosité, le contraste et l'éclairage ambiant de la pièce modifient tous la perception des couleurs
 - Les photos prises sur smartphone ajustent automatiquement la balance des blancs, décalant souvent les teints de peau plus chauds ou plus froids que la réalité
 - Les filtres Instagram/réseaux sociaux déforment encore davantage les photos de référence
@@ -152,7 +152,7 @@ Avant de faire confiance à un résultat — quiz, IA ou autre — vérifiez ces
 ## Points clés à retenir
 
 - Les tests de colorimétrie échouent car ils reposent sur l'auto-déclaration de choses que vous ne pouvez pas évaluer objectivement sur vous-même
-- Les questions binaires passent à côté des 30 à 40 % de personnes à sous-tons neutres ou mixtes
+- Les questions binaires passent à côté des personnes à sous-tons neutres ou mixtes
 - La distorsion des couleurs à l'écran rend les quiz de comparaison photo peu fiables
 - Une vraie colorimétrie nécessite d'observer comment les couleurs interagissent avec votre peau — pas de répondre à des questions à choix multiples
 - Vos meilleures options sont le drapage professionnel (coûteux mais approfondi) ou l'analyse IA (abordable et rapide, avec la réserve qu'il s'agit d'un jugement visuel)

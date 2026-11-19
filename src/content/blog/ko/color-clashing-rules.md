@@ -202,4 +202,4 @@ image: "/images/blog/color-clashing-rules.webp"
 - [퍼스널 컬러 완전 가이드](/ko/color-analysis) — 자신에게 가장 어울리는 색을 찾는 데 필요한 모든 것
 - [미술 시간의 색채 이론이 개인 스타일에 적용되는 법](/ko/blog/color-theory-personal-style) — 특정 컬러 조합이 효과적인 과학적 이유
 - [시즌 컬러로 캡슐 워드로브 만드는 법](/ko/blog/capsule-wardrobe-color-season) — 먼저 자신의 베스트 컬러로 기초 워드로브 구축
-- [30일간 '시즌 컬러'만 입어본 결과](/ko/blog/wearing-season-colors-30-days) — 엄격한 팔레트 준수가 한 필자에게 유연성에 대해 가르쳐준 것
+- [30일 시즌 컬러만 입기 챌린지: 따라 할 수 있는 계획](/ko/blog/wearing-season-colors-30-days) — 30일 동안 시즌 컬러만 입기 위한 주차별 계획

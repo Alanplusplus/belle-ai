@@ -12,7 +12,7 @@ Every sunglasses guide on the internet tells you the same thing: match your fram
 
 That advice isn't wrong — it's just incomplete.
 
-I've watched friends nail the perfect frame shape and still look… off. The sunglasses fit their face structure beautifully, but something about the color made their skin look sallow, washed out, or weirdly pale.
+It is common to nail the frame shape and still look off: the sunglasses fit the bone structure, but the frame color makes skin look sallow, washed out, or oddly pale.
 
 **The missing ingredient? Your skin undertone and color season.**
 
@@ -104,7 +104,7 @@ Your cheekbones are your star feature. Choose frames that complement rather than
 
 ## Step 3: The Part Everyone Forgets — Frame Color and Your Skin Tone
 
-Here's where most guides end. But for me, this is where the real magic happens.
+Here is where most guides end — and where undertone makes the biggest difference.
 
 Your skin undertone falls into one of three categories, and each one has frame colors that make it glow — and colors that make it look tired.
 
@@ -249,11 +249,9 @@ Your hair frames your face just like sunglasses do. They need to work together.
 
 ## How Technology Is Making This Easier
 
-Here's what I find exciting: you no longer have to figure all of this out through trial and error.
+You no longer have to figure all of this out through trial and error alone.
 
-AI-powered face analysis tools can now suggest your likely face shape and frame styles — in seconds, from a single photo. Some go even further, analyzing your skin tone and color season to recommend frame colors too.
-
-I tested one of these tools recently and was genuinely surprised. It identified my face shape as "oval with slightly high cheekbones" (which my optician had told me years ago) and suggested specific frame styles with color recommendations based on my undertone.
+AI-powered face analysis tools can suggest your likely face shape and frame styles in seconds from a single photo. Some go further, analyzing skin tone and color season to recommend frame colors too. Results are often surprisingly specific — for example, oval with slightly high cheekbones plus frame styles matched to undertone.
 
 Free tools like [aicoloranalysis.io](/glasses-analysis) combine face shape detection with color analysis to give you a comprehensive glasses recommendation — covering both shape and color in one analysis.
 

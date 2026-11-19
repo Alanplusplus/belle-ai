@@ -12,7 +12,7 @@ Prácticamente todas las guías de gafas de sol en internet dicen lo mismo: elig
 
 Ese consejo no está mal — simplemente está incompleto.
 
-He visto a amigas acertar perfectamente con la forma de la montura y, aun así, verse… raro. Las gafas encajaban con la estructura de su rostro, pero algo en el color hacía que su piel pareciera apagada, pálida o sin vida.
+Es frecuente acertar con la forma de la montura y, aun así, verse raro: encaja con la estructura ósea, pero el color de la montura apaga la piel, la vuelve pálida o sin vida.
 
 **¿El ingrediente que falta? Tu subtono de piel y tu estación de color.**
 
@@ -104,7 +104,7 @@ Tus pómulos son tu mejor rasgo. Elige monturas que complementen, no compitan.
 
 ## Paso 3: Lo que todos olvidan — Color de montura y tono de piel
 
-Aquí es donde la mayoría de guías terminan. Pero para mí, aquí es donde empieza la verdadera magia.
+Aquí es donde la mayoría de guías terminan — y donde el subtono marca la mayor diferencia.
 
 Tu subtono de piel se clasifica en tres categorías, y cada una tiene colores de montura que la hacen brillar — y colores que la hacen lucir cansada.
 
@@ -249,11 +249,9 @@ Tu cabello enmarca tu rostro igual que las gafas de sol. Necesitan funcionar jun
 
 ## Cómo la tecnología lo está haciendo más fácil
 
-Esto es lo que me emociona: ya no tienes que resolver todo esto por ensayo y error.
+Ya no tienes que resolverlo todo solo por ensayo y error.
 
-Las herramientas de análisis facial con inteligencia artificial pueden ahora sugerir tu forma de rostro probable y estilos de montura — en segundos, a partir de una sola foto. Algunas van más allá, analizando tu tono de piel y estación de color para recomendar colores de montura también.
-
-Probé una de estas herramientas recientemente y me sorprendió genuinamente. Identificó mi forma de rostro como "ovalado con pómulos ligeramente altos" (que mi óptico me había dicho hace años) y sugirió estilos de montura específicos con recomendaciones de color basadas en mi subtono.
+Las herramientas de análisis facial con IA pueden sugerir en segundos tu forma de rostro probable y estilos de montura a partir de una foto. Algunas analizan también tono de piel y estación de color para recomendar colores de montura; los resultados pueden ser muy concretos (por ejemplo, ovalado con pómulos ligeramente altos más estilos alineados con tu subtono).
 
 Herramientas gratuitas como [aicoloranalysis.io](/glasses-analysis) combinan la detección de forma facial con análisis de color para darte una recomendación integral de gafas — cubriendo tanto forma como color en un solo análisis.
 

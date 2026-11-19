@@ -13,7 +13,7 @@ Getting typed as a Winter is exciting. You're in the most dramatic, high-contras
 
 But here's the thing — there are **three distinct Winter sub-seasons**, and lumping them together is like saying "all ice cream is the same." A Deep Winter in icy pastels will look washed out. A Bright Winter in dark muted shades will look heavy. And a True Winter in warm-leaning jewel tones will just look... off.
 
-I've watched countless people make this exact mistake. They hear "Winter" and immediately reach for black, navy, and nothing else. Or they buy every jewel tone they can find without considering whether their specific Winter type can carry the depth, coolness, or brightness of each shade.
+Countless people make this exact mistake. They hear "Winter" and immediately reach for black, navy, and nothing else. Or they buy every jewel tone they can find without considering whether their specific Winter type can carry the depth, coolness, or brightness of each shade.
 
 In this guide, I'll break down **Deep Winter**, **True Winter**, and **Bright Winter** — their defining traits, their best and worst colors, and exactly how to figure out which one matches your natural coloring.
 

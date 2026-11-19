@@ -202,4 +202,4 @@ Farbanalyse gibt Ihnen die Wissenschaft. Stil gibt Ihnen die Kunst. Die Magie en
 - [Farbanalyse: Der vollständige Leitfaden](/de/color-analysis) — Alles, was Sie wissen müssen, um Ihre besten Farben zu finden
 - [Wie Farbtheorie aus dem Kunstunterricht auf Ihren persönlichen Stil anwendbar ist](/de/blog/color-theory-personal-style) — Die Wissenschaft hinter funktionierenden Farbkombinationen
 - [So bauen Sie eine Kapselgarderobe für Ihre Farbsaison](/de/blog/capsule-wardrobe-color-season) — Bauen Sie zuerst eine Basisgarderobe in Ihren besten Farben
-- [Ich trug 30 Tage nur meine „Saisonfarben" — das ist passiert](/de/blog/wearing-season-colors-30-days) — Was striktes Palettenfolgen über Flexibilität lehrte
+- [30-Tage-Farbtyp-Challenge: Ein Plan zum Mitmachen](/de/blog/wearing-season-colors-30-days) — Ein Wochenplan, um 30 Tage lang nur deine Farbtyp-Farben zu tragen

@@ -12,7 +12,7 @@ Du hast herausgefunden, dass du ein Soft Autumn oder Bright Spring bist. Viellei
 
 Aber hier ist das Problem, über das niemand spricht: Deinen Farbtyp zu kennen, repariert nicht automatisch deinen Kleiderschrank.
 
-Ich erinnere mich, wie ich meine „Soft Summer“-Palette anstarrte — diese staubigen Rosé-Töne, sanften Lavendeltöne und weichen Blaugrau-Nuancen — und dachte: „Super. Und wie mache ich daraus echte Outfits, die ich Montag zur Arbeit trage?“
+Vielleicht starrst du auf deine Soft-Summer-Palette — staubiges Rosa, sanfter Lavendel, weiches Blaugrau — und denkst: „Super. Und wie mache ich daraus echte Outfits für Montag im Büro?“
 
 Wenn du gerade an diesem Punkt bist, ist dieser Guide für dich. Ich führe dich Schritt für Schritt durch den Aufbau einer Capsule Wardrobe, die komplett auf deinem Farbtyp basiert — Stück für Stück, ohne Overwhelm.
 
@@ -160,7 +160,7 @@ Du musst nicht morgen 30 Teile kaufen. Realistischer Zeitplan:
 
 ## Häufige Fehler vermeiden
 
-Nach über einem Jahr mit meiner eigenen Capsule Wardrobe — Fallstricke, die ich meide:
+Beim Aufbau einer farbtypbasierten Capsule Wardrobe lohnen sich diese Fallstricke zu vermeiden:
 
 **1. Alles neutral.** Dein Schrank wirkt langweilig bei 100 % Basics. Du brauchst Akzente für Freude und Selbstausdruck.
 

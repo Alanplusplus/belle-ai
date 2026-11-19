@@ -8,7 +8,7 @@ image: "/images/blog/best-colors-for-warm-undertones.webp"
 
 ## Ihr warmer Unterton ist ein Superpower — wenn Sie wissen, wie Sie ihn nutzen
 
-Jahrelang habe ich eisige Pastelltöne und kühle Grautöne getragen, weil ein Kaufhaus-Quiz mir versicherte, ich sehe „in allen Neutraltönen großartig aus“. Erst als ich meinen warmen Unterton wirklich verstand, wurde mir klar, warum manche Outfits mich sonnenverwöhnt und lebendig wirken ließen, während andere mich schon vor dem Mittag müde aussehen ließen.
+Viele Menschen greifen zu eisigen Pastelltönen und kühlen Grautönen, weil ein Schnell-Quiz im Kaufhaus versichert: „In allen Neutraltönen sieht man großartig aus.“ Kennt man seinen warmen Unterton, wird das Muster klar: manche Outfits wirken sonnverwöhnt und lebendig, kühle Neutrals lassen einen schon vor dem Mittag müde aussehen.
 
 Wenn Sie warme Untertöne haben — goldene, pfirsichfarbene oder gelbliche Nuancen unter Ihrer Hautoberfläche — verstärken bestimmte Farben diese natürliche Wärme und lassen Sie von innen strahlen. Die falschen Farben hingegen können Sie blass wirken lassen oder Ihren Teint stumpf erscheinen lassen.
 
@@ -79,7 +79,7 @@ Erdtöne sind das Heimspiel für warme Untertöne. Diese Schattierungen lassen S
 - Karamell
 - Bernstein
 
-Ich habe mindestens ein Terracotta- oder rostfarbenes Oberteil ständig in Rotation — es ist das Äquivalent zu einem Sofort-Filter für warme Haut.
+Ein Terracotta- oder rostfarbenes Oberteil nahe am Gesicht wirkt wie ein Sofort-Filter auf warmer Haut — mindestens eines in Rotation lohnt sich.
 
 ### Grün
 
@@ -226,7 +226,7 @@ Lila funktioniert für warme Untertöne am besten als Akzent statt als Ganzkörp
 - Blau-Schwarz
 - Violett-basierte Farben
 
-Ich bin vor ein paar Jahren von Aschbraun zu warmem Kastanienbraun gewechselt, und die Anzahl der „du siehst so gesund aus“-Komplimente war wirklich überraschend. Dasselbe Gesicht, anderer Unterton in den Haaren — riesiger Unterschied.
+Der Wechsel von Aschbraun zu warmem Kastanienbraun ist ein häufiges Upgrade: Das Haar wirkt wärmer auf goldener Haut, das Gesicht oft gesünder. Dasselbe Gesicht, anderer Unterton in den Haaren — riesiger Unterschied.
 
 ---
 
@@ -299,7 +299,7 @@ Ihren Sub-Saison-Typ zu kennen, verfeinert Ihre Palette von „generell warm“ 
 
 **Schritt 1:** Verankern Sie mit warmen Neutraltönen (Kamel, Creme, Schokoladenbraun, warmes Marineblau)
 
-**Schritt 2:** Fügen Sie 2–3 Akzentfarben hinzu, die Ihnen durchgehend Komplimente einbringen (die meisten warm getönten Menschen haben eine „Signaturfarbe“ — meine ist Terracotta)
+**Schritt 2:** Fügen Sie 2–3 Akzentfarben hinzu, die Ihnen durchgehend Komplimente einbringen (viele Warmgetönte setzen auf eine Signaturfarbe wie Terracotta oder Oliv)
 
 **Schritt 3:** Halten Sie Oberteile, Schals und alles in Gesichtsnähe in Ihren besten Farben. Hosen können flexibler sein.
 

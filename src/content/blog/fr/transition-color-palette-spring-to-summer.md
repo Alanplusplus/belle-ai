@@ -8,7 +8,7 @@ image: "/images/blog/transition-color-palette-spring-to-summer.webp"
 
 ## La crise de dressing qui revient chaque juin
 
-Chaque année, vers la fin mai, je me heurte au même mur. Mon dressing déborde de pièces pêche, corail et jaune doré qui m'ont fait rayonner tout le printemps — et soudain, elles semblent trop lourdes, trop chaudes, trop *intenses*. La lumière a changé. L'air est différent. Et les couleurs qui me rendaient radieuse en avril me donnent l'air légèrement rouge en juin.
+Fin mai a tendance à casser l'élan de votre garde-robe printanière. Les pièces pêche, corail et jaune doré qui semblaient radieuses en avril deviennent soudain trop lourdes, trop chaudes, trop *intenses*. La lumière a changé. L'air est différent — et dès juin, ces mêmes couleurs peuvent donner à la peau un air légèrement rouge.
 
 Si vous avez déjà eu l'impression que votre garde-robe ne fonctionne plus quand la météo bascule, ce n'est pas dans votre tête. La transition du printemps à l'été n'est pas qu'une question de température — c'est un changement de lumière. Et ce décalage de lumière naturelle influence réellement la façon dont les couleurs interagissent avec votre peau.
 
@@ -48,7 +48,7 @@ Ce sont vos **couleurs pont** — les pièces qui méritent leur place dans le d
 
 ## Une stratégie de transition pratique (semaine par semaine)
 
-Pas besoin de refaire entièrement votre garde-robe le 1er juin. Voici comment je gère le changement :
+Pas besoin de refaire entièrement votre garde-robe le 1er juin. Voici une façon pratique de gérer le changement :
 
 ### Semaines 1–2 : commencer à adoucir
 

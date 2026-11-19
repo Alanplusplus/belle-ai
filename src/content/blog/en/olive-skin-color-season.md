@@ -19,9 +19,9 @@ faq:
 
 **Quick answer:** Olive skin most often lands in Soft Autumn, Soft Summer, Deep Autumn or Deep Winter. Warm olive points to the Autumn family first and cool olive to Summer or Winter, while contrast separates the Soft version from the Deep one. Spring and Bright seasons are uncommon because olive's green-grey cast mutes clarity.
 
-I hear the same story in almost every olive undertone consultation. Someone finishes a color season quiz — sometimes they even book professional draping — and leaves with three different answers and zero confidence.
+Many people with olive undertones finish a color season quiz — sometimes they even book professional draping — and still leave with three different answers and zero confidence.
 
-Soft Autumn feels close until terracotta near the face makes them look washed out. The algorithm suggests True Winter, but icy pink lipstick turns their skin ash-grey. Worst of all is "Neutral" with no palette attached, as if olive skin has no colors at all.
+Soft Autumn feels close until terracotta near the face makes you look washed out. The algorithm suggests True Winter, but icy pink lipstick turns skin ash-grey. Worst of all is "Neutral" with no palette attached, as if olive skin has no colors at all.
 
 If that sounds familiar, you are not doing anything wrong. Classic seasonal color analysis was designed for skin that reads clearly warm or clearly cool, without a green-grey layer on top. Olive undertone is a modifier, not a neat third box on a chart. Once you treat it that way, the four seasons below start to click.
 
@@ -53,7 +53,7 @@ Accept olive as a modifier on warm or cool base skin, not as "just neutral," and
 
 ## The Four Seasons Olive Skin Most Often Belongs To
 
-In my practice, most olive-toned clients land in one of these four. Each combines **muted chroma** with warm or cool undertone and medium or deep overall value.
+Most olive-toned skin tends to land in one of these four. Each combines **muted chroma** with warm or cool undertone and medium or deep overall value.
 
 | Season | Undertone | Depth & contrast | One-line vibe |
 | --- | --- | --- | --- |
@@ -66,7 +66,7 @@ Below I break down how to recognize each on olive skin, plus clothing, makeup, a
 
 ### Soft Autumn — The Classic Olive Season
 
-**Profile:** Muted, warm, medium depth. This is the season I see most on warm-olive skin.
+**Profile:** Muted, warm, medium depth. This is the most common season match for warm-olive skin.
 
 **How to recognize it on olive skin:**
 
@@ -166,7 +166,7 @@ Knowing what you are **not** saves time, money, and makeup frustration.
 
 ### Spring family (Light Spring, Warm Spring, Bright Spring)
 
-Spring needs clear, warm, often light or bright colour. Olive's green-grey layer adds muting. When an olive client types as Bright Spring, I almost always re-test: they are usually Soft Autumn or a light Soft Summer with warm olive.
+Spring needs clear, warm, often light or bright colour. Olive's green-grey layer adds muting. If you are olive and typed as Bright Spring, re-check with draping: Soft Autumn or a light Soft Summer with warm olive is often the better fit.
 
 ### True / primary Summer and Autumn
 
@@ -188,7 +188,7 @@ Use this flow at home before you buy a whole new wardrobe.
 
 ### Step 1: Confirm olive undertone
 
-Season typing only works if undertone is right. Check green cast, foundation mismatch, and how white fabric looks on your neck. My [olive undertone guide](/blog/olive-undertone-guide) walks through reliable tests.
+Season typing only works if undertone is right. Check green cast, foundation mismatch, and how white fabric looks on your neck. Our [olive undertone guide](/blog/olive-undertone-guide) walks through reliable tests.
 
 ### Step 2: Split warm olive vs cool olive
 

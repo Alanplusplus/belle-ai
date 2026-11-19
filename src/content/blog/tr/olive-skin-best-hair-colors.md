@@ -9,9 +9,9 @@ image: "/images/blog/olive-skin-best-hair-colors.webp"
 
 ## Saç Rengi Neden Zeytin Ten İçin Daha Önemli?
 
-İki yıl boyunca beni yorgun göstermeyen bir saç rengi aradım. Altın sarısı da seçsem, soğuk kül kahverengi de seçsem, cildim her zaman biraz cansız görünüyordu. Zeytin alt tonlarının benzersiz bir optik zorluk yarattığını anladığımda her şey yerine oturdu.
+Zeytin alt tonunuz varsa altın sarısı da soğuk kül kahverengi de denemiş olabilirsiniz; cilt yine de biraz cansız görünebilir. Bu çoğu zaman salon hatası değil, zeytin tenin optik zorluğudur.
 
-Zeytin tenlerde bulunan yeşilimsi gri pigment, saf sıcak veya soğuk tenlerde harika görünen saç renklerinin zeytin teni sarımsı, soluk veya cansız gösterebileceği anlamına gelir. Ancak doğru ton seçildiğinde zeytin ten inanılmaz ışıldar. Bu rehber, sıcak zeytin ile soğuk zeytinin farkından mevsimsel tip bazında spesifik renk önerilerine kadar öğrendiğim her şeyi kapsar.
+Zeytin tenlerde bulunan yeşilimsi gri pigment, saf sıcak veya soğuk tenlerde harika görünen saç renklerinin zeytin teni sarımsı, soluk veya cansız gösterebileceği anlamına gelir. Ancak doğru ton seçildiğinde zeytin ten inanılmaz ışıldar. Bu rehber, sıcak zeytin ile soğuk zeytin kurallarından mevsimsel tip bazında renk önerilerine kadar saç rengi eşleştirmesini kapsar.
 
 ---
 
@@ -86,7 +86,7 @@ Sıcak mı soğuk mu olduğunuzdan emin değilseniz, orta yol en güvenli seçim
 
 ### Bastırılmış Kırmızılar ve Bordolar
 
-Parlak bakırın aksine, bastırılmış bordo ve şarap tonları bakır olmadan zeytin tene zenginlik katar. Koyu vişne, koyu kızıl kahve veya bastırılmış şarap rengi düşünün — itfaiye kırmızısı değil. Bu tonların özellikle orta derinlikteki zeytin tenlerde etkileyici olduğunu fark ettim.
+Parlak bakırın aksine, bastırılmış bordo ve şarap tonları bakır olmadan zeytin tene zenginlik katar. Koyu vişne, koyu kızıl kahve veya bastırılmış şarap rengi düşünün — itfaiye kırmızısı değil. Bu tonlar özellikle orta derinlikteki zeytin tenlerde etkileyicidir.
 
 ### Yumuşak Bronde ve Koyu Sarı
 
@@ -181,7 +181,7 @@ Renk özellikleriniz derin ve yüksek kontrastlı. Cesur, soğuk eğilimli renkl
 
 ## Modern Bir Kısayol: Yapay Zekâ Renk Analizi
 
-Sıcak mı soğuk mu zeytin olduğunuzdan — ya da hangi mevsimsel tipe ait olduğunuzdan — emin değilseniz, yapay zekâ renk analizi araçları artık tek bir fotoğraftan alt tonunuzu önerebiliyor. Bu, bir mevsim seçmek ve saç rengi kararları için başlangıç noktası sunar. Zeytin ten için özellikle faydalı buluyorum çünkü yeşilimsi gri ton aynada fark edilmesi zor olabilir; tüm fotoğrafa bakan bir yapay zeka görüntü modeli bazen bunu yakalayabilir, yine de ışık ve kamera ayarları sonucu etkiler.
+Sıcak mı soğuk mu zeytin olduğunuzdan — ya da hangi mevsimsel tipe ait olduğunuzdan — emin değilseniz, yapay zekâ renk analizi araçları artık tek bir fotoğraftan alt tonunuzu önerebiliyor. Bu, bir mevsim seçmek ve saç rengi kararları için başlangıç noktası sunar. Zeytin ten için özellikle faydalıdır; yeşilimsi gri ton aynada fark edilmesi zor olabilir, tüm fotoğrafa bakan bir yapay zeka görüntü modeli bazen bunu yakalayabilir, yine de ışık ve kamera ayarları sonucu etkiler.
 
 ---
 

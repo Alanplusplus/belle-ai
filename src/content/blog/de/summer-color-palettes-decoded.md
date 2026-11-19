@@ -13,7 +13,7 @@ Deine Farbanalyse hat bestätigt, was du vermutet hast: Du bist ein Sommertyp. D
 
 Aber hier wird es kompliziert — im 12-Jahreszeiten-System gibt es **drei verschiedene Sommer-Subtypen**, und sie zu verwechseln kann den Unterschied zwischen strahlend und fahl ausmachen.
 
-Ich habe mit Frauen gearbeitet, die jahrelang „kühle Pastelle“ kauften, weil sie wussten, dass sie Sommertypen sind — und erst später merkten, dass sie Cool-Summer-Töne griffen, obwohl sie eigentlich Soft Summer sind. Der Unterton stimmte, die Intensität war völlig daneben.
+Viele Menschen kaufen jahrelang „kühle Pastelle“, weil sie wissen, dass sie Sommertypen sind — und merken erst später, dass sie Cool-Summer-Töne griffen, obwohl sie eigentlich Soft Summer sind. Der Unterton stimmte, die Intensität war völlig daneben.
 
 In diesem Guide erkläre ich **Cool Summer**, **True Summer** und **Soft Summer** — ihre prägenden Merkmale, beste und schlechteste Farben und wie du genau erkennst, welcher du bist.
 

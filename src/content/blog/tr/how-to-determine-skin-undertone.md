@@ -36,7 +36,7 @@ Doğal gün ışığında iç bileğinizdeki damarlara bakın:
 | Yeşil | Sıcak |
 | Mavi-yeşil karışımı | Nötr |
 
-**Doğruluk:** ~%70. Açık cilt tonlarında en iyi sonuç verir. Koyu ciltte damarları görmek zor olabilir.
+**Doğruluk:** Orta. Açık cilt tonlarında en iyi sonuç verir. Koyu ciltte damarları görmek zor olabilir.
 
 ### Yöntem 2: Altın ve Gümüş Testi
 
@@ -113,7 +113,7 @@ Hızlı bir ikinci görüş. Belle AI gibi yapay zekâ araçları, alt tonunuzu 
 
 ## Özel Durum: Nötr Alt Ton
 
-İnsanların yaklaşık %20-30'u nötr alt tona sahiptir. Nötr olduğunuzun işaretleri:
+Birçok kişi nötr alt tona sahiptir. Nötr olduğunuzun işaretleri:
 
 - Testler karışık sonuçlar veriyor (bazıları sıcak, bazıları soğuk diyor)
 - Hem altın hem gümüş iyi görünüyor

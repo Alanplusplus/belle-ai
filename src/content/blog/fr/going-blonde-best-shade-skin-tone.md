@@ -10,7 +10,7 @@ image: "/images/blog/going-blonde-best-shade-skin-tone.webp"
 
 Vous avez vu les photos. Une célébrité défile sur le tapis rouge en blond platine lumineux et vous pensez : *je veux ça.* Vous montrez la photo à votre coloriste, passez trois heures au fauteuil et ressortez... fatiguée. Terne. Peut-être même un peu orange.
 
-Je suis passée par là. Après des années à étudier l'interaction entre couleur des cheveux et teint, j'ai constaté que le problème ne vient presque jamais de « le blond ne vous va pas ». Il vient du choix du *mauvais blond pour votre sous-ton et votre saison colorimétrique.* La différence entre miel et cendré n'est pas une question de préférence — c'est la différence entre rayonner ou paraître fade.
+Si cela vous parle, le problème ne vient presque jamais de « le blond ne vous va pas ». Il vient du choix du *mauvais blond pour votre sous-ton et votre saison colorimétrique.* La différence entre miel et cendré n'est pas une question de préférence — c'est la différence entre rayonner ou paraître fade.
 
 Dans ce guide, je vous explique comment associer une nuance de blond à votre teint, sous-ton et saison — pour entrer au salon (ou dans votre salle de bain) avec confiance plutôt qu'avec l'espoir nourri par Pinterest.
 
@@ -34,7 +34,7 @@ Il y a aussi le facteur de décoloration. Devenir blonde exige presque toujours 
 
 Enfin, le blond est impitoyable d'une façon dont les tons foncés ne le sont pas. Un brun légèrement trop froid peut paraître « riche ». Un blond légèrement trop froid paraît « terne » ou « gris ». Un blond trop chaud paraît « cuivré » ou « cheap ». La marge d'erreur est mince, d'où l'importance du matching de sous-ton ici plus qu'ailleurs.
 
-Un autre facteur complique les choses : **votre couleur naturelle.** Partir de châtain foncé (niveau 3) ou de châtain clair (niveau 6), on peut aboutir au « blond », mais le traitement — et la chaleur qui émerge — seront totalement différents. J'ai vu deux amies demander la même photo « blond miel » et ressortir avec des résultats opposés, leurs niveaux de départ étant à trois tons d'écart.
+Un autre facteur complique les choses : **votre couleur naturelle.** Partir de châtain foncé (niveau 3) ou de châtain clair (niveau 6), on peut aboutir au « blond », mais le traitement — et la chaleur qui émerge — seront totalement différents. Deux personnes peuvent demander la même photo « blond miel » et ressortir avec des résultats opposés si leurs niveaux de départ diffèrent de trois tons.
 
 ### Les blonds les plus demandés, décryptés
 
@@ -59,7 +59,7 @@ Si vous hésitez, commencez par les bases : veines du poignet à la lumière nat
 
 ### Blond froid vs. chaud vs. neutre
 
-Le tableau que j'aurais voulu voir avant mon premier désastre au salon :
+Un tableau pratique à consulter avant votre rendez-vous au salon :
 
 | Catégorie | Sous-ton | Exemples | Idéal pour | Éviter si |
 |---|---|---|---|---|
@@ -67,9 +67,9 @@ Le tableau que j'aurais voulu voir avant mon premier désastre au salon :
 | **Blond chaud** | Chaud (peau jaune, dorée, pêche) | Miel, doré, beurre, champagne, caramel | Sous-tons chauds et neutre-chauds ; teint ensoleillé | Sous-tons froids — reflets cuivrés, orange ou « cheap » |
 | **Blond neutre** | Neutre (équilibre chaud/froid) | Sable, blé, beige doux, bronde clair | Sous-tons neutres ; or et argent conviennent | Extrêmes — ni platine glacé ni or cuivré profond |
 
-**Les blonds froids** contiennent des pigments bleu, violet ou cendré qui neutralisent jaune et chaleur. Sur peau froide, look éditorial — platine scandinave ou balayage cendré sophistiqué. Sur peau chaude, ces pigments heurtent votre base dorée et vous font paraître grise ou terne. [Le guide Vogue du blond parfait](https://www.vogue.com/article/how-to-find-the-perfect-blonde-for-your-skin-tone) insiste sur ce matching de température comme base de toute transformation réussie.
+**Les blonds froids** contiennent des pigments bleu, violet ou cendré qui neutralisent jaune et chaleur. Sur peau froide, look éditorial — platine scandinave ou balayage cendré sophistiqué. Sur peau chaude, ces pigments heurtent votre base dorée et vous font paraître grise ou terne. Faire correspondre la température est le fondement de toute transformation blond réussie.
 
-**Les blonds chauds** portent des pigments dorés, cuivrés ou miel qui font écho à la chaleur de votre peau. Ce glow ensoleillé et sain qui paraît naturel, pas artificiel. En expérience, les blonds chauds sont les plus demandés — et les plus souvent appliqués aux mauvais sous-tons. Une personne froide en miel voit l'or des cheveux amplifier le rose de la peau, effet rubicond involontaire.
+**Les blonds chauds** portent des pigments dorés, cuivrés ou miel qui font écho à la chaleur de votre peau. Ce glow ensoleillé et sain qui paraît naturel, pas artificiel. Les blonds chauds comptent parmi les plus demandés — et sont souvent appliqués aux mauvais sous-tons. Une personne froide en miel voit l'or des cheveux amplifier le rose de la peau, effet rubicond involontaire.
 
 **Les blonds neutres** sont au milieu — ni clairement chauds ni froids. Point de départ le plus sûr si vous hésitez, mais peuvent paraître « plats » avec des traits très contrastés. Sable et blé fonctionnent magnifiquement sur sous-tons neutres et sur celles dont l'[analyse colorimétrique en 12 saisons](/fr/color-analysis) les place en saisons mélangées ou douces.
 
@@ -81,7 +81,7 @@ La peau olivâtre — avec une nuance verdâtre sous la surface — brise la bin
 
 Mythe tenace : le blond « ne marche pas » sur peaux profondes. Si — mais les règles de sélection s'appliquent. Peau profonde chaude : miel riche, caramel ou bronde doré éblouissants. Peau profonde froide : cendré, beige froid, voire platine si le contraste le permet.
 
-En expérience, l'erreur sur peaux profondes n'est pas devenir blonde — c'est choisir trop cendré (gris sur peau riche) ou trop chaud (cuivré plutôt que doré). Le sweet spot : un blond avec assez de profondeur et chaleur/froideur pour compléter la richesse naturelle, pas une clarté plate et unidimensionnelle.
+Sur les peaux profondes, l'erreur n'est généralement pas devenir blonde — c'est choisir trop cendré (gris sur peau riche) ou trop chaud (cuivré plutôt que doré). Le sweet spot : un blond avec assez de profondeur et chaleur/froideur pour compléter la richesse naturelle, pas une clarté plate et unidimensionnelle.
 
 ### Comment le niveau de contraste affecte votre blond
 
@@ -154,13 +154,13 @@ Tout le monde ne rentre pas dans une case — c'est normal. Entre Soft Autumn et
 
 ## Conseils pratiques : éviter un désastre blond au salon (et à la maison)
 
-Connaître la nuance idéale est la moitié du combat. L'autre moitié : l'exécution — j'ai vu des personnes maîtrisant la théorie des couleurs finir cuivrées, abîmées ou inégales parce que le processus était mal géré.
+Connaître la nuance idéale est la moitié du combat. L'autre moitié : l'exécution — des personnes maîtrisant la théorie des couleurs peuvent finir cuivrées, abîmées ou inégales si le processus est mal géré.
 
 ### Avant de devenir blonde
 
-**Commencez par un test mèche.** Toujours. Salon ou kit maison, une mèche sous la couronne révèle comment vos cheveux s'éclaircissent et quel pigment émerge. Cette étape évite plus de désastres que toute autre.
+**Commencez par un test mèche.** Toujours. Salon ou kit maison, une mèche sous la couronne révèle comment vos cheveux s'éclaircissent et quel pigment émerge. Cette étape évite plus de désastres que presque tout le reste.
 
-**Soyez honnête sur le niveau de départ.** Du quasi-noir (1–3) au platine n'est pas une séance — qui prétend le contraire vous prépare à la casse. Délais réalistes : 2–4 séances espacées. Le [*Journal of Cosmetic Dermatology*](https://onlinelibrary.wiley.com/journal/14732165) note que des décolorations répétées à court intervalle augmentent dommages cuticulaires et porosité.
+**Soyez honnête sur le niveau de départ.** Du quasi-noir (1–3) au platine n'est pas une séance — qui prétend le contraire vous prépare à la casse. Délais réalistes : 2–4 séances espacées. Des décolorations répétées à court intervalle augmentent les dommages cuticulaires et la porosité.
 
 **Apportez le langage du sous-ton, pas seulement des photos.** Plutôt qu'une photo de célébrité : « Sous-ton froid, Light Summer — blond cendré niveau 9 avec dimension subtile. » La précision rapproche de l'objectif mieux qu'un board Pinterest.
 
@@ -172,7 +172,7 @@ Connaître la nuance idéale est la moitié du combat. L'autre moitié : l'exéc
 
 **Demandez gloss ou toner juste après décoloration.** Cheveux bruts jaunes/orange — normal. Le toner crée votre vrai blond. Sauter ou bâcler = cuivré en sortant.
 
-**Vérifiez sous plusieurs lumières.** L'éclairage salon est flatteur et souvent chaud. Sortez ou vérifiez près d'une fenêtre. J'ai validé sous lumières salon pour découvrir un rendu totalement différent en jour.
+**Vérifiez sous plusieurs lumières.** L'éclairage salon est flatteur et souvent chaud. Sortez ou vérifiez près d'une fenêtre. Beaucoup valident sous lumières salon et découvrent un rendu totalement différent en plein jour.
 
 ### À la maison
 

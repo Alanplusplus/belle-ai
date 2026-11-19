@@ -6,13 +6,11 @@ tags: ["color analysis", "wedding outfit", "color season", "fashion tips", "occa
 image: "/images/blog/wedding-guest-outfit-colors.webp"
 ---
 
-## The Dress I Almost Wore to My Best Friend's Wedding
+## When the Perfect Dress Fights Your Complexion
 
-Last spring, I found what I thought was the perfect wedding guest dress: a bright coral midi with a fitted bodice and flowy skirt. It looked incredible online. It looked decent on the hanger. But the moment I tried it on and stood in front of the mirror, something was off.
+You have probably had this moment: a bright coral midi looks incredible online and fine on the hanger, but in the mirror your skin looks sallow, shadows under the eyes deepen, and the color competes with your face instead of framing it. Swap to a dusty mauve or another shade from your seasonal palette, and the same silhouette can suddenly photograph beautifully.
 
-My skin looked sallow. My under-eye circles seemed deeper. The color was fighting my face instead of framing it. I returned the dress two days before the wedding and panic-bought a dusty mauve alternative that I wasn't sure about — and ended up getting more compliments on it than anything I'd worn in months.
-
-That's when it clicked: the color of your outfit matters more than the cut, the brand, or the price tag. And if you know your color season, choosing the right wedding guest outfit becomes almost effortless.
+The lesson is straightforward: for wedding guests, color often matters more than cut, brand, or price tag. When you know your color season, choosing a flattering guest outfit gets much easier.
 
 ---
 
@@ -141,7 +139,7 @@ The same "emerald green" looks completely different in matte crepe vs. satin vs.
 
 ## How to Test Before You Buy
 
-Here's my three-step system for avoiding color regret:
+A three-step system helps you avoid color regret:
 
 **Step 1: Hold it to your face in natural light.** Not store lighting — actual daylight near a window. Does your skin look even and bright, or does it look gray/yellow/red? Trust the first impression.
 

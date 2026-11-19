@@ -8,7 +8,7 @@ image: "/images/blog/transition-color-palette-spring-to-summer.webp"
 
 ## Her Haziran Tekrarlayan Dolap Krizi
 
-Her yıl Mayıs sonlarına doğru aynı duvara çarpıyorum. Dolabım tüm ilkbahar boyunca parlatıp ışıldattığım sıcak şeftali, mercan ve altın sarısı parçalarla dolu — ama birdenbire fazla ağır, fazla sıcak, fazla *abartılı* hissediyorlar. Işık değişti. Hava farklı. Nisan'da beni ışıldatan renkler Haziran'da hafifçe kızarmış göstermeye başlıyor.
+Mayıs sonu, ilkbahar gardırobunuzun ivmesini kırmanın klasik zamanıdır. Nisan'da parlak görünen sıcak şeftali, mercan ve altın sarısı parçalar birdenbire fazla ağır, fazla sıcak, fazla *abartılı* gelebilir. Işık değişir, hava farklı hissedilir — Haziran'da aynı renkler cildinizde hafifçe kızarmış okunmaya başlayabilir.
 
 Hava değişince gardırobunuzun artık işe yaramadığını hissettiyseniz, hayal gücünüz oynamıyor. İlkbahardan yaz geçişi sadece sıcaklık değişimi değil — ışık değişimidir. Ve doğal ışıktaki bu kayma, renklerin cildinizle nasıl etkileşime girdiğini gerçekten değiştirir.
 
@@ -48,7 +48,7 @@ Bunlar **köprü renkleriniz** — geçiş boyunca her iki mevsimin ışığınd
 
 ## Pratik Geçiş Stratejisi (Hafta Hafta)
 
-1 Haziran'da gardırobunuzu baştan aşağı yenilemenize gerek yok. Geçişi ben şöyle yönetiyorum:
+1 Haziran'da gardırobunuzu baştan aşağı yenilemenize gerek yok. Geçiş için pratik bir yol:
 
 ### 1–2. Haftalar: Soluklaştırmaya Başlayın
 

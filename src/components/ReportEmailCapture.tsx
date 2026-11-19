@@ -28,11 +28,31 @@ function writeSent(taskId: string, email: string) {
 }
 
 /**
- * 锁定报告底部的「把结果发到我的邮箱」：还没准备好付费的人留下邮箱，我们发一封预览邮件，之后最多再提醒一次。
+ * 锁定报告上的「把结果发到我的邮箱」：未付费的人想保存 / 下载报告时，不给下载，改成把结果发到她的邮箱——
+ * 我们由此拿到邮箱，发一封预览邮件，之后最多再提醒一次。
  * 邮件里只有锁定状态下页面本来就显示的内容（后端同一份口径生成），付费才有的部分不会出现在邮件里。
+ * 放在原来「下载 PDF / 保存海报」按钮的位置（用户想带走结果的那一刻），而不是埋在报告最底下。
+ * variant="lens"：独立工具（发色 / 眼镜 / 彩妆…）结果页上的同一个入口——邮件是工具的免费文字分析，只发一封、之后不再提醒，
+ * 所以文案不提「提醒」。同一个后端接口，由后端按任务类型决定发哪封邮件。
  */
-export function ReportEmailCapture({ taskId, lang }: { taskId: string; lang: string }) {
+export function ReportEmailCapture({
+  taskId,
+  lang,
+  className = "mt-4",
+  placement = "report",
+  variant = "report",
+}: {
+  taskId: string;
+  lang: string;
+  className?: string;
+  placement?: string;
+  variant?: "report" | "lens";
+}) {
   const t = useTranslations("report");
+  const copy =
+    variant === "lens"
+      ? ({ title: "lensEmailTitle", desc: "lensEmailDesc", note: "lensEmailNote" } as const)
+      : ({ title: "emailTitle", desc: "emailDesc", note: "emailNote" } as const);
   // 只在用户点了「解锁」入口附近渲染（纯客户端），初始值直接读本地缓存不会造成 hydration 不一致
   const [sentTo, setSentTo] = useState(() => readSent(taskId));
   const [email, setEmail] = useState(() => getCachedEmail() ?? getSavedCheckoutEmail());
@@ -41,7 +61,7 @@ export function ReportEmailCapture({ taskId, lang }: { taskId: string; lang: str
 
   if (sentTo) {
     return (
-      <p role="status" className="report-serif mt-4 rounded-xl border border-gold/40 bg-white/70 px-4 py-3 text-center text-sm leading-relaxed text-foreground/80">
+      <p role="status" className={`report-serif ${className} rounded-xl border border-gold/40 bg-white/70 px-4 py-3 text-center text-sm leading-relaxed text-foreground/80`}>
         {t("emailDone", { email: sentTo })}
       </p>
     );
@@ -62,7 +82,7 @@ export function ReportEmailCapture({ taskId, lang }: { taskId: string; lang: str
     }
     setPhase("sending");
     setError(null);
-    trackEvent("report_email_submit", { task: taskId });
+    trackEvent("report_email_submit", { task: taskId, placement, kind: variant });
     try {
       const res = await fetch("/api/report-email", {
         method: "POST",
@@ -88,9 +108,9 @@ export function ReportEmailCapture({ taskId, lang }: { taskId: string; lang: str
   };
 
   return (
-    <form onSubmit={submit} noValidate className="mt-4 rounded-xl border border-gold/40 bg-white/70 px-4 py-4">
-      <p className="report-serif text-sm font-semibold">{t("emailTitle")}</p>
-      <p className="report-serif mt-1 text-[0.8rem] leading-relaxed text-muted-foreground">{t("emailDesc")}</p>
+    <form onSubmit={submit} noValidate className={`${className} rounded-xl border border-gold/40 bg-white/70 px-4 py-4`}>
+      <p className="report-serif text-sm font-semibold">{t(copy.title)}</p>
+      <p className="report-serif mt-1 text-[0.8rem] leading-relaxed text-muted-foreground">{t(copy.desc)}</p>
       <div className="mt-3 flex flex-col gap-2 sm:flex-row">
         <input
           type="email"
@@ -119,7 +139,7 @@ export function ReportEmailCapture({ taskId, lang }: { taskId: string; lang: str
           {t(error === "invalid" ? "emailInvalid" : error === "limit" ? "emailLimit" : "emailFailed")}
         </p>
       )}
-      <p className="mt-2 text-[11px] leading-snug text-muted-foreground/80">{t("emailNote")}</p>
+      <p className="mt-2 text-[11px] leading-snug text-muted-foreground/80">{t(copy.note)}</p>
     </form>
   );
 }

@@ -8,11 +8,11 @@ image: "/images/blog/color-analysis-myths-tiktok.webp"
 
 ## TikTok hizo viral el análisis de color — pero también se equivocó en muchas cosas
 
-Lo admito: TikTok ha hecho más por la difusión del análisis de color en dos años que la industria profesional del estilismo en dos décadas. De repente todo el mundo sabe qué es una «estación de color», y mis amigas que nunca se habían interesado por los subtonos me envían reels preguntando «¿soy Verano Suave?».
+TikTok ha hecho más por la difusión del análisis de color en dos años que la industria profesional del estilismo en dos décadas. De repente todo el mundo sabe qué es una «estación de color», y personas que nunca se habían interesado por los subtonos comparten reels preguntando «¿soy Verano Suave?».
 
 Esa es la buena noticia. La mala: con la viralidad llega la desinformación. Y parte del contenido de análisis de color más compartido en TikTok está simplificado hasta quedar inútil, o es directamente incorrecto.
 
-He dedicado cientos de horas a estudiar la teoría del color, comparar resultados de drapeado profesional con consejos de redes sociales y poner a prueba estas afirmaciones en personas reales. Estos son los 7 mitos más grandes que TikTok sigue difundiendo — y lo que dicen realmente la ciencia y la práctica.
+Cuando comparas resultados de drapeado profesional con los consejos que circulan en redes sociales, las discrepancias salen a la luz enseguida. Estos son los 7 mitos más grandes que TikTok sigue difundiendo — y lo que dicen realmente la ciencia y la práctica.
 
 ---
 
@@ -29,7 +29,7 @@ He dedicado cientos de horas a estudiar la teoría del color, comparar resultado
 
 **Lo que realmente funciona:** El test de las venas puede descartar extremos (si tus venas son vividamente verdes, probablemente no eres Invierno Frío). Pero para una lectura precisa, necesitas observar varios indicadores juntos: cómo reacciona tu piel a distintos metales, si te bronceas dorado o rosado, cómo reflejan el oro y la plata en tu rostro y — lo más fiable — cómo se ve tu piel con telas de prueba específicas colocadas junto a ella.
 
-Investigaciones publicadas en [Color Research & Application](https://onlinelibrary.wiley.com/journal/15206378) confirman que la percepción del color de la piel cambia drásticamente según los colores adyacentes, por eso el drapeado (sostener telas junto al rostro) sigue siendo el estándar de referencia — no una mirada rápida a la muñeca.
+La percepción del color de la piel cambia según los colores adyacentes (contraste simultáneo), por eso el drapeado (sostener telas junto al rostro) sigue siendo el estándar de referencia — no una mirada rápida a la muñeca.
 
 ---
 

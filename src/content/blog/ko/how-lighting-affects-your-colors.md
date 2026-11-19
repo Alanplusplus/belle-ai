@@ -9,7 +9,7 @@ image: "/images/blog/lighting-affects-colors.webp"
 
 ## 착각이 아닙니다 — 다른 조명 아래에서는 정말로 다르게 보입니다
 
-이런 경험 분명 있으시죠. 아침에 옷을 입고 거울을 보며 *오늘 코디 잘 됐다*고 생각합니다. 그런데 사무실 화장실 거울에서 자신을 보면… 뭔가 어긋납니다. 집에서는 깊은 버건디로 보였던 블라우스가 탁한 갈색으로 읽힙니다. 피부는 따뜻해 보이는 대신 칙칙합니다.
+익숙한 장면일 수 있습니다. 아침에 옷을 입고 거울을 보며 *오늘 코디 잘 됐다*고 생각합니다. 그런데 사무실 화장실 거울에서 자신을 보면… 뭔가 어긋납니다. 집에서는 깊은 버건디로 보였던 블라우스가 탁한 갈색으로 읽힙니다. 피부는 따뜻해 보이는 대신 칙칙합니다.
 
 이상한 게 아닙니다. 개인 스타일링에서 **가장 간과되는 요소** 중 하나 — 조명이 몸 위 색이 보이는 방식을 근본적으로 바꾼다는 것입니다.
 
@@ -198,4 +198,4 @@ image: "/images/blog/lighting-affects-colors.webp"
 
 - [퍼스널 컬러 분석의 과학: 실제로 어떻게 작동하는가](/ko/blog/science-behind-personal-color-analysis) — 시즌 타이핑의 광학·생물학 심층
 - [집에서 컬러 분석하는 방법](/ko/blog/how-to-do-color-analysis-at-home) — 조명 설정 포함 단계별 가이드
-- [AI vs 전문가 컬러 분석: 둘 다 해봤습니다](/ko/blog/ai-vs-professional-color-analysis) — 기술이 조명 변수를 다루는 방식
+- [AI vs 전문 퍼스널 컬러 진단: 어떻게 비교할까](/ko/blog/ai-vs-professional-color-analysis) — 기술이 조명 변수를 다루는 방식

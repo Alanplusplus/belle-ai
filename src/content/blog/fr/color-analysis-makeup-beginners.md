@@ -6,13 +6,13 @@ tags: ["maquillage pour débutantes", "colorimétrie personnelle", "saison de co
 image: "/images/blog/color-analysis-makeup-beginners.webp"
 ---
 
-## Le tiroir plein de maquillage que je n'ai jamais utilisé
+## Quand votre tiroir maquillage ne vous correspond pas
 
-Il y a quelques années, j'ai ouvert le tiroir de ma salle de bains et j'ai compté. Trente et un produits. Sept rouges à lèvres, quatre blushs, trois palettes de fards à paupières et un fond de teint acheté parce qu'une vidéo le disait « flatteur pour tout le monde ». J'en utilisais régulièrement exactement quatre.
+Il est facile d'accumuler des dizaines de produits — rouges à lèvres, blushs, palettes et un fond de teint « pour tout le monde » — tout en n'en utilisant que quelques-uns au quotidien.
 
-Tout le reste avait été acheté dans des moments d'optimisme : des soldes, un tutoriel, la recommandation d'une amie. Aucun n'était un mauvais produit. Ce n'étaient simplement pas *mes* produits. Chaque fois que j'en essayais un, je me regardais dans le miroir avec la vague impression que quelque chose clochait, sans pouvoir expliquer quoi. J'en ai donc conclu que le problème venait de ma technique, et j'ai acheté encore plus.
+Le reste s'achète souvent dans l'optimisme : soldes, tutoriels, recommandations. Ce ne sont pas de mauvais produits, mais ils ne conviennent pas forcément à *votre* coloration. Vous essayez, vous regardez dans le miroir, quelque chose cloche sans que vous sachiez pourquoi, et vous achetez encore.
 
-Le problème n'était pas la technique. C'est que je n'avais aucun système pour choisir. Quand j'ai appris à utiliser ma saison de couleurs comme filtre, mon tiroir est tombé à neuf produits et, pour la première fois, j'ai vraiment aimé ce que je voyais dans le miroir.
+Le problème n'est souvent pas la technique, mais l'absence de méthode pour choisir. Utiliser votre saison de couleurs comme filtre permet de réduire votre stock à une petite trousse cohérente.
 
 Si vous débutez en maquillage et que tout vous semble écrasant, ce guide est fait pour vous.
 
@@ -32,7 +32,7 @@ Entrez dans n'importe quelle boutique de beauté : vous verrez des centaines de 
 
 La plupart des conseils pour débutantes aggravent la situation. « Expérimentez ! » est charmant si l'on dispose de temps et d'argent illimités. Pour toutes les autres, cela signifie des essais et des erreurs à quinze ou quarante euros la tentative.
 
-Ce dont une débutante a réellement besoin, ce n'est pas de plus d'options, mais de **moins d'options, mieux ciblées**. C'est exactement ce que vous apporte la colorimétrie : un moyen d'éliminer environ 70 pour cent du rayon avant même de toucher un produit.
+Ce dont une débutante a réellement besoin, ce n'est pas de plus d'options, mais de **moins d'options, mieux ciblées**. C'est exactement ce que vous apporte la colorimétrie : un moyen d'éliminer la majeure partie du rayon avant même de toucher un produit.
 
 ---
 
@@ -44,7 +44,7 @@ La colorimétrie semble technique, mais pour le maquillage, vous n'avez besoin q
 
 Votre sous-ton est la nuance subtile qui se cache sous la couleur apparente de votre peau. Les sous-tons **chauds** tirent vers le doré, le pêche ou le jaune. Les sous-tons **froids** tirent vers le rose, le rosé ou le bleuté. Les sous-tons **neutres** sont un équilibre des deux.
 
-C'est le facteur le plus important pour le maquillage. Un fond de teint qui correspond à votre profondeur mais pas à votre sous-ton paraîtra gris, orangé ou cendré, quelle que soit la qualité de votre estompage. Si vous n'êtes pas sûre du vôtre, mon guide [Suis-je à sous-ton chaud ou froid ? Le guide définitif du sous-ton (2026)](/fr/blog/how-to-determine-skin-undertone) passe en revue des vérifications simples à faire chez soi.
+C'est le facteur le plus important pour le maquillage. Un fond de teint qui correspond à votre profondeur mais pas à votre sous-ton paraîtra gris, orangé ou cendré, quelle que soit la qualité de votre estompage. Si vous n'êtes pas sûre du vôtre, notre guide [Suis-je à sous-ton chaud ou froid ? Le guide définitif du sous-ton (2026)](/fr/blog/how-to-determine-skin-undertone) passe en revue des vérifications simples à faire chez soi.
 
 ### 2. La profondeur : claire, moyenne ou foncée
 
@@ -60,7 +60,7 @@ Ces trois dimensions se combinent pour former les 12 saisons de couleurs. Inutil
 
 ## Les 4 familles, traduites en maquillage
 
-Voici l'aide-mémoire que j'aurais aimé avoir dès le premier jour. Trouvez la famille la plus proche de vous et considérez les teintes ci-dessous comme votre liste de « oui ».
+Voici l'aide-mémoire pour bien démarrer. Trouvez la famille la plus proche de vous et considérez les teintes ci-dessous comme votre liste de « oui ».
 
 | Famille de saison | Sous-ton | Blush | Lèvres | Yeux |
 | --- | --- | --- | --- | --- |
@@ -75,7 +75,7 @@ Quelques précisions pour que cela ne devienne pas un règlement :
 - Les **saisons douces** (Été Doux, Automne Doux) sont à leur avantage avec des textures estompables : blush crème, eye-liner estompé, rouge à lèvres satiné.
 - Les **saisons éclatantes** (Printemps Vif, Hiver Vif) peuvent assumer une définition nette : un contour de lèvres précis, un blush franc, un eye-liner graphique.
 
-Si vous voulez la version complète des 12 saisons, mon [tableau complet des couleurs de maquillage par saison](/fr/blog/best-makeup-colors-color-season) détaille chaque sous-saison.
+Si vous voulez la version complète des 12 saisons, notre [tableau complet des couleurs de maquillage par saison](/fr/blog/best-makeup-colors-color-season) détaille chaque sous-saison.
 
 ---
 
@@ -87,7 +87,7 @@ C'est ici que le système fait ses preuves. Au lieu d'acheter toute une collecti
 
 Choisissez d'abord selon le sous-ton, ensuite selon la profondeur. Testez trois teintes en bandes le long de la mâchoire et vérifiez-les à la lumière naturelle. La bonne se fond dans le cou ; la mauvaise laisse une ligne visible. Quand on débute, un teint léger est plus indulgent qu'un fond de teint haute couvrance. Pour comprendre un peu comment sont formulés les produits de teint, [l'article de Wikipédia sur le fond de teint](https://en.wikipedia.org/wiki/Foundation_(cosmetics)) est une introduction étonnamment claire.
 
-C'est dans le fond de teint que les erreurs de sous-ton se voient le plus ; si le vôtre ne convient jamais tout à fait, lisez mon article [Pourquoi votre fond de teint ne correspond jamais : plongée dans les sous-tons](/fr/blog/foundation-undertone-guide).
+C'est dans le fond de teint que les erreurs de sous-ton se voient le plus ; si le vôtre ne convient jamais tout à fait, lisez notre article [Pourquoi votre fond de teint ne correspond jamais : plongée dans les sous-tons](/fr/blog/foundation-undertone-guide).
 
 ### 2. Blush crème
 
@@ -111,7 +111,7 @@ Les sourcils encadrent tout le reste. Choisissez une teinte proche de vos poils 
 
 ## Une routine de 10 minutes pour débutantes
 
-Une fois vos cinq produits en main, voici la routine que je donne à chaque amie qui me la demande :
+Une fois vos cinq produits en main, voici une routine simple à suivre :
 
 1. **Teint (2 minutes) :** Appliquez votre teint léger ou votre fond de teint avec les doigts ou une éponge humide, en vous concentrant sur le centre du visage, puis estompez vers l'extérieur.
 2. **Blush (1 minute) :** Tapotez le blush crème sur les pommettes et estompez vers les tempes.
@@ -120,13 +120,13 @@ Une fois vos cinq produits en main, voici la routine que je donne à chaque amie
 5. **Lèvres (1 minute) :** Appliquez votre rouge à lèvres signature et pressez une fois avec un mouchoir.
 6. **Vérification (2 minutes) :** Reculez et regardez-vous à la lumière naturelle. Si quelque chose paraît lourd, estompez-le du bout d'un doigt propre.
 
-Inutile de faire toutes les étapes tous les jours. Bien des jours, je ne mets que du blush, les sourcils et les lèvres, et la différence avec un visage nu est spectaculaire.
+Inutile de faire toutes les étapes tous les jours. Bien des jours, blush, sourcils et lèvres suffisent, et la différence avec un visage nu est spectaculaire.
 
 ---
 
 ## 6 erreurs de débutante qui font gaspiller le plus d'argent
 
-Ce sont les pièges dans lesquels je suis tombée, pour que vous n'ayez pas à le faire.
+Ce sont les pièges les plus fréquents chez les débutantes — et comment les éviter.
 
 - **Acheter d'après le swatch sur le dos de la main.** La peau de la main a souvent un sous-ton différent de celui du visage. Testez plutôt sur la mâchoire ou la joue.
 - **Choisir le fond de teint qui s'accorde au cou sous l'éclairage du magasin.** Vérifiez-le à la lumière du jour avant de partir ou demandez des échantillons.
@@ -141,7 +141,7 @@ Ce sont les pièges dans lesquels je suis tombée, pour que vous n'ayez pas à l
 
 La partie la plus difficile de ce système est la première étape : connaître votre saison. Draper des tissus sur vos épaules devant le miroir fonctionne, mais il est facile de se tromper, surtout sous une mauvaise lumière.
 
-C'est là que les outils d'IA sont devenus vraiment utiles. Téléversez un selfie sans maquillage à la lumière naturelle, et un bon outil d'analyse lit votre sous-ton, votre profondeur et votre chroma, puis les traduit en teintes de maquillage. J'ai essayé un outil gratuit comme [aicoloranalysis.io](/makeup-analysis) avant une grande séance d'achats de maquillage, et il m'a donné une liste claire de familles de fond de teint, de rouge à lèvres et de blush. Il n'a pas remplacé le test du miroir, mais il m'a évité plusieurs faux pas.
+C'est là que les outils d'IA sont devenus vraiment utiles. Téléversez un selfie sans maquillage à la lumière naturelle, et un bon outil d'analyse lit votre sous-ton, votre profondeur et votre chroma, puis les traduit en teintes de maquillage. Des outils gratuits comme [aicoloranalysis.io](/makeup-analysis) peuvent suggérer des familles de fond de teint, rouge à lèvres et blush avant les achats. Ils ne remplacent pas le test du miroir, mais aident à éviter les décalages évidents.
 
 Si vous souhaitez une introduction plus large et sans jargon à tout cela, il existe un [guide de colorimétrie pour débutantes](/fr/color-analysis-for/beginners) qui explique les bases pas à pas.
 

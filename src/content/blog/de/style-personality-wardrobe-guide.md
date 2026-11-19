@@ -8,9 +8,9 @@ image: "/images/blog/style-personality-wardrobe-guide.webp"
 
 ## Dein Kleiderschrank ist voll – warum fühlt sich nichts richtig an?
 
-Ich habe einmal gezählt: 47 Teile in meinem Schrank, und trotzdem stand ich jeden Morgen davor und dachte, ich hätte nichts anzuziehen. Die Stücke waren nicht schlecht. Manche teuer. Einige im Trend auf Instagram. Aber sie fühlten sich nicht nach *mir* an – und ich verstand nicht warum.
+Kommt dir das bekannt vor: voller Schrank und trotzdem jeden Morgen dieses Gefühl – „nichts anzuziehen“? Die Teile sind nicht schlecht; manche teuer; andere wirkten an anderen großartig. Sie fühlen sich nicht nach *dir* an, und der Grund bleibt unscharf.
 
-Alles änderte sich, als ich etwas entdeckte: Ich hatte meine Garderobe um meine Farbtyp-Saison (Soft Summer, nebenbei) aufgebaut, aber meine Style Personality komplett ignoriert. Ich kaufte die richtigen Farben in falschen Silhouetten, Texturen und Energien. Eine dusty-rose-Seidenbluse mit scharfem, strukturiertem Schnitt? Technisch in meiner Palette. Visuell falsch an mir.
+Oft fehlt nicht die Farbe, sondern die Style Personality. Du kannst deinen [Farbtyp](/de/color-analysis) treffen und trotzdem die richtigen Töne in falschen Silhouetten, Texturen und Energien kaufen. Dusty-rose-Seidenbluse mit scharfem Schnitt? Technisch in der Palette – bei Romantic-Natural-Blend zählt weiche Form genauso wie der Farbton.
 
 Wenn du schon mal etwas gekauft hast, das an jemand anderem umwerfend und an dir flach wirkte – selbst in deinem perfekten Farbton – ist deine Style Personality das fehlende Puzzleteil. So nutzt du sie für eine Garderobe, die wirklich funktioniert.
 
@@ -47,7 +47,7 @@ Schnellreferenz der acht Archetypen:
 
 Fällt auf, dass in dieser Tabelle keine Farbe steht? Absichtlich. Style Personality regiert die *Form* – Farbtyp-Saison die *Farbnuance*. Beim Shoppen brauchst du beide Filter.
 
-Bist du eine Classic-Dramatic-Mischung, sollte deine Garderobe zu tailored Struktur mit bold, clean Statements tendieren – nicht zu soft Draping oder verspieltem Color Blocking. Das allein hätte mir Jahre „fast richtiger“ Käufe erspart.
+Bist du eine Classic-Dramatic-Mischung, sollte deine Garderobe zu tailored Struktur mit bold, clean Statements tendieren – nicht zu soft Draping oder verspieltem Color Blocking. Früh auszurichten spart Jahre „fast richtiger“ Käufe.
 
 ---
 
@@ -61,7 +61,7 @@ Bevor du etwas hinzufügst, subtrahiere strategisch. Alles raus und in drei Stap
 
 **Loslassen:** Falsche Farbe UND falscher Stil. Das sind die Teile, bei denen du dich wie in einem Kostüm fühlst. Spende ohne Schuld.
 
-Bei meinem Audit merkte ich: 60 % meines Schranks waren Classic-strukturierte Stücke – Blazer, Bleistiftröcke, crisp Hemden – obwohl mein Haupttyp Romantic mit Natural als Sekundärtyp ist. Kein Wunder, dass ich mich steif und unwohl fühlte. Ich kleidete mich nicht für meine Energie, sondern für den Job, den ich dachte, haben zu müssen.
+Beim Sortieren prüfe, ob dein Archetyp zu dem passt, was im Schrank dominiert. Haupttyp Romantic, Sekundärtyp Natural – und die meisten Hänger voller Classic-Struktur (Blazer, Bleistiftröcke, crisp Hemden)? Steif wirkt oft nach Aspiration, nicht nach echter Energie.
 
 Achte besonders auf Stücke, die du ständig greifst. Sie verraten etwas über deine wahre Style Personality, auch wenn du sie noch nicht formal identifiziert hast.
 
@@ -117,17 +117,17 @@ Der Kern: Deine Kern-Garderobe sollte sich anfühlen wie *du an deinem besten Ta
 
 Hier spart dir Style Personality echtes Geld. Vor jedem Kauf fünf Fragen:
 
-1. **Silhouette:** Passt sie zu den Formen meines Archetyps? (Romantic = soft und drapiert; Dramatic = strukturiert und kantig)
-2. **Stoff:** Passt die Textur zu meiner Style-Energie? (Natural = Leinen und Baumwolle; Sensual = Satin und Seide)
-3. **Farbe:** Ist sie in meiner Farbtyp-Palette? (Beide Filter müssen passen)
-4. **Detail-Level:** Passt das Styling zu meinem Typ? (Classic = minimal; Creative = eklektisch)
-5. **Bauchgefühl:** Fühle ich mich wie *ich selbst*, oder spiele ich eine Rolle?
+1. **Silhouette:** Passt sie zu den Formen deines Archetyps? (Romantic = soft und drapiert; Dramatic = strukturiert und kantig)
+2. **Stoff:** Passt die Textur zu deiner Style-Energie? (Natural = Leinen und Baumwolle; Sensual = Satin und Seide)
+3. **Farbe:** Ist sie in deiner Farbtyp-Palette? (Beide Filter müssen passen)
+4. **Detail-Level:** Passt das Styling zu deinem Typ? (Classic = minimal; Creative = eklektisch)
+5. **Bauchgefühl:** Fühlst du dich wie *du selbst*, oder spielst du eine Rolle?
 
 Scheitert eine der ersten vier, zurück damit. Passen alle vier, aber das Bauchgefühl nicht – ebenfalls zurück. Dein Instinkt weiß Bescheid.
 
-Ich speichere Style-Keywords auf dem Handy: „soft, draped, natural, warm, effortless.“ Wenn mich ein strukturierter Power-Blazer lockt (Classic-Dramatic-Energie, die nicht meine ist), lese ich zuerst diese Worte. Funktioniert jedes Mal.
+Notiere Style-Keywords auf dem Handy – z. B. „soft, draped, natural, warm, effortless“ passend zu deinem Archetyp. Lockt ein strukturierter Power-Blazer (Classic-Dramatic, nicht deine Energie), lies sie vor dem Kauf – einfache Bremse gegen Trendkäufe.
 
-Forschung des [Fashion Institute of Technology](https://www.fitnyc.edu/) zeigt konsistent: Menschen, die im Einklang mit ihrer persönlichen Style-Identität kleiden, berichten von mehr Selbstvertrauen und weniger Entscheidungsmüdigkeit – logisch. Wenn Garderobe und Persönlichkeit passen, hinterfragst du jedes Outfit nicht mehr.
+Im Einklang mit dem persönlichen Stil zu kleiden macht das Anziehen tendenziell leichter. Wenn Garderobe und Persönlichkeit passen, hinterfragst du jedes Outfit nicht mehr.
 
 ---
 
@@ -149,7 +149,7 @@ Für einen detaillierten Walkthrough siehe unseren [Schritt-für-Schritt Capsule
 
 ## Häufige Garderobe-Fehler (und wie Style Personality sie behebt)
 
-Nach Dutzenden Freundinnen beim Garderobe-Rebuild sehe ich dieselben Muster:
+Mit Style Personality im Blick fallen diese Muster am häufigsten auf:
 
 **Fehler 1: Trends jagen, die mit deinem Typ kollidieren.** Oversized-Blazer-Trend? Stunning bei Dramatic und Classic. Overwhelming bei Gamine und Ethereal. Kenn deinen Typ, bevor du dem Trend folgst.
 
@@ -167,7 +167,7 @@ Nach Dutzenden Freundinnen beim Garderobe-Rebuild sehe ich dieselben Muster:
 
 Eine Style-Personality-Capsule kombiniert das Beste: Versatility einer Capsule (30-40 Mix-and-Match-Teile) mit Authenticity des Archetyp-Kleidens.
 
-Mein empfohlener Zeitplan:
+Ein praktischer Zeitplan zum Mitgehen:
 
 **Monat 1: Foundation** — Kleiderschrank-Audit, Style Personality identifizieren, 15-20 Kernstücke listen
 

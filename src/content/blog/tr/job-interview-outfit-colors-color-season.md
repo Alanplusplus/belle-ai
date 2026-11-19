@@ -6,13 +6,11 @@ tags: ["iş görüşmesi kıyafeti", "renk mevsimi", "renk analizi", "kariyer st
 image: "/images/blog/job-interview-outfit-colors-color-season.webp"
 ---
 
-## Beni Yorgun Gösteren Lacivert Takım
+## «Güvenli» mülakat kıyafeti ters teptiğinde
 
-İlk büyük görüşmemden önce kariyer yazılarının hepsinin söylediğini yaptım: lacivert bir takım aldım. Lacivert güven demek, lacivert yetkinlik demek, lacivert «güvenli» renktir. Beyaz gömlek giydim, aynada cevaplarımı prova ettim ve tamamen hazır hissettim.
+Muhtemelen standart tavsiyeyi uyguladınız: lacivert blazer, beyaz gömlek — profesyonel ve düzenli. Arama öncesi aynada doğru görünür; video ekran görüntüsünde cilt soluk, göz altları öne çıkar, yüzün yanındaki beyaz her şeyi soldurur. Kıyafet yetersizliği değil; renklerinizle kavga eden «doğru» renkler.
 
-Sonra işe alım uzmanının kaydettiği görüntülü görüşmeden bir fotoğraf gördüm. Cildim soluk görünüyordu, göz altlarım aniden yüzümün ana odağı olmuştu ve tertemiz beyaz gömlek etrafındaki her şeyi mat gösteriyordu. Kıyafetsiz değildim. «Doğru» renkleri yanlış şekilde giyiyordum.
-
-Aylar sonra renk mevsimimi öğrendiğimde açıklama basitti. Lacivert herkes için yanlış değildir ama *soğuk, koyu, yüksek kontrastlı* bir lacivert, sıcak ve yumuşak renklere sahip birinin yüzüne yakın ihtiyacı olan şey değildir. Aynı takım bir adayı keskin gösterirken bir başkasını yorgun gösterebilir.
+Lacivert herkes için yanlış değildir ama *soğuk, koyu, yüksek kontrastlı* lacivert her renk mevsimine yüz yakınında uygun değildir. Aynı takım birini keskin, birini yorgun gösterebilir.
 
 Bir görüşmede güvenilir, uyanık ve hazır görünmek için birkaç dakikanız vardır. Renk, kontrol edebileceğiniz en hızlı sinyallerden biridir. Bu rehberde onu nasıl kullanacağınızı anlatacağım.
 
@@ -30,7 +28,7 @@ Bir görüşmede güvenilir, uyanık ve hazır görünmek için birkaç dakikan�
 
 Görüşmeciler izlenimlerini hızla oluşturur ve kıyafet o ilk okumanın parçasıdır. Araştırmacılar bununla ilişkili bir etkiyi *giyinme bilişi* olarak tanımlar: giydiğimiz kıyafetler yalnızca başkalarının bizi nasıl gördüğünü değil, nasıl düşündüğümüzü ve hissettiğimizi de etkiler. Hajo Adam ve Adam Galinsky'nin 2012'deki çalışması, dikkat ve odakla ilişkilendirdikleri bir giysiyi giyen kişilerin dikkat görevlerinde daha iyi performans gösterdiğini buldu. Role uygun giyinmek yüzeysel değildir; kendi ruh hâlinizi de değiştirir.
 
-Renk bir katman daha ekler. Temel [renk psikolojisi](https://en.wikipedia.org/wiki/Color_psychology) mavileri güvenle, koyu yeşilleri istikrarla, bordo tonlarını özgüvenle ilişkilendirir. Bu bağlantılar gevşektir ve kültüre göre değişir; ben onları kural değil, hafif bir yönlendirme olarak görürüm. Daha ölçülebilir olan başka bir şeydir: **rengin yüzünüzü nasıl etkilediği.**
+Renk bir katman daha ekler. Temel [renk psikolojisi](https://en.wikipedia.org/wiki/Color_psychology) mavileri güvenle, koyu yeşilleri istikrarla, bordo tonlarını özgüvenle ilişkilendirir. Bu bağlantılar gevşektir ve kültüre göre değişir; kural değil, hafif bir yönlendirme olarak düşünmek yeterli. Daha ölçülebilir olan başka bir şeydir: **rengin yüzünüzü nasıl etkilediği.**
 
 Görüşmeciler ceketinize bakmaz; yüzünüze bakar ve yanındaki renk ya teninizi destekler ya da onunla yarışır. Renklendirmenize uyan bir ton cildi eşit, gözleri parlak gösterir; bu da sağlıklı, uyanık ve enerjik okunur. Renklendirmenizle çatışan bir ton tam tersini yapar — kağıt üzerinde ne kadar profesyonel olursa olsun.
 
@@ -59,7 +57,7 @@ Mevsiminizden henüz emin değilseniz [renk mevsiminizi nasıl bulacağınız](/
 
 ## Üç Renkli Görüşme Formülü
 
-Mevsim mevsim dökümünden önce her görüşme kıyafeti için kullandığım yapı şudur. Mevsiminiz ne olursa olsun işe yarar:
+Mevsim mevsim dökümünden önce tüm mevsimler için geçerli üç parçalı bir yapı:
 
 1. **Temel (%60):** takım ceketi, ceket veya elbise. En büyük renk bloğunuz budur ve paletinizden yakıştıran bir *nötr* olmalıdır.
 2. **Yüz rengi (%30):** yüzünüze en yakın duran üst, gömlek veya eşarp. Cildinizi çerçevelediği için en önemli parçadır. Teninizi aydınlatan paletinizden bir ton seçin.
@@ -138,9 +136,9 @@ Bunların hiçbiri yasak değildir. Doğru yerleşim, doğru ton veya yüzünüz
 
 ## Modern Yaklaşım: Satın Almadan Önce Renkleri Test Edin
 
-Mevsiminizi bulmak eskiden profesyonel bir kumaş deneme seansı demekti. Bugün yapay zeka bir fotoğrafı analiz edip hangi tonların alt tonunuzu yakıştırdığını, hangilerinin sizi soldurduğunu söyleyebilir. Kariyer değişikliğine hazırlanırken bir fotoğrafı yapay zeka renk analizi aracından geçirdim ve bir dakikadan kısa sürede temel, yüz ve aksan renklerinin listesini aldım. [aicoloranalysis.io](/outfit-color-analysis) gibi ücretsiz araçlar yeni bir takım ceketi için para harcamadan önce hangi kıyafet renklerinin teninizi aydınlattığını gösterebilir.
+Mevsiminizi bulmak eskiden profesyonel bir kumaş deneme seansı demekti. Bugün yapay zeka bir fotoğrafı analiz edip hangi tonların alt tonunuzu yakıştırdığını, hangilerinin sizi soldurduğunu söyleyebilir — çoğu zaman bir dakikadan kısa sürede temel, yüz ve aksan renk listesiyle. [aicoloranalysis.io](/outfit-color-analysis) gibi ücretsiz araçlar yeni bir takım ceketi için para harcamadan önce hangi kıyafet renklerinin teninizi aydınlattığını gösterebilir.
 
-Giysiyi denemenin yerini tutmaz ama alanı daraltır; deneme kabininde tahmin yürütmezsiniz. Profesyonel tavsiyenin nasıl karşılaştırıldığına daha derin bakmak isterseniz [The Muse'un görüşme kıyafeti rehberi](https://www.themuse.com/advice/what-to-wear-to-an-interview) yukarıdakileri tamamlayan kalıp, kumaş ve giyim kuralları konularını ele alır.
+Giysiyi denemenin yerini tutmaz ama alanı daraltır; deneme kabininde tahmin yürütmezsiniz.
 
 ---
 

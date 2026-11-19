@@ -14,7 +14,7 @@ Resulta que ese simple gráfico circular es una de las herramientas de estilismo
 
 Estilistas profesionales, diseñadores de interiores y consultores de marca usan la teoría del color todos los días. Los mismos principios que hacen que un cuadro se sienta armonioso o que un logotipo transmita confianza también explican por qué ciertos outfits se ven impecables sin esfuerzo mientras que otros se sienten «raro» sin importar lo caras que sean las prendas.
 
-Pasé años pensando que la coordinación de colores era intuitiva — algo que o tenías o no. Luego estudié la teoría detrás de todo esto, y encajó. Hay reglas. Se pueden aprender. Y funcionan.
+Es fácil pensar que la coordinación de colores es puramente intuitiva — algo que tienes o no. Pero hay teoría real detrás, y cuando aprendes lo básico, todo encaja. Hay reglas. Se pueden aprender. Y funcionan.
 
 En este artículo desgloso los conceptos fundamentales de la teoría del color que importan para el estilo personal — sin necesidad de un título en bellas artes.
 

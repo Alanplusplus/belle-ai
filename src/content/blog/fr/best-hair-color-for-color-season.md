@@ -12,7 +12,7 @@ Voici quelque chose que beaucoup de personnes ne réalisent qu'après une colora
 
 C'est précisément ce que l'[analyse de couleurs personnelle](/fr/blog/personal-color-analysis-guide) est conçue pour résoudre. Votre saison de couleurs ne concerne pas seulement les vêtements ou le maquillage : c'est un guide complet des teintes qui s'harmonisent avec vos traits naturels, et cela inclut absolument la couleur des cheveux.
 
-J'ai vu des personnes passer d'un teint terne et fatigué à un éclat absolu — non pas grâce à une nouvelle routine de soins, mais parce qu'elles avaient enfin choisi une coloration adaptée à leur saison. La différence est réelle, et souvent spectaculaire.
+Beaucoup de personnes passent d'un teint terne et fatigué à un éclat absolu — non pas grâce à une nouvelle routine de soins, mais parce qu'elles ont enfin choisi une coloration adaptée à leur saison. La différence est réelle, et souvent spectaculaire.
 
 Les cheveux constituent le plus grand « bloc de couleur » qui encadre votre visage. Quand la teinte est juste, le maquillage, les vêtements et même les bijoux s'accordent beaucoup plus facilement. Quand elle ne l'est pas, vous lutterez contre votre harmonie naturelle au quotidien.
 

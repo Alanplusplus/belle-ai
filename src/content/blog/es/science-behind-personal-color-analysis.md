@@ -12,7 +12,7 @@ Seguro que lo has vivido. Te pruebas una blusa coral y tu piel se ve radiante, t
 
 No es cosa de tu imaginación. Hay ciencia real detrás de esto, y una vez que entiendes la mecánica, todo el mundo de «qué colores me favorecen» deja de ser adivinanza y empieza a tener sentido.
 
-Pasé meses investigando la física, la biología y la ciencia perceptual que sustentan el análisis de color personal. Esto es lo que descubrí — y por qué esta práctica centenaria está respaldada por más ciencia dura de lo que la mayoría cree.
+Este artículo recorre la física, la biología y la ciencia perceptual que sustentan el análisis de color personal — y por qué esta práctica centenaria está respaldada por más ciencia dura de lo que la mayoría cree.
 
 ---
 
@@ -107,7 +107,7 @@ El contraste simultáneo fue descrito por primera vez por el químico francés M
 - **Colores armoniosos** (los que comparten tu subtono) hacen que tu piel parezca lisa, uniforme y luminosa. La luz reflejada refuerza tu coloración natural.
 - **Colores disonantes** (los que se oponen a tu subtono) crean una tensión visual. Tu piel puede parecer apagada, grisácea, enrojecida o desigual porque la luz reflejada choca con tus pigmentos naturales.
 
-No es un efecto sutil. La investigación en ciencia del color ha demostrado que el contraste simultáneo puede desplazar el color percibido hasta un 20-30 % en escalas perceptuales de color. Esa es la diferencia entre «te ves increíble» y «¿estás bien?».
+No es un efecto sutil. El contraste simultáneo puede cambiar de forma notable cómo se percibe un color. Esa es la diferencia entre «te ves increíble» y «¿estás bien?».
 
 ## Por Qué el Análisis de Color Tradicional Es Difícil (Y Dónde Entra la IA)
 

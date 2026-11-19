@@ -6,15 +6,15 @@ tags: ["skin undertone", "neutral undertone", "color analysis", "beauty", "style
 image: "/images/blog/neutral-undertone-guide.webp"
 ---
 
-## The Undertone Test That Made Me Question Everything
+## Stuck Between Warm and Cool?
 
-I've taken the vein test at least a dozen times. Blue veins? Cool. Green veins? Warm. Simple, right?
+You may have taken the vein test more than once. Blue veins? Cool. Green veins? Warm. Simple, right?
 
-Except mine looked teal. Not green, not blue — somewhere stubbornly in between. The gold-versus-silver jewelry test wasn't any clearer: gold looked fine, silver looked fine, rose gold looked… also fine. Every online quiz I tried gave me a different result, and by the time I'd consulted three different "undertone guides," I had been classified as cool, warm, AND olive — all within the same afternoon.
+Except your veins looked teal — not green, not blue, somewhere stubbornly in between. The gold-versus-silver jewelry test may not have been any clearer: gold looked fine, silver looked fine, rose gold looked fine too. Online quizzes can give different results on different days, and three undertone guides can label you cool, warm, and olive in the same afternoon.
 
 If this sounds painfully familiar, there's a good chance you have a neutral undertone. And here's the thing most guides won't tell you: neutral is genuinely the hardest undertone to pin down, because the standard tests were designed for people who sit clearly on one end of the spectrum. If you're balanced in the middle, those tests essentially break.
 
-This article is for everyone who's been stuck in undertone limbo. I'll explain what neutral undertone actually means, why conventional tests fail you, and — most importantly — five methods that actually work for identifying it.
+This article is for everyone who's been stuck in undertone limbo. We'll explain what neutral undertone actually means, why conventional tests fail you, and — most importantly — five methods that actually work for identifying it.
 
 ---
 
@@ -72,7 +72,7 @@ The common thread? These tests work on a binary warm/cool model. If you're balan
 
 ## 5 Tests That Actually Work for Neutral Undertone
 
-After years of frustration and research, I've found five methods that reliably identify neutral undertone. Use them together for the most accurate result — if three or more point to "neutral," you can be confident.
+These five methods, used together, reliably identify neutral undertone. If three or more point to "neutral," you can be confident.
 
 ### 1. The Draping Comparison Test
 

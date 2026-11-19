@@ -8,11 +8,9 @@ image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
 
 ## Die Make-up-Regel, die jeder falsch versteht
 
-Ich habe verloren, wie viele rote Lippenstifte ich gekauft, einmal getragen und ganz hinten in der Schublade verstaut habe. Klassisches Rot? Zu hart. Koralle? Hat mich blass wirken lassen. Beere? Hat meine Zähne gelb aussehen lassen. Jahrelang dachte ich, ich könne einfach „kein Rot tragen“.
+In Ihrer Schublade liegen vielleicht viele Rottöne, die im Laden perfekt und im Gesicht falsch wirken: klassisches Rot zu hart, Koralle zu blass, Beere lässt die Zähne gelb aussehen. Das heißt meist nicht, dass Sie kein Rot tragen können, sondern dass Unterton von Lippenstift und Haut nicht zusammenpassen.
 
-Es stellte sich heraus: Ich war nicht schlecht darin, Rot zu tragen. Ich war schlecht darin, das *richtige* Rot zu wählen.
-
-Das Geheimnis liegt nicht an Mut oder Selbstbewusstsein (obwohl beides hilft). Es geht darum zu verstehen, wie der Unterton Ihrer Haut mit den Pigmenten eines Lippenstifts interagiert. Als ich das herausgefunden hatte, fand ich mein perfektes Rot in unter fünf Minuten — und das können Sie auch.
+Das Geheimnis liegt nicht an Mut oder Selbstbewusstsein (obwohl beides hilft). Es geht darum zu verstehen, wie der Unterton Ihrer Haut mit den Pigmenten eines Lippenstifts interagiert. Kennen Sie Ihren Unterton, können Sie in Minuten ein schmeichelhaftes Rot eingrenzen — statt monatelang zu probieren.
 
 Dieser Ratgeber erklärt die Wissenschaft dahinter, liefert konkrete Farbempfehlungen und enthält einen einfachen Selbsttest, damit Sie nie wieder Geld für das falsche Rot ausgeben.
 
@@ -156,7 +154,7 @@ Farbabstimmung erforderte früher einen Besuch bei einer geschulten Beraterin od
 
 Apps wie [Belle AI](/) können ein Foto Ihres Gesichts betrachten und Ihren Unterton anhand derselben Farbhinweise vorschlagen, auf die Profis achten — ob Sie warm, kühl oder neutral sind, und einen wahrscheinlichen Farbtyp. Sobald Sie Ihre Saison kennen, wird die Suche nach dem richtigen Rot fast mühelos.
 
-Ich habe mein eigenes Selfie durch ein KI-Farbanalyse-Tool laufen lassen und bestätigt bekommen, dass ich ein Soft Summer bin — was erklärte, warum jede Koralle falsch wirkte und warum gedämpfte Beeren-Rottöne mich zum Strahlen brachten.
+Ein Selfie durch ein KI-Farbanalyse-Tool kann Unterton und wahrscheinliche Farbsaison anhand derselben Hinweise wie Profis anzeigen — hilfreich, wenn Koralle immer falsch wirkt und gedämpfte Beeren-Rottöne plötzlich passen.
 
 ---
 

@@ -9,11 +9,11 @@ image: "/images/blog/olive-skin-foundation-guide.webp"
 
 ## Zeytin Tende Fondöten Alışverişi Neden Zor
 
-Zeytin alt tonunuz varsa, son tezgah ziyaretinizi tahmin edebilirim. On ton denediniz. Sıcak tonlar çenede turuncu; soğaklar pembe veya gri. Nötr ikisini birden yaptı. Mağaza ışığında «yeterince yakın» bir şişe aldınız — eve gelince yüz ve boyun farklı hikâyeler anlattı.
+Zeytin alt tonunuz varsa, son tezgah ziyaretiniz tanıdık bir kalıba uyuyor olabilir: On ton denediniz. Sıcak tonlar çenede turuncu; soğaklar pembe veya gri. Nötr ikisini birden yaptı. Mağaza ışığında «yeterince yakın» bir şişe aldınız — eve gelince yüz ve boyun farklı hikâyeler anlattı.
 
 Bu beceri eksikliği değil. Çoğu fondöten hattı cildi hâlâ **sıcak (sarı-altın)** veya **soğuk (pembe-mavi)** sanıyor. Zeytin ten, temel alt tonunuzun üstüne **yeşil-gri bir düzeltici** ekler. Yeşil kanalı olmayan formüller, derinliği ne kadar iyi eşleştirseniz de nadiren erir.
 
-Bu rehberde klasik sıcak/soğuk önerilerinin neden tutmadığını, pigment düzeyinde neler olduğunu, hangi markaların zeytin için formüle ettiğini ve **açık, orta ve koyu** zeytin teni mevsimlere göre nasıl düşündüğümü anlatıyorum.
+Bu rehberde klasik sıcak/soğuk önerilerinin neden tutmadığını, pigment düzeyinde neler olduğunu, hangi markaların zeytin için formüle ettiğini ve **açık, orta ve koyu** zeytin teni mevsimlere göre nasıl eşleştirebileceğinizi anlatıyoruz.
 
 ---
 
@@ -23,7 +23,7 @@ Bu rehberde klasik sıcak/soğuk önerilerinin neden tutmadığını, pigment d�
 
 Sıcak tabanlar sarı ve altın pigmentlere dayanır. Net altın alt tonlarda bu sağlıklı bir parlaklık okur. Zeytin tende aynı pigmentler yeşille **karışmak yerine üstünde** kalır.
 
-En sık gördüklerim:
+Tezgâhta sık görülen uyumsuzluklar:
 
 - Şişede «mükemmel» altın, **saç çizgisinde turuncu**
 - Birkaç saat sonra **çene yüzün geri kalanından daha sarı**
@@ -63,13 +63,13 @@ Katmanlar düşünün: **derinlik** pigment miktarından; **temel alt ton** (sı
 - Sarı, **soğuk pembeyi** griye çevirmesin diye durdurur.
 - **Derinlik** alt tondan ayrıdır: açık, orta, koyu zeytin — her biri farklı ton ailesi.
 
-Renk denerken şişede **mat, bej-gri veya yeşil-gri** görünen tonlar «temiz» altınları sık geçer. Sezgisel değil ama güvenilir.
+Renkleri denerken şişede **mat, bej-gri veya yeşil-gri** görünen tonlar «temiz» altınları sık geçer. Sezgisel değil ama güvenilir.
 
 ---
 
-## Renk Deneme Rutinim (Üçüncü Yanlış Şişeden Önce)
+## Renk Deneme Adımları (Üçüncü Yanlış Şişeden Önce)
 
-Tezgah ışığı yalan söyler. Basit sıram:
+Tezgah ışığı yalan söyler. İşe yarayan basit bir rutin:
 
 1. **Aynı derinlikte üç alt ton** çenede — altın-sıcak, pembe-soğuk, mat/zeytin yönlü.
 2. **On beş dakika bekle** — oksidasyon zeytin eşleşmesini sandığından fazla kaydırır.
@@ -82,7 +82,7 @@ Derinliğinizdeki tüm tonlar tutmazsa, muhtemelen **alt ton ailesi** yanlış, 
 
 ## Denemeye Değer Markalar (Zeytin Dostu)
 
-Büyük markalar iyileşti ama zeytin alt ton notlarını okumayı gerektirir — sadece «orta sıcak» değil. İlk yönlendirdiğim yerler:
+Büyük markalar iyileşti ama zeytin alt ton notlarını okumayı gerektirir — sadece «orta sıcak» değil. Pratik başlangıç noktaları:
 
 ### NARS
 
@@ -124,13 +124,13 @@ Alt ton kuralları aynı; **derinlik hangi şişeyi** seçtirir. Başlangıç ha
 
 ### Açık–light zeytin
 
-Yeşil ton ince olduğu için «nötr» veya «soğuk» sanılır. **Açık-orta**, **yeşil-gri veya taupe** taban ararım — şeftali, pembe değil. Eller yüzden farklı bronzlanır; **çene ve boyun**, el sırtı değil.
+Yeşil ton ince olduğu için «nötr» veya «soğuk» sanılır. **Açık-orta**, **yeşil-gri veya taupe** taban arayın — şeftali, pembe değil. Eller yüzden farklı bronzlanır; **çene ve boyun**, el sırtı değil.
 
 Derinlik mükemmel, alt ton yarım adım kayıksa **pompa başına bir damla yeşil renk düzeltici** yakın eşleşmeyi zeytinleştirir.
 
 ### Orta zeytin
 
-En sık duyduğum derinlik — marka kapsamı da en zengin. **«sıcak nötr»** veya **«altın zeytin»** denemeye değer. Orta zeytin **yarım ton daha sıcak oksitlenir**; karar vermeden on-on beş dakika bekleyin.
+Orta zeytin en geniş marka kapsamına sahip derinliktir. **«sıcak nötr»** veya **«altın zeytin»** denemeye değer. Orta zeytin **yarım ton daha sıcak oksitlenir**; karar vermeden on-on beş dakika bekleyin.
 
 ### Bronz–koyu
 
@@ -146,7 +146,7 @@ Zeytin ten nadiren yıl boyunca tek düz renk kalır. Planınız hareket etmeli.
 
 **Kış:** Cilt hafif açılır; **yeşil-gri daha güçlü** okunur. Yaz derinliği boyunda turuncu veya mat görünebilir.
 
-**Geçiş ayları:** **İki fondöten** tutarım — yaz ve kış derinliği — gerektiğinde karıştırırım. Normaldir, «fazla makyaj» değil.
+**Geçiş ayları:** Birçok kişi **iki fondöten** tutar — yaz ve kış derinliği — gerektiğinde karıştırır. Normaldir, «fazla makyaj» değil.
 
 **Mevsimsel düzeltici:** Az yeşil tabana karıştırmak, tonlar arası haftalarda veya sadece «neredeyse» varken köprü kurar.
 

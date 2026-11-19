@@ -21,7 +21,7 @@ faq:
 
 İnternette «zeytin ten» aradığınızda çoğunlukla Akdeniz tipi için yazılmış öneriler bulursunuz — açıktan orta derinliğe, Avrupa yeşil yansımalı ten. Korece aradığınızda konuşma tamamen değişir: Doğu Asya açık tenindeki gri-yeşil ton ve zeytin alt tonu odaktadır. İkisi de dünya nüfusunda zeytin alt tonunun nasıl göründüğünü tam anlatmaz.
 
-Yıllardır farklı etnik arka planlarda zeytin alt tonunun nasıl göründüğünü inceliyorum; öğrendiğim en önemli şey şu: **Zeytin bir etnisite değildir. Herkesin, her yerde görülebilecek bir pigment desenidir.**
+Farklı etnik arka planlarda tekrar tekrar öne çıkan nokta şu: **Zeytin bir etnisite değildir. Herkesin, her yerde görülebilecek bir pigment desenidir.**
 
 Bu rehber Akdeniz, Doğu Asya, Güney Asya, Orta Doğu ve Latin kökenli gruplarda zeytin teni ele alır — derinliğin zeytin modifikatörüyle etkileşimi, her grubun karşılaştığı tanı zorlukları ve geçmişiniz ne olursa olsun doğru alt ton analizi almanın yolları.
 

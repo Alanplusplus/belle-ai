@@ -21,7 +21,7 @@ faq:
 
 Si buscas «piel oliva» en línea, encontrarás sobre todo consejos pensados para complexiones mediterráneas: piel clara a media con un matiz verde europeo. Si buscas en coreano, la conversación cambia por completo y gira en torno al matiz oliva en piel asiática oriental con un tinte verde grisáceo. Ninguna de las dos captura del todo cómo se manifiesta el subtono oliva en las poblaciones del mundo.
 
-Llevo años estudiando cómo se ve el subtono oliva según el origen étnico, y lo más importante que he aprendido es esto: **oliva no es una etnia. Es un patrón de pigmento que puede aparecer en cualquier persona, en cualquier lugar.**
+En distintos orígenes étnicos, un punto vuelve una y otra vez: **oliva no es una etnia. Es un patrón de pigmento que puede aparecer en cualquier persona, en cualquier lugar.**
 
 Esta guía explora la piel oliva en poblaciones mediterráneas, de Asia Oriental, del sur de Asia, de Oriente Medio y latinas: cómo interactúa la profundidad con el modificador oliva, por qué cada grupo enfrenta retos distintos de identificación y cómo obtener un análisis de subtono preciso sea cual sea tu origen.
 

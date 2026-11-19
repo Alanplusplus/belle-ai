@@ -12,7 +12,7 @@ image: "/images/blog/sunglasses-face-shape-skin-tone.webp"
 
 Bu tavsiye yanlış değil — sadece eksik.
 
-Arkadaşlarımın çerçeve şeklini mükemmel tutturduğu ama taktıklarında yine de bir şeylerin… uyumsuz göründüğü anları defalarca gördüm. Güneş gözlüğü yüz yapısına güzelce oturuyordu ama çerçevenin renginden dolayı ciltleri solgun, cansız ya da yorgun görünüyordu.
+Çerçeve şekli doğru olsa bile takınca uyumsuz görünmek sık görülür: hatlar kemik yapısına oturur ama çerçeve rengi cildi soluk, cansız veya yorgun gösterir.
 
 **Eksik olan bileşen ne? Cilt alt tonunuz ve renk mevsimsiniz.**
 
@@ -104,7 +104,7 @@ Elmacık kemikleriniz yıldız özelliğiniz. Onlarla yarışmak yerine tamamlay
 
 ## Adım 3: Herkesin Unuttuğu Kısım — Çerçeve Rengi ve Cilt Tonunuz
 
-Çoğu rehber burada biter. Ama bence asıl sihir burada başlıyor.
+Çoğu rehber burada biter — alt tonun en büyük farkı yarattığı yer de burasıdır.
 
 Cilt alt tonunuz üç kategoriden birine girer ve her birinin cildi parlatan — ve yorgun gösteren — çerçeve renkleri vardır.
 
@@ -249,11 +249,9 @@ Saçlarınız da güneş gözlüğü gibi yüzünüzü çerçeveler. Birlikte ç
 
 ## Teknoloji Seçimi Nasıl Kolaylaştırıyor?
 
-Beni heyecanlandıran şu: Artık her şeyi deneme yanılmayla çözmek zorunda değilsiniz.
+Artık her şeyi yalnızca deneme yanılmayla çözmek zorunda değilsiniz.
 
-Yapay zeka destekli yüz analizi araçları artık tek bir fotoğraftan olası yüz şeklinizi ve çerçeve stillerini önerebiliyor — saniyeler içinde. Bazıları daha da ileri giderek cilt tonunuzu ve renk mevsimsinizi analiz edip çerçeve renkleri de öneriyor.
-
-Bu araçlardan birini yakın zamanda test ettim ve gerçekten şaşırdım. Yüz şeklimi "hafif yüksek elmacık kemikli oval" olarak belirledi (yıllar önce gözlükçümün söylediğiyle aynı) ve alt tonuma dayalı spesifik çerçeve stilleri ve renk önerileri sundu.
+Yapay zeka yüz analizi araçları tek fotoğraftan saniyeler içinde olası yüz şeklini ve çerçeve stillerini önerebilir; bazıları cilt tonu ve renk mevsimini de okuyup çerçeve rengi önerir — örneğin «hafif yüksek elmacık kemikli oval» ve alt tona uygun stiller.
 
 [aicoloranalysis.io](/glasses-analysis) gibi ücretsiz araçlar, yüz şekli tespitini renk analiziyle birleştirerek hem şekil hem rengi kapsayan kapsamlı bir gözlük önerisi sunar.
 

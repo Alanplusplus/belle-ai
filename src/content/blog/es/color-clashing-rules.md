@@ -202,4 +202,4 @@ El análisis de color te da la ciencia. El estilo te da el arte. La magia ocurre
 - [Análisis de color: la guía completa](/es/color-analysis) — Todo lo que necesitas saber para encontrar tus mejores colores
 - [Cómo la teoría del color de la clase de arte se aplica a tu estilo personal](/es/blog/color-theory-personal-style) — La ciencia detrás de por qué ciertas combinaciones funcionan
 - [Cómo construir un armario cápsula para tu estación de color](/es/blog/capsule-wardrobe-color-season) — Construye primero un guardarropa base con tus mejores colores
-- [Usé solo mis 'colores de estación' durante 30 días — esto es lo que pasó](/es/blog/wearing-season-colors-30-days) — Lo que la adhesión estricta a la paleta enseñó sobre la flexibilidad
+- [Reto de 30 días solo con colores de tu estación: un plan que puedes seguir](/es/blog/wearing-season-colors-30-days) — Un plan semana a semana para vestir solo tus colores de estación durante 30 días

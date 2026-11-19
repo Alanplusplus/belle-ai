@@ -21,7 +21,7 @@ faq:
 
 Search "olive skin" online and you'll mostly find advice written for Mediterranean complexions — light-to-medium skin with a European green cast. Search in Korean and you'll find a completely different conversation about 올리브톤 that focuses on East Asian skin with a grey-green tint. Neither conversation fully captures how olive undertones present across the world's populations.
 
-I've spent years studying how olive undertones look across different ethnic backgrounds, and the most important thing I've learned is this: olive is not an ethnicity. It's a pigment pattern that can appear in anyone, anywhere.
+Across ethnic backgrounds, one point comes up again and again: olive is not an ethnicity. It's a pigment pattern that can appear in anyone, anywhere.
 
 This guide explores olive skin in Mediterranean, East Asian, South Asian, Middle Eastern, and Latinx populations — how depth interacts with the olive modifier, why each group faces unique identification challenges, and how to get accurate undertone analysis regardless of your background.
 

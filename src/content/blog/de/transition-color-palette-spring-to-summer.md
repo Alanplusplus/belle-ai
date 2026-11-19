@@ -8,7 +8,7 @@ image: "/images/blog/transition-color-palette-spring-to-summer.webp"
 
 ## Die Kleiderschrank-Krise, die jeden Juni zurückkommt
 
-Jedes Jahr gegen Ende Mai stoße ich auf dieselbe Wand. Mein Kleiderschrank ist voll mit warmen Pfirsich-, Korallen- und Goldgelb-Stücken, die mich den ganzen Frühling zum Strahlen gebracht haben — und plötzlich wirken sie zu schwer, zu warm, zu *viel*. Das Licht hat sich verändert. Die Luft fühlt sich anders an. Und die Farben, die mich im April strahlen ließen, lassen mich im Juni leicht gerötet aussehen.
+Gegen Ende Mai bricht oft die Frühlings-Garderobe-Momentum ab. Stücke in warmem Pfirsich, Koralle und Goldgelb, die im April noch strahlend wirkten, fühlen sich plötzlich zu schwer, zu warm, zu *viel* an. Das Licht hat sich verändert. Die Luft fühlt sich anders an — und dieselben Farben können im Juni auf der Haut leicht gerötet wirken.
 
 Wenn du jemals das Gefühl hattest, dass deine Garderobe einfach nicht mehr funktioniert, wenn das Wetter umschlägt, bildest du dir das nicht ein. Der Übergang vom Frühling zum Sommer ist nicht nur eine Temperaturänderung — es ist eine Lichtänderung. Und dieser Wechsel im natürlichen Licht beeinflusst wirklich, wie Farben mit deiner Haut interagieren.
 
@@ -48,7 +48,7 @@ Das sind deine **Brückenfarben** — Stücke, die ihren Platz im Kleiderschrank
 
 ## Eine praktische Übergangsstrategie (Woche für Woche)
 
-Du musst deine Garderobe nicht am 1. Juni komplett erneuern. So gehe ich mit dem Wechsel um:
+Du musst deine Garderobe nicht am 1. Juni komplett erneuern. So kannst du den Wechsel praktisch angehen:
 
 ### Wochen 1–2: Mit dem Gedämpften beginnen
 

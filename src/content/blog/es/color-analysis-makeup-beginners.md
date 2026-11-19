@@ -6,13 +6,13 @@ tags: ["maquillaje para principiantes", "análisis de color personal", "estació
 image: "/images/blog/color-analysis-makeup-beginners.webp"
 ---
 
-## El cajón lleno de maquillaje que nunca usé
+## Cuando tu cajón de maquillaje no encaja contigo
 
-Hace unos años abrí el cajón del baño y conté. Treinta y un productos. Siete labiales, cuatro coloretes, tres paletas de sombras y una base que compré porque un vídeo decía que era «favorecedora para todo el mundo». De todos ellos, usaba con regularidad exactamente cuatro.
+Es fácil acumular decenas de productos — labiales, coloretes, paletas y una base «para todo el mundo» — mientras solo usas unos pocos cada día.
 
-El resto los había comprado en momentos de optimismo: unas rebajas, un tutorial, la recomendación de una amiga. Ninguno era un mal producto. Simplemente no eran *mis* productos. Cada vez que probaba uno, me miraba en el espejo con una vaga sensación de que algo no encajaba, pero no sabía explicar por qué. Así que asumí que el problema era mi técnica, y compré más.
+El resto suele comprarse en momentos de optimismo: rebajas, tutoriales, recomendaciones. Muchos no son malos productos; simplemente no van con *tu* color. Pruebas uno, te miras al espejo y algo no cuadra, pero sin explicación, así que culpas a la técnica y compras más.
 
-El problema no era la técnica. Era que no tenía un sistema para elegir. Cuando aprendí a usar mi estación de color como filtro, mi cajón se redujo a nueve productos y, por primera vez, me gustó de verdad lo que veía en el espejo.
+El problema a menudo no es la técnica, sino la falta de un sistema para elegir. Usar tu estación de color como filtro reduce lo que tienes a un kit pequeño y coherente.
 
 Si estás empezando en el maquillaje y todo te abruma, esta guía es para ti.
 
@@ -32,7 +32,7 @@ Entra en cualquier tienda de belleza y verás cientos de tonos de base, miles de
 
 La mayoría de los consejos para principiantes lo empeoran. «¡Experimenta!» suena precioso si tienes tiempo y dinero ilimitados. Para todos los demás significa ensayo y error a quince o cuarenta euros por intento.
 
-Lo que una principiante necesita no son más opciones, sino **menos opciones, mejor dirigidas**. Eso es exactamente lo que te da el análisis de color: una forma de descartar aproximadamente el 70 por ciento del estante antes de coger nada.
+Lo que una principiante necesita no son más opciones, sino **menos opciones, mejor dirigidas**. Eso es exactamente lo que te da el análisis de color: una forma de descartar la mayor parte del estante antes de coger nada.
 
 ---
 
@@ -44,7 +44,7 @@ El análisis de color suena técnico, pero para el maquillaje solo necesitas tre
 
 Tu subtono es el matiz sutil que hay bajo el color superficial de tu piel. Los subtonos **cálidos** tienden a lo dorado, melocotón o amarillento. Los subtonos **fríos** tienden a lo rosado, sonrosado o azulado. Los subtonos **neutros** son un equilibrio de ambos.
 
-Este es el factor más importante para el maquillaje. Una base que coincide con tu profundidad pero no con tu subtono se verá gris, naranja o ceniza por mucho que la difumines. Si no estás segura del tuyo, mi guía [¿Tengo tono cálido o frío? La guía definitiva del subtono (2026)](/es/blog/how-to-determine-skin-undertone) repasa comprobaciones sencillas que puedes hacer en casa.
+Este es el factor más importante para el maquillaje. Una base que coincide con tu profundidad pero no con tu subtono se verá gris, naranja o ceniza por mucho que la difumines. Si no estás segura del tuyo, nuestra guía [¿Tengo tono cálido o frío? La guía definitiva del subtono (2026)](/es/blog/how-to-determine-skin-undertone) repasa comprobaciones sencillas que puedes hacer en casa.
 
 ### 2. Profundidad: clara, media o profunda
 
@@ -60,7 +60,7 @@ Estas tres dimensiones se combinan en las 12 estaciones de color. No hace falta 
 
 ## Las 4 familias, traducidas a maquillaje
 
-Esta es la chuleta que me habría encantado tener el primer día. Busca la familia más cercana a ti y trata los tonos de abajo como tu lista de «sí».
+Esta es la chuleta para empezar el primer día. Busca la familia más cercana a ti y trata los tonos de abajo como tu lista de «sí».
 
 | Familia de estación | Subtono | Rubor | Labios | Ojos |
 | --- | --- | --- | --- | --- |
@@ -75,7 +75,7 @@ Unas notas para que esto no se convierta en un reglamento:
 - Las **estaciones suaves** (Verano Suave, Otoño Suave) lucen mejor con fórmulas difuminables: rubor en crema, eyeliner esfumado, labial satinado.
 - Las **estaciones brillantes** (Primavera Brillante, Invierno Brillante) aguantan una definición nítida: un contorno de labios limpio, un rubor intenso, un eyeliner gráfico.
 
-Si quieres la versión completa de las 12 estaciones, mi [tabla completa de colores de maquillaje por estación](/es/blog/best-makeup-colors-color-season) cubre cada subestación en detalle.
+Si quieres la versión completa de las 12 estaciones, nuestra [tabla completa de colores de maquillaje por estación](/es/blog/best-makeup-colors-color-season) cubre cada subestación en detalle.
 
 ---
 
@@ -87,7 +87,7 @@ Aquí es donde el sistema da sus frutos. En lugar de comprar una colección ente
 
 Elige primero por subtono y después por profundidad. Prueba tres tonos en una franja a lo largo de la mandíbula y compruébalos con luz natural. El adecuado desaparece en tu cuello; el equivocado deja una línea visible. Para empezar, una crema con color ligera perdona más que una base de cobertura total. Si quieres algo de contexto sobre cómo se formulan los productos de base, [la descripción de Wikipedia sobre los cosméticos de base](https://en.wikipedia.org/wiki/Foundation_(cosmetics)) es una introducción sorprendentemente clara.
 
-Las bases son donde más se notan los errores de subtono, así que si la tuya nunca termina de encajar, lee mi [análisis a fondo sobre por qué tu base nunca encaja](/es/blog/foundation-undertone-guide).
+Las bases son donde más se notan los errores de subtono, así que si la tuya nunca termina de encajar, lee nuestro [análisis a fondo sobre por qué tu base nunca encaja](/es/blog/foundation-undertone-guide).
 
 ### 2. Rubor en crema
 
@@ -111,7 +111,7 @@ Las cejas enmarcan todo lo demás. Elige un tono cercano al vello natural de tus
 
 ## Una rutina de 10 minutos para principiantes
 
-Una vez que tengas tus cinco productos, esta es la rutina que doy a cada amiga que me lo pide:
+Una vez que tengas tus cinco productos, sigue esta rutina sencilla:
 
 1. **Base (2 minutos):** Aplica tu crema con color o base con los dedos o una esponja húmeda, centrándote en el centro del rostro, y luego difumina hacia fuera.
 2. **Rubor (1 minuto):** Da toquecitos de rubor en crema en las manzanas de las mejillas y difumina hacia las sienes.
@@ -120,13 +120,13 @@ Una vez que tengas tus cinco productos, esta es la rutina que doy a cada amiga q
 5. **Labios (1 minuto):** Aplica tu labial de firma y presiona una vez con un pañuelo.
 6. **Revisión (2 minutos):** Da un paso atrás y mírate con luz natural. Si algo se ve pesado, difumínalo con la yema de un dedo limpio.
 
-No hace falta hacer todos los pasos todos los días. Muchos días solo me pongo rubor, cejas y labios, y la diferencia con la cara al natural es drástica.
+No hace falta hacer todos los pasos todos los días. Muchos días, solo rubor, cejas y labios, y la diferencia con la cara al natural es drástica.
 
 ---
 
 ## 6 errores de principiante que más dinero malgastan
 
-Son las trampas en las que caí yo, para que tú no tengas que hacerlo.
+Son las trampas más comunes para principiantes — y cómo evitarlas.
 
 - **Comprar por el muestrario en el dorso de la mano.** La piel de la mano suele tener un subtono distinto al de la cara. Prueba en la mandíbula o en la mejilla.
 - **Elegir la base que coincide con el cuello bajo la luz de la tienda.** Compruébala con luz del día antes de irte o pide muestras.
@@ -141,7 +141,7 @@ Son las trampas en las que caí yo, para que tú no tengas que hacerlo.
 
 La parte más difícil de este sistema es el primer paso: conocer tu estación. Colocarte telas sobre los hombros frente al espejo funciona, pero es fácil equivocarse, sobre todo con mala iluminación.
 
-Aquí es donde las herramientas de IA se han vuelto realmente útiles. Sube un selfi sin maquillaje con luz natural y una buena herramienta de análisis lee tu subtono, profundidad y croma, y los traduce en tonos de maquillaje. Probé una herramienta gratuita como [aicoloranalysis.io](/makeup-analysis) antes de un gran viaje de compras de maquillaje, y me dio una lista clara de familias de base, labial y rubor. No sustituyó a la prueba del espejo, pero me ahorró varios malos pasos.
+Aquí es donde las herramientas de IA se han vuelto realmente útiles. Sube un selfi sin maquillaje con luz natural y una buena herramienta de análisis lee tu subtono, profundidad y croma, y los traduce en tonos de maquillaje. Herramientas gratuitas como [aicoloranalysis.io](/makeup-analysis) pueden sugerir familias de base, labial y rubor antes de comprar. No sustituyen la prueba del espejo, pero ayudan a evitar desajustes evidentes.
 
 Si quieres una introducción más amplia y sin jerga a todo esto, hay una [guía de análisis de color para principiantes](/es/color-analysis-for/beginners) que explica lo básico paso a paso.
 

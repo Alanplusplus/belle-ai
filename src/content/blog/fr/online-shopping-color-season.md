@@ -8,13 +8,13 @@ image: "/images/blog/online-shopping-color-season.webp"
 
 ## Le Problème des Couleurs en Ligne Dont Personne ne Parle
 
-J'étais tellement enthousiaste quand j'ai enfin découvert ma saison de couleurs. Été Doux — des couleurs atténuées, aux tons froids, de profondeur moyenne. Rose poudré, sauge, bleu ardoise, taupe froid. J'ai immédiatement ouvert mon ordinateur, parcouru mes boutiques préférées et commencé à remplir mon panier.
+Vous connaissez enfin votre saison — par exemple l'Été Doux, avec des couleurs atténuées, froides, de profondeur moyenne : rose poudré, sauge, bleu ardoise, taupe froid. Vous ouvrez l'ordinateur, parcourez vos boutiques et remplissez le panier.
 
-Trois jours et une livraison plus tard, je contemplais un tas de vêtements qui ne ressemblaient *absolument pas* à ce que j'avais commandé. Le haut « mauve poudré » était agressivement rose. Le pantalon « vert sauge » était un olive fluo. Et le blazer « gris froid » avait une teinte nettement chaude et jaunâtre qui me donnait l'air de ne pas avoir dormi depuis une semaine.
+À la livraison, la pile sur le lit peut ne ressembler *absolument pas* à la commande. Le haut « mauve poudré » peut être agressivement rose, le pantalon « vert sauge » olive fluo, le blazer « gris froid » teinté de chaleur qui ternit le teint.
 
 Ça vous parle ? Si vous avez déjà essayé d'acheter en ligne selon votre saison de couleurs, vous connaissez la galère. Les couleurs sur votre écran ne sont pas celles sur le cintre — et connaître sa saison ne sert à rien si chaque écran vous ment différemment.
 
-J'ai passé deux ans à affiner un système d'achat de couleurs en ligne qui fonctionne vraiment. Voici tout ce que j'ai appris pour acheter les bonnes couleurs sans toucher le tissu au préalable.
+Le système en 7 étapes ci-dessous sert à acheter les bonnes couleurs sans toucher le tissu — des habitudes qui réduisent nettement les retours.
 
 ---
 
@@ -38,7 +38,7 @@ La compression JPEG — le format utilisé par pratiquement toutes les boutiques
 
 **4. L'interférence de l'arrière-plan**
 
-La couleur du fond, le teint du mannequin et même le style de la photo influencent votre perception. Un chemisier rose poudré sur un mannequin aux tons chauds devant un fond beige paraît plus chaud que le même chemisier sur un mannequin aux tons froids devant un fond blanc. Votre cerveau ajuste la perception des couleurs selon le contexte environnant — un phénomène bien documenté appelé [contraste simultané](https://www.colormatters.com/color-and-vision/color-and-simultaneous-contrast).
+La couleur du fond, le teint du mannequin et même le style de la photo influencent votre perception. Un chemisier rose poudré sur un mannequin aux tons chauds devant un fond beige paraît plus chaud que le même chemisier sur un mannequin aux tons froids devant un fond blanc. Votre cerveau ajuste la perception des couleurs selon le contexte environnant — un phénomène bien documenté appelé contraste simultané.
 
 **5. Le décalage nom-couleur**
 
@@ -48,7 +48,7 @@ Les marques de mode nomment les couleurs pour le marketing, pas pour la précisi
 
 ## Le Système en 7 Étapes pour Acheter Votre Palette en Ligne
 
-Voici le cadre pratique que j'utilise à chaque achat en ligne. Il ne nécessite aucun équipement spécial — juste quelques habitudes qui réduisent considérablement la pile de retours.
+Voici le cadre pratique que vous pouvez utiliser à chaque achat en ligne. Il ne nécessite aucun équipement spécial — juste quelques habitudes qui réduisent considérablement la pile de retours.
 
 ### Étape 1 : Constituez une Référence Colorimétrique Physique
 
@@ -148,7 +148,7 @@ Cela ne remplace pas l'apprentissage de la lecture des couleurs par vous-même �
 
 ## Trois Marques Qui Réussissent les Couleurs en Ligne (Et Comment Repérer les Autres)
 
-Après des années d'achats en ligne, j'ai remarqué que certaines marques représentent les couleurs de façon plus fidèle. Voici ce qu'elles font différemment :
+Certaines marques représentent les couleurs en ligne de façon plus fidèle. Voici ce qu'elles font différemment :
 
 **Ce que font les marques précises :**
 - Photographier sur fond blanc uni ou gris clair avec un éclairage calibré
@@ -168,14 +168,14 @@ Après des années d'achats en ligne, j'ai remarqué que certaines marques repr�
 
 ## Points Clés
 
-- Les couleurs en ligne sont déformées par l'éclairage, la calibration de l'écran, la compression, les arrière-plans et la créativité des noms de couleurs — attendez-vous à 20-30 % de variation entre l'écran et la réalité
+- Les couleurs en ligne sont déformées par l'éclairage, la calibration de l'écran, la compression, les arrière-plans et la créativité des noms de couleurs — attendez-vous à une certaine variation entre l'écran et la réalité
 - Les échantillons de couleurs physiques près de votre écran sont le meilleur investissement pour la précision des achats en ligne
 - Les photos des avis clients sont plus fiables que les photos produit professionnelles pour juger la vraie couleur
 - La composition du tissu change l'apparence des couleurs — le coton est le plus fiable, la soie ajoute de la chaleur, le polyester ajoute de la luminosité
 - Comprenez les *limites* de votre saison (quelle qualité compte le plus) pour évaluer les scénarios « pire cas » avant d'acheter
 - Les retours gratuits font partie de la stratégie d'achat colorimétrique, pas d'un simple confort — commandez stratégiquement et retournez sans culpabilité
 
-Les meilleures acheteuses en ligne que je connais n'ont pas une vision des couleurs parfaite. Elles ont des systèmes. Construisez le vôtre, et vous arrêterez de redouter l'instant où la boîte de livraison arrive.
+Les acheteuses les plus régulières n'ont pas une vision des couleurs parfaite. Elles ont des systèmes. Construisez le vôtre, et vous arrêterez de redouter l'instant où la boîte de livraison arrive.
 
 ## Articles connexes
 

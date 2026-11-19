@@ -8,11 +8,9 @@ image: "/images/blog/perfect-red-lipstick-skin-tone.webp"
 
 ## The One Makeup Rule Everyone Gets Wrong
 
-I've lost count of how many red lipsticks I've bought, worn once, and shoved to the back of a drawer. Classic red? Too harsh. Coral? Washed me out. Berry? Made my teeth look yellow. For years I thought I just "couldn't pull off red lipstick."
+You may have a drawer full of red lipsticks that looked stunning in the store and wrong on your face: classic red feels too harsh, coral washes you out, berry makes teeth look yellow. That usually does not mean you cannot wear red — it means the undertone of the red and your skin are out of sync.
 
-Turns out, I wasn't bad at wearing red. I was bad at choosing the *right* red.
-
-The secret isn't about boldness or confidence (though those help). It's about understanding how your skin's undertone interacts with the pigments in a lipstick. Once I figured that out, I found my perfect red in under five minutes — and you can too.
+The secret is not about boldness or confidence (though those help). It is about understanding how your skin's undertone interacts with the pigments in a lipstick. Once you know your undertone, narrowing to a flattering red can take minutes, not months of trial and error.
 
 This guide breaks down the science, gives you specific shade recommendations, and includes a simple self-test so you'll never waste money on the wrong red again.
 
@@ -156,7 +154,7 @@ Color matching used to require a trip to a trained consultant or hours of trial 
 
 Apps like [Belle AI](/) can look at a photo of your face and suggest your undertone using the same color cues professionals look at — whether you're warm, cool, or neutral, and a likely color season. Once you know your season, narrowing down the right red becomes almost effortless.
 
-I ran my own selfie through an AI color analysis tool and confirmed I was a Soft Summer — which explained why every coral I tried looked wrong, and why muted berry reds made me light up.
+Running a selfie through an AI color analysis tool can flag your undertone and a likely color season using the same color cues professionals look at — useful when coral reds keep looking off but muted berry reds suddenly work.
 
 ---
 

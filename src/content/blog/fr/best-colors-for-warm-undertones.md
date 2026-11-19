@@ -8,7 +8,7 @@ image: "/images/blog/best-colors-for-warm-undertones.webp"
 
 ## Votre sous-ton chaud est un superpouvoir — si vous savez l'utiliser
 
-Pendant des années, j'ai porté des pastels glacés et des gris froids parce qu'un quiz en magasin m'avait dit que j'étais « superbe dans tout ce qui est neutre ». Ce n'est qu'en comprenant enfin mon sous-ton chaud que j'ai réalisé pourquoi certaines tenues me donnaient l'air bronzée et pleine de vie, tandis que d'autres me faisaient paraître fatiguée avant midi.
+Beaucoup de personnes choisissent des pastels glacés et des gris froids parce qu'un quiz en magasin assure qu'« on est superbe dans tout ce qui est neutre ». Lorsque vous savez que votre sous-ton est chaud, le schéma devient clair : certaines tenues vous donnent l'air bronzée et pleine de vie, tandis que les neutres froids peuvent vous fatiguer avant midi.
 
 Si vous avez des sous-tons chauds — des nuances dorées, pêche ou jaunâtres sous la surface de votre peau — certaines couleurs amplifieront cette chaleur naturelle et vous feront rayonner de l'intérieur. Les mauvaises couleurs, en revanche, peuvent vous ternir ou donner à votre teint un aspect terne.
 
@@ -79,7 +79,7 @@ Les tons terre sont le territoire naturel des sous-tons chauds. Ce sont les tein
 - Caramel
 - Ambre
 
-Je garde toujours au moins un haut terre cuite ou rouille en rotation — c'est l'équivalent d'un filtre instantané pour la peau chaude.
+Un haut terre cuite ou rouille près du visage agit comme un filtre instantané sur une peau chaude — gardez-en au moins un en rotation.
 
 ### Verts
 
@@ -226,7 +226,7 @@ Le violet fonctionne généralement mieux en accent qu'en tenue head-to-toe pour
 - Bleu-noir
 - Couleurs à base violette
 
-Je suis passée du brun cendré au châtaigne chaud il y a quelques années, et le nombre de commentaires « tu as l'air si en forme » que j'ai commencé à recevoir m'a vraiment surprise. Même visage, sous-ton différent dans les cheveux — impact énorme.
+Passer du brun cendré au châtaigne chaud est une amélioration fréquente : les cheveux paraissent plus chauds sur une peau dorée et le visage semble souvent plus sain. Même visage, sous-ton différent dans les cheveux — impact énorme.
 
 ---
 
@@ -299,7 +299,7 @@ Comprendre votre sous-saison affine votre palette de « généralement chaud » 
 
 **Étape 1 :** Ancrer avec des neutres chauds (camel, crème, marron chocolat, bleu marine chaud)
 
-**Étape 2 :** Ajouter 2-3 couleurs d'accent qui vous valent régulièrement des compliments (la plupart des personnes à sous-ton chaud ont une « signature » — la mienne est terre cuite)
+**Étape 2 :** Ajouter 2-3 couleurs d'accent qui vous valent régulièrement des compliments (beaucoup de personnes à sous-ton chaud adoptent une couleur signature comme terre cuite ou olive)
 
 **Étape 3 :** Garder hauts, écharpes et tout ce qui est près du visage dans vos meilleures couleurs. Le bas peut être plus flexible.
 

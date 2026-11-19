@@ -195,6 +195,8 @@ export function PricingModal({
           headline: lockScene && unlockReport ? proseFor(unlockReport, reportLang)?.headline : undefined,
           // 锁定的报告只免费露出前 3 个推荐色（和后端 LOCKED_FREE_COLORS 一致）；额度用完那一档展示的是上次结果，沿用同样的 3 个
           revealed: teaserPalette.bestColors.slice(0, FREE_COLOR_COUNT).map((c) => c.hex),
+          // 还没揭晓的推荐色个数：和报告里「锁定色点」同一个画法，让人一眼看到「还有这么多在等我」
+          hiddenCount: Math.max(0, teaserPalette.bestColors.length - FREE_COLOR_COUNT),
         }
       : null;
   // 三句「用上之后的感觉」：解锁页已经有季型预览，手机上空间紧，就不再放
@@ -299,7 +301,8 @@ export function PricingModal({
           <LoadingDots />
         ) : upgradeScene ? (
           t("upgradeCta", { price: kitCardPrice })
-        ) : lockScene ? (
+        ) : lockScene && !singleOffer ? (
+          // 单份和套装两张卡同屏时，套装按钮写「买套装」：避免两个按钮都是「揭晓我的…」，只差价格，让人分不清买的是什么
           t("ctaLock", { price: kitPrice })
         ) : (
           t("cta", { price: kitPrice })
@@ -373,6 +376,7 @@ export function PricingModal({
             name={teaser.name}
             headline={teaser.headline}
             revealed={teaser.revealed}
+            hiddenCount={teaser.hiddenCount}
             moreText={t("lockPaletteMore")}
           />
         )}
@@ -467,6 +471,7 @@ function UnlockTeaser({
   name,
   headline,
   revealed,
+  hiddenCount,
   moreText,
 }: {
   lang: string;
@@ -474,6 +479,7 @@ function UnlockTeaser({
   name: string;
   headline?: string;
   revealed: string[];
+  hiddenCount: number;
   moreText: string;
 }) {
   return (
@@ -488,6 +494,15 @@ function UnlockTeaser({
       <div className="mt-3.5 flex items-center justify-center gap-1.5" aria-hidden>
         {revealed.map((hex, i) => (
           <span key={`${hex}-${i}`} className="h-6 w-6 rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.25),inset_0_0_0_1px_rgba(0,0,0,0.07)]" style={{ background: hex }} />
+        ))}
+        {/* 还没揭晓的颜色：灰底小锁，比已揭晓的略小，手机上 10 个也能排在一行 */}
+        {Array.from({ length: hiddenCount }, (_, i) => (
+          <span key={`hidden-${i}`} className="flex h-5 w-5 items-center justify-center rounded-full bg-foreground/[0.07] text-gold-deep">
+            <svg className="h-2.5 w-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.4}>
+              <rect x="5" y="11" width="14" height="9" rx="2" />
+              <path strokeLinecap="round" d="M8 11V8a4 4 0 018 0v3" />
+            </svg>
+          </span>
         ))}
       </div>
       <p className="mt-2.5 flex items-center justify-center gap-1.5 text-xs text-muted-foreground">

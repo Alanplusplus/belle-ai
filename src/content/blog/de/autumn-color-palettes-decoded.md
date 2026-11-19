@@ -13,7 +13,7 @@ Deine Farbanalyse hat ergeben: Herbsttyp. Du hast Wärme in deinem Teint, Tiefe 
 
 Aber hier wird es spannend — es gibt **drei verschiedene Herbst-Subtypen** im 12-Jahreszeiten-Farbanalysesystem, und sie unterscheiden sich mehr, als die meisten denken. Eine Farbe, die einen Herbsttyp strahlend wirken lässt, kann einen anderen matschig oder fahl aussehen lassen.
 
-Ich habe diesen Fehler so oft gesehen: Jemand erfährt, dass er oder sie Herbsttyp ist, füllt den Schrank mit jedem Orange- und Brauntön, den er findet — und wundert sich, warum manche Teile zum Leuchten bringen und andere müde wirken lassen. Die Antwort ist fast immer ein Subtyp-Mismatch.
+Ein häufiger Fehler: Jemand erfährt, dass er oder sie Herbsttyp ist, füllt den Schrank mit jedem Orange- und Brauntön, den er findet — und wundert sich, warum manche Teile zum Leuchten bringen und andere müde wirken lassen. Die Antwort ist fast immer ein Subtyp-Mismatch.
 
 In diesem Guide stelle ich dir **Deep Autumn**, **True Autumn** und **Soft Autumn** vor — was jeden einzigartig macht, welche Farben am besten und schlechtesten sind, und wie du genau herausfindest, welcher Herbsttyp du bist.
 

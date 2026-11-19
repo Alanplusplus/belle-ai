@@ -13,7 +13,7 @@ Votre analyse colorimétrique confirme ce que vous soupçonniez : vous êtes un 
 
 Mais voilà le hic — il existe **trois sous-types d'Été distincts** dans le système des 12 saisons, et les confondre peut faire la différence entre un teint lumineux et un teint terne.
 
-J'ai accompagné des femmes qui ont acheté des « pastels froids » pendant des années parce qu'elles savaient être des Étés, pour réaliser qu'elles choisissaient des teintes Cool Summer alors qu'elles étaient en réalité Soft Summer. Le sous-ton était bon, l'intensité complètement fausse.
+Beaucoup de personnes achètent des « pastels froids » pendant des années parce qu'elles savent être des Étés, pour réaliser qu'elles choisissaient des teintes Cool Summer alors qu'elles sont en réalité Soft Summer. Le sous-ton était bon, l'intensité complètement fausse.
 
 Dans ce guide, je détaille **Cool Summer**, **True Summer** et **Soft Summer** — leurs traits distinctifs, leurs meilleures et pires couleurs, et comment savoir exactement lequel vous êtes.
 

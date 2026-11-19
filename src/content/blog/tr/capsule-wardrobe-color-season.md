@@ -12,7 +12,7 @@ Soft Autumn ya da Bright Spring olduğunu öğrendin. Belki bir yapay zeka renk 
 
 Ama kimsenin bahsetmediği sorun şu: mevsimini bilmek gardırobunu otomatik olarak düzeltmez.
 
-"Soft Summer" paletimi — o tozlu pembeler, soluk lavantalar ve yumuşak mavi-griler — izlerken düşünüyordum: "Harika. Pazartesi işe gidecek gerçek kombinleri nasıl yapacağım?"
+Soft Summer paletinize — tozlu pembeler, soluk lavantalar, yumuşak mavi-griler — bakıp "Harika. Pazartesi işe gidecek gerçek kombinleri nasıl yapacağım?" diye düşünüyor olabilirsiniz.
 
 Şu an tam bu noktadaysan bu rehber senin için. Renk mevsimine tamamen dayalı bir kapsül gardırop kurman için parça parça, bunaltmadan yürüyeceğim.
 
@@ -160,7 +160,7 @@ Yarın 30 parça almana gerek yok. Gerçekçi bir zaman çizelgesi:
 
 ## Kaçınılacak Yaygın Hatalar
 
-Kendi kapsül gardırobumla bir yıldan fazla çalıştıktan sonra öğrendiğim tuzaklar:
+Mevsim renklerine dayalı bir kapsül gardırop kurarken kaçınılması gereken tuzaklar:
 
 **1. Tamamen nötr gitmek.** Gardırop %100 basic olursa sıkıcı hissettirir. Neşe ve kendini ifade için aksan parçalara ihtiyacın var.
 

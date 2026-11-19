@@ -36,7 +36,7 @@ Observez les veines à l'intérieur de votre poignet en lumière naturelle :
 | Vert | Chaud |
 | Mélange bleu-vert | Neutre |
 
-**Précision :** ~70 %. Fonctionne mieux sur les teints clairs. Sur les teints foncés, les veines peuvent être plus difficiles à voir.
+**Précision :** Modérée. Fonctionne mieux sur les teints clairs. Sur les teints foncés, les veines peuvent être plus difficiles à voir.
 
 ### Méthode 2 : Le test or vs argent
 
@@ -113,7 +113,7 @@ Un second avis rapide. Les outils IA comme Belle AI s'appuient sur un modèle d'
 
 ## Le cas particulier : le sous-ton neutre
 
-Environ 20 à 30 % des personnes ont un sous-ton neutre. Signes que vous êtes neutre :
+Beaucoup de personnes ont un sous-ton neutre. Signes que vous êtes neutre :
 
 - Les tests donnent des résultats mitigés (certains indiquent chaud, d'autres froid)
 - L'or et l'argent vous vont tous les deux bien

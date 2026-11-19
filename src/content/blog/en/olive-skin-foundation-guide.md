@@ -9,11 +9,11 @@ image: "/images/blog/olive-skin-foundation-guide.webp"
 
 ## Why Foundation Shopping Breaks Down on Olive Skin
 
-If you have olive undertones, I already know how your last counter visit probably went. You swatched ten shades. Warm options looked orange on your jaw. Cool options looked pink or grey. Neutral somehow did both. Under store lights you picked a “close enough” bottle — and by the time you got home, your face and neck were telling two different stories.
+If you have olive undertones, your last counter visit may have followed a familiar pattern: you swatched ten shades. Warm options looked orange on your jaw. Cool options looked pink or grey. Neutral somehow did both. Under store lights you picked a “close enough” bottle — and by the time you got home, your face and neck were telling two different stories.
 
 That is not a skill problem. Most foundation lines still assume skin is either **warm (yellow-gold)** or **cool (pink-blue)**. Olive skin adds a **green-grey modifier** on top of your base undertone. Formulas without that green channel rarely melt in, no matter how carefully you shade-match for depth.
 
-In this guide I walk through why the usual warm/cool advice fails, what is happening in your skin at a pigment level, which brands actually label or formulate for olive tones, and how I think about matching **fair, medium, and deep** olive across seasons.
+In this guide we walk through why the usual warm/cool advice fails, what is happening in your skin at a pigment level, which brands actually label or formulate for olive tones, and how to match **fair, medium, and deep** olive across seasons.
 
 ---
 
@@ -23,7 +23,7 @@ In this guide I walk through why the usual warm/cool advice fails, what is happe
 
 Warm bases lean on yellow and golden pigments. On clear golden undertones, that reads as healthy glow. On olive skin, those same pigments sit **on top of** your green cast instead of blending with it.
 
-What I see most often:
+Common mismatches at the counter:
 
 - A golden “perfect match” that looks fine in the bottle but **orange at the hairline**
 - Jawlines that look **more yellow than the rest of the face** after a few hours
@@ -63,13 +63,13 @@ Think of your skin as stacked layers. Your **depth** (how light or deep you read
 - Yellow in the formula stops **cool pink** from turning you grey.
 - **Depth** (fair vs deep) is separate from undertone. You can be light olive, medium olive, or deep olive — each needs its own shade family.
 
-When I swatch, shades that look slightly **muddy, taupe, or grey-green in the bottle** often outperform “clean” golden shades. Counterintuitive, but reliable.
+When you swatch, shades that look slightly **muddy, taupe, or grey-green in the bottle** often outperform “clean” golden shades. Counterintuitive, but reliable.
 
 ---
 
-## How I Swatch (Before You Buy Another Wrong Bottle)
+## How to Swatch (Before You Buy Another Wrong Bottle)
 
-Counter lighting lies. I use a simple routine:
+Counter lighting lies. A simple routine that works:
 
 1. **Strip swatch three undertones at the same depth** on the jaw — one golden-warm, one pink-cool, one muted or olive-leaning.
 2. **Wait fifteen minutes** — oxidation and dry-down change olive matches more than people expect.
@@ -82,7 +82,7 @@ If every shade at your depth fails, you are probably shopping the wrong underton
 
 ## Brands Worth Trying (Olive-Friendly Lines)
 
-Major brands have gotten better, but olive still requires reading undertone notes — not just picking “medium warm.” Here is where I send people first.
+Major brands have gotten better, but olive still requires reading undertone notes — not just picking “medium warm.” These lines are practical places to start.
 
 ### NARS
 
@@ -124,13 +124,13 @@ Undertone rules stay the same; **depth changes which bottle** you reach for. Use
 
 ### Fair to light olive
 
-Light olive is often misread as “neutral” or “cool” because the green cast is subtle. I look for **light-medium** shades with a **grey-green or taupe** base — not peach, not pink. Hands tan differently than the face; **always match jaw and neck**, not the back of your hand.
+Light olive is often misread as “neutral” or “cool” because the green cast is subtle. Look for **light-medium** shades with a **grey-green or taupe** base — not peach, not pink. Hands tan differently than the face; **always match jaw and neck**, not the back of your hand.
 
 If the depth is perfect but undertone is slightly off, **one drop of green color corrector per pump** can olive-ize a close match without changing the whole base.
 
 ### Medium olive
 
-This is the most common depth I hear about — and the richest brand coverage. Descriptions like **“warm neutral”** or **“golden olive”** are worth trying. Medium olives often **oxidize half a shade warmer**; wait ten to fifteen minutes before you commit.
+Medium olive is the depth with the widest brand coverage. Descriptions like **“warm neutral”** or **“golden olive”** are worth trying. Medium olives often **oxidize half a shade warmer**; wait ten to fifteen minutes before you commit.
 
 ### Tan to deep olive
 
@@ -146,7 +146,7 @@ Olive skin rarely stays one flat color all year. Your foundation plan should mov
 
 **Winter:** Skin may lighten slightly; **grey-green reads stronger**. Summer depth can look orange or muddy on the neck.
 
-**Transition months:** I keep **two foundations** — summer depth and winter depth — and mix them as needed. That is normal, not “too much makeup.”
+**Transition months:** Many people keep **two foundations** — summer depth and winter depth — and mix them as needed. That is normal, not “too much makeup.”
 
 **Corrector as a seasonal tool:** Green corrector mixed into your base (sparingly) can bridge weeks when you are between shades or when only “almost” matches are in stock.
 

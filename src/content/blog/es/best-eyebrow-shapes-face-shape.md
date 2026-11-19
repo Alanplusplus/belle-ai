@@ -11,7 +11,7 @@ image: "/images/blog/best-eyebrow-shapes-face-shape.webp"
 
 Si alguna vez has mirado una foto y has sentido que algo no encajaba del todo — pero no sabías qué —, lo más probable es que fueran las cejas. Las cejas ocupan el tercio superior del rostro, la zona donde la mirada aterriza primero. Enmarcan los ojos, definen la expresión y marcan discretamente el tono del resto de rasgos.
 
-He visto clientas dedicar horas a perfeccionar la base y el labial mientras dejaban las cejas intactas o sobredepiladas siguiendo una tendencia que nunca favoreció su estructura ósea. La diferencia cuando aciertas la forma de la ceja es inmediata y notable. No se trata de seguir lo que está de moda en redes sociales, sino de entender cómo tus cejas interactúan con la geometría de tu rostro.
+Muchas personas dedicar horas a perfeccionar la base y el labial mientras dejaban las cejas intactas o sobredepiladas siguiendo una tendencia que nunca favoreció su estructura ósea. La diferencia cuando aciertas la forma de la ceja es inmediata y notable. No se trata de seguir lo que está de moda en redes sociales, sino de entender cómo tus cejas interactúan con la geometría de tu rostro.
 
 ---
 
@@ -21,7 +21,7 @@ La forma de tu rostro es, en esencia, un mapa de tus proporciones: qué tan anch
 
 El principio es el mismo que maquilladores y especialistas en cejas han usado durante décadas: **las cejas deben crear armonía, no competición.** Si tu rostro es redondo y suave, una ceja muy angular y afilada puede resultar dura. Si tu rostro es largo y estrecho, un arco alto y dramático puede alargarlo aún más. El objetivo es acercar tus proporciones visuales al equilibrio.
 
-La investigación sobre atractivo facial muestra de forma consistente que las proporciones equilibradas importan. Tus cejas no reescribirán tu estructura ósea, pero pueden modificar sutilmente cómo los demás leen esas proporciones. [La guía de cejas de Allure](https://www.allure.com/story/eyebrow-shapes) lleva años subrayando esta conexión entre la colocación del arco y la forma del rostro, y en mi experiencia, el consejo funciona con mucha más fiabilidad que cualquier tendencia de cejas.
+Las proporciones equilibradas influyen en cómo se lee un rostro. Tus cejas no reescribirán tu estructura ósea, pero pueden modificar sutilmente cómo los demás leen esas proporciones. Editores y especialistas en cejas llevan años subrayando esta conexión entre la colocación del arco y la forma del rostro — más fiable que la mayoría de tendencias.
 
 Piensa en tus cejas como líneas horizontales en la parte superior del rostro. Su ángulo, altura y grosor envían señales sobre anchura, longitud y estructura. Por eso la mejor forma de ceja para cada forma de rostro no es una respuesta única: es una recomendación personalizada según lo que necesitan tus proporciones concretas.
 
@@ -37,7 +37,7 @@ Antes de profundizar, recuerda que son orientaciones, no reglas rígidas. Las fo
 
 **El objetivo:** Realzar lo que ya está equilibrado. Los rostros ovalados son los más versátiles, así que tus cejas deben complementar, no corregir.
 
-**Mejor forma de ceja:** Cejas suavemente anguladas con un arco natural y suave. El pico debe situarse sobre el tercio externo del iris — lo bastante alto para definir, lo bastante bajo para mantener suavidad. He comprobado que un grosor medio con un ligero ángulo ascendente en la cola crea el aspecto más pulido en rostros ovalados.
+**Mejor forma de ceja:** Cejas suavemente anguladas con un arco natural y suave. El pico debe situarse sobre el tercio externo del iris — lo bastante alto para definir, lo bastante bajo para mantener suavidad. Un grosor medio con un ligero ángulo ascendente en la cola suele crear el aspecto más pulido en rostros ovalados.
 
 **Qué evitar:** Cejas extremadamente finas que rompen tu armonía natural, o arcos muy altos y dramáticos que añaden angularidad innecesaria.
 
@@ -87,7 +87,7 @@ Antes de profundizar, recuerda que son orientaciones, no reglas rígidas. Las fo
 
 **Mejor forma de ceja:** Cejas planas y horizontales con arco mínimo. Mantén la línea de la ceja relativamente recta de extremo a extremo, con solo un leve levantamiento en la cola. Un grosor más completo ayuda a añadir anchura visual a la parte superior del rostro.
 
-**Qué evitar:** Arcos altos — son el error más grande que veo en rostros alargados. Un arco dramático añade longitud vertical exactamente donde menos la necesitas.
+**Qué evitar:** Arcos altos — son de los errores más frecuentes en rostros alargados. Un arco dramático añade longitud vertical exactamente donde menos la necesitas.
 
 **Consejo rápido:** Resiste la tentación de alargar la cola demasiado hacia abajo. Una cola ligeramente extendida y mantenida a nivel, sin caer, conserva la anchura sin añadir longitud.
 
@@ -122,7 +122,7 @@ Usa esta tabla como chuleta cuando estés en el salón o arreglándote las cejas
 
 ## Errores comunes de cejas según la forma del rostro
 
-Saber qué evitar es tan valioso como saber qué elegir. Estos son los errores que veo con más frecuencia — y varios los he cometido yo misma.
+Saber qué evitar es tan valioso como saber qué elegir. Estos son los errores más frecuentes según la forma del rostro.
 
 **Rostros ovalados:** Depilar en exceso para seguir la tendencia de cejas finas. Los rostros ovalados ya tienen proporciones equilibradas; reducir demasiado las cejas elimina un marco natural que juega a tu favor.
 
@@ -142,7 +142,7 @@ Un error universal que vale la pena mencionar: ignorar la longitud de la cola. L
 
 ## Cómo determinar tu forma de rostro en casa
 
-Si no estás segura de en qué categoría encajas, aquí tienes un método rápido que he usado con clientas y en mis propios experimentos frente al espejo.
+Si no estás segura de en qué categoría encajas, aquí tienes un método rápido para hacer en casa:
 
 Recoge el pelo hacia atrás con firmeza — una diadema o pinza funciona bien. Párate frente a un espejo con luz natural de día, mirando de frente. Usa un rotulador lavable o un labial para trazar el contorno de tu rostro sobre el espejo. Da un paso atrás y observa la forma que has dibujado.
 
@@ -169,8 +169,6 @@ Hazte la foto de frente, no desde arriba o abajo — el ángulo distorsiona las 
 La tecnología ha hecho el análisis de proporciones mucho más accesible que hace apenas cinco años. [Las herramientas de análisis de forma de rostro con IA](/face-shape-analysis) pueden sugerir tu forma de rostro y tus proporciones en segundos, dándote un punto de partida para elegir desde la forma de las cejas hasta el peinado. Sigo recomendando confiar en tu espejo y en tu instinto — pero tener una segunda opinión puede ayudar, especialmente si no estabas segura de si eres redonda, ovalada o algo intermedio.
 
 Los servicios profesionales de cejas también han evolucionado. Las técnicas de mapeo que usan los especialistas — medir inicio, arco y cola de la ceja respecto a puntos de referencia faciales — reflejan la misma lógica proporcional que cubre esta guía. Ya vayas a un brow bar o trabajes tus cejas en casa, el principio subyacente sigue siendo el mismo: diseña según tu rostro, no en su contra.
-
-[La visión general de Vogue sobre rasgos que enmarcan el rostro](https://www.vogue.com/article/face-shape-beauty-guide) conecta cejas, cabello, maquillaje y accesorios mediante la misma filosofía de equilibrio primero.
 
 ---
 

@@ -8,7 +8,7 @@ image: "/images/blog/transition-color-palette-spring-to-summer.webp"
 
 ## La crisis del armario que ocurre cada junio
 
-Cada año, hacia finales de mayo, me topo con el mismo muro. Mi armario está lleno de piezas en melocotón cálido, coral y amarillo dorado que me hicieron brillar toda la primavera — pero de repente se sienten demasiado pesadas, demasiado cálidas, *demasiado*. La luz ha cambiado. El aire se siente distinto. Y los colores que me hacían radiante en abril ahora me hacen ver ligeramente sonrojada en junio.
+Finales de mayo suelen frenar el impulso de tu armario primaveral. Las piezas en melocotón cálido, coral y amarillo dorado que parecían radiantes en abril de pronto se sienten demasiado pesadas, demasiado cálidas, *demasiado*. La luz ha cambiado. El aire se siente distinto — y en junio esos mismos colores pueden leerse como un rubor ligero en la piel.
 
 Si alguna vez has sentido que tu armario deja de funcionar cuando cambia el clima, no lo estás imaginando. La transición de primavera a verano no es solo un cambio de temperatura — es un cambio de luz. Y ese cambio en la luz natural afecta de verdad cómo los colores interactúan con tu piel.
 
@@ -48,7 +48,7 @@ Estos son tus **colores puente** — las piezas que se ganan su espacio en el ar
 
 ## Una estrategia práctica de transición (semana a semana)
 
-No necesitas renovar tu armario el 1 de junio. Así es como yo manejo el cambio:
+No necesitas renovar tu armario el 1 de junio. Una forma práctica de manejar el cambio:
 
 ### Semanas 1–2: empieza a apagar
 

@@ -8,9 +8,9 @@ image: "/images/blog/style-personality-wardrobe-guide.webp"
 
 ## Votre dressing est plein — pourquoi rien ne semble juste ?
 
-Je les ai comptées une fois : 47 pièces dans mon armoire, et pourtant chaque matin je me tenais devant elle en pensant n'avoir rien à porter. Les vêtements n'étaient pas mauvais. Certains étaient chers. Quelques-uns faisaient le buzz sur Instagram. Mais ils ne me *ressemblaient* pas — et je ne comprenais pas pourquoi.
+Ce scénario vous parle peut-être : un dressing rempli et, chaque matin, cette sensation de blocage — « je n'ai rien à porter ». Les pièces ne sont pas mauvaises ; certaines étaient chères ; d'autres étaient superbes sur quelqu'un d'autre. Elles ne vous *ressemblent* pas, et difficile d'en nommer la cause.
 
-Tout a changé quand j'ai découvert quelque chose : j'avais construit ma garde-robe autour de ma saison de couleur (Soft Summer, pour info) en ignorant complètement ma personnalité de style. J'achetais les bonnes couleurs dans les mauvaises silhouettes, textures et énergies. Une blouse en soie rose poudré à la coupe structurée et nette ? Techniquement dans ma palette. Visuellement fausse sur moi.
+Il manque souvent la personnalité de style, pas seulement la couleur. Vous pouvez connaître votre [saison de couleur](/fr/color-analysis) et acheter les bons tons dans de mauvaises silhouettes, textures et énergies. Une blouse en soie rose poudré à la coupe structurée et nette ? Techniquement dans la palette ; si votre archétype est Romantique-Naturelle, la forme douce compte autant que la teinte.
 
 Si vous avez déjà acheté quelque chose de superbe sur quelqu'un d'autre et plat sur vous — même dans votre teinte parfaite — votre personnalité de style est la pièce manquante. Voici comment l'utiliser pour créer une garde-robe qui fonctionne vraiment.
 
@@ -47,7 +47,7 @@ Référence rapide des huit archétypes :
 
 Remarquez l'absence de couleur dans ce tableau ? C'est intentionnel. La personnalité de style régit la *forme* ; la saison de couleur, la *teinte*. Vous avez besoin des deux filtres pour shopper.
 
-Si vous êtes un mélange Classique-Dramatique, votre garde-robe doit pencher vers une structure taillée avec des statements audacieux et épurés — pas des drapés doux ni des blocs de couleur enjoués. Savoir cela m'aurait évité des années d'achats « presque justes ».
+Si vous êtes un mélange Classique-Dramatique, votre garde-robe doit pencher vers une structure taillée avec des statements audacieux et épurés — pas des drapés doux ni des blocs de couleur enjoués. S'aligner tôt là-dessus évite des années d'achats « presque justes ».
 
 ---
 
@@ -61,7 +61,7 @@ Avant d'ajouter quoi que ce soit, soustrayez stratégiquement. Sortez tout et tr
 
 **Libérer :** Mauvaise couleur ET mauvais style. Ce sont les pièces qui vous font sentir en costume. Donnez sans culpabilité.
 
-Lors de mon audit, j'ai réalisé que 60 % de ma garde-robe étaient des pièces Classiques structurées — blazers, jupes crayon, chemises rigides — alors que mon type principal est Romantique avec secondaire Naturelle. Pas étonnant que je me sente raide et mal à l'aise. Je m'habillais pour le job que je pensais devoir avoir, pas pour mon énergie.
+En triant, vérifiez si votre archétype correspond à ce qui domine le dressing. Type principal Romantique avec secondaire Naturelle et majorité de pièces Classiques structurées — blazers, jupes crayon, chemises rigides — ? L'inconfort vient souvent d'une image aspirée, pas de votre énergie réelle.
 
 Portez une attention particulière aux pièces que vous attrapez constamment. Elles vous disent quelque chose sur votre vraie personnalité de style, même si vous ne l'avez pas formellement identifiée.
 
@@ -117,17 +117,17 @@ L'essentiel : votre garde-robe de base doit ressembler à *vous au meilleur de v
 
 C'est là que la personnalité de style vous fait économiser de l'argent. Avant tout achat, passez-le au crible de cinq questions :
 
-1. **Silhouette :** Correspond-elle aux formes de mon archétype ? (Romantique = douce et drapée ; Dramatique = structurée et angulaire)
-2. **Tissu :** La texture correspond-elle à mon énergie de style ? (Naturelle = lin et coton ; Sensuelle = satin et soie)
-3. **Couleur :** Est-elle dans la palette de ma saison ? (Les deux filtres doivent passer)
-4. **Niveau de détail :** Le styling correspond-il à mon type ? (Classique = minimal ; Créative = éclectique)
-5. **Check instinctif :** Est-ce que je me sens *moi-même*, ou comme si je jouais un rôle ?
+1. **Silhouette :** Correspond-elle aux formes de votre archétype ? (Romantique = douce et drapée ; Dramatique = structurée et angulaire)
+2. **Tissu :** La texture correspond-elle à votre énergie de style ? (Naturelle = lin et coton ; Sensuelle = satin et soie)
+3. **Couleur :** Est-elle dans la palette de votre saison ? (Les deux filtres doivent passer)
+4. **Niveau de détail :** Le styling correspond-il à votre type ? (Classique = minimal ; Créative = éclectique)
+5. **Check instinctif :** Vous sentez-vous *vous-même*, ou comme si vous jouiez un rôle ?
 
 Si l'une des quatre premières échoue, reposez-la. Si les quatre passent mais l'instinct échoue, idem — votre intuition sait.
 
-Je garde maintenant sur mon téléphone mes mots-clés de style : « douce, drapée, naturelle, chaude, effortless ». Quand un blazer power structuré me tente (énergie Classique-Dramatique qui n'est pas la mienne), je lis d'abord ces mots. Ça marche à chaque fois.
+Gardez sur votre téléphone quelques mots-clés de style — par exemple « douce, drapée, naturelle, chaude, effortless » s'ils correspondent à votre archétype. Avant d'acheter un blazer power structuré (énergie Classique-Dramatique qui n'est pas la vôtre), relisez-les : une pause simple contre les achats tendance.
 
-Les recherches du [Fashion Institute of Technology](https://www.fitnyc.edu/) montrent de manière constante que les personnes qui s'habillent en accord avec leur identité de style personnelle rapportent plus de confiance et moins de fatigue décisionnelle — logique. Quand votre garde-robe correspond à votre personnalité, vous arrêtez de remettre en question chaque tenue.
+S'habiller en accord avec votre style personnel a tendance à faciliter l'habillage. Quand votre garde-robe correspond à votre personnalité, vous arrêtez de remettre en question chaque tenue.
 
 ---
 
@@ -149,7 +149,7 @@ Pour un guide détaillé, consultez notre [guide pas à pas garde-robe capsule p
 
 ## Erreurs courantes de garde-robe (et comment la personnalité de style les corrige)
 
-Après avoir aidé des dizaines d'amies à reconstruire leurs dressings, je vois les mêmes schémas :
+Quand la personnalité de style entre en jeu, voici les schémas les plus fréquents :
 
 **Erreur 1 : Courir après des tendances qui heurtent votre type.** La tendance blazer oversize ? Superbe sur les types Dramatiques et Classiques. Écrasante pour Gamine et Éthérées. Connaissez votre type avant d'acheter la tendance.
 
@@ -167,7 +167,7 @@ Après avoir aidé des dizaines d'amies à reconstruire leurs dressings, je vois
 
 Une garde-robe capsule basée sur la personnalité de style combine le meilleur des deux mondes : la polyvalence d'une capsule (30-40 pièces mixables) et l'authenticité de s'habiller pour son archétype.
 
-Mon calendrier recommandé :
+Un calendrier pratique à suivre :
 
 **Mois 1 : Fondations** — Audit garde-robe, identifier personnalité de style (principal + secondaire), lister 15-20 pièces essentielles
 

@@ -202,4 +202,4 @@ image: "/images/blog/color-clashing-rules.webp"
 - [パーソナルカラー完全ガイド](/ja/color-analysis) — 自分に最も似合う色を見つけるために知っておくべきすべて
 - [美術の授業のカラー理論をパーソナルスタイルに活かす方法](/ja/blog/color-theory-personal-style) — 特定のカラーコンビネーションが効果的な科学的理由
 - [シーズンカラーでカプセルワードローブを作る方法](/ja/blog/capsule-wardrobe-color-season) — まず自分のベストカラーで基盤ワードローブを構築
-- [30日間「シーズンカラー」だけで過ごしてみた結果](/ja/blog/wearing-season-colors-30-days) — 厳格なパレット遵守がある筆者に柔軟性について教えてくれたこと
+- [30日シーズンカラーだけ着用チャレンジ：そのまま使えるプラン](/ja/blog/wearing-season-colors-30-days) — 30日間シーズンカラーだけで過ごすための週ごとのプラン

@@ -25,7 +25,7 @@ Nur: Was, wenn weder Gold noch Silber so richtig passt? Wenn Ihre Venen zugleich
 
 Dann haben Sie mit hoher Wahrscheinlichkeit einen Oliv-Unterton. Und Sie sind damit nicht allein: Oliv gehört weltweit zu den häufigsten Untertönen, kommt in gängigen Beauty-Ratschlägen aber kaum vor.
 
-Ich beschäftige mich seit Jahren mit Unterton-Theorie, und Oliv ist ohne Zweifel das am häufigsten falsch bestimmte Hautmerkmal der Beauty-Welt. Hier die Erklärung, warum.
+In der Unterton-Theorie ist Oliv ohne Zweifel das am häufigsten falsch bestimmte Hautmerkmal der Beauty-Welt. Hier die Erklärung, warum.
 
 ---
 

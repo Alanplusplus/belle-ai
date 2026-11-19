@@ -8,9 +8,9 @@ image: "/images/blog/style-personality-wardrobe-guide.webp"
 
 ## Your Closet Is Full — So Why Does Nothing Feel Right?
 
-I counted once: 47 items hanging in my closet, and I still stood in front of it every morning feeling like I had nothing to wear. The pieces weren't bad. Some were expensive. A few were trending on Instagram. But they didn't *feel* like me — and I couldn't figure out why.
+You might recognize the pattern: a closet full of clothes and still that stuck feeling every morning — like you have nothing to wear. The pieces aren't necessarily bad. Some were a splurge. A few looked stunning on someone else. They just don't *feel* like you, and it's hard to name why.
 
-Then I discovered something that changed everything: I had been building my wardrobe around my color season (Soft Summer, for the record) but completely ignoring my style personality. I was buying the right colors in the wrong shapes, textures, and energy. A dusty rose silk blouse in a sharp, structured cut? Technically in my palette. Visually wrong on my Romantic-Natural blend.
+Often the missing piece is style personality, not color alone. You can nail your [color season](/color-analysis) and still buy the right shades in the wrong shapes, textures, and energy. A dusty rose silk blouse in a sharp, structured cut might sit perfectly in your palette yet look wrong if your archetype leans Romantic-Natural — soft form matters as much as hue.
 
 If you've ever bought something that looked stunning on someone else and fell flat on you — even in your perfect shade — your style personality is the missing piece. Here's how to use it to build a wardrobe that actually works.
 
@@ -47,7 +47,7 @@ Here's a quick reference for the eight archetypes:
 
 Notice how color isn't even in this table? That's intentional. Your style personality governs *form* — color season governs *hue*. You need both filters when you shop.
 
-If you're a Classic-Dramatic blend, your wardrobe should lean toward tailored structure with bold, clean statements — not soft draping or playful color blocking. Knowing this one thing would have saved me years of "almost right" purchases.
+If you're a Classic-Dramatic blend, your wardrobe should lean toward tailored structure with bold, clean statements — not soft draping or playful color blocking. Locking in that alignment early saves years of "almost right" purchases.
 
 ---
 
@@ -61,7 +61,7 @@ Before adding anything, subtract strategically. Pull everything out and sort int
 
 **Release:** Wrong color AND wrong style. These are the pieces that make you feel like you're wearing a costume. Donate without guilt.
 
-When I did this audit, I realized 60% of my closet was Classic-structured pieces — blazers, pencil skirts, crisp button-downs — when my primary type is Romantic with Natural secondary. No wonder I felt stiff and uncomfortable. I wasn't dressing for my energy; I was dressing for the job I thought I should have.
+As you sort, watch for mismatches between your archetype and what dominates the closet. Someone whose primary type is Romantic with Natural secondary might find most hangers filled with Classic-structured blazers, pencil skirts, and crisp button-downs — technically fine pieces that feel stiff because they match an aspirational image, not your actual energy.
 
 Pay special attention to the pieces you reach for constantly. They're telling you something about your true style personality, even if you haven't formally identified it yet.
 
@@ -117,17 +117,17 @@ The key insight: your core wardrobe should feel like *you on your best day*, not
 
 This is where style personality saves you real money. Before any purchase, run it through five questions:
 
-1. **Silhouette:** Does this match my archetype's shapes? (Romantic = soft and draped; Dramatic = structured and angular)
-2. **Fabric:** Does the texture feel like my style energy? (Natural = linen and cotton; Sensual = satin and silk)
-3. **Color:** Is this in my color season palette? (Both filters must pass)
-4. **Detail level:** Does the styling match my type? (Classic = minimal; Creative = eclectic)
-5. **Gut check:** Do I feel like *myself* in this, or like I'm performing?
+1. **Silhouette:** Does this match your archetype's shapes? (Romantic = soft and draped; Dramatic = structured and angular)
+2. **Fabric:** Does the texture feel like your style energy? (Natural = linen and cotton; Sensual = satin and silk)
+3. **Color:** Is this in your color season palette? (Both filters must pass)
+4. **Detail level:** Does the styling match your type? (Classic = minimal; Creative = eclectic)
+5. **Gut check:** Do you feel like *yourself* in this, or like you're performing?
 
 If it fails any of the first four, put it back. If it passes all four but fails the gut check, also put it back — your instinct knows.
 
-I now keep a note on my phone with my style keywords: "soft, draped, natural, warm, effortless." When I'm tempted by a structured power blazer (Classic-Dramatic energy that isn't mine), I read those words first. Works every time.
+Keep a short list of style keywords on your phone — for example, "soft, draped, natural, warm, effortless" if that matches your archetype. When a structured power blazer (Classic-Dramatic energy that isn't yours) shows up in your feed or in-store, read those words before you buy. It's a simple pause that stops trend-driven mistakes.
 
-Research from the [Fashion Institute of Technology](https://www.fitnyc.edu/) consistently shows that people who dress in alignment with their personal style identity report higher confidence and lower decision fatigue — which makes sense. When your closet matches your personality, you stop second-guessing every outfit.
+Dressing in line with your personal style tends to make getting dressed easier. When your closet matches your personality, you stop second-guessing every outfit.
 
 ---
 
@@ -149,7 +149,7 @@ For a detailed walkthrough of building a color-season capsule wardrobe, see our 
 
 ## Common Wardrobe Mistakes (and How Style Personality Fixes Them)
 
-After helping dozens of friends rebuild their closets, I see the same patterns:
+These are the wardrobe mistakes we see most often once style personality enters the picture:
 
 **Mistake 1: Chasing trends that clash with your type.**
 That oversized blazer trend? Stunning on Dramatic and Classic types. Overwhelming on Gamine and Ethereal. Know your type before you buy into the trend cycle.
@@ -172,7 +172,7 @@ Adding new pieces to a misaligned closet just creates more clutter. Subtraction 
 
 A style-personality capsule wardrobe combines the best of both worlds: the versatility of a capsule (30-40 mix-and-match pieces) with the authenticity of dressing for your archetype.
 
-Here's my recommended timeline:
+Here's a practical timeline you can follow:
 
 **Month 1: Foundation**
 - Complete your closet audit

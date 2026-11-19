@@ -8,11 +8,11 @@ image: "/images/blog/color-analysis-myths-tiktok.webp"
 
 ## TikTok Made Color Analysis Viral — But Also Got a Lot Wrong
 
-I'll admit it: TikTok has done more for color analysis awareness in two years than the professional styling industry did in two decades. Suddenly everyone knows what a "color season" is, and my friends who never cared about undertones are sending me reels asking "am I a Soft Summer?"
+TikTok has done more for color analysis awareness in two years than the professional styling industry did in two decades. Suddenly everyone knows what a "color season" is, and people who never cared about undertones are sharing reels asking "am I a Soft Summer?"
 
 That's the good news. The bad news? With virality comes misinformation. And some of the most-shared color analysis content on TikTok is either oversimplified to the point of being useless, or flat-out wrong.
 
-I've spent hundreds of hours studying color theory, comparing professional draping results with social media advice, and testing these claims on real people. Here are the 7 biggest myths that TikTok keeps spreading — and what the actual science and practice say.
+When you compare professional draping results with the advice circulating on social media, the gaps show up fast. Here are the 7 biggest myths that TikTok keeps spreading — and what the actual science and practice say.
 
 ---
 
@@ -29,7 +29,7 @@ I've spent hundreds of hours studying color theory, comparing professional drapi
 
 **What actually works:** The vein test can rule out extremes (if your veins are vividly green, you're probably not Cool Winter). But for an accurate read, you need to look at multiple indicators together: how your skin reacts to different metals, whether you tan golden or pink, how silver vs. gold fabrics reflect on your face, and — most reliably — how your skin looks draped in specific test colors.
 
-Research published in [Color Research & Application](https://onlinelibrary.wiley.com/journal/15206378) confirms that skin color perception changes dramatically based on adjacent colors, which is why draping (holding fabrics next to your face) remains the gold standard — not a quick glance at your wrist.
+Skin color perception changes based on adjacent colors (simultaneous contrast), which is why draping (holding fabrics next to your face) remains the gold standard — not a quick glance at your wrist.
 
 ---
 

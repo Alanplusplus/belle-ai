@@ -65,7 +65,8 @@ export const VIDEOS: VideoEntry[] = [
     durationSeconds: 286,
     uploadDate: "2026-10-25",
     thumbnail: "/images/videos/undertone-at-home.webp",
-    blogSlugs: ["how-to-determine-skin-undertone"],
+    // cool-tone-vs-warm-tone 在 GSC 里有大量 15-30 名的曝光（cool/warm undertone 一类词），视频主题刚好对口
+    blogSlugs: ["how-to-determine-skin-undertone", "cool-tone-vs-warm-tone"],
     toolPaths: ["/tools/undertone-test"],
   },
   // LF04
@@ -92,6 +93,32 @@ export const VIDEOS: VideoEntry[] = [
     uploadDate: "2026-11-06",
     thumbnail: "/images/videos/soft-autumn-vs-soft-summer.webp",
     blogSlugs: ["soft-autumn-vs-soft-summer"],
+    toolPaths: [],
+  },
+  // LF06（SEO 视频：标题直接用目标词 "glasses for face shape"，前 5 秒给结论；GSC 里这篇文章排在 22~33 名、近 28 天约 1700 次曝光）
+  {
+    id: "glasses-for-face-shape",
+    youtubeId: null, // ← 发布后只填这里（durationSeconds 是估算，拿到成片后顺手改成实际秒数）
+    title: "Best Glasses for Face Shape: Frames for All 6 Shapes",
+    description:
+      "The best glasses for face shape, explained: contrast your face shape instead of copying it. See the right frames for round, square, oval, heart, diamond and oblong faces, how to pick the right frame size, and which frame colors match your undertone.",
+    durationSeconds: 270,
+    uploadDate: "2026-11-21",
+    thumbnail: "/images/videos/glasses-for-face-shape.webp",
+    blogSlugs: ["best-glasses-for-face-shape"],
+    toolPaths: [],
+  },
+  // LF07（SEO 视频：标题含 "eyebrow shapes for face shapes"；GSC 里这篇文章排在 22~30 名）
+  {
+    id: "eyebrow-shapes-for-face-shapes",
+    youtubeId: null, // ← 发布后只填这里（durationSeconds 是估算，拿到成片后顺手改成实际秒数）
+    title: "Eyebrow Shapes for Face Shapes: Best Brows for All 6",
+    description:
+      "The best eyebrow shape for your face shape in one line: round faces need a high arch, square faces a soft curve, long faces a flat brow. See all six face shapes with the arch, thickness and tail tweaks that work for each, the one tail rule that fits every face, and the mistakes to avoid.",
+    durationSeconds: 247,
+    uploadDate: "2026-11-21",
+    thumbnail: "/images/videos/eyebrow-shapes-for-face-shapes.webp",
+    blogSlugs: ["best-eyebrow-shapes-face-shape"],
     toolPaths: [],
   },
 ];

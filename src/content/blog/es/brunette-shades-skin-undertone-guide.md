@@ -8,11 +8,11 @@ image: "/images/blog/brunette-shades-skin-undertone-guide.webp"
 
 ## «Ponme un castaño» es el consejo más engañoso del color de cabello
 
-Se supone que el castaño es la opción segura. Sin decoloración, sin calendario de tóner, sin línea de crecimiento dramática. Así que cuando decidí oscurecerme hace unos años, le dije a mi colorista: «Un castaño bonito, nada más».
+Se supone que el castaño es la opción segura. Sin decoloración, sin calendario de tóner, sin línea de crecimiento dramática. Muchas personas siguen diciéndole a su colorista: «Un castaño bonito, nada más».
 
-Tres semanas después me miraba al espejo bajo la luz de la oficina, convencida de que parecía cansada. El castaño era cenizo y mi piel cálida se veía plana y un poco grisácea a su lado. Una amiga con exactamente el mismo «castaño bonito» lucía radiante. La misma palabra, resultado totalmente distinto.
+Unas semanas después, bajo la luz de la oficina, el patrón suele repetirse: el castaño cenizo y la piel cálida se veía plana y un poco grisácea a su lado. Una amiga con exactamente el mismo «castaño bonito» lucía radiante. La misma palabra, resultado totalmente distinto.
 
-Ahí entendí lo que las coloristas ya saben: **el castaño no es un color. Es un espectro con tres mandos independientes** — profundidad, temperatura e intensidad — y lo «seguro» solo ocurre cuando los tres encajan con tu coloración.
+Ahí está la lección que las coloristas ya saben: **el castaño no es un color. Es un espectro con tres mandos independientes** — profundidad, temperatura e intensidad — y lo «seguro» solo ocurre cuando los tres encajan con tu coloración.
 
 En esta guía desgloso cómo leer esos mandos, combinarlos con tu subtono y estación de color, y entrar al salón con un lenguaje que de verdad te acerque al castaño que tienes en la cabeza.
 
@@ -38,7 +38,7 @@ La mayoría de historias de «castaño equivocado» vienen de acertar la profund
 
 ### Vocabulario castaño, descifrado
 
-Estos son los tonos que más escucho pedir, y lo que significan en realidad:
+Estos son los tonos que más se piden, y lo que significan en realidad:
 
 | Tono | Profundidad | Temperatura | Aspecto |
 |---|---|---|---|
@@ -79,7 +79,7 @@ Si el oro y la plata te quedan bien por igual, probablemente eres neutra. **Moch
 
 ### La excepción oliva
 
-La piel oliva lleva un matiz verdoso bajo la superficie, así que rompe la regla simple cálido frente a frío. En mi experiencia, los tonos oliva suelen lucir mejor en **castaños neutro a frío con un acabado ligeramente apagado**, como mocha o castaño seta suave. Los castaños muy dorados o rojizos pueden sacar el verde. Si eres tú, nuestra guía sobre los [mejores colores de cabello para piel oliva](/es/blog/olive-skin-best-hair-colors) profundiza mucho más.
+La piel oliva lleva un matiz verdoso bajo la superficie, así que rompe la regla simple cálido frente a frío. Los tonos oliva suelen lucir mejor en **castaños neutro a frío con un acabado ligeramente apagado**, como mocha o castaño seta suave. Los castaños muy dorados o rojizos pueden sacar el verde. Si eres tú, nuestra guía sobre los [mejores colores de cabello para piel oliva](/es/blog/olive-skin-best-hair-colors) profundiza mucho más.
 
 ---
 
@@ -89,13 +89,13 @@ El subtono te dice hacia qué dirección ir. **El contraste te dice hasta dónde
 
 El contraste es la diferencia entre tu piel, ojos y cabello natural. Las personas de alto contraste — piel clara con ojos oscuros o piel profunda con ojos brillantes — pueden llevar castaños más profundos y dramáticos como espresso sin verse duras. Las de bajo contraste, con coloración suavemente fundida, suelen lucir más armoniosas en castaños medios y ligeramente más suaves.
 
-Una regla en la que confío: **mantente dentro de unos dos niveles de tu color natural** para un resultado creíble, y pide un toque de claridad alrededor del rostro si quieres que tu piel se vea más luminosa. Bajar tres o más niveles respecto a tu tono natural puede leerse pesado, y es la vía más rápida al mantenimiento constante de raíces.
+Una regla simple a seguir: **mantente dentro de unos dos niveles de tu color natural** para un resultado creíble, y pide un toque de claridad alrededor del rostro si quieres que tu piel se vea más luminosa. Bajar tres o más niveles respecto a tu tono natural puede leerse pesado, y es la vía más rápida al mantenimiento constante de raíces.
 
 ---
 
 ## Los mejores castaños para cada estación de color
 
-Tu estación de color combina subtono, profundidad y claridad, así que afina la elección más allá de cálido frente a frío. Esto es lo que he visto funcionar en el sistema de 12 estaciones.
+Tu estación de color combina subtono, profundidad y claridad, así que afina la elección más allá de cálido frente a frío. Esto es lo que suele funcionar en el sistema de 12 estaciones.
 
 | Estación | Mejores castaños | Castaños a evitar |
 |---|---|---|
@@ -132,7 +132,7 @@ Inclínate hacia la opción más cercana a tu color natural y un paso más apaga
 
 **Pregunta por un gloss.** Un gloss transparente o teñido es lo que da al cabello castaño ese brillo tipo espejo. También permite a tu colorista afinar la temperatura sin cambiar la profundidad.
 
-**Revisa el tono a luz del día.** La iluminación del salón es cálida y favorecedora. Acércate a una ventana antes de pagar. He aprobado tonos bajo luces de salón que fuera se veían completamente distintos.
+**Revisa el tono a luz del día.** La iluminación del salón es cálida y favorecedora. Acércate a una ventana antes de pagar. Los tonos que parecen perfectos bajo luces de salón suelen verse completamente distintos fuera.
 
 ### En casa
 
@@ -163,7 +163,7 @@ Para una visión más amplia de cómo el subtono y la estación guían cada elec
 
 Durante años, elegir un castaño significaba hojear un catálogo de mechas y esperar que el tono funcionara contigo. Las muestras no muestran cómo un tono interactúa con tu piel, ojos y nivel de contraste.
 
-Las herramientas con IA pueden renderizar distintos castaños en tu foto real, para comparar castaño con mocha, o ceniza con chocolate cálido, lado a lado. Probé una antes de mi última cita de color, y ver un mocha neutro en mi propio rostro cerró la decisión en unos treinta segundos. Herramientas gratuitas como [aicoloranalysis.io](/es/hair-color-analysis) analizan tu subtono y muestran las mejores y peores opciones de color de cabello para tu coloración antes de gastar dinero en tinte.
+Las herramientas con IA pueden renderizar distintos castaños en tu foto real, para comparar castaño con mocha, o ceniza con chocolate cálido, lado a lado. Antes de la cita, comparar tonos en tu foto suele acotar la decisión en pocos minutos. Herramientas gratuitas como [aicoloranalysis.io](/es/hair-color-analysis) analizan tu subtono y muestran las mejores y peores opciones de color de cabello para tu coloración antes de gastar dinero en tinte.
 
 No sustituye a una colorista hábil, que sigue manejando la química y la técnica. Pero elimina la mayor variable — si el tono te favorece — antes de sentarte en la silla.
 

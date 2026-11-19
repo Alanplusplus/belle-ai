@@ -6,15 +6,13 @@ tags: ["cilt alt tonu", "nötr alt ton", "renk analizi", "güzellik", "stil rehb
 image: "/images/blog/neutral-undertone-guide.webp"
 ---
 
-## Beni Her Şeyi Sorgulamaya İtiren Alt Ton Testi
+## Sıcak ile soğuk arasında mı kaldınız?
 
-Damar testini en az bir düzine kez yaptım. Mavi damarlar mı? Soğuk. Yeşil damarlar mı? Sıcak. Basit, değil mi?
+Damar testi net sonuç vermeyebilir. Turkuaz damarlar, altın ve gümüşün ikisinin de iyi durması, çevrimiçi testlerin gün gün değişmesi — aynı öğleden sonra soğuk, sıcak ve zeytin etiketleri mümkün.
 
-Ama benimkiler turkuaz görünüyordu. Ne yeşil ne mavi — inatla ikisinin arasında bir yerde. Altın mı gümüş mü takı testi de daha net değildi: altın iyi görünüyordu, gümüş iyi görünüyordu, rose gold da… yine iyi görünüyordu. Denediğim her çevrimiçi test farklı bir sonuç verdi ve üç farklı "alt ton rehberine" danıştığımda aynı öğleden sonra içinde soğuk, sıcak VE zeytin olarak sınıflandırılmıştım.
+Bu tanıdık geliyorsa, büyük olasılıkla nötr alt tonunuz vardır. Standart testler spektrumun uçları için tasarlanmıştır; ortada dengedeyseniz çökerler.
 
-Bu tanıdık geliyorsa, büyük olasılıkla nötr alt tonunuz vardır. Ve çoğu rehberin söylemediği şey şu: nötr, gerçekten de belirlenmesi en zor alt tondur — çünkü standart testler, spektrumun bir ucunda net biçimde duran insanlar için tasarlanmıştır. Ortada dengedeyseniz, bu testler temelde çöker.
-
-Bu makale, alt ton belirsizliğinde takılı kalan herkes içindir. Nötr alt tonun gerçekte ne anlama geldiğini, geleneksel testlerin neden sizi yanılttığını ve — en önemlisi — bunu belirlemek için gerçekten işe yarayan beş yöntemi açıklayacağım.
+Bu makale, alt ton belirsizliğinde takılı kalan herkes içindir: nötr alt ton ne demek, geleneksel testler neden yanıltır ve beş yöntem nasıl işe yarar.
 
 ---
 
@@ -72,7 +70,7 @@ Ortak nokta? Bu testler ikili sıcak/soğuk modeli üzerine kuruludur. İkisi ar
 
 ## Nötr Alt Ton İçin Gerçekten İşe Yarayan 5 Test
 
-Yıllarca süren hayal kırıklığı ve araştırmadan sonra nötr alt tonu güvenilir biçimde belirleyen beş yöntem buldum. En doğru sonuç için birlikte kullanın — üç veya daha fazlası "nötr"e işaret ediyorsa emin olabilirsiniz.
+Bu beş yöntem birlikte kullanıldığında nötr alt tonu güvenilir biçimde belirlemeye yardımcı olur. Üç veya daha fazlası "nötr"e işaret ediyorsa emin olabilirsiniz.
 
 ### 1. Draping Karşılaştırma Testi
 

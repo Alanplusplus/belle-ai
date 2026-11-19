@@ -8,9 +8,9 @@ image: "/images/blog/best-earring-styles-face-shape.webp"
 
 ## The Earring Mistake Almost Everyone Makes
 
-Here's a confession: I spent years buying earrings based on what looked pretty on the rack. Delicate studs, dramatic chandeliers, trendy hoops — if they caught my eye, they came home with me. And half of them made me look... off. Some widened my face. Others elongated it in strange ways. A few just disappeared entirely against my features.
+You have probably stood in front of a mirror with a new pair of earrings and wondered why they look stunning on the display but somehow wrong on you. Delicate studs can widen a round face. Dramatic drops can stretch an oblong face in odd ways. Tiny studs can vanish against strong bone structure. The earrings are not necessarily bad — the mismatch is usually between earring geometry and face shape.
 
-It took me an embarrassingly long time to realize the issue wasn't the earrings themselves. It was the relationship between the earring shape and my face shape. Once I understood that geometry — how vertical and horizontal lines interact with the contours of your face — everything changed. I stopped impulse-buying. I started choosing pieces that actually enhanced my features. And suddenly, even inexpensive earrings looked like they were made for me.
+Once you see how vertical and horizontal lines interact with your contours, shopping gets easier. You can skip impulse buys, choose shapes that enhance your proportions, and make even inexpensive earrings look intentional.
 
 This guide breaks down exactly which earring styles complement each face shape, and more importantly, *why* they work. Because once you understand the logic, you'll never second-guess an earring purchase again.
 
@@ -22,7 +22,7 @@ Earrings sit at the widest, most visible point of your face — right at the jaw
 
 The core principle is simple: **earrings should create balance.** If your face is wide, you want earrings that add length. If your face is long, you want earrings that add width. If your face is already balanced (like an oval), you have the widest range of options.
 
-According to research published in [Perception journal](https://journals.sagepub.com/home/pec), people perceive faces as more attractive when their proportions approach a balanced oval ratio — roughly 1.6:1 (length to width). Earrings are one of the easiest tools for nudging your visual proportions in that direction.
+The usual styling goal is a balanced, oval-leaning silhouette, and earrings are one of the easiest tools for nudging your visual proportions in that direction.
 
 Here's another thing most guides won't tell you: **scale matters as much as shape.** A petite face overwhelmed by massive chandelier earrings won't look balanced regardless of face shape. I'll cover sizing recommendations for each shape too.
 
@@ -60,7 +60,7 @@ If you're unsure, try tracing your face outline on a mirror with a washable mark
 
 **Sizing guide:** You can go medium to large confidently. Your proportions can handle statement pieces that other shapes might not be able to pull off.
 
-**My go-to pick for oval faces:** A medium-length teardrop earring. It follows your face's natural taper and adds just enough movement to catch the light. Whether you go for gold or silver depends on your [skin undertone](/blog/jewelry-metals-skin-tone-guide) — not your face shape.
+**A strong pick for oval faces:** A medium-length teardrop earring. It follows your face's natural taper and adds just enough movement to catch the light. Whether you go for gold or silver depends on your [skin undertone](/blog/jewelry-metals-skin-tone-guide) — not your face shape.
 
 ---
 
@@ -151,7 +151,7 @@ If you're unsure, try tracing your face outline on a mirror with a washable mark
 
 **Sizing guide:** Think wide, not long. A 1-inch diameter hoop is better than a 2-inch linear drop. If you do wear dangles, keep them short and choose styles that extend sideways.
 
-**My favorite trick for oblong faces:** Layered ear piercings. If you have multiple piercings, stacking small studs and huggies up the ear creates horizontal interest that beautifully counterbalances length.
+**A useful trick for oblong faces:** Layered ear piercings. If you have multiple piercings, stacking small studs and huggies up the ear creates horizontal interest that beautifully counterbalances length.
 
 ---
 
@@ -189,13 +189,13 @@ Shape gets the most attention, but material and finish matter too:
 - Cool undertones → silver, platinum, white gold, cool-toned metals
 - Neutral undertones → you can wear either
 
-For a deeper dive into metal selection, check out my [complete guide to jewelry metals and skin tone](/blog/jewelry-metals-skin-tone-guide).
+For a deeper dive into metal selection, see the [complete guide to jewelry metals and skin tone](/blog/jewelry-metals-skin-tone-guide).
 
 ---
 
 ## Practical Shopping Tips
 
-After years of earring trial-and-error, here are the shortcuts I wish someone had told me:
+These shopping shortcuts save a lot of trial and error:
 
 1. **Take a selfie, not a mirror glance.** Mirrors reverse your image. A front-facing photo shows you what others actually see, and it's easier to evaluate proportions.
 
@@ -205,7 +205,7 @@ After years of earring trial-and-error, here are the shortcuts I wish someone ha
 
 4. **Consider your hairstyle.** Hair up? Your earrings become the primary frame for your face — shape matching matters most. Hair down? Earrings interact with your hair as much as your face, and you can be more flexible.
 
-5. **Don't forget about your glasses.** If you wear glasses daily, your earrings need to harmonize with your frames too. I wrote a full guide on [choosing glasses for your face shape](/blog/best-glasses-for-face-shape) that covers this interaction.
+5. **Don't forget about your glasses.** If you wear glasses daily, your earrings need to harmonize with your frames too. Our [guide to choosing glasses for your face shape](/blog/best-glasses-for-face-shape) covers this interaction.
 
 ---
 

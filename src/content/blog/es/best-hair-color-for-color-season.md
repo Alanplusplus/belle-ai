@@ -12,7 +12,7 @@ Hay algo que la mayoría de las personas no descubre hasta después de un tinte 
 
 Precisamente para eso existe el [análisis de color personal](/es/blog/personal-color-analysis-guide). Tu estación de color no se limita a la ropa o al maquillaje: es una guía completa sobre los tonos que armonizan con tus rasgos naturales, y eso incluye, sin duda, el color del cabello.
 
-He visto a personas pasar de verse apagadas y cansadas a lucir absolutamente luminosas — no por un cambio de rutina de skincare, sino porque por fin eligieron un color de pelo acorde a su estación. La diferencia es real y, a menudo, sorprendente.
+Muchas personas pasan de verse apagadas y cansadas a lucir absolutamente luminosas — no por un cambio de rutina de skincare, sino porque por fin eligieron un color de pelo acorde a su estación. La diferencia es real y, a menudo, sorprendente.
 
 El cabello es el bloque de color más grande que enmarca tu rostro. Cuando acierta, el maquillaje, la ropa e incluso las joyas encajan con mucha más facilidad. Cuando falla, lucharás contra tu armonía natural cada día.
 

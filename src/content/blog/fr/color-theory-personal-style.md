@@ -14,7 +14,7 @@ Il s'avère que ce simple graphique circulaire est l'un des outils de stylisme l
 
 Les stylistes professionnels, les décorateurs d'intérieur et les consultants de marque utilisent la théorie des couleurs au quotidien. Les mêmes principes qui rendent un tableau harmonieux ou un logo digne de confiance expliquent aussi pourquoi certaines tenues paraissent naturellement soignées tandis que d'autres semblent « bizarre » même avec des pièces très chères.
 
-J'ai passé des années à croire que la coordination des couleurs était intuitive — quelque chose que l'on avait ou non. Puis j'ai étudié la théorie qui la sous-tend, et tout s'est éclairé. Il y a des règles. On peut les apprendre. Et elles fonctionnent.
+On croit souvent que la coordination des couleurs est purement intuitive — un « don » que l'on a ou non. Mais il y a une vraie théorie derrière, et une fois les bases apprises, tout s'éclaire. Il y a des règles. On peut les apprendre. Et elles fonctionnent.
 
 Dans cet article, je décompose les concepts fondamentaux de la théorie des couleurs qui comptent pour le style personnel — sans diplôme d'arts plastiques requis.
 

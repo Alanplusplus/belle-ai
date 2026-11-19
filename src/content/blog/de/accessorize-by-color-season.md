@@ -12,7 +12,7 @@ Du hast deinen Farbtyp herausgefunden. Du hast einen Kleiderschrank voller schme
 
 In neun von zehn Fällen liegt das Problem nicht bei der Kleidung. Es sind die Accessoires.
 
-Das habe ich am eigenen Leib erfahren. Nach Monaten, in denen ich sorgfältig eine Soft-Summer-Garderobe aufgebaut hatte, trug ich immer noch hellen Goldschmuck, warmtonige Ledertaschen und Schals in gesättigtem Orange, die die sanfte Harmonie komplett untergruben, für die ich so hart gearbeitet hatte. In dem Moment, als ich auf Roségold und Silber mit gedämpften, kühlen Accessoires umstieg, passte alles zusammen.
+Typische Falle: Sie bauen eine Soft-Summer-Garderobe in kühlen, gedämpften Tönen auf und kombinieren sie trotzdem mit glänzendem Gold, warmen Ledertaschen und gesättigten Orangetönen, die die Harmonie zerstören. Wechsel zu Roségold, Silber und gedämpft kühlen Accessoires — oft passt alles sofort zusammen.
 
 Accessoires sind der letzte Schliff, der deine Farbgeschichte entweder verstärkt oder sabotiert. Und die Regeln unterscheiden sich von der Kleidung — oft einfacher, aber genauso wichtig. Ich führe dich Schritt für Schritt durch, wie du für jeden Farbtyp accessoires wählst.
 
@@ -106,7 +106,7 @@ Das Energieniveau deines Typs bestimmt auch die Stoffwahl:
 
 ## Handtaschen & Lederwaren
 
-Taschen sind eine Investition — die richtige Farbe zählt also auch finanziell. So gehe ich vor:
+Taschen sind eine Investition — die richtige Farbe zählt also auch finanziell. So können Sie vorgehen:
 
 ### Deine Drei-Taschen-Strategie
 
@@ -152,7 +152,7 @@ Die wirken unbedeutend, tragen aber zur Gesamt-Farbkohärenz bei:
 
 ## So prüfst du deine aktuellen Accessoires
 
-Diese kurze Übung empfehle ich allen:
+Kurze Übung zur Bestandsaufnahme:
 
 1. **Lege deinen gesamten Schmuck** auf eine weiße Fläche
 2. **Sortiere in warm und kühl:** Gold/Messing/Kupfer in einen Stapel, Silber/Platin/Gunmetal in den anderen
@@ -183,7 +183,7 @@ Das ergibt Dutzende Kombinationen bei perfekter Farbharmonie.
 
 Bist du unsicher bei deinem Farbtyp — und damit bei der Accessoire-Richtung — war die klassische Methode, Gold- und Silberschmuck ans Gesicht zu halten und im Spiegel zu squinten. Funktioniert, ist aber subjektiv.
 
-Moderne KI-Farbanalyse-Tools können aus einem Foto einen wahrscheinlichen Farbtyp vorschlagen und liefern einen nützlichen Ausgangspunkt für die Metallwahl. Ich habe [ein KI-gestütztes Farbanalyse-Tool](/) genutzt, um meinen Typ zu überprüfen — mit kompletter Palette inklusive empfohlener Metalle und Accessoire-Töne, was sonst oft eine persönliche Beratung für über 200 $ bedeutet.
+Moderne [KI-Farbanalyse](/)-Tools können aus einem Foto einen wahrscheinlichen Farbtyp vorschlagen und einen Ausgangspunkt für die Metallwahl liefern — oft inklusive empfohlener Metalle und Accessoire-Töne, ähnlich wie bei einer persönlichen Beratung.
 
 ---
 

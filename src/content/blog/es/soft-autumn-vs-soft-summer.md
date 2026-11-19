@@ -14,7 +14,7 @@ Tanto Otoño Suave como Verano Suave comparten la misma característica dominant
 
 Entonces, ¿cómo se distinguen realmente?
 
-Después de años estudiando análisis de color — y habiendo sido clasificada incorrectamente yo misma — he descubierto que la distinción se reduce a una pregunta fundamental: ¿tu piel tiene un brillo dorado cálido o una suavidad rosada fría? Te lo explico de una forma que realmente tenga sentido.
+La distinción suele reducirse a una pregunta fundamental: ¿tu piel tiene un brillo dorado cálido o una suavidad rosada fría? Te lo explico de una forma que realmente tenga sentido.
 
 ---
 
@@ -177,7 +177,7 @@ Si descubres que ambas paletas te quedan razonablemente bien, te sugiero esto: c
 
 Determinar tu subtono puede ser genuinamente difícil, especialmente en estaciones apagadas donde la calidez o la frialdad es sutil. Este es uno de los ámbitos donde el análisis de color con IA se ha vuelto sorprendentemente útil.
 
-Las herramientas modernas pueden valorar el subtono de tu piel a partir de una foto, observando niveles de contraste y otras señales que pueden engañar al ojo humano, aunque la luz y la cámara pueden cambiar el resultado. Si estás atrapada entre Otoño Suave y Verano Suave, una [herramienta de análisis de color con IA](/) puede ofrecerte una segunda opinión. La he encontrado especialmente útil para personas con subtonos neutros que genuinamente no saben hacia qué lado se inclinan.
+Las herramientas modernas pueden valorar el subtono de tu piel a partir de una foto, observando niveles de contraste y otras señales que pueden engañar al ojo humano, aunque la luz y la cámara pueden cambiar el resultado. Si estás atrapada entre Otoño Suave y Verano Suave, una [herramienta de análisis de color con IA](/) puede ofrecerte una segunda opinión — especialmente útil si tienes un subtono neutro y genuinamente no sabes hacia qué lado te inclinas.
 
 ---
 

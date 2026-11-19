@@ -15,7 +15,7 @@ Both Soft Autumn and Soft Summer share the same dominant characteristic: **muted
 
 So how do you actually tell them apart?
 
-After years of studying color analysis — and having been mistyped myself — I've found that the distinction comes down to one fundamental question: does your skin have a warm golden glow, or a cool rosy softness? Let me break it down in a way that actually makes sense.
+The distinction often comes down to one fundamental question: does your skin have a warm golden glow, or a cool rosy softness? Let me break it down in a way that actually makes sense.
 
 ---
 
@@ -178,7 +178,7 @@ If you find that both palettes work reasonably well for you, here's my suggestio
 
 Determining your undertone can be genuinely difficult, especially for muted seasons where the warmth or coolness is subtle. This is one area where AI-powered color analysis has become surprisingly useful.
 
-Modern tools can judge your skin's undertone from a photo, looking at contrast levels and other cues that might trick the human eye, though lighting and camera settings can still shift the result. If you're stuck between Soft Autumn and Soft Summer, an [AI color analysis tool](/) can provide a second opinion. I've found it particularly helpful for people with neutral undertones who genuinely can't tell which way they lean.
+Modern tools can judge your skin's undertone from a photo, looking at contrast levels and other cues that might trick the human eye, though lighting and camera settings can still shift the result. If you're stuck between Soft Autumn and Soft Summer, an [AI color analysis tool](/) can provide a second opinion — especially useful when you have a neutral undertone and genuinely can't tell which way you lean.
 
 ---
 

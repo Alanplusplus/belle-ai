@@ -27,6 +27,8 @@ import Image from "next/image";
 import remarkGfm from "remark-gfm";
 import { StickyBottomCta, TopCta, BottomCta } from "@/components/BlogCtaBanner";
 import { ResultCta } from "@/components/ResultCta";
+import { AuthorAvatar } from "@/components/AuthorAvatar";
+import { AUTHOR, AUTHOR_PATH, authorArticleJsonLd } from "@/lib/author";
 import { VideoSection } from "@/components/VideoEmbed";
 import { OliveHub } from "@/components/OliveHub";
 import { isOliveClusterPost } from "@/lib/oliveCluster";
@@ -102,11 +104,9 @@ export default async function BlogPostPage({
     description: post.description,
     datePublished: `${post.date}T00:00:00+00:00`,
     dateModified: `${post.updated}T00:00:00+00:00`,
-    author: {
-      "@type": "Organization",
-      name: "Belle AI",
-      url: SITE_URL,
-    },
+    // 署名的是真人作者（Person），发布方才是 Belle AI（Organization）。
+    // 作者的完整信息在作者页的 ProfilePage 里，这里通过 @id 引用
+    author: authorArticleJsonLd(locale),
     publisher: {
       "@type": "Organization",
       name: "Belle AI",
@@ -179,6 +179,7 @@ function BlogPostContent({
 }) {
   const locale = useLocale();
   const t = useTranslations("blog");
+  const at = useTranslations("author");
   const ft = useTranslations("features");
   const tt = useTranslations("tryPage");
 
@@ -229,6 +230,19 @@ function BlogPostContent({
             <span>{post.readingTime} {t("minRead")}</span>
           </div>
           <h1 className="mt-3 text-3xl font-bold sm:text-4xl">{post.title}</h1>
+          {/* 署名：链接到作者页，作者页再链回文章，形成「作者 ↔ 文章」的互相印证 */}
+          <div className="mt-4 flex items-center gap-3">
+            <AuthorAvatar size={40} alt={at("avatarAlt")} />
+            <div className="text-sm leading-tight">
+              <p>
+                <span className="text-muted-foreground">{at("by")} </span>
+                <Link href={AUTHOR_PATH} rel="author" className="font-semibold hover:text-primary hover:underline">
+                  {AUTHOR.name}
+                </Link>
+              </p>
+              <p className="mt-0.5 text-xs text-muted-foreground">{at("role")}</p>
+            </div>
+          </div>
           {/* 顶部 CTA：直接搜索 / 社媒进来的读者首屏就能看到入口 */}
           <TopCta
             title={t("topCtaTitle")}

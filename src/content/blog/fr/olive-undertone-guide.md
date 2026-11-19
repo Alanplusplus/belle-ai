@@ -22,7 +22,7 @@ Sauf que — et si ni l'or ni l'argent ne vous convient vraiment ? Et si vos vei
 
 Si cela vous parle, il y a de fortes chances que vous ayez un sous-ton olive. Et vous n'êtes pas seule — l'olive est l'un des sous-tons les plus courants dans le monde, pourtant il est à peine mentionné dans les conseils beauté standards.
 
-J'ai passé des années à étudier la théorie des sous-tons, et les sous-tons olive sont sans conteste la caractéristique cutanée la plus mal identifiée dans le monde de la beauté. Laissez-moi vous expliquer pourquoi.
+Dans la théorie des sous-tons, les sous-tons olive sont sans conteste la caractéristique cutanée la plus mal identifiée dans le monde de la beauté. Laissez-moi vous expliquer pourquoi.
 
 ---
 

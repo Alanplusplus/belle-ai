@@ -209,6 +209,10 @@ export function ReportPanel({
 
   const season = isSeasonSlug(data.season) ? data.season : null;
 
+  // 未付费的报告不支持下载（PDF / 海报都是付费内容）：想「带走」结果的人，改成把结果发到她的邮箱。
+  // 邮件功能没开、或示例报告（没有任务 ID）时仍保留原来的按钮，点了去解锁
+  const emailInsteadOfDownload = !demo && locked && !!taskId && REPORT_EMAIL_ENABLED;
+
   const footer = demo ? null : (
     <div lang={pageLocale} className="space-y-3">
       {/* 报告还锁着：点名「解锁后还有什么」，用现成的示例图展示试色板长什么样（不另外生成图片） */}
@@ -268,16 +272,23 @@ export function ReportPanel({
           </button>
         </div>
       )}
-      <button
-        type="button"
-        onClick={handlePdf}
-        disabled={pdfBusy || posterBusy !== null}
-        className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-primary px-4 text-sm font-semibold text-white shadow-md shadow-primary/25 transition hover:bg-primary-dark disabled:opacity-60"
-      >
-        <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
-        {pdfBusy ? t("pdfBusy") : locked ? t("actPdfLocked") : t("actPdf")}
-      </button>
-      <div className={SHARE_BUTTONS_ENABLED ? "grid grid-cols-2 gap-2.5" : "grid grid-cols-1"}>
+      {emailInsteadOfDownload && taskId ? (
+        <ReportEmailCapture taskId={taskId} lang={lang} className="" placement="download" />
+      ) : (
+        <button
+          type="button"
+          onClick={handlePdf}
+          disabled={pdfBusy || posterBusy !== null}
+          className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full bg-primary px-4 text-sm font-semibold text-white shadow-md shadow-primary/25 transition hover:bg-primary-dark disabled:opacity-60"
+        >
+          <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
+          {pdfBusy ? t("pdfBusy") : locked ? t("actPdfLocked") : t("actPdf")}
+        </button>
+      )}
+      {/* 只剩分享一个按钮（用邮箱代替了下载）时，没开分享就不画这一行 */}
+      {(!emailInsteadOfDownload || SHARE_BUTTONS_ENABLED) && (
+      <div className={SHARE_BUTTONS_ENABLED && !emailInsteadOfDownload ? "grid grid-cols-2 gap-2.5" : "grid grid-cols-1"}>
+        {!emailInsteadOfDownload && (
         <button
           type="button"
           onClick={handleSave}
@@ -287,6 +298,7 @@ export function ReportPanel({
           <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
           {posterBusy === "save" ? t("posterBusy") : locked ? t("actPosterLocked") : t("actPoster")}
         </button>
+        )}
         {SHARE_BUTTONS_ENABLED && (
           <button
             type="button"
@@ -299,6 +311,7 @@ export function ReportPanel({
           </button>
         )}
       </div>
+      )}
 
       {onTryOn && season && (
         <button
@@ -373,7 +386,6 @@ export function ReportPanel({
         onUpgrade={demo ? undefined : onUpgrade}
         upgradeLabel={upgradeLabel}
         onLookbookPreview={demo ? undefined : setOwnTile}
-        lockedExtra={!demo && taskId && REPORT_EMAIL_ENABLED ? <ReportEmailCapture taskId={taskId} lang={lang} /> : undefined}
         lookbookTaskId={demo ? null : taskId}
         lookbookDemo={demo}
         lookbookDemoPersona={demoPersona}

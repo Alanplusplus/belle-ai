@@ -8,9 +8,9 @@ image: "/images/blog/style-personality-wardrobe-guide.webp"
 
 ## Tu armario está lleno — ¿por qué nada encaja?
 
-Lo conté una vez: 47 prendas colgando en mi armario, y aun así me quedaba parada cada mañana sintiendo que no tenía nada que ponerme. Las piezas no eran malas. Algunas costaron caro. Varias eran tendencia en Instagram. Pero no me *sentían* a mí — y no entendía por qué.
+Quizá te resulte familiar: un armario con ropa de sobra y, aun así, cada mañana esa sensación de atasco — «no tengo nada que ponerme». Las prendas no son malas; algunas fueron caras; otras lucían increíbles en otra persona. Pero no te *sienten* a ti, y cuesta ponerle nombre.
 
-Todo cambió cuando descubrí algo: había construido mi armario en torno a mi estación de color (Soft Summer, para constancia) pero ignoraba por completo mi personalidad de estilo. Compraba los colores correctos con las siluetas, texturas y energía equivocadas. ¿Una blusa de seda rosa polvoriento con un corte estructurado y afilado? Técnicamente en mi paleta. Visualmente incorrecta para mí.
+A menudo falta la personalidad de estilo, no solo el color. Puedes acertar tu [estación de color](/es/color-analysis) y seguir comprando los tonos correctos en siluetas, texturas y energía equivocadas. ¿Una blusa de seda rosa polvoriento con un corte estructurado y afilado? En la paleta puede encajar; si tu arquetipo es Romántica-Natural, la forma suave importa tanto como el matiz.
 
 Si alguna vez compraste algo que lucía espectacular en otra persona y a ti te quedaba plano — incluso en tu tono perfecto — tu personalidad de estilo es la pieza que falta. Así es como usarla para crear un armario que realmente funcione.
 
@@ -47,7 +47,7 @@ Referencia rápida de los ocho arquetipos:
 
 ¿Notaste que en esta tabla no hay color? Es intencional. La personalidad de estilo gobierna la *forma*; la estación de color, el *matiz*. Necesitas ambos filtros al comprar.
 
-Si eres una mezcla Clásica-Dramática, tu armario debe inclinarse hacia estructura entallada con declaraciones audaces y limpias — no drapeados suaves ni bloques de color juguetones. Saber esto me habría ahorrado años de compras «casi correctas».
+Si eres una mezcla Clásica-Dramática, tu armario debe inclinarse hacia estructura entallada con declaraciones audaces y limpias — no drapeados suaves ni bloques de color juguetones. Alinear esto pronto ahorra años de compras «casi correctas».
 
 ---
 
@@ -61,7 +61,7 @@ Antes de añadir nada, resta estratégicamente. Saca todo y divide en tres monto
 
 **Liberar:** Color y estilo incorrectos. Son las piezas que te hacen sentir que llevas un disfraz. Dona sin culpa.
 
-Cuando hice esta auditoría, me di cuenta de que el 60 % de mi armario eran piezas Clásicas estructuradas — blazers, faldas lápiz, camisas rígidas — cuando mi tipo principal es Romántica con secundaria Natural. No es de extrañar que me sintiera rígida e incómoda. No vestía para mi energía; vestía para el trabajo que creía que debía tener.
+Al clasificar, fíjate si tu arquetipo coincide con lo que domina el armario. Si tu tipo principal es Romántica con secundaria Natural y la mayoría son piezas Clásicas estructuradas — blazers, faldas lápiz, camisas rígidas — puede sentirse incómodo porque reflejan una imagen aspiracional, no tu energía real.
 
 Presta especial atención a las piezas que siempre coges. Te están diciendo algo sobre tu verdadera personalidad de estilo, aunque no la hayas identificado formalmente.
 
@@ -117,17 +117,17 @@ La clave: tu armario base debe sentirse como *tú en tu mejor día*, no como tú
 
 Aquí es donde la personalidad de estilo te ahorra dinero de verdad. Antes de cualquier compra, pásala por cinco preguntas:
 
-1. **Silueta:** ¿Coincide con las formas de mi arquetipo? (Romántica = suave y drapeada; Dramática = estructurada y angular)
-2. **Tela:** ¿La textura encaja con mi energía de estilo? (Natural = lino y algodón; Sensual = satén y seda)
-3. **Color:** ¿Está en la paleta de mi estación de color? (Ambos filtros deben pasar)
-4. **Nivel de detalle:** ¿El estilismo coincide con mi tipo? (Clásica = mínimo; Creativa = ecléctico)
-5. **Chequeo instintivo:** ¿Me siento *yo misma* con esto, o como si actuara?
+1. **Silueta:** ¿Coincide con las formas de tu arquetipo? (Romántica = suave y drapeada; Dramática = estructurada y angular)
+2. **Tela:** ¿La textura encaja con tu energía de estilo? (Natural = lino y algodón; Sensual = satén y seda)
+3. **Color:** ¿Está en la paleta de tu estación de color? (Ambos filtros deben pasar)
+4. **Nivel de detalle:** ¿El estilismo coincide con tu tipo? (Clásica = mínimo; Creativa = ecléctico)
+5. **Chequeo instintivo:** ¿Te sientes *tú misma* con esto, o como si actuaras?
 
 Si falla cualquiera de las cuatro primeras, déjalo. Si pasa las cuatro pero falla el instinto, también déjalo — tu intuición lo sabe.
 
-Ahora guardo en el móvil mis palabras clave de estilo: «suave, drapeada, natural, cálida, effortless». Cuando me tienta un blazer de poder estructurado (energía Clásica-Dramática que no es mía), leo esas palabras primero. Funciona siempre.
+Guarda en el móvil unas palabras clave de estilo — por ejemplo, «suave, drapeada, natural, cálida, effortless» si encajan con tu arquetipo. Antes de comprar un blazer de poder estructurado (energía Clásica-Dramática que no es tuya), léelas. Es una pausa simple que evita compras por tendencia.
 
-La investigación del [Fashion Institute of Technology](https://www.fitnyc.edu/) muestra consistentemente que quienes visten alineados con su identidad de estilo personal reportan más confianza y menos fatiga de decisión — tiene sentido. Cuando tu armario coincide con tu personalidad, dejas de cuestionar cada outfit.
+Vestir alineado con tu estilo personal suele hacer que vestirte sea más fácil. Cuando tu armario coincide con tu personalidad, dejas de cuestionar cada outfit.
 
 ---
 
@@ -149,7 +149,7 @@ Para un recorrido detallado, consulta nuestra [guía paso a paso de armario cáp
 
 ## Errores comunes del armario (y cómo la personalidad de estilo los corrige)
 
-Tras ayudar a decenas de amigas a reconstruir sus armarios, veo los mismos patrones:
+Cuando entra la personalidad de estilo, estos son los patrones que vemos con más frecuencia:
 
 **Error 1: Perseguir tendencias que chocan con tu tipo.** ¿La tendencia del blazer oversize? Impresionante en tipos Dramáticos y Clásicos. Abrumadora en Gamine y Etéreos. Conoce tu tipo antes de comprar la tendencia.
 
@@ -167,7 +167,7 @@ Tras ayudar a decenas de amigas a reconstruir sus armarios, veo los mismos patro
 
 Un armario cápsula basado en personalidad de estilo combina lo mejor de ambos mundos: la versatilidad de una cápsula (30-40 piezas combinables) con la autenticidad de vestir para tu arquetipo.
 
-Mi cronograma recomendado:
+Un cronograma práctico que puedes seguir:
 
 **Mes 1: Fundamentos** — Auditoría del armario, identificar personalidad de estilo (principal + secundaria), listar 15-20 piezas clave
 

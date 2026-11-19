@@ -202,4 +202,4 @@ image: "/images/blog/color-clashing-rules.webp"
 - [色彩分析完全指南](/zh/color-analysis) — 了解如何找到最适合你的颜色
 - [美术课上的色彩理论如何应用于你的个人风格](/zh/blog/color-theory-personal-style) — 某些颜色组合有效背后的科学原理
 - [如何为你的色彩季节型打造胶囊衣橱](/zh/blog/capsule-wardrobe-color-season) — 先用你最好的颜色建立基础衣橱
-- [我只穿了30天「季节色」——发生了什么](/zh/blog/wearing-season-colors-30-days) — 严格遵循色盘教会了一位作者关于灵活性的事
+- [30 天只穿季型色挑战：一份可照做的计划](/zh/blog/wearing-season-colors-30-days) — 一份连续 30 天只穿季型色、按周推进的计划

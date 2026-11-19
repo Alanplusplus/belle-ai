@@ -16,7 +16,7 @@ But step two? Almost nobody talks about it.
 
 **Your color season determines which frame colors and materials actually flatter your skin.** The wrong color frame sitting on your face for 16 hours a day can make you look washed out, tired, or off — even if the shape is perfect.
 
-I've seen people nail the frame shape and still look "wrong" in their glasses. Almost every time, it's a color mismatch. They're wearing cool silver frames when they need warm gold. Or shiny black when matte tortoiseshell would make their skin glow.
+It's common to nail the frame shape and still look "wrong" in your glasses. Almost every time, it's a color mismatch. You might be wearing cool silver frames when you need warm gold — or shiny black when matte tortoiseshell would make your skin glow.
 
 In this guide, I'll show you how to get both right — so your glasses don't just fit your face, they enhance your entire look.
 

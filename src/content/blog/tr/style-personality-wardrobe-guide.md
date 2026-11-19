@@ -8,9 +8,9 @@ image: "/images/blog/style-personality-wardrobe-guide.webp"
 
 ## Dolabınız Dolu — Peki Neden Hiçbir Şey Doğru Hissettirmiyor?
 
-Bir kez saydım: dolapta 47 parça asılıydı ve yine de her sabah önünde durup giyecek bir şeyim yokmuş gibi hissediyordum. Parçalar kötü değildi. Bazıları pahalıydı. Birkaçı Instagram'da trenddi. Ama *bana* ait hissettirmiyorlardı — ve nedenini çözemiyordum.
+Tanıdık geliyor mu: dolap dolu, yine de her sabah «giyecek bir şey yok» hissi? Parçalar kötü değil; bazıları pahalı; başkasında harika duranlar bile *size* ait hissettirmiyor.
 
-Sonra her şeyi değiştiren bir şey keşfettim: gardırobumu renk mevsimim (kayıtlara geçsin, Soft Summer) etrafında kuruyordum ama Style Personality'mi tamamen görmezden geliyordum. Doğru renkleri yanlış siluet, doku ve enerjide alıyordum. Keskin, yapılı bir kesimde tozlu gül ipek bluz? Paletimde teknik olarak doğru. Bende görsel olarak yanlış — Romantic-Natural karışımımda.
+Eksik olan çoğu zaman renk değil, Style Personality. [Renk mevsiminizi](/tr/color-analysis) bilseniz bile doğru tonları yanlış siluet, doku ve enerjide alabilirsiniz. Keskin kesimli tozlu gül ipek bluz? Palette doğru olabilir; Romantic-Natural için yumuşak form ton kadar önemli.
 
 Başkasında muhteşem görünen, sizde düz kalan — mükemmel tonunuzda bile — bir şey aldıysanız eksik parça Style Personality'nizdir. Gerçekten işe yarayan bir gardırop kurmak için nasıl kullanacağınız burada.
 
@@ -47,7 +47,7 @@ Sekiz arketip için hızlı referans:
 
 Tabloda renk yok mu fark ettiniz? Kasıtlı. Style personality *formu* yönetir — renk mevsimi *tonu*. Alışverişte iki filtreye de ihtiyacınız var.
 
-Classic-Dramatic karışımıysanız gardırop yapılı terziliğe cesur, temiz statement'lara yönelmeli — yumuşak draping veya oyuncu renk bloklamaya değil. Bunu bilmek yıllarca «neredeyse doğru» alışverişten kurtarırdı.
+Classic-Dramatic karışımıysanız gardırop yapılı terziliğe cesur, temiz statement'lara yönelmeli — yumuşak draping veya oyuncu renk bloklamaya değil. Erken hizalamak yıllarca «neredeyse doğru» alışverişi azaltır.
 
 ---
 
@@ -61,7 +61,7 @@ Eklemeden önce stratejik olarak çıkarın. Her şeyi çıkarıp üç yığına
 
 **Bırak:** Hem renk hem stil yanlış. Kostüm giyiyormuş gibi hissettiren parçalar. Suçsuzca bağışlayın.
 
-Bu denetimi yaptığımda dolabımın %60'ının Classic-yapılı parçalar — blazer, kalem etek, crisp gömlek — olduğunu fark ettim; oysa birincil tipim Romantic, ikincil Natural. Sert ve rahatsız hissetmem şaşırtıcı değildi. Enerjim için değil, «olması gereken» iş için giyiniyordum.
+Ayırırken arketipinizle dolabın «çoğunluğu» örtüşüyor mu bakın. Birincil Romantic, ikincil Natural iken askılarda çoğunlukla Classic yapılı blazer, kalem etek, crisp gömlek varsa sert his normal — kıyafetler çoğu zaman özlemilen imaja, gerçek enerjiye değil.
 
 Sürekli elinize aldığınız parçalara özellikle dikkat edin. Henüz resmen belirlememiş olsanız bile gerçek Style Personality'niz hakkında bir şey söylüyorlar.
 
@@ -117,17 +117,17 @@ Anahtar içgörü: temel gardırobu *en iyi gününüzdeki siz* gibi hissettirme
 
 Style personality burada gerçek parayı kurtarır. Her alışverişten önce beş sorudan geçirin:
 
-1. **Siluet:** Bu arketipimin şekillerine uyuyor mu? (Romantic = yumuşak ve dökümlü; Dramatic = yapılı ve köşeli)
-2. **Kumaş:** Doku stil enerjime uyuyor mu? (Natural = keten ve pamuk; Sensual = saten ve ipek)
-3. **Renk:** Bu renk mevsim paletimde mi? (Her iki filtre de geçmeli)
-4. **Detay seviyesi:** Styling tipime uyuyor mu? (Classic = minimal; Creative = eklektik)
-5. **İçgüdü kontrolü:** Bu *kendim* gibi mi hissettiriyor yoksa rol mü yapıyorum?
+1. **Siluet:** Arketipinizin şekillerine uyuyor mu? (Romantic = yumuşak ve dökümlü; Dramatic = yapılı ve köşeli)
+2. **Kumaş:** Doku stil enerjinize uyuyor mu? (Natural = keten ve pamuk; Sensual = saten ve ipek)
+3. **Renk:** Renk mevsim paletinizde mi? (Her iki filtre de geçmeli)
+4. **Detay seviyesi:** Styling tipinize uyuyor mu? (Classic = minimal; Creative = eklektik)
+5. **İçgüdü kontrolü:** Bu *sizi* yansıtıyor mu yoksa rol mü yapıyorsunuz?
 
 İlk dördünden biri başarısızsa geri koyun. Dördü geçip içgüdü başarısızsa yine geri koyun — içgüdünüz bilir.
 
-Telefonumda stil anahtar kelimelerim var: «yumuşak, dökümlü, natural, sıcak, zahmetsiz.» Yapılı power blazer (bende olmayan Classic-Dramatic enerjisi) cezbedince önce onları okuyorum. Her seferinde işe yarar.
+Telefonda stil anahtar kelimeleri tutun — örneğin arketipinize uyan «yumuşak, dökümlü, natural, sıcak, zahmetsiz». Yapılı power blazer (sizde olmayan Classic-Dramatic enerjisi) cezbedince satın almadan önce okuyun; trend alışverişine karşı basit bir fren.
 
-[Fashion Institute of Technology](https://www.fitnyc.edu/) araştırmaları kişisel stil kimliğiyle uyumlu giyinen insanların daha yüksek güven ve daha düşük karar yorgunluğu bildirdiğini tutarlı biçimde gösteriyor — mantıklı. Dolabınız kişiliğinizle eşleşince her kombini ikinci kez sorgulamayı bırakırsınız.
+Kişisel stilinizle uyumlu giyinmek, giyinmeyi genelde kolaylaştırır. Dolabınız kişiliğinizle eşleşince her kombini ikinci kez sorgulamayı bırakırsınız.
 
 ---
 
@@ -149,7 +149,7 @@ Renk mevsimi kapsül gardırop kurulumu için adım adım rehberimiz: [kapsül g
 
 ## Yaygın Gardırop Hataları (Style Personality Nasıl Düzeltir)
 
-Onlarca arkadaşımın dolabını yeniden kurmasına yardım ettikten sonra aynı kalıpları görüyorum:
+Style Personality devreye girince en sık görülen kalıplar şunlar:
 
 **Hata 1: Tipinizle çakışan trendlerin peşinde koşmak.**
 O oversize blazer trendi mi? Dramatic ve Classic tiplerde muhteşem. Gamine ve Ethereal'da bunaltıcı. Trend döngüsüne girmeden önce tipinizi bilin.
@@ -172,7 +172,7 @@ Uyumsuz bir dolaba yeni parça eklemek yalnızca daha fazla dağınıklık yarat
 
 Style-personality kapsül gardırop iki dünyanın en iyisini birleştirir: kapsülün çok yönlülüğü (30-40 karıştır-uyumla parça) ile arketipinize uygun giyinmenin özgünlüğü.
 
-Önerdiğim zaman çizelgesi:
+İzleyebileceğiniz pratik bir zaman çizelgesi:
 
 **1. ay: Temel**
 - Dolap denetimini tamamlayın

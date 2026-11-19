@@ -13,7 +13,7 @@ Renk analizi sonucunuz şüphelendiğinizi doğruladı: Yaz tipsiniz. Renklendir
 
 Ama sorun şu — 12 mevsim renk analizi sisteminde **üç ayrı Yaz alt mevsimi** vardır ve bunları karıştırmak ışıltılı görünmek ile soluk görünmek arasındaki fark olabilir.
 
-Yıllarca Yaz olduklarını bildikleri için «soğuk pastel» alan, aslında Yumuşak Yaz olduklarını fark edene kadar Soğuk Yaz tonlarına yönelen kadınlarla çalıştım. Alt ton doğruydu, ama yoğunluk tamamen yanlıştı.
+Yıllarca Yaz olduklarını bildikleri için «soğuk pastel» alan, aslında Yumuşak Yaz olduklarını fark edene kadar Soğuk Yaz tonlarına yönelen pek çok kişi var. Alt ton doğruydu, ama yoğunluk tamamen yanlıştı.
 
 Bu rehberde **Soğuk Yaz**, **Gerçek Yaz** ve **Yumuşak Yaz**'ı — belirleyici özelliklerini, en iyi ve en kötü renklerini ve hangisi olduğunuzu tam olarak nasıl anlayacağınızı — açıklıyorum.
 

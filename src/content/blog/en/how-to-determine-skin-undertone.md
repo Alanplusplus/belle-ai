@@ -36,7 +36,7 @@ Look at the veins on your inner wrist under natural daylight:
 | Green | Warm |
 | Blue-green mix | Neutral |
 
-**Accuracy:** ~70%. Works best on lighter skin tones. On deeper skin, veins may be harder to see.
+**Accuracy:** Moderate. Works best on lighter skin tones. On deeper skin, veins may be harder to see.
 
 ### Method 2: The Gold vs. Silver Test
 
@@ -113,7 +113,7 @@ A quick second opinion. AI tools like Belle AI use an AI image model to judge yo
 
 ## The Special Case: Neutral Undertone
 
-About 20-30% of people have neutral undertones. Signs you're neutral:
+Many people have neutral undertones. Signs you're neutral:
 
 - Tests give mixed results (some say warm, some say cool)
 - Both gold and silver look good

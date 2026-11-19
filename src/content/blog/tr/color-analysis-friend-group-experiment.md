@@ -1,172 +1,161 @@
 ---
-title: "Tüm Arkadaş Grubuma Renk Analizi Yaptırdım — 5 Kadın, 5 Mevsim, 5 Şaşırtıcı Ders"
-description: "Beş arkadaş renk mevsimlerini birlikte keşfettiğinde ne olur? Sürprizler, tartışmalar ve ardından gelen alışveriş çılgınlığını anlatan kişisel bir hikâye."
+title: "Arkadaşlarla renk analizi: grup buluşması rehberi"
+description: "Arkadaşlarla renk analizi oturumu nasıl yapılır — ışık ve selfie'den kumaş karşılaştırmasına, sık sürprizlere, anlaşmazlıklara ve sonrası yapılacaklar listesine."
 date: "2026-09-20"
 tags: ["kişisel renk analizi", "renk mevsimi", "kişisel stil", "kendini geliştirme", "güzellik"]
 image: "/images/blog/color-analysis-friend-group-experiment.webp"
 ---
 
-## Her Şey Bir Şarap Gecesi Tartışmasıyla Başladı
+## Neden arkadaşlarla yapmak daha isabetli
 
-Geçen ay arkadaşım Priya, elindeki Merlot kadehini yudumlarken cesur bir iddiada bulundu.
+Mevsimsel renk analizini tek başına yapmak işe yarar; arkadaş eklemek soyut teoriyi *görünür* kılar. Grupta birbirinizin referansısınız — biri soğuk ve soft, biri sıcak ve yüksek kontrast; farklar aynı ışıkta yan yana ortaya çıkar, yalnızca ekranda değil.
 
-"O sarı tonu *asla* giymemelisin," dedi, kazağıma işaret ederek. "Seni... yorgun gösteriyor."
+Karşılaştırma önemli. Kontrast düzeyi, alt tonun sıcak/soğuk oluşu, genel «berrak» mı «yumuşak» mı okunduğu — aynı ışık ve aynı çekim yöntemiyle birden fazla yüz varken daha kolay yargılanır. Gardırobun «imza rengi» birinde mat, diğerinde parlak görünebilir — tersi de; dışarıdan fark etmek kolaylaşır.
 
-Aşağı baktım. En sevdiğim kanarya sarısı kazağım — tam bir kez iltifat aldığım, her şeyi öven annemden. İçten içe Priya'nın haklı olabileceğini biliyordum. Sarı, tenimde her zaman hafif *uyumsuz* duruyordu; sanki başkasının gözlüğünü takmak gibiydi.
-
-O sıradan laf, hayatımda yaptığım en göz açıcı grup deneyimlerinden birini başlattı. İki hafta içinde beşimizi de — ben, Priya, Jordan, Mei ve Tasha — ikna edip birlikte yapay zekâ renk analizi yaptırdık ve bir ay boyunca sonuçları test ettik.
-
-İşte öğrendiklerimiz ve bazı sonuçların bizi neden gerçekten şok ettiği.
+Buluşma «doğru mevsim» yarışı değil; gözü kalibre etmek. Herkesin bireysel sonucu var; grubun değeri kumaş testi ve palet konuşmasını ikna edici kılmak.
 
 ---
 
-## Kurulum: Beş Arkadaş, Bir Cumartesi, Bir Uygulama
+## Oturumdan önce hazırlık
 
-Bir Cumartesi öğleden sonrasını seçtik, Jordan'ın dairesinde kahve ve hamur işleriyle toplandık ve her birimiz telefonumuzdan yapay zekâ renk analizi yaptırdık. Süreç basitti: doğal ışıkta bir selfie yükleyin, yapay zekâ ten alt tonunuza, kontrast seviyenize ve genel renklendirmenize bakarak 12 mevsimlik sistemde olası bir mevsimsel renk tipi önersin.
+Azıcık hazırlık sonuçları karşılaştırılabilir kılar, yüz yüze doğrulamayı anlamlı yapar.
 
-Dakikalar içinde hepimizin sonucu hazırdı:
+**Işık ve fotoğraf**
 
-- **Ben (Sarah):** Soft Summer — soğuk, mat, orta derinlik
-- **Priya:** Deep Autumn — sıcak, zengin, derin
-- **Jordan:** Light Spring — sıcak, parlak, açık
-- **Mei:** Cool Winter — soğuk, berrak, yüksek kontrast
-- **Tasha:** Warm Autumn — sıcak, toprak tonları, orta-derin
+- **Düzgün gün ışığı** (pencere yanı, doğrudan güneş yok).
+- **Aynı saatte** selfie.
+- **Tutarlı yöntem**: benzer mesafe, nötr arka plan, yüz ortada, minimum filtre.
+- Alt ton okuması için **makyajsız veya hafif makyaj**; makyajlıysa sonraki karşılaştırmada not edin.
 
-Beş kadın. Beş farklı mevsim. Fikirlerle dolu bir daire.
+**Getirilecekler**
 
----
+- Şarjlı telefonlar ([yapay zekâ renk analizi](/) yüklemesi).
+- Sık giyilen **düz atkı, üst veya kumaş parçaları** — özellikle nötrler ve favoriler.
+- İsteğe bağlı: ayna, atıştırmalık, çene altına kumaş için masa.
 
-## Ders 1: "İmza Renginiz" En Kötü Renginiz Olabilir
+**Zihniyet**
 
-İlk şok buydu. Gardıroplarımızdaki vazgeçilmez renkleri gerçek mevsim paletlerimizle karşılaştırdığımızda, beşimizden üçü bize *aktif olarak* ters düşen renkler giyiyordu.
-
-**Örnek A: Jordan'ın siyah gardırop krizi.** Jordan kendini "her şey siyah" biri olarak tanımlıyor. Dolabı bir New York moda editörünün dolabı gibiydi — şık, monokrom, sofistike. Ama Light Spring sonucu rahatsız edici bir şey söylüyordu: saf siyah giyebileceği en sert renklerden biri.
-
-"Bu doğru olamaz," dedi, paletinde gezinirken. En iyi nötrleri sıcak fildişi, deve tüyü ve yumuşak taupe — yani dolabının tam tersi.
-
-Hemen orada krem bir bluz denetmesini sağladık (Priya'nın biraz oturanı vardı) ve fark... inkâr edilemezdi. Krem yüzünün yanında ışıltılı duruyordu. Siyah ise onu soluk ve yanlış bir şekilde keskin gösteriyordu.
-
-**Örnek B: Sarı kazağım.** Soft Summer olarak mat, soğuğa yakın renkler giymeliyim — tozlu gül, adaçayı yeşili, soğuk taupe. Kanarya sarısı? Bu bir Spring rengi. Parlak, sıcak ve mat, soğuk renklendirmem için tamamen yanlış. Priya haklı çıkmıştı.
-
-**Örnek C: Tasha'nın pastel sevgisi.** Warm Autumn olan Tasha'nın dolabı yumuşak lavanta, bebek pembesi ve pudra mavisiyle doluydu — klasik Summer renkleri. Gerçek Warm Autumn renklerini (terracotta, zeytin yeşili, yanmış sienna) tuttuğunda fark dramatiktı. Sıcak tonlar koyu tenini daha zengin ve ışıltılı gösterirken, yıllardır giydiği pastel tonlar tenini hafifçe matlaştırıyordu.
-
-**Sonuç:** *Sevdiğiniz* renk, her zaman sizi *seven* renk değildir. Üçümüz bizi daha kötü gösteren renkler etrafında tüm gardırobumuzu kurmuştuk.
+- Sonuç **palet rehberi**, kişilik etiketi değil. Amaç yüz yakınında yakıştırmak, kutuya koymak değil.
 
 ---
 
-## Ders 2: Alt Ton, Ten Rengiyle Aynı Şey Değil
+## Adım adım: grup akışı
 
-Bu deneyden önce hepimiz sanırım ten renginizin (ne kadar açık veya koyu olduğunuzun) hangi renklerin size yakıştığını belirlediğini düşünüyorduk. Öyle değil.
+**1. Herkes selfie yükler**
 
-Tasha ve Priya ikisi de daha koyu tenli, ama mevsimleri tamamen farklı. Tasha Warm Autumn (altın-sıcak alt ton), Priya ise Deep Autumn (o da sıcak, ama çok daha zengin ve derin). Doğu Asyalı, açık-orta tenli Mei Cool Winter — yani soğuk alt tonu... benimle, açık tenli bir Soft Summer ile paylaşıyor.
+Kararlaştırılan ışıkta analiz; araçtan mevsim, alt ton, kontrast ipuçlarını not edin.
 
-Bu gerçekten aydınlatıcıydı. Alt ton, ten derinliğinden bağımsız çalışır. Çok açık tenli biri ile koyu tenli biri aynı alt tona sahip olabilir ve benzer renk ailelerinde en iyi görünebilir.
+**2. Sonuçları sesli paylaşın — henüz tartışmayın**
 
-Sıraya girip paletleri karşılaştırdığımızda kalıplar netti:
+Sırayla mevsimleri söyleyin. Örüntüleri dinleyin (çok sıcak, karışık derinlik vb.). Bu aşamada düzeltme yok; ortak taban.
 
-| Kişi | Ten Derinliği | Alt Ton | En İyi Renkler |
-|--------|-----------|-----------|-------------|
-| Ben (Sarah) | Açık | Soğuk | Tozlu gül, adaçayı, lavanta |
-| Priya | Koyu | Sıcak | Orman yeşili, bordo, bronz |
-| Jordan | Açık | Sıcak | Şeftali, mercan, sıcak fildişi |
-| Mei | Açık-orta | Soğuk | Gerçek kırmızı, kraliyet mavisi, zümrüt |
-| Tasha | Orta-koyu | Sıcak | Terracotta, zeytin yeşili, hardal |
+**3. Birlikte hızlı kumaş kontrolü**
 
-Soğuk alt tonlu iki kişi (ben ve Mei) turuncu ve hardalda soluk görünüyoruz. Sıcak alt tonlu üç kişi (Priya, Jordan, Tasha) buz pembesi ve lavantada zorlanıyor. Ten derinliğinin hiçbir ilgisi yoktu.
+Buluşmanın en ikna edici kısmı:
 
----
+- YZ'nin **güçlü** dediği rengi çene altına.
+- Tür için **genelde zor** renge geçiş (çoğu zaman palet dışı çok canlı veya çok muted ton).
+- **Karşılaştırma fotoğrafları** — aynı ışık, aynı poz.
 
-## Ders 3: "Yanlış" Renkler Sadece Kötü Görünmez — Yüzünüzü Gerçekten Değiştirirler
+Tekrarlayan işaretler: göz altı koyulaşması, düzensiz cilt, yakışan renkte daha dinlenmiş yüz. Değişimi grup görmeli.
 
-Bu ders, gruptaki son şüpheci Jordan'ı (hâlâ siyahın rengi olduğunu düşünen) ikna etti.
+**4. Ten derinliği değil alt tonu karşılaştırın**
 
-Çok bilimsel olmayan ama şaşırtıcı derecede etkili bir test yaptık: herkes yüzünün yanına *en kötü* önerilen renkte bir kumaş parçası tuttu, sonra *en iyi* renge geçti. Fotoğraf çektik.
+Paletleri açın; **alt ton** (sıcak, soğuk, nötr) ile **derinliği** ayırın. Farklı derinlikler aynı veya farklı alt ton, farklı veya yakın palet aileleri — grupta tablodan kolay anlatılır.
 
-Sonuçlar neredeyse komik derecede dramatiktı.
+**5. Sonrası için kaydedin**
 
-Yanlış renkte hepimiz aynı belirtileri gösterdik: göz altı gölgeleri daha koyu, cilt düzensiz, çene hatları daha az belirgin ve genel olarak... yorgun. İki saat daha az uyumuşuz gibi.
-
-Doğru renkte? Cilt daha pürüzsüz görünüyordu. Göz altı halkaları yumuşuyordu. *Uyanık* görünüyorduk. Makyajsız, doğal bir filtre gibiydi.
-
-Mei'nin karşılaştırması en çarpıcıydı. Mat zeytin yeşilinde (Soft Autumn rengi — Cool Winter tipi için yanlış) gerçekten hasta görünüyordu. Parlak kraliyet mavisinde ise tatile yeni dönmüş gibiydi. Aynı ışık, aynı ifade, aynı öğleden sonra. Sadece renk değişmişti.
-
-Karşılaştırma fotoğraflarını telefonlarımıza kaydettik ve en az üçümüz bir hafta boyunca kilit ekranı yaptık.
+Karşılaştırma fotoğraflarını saklayın — alışveriş, dolap, «benim rengim mi trend mi?».
 
 ---
 
-## Ders 4: Mevsiminize Göre Birlikte Alışveriş Yapmak Tehlikeli Derecede Eğlenceli
+## Sık «sürpriz» türleri ve anlamları
 
-Analiz gününden yaklaşık bir hafta sonra birlikte AVM'ye gittik, ama yeni bir kural vardı: yalnızca mevsim paletinizdeki renkleri alabilirdiniz.
+Belirli kişi veya sonuç yok — gruplarda tekrar tekrar çıkan kalıplar.
 
-Olan beklenmedikti. Alışveriş normalde bunaltıcı — çok fazla seçenek, çok fazla "bana yakışır mı?" sorusu. Mevsim paleti filtre olunca her birimiz temelde önceden onaylanmış bir renk listesiyle hareket ediyordu. Karar yorgunluğu yok oldu.
+**En sevdiğiniz renk en iyi palette olmayabilir**
 
-"Artık siyah yok" şokundan en çok etkilenen Jordan, kendini bir Avrupa filmindeymiş gibi gösteren altın-fildişi bir trençkot buldu. Hayatında hiç krem bir palto almayı düşünmemişti. "Önceden beni tamamen görünmez kılardı," dedi.
+Her gün seçilen ton alışkanlık, nostalji veya raf stokuna bağlı olabilir; alt ton ve kontrastla uyum şart değil. Önerilen aile yanında koymak çoğu zaman ilk uyarı.
 
-Priya doğrudan derin orman yeşili bir wrap elbiseye yöneldi ve o kadar iyi görünüyordu ki bir satış görevlisi istemeden gelip söyledi.
+**Alt ton, ten renginin açık/koyuluğu ile aynı değil**
 
-Ben gözlerimi iki kat daha mavi gösteren arduvaz mavisi bir blazer buldum. Arduvaz mavisi. "Sıkıcı" göründüğü için eskiden yanından geçeceğim bir renk. Güç nötrüm çıktı.
+İki eksen. Farklı derinlikler aynı alt tonu paylaşabilir veya farklı palet aileleri gerektirebilir.
 
-**Şaşırtıcı kısım:** hepsinden *daha az* harcadık. Renklerinizi bildiğinizde "belki olur" diye dürtüsel alışverişi bırakırsınız. Her alışveriş kasıtlı hissettiriyordu.
+**Siyah (veya her «güvenli nötr») evrensel değil**
 
----
+Derin, soğuk, yüksek kontrast tipler siyahta harika; açık, sıcak veya soft tiplerde yüz yakınında kömür, sıcak lacivert, fildişi, deve çoğu zaman daha iyi. Nötrleri varsaymayın, test edin.
 
-## Ders 5: Renk Analizi *Başkalarının* Stilini Görme Biçiminizi Değiştirir
+**«Yanlış» renkler sadece «fena değil» değil — yüzü değiştirir**
 
-Bu en tuhaf yan etkiydi ve gruptaki herkes bağımsız olarak bildirdi: 12 mevsimlik sistemi öğrendikten sonra artık görmezden gelemezsiniz.
+Kötü eşleşmede göz altları belirginleşir, cilt düzensiz; iyide ek makyajsız daha dinlenmiş görünüm. Grup foto testi hızlı gösterir.
 
-Sokakta yürümek farklı bir deneyim oldu. Birinin açıkça kendi mevsiminde olmayan bir renkte olduğunu fark edip "Ah, muhtemelen Winter ama o sıcak deve tüyü palto — yakışmaması normal" diye düşünüyordum. Ünlülerin dergi kapaklarında yanlış renklerle stilize edildiğini fark etmeye başladım (düşündüğünüzden daha sık oluyor).
+**Alışveriş sadeleşir — bazen daha az harcanır**
 
-Priya sessizce iş arkadaşlarını renk tiplendirmeye başladı. Jordan restoran iç mekânlarını renk sıcaklığına göre değerlendirdi ("bu aydınlatma çok sıcak, her Summer berbat görünür"). Tasha kız kardeşine ruj renkleri konusunda tavsiye vermeye başladı.
+Paylaşılan palet filtre olunca karar yorgunluğu ve yüz yakını «belki» alımları azalır.
 
-Estetiği anlamak için kendimize yeni bir mercek vermiştik ve kapatmak imkânsızdı. Dürüst olmak gerekirse? Oldukça harikaydı. Her gün görsel olarak biraz daha ilginçleşti.
+**Herkesin rengine dikkat etmeye başlarsınız**
 
----
-
-## Yanlış Anladıklarımız (Ve Bizi Şaşırtanlar)
-
-Her şey yolunda gitmedi. Yolda bizi şaşırtan veya tökezleten birkaç şey oldu.
-
-**Mevsim paleti bir hapishane değil.** Başta Jordan panikledi çünkü artık siyah *asla* giyemeyeceğini sandı. Öyle çalışmıyor. Mevsim paletiniz *en iyi* renk aralığınızdır — sizi en zahmetsiz şekilde güzelleştirenler. Yine de istediğinizi giyebilirsiniz. Yüzünüze yakın siyah mı? Siyah bir kıyafetle mevsim renklerinizde bir atkı veya takı deneyin. Sistem bir rehber, ömür boyu hüküm değil.
-
-**Aydınlatma çok önemli.** Bazı renklerin AVM floresan ışıklarında evdeki doğal pencere ışığından farklı göründüğünü fark ettik. Bu normal — renk sabitliği görsel bilimde gerçek bir kavram. En iyi renkleriniz yine en iyi renkleriniz, ama etki doğal ışıkta en dramatik.
-
-**Herkes paletini hemen sevmedi.** Mei başta Cool Winter sonucundan hayal kırıklığına uğradı çünkü Soft Autumn olmak istiyordu (toprak tonlu, boho estetiği seviyordu). Ama gerçek soğuk, berrak renklerinde — fuşya, kraliyet mavisi, zümrüt — ne kadar çarpıcı göründüğünü görünce hızla fikrini değiştirdi. Stil tercihi ile renk yakıştırması her zaman aynı değildir ve bu sorun değil.
-
-**Yapay zekâ tuttu.** Beşimizin de kararı buydu. Sonra yapay zekâ sonuçlarımızı çevrimiçi testlerle (tamamen farklı cevaplar verdiler) ve YouTube'daki draping videolarıyla (faydalı ama kendi kendine değerlendirmek zor) karşılaştırdık. Yapay zekâ analizi en tutarlı, en hızlı ve — kumaş testimize göre — en iyi eşleşen seçenekti. Bu beş kişi ve bir öğleden sonra; kontrollü bir çalışma değil.
+12 mevsim çerçevesi oturunca sokak, mağaza, editoryalde uyum ve uyumsuzluk göze çarpar — görsel okuryazarlık, yargı oyunu değil.
 
 ---
 
-## 3 Ay Sonra: Ne Kaldı?
+## Beklenti sonuçla uyuşmadığında
 
-Deneyimizden bu yana yaklaşık üç ay geçti. İşte değişenler:
+Herkes anında coşmaz. Bu sürtüşme noktalarını öngörün, buluşma destekleyici kalsın.
 
-1. **Hepimiz farklı giyiniyoruz.** Radikal değil, ama fark edilir. Her birimiz temel gardırop parçalarını mevsim renklerimize kaydırdık, özellikle yüze yakın olanlar — üstler, atkılar, gözlükler, küpeler.
+**Palet dar hissediliyor**
 
-2. **Birbirimizi farklı iltifatlıyoruz.** "Tatlı elbise" yerine artık "bu *tam* sana yakışan bir Spring rengi." Özgüllük daha samimi hissettiriyor.
+Mevsim paleti **en kolay renk aralığı**, yasak listesi değil. Yüz yakını siyah, palet renkli atkı veya takıyla bölünebilir. «Önce en iyisi», «sadece bunlar» değil.
 
-3. **Alışveriş daha hızlı ve daha ucuz.** Jordan 90 dakikalık gezinmelerden 30 dakikalık hedefli turlara geçti. Yanlış renklerde "belki olur" parçalar almayarak yaklaşık 400 dolar tasarruf ettiğini tahmin ediyor.
+**Işık anlaşmazlığı**
 
-4. **Renk evangelistlerine dönüştük.** Beşimiz arasında renk analizini yaklaşık 15 arkadaş ve aile üyesine tanıttık. Vazgeçilmez hediye önerimiz oldu: "Dene, pişman olmazsın."
+AVM vs ev penceresi — normal (renk sabitliği). **Gün ışığı** karşılaştırmalarına öncelik; tartışmalı tonları pencerede yeniden deneyin.
 
-5. **Kimse o sarı kazağı giymiyor artık.** Bağışladım. Priya haklıydı.
+**Başka estetiğe bağlılık**
+
+Soft toprak tonu istenmiş, araç soğuk berrak aile önermiş — stil ve renk yakıştırması her zaman aynı değil. **Kumaş fotoğrafları** konuşmayı bitirir, etiket değil.
+
+**Araç vs anket vs draping videoları**
+
+Çevrimiçi anketler birbirini tutmaz. Videolar yardımcı, öz değerlendirme zor. YZ yapılandırılmış girdi; grupta **kumaşla doğrulayın**. Canlı testlerin tutarlılığı anlık tek etiketten önemli.
+
+**Yumuşak kurallar**
+
+- Uzun vadede ne giyildiğini denetlemeyin.
+- **Yüz yakını renkler** konuşulsun; beden veya kimlik değil.
+- Güçlü ayrılıkta aynı ışıkta yeniden çekim veya başka kumaş parçası.
 
 ---
 
-## Önemli Çıkarımlar
+## Oturum sonrası yapılacaklar listesi
 
-- **Vazgeçilmez renginiz en iyi renginiz olmayabilir.** Gerçek mevsim paletinize karşı test edin — sonuçlar sizi şaşırtabilir.
-- **Alt ton, ten derinliğinden ayrıdır.** Açık ve koyu tenli insanlar aynı alt tona ve mevsim tipine sahip olabilir.
-- **Yanlış renkler sadece "fena" görünmez — aktif olarak yorgun gösterirler.** Doğrular doğal bir filtre gibi çalışır.
-- **Grup renk analizi yalnız yapmaktan daha eğlencelidir.** Birbirinizin karşılaştırmalarından öğrenirsiniz.
-- **Her şeyi görme biçiminizi değiştirir.** Sistemi öğrendikten sonra renk yakıştırmasını (ve uyumsuzlukları) her yerde fark edersiniz.
+Önümüzdeki haftalarda uygulayın; öğleden sonrayı kalıcı dolap sezgisi yapın.
 
-Renk analizine meraklıysanız ama henüz denemediyseniz bir arkadaşınızı — daha iyisi, tüm grubunuzu — yanınıza alın. Gerçekten faydalı, hemen uygulanabilir ve beklediğinizden çok daha eğlenceli nadir güzellik keşiflerinden biri.
+1. Kumaş testi **karşılaştırma fotoğraflarını kaydedin**.
+2. Yüze yakın parçalar için **çekirdek palet renklerini işaretleyin**: üstler, atkılar, yakalar, gözlük, küpeler.
+3. **Sık kullanılan nötrleri gözden geçirin** — yan yana testte açıkça kaybedenleri değiştirin.
+4. **Alışverişte paleti açık tutun** (ekran görüntüsü/not).
+5. Büyük alımlarda **mağaza ışığında tekrar**; mümkünse evde pencere.
+6. Gelmeyenlere **aracı paylaşın** — grup devamı kolaylaştırır.
 
-Renk mevsiminizi merak ediyor musunuz? Ücretsiz [yapay zekâ renk analizi](/) deneyin — 60 saniye ve bir selfie yeterli.
+Renk mevsiminizi merak ediyor musunuz? Ücretsiz [yapay zekâ renk analizi](/) deneyin — 60 saniye, bir selfie.
+
+---
+
+## Özet
+
+- **Aynı ışık ve çekim** — arkadaşlar alt ton ve kontrastı görünür kılar.
+- **Yüz yakını kumaş** etiket tartışmasını yener.
+- **Favori ile en iyi renk** aynı olmayabilir — tahmin değil test.
+- Palet okurken **alt ton ve derinliği ayırın**.
+- **Palet rehberdir, hapsetmez** — sert nötrleri mevsim vurgularıyla bölün.
+- **Anlaşmazlık normal** — gün ışığında yeniden test, yüze odak.
+
+Renk analizi listedeyse birkaç arkadaş çağırın, öğleden sonrayı ayırın, atıştırmalıklı atölye gibi yapın. Hemen işe yarayan, tekrarlanabilir, birlikte daha eğlenceli bir güzellik becerisi.
 
 ## İlgili Makaleler
 
-- [30 Gün Boyunca Sadece 'Renk Mevsimimdeki' Renkleri Giydim — İşte Olanlar](/tr/blog/wearing-season-colors-30-days) — Bir ay boyunca yalnızca mevsim paletimi giymek
+- [30 günlük mevsim rengi challenge: Uygulanabilir bir plan](/tr/blog/wearing-season-colors-30-days) — 30 gün boyunca yalnızca mevsim renklerini giymek için haftalık plan
 - [Renk Mevsiminiz İçin Capsule Gardırop Nasıl Oluşturulur](/tr/blog/capsule-wardrobe-color-season) — Mevsim renklerinizle pratik gardırop oluşturma
 - [Kişisel Renk Analizinin Arkasındaki Bilim: Gerçekte Nasıl Çalışır](/tr/blog/science-behind-personal-color-analysis) — Bunu mümkün kılan renk bilimi
 - [Renk Analizi: Kapsamlı Rehber](/tr/color-analysis) — En iyi renklerinizi bulmak için bilmeniz gereken her şey

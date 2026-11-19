@@ -9,9 +9,9 @@ image: "/images/blog/olive-skin-best-hair-colors.webp"
 
 ## Pourquoi la couleur de cheveux compte davantage pour la peau olive
 
-J'ai passé deux ans à chercher une couleur de cheveux qui ne me donne pas l'air fatiguée. Chaque nuance que je choisissais — qu'il s'agisse d'un blond doré ou d'un châtain cendré froid — laissait mon teint légèrement éteint. Ce n'est que lorsque j'ai compris que les sous-tons olive créent un défi optique unique que tout s'est éclairé.
+Avec un sous-ton olive, vous avez peut-être essayé blond doré et châtain cendré froid sans que le teint paraisse juste — souvent pas une erreur du salon, mais un défi optique propre à la peau olive.
 
-Le voile vert-gris de la peau olive signifie que des couleurs magnifiques sur les peaux purement chaudes ou froides peuvent rendre la peau olive jaunâtre, cendrée ou terne. En revanche, la bonne nuance fait rayonner la peau olive de façon spectaculaire. Ce guide couvre tout ce que j'ai appris sur l'accord entre couleur de cheveux et sous-tons olive — des règles olive chaud vs froid aux recommandations précises par saison.
+Le voile vert-gris de la peau olive signifie que des couleurs magnifiques sur les peaux purement chaudes ou froides peuvent rendre la peau olive jaunâtre, cendrée ou terne. En revanche, la bonne nuance fait rayonner la peau olive de façon spectaculaire. Ce guide détaille l'accord entre couleur de cheveux et sous-tons olive — des règles olive chaud vs froid aux recommandations précises par saison.
 
 ---
 
@@ -86,7 +86,7 @@ Chocolat, expresso et châtain sont les couleurs universelles pour la peau olive
 
 ### Rouges atténués et bordeaux
 
-Contrairement au cuivré vif, les tons bordeaux et vin atténués enrichissent la peau olive sans effet cuivré. Pensez cerise profonde, auburn foncé ou vin discret — pas rouge pompier. J'ai trouvé ces nuances particulièrement saisissantes sur les peaux olive de profondeur moyenne.
+Contrairement au cuivré vif, les tons bordeaux et vin atténués enrichissent la peau olive sans effet cuivré. Pensez cerise profonde, auburn foncé ou vin discret — pas rouge pompier. Ces nuances sont particulièrement saisissantes sur les peaux olive de profondeur moyenne.
 
 ### Bronde doux et blond foncé
 
@@ -181,7 +181,7 @@ Votre colorimétrie est profonde et à haut contraste. Des couleurs audacieuses 
 
 ## Un raccourci moderne : l'analyse de couleur par intelligence artificielle
 
-Si vous n'êtes pas sûre d'être olive chaude ou froide — ou à quelle saison vous appartenez — les outils d'analyse de couleur par IA peuvent désormais suggérer votre sous-ton à partir d'une seule photo. Cela vous donne un point de départ pour choisir une saison et une couleur de cheveux. J'ai trouvé cela particulièrement utile pour la peau olive, où le voile vert-gris est difficile à percevoir dans un miroir, et un modèle d'image IA qui observe l'ensemble de la photo peut parfois le repérer, bien que la lumière et les réglages de l'appareil influencent encore le résultat.
+Si vous n'êtes pas sûre d'être olive chaude ou froide — ou à quelle saison vous appartenez — les outils d'analyse de couleur par IA peuvent désormais suggérer votre sous-ton à partir d'une seule photo. Cela vous donne un point de départ pour choisir une saison et une couleur de cheveux. C'est particulièrement utile pour la peau olive, où le voile vert-gris est difficile à percevoir dans un miroir, et un modèle d'image IA qui observe l'ensemble de la photo peut parfois le repérer, bien que la lumière et les réglages de l'appareil influencent encore le résultat.
 
 ---
 

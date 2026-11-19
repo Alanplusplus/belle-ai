@@ -8,13 +8,13 @@ image: "/images/blog/online-shopping-color-season.webp"
 
 ## El problema del color en las compras online del que nadie habla
 
-Me emocioné mucho cuando por fin descubrí mi estación de color. Verano Suave — colores apagados, fríos y de profundidad media. Rosa polvoriento, salvia, azul pizarra, topo frío. Abrí el portátil, entré en mis tiendas favoritas y empecé a llenar el carrito.
+Por fin conoces tu estación de color — por ejemplo, Verano Suave, con colores apagados, fríos y de profundidad media como rosa polvoriento, salvia, azul pizarra y topo frío. Abres el portátil, entras en tus tiendas favoritas y empiezas a llenar el carrito.
 
-Tres días después, con el paquete delante, miraba un montón de ropa que no se parecía *en nada* a lo que había pedido. El top «malva polvoriento» era rosa chillón. Los pantalones «verde salvia» eran oliva neón. Y la americana «gris frío» tenía un matiz cálido y amarillento que me hacía parecer que no había dormido en una semana.
+Cuando llega el paquete, el montón sobre la cama a menudo no se parece *en nada* a lo pedido. El top «malva polvoriento» puede ser rosa chillón; los pantalones «verde salvia», oliva neón; y la americana «gris frío» puede llevar un matiz cálido que te apaga.
 
 ¿Te suena? Si alguna vez has intentado comprar online según tu estación de color, conoces la frustración. Los colores en pantalla no son los de la percha — y saber tu estación no sirve de mucho si cada monitor te miente de forma distinta.
 
-Llevo dos años perfeccionando un sistema de compras online por color que de verdad funciona. Aquí comparto todo lo que he aprendido sobre cómo acertar con los colores sin tocar la tela antes.
+El sistema de 7 pasos de abajo está pensado para acertar con los colores sin tocar la tela antes — hábitos que reducen de verdad las devoluciones.
 
 ---
 
@@ -38,7 +38,7 @@ La compresión JPEG — el formato de casi todas las tiendas online — sacrific
 
 **4. Interferencia del fondo**
 
-El color del fondo, el tono de piel del modelo e incluso el estilismo de la foto afectan tu percepción. Una blusa rosa polvoriento sobre un modelo cálido con fondo beige se ve más cálida que la misma blusa sobre un modelo frío con fondo blanco. Tu cerebro ajusta la percepción del color según el contexto — un fenómeno bien documentado llamado [contraste simultáneo](https://www.colormatters.com/color-and-vision/color-and-simultaneous-contrast).
+El color del fondo, el tono de piel del modelo e incluso el estilismo de la foto afectan tu percepción. Una blusa rosa polvoriento sobre un modelo cálido con fondo beige se ve más cálida que la misma blusa sobre un modelo frío con fondo blanco. Tu cerebro ajusta la percepción del color según el contexto — un fenómeno bien documentado llamado contraste simultáneo.
 
 **5. Desajuste entre nombre y color**
 
@@ -48,7 +48,7 @@ Las marcas nombran los colores para marketing, no para precisión. «Dusty Rose�
 
 ## El sistema de 7 pasos para comprar tu paleta online
 
-Este es el marco práctico que uso cada vez que compro online. No requiere equipo especial — solo unos hábitos que reducen mucho la pila de devoluciones.
+Este es un marco práctico que puedes usar cada vez que compras online. No requiere equipo especial — solo unos hábitos que reducen mucho la pila de devoluciones.
 
 ### Paso 1: Crea una referencia de color física
 
@@ -148,7 +148,7 @@ No sustituye aprender a leer los colores tú misma — pero es una herramienta �
 
 ## Tres marcas que aciertan el color online (y cómo detectar otras)
 
-Tras años comprando online, he visto que algunas marcas representan el color con mucha más fidelidad. Esto es lo que hacen distinto:
+Algunas marcas representan el color online con mucha más fidelidad de forma constante. Esto es lo que suelen hacer distinto:
 
 **Lo que hacen las marcas precisas:**
 - Fotografían sobre fondo blanco o gris claro con iluminación calibrada
@@ -168,14 +168,14 @@ Tras años comprando online, he visto que algunas marcas representan el color co
 
 ## Conclusiones clave
 
-- Los colores online se distorsionan por la luz, la calibración del monitor, la compresión, el fondo y nombres creativos — espera un 20-30 % de variación de pantalla a realidad
+- Los colores online se distorsionan por la luz, la calibración del monitor, la compresión, el fondo y nombres creativos — espera cierta variación entre la pantalla y la realidad
 - Las muestras físicas junto a la pantalla son la mejor inversión para acertar al comprar online
 - Las fotos de reseñas de clientes son más fiables que las fotos profesionales para juzgar el color real
 - La composición de la tela cambia la apariencia — el algodón es lo más fiable, la seda añade calidez, el poliéster brillo
 - Entiende los *límites* de tu estación (qué cualidad importa más) para evaluar escenarios de «peor caso» antes de comprar
 - Las devoluciones gratuitas son estrategia de compra por color, no comodidad — pide con criterio y devuelve sin culpa
 
-Las mejores compradoras online que conozco no tienen visión del color perfecta. Tienen sistemas. Construye el tuyo y dejarás de temer el momento en que llega la caja.
+Las compradoras online más constantes no dependen de una visión del color perfecta. Dependen de sistemas. Construye el tuyo y dejarás de temer el momento en que llega la caja.
 
 ## Artículos relacionados
 

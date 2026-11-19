@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";
 import { PricedFill } from "@/components/PricedFill";
-import { ADDON_CREDITS, KIT_RETEST_DAYS } from "@/lib/constants";
+import { ADDON_CREDITS, KIT_RETEST_DAYS, SINGLE_UNLOCK_ENABLED } from "@/lib/constants";
 
 /**
  * 页面开头的「一句话答案 + 关键事实」卡片。
@@ -50,7 +50,11 @@ export async function QuickAnswerSection({
   variant: "home" | "tool";
 }) {
   const t = await getTranslations({ locale, namespace: "quickFacts" });
-  const costTemplate = t.raw(variant === "home" ? "costHome" : "costTool") as string;
+  // 首页：打开了「单份报告」入口、且这个语言写了带单份价格的版本（costHomeSingle）时，讲清「ab 单份价」；
+  // 没写的语言、或入口没开，仍用只讲套装的 costHome（不会把没在卖的商品写进文案）
+  const costKey =
+    variant === "home" ? (SINGLE_UNLOCK_ENABLED && t.has("costHomeSingle") ? "costHomeSingle" : "costHome") : "costTool";
+  const costTemplate = t.raw(costKey) as string;
 
   return (
     <QuickAnswer
@@ -62,7 +66,7 @@ export async function QuickAnswerSection({
           text: (
             <PricedFill
               template={costTemplate}
-              prices={{ kit: "kit", addon: "addon" }}
+              prices={{ kit: "kit", addon: "addon", single: "single" }}
               values={{ credits: ADDON_CREDITS, days: KIT_RETEST_DAYS }}
             />
           ),

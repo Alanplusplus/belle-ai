@@ -12,7 +12,7 @@ Has hecho un análisis de color y el veredicto está claro: eres Primavera. Tu s
 
 Pero hay algo de lo que casi nadie te avisa: en el sistema de análisis de color de las doce estaciones existen **tres tipos distintos de Primavera**, y las diferencias entre ellos son lo bastante importantes como para cambiar por completo tu estrategia de armario.
 
-He visto a personas comprar con confianza «colores cálidos de Primavera» y acabar con un armario lleno de prendas que se ven casi bien, pero no del todo. ¿El problema? Compraban colores de Primavera Verdadera cuando en realidad eran Primavera Ligera, o al revés.
+Muchas personas compran con confianza «colores cálidos de Primavera» y acaban con un armario lleno de prendas que se ven casi bien, pero no del todo. ¿El problema? Compraban colores de Primavera Verdadera cuando en realidad eran Primavera Ligera, o al revés.
 
 En esta guía desglosaré los tres subtipos de Primavera — **Primavera Brillante**, **Primavera Verdadera** y **Primavera Ligera** — para que identifiques exactamente cuál eres y empieces a elegir colores que de verdad te hagan brillar.
 

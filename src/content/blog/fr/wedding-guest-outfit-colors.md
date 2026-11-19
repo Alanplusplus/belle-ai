@@ -6,13 +6,11 @@ tags: ["analyse colorimétrique", "tenue de mariage", "saison colorimétrique", 
 image: "/images/blog/wedding-guest-outfit-colors.webp"
 ---
 
-## La Robe Que J'ai Failli Porter au Mariage de Ma Meilleure Amie
+## Quand la « robe parfaite » affronte votre teint
 
-Le printemps dernier, j'ai trouvé ce que je pensais être la robe parfaite pour une invitée de mariage : un midi corail vif, bustier ajusté et jupe fluide. Elle était magnifique en ligne. Correcte sur le cintre. Mais dès que je l'ai essayée devant le miroir, quelque chose clochait.
+Un midi corail vif peut être superbe en ligne et correct sur cintre, mais à l'essayage la peau paraît terne, les cernes plus marqués et la couleur rivalise avec le visage au lieu de l'encadrer. Passer à un mauve poudré ou à une autre teinte de votre palette saisonnière peut faire photographier la même silhouette bien mieux.
 
-Ma peau paraissait terne. Mes cernes semblaient plus marqués. La couleur se battait contre mon visage au lieu de l'encadrer. J'ai rendu la robe deux jours avant le mariage et, dans la panique, j'ai acheté une alternative mauve poudré dont je n'étais pas sûre — et j'ai reçu plus de compliments qu'avec tout ce que j'avais porté depuis des mois.
-
-C'est là que j'ai compris : la couleur de votre tenue compte plus que la coupe, la marque ou le prix. Et si vous connaissez votre saison colorimétrique, choisir la bonne tenue d'invitée devient presque un jeu d'enfant.
+La leçon est directe : en tant qu'invitée, la couleur compte souvent plus que la coupe, la marque ou le prix. Connaître sa saison colorimétrique simplifie énormément le choix.
 
 ---
 
@@ -141,7 +139,7 @@ Le même « vert émeraude » paraît totalement différent en crêpe mat, en sa
 
 ## Comment Tester Avant d'Acheter
 
-Voici mon système en trois étapes pour éviter les regrets colorimétriques :
+Un système en trois étapes aide à éviter les regrets colorimétriques :
 
 **Étape 1 : Portez la couleur près du visage à la lumière naturelle.** Pas l'éclairage du magasin — la vraie lumière du jour près d'une fenêtre. Votre peau paraît-elle uniforme et lumineuse, ou grise/jaune/rouge ? Fiez-vous à la première impression.
 

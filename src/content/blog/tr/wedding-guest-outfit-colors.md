@@ -6,13 +6,11 @@ tags: ["renk analizi", "düğün kıyafeti", "renk mevsimi", "moda ipuçları", 
 image: "/images/blog/wedding-guest-outfit-colors.webp"
 ---
 
-## En Yakın Arkadaşımın Düğününe Neredeyse Giyeceğim Elbise
+## «Mükemmel elbise» teninizle savaştığında
 
-Geçen ilkbahar, mükemmel düğün konuğu elbisesi bulduğumu sandım: oturan üst ve akan etekli parlak mercan midi bir elbise. Online harika görünüyordu. Askıda fena değildi. Ama deneyip aynanın karşısına geçtiğim anda bir şeyler ters gidiyordu.
+Parlak mercan midi online ve askıda iyi görünse de denediğinizde ten matlaşabilir, göz altları belirginleşir, renk yüzü çerçevelemek yerine onunla savaşır. Mevsim paletinizdeki tozlu mor gibi bir tonla aynı kalıp çoğu zaman fotoğrafta çok daha iyi durur.
 
-Tenim mat görünüyordu. Göz altı halkalarım daha belirginmiş gibi duruyordu. Renk yüzümü çerçevelemek yerine onunla savaşıyordu. Elbiseyi düğünden iki gün önce iade ettim ve emin olmadığım tozlu mor bir alternatife panik halinde yöneldim — ve aylardır giydiğim her şeyden daha fazla iltifat aldım.
-
-İşte o an anladım: kıyafetin rengi, kesiminden, markasından veya fiyatından daha önemli. Renk mevsiminizi biliyorsanız, doğru düğün konuğu kıyafetini seçmek neredeyse zahmetsiz hale gelir.
+Özet: düğün konuğu olarak renk çoğu zaman kesim, marka veya fiyattan daha önemlidir. Renk mevsiminizi biliyorsanız seçim çok daha kolaydır.
 
 ---
 
@@ -141,7 +139,7 @@ Aynı "zümrüt yeşili" mat krep, saten ve payetlerde tamamen farklı görünü
 
 ## Satın Almadan Önce Nasıl Test Edilir
 
-Renk pişmanlığından kaçınmak için üç adımlı sistemim:
+Renk pişmanlığından kaçınmak için üç adımlı bir sistem:
 
 **Adım 1: Doğal ışıkta yüzünüze tutun.** Mağaza aydınlatması değil — pencere yanında gerçek gün ışığı. Teniniz eşit ve parlak mı görünüyor, yoksa gri/sarı/kırmızı mı? İlk izlenime güvenin.
 

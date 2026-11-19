@@ -12,7 +12,7 @@ Muhtemelen bunu yaşamışsınızdır. Mercan renkli bir bluz denersiniz, cildin
 
 Bu sizin hayal gücünüz değil. Arkasında gerçek bir bilim var ve mekanizmayı anladığınızda "hangi renkler bana yakışır" dünyası tahminden çıkıp anlamlı hale gelir.
 
-Kişisel renk analizinin arkasındaki fizik, biyoloji ve algı bilimini aylarca araştırdım. İşte bulduklarım — ve bu yüzyıllık uygulamanın çoğu insanın fark ettiğinden daha sağlam bilimle desteklendiğinin nedeni.
+Bu makale, kişisel renk analizinin arkasındaki fizik, biyoloji ve algı bilimini özetler — ve bu yüzyıllık uygulamanın çoğu insanın fark ettiğinden daha sağlam bilimle desteklendiğinin nedeni.
 
 ---
 
@@ -107,7 +107,7 @@ Eşzamanlı kontrast ilk kez Fransız kimyager Michel Eugène Chevreul tarafınd
 - **Uyumlu renkler** (alt tonunuzu paylaşan) cildinizi pürüzsüz, eşit ve ışıltılı gösterir. Yansıyan ışık doğal renklendirmenizi pekiştirir.
 - **Uyumsuz renkler** (alt tonunuza karşıt) görsel bir gerilim yaratır. Yansıyan ışık doğal pigmentlerinizle çatıştığı için cildiniz sarımsı, gri, kızarık veya düzensiz görünebilir.
 
-Bu ince bir etki değil. Renk bilimi araştırmaları eşzamanlı kontrastın algılanan rengi algısal renk ölçeklerinde %20-30'a kadar kaydırabileceğini göstermiştir. Bu "harika görünüyorsun" ile "iyi misin?" arasındaki farktır.
+Bu ince bir etki değil. Eşzamanlı kontrast, bir rengin nasıl algılandığını belirgin şekilde değiştirebilir. Bu "harika görünüyorsun" ile "iyi misin?" arasındaki farktır.
 
 ## Geleneksel Renk Analizi Neden Zor (Ve AI Nerede Devreye Giriyor)
 

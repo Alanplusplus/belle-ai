@@ -50,7 +50,7 @@ Zeytini sıcak veya soğuk taban cilt üzerinde **modifikatör** olarak kabul ed
 
 ## Zeytin teninin en sık düştüğü dört sezon
 
-Uygulamamda zeytin tonlu müşterilerin çoğu şu dört gruptan birine girer. Ortak nokta: **soluk renk canlılığı**, sıcak veya soğuk alt ton ve orta veya derin genel değer.
+Zeytin tonlu tenin çoğu şu dört gruptan birine girer. Ortak nokta: **soluk renk canlılığı**, sıcak veya soğuk alt ton ve orta veya derin genel değer.
 
 | Sezon | Alt ton | Derinlik ve kontrast | Tek cümle |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@ Aşağıda zeytin teninde tanıma, giyim, makyaj ve saç yönü var.
 
 ### Yumuşak Sonbahar — klasik zeytin sezonu
 
-**Profil:** Soluk, sıcak, orta derinlik. Sıcak zeytinde en sık gördüğüm sezon.
+**Profil:** Soluk, sıcak, orta derinlik. Sıcak zeytin için en sık görülen sezon eşleşmesi.
 
 **Zeytin teninde işaretler:**
 
@@ -163,7 +163,7 @@ Soğuk zeytin, derin değer, yüksek kontrast → Gerçek Kış'tan daha sık De
 
 ### İlkbahar ailesi (Açık, Sıcak, Parlak İlkbahar)
 
-İlkbahar net, sıcak, çoğu zaman açık veya parlak renk ister. Zeytinin gri-yeşil katmanı solukluk ekler. Zeytin müşteri Parlak İlkbahar çıkarsa neredeyse her zaman yeniden test ederim — çoğu Yumuşak Sonbahar veya açık sıcak zeytinli Yumuşak Yaz.
+İlkbahar net, sıcak, çoğu zaman açık veya parlak renk ister. Zeytinin gri-yeşil katmanı solukluk ekler. Zeytin ten ve Parlak İlkbahar sonucuysa draping ile yeniden test edin — çoğu Yumuşak Sonbahar veya açık sıcak zeytinli Yumuşak Yaz.
 
 ### Gerçek Yaz ve Gerçek Sonbahar
 
@@ -185,7 +185,7 @@ Tüm dolabı yenilemeden önce evde bu akışı kullanın.
 
 ### Adım 1: Zeytin alt tonunu doğrulayın
 
-Alt ton doğru değilse tipileme işe yaramaz. Yeşil tabaka, fondöten uyumsuzluğu, boyundaki beyaz kumaş testini kontrol edin. [Zeytin alt ton rehberim](/tr/blog/olive-undertone-guide) güvenilir testleri anlatır.
+Alt ton doğru değilse tipileme işe yaramaz. Yeşil tabaka, fondöten uyumsuzluğu, boyundaki beyaz kumaş testini kontrol edin. [Zeytin alt ton rehberimiz](/tr/blog/olive-undertone-guide) güvenilir testleri anlatır.
 
 ### Adım 2: Sıcak zeytin vs soğuk zeytin
 

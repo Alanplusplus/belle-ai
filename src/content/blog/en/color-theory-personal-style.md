@@ -14,7 +14,7 @@ Turns out, that simple circular chart is one of the most powerful styling tools 
 
 Professional stylists, interior designers, and brand consultants use color theory every single day. The exact same principles that make a painting feel harmonious or a logo feel trustworthy also determine why certain outfits look effortlessly polished while others feel "off" no matter how expensive the pieces are.
 
-I spent years thinking color coordination was intuitive — something you either had a "feel" for or didn't. Then I actually studied the theory behind it, and everything clicked. There are rules. They're learnable. And they work.
+It's easy to assume color coordination is purely intuitive — something you either have a "feel" for or don't. But there's real theory behind it, and once you learn the basics, the pieces start to fit. There are rules. They're learnable. And they work.
 
 In this article, I'll break down the core color theory concepts that matter for personal style — no art degree required.
 

@@ -8,7 +8,7 @@ image: "/images/blog/celebrity-color-season-style-twin.webp"
 
 ## Du hast bereits einen Promi als Style-Zwilling
 
-Nach Jahren, in denen ich Farbanalyse studiert habe, ist mir etwas aufgefallen: Die Prominenten, zu denen wir uns natürlich hingezogen fühlen, teilen oft unsere Farbsaison. Nicht den Körpertyp, nicht den Lebensstil — unsere *Färbung*. Und das ist kein Zufall.
+In der Farbanalyse zeigt sich ein immer wiederkehrendes Muster: Die Prominenten, zu denen wir uns natürlich hingezogen fühlen, teilen oft unsere Farbsaison. Nicht den Körpertyp, nicht den Lebensstil — unsere *Färbung*. Und das ist kein Zufall.
 
 Wenn jemand mit deinem Unterton, Kontrastniveau und Saisontyp eine bestimmte Farbe trägt, registriert dein Gehirn sie als „schön“, weil du instinktiv erkennst, was zu deinen eigenen Merkmalen passt. Dieses staubige Rosakleid, das eine Schauspielerin strahlend wirken ließ? Es gibt einen Grund, warum es deine Aufmerksamkeit gewann.
 
@@ -26,7 +26,7 @@ Promis sind im Grunde wandelnde Lookbooks für ihre Farbpalette. Jeder rote Tepp
 
 Der Schlüssel: **Wenn ein Promi eine Farbe trägt, die fantastisch aussieht, und ihr dieselbe Saison teilt, wird diese Farbe auch bei dir fantastisch aussehen.** Hautton, Augenfarbe und Haarfarbe erzeugen dieselben optischen Effekte — unabhängig davon, wer das Outfit trägt.
 
-Die Farbpsychologie stützt das. Eine [Studie im Journal Color Research & Application](https://onlinelibrary.wiley.com/journal/15206378) fand, dass Gesichter attraktiver bewertet werden, wenn sie von Farben umrahmt sind, die mit der natürlichen Färbung harmonieren. Die besten Momente deines Style-Zwillings sind im Grunde kuratierte Experimente, die zeigen, welche Harmonien funktionieren.
+Die Idee ist einfach: Farben, die mit deiner natürlichen Färbung harmonieren, stehen dir in der Regel besser. Die besten Momente deines Style-Zwillings sind im Grunde eine kuratierte Sammlung von Beispielen, die zeigen, welche Harmonien funktionieren.
 
 ---
 
@@ -163,7 +163,7 @@ Als Zweitmeinung kann KI-Farbanalyse einen wahrscheinlichen Farbtyp aus einem Fo
 - Dein Style-Zwilling basiert auf **chromatischer Ähnlichkeit** (Unterton, Kontrast, Tiefe) — nicht Körpertyp oder Lebensstil
 - Speichere ihre besten Looks als Shopping-Referenz — die **Nuancen**, die sie tragen, funktionieren auch bei dir
 - Studiere Make-up-Entscheidungen, besonders Lippen- und Rouge-Untertöne
-- Denk an die 80/20-Regel: **80 % des Wertes kommt von der richtigen Farbe**, nicht vom exakten Outfit
+- Denk daran: **die richtige Farbe ist am wichtigsten**, mehr als das exakte Outfit
 
 Wenn du das nächste Mal eine Promi auf einer „best dressed“-Liste siehst und denkst „wow, diese Farbe ist atemberaubend“ — prüf, ob ihr dieselbe Saison teilt. Wenn ja, hast du gerade deine nächste Einkaufsliste.
 

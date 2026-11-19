@@ -16,7 +16,7 @@ faq:
 
 ## „Welche Saison bin ich?“ — das Olivhaut-Dilemma
 
-Bei fast jeder Oliv-Unterton-Beratung höre ich dieselbe Geschichte. Jemand macht ein Farbsaison-Quiz — manchmal sogar bezahltes Draping — und geht mit drei verschiedenen Antworten und null Sicherheit nach Hause.
+Viele mit Oliv-Unterton erleben dieselbe Geschichte: Jemand macht ein Farbsaison-Quiz — manchmal sogar bezahltes Draping — und geht mit drei verschiedenen Antworten und null Sicherheit nach Hause.
 
 Weicher Herbst klingt richtig, bis Terrakotta am Gesicht müde wirkt. Der Algorithmus schlägt Wahrer Winter vor, aber eisiges Pink-Lippenstift lässt die Haut aschgrau wirken. Am schlimmsten ist „Neutral“ ohne Palette, als hätte Olivhaut überhaupt keine Farben.
 
@@ -50,7 +50,7 @@ Nimm Oliv als **Modifikator** auf warmer oder kühler Basis-Haut, nicht als „e
 
 ## Die vier Saisons, in die Olivhaut am häufigsten fällt
 
-In meiner Praxis landen die meisten oliv-getönten Klientinnen in einer dieser vier. Gemeinsam: **gedämpfte Chroma** mit warmem oder kühlem Unterton und mittlerem oder tiefem Gesamtwert.
+Die meisten oliv-getönten Hauttypen landen in einer dieser vier. Gemeinsam: **gedämpfte Chroma** mit warmem oder kühlem Unterton und mittlerem oder tiefem Gesamtwert.
 
 | Saison | Unterton | Tiefe & Kontrast | Stimmung |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@ Unten: Erkennungszeichen auf Olivhaut plus Kleidung, Make-up und Haare.
 
 ### Weicher Herbst — die klassische Oliv-Saison
 
-**Profil:** Gedämpft, warm, mittlere Tiefe. Die Saison, die ich bei warm-oliv am häufigsten sehe.
+**Profil:** Gedämpft, warm, mittlere Tiefe. Die häufigste Saison bei warm-oliv.
 
 **Zeichen auf Olivhaut:**
 
@@ -163,7 +163,7 @@ Zu wissen, was du **nicht** bist, spart Zeit, Geld und Make-up-Frust.
 
 ### Frühlingsfamilie (Heller Frühling, Warmer Frühling, Leuchtender Frühling)
 
-Frühling braucht klare, warme, oft helle oder lebendige Farbe. Olivs grau-grüne Schicht dämpft. Typisiert eine Oliv-Kundin als leuchtender Frühling, teste ich fast immer neu — meist Weicher Herbst oder heller Weicher Sommer mit warm-oliv.
+Frühling braucht klare, warme, oft helle oder lebendige Farbe. Olivs grau-grüne Schicht dämpft. Bei Oliv und Ergebnis leuchtender Frühling lohnt sich ein erneuter Draping-Test — meist Weicher Herbst oder heller Weicher Sommer mit warm-oliv.
 
 ### Wahrer Sommer und Wahrer Herbst
 
@@ -185,7 +185,7 @@ Nutze diesen Ablauf zu Hause, bevor du einen ganzen Kleiderschrank kaufst.
 
 ### Schritt 1: Oliv-Unterton bestätigen
 
-Typisierung funktioniert nur mit richtigem Unterton. Prüfe grünen Schleier, Foundation-Mismatch und weißen Stoff am Hals. Mein [Oliv-Unterton-Guide](/de/blog/olive-undertone-guide) erklärt zuverlässige Tests.
+Typisierung funktioniert nur mit richtigem Unterton. Prüfe grünen Schleier, Foundation-Mismatch und weißen Stoff am Hals. Unser [Oliv-Unterton-Guide](/de/blog/olive-undertone-guide) erklärt zuverlässige Tests.
 
 ### Schritt 2: Warm-oliv vs kühl-oliv trennen
 
