@@ -405,6 +405,8 @@ export interface HistoryEntry extends ReportLockInfo {
   lens_profile?: LensProfile;
   /** 独立工具已经出好、用户能看到的第 1 张效果图（签名地址）；没出图 / 没买的没有 */
   cover_url?: string;
+  /** 独立工具：创建任务时选的报告语言（结果页固定用它展示，不跟着之后的语言切换变） */
+  language?: string;
 }
 
 /** 解锁一份已生成的锁定报告（不用重新生成）：色彩报告花买报告得到的报告额度，没有时返回 429（needs_purchase）；成功后返回完整报告 */
@@ -525,7 +527,7 @@ export async function fetchHistory(page = 1, pageSize = 20, language = "en") {
 
 export async function fetchProcessingTask() {
   return belleApi<{
-    task: { task_id: string; type: string; created_at: number } | null;
+    task: { task_id: string; type: string; language?: string; created_at: number } | null;
   }>({
     action: "processing",
   });

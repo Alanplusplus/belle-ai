@@ -259,6 +259,8 @@ interface BackgroundTask {
   /** 色彩分析是结构化报告：没有图片，页面按数据渲染 */
   report?: ColorReportData;
   sourceUrl?: string;
+  /** 创建任务时选的报告语言：结果弹窗固定用它展示（独立工具），不跟着之后的语言选择器变 */
+  language?: string;
 }
 
 /** 额度分三类显示：免费预览额度、套餐积分（套装 / 加购包买来的，加上老的赠送积分）、报告额度（只解锁色彩报告） */
@@ -443,6 +445,9 @@ export function TryClient({
   const [shareModal, setShareModal] = useState<{ imageUrl: string; link: string; report?: boolean } | null>(null);
   // 当前结果页对应的任务 ID：创建公开分享链接时需要
   const [resultTaskId, setResultTaskId] = useState<string | null>(null);
+  // 当前结果是用哪种报告语言生成的：独立工具的结果页固定用它展示。
+  // 页面上的「报告语言」选择器只决定下一次生成用什么语言，不能让已经生成好的结果跟着变
+  const [resultLang, setResultLang] = useState<string | null>(null);
   const [resultReport, setResultReport] = useState<ResultReportState | null>(null);
   const shareBusyRef = useRef(false);
   const [showPricingModal, setShowPricingModal] = useState(false);
@@ -600,12 +605,15 @@ export function TryClient({
             if (pendingTask) {
               setAnalysisType(pendingTask.type as AnalysisType);
               setPhase("generating");
-              pollAnalysis(pendingTask.task_id, pendingTask.type, loadPrefs().reportLang || reportLang, (season) => setLensStage({ season }))
+              // 用任务创建时的语言（服务端记着）；老接口没带才退回本地记的偏好
+              const pendingLang = pendingTask.language || loadPrefs().reportLang || reportLang;
+              pollAnalysis(pendingTask.task_id, pendingTask.type, pendingLang, (season) => setLensStage({ season }))
                 .then((result) => {
                   setResultUrls(result.urls);
                   setResultReport(reportStateOf(result));
                   setResultLock(lockStateOf(result));
                   setResultTaskId(pendingTask.task_id);
+                  setResultLang(pendingLang);
                   setPhase("done");
                   reloadHistory();
                 })
@@ -943,6 +951,7 @@ export function TryClient({
       setResultReport(reportStateOf(result));
       setResultLock(lockStateOf(result));
       setResultTaskId(taskRes.data.task_id);
+      setResultLang(reportLang);
       setPhase("done");
       reloadHistory();
       refreshCredits();
@@ -1495,6 +1504,7 @@ export function TryClient({
       setResultReport(reportStateOf(result));
       setResultLock(lockStateOf(result));
       setResultTaskId(taskRes.data.task_id);
+      setResultLang(reportLang);
       setPhase("done");
       // 出图后再同步剩余积分：生成过程中就显示「额度已用完」会很突兀
       refreshCredits();
@@ -1532,7 +1542,7 @@ export function TryClient({
     const taskId = `bg_${Date.now()}_${type}`;
     trackEvent("recommended_analysis_started", { type, source: "recommendation" });
 
-    setBackgroundTasks((prev) => [...prev, { id: taskId, type, phase: "generating", resultUrls: [] }]);
+    setBackgroundTasks((prev) => [...prev, { id: taskId, type, phase: "generating", resultUrls: [], language: reportLang }]);
 
     try {
       const signInRes = await webInit();
@@ -2336,7 +2346,7 @@ export function TryClient({
                 lens={lens}
                 title={typeName}
                 season={resultReport.report.season}
-                lang={reportLang}
+                lang={resultLang ?? reportLang}
                 sourceImageUrl={resultReport.sourceUrl ?? sourceImageUrl}
                 onBuyCredits={() => openPricing("tryon_credits", null, null, { intent: "credits", openTaskId: resultTaskId })}
               >
@@ -2597,6 +2607,7 @@ export function TryClient({
                         locked: task.locked,
                         unlocked: task.unlocked,
                         lock_start: task.lockStart,
+                        language: task.language,
                         ...(task.report ? { kind: "report" as const, report: task.report } : {}),
                       },
                       imageIndex: 0,
@@ -2765,7 +2776,7 @@ export function TryClient({
         <LensLightbox
           entry={lightbox.entry}
           lens={lensOf(lightbox.entry.type)!}
-          preferredLang={reportLang}
+          preferredLang={lightbox.entry.language ?? reportLang}
           onBuyCredits={() => openPricing("tryon_credits", null, null, { intent: "credits", openTaskId: lightbox.entry.id })}
           onShare={(taskId) => handleShare(null, taskId, lensOf(lightbox.entry.type) === "glow")}
           onClose={() => setLightbox(null)}
