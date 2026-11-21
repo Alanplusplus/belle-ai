@@ -5,10 +5,10 @@ import { PageHero } from "@/components/PageHero";
 /**
  * 功能介绍页的首屏：左边是标题和按钮，右边是这个功能真实生成的示例报告（来自 public/images/examples）。
  * 以前这类页面首屏只有一行字，访客要往下滚才能看到产品长什么样。
+ * 没有副标题：标题 + 一段说明已经够了，副标题只是把标题再说一遍。
  */
 export function FeatureHero({
   title,
-  subtitle,
   description,
   actions,
   badge,
@@ -16,7 +16,6 @@ export function FeatureHero({
   sampleLabel,
 }: {
   title: string;
-  subtitle?: ReactNode;
   description?: ReactNode;
   actions?: ReactNode;
   /** 标题上方的小标签（例如 Glow-Up 页的 Premium） */
@@ -30,7 +29,6 @@ export function FeatureHero({
     <PageHero
       crumb={badge}
       title={title}
-      subtitle={subtitle}
       description={description}
       actions={actions}
       visual={<ReportPreview src={image} alt={`${title} — ${sampleLabel}`} label={sampleLabel} />}

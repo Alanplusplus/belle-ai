@@ -1,9 +1,8 @@
 import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
+import { FeatureCta, FeatureHeroActions, getFeatureCtaCopy } from "@/components/FeatureCta";
 import { FeatureHero } from "@/components/FeatureHero";
-import { FunnelLink } from "@/components/FunnelLink";
-import { sampleHref } from "@/lib/blogTools";
-import Image from "next/image";
+import { ClampedIntro } from "@/components/ClampedIntro";
+import { ToolFaq } from "@/components/ToolPageSections";
 import {
   buildAlternates,
   buildBreadcrumbJsonLd,
@@ -12,6 +11,7 @@ import {
   TWITTER_IMAGES,
 } from "@/lib/seo";
 import type { Metadata } from "next";
+import { FeatureWhy } from "@/components/FeatureWhy";
 
 export async function generateMetadata({
   params,
@@ -48,9 +48,11 @@ export default async function CelebrityMatchPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const cta = await getFeatureCtaCopy(locale, "celebrity_match");
   const t = await getTranslations({ locale, namespace: "celebrityPage" });
-  const ft = await getTranslations({ locale, namespace: "features" });
   const tp = await getTranslations({ locale, namespace: "tryPage" });
+  const w = await getTranslations({ locale, namespace: "featureWhy" });
+  const bt = await getTranslations({ locale, namespace: "blog" });
 
   const faqCount = 5;
   const faqs = Array.from({ length: faqCount }, (_, i) => ({
@@ -84,115 +86,25 @@ export default async function CelebrityMatchPage({
       />
       <FeatureHero
         title={t("title")}
-        subtitle={t("subtitle")}
-        description={t("description")}
+        description={w("celebrity.hero")}
         image="/images/examples/report_celebrity_season.webp"
         sampleLabel={tp("demoBadge")}
-        actions={
-          <>
-            <Link
-              href="/try?type=celebrity_match"
-              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {ft("tryItFree")}
-            </Link>
-            <FunnelLink
-              href={sampleHref("celebrity_match")}
-              from="feature"
-              tool="celebrity_match"
-              kind="sample"
-              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
-            >
-              {tp("trySample")}
-            </FunnelLink>
-          </>
-        }
+        actions={<FeatureHeroActions tool="celebrity_match" copy={cta} />}
       />
 
-      <section className="py-16">
-        <div className="mx-auto max-w-5xl px-4">
-          <h2 className="text-center text-2xl font-bold">{t("whatYouGet")}</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {DIMENSIONS.map((dim) => (
-              <div key={dim.image} className="group overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
-                <div className="relative aspect-square w-full overflow-hidden">
-                  <Image
-                    src={dim.image}
-                    alt={t(`feat${dim.feat}Title`)}
-                    fill
-                    className="object-cover transition duration-300 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-                <div className="p-4">
-                  <p className="text-sm font-medium">{t(`feat${dim.feat}Title`)}</p>
-                  <p className="mt-1 text-xs text-muted-foreground">{t(`feat${dim.feat}Desc`)}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Link
-              href="/try?type=celebrity_match"
-              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {ft("tryItFree")}
-            </Link>
-          </div>
+      <FeatureWhy locale={locale} tool="celebrity" note={null} />
+
+      <section className="bg-muted/30 py-10">
+        <div className="mx-auto max-w-4xl px-4">
+          <FeatureCta tool="celebrity_match" copy={cta} from="feature_mid" />
         </div>
       </section>
 
-      <section className="bg-muted/30 py-16">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <h2 className="text-2xl font-bold">{t("howItWorks")}</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
-            <Step num="1" text={t("step1")} />
-            <Step num="2" text={t("step2")} />
-            <Step num="3" text={t("step3")} />
-          </div>
-          <Link
-            href="/try?type=celebrity_match"
-            className="mt-10 inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-          >
-            {ft("tryItFree")}
-          </Link>
-        </div>
-      </section>
+      <ClampedIntro text={t("seoIntro")} moreLabel={bt("readMore")} />
 
-      <section className="max-w-3xl mx-auto px-4 py-12">
-        <p className="text-gray-700 leading-relaxed text-base">{t("seoIntro")}</p>
-      </section>
+      <ToolFaq title={t("faqTitle")} faqs={faqs} />
 
-      <section className="max-w-3xl mx-auto px-4 pb-12">
-        <h2 className="text-2xl font-semibold mb-6">{t("faqTitle")}</h2>
-        <div className="space-y-6">
-          {faqs.map((faq, i) => (
-            <details key={i} className="group border-b border-gray-200 pb-4">
-              <summary className="cursor-pointer font-medium text-gray-900 group-open:text-rose-600 transition-colors">
-                {faq.q}
-              </summary>
-              <p className="mt-3 text-gray-600 leading-relaxed">{faq.a}</p>
-            </details>
-          ))}
-        </div>
-      </section>
+      <FeatureCta variant="end" tool="celebrity_match" copy={cta} from="feature_end" />
     </>
   );
 }
-
-function Step({ num, text }: { num: string; text: string }) {
-  return (
-    <div className="flex flex-col items-center">
-      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white font-bold">{num}</div>
-      <p className="mt-3 text-sm">{text}</p>
-    </div>
-  );
-}
-
-// 四张图都是真实报告 / 名人色板卡的截图，和文案一一对应
-const DIMENSIONS = [
-  { image: "/images/dim_celeb_season.webp", feat: 1 },
-  { image: "/images/dim_celeb_list.webp", feat: 2 },
-  { image: "/images/dim_celeb_card.webp", feat: 3 },
-  { image: "/images/dim_celeb_palette.webp", feat: 4 },
-];

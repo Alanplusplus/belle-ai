@@ -143,9 +143,9 @@
     "step2Desc": "AIが肌のアンダートーン、瞳の色、髪の色、コントラストを分析し、シーズンタイプを判定。",
     "step3Title": "カラーパレットを取得",
     "step3Desc": "シーズンカラータイプと、ファッション、メイクなどに最適なフルパレットを受け取り。",
-    "privacyTitle": "あなたの写真、あなたの管理下に",
+    "privacyTitle": "写真は、あなたの管理下に",
     "privacyItem1": "レポート作成のためだけに使用",
-    "privacyItem2": "非公開の履歴に保存され、本人だけが閲覧可能",
+    "privacyItem2": "非公開で保存、本人だけが閲覧可能",
     "privacyItem3": "いつでも削除を依頼可能",
     "privacyLink": "プライバシーポリシーを見る",
     "ctaTitle": "ベストカラーを見つける準備はできましたか？",
@@ -467,7 +467,7 @@
     "faq2Q": "オンラインカラー診断クイズの精度は？",
     "faq2A": "オンラインクイズは自己観察に基づくため、おおよその目安にとどまります。AI写真分析は実際の写真をもとにするため、通常はより信頼しやすい出発点になりますが、AIによる視覚的な判断であり、照明や写真の質によって結果が変わることがあります。",
     "faq3Q": "無料でパーソナルカラー診断はできますか？",
-    "faq3A": "はい！無料のオンラインカラークイズで季節カラータイプの初期診断が受けられます。フルカラーパレットとメイクアドバイス付きの詳細なAI分析は、Belle AIが1回無料で提供しています。",
+    "faq3A": "はい！無料のオンラインカラークイズで季節カラータイプの初期診断が受けられます。フルカラーパレットとメイクアドバイス付きの詳細なAI分析は、Belle AIでは無料のレポートプレビューをご用意しています。",
     "faq4Q": "4つのカラーシーズンとは？",
     "faq4A": "4つのカラーシーズンはスプリング（暖色、明るい、鮮やか）、サマー（寒色、明るい、ソフト）、オータム（暖色、深い、ソフト）、ウィンター（寒色、深い、ビビッド）です。12シーズンシステムではそれぞれ3つのサブタイプがあり、より精密なカラー提案が可能です。",
     "relatedTitle": "その他のカラーツール",
@@ -649,10 +649,52 @@
     "relatedPosts": "関連記事",
     "backToBlog": "ブログに戻る",
     "toc": "この記事の内容",
-    "ctaTitle": "AIカラー診断を試してみませんか？",
-    "ctaDescription": "写真1枚をアップロードして、60秒で雑誌レベルのビューティーレポートを取得。",
-    "topCtaTitle": "あなた自身の結果を60秒で確認",
-    "stickyCtaText": "✨ 無料AIカラー診断を受ける",
+    "cta": {
+      "color_analysis": {
+        "title": "セルフィーを1枚アップすると、カラーシーズンと似合う色がわかります",
+        "button": "私に似合う色を診断する"
+      },
+      "makeup": {
+        "title": "セルフィーを1枚アップすると、リップ・チーク・アイの色まで決まったメイクが3パターン届きます",
+        "button": "私のメイクを見る"
+      },
+      "face_shape": {
+        "title": "セルフィーを1枚アップすると、顔型と似合う髪型がわかります",
+        "button": "私の顔型を診断する"
+      },
+      "hair_preview": {
+        "title": "セルフィーを1枚アップすると、ヘアカラー4色をあなたの写真で試せます",
+        "button": "ヘアカラーを試す"
+      },
+      "outfit_color": {
+        "title": "セルフィーを1枚アップすると、似合う色で組んだコーデが3つ届きます",
+        "button": "私のコーデ配色を見る"
+      },
+      "glasses_match": {
+        "title": "セルフィーを1枚アップすると、顔に似合うメガネがわかります",
+        "button": "似合うメガネを探す"
+      },
+      "occasion_makeup": {
+        "title": "シーンを選んでセルフィーをアップすると、完成メイクが3パターン届きます",
+        "button": "シーン別メイクを見る"
+      },
+      "jewelry_guide": {
+        "title": "セルフィーを1枚アップすると、似合う金属色とイヤリングがわかります",
+        "button": "似合うジュエリーを探す"
+      },
+      "glow_up_report": {
+        "title": "セルフィーを1枚アップすると、あなたのビフォーアフターが見られます",
+        "button": "私のグローアップを見る"
+      },
+      "style_personality": {
+        "title": "セルフィーを1枚アップすると、スタイルタイプと普段のコーデ3つがわかります",
+        "button": "スタイルタイプを診断する"
+      },
+      "celebrity_match": {
+        "title": "セルフィーを1枚アップすると、同じカラーシーズンの有名人がわかります",
+        "button": "私のセレブ診断を見る"
+      }
+    },
     "sidebarCtaTitle": "自分で試してみる",
     "sidebarCtaDesc": "写真をアップロードして、60秒で似合う色を発見。",
     "sidebarCtaFree": "無料 · 登録不要",
@@ -789,6 +831,41 @@
     "notifyBody": "分析レポートが生成されました。クリックして結果をご覧ください。",
     "uploadTrust": "写真はレポート作成のみに使用され、あなた専用の履歴に保存されます。削除はいつでもリクエスト可能",
     "uploadConsent": "アップロードすることで、写真がご本人のものであるか、被写体の許可を得ていることを確認します",
+    "webcamOpen": "Webカメラで撮影",
+    "webcamTitle": "Webカメラで自撮りする",
+    "webcamHint": "窓やライトの方を向いて顔に均一に光が当たるようにし、カメラをまっすぐ見てください。",
+    "webcamCapture": "撮影する",
+    "webcamChooseFile": "ファイルを選ぶ",
+    "webcamStarting": "カメラを起動しています…",
+    "webcamErrorDenied": "カメラへのアクセスがブロックされています。ブラウザのアドレスバーで許可するか、写真ファイルを選んでください。",
+    "webcamErrorMissing": "このパソコンではカメラが見つかりませんでした。写真ファイルを選ぶか、スマートフォンで続けてください。",
+    "webcamErrorOther": "カメラを起動できませんでした。他のアプリで使用中の可能性があります。写真ファイルを選んでください。",
+    "handoffLink": "このパソコンに写真がない？スマホで撮影できます",
+    "handoffHint": "スマホのカメラでスキャンして自撮りすると、写真が自動でここに表示されます。続きはこのパソコンで進められます。",
+    "handoffItemHint": "スマホのカメラでスキャンしてアイテムを撮影すると、写真が自動でここに表示されます。続きはこのパソコンで進められます。",
+    "handoffItemPageTitle": "アイテムの写真をパソコンに送る",
+    "handoffItemTip": "アイテムだけを自然光で撮り、色が画面いっぱいになるようにしてください。",
+    "handoffItemTake": "アイテムを撮影する",
+    "handoffItemTrust": "写真はこのアイテムのスキャンにのみ使用されます。",
+    "handoffCopy": "リンクをコピー",
+    "handoffCopied": "リンクをコピーしました",
+    "handoffQrAlt": "スマホから写真を送るためのQRコード",
+    "handoffWaiting": "写真を待っています…",
+    "handoffExpired": "このコードは有効期限が切れました。",
+    "handoffError": "スマホからのアップロードを開始できませんでした。もう一度お試しください。",
+    "handoffRefresh": "新しいコードを取得",
+    "handoffPageTitle": "自撮りをパソコンに送る",
+    "handoffPageSub": "ここで写真を撮るか選んでください。数秒でパソコンに表示され、続きはパソコンで進められます。",
+    "handoffUploading": "送信中…",
+    "handoffDoneTitle": "写真を送信しました！",
+    "handoffDoneSub": "パソコンに戻って続けてください。このページは閉じて大丈夫です。",
+    "handoffRetake": "別の写真を送る",
+    "handoffExpiredTitle": "このリンクは有効期限が切れました",
+    "handoffExpiredSub": "パソコンに戻り、新しいQRコードを表示してもう一度スキャンしてください。",
+    "handoffUploadFailed": "写真を送信できませんでした。接続を確認してもう一度お試しください。",
+    "valueProp": "セルフィーを1枚アップロードするだけで、約60秒でシーズンカラータイプとパーソナルパレットがわかります。",
+    "previewStrip": "レポートのイメージ",
+    "valueNote": "無料で体験 · 登録不要 · レポートは本人のみ閲覧可",
     "moreTypes": "ほかの分析タイプ",
     "compressing": "写真を最適化しています…",
     "notifyMe": "完成したら通知する",
@@ -895,6 +972,8 @@
     "tryonCat_eyeshadow": "アイシャドウ",
     "tryonCat_hair_color": "ヘアカラー",
     "errorUploadUnreadable": "この写真を読み込めませんでした。移動されたか、クラウドからまだダウンロード中の可能性があります。もう一度選び直すか、新しく撮影してください。",
+    "errorUploadFormat": "この写真形式は処理できませんでした。JPGまたはPNGの写真を選ぶか、新しく撮影してください。",
+    "errorChoosePhoto": "別の写真を選ぶ",
     "errorTimeout": "いつもより時間がかかっています。写真は安全で、分析はこのあと完了するかもしれません。1分ほどしてから最近の結果を確認するか、「再試行」を押してください。",
     "unlockSinglePriceCta": "全部のカラーを見る · {price}"
   },
@@ -930,7 +1009,7 @@
     "aiAccuracy": "AI診断の精度について"
   },
   "privacy": {
-    "title": "Privacy Policy",
+    "title": "プライバシーポリシー",
     "lastUpdated": "Last Updated: November 2026",
     "intro": "Belle AI (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our website.",
     "section1Title": "Information We Collect",
@@ -962,7 +1041,7 @@
     "section9Content": "If you have any questions about this Privacy Policy, please contact us at support@aicoloranalysis.io."
   },
   "terms": {
-    "title": "Terms of Service",
+    "title": "利用規約",
     "lastUpdated": "Last Updated: November 2026",
     "intro": "Please read these Terms of Service (\"Terms\") carefully before using the Belle AI website (the \"Service\") operated by Belle AI (\"we\", \"our\", or \"us\").",
     "section1Title": "Acceptance of Terms",
@@ -3725,7 +3804,7 @@
       "belle6": "Web（スマホ・PCのブラウザ）",
       "comp6": "iOS & Android",
       "feat7": "Languages",
-      "belle7": "5 languages",
+      "belle7": "9 languages",
       "comp7": "Multiple",
       "feat8": "Price",
       "belle8": "Free preview · {price} one-time, no subscription",
@@ -3749,9 +3828,9 @@
     "colorwise": {
       "name": "Colorwise",
       "desc": "Compare Belle AI and Colorwise for seasonal color analysis. Both use AI, but they differ in analysis depth, report quality, and pricing.",
-      "verdict": "Belle AI offers significantly more depth with three analysis modes, 12-season classification, and premium visual reports. Colorwise is simpler and offers more free uses, but provides less detailed analysis. Choose Belle AI for comprehensive beauty guidance, or Colorwise if you just want a quick color type answer.",
+      "verdict": "Belle AI offers significantly more depth with 11 analysis tools, 12-season classification, and premium visual reports. Colorwise is simpler and offers more free uses, but provides less detailed analysis. Choose Belle AI for comprehensive beauty guidance, or Colorwise if you just want a quick color type answer.",
       "feat0": "Analysis Types",
-      "belle0": "Makeup + Color + Face Shape (3 modes)",
+      "belle0": "11 analysis tools (color, makeup, face shape and more)",
       "comp0": "Color analysis only",
       "feat1": "Color System",
       "belle1": "12-season detailed",
@@ -3771,7 +3850,7 @@
       "feat6": "Price",
       "belle6": "Free preview · {price} one-time, no subscription",
       "comp6": "From $9.99/month",
-      "ba0": "1つのツールで3つの分析モード",
+      "ba0": "1つのアプリで11種類の分析ツール",
       "ba1": "12-season system vs 4-season for more precision",
       "ba2": "Magazine-quality visual reports",
       "ba3": "Complete makeup look recommendations",
@@ -3780,7 +3859,7 @@
       "ca1": "4シーズンの結果がより早い",
       "ca2": "Simpler interface",
       "faq1Q": "Is Belle AI more accurate than Colorwise?",
-      "faq1A": "Belle AI uses a 12-season system with three analysis modes for more precise results. Colorwise uses a simpler 4-season system, which is faster but less detailed.",
+      "faq1A": "Belle AI uses a 12-season system with 11 analysis tools for more precise results. Colorwise uses a simpler 4-season system, which is faster but less detailed.",
       "faq2Q": "Which is cheaper — Belle AI or Colorwise?",
       "faq2A": "Belle AI is free to preview (3 free analyses) and the Color Kit is a one-time {price}, while Colorwise requires a subscription from $9.99/month. Belle AI is more affordable for occasional users.",
       "faq3Q": "Does Colorwise offer makeup analysis like Belle AI?",
@@ -3834,9 +3913,9 @@
     "mycoloranalysis": {
       "name": "MyColorAnalysis AI",
       "desc": "Compare Belle AI and MyColorAnalysis AI for personal color analysis. Both offer AI-powered seasonal color typing, but differ in analysis depth, additional features, and pricing model.",
-      "verdict": "Belle AI provides more comprehensive analysis with three modes and premium visual reports. MyColorAnalysis AI offers a professional review option for those who want human expert validation. Choose Belle AI for all-in-one beauty analysis with stunning reports, or MyColorAnalysis if you specifically want an expert human review.",
+      "verdict": "Belle AI provides more comprehensive analysis with 11 analysis tools and premium visual reports. MyColorAnalysis AI offers a professional review option for those who want human expert validation. Choose Belle AI for all-in-one beauty analysis with stunning reports, or MyColorAnalysis if you specifically want an expert human review.",
       "feat0": "Analysis Types",
-      "belle0": "Color + Makeup + Face Shape (3 modes)",
+      "belle0": "11 analysis tools (color, makeup, face shape and more)",
       "comp0": "Color analysis only",
       "feat1": "Color System",
       "belle1": "12-season",
@@ -3862,7 +3941,7 @@
       "feat8": "Price",
       "belle8": "Free preview · {price} one-time, no subscription",
       "comp8": "Free AI / $39 expert",
-      "ba0": "3つの分析モード（カラー + メイク + 顔型）を1つのツールで",
+      "ba0": "11種類の分析ツール（カラー・メイク・顔型など）を1つのアプリで",
       "ba1": "Magazine-quality visual reports designed for sharing",
       "ba2": "Comprehensive makeup looks with detailed product guidance",
       "ba3": "2K/4K high-resolution output",
@@ -3871,7 +3950,7 @@
       "ca1": "Quiz-based alternative (no photo needed)",
       "ca2": "Longer market presence",
       "faq1Q": "How does Belle AI compare to MyColorAnalysis AI?",
-      "faq1A": "Belle AI offers three analysis modes with magazine-quality visual reports. MyColorAnalysis AI focuses on color analysis with an optional $39 expert review for human validation.",
+      "faq1A": "Belle AI offers 11 analysis tools with magazine-quality visual reports. MyColorAnalysis AI focuses on color analysis with an optional $39 expert review for human validation.",
       "faq2Q": "Does MyColorAnalysis AI offer makeup analysis?",
       "faq2A": "MyColorAnalysis AI provides basic shade suggestions only. Belle AI includes complete makeup looks with detailed eye, lip, and blush recommendations.",
       "faq3Q": "Which is better value — Belle AI or MyColorAnalysis AI?",
@@ -3880,7 +3959,7 @@
     "color-analysis-app": {
       "name": "Color Analysis App",
       "desc": "Compare Belle AI and Color-Analysis.app for finding your seasonal color type. Both use AI technology, but they differ in analysis scope, report quality, and additional features.",
-      "verdict": "Belle AI excels in analysis depth and report quality — offering three analysis modes with magazine-grade visual output. Color-Analysis.app is the better choice if you want completely free unlimited access or prefer a quiz-based approach. For the most comprehensive beauty guidance and shareable reports, Belle AI delivers more value.",
+      "verdict": "Belle AI excels in analysis depth and report quality — offering 11 analysis tools with magazine-grade visual output. Color-Analysis.app is the better choice if you want completely free unlimited access or prefer a quiz-based approach. For the most comprehensive beauty guidance and shareable reports, Belle AI delivers more value.",
       "feat0": "Analysis Types",
       "belle0": "Color + Makeup + Face Shape",
       "comp0": "Color analysis only",
@@ -3905,7 +3984,7 @@
       "feat7": "Price",
       "belle7": "Free preview · {price} one-time, no subscription",
       "comp7": "Free",
-      "ba0": "Three comprehensive analysis modes",
+      "ba0": "11 analysis tools in one app",
       "ba1": "Visual magazine-quality reports",
       "ba2": "Complete makeup look recommendations",
       "ba3": "Face shape and hairstyle analysis",
@@ -3950,7 +4029,7 @@
       "feat7": "Price",
       "belle7": "Free preview · {price} one-time, no subscription",
       "comp7": "Free basic / paid detailed",
-      "ba0": "Three analysis modes in one tool",
+      "ba0": "11 analysis tools in one app",
       "ba1": "Magazine-quality visual reports",
       "ba2": "Complete makeup look recommendations",
       "ba3": "Face shape and hairstyle analysis",
@@ -3963,7 +4042,7 @@
       "faq2Q": "Does Palette Hunt offer makeup recommendations?",
       "faq2A": "Palette Hunt provides basic makeup suggestions. Belle AI includes detailed makeup looks with complete eye, lip, and blush guidance.",
       "faq3Q": "Which is better for a quick free color check?",
-      "faq3A": "Palette Hunt offers more free colors without payment. Belle AI provides 3 free analyses with comprehensive magazine-quality reports."
+      "faq3A": "Palette Hunt offers more free colors without payment. Belle AI gives you 3 free analyses as previews; the full magazine-quality report comes with the one-time Color Kit."
     }
   },
   "lookbook": {
@@ -4666,6 +4745,7 @@
     "changeSeason": "変更",
     "takePhoto": "撮影する",
     "choosePhoto": "ギャラリーから選ぶ",
+    "uploadPhoto": "写真をアップロード",
     "tip": "アイテムだけを自然光で撮り、色が画面いっぱいになるようにしてください。",
     "scanning": "色を読み取り中…",
     "quota": "本日の残りスキャン {remaining}/{limit} 回",
@@ -4719,7 +4799,119 @@
     "errInvalid": "この画像を読み込めませんでした。JPGまたはPNGの写真をお試しください。",
     "errTooLarge": "画像が大きすぎます。小さい写真をお試しください。",
     "disclaimer": "色は写真から推定しており、光の条件で変わります。絶対的なルールではなく目安としてご利用ください。",
-    "privacy": "写真はメモリ上で分析され、保存されません。"
+    "privacy": "スキャンした写真はメモリ上で分析され、保存されません。",
+    "privacyPhone": "スマホから送った写真は、このページに届けるため先にアップロードされます。"
+  },
+  "scanPage": {
+    "howTitle": "スキャンの使い方",
+    "how1Title": "シーズンを選ぶ",
+    "how1": "カラー診断で出た12シーズンを使うか、自分で選びます。まだ分からなくても、約1分で無料で診断できます。",
+    "how2Title": "アイテムを撮る",
+    "how2": "服・アクセサリー・コスメの写真を撮るかアップロードします。単体で、自然光の下で、色が画面いっぱいに入るように撮ると最適です。",
+    "how3Title": "結論を見る",
+    "how3": "とても似合う・取り入れ方に注意・あなたの色ではない、のどれかを、理由や見つかった色、代わりに選べるパレットの色とともに確認できます。",
+    "verdictTitle": "結論の見方",
+    "tipsTitle": "正確にスキャンするコツ",
+    "tip1": "自然光の下で撮りましょう。室内の暖色の照明や店内の照明は、色を最も大きく変えます。",
+    "tip2": "1回に1アイテムだけ、無地に近い背景で、色が画面いっぱいに入るように撮ります。",
+    "tip3": "フィルターやフラッシュは使わず、自分の影がアイテムにかからないようにします。",
+    "tip4": "柄物やストライプは主な色で判定します。柄を顔の近くに当てたときの見え方も確認しましょう。",
+    "faqTitle": "買う前にスキャン：よくある質問",
+    "faq1Q": "似合うかどうかをどうやって判断しますか？",
+    "faq1A": "写真からアイテムの主な色を読み取り、色みの温度感・明るさ・鮮やかさを、あなたの12シーズンのパレットや避けたい色と比較します。マッチ度、分かりやすい結論、その理由が表示され、あまり合わない場合はパレットの中から代わりに選べる色も提案されます。写真からのAIによる推定であり、正確な測定ではありません。",
+    "faq2Q": "先に自分のシーズンを知っておく必要がありますか？",
+    "faq2A": "はい。スキャンはアイテムをあなたのシーズンと比べるため、最初に選んでもらいます。このブラウザでカラー分析をしたことがあれば、自動で入力されます。まだシーズンが分からない場合は、セルフィー1枚で診断できる無料のカラー分析をお試しください。",
+    "faq3Q": "服だけでなく、アクセサリーやコスメもスキャンできますか？",
+    "faq3A": "服、アクセサリー、口紅・チーク・アイシャドウなどのコスメに対応しています。無地のアイテムが最も分かりやすい結果になります。柄物やストライプは主な色で判定するため、柄を顔の近くに当てたときの見え方も確認してください。",
+    "faq4Q": "スキャンした色が実物と違って見えるのはなぜですか？",
+    "faq4A": "写真では、照明・カメラ・フィルターによって色が変わり、特に室内の暖色の照明で大きくずれます。照明の影響が疑われる場合は、スキャン結果でお知らせします。自然光で撮り直すと、より信頼できる結果になります。結論はあくまで目安としてお使いください。",
+    "faq5Q": "無料ですか？写真は保存されますか？",
+    "faq5A": "1日{free}回まで無料でスキャンでき、カラーキットで1日{pack}回に増えます。スキャンした写真はメモリ上で分析され、保存されません。例外は2つです。スマホからパソコンに送る写真は、ページに届けるため先にアップロードされます。また、任意の試着プレビュー（1クレジット）では、あなたの写真とアイテムの写真がアップロードされ、履歴に保存されます。"
+  },
+  "featureWhy": {
+    "color": {
+      "hero": "あなたが輝く色を見つけて、似合わない色にお金を使うのをやめましょう。",
+      "title": "似合わない色を買うのは、もうやめよう",
+      "w1": "輝いて見える色もあれば、疲れて見える色もあり、目で見分けるのは難しいものです。",
+      "w2": "自分のパレットがわからないと、服もメイクも高くつく試行錯誤になります。",
+      "w3": "Belleはセルフィー1枚からあなたのシーズンを判定し、買い物や服選びの基準になるパレットを渡します。"
+    },
+    "makeup": {
+      "hero": "次のコスメを買う前に、あなたの顔に似合う色とメイクを知りましょう。",
+      "title": "みんな向けではなく、あなたの顔に合わせたメイク",
+      "w1": "モデルに完璧に似合う色でも、あなたには合わないことがあります。",
+      "w2": "一般的なメイク解説はアンダートーンを考えないので、買ったコスメが引き出しの奥に眠りがちです。",
+      "w3": "すっぴん写真1枚から、正確なカラーコード付きの完成メイク3パターンを、あなたの顔の上に描きます。"
+    },
+    "face": {
+      "hero": "似合う髪型を、美容院に行く前にあなたの写真で確かめましょう。",
+      "title": "似合う髪型は、顔型を知ることから",
+      "w1": "他の人に似合う髪型が、あなたの顔を広く、長く、重たく見せることがあります。",
+      "w2": "髪は取り返しがつきません。失敗したカットは伸びるまで何か月もかかります。",
+      "w3": "Belleはあなたの顔型を判定し、髪型4つをあなたの写真に描いて、それぞれの理由も添えます。"
+    },
+    "hair": {
+      "hero": "美容院を予約する前に、似合うヘアカラーと避けたい色を、あなたの写真で確かめましょう。",
+      "title": "染める前に、ヘアカラーを試そう",
+      "w1": "同じ色でも、ある人は華やかに、ある人はくすんで見えます。",
+      "w2": "似合わない色を直すには、時間もお金もかかります。",
+      "w3": "Belleはカラーシーズンに合う色を選び、あなたの写真に4色を表示します。ベスト1色、好相性2色、避けたい1色です。"
+    },
+    "glasses": {
+      "hero": "注文する前に、どのフレームが顔に似合うか、あなたの写真で確かめましょう。",
+      "title": "好みだけでなく、顔に似合うフレームを",
+      "w1": "フレームは一日中顔の真ん中にあるので、形が合わないと目立ちます。",
+      "w2": "店で何十本も試したり、ネットで運任せに買うのは時間がかかります。",
+      "w3": "Belleは顔型とカラーシーズンから6本を選びます。似合う4本と避けたい2本を、あなたの写真に描きます。"
+    },
+    "jewelry": {
+      "hero": "次のアクセサリーを買う前に、似合うメタルとイヤリングの形を見つけましょう。",
+      "title": "合うメタルは肌を輝かせ、合わないメタルはくすませる",
+      "w1": "ゴールド、シルバー、ローズゴールド。アンダートーンに合うものもあれば、肌を沈んで見せるものもあります。",
+      "w2": "勘でアクセサリーを買うと、箱にしまったままになりがちです。",
+      "w3": "Belleはアンダートーンと顔型から、あなたの写真に最適なメタルとピアス・イヤリング3型を表示します。"
+    },
+    "outfit": {
+      "hero": "顔色が明るく見える服の色と、くすんで見える色を、あなたの写真で確かめましょう。",
+      "title": "疲れて見える色ではなく、元気に見える色を着よう",
+      "w1": "顔色を明るくする服の色もあれば、よく寝た日でも疲れて見える色もあります。",
+      "w2": "パレットがないと、着ない服ばかりがクローゼットに増えます。",
+      "w3": "Belleはあなたのベストカラーだけで、普段着・デート・仕事の3コーデを作り、あなたの写真に描きます。"
+    },
+    "occasion": {
+      "hero": "シーンを選ぶだけで、完成メイク3パターンをあなたの顔で確認できます。",
+      "title": "シーンに合ったメイクを",
+      "w1": "オフィス向けのメイクは夜の席では浮き、パーティー向けのメイクは面接では派手すぎます。",
+      "w2": "新しいメイクを当日に初めて試すのは賭けです。",
+      "w3": "シーンを選ぶと、Belleがあなたの写真に完成メイク3パターンを描き、スタイリストのひとこともつけます。"
+    },
+    "glow": {
+      "hero": "4つの小さな変更で、ベストバージョンのあなたを。ビフォーアフターはあなたの写真で。",
+      "title": "変えるところも、変えないところもわかる",
+      "w1": "イメチェンのアドバイスは多すぎて迷うし、全部変えると自分らしさがなくなることもあります。",
+      "w2": "ヒントのリストは、結果が見えるまで信じにくいものです。",
+      "w3": "Belleはヘアカラー、メイク、トップス、アクセサリーの4つの小さな変更を提案し、ビフォーアフターを見せます。"
+    },
+    "persona": {
+      "hero": "自分らしいスタイルを見つけて、あなたの写真に描かれた普段着3コーデを確かめましょう。",
+      "title": "あなたのスタイルに名前をつけよう",
+      "w1": "トレンドは今の流行を教えてくれますが、あなたに似合うかは教えてくれません。",
+      "w2": "スタイルが定まらないと、買い物は合わない衝動買いになります。",
+      "w3": "Belleはスタイル名、キーワード4つ、普段着3コーデ、買い物に使える一行の公式を渡します。"
+    },
+    "celebrity": {
+      "hero": "あなたと同じ色味のセレブを見つけて、彼らに似合うベストカラーを取り入れましょう。",
+      "title": "同じ色味の人を見つけよう",
+      "w1": "「どのセレブに似ている？」は顔立ちによる推測で、何を着ればいいかはわかりません。",
+      "w2": "色味でマッチングすると、色、メイクの色、ヘアカラーという使える情報が得られます。",
+      "w3": "Belleは12シーズンのタイプを判定し、同じシーズンと判断されやすいセレブとそのベストカラーを見せます。"
+    },
+    "scan": {
+      "title": "買う前にスキャンする理由",
+      "w1": "ハンガーにかかっているときは素敵な色でも、顔の近くに当てると、くすんで見えたり疲れて見えたりすることがあります。",
+      "w2": "お店で感覚だけで選ぶと、返品や衝動買いが増え、「惜しい」服ばかりがクローゼットにたまります。",
+      "w3": "アイテムを撮るだけで、Belleがその色をあなたのシーズンのパレットと照らし合わせ、数秒ではっきりした結論と、代わりに選べる色を伝えます。"
+    }
   },
   "featureIncludes": {
     "noteLens": "文章での分析は無料です。結果写真はひとまとめで 1 クレジット、最初の 1 枚は無料です。",

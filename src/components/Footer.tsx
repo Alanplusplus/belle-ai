@@ -97,6 +97,7 @@ export function Footer() {
               <li><Link href="/style-personality" className="text-muted-foreground hover:text-foreground">{ft("stylePersonality")}</Link></li>
               <li><Link href="/celebrity-match" className="text-muted-foreground hover:text-foreground">{ft("celebrityMatch")}</Link></li>
               <li><Link href="/jewelry-analysis" className="text-muted-foreground hover:text-foreground">{ft("jewelryGuide")}</Link></li>
+              <li><Link href="/scan" className="text-muted-foreground hover:text-foreground">{nav("scan")}</Link></li>
               <li><Link href="/try" className="text-muted-foreground hover:text-foreground">{nav("tryNow")}</Link></li>
               <li><Link href="/pricing" className="text-muted-foreground hover:text-foreground">{nav("pricing")}</Link></li>
             </ul>

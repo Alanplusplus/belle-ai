@@ -12,6 +12,7 @@ import {
 import { SEASON_PALETTES, PARENT_SEASON_ORDER, getSeasonsByParent } from "@/lib/color-palette-data";
 import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
+import { ResultCta } from "@/components/ResultCta";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -80,10 +81,6 @@ function LookbookIndexContent() {
           <h1 className="font-serif text-3xl font-bold sm:text-5xl">
             {t("indexHeroTitle")}
           </h1>
-          <p className="mt-2 text-lg text-primary">{t("indexHeroSubtitle")}</p>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            {t("indexHeroDesc")}
-          </p>
         </div>
       </section>
 
@@ -92,21 +89,7 @@ function LookbookIndexContent() {
           <SeasonGroup key={parent} parent={parent} />
         ))}
 
-        {/* CTA */}
-        <section className="mt-12 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
-          <h2 className="text-xl font-bold">{t("ctaTitle").replace("{season}", "")}</h2>
-          <p className="mt-2 text-muted-foreground">
-            {t("ctaDesc2")}
-          </p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link
-              href="/try?type=color_analysis"
-              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {t("getAnalysis")}
-            </Link>
-          </div>
-        </section>
+        <ResultCta type="color_analysis" from="lookbook" variant="band" />
       </div>
     </>
   );

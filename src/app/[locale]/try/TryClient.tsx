@@ -34,7 +34,7 @@ import { formatRetestDate, isCreditsOnlyType, isKitHeroType, remainingFor } from
 import { usePrices } from "@/lib/usePrices";
 import { trackEvent, trackCheckoutEvent, trackFeedbackSubmitted, saveReportFeedback } from "@/lib/analytics";
 import { consumeCheckoutContext } from "@/lib/checkout";
-import { prepareImageForUpload, snapshotFile, IMAGE_TOO_LARGE, IMAGE_UNREADABLE } from "@/lib/imageUpload";
+import { prepareImageForUpload, snapshotFile, IMAGE_TOO_LARGE, IMAGE_UNREADABLE, IMAGE_UNSUPPORTED } from "@/lib/imageUpload";
 import { isMobileDevice, copyText, nativeShare, openShareWindow } from "@/lib/device";
 import { RESULT_READY_EVENT } from "@/lib/google-signin";
 import { useSignIn } from "@/lib/useSignIn";
@@ -52,6 +52,21 @@ import { useReportMessages } from "@/lib/report-messages";
 import { loadDemoReport, useDemoPersonaData, type DemoPersonaData } from "@/lib/demo-report";
 import { personaPhoto, personaSeason, resolvePersona, type DemoPersonaId } from "@/lib/demo-personas";
 import { SamplePersonaPicker } from "@/components/SamplePersonaPicker";
+import { WebcamCaptureModal } from "@/components/WebcamCaptureModal";
+import { PhoneHandoff } from "@/components/PhoneHandoff";
+import { useDesktopTools } from "@/lib/useDesktopTools";
+import Image from "next/image";
+
+/**
+ * 桌面端上传卡里「你的报告长这样」的缩略图。右栏只有 ~215px 宽：三张比四张大一圈，
+ * 而且只放缩到很小也一眼能看懂的页（完整整脸的季型 hero / 色板插画 / 整脸 Lookbook 网格），不放整页文字的页。
+ * 和首页是同一份真实报告里的页面。
+ */
+const REPORT_PREVIEW_IMAGES = [
+  "/images/examples/color_thumb_season.webp",
+  "/images/examples/color_palette.webp",
+  "/images/examples/color_lookbook.webp",
+] as const;
 
 const MAX_PHOTO_BYTES = 25 * 1024 * 1024;
 
@@ -225,20 +240,22 @@ const RECOMMENDED_TYPES: Record<AnalysisType, AnalysisType[]> = {
   scan_tryon: ["outfit_color", "color_analysis", "hair_preview"],
 };
 
+// 「推荐其他功能」卡片（生成等待区 / 出结果后 / 任务列表缩略图）用的图。
+// 和首页「全部分析类型」同一批 explore_*.webp：每张都直接画出该功能的结果，且图里不带文字（9 种语言通用）
 const CARD_IMAGES: Record<AnalysisType, string> = {
-  makeup: "/images/card_makeup.webp",
-  color_analysis: "/images/card_color_analysis.webp",
-  face_shape: "/images/card_face_shape.webp",
-  hair_preview: "/images/card_hair.webp",
-  outfit_color: "/images/card_outfit.webp",
-  glasses_match: "/images/card_glasses.webp",
-  occasion_makeup: "/images/card_occasion.webp",
-  jewelry_guide: "/images/card_jewelry.webp",
-  glow_up_report: "/images/card_glow_up.webp",
-  style_personality: "/images/card_style.webp",
-  palette_scan: "/images/card_color_analysis.webp",
-  celebrity_match: "/images/card_celebrity.webp",
-  scan_tryon: "/images/card_outfit.webp",
+  makeup: "/images/explore_makeup.webp",
+  color_analysis: "/images/explore_color.webp",
+  face_shape: "/images/explore_face.webp",
+  hair_preview: "/images/explore_hair.webp",
+  outfit_color: "/images/explore_outfit.webp",
+  glasses_match: "/images/explore_glasses.webp",
+  occasion_makeup: "/images/explore_occasion.webp",
+  jewelry_guide: "/images/explore_jewelry.webp",
+  glow_up_report: "/images/explore_glowup.webp",
+  style_personality: "/images/explore_style.webp",
+  palette_scan: "/images/explore_color.webp",
+  celebrity_match: "/images/explore_celeb.webp",
+  scan_tryon: "/images/explore_outfit.webp",
 };
 
 
@@ -334,9 +351,29 @@ function reportStateOf(result: Pick<ReportResult, "report" | "sourceImageUrl">):
   return result.report ? { report: result.report, sourceUrl: result.sourceImageUrl ?? null, createdAt: Date.now() / 1000 } : null;
 }
 
+/**
+ * 失败原因是照片本身：用同一张照片重试只会再失败，错误卡片要引导用户换一张，而不是只给一个「重试」。
+ * 前几项是服务端任务的失败码（color_report_job 写进 tasks.error_message），后几项是浏览器端上传前就拦下的原因。
+ */
+const PHOTO_ISSUE_CODES: ReadonlySet<string> = new Set([
+  "no_face",
+  "no_face_detected",
+  "image_unreadable",
+  IMAGE_UNREADABLE,
+  IMAGE_TOO_LARGE,
+  IMAGE_UNSUPPORTED,
+  "payload_too_large",
+]);
+
+type GenerateErrorKey = "errorNoFace" | "errorUploadUnreadable" | "errorTimeout" | "errorGenerate";
+
 /** 轮询抛出的错误码（后端任务失败原因）→ 提示文案的 key */
-function generateErrorKey(message: string): "errorNoFace" | "errorTimeout" | "errorGenerate" {
-  if (message === "no_face") return "errorNoFace";
+function generateErrorKey(message: string): GenerateErrorKey {
+  // 后端写进任务的失败码是 no_face_detected（早期版本是 no_face，两个都认）。
+  // 以前这里只认 no_face，「没找到人脸」的专门提示一次都没显示过，用户只看到笼统的失败，然后拿同一张照片反复重试
+  if (message === "no_face" || message === "no_face_detected") return "errorNoFace";
+  // 服务端下载 / 解码不了这张图：和「浏览器读不了」一样，让用户重选或重拍
+  if (message === "image_unreadable") return "errorUploadUnreadable";
   // 客户端等够了还没出结果：任务多半还在服务端跑，告诉用户稍后去记录里看，而不是让人当成彻底失败、重传一遍
   if (message === "Timed out") return "errorTimeout";
   return "errorGenerate";
@@ -359,6 +396,15 @@ function claimQuotaPopup(): boolean {
 }
 
 /** 创建任务时被生成前审核（Prompt Sift）拒绝：422 = 内容不合规，503 = 审核暂不可用；其它返回 null */
+/** 上传阶段的失败（浏览器端处理失败 / 服务端拒收）→ 提示文案的 key */
+function uploadErrorKey(message: string, httpCode?: number): "errorUploadTooLarge" | "errorUploadUnreadable" | "errorUploadFormat" | "errorUpload" {
+  if (message === IMAGE_TOO_LARGE || httpCode === 413) return "errorUploadTooLarge";
+  if (message === IMAGE_UNREADABLE) return "errorUploadUnreadable";
+  // 415：服务端 /upload 连 HEIC 都转不了（见 IMAGE_UNSUPPORTED）
+  if (message === IMAGE_UNSUPPORTED || httpCode === 415) return "errorUploadFormat";
+  return "errorUpload";
+}
+
 function contentCheckErrorKey(code: number | undefined): "errorContentBlocked" | "errorContentUnavailable" | null {
   if (code === 422) return "errorContentBlocked";
   if (code === 503) return "errorContentUnavailable";
@@ -430,6 +476,8 @@ export function TryClient({
   const [sourceImageUrl, setSourceImageUrl] = useState<string | null>(null);
   const [resultUrls, setResultUrls] = useState<string[]>([]);
   const [errorMsg, setErrorMsg] = useState("");
+  // 这次失败是照片本身的问题（没找到人脸 / 读不了 / 格式不支持 / 内容被拦）：错误卡片不再让人原样重试，而是引导换一张照片
+  const [errorNeedsNewPhoto, setErrorNeedsNewPhoto] = useState(false);
   const [quota, setQuota] = useState<{ total: number; used: number; remaining: number } | null>(null);
   const [userCredits, setUserCredits] = useState<UserCredits | null>(null);
   // 当前结果卡片的锁定状态：locked=细节被服务端打码；unlocked=完整可下载
@@ -536,6 +584,13 @@ export function TryClient({
   const [pastStart, setPastStart] = useState(false);
   const [atExampleEnd, setAtExampleEnd] = useState(false);
   const [uploadPulse, setUploadPulse] = useState(false);
+  // 本次访问里是否看过示例：photo_selected 据此带 after_demo，衡量「示例 → 自己的照片」的转化
+  const demoSeenRef = useRef(false);
+  // 桌面端专属入口：网页摄像头自拍 + 「用手机继续」二维码。
+  // 桌面浏览器会忽略 input 的 capture 属性，没有「拍一张」的入口，想用自拍的人得先把照片传到电脑上——桌面端 /try 到上传的转化只有手机的一半多一点。
+  // 判断逻辑在 useDesktopTools（/scan 共用）：服务端渲染和首次渲染是 null（什么都不显示），挂载后再决定，避免 hydration 不一致
+  const desktopTools = useDesktopTools();
+  const [webcamOpen, setWebcamOpen] = useState(false);
   const [saveImageUrl, setSaveImageUrl] = useState<string | null>(null);
   const { status: authStatus } = useSession();
   const signIn = useSignIn();
@@ -618,7 +673,9 @@ export function TryClient({
                   reloadHistory();
                 })
                 .catch((err) => {
-                  setErrorMsg(t(generateErrorKey(err instanceof Error ? err.message : "")));
+                  const message = err instanceof Error ? err.message : "";
+                  setErrorMsg(t(generateErrorKey(message)));
+                  setErrorNeedsNewPhoto(PHOTO_ISSUE_CODES.has(message));
                   setPhase("error");
                 });
             }
@@ -941,6 +998,7 @@ export function TryClient({
       if (checkKey) {
         trackEvent("content_check_rejected", { type, reason: taskRes.message, source: "correction" });
         setErrorMsg(t(checkKey));
+        setErrorNeedsNewPhoto(checkKey === "errorContentBlocked");
         setPhase("error");
         return;
       }
@@ -956,7 +1014,9 @@ export function TryClient({
       reloadHistory();
       refreshCredits();
     } catch (err) {
-      setErrorMsg(t(generateErrorKey(err instanceof Error ? err.message : "")));
+      const message = err instanceof Error ? err.message : "";
+      setErrorMsg(t(generateErrorKey(message)));
+      setErrorNeedsNewPhoto(PHOTO_ISSUE_CODES.has(message));
       setPhase("error");
     }
   }, [reportLang, resolution, reloadHistory, refreshCredits, scrollToResult, t]);
@@ -1127,6 +1187,7 @@ export function TryClient({
     clearDemoTimer();
     const run = (demoRunRef.current += 1);
     demoTypeRef.current = type;
+    demoSeenRef.current = true;
     setDemoMode(true);
     selectedFileRef.current = null;
     setSourceImageUrl(null);
@@ -1218,10 +1279,12 @@ export function TryClient({
     fileRef.current?.click();
   }, [analysisType, exitDemo]);
 
-  const handleFileSelect = useCallback(
-    async (e: React.ChangeEvent<HTMLInputElement>) => {
-      const file = e.target.files?.[0];
-      if (!file) return;
+  /**
+   * 选好了一张自拍（文件选择器 / 前置相机 / 桌面网页摄像头）后的统一处理。
+   * 三种来源只在埋点的 source 上有区别：library / camera / webcam。
+   */
+  const processPickedFile = useCallback(
+    async (file: File, source: "library" | "camera" | "webcam") => {
       // 换成自己的照片：退出演示模式，之后走真实的生成流程
       if (demoMode) {
         clearDemoTimer();
@@ -1229,7 +1292,8 @@ export function TryClient({
         setResultLock(NO_LOCK);
         setResultTaskId(null);
       }
-      const fromCamera = e.target === cameraRef.current;
+      // 本次访问里看过示例的人选了照片：photo_selected 带上 after_demo，用来衡量「示例 → 自己的照片」这座桥到底送过去多少人
+      const afterDemo = demoSeenRef.current ? { after_demo: 1 } : {};
       // 上传前会在浏览器里重新编码（保持原始宽高，只有放不进约 6MB 预算时才降质量 / 缩小），所以这里可以放宽到 25MB（手机原图常见 5–12MB）
       if (file.size > MAX_PHOTO_BYTES) {
         trackEvent("photo_rejected", { reason: "file_too_large", size_mb: Math.round(file.size / 1024 / 1024) });
@@ -1237,24 +1301,24 @@ export function TryClient({
         setSourceImageUrl(null);
         clearSelectedFile();
         setErrorMsg(t("fileTooLarge"));
+        setErrorNeedsNewPhoto(true);
         autoScrollRef.current = true;
         setPhase("error");
         return;
       }
-      trackEvent("photo_selected", { size_kb: Math.round(file.size / 1024), type: file.type, source: fromCamera ? "camera" : "library" });
-      // 清空 input：之后再选同一张照片也会触发 change；File 对象本身不受影响
-      e.target.value = "";
+      trackEvent("photo_selected", { size_kb: Math.round(file.size / 1024), type: file.type, source, ...afterDemo });
       // 选中的当下就把照片读进内存，之后预览 / 压缩 / 上传都用这份副本：File 只是磁盘文件的引用，
       // 等用户点「开始」时可能已经失效（「file could not be read」是上传失败的头号原因），那时才报错用户已经等过一轮
       let stable: File;
       try {
         stable = await snapshotFile(file);
       } catch {
-        trackEvent("photo_rejected", { reason: "unreadable", source: fromCamera ? "camera" : "library", type: file.type });
+        trackEvent("photo_rejected", { reason: "unreadable", source, type: file.type });
         setPreviewUrl(null);
         setSourceImageUrl(null);
         clearSelectedFile();
         setErrorMsg(t("errorUploadUnreadable"));
+        setErrorNeedsNewPhoto(true);
         autoScrollRef.current = true;
         setPhase("error");
         return;
@@ -1271,6 +1335,36 @@ export function TryClient({
     },
     [t, clearSelectedFile, demoMode, clearDemoTimer]
   );
+
+  const handleFileSelect = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      const source = e.target === cameraRef.current ? "camera" : "library";
+      // 先清空 input：之后再选同一张照片也会触发 change；File 对象本身不受影响
+      e.target.value = "";
+      return processPickedFile(file, source);
+    },
+    [processPickedFile]
+  );
+
+  // ---- 桌面端：网页摄像头自拍 ----
+  const handleWebcamOpen = useCallback(() => {
+    trackEvent("webcam_clicked", { type: analysisType });
+    setWebcamOpen(true);
+  }, [analysisType]);
+
+  const handleWebcamCapture = useCallback((file: File) => {
+    setWebcamOpen(false);
+    void processPickedFile(file, "webcam");
+  }, [processPickedFile]);
+
+  /** 摄像头用不了 / 用户更想选文件：关掉弹窗，直接弹出文件选择器（这一下点击仍在用户手势里，浏览器允许） */
+  const handleWebcamChooseFile = useCallback(() => {
+    setWebcamOpen(false);
+    trackEvent("upload_area_clicked", { source: "webcam_fallback" });
+    fileRef.current?.click();
+  }, []);
 
   const handleItemUploadClick = useCallback(() => {
     trackEvent("tryon_item_upload_clicked");
@@ -1347,6 +1441,8 @@ export function TryClient({
     // rawMessage 只上报给统计（用于排查），界面上展示翻译过的、能告诉用户下一步怎么做的提示
     const fail = (event: string, rawMessage: string, userMessage: string, extra?: Record<string, string | number>) => {
       setErrorMsg(userMessage);
+      // 单品照片（item）出错时「换一张」指的是自拍，不适用；内容被拦（422）同样是照片的问题
+      setErrorNeedsNewPhoto(!extra?.item && (event === "content_check_rejected" || PHOTO_ISSUE_CODES.has(rawMessage)));
       autoScrollRef.current = true;
       setPhase("error");
       trackEvent(event, {
@@ -1404,7 +1500,7 @@ export function TryClient({
             fail(
               "upload_failed",
               uploadRes.message || "Upload failed",
-              uploadRes.code === 413 ? t("errorUploadTooLarge") : t("errorUpload"),
+              t(uploadErrorKey("", uploadRes.code)),
               { ...uploadDiag(), http: uploadRes.code },
             );
             return;
@@ -1415,12 +1511,7 @@ export function TryClient({
           saveLastPhotoUrl(imageUrl);
         } catch (err) {
           const message = err instanceof Error ? err.message : "Upload error";
-          fail(
-            "upload_failed",
-            message,
-            message === IMAGE_TOO_LARGE ? t("errorUploadTooLarge") : message === IMAGE_UNREADABLE ? t("errorUploadUnreadable") : t("errorUpload"),
-            uploadDiag(),
-          );
+          fail("upload_failed", message, t(uploadErrorKey(message)), uploadDiag());
           return;
         }
       }
@@ -1444,7 +1535,7 @@ export function TryClient({
               fail(
                 "upload_failed",
                 itemRes.message || "Item upload failed",
-                itemRes.code === 413 ? t("errorUploadTooLarge") : t("errorUpload"),
+                t(uploadErrorKey("", itemRes.code)),
                 { http: itemRes.code, item: 1 },
               );
               return;
@@ -1452,7 +1543,7 @@ export function TryClient({
             itemUrlRef.current = itemRes.data.url;
           } catch (err) {
             const message = err instanceof Error ? err.message : "Item upload error";
-            fail("upload_failed", message, message === IMAGE_TOO_LARGE ? t("errorUploadTooLarge") : message === IMAGE_UNREADABLE ? t("errorUploadUnreadable") : t("errorUpload"), { item: 1 });
+            fail("upload_failed", message, t(uploadErrorKey(message)), { item: 1 });
             return;
           }
         }
@@ -1518,9 +1609,15 @@ export function TryClient({
       if (result.locked) {
         trackEvent("locked_report_shown", { type: analysisType });
       }
+      // 系统通知只是锦上添花：安卓 Chrome 等环境里 new Notification() 会直接抛 TypeError（要求走 ServiceWorker），
+      // 以前它在外层 try 里，抛错会被当成「生成失败」——结果已经出了，界面却跳到错误卡片，用户还会拿同一张照片重来
       if (document.hidden && "Notification" in window && Notification.permission === "granted") {
-        const n = new Notification(t("notifyTitle"), { body: t("notifyBody"), icon: "/favicon-32.png" });
-        n.onclick = () => { window.focus(); n.close(); };
+        try {
+          const n = new Notification(t("notifyTitle"), { body: t("notifyBody"), icon: "/favicon-32.png" });
+          n.onclick = () => { window.focus(); n.close(); };
+        } catch {
+          // 忽略：不支持就不弹
+        }
       }
       reloadHistory();
     } catch (err) {
@@ -1604,6 +1701,33 @@ export function TryClient({
     setErrorMsg("");
   }, [lastUploadedPhotoUrl]);
 
+  /**
+   * 手机接力：手机扫码只负责把照片传到服务器（归属这台电脑的账号），这里拿到地址后直接当作「已上传的自拍」，
+   * 后面的分析 / 付费 / 查看报告都在电脑上完成。和 handleUseLastPhoto 一样走 sourceImageUrl，点「开始」时不会重复上传。
+   */
+  const handleHandoffPhoto = useCallback(
+    (url: string) => {
+      if (demoMode) {
+        clearDemoTimer();
+        setDemoMode(false);
+        setResultLock(NO_LOCK);
+        setResultTaskId(null);
+      }
+      const afterDemo = demoSeenRef.current ? { after_demo: 1 } : {};
+      trackEvent("photo_selected", { source: "phone_handoff", ...afterDemo });
+      clearSelectedFile();
+      setSourceImageUrl(url);
+      setLastUploadedPhotoUrl(url);
+      saveLastPhotoUrl(url);
+      setPreviewUrl(url);
+      setPhase("idle");
+      setResultUrls([]);
+      setResultReport(null);
+      setErrorMsg("");
+    },
+    [demoMode, clearDemoTimer, clearSelectedFile],
+  );
+
   // 没有合适照片的访客：用示例照片体验。直接展示预先生成好的完整示例报告：不等待、不扣积分、不用解锁
   const handleUseSamplePhoto = useCallback(() => {
     trackEvent("sample_photo_clicked", { type: analysisType });
@@ -1620,6 +1744,10 @@ export function TryClient({
     window.scrollTo({ top: 0, behavior: "smooth" });
     setUploadPulse(true);
     window.setTimeout(() => setUploadPulse(false), 2200);
+    // 按钮写的是「用我自己的照片试试」：直接弹出选择器，和顶部结果栏的同名按钮一致。
+    // 以前这里只滚回顶部 + 高亮上传框，用户要在页面顶部再找一次、再点一下上传框，每多一步就多掉一批人；
+    // 用户取消选择也没关系，已经回到顶部、上传框还在高亮。选择器放在最外层，exitDemo 之后仍然挂载着
+    fileRef.current?.click();
   }, [analysisType, demoMode, exitDemo]);
 
   // 起始卡片滚出视口（上方）+ 示例底部的行动区进入视口：决定悬浮的「回去试自己的」要不要显示。
@@ -1728,9 +1856,20 @@ export function TryClient({
     <div className="mx-auto max-w-6xl px-4 py-5 sm:py-12">
       <DevUnlockToggle />
       {view === "tool" ? (
-        // 这个页面只做一件事：让人试起来。标题一行 + 右边是记录入口，没有副标题、没有说明文字
+        // 这个页面只做一件事：让人试起来。标题 + 右边是记录入口。
+        // 色彩分析（主打产品）在还没选照片时多一行「能得到什么」：从内容页 / 搜索直接落到这里的人，
+        // 以前只看到一句标题和一个上传框，不知道传了照片会得到什么，也不知道要不要注册、照片会不会被留着——这是只有 23% 的人会走到上传的原因之一
         <div className="mx-auto flex max-w-2xl items-center justify-between gap-3">
-          <h1 className="font-serif text-xl font-bold sm:text-3xl">{t("title")}</h1>
+          <div className="min-w-0">
+            <h1 className="font-serif text-xl font-bold sm:text-3xl">{t("title")}</h1>
+            {/* 不跟 previewUrl 联动：选完照片时标题下面的文字消失会让整张卡片突然上移，正好发生在用户看预览的那一刻 */}
+            {analysisType === "color_analysis" && !demoMode && (phase === "idle" || phase === "error") && (
+              <>
+                <p className="mt-1 text-sm leading-snug text-foreground/80">{t("valueProp")}</p>
+                <p className="mt-0.5 text-xs text-muted-foreground">{t("valueNote")}</p>
+              </>
+            )}
+          </div>
           {/* 分析记录入口：有记录才显示（记录本身在单独的页面里，不再堆在这一页最底下）；手机上只留图标和数量 */}
           {shownHistory.length > 0 && (
             <button
@@ -2009,6 +2148,22 @@ export function TryClient({
                     </button>
                   </div>
                 )}
+                {/* 桌面端专属：网页摄像头自拍 + 「用手机继续」二维码。手机上有「拍一张自拍」按钮，这里不显示 */}
+                {!previewUrl && desktopTools && (
+                  <div className="mt-2 flex flex-col items-stretch gap-1">
+                    {desktopTools.webcam && (
+                      <button
+                        type="button"
+                        onClick={handleWebcamOpen}
+                        className="inline-flex min-h-10 items-center justify-center gap-2 rounded-full border border-primary/40 bg-primary/5 px-4 text-sm font-medium text-primary transition hover:bg-primary/10"
+                      >
+                        <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" /><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" /></svg>
+                        {t("webcamOpen")}
+                      </button>
+                    )}
+                    <PhoneHandoff analysisType={analysisType} onPhotoReceived={handleHandoffPhoto} />
+                  </div>
+                )}
               </div>
 
               {/* 选项 + 开始 */}
@@ -2177,6 +2332,21 @@ export function TryClient({
                   </button>
                 )}
 
+                {/* 「你的报告长这样」：桌面端右栏空间够，放一排真实报告页的缩略图（不可点，只让人知道传了照片会得到什么）。
+                    手机上这一列要把「开始」和示例入口留在首屏，不放；图片懒加载且只在色彩分析、还没选照片时渲染，不拖慢上传 */}
+                {analysisType === "color_analysis" && !previewUrl && !demoMode && (
+                  <div className="hidden sm:block" aria-hidden="true">
+                    <p className="mb-1.5 text-xs font-medium text-muted-foreground">{t("previewStrip")}</p>
+                    <div className="grid grid-cols-3 gap-2.5">
+                      {REPORT_PREVIEW_IMAGES.map((src) => (
+                        <div key={src} className="relative aspect-[3/4] overflow-hidden rounded-lg border border-border bg-muted/30 shadow-sm">
+                          <Image src={src} alt="" fill sizes="140px" loading="lazy" className="object-cover object-top" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* 隐私说明常驻显示：用户决定传不传脸部照片之前就能看到，并能点进隐私政策 */}
                 <p className="flex items-start gap-1.5 text-xs text-muted-foreground max-sm:order-2">
                   <svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
@@ -2285,16 +2455,55 @@ export function TryClient({
           <div className="flex min-h-[14rem] flex-col items-center justify-center rounded-2xl border border-red-200/60 bg-red-50/30 p-6 dark:border-red-900/30 dark:bg-red-950/10">
             <svg className="mb-3 h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg>
             <p role="alert" className="px-3 text-center text-sm font-medium text-red-600 dark:text-red-400">{errorMsg}</p>
-            {previewUrl && (
-              <button
-                onClick={() => {
-                  trackEvent("generate_retry_clicked", { type: analysisType });
-                  handleGenerate();
-                }}
-                className="mt-4 min-h-10 rounded-full bg-primary px-5 text-sm font-semibold text-white transition hover:bg-primary-dark"
-              >
-                {t("retryBtn")}
-              </button>
+            {errorNeedsNewPhoto ? (
+              // 失败原因是照片本身（没找到人脸 / 读不了 / 格式不支持 / 太大）：原样重试只会再失败一次，直接引导换一张
+              <div className="mt-4 flex w-full max-w-xs flex-col items-stretch gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    trackEvent("error_choose_photo_clicked", { type: analysisType });
+                    fileRef.current?.click();
+                  }}
+                  className="min-h-11 rounded-full bg-primary px-5 text-sm font-semibold text-white transition hover:bg-primary-dark"
+                >
+                  {t("errorChoosePhoto")}
+                </button>
+                {/* 重拍一张：手机直接开前置相机；桌面端开网页摄像头 */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    trackEvent("error_retake_clicked", { type: analysisType });
+                    handleTakeSelfie();
+                  }}
+                  className="min-h-11 rounded-full border border-border bg-background px-5 text-sm font-medium text-foreground transition hover:border-primary/40 sm:hidden"
+                >
+                  {t("takeSelfie")}
+                </button>
+                {desktopTools?.webcam && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      trackEvent("error_retake_clicked", { type: analysisType });
+                      handleWebcamOpen();
+                    }}
+                    className="hidden min-h-11 rounded-full border border-border bg-background px-5 text-sm font-medium text-foreground transition hover:border-primary/40 sm:block"
+                  >
+                    {t("webcamOpen")}
+                  </button>
+                )}
+              </div>
+            ) : (
+              previewUrl && (
+                <button
+                  onClick={() => {
+                    trackEvent("generate_retry_clicked", { type: analysisType });
+                    handleGenerate();
+                  }}
+                  className="mt-4 min-h-10 rounded-full bg-primary px-5 text-sm font-semibold text-white transition hover:bg-primary-dark"
+                >
+                  {t("retryBtn")}
+                </button>
+              )
             )}
           </div>
         );
@@ -2482,6 +2691,14 @@ export function TryClient({
             <input ref={cameraRef} type="file" accept="image/*" capture="user" className="hidden" onChange={handleFileSelect} />
             {/* 真人试穿的单品照片（商品图 / 衣服平铺图 / 口红色号图都行） */}
             <input ref={itemInputRef} type="file" accept="image/*" className="hidden" onChange={handleItemSelect} />
+            {/* 桌面端网页摄像头自拍：拍到的照片和选文件走同一条流程（processPickedFile） */}
+            {webcamOpen && (
+              <WebcamCaptureModal
+                onCapture={handleWebcamCapture}
+                onClose={() => setWebcamOpen(false)}
+                onChooseFile={handleWebcamChooseFile}
+              />
+            )}
 
             {/* startAnchorRef：这一块滚出视口，说明用户在往下看示例，悬浮的「回去试自己的」才出现 */}
             <div ref={startAnchorRef}>

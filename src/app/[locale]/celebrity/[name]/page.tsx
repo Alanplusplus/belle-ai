@@ -3,8 +3,6 @@ import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { FunnelLink } from "@/components/FunnelLink";
-import { sampleHref } from "@/lib/blogTools";
 import { ResultCta } from "@/components/ResultCta";
 import { routing } from "@/i18n/routing";
 import { buildBreadcrumbJsonLd, canonicalUrl, ogLocale } from "@/lib/seo";
@@ -118,7 +116,6 @@ function CelebrityContent({ slug }: { slug: string }) {
   const sd = useTranslations(`sd.${data.season}`);
   const sdAll = useTranslations("sd");
   const ph = useTranslations("paletteHub");
-  const tp = useTranslations("tryPage");
   const st = useTranslations("seasonPalette");
   const seasonName = sd.has("name") ? sd("name") : seasonData.name;
 
@@ -202,9 +199,6 @@ function CelebrityContent({ slug }: { slug: string }) {
           <h2 className="text-2xl font-bold">
             {t("bestColors")} — {data.name}
           </h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {t("bestColorsDesc")}
-          </p>
           <div className="mt-8 grid items-start gap-8 md:grid-cols-[minmax(0,26rem)_1fr]">
             <PaletteCardLarge
               slug={celebrityCardKey(slug)}
@@ -226,9 +220,6 @@ function CelebrityContent({ slug }: { slug: string }) {
           <h2 className="text-2xl font-bold">
             {t("styleInsights")} — {data.name}
           </h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {t("styleInsightsDesc")}
-          </p>
           <ul className="mt-6 space-y-3">
             {data.styleInsights.map((tip) => (
               <li
@@ -268,9 +259,6 @@ function CelebrityContent({ slug }: { slug: string }) {
             <h2 className="text-2xl font-bold">
               {t("iconicLooksTitle", { name: data.name })}
             </h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              {t("iconicLooksDesc")}
-            </p>
             <div className="mt-6 space-y-6">
               {data.iconicLooks.map((look) => (
                 <div
@@ -333,9 +321,6 @@ function CelebrityContent({ slug }: { slug: string }) {
             <h2 className="text-2xl font-bold">
               {t("getTheLookTitle", { name: data.name, season: seasonName })}
             </h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              {t("getTheLookDesc")}
-            </p>
             <ul className="mt-6 space-y-3">
               {data.getTheLook.map((tip) => (
                 <li
@@ -405,28 +390,7 @@ function CelebrityContent({ slug }: { slug: string }) {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="my-6 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
-          <h2 className="text-xl font-bold">{t("ctaTitle")}</h2>
-          <p className="mt-2 text-muted-foreground">{t("ctaDesc")}</p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link
-              href="/try?type=celebrity_match"
-              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {t("getAnalysis")}
-            </Link>
-            <FunnelLink
-              href={sampleHref("celebrity_match", data.season)}
-              from="celebrity"
-              tool="celebrity_match"
-              kind="sample"
-              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
-            >
-              {tp("trySample")}
-            </FunnelLink>
-          </div>
-        </section>
+        <ResultCta type="celebrity_match" from="celebrity" season={data.season} variant="band" />
 
         {/* Other Celebrities */}
         <section className="border-t border-border py-12">

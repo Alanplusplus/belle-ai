@@ -144,9 +144,9 @@
     "step3Title": "Obtenez votre palette de couleurs",
     "step3Desc": "Recevez votre saison colorimétrique avec une palette complète de vos plus belles couleurs pour les vêtements, le maquillage et plus encore.",
     "privacyTitle": "Votre photo, sous votre contrôle",
-    "privacyItem1": "Utilisée uniquement pour créer votre rapport",
-    "privacyItem2": "Enregistrée dans votre historique privé, visible par vous seul",
-    "privacyItem3": "Suppression possible à tout moment sur demande",
+    "privacyItem1": "Sert uniquement à votre rapport",
+    "privacyItem2": "Gardée en privé, visible par vous seul",
+    "privacyItem3": "Suppression sur simple demande",
     "privacyLink": "Lire la politique de confidentialité",
     "ctaTitle": "Prête à trouver vos plus belles couleurs ?",
     "ctaSubtitle": "Découvrez votre palette de couleurs idéale grâce à l'IA. Essai gratuit, résultat en 60 secondes, sans inscription.",
@@ -467,7 +467,7 @@
     "faq2Q": "Quelle est la précision d'un quiz de couleur en ligne ?",
     "faq2A": "Les quiz en ligne ne donnent qu'une estimation approximative car ils reposent sur l'auto-observation. L'analyse photo IA part de votre vraie photo et offre généralement un point de départ plus fiable, mais reste une appréciation visuelle de l'IA qui peut varier selon l'éclairage et la qualité de la photo.",
     "faq3Q": "Puis-je faire une analyse de couleur gratuite ?",
-    "faq3A": "Oui ! Vous pouvez prendre notre quiz de couleur en ligne gratuit pour une évaluation initiale. Pour une analyse IA plus détaillée avec palette complète et conseils maquillage, Belle AI offre une analyse gratuite.",
+    "faq3A": "Oui ! Vous pouvez prendre notre quiz de couleur en ligne gratuit pour une évaluation initiale. Pour une analyse IA plus détaillée avec palette complète et conseils maquillage, Belle AI propose un aperçu gratuit de votre rapport.",
     "faq4Q": "Quelles sont les 4 saisons de couleur ?",
     "faq4A": "Les 4 saisons sont Printemps (chaud, clair, vif), Été (froid, clair, doux), Automne (chaud, profond, doux) et Hiver (froid, profond, éclatant). Chaque saison a 3 sous-types dans le système à 12 saisons pour des recommandations plus précises.",
     "relatedTitle": "Explorez d'autres outils couleur",
@@ -649,10 +649,52 @@
     "relatedPosts": "Articles connexes",
     "backToBlog": "Retour au blog",
     "toc": "Dans cet article",
-    "ctaTitle": "Envie d'essayer l'analyse couleur IA vous-même ?",
-    "ctaDescription": "Téléchargez une photo et obtenez un rapport beauté de niveau magazine en 60 secondes.",
-    "topCtaTitle": "Découvrez votre propre résultat en 60 secondes",
-    "stickyCtaText": "✨ Analyse couleur IA gratuite",
+    "cta": {
+      "color_analysis": {
+        "title": "Envoyez un selfie pour découvrir votre saison de couleur et vos meilleures couleurs",
+        "button": "Trouver mes couleurs"
+      },
+      "makeup": {
+        "title": "Envoyez un selfie pour obtenir 3 looks maquillage avec les teintes exactes lèvres, joues et yeux",
+        "button": "Obtenir mes looks"
+      },
+      "face_shape": {
+        "title": "Envoyez un selfie pour découvrir votre forme de visage et les coiffures qui vous flattent",
+        "button": "Trouver ma forme de visage"
+      },
+      "hair_preview": {
+        "title": "Envoyez un selfie pour essayer 4 couleurs de cheveux sur votre propre photo",
+        "button": "Tester ma couleur de cheveux"
+      },
+      "outfit_color": {
+        "title": "Envoyez un selfie pour obtenir 3 tenues construites avec vos meilleures couleurs",
+        "button": "Obtenir mes tenues"
+      },
+      "glasses_match": {
+        "title": "Envoyez un selfie pour trouver les montures qui vont à votre visage",
+        "button": "Trouver mes lunettes"
+      },
+      "occasion_makeup": {
+        "title": "Choisissez une occasion et envoyez un selfie pour obtenir 3 looks maquillage complets",
+        "button": "Obtenir mes looks d'occasion"
+      },
+      "jewelry_guide": {
+        "title": "Envoyez un selfie pour découvrir les métaux et boucles d'oreilles qui vous flattent",
+        "button": "Trouver mes bijoux"
+      },
+      "glow_up_report": {
+        "title": "Envoyez un selfie pour voir votre propre avant/après glow-up",
+        "button": "Voir mon glow-up"
+      },
+      "style_personality": {
+        "title": "Envoyez un selfie pour découvrir votre type de style et 3 looks du quotidien",
+        "button": "Trouver mon style"
+      },
+      "celebrity_match": {
+        "title": "Envoyez un selfie pour trouver les célébrités de votre saison de couleur",
+        "button": "Trouver mes célébrités"
+      }
+    },
     "sidebarCtaTitle": "Essayez par vous-même",
     "sidebarCtaDesc": "Téléchargez une photo et découvrez vos meilleures couleurs en 60 secondes.",
     "sidebarCtaFree": "Gratuit · Sans inscription",
@@ -783,6 +825,41 @@
     "notifyBody": "Votre rapport d'analyse a été généré. Cliquez pour voir les résultats.",
     "uploadTrust": "Utilisée uniquement pour créer votre rapport et conservée dans votre historique privé. Suppression sur demande",
     "uploadConsent": "En téléchargeant, vous confirmez que la photo est la vôtre ou que vous avez l'autorisation du sujet",
+    "webcamOpen": "Utiliser la webcam",
+    "webcamTitle": "Prenez un selfie avec votre webcam",
+    "webcamHint": "Placez-vous face à une fenêtre ou une lampe pour que la lumière soit uniforme sur votre visage, et regardez droit vers la caméra.",
+    "webcamCapture": "Prendre la photo",
+    "webcamChooseFile": "Choisir un fichier à la place",
+    "webcamStarting": "Démarrage de la caméra…",
+    "webcamErrorDenied": "L'accès à la caméra est bloqué. Autorisez-le dans la barre d'adresse du navigateur ou choisissez plutôt un fichier photo.",
+    "webcamErrorMissing": "Aucune caméra n'a été trouvée sur cet ordinateur. Choisissez un fichier photo ou continuez sur votre téléphone.",
+    "webcamErrorOther": "Impossible de démarrer la caméra. Elle est peut-être utilisée par une autre application. Choisissez plutôt un fichier photo.",
+    "handoffLink": "Pas de photo sur cet ordinateur ? Prenez-en une avec votre téléphone",
+    "handoffHint": "Scannez avec l'appareil photo de votre téléphone et prenez un selfie : il apparaît ici automatiquement. Vous terminerez sur cet ordinateur.",
+    "handoffItemHint": "Scannez avec l'appareil photo de votre téléphone et photographiez l'article : il apparaît ici automatiquement. Vous terminerez sur cet ordinateur.",
+    "handoffItemPageTitle": "Envoyez la photo de l'article à votre ordinateur",
+    "handoffItemTip": "Photographiez l'article seul, en lumière naturelle, avec sa couleur qui remplit le cadre.",
+    "handoffItemTake": "Photographier l'article",
+    "handoffItemTrust": "Utilisée uniquement pour scanner cet article.",
+    "handoffCopy": "Copier le lien",
+    "handoffCopied": "Lien copié",
+    "handoffQrAlt": "QR code pour envoyer une photo depuis votre téléphone",
+    "handoffWaiting": "En attente de votre photo…",
+    "handoffExpired": "Ce code a expiré.",
+    "handoffError": "Impossible de démarrer l'envoi depuis le téléphone. Veuillez réessayer.",
+    "handoffRefresh": "Obtenir un nouveau code",
+    "handoffPageTitle": "Envoyez votre selfie à votre ordinateur",
+    "handoffPageSub": "Prenez ou choisissez une photo ici. Elle apparaît sur votre ordinateur en quelques secondes, et vous poursuivez là-bas.",
+    "handoffUploading": "Envoi en cours…",
+    "handoffDoneTitle": "Photo envoyée !",
+    "handoffDoneSub": "Retournez sur votre ordinateur pour continuer. Vous pouvez fermer cette page.",
+    "handoffRetake": "Envoyer une autre photo",
+    "handoffExpiredTitle": "Ce lien a expiré",
+    "handoffExpiredSub": "Retournez sur votre ordinateur, affichez un nouveau QR code et scannez-le à nouveau.",
+    "handoffUploadFailed": "Impossible d'envoyer la photo. Vérifiez votre connexion et réessayez.",
+    "valueProp": "Téléchargez un selfie et obtenez votre saison colorimétrique et votre palette personnelle en 60 secondes environ.",
+    "previewStrip": "À quoi ressemble votre rapport",
+    "valueNote": "Gratuit à essayer · Sans inscription · Rapports privés",
     "moreTypes": "Autres types d'analyse",
     "compressing": "Optimisation de votre photo…",
     "notifyMe": "Me prévenir quand c'est prêt",
@@ -895,6 +972,8 @@
     "tryonCat_eyeshadow": "Fard à paupières",
     "tryonCat_hair_color": "Couleur de cheveux",
     "errorUploadUnreadable": "Nous n'avons pas pu lire cette photo : elle a peut-être été déplacée ou est encore en cours de téléchargement depuis le cloud. Choisissez-la de nouveau ou prenez-en une nouvelle.",
+    "errorUploadFormat": "Nous n'avons pas pu traiter ce format de photo. Choisissez une photo JPG ou PNG, ou prenez-en une nouvelle.",
+    "errorChoosePhoto": "Choisir une autre photo",
     "errorTimeout": "Cela prend plus de temps que d'habitude. Votre photo est en sécurité et l'analyse peut encore aboutir : consultez vos résultats récents dans une minute ou appuyez sur « Réessayer ».",
     "unlockSinglePriceCta": "Dévoiler toutes mes couleurs · {price}"
   },
@@ -930,7 +1009,7 @@
     "aiAccuracy": "Quelle fiabilité pour l'IA ?"
   },
   "privacy": {
-    "title": "Privacy Policy",
+    "title": "Politique de confidentialité",
     "lastUpdated": "Last Updated: November 2026",
     "intro": "Belle AI (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our website.",
     "section1Title": "Information We Collect",
@@ -962,7 +1041,7 @@
     "section9Content": "If you have any questions about this Privacy Policy, please contact us at support@aicoloranalysis.io."
   },
   "terms": {
-    "title": "Terms of Service",
+    "title": "Conditions d'utilisation",
     "lastUpdated": "Last Updated: November 2026",
     "intro": "Please read these Terms of Service (\"Terms\") carefully before using the Belle AI website (the \"Service\") operated by Belle AI (\"we\", \"our\", or \"us\").",
     "section1Title": "Acceptance of Terms",
@@ -3725,7 +3804,7 @@
       "belle6": "Web (navigateurs mobile et ordinateur)",
       "comp6": "iOS & Android",
       "feat7": "Languages",
-      "belle7": "5 languages",
+      "belle7": "9 languages",
       "comp7": "Multiple",
       "feat8": "Price",
       "belle8": "Free preview · {price} one-time, no subscription",
@@ -3749,9 +3828,9 @@
     "colorwise": {
       "name": "Colorwise",
       "desc": "Compare Belle AI and Colorwise for seasonal color analysis. Both use AI, but they differ in analysis depth, report quality, and pricing.",
-      "verdict": "Belle AI offers significantly more depth with three analysis modes, 12-season classification, and premium visual reports. Colorwise is simpler and offers more free uses, but provides less detailed analysis. Choose Belle AI for comprehensive beauty guidance, or Colorwise if you just want a quick color type answer.",
+      "verdict": "Belle AI offers significantly more depth with 11 analysis tools, 12-season classification, and premium visual reports. Colorwise is simpler and offers more free uses, but provides less detailed analysis. Choose Belle AI for comprehensive beauty guidance, or Colorwise if you just want a quick color type answer.",
       "feat0": "Analysis Types",
-      "belle0": "Makeup + Color + Face Shape (3 modes)",
+      "belle0": "11 analysis tools (color, makeup, face shape and more)",
       "comp0": "Color analysis only",
       "feat1": "Color System",
       "belle1": "12-season detailed",
@@ -3771,7 +3850,7 @@
       "feat6": "Price",
       "belle6": "Free preview · {price} one-time, no subscription",
       "comp6": "From $9.99/month",
-      "ba0": "Trois modes d'analyse dans un seul outil",
+      "ba0": "11 outils d'analyse dans une seule application",
       "ba1": "12-season system vs 4-season for more precision",
       "ba2": "Magazine-quality visual reports",
       "ba3": "Complete makeup look recommendations",
@@ -3780,7 +3859,7 @@
       "ca1": "Résultat à 4 saisons plus rapide",
       "ca2": "Simpler interface",
       "faq1Q": "Is Belle AI more accurate than Colorwise?",
-      "faq1A": "Belle AI uses a 12-season system with three analysis modes for more precise results. Colorwise uses a simpler 4-season system, which is faster but less detailed.",
+      "faq1A": "Belle AI uses a 12-season system with 11 analysis tools for more precise results. Colorwise uses a simpler 4-season system, which is faster but less detailed.",
       "faq2Q": "Which is cheaper — Belle AI or Colorwise?",
       "faq2A": "Belle AI is free to preview (3 free analyses) and the Color Kit is a one-time {price}, while Colorwise requires a subscription from $9.99/month. Belle AI is more affordable for occasional users.",
       "faq3Q": "Does Colorwise offer makeup analysis like Belle AI?",
@@ -3834,9 +3913,9 @@
     "mycoloranalysis": {
       "name": "MyColorAnalysis AI",
       "desc": "Compare Belle AI and MyColorAnalysis AI for personal color analysis. Both offer AI-powered seasonal color typing, but differ in analysis depth, additional features, and pricing model.",
-      "verdict": "Belle AI provides more comprehensive analysis with three modes and premium visual reports. MyColorAnalysis AI offers a professional review option for those who want human expert validation. Choose Belle AI for all-in-one beauty analysis with stunning reports, or MyColorAnalysis if you specifically want an expert human review.",
+      "verdict": "Belle AI provides more comprehensive analysis with 11 analysis tools and premium visual reports. MyColorAnalysis AI offers a professional review option for those who want human expert validation. Choose Belle AI for all-in-one beauty analysis with stunning reports, or MyColorAnalysis if you specifically want an expert human review.",
       "feat0": "Analysis Types",
-      "belle0": "Color + Makeup + Face Shape (3 modes)",
+      "belle0": "11 analysis tools (color, makeup, face shape and more)",
       "comp0": "Color analysis only",
       "feat1": "Color System",
       "belle1": "12-season",
@@ -3862,7 +3941,7 @@
       "feat8": "Price",
       "belle8": "Free preview · {price} one-time, no subscription",
       "comp8": "Free AI / $39 expert",
-      "ba0": "Trois modes d'analyse (couleur + maquillage + forme du visage) dans un seul outil",
+      "ba0": "11 outils d'analyse (couleur, maquillage, forme du visage et plus) dans une seule application",
       "ba1": "Magazine-quality visual reports designed for sharing",
       "ba2": "Comprehensive makeup looks with detailed product guidance",
       "ba3": "2K/4K high-resolution output",
@@ -3871,7 +3950,7 @@
       "ca1": "Quiz-based alternative (no photo needed)",
       "ca2": "Longer market presence",
       "faq1Q": "How does Belle AI compare to MyColorAnalysis AI?",
-      "faq1A": "Belle AI offers three analysis modes with magazine-quality visual reports. MyColorAnalysis AI focuses on color analysis with an optional $39 expert review for human validation.",
+      "faq1A": "Belle AI offers 11 analysis tools with magazine-quality visual reports. MyColorAnalysis AI focuses on color analysis with an optional $39 expert review for human validation.",
       "faq2Q": "Does MyColorAnalysis AI offer makeup analysis?",
       "faq2A": "MyColorAnalysis AI provides basic shade suggestions only. Belle AI includes complete makeup looks with detailed eye, lip, and blush recommendations.",
       "faq3Q": "Which is better value — Belle AI or MyColorAnalysis AI?",
@@ -3880,7 +3959,7 @@
     "color-analysis-app": {
       "name": "Color Analysis App",
       "desc": "Compare Belle AI and Color-Analysis.app for finding your seasonal color type. Both use AI technology, but they differ in analysis scope, report quality, and additional features.",
-      "verdict": "Belle AI excels in analysis depth and report quality — offering three analysis modes with magazine-grade visual output. Color-Analysis.app is the better choice if you want completely free unlimited access or prefer a quiz-based approach. For the most comprehensive beauty guidance and shareable reports, Belle AI delivers more value.",
+      "verdict": "Belle AI excels in analysis depth and report quality — offering 11 analysis tools with magazine-grade visual output. Color-Analysis.app is the better choice if you want completely free unlimited access or prefer a quiz-based approach. For the most comprehensive beauty guidance and shareable reports, Belle AI delivers more value.",
       "feat0": "Analysis Types",
       "belle0": "Color + Makeup + Face Shape",
       "comp0": "Color analysis only",
@@ -3905,7 +3984,7 @@
       "feat7": "Price",
       "belle7": "Free preview · {price} one-time, no subscription",
       "comp7": "Free",
-      "ba0": "Three comprehensive analysis modes",
+      "ba0": "11 analysis tools in one app",
       "ba1": "Visual magazine-quality reports",
       "ba2": "Complete makeup look recommendations",
       "ba3": "Face shape and hairstyle analysis",
@@ -3950,7 +4029,7 @@
       "feat7": "Price",
       "belle7": "Free preview · {price} one-time, no subscription",
       "comp7": "Free basic / paid detailed",
-      "ba0": "Three analysis modes in one tool",
+      "ba0": "11 analysis tools in one app",
       "ba1": "Magazine-quality visual reports",
       "ba2": "Complete makeup look recommendations",
       "ba3": "Face shape and hairstyle analysis",
@@ -3963,7 +4042,7 @@
       "faq2Q": "Does Palette Hunt offer makeup recommendations?",
       "faq2A": "Palette Hunt provides basic makeup suggestions. Belle AI includes detailed makeup looks with complete eye, lip, and blush guidance.",
       "faq3Q": "Which is better for a quick free color check?",
-      "faq3A": "Palette Hunt offers more free colors without payment. Belle AI provides 3 free analyses with comprehensive magazine-quality reports."
+      "faq3A": "Palette Hunt offers more free colors without payment. Belle AI gives you 3 free analyses as previews; the full magazine-quality report comes with the one-time Color Kit."
     }
   },
   "lookbook": {
@@ -4655,7 +4734,7 @@
     "lensEmailNote": "Un seul e-mail avec votre résultat. Désinscription possible à tout moment."
   },
   "scan": {
-    "metaTitle": "Scanner avant d'acheter : va-t-il avec votre saison de couleur ? | Belle AI",
+    "metaTitle": "Scanner avant d'acheter : va-t-il avec votre saison ? | Belle AI",
     "metaDescription": "Prenez en photo un vêtement, un accessoire ou un produit de maquillage et voyez aussitôt si ses couleurs vont avec votre palette.",
     "h1": "Scanner avant d'acheter",
     "subtitle": "Photographiez un article et découvrez si sa couleur va avec votre saison.",
@@ -4666,6 +4745,7 @@
     "changeSeason": "Changer",
     "takePhoto": "Prendre une photo",
     "choosePhoto": "Choisir dans la galerie",
+    "uploadPhoto": "Importer une photo",
     "tip": "Photographiez l'article seul, en lumière naturelle, avec sa couleur qui remplit le cadre.",
     "scanning": "Lecture des couleurs…",
     "quota": "Il vous reste {remaining} scans sur {limit} aujourd'hui",
@@ -4719,7 +4799,119 @@
     "errInvalid": "Impossible de lire cette image. Essayez une photo JPG ou PNG.",
     "errTooLarge": "Cette image est trop volumineuse. Essayez une photo plus petite.",
     "disclaimer": "Les couleurs sont estimées à partir d'une photo et varient selon la lumière. Voyez cela comme un guide, pas comme une règle.",
-    "privacy": "Les photos sont analysées en mémoire et jamais enregistrées."
+    "privacy": "Les photos scannées sont analysées en mémoire et jamais enregistrées.",
+    "privacyPhone": "Les photos envoyées depuis le téléphone sont d'abord téléversées pour arriver sur cette page."
+  },
+  "scanPage": {
+    "howTitle": "Comment fonctionne le scan",
+    "how1Title": "Choisissez votre saison",
+    "how1": "Utilisez la saison (parmi les 12) obtenue avec votre analyse colorimétrique, ou choisissez-la vous-même. Vous ne la connaissez pas encore ? Vous pouvez la trouver gratuitement en environ une minute.",
+    "how2Title": "Photographiez l'article",
+    "how2": "Prenez ou importez la photo d'un vêtement, d'un accessoire ou d'un produit de maquillage. Le résultat est meilleur avec l'article seul, en lumière naturelle, sa couleur remplissant le cadre.",
+    "how3Title": "Obtenez le verdict",
+    "how3": "Vous voyez s'il s'agit d'un très bon choix, d'une pièce à porter avec précaution ou d'une couleur qui n'est pas la vôtre, avec les raisons, les couleurs repérées et des nuances de votre palette à choisir à la place.",
+    "verdictTitle": "Ce que signifie le verdict",
+    "tipsTitle": "Conseils pour un scan fiable",
+    "tip1": "Photographiez en lumière naturelle. L'éclairage chaud d'intérieur et celui des magasins déforment le plus les couleurs.",
+    "tip2": "Un seul article à la fois, sur un fond uni, sa couleur remplissant le cadre.",
+    "tip3": "Évitez les filtres et le flash, et gardez votre ombre hors de l'article.",
+    "tip4": "Pour les imprimés et les rayures, le scan juge les couleurs principales ; vérifiez aussi l'effet du motif près de votre visage.",
+    "faqTitle": "Scanner avant d'acheter : questions fréquentes",
+    "faq1Q": "Comment le scan sait-il si un article me va ?",
+    "faq1A": "Il lit les couleurs principales de l'article sur votre photo et compare leur chaleur, leur clarté et leur intensité à la palette de votre saison (parmi les 12) et aux couleurs à éviter. Vous obtenez un score de correspondance, un verdict en langage clair et les raisons ; si ce n'est pas un très bon choix, des nuances de votre palette à privilégier à la place. C'est une estimation par IA à partir d'une photo, pas une mesure.",
+    "faq2Q": "Dois-je d'abord connaître ma saison ?",
+    "faq2A": "Oui. Le scan compare l'article à votre saison, il vous demande donc d'en choisir une. Si vous avez déjà fait une analyse colorimétrique sur ce navigateur, elle est préremplie. Si vous ne connaissez pas encore votre saison, l'analyse colorimétrique gratuite la trouve à partir d'un seul selfie.",
+    "faq3Q": "Cela fonctionne-t-il pour le maquillage et les accessoires, ou seulement les vêtements ?",
+    "faq3A": "Cela fonctionne pour les vêtements, les accessoires et le maquillage comme les rouges à lèvres, blushs ou fards à paupières. Les couleurs unies donnent la réponse la plus nette ; pour les imprimés et les rayures, le scan juge les couleurs principales, alors vérifiez aussi l'effet du motif près de votre visage.",
+    "faq4Q": "Pourquoi la couleur scannée peut-elle différer de l'article réel ?",
+    "faq4A": "Une photo modifie les couleurs : l'éclairage, l'appareil et les filtres les déplacent, surtout la lumière chaude d'intérieur. Quand le scan soupçonne un éclairage problématique, il vous le signale. Reprenez la photo en lumière naturelle pour un résultat plus fiable, et considérez le verdict comme un guide, pas comme une règle.",
+    "faq5Q": "Est-ce gratuit, et mes photos sont-elles conservées ?",
+    "faq5A": "Vous avez {free} scans gratuits par jour, et le Kit Couleur porte cette limite à {pack} par jour. Les photos scannées sont analysées en mémoire et jamais enregistrées. Il y a deux exceptions : une photo envoyée de votre téléphone vers l'ordinateur est d'abord téléversée pour atteindre la page, et l'aperçu d'essayage facultatif (1 crédit) envoie et conserve dans votre historique votre photo et celle de l'article."
+  },
+  "featureWhy": {
+    "color": {
+      "hero": "Trouvez les couleurs qui vous illuminent et arrêtez de dépenser pour celles qui ne vous vont pas.",
+      "title": "Arrêtez d'acheter des couleurs qui ne vous vont pas",
+      "w1": "Certaines couleurs vous illuminent, d'autres vous donnent mauvaise mine, et c'est difficile à voir à l'œil nu.",
+      "w2": "Sans connaître votre palette, vêtements et maquillage deviennent un coûteux jeu d'essais.",
+      "w3": "Belle trouve votre saison à partir d'un selfie et vous donne une palette pour acheter et vous habiller."
+    },
+    "makeup": {
+      "hero": "Découvrez les teintes et les looks qui vous vont avant d'acheter un autre produit.",
+      "title": "Un maquillage choisi pour votre visage, pas pour tout le monde",
+      "w1": "Une teinte parfaite sur un mannequin peut ne pas vous convenir.",
+      "w2": "Les tutoriels génériques ignorent votre sous-ton, et les produits finissent oubliés dans un tiroir.",
+      "w3": "À partir d'une photo sans maquillage, Belle crée trois looks complets avec des teintes précises, dessinés sur votre visage."
+    },
+    "face": {
+      "hero": "Trouvez les coupes qui flattent la forme de votre visage, sur votre propre photo, avant d'aller chez le coiffeur.",
+      "title": "Une belle coupe commence par la forme de votre visage",
+      "w1": "Une coupe superbe sur quelqu'un d'autre peut élargir, allonger ou alourdir votre visage.",
+      "w2": "Les cheveux se rattrapent mal : une coupe ratée met des mois à repousser.",
+      "w3": "Belle identifie la forme de votre visage et dessine quatre coupes sur votre photo, avec la raison de chacune."
+    },
+    "hair": {
+      "hero": "Voyez quelles couleurs de cheveux vous vont, et lesquelles éviter, sur votre propre photo avant de prendre rendez-vous.",
+      "title": "Essayez une couleur de cheveux avant de la teindre",
+      "w1": "La même teinte peut être éclatante sur une personne et ternir le teint d'une autre.",
+      "w2": "Corriger une couleur qui ne vous va pas coûte du temps et de l'argent.",
+      "w3": "Belle choisit des teintes selon votre saison et en montre quatre sur votre photo : la meilleure, deux bonnes et une à éviter."
+    },
+    "glasses": {
+      "hero": "Voyez quelles montures vous vont, sur votre propre photo, avant de commander.",
+      "title": "Trouvez des montures qui vont à votre visage, pas seulement à vos goûts",
+      "w1": "La monture est au milieu de votre visage toute la journée, et une forme inadaptée se remarque.",
+      "w2": "Essayer des dizaines de paires en magasin, ou commander en ligne à l'aveugle, fait perdre du temps.",
+      "w3": "Belle choisit six montures selon votre forme de visage et votre saison : quatre à porter et deux à éviter, toutes sur votre photo."
+    },
+    "jewelry": {
+      "hero": "Trouvez les métaux et les boucles d'oreilles qui vous flattent avant d'acheter un autre bijou.",
+      "title": "Le bon métal illumine la peau, le mauvais la ternit",
+      "w1": "Or, argent ou or rose : l'un flatte votre sous-ton, un autre peut éteindre votre teint.",
+      "w2": "Acheter des bijoux au hasard, c'est des pièces qui restent dans la boîte.",
+      "w3": "Belle lit votre sous-ton et la forme de votre visage, puis montre sur votre photo votre meilleur métal et trois styles de boucles d'oreilles."
+    },
+    "outfit": {
+      "hero": "Voyez quelles couleurs de vêtements éclairent votre visage et lesquelles le ternissent, sur votre propre photo.",
+      "title": "Portez des couleurs qui vous donnent bonne mine, pas l'air fatigué",
+      "w1": "Certaines couleurs de vêtements illuminent votre visage, d'autres vous fatiguent, même après une bonne nuit.",
+      "w2": "Sans palette, la garde-robe se remplit de pièces jamais portées.",
+      "w3": "Belle compose trois tenues uniquement avec vos meilleures couleurs : du quotidien, un rendez-vous et le travail, sur votre photo."
+    },
+    "occasion": {
+      "hero": "Choisissez l'occasion et voyez trois looks maquillage complets sur votre propre visage.",
+      "title": "Le bon look pour la bonne occasion",
+      "w1": "Un look de bureau détonne lors d'une soirée, et un look de fête est trop pour un entretien.",
+      "w2": "Tester un nouveau look pour la première fois le jour J, c'est un pari.",
+      "w3": "Choisissez l'occasion et Belle dessine trois looks complets sur votre photo, chacun avec un conseil de styliste."
+    },
+    "glow": {
+      "hero": "Découvrez votre meilleure version en quatre petits changements, avant et après sur votre propre photo.",
+      "title": "Sachez quoi changer, et quoi laisser tel quel",
+      "w1": "Les conseils de relooking sont écrasants, et tout changer peut vous faire perdre ce qui vous ressemble.",
+      "w2": "Une liste de conseils est difficile à croire tant qu'on n'en voit pas le résultat.",
+      "w3": "Belle propose quatre petits changements de couleur de cheveux, de maquillage, de haut et d'accessoire, puis montre votre avant et après."
+    },
+    "persona": {
+      "hero": "Trouvez le style qui vous ressemble, avec trois looks du quotidien dessinés sur votre propre photo.",
+      "title": "Mettez un nom sur votre style",
+      "w1": "Les tendances disent ce qui est à la mode, pas ce qui vous va.",
+      "w2": "Sans style clair, les achats deviennent des coups de tête qui ne vont pas ensemble.",
+      "w3": "Belle vous donne un nom de style, quatre mots-clés, trois looks du quotidien et une formule en une ligne pour vos achats."
+    },
+    "celebrity": {
+      "hero": "Trouvez les célébrités qui partagent votre colorimétrie et empruntez leurs plus belles couleurs.",
+      "title": "Découvrez qui partage votre colorimétrie",
+      "w1": "« À quelle célébrité je ressemble ? » est une supposition fondée sur les traits, qui ne dit pas quoi porter.",
+      "w2": "Associer par colorimétrie donne du concret : couleurs, teintes de maquillage et couleurs de cheveux.",
+      "w3": "Belle indique votre type parmi les 12 saisons et montre les célébrités généralement classées dans la même saison, avec leurs meilleures couleurs."
+    },
+    "scan": {
+      "title": "Pourquoi scanner avant d'acheter ?",
+      "w1": "Une couleur qui paraît superbe sur le cintre peut sembler terne ou fatiguée dès qu'elle est près de votre visage.",
+      "w2": "Choisir à l'instinct en magasin, c'est des retours, des achats impulsifs et un dressing plein de pièces presque justes.",
+      "w3": "Photographiez l'article : Belle compare ses couleurs à la palette de votre saison et rend un verdict clair en quelques secondes, avec des nuances à choisir à la place."
+    }
   },
   "featureIncludes": {
     "noteLens": "L'analyse écrite est gratuite. Générer les photos du résultat coûte 1 crédit pour l'ensemble, et votre toute première photo est offerte.",

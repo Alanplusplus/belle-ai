@@ -114,7 +114,6 @@ export function UndertoneTestClient({ embedded = false }: { embedded?: boolean }
       <section className={pad}>
         <div className="mx-auto max-w-2xl px-4 text-center">
           <h1 className={h1}>{ut("title")}</h1>
-          <p className="mt-4 text-lg text-muted-foreground">{ut("description")}</p>
           <button
             onClick={() => {
               setCurrent(0);

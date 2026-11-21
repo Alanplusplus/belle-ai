@@ -149,7 +149,6 @@ function VsContent({ slug }: { slug: string }) {
           <h1 className="text-3xl font-bold sm:text-4xl">
             {t("title", { competitor: name })}
           </h1>
-          <p className="mt-3 text-muted-foreground">{v("desc")}</p>
 
           <ResultCta type="color_analysis" from="vs" className="mt-8" />
 
@@ -257,19 +256,7 @@ function VsContent({ slug }: { slug: string }) {
             </ul>
           </nav>
 
-          <div className="mt-10 text-center">
-            <p className="text-lg font-semibold">{t("ctaTitle")}</p>
-            <p className="mt-1 text-sm text-muted-foreground">{t("ctaDesc")}</p>
-            <Link
-              href="/try"
-              className="mt-4 inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {t("tryBelle")}
-            </Link>
-            <p className="mt-2 text-sm text-muted-foreground">
-              {t("ctaSubtext")}
-            </p>
-          </div>
+          <ResultCta type="color_analysis" from="vs" variant="band" className="mt-10" />
         </div>
       </section>
     </>

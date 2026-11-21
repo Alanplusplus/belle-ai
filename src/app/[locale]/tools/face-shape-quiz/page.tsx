@@ -7,7 +7,8 @@ import {
 } from "@/lib/seo";
 import type { Metadata } from "next";
 import { FaceShapeQuizClient } from "./FaceShapeQuizClient";
-import { ToolFaq, ToolIntro, ToolRelated } from "@/components/ToolPageSections";
+import { ClampedIntro } from "@/components/ClampedIntro";
+import { ToolFaq, ToolRelated } from "@/components/ToolPageSections";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({
@@ -48,6 +49,7 @@ export default async function FaceShapeQuizPage({
   const t = await getTranslations({ locale, namespace: "faceQuiz" });
   const nav = await getTranslations({ locale, namespace: "nav" });
   const quiz = await getTranslations({ locale, namespace: "quiz" });
+  const bt = await getTranslations({ locale, namespace: "blog" });
   const embed = await getTranslations({ locale, namespace: "embed" });
   const related = [
     { href: "/face-shape-analysis", label: nav("faceAnalysis") },
@@ -91,7 +93,7 @@ export default async function FaceShapeQuizPage({
 
       <FaceShapeQuizClient />
 
-      <ToolIntro text={t("seoIntro")} />
+      <ClampedIntro text={t("seoIntro")} moreLabel={bt("readMore")} />
       <ToolFaq title={quiz("faqTitle")} faqs={faqs} />
       <ToolRelated title={t("relatedTitle")} links={related} />
     </>

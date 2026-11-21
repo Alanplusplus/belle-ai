@@ -155,7 +155,7 @@ export const GUIDE_TOPICS: GuideTopic[] = [
       {
         title: "Warm Undertone",
         description: "Warm undertones (yellow, golden, peachy) pair best with warm-toned hair colors that enhance the natural glow.",
-        image: "/images/dim_hair_best.webp",
+        image: "/images/guide_hair_warm.webp",
         items: [
           { label: "Golden Blonde", detail: "Adds sun-kissed warmth to fair warm skin" },
           { label: "Rich Auburn", detail: "Complements golden undertones beautifully" },
@@ -167,7 +167,7 @@ export const GUIDE_TOPICS: GuideTopic[] = [
       {
         title: "Cool Undertone",
         description: "Cool undertones (pink, blue, rosy) are enhanced by ash and cool-toned hair colors.",
-        image: "/images/dim_hair_undertone.webp",
+        image: "/images/guide_hair_cool.webp",
         items: [
           { label: "Ash Blonde", detail: "Complements pink undertones without adding warmth" },
           { label: "Cool Brown", detail: "A neutral-cool shade that enhances cool complexions" },
@@ -179,7 +179,7 @@ export const GUIDE_TOPICS: GuideTopic[] = [
       {
         title: "Neutral Undertone",
         description: "Neutral undertones can wear both warm and cool shades — the most versatile skin tone for hair color.",
-        image: "/images/dim_hair_style.webp",
+        image: "/images/guide_hair_neutral.webp",
         items: [
           { label: "Bronde", detail: "The perfect warm-cool middle ground" },
           { label: "Mushroom Brown", detail: "A cool-neutral shade with muted warmth" },

@@ -15,12 +15,16 @@ export function ShareLandingTracker({ type }: { type: string }) {
 
 export function ShareCtaButton({
   type,
+  tool,
   children,
 }: {
   type: string;
+  /** 分享的是 11 个工具之一时，按钮直达同一个工具，而不是落到默认页 */
+  tool?: string | null;
   children: React.ReactNode;
 }) {
   const query = new URLSearchParams({
+    ...(tool ? { type: tool } : {}),
     utm_source: "share",
     utm_medium: "result_page",
     utm_campaign: "viral",

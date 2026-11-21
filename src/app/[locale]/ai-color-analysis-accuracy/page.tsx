@@ -82,6 +82,7 @@ export default async function AccuracyPage({
   const t = await getTranslations({ locale, namespace: "accuracy" });
   const nav = await getTranslations({ locale, namespace: "nav" });
   const footer = await getTranslations({ locale, namespace: "footer" });
+  const bt = await getTranslations({ locale, namespace: "blog" });
   const format = await getFormatter({ locale });
 
   const glance = range(5).map((n) => t(`glance${n}` as "glance1"));
@@ -126,7 +127,7 @@ export default async function AccuracyPage({
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [{ name: t("breadcrumb"), path: PATH }]);
 
   const links = [
-    { href: "/try", label: nav("tryNow") },
+    { href: "/try?type=color_analysis", label: bt("cta.color_analysis.button") },
     { href: "/tools/color-quiz", label: nav("colorQuiz") },
     { href: "/tools/undertone-test", label: nav("undertoneTest") },
     { href: "/color-palette", label: footer("colorPalettes") },
@@ -145,8 +146,7 @@ export default async function AccuracyPage({
       <article className="py-16">
         <div className="mx-auto max-w-3xl px-4">
           <h1 className="font-serif text-3xl font-bold sm:text-4xl">{t("title")}</h1>
-          <p className="mt-4 text-lg text-muted-foreground">{t("subtitle")}</p>
-          <p className="mt-3 text-xs text-muted-foreground">
+          <p className="mt-4 text-xs text-muted-foreground">
             {t("updatedLabel")}: <time dateTime={LAST_UPDATED}>{updatedText}</time>
           </p>
 

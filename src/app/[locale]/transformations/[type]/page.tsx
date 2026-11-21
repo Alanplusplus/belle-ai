@@ -7,8 +7,6 @@ import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import { TRANSFORMATION_TYPES, TRANSFORMATION_SLUGS, TRANSFORMATION_TOOL } from "@/lib/transformation-data";
 import { ResultCta } from "@/components/ResultCta";
-import { FunnelLink } from "@/components/FunnelLink";
-import { sampleHref } from "@/lib/blogTools";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -74,7 +72,6 @@ export default async function TransformationTypePage({
 
 function TransformationTypeContent({ slug }: { slug: string }) {
   const t = useTranslations("transformations");
-  const tp = useTranslations("tryPage");
   const data = TRANSFORMATION_TYPES.find((t) => t.slug === slug)!;
   const tool = TRANSFORMATION_TOOL[slug] ?? "color_analysis";
   const otherTypes = TRANSFORMATION_TYPES.filter((t) => t.slug !== slug);
@@ -90,8 +87,6 @@ function TransformationTypeContent({ slug }: { slug: string }) {
             </Link>
           </p>
           <h1 className="mt-3 font-serif text-3xl font-bold sm:text-5xl">{t(`type_${data.slug}_name`)}</h1>
-          <p className="mt-2 text-lg text-primary">{t(`type_${data.slug}_tagline`)}</p>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{t(`type_${data.slug}_desc`)}</p>
           {/* 先给「成品」：这个工具现在真实生成的示例报告 + 直接试 / 先看示例 */}
           <ResultCta type={tool} from="transformations" className="mx-auto mt-8 max-w-3xl text-left" />
         </div>
@@ -158,28 +153,7 @@ function TransformationTypeContent({ slug }: { slug: string }) {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="my-6 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
-          <h2 className="text-xl font-bold">{t("ctaTitle")}</h2>
-          <p className="mt-2 text-muted-foreground">{t("ctaDesc")}</p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link
-              href={`/try?type=${tool}`}
-              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {t("startAnalysis")}
-            </Link>
-            <FunnelLink
-              href={sampleHref(tool)}
-              from="transformations"
-              tool={tool}
-              kind="sample"
-              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
-            >
-              {tp("trySample")}
-            </FunnelLink>
-          </div>
-        </section>
+        <ResultCta type={tool} from="transformations" variant="band" />
 
         {/* Other Types */}
         <section className="border-t border-border py-12 mb-10">

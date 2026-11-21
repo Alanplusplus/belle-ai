@@ -52,6 +52,22 @@ export function GET() {
   );
   lines.push("");
 
+  lines.push("## Other analyses and tools");
+  lines.push("");
+  lines.push(`- [Scan before you buy](${SITE_URL}/scan): photograph a clothing, accessory or makeup item and see whether its colors suit your season palette`);
+  lines.push(`- [Hair color analysis](${SITE_URL}/hair-color-analysis): preview which hair colors suit your skin tone and face shape`);
+  lines.push(`- [Outfit color analysis](${SITE_URL}/outfit-color-analysis): which clothing colors brighten your complexion and which wash you out`);
+  lines.push(`- [Glasses recommendation](${SITE_URL}/glasses-analysis): frame shapes and sunglasses styles for your face shape`);
+  lines.push(`- [Occasion makeup](${SITE_URL}/occasion-makeup): makeup looks for date night, interviews, weddings and other events`);
+  lines.push(`- [Jewelry and accessory guide](${SITE_URL}/jewelry-analysis): metals, gemstones and earring styles for your skin tone and face shape`);
+  lines.push(`- [Glow-up report](${SITE_URL}/glow-up-report): a before-and-after on your own photo with changes to hair color, makeup, top and accessory`);
+  lines.push(`- [Style personality](${SITE_URL}/style-personality): your style archetype with personalized recommendations`);
+  lines.push(`- [Celebrity match](${SITE_URL}/celebrity-match): celebrities who share your color season`);
+  lines.push(`- [Style lookbooks](${SITE_URL}/lookbook): outfit, makeup and hair inspiration boards for all 12 seasons`);
+  lines.push(`- [Before and after transformations](${SITE_URL}/transformations): example results of color, makeup and hair changes`);
+  lines.push(`- [Visual style guides](${SITE_URL}/guides): quick-reference guides for color seasons, face shapes and hair color`);
+  lines.push("");
+
   lines.push("## Free tools");
   lines.push("");
   lines.push(`- [Color season quiz](${SITE_URL}/tools/color-quiz): find your seasonal color type by answering questions`);

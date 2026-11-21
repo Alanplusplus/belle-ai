@@ -144,9 +144,9 @@
     "step3Title": "Renk Paletinizi Alın",
     "step3Desc": "Kıyafet, makyaj ve daha fazlası için en iyi renklerinizden oluşan tam bir paletle birlikte mevsimsel renk tipinizi alın.",
     "privacyTitle": "Fotoğrafın, senin kontrolünde",
-    "privacyItem1": "Yalnızca raporunu oluşturmak için kullanılır",
-    "privacyItem2": "Özel geçmişinde saklanır, yalnızca sen görürsün",
-    "privacyItem3": "İstediğin zaman silinmesini talep edebilirsin",
+    "privacyItem1": "Yalnızca raporun için kullanılır",
+    "privacyItem2": "Özel saklanır, yalnızca sen görürsün",
+    "privacyItem3": "İstediğinde silinmesini isteyebilirsin",
     "privacyLink": "Gizlilik Politikasını oku",
     "whyTitle": "Neden Yapay Zeka Renk Analizi?",
     "whyFree": "Ücretsiz Dene, Hızlı Sonuç Al",
@@ -467,7 +467,7 @@
     "faq2Q": "Online renk testi ne kadar doğru?",
     "faq2A": "Online testler kendi gözleminize dayandığı için yalnızca kaba bir tahmin sunar. AI fotoğraf analizi gerçek fotoğrafınızdan yola çıktığı için genellikle daha güvenilir bir başlangıç noktası verir; yine de yapay zekânın görsel bir değerlendirmesidir ve ışığa ve fotoğraf kalitesine göre değişebilir.",
     "faq3Q": "Ücretsiz renk analizi yapabilir miyim?",
-    "faq3A": "Evet! Ücretsiz online renk testini yaparak mevsimsel renk tipinizin ilk değerlendirmesini alabilirsiniz. Tam palette ve makyaj önerileri içeren detaylı AI analizi için Belle AI bir ücretsiz analiz sunar.",
+    "faq3A": "Evet! Ücretsiz online renk testini yaparak mevsimsel renk tipinizin ilk değerlendirmesini alabilirsiniz. Tam palette ve makyaj önerileri içeren detaylı AI analizi için Belle AI raporunuzun ücretsiz bir önizlemesini sunar.",
     "faq4Q": "4 renk mevsimi nedir?",
     "faq4A": "4 renk mevsimi: İlkbahar (sıcak, açık, parlak), Yaz (soğuk, açık, yumuşak), Sonbahar (sıcak, derin, yumuşak) ve Kış (soğuk, derin, canlı). 12 mevsim sisteminde her birinin 3 alt tipi vardır.",
     "relatedTitle": "Daha fazla renk aracını keşfedin",
@@ -649,10 +649,52 @@
     "relatedPosts": "İlgili Yazılar",
     "backToBlog": "Bloga Dön",
     "toc": "Bu yazıda",
-    "ctaTitle": "Yapay zeka renk analizini kendiniz denemek ister misiniz?",
-    "ctaDescription": "Bir fotoğraf yükleyin ve 60 saniyede dergi kalitesinde güzellik raporu alın.",
-    "topCtaTitle": "Kendi sonucunuzu 60 saniyede görün",
-    "stickyCtaText": "✨ Ücretsiz AI renk analizi",
+    "cta": {
+      "color_analysis": {
+        "title": "Bir selfie yükleyin, renk mevsiminizi ve size en çok yakışan renkleri öğrenin",
+        "button": "Renk mevsimimi öğren"
+      },
+      "makeup": {
+        "title": "Bir selfie yükleyin, dudak, yanak ve göz tonları kesin 3 makyaj görünümü alın",
+        "button": "Makyaj önerilerimi al"
+      },
+      "face_shape": {
+        "title": "Bir selfie yükleyin, yüz şeklinizi ve size yakışan saç modellerini öğrenin",
+        "button": "Yüz şeklimi öğren"
+      },
+      "hair_preview": {
+        "title": "Bir selfie yükleyin, 4 saç rengini kendi fotoğrafınızda görün",
+        "button": "Saç rengimi dene"
+      },
+      "outfit_color": {
+        "title": "Bir selfie yükleyin, en iyi renklerinizle hazırlanmış 3 kombin alın",
+        "button": "Kombin renklerimi al"
+      },
+      "glasses_match": {
+        "title": "Bir selfie yükleyin, yüzünüze yakışan gözlük çerçevelerini bulun",
+        "button": "Gözlüğümü bul"
+      },
+      "occasion_makeup": {
+        "title": "Bir etkinlik seçip selfie yükleyin, 3 eksiksiz makyaj görünümü alın",
+        "button": "Etkinlik makyajımı al"
+      },
+      "jewelry_guide": {
+        "title": "Bir selfie yükleyin, size yakışan metalleri ve küpe modellerini bulun",
+        "button": "Takılarımı bul"
+      },
+      "glow_up_report": {
+        "title": "Bir selfie yükleyin, kendi öncesi-sonrası glow-up'ınızı görün",
+        "button": "Glow-up'ımı gör"
+      },
+      "style_personality": {
+        "title": "Bir selfie yükleyin, stil tipinizi ve 3 günlük görünümü keşfedin",
+        "button": "Stil tipimi keşfet"
+      },
+      "celebrity_match": {
+        "title": "Bir selfie yükleyin, renk mevsiminizi paylaşan ünlüleri bulun",
+        "button": "Ünlü eşleşmemi bul"
+      }
+    },
     "sidebarCtaTitle": "Kendin dene",
     "sidebarCtaDesc": "Bir fotoğraf yükle ve 60 saniyede en iyi renklerini keşfet.",
     "sidebarCtaFree": "Ücretsiz · Kayıt gerekmez",
@@ -789,6 +831,41 @@
     "notifyBody": "Analiz raporunuz oluşturuldu. Sonuçları görmek için tıklayın.",
     "uploadTrust": "Yalnızca raporunuzu oluşturmak için kullanılır ve özel geçmişinizde saklanır. Talep üzerine silinir",
     "uploadConsent": "Yükleyerek, fotoğrafın size ait olduğunu veya kişinin iznini aldığınızı onaylarsınız",
+    "webcamOpen": "Web kamerasını kullan",
+    "webcamTitle": "Web kamerasıyla selfie çekin",
+    "webcamHint": "Yüzünüze ışık eşit düşecek şekilde bir pencereye veya lambaya dönün ve doğrudan kameraya bakın.",
+    "webcamCapture": "Fotoğraf çek",
+    "webcamChooseFile": "Bunun yerine dosya seç",
+    "webcamStarting": "Kamera başlatılıyor…",
+    "webcamErrorDenied": "Kamera erişimi engellendi. Tarayıcının adres çubuğundan izin verin veya bunun yerine bir fotoğraf dosyası seçin.",
+    "webcamErrorMissing": "Bu bilgisayarda kamera bulunamadı. Bir fotoğraf dosyası seçin veya telefonunuzda devam edin.",
+    "webcamErrorOther": "Kamera başlatılamadı. Başka bir uygulama kullanıyor olabilir. Bunun yerine bir fotoğraf dosyası seçin.",
+    "handoffLink": "Bu bilgisayarda fotoğraf yok mu? Telefonunuzla çekin",
+    "handoffHint": "Telefonunuzun kamerasıyla tarayın, orada selfie çekin; fotoğraf otomatik olarak burada görünür. Gerisini bu bilgisayarda tamamlarsınız.",
+    "handoffItemHint": "Telefonunuzun kamerasıyla tarayın, orada ürünün fotoğrafını çekin; fotoğraf otomatik olarak burada görünür. Gerisini bu bilgisayarda tamamlarsınız.",
+    "handoffItemPageTitle": "Ürün fotoğrafını bilgisayarınıza gönderin",
+    "handoffItemTip": "Ürünü tek başına, gün ışığında ve rengi kareyi dolduracak şekilde çekin.",
+    "handoffItemTake": "Ürünün fotoğrafını çek",
+    "handoffItemTrust": "Yalnızca bu ürünü taramak için kullanılır.",
+    "handoffCopy": "Bağlantıyı kopyala",
+    "handoffCopied": "Bağlantı kopyalandı",
+    "handoffQrAlt": "Telefondan fotoğraf göndermek için QR kod",
+    "handoffWaiting": "Fotoğrafınız bekleniyor…",
+    "handoffExpired": "Bu kodun süresi doldu.",
+    "handoffError": "Telefondan yükleme başlatılamadı. Lütfen tekrar deneyin.",
+    "handoffRefresh": "Yeni kod al",
+    "handoffPageTitle": "Selfie'nizi bilgisayarınıza gönderin",
+    "handoffPageSub": "Burada bir fotoğraf çekin veya seçin. Birkaç saniye içinde bilgisayarınızda görünür ve orada devam edersiniz.",
+    "handoffUploading": "Gönderiliyor…",
+    "handoffDoneTitle": "Fotoğraf gönderildi!",
+    "handoffDoneSub": "Devam etmek için bilgisayarınıza dönün. Bu sayfayı kapatabilirsiniz.",
+    "handoffRetake": "Başka bir fotoğraf gönder",
+    "handoffExpiredTitle": "Bu bağlantının süresi doldu",
+    "handoffExpiredSub": "Bilgisayarınıza dönün, yeni bir QR kod gösterin ve tekrar tarayın.",
+    "handoffUploadFailed": "Fotoğraf gönderilemedi. Bağlantınızı kontrol edip tekrar deneyin.",
+    "valueProp": "Bir selfie yükleyin; yaklaşık 60 saniyede mevsimsel renk tipinizi ve kişisel paletinizi öğrenin.",
+    "previewStrip": "Raporunuz böyle görünür",
+    "valueNote": "Ücretsiz dene · Kayıt gerekmez · Raporların gizli kalır",
     "moreTypes": "Diğer analiz türleri",
     "compressing": "Fotoğraf optimize ediliyor…",
     "notifyMe": "Hazır olunca bana haber ver",
@@ -895,6 +972,8 @@
     "tryonCat_eyeshadow": "Far",
     "tryonCat_hair_color": "Saç rengi",
     "errorUploadUnreadable": "Bu fotoğraf okunamadı — taşınmış olabilir ya da hâlâ buluttan indiriliyor olabilir. Lütfen yeniden seçin veya yeni bir fotoğraf çekin.",
+    "errorUploadFormat": "Bu fotoğraf biçimi işlenemedi. Lütfen JPG veya PNG bir fotoğraf seçin ya da yeni bir fotoğraf çekin.",
+    "errorChoosePhoto": "Başka bir fotoğraf seç",
     "errorTimeout": "Bu, normalden uzun sürüyor. Fotoğrafınız güvende ve analiz yine de tamamlanabilir — bir dakika sonra son sonuçlarınıza bakın veya «Tekrar dene»ye dokunun.",
     "unlockSinglePriceCta": "Tüm renklerimi göster · {price}"
   },
@@ -930,7 +1009,7 @@
     "aiAccuracy": "Yapay Zekâ Ne Kadar Doğru?"
   },
   "privacy": {
-    "title": "Privacy Policy",
+    "title": "Gizlilik Politikası",
     "lastUpdated": "Last Updated: November 2026",
     "intro": "Belle AI (\"we\", \"our\", or \"us\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use our website.",
     "section1Title": "Information We Collect",
@@ -962,7 +1041,7 @@
     "section9Content": "If you have any questions about this Privacy Policy, please contact us at support@aicoloranalysis.io."
   },
   "terms": {
-    "title": "Terms of Service",
+    "title": "Hizmet Şartları",
     "lastUpdated": "Last Updated: November 2026",
     "intro": "Please read these Terms of Service (\"Terms\") carefully before using the Belle AI website (the \"Service\") operated by Belle AI (\"we\", \"our\", or \"us\").",
     "section1Title": "Acceptance of Terms",
@@ -3725,7 +3804,7 @@
       "belle6": "Web (telefon ve masaüstü tarayıcıları)",
       "comp6": "iOS & Android",
       "feat7": "Languages",
-      "belle7": "5 languages",
+      "belle7": "9 languages",
       "comp7": "Multiple",
       "feat8": "Price",
       "belle8": "Free preview · {price} one-time, no subscription",
@@ -3749,9 +3828,9 @@
     "colorwise": {
       "name": "Colorwise",
       "desc": "Compare Belle AI and Colorwise for seasonal color analysis. Both use AI, but they differ in analysis depth, report quality, and pricing.",
-      "verdict": "Belle AI offers significantly more depth with three analysis modes, 12-season classification, and premium visual reports. Colorwise is simpler and offers more free uses, but provides less detailed analysis. Choose Belle AI for comprehensive beauty guidance, or Colorwise if you just want a quick color type answer.",
+      "verdict": "Belle AI offers significantly more depth with 11 analysis tools, 12-season classification, and premium visual reports. Colorwise is simpler and offers more free uses, but provides less detailed analysis. Choose Belle AI for comprehensive beauty guidance, or Colorwise if you just want a quick color type answer.",
       "feat0": "Analysis Types",
-      "belle0": "Makeup + Color + Face Shape (3 modes)",
+      "belle0": "11 analysis tools (color, makeup, face shape and more)",
       "comp0": "Color analysis only",
       "feat1": "Color System",
       "belle1": "12-season detailed",
@@ -3771,7 +3850,7 @@
       "feat6": "Price",
       "belle6": "Free preview · {price} one-time, no subscription",
       "comp6": "From $9.99/month",
-      "ba0": "Tek araçta üç analiz modu",
+      "ba0": "Tek uygulamada 11 analiz aracı",
       "ba1": "12-season system vs 4-season for more precision",
       "ba2": "Magazine-quality visual reports",
       "ba3": "Complete makeup look recommendations",
@@ -3780,7 +3859,7 @@
       "ca1": "Daha hızlı 4 mevsim sonucu",
       "ca2": "Simpler interface",
       "faq1Q": "Is Belle AI more accurate than Colorwise?",
-      "faq1A": "Belle AI uses a 12-season system with three analysis modes for more precise results. Colorwise uses a simpler 4-season system, which is faster but less detailed.",
+      "faq1A": "Belle AI uses a 12-season system with 11 analysis tools for more precise results. Colorwise uses a simpler 4-season system, which is faster but less detailed.",
       "faq2Q": "Which is cheaper — Belle AI or Colorwise?",
       "faq2A": "Belle AI is free to preview (3 free analyses) and the Color Kit is a one-time {price}, while Colorwise requires a subscription from $9.99/month. Belle AI is more affordable for occasional users.",
       "faq3Q": "Does Colorwise offer makeup analysis like Belle AI?",
@@ -3834,9 +3913,9 @@
     "mycoloranalysis": {
       "name": "MyColorAnalysis AI",
       "desc": "Compare Belle AI and MyColorAnalysis AI for personal color analysis. Both offer AI-powered seasonal color typing, but differ in analysis depth, additional features, and pricing model.",
-      "verdict": "Belle AI provides more comprehensive analysis with three modes and premium visual reports. MyColorAnalysis AI offers a professional review option for those who want human expert validation. Choose Belle AI for all-in-one beauty analysis with stunning reports, or MyColorAnalysis if you specifically want an expert human review.",
+      "verdict": "Belle AI provides more comprehensive analysis with 11 analysis tools and premium visual reports. MyColorAnalysis AI offers a professional review option for those who want human expert validation. Choose Belle AI for all-in-one beauty analysis with stunning reports, or MyColorAnalysis if you specifically want an expert human review.",
       "feat0": "Analysis Types",
-      "belle0": "Color + Makeup + Face Shape (3 modes)",
+      "belle0": "11 analysis tools (color, makeup, face shape and more)",
       "comp0": "Color analysis only",
       "feat1": "Color System",
       "belle1": "12-season",
@@ -3862,7 +3941,7 @@
       "feat8": "Price",
       "belle8": "Free preview · {price} one-time, no subscription",
       "comp8": "Free AI / $39 expert",
-      "ba0": "Tek araçta üç analiz modu (renk + makyaj + yüz şekli)",
+      "ba0": "Tek uygulamada 11 analiz aracı (renk, makyaj, yüz şekli ve daha fazlası)",
       "ba1": "Magazine-quality visual reports designed for sharing",
       "ba2": "Comprehensive makeup looks with detailed product guidance",
       "ba3": "2K/4K high-resolution output",
@@ -3871,7 +3950,7 @@
       "ca1": "Quiz-based alternative (no photo needed)",
       "ca2": "Longer market presence",
       "faq1Q": "How does Belle AI compare to MyColorAnalysis AI?",
-      "faq1A": "Belle AI offers three analysis modes with magazine-quality visual reports. MyColorAnalysis AI focuses on color analysis with an optional $39 expert review for human validation.",
+      "faq1A": "Belle AI offers 11 analysis tools with magazine-quality visual reports. MyColorAnalysis AI focuses on color analysis with an optional $39 expert review for human validation.",
       "faq2Q": "Does MyColorAnalysis AI offer makeup analysis?",
       "faq2A": "MyColorAnalysis AI provides basic shade suggestions only. Belle AI includes complete makeup looks with detailed eye, lip, and blush recommendations.",
       "faq3Q": "Which is better value — Belle AI or MyColorAnalysis AI?",
@@ -3880,7 +3959,7 @@
     "color-analysis-app": {
       "name": "Color Analysis App",
       "desc": "Compare Belle AI and Color-Analysis.app for finding your seasonal color type. Both use AI technology, but they differ in analysis scope, report quality, and additional features.",
-      "verdict": "Belle AI excels in analysis depth and report quality — offering three analysis modes with magazine-grade visual output. Color-Analysis.app is the better choice if you want completely free unlimited access or prefer a quiz-based approach. For the most comprehensive beauty guidance and shareable reports, Belle AI delivers more value.",
+      "verdict": "Belle AI excels in analysis depth and report quality — offering 11 analysis tools with magazine-grade visual output. Color-Analysis.app is the better choice if you want completely free unlimited access or prefer a quiz-based approach. For the most comprehensive beauty guidance and shareable reports, Belle AI delivers more value.",
       "feat0": "Analysis Types",
       "belle0": "Color + Makeup + Face Shape",
       "comp0": "Color analysis only",
@@ -3905,7 +3984,7 @@
       "feat7": "Price",
       "belle7": "Free preview · {price} one-time, no subscription",
       "comp7": "Free",
-      "ba0": "Three comprehensive analysis modes",
+      "ba0": "11 analysis tools in one app",
       "ba1": "Visual magazine-quality reports",
       "ba2": "Complete makeup look recommendations",
       "ba3": "Face shape and hairstyle analysis",
@@ -3950,7 +4029,7 @@
       "feat7": "Price",
       "belle7": "Free preview · {price} one-time, no subscription",
       "comp7": "Free basic / paid detailed",
-      "ba0": "Three analysis modes in one tool",
+      "ba0": "11 analysis tools in one app",
       "ba1": "Magazine-quality visual reports",
       "ba2": "Complete makeup look recommendations",
       "ba3": "Face shape and hairstyle analysis",
@@ -3963,7 +4042,7 @@
       "faq2Q": "Does Palette Hunt offer makeup recommendations?",
       "faq2A": "Palette Hunt provides basic makeup suggestions. Belle AI includes detailed makeup looks with complete eye, lip, and blush guidance.",
       "faq3Q": "Which is better for a quick free color check?",
-      "faq3A": "Palette Hunt offers more free colors without payment. Belle AI provides 3 free analyses with comprehensive magazine-quality reports."
+      "faq3A": "Palette Hunt offers more free colors without payment. Belle AI gives you 3 free analyses as previews; the full magazine-quality report comes with the one-time Color Kit."
     }
   },
   "lookbook": {
@@ -4666,6 +4745,7 @@
     "changeSeason": "Değiştir",
     "takePhoto": "Fotoğraf çek",
     "choosePhoto": "Galeriden seç",
+    "uploadPhoto": "Fotoğraf yükle",
     "tip": "Ürünü tek başına, gün ışığında ve rengi kareyi dolduracak şekilde çekin.",
     "scanning": "Renkler okunuyor…",
     "quota": "Bugün {limit} taramadan {remaining} hakkınız kaldı",
@@ -4719,7 +4799,119 @@
     "errInvalid": "Bu görsel okunamadı. JPG veya PNG bir fotoğraf deneyin.",
     "errTooLarge": "Bu görsel çok büyük. Daha küçük bir fotoğraf deneyin.",
     "disclaimer": "Renkler bir fotoğraftan tahmin edilir ve ışığa göre değişir. Bunu kural değil, rehber olarak kullanın.",
-    "privacy": "Fotoğraflar bellekte analiz edilir ve asla kaydedilmez."
+    "privacy": "Taranan fotoğraflar bellekte analiz edilir ve asla kaydedilmez.",
+    "privacyPhone": "Telefondan gönderilen fotoğraflar, bu sayfaya ulaşabilmesi için önce yüklenir."
+  },
+  "scanPage": {
+    "howTitle": "Tarama nasıl çalışır?",
+    "how1Title": "Mevsiminizi seçin",
+    "how1": "Renk analizinizden çıkan 12 mevsimden birini kullanın ya da kendiniz seçin. Henüz emin değil misiniz? Yaklaşık bir dakikada ücretsiz öğrenebilirsiniz.",
+    "how2Title": "Ürünün fotoğrafını çekin",
+    "how2": "Bir kıyafetin, aksesuarın ya da makyaj ürününün fotoğrafını çekin veya yükleyin. Ürün tek başına, gün ışığında ve rengi kareyi doldururken en iyi sonucu verir.",
+    "how3Title": "Kararı görün",
+    "how3": "Ürünün çok yakıştığını, dikkatli kullanılması gerektiğini ya da sizin renginiz olmadığını; nedenleri, bulunan renkleri ve paletinizden onun yerine seçebileceğiniz tonlarla birlikte görürsünüz.",
+    "verdictTitle": "Karar ne anlama gelir?",
+    "tipsTitle": "Güvenilir tarama için ipuçları",
+    "tip1": "Gün ışığında çekin. Kapalı alanlardaki sıcak ışık ve mağaza aydınlatması renkleri en çok değiştirir.",
+    "tip2": "Her seferinde tek ürün çekin, sade bir arka planda ve rengi kareyi dolduracak şekilde.",
+    "tip3": "Filtre ve flaş kullanmayın, kendi gölgenizin ürünün üzerine düşmesini önleyin.",
+    "tip4": "Desenli ve çizgili ürünlerde ana renkler değerlendirilir; deseni yüzünüzün yanında nasıl durduğuna da bakın.",
+    "faqTitle": "Almadan Önce Tara: sık sorulan sorular",
+    "faq1Q": "Tarama bir ürünün bana yakışıp yakışmadığını nasıl anlıyor?",
+    "faq1A": "Fotoğrafınızdan ürünün ana renklerini okur; sıcaklık, açıklık ve yoğunluklarını 12 mevsimden size ait paletle ve kaçınmanız gereken renklerle karşılaştırır. Bir eşleşme puanı, sade bir dille karar ve nedenleri görürsünüz; çok uygun değilse paletinizden onun yerine seçebileceğiniz tonlar da gösterilir. Bu, bir fotoğraftan yapılan yapay zekâ tahminidir, ölçüm değildir.",
+    "faq2Q": "Önce renk mevsimimi bilmem gerekiyor mu?",
+    "faq2A": "Evet. Tarama ürünü mevsiminizle karşılaştırdığı için bir mevsim seçmenizi ister. Bu tarayıcıda daha önce renk analizi yaptıysanız otomatik doldurulur. Mevsiminizi henüz bilmiyorsanız ücretsiz renk analizi tek bir selfie ile bulur.",
+    "faq3Q": "Sadece kıyafetlerde mi çalışır, makyaj ve aksesuarlarda da çalışır mı?",
+    "faq3A": "Kıyafetlerde, aksesuarlarda ve ruj, allık, far gibi makyaj ürünlerinde çalışır. Düz renkli ürünler en net sonucu verir; desenli ve çizgili ürünlerde ana renkler değerlendirilir, bu yüzden deseni yüzünüzün yanında nasıl durduğuna da bakın.",
+    "faq4Q": "Taranan renk neden gerçek üründen farklı olabilir?",
+    "faq4A": "Fotoğraf renkleri değiştirir: ışık, kamera ve filtreler renkleri kaydırır, en çok da kapalı alanlardaki sıcak ışık. Tarama ışığın rengi bozduğundan şüphelenirse sizi uyarır. Daha güvenilir sonuç için gün ışığında yeniden çekin ve kararı bir kural değil, bir rehber olarak görün.",
+    "faq5Q": "Ücretsiz mi, fotoğraflarım kaydediliyor mu?",
+    "faq5A": "Günde {free} ücretsiz tarama hakkınız var; Renk Seti ile bu limit günde {pack} olur. Taranan fotoğraflar bellekte analiz edilir ve asla kaydedilmez. İki istisna vardır: Telefondan bilgisayara gönderdiğiniz fotoğraf sayfaya ulaşabilmesi için önce yüklenir; isteğe bağlı deneme önizlemesi (1 kredi) ise fotoğrafınızı ve ürünün fotoğrafını yükleyip geçmişinizde saklar."
+  },
+  "featureWhy": {
+    "color": {
+      "hero": "Sizi parlatan renkleri bulun ve size yakışmayan renklere para harcamayı bırakın.",
+      "title": "Size yakışmayan renkleri almayı bırakın",
+      "w1": "Bazı renkler sizi ışıl ışıl, bazıları yorgun gösterir ve bunu gözle ayırt etmek zordur.",
+      "w2": "Paletinizi bilmeyince kıyafet ve makyaj pahalı bir deneme yanılmaya dönüşür.",
+      "w3": "Belle tek bir selfie'den renk mevsiminizi bulur ve alışveriş ile kombin için bir palet verir."
+    },
+    "makeup": {
+      "hero": "Bir sonraki ürünü almadan önce yüzünüze hangi tonların ve görünümlerin yakıştığını öğrenin.",
+      "title": "Herkes için değil, yüzünüz için seçilmiş makyaj",
+      "w1": "Bir mankende mükemmel duran ton, sizde yanlış görünebilir.",
+      "w2": "Genel makyaj anlatımları alt tonunuzu hesaba katmaz ve ürünler çekmecede unutulur.",
+      "w3": "Belle, makyajsız tek bir fotoğraftan, kesin tonlarla üç eksiksiz görünümü kendi yüzünüzün üzerinde çizer."
+    },
+    "face": {
+      "hero": "Kuaföre gitmeden önce yüz şeklinize yakışan saç modellerini kendi fotoğrafınızda görün.",
+      "title": "Güzel bir saç kesimi yüz şeklinizi bilmekle başlar",
+      "w1": "Başkasında harika duran bir kesim, yüzünüzü daha geniş, uzun veya ağır gösterebilir.",
+      "w2": "Saç geri alınması zor bir şeydir: yanlış kesim aylarca uzar.",
+      "w3": "Belle yüz şeklinizi bulur ve kendi fotoğrafınıza dört saç modeli çizer, her biri için bir gerekçeyle."
+    },
+    "hair": {
+      "hero": "Kuaför randevusu almadan önce cildinize hangi saç renklerinin yakıştığını, hangilerinden kaçınmanız gerektiğini kendi fotoğrafınızda görün.",
+      "title": "Saç rengini saçınıza sürmeden önce deneyin",
+      "w1": "Aynı ton birinde ışıl ışıl, bir başkasında solgun görünebilir.",
+      "w2": "Size yakışmayan bir rengi düzeltmek zaman ve para harcatır.",
+      "w3": "Belle tonları renk mevsiminize göre seçer ve kendi fotoğrafınızda dördünü gösterir: en iyisi, iki iyi seçenek ve atlamanız gereken bir ton."
+    },
+    "glasses": {
+      "hero": "Sipariş vermeden önce hangi çerçevelerin size yakıştığını kendi fotoğrafınızda görün.",
+      "title": "Yalnızca zevkinize değil, yüzünüze de uyan çerçeveler bulun",
+      "w1": "Çerçeve gün boyu yüzünüzün ortasındadır ve yanlış şekil göze çarpar.",
+      "w2": "Mağazada onlarca çerçeve denemek ya da internetten gözü kapalı sipariş vermek zaman kaybettirir.",
+      "w3": "Belle yüz şeklinize ve renk mevsiminize göre altı çerçeve seçer: dördü size yakışan, ikisi kaçınılacak olanlar; hepsi fotoğrafınızda."
+    },
+    "jewelry": {
+      "hero": "Bir sonraki takıyı almadan önce size yakışan metalleri ve küpe stillerini bulun.",
+      "title": "Doğru metal cildi parlatır, yanlış metal soluklaştırır",
+      "w1": "Altın, gümüş ya da roze altın: biri alt tonunuza yakışır, bir diğeri sizi donuk gösterebilir.",
+      "w2": "Takıyı tahminle almak, kutuda kalan parçalar demektir.",
+      "w3": "Belle alt tonunuzu ve yüz şeklinizi okur, en iyi metalinizi ve üç küpe stilini kendi fotoğrafınızda gösterir."
+    },
+    "outfit": {
+      "hero": "Hangi kıyafet renklerinin yüzünüzü aydınlattığını, hangilerinin soldurduğunu kendi fotoğrafınızda görün.",
+      "title": "Sizi yorgun değil, dinç gösteren renkler giyin",
+      "w1": "Bazı kıyafet renkleri yüzünüzü aydınlatır, bazıları iyi uyusanız bile sizi yorgun gösterir.",
+      "w2": "Paletiniz yoksa gardırop hiç giyilmeyen parçalarla dolar.",
+      "w3": "Belle yalnızca en iyi renklerinizle üç kombin oluşturur: günlük, randevu ve iş; hepsi sizin üzerinizde çizilir."
+    },
+    "occasion": {
+      "hero": "Davet türünü seçin ve kendi yüzünüzde üç eksiksiz makyaj görünümü görün.",
+      "title": "Her davete uygun doğru görünüm",
+      "w1": "Ofis makyajı akşam davetinde yadırganır, parti makyajı ise mülakat için fazla gelir.",
+      "w2": "Yeni bir görünümü ilk kez o gün denemek bir kumardır.",
+      "w3": "Daveti seçin, Belle fotoğrafınıza üç eksiksiz görünüm çizsin; her birinde bir stilist ipucu da var."
+    },
+    "glow": {
+      "hero": "En iyi halinizi dört küçük değişiklikle görün; önce ve sonra kendi fotoğrafınızda.",
+      "title": "Neyi değiştireceğinizi ve neye dokunmayacağınızı bilin",
+      "w1": "Değişim tavsiyeleri bunaltıcıdır ve her şeyi değiştirmek kendinize benzememenize yol açabilir.",
+      "w2": "Bir ipucu listesine, sonucu görene kadar güvenmek zordur.",
+      "w3": "Belle saç rengi, makyaj, üst ve aksesuarda dört küçük değişiklik önerir, ardından önce ve sonrayı gösterir."
+    },
+    "persona": {
+      "hero": "Size en çok benzeyen stili bulun ve kendi fotoğrafınıza çizilmiş üç günlük görünümü görün.",
+      "title": "Stilinize bir isim verin",
+      "w1": "Trendler neyin moda olduğunu söyler, size neyin yakıştığını değil.",
+      "w2": "Net bir stil olmadan alışveriş, birbiriyle uyuşmayan anlık alımlara dönüşür.",
+      "w3": "Belle size bir stil adı, dört anahtar kelime, üç günlük görünüm ve alışverişte kullanacağınız tek satırlık bir formül verir."
+    },
+    "celebrity": {
+      "hero": "Sizinle aynı renk yapısını paylaşan ünlüleri bulun ve onlara en çok yakışan renkleri ödünç alın.",
+      "title": "Renk yapınızı kimlerin paylaştığını bulun",
+      "w1": "“Hangi ünlüye benziyorum?” yüz hatlarına dayanan bir tahmindir ve ne giymeniz gerektiğini söylemez.",
+      "w2": "Renk yapısına göre eşleşmek size kullanabileceğiniz bir şey verir: renkler, makyaj tonları ve saç renkleri.",
+      "w3": "Belle 12 mevsimlik türünüzü bulur ve genellikle aynı mevsimde sayılan ünlüleri en iyi renkleriyle gösterir."
+    },
+    "scan": {
+      "title": "Satın almadan önce neden taramalı?",
+      "w1": "Askıda harika görünen bir renk, yüzünüzün yanına geldiğinde donuk ya da yorgun görünebilir.",
+      "w2": "Mağazada gözle seçmek; iadeler, anlık alışverişler ve “neredeyse doğru” parçalarla dolu bir gardırop demektir.",
+      "w3": "Ürünün fotoğrafını çekin; Belle renklerini mevsim paletinizle karşılaştırır: saniyeler içinde net bir karar ve onun yerine seçebileceğiniz tonlar."
+    }
   },
   "featureIncludes": {
     "noteLens": "Yazılı analiz ücretsizdir. Sonuç fotoğraflarının tüm seti 1 kredi tutar, ilk fotoğrafınız ücretsizdir.",

@@ -1,8 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { FeatureHero } from "@/components/FeatureHero";
-import { FunnelLink } from "@/components/FunnelLink";
-import { sampleHref } from "@/lib/blogTools";
 import { SITE_URL } from "@/lib/constants";
 import {
   buildAlternates,
@@ -24,6 +22,7 @@ import { COMPARISON_SLUGS } from "@/lib/season-compare-data";
 import { getPostBySlug } from "@/lib/blog";
 import { PaletteCardImage } from "@/components/PaletteCardImage";
 import type { Metadata } from "next";
+import { FeatureCta, FeatureHeroActions, getFeatureCtaCopy } from "@/components/FeatureCta";
 
 /**
  * 专题页内容的真实最近更新日期（页面可见 + Article schema 的 dateModified 共用）。
@@ -74,6 +73,7 @@ export default async function ColorAnalysisPillarPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const cta = await getFeatureCtaCopy(locale, "color_analysis");
   const t = await getTranslations({ locale, namespace: "colorGuide" });
   const tp = await getTranslations({ locale, namespace: "tryPage" });
   const sd = await getTranslations({ locale, namespace: "sd" });
@@ -195,19 +195,9 @@ export default async function ColorAnalysisPillarPage({
       {/* Hero：左文右图（真实示例报告），按钮和以前一致 */}
       <FeatureHero
         title={t("heroTitle")}
-        description={t("heroDesc")}
         image="/images/examples/report_color_analysis.webp"
         sampleLabel={tp("demoBadge")}
-        actions={
-          <>
-            <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
-              {t("tryFreeAI")}
-            </Link>
-            <FunnelLink href={sampleHref("color_analysis")} from="feature" tool="color_analysis" kind="sample" className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted">
-              {tp("trySample")}
-            </FunnelLink>
-          </>
-        }
+        actions={<FeatureHeroActions tool="color_analysis" copy={cta} />}
       />
 
       {/* 一句话定义：搜索「color analysis」的人首屏就能拿到答案，也是精选摘要的候选段落 */}
@@ -304,14 +294,8 @@ export default async function ColorAnalysisPillarPage({
           </div>
         </section>
 
-        {/* Mid CTA */}
-        <section className="my-4 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
-          <h3 className="text-xl font-bold">{t("midCtaTitle")}</h3>
-          <p className="mt-2 text-muted-foreground">{t("midCtaDesc")}</p>
-          <Link href="/try?type=color_analysis" className="mt-4 inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
-            {t("tryFreeAI")}
-          </Link>
-        </section>
+        {/* Mid CTA：和功能页同一张成品示例卡 */}
+        <FeatureCta tool="color_analysis" copy={cta} from="color_guide_mid" className="my-4" />
 
         {/* 12-Season */}
         <section id="12-season" className="scroll-mt-20 border-t border-border py-16">
@@ -439,7 +423,6 @@ export default async function ColorAnalysisPillarPage({
         {/* Further Reading */}
         <section className="border-t border-border py-16">
           <h2 className="text-3xl font-bold">{t("furtherReadingTitle")}</h2>
-          <p className="mt-4 text-muted-foreground">{t("furtherReadingDesc")}</p>
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
             {blogSlugs.map((slug, i) => (
               <Link key={slug} href={`/blog/${slug}`} className="rounded-lg border border-border px-4 py-3 text-sm transition hover:border-primary/40 hover:bg-muted">
@@ -470,12 +453,10 @@ export default async function ColorAnalysisPillarPage({
         {/* More Guides */}
         <section className="border-t border-border py-16">
           <h2 className="text-3xl font-bold">{t("moreGuidesTitle")}</h2>
-          <p className="mt-4 text-muted-foreground">{t("moreGuidesDesc")}</p>
 
           <div className="mt-10 space-y-10">
             <div>
               <h3 className="text-xl font-semibold">{t("faceShapesTitle")}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{t("faceShapesDesc")}</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {FACE_SHAPE_SLUGS.map((slug) => (
                   <Link
@@ -491,7 +472,6 @@ export default async function ColorAnalysisPillarPage({
 
             <div>
               <h3 className="text-xl font-semibold">{t("celebrityMatchesTitle")}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{t("celebrityMatchesDesc")}</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {CELEBRITY_SLUGS.slice(0, 9).map((slug) => (
                   <Link
@@ -507,7 +487,6 @@ export default async function ColorAnalysisPillarPage({
 
             <div>
               <h3 className="text-xl font-semibold">{t("seasonComparisonsTitle")}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{t("seasonComparisonsDesc")}</p>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
                 {COMPARISON_SLUGS.slice(0, 8).map((slug) => {
                   // 季型名取当前语言的 sd.<slug>.name,查不到才退回英文标题
@@ -538,18 +517,7 @@ export default async function ColorAnalysisPillarPage({
         </section>
 
         {/* Bottom CTA */}
-        <section className="mb-16 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
-          <h2 className="text-2xl font-bold">{t("bottomCtaTitle")}</h2>
-          <p className="mt-2 text-muted-foreground">{t("bottomCtaDesc")}</p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
-              {t("startFreeAnalysis")}
-            </Link>
-            <FunnelLink href={sampleHref("color_analysis")} from="feature" tool="color_analysis" kind="sample" className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted">
-              {tp("trySample")}
-            </FunnelLink>
-          </div>
-        </section>
+        <FeatureCta variant="band" tool="color_analysis" copy={cta} from="color_guide_end" className="mb-16" />
       </div>
     </>
   );

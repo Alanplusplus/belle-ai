@@ -9,6 +9,7 @@ import { ResultCta } from "@/components/ResultCta";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
 import { GUIDE_TOPICS, GUIDE_SLUGS } from "@/lib/guide-data";
+import type { ToolType } from "@/lib/blogTools";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -72,6 +73,13 @@ export default async function GuideTopicPage({
   );
 }
 
+/** 每个指南主题最贴近的工具：CTA 直达它，而不是一律落到色彩分析 */
+const GUIDE_TOOL: Record<string, ToolType> = {
+  "12-season-color-cheat-sheet": "color_analysis",
+  "face-shape-glasses-guide": "glasses_match",
+  "skin-tone-hair-color-guide": "hair_preview",
+};
+
 const SEASON_LABEL_TO_SLUG: Record<string, string> = {
   "Light Spring": "light-spring", "Warm Spring": "warm-spring", "Bright Spring": "bright-spring",
   "Light Summer": "light-summer", "Cool Summer": "cool-summer", "Soft Summer": "soft-summer",
@@ -86,6 +94,7 @@ function GuideTopicContent({ slug }: { slug: string }) {
 
   const data = GUIDE_TOPICS.find((g) => g.slug === slug)!;
   const otherGuides = GUIDE_TOPICS.filter((g) => g.slug !== slug);
+  const tool = GUIDE_TOOL[slug] ?? "color_analysis";
 
   return (
     <>
@@ -97,13 +106,11 @@ function GuideTopicContent({ slug }: { slug: string }) {
           </Link>
         }
         title={t.has(`guide_${data.i18nKey}_name`) ? t(`guide_${data.i18nKey}_name`) : data.name}
-        subtitle={t.has(`guide_${data.i18nKey}_tagline`) ? t(`guide_${data.i18nKey}_tagline`) : data.tagline}
-        description={t.has(`guide_${data.i18nKey}_desc`) ? t(`guide_${data.i18nKey}_desc`) : data.description}
       />
       <SectionNav />
 
       <div className="content-page mx-auto max-w-4xl px-4">
-        <ResultCta type="color_analysis" from="guide" className="mt-8" />
+        <ResultCta type={tool} from="guide" className="mt-8" />
 
         {/* Sections */}
         {data.sections.map((section, idx) => (
@@ -148,19 +155,7 @@ function GuideTopicContent({ slug }: { slug: string }) {
           </section>
         ))}
 
-        {/* CTA */}
-        <section className="my-6 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
-          <h2 className="text-xl font-bold">{t("ctaTitle")}</h2>
-          <p className="mt-2 text-muted-foreground">{t("ctaDesc")}</p>
-          <div className="mt-6">
-            <Link
-              href="/try?type=color_analysis"
-              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {t("getAnalysis")}
-            </Link>
-          </div>
-        </section>
+        <ResultCta type={tool} from="guide" variant="band" />
 
         {/* Related Articles */}
         <section className="border-t border-border py-12">
@@ -262,7 +257,6 @@ function GuideItemText({ t, sdRoot, guideKey, sIdx, iIdx, item }: {
 }
 
 function guideImageAspect(src: string): string {
-  if (src.includes("season_")) return "aspect-[4/3]";
-  if (src.includes("dim_hair_")) return "aspect-square";
+  if (src.includes("season_") || src.includes("guide_hair_")) return "aspect-[4/3]";
   return "aspect-[16/9]";
 }

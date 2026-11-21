@@ -32,15 +32,15 @@ export function QuizCta({
 }) {
   const t = useTranslations("quiz");
   const e = useTranslations("embed");
+  const b = useTranslations("blog");
   const locale = useLocale();
   const type = TRY_TYPE[quiz];
 
   return (
     <div className="mt-8 rounded-2xl border border-primary/30 bg-primary/5 p-6 text-center">
       <h3 className="text-lg font-bold">{embedded ? e("ctaTitle") : t("wantMoreAccurate")}</h3>
-      <p className="mt-2 text-sm text-muted-foreground">
-        {embedded ? e("ctaDesc") : t("wantMoreAccurateDesc")}
-      </p>
+      {/* 站内版只留标题和按钮：标题已经说明了用途，不再补一句铺垫 */}
+      {embedded && <p className="mt-2 text-sm text-muted-foreground">{e("ctaDesc")}</p>}
       {embedded ? (
         <a
           href={embedOutboundUrl(locale, "/try", quiz, { type })}
@@ -53,7 +53,7 @@ export function QuizCta({
         </a>
       ) : (
         <Link href={`/try?type=${type}`} onClick={onClick} className={BUTTON_CLASS}>
-          {t("tryAiAnalysis")}
+          {b(`cta.${type}.button`)} →
         </Link>
       )}
     </div>

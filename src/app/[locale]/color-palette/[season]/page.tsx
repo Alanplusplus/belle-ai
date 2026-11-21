@@ -7,9 +7,8 @@ import { buildAlternates, buildBreadcrumbJsonLd, canonicalUrl, ogLocale } from "
 import { localizedPageSeo } from "@/lib/untranslated";
 import { PaletteCardDownload, PaletteCardImage, PaletteCardLarge } from "@/components/PaletteCardImage";
 import { PageHero } from "@/components/PageHero";
-import { FunnelLink } from "@/components/FunnelLink";
+import { FeatureHeroActions, useFeatureCtaCopy } from "@/components/FeatureCta";
 import { ResultCta } from "@/components/ResultCta";
-import { sampleHref } from "@/lib/blogTools";
 import { SectionNav } from "@/components/SectionNav";
 import { ParentArchTrio, SeasonPhotoCollage } from "@/components/SeasonHeroVisuals";
 import { ColorTextList } from "@/components/ColorTextList";
@@ -159,9 +158,9 @@ export default async function SeasonPalettePage({
 }
 
 function SeasonPaletteContent({ slug }: { slug: string }) {
+  const cta = useFeatureCtaCopy("color_analysis");
   const t = useTranslations("seasonPalette");
   const sd = useTranslations(`sd.${slug}`);
-  const tp = useTranslations("tryPage");
   const bt = useTranslations("blogTitles");
   const ph = useTranslations("paletteHub");
 
@@ -237,16 +236,7 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
         title={displayName}
         subtitle={sd("tagline")}
         description={sd("desc")}
-        actions={
-          <>
-            <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-7 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
-              {t("getMyAnalysis")}
-            </Link>
-            <FunnelLink href={sampleHref("color_analysis", slug)} from="palette" tool="color_analysis" kind="sample" className="rounded-full border-2 border-primary/70 bg-white/70 px-7 py-[10px] font-semibold text-primary-dark transition hover:border-primary hover:bg-primary/10">
-              {tp("trySample")}
-            </FunnelLink>
-          </>
-        }
+        actions={<FeatureHeroActions tool="color_analysis" copy={cta} season={slug} from="palette" />}
         visual={<SeasonPhotoCollage slug={slug} faceAlt={ph("photoAlt", { season: displayName })} />}
       />
       <SectionNav />
@@ -268,7 +258,6 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
         {/* 色板：用 PNG 卡片展示，不再由浏览器用 CSS 画色块。颜色名和色值保留为纯文本（可复制、可被搜索引擎读到） */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">{t("bestColors", { season: displayName })}</h2>
-          <p className="mt-2 text-sm text-muted-foreground">{t("bestColorsDesc")}</p>
 
           <div className="mt-8 grid items-start gap-8 md:grid-cols-[minmax(0,26rem)_1fr]">
             <PaletteCardLarge slug={slug} alt={ph("cardAlt", { season: displayName })} priority />
@@ -278,13 +267,11 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
 
               <div>
                 <h3 className="text-lg font-semibold">{t("neutrals", { season: displayName })}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{t("neutralsDesc")}</p>
                 <ColorTextList colors={neutrals} />
               </div>
 
               <div>
                 <h3 className="text-lg font-semibold">{t("avoidColors", { season: displayName })}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{t("avoidColorsDesc")}</p>
                 <ColorTextList colors={avoidColors} />
               </div>
 
@@ -294,7 +281,7 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
         </section>
 
         {/* 看完通用色板后的转化点：这是「这个季型」的色板，你自己的那份报告长这样 */}
-        <ResultCta type="color_analysis" from="palette" className="my-2" />
+        <ResultCta type="color_analysis" from="palette" season={slug} className="my-2" />
 
         {/* Makeup */}
         <section className="border-t border-border py-12">
@@ -359,7 +346,6 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
         {/* Celebrities */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">{t("celebrityTitle", { season: displayName })}</h2>
-          <p className="mt-4 text-muted-foreground">{t("celebrityDesc", { season: displayName })}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             {data.celebrities.map((c) => (
               <span key={c} className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium">{c}</span>
@@ -380,19 +366,7 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="my-6 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
-          <h2 className="text-xl font-bold">{t("ctaTitle", { season: displayName })}</h2>
-          <p className="mt-2 text-muted-foreground">{t("ctaDesc")}</p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
-              {t("getMyAnalysis")}
-            </Link>
-            <FunnelLink href={sampleHref("color_analysis", slug)} from="palette" tool="color_analysis" kind="sample" className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted">
-              {tp("trySample")}
-            </FunnelLink>
-          </div>
-        </section>
+        <ResultCta type="color_analysis" from="palette" season={slug} variant="band" />
 
         {/* Siblings */}
         <section className="border-t border-border py-12">
@@ -441,9 +415,9 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
 }
 
 function ParentSeasonContent({ parent }: { parent: string }) {
+  const cta = useFeatureCtaCopy("color_analysis");
   const t = useTranslations("seasonHub");
   const sh = useTranslations(`sh.${parent}`);
-  const tp = useTranslations("tryPage");
   const bt = useTranslations("blogTitles");
   const ph = useTranslations("paletteHub");
   const st = useTranslations("seasonPalette");
@@ -487,16 +461,7 @@ function ParentSeasonContent({ parent }: { parent: string }) {
         crumb={<Link href="/color-analysis" className="hover:underline">{t("backToGuide")}</Link>}
         title={t("subtitle", { season: label })}
         description={sh("heroDesc")}
-        actions={
-          <>
-            <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-7 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
-              {t("getAnalysis")}
-            </Link>
-            <FunnelLink href={sampleHref("color_analysis", parent)} from="palette" tool="color_analysis" kind="sample" className="rounded-full border-2 border-primary/70 bg-white/70 px-7 py-[10px] font-semibold text-primary-dark transition hover:border-primary hover:bg-primary/10">
-              {tp("trySample")}
-            </FunnelLink>
-          </>
-        }
+        actions={<FeatureHeroActions tool="color_analysis" copy={cta} season={parent} from="palette" />}
         visual={<ParentArchTrio slugs={subSeasons.map((x) => x.slug)} />}
       />
       <SectionNav />
@@ -518,7 +483,6 @@ function ParentSeasonContent({ parent }: { parent: string }) {
         {/* Signature Colors */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">{t("signatureColors", { season: label })}</h2>
-          <p className="mt-2 text-sm text-muted-foreground">{t("signatureDesc", { season: label })}</p>
           <div className="mt-8 grid items-start gap-8 md:grid-cols-[minmax(0,26rem)_1fr]">
             <PaletteCardLarge slug={parent} alt={ph("cardAltParent", { season: parentName })} priority />
 
@@ -529,12 +493,11 @@ function ParentSeasonContent({ parent }: { parent: string }) {
           </div>
         </section>
 
-        <ResultCta type="color_analysis" from="palette" className="my-2" />
+        <ResultCta type="color_analysis" from="palette" season={parent} className="my-2" />
 
         {/* Sub-Seasons */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">{t("subSeasons", { season: label })}</h2>
-          <p className="mt-2 text-sm text-muted-foreground">{t("subSeasonsDesc", { season: label })}</p>
           <div className="mt-6 grid gap-6 sm:grid-cols-3">
             {subSeasons.map((sub) => {
               const SubCard = () => {
@@ -549,8 +512,7 @@ function ParentSeasonContent({ parent }: { parent: string }) {
                     />
                     <div className="flex flex-1 flex-col px-2 pb-2">
                       <h3 className="mt-4 text-lg font-semibold group-hover:text-primary">{sd("name")}</h3>
-                      <p className="mt-1 text-sm text-primary">{sd("tagline")}</p>
-                      <p className="mt-2 line-clamp-2 flex-1 text-sm text-muted-foreground">{sd("desc")}</p>
+                      <p className="mt-1 flex-1 text-sm text-primary">{sd("tagline")}</p>
                       <p className="mt-3 text-xs font-medium text-primary">{t("exploreSubSeason")} →</p>
                     </div>
                   </Link>
@@ -574,19 +536,7 @@ function ParentSeasonContent({ parent }: { parent: string }) {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="my-6 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
-          <h2 className="text-xl font-bold">{t("ctaTitle", { season: label })}</h2>
-          <p className="mt-2 text-muted-foreground">{t("ctaDesc")}</p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
-              {t("getAnalysis")}
-            </Link>
-            <FunnelLink href={sampleHref("color_analysis", parent)} from="palette" tool="color_analysis" kind="sample" className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted">
-              {tp("trySample")}
-            </FunnelLink>
-          </div>
-        </section>
+        <ResultCta type="color_analysis" from="palette" season={parent} variant="band" />
 
         {/* Other Seasons */}
         <section className="border-t border-border py-12">

@@ -8,7 +8,8 @@ import {
 } from "@/lib/seo";
 import type { Metadata } from "next";
 import { UndertoneTestClient } from "./UndertoneTestClient";
-import { ToolFaq, ToolIntro, ToolRelated } from "@/components/ToolPageSections";
+import { ClampedIntro } from "@/components/ClampedIntro";
+import { ToolFaq, ToolRelated } from "@/components/ToolPageSections";
 import { VideoSection } from "@/components/VideoEmbed";
 import { getVideoForTool } from "@/lib/videos";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -53,6 +54,7 @@ export default async function UndertoneTestPage({
   const nav = await getTranslations({ locale, namespace: "nav" });
   const cq = await getTranslations({ locale, namespace: "colorQuiz" });
   const quiz = await getTranslations({ locale, namespace: "quiz" });
+  const bt = await getTranslations({ locale, namespace: "blog" });
   const embed = await getTranslations({ locale, namespace: "embed" });
 
   const faqs = [
@@ -95,7 +97,7 @@ export default async function UndertoneTestPage({
     { href: "/tools/color-quiz", label: nav("colorQuiz") },
     { href: "/color-analysis", label: nav("colorAnalysisGuide") },
     { href: "/personal-color-analysis", label: nav("colorAnalysis") },
-    { href: "/try?type=color_analysis", label: nav("tryNow") },
+    { href: "/try?type=color_analysis", label: bt("cta.color_analysis.button") },
     { href: "/tools/embed", label: embed("linkLabel") },
   ];
 
@@ -107,7 +109,7 @@ export default async function UndertoneTestPage({
 
       <UndertoneTestClient />
 
-      <ToolIntro text={t("seoIntro")} />
+      <ClampedIntro text={t("seoIntro")} moreLabel={bt("readMore")} />
       {video && <VideoSection video={video} page="tool:undertone-test" contained />}
       <ToolFaq title={quiz("faqTitle")} faqs={faqs} />
       <ToolRelated title={cq("relatedTitle")} links={related} />

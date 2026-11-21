@@ -25,7 +25,6 @@ export function BlogList({
     <section className="py-20">
       <div className="mx-auto max-w-4xl px-4">
         <h1 className="text-4xl font-bold">{t("title")}</h1>
-        <p className="mt-3 text-lg text-muted-foreground">{t("subtitle")}</p>
 
         {posts.length === 0 ? (
           <p className="mt-12 text-center text-muted-foreground">Coming soon...</p>
@@ -36,18 +35,19 @@ export function BlogList({
                 key={post.slug}
                 className="group overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary/40 hover:shadow-md"
               >
-                <div className={`grid ${post.image ? "sm:grid-cols-[200px_1fr]" : ""}`}>
+                <div className={`grid ${post.image ? "sm:grid-cols-[17rem_1fr]" : ""}`}>
                   {post.image && (
+                    // 封面都是 16:9：容器固定 16:9，图片完整显示；不再按卡片高度拉伸后左右被裁掉
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="relative hidden self-stretch overflow-hidden sm:block"
+                      className="relative m-3 hidden aspect-video self-center overflow-hidden rounded-lg sm:block"
                     >
                       <Image
                         src={post.image}
                         alt={post.title}
                         fill
                         className="object-cover transition duration-300 group-hover:scale-105"
-                        sizes="200px"
+                        sizes="248px"
                         // 首屏第一张图提前加载，其余走默认懒加载
                         priority={page === 1 && index === 0}
                       />

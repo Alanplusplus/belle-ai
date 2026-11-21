@@ -7,7 +7,8 @@ import {
 } from "@/lib/seo";
 import type { Metadata } from "next";
 import { ColorQuizClient, type ParentCardTexts } from "./ColorQuizClient";
-import { ToolFaq, ToolIntro, ToolRelated } from "@/components/ToolPageSections";
+import { ClampedIntro } from "@/components/ClampedIntro";
+import { ToolFaq, ToolRelated } from "@/components/ToolPageSections";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({
@@ -48,6 +49,7 @@ export default async function ColorQuizPage({
   const t = await getTranslations({ locale, namespace: "colorQuiz" });
   const nav = await getTranslations({ locale, namespace: "nav" });
   const quiz = await getTranslations({ locale, namespace: "quiz" });
+  const bt = await getTranslations({ locale, namespace: "blog" });
   const embed = await getTranslations({ locale, namespace: "embed" });
   const ph = await getTranslations({ locale, namespace: "paletteHub" });
   const cg = await getTranslations({ locale, namespace: "colorGuide" });
@@ -100,7 +102,7 @@ export default async function ColorQuizPage({
 
       <ColorQuizClient parentCards={parentCards} />
 
-      <ToolIntro text={t("seoIntro")} />
+      <ClampedIntro text={t("seoIntro")} moreLabel={bt("readMore")} />
       <ToolFaq title={quiz("faqTitle")} faqs={faqs} />
       <ToolRelated title={t("relatedTitle")} links={related} />
     </>

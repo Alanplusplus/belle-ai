@@ -222,9 +222,6 @@ export function ColorQuizClient({
       <section className={pad}>
         <div className="mx-auto max-w-2xl px-4 text-center">
           <h1 className={h1}>{cq("title")}</h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            {cq("description")}
-          </p>
           <button
             onClick={() => setCurrentQ(0)}
             className="mt-8 rounded-full bg-primary px-8 py-3 text-base font-semibold text-white transition hover:bg-primary-dark"

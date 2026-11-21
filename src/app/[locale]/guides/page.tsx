@@ -11,6 +11,7 @@ import {
 } from "@/lib/seo";
 import { GUIDE_TOPICS } from "@/lib/guide-data";
 import type { Metadata } from "next";
+import { ResultCta } from "@/components/ResultCta";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -32,8 +33,8 @@ export async function generateMetadata({
     title,
     description,
     alternates,
-    openGraph: { title, description, type: "website", locale: ogLocale(locale), url: alternates.canonical },
-    twitter: { card: "summary_large_image", title, description },
+    openGraph: { title, description, type: "website", locale: ogLocale(locale), url: alternates.canonical, images: OG_IMAGES },
+    twitter: { card: "summary_large_image", title, description, images: TWITTER_IMAGES },
   };
 }
 
@@ -69,7 +70,6 @@ function GuidesIndexContent() {
       <section className="bg-gradient-to-b from-primary/5 to-transparent py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h1 className="font-serif text-3xl font-bold sm:text-5xl">{t("heroTitle")}</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">{t("heroDesc")}</p>
         </div>
       </section>
 
@@ -84,26 +84,13 @@ function GuidesIndexContent() {
               >
                 <h2 className="text-lg font-bold group-hover:text-primary">{t.has(`guide_${guide.i18nKey}_name`) ? t(`guide_${guide.i18nKey}_name`) : guide.name}</h2>
                 <p className="mt-1 text-sm text-primary">{t.has(`guide_${guide.i18nKey}_tagline`) ? t(`guide_${guide.i18nKey}_tagline`) : guide.tagline}</p>
-                <p className="mt-3 line-clamp-3 text-sm text-muted-foreground">{t.has(`guide_${guide.i18nKey}_desc`) ? t(`guide_${guide.i18nKey}_desc`) : guide.description}</p>
-                <p className="mt-4 text-xs font-medium text-primary">{t("sectionsCount", { count: guide.sections.length })}</p>
+                <p className="mt-3 text-xs font-medium text-primary">{t("sectionsCount", { count: guide.sections.length })}</p>
               </Link>
             ))}
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="my-6 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
-          <h2 className="text-xl font-bold">{t("ctaTitle")}</h2>
-          <p className="mt-2 text-muted-foreground">{t("ctaDesc")}</p>
-          <div className="mt-6">
-            <Link
-              href="/try?type=color_analysis"
-              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {t("getAnalysis")}
-            </Link>
-          </div>
-        </section>
+        <ResultCta type="color_analysis" from="guide" variant="band" />
       </div>
     </>
   );

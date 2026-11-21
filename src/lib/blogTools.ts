@@ -18,6 +18,25 @@ export type ToolType =
   | "style_personality"
   | "celebrity_match";
 
+const TOOL_TYPES: readonly string[] = [
+  "color_analysis",
+  "makeup",
+  "face_shape",
+  "hair_preview",
+  "outfit_color",
+  "glasses_match",
+  "occasion_makeup",
+  "jewelry_guide",
+  "glow_up_report",
+  "style_personality",
+  "celebrity_match",
+];
+
+/** 分享页等处拿到的是后端返回的字符串类型，先判断是不是这 11 个工具之一再去取对应文案 */
+export function isToolType(value: string): value is ToolType {
+  return TOOL_TYPES.includes(value);
+}
+
 /** 顺序即优先级：越具体的越靠前（例如 occasion-makeup 要先于 makeup，face-shape-hairstyle 要先于 hair） */
 const SLUG_RULES: Array<[RegExp, ToolType]> = [
   [/glasses|sunglasses|frames/, "glasses_match"],

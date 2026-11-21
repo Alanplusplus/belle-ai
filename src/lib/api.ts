@@ -132,26 +132,37 @@ function uploadTimeoutMs(payloadChars: number): number {
  * 以前 res.json() 会抛 SyntaxError 被当成网络错误白白重试 3 次，现在直接按状态码返回、不重试。
  */
 export async function uploadImage(base64Data: string): Promise<ApiResponse<{ url: string }>> {
+  return postImageWithRetry<{ url: string }>("/common/v1/web/upload", {
+    imageBase64: base64Data,
+    fileType: "jpg",
+  });
+}
+
+/** 超时 + 重试的图片 POST（直连后端，不经 Next 代理）：uploadImage 和手机接力上传共用 */
+async function postImageWithRetry<T>(
+  path: string,
+  payload: { imageBase64: string } & Record<string, unknown>,
+): Promise<ApiResponse<T>> {
   let lastError: unknown = null;
-  const timeoutMs = uploadTimeoutMs(base64Data.length);
+  const timeoutMs = uploadTimeoutMs(payload.imageBase64.length);
 
   for (let attempt = 1; attempt <= UPLOAD_MAX_ATTEMPTS; attempt++) {
     const isLastAttempt = attempt === UPLOAD_MAX_ATTEMPTS;
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), timeoutMs);
     try {
-      const res = await fetch(`${DIRECT_API_BASE}/common/v1/web/upload`, {
+      const res = await fetch(`${DIRECT_API_BASE}${path}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ imageBase64: base64Data, fileType: "jpg" }),
+        body: JSON.stringify(payload),
         signal: controller.signal,
       });
 
       if (res.status === 413) return { code: 413, message: "payload_too_large" };
 
-      let json: ApiResponse<{ url: string }> | null = null;
+      let json: ApiResponse<T> | null = null;
       try {
-        json = (await res.json()) as ApiResponse<{ url: string }>;
+        json = (await res.json()) as ApiResponse<T>;
       } catch {
         json = null;
       }
@@ -177,6 +188,33 @@ export async function uploadImage(base64Data: string): Promise<ApiResponse<{ url
   }
 
   throw lastError instanceof Error ? lastError : new Error("upload_failed");
+}
+
+/**
+ * 手机接力：电脑端（已有账号）创建一个 10 分钟的接力会话，拿到令牌；
+ * 手机扫码打开 /handoff/{token} 只负责上传照片，照片归属电脑端账号，后续分析 / 付费都在电脑端完成。
+ */
+export async function handoffCreate() {
+  return belleApi<{ token: string; expires_in: number }>({ action: "handoff-create" });
+}
+
+export type HandoffStatus =
+  | { status: "waiting"; expires_in: number }
+  | { status: "uploaded"; url: string }
+  | { status: "expired" };
+
+/** 电脑端轮询：手机传完后返回图片地址（只有创建这个令牌的账号能查） */
+export async function handoffStatus(token: string) {
+  return belleApi<HandoffStatus>({ action: "handoff-status", token });
+}
+
+/** 手机端上传（无需登录，凭令牌）：后端转存（HEIC 转 JPEG）后写回会话，电脑端轮询就能拿到 */
+export async function handoffUpload(token: string, base64Data: string) {
+  return postImageWithRetry<{ status: "uploaded" }>("/common/v1/web/handoff-upload", {
+    token,
+    imageBase64: base64Data,
+    fileType: "jpg",
+  });
 }
 
 export type AnalysisType =

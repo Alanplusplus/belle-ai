@@ -160,7 +160,6 @@ export default async function PricingPage({
         <div className="mx-auto max-w-5xl px-4">
           <div className="text-center">
             <h1 className="font-serif text-3xl font-bold sm:text-4xl">{t("pageTitle")}</h1>
-            <p className="mx-auto mt-3 max-w-2xl text-base text-muted-foreground sm:text-lg">{t("pageSubtitle")}</p>
           </div>
 
           {/* 内置浏览器里购买记录不会跟随到系统浏览器：提前提示用系统浏览器打开再付款 */}
@@ -235,7 +234,6 @@ export default async function PricingPage({
           {/* 想先看看某个功能做什么：按「套装里的」和「用积分生成效果图的」分两组，点进对应的功能介绍页 */}
           <div id="pricing-tools" className="mt-14 scroll-mt-24">
             <h2 className="text-center font-serif text-2xl font-bold">{t("toolsTitle")}</h2>
-            <p className="mx-auto mt-2 max-w-xl text-center text-sm text-muted-foreground">{t("toolsSubtitle")}</p>
             <div className="mt-6 grid gap-4 md:grid-cols-3">
               <ToolGroup title={t("toolsKitGroup")} hint={t("toolsKitHint")} items={KIT_TOOLS.map((tool) => ({ href: tool.href, label: tNav(tool.key) }))} />
               <ToolGroup

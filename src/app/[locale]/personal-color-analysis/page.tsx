@@ -1,8 +1,9 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { FeatureCta, FeatureHeroActions, getFeatureCtaCopy } from "@/components/FeatureCta";
 import { FeatureHero } from "@/components/FeatureHero";
-import { FunnelLink } from "@/components/FunnelLink";
-import { sampleHref } from "@/lib/blogTools";
+import { FeatureWhy } from "@/components/FeatureWhy";
+import { ToolFaq } from "@/components/ToolPageSections";
 import {
   buildAlternates,
   buildBreadcrumbJsonLd,
@@ -55,10 +56,12 @@ export default async function PersonalColorAnalysisPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const cta = await getFeatureCtaCopy(locale, "color_analysis");
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "color" });
   const ft = await getTranslations({ locale, namespace: "features" });
   const tp = await getTranslations({ locale, namespace: "tryPage" });
+  const w = await getTranslations({ locale, namespace: "featureWhy" });
   const cg = await getTranslations({ locale, namespace: "colorGuide" });
   // 文末相关文章：标题取各语种的 blogTitles，小标题复用已翻译的 seasonPalette.relatedArticles
   const bt = await getTranslations({ locale, namespace: "blogTitles" });
@@ -99,55 +102,45 @@ export default async function PersonalColorAnalysisPage({
       />
       <FeatureHero
         title={t("title")}
-        subtitle={t("subtitle")}
-        description={t("description")}
+        description={w("color.hero")}
         image="/images/examples/report_color_analysis.webp"
         sampleLabel={tp("demoBadge")}
-        actions={
-          <>
-            <Link
-              href="/try?type=color_analysis"
-              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {ft("tryItFree")}
-            </Link>
-            <FunnelLink
-              href={sampleHref("color_analysis")}
-              from="feature"
-              tool="color_analysis"
-              kind="sample"
-              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
-            >
-              {tp("trySample")}
-            </FunnelLink>
-          </>
-        }
+        actions={<FeatureHeroActions tool="color_analysis" copy={cta} />}
       />
 
+      {/* 先讲为什么值得试，再用真实报告截图证明「拿到的就是这样」 */}
+      <FeatureWhy locale={locale} tool="color" note={null} />
+
       {/* 报告里有什么：真实报告截图 + 逐页说明 */}
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-5xl px-4">
           <h2 className="text-center text-3xl font-bold">{cp("insideTitle")}</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">{cp("insideSub")}</p>
-          <div className="mt-12 space-y-14 sm:space-y-16">
+          <p className="mt-4 text-center">
+            <span className="inline-block rounded-full border border-primary/20 bg-card px-3.5 py-1 text-xs font-semibold text-primary shadow-sm">
+              {tp("demoBadge")}
+            </span>
+          </p>
+          {/* 手机上是两列缩略图 + 标题（原来七页各占一屏半的大图加一段说明，是整站最长的一页）；
+              md 以上还是左右交替的「图 + 编号 + 标题 + 说明」。同一份 DOM，靠断点切换，说明句始终在页面里 */}
+          <div className="mt-8 grid grid-cols-2 gap-x-3 gap-y-6 md:mt-10 md:block md:space-y-16">
             {REPORT_ROWS.map((row, i) => (
-              <div key={row.key} className="grid items-center gap-6 md:grid-cols-2 md:gap-14">
+              <div key={row.key} className="md:grid md:grid-cols-2 md:items-center md:gap-14">
                 <div className={i % 2 === 1 ? "md:order-2" : ""}>
-                  <div className="mx-auto w-full max-w-[340px] overflow-hidden rounded-2xl border border-border bg-card shadow-lg shadow-black/5">
+                  <div className="mx-auto aspect-[3/4] w-full overflow-hidden rounded-2xl border border-border bg-card shadow-md shadow-black/5 md:aspect-auto md:max-w-[340px] md:shadow-lg">
                     <Image
                       src={row.image}
                       alt={cp(`${row.key}t`)}
                       width={row.width}
                       height={row.height}
-                      sizes="340px"
-                      className="h-auto w-full"
+                      sizes="(max-width: 768px) 50vw, 340px"
+                      className="h-full w-full object-cover object-top md:h-auto"
                     />
                   </div>
                 </div>
-                <div className="mx-auto max-w-md md:mx-0">
-                  <span className="font-serif text-4xl text-primary/30">{String(i + 1).padStart(2, "0")}</span>
-                  <h3 className="mt-1 text-xl font-bold sm:text-2xl">{cp(`${row.key}t`)}</h3>
-                  <p className="mt-3 leading-relaxed text-muted-foreground">{cp(`${row.key}d`)}</p>
+                <div className="mt-2.5 md:mx-0 md:mt-0 md:max-w-md">
+                  <span className="hidden font-serif text-4xl text-primary/30 md:block">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="text-sm font-semibold leading-snug md:mt-1 md:text-2xl md:font-bold">{cp(`${row.key}t`)}</h3>
+                  <p className="mt-3 hidden leading-relaxed text-muted-foreground md:block">{cp(`${row.key}d`)}</p>
                 </div>
               </div>
             ))}
@@ -156,7 +149,7 @@ export default async function PersonalColorAnalysisPage({
       </section>
 
       {/* 套装：价格 + 包含项 */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-muted/30 py-12 sm:py-16">
         <div className="mx-auto max-w-3xl px-4">
           <div className="rounded-3xl border border-primary/30 bg-card p-8 text-center shadow-xl shadow-primary/5 sm:p-10">
             <h2 className="text-2xl font-bold sm:text-3xl">{cp("kitTitle")}</h2>
@@ -192,14 +185,15 @@ export default async function PersonalColorAnalysisPage({
       </section>
 
       {/* 信服力：为什么可以相信结果 */}
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-4xl px-4">
           <h2 className="text-center text-2xl font-bold">{cp("trustTitle")}</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          {/* 手机上两列、只留标题（四个标题已经是四条理由）；说明句桌面再显示 */}
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:gap-4">
             {[1, 2, 3, 4].map((n) => (
-              <div key={n} className="rounded-2xl border border-border bg-card p-5">
-                <h3 className="font-semibold">{cp(`t${n}t`)}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+              <div key={n} className="rounded-2xl border border-border bg-card p-3.5 sm:p-5">
+                <h3 className="text-sm font-semibold leading-snug sm:text-base">{cp(`t${n}t`)}</h3>
+                <p className="mt-1.5 hidden text-sm leading-relaxed text-muted-foreground sm:block">
                   {cp(`t${n}d`, { days: KIT_RETEST_DAYS })}
                 </p>
               </div>
@@ -209,10 +203,9 @@ export default async function PersonalColorAnalysisPage({
       </section>
 
       {/* 12 季型：同一风格的 12 张季型图，按四个季节分组，点进完整色板页 */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-muted/30 py-12 sm:py-16">
         <div className="mx-auto max-w-5xl px-4">
-          <h2 className="mb-3 text-center text-2xl font-bold">{t("seasonsTitle")}</h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-muted-foreground">{cp("seasonsSub")}</p>
+          <h2 className="mb-8 text-center text-2xl font-bold sm:mb-10">{t("seasonsTitle")}</h2>
           {PARENT_SEASON_ORDER.map((parent) => (
             <div key={parent} className="mt-10 first:mt-0">
               <div className="mb-4 flex items-center gap-3">
@@ -223,7 +216,8 @@ export default async function PersonalColorAnalysisPage({
                 </h3>
                 <span aria-hidden="true" className="h-px flex-1 bg-border" />
               </div>
-              <div className="grid gap-4 sm:grid-cols-3">
+              {/* 每个季节族 3 个季型：手机上三列排成一行（原来是 12 张单列卡片叠下去） */}
+              <div className="grid grid-cols-3 gap-2 sm:gap-4">
                 {getSeasonsByParent(parent).map((season) => (
                   <Link
                     key={season.slug}
@@ -235,43 +229,26 @@ export default async function PersonalColorAnalysisPage({
                         src={`/images/report/plate-${season.slug}.webp`}
                         alt={sd(`${season.slug}.name`)}
                         fill
-                        sizes="(max-width: 640px) 100vw, 33vw"
+                        sizes="33vw"
                         className="object-cover transition duration-300 group-hover:scale-105"
                       />
                     </div>
-                    <div className="flex items-center justify-between px-4 py-3">
-                      <span className="text-sm font-semibold">{sd(`${season.slug}.name`)}</span>
-                      <span className="text-xs text-muted-foreground transition group-hover:text-primary">→</span>
+                    <div className="flex items-center justify-between px-2 py-2 sm:px-4 sm:py-3">
+                      <span className="text-xs font-semibold leading-tight sm:text-sm">{sd(`${season.slug}.name`)}</span>
+                      <span className="hidden text-xs text-muted-foreground transition group-hover:text-primary sm:inline">→</span>
                     </div>
                   </Link>
                 ))}
               </div>
             </div>
           ))}
-          <div className="mt-12 text-center">
-            <Link
-              href="/try?type=color_analysis"
-              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {ft("tryItFree")}
-            </Link>
-          </div>
+          <FeatureCta tool="color_analysis" copy={cta} from="feature_mid" className="mt-12" />
         </div>
       </section>
 
-      <section className="max-w-3xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-semibold mb-6">{t("faqTitle")}</h2>
-        <div className="space-y-6">
-          {faqs.map((faq, i) => (
-            <details key={i} className="group border-b border-gray-200 pb-4">
-              <summary className="cursor-pointer font-medium text-gray-900 group-open:text-rose-600 transition-colors">
-                {faq.q}
-              </summary>
-              <p className="mt-3 text-gray-600 leading-relaxed">{faq.a}</p>
-            </details>
-          ))}
-        </div>
-      </section>
+      <ToolFaq title={t("faqTitle")} faqs={faqs} />
+
+      <FeatureCta variant="end" tool="color_analysis" copy={cta} from="feature_end" />
 
       {/* 落地页 → 专题页：「color analysis」这个词由 /color-analysis 承接，这里用描述性锚文本把权重导过去 */}
       <section className="mx-auto max-w-4xl px-4 pb-10">
@@ -296,9 +273,9 @@ export default async function PersonalColorAnalysisPage({
             <Link
               key={slug}
               href={`/blog/${slug}`}
-              className="block p-4 rounded-xl border border-gray-200 hover:border-rose-300 hover:shadow-sm transition-all"
+              className="block rounded-xl border border-border bg-card p-4 transition-all hover:border-primary/40 hover:shadow-sm"
             >
-              <span className="font-medium text-gray-900">{bt(slug)}</span>
+              <span className="font-medium text-foreground">{bt(slug)}</span>
             </Link>
           ))}
         </div>

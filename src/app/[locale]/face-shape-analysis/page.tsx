@@ -1,9 +1,9 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { FeatureCta, FeatureHeroActions, getFeatureCtaCopy } from "@/components/FeatureCta";
 import { FeatureHero } from "@/components/FeatureHero";
-import { FeatureIncludes } from "@/components/FeatureIncludes";
-import { FunnelLink } from "@/components/FunnelLink";
-import { sampleHref } from "@/lib/blogTools";
+import { FeatureWhy } from "@/components/FeatureWhy";
+import { ToolFaq } from "@/components/ToolPageSections";
 import {
   buildAlternates,
   buildBreadcrumbJsonLd,
@@ -49,16 +49,18 @@ export default async function FaceShapeAnalysisPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const cta = await getFeatureCtaCopy(locale, "face_shape");
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "face" });
   const ft = await getTranslations({ locale, namespace: "features" });
   const tp = await getTranslations({ locale, namespace: "tryPage" });
   const nt = await getTranslations({ locale, namespace: "nav" });
+  const w = await getTranslations({ locale, namespace: "featureWhy" });
 
-  const faqCount = 4;
-  const faqs = Array.from({ length: faqCount }, (_, i) => ({
-    q: t(`faq${i + 1}Q`),
-    a: t(`faq${i + 1}A`),
+  // 页面卖的是发型：先答「脸型会影响发型吗 / 怎么判断 / 准不准」，「哪种脸型最常见」放最后
+  const faqs = [3, 1, 4, 2].map((n) => ({
+    q: t(`faq${n}Q`),
+    a: t(`faq${n}A`),
   }));
 
   const faqJsonLd = {
@@ -87,105 +89,48 @@ export default async function FaceShapeAnalysisPage({
       />
       <FeatureHero
         title={t("title")}
-        subtitle={t("subtitle")}
-        description={t("description")}
+        description={w("face.hero")}
         image="/images/examples/report_face_shape.webp"
         sampleLabel={tp("demoBadge")}
-        actions={
-          <>
-            <Link
-              href="/try?type=face_shape"
-              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {ft("tryItFree")}
-            </Link>
-            <FunnelLink
-              href={sampleHref("face_shape")}
-              from="feature"
-              tool="face_shape"
-              kind="sample"
-              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
-            >
-              {tp("trySample")}
-            </FunnelLink>
-          </>
-        }
+        actions={<FeatureHeroActions tool="face_shape" copy={cta} />}
       />
 
-      <FeatureIncludes locale={locale} tool="face" />
+      <FeatureWhy locale={locale} tool="face" />
 
-      {/* Face Shapes Grid */}
-      <section className="bg-muted/30 py-16">
+      <section className="bg-muted/30 py-10">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="mb-4 text-center text-2xl font-bold">
-            {t("shapesTitle")}
-          </h2>
-          <p className="mx-auto mb-2 max-w-2xl text-center text-muted-foreground">
-            {t("description")}
-          </p>
-          <p className="mx-auto mb-8 max-w-2xl text-center text-sm text-muted-foreground">
-            {t("shapesNote")}
-          </p>
-          {/* 插画本身不带文字,七个名称用当前语言渲染在每张脸下方,避免图里烤死英文 */}
-          <div className="mb-8 overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
-            <Image
-              src="/images/face_shapes_nolabel.webp"
-              alt={t("shapesAlt")}
-              width={1672}
-              height={520}
-              className="w-full"
-              sizes="(max-width: 768px) 100vw, 800px"
-              priority
-            />
-            <div className="grid grid-cols-7 px-1 pb-4 pt-1 sm:pb-5">
-              {FACE_SHAPES.map((shape) => (
-                <p
-                  key={shape.key}
-                  className="px-0.5 text-center font-serif text-[10px] leading-tight text-foreground/80 sm:text-sm"
-                >
-                  {t(`shape${shape.key}`)}
-                </p>
-              ))}
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-            {FACE_SHAPES.map((shape) => (
-              <div
-                key={shape.key}
-                className="flex items-start gap-3 rounded-xl border border-border bg-card p-4 transition hover:border-primary/40 hover:shadow-md"
-              >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  {shape.icon}
-                </div>
-                <div>
-                  <p className="text-sm font-semibold">{t(`shape${shape.key}`)}</p>
-                  <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">{t(`shape${shape.key}Desc`)}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Link
-              href="/try?type=face_shape"
-              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {ft("tryItFree")}
-            </Link>
-          </div>
+          <FeatureCta tool="face_shape" copy={cta} from="feature_mid" />
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-12">
-        <h2 className="mb-6 text-2xl font-semibold">{t("faqTitle")}</h2>
-        <div className="space-y-6">
-          {faqs.map((faq, i) => (
-            <details key={i} className="group border-b border-gray-200 pb-4">
-              <summary className="cursor-pointer font-medium text-gray-900 transition-colors group-open:text-rose-600">
-                {faq.q}
-              </summary>
-              <p className="mt-3 leading-relaxed text-gray-600">{faq.a}</p>
-            </details>
-          ))}
+      <ToolFaq title={t("faqTitle")} faqs={faqs} />
+
+      <FeatureCta variant="end" tool="face_shape" copy={cta} from="feature_end" />
+
+      {/* 七种脸型：不再逐个讲解（那是 /face-shape/<shape> 的事），这里只是一张图 + 七个入口，把想深入了解的人导过去 */}
+      <section className="mx-auto max-w-4xl px-4 pb-10">
+        <h2 className="mb-4 text-center text-xl font-bold">{t("shapesTitle")}</h2>
+        <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
+          <Image
+            src="/images/face_shapes_nolabel.webp"
+            alt={t("shapesAlt")}
+            width={1672}
+            height={520}
+            className="w-full"
+            sizes="(max-width: 768px) 100vw, 800px"
+          />
+          {/* 插画本身不带文字，七个名称用当前语言渲染在每张脸下方，同时是指向各脸型详情页的链接 */}
+          <div className="grid grid-cols-7 px-1 pb-4 pt-1 sm:pb-5">
+            {FACE_SHAPES.map((shape) => (
+              <Link
+                key={shape.key}
+                href={`/face-shape/${shape.key.toLowerCase()}`}
+                className="px-0.5 text-center font-serif text-[10px] leading-tight text-foreground/80 underline-offset-4 hover:text-primary hover:underline sm:text-sm"
+              >
+                {t(`shape${shape.key}`)}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -194,28 +139,28 @@ export default async function FaceShapeAnalysisPage({
         <div className="grid gap-4 sm:grid-cols-3">
           <Link
             href="/glasses-analysis"
-            className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
+            className="block rounded-xl border border-border bg-card p-4 transition-all hover:border-primary/40 hover:shadow-sm"
           >
-            <span className="font-medium text-gray-900">{nt("glassesMatch")}</span>
-            <span className="mt-1 block text-sm text-gray-500">
+            <span className="font-medium text-foreground">{nt("glassesMatch")}</span>
+            <span className="mt-1 block text-sm text-muted-foreground">
               {ft("relGlassesForFace")}
             </span>
           </Link>
           <Link
             href="/tools/face-shape-quiz"
-            className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
+            className="block rounded-xl border border-border bg-card p-4 transition-all hover:border-primary/40 hover:shadow-sm"
           >
-            <span className="font-medium text-gray-900">{nt("faceQuiz")}</span>
-            <span className="mt-1 block text-sm text-gray-500">
+            <span className="font-medium text-foreground">{nt("faceQuiz")}</span>
+            <span className="mt-1 block text-sm text-muted-foreground">
               {ft("relQuizForFace")}
             </span>
           </Link>
           <Link
             href="/hair-color-analysis"
-            className="block rounded-xl border border-gray-200 p-4 transition-all hover:border-rose-300 hover:shadow-sm"
+            className="block rounded-xl border border-border bg-card p-4 transition-all hover:border-primary/40 hover:shadow-sm"
           >
-            <span className="font-medium text-gray-900">{nt("hairPreview")}</span>
-            <span className="mt-1 block text-sm text-gray-500">
+            <span className="font-medium text-foreground">{nt("hairPreview")}</span>
+            <span className="mt-1 block text-sm text-muted-foreground">
               {ft("relHairForFace")}
             </span>
           </Link>
@@ -225,69 +170,13 @@ export default async function FaceShapeAnalysisPage({
   );
 }
 
-function OvalIcon() {
-  return (
-    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-      <ellipse cx="12" cy="12" rx="7" ry="9" />
-    </svg>
-  );
-}
-
-function RoundIcon() {
-  return (
-    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-      <circle cx="12" cy="12" r="8" />
-    </svg>
-  );
-}
-
-function SquareIcon() {
-  return (
-    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-      <rect x="4" y="4" width="16" height="16" rx="2" />
-    </svg>
-  );
-}
-
-function HeartIcon() {
-  return (
-    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-      <path d="M12 21C12 21 4 14.5 4 9.5C4 7 6 4.5 8.5 4.5C10 4.5 11.5 5.5 12 7C12.5 5.5 14 4.5 15.5 4.5C18 4.5 20 7 20 9.5C20 14.5 12 21 12 21Z" />
-    </svg>
-  );
-}
-
-function OblongIcon() {
-  return (
-    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-      <rect x="6" y="2" width="12" height="20" rx="6" />
-    </svg>
-  );
-}
-
-function DiamondIcon() {
-  return (
-    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-      <path d="M12 2L22 12L12 22L2 12L12 2Z" />
-    </svg>
-  );
-}
-
-function TriangleIcon() {
-  return (
-    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-      <path d="M12 4L22 20H2L12 4Z" />
-    </svg>
-  );
-}
-
-// key 对应 messages 里 face.shape<Key> / face.shape<Key>Desc,顺序与插图中七张脸一致
+// key 对应 messages 里 face.shape<Key>，也是 /face-shape/<key 小写> 的路径；顺序与插图中七张脸一致
 const FACE_SHAPES = [
-  { key: "Oval", icon: <OvalIcon /> },
-  { key: "Round", icon: <RoundIcon /> },
-  { key: "Square", icon: <SquareIcon /> },
-  { key: "Heart", icon: <HeartIcon /> },
-  { key: "Oblong", icon: <OblongIcon /> },
-  { key: "Diamond", icon: <DiamondIcon /> },
-  { key: "Triangle", icon: <TriangleIcon /> },
+  { key: "Oval" },
+  { key: "Round" },
+  { key: "Square" },
+  { key: "Heart" },
+  { key: "Oblong" },
+  { key: "Diamond" },
+  { key: "Triangle" },
 ] as const;

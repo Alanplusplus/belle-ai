@@ -10,6 +10,7 @@ import {
 } from "@/lib/seo";
 import { ExtraMessages } from "@/components/ExtraMessages";
 import { ScanClient } from "./ScanClient";
+import { ScanContent } from "./ScanContent";
 
 export async function generateMetadata({
   params,
@@ -74,6 +75,7 @@ export default async function ScanPage({
       <ExtraMessages messages={{ scan: messages.scan }}>
         <ScanClient locale={locale} />
       </ExtraMessages>
+      <ScanContent locale={locale} />
     </>
   );
 }

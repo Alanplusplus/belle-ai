@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
+import { ClampedIntro } from "@/components/ClampedIntro";
+import { ToolFaq } from "@/components/ToolPageSections";
 import {
   buildAlternates,
   buildBreadcrumbJsonLd,
@@ -7,10 +8,9 @@ import {
   OG_IMAGES,
   TWITTER_IMAGES,
 } from "@/lib/seo";
+import { FeatureCta, FeatureHeroActions, getFeatureCtaCopy } from "@/components/FeatureCta";
 import { FeatureHero } from "@/components/FeatureHero";
-import { FunnelLink } from "@/components/FunnelLink";
-import { sampleHref } from "@/lib/blogTools";
-import { FeatureIncludes } from "@/components/FeatureIncludes";
+import { FeatureWhy } from "@/components/FeatureWhy";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -48,9 +48,11 @@ export default async function MakeupAnalysisPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const cta = await getFeatureCtaCopy(locale, "makeup");
   const t = await getTranslations({ locale, namespace: "makeup" });
-  const ft = await getTranslations({ locale, namespace: "features" });
   const tp = await getTranslations({ locale, namespace: "tryPage" });
+  const w = await getTranslations({ locale, namespace: "featureWhy" });
+  const bt = await getTranslations({ locale, namespace: "blog" });
 
   const faqCount = 5;
   const faqs = Array.from({ length: faqCount }, (_, i) => ({
@@ -84,90 +86,29 @@ export default async function MakeupAnalysisPage({
       />
       <FeatureHero
         title={t("title")}
-        subtitle={t("subtitle")}
-        description={t("description")}
+        description={w("makeup.hero")}
         image="/images/examples/report_makeup.webp"
         sampleLabel={tp("demoBadge")}
-        actions={
-          <>
-            <Link
-              href="/try?type=makeup"
-              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {ft("tryItFree")}
-            </Link>
-            <FunnelLink
-              href={sampleHref("makeup")}
-              from="feature"
-              tool="makeup"
-              kind="sample"
-              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
-            >
-              {tp("trySample")}
-            </FunnelLink>
-          </>
-        }
+        actions={<FeatureHeroActions tool="makeup" copy={cta} />}
       />
 
-      <FeatureIncludes locale={locale} tool="makeup" />
+      <FeatureWhy locale={locale} tool="makeup" />
 
-      <section className="bg-muted/30 py-16">
+      {/* 原来这里是「Why AI Color Analysis?」四条（60 秒 / 比色彩分析师便宜 / 杂志级报告）：是色彩分析的通用文案，
+          放在美妆分析页主题不对；这页的卖点由上面的「包含什么」交代。features.whyAI 等键保留不动。
+          页面中段的入口用一张成品示例卡（标题写清楚「点进去会得到什么」），不再是通用的 Start Free Analysis */}
+      <section className="bg-muted/30 py-10">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-2xl font-bold">{ft("whyAI")}</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <WhyItem text={ft("aiAccuracy")} />
-            <WhyItem text={ft("aiSpeed")} />
-            <WhyItem text={ft("aiCost")} />
-            <WhyItem text={ft("aiQuality")} />
-          </div>
-          <div className="mt-10 text-center">
-            <Link
-              href="/try?type=makeup"
-              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {ft("tryItFree")}
-            </Link>
-          </div>
+          <FeatureCta tool="makeup" copy={cta} from="feature_mid" />
         </div>
       </section>
+      <ClampedIntro text={t("seoIntro")} moreLabel={bt("readMore")} />
 
-      <section className="max-w-3xl mx-auto px-4 py-12">
-        <p className="text-gray-700 leading-relaxed text-base">{t("seoIntro")}</p>
-      </section>
+      <ToolFaq title={t("faqTitle")} faqs={faqs} />
 
-      <section className="max-w-3xl mx-auto px-4 pb-12">
-        <h2 className="text-2xl font-semibold mb-6">{t("faqTitle")}</h2>
-        <div className="space-y-6">
-          {faqs.map((faq, i) => (
-            <details key={i} className="group border-b border-gray-200 pb-4">
-              <summary className="cursor-pointer font-medium text-gray-900 group-open:text-rose-600 transition-colors">
-                {faq.q}
-              </summary>
-              <p className="mt-3 text-gray-600 leading-relaxed">{faq.a}</p>
-            </details>
-          ))}
-        </div>
-      </section>
+      <FeatureCta variant="end" tool="makeup" copy={cta} from="feature_end" />
     </>
   );
 }
 
-function WhyItem({ text }: { text: string }) {
-  return (
-    <div className="flex items-start gap-3 rounded-xl border border-border bg-card p-4">
-      <svg
-        className="mt-0.5 h-5 w-5 shrink-0 text-primary"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
-        <path
-          fillRule="evenodd"
-          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-          clipRule="evenodd"
-        />
-      </svg>
-      <p className="text-sm">{text}</p>
-    </div>
-  );
-}
 

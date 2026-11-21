@@ -6,6 +6,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
 import {
+  decodeTagParam,
   getAllTags,
   getPostsByTag,
   slugifyTag,
@@ -36,18 +37,22 @@ function getTagDisplayName(posts: BlogPost[], tagSlug: string): string {
   return tagSlug.replace(/-/g, " ");
 }
 
+// 规范地址里的 slug 要百分号编码（中日韩俄标签是非 ASCII）；纯 ASCII 标签编码后不变
+const tagPath = (tagSlug: string) => `/blog/tag/${encodeURIComponent(tagSlug)}`;
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string; tag: string }>;
 }): Promise<Metadata> {
-  const { locale, tag: tagSlug } = await params;
+  const { locale, tag: rawSlug } = await params;
+  const tagSlug = decodeTagParam(rawSlug);
   const posts = getPostsByTag(locale, tagSlug);
   if (posts.length === 0) return {};
 
   const tagName = getTagDisplayName(posts, tagSlug);
   const title = `${tagName} – Blog`;
-  const canonical = canonicalUrl(locale, `/blog/tag/${tagSlug}`);
+  const canonical = canonicalUrl(locale, tagPath(tagSlug));
 
   return {
     title,
@@ -76,15 +81,16 @@ export default async function TagPage({
 }: {
   params: Promise<{ locale: string; tag: string }>;
 }) {
-  const { locale, tag: tagSlug } = await params;
+  const { locale, tag: rawSlug } = await params;
   setRequestLocale(locale);
+  const tagSlug = decodeTagParam(rawSlug);
   const posts = getPostsByTag(locale, tagSlug);
   if (posts.length === 0) notFound();
 
   const tagName = getTagDisplayName(posts, tagSlug);
   const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
     { name: "Blog", path: "/blog" },
-    { name: `Tag: ${tagName}`, path: `/blog/tag/${tagSlug}` },
+    { name: `Tag: ${tagName}`, path: tagPath(tagSlug) },
   ]);
 
   return (
@@ -118,9 +124,6 @@ function TagPostList({
         </Link>
 
         <h1 className="mt-6 text-4xl font-bold capitalize">{tagName}</h1>
-        <p className="mt-3 text-lg text-muted-foreground">
-          {posts.length} {posts.length === 1 ? "post" : "posts"}
-        </p>
 
         <div className="mt-12 space-y-4">
           {posts.map((post) => (
@@ -129,19 +132,20 @@ function TagPostList({
               className="group overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary/40 hover:shadow-md"
             >
               <div
-                className={`grid ${post.image ? "sm:grid-cols-[200px_1fr]" : ""}`}
+                className={`grid ${post.image ? "sm:grid-cols-[17rem_1fr]" : ""}`}
               >
                 {post.image && (
+                  // 封面都是 16:9：容器固定 16:9，图片完整显示；不再按卡片高度拉伸后左右被裁掉
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="relative hidden self-stretch overflow-hidden sm:block"
+                    className="relative m-3 hidden aspect-video self-center overflow-hidden rounded-lg sm:block"
                   >
                     <Image
                       src={post.image}
                       alt={post.title}
                       fill
                       className="object-cover transition duration-300 group-hover:scale-105"
-                      sizes="200px"
+                      sizes="248px"
                     />
                   </Link>
                 )}

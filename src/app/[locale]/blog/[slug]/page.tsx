@@ -180,13 +180,14 @@ function BlogPostContent({
   const locale = useLocale();
   const t = useTranslations("blog");
   const at = useTranslations("author");
-  const ft = useTranslations("features");
   const tt = useTranslations("tryPage");
 
   // CTA 按文章主题直达对应工具（/try?type=...），而不是一律落到默认工具
   const toolType = detectToolType(slug);
   const target = { href: toolHref(toolType), sampleHref: sampleHref(toolType), postSlug: slug, toolType };
-  const toolLabel = tt(`type_${toolType}`);
+  // 顶部 / 中部 / 底部 / 吸底条共用同一套文案：一句话讲清「点进去做什么」+ 带结果的按钮（按工具各写一套）。
+  // 读者不熟悉这个网站，所以不放「类型标签」和副标题。
+  const cta = { title: t(`cta.${toolType}.title`), button: t(`cta.${toolType}.button`) };
   const complementaryTools = getComplementaryTools(toolType);
   const headings = extractH2Headings(post.content);
   const video = getVideoForBlog(slug);
@@ -245,12 +246,10 @@ function BlogPostContent({
           </div>
           {/* 顶部 CTA：直接搜索 / 社媒进来的读者首屏就能看到入口 */}
           <TopCta
-            title={t("topCtaTitle")}
-            description={tt(`out_${toolType}`)}
+            title={cta.title}
+            button={cta.button}
             note={t("sidebarCtaFree")}
-            tryItFree={ft("tryItFree")}
             sampleLabel={tt("trySample")}
-            toolLabel={toolLabel}
             image={exampleReportImage(toolType)}
             target={target}
           />
@@ -320,7 +319,7 @@ function BlogPostContent({
         <div className="prose prose-neutral mt-10 max-w-none break-words prose-headings:font-bold prose-a:text-primary prose-img:h-auto prose-img:max-w-full">
           <MarkdownContent content={bodyBefore} toolType={toolType} locale={locale} />
           {oliveHub && <OliveHub slug={slug} placement={quickAnswerSplit ? "after_quick_answer" : "after_first_section"} />}
-          {midCta && bodyAfter && <ResultCta type={toolType} from="blog" className="not-prose my-10" />}
+          {midCta && bodyAfter && <ResultCta type={toolType} from="blog" copy={cta} className="not-prose my-10" />}
           {bodyAfter && (
             // 前半部分已经渲染过的二级标题数（bodyAfterStartH2），后半部分的标题序号接着往下排，目录锚点才对得上
             <MarkdownContent content={bodyAfter} toolType={toolType} locale={locale} startH2Index={bodyAfterStartH2} />
@@ -329,11 +328,10 @@ function BlogPostContent({
 
         {/* Bottom CTA card */}
         <BottomCta
-          title={t("ctaTitle")}
-          description={t("ctaDescription")}
-          tryItFree={ft("tryItFree")}
+          title={cta.title}
+          button={cta.button}
+          note={t("sidebarCtaFree")}
           sampleLabel={tt("trySample")}
-          toolLabel={toolLabel}
           target={target}
         />
 
@@ -375,7 +373,7 @@ function BlogPostContent({
       </div>
 
       {/* 底部吸附条：顶部 CTA 滚出视口后接力 */}
-      <StickyBottomCta target={target} />
+      <StickyBottomCta target={target} button={cta.button} />
     </article>
   );
 }

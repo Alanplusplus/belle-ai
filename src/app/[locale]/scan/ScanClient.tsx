@@ -6,6 +6,8 @@ import { Link } from "@/i18n/navigation";
 import { fetchScanQuota, scanItem, webInit, type ScanQuota, type ScanResult, type ScanTier } from "@/lib/api";
 import { trackEvent } from "@/lib/analytics";
 import { prepareScanImage } from "@/lib/imageUpload";
+import { useDesktopTools } from "@/lib/useDesktopTools";
+import { PhoneHandoff } from "@/components/PhoneHandoff";
 import {
   LOCALE_TO_REPORT_LANG,
   MY_SEASON_KEY,
@@ -29,9 +31,14 @@ const TIER_STYLE: Record<ScanTier, { chip: string; bar: string; ring: string }> 
 };
 
 type Phase = "idle" | "scanning" | "result" | "error" | "quotaOut";
+/** 照片来源（只用于埋点）：手机相机 / 相册或文件 / 手机接力 */
+type PhotoSource = "camera" | "library" | "phone_handoff";
 
 export function ScanClient({ locale }: { locale: string }) {
   const t = useTranslations("scan");
+  // 桌面端：浏览器会忽略 capture，「拍照」只会弹出文件选择器，等于一个多余的按钮，所以桌面上去掉它，改成「上传照片」+「用手机拍一件」（手机接力）。
+  // 不做网页摄像头：扫的是衣服 / 配饰，对着电脑摄像头举着拍不现实，手机才是拍单品的正确设备；手机上这里是 null，保持原来的相机入口
+  const desktopTools = useDesktopTools();
   const reportLang = LOCALE_TO_REPORT_LANG[locale] ?? "en";
   const messages = useReportMessages(reportLang);
 
@@ -112,13 +119,13 @@ export function ScanClient({ locale }: { locale: string }) {
   }, []);
 
   const handleFile = useCallback(
-    async (file: File | undefined) => {
+    async (file: File | undefined, source: PhotoSource = "library") => {
       if (!file || !season) return;
       setResult(null);
       setItemImage(null);
       setPreviewUrl(URL.createObjectURL(file));
       setPhase("scanning");
-      trackEvent("scan_started", { season });
+      trackEvent("scan_started", { season, source });
 
       let dataUrl: string;
       try {
@@ -161,10 +168,34 @@ export function ScanClient({ locale }: { locale: string }) {
 
   function onPicked(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
+    const source = e.target === cameraRef.current ? "camera" : "library";
     // 清空 value：同一张照片连续选两次也能再次触发 change
     e.target.value = "";
-    void handleFile(file);
+    void handleFile(file, source);
   }
+
+  // ---- 桌面端：手机接力 ----
+  // 手机只负责把单品照片传到服务器，这里拿到地址后经同源代理取回字节（图片在 OSS 上、没有 CORS 头，不能直接 fetch），
+  // 再和本地选图走同一条流程（缩小 → 识别）。扫一扫的识别接口只收图片内容，不收地址。
+  const handleHandoffPhoto = useCallback(
+    async (url: string) => {
+      if (!season) return;
+      setResult(null);
+      setItemImage(null);
+      setPreviewUrl(null);
+      setPhase("scanning");
+      try {
+        const res = await fetch(`/api/photo?u=${encodeURIComponent(url)}`);
+        if (!res.ok) throw new Error("photo_fetch_failed");
+        const blob = await res.blob();
+        await handleFile(new File([blob], `phone-item-${Date.now()}.jpg`, { type: blob.type || "image/jpeg" }), "phone_handoff");
+      } catch {
+        setErrorKey("errFailed");
+        setPhase("error");
+      }
+    },
+    [season, handleFile],
+  );
 
   const seasonName = season ? messages?.seasons[season]?.name ?? seasonPalette(season)?.name ?? season : "";
   const palette = season ? seasonPalette(season) : null;
@@ -228,33 +259,49 @@ export function ScanClient({ locale }: { locale: string }) {
           <div className="mt-6">
             {phase === "idle" && !outOfQuota && (
               <div className="rounded-2xl border border-border bg-card p-5">
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <button
-                    type="button"
-                    onClick={() => cameraRef.current?.click()}
-                    className="flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
-                  >
-                    <CameraIcon />
-                    {t("takePhoto")}
-                  </button>
+                {/* 手机：拍照（后置相机）+ 从相册选；桌面：只有「上传照片」一个按钮（capture 在桌面无效，「拍照」只会弹出文件选择器） */}
+                <div className={`grid gap-3 ${desktopTools ? "" : "sm:grid-cols-2"}`}>
+                  {!desktopTools && (
+                    <button
+                      type="button"
+                      onClick={() => cameraRef.current?.click()}
+                      className="flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
+                    >
+                      <CameraIcon />
+                      {t("takePhoto")}
+                    </button>
+                  )}
                   <button
                     type="button"
                     onClick={() => galleryRef.current?.click()}
-                    className="flex items-center justify-center gap-2 rounded-xl border border-primary/40 bg-white px-4 py-3.5 text-sm font-semibold text-primary transition hover:bg-primary/5"
+                    className={
+                      desktopTools
+                        ? "flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
+                        : "flex items-center justify-center gap-2 rounded-xl border border-primary/40 bg-white px-4 py-3.5 text-sm font-semibold text-primary transition hover:bg-primary/5"
+                    }
                   >
                     <ImageIcon />
-                    {t("choosePhoto")}
+                    {desktopTools ? t("uploadPhoto") : t("choosePhoto")}
                   </button>
                 </div>
+                {/* 桌面端专属：电脑里没有合适的照片，用手机拍一件单品传过来。手机上有相机按钮，这里不显示 */}
+                {desktopTools && (
+                  <div className="mx-auto mt-3 max-w-sm text-center">
+                    <PhoneHandoff analysisType="palette_scan" kind="item" onPhotoReceived={handleHandoffPhoto} />
+                  </div>
+                )}
                 <p className="mt-4 text-center text-xs leading-relaxed text-muted-foreground">{t("tip")}</p>
               </div>
             )}
 
-            {busy && previewUrl && (
+            {busy && (
               <div className="overflow-hidden rounded-2xl border border-border bg-card">
                 <div className="relative aspect-[4/3] bg-muted">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={previewUrl} alt="" className="h-full w-full object-contain" />
+                  {/* 手机接力时先要把照片取回来，这段时间还没有预览图 */}
+                  {previewUrl && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={previewUrl} alt="" className="h-full w-full object-contain" />
+                  )}
                   <div className="absolute inset-0 animate-pulse bg-gradient-to-b from-white/0 via-white/40 to-white/0" />
                 </div>
                 <p className="px-4 py-4 text-center text-sm text-muted-foreground" role="status">{t("scanning")}</p>
@@ -316,6 +363,8 @@ export function ScanClient({ locale }: { locale: string }) {
         <div className="mt-10 space-y-1.5 text-center text-xs leading-relaxed text-muted-foreground">
           <p>{t("disclaimer")}</p>
           <p>{t("privacy")}</p>
+          {/* 手机接力的照片要先上传到服务器才能传到电脑上，和上面「只在内存里分析」不是一回事，用到接力的桌面端如实补一句 */}
+          {desktopTools && <p>{t("privacyPhone")}</p>}
         </div>
       </div>
     </section>

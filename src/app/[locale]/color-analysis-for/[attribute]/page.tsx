@@ -12,8 +12,11 @@ import { ColorTextList } from "@/components/ColorTextList";
 import { SkinToneChart } from "@/components/SkinToneChart";
 import { attributeCardKey, isColorNote, paletteImageJsonLd } from "@/lib/palette-card";
 import { ATTRIBUTES, ATTRIBUTE_SLUGS } from "@/lib/color-analysis-for-data";
+import { SEASON_SLUGS } from "@/lib/color-palette-data";
 import { SKIN_TONE_CHARTS, type SkinUndertone } from "@/lib/skin-tone-chart-data";
 import type { Metadata } from "next";
+import { FeatureHeroActions, useFeatureCtaCopy } from "@/components/FeatureCta";
+import { ResultCta } from "@/components/ResultCta";
 
 export function generateStaticParams() {
   const params: { locale: string; attribute: string }[] = [];
@@ -107,6 +110,7 @@ export default async function ColorAnalysisForPage({
 }
 
 function ColorAnalysisForContent({ slug }: { slug: string }) {
+  const cta = useFeatureCtaCopy("color_analysis");
   const t = useTranslations("colorFor");
   const ad = useTranslations(`ad.${slug}`);
   const bt = useTranslations("blogTitles");
@@ -118,7 +122,12 @@ function ColorAnalysisForContent({ slug }: { slug: string }) {
   const displayName = ad("name");
 
   const challenges = data.challenges.map((_, i) => ad(`ch${i}`));
-  const commonSeasons = data.commonSeasons.map((_, i) => ad(`cs${i}`));
+  // 链接目标只能由语言无关的英文数据决定：以前用译文拼 slug，非英语页变成 /color-palette/heller-frühling 之类的 404；
+  // 英文里也有不是季型的条目（"All seasons apply"、"Undertone — …"、整句建议），这些只展示、不加链接。
+  const commonSeasons = data.commonSeasons.map((source, i) => {
+    const seasonSlug = source.split(" — ")[0].trim().toLowerCase().replace(/ /g, "-");
+    return { text: ad(`cs${i}`), seasonSlug: SEASON_SLUGS.includes(seasonSlug) ? seasonSlug : null };
+  });
   const bestColors = data.bestColors.map((c, i) => ({ name: ad(`bc${i}`), hex: c.hex }));
   const avoidColors = data.avoidColors.map((c, i) => ({ name: ad(`ac${i}`), hex: c.hex, note: isColorNote(c.name) }));
   const makeupTips = data.makeupTips.map((_, i) => ad(`mt${i}`));
@@ -166,11 +175,7 @@ function ColorAnalysisForContent({ slug }: { slug: string }) {
         }
         title={t("colorAnalysisFor", { audience: displayName })}
         description={ad("heroDesc")}
-        actions={
-          <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-7 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
-            {t("getMyAnalysis")}
-          </Link>
-        }
+        actions={<FeatureHeroActions tool="color_analysis" copy={cta} from="color_for" />}
         visual={
           <div className="mx-auto w-[62%] max-w-[17rem] rotate-[3deg] lg:w-[78%]">
             <PaletteCardImage
@@ -228,11 +233,18 @@ function ColorAnalysisForContent({ slug }: { slug: string }) {
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">{t("commonSeasons", { audience: displayName })}</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            {commonSeasons.map((cs) => {
-              const [seasonName, reason] = cs.includes(" — ") ? cs.split(" — ") : [cs, ""];
-              const csSlug = seasonName.toLowerCase().replace(/ /g, "-");
+            {commonSeasons.map(({ text, seasonSlug }) => {
+              const [seasonName, reason] = text.includes(" — ") ? text.split(" — ") : [text, ""];
+              if (!seasonSlug) {
+                return (
+                  <div key={text} className="card-soft p-5">
+                    <h3 className="font-semibold">{seasonName}</h3>
+                    {reason && <p className="mt-1 text-sm text-muted-foreground">{reason}</p>}
+                  </div>
+                );
+              }
               return (
-                <Link key={cs} href={`/color-palette/${csSlug}`} className="group card-soft p-5 transition hover:border-primary/40 hover:shadow-md">
+                <Link key={text} href={`/color-palette/${seasonSlug}`} className="group card-soft p-5 transition hover:border-primary/40 hover:shadow-md">
                   <h3 className="font-semibold group-hover:text-primary">{seasonName}</h3>
                   {reason && <p className="mt-1 text-sm text-muted-foreground">{reason}</p>}
                 </Link>
@@ -291,14 +303,7 @@ function ColorAnalysisForContent({ slug }: { slug: string }) {
           </ul>
         </section>
 
-        {/* CTA */}
-        <section className="my-6 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
-          <h2 className="text-xl font-bold">{t("ctaTitle")}</h2>
-          <p className="mt-2 text-muted-foreground">{t("ctaDesc", { audience: displayName })}</p>
-          <Link href="/try?type=color_analysis" className="mt-6 inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
-            {t("getMyAnalysis")}
-          </Link>
-        </section>
+        <ResultCta type="color_analysis" from="color_for" variant="band" />
 
         {/* FAQ */}
         <section className="border-t border-border py-12">

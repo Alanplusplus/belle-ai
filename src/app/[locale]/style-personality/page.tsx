@@ -1,10 +1,10 @@
 import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
+import { FeatureCta, FeatureHeroActions, getFeatureCtaCopy } from "@/components/FeatureCta";
 import { FeatureHero } from "@/components/FeatureHero";
-import { FunnelLink } from "@/components/FunnelLink";
-import { sampleHref } from "@/lib/blogTools";
-import { FeatureIncludes } from "@/components/FeatureIncludes";
+import { FeatureWhy } from "@/components/FeatureWhy";
 import Image from "next/image";
+import { ClampedIntro } from "@/components/ClampedIntro";
+import { ToolFaq } from "@/components/ToolPageSections";
 import {
   buildAlternates,
   buildBreadcrumbJsonLd,
@@ -49,9 +49,11 @@ export default async function StylePersonalityPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const cta = await getFeatureCtaCopy(locale, "style_personality");
   const t = await getTranslations({ locale, namespace: "stylePage" });
-  const ft = await getTranslations({ locale, namespace: "features" });
   const tp = await getTranslations({ locale, namespace: "tryPage" });
+  const w = await getTranslations({ locale, namespace: "featureWhy" });
+  const bt = await getTranslations({ locale, namespace: "blog" });
 
   const faqCount = 5;
   const faqs = Array.from({ length: faqCount }, (_, i) => ({
@@ -85,38 +87,21 @@ export default async function StylePersonalityPage({
       />
       <FeatureHero
         title={t("title")}
-        subtitle={t("subtitle")}
-        description={t("description")}
+        description={w("persona.hero")}
         image="/images/examples/report_style_personality.webp"
         sampleLabel={tp("demoBadge")}
-        actions={
-          <>
-            <Link
-              href="/try?type=style_personality"
-              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {ft("tryItFree")}
-            </Link>
-            <FunnelLink
-              href={sampleHref("style_personality")}
-              from="feature"
-              tool="style_personality"
-              kind="sample"
-              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
-            >
-              {tp("trySample")}
-            </FunnelLink>
-          </>
-        }
+        actions={<FeatureHeroActions tool="style_personality" copy={cta} />}
       />
 
-      <FeatureIncludes locale={locale} tool="persona" />
+      <FeatureWhy locale={locale} tool="persona" />
 
-      <section className="bg-muted/30 py-16">
+      <section className="bg-muted/30 py-12 sm:py-16">
         <div className="mx-auto max-w-5xl px-4">
           <h2 className="text-center text-2xl font-bold">{t("archetypes")}</h2>
+          {/* 这句不是废话：它说明「这八个是经典风格族、你的结果是另起的个人风格名」，没有它访客会以为结果只会是八选一，所以保留 */}
           <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">{t("archetypesIntro")}</p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {/* 手机上两列（原来是单列的大方图，八张要滚八屏）；桌面四列 */}
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:gap-4 lg:grid-cols-4">
             {PERSONALITIES.map((p) => (
               <div key={p.key} className="group overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
                 <div className="relative aspect-square w-full overflow-hidden">
@@ -125,7 +110,7 @@ export default async function StylePersonalityPage({
                     alt={t(`style${p.key}`)}
                     fill
                     className="object-cover transition duration-300 group-hover:scale-105"
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 25vw"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
                 <div className="p-3 text-center">
@@ -135,34 +120,15 @@ export default async function StylePersonalityPage({
               </div>
             ))}
           </div>
-          <div className="mt-10 text-center">
-            <Link
-              href="/try?type=style_personality"
-              className="inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {ft("tryItFree")}
-            </Link>
-          </div>
+          <FeatureCta tool="style_personality" copy={cta} from="feature_mid" className="mt-8 sm:mt-10" />
         </div>
       </section>
 
-      <section className="max-w-3xl mx-auto px-4 py-12">
-        <p className="text-gray-700 leading-relaxed text-base">{t("seoIntro")}</p>
-      </section>
+      <ClampedIntro text={t("seoIntro")} moreLabel={bt("readMore")} />
 
-      <section className="max-w-3xl mx-auto px-4 pb-12">
-        <h2 className="text-2xl font-semibold mb-6">{t("faqTitle")}</h2>
-        <div className="space-y-6">
-          {faqs.map((faq, i) => (
-            <details key={i} className="group border-b border-gray-200 pb-4">
-              <summary className="cursor-pointer font-medium text-gray-900 group-open:text-rose-600 transition-colors">
-                {faq.q}
-              </summary>
-              <p className="mt-3 text-gray-600 leading-relaxed">{faq.a}</p>
-            </details>
-          ))}
-        </div>
-      </section>
+      <ToolFaq title={t("faqTitle")} faqs={faqs} />
+
+      <FeatureCta variant="end" tool="style_personality" copy={cta} from="feature_end" />
     </>
   );
 }

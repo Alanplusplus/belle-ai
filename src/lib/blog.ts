@@ -119,13 +119,27 @@ export function getAvailableLocales(slug: string, locales: readonly string[]): s
   return locales.filter((l) => fs.existsSync(path.join(CONTENT_DIR, l, `${slug}.md`)));
 }
 
+/**
+ * 标签 → URL slug。保留各语种的字母和数字（中日韩俄等）：
+ * 以前用 /[^\w\s-]/ 会把非拉丁文字全部删光，zh / ja / ko / ru 的标签 slug 变成空串，
+ * 标签芯片全部指向 /<语种>/blog/tag（404）。纯 ASCII 标签的结果和以前完全一致，英文标签页地址不变。
+ */
 export function slugifyTag(tag: string): string {
   return tag
     .toLowerCase()
     .trim()
-    .replace(/[^\w\s-]/g, "")
+    .replace(/[^\p{L}\p{N}_\s-]/gu, "")
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
+}
+
+/** 路由参数里的标签 slug 可能是百分号编码的（中日韩俄标签），统一还原后再比较 */
+export function decodeTagParam(param: string): string {
+  try {
+    return decodeURIComponent(param);
+  } catch {
+    return param;
+  }
 }
 
 export function getAllTags(
@@ -195,7 +209,8 @@ export function getRelatedPosts(locale: string, slug: string, limit = 4): BlogPo
 
 export function getPostsByTag(locale: string, tagSlug: string): BlogPost[] {
   const posts = getAllPosts(locale);
+  const wanted = decodeTagParam(tagSlug);
   return posts.filter((post) =>
-    post.tags.some((t) => slugifyTag(t) === tagSlug)
+    post.tags.some((t) => slugifyTag(t) === wanted)
   );
 }

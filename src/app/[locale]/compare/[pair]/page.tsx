@@ -3,8 +3,6 @@ import { notFound } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { FunnelLink } from "@/components/FunnelLink";
-import { sampleHref } from "@/lib/blogTools";
 import { ResultCta } from "@/components/ResultCta";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
@@ -115,7 +113,6 @@ function CompareContent({ slug }: { slug: string }) {
   const cmpAll = useTranslations("cmp");
   const sd = useTranslations("sd");
   const ph = useTranslations("paletteHub");
-  const tp = useTranslations("tryPage");
 
   const data = COMPARISON_DATA[slug];
   // 正文以英文数据为底，各语言译文放在 messages 的 cmp.<slug> 下；缺哪条就退回英文，不会整页报错
@@ -266,12 +263,6 @@ function CompareContent({ slug }: { slug: string }) {
         {data.commonMistakes && data.commonMistakes.length > 0 && (
           <section className="border-t border-border py-12">
             <h2 className="text-2xl font-bold">{t("commonMistakes")}</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              {t("commonMistakesDesc", {
-                season1: season1Name,
-                season2: season2Name,
-              })}
-            </p>
             <ul className="mt-6 space-y-3">
               {data.commonMistakes.map((mistake, i) => (
                 <li
@@ -305,9 +296,6 @@ function CompareContent({ slug }: { slug: string }) {
         {data.realWorldExample && (
           <section className="border-t border-border py-12">
             <h2 className="text-2xl font-bold">{t("realWorldExample")}</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              {t("realWorldExampleDesc")}
-            </p>
             <div className="mt-6 card-soft p-6">
               <p className="text-sm leading-relaxed text-muted-foreground">
                 {pick("example", data.realWorldExample)}
@@ -361,28 +349,7 @@ function CompareContent({ slug }: { slug: string }) {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="my-6 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
-          <h2 className="text-xl font-bold">{t("ctaTitle")}</h2>
-          <p className="mt-2 text-muted-foreground">{t("ctaDesc")}</p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link
-              href="/try?type=color_analysis"
-              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {t("getAnalysis")}
-            </Link>
-            <FunnelLink
-              href={sampleHref("color_analysis", data.season1)}
-              from="compare"
-              tool="color_analysis"
-              kind="sample"
-              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
-            >
-              {tp("trySample")}
-            </FunnelLink>
-          </div>
-        </section>
+        <ResultCta type="color_analysis" from="compare" season={data.season1} variant="band" />
 
         {/* Other Comparisons */}
         <section className="border-t border-border mb-10 py-12">

@@ -15,6 +15,8 @@ import { SEASON_PALETTES, SEASON_SLUGS, getSeasonsByParent, PARENT_SEASON_ORDER 
 import { LOOKBOOK_DATA, LOOKBOOK_SLUGS } from "@/lib/lookbook-data";
 import { SITE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
+import { ResultCta } from "@/components/ResultCta";
+import { FeatureHeroActions, useFeatureCtaCopy } from "@/components/FeatureCta";
 
 export function generateStaticParams() {
   const params: { locale: string; season: string }[] = [];
@@ -102,6 +104,7 @@ export default async function LookbookPage({
 }
 
 function LookbookContent({ slug }: { slug: string }) {
+  const cta = useFeatureCtaCopy("color_analysis");
   const t = useTranslations("lookbook");
   const sd = useTranslations(`sd.${slug}`);
   const qt = useTranslations("quiz");
@@ -175,16 +178,14 @@ function LookbookContent({ slug }: { slug: string }) {
           </>
         }
         title={t("title", { season: displayName })}
-        description={t("heroDesc", { season: displayName })}
         actions={
-          <>
-            <Link href="/try?type=color_analysis" className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-7 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl">
-              {t("getAnalysis")}
-            </Link>
-            <Link href={`/color-palette/${slug}`} className="rounded-full border-2 border-primary/70 bg-white/70 px-7 py-[10px] font-semibold text-primary-dark transition hover:border-primary hover:bg-primary/10">
-              {t("viewPalette", { season: displayName })}
-            </Link>
-          </>
+          <FeatureHeroActions
+            tool="color_analysis"
+            copy={cta}
+            season={slug}
+            from="lookbook"
+            secondary={{ href: `/color-palette/${slug}`, label: t("viewPalette", { season: displayName }) }}
+          />
         }
         visual={<SeasonPhotoCollage slug={slug} main="jewelry-1" face="outfit-evening" faceAlt={imgCaptions["outfit-evening"]} />}
       />
@@ -214,9 +215,6 @@ function LookbookContent({ slug }: { slug: string }) {
         {/* Outfit Inspiration */}
         <section className="border-t border-border py-12">
           <h2 className="text-2xl font-bold">{t("outfitSection")} — {displayName}</h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {sectionDescs.outfit}
-          </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {lookbook.sections
               .find((s) => s.title === "Outfit Inspiration")
@@ -342,25 +340,7 @@ function LookbookContent({ slug }: { slug: string }) {
           <ColorTextList colors={avoidColors} className="mt-4" />
         </section>
 
-        {/* CTA */}
-        <section className="my-6 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
-          <h2 className="text-xl font-bold">{t("ctaTitle", { season: displayName })}</h2>
-          <p className="mt-2 text-muted-foreground">{t("ctaDesc", { season: displayName })}</p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link
-              href="/try?type=color_analysis"
-              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {t("getAnalysis")}
-            </Link>
-            <Link
-              href={`/color-palette/${slug}`}
-              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
-            >
-              {t("viewPalette", { season: displayName })}
-            </Link>
-          </div>
-        </section>
+        <ResultCta type="color_analysis" from="lookbook" season={slug} variant="band" />
 
         {/* Other Lookbooks */}
         <section className="border-t border-border py-12">

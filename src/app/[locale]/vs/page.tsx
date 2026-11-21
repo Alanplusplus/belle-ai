@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { ResultCta } from "@/components/ResultCta";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale, OG_IMAGES, TWITTER_IMAGES } from "@/lib/seo";
 import { VS_SLUGS } from "@/lib/vs";
 import type { Metadata } from "next";
@@ -68,7 +69,6 @@ function VsIndexContent() {
     <section className="py-20">
       <div className="mx-auto max-w-4xl px-4">
         <h1 className="text-3xl font-bold sm:text-4xl">{t("indexTitle")}</h1>
-        <p className="mt-3 text-muted-foreground">{t("indexSubtitle")}</p>
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
           {VS_SLUGS.map((slug) => (
@@ -80,22 +80,12 @@ function VsIndexContent() {
                 <h2 className="text-lg font-semibold group-hover:text-primary">
                   {t("title", { competitor: v(`${slug}.name`) })}
                 </h2>
-                <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{v(`${slug}.desc`)}</p>
               </Link>
             </li>
           ))}
         </ul>
 
-        <div className="mt-12 text-center">
-          <p className="text-lg font-semibold">{t("ctaTitle")}</p>
-          <p className="mt-1 text-sm text-muted-foreground">{t("ctaDesc")}</p>
-          <Link
-            href="/try"
-            className="mt-4 inline-block rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-          >
-            {t("tryBelle")}
-          </Link>
-        </div>
+        <ResultCta type="color_analysis" from="vs" variant="band" className="mt-12" />
       </div>
     </section>
   );

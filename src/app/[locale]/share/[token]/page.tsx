@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/constants";
 import { LOCALE_TO_REPORT_LANG } from "@/lib/color-report";
+import { isToolType } from "@/lib/blogTools";
 import { fetchSharedReport } from "@/lib/share";
 import { ogLocale } from "@/lib/seo";
 import { ShareCtaButton, ShareLandingTracker } from "./ShareLanding";
@@ -69,6 +70,8 @@ export default async function SharePage({
   if (!report) notFound();
 
   const t = await getTranslations({ locale, namespace: "sharePage" });
+  const bt = await getTranslations({ locale, namespace: "blog" });
+  const tool = isToolType(report.type) ? report.type : null;
   const tTry = report.lens ? await getTranslations({ locale, namespace: "tryPage" }) : null;
 
   return (
@@ -76,7 +79,6 @@ export default async function SharePage({
       <ShareLandingTracker type={report.type} />
 
       <h1 className="font-serif text-2xl font-bold text-foreground sm:text-3xl">{t("heading")}</h1>
-      <p className="mt-2 text-sm text-muted-foreground sm:text-base">{t("subheading")}</p>
 
       {report.lens && report.lookbook && tTry ? (
         <div className="mt-6 w-full">
@@ -113,8 +115,8 @@ export default async function SharePage({
       )}
 
       <div className="mt-8 flex flex-col items-center gap-2">
-        <ShareCtaButton type={report.type}>
-          {t("cta")}
+        <ShareCtaButton type={report.type} tool={tool}>
+          {tool ? `${bt(`cta.${tool}.button`)} →` : t("cta")}
         </ShareCtaButton>
         <p className="text-xs text-muted-foreground">{t("ctaNote")}</p>
       </div>

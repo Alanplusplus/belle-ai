@@ -1,14 +1,6 @@
 import { Link } from "@/i18n/navigation";
 
-/** 免费工具页（色彩测验 / 脸型测验 / 底调测试）共用的 SEO 区块：简介、FAQ、相关入口。文案全部由调用方传入（已本地化）。 */
-
-export function ToolIntro({ text }: { text: string }) {
-  return (
-    <section className="mx-auto max-w-3xl px-4 py-12">
-      <p className="text-base leading-relaxed text-muted-foreground">{text}</p>
-    </section>
-  );
-}
+/** 免费工具页（色彩测验 / 脸型测验 / 底调测试）共用的 SEO 区块：FAQ、相关入口（简介见 ClampedIntro）。文案全部由调用方传入（已本地化）。 */
 
 export function ToolFaq({ title, faqs }: { title: string; faqs: { q: string; a: string }[] }) {
   return (

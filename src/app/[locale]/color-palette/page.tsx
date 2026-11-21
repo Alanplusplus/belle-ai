@@ -165,7 +165,6 @@ export default async function ColorPaletteHubPage({
         {/* 四大季型的入口：这 4 个大类页此前只靠互相链接和 sitemap 才能到达 */}
         <section className="py-6">
           <h2 className="text-xl font-semibold">{t("parentTitle")}</h2>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t("parentDesc")}</p>
           <ul className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {PARENT_SEASON_ORDER.map((parent) => (
               <li key={parent} className="flex flex-col rounded-xl border border-border bg-card p-3">

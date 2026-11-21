@@ -1,4 +1,4 @@
-import { hasLocale, useLocale, useTranslations } from "next-intl";
+import { hasLocale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
@@ -13,7 +13,6 @@ import { VideoCard } from "@/components/VideoEmbed";
 import { getPublishedVideos } from "@/lib/videos";
 import { FunnelLink } from "@/components/FunnelLink";
 import { sampleHref } from "@/lib/blogTools";
-import { QuickAnswerSection } from "@/components/QuickAnswer";
 import { PricedFill } from "@/components/PricedFill";
 
 export async function generateMetadata({
@@ -48,7 +47,6 @@ export default async function HomePage({
 }
 
 function HomeContent() {
-  const locale = useLocale();
   const t = useTranslations("home");
   const ft = useTranslations("features");
   const cg = useTranslations("colorGuide");
@@ -142,9 +140,6 @@ function HomeContent() {
         <div aria-hidden="true" className="pointer-events-none absolute -left-28 bottom-0 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 lg:grid-cols-[1.2fr_0.8fr] lg:gap-6 lg:py-16">
           <div className="text-center lg:text-left">
-            <p className="mb-4 inline-block rounded-full border border-primary/40 bg-white/60 px-4 py-1.5 text-sm font-semibold tracking-widest uppercase text-primary">
-              {t("heroSubtitle")}
-            </p>
             <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl xl:text-[3.4rem] xl:leading-[1.1]">
               {t("heroTitle")}
               <br />
@@ -152,8 +147,10 @@ function HomeContent() {
                 {t("heroTitleAccent")}
               </span>
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground lg:mx-0">
-              {t("heroDescription")}
+            {/* 一句话说清「传什么 → 得到什么 → 多久」；原来的三句描述和下面的 heroNote 在重复「免费 / 无需注册」。
+                直接复用 /try 页的价值主张，两处说法一致（结构化数据里的 description 仍用完整的 heroDescription） */}
+            <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground lg:mx-0">
+              {tp("valueProp")}
             </p>
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
               <Link
@@ -179,29 +176,6 @@ function HomeContent() {
                 <PricedFill template={t.raw("heroPriceNote") as string} prices={{ price: "single" }} />
               </p>
             )}
-
-            {/* Product Stats Bar */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground lg:justify-start">
-              <div className="flex items-center gap-2">
-                <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>
-                <span><span className="font-semibold text-foreground">{t("statsAnalysisTypes")}</span></span>
-              </div>
-              <span className="text-border lg:hidden">·</span>
-              <div className="flex items-center gap-2">
-                <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" /></svg>
-                <span><span className="font-semibold text-foreground">{t("statsSeasonSystem")}</span></span>
-              </div>
-              <span className="text-border lg:hidden">·</span>
-              <div className="flex items-center gap-2">
-                <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
-                <span><span className="font-semibold text-foreground">{t("statsLanguages")}</span></span>
-              </div>
-              <span className="text-border lg:hidden">·</span>
-              <div className="flex items-center gap-2">
-                <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
-                <span><span className="font-semibold text-foreground">{t("statsSpeed")}</span></span>
-              </div>
-            </div>
           </div>
 
           <HeroPreview
@@ -212,14 +186,17 @@ function HomeContent() {
         </div>
       </section>
 
-      {/* 一句话答案 + 关键事实（费用、限制、怎么做的、照片去向）：给 AI 搜索和只看首屏的访客直接摘取，不放进首屏英雄区里挤按钮 */}
-      <QuickAnswerSection locale={locale} lead={t("answerLead")} variant="home" />
-
       {/* 成品长什么样：真实报告里的四页（和 personal-color-analysis 页是同一批截图），让人在首屏之后马上看到「这就是我会拿到的」 */}
       <section className="py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <SectionHeading title={cp("insideTitle")} subtitle={cp("insideSub")} />
-          <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
+          <SectionHeading title={cp("insideTitle")} />
+          {/* 原来的一整句说明只为表达「这是示例」，换成一个小标签 */}
+          <p className="mt-4 text-center">
+            <span className="inline-block rounded-full border border-primary/20 bg-card px-3.5 py-1 text-xs font-semibold text-primary shadow-sm">
+              {tp("demoBadge")}
+            </span>
+          </p>
+          <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
             {HOME_REPORT_PAGES.map((page) => (
               <FunnelLink
                 key={page.key}
@@ -265,24 +242,27 @@ function HomeContent() {
       {/* How It Works */}
       <section className="bg-primary/[0.05] py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <SectionHeading title={t("howTitle")} subtitle={t("howSubtitle")} />
-          <div className="mt-8 grid gap-8 md:grid-cols-3">
-            <StepCard number="1" title={t("step1Title")} desc={t("step1Desc")} />
+          <SectionHeading title={t("howTitle")} />
+          {/* 手机上是一条带连接线的三步横排，只留标题：三段描述里第 2、3 步只是把标题再说一遍，第 1 步的「素颜 / 自然光」提示在 /try 上传框里已有。
+              桌面端宽度够，描述保留（HowTo 结构化数据里的 step 文案不受影响） */}
+          <ol className="mt-8 grid grid-cols-3">
+            <StepCard number="1" title={t("step1Title")} desc={t("step1Desc")} first />
             <StepCard number="2" title={t("step2Title")} desc={t("step2Desc")} />
-            <StepCard number="3" title={t("step3Title")} desc={t("step3Desc")} />
-          </div>
+            <StepCard number="3" title={t("step3Title")} desc={t("step3Desc")} last />
+          </ol>
         </div>
       </section>
 
       {/* Photo privacy commitments */}
       <section className="bg-primary/[0.05] pb-12">
         <div className="mx-auto max-w-4xl px-4">
-          <div className="rounded-2xl border border-primary/20 bg-white/80 px-6 py-6 text-center shadow-sm sm:px-8">
+          <div className="rounded-2xl border border-primary/20 bg-white/80 px-4 py-5 text-center shadow-sm sm:px-8 sm:py-6">
             <h2 className="font-serif text-xl font-bold sm:text-2xl">{t("privacyTitle")}</h2>
-            <ul className="mt-4 grid gap-3 text-sm text-muted-foreground sm:grid-cols-3">
+            {/* 三条承诺都是短句：手机上居中成一组、左对齐、每条一行（原来三列在手机上被挤成多行）；桌面一行排开 */}
+            <ul className="mx-auto mt-4 flex w-fit max-w-full flex-col gap-2.5 text-left text-[13px] text-muted-foreground sm:w-auto sm:text-sm sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-8 sm:gap-y-2">
               {(["privacyItem1", "privacyItem2", "privacyItem3"] as const).map((key) => (
-                <li key={key} className="flex items-start justify-center gap-2 text-left sm:text-center">
-                  <svg className="mt-0.5 h-4 w-4 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                <li key={key} className="flex items-center gap-2">
+                  <svg className="h-4 w-4 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                   <span>{t(key)}</span>
                 </li>
               ))}
@@ -298,77 +278,25 @@ function HomeContent() {
       {videos.length > 0 && (
         <section className="py-12">
           <div className="mx-auto max-w-6xl px-4">
-            <SectionHeading title={vt("homeTitle")} subtitle={vt("homeSubtitle")} />
+            <SectionHeading title={vt("homeTitle")} />
             <div className="mx-auto mt-8 grid max-w-4xl gap-6 sm:grid-cols-2">
               {videos.map((video) => (
-                <VideoCard key={video.id} video={video} page="home" showDescription sizes="(max-width: 640px) 100vw, 400px" />
+                <VideoCard key={video.id} video={video} page="home" sizes="(max-width: 640px) 100vw, 400px" />
               ))}
             </div>
           </div>
         </section>
       )}
 
-      {/* Core Features */}
+      {/* 全部分析类型：一个统一的网格，只留图 + 标题，手机两列。
+          以前分成「Complete Color Analysis Suite（3 个）」和「Explore All（另外 8 个）」两块：按定价页的分法，
+          妆容 / 脸型和发色、穿搭、眼镜等是同一档（都用积分），拆开不准确，两个标题还互相矛盾，页面也更长。
+          每张卡片的说明已去掉（妆容那句还写着现在的报告里没有的「contour」） */}
       <section className="bg-muted/30 py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <SectionHeading title={t("featuresTitle")} subtitle={t("featuresSubtitle")} />
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            <FeatureCard
-              image="/images/card_color_analysis.webp"
-              icon={<ColorIcon />}
-              title={t("colorTitle")}
-              description={t("colorDesc")}
-              href="/personal-color-analysis"
-              cta={ft("learnMore")}
-            />
-            <FeatureCard
-              image="/images/showcase_skin.webp"
-              icon={<MakeupIcon />}
-              title={t("makeupTitle")}
-              description={t("makeupDesc")}
-              href="/makeup-analysis"
-              cta={ft("learnMore")}
-            />
-            <FeatureCard
-              image="/images/card_face_shape.webp"
-              icon={<FaceIcon />}
-              title={t("faceTitle")}
-              description={t("faceDesc")}
-              href="/face-shape-analysis"
-              cta={ft("learnMore")}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Color Analysis Guide Banner */}
-      <section className="py-6">
-        <div className="mx-auto max-w-6xl px-4">
-          <Link
-            href="/color-analysis"
-            className="group flex items-center justify-between rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/5 to-gold/5 px-6 py-5 transition hover:border-primary/40 hover:shadow-md sm:px-8"
-          >
-            <div>
-              <h3 className="font-serif text-lg font-bold group-hover:text-primary sm:text-xl">
-                {cg("homeBannerTitle")}
-              </h3>
-              <p className="mt-1 text-sm text-muted-foreground">
-                {cg("homeBannerDesc")}
-              </p>
-            </div>
-            <span className="ml-4 shrink-0 text-primary transition group-hover:translate-x-1">
-              &rarr;
-            </span>
-          </Link>
-        </div>
-      </section>
-
-      {/* More Analysis Types */}
-      <section className="py-12">
-        <div className="mx-auto max-w-6xl px-4">
-          <SectionHeading title={t("moreTitle")} subtitle={t("moreSubtitle")} />
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {MORE_FEATURES.map((f) => (
+          <SectionHeading title={t("moreTitle")} />
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+            {ANALYSIS_TYPES.map((f) => (
               <Link key={f.href} href={f.href} className="group block h-full">
                 <div className="h-full overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
                   <div className="relative aspect-[4/3]">
@@ -377,29 +305,27 @@ function HomeContent() {
                       alt={t(f.titleKey)}
                       fill
                       className="object-cover transition duration-300 group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
                     />
                   </div>
-                  <div className="p-4">
+                  <div className="p-3 sm:p-4">
                     <h3 className="text-sm font-semibold">{t(f.titleKey)}</h3>
-                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground line-clamp-2">{t(f.descKey)}</p>
                   </div>
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why AI Color Analysis */}
-      <section className="bg-primary/[0.05] py-12">
-        <div className="mx-auto max-w-6xl px-4">
-          <SectionHeading title={t("whyTitle")} />
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            <WhyCard icon={<WhyFreeIcon />} title={t("whyFree")} text={t("whyFreeDesc")} />
-            <WhyCard icon={<WhyAccuracyIcon />} title={t("whyAccurate")} text={t("whyAccurateDesc")} />
-            <WhyCard icon={<WhyCostIcon />} title={t("whyCost")} text={t("whyCostDesc")} />
-            <WhyCard icon={<WhyPersonalIcon />} title={t("whyPersonal")} text={t("whyPersonalDesc")} />
+            {/* 第 12 格：色彩分析指南入口。11 张卡片在两列 / 四列下都会留空位，补上这一格正好排满（手机 6 行、桌面 3 行） */}
+            <Link
+              href="/color-analysis"
+              className="group flex h-full min-h-32 flex-col items-center justify-center gap-2 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 to-gold/10 p-4 text-center transition hover:border-primary/40 hover:shadow-lg"
+            >
+              <h3 className="font-serif text-base font-bold group-hover:text-primary sm:text-lg">
+                {cg("homeBannerTitle")}
+              </h3>
+              <span aria-hidden="true" className="text-primary transition group-hover:translate-x-1">
+                &rarr;
+              </span>
+            </Link>
           </div>
         </div>
       </section>
@@ -411,17 +337,20 @@ function HomeContent() {
           <p className="mx-auto mt-5 max-w-3xl text-center leading-relaxed text-muted-foreground">
             {t.rich("aiDeepIntro", { guide: inlineLink("/color-analysis") })}
           </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {/* 四个维度：默认只露标题，点开看解释（和 FAQ 同一种折叠写法）；手机上不再是四大段连续的小字 */}
+          <div className="mx-auto mt-8 max-w-3xl divide-y divide-border rounded-2xl border border-border bg-card px-5">
             {AI_DIMENSIONS.map((dim) => (
-              <div key={dim.titleKey} className="rounded-xl border border-border bg-card p-5">
-                <h3 className="text-sm font-semibold">{cg(dim.titleKey)}</h3>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{cg(dim.descKey)}</p>
-              </div>
+              <details key={dim.titleKey} className="group py-4">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+                  <h3 className="text-base font-semibold">{cg(dim.titleKey)}</h3>
+                  <span aria-hidden="true" className="shrink-0 text-muted-foreground transition group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{cg(dim.descKey)}</p>
+              </details>
             ))}
           </div>
 
           <h3 className="mt-12 text-center font-serif text-2xl font-bold">{t("aiSeasonsTitle")}</h3>
-          <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-muted-foreground">{t("aiSeasonsDesc")}</p>
           <div className="mt-6 flex flex-wrap justify-center gap-2.5">
             {allSeasons.map((season) => (
               <Link
@@ -452,7 +381,7 @@ function HomeContent() {
       {/* Comparison Table */}
       <section className="bg-muted/50 py-12">
         <div className="mx-auto max-w-4xl px-4">
-          <SectionHeading title={t("compareTitle")} subtitle={t("compareSubtitle")} />
+          <SectionHeading title={t("compareTitle")} />
           <div className="mt-8 overflow-x-auto">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -505,10 +434,7 @@ function HomeContent() {
           <div className="section-ornament" aria-hidden="true">
             <span />
           </div>
-          <p className="mt-4 text-lg text-muted-foreground">
-            {t("ctaSubtitle")}
-          </p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
               href="/try"
               className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-10 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl hover:shadow-primary/40"
@@ -516,9 +442,9 @@ function HomeContent() {
               {t("ctaCta")}
             </Link>
           </div>
-          <p className="mt-4 text-xs text-muted-foreground">
-            {t("ctaNote")}
-          </p>
+          {/* 原来的 ctaNote 是四项并列（免费预览 / 无需注册 / 60 秒 / 12 季型），后两项在首屏已经说过，
+              且和首屏 heroNote 的说法、标点都不一致。这里直接复用 heroNote，两处口径相同（ctaNote 键保留不动） */}
+          <p className="mt-4 text-sm text-muted-foreground">{t("heroNote")}</p>
         </div>
       </section>
     </>
@@ -566,172 +492,76 @@ function HeroPreview({
   );
 }
 
-/** 区块标题：衬线标题 + 金色装饰线 + 副标题 */
-function SectionHeading({ title, subtitle }: { title: string; subtitle?: string }) {
+/** 区块标题：衬线标题 + 金色装饰线。不放副标题：副标题基本是把标题再说一遍，手机上只会把内容往下推 */
+function SectionHeading({ title }: { title: string }) {
   return (
     <div className="text-center">
       <h2 className="font-serif text-3xl font-bold sm:text-4xl">{title}</h2>
       <div className="section-ornament" aria-hidden="true">
         <span />
       </div>
-      {subtitle && <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">{subtitle}</p>}
     </div>
   );
 }
 
-function FeatureCard({
-  image,
-  icon,
-  title,
-  description,
-  href,
-  cta,
-}: {
-  image?: string;
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  href: string;
-  cta: string;
-}) {
-  return (
-    <div className="group overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/40 hover:shadow-lg">
-      {image && (
-        <div className="relative aspect-[16/9] w-full overflow-hidden">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-cover transition duration-300 group-hover:scale-105"
-            sizes="(max-width: 768px) 100vw, 33vw"
-          />
-        </div>
-      )}
-      <div className="p-6">
-        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
-          {icon}
-        </div>
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-          {description}
-        </p>
-        <Link
-          href={href}
-          className="mt-4 inline-flex items-center text-sm font-medium text-primary transition group-hover:underline"
-        >
-          {cta} &rarr;
-        </Link>
-      </div>
-    </div>
-  );
-}
-
+/** 三步里的一步：圆形序号 + 标题；序号两侧各半条连接线（第一步没有左半、最后一步没有右半），三列拼起来是一条贯穿的线 */
 function StepCard({
   number,
   title,
   desc,
+  first = false,
+  last = false,
 }: {
   number: string;
   title: string;
   desc: string;
+  first?: boolean;
+  last?: boolean;
 }) {
   return (
-    <div className="text-center">
-      <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary to-gold text-xl font-bold text-white shadow-md shadow-primary/20">
+    <li className="relative px-1.5 text-center sm:px-4">
+      {!first && (
+        <span aria-hidden="true" className="absolute left-0 top-5 h-px w-1/2 bg-primary/30 sm:top-7" />
+      )}
+      {!last && (
+        <span aria-hidden="true" className="absolute right-0 top-5 h-px w-1/2 bg-primary/30 sm:top-7" />
+      )}
+      <div className="relative mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-gold text-lg font-bold text-white shadow-md shadow-primary/20 sm:mb-4 sm:h-14 sm:w-14 sm:text-xl">
         {number}
       </div>
-      <h3 className="font-serif text-lg font-semibold">{title}</h3>
-      <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
-    </div>
+      <h3 className="font-serif text-sm font-semibold leading-snug sm:text-lg">{title}</h3>
+      <p className="mt-2 hidden text-sm text-muted-foreground sm:block">{desc}</p>
+    </li>
   );
 }
 
-function WhyCard({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) {
-  return (
-    <div className="rounded-xl border border-border bg-card p-5 text-center">
-      <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-        {icon}
-      </div>
-      <h3 className="font-medium text-sm">{title}</h3>
-      <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{text}</p>
-    </div>
-  );
-}
-
-function WhyFreeIcon() {
-  return (
-    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-    </svg>
-  );
-}
-
-function WhyAccuracyIcon() {
-  return (
-    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-  );
-}
-
-function WhyCostIcon() {
-  return (
-    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-  );
-}
-
-function WhyPersonalIcon() {
-  return (
-    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
-    </svg>
-  );
-}
-
-function MakeupIcon() {
-  return (
-    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
-    </svg>
-  );
-}
-
-function ColorIcon() {
-  return (
-    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
-    </svg>
-  );
-}
-
-function FaceIcon() {
-  return (
-    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
-    </svg>
-  );
-}
-
-// 首页展示的四页真实报告截图（public/images/examples/color_*.webp），key 对应 messages.colorPage.r<N>t
+// 首页展示的四页真实报告截图（public/images/examples/color_*.webp），key 对应 messages.colorPage.r<N>t。
+// 选图标准：缩略尺寸下一眼能看懂、而且不能把人脸裁掉——第一张用完整的 hero（整脸 + 季型标题），
+// 不用整页都是文字胶囊的妆容页；color_thumb_* 是专为缩略图重裁的文件（personal-color-analysis 页的整页长图仍用 color_season / color_avoid）
 const HOME_REPORT_PAGES = [
-  { key: "r1", image: "/images/examples/color_season.webp" },
+  { key: "r1", image: "/images/examples/color_thumb_season.webp" },
   { key: "r3", image: "/images/examples/color_palette.webp" },
-  { key: "r5", image: "/images/examples/color_makeup.webp" },
+  { key: "r4", image: "/images/examples/color_thumb_avoid.webp" },
   { key: "r7", image: "/images/examples/color_lookbook.webp" },
 ] as const;
 
-const MORE_FEATURES = [
-  { titleKey: "hairTitle", descKey: "hairDesc", href: "/hair-color-analysis" as const, image: "/images/card_hair.webp" },
-  { titleKey: "outfitTitle", descKey: "outfitDesc", href: "/outfit-color-analysis" as const, image: "/images/card_outfit.webp" },
-  { titleKey: "glassesTitle", descKey: "glassesDesc", href: "/glasses-analysis" as const, image: "/images/card_glasses.webp" },
-  { titleKey: "occasionTitle", descKey: "occasionDesc", href: "/occasion-makeup" as const, image: "/images/card_occasion.webp" },
-  { titleKey: "jewelryTitle", descKey: "jewelryDesc", href: "/jewelry-analysis" as const, image: "/images/card_jewelry.webp" },
-  { titleKey: "glowUpTitle", descKey: "glowUpDesc", href: "/glow-up-report" as const, image: "/images/card_glow_up.webp" },
-  { titleKey: "styleTitle", descKey: "styleDesc", href: "/style-personality" as const, image: "/images/card_style.webp" },
-  { titleKey: "celebTitle", descKey: "celebDesc", href: "/celebrity-match" as const, image: "/images/card_celebrity.webp" },
-];
+// 首页「全部分析类型」网格：色彩分析排第一（主打产品），其余沿用原来的先后顺序。
+// 图片是专门为这个网格做的 explore_*.webp（4:3，AI 生成，图里不带文字所以 9 种语言通用）：
+// 每张都直接画出该功能的「结果」——披色布做色彩诊断、面部网格扫描、同一个人三种发色、金 vs 银、前后对比、四种风格、红毯相似度。
+// 旧的 card_*.webp 还被 /try 的工具选择卡使用，不要删
+const ANALYSIS_TYPES = [
+  { titleKey: "colorTitle", href: "/personal-color-analysis" as const, image: "/images/explore_color.webp" },
+  { titleKey: "makeupTitle", href: "/makeup-analysis" as const, image: "/images/explore_makeup.webp" },
+  { titleKey: "faceTitle", href: "/face-shape-analysis" as const, image: "/images/explore_face.webp" },
+  { titleKey: "hairTitle", href: "/hair-color-analysis" as const, image: "/images/explore_hair.webp" },
+  { titleKey: "outfitTitle", href: "/outfit-color-analysis" as const, image: "/images/explore_outfit.webp" },
+  { titleKey: "glassesTitle", href: "/glasses-analysis" as const, image: "/images/explore_glasses.webp" },
+  { titleKey: "occasionTitle", href: "/occasion-makeup" as const, image: "/images/explore_occasion.webp" },
+  { titleKey: "jewelryTitle", href: "/jewelry-analysis" as const, image: "/images/explore_jewelry.webp" },
+  { titleKey: "glowUpTitle", href: "/glow-up-report" as const, image: "/images/explore_glowup.webp" },
+  { titleKey: "styleTitle", href: "/style-personality" as const, image: "/images/explore_style.webp" },
+  { titleKey: "celebTitle", href: "/celebrity-match" as const, image: "/images/explore_celeb.webp" },
+] as const;
 
 // 复用专题页已翻译好的四个维度文案，不需要额外翻译
 const AI_DIMENSIONS = [

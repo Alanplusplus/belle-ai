@@ -12,24 +12,48 @@ export function QuickAnswer({
   title,
   lead,
   facts,
+  collapsed = false,
 }: {
   title: string;
-  lead: string;
+  /** 一句话答案；折叠模式下由调用方放到别处（功能页放进首屏），这里可以不传 */
+  lead?: string;
   facts: { label: string; text: ReactNode }[];
+  /** 折叠成一行（标题 + 展开箭头），事实清单仍然在 DOM 里，没有换成别的内容 */
+  collapsed?: boolean;
 }) {
+  const factList = (
+    <dl className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
+      {facts.map((fact) => (
+        <div key={fact.label}>
+          <dt className="text-sm font-semibold">{fact.label}</dt>
+          <dd className="mt-0.5 text-sm leading-relaxed text-muted-foreground">{fact.text}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+
+  if (collapsed) {
+    return (
+      <section aria-label={title} className="mx-auto max-w-4xl px-4 pt-2">
+        <details className="group rounded-2xl border border-primary/20 bg-card px-5 py-3.5 shadow-sm">
+          <summary className="flex cursor-pointer list-none items-center justify-between text-sm font-semibold uppercase tracking-wider text-primary [&::-webkit-details-marker]:hidden">
+            {title}
+            <svg aria-hidden="true" className="h-4 w-4 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div className="mt-4">{factList}</div>
+        </details>
+      </section>
+    );
+  }
+
   return (
     <section aria-label={title} className="mx-auto max-w-4xl px-4 py-8">
       <div className="rounded-2xl border border-primary/20 bg-card p-6 shadow-sm">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-primary">{title}</h2>
-        <p className="mt-2 text-base leading-relaxed">{lead}</p>
-        <dl className="mt-4 grid gap-x-8 gap-y-3 sm:grid-cols-2">
-          {facts.map((fact) => (
-            <div key={fact.label}>
-              <dt className="text-sm font-semibold">{fact.label}</dt>
-              <dd className="mt-0.5 text-sm leading-relaxed text-muted-foreground">{fact.text}</dd>
-            </div>
-          ))}
-        </dl>
+        {lead && <p className="mt-2 text-base leading-relaxed">{lead}</p>}
+        <div className="mt-4">{factList}</div>
       </div>
     </section>
   );
@@ -39,15 +63,18 @@ export function QuickAnswer({
  * 功能页 / 首页用的版本：lead 是各页自己的一句话答案，下面四条事实（费用、限制、怎么做的、照片去向）全站一致。
  * 费用那条带价格，交给 PricedFill 按访客币种渲染；价格和天数、积分数都取自 constants，不在文案里写死。
  * variant="home" 讲整站（免费预览 + 套装），"tool" 讲单个分析工具（文字结果免费，结果图用积分）。
+ * collapsed：折叠成一行；这时一句话答案由调用方放到首屏（lead 可以不传），清单收进展开区。
  */
 export async function QuickAnswerSection({
   locale,
   lead,
   variant,
+  collapsed = false,
 }: {
   locale: string;
-  lead: string;
+  lead?: string;
   variant: "home" | "tool";
+  collapsed?: boolean;
 }) {
   const t = await getTranslations({ locale, namespace: "quickFacts" });
   // 首页：打开了「单份报告」入口、且这个语言写了带单份价格的版本（costHomeSingle）时，讲清「ab 单份价」；
@@ -60,6 +87,7 @@ export async function QuickAnswerSection({
     <QuickAnswer
       title={t("title")}
       lead={lead}
+      collapsed={collapsed}
       facts={[
         {
           label: t("costLabel"),

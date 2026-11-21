@@ -125,6 +125,9 @@ export const KIT_SPARE_CREDITS = KIT_CREDITS;
 export const ADDON_CREDITS = CREDIT_PACKS.addon.credits;
 /** 解锁后多少天内可以免费重测色彩分析（后端 kit_mode.RETEST_DAYS 要保持一致） */
 export const KIT_RETEST_DAYS = 14;
+/** 「买前扫一扫」每天的次数：免费 / 买过色彩套装（后端 web_color_routes.py 的 SCAN_FREE_DAILY / SCAN_PACK_DAILY 要保持一致） */
+export const SCAN_FREE_DAILY = 3;
+export const SCAN_PACK_DAILY = 20;
 
 /** GA4 衡量 ID：layout 里的 gtag 和 webhook 里的服务端 purchase 共用 */
 export const GA_MEASUREMENT_ID = "G-H526RRVE9N";

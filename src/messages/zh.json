@@ -145,7 +145,7 @@
     "step3Desc": "获得你的四季色彩类型及适合服装、妆容等的完整配色方案。",
     "privacyTitle": "你的照片，由你掌控",
     "privacyItem1": "仅用于生成你的报告",
-    "privacyItem2": "保存在你的私密历史中，仅你可见",
+    "privacyItem2": "私密保存，仅你可见",
     "privacyItem3": "可随时申请删除",
     "privacyLink": "查看隐私政策",
     "ctaTitle": "准备好找到你的最佳颜色了吗？",
@@ -467,7 +467,7 @@
     "faq2Q": "在线色彩分析测试有多准确？",
     "faq2A": "在线测试依赖你对自身特征的主观观察，只能给出大致的估计。AI 照片分析基于你的真实照片，通常能提供更可靠的参考起点——但它仍是 AI 的视觉判断，会随光线和照片质量而变化。",
     "faq3Q": "可以免费做个人色彩分析吗？",
-    "faq3A": "当然可以！你可以参加我们的免费在线色彩测试，获得季节色彩类型的初步评估。如需更详细的AI分析，包含完整色彩搭配和化妆建议，Belle AI提供一次免费分析。",
+    "faq3A": "当然可以！你可以参加我们的免费在线色彩测试，获得季节色彩类型的初步评估。如需更详细的AI分析，包含完整色彩搭配和化妆建议，Belle AI提供免费的报告预览。",
     "faq4Q": "四季色彩类型是什么？",
     "faq4A": "四季色彩类型分别是：春季型（暖色调、浅色、明亮）、夏季型（冷色调、浅色、柔和）、秋季型（暖色调、深色、柔和）、冬季型（冷色调、深色、鲜明）。在12季节系统中，每个季节还有3个亚型，提供更精确的色彩建议。",
     "relatedTitle": "探索更多色彩工具",
@@ -649,10 +649,52 @@
     "relatedPosts": "相关文章",
     "backToBlog": "返回博客",
     "toc": "本文目录",
-    "ctaTitle": "想亲自体验AI色彩分析吗？",
-    "ctaDescription": "上传一张照片，60秒获得杂志级AI美妆报告。",
-    "topCtaTitle": "60 秒看到你自己的结果",
-    "stickyCtaText": "✨ 免费获取你的AI色彩分析",
+    "cta": {
+      "color_analysis": {
+        "title": "上传一张自拍，找出你的色彩季型和最适合你的颜色",
+        "button": "测我的色彩季型"
+      },
+      "makeup": {
+        "title": "上传一张自拍，获得 3 套带精确唇色、腮红和眼影色号的妆容",
+        "button": "获取我的专属妆容"
+      },
+      "face_shape": {
+        "title": "上传一张自拍，找出你的脸型和最适合的发型",
+        "button": "测我的脸型"
+      },
+      "hair_preview": {
+        "title": "上传一张自拍，在你自己的照片上预览 4 种发色",
+        "button": "预览我的发色"
+      },
+      "outfit_color": {
+        "title": "上传一张自拍，获得 3 套用你的适合色搭配的穿搭",
+        "button": "获取我的穿搭配色"
+      },
+      "glasses_match": {
+        "title": "上传一张自拍，找出最适合你脸型的眼镜款式",
+        "button": "找我的适配眼镜"
+      },
+      "occasion_makeup": {
+        "title": "选好场合并上传一张自拍，获得 3 套完整妆容",
+        "button": "获取我的场合妆容"
+      },
+      "jewelry_guide": {
+        "title": "上传一张自拍，找出最衬你的金属色和耳环款式",
+        "button": "找我的适配首饰"
+      },
+      "glow_up_report": {
+        "title": "上传一张自拍，看看你变美后的前后对比",
+        "button": "生成我的变美对比"
+      },
+      "style_personality": {
+        "title": "上传一张自拍，发现你的风格类型和 3 套日常搭配",
+        "button": "测我的风格类型"
+      },
+      "celebrity_match": {
+        "title": "上传一张自拍，找出和你同色彩季型的明星",
+        "button": "找我的同季明星"
+      }
+    },
     "sidebarCtaTitle": "亲自试试",
     "sidebarCtaDesc": "上传照片，60秒发现最适合你的颜色。",
     "sidebarCtaFree": "免费 · 无需注册",
@@ -789,6 +831,41 @@
     "notifyBody": "你的分析报告已经生成完毕，点击查看结果。",
     "uploadTrust": "照片仅用于生成您的报告，并保存在您的私有历史记录中，可随时申请删除",
     "uploadConsent": "上传即表示您确认照片为本人或已获得当事人许可",
+    "webcamOpen": "使用摄像头拍照",
+    "webcamTitle": "用摄像头拍一张自拍",
+    "webcamHint": "面朝窗户或灯光，让脸上光线均匀，并正视镜头。",
+    "webcamCapture": "拍照",
+    "webcamChooseFile": "改为选择文件",
+    "webcamStarting": "正在启动摄像头…",
+    "webcamErrorDenied": "摄像头权限被拒绝。请在浏览器地址栏允许访问，或改为选择照片文件。",
+    "webcamErrorMissing": "这台电脑上没有找到摄像头。请选择照片文件，或改用手机继续。",
+    "webcamErrorOther": "无法启动摄像头，可能正被其他应用占用。请改为选择照片文件。",
+    "handoffLink": "电脑里没有合适的照片？用手机拍一张",
+    "handoffHint": "用手机相机扫码，在手机上自拍，照片会自动出现在这里，之后仍在这台电脑上完成。",
+    "handoffItemHint": "用手机相机扫码，在手机上拍下这件单品，照片会自动出现在这里，之后仍在这台电脑上完成。",
+    "handoffItemPageTitle": "把单品照片传到你的电脑",
+    "handoffItemTip": "单独拍摄这件单品，自然光下，让颜色充满画面。",
+    "handoffItemTake": "拍下这件单品",
+    "handoffItemTrust": "照片仅用于为你扫描这件单品。",
+    "handoffCopy": "复制链接",
+    "handoffCopied": "链接已复制",
+    "handoffQrAlt": "用手机传照片的二维码",
+    "handoffWaiting": "正在等待你的照片…",
+    "handoffExpired": "这个二维码已过期。",
+    "handoffError": "暂时无法开启手机上传，请重试。",
+    "handoffRefresh": "获取新的二维码",
+    "handoffPageTitle": "把自拍传到你的电脑",
+    "handoffPageSub": "在这里拍一张或选一张照片，几秒钟后它会出现在你的电脑上，后续都在电脑上完成。",
+    "handoffUploading": "正在发送…",
+    "handoffDoneTitle": "照片已发送！",
+    "handoffDoneSub": "回到电脑上继续就可以了，可以关闭这个页面。",
+    "handoffRetake": "换一张照片再发",
+    "handoffExpiredTitle": "这个链接已过期",
+    "handoffExpiredSub": "请回到电脑上，重新获取二维码再扫一次。",
+    "handoffUploadFailed": "照片发送失败，请检查网络后重试。",
+    "valueProp": "上传一张自拍，约 60 秒得到你的色彩季型和专属配色方案。",
+    "previewStrip": "你的报告长这样",
+    "valueNote": "免费体验 · 无需注册 · 报告仅你可见",
     "moreTypes": "更多分析类型",
     "compressing": "正在优化照片…",
     "notifyMe": "完成后通知我",
@@ -895,6 +972,8 @@
     "tryonCat_eyeshadow": "眼影",
     "tryonCat_hair_color": "染发",
     "errorUploadUnreadable": "无法读取这张照片——它可能已被移动，或还在从云端下载。请重新选择这张照片，或拍一张新的。",
+    "errorUploadFormat": "暂时无法处理这种照片格式。请选择 JPG 或 PNG 照片，或拍一张新的。",
+    "errorChoosePhoto": "换一张照片",
     "errorTimeout": "这次花的时间比平时长。你的照片是安全的，分析可能仍会完成——请过一分钟到最近记录里看看，或点击「重试」。",
     "unlockSinglePriceCta": "揭晓我的全部颜色 · {price}"
   },
@@ -3725,7 +3804,7 @@
       "belle6": "网页版（手机与电脑浏览器）",
       "comp6": "iOS & Android",
       "feat7": "Languages",
-      "belle7": "5 languages",
+      "belle7": "9 languages",
       "comp7": "Multiple",
       "feat8": "Price",
       "belle8": "Free preview · {price} one-time, no subscription",
@@ -3749,9 +3828,9 @@
     "colorwise": {
       "name": "Colorwise",
       "desc": "Compare Belle AI and Colorwise for seasonal color analysis. Both use AI, but they differ in analysis depth, report quality, and pricing.",
-      "verdict": "Belle AI offers significantly more depth with three analysis modes, 12-season classification, and premium visual reports. Colorwise is simpler and offers more free uses, but provides less detailed analysis. Choose Belle AI for comprehensive beauty guidance, or Colorwise if you just want a quick color type answer.",
+      "verdict": "Belle AI offers significantly more depth with 11 analysis tools, 12-season classification, and premium visual reports. Colorwise is simpler and offers more free uses, but provides less detailed analysis. Choose Belle AI for comprehensive beauty guidance, or Colorwise if you just want a quick color type answer.",
       "feat0": "Analysis Types",
-      "belle0": "Makeup + Color + Face Shape (3 modes)",
+      "belle0": "11 analysis tools (color, makeup, face shape and more)",
       "comp0": "Color analysis only",
       "feat1": "Color System",
       "belle1": "12-season detailed",
@@ -3771,7 +3850,7 @@
       "feat6": "Price",
       "belle6": "Free preview · {price} one-time, no subscription",
       "comp6": "From $9.99/month",
-      "ba0": "一个工具内含三种分析模式",
+      "ba0": "一个应用内含 11 种分析工具",
       "ba1": "12-season system vs 4-season for more precision",
       "ba2": "Magazine-quality visual reports",
       "ba3": "Complete makeup look recommendations",
@@ -3780,7 +3859,7 @@
       "ca1": "更快得出 4 季型结果",
       "ca2": "Simpler interface",
       "faq1Q": "Is Belle AI more accurate than Colorwise?",
-      "faq1A": "Belle AI uses a 12-season system with three analysis modes for more precise results. Colorwise uses a simpler 4-season system, which is faster but less detailed.",
+      "faq1A": "Belle AI uses a 12-season system with 11 analysis tools for more precise results. Colorwise uses a simpler 4-season system, which is faster but less detailed.",
       "faq2Q": "Which is cheaper — Belle AI or Colorwise?",
       "faq2A": "Belle AI is free to preview (3 free analyses) and the Color Kit is a one-time {price}, while Colorwise requires a subscription from $9.99/month. Belle AI is more affordable for occasional users.",
       "faq3Q": "Does Colorwise offer makeup analysis like Belle AI?",
@@ -3834,9 +3913,9 @@
     "mycoloranalysis": {
       "name": "MyColorAnalysis AI",
       "desc": "Compare Belle AI and MyColorAnalysis AI for personal color analysis. Both offer AI-powered seasonal color typing, but differ in analysis depth, additional features, and pricing model.",
-      "verdict": "Belle AI provides more comprehensive analysis with three modes and premium visual reports. MyColorAnalysis AI offers a professional review option for those who want human expert validation. Choose Belle AI for all-in-one beauty analysis with stunning reports, or MyColorAnalysis if you specifically want an expert human review.",
+      "verdict": "Belle AI provides more comprehensive analysis with 11 analysis tools and premium visual reports. MyColorAnalysis AI offers a professional review option for those who want human expert validation. Choose Belle AI for all-in-one beauty analysis with stunning reports, or MyColorAnalysis if you specifically want an expert human review.",
       "feat0": "Analysis Types",
-      "belle0": "Color + Makeup + Face Shape (3 modes)",
+      "belle0": "11 analysis tools (color, makeup, face shape and more)",
       "comp0": "Color analysis only",
       "feat1": "Color System",
       "belle1": "12-season",
@@ -3862,7 +3941,7 @@
       "feat8": "Price",
       "belle8": "Free preview · {price} one-time, no subscription",
       "comp8": "Free AI / $39 expert",
-      "ba0": "三种分析模式（色彩 + 妆容 + 脸型）集于一个工具",
+      "ba0": "11 种分析工具（色彩、妆容、脸型等）集于一个应用",
       "ba1": "Magazine-quality visual reports designed for sharing",
       "ba2": "Comprehensive makeup looks with detailed product guidance",
       "ba3": "2K/4K high-resolution output",
@@ -3871,7 +3950,7 @@
       "ca1": "Quiz-based alternative (no photo needed)",
       "ca2": "Longer market presence",
       "faq1Q": "How does Belle AI compare to MyColorAnalysis AI?",
-      "faq1A": "Belle AI offers three analysis modes with magazine-quality visual reports. MyColorAnalysis AI focuses on color analysis with an optional $39 expert review for human validation.",
+      "faq1A": "Belle AI offers 11 analysis tools with magazine-quality visual reports. MyColorAnalysis AI focuses on color analysis with an optional $39 expert review for human validation.",
       "faq2Q": "Does MyColorAnalysis AI offer makeup analysis?",
       "faq2A": "MyColorAnalysis AI provides basic shade suggestions only. Belle AI includes complete makeup looks with detailed eye, lip, and blush recommendations.",
       "faq3Q": "Which is better value — Belle AI or MyColorAnalysis AI?",
@@ -3880,7 +3959,7 @@
     "color-analysis-app": {
       "name": "Color Analysis App",
       "desc": "Compare Belle AI and Color-Analysis.app for finding your seasonal color type. Both use AI technology, but they differ in analysis scope, report quality, and additional features.",
-      "verdict": "Belle AI excels in analysis depth and report quality — offering three analysis modes with magazine-grade visual output. Color-Analysis.app is the better choice if you want completely free unlimited access or prefer a quiz-based approach. For the most comprehensive beauty guidance and shareable reports, Belle AI delivers more value.",
+      "verdict": "Belle AI excels in analysis depth and report quality — offering 11 analysis tools with magazine-grade visual output. Color-Analysis.app is the better choice if you want completely free unlimited access or prefer a quiz-based approach. For the most comprehensive beauty guidance and shareable reports, Belle AI delivers more value.",
       "feat0": "Analysis Types",
       "belle0": "Color + Makeup + Face Shape",
       "comp0": "Color analysis only",
@@ -3905,7 +3984,7 @@
       "feat7": "Price",
       "belle7": "Free preview · {price} one-time, no subscription",
       "comp7": "Free",
-      "ba0": "Three comprehensive analysis modes",
+      "ba0": "11 analysis tools in one app",
       "ba1": "Visual magazine-quality reports",
       "ba2": "Complete makeup look recommendations",
       "ba3": "Face shape and hairstyle analysis",
@@ -3950,7 +4029,7 @@
       "feat7": "Price",
       "belle7": "Free preview · {price} one-time, no subscription",
       "comp7": "Free basic / paid detailed",
-      "ba0": "Three analysis modes in one tool",
+      "ba0": "11 analysis tools in one app",
       "ba1": "Magazine-quality visual reports",
       "ba2": "Complete makeup look recommendations",
       "ba3": "Face shape and hairstyle analysis",
@@ -3963,7 +4042,7 @@
       "faq2Q": "Does Palette Hunt offer makeup recommendations?",
       "faq2A": "Palette Hunt provides basic makeup suggestions. Belle AI includes detailed makeup looks with complete eye, lip, and blush guidance.",
       "faq3Q": "Which is better for a quick free color check?",
-      "faq3A": "Palette Hunt offers more free colors without payment. Belle AI provides 3 free analyses with comprehensive magazine-quality reports."
+      "faq3A": "Palette Hunt offers more free colors without payment. Belle AI gives you 3 free analyses as previews; the full magazine-quality report comes with the one-time Color Kit."
     }
   },
   "lookbook": {
@@ -4666,6 +4745,7 @@
     "changeSeason": "更换",
     "takePhoto": "拍照",
     "choosePhoto": "从相册选择",
+    "uploadPhoto": "上传照片",
     "tip": "单独拍摄这件单品，自然光下，让颜色充满画面。",
     "scanning": "正在识别颜色…",
     "quota": "今天还可以扫 {remaining}/{limit} 次",
@@ -4719,7 +4799,119 @@
     "errInvalid": "无法读取这张图片，请换一张 JPG 或 PNG 照片。",
     "errTooLarge": "图片太大，请换一张小一点的照片。",
     "disclaimer": "颜色由照片估算，会受光线影响。结果仅供参考，不是硬性规定。",
-    "privacy": "照片只在内存中分析，不会保存。"
+    "privacy": "扫描的照片只在内存中分析，不会保存。",
+    "privacyPhone": "从手机发来的照片会先上传，才能到达这个页面。"
+  },
+  "scanPage": {
+    "howTitle": "扫一扫怎么用",
+    "how1Title": "选择你的季型",
+    "how1": "使用色彩分析得出的 12 季型，或自己选一个。还不确定？大约一分钟就能免费测出来。",
+    "how2Title": "拍下单品",
+    "how2": "拍摄或上传一件衣服、配饰或彩妆的照片。单独拍、在自然光下、让颜色占满画面，效果最好。",
+    "how3Title": "查看结论",
+    "how3": "看它是非常适合、谨慎入手，还是不是你的颜色，并附上理由、识别出的颜色，以及可以换选的色板颜色。",
+    "verdictTitle": "结论怎么看",
+    "tipsTitle": "想扫得准，记住这几点",
+    "tip1": "在自然光下拍。室内暖光和店里的灯光对颜色的影响最大。",
+    "tip2": "一次只拍一件，背景尽量简单，让它的颜色占满画面。",
+    "tip3": "不要用滤镜和闪光灯，也别让自己的影子遮住单品。",
+    "tip4": "印花和条纹只按主要颜色判断，还要看图案放在脸旁边的效果。",
+    "faqTitle": "买前扫一扫：常见问题",
+    "faq1Q": "扫一扫怎么判断单品适不适合我？",
+    "faq1A": "它从照片中读出单品的主要颜色，把冷暖、深浅和鲜艳度与你的 12 季型色板和需要避开的颜色做对比。你会得到一个匹配分数、一句通俗的结论和理由；如果不太合适，还会推荐你色板里可以换着选的颜色。这是基于照片的 AI 估算，不是精确测量。",
+    "faq2Q": "要先知道自己的色彩季型吗？",
+    "faq2A": "需要。扫一扫是拿单品和你的季型作对比，所以会让你先选一个。如果你在这个浏览器上做过色彩分析，会自动帮你填好。还不知道自己的季型，可以先做免费的色彩分析，一张自拍就能测出来。",
+    "faq3Q": "只能扫衣服，还是配饰和彩妆也行？",
+    "faq3A": "衣服、配饰，以及口红、腮红、眼影这类彩妆都可以。纯色单品结论最清楚；印花和条纹只按主要颜色判断，所以还要看图案贴近脸时的效果。",
+    "faq4Q": "为什么扫出来的颜色和实物会有差别？",
+    "faq4A": "照片本身会改变颜色：光线、相机和滤镜都会让颜色偏移，室内暖光偏得最多。如果扫描判断光线有问题，会提示你。在自然光下重拍，结果更可靠；结论只作参考，不是硬性规定。",
+    "faq5Q": "免费吗？照片会被保存吗？",
+    "faq5A": "每天可免费扫 {free} 次，购买色彩套装后每天 {pack} 次。扫描的照片只在内存中分析，不会保存。有两种例外：从手机发到电脑的照片要先上传才能到达页面；可选的试穿预览（1 积分）会上传你的照片和单品照片，并保存到历史记录中。"
+  },
+  "featureWhy": {
+    "color": {
+      "hero": "找到让你气色更好的颜色，不再为不适合的颜色花冤枉钱。",
+      "title": "别再买不适合你的颜色",
+      "w1": "有些颜色让你容光焕发，有些让你显得憔悴，光靠肉眼很难分辨。",
+      "w2": "不知道自己的色板，买衣服和彩妆就成了昂贵的试错。",
+      "w3": "Belle 从一张自拍判断你的色彩季型，给你一套可以照着买、照着穿的色板。"
+    },
+    "makeup": {
+      "hero": "在买下一件产品之前，先知道哪些色号和妆容适合你的脸。",
+      "title": "为你的脸挑选的妆容，而不是通用的妆容",
+      "w1": "模特身上完美的色号，用在你脸上可能就不对。",
+      "w2": "通用教程不看你的底调，买回来的产品最后躺在抽屉里。",
+      "w3": "只需一张素颜照，Belle 就为你生成 3 套完整妆容和精确色号，直接画在你自己的脸上。"
+    },
+    "face": {
+      "hero": "找到适合你脸型的发型，去理发店之前先在自己的照片上看效果。",
+      "title": "好发型，从了解脸型开始",
+      "w1": "别人身上很好看的发型，在你脸上可能显得更宽、更长或更沉。",
+      "w2": "头发很难挽回：剪错了要等好几个月才能长回来。",
+      "w3": "Belle 判断你的脸型，并把 4 款发型画在你自己的照片上，每款都有理由。"
+    },
+    "hair": {
+      "hero": "在预约发廊之前，先在自己的照片上看看哪些发色适合你的肤色，哪些要避开。",
+      "title": "染发之前，先试试发色",
+      "w1": "同一个发色，在有人身上明艳动人，在有人身上却显得暗沉。",
+      "w2": "染错了再修正，既费时间又费钱。",
+      "w3": "Belle 按你的色彩季型挑选发色，在你的照片上展示 4 种：最佳 1 种、不错 2 种、避开 1 种。"
+    },
+    "glasses": {
+      "hero": "下单之前，先在自己的照片上看看哪些镜框适合你的脸。",
+      "title": "找到适合你脸型的镜框，而不只是喜欢的款式",
+      "w1": "镜框整天戴在脸中央，形状不对会特别显眼。",
+      "w2": "在店里试几十副，或者网上盲买，都很费时间。",
+      "w3": "Belle 按你的脸型和色彩季型挑出 6 副镜框：4 副适合、2 副要避开，全部画在你的照片上。"
+    },
+    "jewelry": {
+      "hero": "在买下一件首饰之前，先找到适合你的金属色和耳饰款式。",
+      "title": "对的金属色让肤色发光，错的会让它暗淡",
+      "w1": "黄金、银色还是玫瑰金：有一种衬你的底调，另一种可能让你显得没精神。",
+      "w2": "凭感觉买首饰，最后往往只是放在盒子里。",
+      "w3": "Belle 根据你的底调和脸型，在你的照片上展示最适合的金属色和 3 款耳饰。"
+    },
+    "outfit": {
+      "hero": "在自己的照片上看看哪些服装颜色让你更提亮，哪些让你显得暗沉。",
+      "title": "穿让你气色好的颜色，而不是显憔悴的颜色",
+      "w1": "有些服装颜色提亮脸色，有些让你显得疲惫，哪怕你睡得很好。",
+      "w2": "没有色板，衣橱里就会塞满从来不穿的衣服。",
+      "w3": "Belle 只用你的最佳颜色搭出 3 套造型：日常、约会和通勤，画在你自己身上。"
+    },
+    "occasion": {
+      "hero": "选好场合，就能在自己的脸上看到 3 套完整妆容。",
+      "title": "什么场合，配什么妆",
+      "w1": "上班的妆放到晚宴上不对劲，派对妆去面试又太夸张。",
+      "w2": "到了当天才第一次尝试新妆容，是在赌运气。",
+      "w3": "选好场合，Belle 就在你的照片上画出 3 套完整造型，每套都有造型师小建议。"
+    },
+    "glow": {
+      "hero": "只改 4 处，看到你的最佳版本，前后对比就在你自己的照片上。",
+      "title": "知道该改什么，也知道该留什么",
+      "w1": "改造建议太多会让人无从下手，全都改掉还可能让你不像自己。",
+      "w2": "一堆建议很难让人信服，直到你亲眼看到效果。",
+      "w3": "Belle 给出发色、妆容、上衣和配饰 4 处小改变，再展示你的前后对比。"
+    },
+    "persona": {
+      "hero": "找到最像你的风格，再看 3 套画在你自己照片上的日常造型。",
+      "title": "给你的风格起个名字",
+      "w1": "潮流只告诉你什么在流行，不告诉你什么适合你。",
+      "w2": "风格不明确，购物就变成一堆搭不到一起的冲动消费。",
+      "w3": "Belle 给你一个风格名称、4 个关键词、3 套日常造型，和一句购物用的风格公式。"
+    },
+    "celebrity": {
+      "hero": "找到和你色彩相近的明星，借用他们最好看的颜色。",
+      "title": "找到和你色彩相近的人",
+      "w1": "「我像哪位明星」只是凭脸型的猜测，也没告诉你该穿什么。",
+      "w2": "按色彩匹配，得到的是用得上的东西：颜色、彩妆色号和发色。",
+      "w3": "Belle 判断你的 12 季型，并展示通常被判定为同一季型的明星，附上他们的最佳颜色。"
+    },
+    "scan": {
+      "title": "为什么买之前要先扫一下？",
+      "w1": "挂在衣架上很好看的颜色，一贴近你的脸，就可能显得暗沉、没精神。",
+      "w2": "凭感觉在店里挑，结果往往是退货、冲动消费，和一衣柜“差一点点”的衣服。",
+      "w3": "拍下这件单品，Belle 会拿它的颜色和你的季型色板对比：几秒给出明确结论，并推荐可以换着选的颜色。"
+    }
   },
   "featureIncludes": {
     "noteLens": "文字分析免费。生成效果图整套只需 1 积分，你的第一张效果图免费。",

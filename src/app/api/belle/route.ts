@@ -215,6 +215,21 @@ export async function POST(req: NextRequest) {
         return NextResponse.json(data);
       }
 
+      case "handoff-create": {
+        const data = await proxyPost("/common/v1/web/handoff-create", {
+          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
+        });
+        return NextResponse.json(data);
+      }
+
+      case "handoff-status": {
+        const data = await proxyPost("/common/v1/web/handoff-status", {
+          ...(googleId ? { google_user_id: googleId } : { fingerprint }),
+          token: params.token,
+        });
+        return NextResponse.json(data);
+      }
+
       case "share-create": {
         const data = await proxyPost("/common/v1/web/share-create", {
           ...(googleId ? { google_user_id: googleId } : { fingerprint }),

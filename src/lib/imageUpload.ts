@@ -10,8 +10,9 @@
  * - 编码后仍超过体积预算：服务端 nginx 的请求体上限是 10MB（实测 8MB 能过、10.1MB 直接 413，返回的还是 HTML 错误页），
  *   先降质量，再按比例缩小，直到放得进预算。
  *
- * 压缩 / 解码失败（比如桌面 Chrome 读不了 HEIC）时回退到原文件；原文件编码后也超过上限就直接在浏览器里拦下，
- * 不再发出一个注定被拒绝的请求。
+ * 压缩 / 解码失败时回退到原文件；原文件编码后也超过上限就直接在浏览器里拦下，不再发出一个注定被拒绝的请求。
+ * HEIC / HEIF（iPhone 原图，Windows / Linux 上的 Chrome、Edge、Firefox 解不开）也走这个回退：原样传上去，
+ * 由服务端（pillow-heif）转成 JPEG 再存；服务端转不了时 /upload 会返回 415 image_unsupported，见 IMAGE_UNSUPPORTED。
  */
 
 /** 长边上限：canvas 能安全绘制的尺寸（见上）。绝大多数手机照片（≤ 4032px）完全不会被缩放 */
@@ -31,6 +32,12 @@ export const IMAGE_TOO_LARGE = "image_too_large";
  * 手机相册里选的云端照片、微信等内置浏览器里选的照片最常见。调用方据此提示「请重新选一张照片」。
  */
 export const IMAGE_UNREADABLE = "image_unreadable";
+
+/**
+ * 服务端 /upload 返回 415 的 message：图片格式它也转不了（HEIC 转换失败，或后端还没装 pillow-heif）。
+ * 在上传这一步就告诉用户换一张，而不是等任务排队、跑完才收到一个看不懂的「图片无法读取」。
+ */
+export const IMAGE_UNSUPPORTED = "image_unsupported";
 
 const sleep = (ms: number) => new Promise((resolve) => window.setTimeout(resolve, ms));
 

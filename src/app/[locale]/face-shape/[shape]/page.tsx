@@ -3,8 +3,6 @@ import { notFound } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { FunnelLink } from "@/components/FunnelLink";
-import { sampleHref } from "@/lib/blogTools";
 import { ResultCta } from "@/components/ResultCta";
 import { routing } from "@/i18n/routing";
 import { buildAlternates, buildBreadcrumbJsonLd, ogLocale } from "@/lib/seo";
@@ -100,7 +98,6 @@ function FaceShapeContent({ slug }: { slug: string }) {
   const fs = useTranslations(`fs.${slug}`);
   const fsAll = useTranslations("fs");
   const fc = useTranslations("face");
-  const tp = useTranslations("tryPage");
   const bt = useTranslations("blogTitles");
 
   const data = FACE_SHAPES[slug];
@@ -193,9 +190,6 @@ function FaceShapeContent({ slug }: { slug: string }) {
           <h2 className="text-2xl font-bold">
             {t("bestHairstyles", { shape: inlineName })}
           </h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {t("bestHairstylesDesc")}
-          </p>
           <ul className="mt-6 space-y-3">
             {data.bestHairstyles.map((tip, i) => (
               <li
@@ -214,9 +208,6 @@ function FaceShapeContent({ slug }: { slug: string }) {
           <h2 className="text-2xl font-bold">
             {t("avoidHairstyles", { shape: inlineName })}
           </h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {t("avoidHairstylesDesc")}
-          </p>
           <ul className="mt-6 space-y-3">
             {data.avoidHairstyles.map((tip, i) => (
               <li
@@ -245,9 +236,6 @@ function FaceShapeContent({ slug }: { slug: string }) {
           <h2 className="text-2xl font-bold">
             {t("glassesTitle", { shape: inlineName })}
           </h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {t("glassesDesc")}
-          </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <div className="card-soft p-5">
               <h3 className="font-semibold text-primary">{t("bestFrames")}</h3>
@@ -301,9 +289,6 @@ function FaceShapeContent({ slug }: { slug: string }) {
           <h2 className="text-2xl font-bold">
             {t("earringTitle", { shape: inlineName })}
           </h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {t("earringDesc")}
-          </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <div className="card-soft p-5">
               <h3 className="font-semibold text-primary">
@@ -342,9 +327,6 @@ function FaceShapeContent({ slug }: { slug: string }) {
             <h2 className="text-2xl font-bold">
               {t("facialHairTitle", { shape: inlineName })}
             </h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              {t("facialHairDesc")}
-            </p>
             <ul className="mt-6 space-y-3">
               {data.facialHairTips.map((tip, i) => (
                 <li
@@ -364,9 +346,6 @@ function FaceShapeContent({ slug }: { slug: string }) {
           <h2 className="text-2xl font-bold">
             {t("celebrityTitle", { shape: inlineName })}
           </h2>
-          <p className="mt-4 text-muted-foreground">
-            {t("celebrityDesc", { shape: inlineName })}
-          </p>
           <div className="mt-4 flex flex-wrap gap-2">
             {data.celebrities.map((c) => (
               <span
@@ -396,28 +375,7 @@ function FaceShapeContent({ slug }: { slug: string }) {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="my-6 rounded-2xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 text-center">
-          <h2 className="text-xl font-bold">{t("ctaTitle")}</h2>
-          <p className="mt-2 text-muted-foreground">{t("ctaDesc")}</p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link
-              href="/try?type=face_shape"
-              className="rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl"
-            >
-              {t("getMyAnalysis")}
-            </Link>
-            <FunnelLink
-              href={sampleHref("face_shape")}
-              from="face_shape_page"
-              tool="face_shape"
-              kind="sample"
-              className="rounded-full border border-border px-8 py-3 font-medium transition hover:bg-muted"
-            >
-              {tp("trySample")}
-            </FunnelLink>
-          </div>
-        </section>
+        <ResultCta type="face_shape" from="face_shape_page" variant="band" />
 
         {/* Other Shapes */}
         <section className="border-t border-border py-12">
