@@ -60,6 +60,8 @@ export interface ColorReportProps {
   createdAt?: number;
   /** 报告下方的操作区（保存海报 / 分享 / 换装 / 扫一扫） */
   footer?: ReactNode;
+  /** 「下一步」建议：放在最佳颜色之后、同季名人之前（用户读完结论、也看到解锁入口的那一刻），不进 PDF */
+  nextStep?: ReactNode;
 }
 
 /** 拉丁字母语言的段落首字下沉；中日韩的首字下沉不好看，不用 */
@@ -84,7 +86,7 @@ export function ReportSkeleton() {
   );
 }
 
-function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceImageUrl, onUnlock, unlockLabel, unlockBusy, onUpgrade, upgradeLabel, onLookbookPreview, lockedExtra, lookbookTaskId, lookbookDemo, lookbookDemoPersona, lookbookShared, demoBadge, createdAt, footer, messages }: ColorReportProps & { messages: ReportMessages }) {
+function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceImageUrl, onUnlock, unlockLabel, unlockBusy, onUpgrade, upgradeLabel, onLookbookPreview, lockedExtra, lookbookTaskId, lookbookDemo, lookbookDemoPersona, lookbookShared, demoBadge, createdAt, footer, nextStep, messages }: ColorReportProps & { messages: ReportMessages }) {
   const slug: SeasonSlug = isSeasonSlug(report.season) ? report.season : "soft-summer";
   const palette = seasonPalette(slug);
   const sd = messages.seasons[slug] ?? {};
@@ -305,6 +307,8 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
           </>
         )}
       </section>
+
+      {nextStep && <div data-export-hide="" className="px-5 pt-9">{nextStep}</div>}
 
       {/* 04 同季名人：只有文字和色板，不生成名人形象（季型是免费预览就有的结论，所以锁定时也完整显示） */}
       <CelebritySection

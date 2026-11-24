@@ -1,6 +1,6 @@
 /**
  * 结构化色彩报告：后端（视觉模型）只返回 JSON，页面由前端按这份数据渲染。
- * 未解锁时后端在数据层剔除个性化字段（explanation / avoid_note / 特征描述 / scores / runner_up），
+ * 未解锁时后端在数据层剔除个性化字段（avoid_note / 肤发瞳色描述 / scores / runner_up；explanation 对未付费用户开放），
  * 所以这些字段在类型里都是可选的——拿不到就是真的没有。
  */
 import { SEASON_PALETTES } from "./color-palette-data";

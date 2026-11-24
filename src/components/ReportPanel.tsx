@@ -48,6 +48,8 @@ export interface ReportPanelProps {
   onReportUpdated?: (report: ColorReportData) => void;
   /** 报告卡片下面的内容（评分反馈等） */
   children?: ReactNode;
+  /** 报告中间的「下一步」建议（最佳颜色之后）；不进 PDF */
+  nextStep?: ReactNode;
 }
 
 function initialLang(report: ColorReportData, preferred: string): string {
@@ -77,6 +79,7 @@ export function ReportPanel({
   onNotice,
   onReportUpdated,
   children,
+  nextStep,
 }: ReportPanelProps) {
   const t = useTranslations("report");
   const tKit = useTranslations("kit");
@@ -392,6 +395,7 @@ export function ReportPanel({
         demoBadge={demo ? t("demoBadge") : undefined}
         createdAt={createdAt}
         footer={footer}
+        nextStep={nextStep}
       />
       {children}
     </div>

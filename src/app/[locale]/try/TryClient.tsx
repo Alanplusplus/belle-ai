@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useState, useRef, useCallback, useEffect, type ReactNode } from "react";
 import { useSearchParams } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { useSession } from "next-auth/react";
@@ -45,6 +45,7 @@ import { InAppBrowserNotice, InAppSignInSheet } from "@/components/InAppBrowserN
 import { ReportPanel } from "@/components/ReportPanel";
 import { HistoryReportCard } from "@/components/ColorReport";
 import { LensPanel } from "@/components/LensPanel";
+import { NextStepCards, type NextStepItem } from "@/components/NextStepCards";
 import { lensOf, refreshLookbook, waitForLensText, type LookbookSheetKey } from "@/lib/lookbook";
 import { DevUnlockToggle } from "@/components/DevUnlockToggle";
 import { isSeasonSlug, type ColorReportData } from "@/lib/color-report";
@@ -240,6 +241,36 @@ const RECOMMENDED_TYPES: Record<AnalysisType, AnalysisType[]> = {
   scan_tryon: ["outfit_color", "color_analysis", "hair_preview"],
 };
 
+/** 推荐凑不满 3 个时的补位顺序：色彩分析是主打，其次是从一张自拍就能做、结果直观的工具 */
+const NEXT_STEP_FALLBACK: AnalysisType[] = [
+  "color_analysis", "outfit_color", "hair_preview", "makeup", "glasses_match",
+  "face_shape", "jewelry_guide", "style_personality", "glow_up_report", "occasion_makeup",
+];
+
+/**
+ * 「下一步」该推荐哪 3 个：按她做过的类型来定，而不是只看当前这一个。
+ * - focus：此刻正在看的类型，它自己的推荐权重最高（没有历史的新用户就等于原来的固定推荐）
+ * - doneTypes：她做过的类型（新的在前），越近的类型推荐越靠前；做过的不再推荐
+ * - pinned：这次访问里已经点过的类型，哪怕出结果后进了历史也留在原位（卡片要变成「查看」，不能凭空消失）
+ */
+function rankNextTypes(focus: string | null, doneTypes: string[], pinned: ReadonlySet<string>, allow: (type: AnalysisType) => boolean): AnalysisType[] {
+  const score = new Map<AnalysisType, number>();
+  const add = (source: string, weight: number) => {
+    const list = RECOMMENDED_TYPES[source as AnalysisType];
+    list?.forEach((type, index) => score.set(type, (score.get(type) ?? 0) + weight * (list.length - index)));
+  };
+  if (focus) add(focus, 3);
+  Array.from(new Set(doneTypes)).forEach((type, index) => add(type, 1 / (1 + index)));
+
+  const done = new Set(doneTypes);
+  const candidates = [...score.keys(), ...NEXT_STEP_FALLBACK]
+    .filter((type, index, all) => all.indexOf(type) === index)
+    .filter((type) => type !== focus && (!done.has(type) || pinned.has(type)) && allow(type));
+  return candidates
+    .sort((a, b) => (score.get(b) ?? 0) - (score.get(a) ?? 0) || NEXT_STEP_FALLBACK.indexOf(a) - NEXT_STEP_FALLBACK.indexOf(b))
+    .slice(0, 3);
+}
+
 // 「推荐其他功能」卡片（生成等待区 / 出结果后 / 任务列表缩略图）用的图。
 // 和首页「全部分析类型」同一批 explore_*.webp：每张都直接画出该功能的结果，且图里不带文字（9 种语言通用）
 const CARD_IMAGES: Record<AnalysisType, string> = {
@@ -273,6 +304,8 @@ interface BackgroundTask {
   unlocked?: boolean;
   lockStart?: number;
   errorMsg?: string;
+  /** 因为积分 / 额度不足失败（不是出错）：这种失败条点击后去买积分，买完再点就是重试 */
+  noCredits?: boolean;
   /** 色彩分析是结构化报告：没有图片，页面按数据渲染 */
   report?: ColorReportData;
   sourceUrl?: string;
@@ -1626,10 +1659,10 @@ export function TryClient({
     }
   }, [previewUrl, sourceImageUrl, analysisType, itemCategory, reportLang, resolution, occasion, reloadHistory, refreshCredits, scrollToResult, openQuotaPricing, t, demoMode, startDemo]);
 
-  const startRecommendedAnalysis = useCallback(async (type: AnalysisType, opts?: { photoUrl?: string; colorSeason?: string }) => {
+  const startRecommendedAnalysis = useCallback(async (type: AnalysisType, opts?: { photoUrl?: string; colorSeason?: string; placement?: string }) => {
     // 演示模式：直接切到该类型的示例报告，不开后台任务、不扣积分
     if (demoMode) {
-      trackEvent("analysis_type_selected", { type, source: "demo_recommendation" });
+      trackEvent("analysis_type_selected", { type, source: "demo_recommendation", placement: opts?.placement ?? "waiting" });
       selectType(type);
       return;
     }
@@ -1637,16 +1670,18 @@ export function TryClient({
     if (!photoUrl) return;
 
     const taskId = `bg_${Date.now()}_${type}`;
-    trackEvent("recommended_analysis_started", { type, source: "recommendation" });
+    // placement：从哪个位置点的（waiting = 等待区 / in_report = 报告中间 / after_result = 工具结果下方 / tryon = 报告里的换装）
+    trackEvent("recommended_analysis_started", { type, source: "recommendation", placement: opts?.placement ?? "waiting" });
 
-    setBackgroundTasks((prev) => [...prev, { id: taskId, type, phase: "generating", resultUrls: [], language: reportLang }]);
+    // 同一类型之前失败的条换掉（重试不会越堆越多）；先记下用的是哪张照片，失败后点击重试要用
+    setBackgroundTasks((prev) => [...prev.filter((bt) => !(bt.type === type && bt.phase === "error")), { id: taskId, type, phase: "generating", resultUrls: [], language: reportLang, sourceUrl: photoUrl }]);
 
     try {
       const signInRes = await webInit();
       if (signInRes.code !== 200 || !signInRes.data) throw new Error(signInRes.message);
       if (remainingFor(signInRes.data, type) <= 0) {
-        setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: "No credits" } : t));
-        openQuotaPricing("no_quota_recommended");
+        setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: "No credits", noCredits: true } : t));
+        openQuotaPricing("no_quota_recommended", type === "color_analysis" ? "report" : "credits");
         return;
       }
 
@@ -1655,8 +1690,8 @@ export function TryClient({
         ...(opts?.colorSeason ? { color_season: opts.colorSeason } : {}),
       });
       if (taskRes.code === 429) {
-        setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: "No credits" } : t));
-        openQuotaPricing("no_quota_recommended");
+        setBackgroundTasks((prev) => prev.map((t) => t.id === taskId ? { ...t, phase: "error", errorMsg: "No credits", noCredits: true } : t));
+        openQuotaPricing("no_quota_recommended", type === "color_analysis" ? "report" : "credits");
         return;
       }
       if (taskRes.code !== 200 || !taskRes.data?.task_id) throw new Error(taskRes.message);
@@ -1687,7 +1722,7 @@ export function TryClient({
     trackEvent("tryon_started", { season });
     setLightbox(null);
     showToast(t("tryOnStarted"));
-    void startRecommendedAnalysis("outfit_color", { photoUrl: photo, colorSeason: season });
+    void startRecommendedAnalysis("outfit_color", { photoUrl: photo, colorSeason: season, placement: "tryon" });
   }, [sourceImageUrl, lastUploadedPhotoUrl, showToast, startRecommendedAnalysis, t]);
 
   const handleUseLastPhoto = useCallback(async () => {
@@ -1792,6 +1827,111 @@ export function TryClient({
   const recommendedTypes = (RECOMMENDED_TYPES[analysisType] || []).filter(
     (t) => !backgroundTasks.some((bt) => bt.type === t) && (!demoMode || isDemoType(t))
   );
+
+  /** 把后台任务的结果打开（任务列表的「查看」和「下一步」卡片共用） */
+  const openBackgroundTask = (task: BackgroundTask) => {
+    setLightbox({
+      entry: {
+        id: task.taskId ?? task.id,
+        status: "success",
+        type: task.type,
+        image_urls: task.resultUrls,
+        source_image_url: task.sourceUrl ?? sourceImageUrl ?? lastUploadedPhotoUrl ?? undefined,
+        created_at: Date.now() / 1000,
+        locked: task.locked,
+        unlocked: task.unlocked,
+        lock_start: task.lockStart,
+        language: task.language,
+        ...(task.report ? { kind: "report" as const, report: task.report } : {}),
+      },
+      imageIndex: 0,
+    });
+  };
+
+  /** 同一类型可能点过几次（失败重试），以最后一次为准 */
+  const latestBackgroundTask = (type: string) => [...backgroundTasks].reverse().find((bt) => bt.type === type);
+
+  /** 此刻积分 / 额度够不够做这个类型（买完积分回来后，之前「积分不足」的失败条就该变回可重试） */
+  const canStartNow = (type: string) => !!userCredits && startableCount(userCredits, type) > 0;
+  /** 因为积分不足失败、而且现在还是没积分：点它应该去买积分，不是重试 */
+  const needsCreditsNow = (task: BackgroundTask | undefined) => !!task && task.phase === "error" && !!task.noCredits && !canStartNow(task.type);
+  /** 打开买积分的窗口：是用户自己点的，不受「额度用完自动弹窗」那个冷却的限制 */
+  const openCreditsPricing = (type: string, source: string) => {
+    trackEvent("no_credits_task_clicked", { type, source });
+    openPricing(source, null, null, { intent: type === "color_analysis" ? "report" : "credits" });
+  };
+  const retryBackgroundTask = (task: BackgroundTask) => {
+    void startRecommendedAnalysis(task.type, { photoUrl: task.sourceUrl, placement: "task_retry" });
+  };
+
+  /**
+   * 结果页的「下一步」：用她自己的照片和季型色摆出 3 个建议。
+   * 和以前的通用推荐不同：点过之后卡片留在原地显示进度，出结果后变成「查看」，不会消失、也不用去页面更下面的任务列表里找。
+   * 颜色报告：放在报告中间（最佳颜色之后）；其余工具：放在结果下方。placement 用来统计哪个位置更有效。
+   */
+  const nextStepItemsFor = (focusType: string | null): NextStepItem[] => {
+    // 示例模式不看真实历史；其余按她做过的类型来排（做过的不再推荐）。shownHistory 在下面定义，这里只在渲染时才会被调用
+    const doneTypes = demoMode ? [] : [...shownHistory].sort((a, b) => b.created_at - a.created_at).map((e) => e.type || "color_analysis");
+    const pinned = new Set<string>(backgroundTasks.map((bt) => bt.type));
+    return rankNextTypes(focusType, doneTypes, pinned, (tp) => !demoMode || isDemoType(tp)).map((tp) => {
+      const task = latestBackgroundTask(tp);
+      const viewable = !!task && task.phase === "done" && !!(task.resultUrls[0] || task.report);
+      const status: NextStepItem["status"] = !task
+        ? "idle"
+        : viewable
+          ? "done"
+          : needsCreditsNow(task)
+            ? "noCredits"
+            : task.phase === "error"
+              ? task.noCredits ? "idle" : "error" // 积分不足但现在有积分了：回到「立即开始」
+              : task.phase === "done" ? "idle" : "running";
+      return { type: tp, name: t(`type_${tp}`), promise: t(`out_${tp}`), status };
+    });
+  };
+
+  /**
+   * focusType：此刻在看哪个类型的结果（不传 = 当前选中的工具；null = 没有正在看的结果，如历史页底部，只按她的历史来排）。
+   * placement：in_report / after_result（结果页）、history_top（历史页顶部）、lightbox（历史里查看大图）。
+   */
+  const renderNextSteps = (o: { placement: string; focusType?: string | null; season?: string | null; photoUrl?: string | null; faceBox?: ColorReportData["face_box"]; tone?: "report" | "page"; compact?: boolean }) => {
+    const focus = o.focusType === undefined ? analysisType : o.focusType;
+    // 历史页 / 大图里的是她真实的结果；还停在示例模式时（示例里点推荐只是切换示例）不显示，免得点了没反应
+    if (demoMode && (o.placement === "history_top" || o.placement === "lightbox")) return null;
+    const items = nextStepItemsFor(focus);
+    return items.length > 0 && (demoMode || !!o.photoUrl) ? (
+      <NextStepCards
+        items={items}
+        season={o.season}
+        // 整块（标题、工具名、说明）都用页面语言，季型名也是；不跟着报告语言走，否则一个标题里会混着两种语言
+        lang={LOCALE_TO_REPORT_LANG[locale] ?? "en"}
+        photoUrl={o.photoUrl}
+        faceBox={o.faceBox}
+        heading={(season) => t("nextForSeason", { season })}
+        fallbackHeading={t("tryAnother")}
+        subheading={t("tryAnotherDesc")}
+        labels={{ start: t("startNow"), running: t("taskAnalyzing"), view: t("viewResults"), error: t("taskError"), credits: t("taskGetCredits") }}
+        // 历史页 / 大图是隔了一段时间回来看的，页面里没有刚上传的照片，所以带上这份结果自己的原照
+        onPick={(type) => {
+          // 上次因为积分不足失败、现在还是没积分：直接去买积分（再点「开始」只会又多一条失败）
+          if (needsCreditsNow(latestBackgroundTask(type))) {
+            openCreditsPricing(type, "no_quota_next_step");
+            return;
+          }
+          void startRecommendedAnalysis(type as AnalysisType, { placement: o.placement, photoUrl: o.photoUrl ?? undefined });
+        }}
+        onView={(type) => {
+          const task = latestBackgroundTask(type);
+          if (task) openBackgroundTask(task);
+        }}
+        onShown={() => trackEvent("next_step_shown", { placement: o.placement, from: focus ?? "history", demo: demoMode })}
+        tone={o.tone}
+        compact={o.compact}
+      />
+    ) : null;
+  };
+
+  // 颜色报告把「下一步」放进报告里；其余结果（含图片类）放在结果下方
+  const nextStepInReport = analysisType === "color_analysis" && resultReport !== null;
 
   const activeTaskCount = backgroundTasks.filter((t) => t.phase === "generating" || t.phase === "uploading").length;
 
@@ -2088,6 +2228,7 @@ export function TryClient({
             onSavePoster={() => {}}
             onShare={() => {}}
             onNotice={showToast}
+            nextStep={nextStepInReport ? renderNextSteps({ placement: "in_report", season: demoData.report.season, photoUrl: samplePhoto, faceBox: demoData.report.face_box }) : undefined}
           />
         ) : null;
 
@@ -2585,6 +2726,7 @@ export function TryClient({
                 kitRetest={kitRetest}
                 onNotice={showToast}
                 onReportUpdated={(report) => setResultReport((prev) => (prev ? { ...prev, report } : prev))}
+                nextStep={nextStepInReport ? renderNextSteps({ placement: "in_report", season: resultReport.report.season, photoUrl: resultReport.sourceUrl ?? sourceImageUrl, faceBox: resultReport.report.face_box }) : undefined}
               >
                 {demoMode ? null : <ResultFeedback key={resultTaskId ?? "current"} taskId={resultTaskId} type={analysisType} />}
               </ReportPanel>
@@ -2757,7 +2899,7 @@ export function TryClient({
             {recommendedTypes.map((type) => (
               <button
                 key={type}
-                onClick={() => startRecommendedAnalysis(type)}
+                onClick={() => startRecommendedAnalysis(type, { placement: "waiting" })}
                 className="group flex-shrink-0 w-[160px] overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary/40 hover:shadow-md"
               >
                 <div className="relative h-[100px] overflow-hidden">
@@ -2797,10 +2939,19 @@ export function TryClient({
             )}
           </div>
           <div className="space-y-2">
-            {backgroundTasks.map((task) => (
+            {backgroundTasks.map((task) => {
+              // 因为积分不足失败的条不是死条：点它去买积分；买完回来有积分了，同一个条就是「重试」
+              const creditsFailed = task.phase === "error" && !!task.noCredits;
+              const needsCredits = needsCreditsNow(task);
+              const activate = () => (needsCredits ? openCreditsPricing(task.type, "no_quota_task_row") : retryBackgroundTask(task));
+              return (
               <div
                 key={task.id}
-                className="flex items-center gap-3 rounded-xl border border-border bg-card p-3 transition hover:border-primary/20"
+                role={creditsFailed ? "button" : undefined}
+                tabIndex={creditsFailed ? 0 : undefined}
+                onClick={creditsFailed ? activate : undefined}
+                onKeyDown={creditsFailed ? (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); activate(); } } : undefined}
+                className={`flex items-center gap-3 rounded-xl border border-border bg-card p-3 transition hover:border-primary/20 ${creditsFailed ? "cursor-pointer hover:border-primary/40" : ""}`}
               >
                 <div className="h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg">
                   <img src={CARD_IMAGES[task.type]} alt="" className="h-full w-full object-cover" />
@@ -2808,38 +2959,29 @@ export function TryClient({
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium truncate">{t(`type_${task.type}`)}</p>
                   <p className="text-xs text-muted-foreground">
-                    {task.phase === "done" ? t("taskDone") : task.phase === "error" ? t("taskError") : task.phase === "uploading" ? t("taskUploading") : t("taskAnalyzing")}
+                    {task.phase === "done" ? t("taskDone") : task.phase === "error" ? (needsCredits ? t("taskNoCredits") : t("taskError")) : task.phase === "uploading" ? t("taskUploading") : t("taskAnalyzing")}
                   </p>
                 </div>
                 {task.phase === "done" && (task.resultUrls[0] || task.report) && (
                   <button
-                    onClick={() => setLightbox({
-                      entry: {
-                        id: task.taskId ?? task.id,
-                        status: "success",
-                        type: task.type,
-                        image_urls: task.resultUrls,
-                        source_image_url: task.sourceUrl ?? sourceImageUrl ?? lastUploadedPhotoUrl ?? undefined,
-                        created_at: Date.now() / 1000,
-                        locked: task.locked,
-                        unlocked: task.unlocked,
-                        lock_start: task.lockStart,
-                        language: task.language,
-                        ...(task.report ? { kind: "report" as const, report: task.report } : {}),
-                      },
-                      imageIndex: 0,
-                    })}
+                    onClick={() => openBackgroundTask(task)}
                     className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary hover:bg-primary/20"
                   >
                     {t("viewResults")}
                   </button>
                 )}
                 {task.phase === "generating" && <Spinner />}
-                {task.phase === "error" && (
+                {creditsFailed && (
+                  <span className="shrink-0 rounded-full bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700">
+                    {needsCredits ? t("taskGetCredits") : t("startNow")} →
+                  </span>
+                )}
+                {task.phase === "error" && !creditsFailed && (
                   <svg className="h-4 w-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg>
                 )}
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       )}
@@ -2851,39 +2993,15 @@ export function TryClient({
           {/* AI 生成内容标注 */}
           <p className="mb-4 text-center text-xs text-muted-foreground">{t("aiGeneratedNote")}</p>
 
-          {recommendedTypes.length > 0 && (demoMode || sourceImageUrl || lastUploadedPhotoUrl) && (
-            <div className="rounded-2xl border border-border bg-gradient-to-br from-muted/30 to-muted/10 p-5">
-              <div className="flex items-center gap-2 mb-1">
-                <svg className="h-4 w-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" /></svg>
-                <h3 className="font-serif text-base font-bold">{t("tryAnother")}</h3>
-              </div>
-              <p className="mb-4 text-xs text-muted-foreground">{t("tryAnotherDesc")}</p>
-              <div className="grid grid-cols-3 gap-3">
-                {recommendedTypes.map((type) => (
-                  <button
-                    key={type}
-                    onClick={() => startRecommendedAnalysis(type)}
-                    className="group overflow-hidden rounded-xl border border-border bg-card transition hover:border-primary/40 hover:shadow-md"
-                  >
-                    <div className="relative aspect-[4/3] overflow-hidden">
-                      <img
-                        src={CARD_IMAGES[type]}
-                        alt={t(`type_${type}`)}
-                        className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                      />
-                    </div>
-                    <div className="p-2.5 text-center">
-                      <p className="text-xs font-semibold truncate">{t(`type_${type}`)}</p>
-                      <div className="mt-1 flex items-center justify-center gap-1 text-primary">
-                        <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                        <span className="text-xs font-medium">{t("startNow")}</span>
-                      </div>
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
+          {/* 下一步：颜色报告已经把它放进报告中间了，其余结果放这里 */}
+          {!nextStepInReport &&
+            renderNextSteps({
+              placement: "after_result",
+              season: demoMode ? demoData?.report.season : resultReport?.report.season,
+              photoUrl: demoMode ? samplePhoto : resultReport?.sourceUrl ?? sourceImageUrl ?? lastUploadedPhotoUrl,
+              faceBox: demoMode ? demoData?.report.face_box : resultReport?.report.face_box,
+              tone: "page",
+            })}
 
           {/* 以「总剩余次数」为准：免费额度用完但还有付费积分 / 订阅额度的用户不应该看到额度墙 */}
           {!demoMode && (userCredits ? startableCount(userCredits, analysisType) <= 0 : !!quota && quota.remaining <= 0) && (
@@ -2924,6 +3042,22 @@ export function TryClient({
         )}
         {!historyLoading && shownHistory.length > 0 && (
           <div>
+            {/* 历史页顶部：按她做过的类型，推荐还没做过的；一行紧凑的小芯片，不占版面。用最近一份结果的原照和季型，点一下就用这张照片出结果 */}
+            {(() => {
+              const recent = [...shownHistory].sort((a, b) => b.created_at - a.created_at);
+              const withPhoto = recent.find((e) => e.source_image_url);
+              const withSeason = recent.find((e) => e.report?.season && isSeasonSlug(e.report.season));
+              const block = renderNextSteps({
+                placement: "history_top",
+                focusType: null,
+                season: withSeason?.report?.season,
+                photoUrl: withPhoto?.source_image_url,
+                faceBox: withPhoto?.report?.face_box,
+                tone: "page",
+                compact: true,
+              });
+              return block ? <div className="mb-4">{block}</div> : null;
+            })()}
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
               {shownHistory.map((entry) => {
                 const typeKey = entry.type || "color_analysis";
@@ -2997,6 +3131,14 @@ export function TryClient({
           onBuyCredits={() => openPricing("tryon_credits", null, null, { intent: "credits", openTaskId: lightbox.entry.id })}
           onShare={(taskId) => handleShare(null, taskId, lensOf(lightbox.entry.type) === "glow")}
           onClose={() => setLightbox(null)}
+          nextStep={renderNextSteps({
+            placement: "lightbox",
+            focusType: lightbox.entry.type || "color_analysis",
+            season: lightbox.entry.report.season,
+            photoUrl: lightbox.entry.source_image_url,
+            faceBox: lightbox.entry.report.face_box,
+            tone: "page",
+          })}
           t={t}
         />
       )}
@@ -3016,6 +3158,13 @@ export function TryClient({
           tryOnBusy={tryOnBusy}
           kitRetest={kitRetest ? { left: kitRetest.left, expiresAt: kitRetest.expiresAt, onRetest: () => { setLightbox(null); kitRetest.onRetest(); } } : undefined}
           onNotice={showToast}
+          nextStep={lightbox.entry.id === "demo" ? undefined : renderNextSteps({
+            placement: "lightbox",
+            focusType: lightbox.entry.type || "color_analysis",
+            season: lightbox.entry.report?.season,
+            photoUrl: lightbox.entry.source_image_url,
+            faceBox: lightbox.entry.report?.face_box,
+          })}
           t={t}
         />
       )}
@@ -3672,6 +3821,7 @@ function ReportLightbox({
   tryOnBusy,
   kitRetest,
   onNotice,
+  nextStep,
   t,
 }: {
   entry: HistoryEntry;
@@ -3688,6 +3838,8 @@ function ReportLightbox({
   tryOnBusy: boolean;
   kitRetest?: { left: number; expiresAt: number | null; onRetest: () => void };
   onNotice: (message: string) => void;
+  /** 报告中间的「下一步」建议 */
+  nextStep?: ReactNode;
   t: (key: string, values?: Record<string, string | number>) => string;
 }) {
   const dialogRef = useDialogA11y<HTMLDivElement>(onClose);
@@ -3735,6 +3887,7 @@ function ReportLightbox({
             kitRetest={kitRetest}
             onNotice={onNotice}
             onReportUpdated={setReport}
+            nextStep={nextStep}
           />
         </div>
       </div>
@@ -3750,6 +3903,7 @@ function LensLightbox({
   onBuyCredits,
   onShare,
   onClose,
+  nextStep,
   t,
 }: {
   entry: HistoryEntry;
@@ -3758,6 +3912,8 @@ function LensLightbox({
   onBuyCredits: () => void;
   onShare: (taskId: string) => void;
   onClose: () => void;
+  /** 结果下方的「下一步」建议 */
+  nextStep?: ReactNode;
   t: (key: string, values?: Record<string, string | number>) => string;
 }) {
   const dialogRef = useDialogA11y<HTMLDivElement>(onClose);
@@ -3788,6 +3944,7 @@ function LensLightbox({
             onBuyCredits={onBuyCredits}
           >
             <LensShareButton label={t("share")} onClick={() => onShare(entry.id)} />
+            {nextStep}
           </LensPanel>
         </div>
       </div>
