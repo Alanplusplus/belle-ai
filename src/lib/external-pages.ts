@@ -34,4 +34,12 @@ export const EXTERNAL_PAGES: readonly ExternalPage[] = [
       "A one-page overview of Belle AI: how it works, what you get, and answers to common questions.",
     lang: "en",
   },
+  {
+    id: "taaft-listing",
+    name: "Belle AI on There's An AI For That",
+    url: "https://theresanaiforthat.com/ai/belle-ai/",
+    description:
+      "Our listing in the There's An AI For That directory: a short overview, screenshots and user reviews.",
+    lang: "en",
+  },
 ];

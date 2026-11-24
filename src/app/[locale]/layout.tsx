@@ -153,6 +153,7 @@ export default async function LocaleLayout({
       "https://www.youtube.com/@coloranalysisbelleai",
       "https://www.pinterest.com/coloranalysisbelleai",
       "https://medium.com/@belleai",
+      "https://theresanaiforthat.com/ai/belle-ai/",
     ],
     description: meta?.homeDescription ?? "AI-powered personal color analysis app.",
     founder: authorFounderJsonLd(),
