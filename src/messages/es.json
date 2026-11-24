@@ -212,7 +212,13 @@
     "aiSeasonsTitle": "Explora las 12 estaciones de color",
     "aiSeasonsDesc": "¿Ya conoces tu estación? Abre la paleta completa y la guía de maquillaje y estilo de cada una.",
     "aiDeepOutro": "¿Prefieres no subir una foto? Haz el <quiz>test gratuito de análisis de color</quiz>. ¿Quieres los detalles primero? Lee cómo funciona el <personal>análisis de color personal</personal> o nuestra guía sobre el <free>análisis de color con IA gratis online</free>.",
-    "answerLead": "Belle AI es una herramienta de análisis de color personal con IA. A partir de un selfie estima tu subtono de piel y cuál de las 12 estaciones de color eres, y en unos 60 segundos te da una paleta personal con recomendaciones de maquillaje, pelo, joyería y gafas."
+    "answerLead": "Belle AI es una herramienta de análisis de color personal con IA. A partir de un selfie estima tu subtono de piel y cuál de las 12 estaciones de color eres, y en unos 60 segundos te da una paleta personal con recomendaciones de maquillaje, pelo, joyería y gafas.",
+    "faq7Q": "¿Cómo hacer un análisis de color online gratis?",
+    "faq7A": "Sube una selfie con luz natural, sin maquillaje ni filtros: la IA estima tu subtono (cálido, frío o neutro), te asigna una de las 12 estaciones y te muestra tu paleta. Puedes probarlo gratis en el navegador y, si prefieres no subir una foto, hacer el test de color gratuito. Es una orientación visual, no una medición: la luz y la cámara influyen.",
+    "faq8Q": "¿Cómo saber si mi subtono es cálido o frío?",
+    "faq8A": "Mira las venas de la muñeca a la luz del día: si se ven azuladas o moradas, suele indicar subtono frío; si se ven verdosas, cálido; si no lo distingues, neutro. Prueba también qué metal te favorece, plata u oro. Son pistas aproximadas: el análisis con IA o una prueba con telas lo confirma.",
+    "faq9Q": "¿Qué es la colorimetría personal y para qué sirve?",
+    "faq9A": "Es el estudio de los colores que mejor combinan con tu piel, ojos y cabello. Sirve para elegir ropa, maquillaje, joyas y tinte con más seguridad. Belle AI la aplica con 12 estaciones a partir de una selfie."
   },
   "features": {
     "learnMore": "Saber más",

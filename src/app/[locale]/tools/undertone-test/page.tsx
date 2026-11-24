@@ -9,7 +9,7 @@ import {
 import type { Metadata } from "next";
 import { UndertoneTestClient } from "./UndertoneTestClient";
 import { ClampedIntro } from "@/components/ClampedIntro";
-import { ToolFaq, ToolRelated } from "@/components/ToolPageSections";
+import { ToolFaq, ToolGuide, ToolRelated, type GuideBlock } from "@/components/ToolPageSections";
 import { VideoSection } from "@/components/VideoEmbed";
 import { getVideoForTool } from "@/lib/videos";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -57,11 +57,46 @@ export default async function UndertoneTestPage({
   const bt = await getTranslations({ locale, namespace: "blog" });
   const embed = await getTranslations({ locale, namespace: "embed" });
 
-  const faqs = [
-    { q: t("faq1Q"), a: t("faq1A") },
-    { q: t("faq2Q"), a: t("faq2A") },
-    { q: t("faq3Q"), a: t("faq3A") },
-  ];
+  // 前 3 条所有语种都有；第 4 条起是按搜索问句补的问答，哪个语种写了就显示哪条
+  const faqs = [1, 2, 3, 4, 5, 6]
+    .filter((n) => t.has(`faq${n}Q`))
+    .map((n) => ({ q: t(`faq${n}Q`), a: t(`faq${n}A`) }));
+
+  // 答案块（3 个自查对照表 / 肤色 vs 底色 / 橄榄色）：哪个语种写了就显示
+  const guideSections: { title: string; blocks: GuideBlock[] }[] = [];
+  if (t.has("guideChecksTitle")) {
+    guideSections.push(
+      {
+        title: t("guideChecksTitle"),
+        blocks: [
+          {
+            type: "table",
+            head: [t("guideChecksColCheck"), t("guideChecksColCool"), t("guideChecksColWarm"), t("guideChecksColNeutral")],
+            rows: [1, 2, 3].map((n) => ({
+              cells: [
+                t(`guideRow${n}Label`),
+                t(`guideRow${n}Cool`),
+                t(`guideRow${n}Warm`),
+                t(`guideRow${n}Neutral`),
+              ],
+            })),
+            note: t("guideChecksNote"),
+          },
+        ],
+      },
+      { title: t("guideToneTitle"), blocks: [{ type: "text", paragraphs: [t("guideToneText")] }] },
+      {
+        title: t("guideOliveTitle"),
+        blocks: [
+          {
+            type: "text",
+            paragraphs: [t("guideOliveText")],
+            link: { href: "/blog/olive-undertone-guide", label: t("guideOliveLink") },
+          },
+        ],
+      },
+    );
+  }
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -111,6 +146,7 @@ export default async function UndertoneTestPage({
 
       <ClampedIntro text={t("seoIntro")} moreLabel={bt("readMore")} />
       {video && <VideoSection video={video} page="tool:undertone-test" contained />}
+      <ToolGuide sections={guideSections} />
       <ToolFaq title={quiz("faqTitle")} faqs={faqs} />
       <ToolRelated title={cq("relatedTitle")} links={related} />
     </>

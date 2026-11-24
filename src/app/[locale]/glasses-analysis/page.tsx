@@ -4,7 +4,8 @@ import { FeatureCta, FeatureHeroActions, getFeatureCtaCopy } from "@/components/
 import { FeatureHero } from "@/components/FeatureHero";
 import { FeatureWhy } from "@/components/FeatureWhy";
 import { QuickAnswerSection } from "@/components/QuickAnswer";
-import { ToolFaq } from "@/components/ToolPageSections";
+import { ToolFaq, ToolGuide, type GuideBlock } from "@/components/ToolPageSections";
+import { FACE_SHAPES, FACE_SHAPE_SLUGS } from "@/lib/face-shape-data";
 import {
   buildAlternates,
   buildBreadcrumbJsonLd,
@@ -57,11 +58,38 @@ export default async function GlassesAnalysisPage({
   const w = await getTranslations({ locale, namespace: "featureWhy" });
   const nt = await getTranslations({ locale, namespace: "nav" });
 
-  const faqCount = 4;
-  const faqs = Array.from({ length: faqCount }, (_, i) => ({
-    q: t(`faq${i + 1}Q`),
-    a: t(`faq${i + 1}A`),
-  }));
+  // 前 4 条所有语种都有；第 5 条起是按搜索问句补的问答，哪个语种写了就显示哪条
+  const faqs = [1, 2, 3, 4, 5, 6]
+    .filter((n) => t.has(`faq${n}Q`))
+    .map((n) => ({ q: t(`faq${n}Q`), a: t(`faq${n}A`) }));
+
+  // 答案块（按脸型选镜框对照表）：哪个语种写了就显示；内容读 face-shape-data 里的 glassesFrames，和 /face-shape/* 页面一致
+  const guideSections: { title: string; blocks: GuideBlock[] }[] = [];
+  if (t.has("guideTitle")) {
+    const fc = await getTranslations({ locale, namespace: "face" });
+    guideSections.push({
+      title: t("guideTitle"),
+      blocks: [
+        { type: "text", paragraphs: [t("guideLead")] },
+        {
+          type: "table",
+          head: [t("guideColShape"), t("guideColBest"), t("guideColAvoid")],
+          rows: FACE_SHAPE_SLUGS.map((slug) => {
+            const data = FACE_SHAPES[slug];
+            const key = `shape${data.name}`;
+            return {
+              cells: [
+                fc.has(key) ? fc(key) : data.name,
+                data.glassesFrames.best.slice(0, 2).join(" · "),
+                data.glassesFrames.avoid[0],
+              ],
+              href: `/face-shape/${slug}`,
+            };
+          }),
+        },
+      ],
+    });
+  }
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -105,6 +133,8 @@ export default async function GlassesAnalysisPage({
           <FeatureCta tool="glasses_match" copy={cta} from="feature_mid" />
         </div>
       </section>
+
+      <ToolGuide sections={guideSections} />
 
       <ToolFaq title={t("faqTitle")} faqs={faqs} />
 

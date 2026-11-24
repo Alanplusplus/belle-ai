@@ -213,7 +213,13 @@
     "aiSeasonsTitle": "Alle 12 Farbtypen entdecken",
     "aiSeasonsDesc": "Du kennst deinen Farbtyp schon? Öffne die vollständige Palette samt Make-up- und Styling-Guide.",
     "aiDeepOutro": "Kein Foto hochladen? Mach den <quiz>kostenlosen Farbtyp-Test</quiz>. Erst die Details? Lies, wie die <personal>persönliche Farbanalyse</personal> funktioniert, oder unseren Ratgeber zur <free>kostenlosen KI-Farbanalyse online</free>.",
-    "answerLead": "Belle AI ist ein KI-Tool für die persönliche Farbanalyse. Aus einem Selfie schätzt es deinen Hautunterton und welcher der 12 Farbtypen du bist, und liefert dir in etwa 60 Sekunden eine persönliche Palette mit Empfehlungen für Make-up, Haare, Schmuck und Brillen."
+    "answerLead": "Belle AI ist ein KI-Tool für die persönliche Farbanalyse. Aus einem Selfie schätzt es deinen Hautunterton und welcher der 12 Farbtypen du bist, und liefert dir in etwa 60 Sekunden eine persönliche Palette mit Empfehlungen für Make-up, Haare, Schmuck und Brillen.",
+    "faq7Q": "Welcher Farbtyp bin ich – gibt es dafür einen Test?",
+    "faq7A": "Ja. Lade ein Selfie bei Tageslicht hoch: Die KI schätzt deinen Untertyp (warm, kühl oder neutral) und ordnet dich einem von 12 Farbtypen zu (Frühling, Sommer, Herbst, Winter mit Untertypen). Ohne Foto geht es mit dem kostenlosen Farbanalyse-Quiz. Beides ist ein Startpunkt, den du mit Tuchtests überprüfen kannst.",
+    "faq8Q": "Wie kann ich meinen Farbtyp selbst bestimmen?",
+    "faq8A": "Schau bei Tageslicht ohne Make-up in den Spiegel. Stehen dir Silberschmuck und kühle Töne (Blaurosa) besser, tendierst du zu kühlen Typen (Sommer, Winter); stehen dir Gold und warme Töne (Pfirsich, Olive) besser, eher zu warmen (Frühling, Herbst). Der Kontrast zwischen Haar, Augen und Haut verfeinert das. Die KI-Analyse nimmt dir den Vergleich ab und nennt dir die Palette.",
+    "faq9Q": "Brauche ich eine Farbanalyse-App?",
+    "faq9A": "Nein, Belle AI läuft im Browser, auch auf dem Smartphone: Selfie hochladen, Ergebnis ansehen, kostenlos ausprobieren. Achte bei jeder Farbanalyse-App darauf, ob sie 12 statt nur 4 Typen unterscheidet, die Palette erklärt und dir sagt, wie Licht und Kamera das Ergebnis verändern."
   },
   "features": {
     "learnMore": "Mehr erfahren",

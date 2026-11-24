@@ -70,14 +70,10 @@ function HomeContent() {
       );
     };
 
-  const faqs = [
-    { q: t("faq1Q"), a: t("faq1A") },
-    { q: t("faq2Q"), a: t("faq2A") },
-    { q: t("faq3Q"), a: t("faq3A") },
-    { q: t("faq4Q"), a: t("faq4A") },
-    { q: t("faq5Q"), a: t("faq5A") },
-    { q: t("faq6Q"), a: t("faq6A") },
-  ];
+  // 前 6 条所有语种都有；第 7 条起是按各语种真实搜索说法补的问答，哪个语种写了就显示哪条
+  const faqs = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    .filter((n) => t.has(`faq${n}Q`))
+    .map((n) => ({ q: t(`faq${n}Q`), a: t(`faq${n}A`) }));
 
   const faqJsonLd = {
     "@context": "https://schema.org",
