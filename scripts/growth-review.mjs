@@ -20,8 +20,9 @@ import matter from "gray-matter";
 import {
   BRAND, FAMILY_LABEL, LOCALES, addDays, clip, daysBetween, delta, fetchSitemap, findAiExport, flag, ga4, gaRows, gsc, hasFlag, isMassChange, iso,
   liveMeta, normQ, pageMap, pageUrl, parseAi, parsePage, pct, poissonCdf, pool, pushEvents, qpMap, queryMap, readDate, readXlsx, sql, sumRows, times,
-  touchesPage, utc, zTest,
+  touchesPage, utc, zTest, isQuestion, isToolQuery,
 } from "./lib/seo-core.mjs";
+import { LT_FILE, buildCover, coverOf, isNoise, nearGsc, relevant, stems } from "./lib/longtail.mjs";
 
 const BLOG_DIR = "src/content/blog";
 const QUEUE_FILE = "../social-automation/content/blog-queue.json";
@@ -642,19 +643,6 @@ else {
 }
 
 head(`8h. 意图错位（工具意图词的曝光主要落在内容页；功能/工具页同排名的点击率是内容页的几倍，改由功能页承接更值钱）`);
-const TOOL_WORDS = {
-  en: ["ai", "test", "quiz", "free", "online", "app", "checker", "finder", "generator", "scanner", "analyzer", "calculator", "what is my", "what's my", "find my", "am i", "tool", "upload"],
-  zh: ["测试", "测一测", "免费", "在线", "ai", "识别", "怎么测", "工具"],
-  ja: ["診断", "テスト", "無料", "ai", "アプリ", "チェック"],
-  ko: ["테스트", "진단", "무료", "ai", "앱", "찾기"],
-  es: ["test", "gratis", "online", "ia", "app", "descubre", "cuál es mi", "calculadora", "analizador"],
-  fr: ["test", "gratuit", "en ligne", "ia", "app", "quel est mon", "analyseur"],
-  de: ["test", "kostenlos", "ki", "online", "app", "bestimmen", "rechner"],
-  ru: ["тест", "бесплатно", "онлайн", "ии", "приложение", "определить", "подбор"],
-  tr: ["test", "ücretsiz", "online", "yapay zeka", "uygulama", "belirle"],
-};
-const hasWord = (q, w, cjk) => cjk ? (w === "ai" ? /(?<![a-z])ai(?![a-z])/.test(q) : q.includes(w)) : new RegExp(`(?<![\\p{L}\\p{N}])${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![\\p{L}\\p{N}])`, "u").test(q);
-const isToolQuery = (q, loc) => (TOOL_WORDS[loc] || []).some((w) => hasWord(q, w, ["zh", "ja", "ko"].includes(loc)));
 const byLQ = new Map();
 for (const r of rowsAll) { const k = `${r.page.loc}\t${r.q}`; const a = byLQ.get(k) || { loc: r.page.loc, q: r.q, rows: [] }; a.rows.push(r); byLQ.set(k, a); }
 const shifts = [...byLQ.values()].map((a) => ({ ...a, ...sumRows(a.rows), toolImp: a.rows.filter((r) => r.page.group === "tool").reduce((t, r) => t + r.imp, 0) }))
@@ -668,6 +656,42 @@ for (const a of shifts.slice(0, 12)) {
   if (d >= 1 && !(tool && cooling(tool.page.id))) CANDS.push({ kind: "intent_shift", pg: tool ? tool.page : content.page, sfam: "feature", q: a.q, imp: a.imp, pos: a.pos, d, act: tool ? "功能页：把该词写进 H1/H2 与答案段，博客内链改指向功能页" : "功能页补该词的专门段落/FAQ；博客保留信息向角度，并用该词做锚文本链到功能页" });
 }
 console.log("判定词表是各语种常见的'测试/免费/在线/AI/怎么确定'类措辞，会漏词也会误伤，只作线索；动手前看一眼 SERP 是工具类结果还是文章类结果");
+
+head("8i. 长尾词挖掘（Google 自动补全扩展，读缓存；只说明有人在搜，没有搜索量；不进第 9 节排序）");
+const LT = fs.existsSync(LT_FILE) ? JSON.parse(fs.readFileSync(LT_FILE, "utf8")) : null;
+if (!LT) console.log("（还没有缓存：先跑 npm run longtail，约 15–20 分钟；之后每月刷新一次）");
+else {
+  const ltAge = daysBetween(LT.updated, today);
+  console.log(`缓存 ${LT.updated}（${ltAge} 天前）${ltAge > 35 ? "⚠ 超过 35 天，建议重跑 npm run longtail" : ""}｜语种 ${Object.keys(LT.locales).join(" ")}｜① 有曝光且排名≤20 ② 有曝光但排名>20 ③ 无曝光、站内已含 ④ 站内没覆盖`);
+  for (const [loc, v] of Object.entries(LT.locales)) {
+    const byQ = new Map();
+    for (const r of QP.d28) if (r.page.loc === loc && !r.page.removed) { const a = byQ.get(r.q) || []; a.push(r); byQ.set(r.q, a); }
+    const gscList = [...byQ.entries()].map(([q, rs]) => ({ q, ...sumRows(rs), top: rs.sort((x, y) => y.imp - x.imp)[0].page, stemSet: new Set(stems(q, loc)) }));
+    const exactMap = new Map(gscList.map((g) => [g.q, g]));
+    const units = buildCover(loc, BLOG_DIR, "src/messages");
+    const rows = Object.entries(v.items).filter(([q, it]) => !isNoise(q, loc) && !BRAND.test(q) && relevant(q, loc, it.seeds)).map(([q, it]) => {
+      const g = exactMap.get(q) || nearGsc(q, loc, gscList);
+      return { q, it, g, near: g && g.q !== q, cov: g ? null : coverOf(q, loc, units), tool: isToolQuery(q, loc), ask: isQuestion(q, loc) };
+    });
+    const A = rows.filter((r) => r.g && r.g.pos <= TH.nearPosMax), B = rows.filter((r) => r.g && r.g.pos > TH.nearPosMax), C = rows.filter((r) => !r.g && r.cov), D = rows.filter((r) => !r.g && !r.cov);
+    console.log(`[${loc}] 建议 ${Object.keys(v.items).length} → 去噪 ${rows.length}｜① ${A.length} ② ${B.length} ③ ${C.length} ④ ${D.length}（其中工具意图 ${D.filter((r) => r.tool).length}、问句 ${D.filter((r) => r.ask).length}）`);
+    const tag = (r) => `${r.tool ? "[工具意图]" : ""}${r.ask ? "[问句]" : ""}`;
+    // ②：同一个 GSC 词只列一次（多条补全建议常常对应同一个已有词）
+    const bGroups = new Map();
+    for (const r of B) { const a = bGroups.get(r.g.q) || { g: r.g, list: [] }; a.list.push(r); bGroups.set(r.g.q, a); }
+    for (const { g, list } of [...bGroups.values()].sort((x, y) => y.g.imp - x.g.imp).slice(0, 5)) {
+      line(`  ② 「${g.q}」`, `曝光${g.imp} 点击${g.clicks} 排名${g.pos.toFixed(1)}`, `承接：${g.top.label}（${famTag(g.top)}）`, `补全里的同义问法 ${list.length} 条，如「${list.sort((x, y) => y.it.score - x.it.score)[0].q}」`);
+    }
+    for (const r of C.sort((x, y) => y.it.score - x.it.score).slice(0, 5)) line(`  ③ 「${r.q}」${tag(r)}`, `热度${r.it.score}（${r.it.hits}次）`, `站内已含：${r.cov.kind === "blog" ? `博客 ${r.cov.id}` : `页面文案 ${r.cov.id}`}`, "无曝光：查收录 / 强化该段落与标题措辞");
+    const tier = (r) => (r.tool ? 2 : 0) + (r.ask ? 1 : 0);
+    for (const r of D.sort((x, y) => tier(y) - tier(x) || y.it.score - x.it.score).slice(0, 12)) {
+      line(`  ④ 「${r.q}」${tag(r)}`, `热度${r.it.score}（${r.it.hits}次，来自「${r.it.seeds.slice(0, 2).join("」「")}」）`,
+        r.tool ? "→ 功能页/工具页承接（同 8h）" : r.ask ? "→ 博客 FAQ 或新文章（信息类，易被 AI 概览分流）" : "→ 按主题簇评估：并入已有页还是新文章");
+    }
+  }
+  console.log("热度 = 该建议在各次补全请求里出现的排名加权和，只是'更多人搜'的粗代理；噪音词表只过滤找真人服务/培训/地名/软件这类，仍会有漏网。站内已含 = 整句或 ≥80% 内容词出现在同一个段落/同一条文案里，是近似匹配，动手前要人工确认那段话是不是真的在回答这个问题。");
+  console.log("要证实需求：写进队列前先看它在 GSC 里有没有曝光；发布后用 28 天曝光检验，按 blog-playbook 的证据等级标成'推断'。");
+}
 
 // ================================================================== 9. 本批候选（统一排序）
 head("9. 本批候选 Top（把 8a–8c、8e、8h 折成同一个单位：预估增量点击/28 天；系数保守，只用来排序，不是预测）");

@@ -316,3 +316,26 @@ export async function pushEvents(sinceDay) {
 export const isMassChange = (ev) => ev.blogPages.size >= 30 || ev.families.size >= 3 || ev.shared >= 10 || ev.paths.size >= 6;
 /** 这次上线改没改过这个页面（页面文件级别；动态路由只能认到家族） */
 export const touchesPage = (ev, pg) => ev.blogPages.has(pg.id) || (pg.family !== "blog_post" && (ev.paths.has(pg.path) || (pg.family !== "feature" && ev.families.has(pg.family))));
+
+// ------------------------------------------------------------------ 查询意图：工具意图词 / 问句
+export const TOOL_WORDS = {
+  en: ["ai", "test", "quiz", "free", "online", "app", "checker", "finder", "generator", "scanner", "analyzer", "calculator", "what is my", "what's my", "find my", "am i", "tool", "upload"],
+  zh: ["测试", "测一测", "免费", "在线", "ai", "识别", "怎么测", "工具"],
+  ja: ["診断", "テスト", "無料", "ai", "アプリ", "チェック"],
+  ko: ["테스트", "진단", "무료", "ai", "앱", "찾기"],
+  es: ["test", "gratis", "online", "ia", "app", "descubre", "cuál es mi", "calculadora", "analizador"],
+  fr: ["test", "gratuit", "en ligne", "ia", "app", "quel est mon", "analyseur"],
+  de: ["test", "kostenlos", "ki", "online", "app", "bestimmen", "rechner"],
+  ru: ["тест", "бесплатно", "онлайн", "ии", "приложение", "определить", "подбор"],
+  tr: ["test", "ücretsiz", "online", "yapay zeka", "uygulama", "belirle"],
+};
+const hasWord = (q, w, cjk) => cjk ? (w === "ai" ? /(?<![a-z])ai(?![a-z])/.test(q) : q.includes(w)) : new RegExp(`(?<![\\p{L}\\p{N}])${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![\\p{L}\\p{N}])`, "u").test(q);
+export const isToolQuery = (q, loc) => (TOOL_WORDS[loc] || []).some((w) => hasWord(q, w, ["zh", "ja", "ko"].includes(loc)));
+export const QUESTION_WORDS = {
+  en: ["what", "how", "which", "why", "can", "does", "do", "is", "are", "am i", "should"],
+  ru: ["что", "как", "какой", "какая", "какие", "почему", "можно", "зачем", "где", "сколько"],
+  de: ["was", "wie", "welche", "welcher", "welches", "warum", "kann", "bin ich", "ist", "wann"],
+  es: ["qué", "que", "cómo", "como", "cuál", "cual", "cuáles", "por qué", "puedo", "soy", "es"],
+};
+/** 问句：以疑问词开头，或含"am i / 我是"这类自我判断句式 */
+export const isQuestion = (q, loc) => (QUESTION_WORDS[loc] || []).some((w) => q === w || q.startsWith(`${w} `) || q.includes(` ${w} `));

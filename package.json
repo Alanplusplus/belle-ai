@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "indexnow": "node scripts/indexnow.mjs",
-    "growth-review": "node scripts/growth-review.mjs"
+    "growth-review": "node scripts/growth-review.mjs",
+    "longtail": "node scripts/longtail.mjs"
   },
   "dependencies": {
     "@auth/core": "^0.41.2",
