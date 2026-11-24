@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "indexnow": "node scripts/indexnow.mjs",
-    "blog-review": "node scripts/blog-review.mjs"
+    "growth-review": "node scripts/growth-review.mjs"
   },
   "dependencies": {
     "@auth/core": "^0.41.2",
