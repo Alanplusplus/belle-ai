@@ -4081,6 +4081,8 @@
     "celebNote": "Public figures whose coloring is typically read as {season}. Their best colors are yours too.",
     "celebNear": "Nearby in the {family} family",
     "celebLink": "Palette & looks",
+    "coverTile": "Try-on",
+    "coverTileAlt": "Your color try-on photo — tap to see it in your Lookbook",
     "lbKicker": "Your Lookbook",
     "lbTitle": "On your own face",
     "lbIntro": "AI-styled looks built from your photo and your {season} palette. Same face, your best colors.",

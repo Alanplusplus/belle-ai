@@ -46,6 +46,7 @@ import { ReportPanel } from "@/components/ReportPanel";
 import { HistoryReportCard } from "@/components/ColorReport";
 import { LensPanel } from "@/components/LensPanel";
 import { NextStepCards, type NextStepItem } from "@/components/NextStepCards";
+import { isToolType } from "@/lib/blogTools";
 import { lensOf, refreshLookbook, waitForLensText, type LookbookSheetKey } from "@/lib/lookbook";
 import { DevUnlockToggle } from "@/components/DevUnlockToggle";
 import { isSeasonSlug, type ColorReportData } from "@/lib/color-report";
@@ -498,6 +499,8 @@ export function TryClient({
 }) {
   const t = useTranslations("tryPage");
   const tKit = useTranslations("kit");
+  // 「下一步」入口的按钮文案：和博客 / 功能页的 CTA 是同一套（blog.cta.<类型>.button），每种类型一句结果型的话
+  const tBlog = useTranslations("blog");
   const pageLocale = useLocale();
 
   const validInitialType = (PICKABLE_TYPES.includes(initialType as AnalysisType) ? initialType : "color_analysis") as AnalysisType;
@@ -1885,7 +1888,8 @@ export function TryClient({
             : task.phase === "error"
               ? task.noCredits ? "idle" : "error" // 积分不足但现在有积分了：回到「立即开始」
               : task.phase === "done" ? "idle" : "running";
-      return { type: tp, name: t(`type_${tp}`), promise: t(`out_${tp}`), status };
+      // 没有专属按钮文案的类型（不在博客 CTA 的工具表里）留空，卡片退回通用的「立即开始」
+      return { type: tp, name: t(`type_${tp}`), promise: t(`out_${tp}`), cta: isToolType(tp) ? tBlog(`cta.${tp}.button`) : "", status };
     });
   };
 

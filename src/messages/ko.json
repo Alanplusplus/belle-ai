@@ -4522,6 +4522,8 @@
     "celebNote": "자주 {season}(으)로 분류되는 유명인이에요. 이들의 대표 컬러는 당신에게도 잘 어울려요.",
     "celebNear": "{family} 계열에서 가까운 셀럽",
     "celebLink": "팔레트·스타일",
+    "coverTile": "착용 컷",
+    "coverTileAlt": "내 컬러 착용 사진 — 눌러서 룩북에서 보기",
     "lbKicker": "나의 룩북",
     "lbTitle": "내 얼굴 그대로",
     "lbIntro": "내 사진과 「{season}」 팔레트로 만든 AI 스타일링. 같은 얼굴에 가장 어울리는 색만 입혔어요.",

@@ -4529,6 +4529,8 @@
     "celebNote": "Prominente, die meist als {season} eingeordnet werden. Ihre besten Farben stehen auch dir.",
     "celebNear": "In der Nähe: Familie {family}",
     "celebLink": "Palette & Looks",
+    "coverTile": "Anprobe",
+    "coverTileAlt": "Dein Farb-Anprobe-Foto — tippen, um es im Lookbook zu sehen",
     "lbKicker": "Dein Lookbook",
     "lbTitle": "An deinem eigenen Gesicht",
     "lbIntro": "KI-Looks aus deinem Foto und deiner {season}-Palette. Dein Gesicht, deine besten Farben.",

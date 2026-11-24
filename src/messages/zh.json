@@ -4522,6 +4522,8 @@
     "celebNote": "常被归为「{season}」的公众人物，他们的代表色同样适合你。",
     "celebNear": "同属{family}型的相近名人",
     "celebLink": "色板与造型",
+    "coverTile": "试穿照",
+    "coverTileAlt": "你的色彩试穿照——点击查看专属 Lookbook",
     "lbKicker": "你的专属 Lookbook",
     "lbTitle": "穿在你自己的脸上",
     "lbIntro": "基于你的照片和「{season}」色板生成的 AI 造型：还是你的脸，换上最适合你的颜色。",

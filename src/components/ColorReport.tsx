@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import {
   FREE_COLOR_COUNT,
@@ -95,6 +95,20 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
   const locked = !!report.locked;
   const locale = localeOfReportLang(lang);
 
+  // 用户自己的「色彩试穿」免费预览图：Lookbook 在报告中段，不往下滑就看不到，所以拿一份放到封面右上角做小图
+  const [ownTile, setOwnTile] = useState<string | null>(null);
+  const handlePreviewTile = useCallback(
+    (url: string | null) => {
+      setOwnTile(url);
+      onLookbookPreview?.(url);
+    },
+    [onLookbookPreview],
+  );
+  const openLookbook = () => {
+    trackEvent("report_cover_tile_clicked", { locked });
+    document.getElementById("report-lookbook")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   const issue = useMemo(() => {
     try {
       return new Intl.DateTimeFormat(locale, { month: "long", year: "numeric" }).format(createdAt ? new Date(createdAt * 1000) : new Date());
@@ -163,6 +177,7 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
         {demoBadge && (
           <span className="absolute left-3 top-3 rounded-full bg-black/60 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur-sm">{demoBadge}</span>
         )}
+        {ownTile && <CoverTile url={ownTile} label={ui("coverTile")} alt={ui("coverTileAlt")} onOpen={openLookbook} />}
         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/35 to-transparent px-5 pb-5 pt-16 text-white">
           <p className="rp-label !text-[#F1DDB8]">{ui("yourSeason")}</p>
           <h2 className="report-serif mt-1.5 text-[2.6rem] font-semibold italic leading-[1.05] sm:text-5xl">{name}</h2>
@@ -335,7 +350,7 @@ function ReportBody({ report, lang, onLangChange, langBusy, languages, sourceIma
           unlockBusy={unlockBusy}
           onUpgrade={onUpgrade}
           upgradeLabel={upgradeLabel}
-          onPreviewTile={onLookbookPreview}
+          onPreviewTile={handlePreviewTile}
         />
       )}
 
@@ -875,6 +890,37 @@ function FaceCover({ imageUrl, box, fallbackColors, aspect = 0.8 }: { imageUrl?:
         <img src={imageUrl} alt="" style={imgStyle} draggable={false} />
       )}
     </div>
+  );
+}
+
+/**
+ * 封面右上角的小图：用户自己的色彩试穿预览（Lookbook 的第 1 张）。
+ * 报告里这张图在第 03 / 04 节之后，不往下滑就看不到；放到封面让它一打开就被看见，点一下滚到 Lookbook。
+ * 图是异步生成的：出来之前不占位（也可能额度用完 / 生成失败，那就根本不会出现），出来后淡入。不进 PDF（Lookbook 里本来就有）。
+ */
+function CoverTile({ url, label, alt, onOpen }: { url: string; label: string; alt: string; onOpen: () => void }) {
+  const [shown, setShown] = useState(false);
+  const [failedUrl, setFailedUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => setShown(true));
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
+  if (failedUrl === url) return null;
+  return (
+    <button
+      type="button"
+      data-export-hide=""
+      onClick={onOpen}
+      aria-label={alt}
+      title={alt}
+      className={`absolute right-3 top-3 z-[1] block w-[4.25rem] overflow-hidden rounded-xl border-2 border-white/90 bg-muted shadow-lg ring-1 ring-black/10 transition duration-500 hover:scale-105 motion-reduce:transition-none sm:w-20 ${shown ? "scale-100 opacity-100" : "scale-90 opacity-0"}`}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={url} alt="" draggable={false} onError={() => setFailedUrl(url)} className="block aspect-[3/4] w-full object-cover object-top" />
+      <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent whitespace-nowrap px-0.5 pb-1 pt-5 text-center text-[10px] font-semibold leading-none text-white">{label} ↓</span>
+    </button>
   );
 }
 

@@ -4522,6 +4522,8 @@
     "celebNote": "Des personnalités généralement classées {season}. Leurs meilleures couleurs sont aussi les vôtres.",
     "celebNear": "À proximité, dans la famille {family}",
     "celebLink": "Palette et looks",
+    "coverTile": "Essai",
+    "coverTileAlt": "Votre photo d'essai de couleurs — touchez pour la voir dans votre Lookbook",
     "lbKicker": "Votre Lookbook",
     "lbTitle": "Sur votre propre visage",
     "lbIntro": "Des looks créés par IA à partir de votre photo et de votre palette {season}. Votre visage, vos meilleures couleurs.",
