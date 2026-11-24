@@ -1,4 +1,5 @@
 import { BrandLogo } from "@/components/BrandLogo";
+import { FooterLanguage } from "@/components/LanguageSwitcher";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { SUBSCRIPTION_PORTAL_PATH } from "@/lib/constants";
@@ -288,8 +289,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-          {ft("copyright", { year })}
+        <div className="mt-10 flex flex-col items-center gap-4 border-t border-border pt-6 text-center text-xs text-muted-foreground sm:flex-row sm:justify-between sm:text-left">
+          <span>{ft("copyright", { year })}</span>
+          {/* 语言切换是低频操作，不占顶栏；放在这里 + 头像菜单底部 */}
+          <FooterLanguage />
         </div>
       </div>
     </footer>

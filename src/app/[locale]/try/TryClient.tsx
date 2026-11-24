@@ -3033,15 +3033,44 @@ export function TryClient({
           </div>
         )}
         {!historyLoading && shownHistory.length === 0 && (
-          <div className="mt-6 rounded-2xl border border-dashed border-border bg-card p-8 text-center">
-            <p className="text-sm text-muted-foreground">{t("historyEmptyView")}</p>
-            <button
-              type="button"
-              onClick={() => openView("tool")}
-              className="mt-4 min-h-11 rounded-full bg-gradient-to-r from-primary to-primary-dark px-6 text-sm font-semibold text-white shadow-md shadow-primary/30 transition hover:shadow-lg"
-            >
-              {t("historyStart")}
-            </button>
+          // 顶栏的「我的历史」对所有人常驻，没有记录的人也会点进来：这里不放一个干巴巴的空页面，
+          // 而是把各个功能做成卡片，点哪个就带着这个功能回到上传页，直接开始生成（按钮文字与 Blog / 功能页一致）
+          <div className="mt-6">
+            <p className="rounded-2xl border border-dashed border-border bg-card px-5 py-4 text-center text-sm text-muted-foreground">
+              {t("historyEmptyView")}
+            </p>
+            <ul className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+              {ANALYSIS_TYPE_GROUPS.flatMap((g) => g.items)
+                .filter((item) => isToolType(item.value))
+                .map(({ value }) => (
+                  <li key={value}>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        trackEvent("analysis_type_selected", { type: value, source: "history_empty" });
+                        selectType(value);
+                        openView("tool");
+                      }}
+                      className="group flex h-full w-full flex-col overflow-hidden rounded-xl border border-border bg-card text-left transition hover:border-primary/40 hover:shadow-md"
+                    >
+                      <span className="relative block aspect-[4/3] overflow-hidden bg-muted">
+                        <img
+                          src={CARD_IMAGES[value]}
+                          alt=""
+                          loading="lazy"
+                          className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                        />
+                      </span>
+                      <span className="flex flex-1 flex-col p-3">
+                        <span className="text-sm font-semibold leading-snug">{t(`type_${value}`)}</span>
+                        <span className="mt-auto pt-2 text-xs font-semibold leading-snug text-primary">
+                          {isToolType(value) ? tBlog(`cta.${value}.button`) : t("historyStart")} →
+                        </span>
+                      </span>
+                    </button>
+                  </li>
+                ))}
+            </ul>
           </div>
         )}
         {!historyLoading && shownHistory.length > 0 && (

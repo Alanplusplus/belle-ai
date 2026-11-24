@@ -4,8 +4,9 @@ import { BrandLogo } from "@/components/BrandLogo";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
-import { routing, type Locale } from "@/i18n/routing";
+import { type Locale } from "@/i18n/routing";
 import { LOCALE_NAMES } from "@/lib/constants";
+import { GlobeIcon, LanguageLinks } from "@/components/LanguageSwitcher";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useSession, signOut } from "next-auth/react";
 import { ACCOUNT_SYNCED_EVENT, webInit, webSignIn, type WebInitData, type WebSignInData } from "@/lib/api";
@@ -18,17 +19,19 @@ type UserInfo = { free: number; pack: number };
 
 export function Header() {
   const t = useTranslations("nav");
+  // 「获取积分」的文案已经在试用页翻译好了（9 种语言），这里直接复用
+  const tTry = useTranslations("tryPage");
   const locale = useLocale() as Locale;
   const pathname = usePathname();
   const { data: session, status } = useSession();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileLangOpen, setMobileLangOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
+  // 头像菜单底部的「语言」行：默认折叠，点开才列出语言
+  const [userLangOpen, setUserLangOpen] = useState(false);
   const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
   const signIn = useSignIn();
 
-  const langRef = useRef<HTMLDivElement>(null);
   const userMenuRef = useRef<HTMLDivElement>(null);
   const fetchedRef = useRef(false);
   const syncingRef = useRef(false);
@@ -36,9 +39,6 @@ export function Header() {
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
-      if (langRef.current && !langRef.current.contains(e.target as Node)) {
-        setLangOpen(false);
-      }
       if (userMenuRef.current && !userMenuRef.current.contains(e.target as Node)) {
         setUserMenuOpen(false);
       }
@@ -169,42 +169,19 @@ export function Header() {
           <NavLink href="/blog">{t("blog")}</NavLink>
           <NavLink href="/pricing">{t("pricing")}</NavLink>
 
-          {/* Language switcher */}
-          <div className="relative ml-2" ref={langRef}>
-            <button
-              onClick={() => setLangOpen(!langOpen)}
-              aria-haspopup="true"
-              aria-expanded={langOpen}
-              aria-label={t("language")}
-              className="rounded-md px-2 py-1 text-sm text-muted-foreground hover:bg-muted"
-            >
-              {LOCALE_NAMES[locale]}
-            </button>
-            {langOpen && (
-              <div className="absolute right-0 top-full mt-1 min-w-[120px] rounded-lg border border-border bg-card p-1 shadow-lg">
-                {routing.locales.map((l) => (
-                  <Link
-                    key={l}
-                    href={pathname || "/"}
-                    locale={l}
-                    className={`block rounded-md px-3 py-1.5 text-sm hover:bg-muted ${
-                      l === locale
-                        ? "font-medium text-primary"
-                        : "text-card-foreground"
-                    }`}
-                    onClick={() => setLangOpen(false)}
-                  >
-                    {LOCALE_NAMES[l]}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
+          {/* 我的历史：顶栏常驻、所有人可见（没有记录时历史页会列出各个功能卡片，直接从这里进去开始生成）。
+              语言切换是低频操作，已经移到页脚和头像菜单底部 */}
+          <NavLink href="/try?view=history" onClick={() => trackEvent("header_history_click", { device: "desktop" })}>
+            <span className="inline-flex items-center gap-1.5">
+              <ClockIcon />
+              {t("myHistory")}
+            </span>
+          </NavLink>
 
           {/* User menu — shown for both authenticated and anonymous users */}
           <div className="relative ml-2" ref={userMenuRef}>
             <button
-              onClick={() => setUserMenuOpen(!userMenuOpen)}
+              onClick={() => { setUserMenuOpen(!userMenuOpen); setUserLangOpen(false); }}
               aria-haspopup="true"
               aria-expanded={userMenuOpen}
               aria-label={status === "authenticated" && session?.user?.email ? session.user.email : t("signInGoogle")}
@@ -239,7 +216,19 @@ export function Header() {
                 )}
 
                 {/* 额度/积分（登录用户） */}
-                {status === "authenticated" && <UserQuotaCard userInfo={userInfo} t={t} />}
+                {status === "authenticated" && (
+                  <UserQuotaCard
+                    userInfo={userInfo}
+                    t={t}
+                    buy={{
+                      label: tTry("taskGetCredits"),
+                      onClick: () => {
+                        setUserMenuOpen(false);
+                        trackEvent("header_buy_credits_click", { source: "user_menu" });
+                      },
+                    }}
+                  />
+                )}
 
                 {/* 匿名用户的登录入口：登录后积分、历史记录可以跨浏览器、跨设备保留 */}
                 {status === "unauthenticated" && (
@@ -253,23 +242,32 @@ export function Header() {
                   </button>
                 )}
 
-                {/* Menu items — shown for all users */}
-                <Link
-                  href="/try?view=history"
-                  className="flex items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-muted"
-                  onClick={() => setUserMenuOpen(false)}
+                {/* 账户菜单只放跟「账号」有关的东西：我的历史、价格在顶栏上已经有了，这里不再重复 */}
+                <div className="mx-1 my-1 border-t border-border" />
+                <button
+                  type="button"
+                  onClick={() => setUserLangOpen((v) => !v)}
+                  aria-expanded={userLangOpen}
+                  className="flex w-full items-center justify-between gap-2 rounded-md px-3 py-2 text-left text-sm hover:bg-muted"
                 >
-                  <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                  {t("myHistory")}
-                </Link>
-                <Link
-                  href="/pricing"
-                  className="flex items-center gap-2 rounded-md px-3 py-2 text-sm text-primary hover:bg-muted"
-                  onClick={() => setUserMenuOpen(false)}
-                >
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
-                  {t("pricing")}
-                </Link>
+                  <span className="flex min-w-0 items-center gap-2">
+                    <GlobeIcon className="h-4 w-4 shrink-0 text-muted-foreground" />
+                    <span className="truncate">{t("language")}: {LOCALE_NAMES[locale]}</span>
+                  </span>
+                  <svg className={`h-3 w-3 shrink-0 text-muted-foreground transition ${userLangOpen ? "rotate-180" : ""}`} viewBox="0 0 12 12" fill="currentColor" aria-hidden="true">
+                    <path d="M2 4l4 4 4-4" />
+                  </svg>
+                </button>
+                {userLangOpen && (
+                  <LanguageLinks
+                    source="user_menu"
+                    className="grid grid-cols-2 gap-1 px-1 pb-1 pt-0.5"
+                    onNavigate={() => { setUserMenuOpen(false); setUserLangOpen(false); }}
+                    itemClassName={(active) =>
+                      `flex min-h-9 items-center justify-center rounded-md px-2 text-sm ${active ? "bg-primary/10 font-medium text-primary" : "text-card-foreground hover:bg-muted"}`
+                    }
+                  />
+                )}
                 {status === "authenticated" && (
                   <>
                     <div className="mx-1 my-1 border-t border-border" />
@@ -376,9 +374,9 @@ export function Header() {
             <Link
               href="/try?view=history"
               className="flex min-h-11 items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-muted"
-              onClick={() => setMobileOpen(false)}
+              onClick={() => { setMobileOpen(false); trackEvent("header_history_click", { device: "mobile" }); }}
             >
-              <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <ClockIcon />
               {t("myHistory")}
             </Link>
             <Link
@@ -432,7 +430,7 @@ export function Header() {
               className="flex min-h-11 w-full items-center justify-between rounded-md px-3 text-sm hover:bg-muted"
             >
               <span className="flex items-center gap-2">
-                <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" /></svg>
+                <GlobeIcon className="h-4 w-4 text-muted-foreground" />
                 {t("language")}: {LOCALE_NAMES[locale]}
               </span>
               <svg className={`h-3 w-3 text-muted-foreground transition ${mobileLangOpen ? "rotate-180" : ""}`} viewBox="0 0 12 12" fill="currentColor">
@@ -440,23 +438,14 @@ export function Header() {
               </svg>
             </button>
             {mobileLangOpen && (
-              <div className="grid grid-cols-3 gap-1.5 px-1 pb-2 pt-1">
-                {routing.locales.map((l) => (
-                  <Link
-                    key={l}
-                    href={pathname || "/"}
-                    locale={l}
-                    onClick={() => setMobileOpen(false)}
-                    className={`flex min-h-10 items-center justify-center rounded-md px-2 text-sm ${
-                      l === locale
-                        ? "bg-primary/10 font-medium text-primary"
-                        : "text-muted-foreground hover:bg-muted"
-                    }`}
-                  >
-                    {LOCALE_NAMES[l]}
-                  </Link>
-                ))}
-              </div>
+              <LanguageLinks
+                source="mobile_menu"
+                className="grid grid-cols-3 gap-1.5 px-1 pb-2 pt-1"
+                onNavigate={() => setMobileOpen(false)}
+                itemClassName={(active) =>
+                  `flex min-h-10 items-center justify-center rounded-md px-2 text-sm ${active ? "bg-primary/10 font-medium text-primary" : "text-muted-foreground hover:bg-muted"}`
+                }
+              />
             )}
           </div>
         </div>
@@ -478,14 +467,25 @@ function GoogleGlyph() {
   );
 }
 
+function ClockIcon() {
+  return (
+    <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  );
+}
+
+/** buy：积分卡片底部的一行轻量「获取积分」入口（价格页不再单独占头像菜单的一项）；不传就不显示（手机菜单里价格页就在下面，不重复） */
 function UserQuotaCard({
   userInfo,
   t,
   className = "mx-1 my-1.5",
+  buy,
 }: {
   userInfo: UserInfo | null;
   t: ReturnType<typeof useTranslations>;
   className?: string;
+  buy?: { label: string; onClick: () => void };
 }) {
   return (
     <div className={`${className} overflow-hidden rounded-lg border border-border`}>
@@ -504,6 +504,16 @@ function UserQuotaCard({
           </div>
           <span className="text-xs font-medium">{t("packCredits", { count: userInfo!.pack })}</span>
         </div>
+      )}
+      {buy && (
+        <Link
+          href="/pricing"
+          onClick={buy.onClick}
+          className="flex items-center justify-between gap-2 border-t border-border bg-primary/5 px-3 py-1.5 text-xs font-semibold text-primary transition hover:bg-primary/10"
+        >
+          <span className="truncate">{buy.label}</span>
+          <span aria-hidden="true">→</span>
+        </Link>
       )}
     </div>
   );
