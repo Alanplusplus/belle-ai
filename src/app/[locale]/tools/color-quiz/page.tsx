@@ -8,7 +8,7 @@ import {
 import type { Metadata } from "next";
 import { ColorQuizClient, type ParentCardTexts } from "./ColorQuizClient";
 import { ClampedIntro } from "@/components/ClampedIntro";
-import { ToolFaq, ToolRelated } from "@/components/ToolPageSections";
+import { ToolFaq, ToolGuide, ToolRelated, type GuideBlock } from "@/components/ToolPageSections";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({
@@ -68,12 +68,37 @@ export default async function ColorQuizPage({
     { href: "/tools/embed", label: embed("linkLabel") },
   ];
 
-  const faqs = [
-    { q: t("faq1Q"), a: t("faq1A") },
-    { q: t("faq2Q"), a: t("faq2A") },
-    { q: t("faq3Q"), a: t("faq3A") },
-    { q: t("faq4Q"), a: t("faq4A") },
-  ];
+  // 前 4 条所有语种都有；第 5 条起是按搜索问句补的问答，哪个语种写了就显示哪条
+  const faqs = [1, 2, 3, 4, 5, 6, 7, 8]
+    .filter((n) => t.has(`faq${n}Q`))
+    .map((n) => ({ q: t(`faq${n}Q`), a: t(`faq${n}A`) }));
+
+  // 答案块（怎么判断 / 4 种色型一览 / 测验还是照片）：哪个语种写了就显示；色型名称和推荐色直接读结果页已有文案
+  const guideSections: { title: string; blocks: GuideBlock[] }[] = [];
+  if (t.has("guideStepsTitle")) {
+    const seasons = [
+      { key: "spring", under: "guideSpringUndertone", look: "guideSpringLook" },
+      { key: "summer", under: "guideSummerUndertone", look: "guideSummerLook" },
+      { key: "autumn", under: "guideAutumnUndertone", look: "guideAutumnLook" },
+      { key: "winter", under: "guideWinterUndertone", look: "guideWinterLook" },
+    ] as const;
+    guideSections.push(
+      { title: t("guideStepsTitle"), blocks: [{ type: "steps", items: [1, 2, 3, 4].map((n) => t(`guideStep${n}`)) }] },
+      {
+        title: t("guideTableTitle"),
+        blocks: [
+          {
+            type: "table",
+            head: [t("guideColType"), t("guideColUndertone"), t("guideColLook"), t("guideColColors")],
+            rows: seasons.map((s) => ({
+              cells: [t(`result_${s.key}_title`), t(s.under), t(s.look), t(`result_${s.key}_best`)],
+            })),
+          },
+        ],
+      },
+      { title: t("guideCompareTitle"), blocks: [{ type: "text", paragraphs: [t("guideCompareText")] }] },
+    );
+  }
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -103,6 +128,7 @@ export default async function ColorQuizPage({
       <ColorQuizClient parentCards={parentCards} />
 
       <ClampedIntro text={t("seoIntro")} moreLabel={bt("readMore")} />
+      <ToolGuide sections={guideSections} />
       <ToolFaq title={quiz("faqTitle")} faqs={faqs} />
       <ToolRelated title={t("relatedTitle")} links={related} />
     </>
