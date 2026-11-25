@@ -11,7 +11,7 @@ import { KIT_PERK_VALUES, formatRetestDate } from "@/lib/kit";
 import { loadReportMessages } from "@/lib/report-messages";
 import { renderReportPoster } from "@/lib/report-poster";
 import { SHARE_BUTTONS_ENABLED } from "@/lib/shareLink";
-import { REPORT_EMAIL_ENABLED, SINGLE_UNLOCK_ENABLED } from "@/lib/constants";
+import { REPORT_EMAIL_ENABLED, SINGLE_BONUS_CREDITS, SINGLE_UNLOCK_ENABLED } from "@/lib/constants";
 import { MY_SEASON_KEY, isSeasonSlug, localeOfReportLang, type ColorReportData } from "@/lib/color-report";
 import { personaBase, personaForSeason, type DemoPersonaId } from "@/lib/demo-personas";
 
@@ -252,11 +252,11 @@ export function ReportPanel({
             <div className="min-w-0">
               <p className="text-sm font-semibold text-foreground">{tKit(SINGLE_UNLOCK_ENABLED ? "teaserTitleSingle" : "teaserTitle")}</p>
               <ul className="mt-1.5 space-y-1 text-xs leading-snug text-muted-foreground">
-                {/* 积分和免费重测是套装才有的：有单份入口时，这里只列解锁这份报告就有的内容 */}
-                {(SINGLE_UNLOCK_ENABLED ? (["teaser1", "teaser2", "teaser3"] as const) : (["teaser1", "teaser2", "teaser3", "teaser4"] as const)).map((key) => (
+                {/* 免费重测和 10 个积分是套装才有的：有单份入口时，这里列解锁这份报告就有的内容，外加单份附赠的几个积分 */}
+                {(SINGLE_UNLOCK_ENABLED ? (["teaser1", "teaser2", "teaser3", "singleItem4"] as const) : (["teaser1", "teaser2", "teaser3", "teaser4"] as const)).map((key) => (
                   <li key={key} className="flex items-start gap-1.5">
                     <svg className="mt-0.5 h-3 w-3 shrink-0 text-primary" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                    {tKit(key, KIT_PERK_VALUES)}
+                    {tKit(key, { ...KIT_PERK_VALUES, bonus: SINGLE_BONUS_CREDITS })}
                   </li>
                 ))}
               </ul>

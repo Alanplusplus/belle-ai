@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { trackEvent } from "@/lib/analytics";
 import { startCheckout } from "@/lib/checkout";
-import { ADDON_CREDITS, SINGLE_UNLOCK_ENABLED, UPGRADE_TOPUP_ENABLED, type ProductKey } from "@/lib/constants";
+import { ADDON_CREDITS, SINGLE_BONUS_CREDITS, SINGLE_UNLOCK_ENABLED, UPGRADE_TOPUP_ENABLED, type ProductKey } from "@/lib/constants";
 import { KIT_PERKS, KIT_PERK_VALUES } from "@/lib/kit";
 import {
   FREE_COLOR_COUNT,
@@ -43,7 +43,7 @@ interface Props {
   intent?: "report" | "credits";
   /** 当前积分余额：支付返回后据此判断积分是否到账 */
   packCredits?: number;
-  /** 当前报告额度：单份报告只发报告额度（没有积分），支付返回后据此判断是否到账 */
+  /** 当前报告额度：单份报告到账时一定会多 1 份报告额度（赠送积分不一定被注意到），支付返回后据此判断是否到账 */
   reportCredits?: number;
   /** 买过套装 / 积分包：把「加购包」放在最前面，而不是再卖一次套装 */
   hasPurchased?: boolean;
@@ -253,8 +253,8 @@ export function PricingModal({
         <p className="text-2xl font-bold text-primary">{singlePrice}</p>
       </div>
       <ul className="mt-2 space-y-1">
-        {(["singleItem1", "singleItem2", "singleItem3"] as const).map((key) => (
-          <ModalFeature key={key} text={t(key)} />
+        {(["singleItem1", "singleItem2", "singleItem3", "singleItem4"] as const).map((key) => (
+          <ModalFeature key={key} text={t(key, { bonus: SINGLE_BONUS_CREDITS })} />
         ))}
       </ul>
       <button

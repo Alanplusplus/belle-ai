@@ -22,7 +22,7 @@ export function GoogleOneTap() {
       session.user.name ?? undefined,
       session.user.image ?? undefined
     ).then(() => {
-      trackEvent("account_merged", { method: "google" });
+      trackEvent("account_merged", { method: String(googleId).startsWith("email:") ? "email" : "google" });
     });
   }, [status, session]);
 

@@ -12,7 +12,7 @@ import { useSession, signOut } from "next-auth/react";
 import { ACCOUNT_SYNCED_EVENT, webInit, webSignIn, type WebInitData, type WebSignInData } from "@/lib/api";
 import { trackEvent } from "@/lib/analytics";
 import { useSignIn } from "@/lib/useSignIn";
-import { InAppSignInSheet } from "@/components/InAppBrowserNotice";
+import { SignInSheet } from "@/components/SignInSheet";
 
 /** free：免费预览额度；pack：套餐积分（含老的签到 / 邀请赠送积分，用来出完整结果）。两种分开显示，避免混淆 */
 type UserInfo = { free: number; pack: number };
@@ -184,7 +184,7 @@ export function Header() {
               onClick={() => { setUserMenuOpen(!userMenuOpen); setUserLangOpen(false); }}
               aria-haspopup="true"
               aria-expanded={userMenuOpen}
-              aria-label={status === "authenticated" && session?.user?.email ? session.user.email : t("signInGoogle")}
+              aria-label={status === "authenticated" && session?.user?.email ? session.user.email : t("signIn")}
               className="flex items-center gap-2 rounded-full border border-border px-2 py-1 transition hover:bg-muted"
             >
               {status === "authenticated" && session?.user?.image ? (
@@ -196,7 +196,7 @@ export function Header() {
                 />
               ) : status === "authenticated" && session?.user ? (
                 <div className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">
-                  {(session.user.name?.[0] || "U").toUpperCase()}
+                  {(session.user.name?.[0] || session.user.email?.[0] || "U").toUpperCase()}
                 </div>
               ) : (
                 <div className="flex h-7 w-7 items-center justify-center rounded-full bg-muted">
@@ -237,8 +237,8 @@ export function Header() {
                     onClick={() => { setUserMenuOpen(false); signIn.start("user_menu"); }}
                     className="mx-1 mb-1 flex w-[calc(100%-0.5rem)] items-center gap-2 rounded-lg bg-primary/10 px-3 py-2 text-left text-sm font-medium text-primary hover:bg-primary/15"
                   >
-                    <GoogleGlyph />
-                    <span className="flex-1">{t("signInGoogle")}</span>
+                    <UserGlyph />
+                    <span className="flex-1">{t("signIn")}</span>
                   </button>
                 )}
 
@@ -339,11 +339,11 @@ export function Header() {
                     <img src={session.user.image} alt="" className="h-9 w-9 rounded-full" referrerPolicy="no-referrer" />
                   ) : (
                     <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
-                      {(session.user.name?.[0] || "U").toUpperCase()}
+                      {(session.user.name?.[0] || session.user.email?.[0] || "U").toUpperCase()}
                     </div>
                   )}
                   <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm font-medium">{session.user.name}</p>
+                    {session.user.name && <p className="truncate text-sm font-medium">{session.user.name}</p>}
                     <p className="truncate text-xs text-muted-foreground">{session.user.email}</p>
                   </div>
                   <button
@@ -361,9 +361,9 @@ export function Header() {
                 onClick={() => signIn.start("mobile_menu")}
                 className="flex min-h-12 w-full items-center gap-3 rounded-xl border border-primary/30 bg-primary/5 px-4 text-left"
               >
-                <GoogleGlyph />
+                <UserGlyph />
                 <span className="min-w-0 flex-1">
-                  <span className="block text-sm font-semibold text-foreground">{t("signInGoogle")}</span>
+                  <span className="block text-sm font-semibold text-foreground">{t("signIn")}</span>
                   <span className="block text-xs text-muted-foreground">{t("signInHint")}</span>
                 </span>
               </button>
@@ -451,18 +451,15 @@ export function Header() {
         </div>
       )}
 
-      <InAppSignInSheet open={signIn.blockedOpen} onClose={signIn.closeBlocked} />
+      <SignInSheet open={signIn.open} onClose={signIn.close} />
     </header>
   );
 }
 
-function GoogleGlyph() {
+function UserGlyph() {
   return (
-    <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
-      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z" />
-      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0012 23z" />
-      <path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 010-4.2V7.06H2.18a11 11 0 000 9.88l3.66-2.84z" />
-      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 002.18 7.06l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38z" />
+    <svg className="h-5 w-5 shrink-0 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6.75a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.25a7.5 7.5 0 0115 0" />
     </svg>
   );
 }

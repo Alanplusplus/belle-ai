@@ -41,7 +41,8 @@ import { useSignIn } from "@/lib/useSignIn";
 import { useDialogA11y } from "@/lib/useDialogA11y";
 import { PricingModal } from "@/components/PricingModal";
 import { PaywallExitSurvey } from "@/components/PaywallExitSurvey";
-import { InAppBrowserNotice, InAppSignInSheet } from "@/components/InAppBrowserNotice";
+import { InAppBrowserNotice } from "@/components/InAppBrowserNotice";
+import { SignInSheet } from "@/components/SignInSheet";
 import { ReportPanel } from "@/components/ReportPanel";
 import { HistoryReportCard } from "@/components/ColorReport";
 import { LensPanel } from "@/components/LensPanel";
@@ -547,7 +548,7 @@ export function TryClient({
   // 锁定报告上的按钮直接标套装价（解锁报告 + 10 个积分）：用户点开弹窗前就知道多少钱，不会在弹窗里被价格吓退
   const kitPrice = money("kit");
   const [checkoutStatus, setCheckoutStatus] = useState<"idle" | "confirming" | "success" | "delayed">("idle");
-  // 到账后的提示：kit / addon 说明到账了多少积分（停售前下单的积分包按 addon 提示）；single = 单份报告（没有积分）；upgrade = 单份报告升级成整套
+  // 到账后的提示：kit / addon 说明到账了多少积分（停售前下单的积分包按 addon 提示）；single = 单份报告（1 份报告额度 + 赠送积分，credits 是赠送数）；upgrade = 单份报告升级成整套
   const [checkoutBought, setCheckoutBought] = useState<{ kind: "kit" | "addon" | "single" | "upgrade"; unlocked: boolean; credits: number }>({
     kind: "kit",
     unlocked: false,
@@ -928,7 +929,7 @@ export function TryClient({
         try {
           const res = await webInit();
           const data = res.data;
-          // 单份报告只发报告额度（没有积分），按报告额度到账判断；套装 / 加购包（以及停售前下单的积分包）按积分到账判断
+          // 单份报告按报告额度到账判断（它的赠送积分和报告额度同一单发放）；套装 / 加购包（以及停售前下单的积分包）按积分到账判断
           const arrived = ctx?.product === "single"
             ? (data?.report_credits ?? 0) > (ctx?.reportBefore ?? 0)
             : (data?.pack_credits ?? 0) > (ctx?.packBefore ?? 0);
@@ -977,7 +978,8 @@ export function TryClient({
             }
 
             if (ctx?.product === "single") {
-              setCheckoutBought({ kind: "single", unlocked: unlockedAfterPurchase, credits: 0 });
+              // 单份报告附赠的积分（不是余额）：到账提示里告诉用户「还有几个积分可以去试别的功能」
+              setCheckoutBought({ kind: "single", unlocked: unlockedAfterPurchase, credits: addedCredits ?? 0 });
             } else if (ctx?.product !== "kit" && ctx?.product !== "upgrade" && addedCredits != null) {
               setCheckoutBought({ kind: "addon", unlocked: unlockedAfterPurchase, credits: addedCredits });
             } else {
@@ -2072,7 +2074,7 @@ export function TryClient({
           </button>
         </div>
       )}
-      <InAppSignInSheet open={signIn.blockedOpen} onClose={signIn.closeBlocked} />
+      <SignInSheet open={signIn.open} onClose={signIn.close} />
 
       {view === "tool" && (<>
       {/* 选工具：色彩分析是主打，常驻一个大按钮；其余工具收进「更多工具」，选中后按钮显示当前工具名。

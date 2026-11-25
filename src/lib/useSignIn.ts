@@ -2,27 +2,22 @@
 
 import { useCallback, useState } from "react";
 import { trackEvent } from "@/lib/analytics";
-import { triggerGoogleSignIn } from "@/lib/google-signin";
-import { isInAppBrowser } from "@/lib/inAppBrowser";
 
 /**
- * 统一的「Google 登录」入口：
- * - 普通浏览器：走 One Tap / OAuth；
- * - 内置浏览器（Google 会拦截登录）：不发起登录，改为弹出「请用系统浏览器打开」的说明。
+ * 统一的登录入口：点「登录」只负责打开登录弹层（<SignInSheet />），登录方式在弹层里选：
+ * - Google（One Tap / OAuth；内置浏览器里 Google 会拦截登录，弹层里不显示这个按钮）；
+ * - 邮箱验证码（任何浏览器都能用，包括 Instagram / TikTok 的内置浏览器，也是找回购买最直接的方式）。
+ * 用法：const signIn = useSignIn(); 按钮 onClick={() => signIn.start("来源")}；页面里放一个 <SignInSheet open={signIn.open} onClose={signIn.close} />。
  */
 export function useSignIn() {
-  const [blockedOpen, setBlockedOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const start = useCallback((source: string) => {
     trackEvent("sign_in_click", { source });
-    if (isInAppBrowser()) {
-      setBlockedOpen(true);
-      return;
-    }
-    void triggerGoogleSignIn();
+    setOpen(true);
   }, []);
 
-  const closeBlocked = useCallback(() => setBlockedOpen(false), []);
+  const close = useCallback(() => setOpen(false), []);
 
-  return { start, blockedOpen, closeBlocked };
+  return { start, open, close };
 }

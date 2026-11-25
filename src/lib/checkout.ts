@@ -40,7 +40,7 @@ export interface CheckoutContext {
   ts: number;
   /** 下单前的积分包余额：支付返回后据此判断积分是否到账 */
   packBefore?: number;
-  /** 下单前的报告额度：单份报告只发报告额度（没有积分），支付返回后据此判断是否到账 */
+  /** 下单前的报告额度：单份报告按报告额度到账判断（赠送积分同一单发放），支付返回后据此判断是否到账 */
   reportBefore?: number;
   /** 从哪份锁定的色彩报告进入的付费弹窗：买完后自动用报告额度解锁它 */
   unlockTaskId?: string;

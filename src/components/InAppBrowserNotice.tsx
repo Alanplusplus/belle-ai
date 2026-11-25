@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
-import { useDialogA11y } from "@/lib/useDialogA11y";
 import { trackEvent } from "@/lib/analytics";
 import { getCachedEmail } from "@/lib/api";
 import { getSavedCheckoutEmail, isValidEmail, saveCheckoutEmail } from "@/lib/checkout";
@@ -55,7 +54,7 @@ function HelpActions({ source }: { source: string }) {
 
 /**
  * 内置浏览器提示条：用户从 Instagram / TikTok / Pinterest / Facebook 等 App 点进来时，
- * 提示用系统浏览器打开，这样记录、订阅才会保存在系统浏览器里，Google 登录也才能用。
+ * 提示用系统浏览器打开，这样记录、订阅才会保存在系统浏览器里。内置浏览器里 Google 登录用不了，但可以用邮箱验证码登录。
  * 非内置浏览器不渲染任何内容。
  */
 export function InAppBrowserNotice({ className = "" }: { className?: string }) {
@@ -110,7 +109,7 @@ export function InAppBrowserNotice({ className = "" }: { className?: string }) {
  * 内置浏览器和系统浏览器的账号是隔离的，付款后换浏览器会看不到购买，而 Google 登录在这里又用不了。
  * 以前是一个醒目的警告，要用户自己跑去系统浏览器重新操作，很多人就此放弃。
  * 现在改成：填一个邮箱（可跳过）就能继续付款 —— 邮箱会预填到付款页，付款后后端记下它，
- * 用户之后在 Safari / Chrome 里用同一个邮箱的 Google 账号登录，购买会自动找回来。
+ * 用户之后在 Safari / Chrome 里用同一个邮箱登录（Google 或邮箱验证码），购买会自动找回来。
  * 想直接换到系统浏览器的用户仍然可以点下面的次要链接。
  */
 export function InAppCheckoutEmailStep({ onContinue }: { onContinue: (email?: string) => void }) {
@@ -193,52 +192,5 @@ export function InAppCheckoutEmailStep({ onContinue }: { onContinue: (email?: st
         </div>
       )}
     </form>
-  );
-}
-
-/** 在内置浏览器里点「Google 登录」时弹出：说明为什么不能登录，并给出打开系统浏览器的办法 */
-export function InAppSignInSheet({ open, onClose }: { open: boolean; onClose: () => void }) {
-  const t = useTranslations("inApp");
-  const dialogRef = useDialogA11y<HTMLDivElement>(onClose, open);
-
-  useEffect(() => {
-    if (!open) return;
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    trackEvent("inapp_signin_blocked_shown", { app: detectInAppBrowser() ?? "unknown" });
-    return () => {
-      document.body.style.overflow = prev;
-    };
-  }, [open]);
-
-  if (!open) return null;
-
-  return (
-    <div
-      ref={dialogRef}
-      role="dialog"
-      aria-modal="true"
-      aria-label={t("title")}
-      tabIndex={-1}
-      className="fixed inset-0 z-[260] flex items-end justify-center bg-black/50 outline-none backdrop-blur-sm sm:items-center"
-      onClick={onClose}
-    >
-      <div
-        className="w-full max-w-md rounded-t-2xl border border-border bg-card p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] shadow-2xl sm:rounded-2xl"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <h3 className="text-base font-bold">{t("title")}</h3>
-        <p className="mt-2 text-sm text-muted-foreground">{t("signInBlocked")}</p>
-        <p className="mt-2 text-xs text-muted-foreground">{t(isAndroid() ? "androidSteps" : "iosSteps")}</p>
-        <HelpActions source="signin_sheet" />
-        <button
-          type="button"
-          onClick={onClose}
-          className="mt-3 min-h-10 w-full rounded-full py-2 text-sm text-muted-foreground hover:bg-muted"
-        >
-          {t("dismiss")}
-        </button>
-      </div>
-    </div>
   );
 }

@@ -48,6 +48,7 @@ const CLIENT_NAMESPACES = [
   "nav",
   "footer",
   "inApp",
+  "signIn",
   "blog",
   "features",
   "pricing",

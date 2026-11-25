@@ -10,7 +10,7 @@ export const WAFFO_PRODUCTS = {
   /** 积分加购包：给任何人，用来解锁各类分析的试戴图（每张章节 1 积分），不能用来解锁色彩报告 */
   addon: { id: process.env.WAFFO_PRODUCT_ADDON!, type: "onetime" as const },
   /**
-   * 单份报告（低价入口）：只发 1 份报告额度，没有积分。解锁这份报告的全部文字内容 + 色彩试穿一章；
+   * 单份报告（低价入口）：发 1 份报告额度 + 少量赠送积分（数量见 CREDIT_PACKS.single）。解锁这份报告的全部文字内容 + 色彩试穿一章；
    * 其余 Lookbook 章节要升级套装（后端按订单里的商品名判断，见后端 lookbook_job.unlock_tier）。
    * 商品 ID 取自 WAFFO_PRODUCT_SINGLE；没在 Waffo 后台建好商品、也没打开 NEXT_PUBLIC_SINGLE_UNLOCK 之前，页面上不会出现这个入口。
    */
@@ -70,10 +70,15 @@ export const CREDIT_PACKS = {
   /** 加购包：$4.99 / 10 积分，任何人都能买（没买过报告也可以，用来解锁试戴图） */
   addon: { credits: 10, reports: 0, price: "4.99" },
   /**
-   * 单份报告：只有 1 份报告额度（不含积分）。Waffo 到手 = 2.99 × 0.961 − 0.50 ≈ $2.37。
+   * 单份报告：1 份报告额度 + 2 个赠送积分。Waffo 到手 = 2.99 × 0.961 − 0.50 ≈ $2.37。
    * 后端只给它出文字报告全开 + 色彩试穿一章（6 张图），完整 Lookbook（39 张图）是套装的内容，成本和定价才对得上。
+   * 赠送 2 个积分：付过费的人马上去用别的工具时不用再撞一堵付费墙。
+   * 一个积分 = 一章效果图（平均 3.9 张，¥0.2–0.5 一张 ≈ $0.11–0.27），2 个按 60–80% 使用率约 $0.15–0.45，占单份毛利的 7–22%；
+   * 上限 $0.54。积分只能用在各工具的效果图上，解锁不了单份被锁住的其余 Lookbook 章节，不影响升级。
+   * 线上数据攒到 30 个单份买家再复盘：赠送积分使用率 > 90% 却没有加购 / 升级提升就降到 1 个。
+   * 升级包仍发放 10 积分（单份买家升级后共 12 个），不跟着减，保持「套装 = 单份 + 升级包」的价格关系和文案不变。
    */
-  single: { credits: 0, reports: 1, price: "2.99" },
+  single: { credits: 2, reports: 1, price: "2.99" },
   /**
    * 升级包：套装 − 单份 = 19.99 − 2.99 = $17.00，发放内容和套装完全一样（1 份报告额度 + 10 积分），
    * 单份 + 升级包的总价正好等于直接买套装。Waffo 到手 = 17.00 × 0.961 − 0.50 ≈ $15.84。
@@ -83,7 +88,7 @@ export const CREDIT_PACKS = {
 
 /**
  * 一次性商品对应的积分包积分数；不是积分类商品返回 null。
- * single（单份报告，只发报告额度、没有积分）由 NEXT_PUBLIC_SINGLE_UNLOCK 控制是否展示；pack / pack30 已经停售，
+ * single（单份报告，发 1 份报告额度 + 赠送积分）由 NEXT_PUBLIC_SINGLE_UNLOCK 控制是否展示；pack / pack30 已经停售，
  * 保留是为了让「停售前下单、之后才付款」的订单照常到账。
  */
 export function packCreditsFor(product: string | null | undefined): number | null {
@@ -95,7 +100,7 @@ export function packCreditsFor(product: string | null | undefined): number | nul
     case "addon":
       return CREDIT_PACKS.addon.credits;
     case "single":
-      return 0;
+      return CREDIT_PACKS.single.credits;
     case "pack":
       return 10;
     case "pack30":
@@ -123,6 +128,8 @@ export const KIT_CREDITS = CREDIT_PACKS.kit.credits;
 /** 套装里的积分全部可以自由使用：报告是单独的报告额度，不占积分 */
 export const KIT_SPARE_CREDITS = KIT_CREDITS;
 export const ADDON_CREDITS = CREDIT_PACKS.addon.credits;
+/** 单份报告随单赠送的积分（文案里的 {bonus} 占位符） */
+export const SINGLE_BONUS_CREDITS = CREDIT_PACKS.single.credits;
 /** 解锁后多少天内可以免费重测色彩分析（后端 kit_mode.RETEST_DAYS 要保持一致） */
 export const KIT_RETEST_DAYS = 14;
 /** 「买前扫一扫」每天的次数：免费 / 买过色彩套装（后端 web_color_routes.py 的 SCAN_FREE_DAILY / SCAN_PACK_DAILY 要保持一致） */
