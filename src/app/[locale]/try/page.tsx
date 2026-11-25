@@ -55,8 +55,9 @@ export default async function TryPage({
 
   return (
     // kit：付费弹窗 / 报告页里套装相关的文案（TryClient、ReportPanel、PricingModal 都在客户端取）。
+    // featureWhy：页面标题按类型取功能页的标题（TryClient 里的 pageHeading）。
     // 只在 /try 注入，不放进 layout 的 CLIENT_NAMESPACES（那个会被复制进全站每个静态页）
-    <ExtraMessages messages={{ report: messages.report, kit: messages.kit }}>
+    <ExtraMessages messages={{ report: messages.report, kit: messages.kit, featureWhy: messages.featureWhy }}>
       <TryClient locale={locale} initialType={type} initialPersona={persona} autoSample={sample === "1"} />
     </ExtraMessages>
   );

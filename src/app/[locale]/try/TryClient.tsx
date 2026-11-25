@@ -47,7 +47,8 @@ import { ReportPanel } from "@/components/ReportPanel";
 import { HistoryReportCard } from "@/components/ColorReport";
 import { LensPanel } from "@/components/LensPanel";
 import { NextStepCards, type NextStepItem } from "@/components/NextStepCards";
-import { isToolType } from "@/lib/blogTools";
+import { isToolType, type ToolType } from "@/lib/blogTools";
+import type { FeatureWhyTool } from "@/components/FeatureWhy";
 import { lensOf, refreshLookbook, waitForLensText, type LookbookSheetKey } from "@/lib/lookbook";
 import { DevUnlockToggle } from "@/components/DevUnlockToggle";
 import { isSeasonSlug, type ColorReportData } from "@/lib/color-report";
@@ -101,6 +102,24 @@ const PICKABLE_TYPES: AnalysisType[] = [
  * 既可以在这里作为独立工具主动发起，也可以从「买前扫一扫」带着单品跳过来（这里负责展示进度 / 结果）。
  */
 const ALL_VALID_TYPES: AnalysisType[] = [...PICKABLE_TYPES, "celebrity_match"];
+
+/**
+ * 工具类型 → 功能页「为什么值得试」那一节在 messages.featureWhy 里的键。
+ * 页面标题直接用它的 title：功能页写的是「你会得到什么」（Makeup picked for your face, not for everyone），不是功能名。
+ */
+const FEATURE_WHY_KEY: Record<ToolType, FeatureWhyTool> = {
+  color_analysis: "color",
+  makeup: "makeup",
+  face_shape: "face",
+  hair_preview: "hair",
+  outfit_color: "outfit",
+  glasses_match: "glasses",
+  occasion_makeup: "occasion",
+  jewelry_guide: "jewelry",
+  glow_up_report: "glow",
+  style_personality: "persona",
+  celebrity_match: "celebrity",
+};
 
 /** 试穿可以选的单品类别（与后端 tryon_prompts.TRYON_MODES 保持一致），按「穿的 / 戴的 / 妆发」排好 */
 const TRYON_CATEGORIES = [
@@ -502,6 +521,8 @@ export function TryClient({
   const tKit = useTranslations("kit");
   // 「下一步」入口的按钮文案：和博客 / 功能页的 CTA 是同一套（blog.cta.<类型>.button），每种类型一句结果型的话
   const tBlog = useTranslations("blog");
+  // 页面标题：功能页「为什么值得试」的标题（page.tsx 里按需注入，不放进全站的 CLIENT_NAMESPACES）
+  const tWhy = useTranslations("featureWhy");
   const pageLocale = useLocale();
 
   const validInitialType = (PICKABLE_TYPES.includes(initialType as AnalysisType) ? initialType : "color_analysis") as AnalysisType;
@@ -1998,21 +2019,36 @@ export function TryClient({
 
   const tryOnBusy = backgroundTasks.some((bt) => bt.type === "outfit_color" && (bt.phase === "generating" || bt.phase === "uploading"));
 
+  /**
+   * 页面标题 / 副标题 / 开始按钮：跟着选中的类型换，写「你会得到什么」而不是功能名（以前一直是「AI Color & Style Analysis」+「分析我的照片」）。
+   * 全部复用访客进来之前在功能页 / 博客里看到的同一套话，9 个语种都已有翻译：
+   *   标题 = featureWhy.<工具>.title，副标题 = blog.cta.<类型>.title（「上传自拍 → 得到 X」），按钮 = blog.cta.<类型>.button（「Find my color season」）。
+   * 真人试穿不在博客 / 功能页的工具表里，用 tryPage 自己的文案；其余没有专属文案的类型退回通用标题，不显示副标题。
+   */
+  const pageHeading = isToolType(analysisType)
+    ? { title: tWhy(`${FEATURE_WHY_KEY[analysisType]}.title`), sub: tBlog(`cta.${analysisType}.title`) }
+    : isTryOn
+      ? { title: t("heroTitle_scan_tryon"), sub: t("heroSub_scan_tryon") }
+      : { title: t("title"), sub: null };
+  const startLabel = isToolType(analysisType) ? tBlog(`cta.${analysisType}.button`) : isTryOn ? t("tryonBtn") : t("generate");
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-5 sm:py-12">
       <DevUnlockToggle />
       {view === "tool" ? (
         // 这个页面只做一件事：让人试起来。标题 + 右边是记录入口。
-        // 色彩分析（主打产品）在还没选照片时多一行「能得到什么」：从内容页 / 搜索直接落到这里的人，
+        // 标题 / 副标题按选中的类型换（见 pageHeading）：写的是「你会得到什么」。
+        // 还没选照片时副标题下面再补一行免费 / 免注册 / 隐私：从内容页 / 搜索直接落到这里的人，
         // 以前只看到一句标题和一个上传框，不知道传了照片会得到什么，也不知道要不要注册、照片会不会被留着——这是只有 23% 的人会走到上传的原因之一
         <div className="mx-auto flex max-w-2xl items-center justify-between gap-3">
           <div className="min-w-0">
-            <h1 className="font-serif text-xl font-bold sm:text-3xl">{t("title")}</h1>
+            <h1 className="font-serif text-xl font-bold leading-snug sm:text-3xl">{pageHeading.title}</h1>
             {/* 不跟 previewUrl 联动：选完照片时标题下面的文字消失会让整张卡片突然上移，正好发生在用户看预览的那一刻 */}
-            {analysisType === "color_analysis" && !demoMode && (phase === "idle" || phase === "error") && (
+            {pageHeading.sub && !demoMode && (phase === "idle" || phase === "error") && (
               <>
-                <p className="mt-1 text-sm leading-snug text-foreground/80">{t("valueProp")}</p>
-                <p className="mt-0.5 text-xs text-muted-foreground">{t("valueNote")}</p>
+                <p className="mt-1 text-sm leading-snug text-foreground/80">{pageHeading.sub}</p>
+                {/* 真人试穿没有免费次数（只用积分），不能写「免费」 */}
+                {!isTryOn && <p className="mt-0.5 text-xs text-muted-foreground">{t("valueNote")}</p>}
               </>
             )}
           </div>
@@ -2463,7 +2499,7 @@ export function TryClient({
                     className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {busy && <Spinner />}
-                    {busy ? t("generating") : isTryOn ? t("tryonBtn") : t("analyzeBtn")}
+                    {busy ? t("generating") : startLabel}
                   </button>
                 </div>
 
