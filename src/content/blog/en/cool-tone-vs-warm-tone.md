@@ -1,9 +1,9 @@
 ---
 title: "Cool Tone vs Warm Tone: 5 Easy Tests to Find Your Undertone (With Photos)"
-seoTitle: "Cool vs Warm Undertone: 5 Easy Tests (With Photos)"
-description: "5 easy at-home tests to find your undertone in under 2 minutes — with photo examples. Works for ALL skin tones."
+seoTitle: "Warm or Cool Skin Tone? 5 Easy Undertone Tests (With Photos)"
+description: "Not sure if your skin tone is warm or cool? Try 5 easy at-home undertone tests with photo examples. Takes about 2 minutes and works for all skin tones."
 date: "2026-07-02"
-updated: "2026-11-12"
+updated: "2026-11-25"
 tags: ["undertone", "cool tone", "warm tone", "skin tone", "color analysis"]
 image: "/images/blog/cool-tone-vs-warm-tone.webp"
 ---
@@ -130,7 +130,16 @@ No. Your undertone is determined by the amount and type of melanin and hemoglobi
 Overtone (surface tone) is what you see on the surface — it can be affected by sun, redness, acne, etc. Undertone is the subtle hue underneath that stays constant.
 
 **I have olive skin — what's my undertone?**
-Olive skin has a greenish cast that can be either warm-olive or cool-olive. The green hue itself is separate from your underlying warm/cool undertone. Many olive-skinned people are actually neutral or cool.
+Olive skin has a greenish cast that can be either warm-olive or cool-olive. The green hue itself is separate from your underlying warm/cool undertone. Many olive-skinned people are actually neutral or cool. See [color analysis for olive skin](/color-analysis-for/olive-skin) for the colors that work best.
+
+**Can I be both neutral and cool undertone?**
+In practice, yes. Undertone is a spectrum rather than three sealed boxes, so many people sit between neutral and cool (or between neutral and warm). If your tests split between "cool" and "both look good," you probably lean cool-neutral: stay with cool or neutral colors and avoid the very warm, orange-based ones. Compare two or three of the tests rather than relying on one.
+
+**Can warm skin tones wear black?**
+Yes, but it is often not the most flattering choice right next to your face. Black is a very cool, high-contrast neutral, so on warm undertones it can look harsh or make skin look tired. Try dark chocolate brown, deep olive or espresso instead, or keep black away from your face (trousers, shoes, a jacket) and put a warm color near the neckline.
+
+**Does my undertone change when I tan?**
+Your undertone doesn't, but your surface tone does. A tan adds melanin and redness changes the surface, so skin can look more golden or more pink for a while. That is why the tests work best in natural daylight on skin without a fresh tan, such as the inside of your wrist or your jawline.
 
 ## Related Articles
 

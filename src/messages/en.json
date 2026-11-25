@@ -584,7 +584,8 @@
     "faq5Q": "Can AI tell my skin undertone from a photo?",
     "faq5A": "It can give a visual judgment of the warm and cool tones in a photo, but it is not a measurement: lighting, camera and makeup change what it sees. Treat it as a starting point or second opinion, and confirm with a white-cloth or draping test in daylight.",
     "faq6Q": "How do I see my real skin tone?",
-    "faq6A": "Look at your bare face by a window in daylight, with no makeup, and hold a sheet of plain white paper next to your jaw. Avoid warm bulbs and filters, which shift both depth and undertone."
+    "faq6A": "Look at your bare face by a window in daylight, with no makeup, and hold a sheet of plain white paper next to your jaw. Avoid warm bulbs and filters, which shift both depth and undertone.",
+    "guideCoolWarmLink": "Not sure which? Try 5 easy at-home undertone tests with photos"
   },
   "faceQuiz": {
     "title": "Free Face Shape Quiz",

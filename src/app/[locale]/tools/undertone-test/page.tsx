@@ -84,7 +84,19 @@ export default async function UndertoneTestPage({
           },
         ],
       },
-      { title: t("guideToneTitle"), blocks: [{ type: "text", paragraphs: [t("guideToneText")] }] },
+      {
+        title: t("guideToneTitle"),
+        blocks: [
+          {
+            type: "text",
+            paragraphs: [t("guideToneText")],
+            // 5 种在家自测的博客：哪个语种写了链接文案就显示
+            link: t.has("guideCoolWarmLink")
+              ? { href: "/blog/cool-tone-vs-warm-tone", label: t("guideCoolWarmLink") }
+              : undefined,
+          },
+        ],
+      },
       {
         title: t("guideOliveTitle"),
         blocks: [
