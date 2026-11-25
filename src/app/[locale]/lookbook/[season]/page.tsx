@@ -207,7 +207,12 @@ function LookbookContent({ slug }: { slug: string }) {
                 <h3 className="text-lg font-semibold">{t("neutrals")}</h3>
                 <ColorTextList colors={neutrals} />
               </div>
-              <PaletteCardDownload slug={slug} label={st("downloadPalette")} termsLabel={st("downloadTerms")} />
+              <PaletteCardDownload
+                slug={slug}
+                pagePath={`/lookbook/${slug}`}
+                label={st("downloadPalette")}
+                termsLabel={st("downloadTerms")}
+              />
             </div>
           </div>
         </section>

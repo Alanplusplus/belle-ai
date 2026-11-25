@@ -275,7 +275,12 @@ function SeasonPaletteContent({ slug }: { slug: string }) {
                 <ColorTextList colors={avoidColors} />
               </div>
 
-              <PaletteCardDownload slug={slug} label={t("downloadPalette")} termsLabel={t("downloadTerms")} />
+              <PaletteCardDownload
+                slug={slug}
+                pagePath={`/color-palette/${slug}`}
+                label={t("downloadPalette")}
+                termsLabel={t("downloadTerms")}
+              />
             </div>
           </div>
         </section>
@@ -488,7 +493,12 @@ function ParentSeasonContent({ parent }: { parent: string }) {
 
             <div className="space-y-8">
               <ColorTextList colors={colors.map((c, i) => ({ name: sh(`sc${i}`), hex: c.hex }))} className="mt-0" />
-              <PaletteCardDownload slug={parent} label={st("downloadPalette")} termsLabel={st("downloadTerms")} />
+              <PaletteCardDownload
+                slug={parent}
+                pagePath={`/color-palette/${parent}`}
+                label={st("downloadPalette")}
+                termsLabel={st("downloadTerms")}
+              />
             </div>
           </div>
         </section>

@@ -1466,7 +1466,10 @@
     "otherSubSeasons": "Otras sub-estaciones de {parent}",
     "relatedArticles": "Artículos relacionados",
     "backToGuide": "Volver a la guía de análisis de color",
-    "downloadTerms": "Uso gratuito citando la fuente · ver las 12 tarjetas"
+    "downloadTerms": "Uso gratuito citando la fuente · ver las 12 tarjetas",
+    "copyCredit": "Copiar código de crédito",
+    "creditCopied": "Copiado",
+    "creditLine": "Paleta de colores de <brand>Belle AI</brand>"
   },
   "colorFor": {
     "guideLink": "Guía de análisis de color",

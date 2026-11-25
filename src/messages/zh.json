@@ -1460,7 +1460,10 @@
     "otherSubSeasons": "其他 {parent} 子季型",
     "relatedArticles": "相关文章",
     "backToGuide": "返回色彩分析指南",
-    "downloadTerms": "可免费使用，请注明出处 · 查看全部 12 张卡片"
+    "downloadTerms": "可免费使用，请注明出处 · 查看全部 12 张卡片",
+    "copyCredit": "复制署名代码",
+    "creditCopied": "已复制",
+    "creditLine": "色板由 <brand>Belle AI</brand> 制作"
   },
   "colorFor": {
     "guideLink": "色彩分析指南",

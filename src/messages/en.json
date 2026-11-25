@@ -1517,7 +1517,10 @@
     "otherSubSeasons": "Other {parent} Sub-Seasons",
     "relatedArticles": "Related Articles",
     "backToGuide": "Back to Color Analysis Guide",
-    "downloadTerms": "Free to use with credit · see all 12 cards"
+    "downloadTerms": "Free to use with credit · see all 12 cards",
+    "copyCredit": "Copy credit code",
+    "creditCopied": "Copied",
+    "creditLine": "Color palette by <brand>Belle AI</brand>"
   },
   "colorFor": {
     "guideLink": "Color Analysis Guide",

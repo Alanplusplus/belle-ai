@@ -1513,7 +1513,10 @@
     "otherSubSeasons": "Andere {parent} Sub-Seasons",
     "relatedArticles": "Verwandte Artikel",
     "backToGuide": "Zurück zum Farbanalyse-Leitfaden",
-    "downloadTerms": "Kostenlos nutzbar mit Quellenangabe · alle 12 Karten ansehen"
+    "downloadTerms": "Kostenlos nutzbar mit Quellenangabe · alle 12 Karten ansehen",
+    "copyCredit": "Code für Quellenangabe kopieren",
+    "creditCopied": "Kopiert",
+    "creditLine": "Farbpalette von <brand>Belle AI</brand>"
   },
   "colorFor": {
     "guideLink": "Farbanalyse-Leitfaden",

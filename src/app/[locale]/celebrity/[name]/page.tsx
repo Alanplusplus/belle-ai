@@ -208,6 +208,7 @@ function CelebrityContent({ slug }: { slug: string }) {
               <ColorTextList colors={data.bestColors} className="mt-0" />
               <PaletteCardDownload
                 slug={celebrityCardKey(slug)}
+                pagePath={`/celebrity/${slug}`}
                 label={st("downloadPalette")}
                 termsLabel={st("downloadTerms")}
               />

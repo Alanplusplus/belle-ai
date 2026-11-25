@@ -276,6 +276,7 @@ function ColorAnalysisForContent({ slug }: { slug: string }) {
 
               <PaletteCardDownload
                 slug={attributeCardKey(slug)}
+                pagePath={`/color-analysis-for/${slug}`}
                 label={st("downloadPalette")}
                 termsLabel={st("downloadTerms")}
               />

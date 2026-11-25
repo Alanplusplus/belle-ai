@@ -1460,7 +1460,10 @@
     "otherSubSeasons": "다른 {parent} 서브시즌",
     "relatedArticles": "관련 기사",
     "backToGuide": "컬러 분석 가이드로 돌아가기",
-    "downloadTerms": "출처를 밝히면 무료 사용 · 12장 카드 모두 보기"
+    "downloadTerms": "출처를 밝히면 무료 사용 · 12장 카드 모두 보기",
+    "copyCredit": "출처 표기 코드 복사",
+    "creditCopied": "복사됨",
+    "creditLine": "컬러 팔레트 제공: <brand>Belle AI</brand>"
   },
   "colorFor": {
     "guideLink": "컬러 분석 가이드",

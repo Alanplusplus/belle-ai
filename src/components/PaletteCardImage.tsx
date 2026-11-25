@@ -1,6 +1,10 @@
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
+import { CopyCreditButton } from "@/components/CopyCreditButton";
 import { Link } from "@/i18n/navigation";
+import { brandMarkupToHtml } from "@/lib/embed";
 import { PALETTE_CARD_SIZE, paletteCardFilename, paletteCardPath } from "@/lib/palette-card";
+import { canonicalUrl } from "@/lib/seo";
 
 /**
  * 色板卡片（PNG）。各页用它代替浏览器里用 CSS 画的色块：
@@ -60,16 +64,28 @@ export function PaletteCardLarge({
   );
 }
 
-/** 下载 PNG + 授权说明的链接（授权条件写在 /color-palette#license） */
+/**
+ * 下载 PNG + 复制署名代码 + 授权说明的链接（授权条件写在 /color-palette#license）。
+ * 署名代码链到「卡片所在页」的 canonical 完整网址（不是首页，不带 nofollow / UTM）：
+ * pagePath 是该页去掉语种前缀的路径，和各页 generateMetadata 里 canonical 用的路径一致（例如 /color-analysis-for/olive-skin）。
+ * 注意它不是卡片的 slug：人群页、名人页的卡片文件名（for-olive-skin、celebrity-…）和页面路径不同。
+ */
 export function PaletteCardDownload({
   slug,
+  pagePath,
   label,
   termsLabel,
 }: {
   slug: string;
+  pagePath: string;
   label: string;
   termsLabel: string;
 }) {
+  const locale = useLocale();
+  const t = useTranslations("seasonPalette");
+  // creditLine 带 <brand> 标记，用 raw 取原文；转义和链接由 brandMarkupToHtml 处理（与 /color-palette 页的署名框同一做法）
+  const creditHtml = brandMarkupToHtml(t.raw("creditLine") as string, canonicalUrl(locale, pagePath));
+
   return (
     <div>
       <a
@@ -82,6 +98,9 @@ export function PaletteCardDownload({
         </svg>
         {label}
       </a>
+      <div className="mt-2">
+        <CopyCreditButton html={creditHtml} label={t("copyCredit")} copiedLabel={t("creditCopied")} />
+      </div>
       <p className="mt-2 text-xs text-muted-foreground">
         <Link href="/color-palette#license" className="underline underline-offset-2 hover:text-foreground">
           {termsLabel}

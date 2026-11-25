@@ -1460,7 +1460,10 @@
     "otherSubSeasons": "Autres sous-saisons {parent}",
     "relatedArticles": "Articles connexes",
     "backToGuide": "Retour au guide d'analyse colorimétrique",
-    "downloadTerms": "Utilisation gratuite avec mention de la source · voir les 12 cartes"
+    "downloadTerms": "Utilisation gratuite avec mention de la source · voir les 12 cartes",
+    "copyCredit": "Copier le code de la mention",
+    "creditCopied": "Copié",
+    "creditLine": "Palette de couleurs proposée par <brand>Belle AI</brand>"
   },
   "colorFor": {
     "guideLink": "Guide d'analyse colorimétrique",

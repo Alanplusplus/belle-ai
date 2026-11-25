@@ -1460,7 +1460,10 @@
     "otherSubSeasons": "Diğer {parent} Alt Mevsimleri",
     "relatedArticles": "İlgili Makaleler",
     "backToGuide": "Renk Analizi Rehberine Dön",
-    "downloadTerms": "Kaynak belirtilerek ücretsiz kullanılır · 12 kartın tümünü gör"
+    "downloadTerms": "Kaynak belirtilerek ücretsiz kullanılır · 12 kartın tümünü gör",
+    "copyCredit": "Copy credit code",
+    "creditCopied": "Kopyalandı",
+    "creditLine": "Renk paleti: <brand>Belle AI</brand>"
   },
   "colorFor": {
     "guideLink": "Renk Analizi Rehberi",

@@ -1484,7 +1484,10 @@
     "otherSubSeasons": "その他の {parent} サブシーズン",
     "relatedArticles": "関連記事",
     "backToGuide": "カラー分析ガイドに戻る",
-    "downloadTerms": "出典を明記すれば無料で利用可 · 全12枚のカードを見る"
+    "downloadTerms": "出典を明記すれば無料で利用可 · 全12枚のカードを見る",
+    "copyCredit": "クレジット表記コードをコピー",
+    "creditCopied": "コピーしました",
+    "creditLine": "カラーパレット提供：<brand>Belle AI</brand>"
   },
   "colorFor": {
     "guideLink": "カラー分析ガイド",
