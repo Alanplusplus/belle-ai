@@ -2264,7 +2264,7 @@
     },
     "olive-skin": {
       "name": "Olive Skin Tones",
-      "heroDesc": "Olive undertone is arguably the most misunderstood and misdiagnosed skin tone in color analysis. Olive skin has a green or grayish cast that makes it appear neither purely warm nor purely cool. This unique undertone doesn't fit neatly into traditional warm/cool categories, which is why many olive-toned people get incorrect season results from basic quizzes.",
+      "heroDesc": "Olive skin is a skin tone with a muted green or gray cast under the surface instead of a clearly pink or golden one. It can look light or deep and can lean warm or cool. Olive undertone is arguably the most misunderstood and misdiagnosed skin tone in color analysis. Olive skin has a green or grayish cast that makes it appear neither purely warm nor purely cool. This unique undertone doesn't fit neatly into traditional warm/cool categories, which is why many olive-toned people get incorrect season results from basic quizzes.",
       "undertone": "Olive undertone has a distinct greenish or grayish cast visible when compared to standard warm (golden) or cool (pink) tones. To identify it: (1) Both gold and silver jewelry look decent but neither looks perfect; (2) Your skin looks slightly greenish-gray next to white paper; (3) Many foundation shades look too pink or too yellow on you; (4) You may notice a greenish tint on your neck or jawline.",
       "ch0": "Olive undertone doesn't fit the simple warm/cool binary — it's a third category",
       "ch1": "Standard vein tests and jewelry tests can give contradictory results for olive skin",
@@ -2302,7 +2302,13 @@
       "faq1Q": "Why is olive skin so hard to color-type?",
       "faq1A": "Because the green/gray cast of olive skin doesn't fit the standard warm (golden) vs. cool (pink) framework that most color analysis systems use. Both warm and cool colors can look slightly off, and vein/jewelry tests give mixed signals. AI color analysis with photo input tends to be more accurate than quiz-based methods for olive skin.",
       "faq2Q": "What colors should olive skin avoid?",
-      "faq2A": "Generally avoid very bright, saturated colors (especially neon orange, bright coral, and vivid yellow) that can make olive skin look sallow. Also be cautious with very cool pastels (icy pink, baby blue) that may clash with the green undertone. Stick to muted, earthy, and medium-depth colors."
+      "faq2A": "Generally avoid very bright, saturated colors (especially neon orange, bright coral, and vivid yellow) that can make olive skin look sallow. Also be cautious with very cool pastels (icy pink, baby blue) that may clash with the green undertone. Stick to muted, earthy, and medium-depth colors.",
+      "metaTitle": "Olive Skin Tone: How to Tell + Best Colors to Wear",
+      "metaDescription": "Not sure if you have olive skin? Learn how to tell, which undertone it is, and the best colors for clothes, makeup and hair, then find your season.",
+      "faq3Q": "How can I tell if I have olive skin?",
+      "faq3A": "Olive skin has a muted green or gray cast under the surface rather than a clearly pink or golden one. Common signs: gold and silver jewelry both look decent but neither looks perfect; your skin looks slightly greenish-gray next to plain white paper; and many foundations look too pink or too yellow on you. Check in natural daylight, and treat it as a visual judgment, since lighting and cameras can change what you see.",
+      "faq4Q": "What colors make olive skin look best?",
+      "faq4A": "Muted, earthy and medium-depth colors tend to work best: olive green, sage, muted teal, warm taupe, terracotta, dusty rose, deep plum and muted burgundy. The exact shades depend on whether your olive leans warm or cool, so use the seasons above as a guide and try a few colors near your face in daylight."
     },
     "fair-skin": {
       "name": "Fair Skin Tones",

@@ -182,3 +182,4 @@ Warm or olive? Our AI analysis detects the green-grey modifier that standard tes
 - [Olive Undertone Guide](/blog/olive-undertone-guide) — The complete guide to identifying and styling olive skin
 - [Olive vs Neutral Undertone](/blog/olive-vs-neutral-undertone) — How to tell olive apart from neutral skin
 - [Olive Skin Color Season Guide](/blog/olive-skin-color-season) — Which seasonal type olive skin typically falls into
+- [Cool Tone vs Warm Tone: 5 Easy Tests](/blog/cool-tone-vs-warm-tone) — Quick at-home undertone tests with photos

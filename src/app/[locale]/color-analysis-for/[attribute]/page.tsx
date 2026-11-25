@@ -132,7 +132,11 @@ function ColorAnalysisForContent({ slug }: { slug: string }) {
   const avoidColors = data.avoidColors.map((c, i) => ({ name: ad(`ac${i}`), hex: c.hex, note: isColorNote(c.name) }));
   const makeupTips = data.makeupTips.map((_, i) => ad(`mt${i}`));
   const wardrobeTips = data.wardrobeTips.map((_, i) => ad(`wt${i}`));
-  const faqs = data.faq.map((_, i) => ({ q: ad(`faq${i}Q`), a: ad(`faq${i}A`) }));
+  // 前几条所有语种都有；后面按搜索问句补的问答，哪个语种写了就显示哪条
+  const faqs = data.faq
+    .map((_, i) => i)
+    .filter((i) => ad.has(`faq${i}Q`))
+    .map((i) => ({ q: ad(`faq${i}Q`), a: ad(`faq${i}A`) }));
 
   // 肤色色卡表：数据与语言无关，名称/表头文案只在写了 ad.<slug>.chart* 的语言里有，没有就不渲染
   const chartShades = SKIN_TONE_CHARTS[slug];
