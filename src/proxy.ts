@@ -22,8 +22,45 @@ function isDefaultLocalePrefixed(pathname: string): boolean {
   return pathname === prefix || pathname.startsWith(`${prefix}/`);
 }
 
+/**
+ * 是不是浏览器的整页文档请求（地址栏输入、刷新、外链点进来、新标签页打开）。
+ * Next 在把请求交给 proxy 之前已经剥掉了 rsc / next-router-prefetch 这些头，所以在这里没法区分"预取"和"客户端导航"，
+ * 只能区分"整页文档"和"Next 客户端路由器发的 fetch（预取、客户端导航、router.refresh）"：
+ * 前者带 Sec-Fetch-Dest: document 和 Accept: text/html，后者是 Sec-Fetch-Dest: empty、Accept 为通配。
+ * 旧浏览器没有 Sec-Fetch-Dest，退回看 Accept。
+ */
+function isDocumentRequest(request: NextRequest): boolean {
+  const dest = request.headers.get("sec-fetch-dest");
+  if (dest) return dest === "document" || dest === "iframe" || dest === "frame";
+  return (request.headers.get("accept") ?? "").includes("text/html");
+}
+
+/**
+ * 去掉响应里的 NEXT_LOCALE Set-Cookie，其余 Set-Cookie 原样保留。
+ *
+ * 为什么非文档请求不能写语言 cookie：next-intl 的规则是"请求路径的语种前缀 ≠ cookie → 把 cookie 改成路径的语种"。
+ * 用户在中文页点"English"时，页头/页脚上还挂着一堆 /zh/... 链接；导航一发生，Next 会立刻用新的 cookie（en）
+ * 把这些仍可见的旧链接重新预取一遍。每个 /zh/... 预取请求都会被当成"cookie 过期"，
+ * 响应里 Set-Cookie: NEXT_LOCALE=zh，把用户刚选的 en 又盖回去了——结果页面是英文，
+ * 但刷新或点别的链接就弹回中文。其他语种有路径前缀，URL 本身就决定了语种，所以看不出这个问题；
+ * 只有英文（无前缀）完全依赖 cookie。
+ *
+ * 用户真正的选择仍然会落到 cookie 上：
+ * - 点语言切换器（<Link locale>）时，next-intl 的客户端会在点击瞬间同步 document.cookie，不依赖服务端响应；
+ * - 直接打开 /zh/...、/en/... 的整页文档请求，照旧由服务端写 cookie。
+ */
+function dropLocaleCookie(response: NextResponse): void {
+  const cookies = response.headers.getSetCookie();
+  const isLocaleCookie = (cookie: string) => cookie.startsWith("NEXT_LOCALE=");
+  if (!cookies.some(isLocaleCookie)) return;
+  response.headers.delete("set-cookie");
+  for (const cookie of cookies) {
+    if (!isLocaleCookie(cookie)) response.headers.append("set-cookie", cookie);
+  }
+}
+
 export default function proxy(request: NextRequest) {
-  const response = intlMiddleware(request);
+  let response = intlMiddleware(request);
 
   if (response.status === 307 && isDefaultLocalePrefixed(request.nextUrl.pathname)) {
     const location = response.headers.get("location");
@@ -33,9 +70,11 @@ export default function proxy(request: NextRequest) {
         permanent.headers.append("set-cookie", cookie);
       }
       permanent.headers.set("cache-control", "private, no-store");
-      return permanent;
+      response = permanent;
     }
   }
+
+  if (!isDocumentRequest(request)) dropLocaleCookie(response);
 
   return response;
 }
