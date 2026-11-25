@@ -99,7 +99,8 @@
     "signIn": "로그인",
     "signInHint": "기록과 요금제를 어떤 기기에서든 유지하세요",
     "language": "언어",
-    "freeCredits": "무료 크레딧: {count}",
+    "freeColorPreviews": "컬러 리포트 무료 미리보기: {count}회 남음",
+    "freeToolUses": "기타 도구 무료 사용: {count}회 남음",
     "packCredits": "팩 크레딧: {count}",
     "scan": "구매 전 스캔"
   },

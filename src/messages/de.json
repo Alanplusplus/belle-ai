@@ -99,7 +99,8 @@
     "signIn": "Anmelden",
     "signInHint": "Verlauf und Tarif auf jedem Gerät behalten",
     "language": "Sprache",
-    "freeCredits": "Gratis-Credits: {count}",
+    "freeColorPreviews": "Gratis-Vorschauen Farbbericht: {count}",
+    "freeToolUses": "Gratis-Nutzungen weiterer Tools: {count}",
     "packCredits": "Paket-Credits: {count}",
     "scan": "Vor dem Kauf scannen"
   },

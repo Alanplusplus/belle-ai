@@ -99,7 +99,8 @@
     "signIn": "Iniciar sesión",
     "signInHint": "Conserva tu historial y tu plan en cualquier dispositivo",
     "language": "Idioma",
-    "freeCredits": "Créditos gratis: {count}",
+    "freeColorPreviews": "Vistas previas gratis del informe de color: {count}",
+    "freeToolUses": "Usos gratis de otras herramientas: {count}",
     "packCredits": "Créditos del pack: {count}",
     "scan": "Escanear antes de comprar"
   },

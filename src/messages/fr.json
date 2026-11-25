@@ -99,7 +99,8 @@
     "signIn": "Se connecter",
     "signInHint": "Gardez votre historique et votre offre sur tous vos appareils",
     "language": "Langue",
-    "freeCredits": "Crédits gratuits : {count}",
+    "freeColorPreviews": "Aperçus gratuits du rapport couleur : {count}",
+    "freeToolUses": "Utilisations gratuites des autres outils : {count}",
     "packCredits": "Crédits du pack : {count}",
     "scan": "Scanner avant d'acheter"
   },

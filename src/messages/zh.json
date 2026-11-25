@@ -99,7 +99,8 @@
     "signIn": "登录",
     "signInHint": "登录后，记录和套餐可在任意设备找回",
     "language": "语言",
-    "freeCredits": "免费积分：{count}",
+    "freeColorPreviews": "色彩报告免费预览：剩 {count} 次",
+    "freeToolUses": "其他工具免费使用：剩 {count} 次",
     "packCredits": "积分包：{count}",
     "scan": "买前扫一扫"
   },

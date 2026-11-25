@@ -99,7 +99,8 @@
     "signIn": "Sign in",
     "signInHint": "Keep your history and plan on any device",
     "language": "Language",
-    "freeCredits": "Free credits: {count}",
+    "freeColorPreviews": "Free color previews left: {count}",
+    "freeToolUses": "Free tool uses left: {count}",
     "packCredits": "Pack credits: {count}",
     "scan": "Scan Before You Buy"
   },

@@ -14,8 +14,20 @@ import { trackEvent } from "@/lib/analytics";
 import { useSignIn } from "@/lib/useSignIn";
 import { SignInSheet } from "@/components/SignInSheet";
 
-/** free：免费预览额度；pack：套餐积分（含老的签到 / 邀请赠送积分，用来出完整结果）。两种分开显示，避免混淆 */
-type UserInfo = { free: number; pack: number };
+/**
+ * 头像菜单里的额度，三种互相独立、不能混着叫「积分」：
+ * hero：色彩报告的免费预览次数（终身 3 次）；tools：其他免费工具的使用次数（终身 5 次）；
+ * pack：套餐积分（含老的签到 / 邀请赠送积分，只用来出效果图）。
+ */
+type UserInfo = { hero: number; tools: number; pack: number };
+
+function toUserInfo(data: WebInitData): UserInfo {
+  return {
+    hero: data.web_quota?.remaining ?? 0,
+    tools: data.tools_quota?.remaining ?? 0,
+    pack: data.pack_credits ?? 0,
+  };
+}
 
 export function Header() {
   const t = useTranslations("nav");
@@ -74,10 +86,7 @@ export function Header() {
       session?.user?.image ?? undefined
     ).then((res) => {
       if (res.code === 200 && res.data) {
-        setUserInfo({
-          free: res.data.web_quota?.remaining ?? 0,
-          pack: res.data.pack_credits ?? 0,
-        });
+        setUserInfo(toUserInfo(res.data));
       }
     });
   }, [status, session]);
@@ -89,7 +98,7 @@ export function Header() {
       const data = (event as CustomEvent<WebInitData | undefined>).detail;
       if (!data) return;
       lastSyncRef.current = Date.now();
-      setUserInfo({ free: data.web_quota?.remaining ?? 0, pack: data.pack_credits ?? 0 });
+      setUserInfo(toUserInfo(data));
     };
     window.addEventListener(ACCOUNT_SYNCED_EVENT, onSynced);
     return () => window.removeEventListener(ACCOUNT_SYNCED_EVENT, onSynced);
@@ -491,7 +500,10 @@ function UserQuotaCard({
           <div className="flex h-5 w-5 items-center justify-center">
             <svg className="h-3.5 w-3.5 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>
           </div>
-          <span className="text-xs text-muted-foreground">{t("freeCredits", { count: userInfo.free })}</span>
+          <div className="flex flex-col gap-0.5 text-xs text-muted-foreground">
+            <span>{t("freeColorPreviews", { count: userInfo.hero })}</span>
+            <span>{t("freeToolUses", { count: userInfo.tools })}</span>
+          </div>
         </div>
       )}
       {(userInfo?.pack ?? 0) > 0 && (

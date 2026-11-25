@@ -99,7 +99,8 @@
     "signIn": "ログイン",
     "signInHint": "履歴とプランをどの端末でも引き継げます",
     "language": "言語",
-    "freeCredits": "無料クレジット：{count}",
+    "freeColorPreviews": "色彩レポートの無料プレビュー：残り{count}回",
+    "freeToolUses": "その他ツールの無料利用：残り{count}回",
     "packCredits": "パッククレジット：{count}",
     "scan": "買う前にスキャン"
   },

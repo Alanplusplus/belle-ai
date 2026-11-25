@@ -99,7 +99,8 @@
     "signIn": "Giriş yap",
     "signInHint": "Geçmişin ve planın her cihazda seninle kalsın",
     "language": "Dil",
-    "freeCredits": "Ücretsiz kredi: {count}",
+    "freeColorPreviews": "Ücretsiz renk raporu önizlemesi: {count}",
+    "freeToolUses": "Diğer araçlarda ücretsiz kullanım: {count}",
     "packCredits": "Paket kredisi: {count}",
     "scan": "Almadan önce tara"
   },
