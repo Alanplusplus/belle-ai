@@ -301,6 +301,7 @@
     "restoreCta": "Giriş yap",
     "payTrustSecure": "Waffo ile güvenli ödeme — kart bilgilerinizi asla görmeyiz veya saklamayız.",
     "payTrustMethods": "Visa · Mastercard · Apple Pay · Google Pay (cihazınıza ve bölgenize göre değişir)",
+    "payTaxIncluded": "Fiyatlara KDV dahildir.",
     "purchaseRestored": "Tekrar hoş geldiniz — satın alımınız bu hesaba geri yüklendi.",
     "aiDisclosure": "Raporlar üçüncü taraf yapay zekâ modelleriyle (analiz için Google Gemini, yapay zekâ önizleme görselleri için OpenAI GPT Image) oluşturulur ve yapay zekâ üretimi olarak etiketlenir. Sonuçlar yalnızca bilgi ve eğlence amaçlıdır."
   },

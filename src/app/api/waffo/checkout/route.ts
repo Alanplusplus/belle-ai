@@ -10,7 +10,7 @@ const API_BASE = process.env.BELLE_API_BASE || "https://api.chibistyle.app";
 const API_TOKEN = process.env.BELLE_API_TOKEN;
 
 /**
- * 站点语种 → Waffo 结账页默认语言。Waffo 暂不支持 fr / de，这两个不传，由支付服务商按浏览器推断。
+ * 站点语种 → Waffo 结账页默认语言。Waffo 暂不支持 fr / de / it，这三个不传，由支付服务商按浏览器推断。
  * 结账页上用户仍可自己切换语言。
  * 注意：Waffo 文档写明「语言与币种不匹配会被支付服务商拒绝」，所以下面创建会话时失败会自动去掉 language 重试，
  * 不会因为语言配置问题让整单付不了款。币种按买家国家选（resolveBuyerCurrency），见 createSession。

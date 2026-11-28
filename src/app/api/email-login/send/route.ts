@@ -10,7 +10,7 @@ const API_BASE = process.env.BELLE_API_BASE || "https://api.chibistyle.app";
 const API_TOKEN = process.env.BELLE_API_TOKEN;
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const LOCALES = ["en", "zh", "ja", "ko", "es", "fr", "de", "ru", "tr"];
+const LOCALES = ["en", "zh", "ja", "ko", "es", "fr", "de", "it", "ru", "tr"];
 
 function clientIp(req: NextRequest): string | null {
   const forwarded = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim();

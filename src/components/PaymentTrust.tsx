@@ -1,14 +1,17 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useCurrency } from "@/lib/usePrices";
 
 /**
  * 付款前最后一眼的支付信任信息，放在购买按钮附近（价格页卡片下方、价格弹窗里）。
  * 只写可核实的事实：结账在 Waffo 托管页面完成，卡号不经过本站；
  * Visa / Mastercard / Apple Pay / Google Pay 是 Waffo 文档列出的买家支付方式，具体可用项取决于设备和地区。
+ * 欧元价格是含增值税的最终价（见 currency.ts 的说明，实际扣款金额也等于标价），欧盟买家习惯在价格旁看到这句，所以只对欧元显示。
  */
 export function PaymentTrust({ className = "" }: { className?: string }) {
   const t = useTranslations("pricing");
+  const currency = useCurrency();
   return (
     <div className={`flex flex-col items-center gap-1 text-center ${className}`}>
       <p className="text-xs font-medium text-foreground">
@@ -19,6 +22,7 @@ export function PaymentTrust({ className = "" }: { className?: string }) {
         <span>{t("payTrustSecure")}</span>
       </p>
       <p className="text-xs text-muted-foreground">{t("payTrustMethods")}</p>
+      {currency === "EUR" && <p className="text-xs text-muted-foreground">{t("payTaxIncluded")}</p>}
     </div>
   );
 }

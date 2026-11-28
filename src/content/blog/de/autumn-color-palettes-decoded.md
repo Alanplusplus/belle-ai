@@ -1,13 +1,35 @@
 ---
-title: "Herbst-Farbpaletten Entschlüsselt: Deep Autumn vs True Autumn vs Soft Autumn"
-seoTitle: "Deep vs True vs Soft Autumn — Welcher Herbsttyp bist du? (Im Vergleich)"
-description: "Du bist Herbsttyp, weißt aber nicht welcher? Deep, True (Warm) und Soft Autumn im direkten Vergleich — Unterschiede, beste Farben und ein kostenloses KI-Quiz."
+title: "Herbsttyp: Farben, Subtypen & Styling – Deep, True oder Soft Autumn?"
+seoTitle: "Herbsttyp: Beste Farben & Subtypen (Deep, True, Soft Autumn)"
+description: "Bist du ein Herbsttyp? Deep, True (Warm) und Soft Autumn im Vergleich: beste Farben, Make-up, Schmuck und drei Tests, die deinen Subtyp zeigen."
 date: "2026-08-03"
-tags: ["Farbanalyse", "Herbst-Farbpalette", "Farbsaison", "Beauty", "Stilratgeber"]
+updated: "2026-11-27"
+tags: ["Herbsttyp", "Farbanalyse", "Herbst-Farbpalette", "Farbsaison", "Beauty", "Stilratgeber"]
 image: "/images/blog/autumn-color-palettes-decoded.webp"
+faq:
+  - q: "Welche Farben stehen dem Herbsttyp?"
+    a: "Dem Herbsttyp stehen warme, reiche und erdige Farben: Olive, Rost, Senf, Terrakotta, Kamel und warmes Braun. Kühle Pastelltöne wie Lavendel oder eisiges Rosa lassen ihn blass wirken."
+  - q: "Welche 3 Herbsttypen gibt es?"
+    a: "Deep Autumn (sehr tief, mit hoher Reichhaltigkeit), True Autumn (golden-warm, auch Warm Autumn genannt) und Soft Autumn (warm-neutral und sehr gedämpft). Alle drei haben einen warmen Unterton, der Unterschied liegt in Tiefe und Sättigung."
+  - q: "Was ist der Unterschied zwischen Herbsttyp und Sommertyp?"
+    a: "Beide haben eine eher gedämpfte Färbung, aber der Unterton ist verschieden: Der Herbsttyp ist warm, der Sommertyp kühl. Am häufigsten verwechselt werden Soft Autumn und Soft Summer, weil beide sehr weich und gedämpft wirken. Entscheidend ist, ob Goldtöne (Herbst) oder Silbertöne (Sommer) dein Gesicht frischer aussehen lassen."
+  - q: "Woran erkenne ich, ob ich ein Herbsttyp bin?"
+    a: "Typische Anzeichen sind ein warmer, goldener, olivfarbener oder bernsteinfarbener Hautunterton, warme Haar- und Augenfarben, und Farben wie Olive, Rost oder Senf, die deine Haut leuchten lassen. Kühle Pastelle wirken eher blass. Den vollständigen Schnelltest findest du im Artikel „Farbtyp bestimmen: Welcher Farbtyp bin ich?“."
 ---
 
-## Du Bist ein Herbsttyp — Aber Welcher?
+**Herbsttyp in Kürze:** Der Herbsttyp hat einen warmen Unterton, eine mittlere bis tiefe Färbung und reiche, erdige Farben. Es gibt drei Subtypen: **Deep Autumn** (sehr tief), **True Autumn** (golden-warm, auch Warm Autumn genannt) und **Soft Autumn** (sanft und gedämpft). Die Wärme haben alle drei gemeinsam. Welcher Subtyp du bist, entscheiden Tiefe und Sättigung deiner Färbung.
+
+## Bin ich ein Herbsttyp? Die wichtigsten Anzeichen
+
+- Deine Haut hat einen warmen, goldenen, olivfarbenen oder bernsteinfarbenen Unterton, und du wirst golden oder braun.
+- Dein natürliches Haar ist warmbraun, kastanienbraun, rot oder dunkel mit warmem Unterton.
+- Deine Augen sind warm: Haselnuss, Bernstein, Warmbraun oder Grün.
+- Olive, Rost und Senf lassen deine Haut leuchten.
+- Kühle Pastelltöne wie Lavendel oder eisiges Rosa lassen dich blass wirken.
+
+Treffen mehrere Punkte zu, bist du vermutlich ein Herbsttyp. Sicherheit gibt dir der Schnelltest in [Farbtyp bestimmen: Welcher Farbtyp bin ich?](/de/blog/what-color-season-am-i).
+
+## Du bist ein Herbsttyp – aber welcher?
 
 Deine Farbanalyse hat ergeben: Herbsttyp. Du hast Wärme in deinem Teint, Tiefe in deiner Farbgebung und siehst umwerfend aus in Tönen, die an Wälder, Erntemärkte und die goldene Stunde erinnern.
 
@@ -243,6 +265,24 @@ Heute können KI-Farbanalyse-Tools Hautunterton, Augenfarbe und Haarton betracht
 
 Deinen konkreten Herbst-Subtyp zu kennen, verändert, wie du einkaufst, dich morgens anziehst und wie selbstbewusst du zur Tür hinausgehst. Du bist nicht nur „ein Herbsttyp“ — du bist eine bestimmte Nuance von Warm, und genau zu wissen welche, öffnet eine Garderobe, die wirklich zu dir passt.
 
+## Häufige Fragen zum Herbsttyp
+
+### Welche Farben stehen dem Herbsttyp?
+
+Dem Herbsttyp stehen warme, reiche und erdige Farben: Olive, Rost, Senf, Terrakotta, Kamel und warmes Braun. Kühle Pastelltöne wie Lavendel oder eisiges Rosa lassen ihn blass wirken.
+
+### Welche 3 Herbsttypen gibt es?
+
+Deep Autumn (sehr tief, mit hoher Reichhaltigkeit), True Autumn (golden-warm, auch Warm Autumn genannt) und Soft Autumn (warm-neutral und sehr gedämpft). Alle drei haben einen warmen Unterton, der Unterschied liegt in Tiefe und Sättigung.
+
+### Was ist der Unterschied zwischen Herbsttyp und Sommertyp?
+
+Beide haben eine eher gedämpfte Färbung, aber der Unterton ist verschieden: Der Herbsttyp ist warm, der Sommertyp kühl. Am häufigsten verwechselt werden Soft Autumn und Soft Summer, weil beide sehr weich und gedämpft wirken. Entscheidend ist, ob Goldtöne (Herbst) oder Silbertöne (Sommer) dein Gesicht frischer aussehen lassen. Mehr zum kühlen Gegenstück: [Sommertyp: Farben und Subtypen](/de/blog/summer-color-palettes-decoded).
+
+### Woran erkenne ich, ob ich ein Herbsttyp bin?
+
+Typische Anzeichen sind ein warmer, goldener, olivfarbener oder bernsteinfarbener Hautunterton, warme Haar- und Augenfarben, und Farben wie Olive, Rost oder Senf, die deine Haut leuchten lassen. Kühle Pastelle wirken eher blass. Den vollständigen Schnelltest findest du im Artikel [Farbtyp bestimmen: Welcher Farbtyp bin ich?](/de/blog/what-color-season-am-i).
+
 ## Finde Deinen Herbst-Subtyp
 
 Aus Beschreibungen allein nicht sicher? Unsere [kostenlose KI-Farbanalyse](/) kann anhand von Haut, Haar und Augenfärbung einen wahrscheinlichen Herbst-Subtyp vorschlagen.
@@ -263,3 +303,5 @@ Aus Beschreibungen allein nicht sicher? Unsere [kostenlose KI-Farbanalyse](/) ka
 - [Sommer-Farbpaletten Entschlüsselt: Cool Summer vs True Summer vs Soft Summer](/de/blog/summer-color-palettes-decoded) — Vergleich der kühlen, gedämpften Saisons
 - [Deep Winter Farbpalette: Kompletter Stilratgeber](/de/blog/deep-winter-color-palette-guide) — Deep Autumns kühler Nachbar
 - [Beste Farben für warme Untertöne](/de/blog/best-colors-for-warm-undertones) — Breiterer Guide für warme Farben aller Herbsttypen
+- [Farbtyp bestimmen: Welcher Farbtyp bin ich?](/de/blog/what-color-season-am-i) — Schnelltest und Anleitung für alle vier Farbtypen
+- [Wintertyp: Deep, True und Bright Winter](/de/blog/winter-color-palettes-decoded) — Der kühle Gegenpol zum Herbsttyp

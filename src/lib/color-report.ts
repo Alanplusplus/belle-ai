@@ -107,7 +107,7 @@ export function seasonPalette(slug: string) {
 
 /** 报告语言代码 → 站点 locale */
 const LANG_TO_LOCALE: Record<string, string> = {
-  en: "en", "zh-Hans": "zh", ja: "ja", ko: "ko", es: "es", fr: "fr", de: "de", ru: "ru", tr: "tr",
+  en: "en", "zh-Hans": "zh", ja: "ja", ko: "ko", es: "es", fr: "fr", de: "de", it: "it", ru: "ru", tr: "tr",
 };
 
 export function localeOfReportLang(lang: string): string {
@@ -122,12 +122,13 @@ export const REPORT_LANGUAGES = [
   { code: "es", label: "Español" },
   { code: "fr", label: "Français" },
   { code: "de", label: "Deutsch" },
+  { code: "it", label: "Italiano" },
   { code: "ru", label: "Русский" },
   { code: "tr", label: "Türkçe" },
 ] as const;
 
 export const LOCALE_TO_REPORT_LANG: Record<string, string> = {
-  en: "en", zh: "zh-Hans", ja: "ja", ko: "ko", es: "es", fr: "fr", de: "de", ru: "ru", tr: "tr",
+  en: "en", zh: "zh-Hans", ja: "ja", ko: "ko", es: "es", fr: "fr", de: "de", it: "it", ru: "ru", tr: "tr",
 };
 
 /**

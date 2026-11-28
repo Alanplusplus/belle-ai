@@ -65,7 +65,7 @@ export interface ColorReportProps {
 }
 
 /** 拉丁字母语言的段落首字下沉；中日韩的首字下沉不好看，不用 */
-const DROP_CAP_LANGS = new Set(["en", "es", "fr", "de", "tr", "ru"]);
+const DROP_CAP_LANGS = new Set(["en", "es", "fr", "de", "it", "tr", "ru"]);
 
 export function ColorReport(props: ColorReportProps) {
   const messages = useReportMessages(props.lang);

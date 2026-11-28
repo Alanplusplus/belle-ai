@@ -8,7 +8,7 @@ import { personaBase, type DemoPersonaId } from "./demo-personas";
  * 示例页用的完整 Lookbook：用示例人物的自拍真实生成好的一整套（10 章 39 张小图 + 风格档案），
  * 小图放在 /demo/personas/<id>/，每种语言一份 JSON（文字档案已经译好）。示例不请求后端、不扣额度，所以什么都是解锁的。
  */
-const DEMO_LANGS = new Set(["en", "zh-Hans", "ja", "ko", "es", "fr", "de", "ru", "tr"]);
+const DEMO_LANGS = new Set(["en", "zh-Hans", "ja", "ko", "es", "fr", "de", "it", "ru", "tr"]);
 const cache = new Map<string, Promise<LookbookData | null>>();
 
 function load(lang: string, persona: DemoPersonaId): Promise<LookbookData | null> {

@@ -35,12 +35,29 @@ const PRICE_DECIMALS: Record<CurrencyCode, number> = { USD: 2, EUR: 2, GBP: 2, J
 /** 折算值（每积分）的小数位：只有日元不要小数 */
 const UNIT_DECIMALS: Record<CurrencyCode, number> = { USD: 2, EUR: 2, GBP: 2, JPY: 0, HKD: 2 };
 
-function group(value: number, decimals: number): string {
-  return value.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+/**
+ * 德语、法语、西班牙语、意大利语的读者习惯「数字 + 空格 + 符号」、小数点用逗号（"2,69 €"）。
+ * 其余语言保持符号在前、小数点用点。值是传给 Intl 的数字格式地区，只用它格式化数字部分，
+ * 符号仍取自 SYMBOL（不用 Intl 的货币样式：它在不同语言下会把美元写成 "$US" 之类，和我们的文案不一致）。
+ */
+const SUFFIX_SYMBOL_LOCALES: Record<string, string> = { de: "de-DE", fr: "fr-FR", es: "es-ES", it: "it-IT" };
+
+function group(value: number, decimals: number, numberLocale = "en-US"): string {
+  return value.toLocaleString(numberLocale, { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
 }
 
-/** 币种符号 + 金额，统一符号在前（"$19.99"、"€17.99"、"¥3,180"、"HK$158"） */
-export function formatMoney(currency: CurrencyCode, amount: number | string, decimals = PRICE_DECIMALS[currency]): string {
+/**
+ * 币种符号 + 金额。不传 locale 时符号在前（"$19.99"、"€17.99"、"¥3,180"、"HK$158"），
+ * 服务端静态内容和 JSON-LD 用这种写法；传了 de / fr / es 时按当地习惯写成 "17,99 €"（符号前是不换行空格）。
+ */
+export function formatMoney(
+  currency: CurrencyCode,
+  amount: number | string,
+  decimals = PRICE_DECIMALS[currency],
+  locale?: string,
+): string {
+  const numberLocale = locale ? SUFFIX_SYMBOL_LOCALES[locale] : undefined;
+  if (numberLocale) return `${group(Number(amount), decimals, numberLocale)}\u00a0${SYMBOL[currency]}`;
   return SYMBOL[currency] + group(Number(amount), decimals);
 }
 
@@ -54,16 +71,16 @@ export function priceAmount(currency: CurrencyCode, key: PriceKey): number {
  */
 export type PriceSpec = PriceKey | "free" | "kit:perCredit" | "addon:perCredit";
 
-export function resolvePrice(currency: CurrencyCode, spec: PriceSpec): string {
+export function resolvePrice(currency: CurrencyCode, spec: PriceSpec, locale?: string): string {
   switch (spec) {
     case "free":
-      return formatMoney(currency, 0, 0);
+      return formatMoney(currency, 0, 0, locale);
     case "kit:perCredit":
-      return formatMoney(currency, priceAmount(currency, "kit") / CREDIT_PACKS.kit.credits, UNIT_DECIMALS[currency]);
+      return formatMoney(currency, priceAmount(currency, "kit") / CREDIT_PACKS.kit.credits, UNIT_DECIMALS[currency], locale);
     case "addon:perCredit":
-      return formatMoney(currency, priceAmount(currency, "addon") / CREDIT_PACKS.addon.credits, UNIT_DECIMALS[currency]);
+      return formatMoney(currency, priceAmount(currency, "addon") / CREDIT_PACKS.addon.credits, UNIT_DECIMALS[currency], locale);
     default:
-      return formatMoney(currency, priceAmount(currency, spec));
+      return formatMoney(currency, priceAmount(currency, spec), PRICE_DECIMALS[currency], locale);
   }
 }
 

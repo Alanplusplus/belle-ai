@@ -1,12 +1,35 @@
 ---
-title: "Frühlings-Farbpaletten entschlüsselt: Bright Spring vs. True Spring vs. Light Spring"
-description: "Bright, True und Light Spring: Beste Farben, Merkmale und Styling-Tipps – damit du endlich mit Selbstvertrauen anziehst."
+title: "Frühlingstyp: Farben, Subtypen & Styling – Bright, True oder Light Spring?"
+seoTitle: "Frühlingstyp: Beste Farben & Subtypen (Bright, True, Light)"
+description: "Bist du ein Frühlingstyp? Bright, True und Light Spring im Vergleich: beste Farben, Make-up, Schmuck und ein Schnelltest für deinen Subtyp."
 date: "2026-07-27"
-tags: ["Farbanalyse", "Frühlings-Farbpalette", "Farbtyp", "Beauty", "Styling-Guide"]
+updated: "2026-11-27"
+tags: ["Frühlingstyp", "Farbanalyse", "Frühlings-Farbpalette", "Farbtyp", "Beauty", "Styling-Guide"]
 image: "/images/blog/spring-color-palettes-decoded.webp"
+faq:
+  - q: "Welche Farben stehen dem Frühlingstyp?"
+    a: "Dem Frühlingstyp stehen warme, klare und frische Farben: Koralle, Pfirsich, warmes Grün, Türkis und Goldgelb. Kühle Pastelle wirken an ihm oft blass, hartes Schwarz meist zu streng. Als dunklen Neutralton eignen sich Schokoladenbraun, warmes Navy oder dunkles Türkis besser."
+  - q: "Welche 3 Frühlingstypen gibt es?"
+    a: "Light Spring (hell und zart, niedriger Kontrast), True Spring (golden und ausgewogen, mittlerer Kontrast) und Bright Spring (warm und leuchtend, hoher Kontrast). Alle drei haben einen warmen Unterton und unterscheiden sich darin, wie hell und wie klar ihre Färbung ist."
+  - q: "Steht dem Frühlingstyp Gold oder Silber?"
+    a: "Gold steht allen Frühlingstypen. Roségold passt besonders gut zu Light Spring. Silber bringt einen kühlen Ton mit, der mit der Wärme des Frühlingstyps konkurriert."
+  - q: "Woran erkenne ich, ob ich ein Frühlingstyp bin?"
+    a: "Typische Anzeichen sind ein warmer, goldener oder pfirsichfarbener Hautschimmer, warme Reflexe im Haar, klare warme Augen und Farben wie Koralle oder warmes Grün, die dich frisch wirken lassen, während Schwarz oft zu hart aussieht. Den vollständigen Schnelltest findest du im Artikel „Farbtyp bestimmen: Welcher Farbtyp bin ich?“."
 ---
 
-## Du weißt, dass du ein Frühling bist — aber welcher?
+**Frühlingstyp in Kürze:** Der Frühlingstyp hat einen warmen Unterton, eine helle bis mittlere Tiefe und eine klare, frische Färbung. Es gibt drei Subtypen: **Light Spring** (besonders hell und zart), **True Spring** (golden und ausgewogen) und **Bright Spring** (warm mit hohem Kontrast). Die Wärme haben alle drei gemeinsam. Welcher Subtyp du bist, entscheidet, wie hell und wie leuchtend deine Färbung ist.
+
+## Bin ich ein Frühlingstyp? Die wichtigsten Anzeichen
+
+- Deine Haut hat einen warmen, goldenen oder pfirsichfarbenen Schimmer, du bräunst leicht und verbrennst selten.
+- Dein natürliches Haar hat warme Reflexe, etwa Gold, Erdbeerblond oder Kupfer.
+- Deine Augen sind warm und klar: Grün, Haselnuss, Warmbraun oder Blau mit goldenem Ring.
+- Pfirsich, Koralle und warmes Grün lassen dich gesund aussehen.
+- Schwarz wirkt an dir oft zu hart.
+
+Treffen mehrere Punkte zu, bist du vermutlich ein Frühlingstyp. Sicherheit gibt dir der Schnelltest in [Farbtyp bestimmen: Welcher Farbtyp bin ich?](/de/blog/what-color-season-am-i).
+
+## Du bist ein Frühlingstyp – aber welcher?
 
 Du hast eine Farbanalyse gemacht und das Ergebnis steht fest: Du bist ein **Frühling**. Dein Unterton ist warm, dein Gesamteindruck frisch und lebendig, und du siehst unglaublich aus in Farben, die sich wie ein sonniger Garten anfühlen.
 
@@ -200,4 +223,40 @@ Unabhängig davon, welcher Frühlings-Untertyp du bist, gelten diese Grundsätze
 - **Light Spring** = warm + zart. Niedriger Kontrast, helle und sanfte Nuancen. Am besten in Blush, Pistazie und Roségold.
 - Alle drei Frühlings-Typen teilen Wärme als Fundament — der entscheidende Unterschied ist, wie viel Kontrast und Sättigung deine Färbung verträgt.
 - Im Zweifel teste Farben an deinem Gesicht bei natürlichem Tageslicht. Die Reaktion deiner Haut (strahlend vs. ausgewaschen) verrät dir alles.
+
+## Häufige Fragen zum Frühlingstyp
+
+### Welche Farben stehen dem Frühlingstyp?
+
+Dem Frühlingstyp stehen warme, klare und frische Farben: Koralle, Pfirsich, warmes Grün, Türkis und Goldgelb. Kühle Pastelle wirken an ihm oft blass, hartes Schwarz meist zu streng. Als dunklen Neutralton eignen sich Schokoladenbraun, warmes Navy oder dunkles Türkis besser.
+
+### Welche 3 Frühlingstypen gibt es?
+
+Light Spring (hell und zart, niedriger Kontrast), True Spring (golden und ausgewogen, mittlerer Kontrast) und Bright Spring (warm und leuchtend, hoher Kontrast). Alle drei haben einen warmen Unterton und unterscheiden sich darin, wie hell und wie klar ihre Färbung ist.
+
+### Steht dem Frühlingstyp Gold oder Silber?
+
+Gold steht allen Frühlingstypen. Roségold passt besonders gut zu Light Spring. Silber bringt einen kühlen Ton mit, der mit der Wärme des Frühlingstyps konkurriert.
+
+### Woran erkenne ich, ob ich ein Frühlingstyp bin?
+
+Typische Anzeichen sind ein warmer, goldener oder pfirsichfarbener Hautschimmer, warme Reflexe im Haar, klare warme Augen und Farben wie Koralle oder warmes Grün, die dich frisch wirken lassen, während Schwarz oft zu hart aussieht. Den vollständigen Schnelltest findest du im Artikel [Farbtyp bestimmen: Welcher Farbtyp bin ich?](/de/blog/what-color-season-am-i).
+
+## Finde deinen Frühlings-Subtyp
+
+Aus Beschreibungen allein nicht sicher? Unsere [kostenlose KI-Farbanalyse](/de/try) kann anhand eines Selfies einen wahrscheinlichen Frühlings-Subtyp vorschlagen. Das Ergebnis ist eine visuelle Einschätzung, am besten mit Tüchern bei Tageslicht gegengeprüft. Die Vorschau dauert etwa 60 Sekunden und braucht keine Anmeldung.
+
+[Kostenlose KI-Farbanalyse starten →](/de/try)
+
+---
+
+## Verwandte Artikel
+
+- [Farbtyp bestimmen: Welcher Farbtyp bin ich?](/de/blog/what-color-season-am-i) — Schnelltest und Anleitung für alle vier Farbtypen
+- [Light Spring Farbpalette](/de/color-palette/light-spring) — Volle Palette, Make-up- und Garderobe-Guide
+- [Warm Spring Farbpalette](/de/color-palette/warm-spring) — Volle Palette, Make-up- und Garderobe-Guide
+- [Bright Spring Farbpalette](/de/color-palette/bright-spring) — Volle Palette, Make-up- und Garderobe-Guide
+- [Sommertyp: Cool Summer, True Summer und Soft Summer](/de/blog/summer-color-palettes-decoded) — Der kühle Nachbar des Frühlingstyps
+- [Herbsttyp: Deep, True und Soft Autumn](/de/blog/autumn-color-palettes-decoded) — Die warme Schwester mit gedämpfter Färbung
+- [Wintertyp: Deep, True und Bright Winter](/de/blog/winter-color-palettes-decoded) — Bright Winter ist der kühle Gegenpol zu Bright Spring
 

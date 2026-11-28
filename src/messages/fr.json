@@ -1,8 +1,8 @@
 {
   "meta": {
     "siteName": "Belle AI",
-    "homeTitle": "Analyse colorimétrique IA gratuite – 12 saisons",
-    "homeDescription": "Envoyez un selfie et découvrez votre palette des 12 saisons grâce à l’IA en 60 secondes : maquillage, vêtements, cheveux. Gratuit, sans inscription.",
+    "homeTitle": "Test colorimétrie IA gratuit – 12 saisons",
+    "homeDescription": "Envoyez un selfie : test colorimétrie par IA en 60 secondes. Votre palette des 12 saisons pour maquillage, vêtements, cheveux. Gratuit, sans inscription.",
     "makeupTitle": "Analyse maquillage IA – Rapport beauté personnalisé",
     "makeupDescription": "Obtenez un rapport beauté de niveau magazine avec l'IA : analyse du teint, maquillage des yeux, couleur des lèvres, blush, contouring et recommandations de looks complets.",
     "colorTitle": "Analyse couleur personnelle – Votre saison parmi 12",
@@ -212,7 +212,7 @@
     "aiDeepIntro": "Une analyse colorimétrique par IA lit quatre signaux de couleur sur votre selfie et les rattache au système des 12 saisons, le même cadre que celui d'une colorimétriste professionnelle. Nouveau sur le sujet ? Commencez par notre <guide>guide complet de l'analyse colorimétrique</guide>.",
     "aiSeasonsTitle": "Explorer les 12 saisons de couleur",
     "aiSeasonsDesc": "Vous connaissez déjà votre saison ? Ouvrez la palette complète et le guide maquillage et style de chacune.",
-    "aiDeepOutro": "Vous préférez ne pas envoyer de photo ? Faites le <quiz>quiz gratuit d'analyse couleur</quiz>. Envie de comprendre d'abord ? Lisez comment fonctionne l'<personal>analyse couleur personnelle</personal> ou notre guide de l'<free>analyse colorimétrique IA gratuite en ligne</free>.",
+    "aiDeepOutro": "Vous préférez ne pas envoyer de photo ? Faites le <quiz>quiz gratuit d'analyse couleur</quiz>. Envie de comprendre d'abord ? Lisez comment fonctionne l’<personal>analyse couleur personnelle</personal> ou notre guide de l’<free>analyse colorimétrique IA gratuite en ligne</free>.",
     "answerLead": "Belle AI est un outil d'analyse colorimétrique personnelle par IA. À partir d'un selfie, il estime votre sous-ton de peau et laquelle des 12 saisons de couleur vous êtes, puis vous donne en 60 secondes environ une palette personnelle avec des conseils maquillage, cheveux, bijoux et lunettes."
   },
   "features": {
@@ -301,6 +301,7 @@
     "restoreCta": "Se connecter",
     "payTrustSecure": "Paiement sécurisé par Waffo : nous ne voyons ni ne conservons jamais vos données de carte.",
     "payTrustMethods": "Visa · Mastercard · Apple Pay · Google Pay (selon votre appareil et votre région)",
+    "payTaxIncluded": "Prix TTC, TVA incluse.",
     "purchaseRestored": "Bon retour : votre achat a été restauré sur ce compte.",
     "aiDisclosure": "Les rapports sont générés par des modèles d'IA tiers (Google Gemini pour l'analyse et OpenAI GPT Image pour les aperçus générés par IA) et signalés comme générés par IA. Les résultats sont fournis à titre indicatif et de divertissement."
   },

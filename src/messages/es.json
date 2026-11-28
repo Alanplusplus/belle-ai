@@ -1,8 +1,8 @@
 {
   "meta": {
     "siteName": "Belle AI",
-    "homeTitle": "Análisis de color con IA gratis – 12 estaciones",
-    "homeDescription": "Sube una selfie y descubre tu paleta de las 12 estaciones con IA en 60 segundos. Colores para maquillaje, ropa y cabello. Gratis y sin registro.",
+    "homeTitle": "Test de colorimetría con IA gratis – 12 estaciones",
+    "homeDescription": "Sube una selfie y haz tu test de colorimetría con IA en 60 segundos. Tu paleta de las 12 estaciones para maquillaje, ropa y cabello. Gratis y sin registro.",
     "makeupTitle": "Análisis de maquillaje con IA – Informe de belleza personalizado",
     "makeupDescription": "Obtén un informe de belleza de nivel revista con IA: análisis de tono de piel, maquillaje de ojos, color de labios, rubor, contorno y recomendaciones de looks completos.",
     "colorTitle": "Análisis de color personal – Descubre tu estación",
@@ -307,6 +307,7 @@
     "restoreCta": "Iniciar sesión",
     "payTrustSecure": "Pago seguro con Waffo: nunca vemos ni guardamos los datos de tu tarjeta.",
     "payTrustMethods": "Visa · Mastercard · Apple Pay · Google Pay (según tu dispositivo y región)",
+    "payTaxIncluded": "Precios con IVA incluido.",
     "purchaseRestored": "Te damos la bienvenida de nuevo: tu compra se ha restaurado en esta cuenta.",
     "aiDisclosure": "Los informes los generan modelos de IA de terceros (Google Gemini para el análisis y OpenAI GPT Image para las imágenes de vista previa con IA) y se etiquetan como generados por IA. Los resultados son solo orientativos y de entretenimiento."
   },

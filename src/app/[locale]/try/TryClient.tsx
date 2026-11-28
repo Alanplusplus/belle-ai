@@ -212,13 +212,14 @@ const REPORT_LANGUAGES = [
   { code: "es", label: "Español" },
   { code: "fr", label: "Français" },
   { code: "de", label: "Deutsch" },
+  { code: "it", label: "Italiano" },
   { code: "ru", label: "Русский" },
   { code: "tr", label: "Türkçe" },
 ];
 
 const LOCALE_TO_REPORT_LANG: Record<string, string> = {
   en: "en", zh: "zh-Hans", ja: "ja", ko: "ko", es: "es", fr: "fr",
-  de: "de", ru: "ru", tr: "tr",
+  de: "de", it: "it", ru: "ru", tr: "tr",
 };
 
 const PREFS_KEY = "belle_try_prefs";

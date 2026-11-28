@@ -301,6 +301,7 @@
     "restoreCta": "로그인",
     "payTrustSecure": "결제는 Waffo의 안전한 결제 페이지에서 처리돼요. 카드 정보는 저희가 보거나 저장하지 않아요.",
     "payTrustMethods": "Visa · Mastercard · Apple Pay · Google Pay 지원 (기기와 지역에 따라 다를 수 있어요)",
+    "payTaxIncluded": "표시된 가격에는 부가가치세(VAT)가 포함되어 있어요.",
     "purchaseRestored": "다시 오신 것을 환영합니다. 이전 구매 내역이 이 계정으로 복원되었습니다.",
     "aiDisclosure": "리포트는 서드파티 AI 모델(분석에는 Google Gemini, AI 미리보기 이미지에는 OpenAI GPT Image)로 생성되며 AI 생성물로 표시됩니다. 결과는 참고 및 오락용입니다."
   },

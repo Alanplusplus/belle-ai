@@ -12,7 +12,7 @@ const API_TOKEN = process.env.BELLE_API_TOKEN;
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 /** 报告语言代码（和 color-report 的 REPORT_LANGUAGES 一致），决定整封邮件用哪种语言 */
-const LANGUAGES = ["en", "zh-Hans", "ja", "ko", "es", "fr", "de", "ru", "tr"];
+const LANGUAGES = ["en", "zh-Hans", "ja", "ko", "es", "fr", "de", "it", "ru", "tr"];
 
 async function resolveEmailSource(email: string): Promise<"signed_in" | "user_supplied"> {
   try {

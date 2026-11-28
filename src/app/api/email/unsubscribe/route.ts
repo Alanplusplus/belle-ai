@@ -67,6 +67,13 @@ const COPY: Record<Locale, Copy> = {
     failedText: "Wir konnten deine Anfrage nicht verarbeiten. Versuche es später erneut oder antworte auf die E-Mail.",
     back: "Zurück zu Belle AI",
   },
+  it: {
+    done: "Ti sei disiscritto",
+    doneText: "Non ti invieremo più email di promemoria.",
+    failed: "Qualcosa è andato storto",
+    failedText: "Non siamo riusciti a elaborare la richiesta. Riprova più tardi o rispondi all’email.",
+    back: "Torna a Belle AI",
+  },
   ru: {
     done: "Вы отписались",
     doneText: "Мы больше не будем присылать вам напоминания.",

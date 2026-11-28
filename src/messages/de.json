@@ -308,6 +308,7 @@
     "restoreCta": "Anmelden",
     "payTrustSecure": "Sichere Zahlung über Waffo – wir sehen oder speichern deine Kartendaten nie.",
     "payTrustMethods": "Visa · Mastercard · Apple Pay · Google Pay (je nach Gerät und Region)",
+    "payTaxIncluded": "Alle Preise inkl. MwSt.",
     "purchaseRestored": "Willkommen zurück – dein Kauf wurde in dieses Konto übernommen.",
     "aiDisclosure": "Berichte werden von KI-Modellen Dritter erstellt (Google Gemini für die Analyse, OpenAI GPT Image für KI-Vorschaubilder) und als KI-generiert gekennzeichnet. Die Ergebnisse dienen nur der Orientierung und Unterhaltung."
   },

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useSyncExternalStore } from "react";
+import { useLocale } from "next-intl";
 import { isCurrencyCode, resolvePrice, type CurrencyCode, type PriceSpec } from "./currency";
 
 /**
@@ -66,8 +67,16 @@ export function useCurrency(): CurrencyCode {
   return useSyncExternalStore(subscribe, () => current, () => "USD" as CurrencyCode);
 }
 
-/** 当前币种下的价格格式化：money("weeklyIntro") → "$1.99" / "€2.19" / "¥350" */
+/**
+ * 当前币种下的价格格式化：money("single") → "$2.99" / "€2.69" / "¥480"；
+ * 页面语言是德语、法语、西班牙语时按当地习惯写成 "2,69 €"。
+ * 服务端渲染和水合用同一个 locale，所以不会触发水合不一致。
+ */
 export function usePrices() {
   const currency = useCurrency();
-  return useMemo(() => ({ currency, money: (spec: PriceSpec) => resolvePrice(currency, spec) }), [currency]);
+  const locale = useLocale();
+  return useMemo(
+    () => ({ currency, money: (spec: PriceSpec) => resolvePrice(currency, spec, locale) }),
+    [currency, locale],
+  );
 }

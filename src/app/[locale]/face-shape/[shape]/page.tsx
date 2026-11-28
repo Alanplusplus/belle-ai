@@ -12,9 +12,9 @@ import {
 } from "@/lib/face-shape-data";
 import type { Metadata } from "next";
 
-/** 句子中间引用脸型名：西 / 法 / 俄语的名称在标签里首字母大写，放进句子里要小写（ovalado、ovale、овальное） */
+/** 句子中间引用脸型名：西 / 法 / 意 / 俄语的名称在标签里首字母大写，放进句子里要小写（ovalado、ovale、овальное） */
 function inlineShapeName(locale: string, name: string) {
-  return ["es", "fr", "ru"].includes(locale) ? name.toLocaleLowerCase(locale) : name;
+  return ["es", "fr", "it", "ru"].includes(locale) ? name.toLocaleLowerCase(locale) : name;
 }
 
 export function generateStaticParams() {

@@ -36,6 +36,7 @@ const DEFAULT_BY_LOCALE: Record<string, DemoPersonaId> = {
   es: "p7",
   fr: "p2",
   de: "p5",
+  it: "p4",
   ru: "p2",
   tr: "p6",
 };

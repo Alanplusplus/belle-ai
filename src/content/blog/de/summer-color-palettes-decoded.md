@@ -247,3 +247,4 @@ Immer noch unsicher? Unsere [kostenlose KI-Farbanalyse](/) kann anhand eines Sel
 - [Light Summer Farbpalette](/de/color-palette/light-summer) — Volle Palette, Make-up- und Garderobe-Guide
 - [Cool Summer Farbpalette](/de/color-palette/cool-summer) — Volle Palette, Make-up- und Garderobe-Guide
 - [Soft Summer Farbpalette](/de/color-palette/soft-summer) — Volle Palette, Make-up- und Garderobe-Guide
+- [Farbtyp bestimmen: Welcher Farbtyp bin ich?](/de/blog/what-color-season-am-i) — Schnelltest und Anleitung für alle vier Farbtypen

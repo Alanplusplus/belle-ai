@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 // 已下线的语种：把旧地址永久重定向到对应的英文路径，保住这些 URL 积累的外链和排名权重。
 // （next.config 的 redirects 先于 proxy 执行；默认语种 en 不带前缀，所以目标是去掉前缀后的路径。）
-const REMOVED_LOCALES = ["id", "pt", "it", "th", "ar", "hi", "vi"];
+const REMOVED_LOCALES = ["id", "pt", "th", "ar", "hi", "vi"];
 
 const nextConfig: NextConfig = {
   images: {
@@ -21,14 +21,14 @@ const nextConfig: NextConfig = {
       // 色板卡片的旧下载地址（/color-palette/<季>/download）已改成固定的 PNG 地址 /palette-cards/<季>.png
       { source: "/color-palette/:season/download", destination: "/palette-cards/:season.png", permanent: true },
       {
-        source: "/:locale(en|zh|ja|ko|es|fr|de|ru|tr)/color-palette/:season/download",
+        source: "/:locale(en|zh|ja|ko|es|fr|de|it|ru|tr)/color-palette/:season/download",
         destination: "/palette-cards/:season.png",
         permanent: true,
       },
       // 邀请好友页已下线：旧链接（站内菜单、已分享出去的链接）统一回首页，不留 404
       { source: "/referral", destination: "/", permanent: true },
       { source: "/en/referral", destination: "/", permanent: true },
-      { source: "/:locale(zh|ja|ko|es|fr|de|ru|tr)/referral", destination: "/:locale", permanent: true },
+      { source: "/:locale(zh|ja|ko|es|fr|de|it|ru|tr)/referral", destination: "/:locale", permanent: true },
     ];
   },
 };

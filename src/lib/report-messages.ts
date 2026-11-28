@@ -27,6 +27,7 @@ const LOADERS: Record<string, () => Promise<{ default: unknown }>> = {
   es: () => import("@/messages/es.json"),
   fr: () => import("@/messages/fr.json"),
   de: () => import("@/messages/de.json"),
+  it: () => import("@/messages/it.json"),
   ru: () => import("@/messages/ru.json"),
   tr: () => import("@/messages/tr.json"),
 };

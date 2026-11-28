@@ -141,7 +141,7 @@ export const GA_MEASUREMENT_ID = "G-H526RRVE9N";
 
 export const LOCALES = [
   "en", "zh", "ja", "ko",
-  "es", "fr", "de", "ru", "tr",
+  "es", "fr", "de", "it", "ru", "tr",
 ] as const;
 
 export const LOCALE_NAMES: Record<string, string> = {
@@ -152,6 +152,7 @@ export const LOCALE_NAMES: Record<string, string> = {
   es: "Español",
   fr: "Français",
   de: "Deutsch",
+  it: "Italiano",
   ru: "Русский",
   tr: "Türkçe",
 };
